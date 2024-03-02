@@ -105,8 +105,14 @@ Autoload DTCM
 	Object lib/NitroSDK/src/os/os_irqHandler.o (.dtcm.bss)
 	Object lib/NitroSDK/src/os/os_irqTable.o (.dtcm.bss)
 }
+
 Overlay OVY_0
 {
     After main
     Object asm/overlay0.o
+}
+Overlay OVY_1
+{
+    After main
+    Object asm/overlay1.o
 }
