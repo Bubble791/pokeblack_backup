@@ -7,7 +7,7 @@
 
 Static main
 {
-	Address 0x02000000
+	Address 0x02004000
 	StackSize 0 2048
 	Object src/main.o
 
@@ -115,6 +115,11 @@ Overlay OVY_1
 {
     After main
     Object asm/overlay1.o
+}
+Overlay OVY_2
+{
+    After main
+    Object asm/overlay2.o
 }
 Overlay OVY_29
 {
