@@ -560,3 +560,6 @@
 .public sub_0689D6CC
 .public sub_0689D6CC
 .public sub_0689D740
+
+.public sub_020787A8
+.public sub_02078624

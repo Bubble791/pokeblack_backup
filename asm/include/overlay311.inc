@@ -260,3 +260,12 @@
 .public sub_0204A5C8
 .public sub_0204A630
 .public sub_02048F44
+
+.public sub_02199B5C
+.public sub_02199B90
+.public sub_0202DA54
+.public sub_0202DB70
+.public sub_02024EEC
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

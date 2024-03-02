@@ -372,3 +372,11 @@
 .public sub_02049A98
 .public sub_0204A638
 .public sub_02049AF0
+
+.public sub_02024EEC
+.public sub_02045790
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_02049A98
+.public sub_0204B7C8
+.public sub_02049AA0

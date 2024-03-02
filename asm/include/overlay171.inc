@@ -225,3 +225,8 @@
 .public sub_02033254
 .public sub_02033254
 .public sub_02033254
+
+.public sub_02046C40
+.public sub_0203A6A8
+.public sub_0204B758
+.public sub_02033120

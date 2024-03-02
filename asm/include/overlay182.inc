@@ -2556,3 +2556,9 @@
 .public sub_028B1510
 .public sub_01AB3BEC
 .public sub_01CB6060
+
+.public sub_0206D9E4
+.public sub_0206BE44
+.public sub_0206BEE0
+.public sub_0206BDD0
+.public sub_020823AC

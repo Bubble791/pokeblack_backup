@@ -312,3 +312,14 @@
 .public sub_02005748
 .public sub_02005748
 .public sub_02005748
+
+.public sub_0203A6A8
+.public sub_020444A4
+.public sub_02044528
+.public sub_02005B60
+.public sub_0204E15C
+.public sub_0204E240
+.public sub_0204F918
+.public sub_02044528
+.public sub_0204FB4C
+.public sub_0204C560

@@ -181,5 +181,5 @@
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0208D65C
-.public sub_0208D65C
+.public sub_0203A6A8
 .public sub_02074AD8

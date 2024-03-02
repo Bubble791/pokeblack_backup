@@ -222,3 +222,7 @@
 .public sub_02044668
 .public sub_0203A6A8
 .public sub_02043E98
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

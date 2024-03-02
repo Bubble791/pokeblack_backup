@@ -189,3 +189,6 @@
 .public sub_0208D868
 .public sub_0208D868
 .public sub_0208D868
+
+.public sub_0204C438
+.public sub_0204C510

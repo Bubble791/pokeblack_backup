@@ -1764,3 +1764,15 @@
 .public sub_020787A8
 .public sub_0203A1FC
 .public sub_0203A24C
+
+.public sub_02022DA8
+.public sub_02045264
+.public sub_020056B0
+.public sub_020056C8
+.public sub_02044E74
+.public sub_02022DA8
+.public sub_0202AEAC
+.public sub_02024274
+.public sub_0204B6A8
+.public sub_0204B758
+.public sub_02078920

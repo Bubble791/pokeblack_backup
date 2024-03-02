@@ -711,3 +711,13 @@
 .public sub_02040440
 .public sub_02042A6C
 .public sub_0203CB80
+
+.public sub_021C2988
+.public sub_021C5A1C
+.public sub_021C35EC
+.public sub_021C3720
+.public sub_021C48A0
+.public sub_021C545C
+.public sub_021C5544
+.public sub_021C35EC
+.public sub_021C5A48

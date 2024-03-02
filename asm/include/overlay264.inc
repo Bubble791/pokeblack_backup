@@ -61,3 +61,6 @@
 .public sub_02044BD8
 .public sub_02005D8C
 .public sub_02005E10
+
+.public sub_02046C40
+.public sub_0203A6A8

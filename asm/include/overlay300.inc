@@ -551,3 +551,11 @@
 .public sub_021A0870
 .public sub_021A0870
 .public sub_021A262C
+
+.public sub_0203A6A8
+.public sub_02035178
+.public sub_02033120
+.public sub_0204C4A0
+.public sub_0204C560
+.public sub_0204C138
+.public sub_0204C468

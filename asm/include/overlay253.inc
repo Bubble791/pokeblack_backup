@@ -167,3 +167,10 @@
 .public sub_0203A6A8
 .public sub_0217D61C
 .public sub_0203DEFC
+
+.public sub_02046C40
+.public sub_0204B758
+.public sub_0204BF98
+.public sub_0204B7C8
+.public sub_02045A5C
+.public sub_0203DA0C

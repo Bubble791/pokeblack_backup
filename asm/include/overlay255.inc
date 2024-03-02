@@ -2891,3 +2891,11 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_020787A8
+
+.public sub_02007AE4
+.public sub_02024EEC
+.public sub_0204C438
+.public sub_0202B0E8
+.public sub_02033120
+.public sub_02199B5C
+.public sub_02199B90

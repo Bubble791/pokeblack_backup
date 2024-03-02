@@ -174,3 +174,5 @@
 .public sub_020787A8
 .public sub_0204C040
 .public sub_0204C108
+
+.public sub_0203A978

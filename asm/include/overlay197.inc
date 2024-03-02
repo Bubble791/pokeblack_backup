@@ -1285,3 +1285,7 @@
 .public sub_0201CCF8
 .public sub_0203A24C
 .public sub_0203A24C
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

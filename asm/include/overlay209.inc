@@ -1262,3 +1262,11 @@
 .public sub_02015A04
 .public sub_021BFBE0
 .public sub_021BFBF4
+
+.public sub_021EF0F4
+.public sub_021EF104
+.public sub_020064B8
+.public sub_02006564
+.public sub_02005DF4
+.public sub_02050044
+.public sub_0205001C

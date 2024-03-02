@@ -350,3 +350,12 @@
 .public sub_021F6CC0
 .public sub_0202BA64
 .public sub_021F6CC0
+
+.public sub_021F43D0
+.public sub_021F43B4
+.public sub_02033120
+.public sub_021F42E4
+.public sub_021F2D9C
+.public sub_021F6CC0
+.public sub_021F2E84
+.public sub_0202B694

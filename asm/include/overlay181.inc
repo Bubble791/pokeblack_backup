@@ -878,3 +878,6 @@
 .public sub_02078920
 .public sub_02078920
 .public sub_02078920
+
+.public sub_02042788
+.public sub_02021C0C

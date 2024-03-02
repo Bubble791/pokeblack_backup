@@ -447,3 +447,7 @@
 .public sub_0204C560
 .public sub_0202E438
 .public sub_02074A88
+
+.public sub_02046C40
+.public sub_02024FAC
+.public sub_0202B694

@@ -550,3 +550,8 @@
 .public sub_020486F4
 .public sub_021DD708
 .public sub_021DD4DC
+
+.public sub_02045264
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

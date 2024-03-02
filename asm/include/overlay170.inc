@@ -432,3 +432,8 @@
 .public sub_0203A24C
 .public sub_0204AB1C
 .public sub_0203A24C
+
+.public sub_0219D188
+.public sub_0219D4F4
+.public sub_02021280
+.public sub_02021410

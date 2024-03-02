@@ -94,3 +94,8 @@
 .public sub_0204A5C8
 .public sub_0204A630
 .public sub_02048F44
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02048F44

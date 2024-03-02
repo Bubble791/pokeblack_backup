@@ -191,3 +191,7 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_020787A8
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

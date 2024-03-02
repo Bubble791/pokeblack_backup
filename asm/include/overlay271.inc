@@ -929,3 +929,10 @@
 .public sub_020787A8
 .public sub_0200D7F4
 .public sub_0204B570
+
+.public sub_0204C45C
+.public sub_0204C47C
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_0204B570

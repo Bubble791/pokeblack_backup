@@ -668,3 +668,9 @@
 .public sub_0204C124
 .public sub_021A2B04
 .public sub_0204C124
+
+.public sub_0203A6A8
+.public sub_02046C40
+.public sub_02027780
+.public sub_020223B4
+.public sub_0204C124

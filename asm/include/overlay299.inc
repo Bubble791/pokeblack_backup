@@ -417,3 +417,13 @@
 .public sub_0203D564
 .public sub_0219CC90
 .public sub_0203D564
+
+.public sub_0203A6A8
+.public sub_02046C40
+.public sub_0204C550
+.public sub_0204C4A0
+.public sub_0204C560
+.public sub_0203D554
+.public sub_0204C138
+.public sub_02035178
+.public sub_0203D564

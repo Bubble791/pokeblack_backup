@@ -383,3 +383,12 @@
 .public sub_0204C4D4
 .public sub_0204C488
 .public sub_0204C488
+
+.public sub_0203A6A8
+.public sub_02046C40
+.public sub_02035178
+.public sub_02027780
+.public sub_02035198
+.public sub_0219CC28
+.public sub_0219CC3C
+.public sub_0219CC58

@@ -383,3 +383,8 @@
 .public sub_020229B0
 .public sub_02046EFC
 .public sub_020229B0
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02021A3C

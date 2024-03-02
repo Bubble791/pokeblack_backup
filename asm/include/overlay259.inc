@@ -1055,3 +1055,12 @@
 .public sub_0201142C
 .public sub_0219E62C
 .public sub_021A0388
+
+.public sub_0207866C
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02024EEC
+.public sub_0202476C
+.public sub_0200FF78
+.public sub_0200FF8C

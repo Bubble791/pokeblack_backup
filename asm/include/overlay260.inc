@@ -1848,3 +1848,12 @@
 .public sub_0216DC38
 .public sub_02170ED8
 .public sub_02170ED8
+
+.public sub_021C35EC
+.public sub_021C3720
+.public sub_021C48A0
+.public sub_021C35EC
+.public sub_021C3720
+.public sub_021C48A0
+.public sub_021C545C
+.public sub_021C5544

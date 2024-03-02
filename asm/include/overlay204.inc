@@ -663,3 +663,5 @@
 .public sub_0204BCD0
 .public sub_0204BE64
 .public sub_0204C108
+
+.public sub_02046C40

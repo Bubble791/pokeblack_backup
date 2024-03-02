@@ -259,3 +259,8 @@
 .public sub_02016AD8
 .public sub_02017994
 .public sub_020095A0
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02021A3C

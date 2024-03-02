@@ -334,3 +334,12 @@
 .public sub_02013CC0
 .public sub_02013DA0
 .public sub_02018C74
+
+.public sub_02199B5C
+.public sub_02199B90
+.public sub_02034220
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02006254
+.public sub_02018C74

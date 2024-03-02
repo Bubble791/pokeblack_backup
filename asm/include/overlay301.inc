@@ -105,3 +105,5 @@
 .public sub_02045E74
 .public sub_02045E74
 .public sub_02045E74
+
+.public sub_0203A6A8

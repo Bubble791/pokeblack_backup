@@ -880,3 +880,5 @@
 .public sub_02005F0C
 .public sub_02005E54
 .public sub_0203FFC4
+
+.public sub_0204A630

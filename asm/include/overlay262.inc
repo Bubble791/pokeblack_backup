@@ -659,3 +659,7 @@
 .public sub_0200F2C4
 .public sub_0200F368
 .public sub_02017B98
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

@@ -921,3 +921,5 @@
 .public sub_02048210
 .public sub_0204B0B8
 .public sub_02045B7C
+
+.public sub_020504F0

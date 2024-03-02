@@ -389,3 +389,10 @@
 .public sub_0204C124
 .public sub_02199A44
 .public sub_0203A24C
+
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8
+.public sub_02049AA0
+.public sub_0204A630
+.public sub_02015CC8

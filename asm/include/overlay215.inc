@@ -721,3 +721,10 @@
 .public sub_0203DA0C
 .public sub_0203DEFC
 .public sub_0203DEFC
+
+.public sub_02046C40
+.public sub_02033120
+.public sub_0204C488
+.public sub_0204C124
+.public sub_020097D0
+.public sub_0202B694

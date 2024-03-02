@@ -1381,3 +1381,12 @@
 .public sub_0203A1D0
 .public sub_02043E98
 .public sub_02078920
+
+.public sub_021A8FE8
+.public sub_021A942C
+.public sub_02040C64
+.public sub_02046C40
+.public sub_02151AB4
+.public sub_02151ADC
+.public sub_02151AF0
+.public sub_0207C33C

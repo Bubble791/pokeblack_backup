@@ -281,3 +281,6 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208D65C
+
+.public sub_0204B794
+.public sub_02021A3C

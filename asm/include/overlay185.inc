@@ -1147,3 +1147,11 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_020787A8
+
+.public sub_0202DA54
+.public sub_0202E438
+.public sub_02029D40
+.public sub_02199B5C
+.public sub_02199B90
+.public sub_0202DB70
+.public sub_02034220

@@ -270,3 +270,6 @@
 .public sub_0203DAC8
 .public sub_021BD494
 .public sub_0208D65C
+
+.public sub_0203A6A8
+.public sub_0204C560

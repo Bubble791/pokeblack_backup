@@ -261,3 +261,5 @@
 .public sub_021F6B34
 .public sub_021F6B34
 .public sub_0204C140
+
+.public sub_0203DA0C

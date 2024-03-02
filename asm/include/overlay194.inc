@@ -2448,3 +2448,7 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D60C
+
+.public sub_0204A73C
+.public sub_0204C318
+.public sub_02044710

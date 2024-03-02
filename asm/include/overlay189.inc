@@ -1023,3 +1023,11 @@
 .public sub_021A98E8
 .public sub_021AB680
 .public sub_0208D5C4
+
+.public sub_0207ACD8
+.public sub_02157BD0
+.public sub_0207F8AC
+.public sub_0207F900
+.public sub_0207F95C
+.public sub_020586F4
+.public sub_0207ACD8

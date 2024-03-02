@@ -349,6 +349,12 @@
 .public sub_02049A64
 .public sub_0204A5C0
 .public sub_02049A28
-.public sub_02049A28
-.public sub_02049A28
-.public sub_02049A28
+.public sub_0203A7F4
+.public sub_02045A5C
+.public sub_0204B794
+
+.public sub_0204B7C8
+.public sub_02049AA0
+.public sub_02019A88
+.public sub_0204F954
+.public sub_02049DDC

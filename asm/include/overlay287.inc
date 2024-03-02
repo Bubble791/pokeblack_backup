@@ -827,3 +827,5 @@
 .public sub_0202BAEC
 .public sub_021F4320
 .public sub_021FAD48
+
+.public sub_0202B694

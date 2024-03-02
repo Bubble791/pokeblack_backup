@@ -2627,3 +2627,8 @@
 .public sub_0204C5B0
 .public sub_0204C124
 .public sub_0204C124
+
+.public sub_02019C0C
+.public sub_0201C0F0
+.public sub_0204B794
+.public sub_02005748
