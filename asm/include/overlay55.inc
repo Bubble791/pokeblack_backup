@@ -212,3 +212,5 @@
 .public sub_020787A8
 .public sub_0201FF08
 .public sub_0201CCF8
+
+.public sub_02048580

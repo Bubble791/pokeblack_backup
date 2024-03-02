@@ -6643,3 +6643,24 @@
 .public sub_0204B570
 .public sub_0203A24C
 .public sub_0203A24C
+
+.public sub_0689B920
+.public sub_0689B8DC
+.public sub_0689B8EC
+.public sub_0689B7F8
+.public sub_0689B7CC
+.public sub_0689B728
+.public sub_0689B6B4
+.public sub_021DF3E0
+.public sub_06899EA8
+.public sub_06899E5C
+.public sub_06899E34
+.public sub_020267F0
+.public sub_06898CF4
+.public sub_0689D710
+.public sub_0689D784
+.public sub_0689D77C
+.public sub_06898D54
+.public sub_02017D28
+.public sub_02034EE4
+.public sub_0200D6B4
