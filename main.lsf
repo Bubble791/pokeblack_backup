@@ -116,3 +116,9 @@ Overlay OVY_1
     After main
     Object asm/overlay1.o
 }
+Overlay OVY_29
+{
+    After main
+    Object asm/overlay29_thumb.o
+	Object asm/overlay29_arm.o
+}
