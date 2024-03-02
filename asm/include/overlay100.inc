@@ -59,3 +59,6 @@
 .public sub_021804F0
 .public sub_0219AC64
 .public sub_021804D8
+
+.public sub_021B81BC
+.public sub_021B83B4

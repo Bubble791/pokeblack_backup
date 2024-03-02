@@ -67,3 +67,5 @@
 .public sub_020787A8
 .public sub_02044CFC
 .public sub_0203A870
+
+.public sub_02006254

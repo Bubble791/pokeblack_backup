@@ -340,3 +340,5 @@
 .public sub_021B84E4
 .public sub_020061B8
 .public sub_020062D8
+
+.public sub_021B81BC

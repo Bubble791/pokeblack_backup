@@ -174,3 +174,5 @@
 .public sub_021EF5F0
 .public sub_021EF600
 .public sub_021EF608
+
+.public sub_021B8278

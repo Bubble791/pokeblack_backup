@@ -227,3 +227,6 @@
 .public sub_021B84E8
 .public sub_0200BAC8
 .public sub_0200BAC8
+
+.public sub_021B81BC
+.public sub_021B83B4

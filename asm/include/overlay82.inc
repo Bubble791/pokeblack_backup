@@ -160,3 +160,6 @@
 .public sub_02045B7C
 .public sub_0203DF44
 .public sub_0203DF44
+
+.public sub_02044668
+.public sub_0208D868

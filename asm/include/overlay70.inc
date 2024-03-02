@@ -409,3 +409,6 @@
 .public sub_02042BE8
 .public sub_0217F658
 .public sub_0217F658
+
+.public sub_02046C40
+.public sub_0217CF28

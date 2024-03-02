@@ -359,3 +359,5 @@
 .public sub_0202472C
 .public sub_020243D0
 .public sub_02048564
+
+.public sub_0204C560

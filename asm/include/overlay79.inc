@@ -381,3 +381,6 @@
 .public sub_0202C258
 .public sub_0202C258
 .public sub_0202C258
+
+.public sub_020273C0
+.public sub_0204C178

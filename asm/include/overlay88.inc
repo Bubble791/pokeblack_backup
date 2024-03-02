@@ -132,3 +132,7 @@
 .public sub_0201740C
 .public sub_02027ACC
 .public sub_0203DA48
+
+.public sub_0202E1DC
+.public sub_0202DC00
+.public sub_0202DBE4
