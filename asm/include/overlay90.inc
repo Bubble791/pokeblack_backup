@@ -1,0 +1,11 @@
+#include <nitro/fs/overlay.h>
+#pragma once
+.public sub_02016AD8
+.public sub_0201793C
+.public sub_0200BAC4
+.public sub_02016AD8
+.public sub_0201793C
+.public sub_0200BAC4
+.public sub_02016AD8
+.public sub_0201793C
+.public sub_0200BAC4

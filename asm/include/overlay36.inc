@@ -12786,3 +12786,16 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0201C864
+
+.public _021D57A0
+.public sub_020188DC
+.public sub_0215D10C
+.public sub_02025038
+.public sub_021EA9F8
+.public sub_021EAA5C
+.public sub_021EAA90
+.public sub_021EAAA8
+.public sub_0204FDF8
+.public sub_0204F954
+.public sub_02040C64
+.public sub_020189CC
