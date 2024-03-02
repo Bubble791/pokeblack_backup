@@ -680,3 +680,5 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_021A07C8
+
+.public sub_0203A24C

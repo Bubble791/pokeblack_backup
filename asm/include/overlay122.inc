@@ -119,3 +119,6 @@
 .public sub_02016AF0
 .public sub_0218105C
 .public sub_02006254
+
+.public sub_021B81BC
+.public sub_021B83B4

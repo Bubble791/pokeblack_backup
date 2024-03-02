@@ -76,3 +76,6 @@
 .public sub_021672F8
 .public sub_02167308
 .public sub_0215EA80
+
+.public sub_021B81BC
+.public sub_021B83B4

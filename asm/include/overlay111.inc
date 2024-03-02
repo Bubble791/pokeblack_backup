@@ -28,3 +28,6 @@
 .public sub_021B84E8
 .public sub_021B8520
 .public sub_021B8504
+
+.public sub_021B81BC
+.public sub_021B83B4

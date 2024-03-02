@@ -476,3 +476,8 @@
 .public sub_020787A8
 .public sub_0204B4E4
 .public sub_0219F730
+
+.public sub_02199C58
+.public sub_02045A5C
+.public sub_0204B794
+.public sub_0204B7C8

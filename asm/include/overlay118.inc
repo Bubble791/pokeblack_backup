@@ -15,3 +15,6 @@
 .public sub_020507D4
 .public sub_021B8248
 .public sub_021B8258
+
+.public sub_021B81BC
+.public sub_021B83B4

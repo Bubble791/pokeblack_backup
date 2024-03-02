@@ -70,3 +70,6 @@
 .public sub_0219A664
 .public sub_021804F0
 .public sub_0219A664
+
+.public sub_021B81BC
+.public sub_021B83B4

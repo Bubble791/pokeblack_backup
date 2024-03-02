@@ -217,3 +217,6 @@
 .public sub_02048244
 .public sub_020335C4
 .public sub_02033360
+
+.public sub_02033120
+.public sub_0202B694

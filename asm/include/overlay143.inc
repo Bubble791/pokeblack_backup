@@ -1106,3 +1106,10 @@
 .public sub_02048564
 .public sub_020484F4
 .public sub_0204713C
+
+.public sub_02044528
+.public sub_02048080
+.public sub_020480A8
+.public sub_02044668
+.public sub_0202E1DC
+.public sub_0202DA54

@@ -103,3 +103,6 @@
 .public sub_021862B8
 .public sub_021866E4
 .public sub_02186320
+
+.public sub_021B81BC
+.public sub_021B83B4

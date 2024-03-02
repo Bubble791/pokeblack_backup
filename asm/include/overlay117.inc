@@ -140,3 +140,6 @@
 .public sub_021BA624
 .public sub_021BA6BC
 .public sub_021BA624
+
+.public sub_021B81BC
+.public sub_021B83B4

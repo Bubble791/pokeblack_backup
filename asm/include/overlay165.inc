@@ -1385,6 +1385,10 @@
 .public sub_02026820
 .public sub_02026820
 .public sub_02020C8C
-.public sub_013D9C28
-.public sub_013D9E00
-.public sub_02922E84
+
+.public sub_02008538
+.public sub_020244B4
+.public sub_020244C0
+.public sub_020244A4
+.public sub_020246E4
+.public sub_0202DB70

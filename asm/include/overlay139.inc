@@ -348,3 +348,5 @@
 .public sub_02048244
 .public sub_0203DEFC
 .public sub_0203DF20
+
+.public sub_0204C438

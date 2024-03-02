@@ -290,3 +290,5 @@
 .public sub_0203A6A8
 .public sub_0200BACC
 .public sub_0200BACC
+
+.public sub_021B83B4

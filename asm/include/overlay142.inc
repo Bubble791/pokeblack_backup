@@ -1087,3 +1087,6 @@
 .public sub_0204AB0C
 .public sub_02077A4C
 .public sub_0203A24C
+
+.public sub_02035178
+.public sub_02024EEC

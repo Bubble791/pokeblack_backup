@@ -945,3 +945,8 @@
 .public sub_020074E0
 .public sub_020074E8
 .public sub_02007424
+
+.public sub_02015C78
+.public sub_02035178
+.public sub_02033120
+.public sub_02024EEC

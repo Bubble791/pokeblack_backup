@@ -131,3 +131,5 @@
 .public sub_0202451C
 .public sub_02048838
 .public sub_02048838
+
+.public sub_021B870C

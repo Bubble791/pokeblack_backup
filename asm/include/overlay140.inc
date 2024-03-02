@@ -344,3 +344,7 @@
 .public sub_0219E2E4
 .public sub_02006254
 .public sub_0219EA3C
+
+.public sub_02045A5C
+.public sub_0204B7C8
+.public sub_02017BCC

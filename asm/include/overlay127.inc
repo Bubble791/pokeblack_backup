@@ -490,3 +490,8 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
+
+.public sub_02010288
+.public sub_0202DBE4
+.public sub_0202E1DC
+.public sub_021B870C

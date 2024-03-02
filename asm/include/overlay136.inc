@@ -44,3 +44,6 @@
 .public sub_021EEE94
 .public sub_02068458
 .public sub_021EEEA4
+
+.public sub_021B81BC
+.public sub_021B83B4
