@@ -11,11 +11,6 @@ Static main
 	StackSize 0 2048
     Object asm/asm_0_thumb.o
     Object asm/asm_2_thumb.o
-    Object asm/asm_3_arm.o
-    Object asm/asm_4_thumb.o
-    Object asm/asm_5_arm.o
-    Object asm/asm_6_thumb.o
-    Object asm/asm_7_arm.o
     Object asm/asm_8_thumb.o
     Object asm/asm_9_arm.o
     Object asm/asm_10_thumb.o

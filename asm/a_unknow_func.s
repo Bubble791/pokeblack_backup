@@ -28,12 +28,6 @@ sub_01FF936C: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_01FF936C
 
-    thumb_func_start sub_0200413A
-sub_0200413A: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0200413A
-
     thumb_func_start sub_02004190
 sub_02004190: ; 0x02073FB4
 	bx lr
@@ -729,3 +723,21 @@ sub_0276952C: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0276952C
+
+    thumb_func_start sub_027694DC
+sub_027694DC: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_027694DC
+
+    thumb_func_start sub_02769588
+sub_02769588: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02769588
+
+    thumb_func_start sub_02769594
+sub_02769594: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02769594

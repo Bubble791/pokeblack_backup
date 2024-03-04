@@ -12253,7 +12253,7 @@
 .public sub_01FF8FAC
 .public sub_02005BC4
 .public sub_0207C4F4
-.public sub_0200413A
+.public SVC_GetCRC16
 .public sub_0207C7CC
 .public sub_0207C7D4
 .public sub_02704318

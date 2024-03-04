@@ -132,7 +132,7 @@ _0207C5C0:
 	ldr r0, _0207C620 ; =0x0000FFFF
 	ldr r1, [r4, #8]
 	add r2, r5, #0
-	bl sub_0200413A
+	bl SVC_GetCRC16
 	ldr r1, [r4, #8]
 	add r2, r5, #0
 	strh r0, [r1, #0x10]
@@ -185,7 +185,7 @@ _0207C642:
 	strh r6, [r0, #0x10]
 	ldr r0, _0207C694 ; =0x0000FFFF
 	ldr r1, [r4, #8]
-	bl sub_0200413A
+	bl SVC_GetCRC16
 	ldr r1, [r4, #8]
 	strh r0, [r1, #0x10]
 	ldr r0, [r4, #8]
