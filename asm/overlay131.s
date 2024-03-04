@@ -369,7 +369,7 @@ _021EEF40:
 	strh r0, [r4, #0x38]
 	ldr r0, [sp, #0x18]
 	lsl r1, r1, #0xe
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, sp, #0x18
 	str r0, [sp, #0x18]
 	bl sub_02074694
@@ -639,7 +639,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x50]
 	ldr r2, [r4, #0x40]
 	add r6, r1, r0
@@ -657,7 +657,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x4c]
 	ldr r2, [r4, #0x40]
 	add r7, r1, r0
@@ -675,7 +675,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x48]
 	add r0, r1, r0
 	str r0, [sp, #0x44]
@@ -696,7 +696,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x5c]
 	ldr r2, [r4, #0x40]
 	add r6, r1, r0
@@ -714,7 +714,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x58]
 	ldr r2, [r4, #0x40]
 	add r7, r1, r0
@@ -732,7 +732,7 @@ _021EF1A8:
 	orr r0, r1
 	ldr r1, [r4, #0x44]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x54]
 	add r0, r1, r0
 	str r7, [sp, #0x3c]

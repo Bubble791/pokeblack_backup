@@ -5908,7 +5908,7 @@ _0219C9EC:
 	blx sub_0208E144
 _0219C9F8:
 	blx sub_0208DA4C
-	bl sub_02073E28
+	bl FX_Sqrt
 	str r0, [sp, #4]
 	cmp r4, #0
 	ble _0219CA16

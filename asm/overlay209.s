@@ -3954,11 +3954,11 @@ _021BC048:
 	bl ovy209_21bce64
 	ldr r0, [sp, #0x228]
 	ldr r1, [sp, #0xb4]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x228]
 	ldr r0, [sp, #0x22c]
 	ldr r1, [sp, #0xb4]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x22c]
 	add r0, r7, #0
 	add r1, sp, #0x114
@@ -4136,14 +4136,14 @@ _021BC178:
 	add r1, #0xd4
 	ldr r0, [r4, r5]
 	ldr r1, [r1]
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r4, #0
 	str r0, [r4, r5]
 	add r0, r5, #4
 	add r1, #0xd8
 	ldr r0, [r4, r0]
 	ldr r1, [r1]
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #4
 	str r0, [r4, r1]
 	ldr r0, _021BC2B0 ; =0x0400046C

@@ -900,11 +900,11 @@ _0219D5AC:
 	orr r0, r1
 	str r0, [sp, #0x34]
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x38]
 	ldr r0, [sp, #0x34]
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	neg r0, r0
 	str r0, [sp, #0x28]
 	add r0, r4, #0
@@ -914,7 +914,7 @@ _0219D5AC:
 	lsl r1, r1, #0xb
 	str r0, [sp, #0x3c]
 	str r1, [sp, #0x40]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [sp, #0x30]
 	asr r1, r0, #0x1f
 	add r3, r7, #0
@@ -928,11 +928,11 @@ _0219D5AC:
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x44]
 	ldr r0, [sp, #0x3c]
 	ldr r1, [sp, #0x40]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [sp, #0x30]
 	asr r1, r0, #0x1f
 	add r3, r7, #0
@@ -946,7 +946,7 @@ _0219D5AC:
 	lsr r0, r2, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	neg r3, r0
 	ldr r0, [sp, #0x44]
 	ldr r1, [sp, #0x38]

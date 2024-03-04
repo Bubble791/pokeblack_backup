@@ -641,9 +641,9 @@
 .public sub_0208DA4C
 .public sub_02074180
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D374
 .public sub_0208DF14
 .public sub_0208D374

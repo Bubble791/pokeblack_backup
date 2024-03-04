@@ -44482,7 +44482,7 @@ _021AF0F0:
 	blx sub_0208E144
 _021AF0FE:
 	blx sub_0208DA4C
-	bl sub_02073E28
+	bl FX_Sqrt
 	add r1, r5, #0
 	mul r1, r5
 	mul r0, r1
@@ -44504,7 +44504,7 @@ _021AF124:
 	blx sub_0208E144
 _021AF132:
 	blx sub_0208DA4C
-	bl sub_02073E28
+	bl FX_Sqrt
 	add r6, r0, #0
 	add r0, r4, #0
 	mul r0, r4
@@ -45381,13 +45381,13 @@ _021AF81A:
 	mov r0, #0xff
 	lsl r0, r0, #0xc
 	add r1, r7, #0
-	bl sub_02073DF0
-	bl sub_02073E28
-	bl sub_02073E28
+	bl FX_Div
+	bl FX_Sqrt
+	bl FX_Sqrt
 	add r1, r0, #0
 	mov r0, #1
 	lsl r0, r0, #0x1c
-	bl sub_02073DF0
+	bl FX_Div
 	mov r5, #0
 	asr r7, r0, #0xc
 	strb r5, [r4]
@@ -126347,7 +126347,7 @@ ovy167_21d6728: ; 0x021D6728
 	lsl r0, r5, #0xc
 	add r6, r3, #0
 	ldr r7, [sp, #0x28]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r4, r0, #0xc
 	ldr r0, [sp, #4]
 	add r1, sp, #0x10
@@ -126840,7 +126840,7 @@ _021D6AC8:
 	mul r1, r6
 	lsl r0, r0, #1
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp]
 	str r0, [r5, #0x34]
 	str r1, [r5, #0x30]

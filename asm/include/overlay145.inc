@@ -334,7 +334,7 @@
 .public sub_02006254
 .public sub_0208D65C
 .public sub_0203D554
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0204C140
 .public sub_0219E00C
@@ -349,7 +349,7 @@
 .public sub_0204C140
 .public sub_0204C124
 .public sub_0208D65C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0204C140
 .public sub_0219EF70
@@ -506,10 +506,10 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0203DA84
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0219E00C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0204C140
 .public sub_0219E7E4

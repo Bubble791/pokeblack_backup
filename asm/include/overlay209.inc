@@ -310,8 +310,8 @@
 .public sub_02072470
 .public sub_02072C48
 .public sub_0207349C
-.public sub_02073DF0
-.public sub_02073DF0
+.public FX_Div
+.public FX_Div
 .public sub_0208D374
 .public sub_0208DF14
 .public sub_0208D374
@@ -329,8 +329,8 @@
 .public sub_020725C0
 .public sub_02072BA4
 .public sub_02073FD4
-.public sub_02073DF0
-.public sub_02073DF0
+.public FX_Div
+.public FX_Div
 .public sub_021BCE44
 .public sub_0208D60C
 .public sub_0208D60C

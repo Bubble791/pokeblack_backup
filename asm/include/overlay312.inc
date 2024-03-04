@@ -316,4 +316,4 @@
 .public sub_0208D65C
 .public sub_0202B460
 .public sub_020443B4
-.public sub_02073E28
+.public FX_Sqrt

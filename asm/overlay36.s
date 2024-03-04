@@ -10022,11 +10022,11 @@ _0218436E:
 _02184382:
 	ldr r0, [r4, #0x34]
 	ldr r1, [r4, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	add r5, r0, #0
 	ldr r0, [r4, #0x3c]
 	ldr r1, [r4, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0xc
 	ldrh r0, [r4, #0x14]
 	asr r2, r5, #0xc
@@ -10145,11 +10145,11 @@ _0218446A:
 	bl ovy36_2185608
 	ldr r0, [r4, #0x34]
 	ldr r1, [r4, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	add r5, r0, #0
 	ldr r0, [r4, #0x3c]
 	ldr r1, [r4, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0xc
 	ldrh r0, [r4, #0x14]
 	asr r2, r5, #0xc
@@ -10688,7 +10688,7 @@ _02184884:
 	ldr r0, [r0, #4]
 	lsl r1, r1, #0xc
 	str r0, [sp, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x24]
 	ldr r0, [sp]
 	mov r4, #0
@@ -10828,7 +10828,7 @@ ovy36_2184988: ; 0x02184988
 	ldr r0, [sp]
 	ldr r0, [r0, #4]
 	str r0, [sp, #0x10]
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp]
 	mov r1, #0x1f
@@ -10990,7 +10990,7 @@ ovy36_2184ac8: ; 0x02184AC8
 	ldr r0, [r0, #4]
 	add r6, r2, #0
 	str r0, [sp, #0xc]
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp]
 	ldr r1, [sp, #0xc]
@@ -11141,13 +11141,13 @@ ovy36_2184bf4: ; 0x02184BF4
 	mov r1, #2
 	lsl r1, r1, #0xc
 	str r0, [sp, #0x30]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x58]
 	ldr r0, [r7, #8]
 	str r0, [sp, #0x5c]
 	ldr r0, [r4, #4]
 	ldr r1, [sp, #0x5c]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r0, r0, #0xc
 	str r0, [sp, #0x64]
 	add r1, r0, #0
@@ -11616,7 +11616,7 @@ ovy36_2184fb8: ; 0x02184FB8
 	add r4, r0, #0
 	add r0, r6, #0
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp]
 	add r0, r7, #0
 	add r1, r6, #0
@@ -11653,7 +11653,7 @@ ovy36_2185004: ; 0x02185004
 	add r4, r0, #0
 	add r0, r7, #0
 	add r6, r1, #0
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0xc
 	lsr r0, r4, #1
 	sub r5, r1, r0
@@ -11662,12 +11662,12 @@ ovy36_2185004: ; 0x02185004
 	bne _02185038
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_02073F8C
+	bl FX_ModS32
 	mov r1, #1
 	add r4, r0, #0
 	add r0, r6, #0
 	lsl r1, r1, #0xd
-	bl sub_02073DF0
+	bl FX_Div
 	cmp r0, r4
 	bge _02185038
 	add r5, r5, #1
@@ -24201,7 +24201,7 @@ _0218AD3A:
 	add r0, r7, r0
 	ldr r1, [sp, #4]
 	neg r0, r0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0x28]
 	add r0, r1, r0
 	str r0, [r4, #0xc]
@@ -26436,43 +26436,43 @@ _0218BDAE:
 	strh r0, [r5, #0x30]
 	ldr r0, [sp, #0x50]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x4c]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x48]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	strh r7, [r5, #0x34]
 	strh r6, [r5, #0x36]
 	strh r0, [r5, #0x32]
 	ldr r0, [sp, #0x44]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x40]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x3c]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	strh r7, [r5, #0x3a]
 	strh r6, [r5, #0x3c]
 	strh r0, [r5, #0x38]
 	ldr r0, [sp, #0x38]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x34]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x30]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	strh r0, [r5, #0x3e]
 	add r0, r5, #0
 	add r0, #0x40
@@ -26482,15 +26482,15 @@ _0218BDAE:
 	strh r6, [r0]
 	ldr r0, [sp, #0x2c]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x28]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x24]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #0
 	add r1, #0x44
 	strh r0, [r1]
@@ -26502,15 +26502,15 @@ _0218BDAE:
 	strh r6, [r0]
 	ldr r0, [sp, #0x20]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x1c]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x18]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #0
 	add r1, #0x4a
 	strh r0, [r1]
@@ -26522,15 +26522,15 @@ _0218BDAE:
 	strh r6, [r0]
 	ldr r0, [sp, #0x14]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #0x10]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0xc]
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #0
 	add r1, #0x50
 	strh r0, [r1]
@@ -46901,7 +46901,7 @@ ovy36_2195768: ; 0x02195768
 	mov r4, #1
 	lsl r4, r4, #0xe
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r5, r0, #0
 	ldr r0, [sp]
 	add r1, sp, #0xc
@@ -47010,7 +47010,7 @@ ovy36_219584c: ; 0x0219584C
 	bl sub_021B05EC
 	mov r1, #1
 	lsl r1, r1, #0xe
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp]
 	add r1, sp, #0x1c
@@ -53819,11 +53819,11 @@ ovy36_2198da0: ; 0x02198DA0
 	add r5, r0, #0
 	ldr r0, [r4, #4]
 	ldr r1, [r6, #0x14]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #4]
 	ldr r0, [r4, #4]
 	ldr r1, [r6]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [r4, #4]
 	ldr r1, [r5, #4]
 	str r0, [r5]
@@ -53846,19 +53846,19 @@ _02198DD8:
 _02198DDA:
 	mov r1, #1
 	lsl r1, r1, #0xe
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #0xc]
 	ldr r0, [r5]
 	ldr r1, [r5, #0xc]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5]
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #4]
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0xc]
-	bl sub_02073DF0
+	bl FX_Div
 	ldrh r1, [r4]
 	str r0, [r5, #8]
 	ldr r0, [r4, #0xc]
@@ -55553,12 +55553,12 @@ _02199AEC:
 	mov r1, #1
 	ldr r0, [sp, #0x10]
 	lsl r1, r1, #0x14
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x10]
 	mov r1, #3
 	ldr r0, [sp, #0xc]
 	lsl r1, r1, #0x12
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0xc]
 	mov r0, #1
 	lsl r0, r0, #0x14
@@ -55572,7 +55572,7 @@ _02199AEC:
 _02199B2A:
 	ldr r1, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #8]
 	cmp r0, #0
@@ -55593,7 +55593,7 @@ _02199B42:
 _02199B52:
 	ldr r1, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r2, r0, #0
 	ldr r0, [sp, #4]
 	cmp r0, #0
@@ -56785,7 +56785,7 @@ ovy36_219a35c: ; 0x0219A35C
 	add r0, r4, #0
 	add r6, r2, #0
 	add r7, r3, #0
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0x1f
 	lsr r2, r0, #0x13
 	lsl r1, r1, #0xd
@@ -56802,7 +56802,7 @@ ovy36_219a35c: ; 0x0219A35C
 	str r0, [r7]
 	ldr r1, [r5]
 	add r0, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	asr r2, r0, #0x1f
 	lsr r1, r0, #0x13
 	lsl r2, r2, #0xd
@@ -76279,7 +76279,7 @@ ovy36_21a33d0: ; 0x021A33D0
 	bl ovy36_21a34b4
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	add r2, r0, #0
 	ldrh r0, [r4, #0xc]
 	ldrh r1, [r4, #0x14]
@@ -76512,7 +76512,7 @@ ovy36_21a3570: ; 0x021A3570
 	lsr r0, r0, #0xc
 	orr r0, r1
 	ldr r1, [sp, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r5, #0x20]
 	ldr r2, [sp, #4]
 	add r0, r1, r0
@@ -76529,7 +76529,7 @@ ovy36_21a3570: ; 0x021A3570
 	lsr r0, r0, #0xc
 	orr r0, r1
 	ldr r1, [sp, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r5, #0x24]
 	ldr r2, [sp, #4]
 	add r0, r1, r0
@@ -76546,7 +76546,7 @@ ovy36_21a3570: ; 0x021A3570
 	lsr r0, r0, #0xc
 	orr r0, r1
 	ldr r1, [sp, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r5, #0x28]
 	add r0, r1, r0
 	str r0, [sp, #0x14]
@@ -76573,7 +76573,7 @@ ovy36_21a361c: ; 0x021A361C
 	bl ovy36_21a34b4
 	ldr r0, [sp]
 	ldr r1, [sp, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	add r3, r0, #0
 	ldrh r1, [r5, #0x38]
 	ldrh r2, [r5, #0x3a]
@@ -106911,7 +106911,7 @@ ovy36_21b21dc: ; 0x021B21DC
 	pop {r4, r5, r6, r7, pc}
 _021B2376:
 	ldr r0, [sp, #0x38]
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x3c]
 	cmp r7, r0
@@ -107036,7 +107036,7 @@ _021B2446:
 	ldr r0, _021B24D0 ; =0x020946BC
 	ldrh r0, [r0, r1]
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r0, #0
 	add r0, sp, #0x14
 	add r2, r0, #0
@@ -107060,7 +107060,7 @@ _021B2446:
 	ldr r0, _021B24D0 ; =0x020946BC
 	ldrh r0, [r0, r1]
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r0, #0
 	add r0, r4, #0
 	add r2, r4, #0
@@ -107137,7 +107137,7 @@ ovy36_21b2530: ; 0x021B2530
 	add r1, r0, #0
 	lsl r0, r4, #0xc
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	add r0, r5, #0
 	bl sub_021B0CF0
@@ -107223,7 +107223,7 @@ ovy36_21b25dc: ; 0x021B25DC
 	ldr r1, [sp, #4]
 	lsl r0, r0, #0xc
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #8]
 	ldr r2, [sp]
 	ldr r1, [r7, #4]
@@ -107244,7 +107244,7 @@ ovy36_21b25dc: ; 0x021B25DC
 	orr r0, r1
 	ldr r1, [sp, #4]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #4]
 	ldr r1, [r6, #4]
 	add r0, r0, r1
@@ -107359,7 +107359,7 @@ ovy36_21b2714: ; 0x021B2714
 	add r1, r0, #0
 	lsl r0, r7, #0xc
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_021B0D10
@@ -107522,7 +107522,7 @@ _021B288C:
 	str r4, [sp, #0x3c]
 	blx sub_020744EC
 	ldr r1, [sp, #0x28]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0x24]
 	asr r0, r0, #0xc
 	str r0, [sp, #0x14]
@@ -107535,7 +107535,7 @@ _021B288C:
 	lsl r0, r0, #4
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #0x34]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0xc
 	ldr r0, [sp, #0x18]
 	sub r0, r0, r1
@@ -107750,7 +107750,7 @@ _021B2A1A:
 	blx sub_02074254
 	ldr r1, [sp, #0x24]
 	add r0, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp, #0x8c]
 	asr r6, r7, #0x1f
@@ -107865,7 +107865,7 @@ _021B2A1A:
 	add r0, sp, #0x5c
 	blx sub_020744EC
 	ldr r1, [sp, #0x18]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0x20]
 	asr r0, r0, #0xc
 	add r1, #0x10
@@ -108069,7 +108069,7 @@ ovy36_21b2cfc: ; 0x021B2CFC
 	bl sub_021B0CAC
 	lsl r0, r0, #0xc
 	lsl r1, r6, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp]
 	ldr r0, [r4, #4]
 	mov r2, #2
@@ -108331,7 +108331,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x1c]
 	ldr r1, [r4, #8]
 	ldr r0, [r5, #8]
@@ -108349,7 +108349,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x20]
 	ldr r1, [r4, #0xc]
 	ldr r0, [r5, #0xc]
@@ -108367,7 +108367,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x24]
 	ldr r1, [r4, #0x10]
 	ldr r0, [r5, #0x10]
@@ -108385,7 +108385,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x10]
 	ldr r1, [r4, #0x14]
 	ldr r0, [r5, #0x14]
@@ -108403,7 +108403,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x14]
 	ldr r1, [r4, #0x18]
 	ldr r0, [r5, #0x18]
@@ -108421,7 +108421,7 @@ ovy36_21b2f04: ; 0x021B2F04
 	lsr r0, r2, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x18]
 	ldr r2, [sp, #0x1c]
 	ldr r1, [r5, #4]
@@ -108530,7 +108530,7 @@ _021B3102:
 	lsr r0, r0, #0xc
 	orr r0, r1
 	lsl r1, r6, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r3, r0, #0
 	ldr r2, [r5, #8]
 	ldr r0, [r5, #0xc]
@@ -108736,7 +108736,7 @@ ovy36_21b3294: ; 0x021B3294
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0xc]
 	add r2, r6, #0
 	add r0, r1, r0
@@ -108756,7 +108756,7 @@ ovy36_21b3294: ; 0x021B3294
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x10]
 	add r2, r6, #0
 	add r0, r1, r0
@@ -108776,7 +108776,7 @@ ovy36_21b3294: ; 0x021B3294
 	lsr r0, r2, #0xc
 	orr r0, r1
 	add r1, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0x14]
 	ldr r2, [sp, #4]
 	add r0, r1, r0
@@ -109162,7 +109162,7 @@ ovy36_21b365c: ; 0x021B365C
 	bl sub_021B0CAC
 	lsl r0, r0, #0xc
 	lsl r1, r7, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [r5, #4]
 	mov r2, #2
@@ -109383,7 +109383,7 @@ ovy36_21b3830: ; 0x021B3830
 	blx sub_02074254
 	ldr r1, [sp, #8]
 	add r0, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0xc]
 	asr r0, r0, #0x1f
 	str r0, [sp, #0x10]
@@ -115137,7 +115137,7 @@ _021B62B2:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0xc]
 	str r0, [r1, #0xc]
 	add sp, #0x14
@@ -129894,7 +129894,7 @@ _021BD262:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [r5, #4]
 	ldr r1, [r5, #8]
 	str r0, [r5, #0x14]
@@ -139657,7 +139657,7 @@ ovy36_21c1ca8: ; 0x021C1CA8
 	orr r0, r1
 	ldrh r1, [r4, #8]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r4, #0xc]
 	add r0, r1, r0
 	str r0, [r4]
@@ -150927,7 +150927,7 @@ _021C7154:
 	add r0, r0, r1
 	ldr r1, [sp, #0xc]
 	neg r0, r0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0x3c]
 	add r1, r1, r0
 	add r0, r4, r6
@@ -152561,7 +152561,7 @@ _021C7EEA:
 	add r2, sp, #0x28
 	ldr r0, [r0, r1]
 	ldr r1, [r2, r1]
-	bl sub_02073DF0
+	bl FX_Div
 	cmp r5, r0
 	bge _021C7F06
 	add r5, r0, #0

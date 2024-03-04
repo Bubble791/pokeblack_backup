@@ -2302,7 +2302,7 @@
 .public sub_0204C178
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02073E28
+.public FX_Sqrt
 .public sub_0208D65C
 .public sub_0208D60C
 .public sub_0208D60C
@@ -2429,7 +2429,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D60C

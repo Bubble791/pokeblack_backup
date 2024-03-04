@@ -40,9 +40,9 @@
 .public sub_021B84F0
 .public sub_021B84E8
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_02167308
 .public sub_021672F8
 .public sub_02167308

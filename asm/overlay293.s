@@ -1502,7 +1502,7 @@ _021A26AE:
 	lsl r7, r7, #0xc
 	ldr r0, [r5, #0x24]
 	add r1, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r4, _021A280C ; =0x0B60B60B
 	asr r1, r0, #0x1f
 	add r2, r4, #0
@@ -1517,7 +1517,7 @@ _021A26AE:
 	str r0, [sp, #0x30]
 	ldr r0, [r5, #0x28]
 	add r1, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0x1f
 	add r2, r4, #0
 	mov r3, #0xb6
@@ -1568,11 +1568,11 @@ _021A26AE:
 	orr r0, r1
 	str r0, [sp, #0x40]
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x44]
 	ldr r0, [sp, #0x40]
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	neg r0, r0
 	str r0, [sp, #0x20]
 	ldr r1, [sp, #0x3c]
@@ -1591,7 +1591,7 @@ _021A26AE:
 	lsr r1, r7, #1
 	str r0, [sp, #0x48]
 	str r1, [sp, #0x4c]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [sp, #0x34]
 	ldr r3, [sp, #0x38]
 	asr r1, r0, #0x1f
@@ -1604,11 +1604,11 @@ _021A26AE:
 	lsr r0, r0, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x50]
 	ldr r0, [sp, #0x48]
 	ldr r1, [sp, #0x4c]
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r2, [sp, #0x34]
 	ldr r3, [sp, #0x38]
 	asr r1, r0, #0x1f
@@ -1621,7 +1621,7 @@ _021A26AE:
 	lsr r0, r2, #0xc
 	orr r0, r1
 	add r1, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	neg r3, r0
 	ldr r0, [sp, #0x50]
 	ldr r1, [sp, #0x44]
@@ -2677,7 +2677,7 @@ _021A2F60:
 	add r1, r0, #0
 	ldr r0, [r4, #0x14]
 	sub r0, r5, r0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x18]
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3062,7 +3062,7 @@ _021A3266:
 	add r1, r0, #0
 	ldr r0, [r4, #0x1c]
 	sub r0, r5, r0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x20]
 	cmp r7, #0
 	beq _021A3288
@@ -3776,7 +3776,7 @@ _021A37F6:
 	add r1, r0, #0
 	mov r0, #1
 	lsl r0, r0, #0x10
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x28]
 	mov r0, #1
 	mov r1, #0
@@ -3861,7 +3861,7 @@ _021A38AA:
 	add r1, r0, #0
 	mov r0, #1
 	lsl r0, r0, #0x10
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x28]
 	ldr r0, [r4, #4]
 	add sp, #0x10

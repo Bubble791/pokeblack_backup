@@ -2279,9 +2279,9 @@
 .public sub_0218EEC4
 .public sub_0218EED0
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_02167308
 .public sub_021672F8
 .public sub_02167308
@@ -2383,8 +2383,8 @@
 .public sub_0215D6DC
 .public sub_020192E4
 .public sub_020192E4
-.public sub_02073DF0
-.public sub_02073DF0
+.public FX_Div
+.public FX_Div
 .public sub_021925A4
 .public sub_02166FC8
 .public sub_02166FFC

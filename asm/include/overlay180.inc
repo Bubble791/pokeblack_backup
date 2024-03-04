@@ -58,7 +58,7 @@
 .public sub_0208D3BC
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0219C764
 .public sub_0208D3BC
@@ -71,7 +71,7 @@
 .public sub_0208D3BC
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0219C8F0
 .public sub_02074018
@@ -91,7 +91,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0219C8F0
 .public sub_0219B08C
@@ -338,8 +338,8 @@
 .public sub_0208D3BC
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073DF0
-.public sub_02073DF0
+.public FX_Div
+.public FX_Div
 .public sub_0208D60C
 .public sub_020484D8
 .public sub_020484DC

@@ -155,8 +155,8 @@
 .public sub_02034330
 .public sub_02074A88
 .public sub_02074A88
-.public sub_02073DFC
-.public sub_02073DFC
+.public FX_Inv
+.public FX_Inv
 .public sub_020749CC
 .public sub_020749CC
 .public sub_0203DA2C
@@ -219,8 +219,8 @@
 .public sub_02044CFC
 .public sub_02045A5C
 .public sub_0204B7C8
-.public sub_02073DFC
-.public sub_02073DFC
+.public FX_Inv
+.public FX_Inv
 .public sub_0207C1E8
 .public sub_020749CC
 .public sub_020749CC

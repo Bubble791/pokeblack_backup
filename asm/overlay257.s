@@ -2508,10 +2508,10 @@ ovy257_219aa18: ; 0x0219AA18
 	lsl r5, r5, #0xc
 	add r0, r5, #0
 	add r4, r1, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	str r0, [sp, #8]
 	add r0, r5, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	mov r2, #0
 	str r0, [sp, #0x14]
 	str r2, [sp, #0xc]
@@ -2808,10 +2808,10 @@ _0219AC7C:
 _0219AC7E:
 	lsl r5, r5, #0xc
 	add r0, r5, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	str r0, [sp, #0x38]
 	add r0, r5, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	str r0, [sp, #0x44]
 	mov r5, #0
 	str r5, [sp, #0x3c]
@@ -26474,7 +26474,7 @@ _021A6950:
 	lsl r4, r4, #0xa
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #4]
 	ldr r1, [r1]
 	add r1, r1, r0
@@ -26482,7 +26482,7 @@ _021A6950:
 	str r1, [r0]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [r7]
 	add sp, #0x20
 	sub r0, r1, r0

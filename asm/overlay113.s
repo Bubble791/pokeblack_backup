@@ -344,7 +344,7 @@ _021EEEF4:
 	orr r0, r1
 	mov r1, #0x16
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #4]
 	add r0, r1, r0
 	str r0, [sp, #4]
@@ -362,7 +362,7 @@ _021EEEF4:
 	orr r0, r1
 	mov r1, #0x16
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0xc]
 	add r0, r1, r0
 	str r0, [sp, #0xc]

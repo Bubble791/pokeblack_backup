@@ -424,7 +424,7 @@
 .public sub_020744EC
 .public sub_02073FD4
 .public sub_02074254
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_02074494

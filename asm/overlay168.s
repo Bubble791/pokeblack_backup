@@ -1908,7 +1908,7 @@ _021DE8EC:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #0
 	add r1, #0x94
 	str r0, [r1]
@@ -1946,7 +1946,7 @@ _021DE93E:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r4, #0
-	bl sub_02073DF0
+	bl FX_Div
 	add r1, r5, #0
 	add r1, #0x98
 	str r0, [r1]
@@ -6223,7 +6223,7 @@ ovy168_21e0b44: ; 0x021E0B44
 	lsl r3, r3, #0xc
 _021E0B5C:
 	add r1, r3, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4]
 	cmp r0, #0
 	bne _021E0B78
@@ -6261,7 +6261,7 @@ _021E0B94:
 	sub r0, r1, r0
 	beq _021E0BBA
 	add r1, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4]
 	cmp r0, #0
 	bne _021E0BBA
@@ -6282,7 +6282,7 @@ _021E0BBA:
 	sub r0, r1, r0
 	beq _021E0BE0
 	add r1, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #4]
 	cmp r0, #0
 	bne _021E0BE0
@@ -6303,7 +6303,7 @@ _021E0BE0:
 	sub r0, r1, r0
 	beq _021E0C08
 	add r1, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #8]
 	cmp r0, #0
 	bne _021E0C08
@@ -7402,7 +7402,7 @@ _021E1420:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #0x1c]
 	ldr r0, [r4, #8]
 	ldr r1, _021E1464 ; =ovy168_21e6174
@@ -9794,7 +9794,7 @@ ovy168_21e27b0: ; 0x021E27B0
 	ldr r0, [sp, #8]
 	str r6, [sp, #0x48]
 	sub r0, r0, r6
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [sp, #0x4c]
 	cmp r4, #0
 	beq _021E282C
@@ -11676,7 +11676,7 @@ _021E374C:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x1c]
 	ldr r0, [r5, #8]
 	ldr r1, _021E3794 ; =ovy168_21e6174
@@ -14993,11 +14993,11 @@ _021E500E:
 	lsl r7, r7, #0x1a
 	ldr r1, [r4, #0x24]
 	add r0, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #0x40]
 	ldr r1, [r4, #0x24]
 	lsl r0, r7, #1
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #0x44]
 	ldr r2, [r4, #0x54]
 	asr r1, r0, #0x1f
@@ -15017,7 +15017,7 @@ _021E5048:
 	lsl r0, r0, #0x1a
 _021E504C:
 	ldr r1, [r4, #0x24]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r5, #0x40]
 _021E5054:
 	ldr r0, [r5, #0x40]
@@ -16748,7 +16748,7 @@ _021E5DD0:
 	bl ovy168_21e5e34
 	ldr r0, [r5]
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	asr r2, r0, #0x1f
 	lsr r1, r0, #0x12
 	lsl r2, r2, #0xe
@@ -16765,7 +16765,7 @@ _021E5DD0:
 	str r1, [r5]
 	ldr r0, [r5, #4]
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #3
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0xc
@@ -22060,7 +22060,7 @@ _021E85EE:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x30]
 	cmp r5, #0
 	ble _021E8612
@@ -22081,7 +22081,7 @@ _021E8620:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x34]
 	cmp r5, #0
 	ble _021E8644
@@ -22102,7 +22102,7 @@ _021E8652:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x38]
 	ldr r0, [sp, #8]
 	mov r1, #1
@@ -25390,7 +25390,7 @@ _021E9F92:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x30]
 	cmp r5, #0
 	ble _021E9FB6
@@ -25411,7 +25411,7 @@ _021E9FC4:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x34]
 	cmp r5, #0
 	ble _021E9FE8
@@ -25432,7 +25432,7 @@ _021E9FF6:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x38]
 _021EA004:
 	ldr r0, [sp, #4]
@@ -32450,7 +32450,7 @@ ovy168_21ed7f4: ; 0x021ED7F4
 	add r1, r4, r1
 	asr r5, r1, #3
 	mov r1, #8
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r0, #0
 	beq _021ED816
 	add r5, r5, #1
@@ -42801,7 +42801,7 @@ _021F282E:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [sp, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	mov r1, #0x8b
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -43005,7 +43005,7 @@ _021F29CE:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x2c]
 	cmp r5, #0
 	ble _021F29F2
@@ -43026,7 +43026,7 @@ _021F2A00:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #4]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x30]
 	cmp r5, #0
 	ble _021F2A24
@@ -43047,7 +43047,7 @@ _021F2A32:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, [r6, #8]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x34]
 _021F2A40:
 	ldr r0, [sp, #4]

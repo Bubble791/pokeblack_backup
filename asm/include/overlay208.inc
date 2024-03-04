@@ -610,7 +610,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073E28
+.public FX_Sqrt
 .public sub_0208D374
 .public sub_0208DF14
 .public sub_0208D374

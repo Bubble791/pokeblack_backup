@@ -431,14 +431,14 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D3BC
 .public sub_0208DF14
 .public sub_0208D3BC
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D374
 .public sub_0208DF14
 .public sub_0208D374
@@ -456,7 +456,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208D60C
-.public sub_02073DF0
+.public FX_Div
 .public sub_02017208
 .public sub_02010FD4
 .public sub_0200C5DC

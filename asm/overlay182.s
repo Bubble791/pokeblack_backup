@@ -13653,13 +13653,13 @@ ovy182_21ab0f4: ; 0x021AB0F4
 	ldr r0, [r4]
 	ldrb r0, [r0, #9]
 	add r0, r0, #1
-	bl sub_02073F8C
+	bl FX_ModS32
 	ldr r1, [r4]
 	strb r0, [r1, #9]
 	ldr r0, [r4]
 	mov r1, #5
 	ldrb r0, [r0, #9]
-	bl sub_02073F64
+	bl FX_DivS32
 	add r1, r0, #0
 	ldr r2, [r4]
 	add r1, #0x47
@@ -16428,7 +16428,7 @@ _021AC6D8:
 	ldr r0, [sp, #8]
 	mov r1, #4
 	add r0, r0, #3
-	bl sub_02073F8C
+	bl FX_ModS32
 	add r4, sp, #0x14
 	ldr r1, [sp, #8]
 	add r4, #1
@@ -22524,7 +22524,7 @@ _021AF6B2:
 	add r0, r0, #1
 _021AF6B8:
 	mov r1, #3
-	bl sub_02073F8C
+	bl FX_ModS32
 	strb r0, [r4]
 	mov r0, #8
 	bl sub_021B80F4
@@ -25480,7 +25480,7 @@ _021B0DB4:
 	add r2, #0x40
 	mul r0, r1
 	ldrh r1, [r2]
-	bl sub_02073F64
+	bl FX_DivS32
 _021B0DCE:
 	str r0, [sp]
 	add r0, r4, #0
@@ -25926,7 +25926,7 @@ _021B112A:
 	add r2, #0x53
 	mul r0, r1
 	ldrb r1, [r2]
-	bl sub_02073F64
+	bl FX_DivS32
 	strh r0, [r4, #2]
 	bl ovy182_21b14c0
 	ldr r0, [r4, #4]
@@ -25948,14 +25948,14 @@ _021B1154:
 	add r2, #0x53
 	mul r0, r1
 	ldrb r1, [r2]
-	bl sub_02073F64
+	bl FX_DivS32
 	strh r0, [r4, #2]
 	mov r0, #0x13
 	bl sub_021B80F4
 	bl ovy182_21b14c0
 	ldrh r0, [r4, #2]
 	mov r1, #0x1c
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r0, #0
 	bne _021B1194
 	bl ovy182_21b17f8
@@ -26094,7 +26094,7 @@ _021B127E:
 _021B1298:
 	ldrh r0, [r4, #2]
 	mov r1, #0x1c
-	bl sub_02073F64
+	bl FX_DivS32
 	ldrb r1, [r4]
 	mov r2, #0x2a
 	add r1, r1, r0
@@ -26348,7 +26348,7 @@ ovy182_21b14c0: ; 0x021B14C0
 	ldr r4, _021B1524 ; =0x021C40F8
 	mov r1, #0x1c
 	ldrh r0, [r4, #2]
-	bl sub_02073F64
+	bl FX_DivS32
 	ldr r1, [r4, #4]
 	add r5, r0, #0
 	add r0, r1, #0
@@ -26564,7 +26564,7 @@ ovy182_21b1658: ; 0x021B1658
 	ldr r4, _021B16CC ; =0x021C40F8
 	mov r1, #0x1c
 	ldrh r0, [r4, #2]
-	bl sub_02073F8C
+	bl FX_ModS32
 	mov r1, #0x36
 	sub r0, r1, r0
 	ldr r1, [r4, #4]
@@ -26644,7 +26644,7 @@ _021B16EE:
 	ldrh r0, [r6, #2]
 	mov r1, #0x1c
 	mov r7, #0x1c
-	bl sub_02073F8C
+	bl FX_ModS32
 	add r4, r0, #0
 	cmp r4, #0x18
 	bne _021B1708
@@ -26672,7 +26672,7 @@ _021B1718:
 	add r2, #0x40
 	mul r0, r1
 	ldrh r1, [r2]
-	bl sub_02073F64
+	bl FX_DivS32
 	bl sub_021B715C
 	bl sub_021B7164
 	bl ovy182_21b17f8
@@ -26699,7 +26699,7 @@ ovy182_21b1754: ; 0x021B1754
 	add r0, r0, #4
 	strh r0, [r4, #2]
 	ldrh r0, [r4, #2]
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r0, #4
 	blt _021B177A
 	bl ovy182_21b1658
@@ -26719,7 +26719,7 @@ _021B177A:
 	add r2, #0x40
 	mul r0, r1
 	ldrh r1, [r2]
-	bl sub_02073F64
+	bl FX_DivS32
 	bl sub_021B715C
 	bl sub_021B7164
 	bl ovy182_21b17f8
@@ -26744,7 +26744,7 @@ ovy182_21b17bc: ; 0x021B17BC
 	beq _021B17E8
 	ldrh r0, [r4, #2]
 	mov r1, #0x1c
-	bl sub_02073F8C
+	bl FX_ModS32
 	sub r0, #0x32
 	lsl r1, r0, #0x10
 	ldr r0, _021B17F0 ; =0x01FF0000
@@ -30361,7 +30361,7 @@ _021B3412:
 	bl ovy182_21b3740
 	ldrh r0, [r4, #4]
 	mov r1, #0x1d
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r0, #0
 	bne _021B3448
 	bl ovy182_21b4060
@@ -30729,7 +30729,7 @@ ovy182_21b3740: ; 0x021B3740
 	ldr r4, _021B37AC ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r4, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	add r5, r0, #0
 	ldr r0, [r4, #8]
 	mov r1, #0
@@ -31355,12 +31355,12 @@ ovy182_21b3bc4: ; 0x021B3BC4
 	ldr r0, _021B3CD4 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	add r4, r0, #0
 	ldr r0, _021B3CD4 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F8C
+	bl FX_ModS32
 	ldr r1, _021B3CD4 ; =0x021C410C
 	mov r3, #0x34
 	ldr r2, [r1, #8]
@@ -31512,7 +31512,7 @@ _021B3CF4:
 	ldr r0, _021B3E58 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	add r4, r0, #0
 	ldr r0, _021B3E5C ; =0x021C013C
 	add r6, sp, #0
@@ -31550,7 +31550,7 @@ _021B3D32:
 	ldr r0, _021B3E58 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	mov r1, #0
 _021B3D4C:
 	cmp r0, #2
@@ -31611,7 +31611,7 @@ _021B3DB8:
 	ldr r0, _021B3E58 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	mov r1, #0
 _021B3DC4:
 	cmp r0, #6
@@ -31703,7 +31703,7 @@ ovy182_21b3e68: ; 0x021B3E68
 	ldr r0, _021B3E90 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	mov r1, #0
 _021B3E78:
 	cmp r0, r4
@@ -31729,7 +31729,7 @@ ovy182_21b3e94: ; 0x021B3E94
 	ldr r0, _021B3EA8 ; =0x021C410C
 	mov r1, #0x1d
 	ldrh r0, [r0, #4]
-	bl sub_02073F64
+	bl FX_DivS32
 	add r0, r0, r4
 	pop {r4, pc}
 	nop
@@ -31756,7 +31756,7 @@ _021B3EC6:
 	ldrh r0, [r6, #4]
 	mov r1, #0x1d
 	mov r7, #0x1d
-	bl sub_02073F8C
+	bl FX_ModS32
 	add r4, r0, #0
 	cmp r4, #0x17
 	bne _021B3EE0
@@ -31807,7 +31807,7 @@ ovy182_21b3f24: ; 0x021B3F24
 	add r0, r0, #6
 	strh r0, [r4, #4]
 	ldrh r0, [r4, #4]
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r0, #6
 	blt _021B3F4A
 	bl ovy182_21b3bc4
@@ -31848,11 +31848,11 @@ ovy182_21b3f84: ; 0x021B3F84
 	beq _021B3FC6
 	ldrh r0, [r5, #4]
 	mov r1, #0x1d
-	bl sub_02073F64
+	bl FX_DivS32
 	add r4, r0, #0
 	ldrh r0, [r5, #4]
 	mov r1, #0x1d
-	bl sub_02073F8C
+	bl FX_ModS32
 	sub r0, #0x33
 	lsl r1, r0, #0x10
 	add r3, r1, #0
@@ -31963,7 +31963,7 @@ _021B4076:
 	add r5, r0, #0
 	ldrh r0, [r4, #4]
 	mov r1, #0x1d
-	bl sub_02073F64
+	bl FX_DivS32
 	ldrb r1, [r4, #2]
 	add r1, r1, r0
 	cmp r1, #2
@@ -38358,7 +38358,7 @@ _021B7302:
 	mov r1, #6
 	mov r0, #0x7f
 	sub r1, r1, r4
-	bl sub_02073F64
+	bl FX_DivS32
 	b _021B7314
 _021B7312:
 	mov r0, #0x7f
@@ -38376,7 +38376,7 @@ _021B7322:
 	mov r5, #6
 	lsl r0, r0, #8
 	sub r1, r5, r4
-	bl sub_02073F64
+	bl FX_DivS32
 	add r5, #0xfa
 	sub r1, r0, r5
 	b _021B733C
@@ -47723,7 +47723,7 @@ ovy182_21bba00: ; 0x021BBA00
 	ldrb r0, [r5, #3]
 	ldrh r1, [r5]
 	add r0, r0, #1
-	bl sub_02073F8C
+	bl FX_ModS32
 	add r6, r0, #0
 	ldrb r0, [r5, #2]
 	cmp r6, r0
@@ -47756,7 +47756,7 @@ ovy182_21bba38: ; 0x021BBA38
 	ldrh r1, [r5]
 	add r0, r2, r1
 	sub r0, r0, #1
-	bl sub_02073F8C
+	bl FX_ModS32
 	strb r0, [r5, #3]
 	ldrb r0, [r5, #3]
 	lsl r0, r0, #2
@@ -47918,7 +47918,7 @@ ovy182_21bbb40: ; 0x021BBB40
 	ldrsh r0, [r4, r0]
 	ldrh r1, [r4, #6]
 	lsl r0, r0, #4
-	bl sub_02073F64
+	bl FX_DivS32
 	add r1, r0, #0
 	ldrb r0, [r4, #8]
 	mov r2, #1
@@ -49463,7 +49463,7 @@ _021BC6C8:
 	add r0, r0, #4
 	mov r1, #5
 	add r4, r4, #1
-	bl sub_02073F8C
+	bl FX_ModS32
 	cmp r4, #4
 	blt _021BC69C
 _021BC6D6:

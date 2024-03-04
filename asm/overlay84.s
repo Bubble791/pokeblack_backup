@@ -6103,7 +6103,7 @@ _021EDD52:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x1c]
 	ldrb r0, [r4, #0xe]
 	cmp r0, #0
@@ -6150,7 +6150,7 @@ _021EDDBE:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0x1c]
 	str r0, [r4, #0x20]
 	str r1, [r4, #0x24]

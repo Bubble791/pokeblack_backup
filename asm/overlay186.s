@@ -2424,14 +2424,14 @@ ovy186_21a8958: ; 0x021A8958
 	add r5, r0, #0
 	lsl r4, r4, #6
 	ldr r0, [r5, r4]
-	bl sub_02073DFC
+	bl FX_Inv
 	str r0, [sp, #8]
 	mov r0, #0
 	str r0, [sp, #0xc]
 	str r0, [sp, #0x10]
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02073DFC
+	bl FX_Inv
 	str r0, [sp, #0x14]
 	add r0, r4, #0
 	add r0, #0x18
@@ -3831,10 +3831,10 @@ ovy186_21a943c: ; 0x021A943C
 	mov r5, #1
 	lsl r5, r5, #0xc
 	add r0, r5, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_02073DFC
+	bl FX_Inv
 	mov r5, #0
 	str r4, [sp, #8]
 	str r5, [sp, #0xc]

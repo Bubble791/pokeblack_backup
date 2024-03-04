@@ -27394,7 +27394,7 @@ ovy194_21c5348: ; 0x021C5348
 	lsr r1, r3, #0xc
 	orr r1, r0
 	add r0, r2, r1
-	bl sub_02073E28
+	bl FX_Sqrt
 	mov r1, #0xf
 	blx sub_0208D65C
 	add r7, r0, #0
@@ -29076,7 +29076,7 @@ _021C60FC:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_02073DF0
+	bl FX_Div
 	asr r1, r0, #0x1f
 	add r2, r0, #0
 	add r3, r1, #0

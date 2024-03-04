@@ -412,7 +412,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0208D374
 .public sub_0208DF14
 .public sub_0208D374
@@ -423,7 +423,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208DA4C
-.public sub_02073DF0
+.public FX_Div
 .public sub_0203A870
 .public sub_0203A888
 .public sub_0203A910

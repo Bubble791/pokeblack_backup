@@ -6078,7 +6078,7 @@ _0219FE3E:
 	blx sub_0208DA4C
 	mov r1, #0xf
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r7, r0, #0
 	ldr r0, [sp]
 	ldr r0, [r0, #0x50]
@@ -6117,7 +6117,7 @@ _0219FE7A:
 	orr r0, r1
 	mov r1, #3
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	asr r0, r0, #0xc
 	strh r0, [r6, #0xe]
 	ldrh r0, [r6, #0xe]
@@ -6235,7 +6235,7 @@ _0219FF7E:
 	orr r0, r1
 	mov r1, #3
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	asr r0, r0, #0xc
 	strh r0, [r6, #0xe]
 	ldr r0, [sp]

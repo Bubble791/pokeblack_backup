@@ -25573,7 +25573,7 @@ _0215C85A:
 	orr r0, r1
 	mov r1, #0xf
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #4]
 	add r0, r1, r0
 	str r0, [sp, #4]
@@ -25591,7 +25591,7 @@ _0215C85A:
 	orr r0, r1
 	mov r1, #0xf
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp, #0xc]
 	add r0, r1, r0
 	str r0, [sp, #0xc]
@@ -27932,7 +27932,7 @@ ovy12_215d978: ; 0x0215D978
 	mov r1, #2
 	lsl r0, r0, #0x10
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldrh r1, [r4, #2]
 	lsl r1, r1, #0x10
 	add r7, r1, r0
@@ -27944,7 +27944,7 @@ ovy12_215d978: ; 0x0215D978
 	str r0, [sp]
 	ldrh r0, [r4, #4]
 	lsl r0, r0, #0x10
-	bl sub_02073DF0
+	bl FX_Div
 	ldrh r1, [r6, #0xa]
 	str r7, [r5, #8]
 	lsl r1, r1, #0x10

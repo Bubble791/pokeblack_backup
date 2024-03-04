@@ -3022,7 +3022,7 @@ _0219E76A:
 	sub r1, r1, #1
 	lsl r0, r0, #0xc
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #7
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0x10
@@ -3325,7 +3325,7 @@ _0219E9BE:
 	sub r1, r1, #1
 	lsl r0, r0, #0xc
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #7
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0x10
@@ -5074,7 +5074,7 @@ _0219F7AE:
 	ldr r0, [r4, r5]
 	lsl r1, r1, #0x10
 	lsl r0, r0, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	add r2, r0, #0
 	add r0, r5, #0
 	sub r0, #0x96
@@ -5144,7 +5144,7 @@ ovy145_219f838: ; 0x0219F838
 	mov r1, #7
 	lsl r0, r0, #0xc
 	lsl r1, r1, #0x10
-	bl sub_02073DF0
+	bl FX_Div
 	add r2, r0, #0
 	add r0, r5, #0
 	sub r0, #0x96

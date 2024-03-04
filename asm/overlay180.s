@@ -594,7 +594,7 @@ _0219B1C4:
 	lsl r1, r1, #0xe
 	sub r0, r0, r1
 	lsl r1, r1, #1
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #0xf
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0xe
@@ -674,7 +674,7 @@ _0219B272:
 	lsl r1, r1, #0xe
 	sub r0, r0, r1
 	lsl r1, r1, #1
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #0xf
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0xe
@@ -869,7 +869,7 @@ _0219B41A:
 	lsl r1, r1, #0xe
 	sub r0, r0, r1
 	lsl r1, r1, #1
-	bl sub_02073DF0
+	bl FX_Div
 	mov r2, #0xf
 	asr r1, r0, #0x1f
 	lsl r2, r2, #0xe
@@ -3524,12 +3524,12 @@ _0219C8CA:
 	mov r1, #0x3b
 	sub r0, r5, r4
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r6]
 	mov r1, #0xd
 	ldr r0, [sp]
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	sub r0, r4, r0
 	str r0, [r6, #4]
 	mov r0, #1

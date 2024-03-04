@@ -5413,7 +5413,7 @@ _021C172C:
 	mul r1, r6
 	lsl r0, r0, #1
 	lsl r1, r1, #0xc
-	bl sub_02073DF0
+	bl FX_Div
 	ldr r1, [sp]
 	str r0, [r5, #0x34]
 	str r1, [r5, #0x30]

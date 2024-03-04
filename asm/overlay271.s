@@ -11109,7 +11109,7 @@ _021F53C6:
 	lsr r0, r0, #0xc
 	orr r0, r1
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	add r6, r0, #0
 	ldr r0, [sp, #8]
 	ldr r2, [r5, #0x10]
@@ -11124,7 +11124,7 @@ _021F53C6:
 	lsr r0, r0, #0xc
 	orr r0, r1
 	ldr r1, [sp]
-	bl sub_02073DF0
+	bl FX_Div
 	add r4, r0, #0
 	neg r0, r6
 	cmp r6, #0

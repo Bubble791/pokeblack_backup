@@ -5900,7 +5900,7 @@ _021E5E1E:
 	lsr r2, r2, #0xc
 	orr r2, r0
 	add r0, r1, r2
-	bl sub_02073E28
+	bl FX_Sqrt
 	ldr r1, [sp, #0x2c]
 	str r0, [sp, #0x34]
 	add r0, r6, #0
@@ -5915,18 +5915,18 @@ _021E5E1E:
 	lsl r1, r1, #0x14
 	lsr r0, r0, #0xc
 	orr r0, r1
-	bl sub_02073E28
+	bl FX_Sqrt
 	str r0, [sp, #0x18]
 	ldr r1, [sp, #0x34]
 	ldr r0, [sp, #0x38]
 	cmp r1, r0
 	ble _021E5F48
 	ldr r0, [sp, #0x14]
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x40]
 	ldr r1, [sp, #0x34]
 	add r0, r7, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x48]
 	b _021E5F4E
 	nop
@@ -5950,7 +5950,7 @@ _021E5F4E:
 	cmp r1, r0
 	ble _021E5F60
 	add r0, r6, #0
-	bl sub_02073DF0
+	bl FX_Div
 	str r0, [r4, #0x44]
 	b _021E5F62
 _021E5F60:
@@ -7472,7 +7472,7 @@ _021E6C44:
 	b _021E6D18
 _021E6C4E:
 	add r0, r6, #0
-	bl sub_02073E4C
+	bl FX_InvSqrt
 	add r6, r0, #0
 	ldr r0, [r4, #0x68]
 	ldr r1, [r4, #0x74]
@@ -8108,7 +8108,7 @@ _021E7076:
 	cmp r1, r0
 	ble _021E716E
 	add r0, r1, #0
-	bl sub_02073E4C
+	bl FX_InvSqrt
 	str r0, [sp, #0xa8]
 	asr r0, r0, #0x1f
 	str r0, [sp, #0xac]
@@ -8250,7 +8250,7 @@ _021E7242:
 	cmp r1, r0
 	ble _021E7294
 	add r0, r1, #0
-	bl sub_02073E4C
+	bl FX_InvSqrt
 	str r0, [sp, #0xb4]
 	asr r0, r0, #0x1f
 	str r0, [sp, #0xb8]
