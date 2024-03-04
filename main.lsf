@@ -9,7 +9,117 @@ Static main
 {
 	Address 0x02004000
 	StackSize 0 2048
-	Object src/main.o
+    Object asm/asm_0_thumb.o
+    Object asm/asm_2_thumb.o
+    Object asm/asm_3_arm.o
+    Object asm/asm_4_thumb.o
+    Object asm/asm_5_arm.o
+    Object asm/asm_6_thumb.o
+    Object asm/asm_7_arm.o
+    Object asm/asm_8_thumb.o
+    Object asm/asm_9_arm.o
+    Object asm/asm_10_thumb.o
+    Object asm/asm_11_arm.o
+    Object asm/asm_12_thumb.o
+    Object asm/asm_13_arm.o
+    Object asm/asm_14_thumb.o
+    Object asm/asm_15_arm.o
+    Object asm/asm_16_thumb.o
+    Object asm/asm_17_arm.o
+    Object asm/asm_18_thumb.o
+    Object asm/asm_19_arm.o
+    Object asm/asm_20_thumb.o
+    Object asm/asm_21_arm.o
+    Object asm/asm_22_thumb.o
+    Object asm/asm_23_arm.o
+    Object asm/asm_24_thumb.o
+    Object asm/asm_25_arm.o
+    Object asm/asm_26_thumb.o
+    Object asm/asm_27_arm.o
+    Object asm/asm_28_thumb.o
+    Object asm/asm_29_arm.o
+    Object asm/asm_30_thumb.o
+    Object asm/asm_31_arm.o
+    Object asm/asm_32_thumb.o
+    Object asm/asm_33_arm.o
+    Object asm/asm_34_thumb.o
+    Object asm/asm_35_arm.o
+    Object asm/asm_36_thumb.o
+    Object asm/asm_37_arm.o
+    Object asm/asm_38_thumb.o
+    Object asm/asm_39_arm.o
+    Object asm/asm_40_thumb.o
+    Object asm/asm_41_arm.o
+    Object asm/asm_42_thumb.o
+    Object asm/asm_43_arm.o
+	Object lib/NitroSDK/asm/fx_cp.o
+    Object asm/asm_44_thumb.o
+    Object asm/asm_45_arm.o
+    Object asm/asm_46_thumb.o
+    Object asm/asm_47_arm.o
+    Object asm/asm_48_thumb.o
+    Object asm/asm_49_arm.o
+    Object asm/asm_50_thumb.o
+    Object asm/asm_51_arm.o
+    Object asm/asm_52_thumb.o
+    Object asm/asm_53_arm.o
+    Object asm/asm_54_thumb.o
+    Object asm/asm_55_arm.o
+    Object asm/asm_56_thumb.o
+    Object asm/asm_57_arm.o
+    Object asm/asm_58_thumb.o
+    Object asm/asm_59_arm.o
+    Object asm/asm_60_thumb.o
+    Object asm/asm_61_arm.o
+    Object asm/asm_62_thumb.o
+    Object asm/asm_63_arm.o
+    Object asm/asm_64_thumb.o
+    Object asm/asm_65_arm.o
+    Object asm/asm_66_thumb.o
+    Object asm/asm_67_arm.o
+    Object asm/asm_68_thumb.o
+    Object asm/asm_69_arm.o
+    Object asm/asm_70_thumb.o
+    Object asm/asm_71_arm.o
+    Object asm/asm_72_thumb.o
+    Object asm/asm_73_arm.o
+    Object asm/asm_74_thumb.o
+    Object asm/asm_75_arm.o
+    Object asm/asm_76_thumb.o
+    Object asm/asm_77_arm.o
+    Object asm/asm_78_thumb.o
+    Object asm/asm_79_arm.o
+    Object asm/asm_80_thumb.o
+    Object asm/asm_81_arm.o
+    Object asm/asm_82_thumb.o
+    Object asm/asm_83_arm.o
+    Object asm/asm_84_thumb.o
+    Object asm/asm_85_arm.o
+    Object asm/asm_86_thumb.o
+    Object asm/asm_87_arm.o
+    Object asm/asm_88_thumb.o
+    Object asm/asm_89_arm.o
+    Object asm/asm_90_thumb.o
+    Object asm/asm_91_arm.o
+    Object asm/asm_92_thumb.o
+    Object asm/asm_93_arm.o
+    Object asm/asm_94_thumb.o
+    Object asm/asm_95_arm.o
+    Object asm/asm_96_thumb.o
+    Object asm/asm_97_arm.o
+    Object asm/asm_98_thumb.o
+    Object asm/asm_99_arm.o
+    Object asm/asm_100_thumb.o
+    Object asm/asm_101_arm.o
+    Object asm/asm_102_thumb.o
+    Object asm/asm_103_arm.o
+    Object asm/asm_104_thumb.o
+    Object asm/asm_105_arm.o
+    Object asm/asm_106_thumb.o
+    Object asm/asm_107_arm.o
+    Object asm/asm_108_thumb.o
+    Object asm/asm_109_thumb.o
+	Object asm/a_unknow_func.o
 
 	### Vendor libraries ###
 	Object asm/middleware.o
@@ -27,7 +137,6 @@ Static main
 	Object lib/NitroSDK/asm/fx_mtx33.o
 	Object lib/NitroSDK/asm/fx_mtx43.o
 	Object lib/NitroSDK/asm/fx_mtx44.o
-	Object lib/NitroSDK/asm/fx_cp.o
 	Object lib/NitroSDK/asm/fx_vec.o
 	Object lib/NitroSDK/asm/fx_trig.o
 	Object lib/NitroSDK/asm/fx_atanidx.o

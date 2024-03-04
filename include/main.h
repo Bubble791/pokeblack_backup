@@ -1,6 +1,6 @@
 #ifndef POKEHEARTGOLD_MAIN_H
 #define POKEHEARTGOLD_MAIN_H
 
-void NitroMain(void);
+void TwlMain(void);
 
 #endif //POKEHEARTGOLD_MAIN_H
