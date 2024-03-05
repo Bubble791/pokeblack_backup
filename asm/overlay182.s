@@ -48299,10 +48299,10 @@ _021BBE28:
 	str r0, [r4, #0x24]
 	cmp r5, #1
 	bne _021BBE6A
-	bl sub_0207512C
+	bl G2S_GetBG0ScrPtr
 	b _021BBE6E
 _021BBE6A:
-	bl sub_02075100
+	bl G2_GetBG0ScrPtr
 _021BBE6E:
 	mov r1, #0
 	str r1, [sp]
@@ -48411,13 +48411,13 @@ ovy182_21bbf38: ; 0x021BBF38
 	add r0, r1, r0
 	cmp r4, r0
 	bne _021BBF5E
-	bl sub_02075360
+	bl G2_GetBG0CharPtr
 	add r1, r0, #0
 	mov r0, #0
 	mov r2, #6
 	b _021BBF68
 _021BBF5E:
-	bl sub_02075360
+	bl G2_GetBG0CharPtr
 	add r1, r0, #0
 	mov r0, #0
 	mov r2, #3

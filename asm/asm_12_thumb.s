@@ -27900,12 +27900,12 @@ _0201232A:
 	cmp r0, #0x60
 	beq _020123D2
 	ldr r5, [r4]
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r5, #0
 	lsr r2, r6, #0xc
 	blx MIi_CpuCopy16
 	ldr r5, [r4, #4]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r5, #0
 	lsr r2, r6, #0xf
 	blx MIi_CpuCopy16
@@ -28007,12 +28007,12 @@ _02012472:
 	ldrh r1, [r4, #0x36]
 	sub r0, #0x1c
 	strh r1, [r0]
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	ldr r0, [r4]
 	lsr r2, r5, #0xc
 	blx MIi_CpuCopy16
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r0, #0
 	ldr r0, [r4, #4]
 	lsr r2, r6, #0xf
@@ -28174,7 +28174,7 @@ sub_0201260C: ; 0x0201260C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r4, r0, #0
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r2, #1
 	add r1, r0, #0
 	mov r0, #0
@@ -28200,7 +28200,7 @@ sub_0201260C: ; 0x0201260C
 	blx sub_0207B0AC
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	ldr r0, [sp, #0xc]
 	add r2, r5, #0
@@ -28227,7 +28227,7 @@ _02012660:
 	blx sub_0207B0AC
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r0, #0
 	ldr r0, [sp, #8]
 	add r2, r5, #0
@@ -28350,7 +28350,7 @@ sub_02012778: ; 0x02012778
 	str r0, [sp, #8]
 	str r1, [sp, #0xc]
 	ldr r4, _020128E0 ; =0x02141014
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r3, r0, #0
 	mov r5, #0x20
 	mov r2, #4
@@ -28371,7 +28371,7 @@ _02012794:
 	add r2, r2, #1
 	cmp r2, #0x14
 	blt _0201278E
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r6, #1
 	add r1, r0, #0
 	lsl r6, r6, #0xa
@@ -28380,7 +28380,7 @@ _02012794:
 	add r1, r1, r6
 	lsl r2, r2, #0xa
 	blx MIi_CpuClear16
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r5, #1
 	add r0, r0, r6
 	mov r1, #0x1e
@@ -109255,7 +109255,7 @@ _02036160: .word 0x05000400
 sub_02036164: ; 0x02036164
 	push {r3, r4, r5, lr}
 	sub sp, #0x10
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r2, #1
 	add r1, r0, #0
 	mov r0, #0
@@ -109277,7 +109277,7 @@ sub_02036164: ; 0x02036164
 	blx sub_0207B0AC
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	ldr r0, [sp, #0xc]
 	add r2, r5, #0
@@ -109303,7 +109303,7 @@ _020361AE:
 	blx sub_0207B0AC
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r0, #0
 	ldr r0, [sp, #8]
 	add r2, r5, #0
@@ -109347,7 +109347,7 @@ sub_02036234: ; 0x02036234
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	str r0, [sp, #8]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	mov r4, #0x20
 	mov r3, #4
 	mov r1, #1
@@ -109367,7 +109367,7 @@ _0203624A:
 	add r3, r3, #1
 	cmp r3, #0x14
 	blt _02036244
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r5, #1
 	add r1, r0, #0
 	lsl r5, r5, #0xa
@@ -109376,7 +109376,7 @@ _0203624A:
 	add r1, r1, r5
 	lsl r2, r2, #0xa
 	blx MIi_CpuClear16
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r4, #7
 	add r0, r0, r5
 	mov r1, #0x1e

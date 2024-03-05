@@ -2259,10 +2259,10 @@ _0219A82A:
 
 	thumb_func_start sub_0219A82C
 sub_0219A82C: ; 0x0219A82C
-	ldr r3, _0219A830 ; =sub_02075190
+	ldr r3, _0219A830 ; =G2_GetBG2ScrPtr
 	bx r3
 	.align 2, 0
-_0219A830: .word sub_02075190
+_0219A830: .word G2_GetBG2ScrPtr
 	thumb_func_end sub_0219A82C
 
 	thumb_func_start sub_0219A834
@@ -2781,7 +2781,7 @@ _0219AC3A:
 	ldr r0, [sp, #8]
 	bl ovy257_21aad48
 _0219AC4A:
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	mov r2, #6
 	add r1, r0, #0
 	mov r0, #0
@@ -13893,18 +13893,18 @@ _021A0354:
 	ldr r0, [r4, #0x28]
 	cmp r0, #1
 	bne _021A03F2
-	blx sub_02075190
+	blx G2_GetBG2ScrPtr
 	ldr r1, [sp, #0x18]
 	lsl r6, r1, #9
 	ldr r1, [sp, #0x1c]
 	lsl r1, r1, #1
 	add r7, r1, r0
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	add r0, r5, #0
 	bl sub_021AAADC
 	cmp r0, #1
 	bne _021A039C
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	add r3, r0, #0
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x1c]
@@ -13916,7 +13916,7 @@ _021A0354:
 	add r0, r2, r0
 	b _021A03AC
 _021A039C:
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	ldr r2, [sp, #0x1c]
 	ldr r1, [sp, #0x18]
 	lsl r2, r2, #1
@@ -29926,7 +29926,7 @@ ovy257_21a83ec: ; 0x021A83EC
 	and r2, r5
 	orr r0, r2
 	strh r0, [r1]
-	bl sub_020752FC
+	bl G2S_GetBG3ScrPtr
 	mov r2, #6
 	lsl r4, r2, #0xe
 	mov r1, #0
@@ -29939,7 +29939,7 @@ ovy257_21a83ec: ; 0x021A83EC
 	and r2, r5
 	orr r0, r2
 	strh r0, [r1]
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	add r1, r7, #0
 	add r2, r4, #0
 	blx MI_CpuFill8
@@ -33487,13 +33487,13 @@ ovy257_21a9fb4: ; 0x021A9FB4
 	ldr r0, _021AA19C ; =0x00004A84
 	orr r0, r1
 	strh r0, [r7]
-	blx sub_02075190
+	blx G2_GetBG2ScrPtr
 	mov r2, #6
 	lsl r2, r2, #0xe
 	mov r1, #0
 	str r2, [sp]
 	blx MI_CpuFill8
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	ldr r2, [sp]
 	mov r1, #0
 	blx MI_CpuFill8

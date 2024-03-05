@@ -202,7 +202,7 @@ _02199A54: .word 0x0000FFBF
 ovy32_2199a58: ; 0x02199A58
 	push {r3, r4, r5, lr}
 	sub sp, #0x10
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r2, #1
 	add r1, r0, #0
 	mov r0, #0
@@ -224,7 +224,7 @@ ovy32_2199a58: ; 0x02199A58
 	blx sub_0207B0AC
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	ldr r0, [sp, #0xc]
 	add r2, r5, #0
@@ -250,7 +250,7 @@ _02199AA2:
 	blx sub_0207B0AC
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r0, #0
 	ldr r0, [sp, #8]
 	add r2, r5, #0
@@ -294,7 +294,7 @@ ovy32_2199b28: ; 0x02199B28
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	str r0, [sp, #8]
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	mov r4, #0x20
 	mov r3, #4
 	mov r1, #1
@@ -314,7 +314,7 @@ _02199B3E:
 	add r3, r3, #1
 	cmp r3, #0x14
 	blt _02199B38
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r5, #1
 	add r1, r0, #0
 	lsl r5, r5, #0xa
@@ -323,7 +323,7 @@ _02199B3E:
 	add r1, r1, r5
 	lsl r2, r2, #0xa
 	blx MIi_CpuClear16
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	mov r4, #1
 	add r0, r0, r5
 	mov r1, #0x1e
@@ -387,12 +387,12 @@ ovy32_2199be0: ; 0x02199BE0
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046DC0
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	mov r0, #0
 	lsr r2, r5, #0xc
 	blx MIi_CpuClear16
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r1, r0, #0
 	mov r0, #0
 	lsr r2, r6, #0xf

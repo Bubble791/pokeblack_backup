@@ -340,7 +340,7 @@ sub_020757B4: ; 0x020757B4
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_02075100
+	bl G2_GetBG0ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075824 ; =0x0209B528
 	mov r1, #0
@@ -400,7 +400,7 @@ sub_02075828: ; 0x02075828
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_0207512C
+	bl G2S_GetBG0ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075898 ; =0x0209B528
 	mov r1, #0
@@ -460,7 +460,7 @@ sub_0207589C: ; 0x0207589C
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_02075148
+	bl G2_GetBG1ScrPtr
 	add r2, r0, #0
 	ldr r0, _0207590C ; =0x0209B528
 	mov r1, #0
@@ -520,7 +520,7 @@ sub_02075910: ; 0x02075910
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_02075174
+	bl G2S_GetBG1ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075980 ; =0x0209B528
 	mov r1, #0
@@ -580,7 +580,7 @@ sub_02075984: ; 0x02075984
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	blx sub_02075190
+	blx G2_GetBG2ScrPtr
 	add r2, r0, #0
 	ldr r0, _020759F4 ; =0x0209B528
 	mov r1, #0
@@ -640,7 +640,7 @@ sub_020759F8: ; 0x020759F8
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_02075214
+	bl G2S_GetBG2ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075A68 ; =0x0209B528
 	mov r1, #0
@@ -700,7 +700,7 @@ sub_02075A6C: ; 0x02075A6C
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	blx sub_02075278
+	blx G2_GetBG3ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075ADC ; =0x0209B528
 	mov r1, #0
@@ -760,7 +760,7 @@ sub_02075AE0: ; 0x02075AE0
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_020752FC
+	bl G2S_GetBG3ScrPtr
 	add r2, r0, #0
 	ldr r0, _02075B50 ; =0x0209B528
 	mov r1, #0
@@ -820,7 +820,7 @@ sub_02075B54: ; 0x02075B54
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_02075360
+	bl G2_GetBG0CharPtr
 	add r2, r0, #0
 	ldr r0, _02075BA8 ; =0x0209B528
 	mov r1, #0
@@ -866,7 +866,7 @@ sub_02075BAC: ; 0x02075BAC
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_02075388
+	bl G2S_GetBG0CharPtr
 	add r2, r0, #0
 	ldr r0, _02075C00 ; =0x0209B528
 	mov r1, #0
@@ -912,7 +912,7 @@ sub_02075C04: ; 0x02075C04
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	add r2, r0, #0
 	ldr r0, _02075C58 ; =0x0209B528
 	mov r1, #0
@@ -958,7 +958,7 @@ sub_02075C5C: ; 0x02075C5C
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_020753C8
+	bl G2S_GetBG1CharPtr
 	add r2, r0, #0
 	ldr r0, _02075CB0 ; =0x0209B528
 	mov r1, #0
@@ -1004,7 +1004,7 @@ sub_02075CB4: ; 0x02075CB4
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_020753E0
+	bl G2_GetBG2CharPtr
 	add r2, r0, #0
 	ldr r0, _02075D08 ; =0x0209B528
 	mov r1, #0
@@ -1050,7 +1050,7 @@ sub_02075D0C: ; 0x02075D0C
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_0207541C
+	bl G2S_GetBG2CharPtr
 	add r2, r0, #0
 	ldr r0, _02075D60 ; =0x0209B528
 	mov r1, #0
@@ -1096,7 +1096,7 @@ sub_02075D64: ; 0x02075D64
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_02075448
+	bl G2_GetBG3CharPtr
 	add r2, r0, #0
 	ldr r0, _02075DB8 ; =0x0209B528
 	mov r1, #0
@@ -1142,7 +1142,7 @@ sub_02075DBC: ; 0x02075DBC
 	add r6, r0, #0
 	add r5, r1, #0
 	add r4, r2, #0
-	bl sub_02075488
+	bl G2S_GetBG3CharPtr
 	add r2, r0, #0
 	ldr r0, _02075E10 ; =0x0209B528
 	mov r1, #0

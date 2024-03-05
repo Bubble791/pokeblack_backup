@@ -7108,7 +7108,7 @@ _0203CCE0: .word 0x0209A9A0
 	thumb_func_start sub_0203CCE4
 sub_0203CCE4: ; 0x0203CCE4
 	push {r3, r4, r5, lr}
-	bl sub_02075100
+	bl G2_GetBG0ScrPtr
 	mov r5, #0
 	mov r4, #0
 	add r2, r5, #0
@@ -26232,28 +26232,28 @@ _020457CE: ; jump table
 	.short _02045802 - _020457CE - 2 ; case 6
 	.short _02045808 - _020457CE - 2 ; case 7
 _020457DE:
-	bl sub_02075360
+	bl G2_GetBG0CharPtr
 	pop {r3, pc}
 _020457E4:
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	pop {r3, pc}
 _020457EA:
-	bl sub_020753E0
+	bl G2_GetBG2CharPtr
 	pop {r3, pc}
 _020457F0:
-	bl sub_02075448
+	bl G2_GetBG3CharPtr
 	pop {r3, pc}
 _020457F6:
-	bl sub_02075388
+	bl G2S_GetBG0CharPtr
 	pop {r3, pc}
 _020457FC:
-	bl sub_020753C8
+	bl G2S_GetBG1CharPtr
 	pop {r3, pc}
 _02045802:
-	bl sub_0207541C
+	bl G2S_GetBG2CharPtr
 	pop {r3, pc}
 _02045808:
-	bl sub_02075488
+	bl G2S_GetBG3CharPtr
 	pop {r3, pc}
 _0204580E:
 	mov r0, #0
@@ -50572,28 +50572,28 @@ _02050406: ; jump table
 	.short _0205043A - _02050406 - 2 ; case 6
 	.short _02050440 - _02050406 - 2 ; case 7
 _02050416:
-	bl sub_02075360
+	bl G2_GetBG0CharPtr
 	pop {r3, pc}
 _0205041C:
-	bl sub_020753A0
+	bl G2_GetBG1CharPtr
 	pop {r3, pc}
 _02050422:
-	bl sub_020753E0
+	bl G2_GetBG2CharPtr
 	pop {r3, pc}
 _02050428:
-	bl sub_02075448
+	bl G2_GetBG3CharPtr
 	pop {r3, pc}
 _0205042E:
-	bl sub_02075388
+	bl G2S_GetBG0CharPtr
 	pop {r3, pc}
 _02050434:
-	bl sub_020753C8
+	bl G2S_GetBG1CharPtr
 	pop {r3, pc}
 _0205043A:
-	bl sub_0207541C
+	bl G2S_GetBG2CharPtr
 	pop {r3, pc}
 _02050440:
-	bl sub_02075488
+	bl G2S_GetBG3CharPtr
 	pop {r3, pc}
 _02050446:
 	mov r0, #0
