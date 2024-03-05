@@ -7,17 +7,17 @@
 	thumb_func_start sub_020791FC
 sub_020791FC: ; 0x020791FC
 	push {r3, r4, r5, lr}
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r1, _0207926C ; =0x0214C0E0
 	ldr r2, [r1]
 	cmp r2, #0
 	beq _02079210
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 _02079210:
 	mov r2, #1
 	str r2, [r1]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	bl sub_0207C94C
 	mov r5, #4
 	mov r4, #1
@@ -74,24 +74,24 @@ sub_0207927C: ; 0x0207927C
 	mov r0, #4
 	pop {r3, r4, r5, r6, r7, pc}
 _02079292:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r4, _020792EC ; =0x0214C120
 	ldr r1, [r4]
 	cmp r1, #0
 	beq _020792A6
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _020792A6:
 	mov r1, #1
 	str r1, [r4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [sp, #0x18]
 	str r5, [r4, #4]
 	str r0, [r4, #8]
 	mov r0, #0
 	str r0, [r4, #0x40]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r5, r0, #0
 	ldr r2, [sp]
 	add r0, r6, #0
@@ -100,14 +100,14 @@ _020792A6:
 	cmp r0, #1
 	bne _020792D6
 	add r0, r5, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _020792D6:
 	mov r0, #0
 	str r0, [r4]
 	add r0, r5, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, _020792F0 ; =0x0214C170
 	bl sub_0207A89C
 	mov r0, #3
@@ -145,7 +145,7 @@ _0207936C:
 	mov r2, #1
 	bl sub_0207ACC4
 _02079376:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	add r0, sp, #0xc
 	str r0, [sp]
@@ -168,11 +168,11 @@ _0207939A:
 	b _020793AE
 _020793A6:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _020793B6
 _020793AE:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _02079376
 _020793B6:
 	ldr r0, [sp, #8]
@@ -208,18 +208,18 @@ sub_020793E0: ; 0x020793E0
 	mov r0, #4
 	pop {r3, r4, r5, r6, r7, pc}
 _020793F6:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r4, _02079450 ; =0x0214C120
 	ldr r1, [r4]
 	cmp r1, #0
 	beq _0207940A
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _0207940A:
 	mov r1, #2
 	str r1, [r4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [sp]
 	str r0, [r4, #4]
 	ldr r0, [sp, #0x18]
@@ -229,19 +229,19 @@ _0207940A:
 	str r7, [r4, #0x4c]
 	mov r6, #0
 	str r6, [r4, #0x40]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r5, r0, #0
 	bl sub_020799C8
 	cmp r0, #1
 	bne _0207943C
 	add r0, r5, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add r0, r6, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _0207943C:
 	add r0, r5, #0
 	str r6, [r4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, _02079454 ; =0x0214C170
 	bl sub_0207A89C
 	mov r0, #3
@@ -311,7 +311,7 @@ _020796CC:
 	mov r2, #1
 	bl sub_0207ACC4
 _020796D6:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	add r0, sp, #0xc
 	str r0, [sp]
@@ -334,11 +334,11 @@ _020796FA:
 	b _0207970E
 _02079706:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _02079716
 _0207970E:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _020796D6
 _02079716:
 	ldr r0, [sp, #8]
@@ -374,18 +374,18 @@ sub_02079740: ; 0x02079740
 	mov r0, #4
 	pop {r3, r4, r5, r6, r7, pc}
 _02079756:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r4, _020797C8 ; =0x0214C120
 	ldr r1, [r4]
 	cmp r1, #0
 	beq _0207976A
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _0207976A:
 	mov r1, #3
 	str r1, [r4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [sp]
 	mov r1, #0x20
 	str r0, [r4, #4]
@@ -399,7 +399,7 @@ _0207976A:
 	ldr r0, _020797CC ; =0x0214C100
 	mov r4, #0x20
 	blx sub_0207B074
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 	cmp r5, #0x20
 	bhi _0207979A
@@ -412,7 +412,7 @@ _0207979A:
 	cmp r0, #1
 	bne _020797B2
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _020797B2:
@@ -420,7 +420,7 @@ _020797B2:
 	mov r1, #0
 	str r1, [r0]
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, _020797D0 ; =0x0214C170
 	bl sub_0207A89C
 	mov r0, #3
@@ -466,7 +466,7 @@ _020798BC:
 	mov r2, #1
 	bl sub_0207ACC4
 _020798C6:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	add r0, sp, #0xc
 	str r0, [sp]
@@ -489,11 +489,11 @@ _020798EA:
 	b _020798FE
 _020798F6:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _02079906
 _020798FE:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	b _020798C6
 _02079906:
 	ldr r0, [sp, #8]

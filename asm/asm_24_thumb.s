@@ -1893,7 +1893,7 @@ _0206C5D2:
 	mov r0, #1
 	orr r0, r1
 	str r0, [r5, #0x2c]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	mov r0, #1
 	str r0, [r5, #0x34]
@@ -1903,7 +1903,7 @@ _0206C5D2:
 	ldr r0, [sp, #0x44]
 	str r0, [r5, #0x34]
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #1
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
@@ -2171,13 +2171,13 @@ sub_0206C7F8: ; 0x0206C7F8
 	beq _0206C826
 	mov r6, #1
 _0206C80C:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
 	bl sub_0206C760
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [r5, #0x40]
 	cmp r0, #0
 	bne _0206C80C
@@ -4380,7 +4380,7 @@ sub_0206D748: ; 0x0206D748
 	add r6, r2, #0
 	cmp r4, #0
 	beq _0206D780
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 	add r0, r4, #0
 	bl sub_0206CC1C
@@ -4396,7 +4396,7 @@ _0206D774:
 	add r0, r4, #0
 	bl sub_0206CC1C
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 _0206D780:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -5928,7 +5928,7 @@ sub_0206E2CC: ; 0x0206E2CC
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r7, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp]
 	add r0, r5, #0
 	mov r1, #0
@@ -5954,7 +5954,7 @@ _0206E302:
 	bne _0206E2E4
 _0206E308:
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end sub_0206E2CC
 
@@ -5962,7 +5962,7 @@ _0206E308:
 sub_0206E310: ; 0x0206E310
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r6, r0, #0
 	add r0, r5, #0
 	mov r1, #0
@@ -5980,7 +5980,7 @@ sub_0206E310: ; 0x0206E310
 	str r1, [r2, r0]
 _0206E33A:
 	add r0, r6, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0206E310
@@ -5988,7 +5988,7 @@ _0206E33A:
 	thumb_func_start sub_0206E344
 sub_0206E344: ; 0x0206E344
 	push {r3, r4, r5, lr}
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	ldr r0, _0206E36C ; =0x0214995C
 	mov r1, #0
@@ -6000,7 +6000,7 @@ sub_0206E344: ; 0x0206E344
 	bl sub_0205EAF4
 _0206E360:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	nop
@@ -6011,13 +6011,13 @@ _0206E36C: .word 0x0214995C
 sub_0206E370: ; 0x0206E370
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	ldr r0, _0206E38C ; =0x0214995C
 	add r1, r5, #0
 	bl sub_0205EA64
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 	nop
 _0206E38C: .word 0x0214995C
@@ -7690,7 +7690,7 @@ sub_0206EF74: ; 0x0206EF74
 	ldr r5, _0206EFC4 ; =0x0214B440
 	add r7, r0, #0
 	str r1, [sp]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp, #4]
 	ldr r0, [r5, #0x14]
 	cmp r0, r7
@@ -7722,7 +7722,7 @@ _0206EFB4:
 	add r0, r0, #1
 	str r0, [r5, #0x18]
 	ldr r0, [sp, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -7735,7 +7735,7 @@ sub_0206EFC8: ; 0x0206EFC8
 	ldr r4, _0206F014 ; =0x0214B440
 	add r5, r0, #0
 	add r6, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 	ldr r0, [r4, #0x14]
 	cmp r0, r5
@@ -7766,7 +7766,7 @@ _0206EFF2:
 	bl sub_0207A89C
 _0206F00C:
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0206F014: .word 0x0214B440
@@ -7904,7 +7904,7 @@ sub_0206F0F0: ; 0x0206F0F0
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r0, #0
 	add r7, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp]
 	ldr r0, _0206F12C ; =0x0214B960
 	ldr r4, _0206F130 ; =0x0214B960
@@ -7930,7 +7930,7 @@ _0206F11C:
 	bne _0206F106
 _0206F122:
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0206F12C: .word 0x0214B960
@@ -7990,7 +7990,7 @@ sub_0206F188: ; 0x0206F188
 	mov r6, #0
 	mov r4, #8
 _0206F190:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 _0206F196:
 	ldr r0, [r5, #4]
@@ -8001,7 +8001,7 @@ _0206F196:
 	b _0206F196
 _0206F1A4:
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, _0206F1BC ; =0x000004E8
 	mov r1, #0
 	ldr r0, [r5, r0]
@@ -8020,7 +8020,7 @@ sub_0206F1C0: ; 0x0206F1C0
 	add r7, r1, #0
 	str r2, [sp]
 	str r3, [sp, #4]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp, #8]
 	ldr r1, [r5, #4]
 	mov r0, #4
@@ -8049,7 +8049,7 @@ _0206F1EA:
 	str r0, [r5, r1]
 _0206F202:
 	ldr r0, [sp, #8]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [r5]
 	ldr r0, [r0]
 	cmp r0, #0
@@ -8074,7 +8074,7 @@ sub_0206F224: ; 0x0206F224
 	add r0, r6, #4
 	ldr r4, [r5, r6]
 	ldr r7, [r5, r0]
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp]
 	ldr r1, [r5, #4]
 	mov r0, #0x4c
@@ -8084,7 +8084,7 @@ sub_0206F224: ; 0x0206F224
 	str r1, [r5, #4]
 	bl sub_0207A89C
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	cmp r4, #0
 	beq _0206F254
 	add r0, r7, #0
@@ -8262,7 +8262,7 @@ _0206F382:
 	cmp r0, #0
 	blt _0206F382
 _0206F390:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp, #4]
 	ldr r1, [r5, #4]
 	mov r0, #0x20
@@ -8277,7 +8277,7 @@ _0206F3A0:
 	bne _0206F3A0
 _0206F3AC:
 	ldr r0, [sp, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [r5]
 	mov r1, #0x60
 	blx sub_0207B074
@@ -8952,13 +8952,13 @@ _0206F894: .word sub_0206F090
 	thumb_func_start sub_0206F898
 sub_0206F898: ; 0x0206F898
 	push {r3, lr}
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r2, _0206F8B0 ; =0x0214B440
 	mov r1, #0x40
 	ldr r3, [r2, #4]
 	orr r1, r3
 	str r1, [r2, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, pc}
 	nop
 _0206F8B0: .word 0x0214B440
@@ -9395,7 +9395,7 @@ _0206FBEC: .word 0x0214B940
 sub_0206FBF0: ; 0x0206FBF0
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	ldr r0, _0206FC34 ; =0x0214BA80
 	mov r6, #2
@@ -9409,7 +9409,7 @@ sub_0206FBF0: ; 0x0206FBF0
 	add r0, r6, #0
 	bl sub_02079E70
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r4, _0206FC3C ; =0x0214B940
 	ldr r1, _0206FC40 ; =0x04100010
 	ldr r0, [r4, #8]
@@ -9620,7 +9620,7 @@ _0206FD76:
 	bl sub_0206FC68
 	cmp r0, #0
 	beq _0206FE08
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r6, r0, #0
 	ldr r0, _0206FE38 ; =0x0214BA80
 	ldr r0, [r0, #8]
@@ -9646,7 +9646,7 @@ _0206FDD8:
 	bl sub_0206F2AC
 _0206FDF0:
 	add r0, r6, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, _0206FE4C ; =0x0214BA90
 	bl sub_0206FBF0
 	ldr r0, [sp, #0x20]

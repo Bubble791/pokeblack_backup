@@ -24,7 +24,7 @@ NitroMain: ; 0x02005124
 	bl GX_HBlankIntr
 	mov r0, #1
 	bl GX_VBlankIntr
-	blx sub_0207C0D0
+	blx OS_EnableInterrupts
 	bl sub_02005264
 	ldr r4, _020051D0 ; =0x0209DC18
 	sub r5, r6, #4

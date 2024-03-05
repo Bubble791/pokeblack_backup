@@ -27,7 +27,7 @@ sub_0207C51C: ; 0x0207C51C
 	push {r3, r4, r5, r6, r7, lr}
 	add r4, r0, #0
 	add r5, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r7, _0207C568 ; =0x0214C5AC
 	str r0, [sp]
 	ldr r0, [r7]
@@ -59,7 +59,7 @@ _0207C538:
 	b _0207C538
 _0207C560:
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0207C568: .word 0x0214C5AC
@@ -351,13 +351,13 @@ _0207C786:
 	bne _0207C7BE
 	mov r4, #1
 	str r4, [r0, #8]
-	blx sub_0207C148
+	blx OS_GetProcMode
 	cmp r0, #0x12
 	beq _0207C7A4
 	ldr r1, _0207C7C8 ; =0x04000208
 	ldrh r0, [r1]
 	strh r4, [r1]
-	blx sub_0207C0D0
+	blx OS_EnableInterrupts
 _0207C7A4:
 	bl OS_IsRunOnTwl
 	cmp r0, #0

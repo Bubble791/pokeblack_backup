@@ -178,10 +178,10 @@
 .public sub_02174744
 .public sub_0203CB80
 .public sub_02174140
-.public sub_0207C0E4
+.public OS_DisableInterrupts
 .public sub_02174140
 .public sub_02174140
-.public sub_0207C0F8
+.public OS_RestoreInterrupts
 .public sub_020816B4
 .public sub_02174154
 .public sub_02174154

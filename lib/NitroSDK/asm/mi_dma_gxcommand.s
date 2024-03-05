@@ -48,7 +48,7 @@ _0207844E:
 	bl MIi_CheckDma0SourceAddress
 	add r0, r5, #0
 	bl MI_WaitDma
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 	mov r0, #3
 	ldr r1, [r4]
@@ -74,7 +74,7 @@ _0207844E:
 	bl sub_02079E70
 	bl MIi_FIFOCallback
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 _020784BC:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

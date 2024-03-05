@@ -138,7 +138,7 @@ _0207BACC:
 sub_0207BB0C: ; 0x0207BB0C
 	push {r4, r5, lr}
 	sub sp, #0xc
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r1, _0207BB74 ; =0x04000100
 	add r3, sp, #0
 	ldrh r1, [r1]
@@ -171,7 +171,7 @@ sub_0207BB0C: ; 0x0207BB0C
 	str r2, [sp, #4]
 	str r3, [sp, #8]
 _0207BB52:
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r2, [sp, #4]
 	ldr r3, [sp, #8]
 	lsr r0, r2, #0x10
@@ -410,7 +410,7 @@ sub_0207BCF4: ; 0x0207BCF4
 _0207BD08:
 	bl sub_0207C774
 _0207BD0C:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp]
 	mov r0, #0
 	str r0, [r5, #0x1c]
@@ -427,7 +427,7 @@ _0207BD0C:
 	add r2, r6, #0
 	bl sub_0207BC2C
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end sub_0207BCF4
@@ -436,12 +436,12 @@ _0207BD0C:
 sub_0207BD3C: ; 0x0207BD3C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r1, [r5]
 	add r4, r0, #0
 	cmp r1, #0
 	bne _0207BD52
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 _0207BD52:
 	ldr r0, [r5, #0x18]
@@ -472,7 +472,7 @@ _0207BD7A:
 	str r0, [r5, #0x1c]
 	str r0, [r5, #0x20]
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 	nop
 _0207BD8C: .word 0x0214C580
@@ -600,7 +600,7 @@ sub_0207BF08: ; 0x0207BF08
 	add r4, r1, #0
 	add r6, r2, #0
 	add r7, r3, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp]
 	cmp r5, #0
 	beq _0207BF24
@@ -632,7 +632,7 @@ _0207BF40:
 	str r7, [r5]
 	bl sub_0207BE64
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -685,7 +685,7 @@ _0207BF94:
 sub_0207C0A8: ; 0x0207C0A8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r1, _0207C0CC ; =0x0214C58C
 	ldr r2, [r1, #4]
 	cmp r4, r2
@@ -696,7 +696,7 @@ sub_0207C0A8: ; 0x0207C0A8
 _0207C0BE:
 	ldr r5, _0207C0CC ; =0x0214C58C
 	str r4, [r5, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	ldr r0, [r5, #8]
 	pop {r3, r4, r5, pc}
 	nop

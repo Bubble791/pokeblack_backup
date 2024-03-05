@@ -22,7 +22,7 @@ sub_0207C800: ; 0x0207C800
 	add r7, r2, #0
 	str r3, [sp]
 	mov r6, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [sp, #4]
 	cmp r7, #0
 	beq _0207C81E
@@ -65,7 +65,7 @@ _0207C84A:
 	str r0, [r5]
 _0207C858:
 	ldr r0, [sp, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add r0, r6, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -76,7 +76,7 @@ sub_0207C864: ; 0x0207C864
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r6, r0, #0
 	cmp r4, #0
 	beq _0207C880
@@ -87,7 +87,7 @@ sub_0207C864: ; 0x0207C864
 	bl sub_0207A89C
 _0207C880:
 	add r0, r6, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0207C864
 

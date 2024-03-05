@@ -13,14 +13,14 @@ sub_0206FFCC: ; 0x0206FFCC
 	ldr r1, [sp]
 	cmp r0, r1
 	beq _0206FFF2
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	mov r0, #0xe
 	mov r1, #0x11
 	mov r2, #0
 	bl sub_0206FEFC
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 _0206FFF2:
 	add sp, #4
 	pop {r3, r4, pc}

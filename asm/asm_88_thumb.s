@@ -18,7 +18,7 @@ _0207C170:
 	cmp r0, #0x10
 	bls _0207C17C
 	sub r0, #0x10
-	blx sub_0207C154
+	blx OS_SpinWait
 _0207C17C:
 	pop {r3, pc}
 	nop
@@ -30,7 +30,7 @@ sub_0207C184: ; 0x0207C184
 	push {r3, r4, r5, r6, r7, lr}
 	add r4, r0, #0
 	add r5, r1, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	ldr r1, _0207C1DC ; =0x04000208
 	str r0, [sp]
 	mov r0, #1
@@ -52,8 +52,8 @@ _0207C1A8:
 	bne _0207C1C4
 _0207C1B2:
 	blx sub_0207C7E8
-	blx sub_0207C0D0
-	blx sub_0207C0E4
+	blx OS_EnableInterrupts
+	blx OS_DisableInterrupts
 	ldr r0, [r4, r6]
 	tst r0, r5
 	beq _0207C1B2
@@ -66,7 +66,7 @@ _0207C1C4:
 	ldrh r0, [r1]
 	ldr r0, [sp]
 	strh r7, [r1]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0207C1DC: .word 0x04000208

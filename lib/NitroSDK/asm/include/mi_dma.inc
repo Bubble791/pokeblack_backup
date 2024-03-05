@@ -16,8 +16,8 @@
 .public MIi_DmaSetParams
 .public sub_01FF8BF0
 .public sub_02079DE4
-.public sub_0207C0E4
-.public sub_0207C0F8
+.public OS_DisableInterrupts
+.public OS_RestoreInterrupts
 .public sub_0207C774
 
 .public sub_02079D88

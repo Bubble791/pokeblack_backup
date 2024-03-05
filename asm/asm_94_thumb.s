@@ -6,7 +6,7 @@
 	thumb_func_start sub_0207C7DC
 sub_0207C7DC: ; 0x0207C7DC
 	push {r3, lr}
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 _0207C7E2:
 	blx sub_0207C7E8
 	b _0207C7E2

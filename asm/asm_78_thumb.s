@@ -480,10 +480,10 @@ sub_0207A078: ; 0x0207A078
 _0207A08C:
 	cmp r6, #0
 	beq _0207A096
-	blx sub_0207C110
+	blx OS_DisableInterrupts_IrqAndFiq
 	b _0207A09A
 _0207A096:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 _0207A09A:
 	add r7, r0, #0
 	mov r0, #0
@@ -497,11 +497,11 @@ _0207A0A6:
 	cmp r6, #0
 	beq _0207A0B6
 	add r0, r7, #0
-	blx sub_0207C124
+	blx OS_RestoreInterrupts_IrqAndFiq
 	b _0207A0BC
 _0207A0B6:
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 _0207A0BC:
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -525,10 +525,10 @@ sub_0207A0CC: ; 0x0207A0CC
 	add r4, r2, #0
 	add r7, r3, #0
 	beq _0207A0E0
-	blx sub_0207C110
+	blx OS_DisableInterrupts_IrqAndFiq
 	b _0207A0E4
 _0207A0E0:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 _0207A0E4:
 	str r0, [sp]
 	add r0, r5, #0
@@ -546,11 +546,11 @@ _0207A0FC:
 	cmp r7, #0
 	beq _0207A108
 	ldr r0, [sp]
-	blx sub_0207C124
+	blx OS_RestoreInterrupts_IrqAndFiq
 	b _0207A10E
 _0207A108:
 	ldr r0, [sp]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 _0207A10E:
 	ldr r0, [sp, #4]
 	add sp, #8

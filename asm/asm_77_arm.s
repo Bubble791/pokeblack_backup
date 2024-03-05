@@ -8,7 +8,7 @@ sub_02079BB0: ; 0x02079BB0
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	mov r4, r1
-	bl sub_0207C0E4
+	bl OS_DisableInterrupts
 	cmp r5, #0
 	beq _02079BE0
 	ldr r1, _02079C1C ; =0x02FE0000
@@ -18,7 +18,7 @@ sub_02079BB0: ; 0x02079BB0
 	and r2, r3, r2
 	str r2, [r1, #0xff8]
 _02079BE0:
-	bl sub_0207C0F8
+	bl OS_RestoreInterrupts
 	ldr r1, _02079C1C ; =0x02FE0000
 	add r0, r1, #0x3000
 	ldr r0, [r0, #0xff8]

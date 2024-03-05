@@ -186,7 +186,7 @@ sub_0208274C: ; 0x0208274C
 	add r4, r1, #0
 	mov r6, #0x40
 _02082756:
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	str r0, [r4, #4]
 	add r0, r7, #0
 	bl sub_0207A204
@@ -198,7 +198,7 @@ _02082756:
 	cmp r0, #0
 	beq _02082780
 	ldr r0, [r4, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	mov r0, #1
 	bl sub_020044F6
 	b _02082756
@@ -218,7 +218,7 @@ sub_02082788: ; 0x02082788
 	bl sub_0207A138
 _02082796:
 	ldr r0, [r4, #4]
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end sub_02082788

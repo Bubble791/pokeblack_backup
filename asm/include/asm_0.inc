@@ -5,7 +5,7 @@
 .public sub_02079E70
 .public GX_HBlankIntr
 .public GX_VBlankIntr
-.public sub_0207C0D0
+.public OS_EnableInterrupts
 .public sub_02049AB8
 .public sub_0207A828
 .public sub_0207A838

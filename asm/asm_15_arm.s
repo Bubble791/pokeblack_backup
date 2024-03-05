@@ -11018,13 +11018,13 @@ _0205A230:
 _0205A238:
 	cmp r5, #7
 	bhs _0205A260
-	bl sub_0207C0E4
+	bl OS_DisableInterrupts
 	mov r4, r0
 	bl sub_0205C37C
 	mov r5, r0
 	bl sub_0205A7D4
 	mov r0, r4
-	bl sub_0207C0F8
+	bl OS_RestoreInterrupts
 	b _0205A2A0
 _0205A260:
 	cmp r5, #9
@@ -12322,7 +12322,7 @@ _0205B2EC:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _0205B300:
-	bl sub_0207C0E4
+	bl OS_DisableInterrupts
 	mov r4, r0
 	blx sub_0215CB14
 	mov r6, #6
@@ -12332,7 +12332,7 @@ _0205B300:
 	cmp r7, #0
 	bne _0205B338
 	mov r0, r4
-	bl sub_0207C0F8
+	bl OS_RestoreInterrupts
 	add sp, sp, #0xc
 	mov r0, r8
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -12362,7 +12362,7 @@ _0205B378:
 	cmp r6, #0
 	bne _0205B3A8
 	mov r0, r4
-	bl sub_0207C0F8
+	bl OS_RestoreInterrupts
 	add sp, sp, #0xc
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -12373,7 +12373,7 @@ _0205B3A8:
 	bl MI_CpuCopy8
 _0205B3B8:
 	mov r0, r4
-	bl sub_0207C0F8
+	bl OS_RestoreInterrupts
 	add r4, sp, #2
 	mov r0, r4
 	bl sub_0205A378

@@ -3097,7 +3097,7 @@ _02174904: .word 0x00001EB4
 ovy30_2174908: ; 0x02174908
 	push {r3, r4, r5, lr}
 	mov r5, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r4, r0, #0
 	ldr r0, _02174964 ; =0x021757E8
 	ldr r2, [r0]
@@ -3134,7 +3134,7 @@ _02174934:
 	bl sub_02174140
 _02174958:
 	add r0, r4, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	nop

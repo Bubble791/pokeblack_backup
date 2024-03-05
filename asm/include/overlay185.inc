@@ -173,9 +173,9 @@
 .public sub_021A3004
 .public sub_021A2FFC
 .public sub_021A08D0
-.public sub_0207C0E4
+.public OS_DisableInterrupts
 .public sub_0204C040
-.public sub_0207C0F8
+.public OS_RestoreInterrupts
 .public sub_0204C520
 .public sub_0204C53C
 .public sub_0204AFD8

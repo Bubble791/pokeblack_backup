@@ -345,7 +345,7 @@ _02078298:
 MI_WaitDma: ; 0x0207829C
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	mov r1, #0xc
 	mov r2, #2
 	ldr r3, _020782CC ; =0x040000B8
@@ -365,7 +365,7 @@ _020782AE:
 	ldr r1, _020782D4 ; =0x81400001
 	str r1, [r2, #8]
 _020782C6:
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _020782CC: .word 0x040000B8
@@ -377,7 +377,7 @@ _020782D4: .word 0x81400001
 MI_StopDma: ; 0x020782D8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	mov r1, #0xc
 	ldr r3, _02078318 ; =0x040000B8
 	mul r1, r4
@@ -403,7 +403,7 @@ MI_StopDma: ; 0x020782D8
 	str r2, [r4, #4]
 	str r1, [r4, #8]
 _02078310:
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 	nop
 _02078318: .word 0x040000B8

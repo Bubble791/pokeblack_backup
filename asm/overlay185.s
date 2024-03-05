@@ -2968,7 +2968,7 @@ ovy185_219e558: ; 0x0219E558
 _0219E578:
 	lsl r0, r1, #0x10
 	lsr r4, r0, #0x10
-	blx sub_0207C0E4
+	blx OS_DisableInterrupts
 	add r7, r0, #0
 	add r0, sp, #0xc
 	str r0, [sp]
@@ -2982,7 +2982,7 @@ _0219E578:
 	bl sub_0204C040
 	add r4, r0, #0
 	add r0, r7, #0
-	blx sub_0207C0F8
+	blx OS_RestoreInterrupts
 	cmp r4, #0
 	beq _0219E5B6
 	add r0, r4, #0
