@@ -11946,7 +11946,7 @@ _02063DC6:
 	b _02063DDC
 _02063DD0:
 	add r0, r4, #0
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r0, r1, r0
 	str r0, [sp, #4]
@@ -11957,7 +11957,7 @@ _02063DDC:
 	b _02063DEE
 _02063DE4:
 	add r0, r5, #0
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r0, r1, r0
 _02063DEE:
@@ -13261,7 +13261,7 @@ sub_020646FC: ; 0x020646FC
 	b _0206471A
 _02064710:
 	add r0, r5, #0
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r6, r1, r0
 _0206471A:
@@ -13271,7 +13271,7 @@ _0206471A:
 	b _0206472C
 _02064722:
 	add r0, r4, #0
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r0, r1, r0
 _0206472C:
@@ -13499,7 +13499,7 @@ sub_02064898: ; 0x02064898
 	mov r6, #3
 	b _020648C4
 _020648BC:
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r6, r1, r0
 _020648C4:
@@ -13509,7 +13509,7 @@ _020648C4:
 	mov r0, #3
 	b _020648D6
 _020648CE:
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x1f
 	sub r0, r1, r0
 _020648D6:

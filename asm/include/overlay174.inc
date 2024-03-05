@@ -30,7 +30,7 @@
 .public sub_0204C178
 .public sub_0204C140
 .public sub_0204C140
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_02040440
 .public sub_02040440
 .public sub_02017378

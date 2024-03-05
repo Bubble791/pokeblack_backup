@@ -16,7 +16,7 @@
 .public sub_0203FFC4
 .public sub_0217CF84
 .public sub_0217CF80
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_0217CF14
 .public sub_0203FFC4
 .public sub_0203FFC4

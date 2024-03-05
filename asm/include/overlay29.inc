@@ -118,7 +118,7 @@
 .public sub_0219682C
 .public sub_02194D30
 .public sub_02194E30
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_02196758
 .public sub_02194EC8
 .public sub_02194AE4

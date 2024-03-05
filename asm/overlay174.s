@@ -339,7 +339,7 @@ ovy174_219d104: ; 0x0219D104
 	orr r0, r2
 	mov r6, #1
 	str r0, [r5, r4]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	cmp r0, #2
 	blo _0219D124
 	add r0, r4, #4

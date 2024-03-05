@@ -39026,7 +39026,7 @@ ovy182_21b77dc: ; 0x021B77DC
 	str r0, [r4]
 	add r0, r0, r1
 	ldr r1, _021B7808 ; =0x0000A001
-	bl sub_02077908
+	bl MATHi_CRC16InitTableRev
 	ldr r0, [r4]
 	blx sub_02056CE8
 	pop {r4, pc}
@@ -40008,7 +40008,7 @@ _021B7F9E:
 	add r0, r1, r0
 	add r1, r1, r5
 	mov r2, #0xfe
-	bl sub_020779F8
+	bl MATH_CalcCRC16
 	ldr r1, [r6]
 	add r1, r1, r5
 	add r1, #0xfe

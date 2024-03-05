@@ -538,7 +538,7 @@ _021BBAE2:
 	add r0, r4, #0
 	bl sub_021BB984
 	bl sub_0217CF80
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	ldr r1, [r4, #0x2c]
 	cmp r1, r0
 	beq _021BBB0E

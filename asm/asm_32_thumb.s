@@ -2323,7 +2323,7 @@ _020710EC:
 	cmp r4, #0
 	beq _020710FC
 	mov r0, #1
-	bl sub_020774E8
+	bl MATHi_SetOverlayTableMode
 	str r0, [sp, #4]
 _020710FC:
 	ldr r0, _02071138 ; =0x0214BF60
@@ -2333,11 +2333,11 @@ _020710FC:
 	str r0, [sp]
 	add r0, sp, #0x48
 	add r3, sp, #8
-	bl sub_02077748
+	bl MATH_CalcHMACSHA1
 	cmp r4, #0
 	beq _02071118
 	ldr r0, [sp, #4]
-	bl sub_020774E8
+	bl MATHi_SetOverlayTableMode
 _02071118:
 	mov r3, #0
 	add r2, sp, #0x48

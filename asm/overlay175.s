@@ -754,7 +754,7 @@ ovy175_2199df4: ; 0x02199DF4
 	orr r0, r2
 	mov r5, #1
 	str r0, [r4, #0x4c]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	cmp r0, #2
 	blo _02199E0E
 	str r5, [r4, #0x50]

@@ -23,7 +23,7 @@
 .public sub_02042BC4
 .public sub_021704BC
 .public sub_020120C8
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_02042A78
 .public sub_02042E9C
 .public sub_02042BC4

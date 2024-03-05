@@ -247,7 +247,7 @@ _0217D188:
 	ldr r0, [r4, #4]
 	ldr r0, [r0]
 	bl sub_0217CF80
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	ldr r1, [r4, r5]
 	cmp r1, r0
 	beq _0217D1B0

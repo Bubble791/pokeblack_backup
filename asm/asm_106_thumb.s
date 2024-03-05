@@ -6290,7 +6290,7 @@ _02081C64:
 	add r1, r4, #0
 	sub r1, #0xa
 	strh r0, [r5, r1]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	sub r1, r4, #6
 	strh r0, [r5, r1]
 	ldr r1, [sp, #0x10]
@@ -7023,7 +7023,7 @@ sub_020823E8: ; 0x020823E8
 	sub r0, r0, #1
 	and r0, r1
 	add r4, r2, #0
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	mov r1, #0x81
 	lsl r1, r1, #4
 	ldrh r1, [r5, r1]

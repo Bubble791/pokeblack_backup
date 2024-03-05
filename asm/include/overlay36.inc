@@ -11764,8 +11764,8 @@
 .public sub_02040440
 .public sub_02042A6C
 .public sub_02042A80
-.public sub_02076FB0
-.public sub_02076FB0
+.public MATH_CountPopulation
+.public MATH_CountPopulation
 .public sub_02040440
 .public sub_02040624
 .public sub_0203FF6C

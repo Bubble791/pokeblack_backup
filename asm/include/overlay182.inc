@@ -2071,7 +2071,7 @@
 .public MI_CpuCopy8
 .public sub_020811EC
 .public sub_02083A10
-.public sub_02077908
+.public MATHi_CRC16InitTableRev
 .public sub_02056CE8
 .public MI_CpuCopy8
 .public MI_CpuFill8
@@ -2117,7 +2117,7 @@
 .public sub_02056E7C
 .public MI_CpuCopy8
 .public MI_CpuFill8
-.public sub_020779F8
+.public MATH_CalcCRC16
 .public sub_02056CFC
 .public MI_CpuFill8
 .public MI_CpuCopy8

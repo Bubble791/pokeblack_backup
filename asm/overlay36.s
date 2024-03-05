@@ -144641,7 +144641,7 @@ _021C423E:
 	add r0, r5, #0
 	add r0, #0x52
 	ldrb r0, [r4, r0]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	add r1, r5, #0
 	sub r1, #0xa
 	ldrb r1, [r4, r1]
@@ -144687,7 +144687,7 @@ _021C4294:
 	add r0, r6, #0
 	add r0, #0x5a
 	ldrb r0, [r4, r0]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	add r6, #0x55
 	strb r0, [r4, r6]
 	bl sub_02040440

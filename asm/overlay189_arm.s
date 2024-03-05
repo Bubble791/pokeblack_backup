@@ -430,7 +430,7 @@ sub_021A96CC: ; 0x021A96CC
 	mov r0, r4
 	mov r1, lr
 	mov r2, ip
-	bl sub_02077720
+	bl MATH_CalcSHA1
 	mov r0, r4
 	mov r1, r6
 	mov r2, r5

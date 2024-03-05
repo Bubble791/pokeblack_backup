@@ -37,7 +37,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0204424C
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_02042BC4
 .public MI_CpuCopy8
 .public sub_02040440

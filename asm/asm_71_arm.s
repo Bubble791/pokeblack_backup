@@ -9,8 +9,8 @@ _02077CD8: .word 0x6ED9EBA1
 _02077CDC: .word 0x8F1BBCDC
 _02077CE0: .word 0xCA62C1D6
 
-	arm_func_start sub_02077CE4
-sub_02077CE4: ; 0x02077CE4
+	arm_func_start MATHi_SHA1ProcessBlock
+MATHi_SHA1ProcessBlock: ; 0x02077CE4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
 	mov fp, r0
 	sub sp, sp, #0x40
@@ -216,5 +216,5 @@ _02077F54:
 	stmia fp, {r1, r2, r3, sb, sl}
 	add sp, sp, #0x40
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, ip, pc}
-	arm_func_end sub_02077CE4
+	arm_func_end MATHi_SHA1ProcessBlock
 

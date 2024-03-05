@@ -777,11 +777,11 @@
 .public sub_02085E80
 .public sub_020586E4
 .public sub_0216E878
-.public sub_02077720
+.public MATH_CalcSHA1
 .public sub_02058728
 .public sub_02086014
 .public sub_02083964
-.public sub_02077720
+.public MATH_CalcSHA1
 .public sub_02085D9C
 .public sub_02085E80
 .public sub_02058814
@@ -848,7 +848,7 @@
 .public sub_021A92F8
 .public sub_021A9390
 .public sub_021A9548
-.public sub_02077720
+.public MATH_CalcSHA1
 .public sub_021A9654
 .public sub_0207B4F4
 .public sub_0207B598

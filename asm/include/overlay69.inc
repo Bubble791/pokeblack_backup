@@ -7,7 +7,7 @@
 .public sub_02040440
 .public sub_02042A6C
 .public sub_0217CF4C
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_020120C8
 .public sub_021704BC
 .public sub_021704EC

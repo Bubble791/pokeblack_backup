@@ -450,7 +450,7 @@ _021706CC:
 	add r0, r5, r6
 	add r0, #0x5e
 	ldrb r0, [r0]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	add r4, r0, #0
 	bl sub_02042A78
 	cmp r4, r0

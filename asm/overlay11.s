@@ -28064,7 +28064,7 @@ _0215D55A:
 	bne _0215D594
 	ldr r0, _0215D644 ; =0x00003FFE
 	and r0, r2
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	add r1, r0, #0
 	beq _0215D594
 	ldr r0, _0215D648 ; =0x000022E4
@@ -28082,7 +28082,7 @@ _0215D55A:
 	bl ovy11_215c48c
 _0215D594:
 	ldrh r0, [r4, #0xa]
-	blx sub_02076FA8
+	blx MATH_CountLeadingZerosFunc
 	mov r1, #0x20
 	sub r0, r1, r0
 	lsl r0, r0, #0x10

@@ -50,8 +50,11 @@ Static main
     Object lib/NitroSDK/asm/gx_vramcnt.o
     Object lib/NitroSDK/asm/gxasm.o
     Object lib/NitroSDK/asm/gxstate.o
+    Object lib/NitroSDK/asm/math.o
+    Object lib/NitroSDK/asm/dgt_md5.o
+    Object lib/NitroSDK/asm/dgt_sha1.o
+    Object lib/NitroSDK/asm/crc.o
 
-    Object asm/asm_69_arm.o
     Object asm/asm_70_thumb.o
     Object asm/asm_71_arm.o
     Object asm/asm_72_thumb.o

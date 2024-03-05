@@ -78,7 +78,7 @@ ovy69_217c9c8: ; 0x0217C9C8
 	pop {r3, r4, r5, pc}
 _0217C9D8:
 	ldrb r0, [r5, #1]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	ldrb r1, [r5, #9]
 	cmp r1, #2
 	bne _0217C9F2

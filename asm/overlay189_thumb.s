@@ -21948,7 +21948,7 @@ _021A8AB0:
 	add r0, #1
 	add r1, r4, #0
 	add r2, #0x28
-	bl sub_02077720
+	bl MATH_CalcSHA1
 	add r1, r4, #0
 	mov r0, #8
 	mov r2, #0
@@ -22067,7 +22067,7 @@ _021A8B90:
 	add r0, r4, #0
 	add r1, #1
 	mov r2, #0x34
-	bl sub_02077720
+	bl MATH_CalcSHA1
 	mov r2, #0
 	add r0, sp, #0
 _021A8BB8:

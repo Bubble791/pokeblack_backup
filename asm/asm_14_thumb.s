@@ -2576,7 +2576,7 @@ sub_0203ABAC: ; 0x0203ABAC
 	ldr r0, [r4]
 	ldr r1, _0203AC00 ; =0x00001021
 	add r0, r0, #4
-	bl sub_020778D8
+	bl MATHi_CRC16InitTable
 	ldr r0, _0203AC00 ; =0x00001021
 	ldr r1, [r4]
 	lsr r0, r0, #3
@@ -3259,12 +3259,12 @@ sub_0203B090: ; 0x0203B090
 	ldr r0, [r0]
 	sub r3, r3, r2
 	add r1, r1, r3
-	ldr r3, _0203B0B0 ; =sub_02077A10
+	ldr r3, _0203B0B0 ; =MATH_CalcCRC16CCITT
 	add r0, r0, #4
 	bx r3
 	nop
 _0203B0AC: .word 0x0214185C
-_0203B0B0: .word sub_02077A10
+_0203B0B0: .word MATH_CalcCRC16CCITT
 	thumb_func_end sub_0203B090
 
 	thumb_func_start sub_0203B0B4
@@ -3690,7 +3690,7 @@ _0203B3CE:
 	add r1, r2, r1
 	ldr r2, [sp, #0xc]
 	add r0, r0, #4
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	ldrh r1, [r7, #2]
 	cmp r1, r0
 	beq _0203B3F6
@@ -3714,7 +3714,7 @@ _0203B3F6:
 	add r1, r2, r1
 	ldr r2, [sp, #0xc]
 	add r0, r0, #4
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	ldrh r1, [r6, #2]
 	cmp r1, r0
 	beq _0203B44A
@@ -4008,7 +4008,7 @@ _0203B642:
 	ldr r2, [sp, #0xc]
 	add r0, r0, #4
 	add r1, r1, r7
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	ldrh r1, [r6, #2]
 	cmp r1, r0
 	beq _0203B698
@@ -4940,7 +4940,7 @@ sub_0203BD6C: ; 0x0203BD6C
 	add r1, r1, r4
 	ldr r0, [r0]
 	add r0, r0, #4
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	strh r0, [r5, #2]
 	ldrh r0, [r5, #2]
 	pop {r4, r5, r6, pc}
@@ -22756,7 +22756,7 @@ sub_02043E40: ; 0x02043E40
 	add r1, #0xc
 	add r0, r0, r1
 	ldr r1, _02043E94 ; =0x00001021
-	bl sub_020778D8
+	bl MATHi_CRC16InitTable
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0
@@ -23036,7 +23036,7 @@ sub_0204405C: ; 0x0204405C
 	ldr r0, _02044094 ; =0x000009CC
 	add r0, r1, r0
 	add r1, sp, #0
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	pop {r3, pc}
 _02044080:
 	ldr r0, _02044090 ; =0x021418C0
@@ -23044,7 +23044,7 @@ _02044080:
 	ldr r0, _02044094 ; =0x000009CC
 	add r0, r1, r0
 	add r1, r3, #0
-	bl sub_02077A10
+	bl MATH_CalcCRC16CCITT
 	pop {r3, pc}
 	.align 2, 0
 _02044090: .word 0x021418C0
@@ -23061,19 +23061,19 @@ sub_02044098: ; 0x02044098
 	bl sub_0207C6D0
 	add r6, sp, #0x3c
 	add r0, r6, #0
-	bl sub_02077510
+	bl MATH_SHA1Init
 	add r7, sp, #8
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r2, #0x14
-	bl sub_02077544
+	bl MATH_SHA1Update
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r2, #0x20
-	bl sub_02077544
+	bl MATH_SHA1Update
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_020775C8
+	bl MATH_SHA1GetHash
 	add r4, sp, #0
 	add r0, r7, #0
 	add r1, r4, #0

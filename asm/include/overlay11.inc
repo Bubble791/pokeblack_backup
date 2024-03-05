@@ -897,9 +897,9 @@
 .public sub_020816DC
 .public sub_0215C32C
 .public sub_0207B074
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_0208D868
-.public sub_02076FA8
+.public MATH_CountLeadingZerosFunc
 .public sub_0207B090
 .public sub_020815C8
 .public sub_020816B4

@@ -1982,7 +1982,7 @@ _02194684:
 	mvn r0, r1, lsl r0
 	and r0, r2, r0
 	str r0, [r6, #0x8cc]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	sub r0, r0, #1
 	str r0, [r6, #0x8d4]
 	cmp r0, #7

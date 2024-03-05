@@ -202,7 +202,7 @@
 .public sub_02040440
 .public sub_02040664
 .public sub_021712DC
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_0217AA94
 .public sub_0217AB00
 .public sub_0201735C
@@ -233,7 +233,7 @@
 .public sub_02040440
 .public sub_02040664
 .public sub_021712DC
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_0217AAAC
 .public sub_021775CC
 .public sub_0217AAE0
@@ -798,7 +798,7 @@
 .public sub_021672A8
 .public sub_021672D8
 .public sub_02042A78
-.public sub_02076FB0
+.public MATH_CountPopulation
 .public sub_021804F0
 .public sub_0219A664
 .public sub_021804D8

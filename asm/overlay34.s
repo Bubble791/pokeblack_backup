@@ -2795,7 +2795,7 @@ _02177FDA:
 _02177FE6:
 	add r5, #0x5b
 	ldrb r0, [r5]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	cmp r0, #1
 	bls _02177FF6
 	mov r0, #1
@@ -3185,7 +3185,7 @@ _021782D8:
 _021782E4:
 	add r5, #0x5b
 	ldrb r0, [r5]
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	cmp r0, #1
 	bls _021782F4
 	mov r0, #1
@@ -10951,7 +10951,7 @@ _0217BD8A:
 	cmp r4, r0
 	bge _0217BDA2
 	add r0, r5, #0
-	bl sub_02076FB0
+	bl MATH_CountPopulation
 	cmp r4, r0
 	blt _0217BDA6
 _0217BDA2:
