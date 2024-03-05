@@ -1120,9 +1120,9 @@ _021EF526:
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	asr r0, r0, #4
-	ldr r1, _021EF5D8 ; =0x020946BC
+	ldr r1, _021EF5D8 ; =FX_SinCosTable_ ; 0x020946BC
 	lsl r0, r0, #2
-	ldr r2, _021EF5D8 ; =0x020946BC
+	ldr r2, _021EF5D8 ; =FX_SinCosTable_ ; 0x020946BC
 	add r1, r1, r0
 	ldrsh r0, [r2, r0]
 	ldr r2, [r4, #0xc]
@@ -1170,7 +1170,7 @@ _021EF5C8:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021EF5D4: .word 0x021EF868
-_021EF5D8: .word 0x020946BC
+_021EF5D8: .word FX_SinCosTable_
 	thumb_func_end ovy103_21ef518
 
 	thumb_func_start ovy103_21ef5dc

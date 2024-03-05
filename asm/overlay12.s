@@ -40493,13 +40493,13 @@ _021637B8:
 	add r0, r5, #0
 	add r0, #0x9c
 	ldr r0, [r0]
-	ldr r1, _02163858 ; =0x020946BC
+	ldr r1, _02163858 ; =FX_SinCosTable_ ; 0x020946BC
 	add r0, r0, r6
 	ldrh r0, [r0, #0x10]
 	asr r0, r0, #4
 	lsl r2, r0, #2
 	ldrsh r1, [r1, r2]
-	ldr r0, _02163858 ; =0x020946BC
+	ldr r0, _02163858 ; =FX_SinCosTable_ ; 0x020946BC
 	add r0, r0, r2
 	str r1, [sp]
 	mov r1, #2
@@ -40541,7 +40541,7 @@ _02163854:
 	add sp, #0x44
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
-_02163858: .word 0x020946BC
+_02163858: .word FX_SinCosTable_
 _0216385C: .word 0x02143A58
 	thumb_func_end ovy12_2163790
 _02163860:

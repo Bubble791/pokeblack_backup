@@ -560,7 +560,7 @@ _021EF0F4:
 	asr r0, r0, #4
 	ldrsh r2, [r5, r1]
 	lsl r1, r0, #2
-	ldr r0, _021EF120 ; =0x020946BC
+	ldr r0, _021EF120 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	add r1, sp, #0
 	mul r0, r2
@@ -580,7 +580,7 @@ _021EF11A:
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_021EF120: .word 0x020946BC
+_021EF120: .word FX_SinCosTable_
 	thumb_func_end ovy94_21ef098
 
 	thumb_func_start ovy94_21ef124

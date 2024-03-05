@@ -10793,7 +10793,7 @@ _021F5188:
 	lsl r2, r0, #1
 	add r0, r2, #1
 	lsl r1, r0, #1
-	ldr r0, _021F51C8 ; =0x020946BC
+	ldr r0, _021F51C8 ; =FX_SinCosTable_ ; 0x020946BC
 	lsl r2, r2, #1
 	ldrsh r1, [r0, r1]
 	ldrsh r0, [r0, r2]
@@ -10823,7 +10823,7 @@ _021F51C2:
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_021F51C8: .word 0x020946BC
+_021F51C8: .word FX_SinCosTable_
 	thumb_func_end ovy271_21f5110
 
 	thumb_func_start ovy271_21f51cc
@@ -10870,7 +10870,7 @@ ovy271_21f51fc: ; 0x021F51FC
 	lsl r3, r0, #1
 	add r0, r3, #1
 	lsl r2, r0, #1
-	ldr r0, _021F5258 ; =0x020946BC
+	ldr r0, _021F5258 ; =FX_SinCosTable_ ; 0x020946BC
 	lsl r3, r3, #1
 	ldrsh r2, [r0, r2]
 	ldrh r1, [r5, #0x10]
@@ -10900,7 +10900,7 @@ _021F524E:
 	pop {r4, r5, r6, pc}
 	nop
 _021F5254: .word 0x0000FFFF
-_021F5258: .word 0x020946BC
+_021F5258: .word FX_SinCosTable_
 	thumb_func_end ovy271_21f51fc
 
 	thumb_func_start ovy271_21f525c

@@ -2674,7 +2674,7 @@ ovy178_219c19c: ; 0x0219C19C
 	add r3, sp, #0x18
 	ldrh r4, [r3, #8]
 	lsl r3, r2, #1
-	ldr r2, _0219C244 ; =0x020946BC
+	ldr r2, _0219C244 ; =FX_SinCosTable_ ; 0x020946BC
 	mov r5, #0x1f
 	ldrsh r3, [r2, r3]
 	mov r2, #1
@@ -2741,7 +2741,7 @@ ovy178_219c19c: ; 0x0219C19C
 	bl sub_0205FA10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
-_0219C244: .word 0x020946BC
+_0219C244: .word FX_SinCosTable_
 	thumb_func_end ovy178_219c19c
 
 	thumb_func_start ovy178_219c248
@@ -2916,7 +2916,7 @@ _0219C372:
 	asr r0, r0, #4
 	lsl r0, r0, #1
 	lsl r1, r0, #1
-	ldr r2, _0219C3F8 ; =0x020946BC
+	ldr r2, _0219C3F8 ; =FX_SinCosTable_ ; 0x020946BC
 	add r0, r0, #1
 	lsl r0, r0, #1
 	ldrsh r0, [r2, r0]
@@ -2968,7 +2968,7 @@ _0219C3DC:
 	.align 2, 0
 _0219C3F0: .word 0x00000528
 _0219C3F4: .word 0x0000FFFF
-_0219C3F8: .word 0x020946BC
+_0219C3F8: .word FX_SinCosTable_
 	thumb_func_end ovy178_219c2ac
 
 	thumb_func_start ovy178_219c3fc
@@ -3004,7 +3004,7 @@ _0219C420:
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	asr r0, r0, #4
-	ldr r2, _0219C4C4 ; =0x020946BC
+	ldr r2, _0219C4C4 ; =FX_SinCosTable_ ; 0x020946BC
 	lsl r0, r0, #2
 	add r1, r2, r0
 	ldrsh r0, [r2, r0]
@@ -3070,7 +3070,7 @@ _0219C4B0:
 	pop {r4, r5, r6, r7, pc}
 	nop
 _0219C4C0: .word 0x0000FFFF
-_0219C4C4: .word 0x020946BC
+_0219C4C4: .word FX_SinCosTable_
 	thumb_func_end ovy178_219c3fc
 
 	thumb_func_start ovy178_219c4c8

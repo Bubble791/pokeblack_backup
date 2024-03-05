@@ -1933,7 +1933,7 @@ _021A859E:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _021A86E8 ; =0x020946BC
+	ldr r0, _021A86E8 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	asr r1, r0, #0x1f
 	blx sub_0208D60C
@@ -2022,7 +2022,7 @@ _021A864A:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _021A86E8 ; =0x020946BC
+	ldr r0, _021A86E8 ; =FX_SinCosTable_ ; 0x020946BC
 	mov r7, #0
 	ldrsh r0, [r0, r1]
 	asr r1, r0, #0x1f
@@ -2089,7 +2089,7 @@ _021A86D8: .word 0x000032EA
 _021A86DC: .word 0x0000304C
 _021A86E0: .word 0x0000103D
 _021A86E4: .word 0x00000864
-_021A86E8: .word 0x020946BC
+_021A86E8: .word FX_SinCosTable_
 _021A86EC: .word 0x00003038
 _021A86F0: .word 0x000032D4
 _021A86F4: .word 0x000032EE
@@ -5106,7 +5106,7 @@ _021A9D7A:
 	lsl r1, r1, #1
 	add r1, r1, #1
 	lsl r2, r1, #1
-	ldr r1, _021A9E68 ; =0x020946BC
+	ldr r1, _021A9E68 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r2, [r1, r2]
 	mov r1, #1
 	lsl r1, r1, #0xc
@@ -5216,7 +5216,7 @@ _021A9E5A:
 	nop
 _021A9E60: .word 0x0000333C
 _021A9E64: .word 0x00003344
-_021A9E68: .word 0x020946BC
+_021A9E68: .word FX_SinCosTable_
 _021A9E6C: .word 0x00003388
 	thumb_func_end ovy186_21a9d44
 
@@ -10765,7 +10765,7 @@ sub_021ACA70: ; 0x021ACA70
 	lsl r2, r2, #1
 	add r0, r0, r1
 	lsl r1, r2, #1
-	ldr r3, _021ACA94 ; =0x020946BC
+	ldr r3, _021ACA94 ; =FX_SinCosTable_ ; 0x020946BC
 	add r2, r2, #1
 	lsl r2, r2, #1
 	ldrsh r1, [r3, r1]
@@ -10773,7 +10773,7 @@ sub_021ACA70: ; 0x021ACA70
 	ldr r3, _021ACA98 ; =MTX_RotX33_
 	bx r3
 	nop
-_021ACA94: .word 0x020946BC
+_021ACA94: .word FX_SinCosTable_
 _021ACA98: .word MTX_RotX33_
 	thumb_func_end sub_021ACA70
 
@@ -10857,7 +10857,7 @@ _021ACB12:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _021ACBEC ; =0x020946BC
+	ldr r0, _021ACBEC ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r1, [r0, r1]
 	mov r0, #1
 	lsl r0, r0, #0xc
@@ -10957,7 +10957,7 @@ _021ACBE6:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
-_021ACBEC: .word 0x020946BC
+_021ACBEC: .word FX_SinCosTable_
 	thumb_func_end ovy186_21acadc
 
 	thumb_func_start sub_021ACBF0

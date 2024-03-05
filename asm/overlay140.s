@@ -962,7 +962,7 @@ _0219D664:
 	add r0, r0, #1
 	ldrh r3, [r1, #8]
 	lsl r1, r0, #1
-	ldr r0, _0219D704 ; =0x020946BC
+	ldr r0, _0219D704 ; =FX_SinCosTable_ ; 0x020946BC
 	mov r7, #0x1f
 	ldrsh r1, [r0, r1]
 	mov r0, #1
@@ -1028,7 +1028,7 @@ _0219D664:
 	bl sub_0205FA10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_0219D704: .word 0x020946BC
+_0219D704: .word FX_SinCosTable_
 	thumb_func_end ovy140_219d648
 
 	thumb_func_start ovy140_219d708

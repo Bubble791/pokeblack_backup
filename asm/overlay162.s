@@ -7247,7 +7247,7 @@ _021A09BE:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _021A0A18 ; =0x020946BC
+	ldr r0, _021A0A18 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r1, [r0, r1]
 	mov r0, #1
 	lsl r0, r0, #0xc
@@ -7285,7 +7285,7 @@ _021A09BE:
 	bl sub_0205FA10
 	pop {r4, pc}
 	.align 2, 0
-_021A0A18: .word 0x020946BC
+_021A0A18: .word FX_SinCosTable_
 	thumb_func_end ovy162_21a09a0
 
 	thumb_func_start ovy162_21a0a1c

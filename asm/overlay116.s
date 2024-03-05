@@ -645,7 +645,7 @@ _021EF17C:
 	lsr r0, r0, #0x10
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _021EF1B8 ; =0x020946BC
+	ldr r0, _021EF1B8 ; =FX_SinCosTable_ ; 0x020946BC
 	mov r2, #0
 	ldrsh r1, [r0, r1]
 	str r2, [sp]
@@ -663,7 +663,7 @@ _021EF17C:
 	add sp, #0xc
 	pop {r3, r4, pc}
 	nop
-_021EF1B8: .word 0x020946BC
+_021EF1B8: .word FX_SinCosTable_
 	thumb_func_end ovy116_21ef15c
 _021EF1BC:
 	.byte 0x04, 0x00, 0x00, 0x00

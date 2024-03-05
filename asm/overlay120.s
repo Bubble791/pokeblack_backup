@@ -862,7 +862,7 @@ _021EF32C:
 	mov r0, #0
 	ldrsh r0, [r5, r0]
 	lsl r2, r1, #2
-	ldr r1, _021EF368 ; =0x020946BC
+	ldr r1, _021EF368 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r5, [r4, #0x1c]
 	ldrsh r1, [r1, r2]
 	add r3, r0, #0
@@ -889,7 +889,7 @@ _021EF360:
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
-_021EF368: .word 0x020946BC
+_021EF368: .word FX_SinCosTable_
 	thumb_func_end ovy120_21ef224
 _021EF36C:
 	.byte 0x0A, 0x00, 0x00, 0x00

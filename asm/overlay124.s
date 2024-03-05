@@ -724,7 +724,7 @@ _021EF1FA:
 	lsr r0, r0, #0x10
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _021EF284 ; =0x020946BC
+	ldr r0, _021EF284 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r2, [r0, r1]
 	mov r0, #0x1e
 	ldrsh r0, [r4, r0]
@@ -771,7 +771,7 @@ _021EF272:
 _021EF278: .word 0x000011A0
 _021EF27C: .word 0x00000000
 _021EF280: .word 0x00000899
-_021EF284: .word 0x020946BC
+_021EF284: .word FX_SinCosTable_
 	thumb_func_end ovy124_21ef10c
 
 	thumb_func_start ovy124_21ef288
@@ -996,7 +996,7 @@ _021EF424:
 	mov r0, #0
 	ldrsh r0, [r5, r0]
 	lsl r2, r1, #2
-	ldr r1, _021EF460 ; =0x020946BC
+	ldr r1, _021EF460 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r5, [r4, #0x1c]
 	ldrsh r1, [r1, r2]
 	add r3, r0, #0
@@ -1023,7 +1023,7 @@ _021EF458:
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
-_021EF460: .word 0x020946BC
+_021EF460: .word FX_SinCosTable_
 	thumb_func_end ovy124_21ef31c
 _021EF464:
 	.byte 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00

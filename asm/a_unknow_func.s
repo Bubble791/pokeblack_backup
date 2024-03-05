@@ -789,6 +789,7 @@ sub_027681F4:
 sub_0276824C:
 	bl sub_0207E958
 	bl sub_0207E970
+	bl FX_AcosIdx
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0276824C

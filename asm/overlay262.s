@@ -748,7 +748,7 @@ ovy262_21c2b50: ; 0x021C2B50
 	lsl r2, r2, #1
 	add r2, r2, #1
 	lsl r4, r2, #1
-	ldr r2, _021C2BF8 ; =0x020946BC
+	ldr r2, _021C2BF8 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrh r6, [r1, #8]
 	ldrsh r4, [r2, r4]
 	mov r2, #1
@@ -824,7 +824,7 @@ ovy262_21c2b50: ; 0x021C2B50
 	bl sub_0205FA10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_021C2BF8: .word 0x020946BC
+_021C2BF8: .word FX_SinCosTable_
 	thumb_func_end ovy262_21c2b50
 
 	thumb_func_start ovy262_21c2bfc

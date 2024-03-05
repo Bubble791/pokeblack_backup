@@ -424,11 +424,11 @@ _021F607E:
 	ldr r1, [sp, #4]
 	str r1, [r0]
 	ldr r0, [sp, #0x14]
-	ldr r1, _021F61C4 ; =0x020946BC
+	ldr r1, _021F61C4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r0, [r0, #0x1c]
 	asr r0, r0, #4
 	lsl r3, r0, #2
-	ldr r0, _021F61C4 ; =0x020946BC
+	ldr r0, _021F61C4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r1, [r1, r3]
 	add r2, r0, r3
 	mov r3, #2
@@ -438,11 +438,11 @@ _021F607E:
 	add r0, sp, #0x44
 	bl sub_02074C64
 	ldr r0, [sp, #0x14]
-	ldr r1, _021F61C4 ; =0x020946BC
+	ldr r1, _021F61C4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r0, [r0, #0x20]
 	asr r0, r0, #4
 	lsl r3, r0, #2
-	ldr r0, _021F61C4 ; =0x020946BC
+	ldr r0, _021F61C4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r1, [r1, r3]
 	add r2, r0, r3
 	mov r3, #2
@@ -531,7 +531,7 @@ _021F61B4: .word 0x001F0081
 _021F61B8: .word 0x021F61D8
 _021F61BC: .word 0x0000300A
 _021F61C0: .word 0x40004000
-_021F61C4: .word 0x020946BC
+_021F61C4: .word FX_SinCosTable_
 _021F61C8: .word 0x4000C000
 _021F61CC: .word 0xC000C000
 _021F61D0: .word 0xC0004000

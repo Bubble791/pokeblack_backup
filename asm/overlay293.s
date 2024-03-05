@@ -1532,7 +1532,7 @@ _021A26AE:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _021A2810 ; =0x020946BC
+	ldr r0, _021A2810 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r6, [r0, r1]
 	ldrh r1, [r5, #0xc]
 	str r1, [sp, #0x24]
@@ -1656,7 +1656,7 @@ _021A26AE:
 	pop {r4, r5, r6, r7, pc}
 	nop
 _021A280C: .word 0x0B60B60B
-_021A2810: .word 0x020946BC
+_021A2810: .word FX_SinCosTable_
 _021A2814: .word 0x00000000
 _021A2818: .word 0x00001555
 _021A281C: .word 0x021A3F20

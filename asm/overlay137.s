@@ -3753,7 +3753,7 @@ ovy137_21f0818: ; 0x021F0818
 	mov r2, #1
 	bl sub_021B8224
 	add r7, r0, #0
-	ldr r1, _021F08D8 ; =0x020946BC
+	ldr r1, _021F08D8 ; =FX_SinCosTable_ ; 0x020946BC
 	mov r0, #2
 	ldrsh r0, [r1, r0]
 	str r0, [sp, #8]
@@ -3825,7 +3825,7 @@ _021F088A:
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
-_021F08D8: .word 0x020946BC
+_021F08D8: .word FX_SinCosTable_
 	thumb_func_end ovy137_21f0818
 
 	thumb_func_start ovy137_21f08dc

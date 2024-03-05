@@ -372,7 +372,7 @@ _021EEF40:
 	bl FX_Div
 	add r1, sp, #0x18
 	str r0, [sp, #0x18]
-	bl sub_02074694
+	bl FX_Modf
 	cmp r0, #0
 	bne _021EEF96
 	ldr r0, [sp, #0x18]

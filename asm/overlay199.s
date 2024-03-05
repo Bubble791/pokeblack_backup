@@ -4790,7 +4790,7 @@ ovy199_21b55e8: ; 0x021B55E8
 	ldrh r0, [r5, #8]
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _021B56E4 ; =0x020946BC
+	ldr r0, _021B56E4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r1, [r0, r1]
 	lsl r1, r1, #0x12
 	asr r6, r1, #0x1c
@@ -4910,7 +4910,7 @@ _021B56E0:
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
-_021B56E4: .word 0x020946BC
+_021B56E4: .word FX_SinCosTable_
 _021B56E8: .word 0x0000029A
 	thumb_func_end ovy199_21b55e8
 

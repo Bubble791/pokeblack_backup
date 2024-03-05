@@ -1615,7 +1615,7 @@ _021EF93E:
 	bne _021EF9A2
 	asr r0, r1, #4
 	lsl r2, r0, #2
-	ldr r0, _021EFA00 ; =0x020946BC
+	ldr r0, _021EFA00 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r2]
 	lsl r2, r0, #3
 	cmp r1, #0
@@ -1629,7 +1629,7 @@ _021EF9A2:
 	asr r1, r1, #4
 	mov r0, #0x20
 	lsl r2, r1, #2
-	ldr r1, _021EFA00 ; =0x020946BC
+	ldr r1, _021EFA00 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r4, r0]
 	ldrsh r1, [r1, r2]
 	add r2, r0, #0
@@ -1672,7 +1672,7 @@ _021EF9F6:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021EF9FC: .word 0x45800000
-_021EFA00: .word 0x020946BC
+_021EFA00: .word FX_SinCosTable_
 	thumb_func_end ovy101_21ef8ac
 
 	thumb_func_start ovy101_21efa04
@@ -1951,7 +1951,7 @@ ovy101_21efbf0: ; 0x021EFBF0
 _021EFC2C:
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _021EFCB0 ; =0x020946BC
+	ldr r0, _021EFCB0 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	cmp r0, #0
 	bne _021EFC4A
@@ -2023,7 +2023,7 @@ _021EFCA4:
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_021EFCB0: .word 0x020946BC
+_021EFCB0: .word FX_SinCosTable_
 	thumb_func_end ovy101_21efbf0
 
 	thumb_func_start ovy101_21efcb4

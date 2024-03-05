@@ -2113,7 +2113,7 @@ _021ADE90:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r2, r0, #1
-	ldr r0, _021ADEBC ; =0x020946BC
+	ldr r0, _021ADEBC ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r2, [r0, r2]
 	mov r0, #1
 	lsl r0, r0, #0xc
@@ -2130,7 +2130,7 @@ _021ADE90:
 	pop {r3, r4}
 	bx lr
 	nop
-_021ADEBC: .word 0x020946BC
+_021ADEBC: .word FX_SinCosTable_
 	thumb_func_end ovy302_21ade74
 _021ADEC0:
 	.byte 0x01, 0x22, 0x0A, 0x60, 0xD1, 0x03, 0x01, 0x80, 0x70, 0x47, 0x00, 0x00

@@ -954,7 +954,7 @@
 .public VEC_Distance
 .public VEC_Normalize
 .public VEC_DotProduct
-.public sub_020746C0
+.public FX_AcosIdx
 .public VEC_CrossProduct
 .public VEC_Normalize
 .public MTX_RotAxis43
@@ -964,7 +964,7 @@
 .public VEC_Normalize
 .public VEC_Normalize
 .public VEC_DotProduct
-.public sub_020746C0
+.public FX_AcosIdx
 .public VEC_CrossProduct
 .public VEC_Normalize
 .public MTX_RotAxis43

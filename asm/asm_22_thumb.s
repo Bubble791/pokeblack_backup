@@ -252,7 +252,7 @@ sub_02067E1C: ; 0x02067E1C
 	ldr r1, [sp, #0x3c]
 	ldr r2, [sp, #0xc]
 	add r0, r6, r0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	mov r1, #1
 	lsl r1, r1, #0xc
 	add r1, r0, r1
@@ -262,7 +262,7 @@ sub_02067E1C: ; 0x02067E1C
 	ldr r1, [sp, #0x3c]
 	ldr r2, [sp, #0xc]
 	add r0, r4, r7
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	mov r1, #1
 	lsl r1, r1, #0xc
 	add r2, r0, r1
@@ -514,19 +514,19 @@ _0206812C:
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x20]
 	add r2, r4, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	ldr r1, [sp]
 	add r2, r4, #0
 	str r0, [r1]
 	ldr r1, [sp, #0x20]
 	add r0, r7, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	ldr r1, [sp]
 	add r2, r4, #0
 	str r0, [r1, #4]
 	ldr r1, [sp, #0x20]
 	add r0, r6, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	ldr r1, [sp]
 	cmp r5, #0
 	str r0, [r1, #8]
@@ -537,17 +537,17 @@ _0206812C:
 	ldr r0, [sp, #0x18]
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	str r0, [r5]
 	ldr r0, [sp, #0x14]
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	str r0, [r5, #4]
 	ldr r0, [sp, #0x10]
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_02074674
+	blx FX_Mul32x64cFunc
 	str r0, [r5, #8]
 _02068186:
 	ldr r0, [sp, #0x30]

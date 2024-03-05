@@ -991,7 +991,7 @@
 .public sub_0203A1FC
 .public sub_0204A6C4
 .public sub_0204A6CC
-.public sub_020746C0
+.public FX_AcosIdx
 .public sub_0204AA30
 .public sub_0204AA30
 .public sub_0204AB0C
@@ -1089,11 +1089,11 @@
 .public sub_0208DA4C
 .public VEC_Subtract
 .public VEC_Mag
-.public sub_02074694
+.public FX_Modf
 .public VEC_Normalize
 .public VEC_CrossProduct
 .public VEC_DotProduct
-.public sub_020746C0
+.public FX_AcosIdx
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D374
@@ -3681,7 +3681,7 @@
 .public sub_0208D65C
 .public VEC_Fx16CrossProduct
 .public VEC_Fx16DotProduct
-.public sub_020746C0
+.public FX_AcosIdx
 .public sub_0208D65C
 .public MTX_RotAxis43
 .public MTX_MultVec43
@@ -8585,7 +8585,7 @@
 .public VEC_Normalize
 .public VEC_Normalize
 .public VEC_DotProduct
-.public sub_020746C0
+.public FX_AcosIdx
 .public sub_0208D60C
 .public FX_Div
 .public sub_02050784

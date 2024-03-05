@@ -5817,7 +5817,7 @@ _021E5E1E:
 	asr r1, r0, #0x1f
 	asr r2, r2, #4
 	lsl r3, r2, #2
-	ldr r2, _021E5F40 ; =0x020946BC
+	ldr r2, _021E5F40 ; =FX_SinCosTable_ ; 0x020946BC
 	add r3, r2, r3
 	mov r2, #2
 	ldrsh r2, [r3, r2]
@@ -5836,7 +5836,7 @@ _021E5E1E:
 	ldr r0, [r4, #0x50]
 	asr r2, r2, #4
 	lsl r3, r2, #2
-	ldr r2, _021E5F40 ; =0x020946BC
+	ldr r2, _021E5F40 ; =FX_SinCosTable_ ; 0x020946BC
 	asr r1, r0, #0x1f
 	ldrsh r2, [r2, r3]
 	asr r3, r2, #0x1f
@@ -5938,7 +5938,7 @@ _021E5F30: .word 0x41B00000
 _021E5F34: .word 0x3E0B0FCE
 _021E5F38: .word 0x45800000
 _021E5F3C: .word 0x42300000
-_021E5F40: .word 0x020946BC
+_021E5F40: .word FX_SinCosTable_
 _021E5F44: .word 0x00000000
 _021E5F48:
 	ldr r0, [sp, #0x14]
@@ -7300,8 +7300,8 @@ _021E6AE4:
 _021E6AFE:
 	asr r0, r1, #4
 	lsl r3, r0, #2
-	ldr r0, _021E6E34 ; =0x020946BC
-	ldr r1, _021E6E34 ; =0x020946BC
+	ldr r0, _021E6E34 ; =FX_SinCosTable_ ; 0x020946BC
+	ldr r1, _021E6E34 ; =FX_SinCosTable_ ; 0x020946BC
 	add r2, r0, r3
 	ldrsh r1, [r1, r3]
 	mov r3, #2
@@ -7719,11 +7719,11 @@ _021E6E12:
 _021E6E28:
 	asr r0, r1, #4
 	lsl r3, r0, #2
-	ldr r0, _021E6E34 ; =0x020946BC
-	ldr r1, _021E6E34 ; =0x020946BC
+	ldr r0, _021E6E34 ; =FX_SinCosTable_ ; 0x020946BC
+	ldr r1, _021E6E34 ; =FX_SinCosTable_ ; 0x020946BC
 	b _021E6E4C
 	nop
-_021E6E34: .word 0x020946BC
+_021E6E34: .word FX_SinCosTable_
 _021E6E38: .word 0x0000A274
 _021E6E3C: .word 0x00000000
 _021E6E40: .word 0x000011AC
@@ -7988,8 +7988,8 @@ _021E7030:
 _021E7036:
 	asr r0, r1, #4
 	lsl r2, r0, #2
-	ldr r0, _021E72F0 ; =0x020946BC
-	ldr r1, _021E72F0 ; =0x020946BC
+	ldr r0, _021E72F0 ; =FX_SinCosTable_ ; 0x020946BC
+	ldr r1, _021E72F0 ; =FX_SinCosTable_ ; 0x020946BC
 	add r3, r0, r2
 	ldrsh r1, [r1, r2]
 	mov r2, #2
@@ -8022,8 +8022,8 @@ _021E706E:
 _021E7076:
 	asr r0, r1, #4
 	lsl r2, r0, #2
-	ldr r0, _021E72F0 ; =0x020946BC
-	ldr r1, _021E72F0 ; =0x020946BC
+	ldr r0, _021E72F0 ; =FX_SinCosTable_ ; 0x020946BC
+	ldr r1, _021E72F0 ; =FX_SinCosTable_ ; 0x020946BC
 	add r3, r0, r2
 	ldrsh r1, [r1, r2]
 	mov r2, #2
@@ -8336,7 +8336,7 @@ _021E72E8:
 	add sp, #0x20
 	pop {r4, r5, r6, r7, pc}
 	nop
-_021E72F0: .word 0x020946BC
+_021E72F0: .word FX_SinCosTable_
 _021E72F4: .word 0x00000000
 _021E72F8: .word 0xFFFFF000
 _021E72FC: .word 0x000011AC

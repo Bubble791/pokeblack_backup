@@ -23415,12 +23415,12 @@ _02044312:
 	blx sub_0208D65C
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _0204432C ; =0x020946BC
+	ldr r0, _0204432C ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	pop {r3, pc}
 	nop
 _02044328: .word 0x0000FFFF
-_0204432C: .word 0x020946BC
+_0204432C: .word FX_SinCosTable_
 	thumb_func_end sub_02044304
 
 	thumb_func_start sub_02044330
@@ -23441,12 +23441,12 @@ _0204433E:
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _0204435C ; =0x020946BC
+	ldr r0, _0204435C ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	pop {r3, pc}
 	nop
 _02044358: .word 0x0000FFFF
-_0204435C: .word 0x020946BC
+_0204435C: .word FX_SinCosTable_
 	thumb_func_end sub_02044330
 
 	thumb_func_start sub_02044360
@@ -23462,12 +23462,12 @@ sub_02044360: ; 0x02044360
 	blx sub_0208D65C
 	asr r0, r0, #4
 	lsl r1, r0, #2
-	ldr r0, _02044384 ; =0x020946BC
+	ldr r0, _02044384 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	pop {r4, pc}
 	.align 2, 0
 _02044380: .word 0x0000FFFF
-_02044384: .word 0x020946BC
+_02044384: .word FX_SinCosTable_
 	thumb_func_end sub_02044360
 
 	thumb_func_start sub_02044388
@@ -23485,12 +23485,12 @@ sub_02044388: ; 0x02044388
 	lsl r0, r0, #1
 	add r0, r0, #1
 	lsl r1, r0, #1
-	ldr r0, _020443B0 ; =0x020946BC
+	ldr r0, _020443B0 ; =FX_SinCosTable_ ; 0x020946BC
 	ldrsh r0, [r0, r1]
 	pop {r4, pc}
 	.align 2, 0
 _020443AC: .word 0x0000FFFF
-_020443B0: .word 0x020946BC
+_020443B0: .word FX_SinCosTable_
 	thumb_func_end sub_02044388
 
 	thumb_func_start sub_020443B4
@@ -23527,7 +23527,7 @@ sub_020443D8: ; 0x020443D8
 	ldr r0, [sp, #0x18]
 	ldr r1, _02044400 ; =0x0000323D
 	lsl r0, r0, #0xd
-	blx sub_0207465C
+	blx FX_MulFunc
 	asr r1, r0, #0xc
 	lsl r0, r4, #0x10
 	blx sub_0208D65C
@@ -23574,11 +23574,11 @@ sub_02044404: ; 0x02044404
 	ldr r1, [sp, #0x28]
 	str r5, [sp, #0xc]
 	str r5, [sp, #0x10]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r4, r0, #0
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x34]
-	blx sub_0207465C
+	blx FX_MulFunc
 	sub r2, r4, r0
 	ldr r1, [sp, #0xc]
 	ldr r0, [sp, #0x10]
@@ -42305,41 +42305,41 @@ _0204CA76:
 	str r0, [sp, #4]
 	ldr r1, [r5, #4]
 	add r0, r6, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [sp, #0x14]
 	ldr r1, [r5, #0xc]
 	add r0, r6, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	ldr r1, [sp, #0x14]
 	add r0, r1, r0
 	add r0, r7, r0
 	str r0, [sp]
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, #4]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r0, #0
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r0, r6, r0
 	add r6, r7, r0
 	ldr r0, [sp, #8]
 	ldr r1, [r5]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r1, r7, r0
 	ldr r0, [sp, #0x10]
 	add r7, r0, r1
 	ldr r0, [sp, #4]
 	ldr r1, [r5]
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #4]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	ldr r1, [sp, #0x18]
 	add r1, r1, r0
 	ldr r0, [sp, #0x10]
@@ -42567,20 +42567,20 @@ sub_0204CC54: ; 0x0204CC54
 	add r0, r2, #0
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r4, r0, #0
 	ldr r0, [sp, #0x38]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r4, r4, r0
 	ldr r0, [sp, #8]
 	ldr r1, [r5]
 	str r4, [sp, #0x10]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r0, #0
 	ldr r0, [sp, #0x3c]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r0, r6, r0
 	cmp r0, r4
 	bge _0204CCA0
@@ -42593,11 +42593,11 @@ _0204CCA0:
 _0204CCA6:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r0, #0
 	ldr r0, [sp, #0x38]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r1, r6, r0
 	cmp r1, r4
 	bge _0204CCC2
@@ -42611,11 +42611,11 @@ _0204CCC2:
 _0204CCCA:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r0, #0
 	ldr r0, [sp, #0x3c]
 	ldr r1, [r5, #8]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r1, r6, r0
 	cmp r1, r4
 	bge _0204CCE6
@@ -42629,20 +42629,20 @@ _0204CCE6:
 _0204CCEE:
 	ldr r0, [sp, #8]
 	ldr r1, [r5, #4]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r0, #0
 	ldr r0, [sp, #0x38]
 	ldr r1, [r5, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	add r6, r6, r0
 	ldr r0, [sp, #8]
 	ldr r1, [r5, #4]
 	add r7, r6, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #0x3c]
 	ldr r1, [r5, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	ldr r1, [sp, #0x14]
 	add r0, r1, r0
 	cmp r0, r6
@@ -42656,11 +42656,11 @@ _0204CD22:
 _0204CD28:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, #4]
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #0x38]
 	ldr r1, [r5, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	ldr r1, [sp, #0x18]
 	add r0, r1, r0
 	cmp r0, r6
@@ -42674,11 +42674,11 @@ _0204CD46:
 _0204CD4C:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, #4]
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x3c]
 	ldr r1, [r5, #0xc]
-	blx sub_0207465C
+	blx FX_MulFunc
 	ldr r1, [sp, #0x1c]
 	add r0, r1, r0
 	cmp r0, r6
@@ -47444,8 +47444,8 @@ _0204EE9A:
 	add r1, sp, #0x9c
 	bl sub_02074C78
 	ldrh r0, [r4, #0x16]
-	ldr r1, _0204EFE4 ; =0x020946BC
-	ldr r2, _0204EFE4 ; =0x020946BC
+	ldr r1, _0204EFE4 ; =FX_SinCosTable_ ; 0x020946BC
+	ldr r2, _0204EFE4 ; =FX_SinCosTable_ ; 0x020946BC
 	asr r0, r0, #4
 	lsl r0, r0, #2
 	add r1, r1, r0
@@ -47579,7 +47579,7 @@ _0204EFD4: .word 0x040004C8
 _0204EFD8: .word 0x000003FF
 _0204EFDC: .word 0x04000440
 _0204EFE0: .word 0x00007FFF
-_0204EFE4: .word 0x020946BC
+_0204EFE4: .word FX_SinCosTable_
 _0204EFE8: .word 0x02093FD4
 _0204EFEC:
 	ldr r2, [sp, #0x74]
@@ -50890,7 +50890,7 @@ _0205063C:
 	asr r0, r1, #4
 	lsl r3, r0, #1
 	lsl r1, r3, #1
-	ldr r2, _02050674 ; =0x020946BC
+	ldr r2, _02050674 ; =FX_SinCosTable_ ; 0x020946BC
 	add r3, r3, #1
 	lsl r3, r3, #1
 	ldrsh r1, [r2, r1]
@@ -50910,7 +50910,7 @@ _0205063C:
 	pop {r4, r5, r6, pc}
 	nop
 _02050670: .word 0x0000FFFF
-_02050674: .word 0x020946BC
+_02050674: .word FX_SinCosTable_
 	thumb_func_end sub_02050610
 
 	thumb_func_start sub_02050678
@@ -51059,15 +51059,15 @@ sub_02050784: ; 0x02050784
 	ldr r0, [r5]
 	add r4, r2, #0
 	add r6, r1, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [r4]
 	ldr r0, [r5, #4]
 	add r1, r6, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [r4, #4]
 	ldr r0, [r5, #8]
 	add r1, r6, #0
-	blx sub_0207465C
+	blx FX_MulFunc
 	str r0, [r4, #8]
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -51107,7 +51107,7 @@ sub_020507D4: ; 0x020507D4
 	asr r0, r4, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
-	ldr r4, _02050840 ; =0x020946BC
+	ldr r4, _02050840 ; =FX_SinCosTable_ ; 0x020946BC
 	add r2, r2, #1
 	lsl r2, r2, #1
 	ldrsh r1, [r4, r1]
@@ -51144,7 +51144,7 @@ sub_020507D4: ; 0x020507D4
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop
-_02050840: .word 0x020946BC
+_02050840: .word FX_SinCosTable_
 	thumb_func_end sub_020507D4
 
 	thumb_func_start sub_02050844
@@ -51171,7 +51171,7 @@ sub_02050844: ; 0x02050844
 	asr r0, r0, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
-	ldr r4, _020508B4 ; =0x020946BC
+	ldr r4, _020508B4 ; =FX_SinCosTable_ ; 0x020946BC
 	add r2, r2, #1
 	lsl r2, r2, #1
 	add r7, sp, #0x24
@@ -51199,7 +51199,7 @@ sub_02050844: ; 0x02050844
 	add sp, #0x54
 	pop {r4, r5, r6, r7, pc}
 	nop
-_020508B4: .word 0x020946BC
+_020508B4: .word FX_SinCosTable_
 	thumb_func_end sub_02050844
 
 	thumb_func_start sub_020508B8

@@ -34,7 +34,7 @@
 .public VEC_Mag
 .public VEC_Normalize
 .public FX_Div
-.public sub_02074694
+.public FX_Modf
 .public sub_02186730
 .public sub_02186770
 .public sub_021862DC
