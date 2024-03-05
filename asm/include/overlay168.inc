@@ -1852,7 +1852,7 @@
 .public sub_0203A6D0
 .public sub_0203A1FC
 .public sub_020056FC
-.public sub_020723D0
+.public MTX_Scale22_
 .public sub_02044E88
 .public sub_02044E88
 .public sub_0203A6D0

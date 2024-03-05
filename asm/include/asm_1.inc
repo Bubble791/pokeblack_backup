@@ -677,10 +677,10 @@
 .public sub_0207541C
 .public sub_02075488
 .public sub_0208D868
-.public sub_020723DC
+.public MTX_Rot22_
 .public FX_Inv
 .public FX_Inv
-.public sub_020723E8
+.public MTX_ScaleApply22
 .public sub_02073FD4
 .public sub_02073FD4
 .public sub_02074018
@@ -11577,9 +11577,9 @@
 .public sub_0207236C
 .public sub_02072390
 .public sub_020723AC
-.public sub_020723D0
-.public sub_020723DC
-.public sub_020723E8
+.public MTX_Scale22_
+.public MTX_Rot22_
+.public MTX_ScaleApply22
 .public MTX_Scale33_
 .public MTX_RotX33_
 .public MTX_RotY33_

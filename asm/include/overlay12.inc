@@ -2971,9 +2971,9 @@
 .public sub_0208DD34
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_020723D0
+.public MTX_Scale22_
 .public sub_020749CC
-.public sub_020723B8
+.public MTX_Identity22_
 .public sub_020749CC
 .public sub_020056C8
 .public sub_02018C74

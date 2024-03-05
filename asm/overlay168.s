@@ -31317,7 +31317,7 @@ _021ECF42:
 	add r7, sp, #8
 	add r0, r7, #0
 	add r2, r1, #0
-	bl sub_020723D0
+	bl MTX_Scale22_
 	mov r6, #1
 	lsl r6, r6, #8
 	str r6, [sp]

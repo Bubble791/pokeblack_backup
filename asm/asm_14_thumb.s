@@ -50896,7 +50896,7 @@ _0205063C:
 	ldrsh r1, [r2, r1]
 	ldrsh r2, [r2, r3]
 	add r0, r4, #0
-	bl sub_020723DC
+	bl MTX_Rot22_
 	add r0, r5, #0
 	bl FX_Inv
 	add r5, r0, #0
@@ -50906,7 +50906,7 @@ _0205063C:
 	add r0, r4, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_020723E8
+	bl MTX_ScaleApply22
 	pop {r4, r5, r6, pc}
 	nop
 _02050670: .word 0x0000FFFF

@@ -35098,7 +35098,7 @@ _02160E2E:
 	add r4, sp, #8
 	add r0, r4, #0
 	add r2, r1, #0
-	bl sub_020723D0
+	bl MTX_Scale22_
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -35128,7 +35128,7 @@ ovy12_2160e88: ; 0x02160E88
 	sub sp, #0x18
 	add r4, sp, #8
 	add r0, r4, #0
-	blx sub_020723B8
+	blx MTX_Identity22_
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
