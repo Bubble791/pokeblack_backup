@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A1FC
 .public sub_02042BC4
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0207C33C
 .public sub_02040440
 .public sub_02042A6C

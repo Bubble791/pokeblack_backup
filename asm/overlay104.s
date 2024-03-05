@@ -245,7 +245,7 @@ ovy104_21eee34: ; 0x021EEE34
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x68
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r5, [r4]
 	str r6, [r4, #4]
 	add r0, r6, #0

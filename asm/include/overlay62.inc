@@ -168,14 +168,14 @@
 .public sub_0203A1FC
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0201735C
 .public sub_02034BD8
 .public sub_0201F744
 .public sub_0204A934
 .public sub_0203A24C
 .public sub_0200D190
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0200D1AC
@@ -209,7 +209,7 @@
 .public sub_020112D8
 .public sub_0200F98C
 .public sub_0200F98C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201CCF8

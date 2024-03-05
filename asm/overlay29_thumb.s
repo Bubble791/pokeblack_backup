@@ -28,7 +28,7 @@ ovy29_21922c0: ; 0x021922C0
 	mov r2, #0x22
 	lsl r2, r2, #6
 	mov r6, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	ldr r0, [r5]
 	add r4, #0x8c
 	str r6, [r0, r4]
@@ -62,7 +62,7 @@ _02192334:
 	ldr r0, [r7, r0]
 	mov r1, #0
 	add r2, r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r5, r5, #1
 	cmp r5, r4
 	blo _02192334
@@ -583,7 +583,7 @@ ovy29_219270c: ; 0x0219270C
 	mov r1, #0
 	add r2, r5, #0
 	str r0, [r4]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #0x8f
 	lsl r1, r1, #6
 	mul r1, r6

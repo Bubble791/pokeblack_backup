@@ -33,7 +33,7 @@ ovy215_21a75a0: ; 0x021A75A0
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x1c
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	ldr r0, [sp, #4]
 	strb r0, [r4, #0xf]
 	ldr r0, [sp, #8]
@@ -90,7 +90,7 @@ ovy215_21a7624: ; 0x021A7624
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x1c
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	mov r0, #0
 	strh r0, [r4]
 	add r0, r6, #0
@@ -135,7 +135,7 @@ ovy215_21a7684: ; 0x021A7684
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x1c
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	mov r0, #0
 	strh r0, [r4]
 	add r0, r6, #0
@@ -212,7 +212,7 @@ ovy215_21a771c: ; 0x021A771C
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x20
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	str r6, [r4]
 	ldr r0, [r5, #0x14]
 	mov r1, #0x63
@@ -516,7 +516,7 @@ ovy215_21a797c: ; 0x021A797C
 	mov r0, #0
 	add r1, r7, #0
 	mov r2, #0x34
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	add r0, r5, #0
 	strh r4, [r7]
 	bl sub_02009730
@@ -682,7 +682,7 @@ ovy215_21a7ac0: ; 0x021A7AC0
 	mov r0, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	mov r0, #0x64
 	str r0, [r4]
 	str r5, [r4, #0x1c]
@@ -2993,7 +2993,7 @@ ovy215_21a8d68: ; 0x021A8D68
 	add r1, r4, #0
 	mov r2, #0x34
 	mov r6, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	str r5, [r4, #4]
 	ldr r0, [r5]
 	bl sub_02009790
@@ -3383,14 +3383,14 @@ ovy215_21a9034: ; 0x021A9034
 	add r0, r5, r6
 	add r1, r1, #4
 	mov r2, #0x20
-	blx sub_020786E8
+	blx MIi_CpuCopyFast
 	mov r0, #0x20
 	ldr r1, [r7, #8]
 	add r0, #0xe0
 	add r0, r5, r0
 	add r1, #0x24
 	mov r2, #0x20
-	blx sub_020786E8
+	blx MIi_CpuCopyFast
 	ldr r0, [sp, #0xc]
 	bl sub_0203A24C
 	add r0, r4, #0
@@ -3495,7 +3495,7 @@ _021A91C2:
 	add r1, r0, #0
 	add r0, r6, #0
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r4, r4, #1
 	cmp r4, #0xa
 	bls _021A91C2
@@ -5693,7 +5693,7 @@ _021AA27E:
 	mov r0, #0
 	add r2, r4, #0
 	str r1, [r5, #8]
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	add r0, r5, #0
 	bl ovy215_21a9428
 	bl sub_021A8DF0

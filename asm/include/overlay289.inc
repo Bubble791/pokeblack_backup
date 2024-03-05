@@ -88,7 +88,7 @@
 .public sub_0204BDE0
 .public sub_0204B81C
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021F4EF8
 .public sub_021F4EF8
 .public sub_0204C040

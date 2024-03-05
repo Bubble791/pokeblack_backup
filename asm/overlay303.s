@@ -107,7 +107,7 @@ ovy303_219fc70: ; 0x0219FC70
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r2, #0xa5
 	mov r0, #0
 	mov r1, #2
@@ -2782,7 +2782,7 @@ ovy303_21a11cc: ; 0x021A11CC
 	mov r1, #0
 	add r0, r5, r0
 	mov r2, #0x78
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #8]
 	add r7, r5, #0
 	add r0, #0xc
@@ -3242,7 +3242,7 @@ ovy303_21a1550: ; 0x021A1550
 	mov r1, #0
 	str r1, [sp, #0xc]
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r7, #1
 _021A1574:
 	mov r0, #0
@@ -6161,7 +6161,7 @@ ovy303_21a2d3c: ; 0x021A2D3C
 	add r0, sp, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, r6]
 	add r1, r7, #0
 	mov r2, #0x19

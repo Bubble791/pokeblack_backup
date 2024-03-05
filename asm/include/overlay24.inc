@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_020787A8
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_02168320
 .public sub_02168348
 .public sub_02016AD8
@@ -12,5 +12,5 @@
 .public sub_021683A8
 .public sub_021683A8
 .public sub_021683A8
-.public sub_02078920
-.public sub_020787A8
+.public MI_CpuCopy8
+.public MI_CpuFill8

@@ -540,11 +540,11 @@ _0206A8B0:
 	mul r6, r0, r2
 	mla r1, r4, r2, r7
 	add r0, r7, r6
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	add r0, r7, r6
 	add r1, r5, #0x10
 	mov r2, #0x18
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0206A8DC:
 	ldr r3, [r1]
@@ -566,7 +566,7 @@ _0206A8DC:
 	ldr r3, _0206AA44 ; =0x02144A74
 	mov r0, r1
 	mla r1, r4, r2, r3
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	ldr r0, _0206AA40 ; =0x02143C70
 	mov r2, r4, lsr #5
 	ldr r1, [r0]
@@ -635,7 +635,7 @@ _0206A964:
 	orr r6, r6, r1, lsl #20
 	add r1, r5, #0x10
 	str r6, [r4, r3]
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 _0206AA40: .word 0x02143C70

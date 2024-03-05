@@ -1519,7 +1519,7 @@ _02194004:
 _0219404C:
 	add r1, r5, #0xc
 _02194050:
-	bl sub_020786E8
+	bl MIi_CpuCopyFast
 	ldr r0, _0219409C ; =0x02197444
 	mov r4, #0x40
 	ldrh r2, [r0]
@@ -1591,7 +1591,7 @@ _021940E4:
 	ldr r0, [r6, #0x3c]
 	ldr r2, [sp, #4]
 	ldr r0, [r0, #0x474]
-	bl sub_020786E8
+	bl MIi_CpuCopyFast
 	ldr r0, [r6, #0x3c]
 	bl sub_0219678C
 	str r7, [r6, #0x3c]
@@ -1669,7 +1669,7 @@ _02194248:
 	ldr r1, [sp]
 	ldr r2, [sp, #4]
 	mov r4, #1
-	bl sub_020786E8
+	bl MIi_CpuCopyFast
 	mov r0, r6
 	mov r1, r5
 	bl sub_0219521C
@@ -1765,14 +1765,14 @@ _021943B8:
 	mov r1, r7
 	mov r2, r6
 	mov r0, #0
-	bl sub_0207869C
+	bl MIi_CpuClearFast
 	b _021943E0
 _021943CC:
 	mov r4, #0
 	mov r0, r4
 	mov r1, r7
 	mov r2, r6
-	bl sub_0207869C
+	bl MIi_CpuClearFast
 _021943E0:
 	ldr r0, _02194404 ; =0x02197444
 	ldr r0, [r0, #0x18]
@@ -2094,7 +2094,7 @@ _02194824:
 	sub r1, r0, r2
 	add r0, sb, #0xc
 	str r1, [sp]
-	bl sub_02078920
+	bl MI_CpuCopy8
 	ldr r0, [r5, #0x34]
 	sub r1, r8, #0xc
 	strb r0, [r4, #0x11]
@@ -2839,7 +2839,7 @@ sub_02195164: ; 0x02195164
 	mov r1, r4
 	mov r2, #0x28
 	mov r7, r0
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r1, _021951EC ; =0x000134DF
 	mov r0, #1
 	str r1, [r7, #4]
@@ -3518,15 +3518,15 @@ _02195A88:
 	mov r4, #0
 	mov r1, r4
 	str r0, [r6]
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r0, _02195B54 ; =0x021983CC
 	mov r1, r4
 	mov r2, r7
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r0, _02195B58 ; =0x021983B4
 	mov r1, r4
 	mov r2, r7
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r7, [r5, #4]
 	subs r0, r7, #1
 	beq _02195B00
@@ -4458,7 +4458,7 @@ _021966BC:
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	mov r5, r4
 	mov r0, r5
-	bl sub_0207869C
+	bl MIi_CpuClearFast
 	subs lr, r6, #1
 	beq _02196710
 	ldr r0, _0219673C ; =0x00000478
@@ -4566,7 +4566,7 @@ sub_0219680C: ; 0x0219680C
 	ldmeqia sp!, {r3, pc}
 	ldr r0, _02196828 ; =0x02197408
 	mov r2, #0x10
-	bl sub_02078920
+	bl MI_CpuCopy8
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _02196828: .word 0x02197408
@@ -4828,11 +4828,11 @@ _02196B84: .word 0x0219841C
 sub_02196B88: ; 0x02196B88
 	mov r2, r1
 	ldr r1, _02196B98 ; =0x0219844C
-	ldr ip, _02196B9C ; =sub_020786E8
+	ldr ip, _02196B9C ; =MIi_CpuCopyFast
 	bx ip
 	.align 2, 0
 _02196B98: .word 0x0219844C
-_02196B9C: .word sub_020786E8
+_02196B9C: .word MIi_CpuCopyFast
 	arm_func_end sub_02196B88
 
 	arm_func_start sub_02196BA0
@@ -5096,7 +5096,7 @@ sub_02196EB4: ; 0x02196EB4
 	ldr r0, _02196FE8 ; =0x02199898
 	mov r1, r4
 	mov r2, #0x18
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r0, [r5, #0x18]
 	ldr r6, _02196FE4 ; =0x0219988C
 	str r0, [r6, #0x10]

@@ -174,7 +174,7 @@ ovy304_219fcf0: ; 0x0219FCF0
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r2, #0xa6
 	mov r0, #0
 	mov r1, #2

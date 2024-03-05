@@ -227,7 +227,7 @@
 .public sub_0204C378
 .public sub_02021034
 .public sub_0204C378
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021F6B34
 .public sub_021F6B34
 .public sub_0204C040

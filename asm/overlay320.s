@@ -28,7 +28,7 @@ ovy320_219ce80: ; 0x0219CE80
 	mov r1, #0
 	lsl r2, r2, #2
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	strh r5, [r4]
 	add r0, #0xb4
@@ -1440,7 +1440,7 @@ ovy320_219d9f8: ; 0x0219D9F8
 	add r0, sp, #0x1c
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	lsl r0, r6, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0x18]
@@ -1581,7 +1581,7 @@ _0219DAF6:
 	add r0, sp, #0x18
 	mov r1, #0
 	mov r2, #0x18
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, r6
 	add r0, #0xbc
 	ldr r0, [r0]
@@ -1740,7 +1740,7 @@ _0219DC46:
 	lsl r1, r1, #2
 	add r1, r5, r1
 	lsl r2, r4, #5
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _0219DC58: .word 0x05000200
@@ -3799,7 +3799,7 @@ ovy320_219eb70: ; 0x0219EB70
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _0219EBFC ; =0x04000050
 	ldr r0, _0219EC00 ; =0x04001050
 	strh r7, [r1]
@@ -3875,7 +3875,7 @@ ovy320_219ec10: ; 0x0219EC10
 	str r2, [r0]
 	add r0, r4, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r3, r4, r5, pc}
@@ -3937,7 +3937,7 @@ ovy320_219eca0: ; 0x0219ECA0
 	mov r1, #0
 	mov r2, #4
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	bl sub_020444A4
 	add r0, r5, #0
@@ -3997,7 +3997,7 @@ _0219ED0A:
 	add r0, r7, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0219ED34: .word 0x0219F008
@@ -4025,7 +4025,7 @@ ovy320_219ed44: ; 0x0219ED44
 	mov r1, #0
 	mov r2, #4
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _0219ED80 ; =0x0219EFBC
 	add r1, r6, #0
 	add r2, r4, #0
@@ -4057,7 +4057,7 @@ ovy320_219ed84: ; 0x0219ED84
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy320_219ed84

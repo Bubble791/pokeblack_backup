@@ -207,7 +207,7 @@ ovy32_2199a58: ; 0x02199A58
 	add r1, r0, #0
 	mov r0, #0
 	lsl r2, r2, #0xe
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r0, #0x16
 	mov r1, #1
 	mov r2, #0
@@ -229,7 +229,7 @@ ovy32_2199a58: ; 0x02199A58
 	ldr r0, [sp, #0xc]
 	add r2, r5, #0
 	ldr r0, [r0, #0x14]
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 _02199AA2:
 	add r0, r4, #0
 	bl sub_0203A24C
@@ -255,7 +255,7 @@ _02199AA2:
 	ldr r0, [sp, #8]
 	add r2, r5, #0
 	add r0, #0xc
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 _02199AE0:
 	add r0, r4, #0
 	bl sub_0203A24C
@@ -281,7 +281,7 @@ _02199AE0:
 	ldr r0, [r0, #0xc]
 	lsl r1, r1, #0x18
 	mov r2, #0x20
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 _02199B1E:
 	add r0, r4, #0
 	bl sub_0203A24C
@@ -322,7 +322,7 @@ _02199B3E:
 	ldr r0, _02199BD4 ; =0x00007777
 	add r1, r1, r5
 	lsl r2, r2, #0xa
-	blx sub_02078624
+	blx MIi_CpuClear16
 	bl sub_020753A0
 	mov r4, #1
 	add r0, r0, r5
@@ -391,18 +391,18 @@ ovy32_2199be0: ; 0x02199BE0
 	add r1, r0, #0
 	mov r0, #0
 	lsr r2, r5, #0xc
-	blx sub_02078624
+	blx MIi_CpuClear16
 	bl sub_02075148
 	add r1, r0, #0
 	mov r0, #0
 	lsr r2, r6, #0xf
-	blx sub_02078624
+	blx MIi_CpuClear16
 	mov r1, #5
 	lsr r0, r4, #0x11
 	lsl r1, r1, #0x18
 	mov r4, #0x20
 	mov r2, #0x20
-	blx sub_02078624
+	blx MIi_CpuClear16
 	lsl r2, r4, #0x15
 	ldr r1, [r2]
 	ldr r0, _02199C58 ; =0xFFFFE0FF

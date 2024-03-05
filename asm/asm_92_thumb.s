@@ -78,7 +78,7 @@ sub_0207C574: ; 0x0207C574
 	add r2, r5, #0
 	str r0, [r4, #8]
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #3
 	str r0, [r4, #4]
 	sub r5, #0x14
@@ -138,11 +138,11 @@ _0207C5C0:
 	strh r0, [r1, #0x10]
 	ldr r0, [r4, #8]
 	lsl r1, r6, #0x15
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [r4, #8]
 	mov r1, #0
 	add r2, r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r7, [r4, #4]
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -177,7 +177,7 @@ _0207C642:
 	lsl r7, r7, #8
 	lsl r0, r0, #0x18
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [r4, #8]
 	mov r6, #0
 	ldrh r5, [r0, #0x10]
@@ -194,7 +194,7 @@ _0207C642:
 	beq _0207C67E
 	add r1, r6, #0
 	add r2, r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	bl sub_0207C698
 	add r0, r6, #0
 	pop {r3, r4, r5, r6, r7, pc}

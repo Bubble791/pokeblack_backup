@@ -4691,7 +4691,7 @@ ovy288_21f6818: ; 0x021F6818
 	mov r1, #0
 	mov r2, #8
 	add r4, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r2, #6
 	ldrsh r2, [r4, r2]
 	mov r0, #0

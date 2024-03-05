@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0201FF08
 .public sub_02048530
 .public sub_0201CCF8
@@ -75,7 +75,7 @@
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A584
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A58C
 .public sub_02026DC0
 .public sub_0202778C
@@ -305,7 +305,7 @@
 .public sub_02049100
 .public sub_02049214
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02046DF8
@@ -316,7 +316,7 @@
 .public sub_020056FC
 .public sub_0203A6A8
 .public sub_020232D8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A24C
 .public sub_021E4D24
 .public sub_021E4CBC
@@ -327,7 +327,7 @@
 .public sub_02044B84
 .public sub_021E4CC0
 .public sub_021E4D2C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020444A4
 .public sub_02048080
 .public sub_02044710
@@ -337,8 +337,8 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_0204B6A8
 .public sub_0204BF1C
 .public sub_0204C028
@@ -346,7 +346,7 @@
 .public sub_02046D84
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02048D28
 .public sub_0204A5C8
 .public sub_0204A630
@@ -468,7 +468,7 @@
 .public sub_0204914C
 .public MTX_Identity33_
 .public sub_020658A4
-.public sub_0207873C
+.public MI_Copy36B
 .public sub_020658C8
 .public sub_0204A638
 .public sub_02049AF0
@@ -492,11 +492,11 @@
 .public sub_02033768
 .public sub_0204B354
 .public sub_02046EF4
-.public sub_02078658
-.public sub_0207866C
-.public sub_0207866C
-.public sub_0207866C
-.public sub_0207866C
+.public MIi_CpuClear32
+.public MIi_CpuCopy32
+.public MIi_CpuCopy32
+.public MIi_CpuCopy32
+.public MIi_CpuCopy32
 .public sub_02047FB4
 .public sub_02046EF4
 .public sub_0205FA10

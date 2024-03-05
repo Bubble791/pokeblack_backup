@@ -27,7 +27,7 @@ ovy204_21a9b60: ; 0x021A9B60
 	mov r1, #0
 	add r2, r6, #0
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r4, #0x7e
 	lsl r4, r4, #2
 	add r1, r6, #0
@@ -485,7 +485,7 @@ ovy204_21a9f00: ; 0x021A9F00
 	mov r1, #0
 	mov r2, #0x48
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #4]
 	bl sub_02017238
 	add r6, r5, #0

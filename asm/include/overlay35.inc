@@ -2,7 +2,7 @@
 #pragma once
 .public sub_02016AD8
 .public sub_02076AC4
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02076E7C
 .public sub_02034F6C
 .public sub_02034FB0
@@ -51,7 +51,7 @@
 .public sub_020092FC
 .public sub_02026CEC
 .public sub_02076AC4
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02076E7C
 .public sub_02016AD8
 .public sub_02017214
@@ -108,7 +108,7 @@
 .public sub_021649EC
 .public sub_02026CEC
 .public sub_02076AC4
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02076E7C
 .public sub_02034F2C
 .public sub_021804C0

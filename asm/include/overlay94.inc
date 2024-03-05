@@ -99,7 +99,7 @@
 .public sub_02180578
 .public sub_021C09E4
 .public sub_02166FC8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021C19F4
 .public sub_02180578
 .public sub_021C09E4
@@ -235,7 +235,7 @@
 .public sub_02180578
 .public sub_021C09E4
 .public sub_02166FC8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021C19F4
 .public sub_02180578
 .public sub_021C09E4

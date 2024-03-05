@@ -23,24 +23,24 @@ ovy25_216f900: ; 0x0216F900
 	add r2, r6, #0
 	add r7, r3, #0
 	strh r4, [r5, #4]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	add r0, #8
 	add r0, r5, r0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	add r0, #0xc
 	add r0, r5, r0
 	mov r1, #0
 	mov r2, #0x18
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r6, #0x24
 	add r0, r5, r6
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_02168320
 	add r1, r0, #0
@@ -223,7 +223,7 @@ ovy25_216fa6c: ; 0x0216FA6C
 	mov r1, #0
 	mov r2, #0x24
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	add r1, r4, #0
 	bl ovy25_216fa28
@@ -932,7 +932,7 @@ _0216FFB8:
 	add r1, r5, r1
 	mov r2, #0x28
 	mov r6, #5
-	blx sub_02078920
+	blx MI_CpuCopy8
 	b _0216FFDA
 _0216FFCC:
 	mov r0, #0x71
@@ -950,7 +950,7 @@ _0216FFDA:
 	add r0, r7, r6
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r4, [r7, r6]
 	mov r0, #0x72
 	lsl r0, r0, #2

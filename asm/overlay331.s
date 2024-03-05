@@ -232,7 +232,7 @@ _021BEBB8:
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0x28]
 	lsl r2, r2, #2
-	blx sub_02078920
+	blx MI_CpuCopy8
 _021BEBCA:
 	ldr r0, [sp, #8]
 	bl sub_0203A24C
@@ -250,7 +250,7 @@ _021BEBE2:
 	add r0, r7, #0
 	mov r1, #0
 	lsl r2, r2, #2
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	add r0, #0xc
 	mov r1, #0
@@ -503,7 +503,7 @@ ovy331_21bede0: ; 0x021BEDE0
 	sub r0, r5, #1
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r0, #0x7e
 	lsl r0, r0, #0xc
 	add r1, r4, #0
@@ -536,7 +536,7 @@ ovy331_21bee24: ; 0x021BEE24
 	sub r0, r5, #1
 	add r1, r4, #0
 	add r2, r6, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r0, _021BEE64 ; =0x0007E800
 	add r1, r4, #0
 	add r2, r6, #0

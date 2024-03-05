@@ -6,9 +6,9 @@
 .public sub_021759F8
 .public sub_02175B70
 .public sub_0203CB80
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0204405C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020812B8
 .public sub_02176360
 .public sub_02005748

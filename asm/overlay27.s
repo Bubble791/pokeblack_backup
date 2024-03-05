@@ -663,7 +663,7 @@ ovy27_2170884: ; 0x02170884
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x20
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_021804C0
 	strh r0, [r5]
@@ -1071,7 +1071,7 @@ ovy27_2170b98: ; 0x02170B98
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x2c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	add r1, r6, #0
 	add r2, sp, #0

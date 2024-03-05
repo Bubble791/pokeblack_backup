@@ -7,7 +7,7 @@
 .public sub_02016B20
 .public sub_0202BD80
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02017934
 .public sub_0200B488
 .public sub_020092E4

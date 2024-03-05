@@ -105,13 +105,13 @@ _020747B8:
 	add r0, r5, #0
 	add r1, r4, #4
 	mov r2, #0x60
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r4, #0x68
 	ldr r1, _02074804 ; =0x04001000
 	add r0, r5, #0
 	mov r2, #0x70
 	strh r5, [r4]
-	blx sub_02078658
+	blx MIi_CpuClear32
 _020747D0:
 	mov r1, #1
 	ldr r0, _02074808 ; =0x04000020

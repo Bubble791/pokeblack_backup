@@ -125,7 +125,7 @@ _02065E40:
 	mov r1, sl
 	mov r0, #0
 	mov r2, #0x58
-	bl sub_0207869C
+	bl MIi_CpuClearFast
 	mvn r0, #0
 	str r0, [sl]
 	add fp, sp, #0x40
@@ -154,11 +154,11 @@ _02065E60:
 	mov r0, fp
 	add r1, sp, #0xc
 	mov r2, #0xc
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	add r0, sp, #0x58
 	add r1, sp, #0
 	mov r2, #0xc
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 _02065ED0:
 	cmp r5, #0x1000
 	ldreq r7, [sb, #4]
@@ -276,7 +276,7 @@ _02066044:
 	add r0, sp, #0xc
 	add r1, sl, #0x28
 	mov r2, #0xc
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	b _020660A0
 _02066094:
 	add r0, sl, #0x28
@@ -293,7 +293,7 @@ _020660A0:
 	add r0, sp, #0
 	add r1, sl, #0x40
 	mov r2, #0xc
-	bl sub_0207866C
+	bl MIi_CpuCopy32
 	b _020660DC
 _020660D0:
 	add r0, sl, #0x40
@@ -392,7 +392,7 @@ sub_02066178: ; 0x02066178
 	mov r0, #0
 	add r1, r5, #0
 	lsl r2, r2, #2
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	add r0, r5, #0
 	mov r1, #1
 	add r0, #0xc4
@@ -615,17 +615,17 @@ sub_02066300: ; 0x02066300
 	mov r0, #0
 	add r1, #0x3c
 	mov r2, #8
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r1, r4, #0
 	mov r0, #0
 	add r1, #0x44
 	mov r2, #8
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r1, r4, #0
 	mov r0, #0
 	add r1, #0x4c
 	mov r2, #8
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r1, [r4, #8]
 	cmp r1, #0
 	beq _02066342
@@ -2202,17 +2202,17 @@ _02066E10:
 	mov r2, #8
 	str r0, [r1]
 	ldr r0, _02066F14 ; =0x0209B394
-	blx sub_02078684
+	blx MIi_CpuSend32
 	bl sub_02065BA4
 	ldr r1, _02066EFC ; =0x04000400
 	mov r2, #0x30
-	blx sub_02078684
+	blx MIi_CpuSend32
 	ldr r0, _02066F18 ; =0x00001B19
 	ldr r1, _02066EFC ; =0x04000400
 	mov r2, #0x3c
 	str r0, [r1]
 	ldr r0, _02066F1C ; =0x0209B39C
-	blx sub_02078684
+	blx MIi_CpuSend32
 	b _02066EA8
 _02066E70:
 	mov r1, #2
@@ -2223,22 +2223,22 @@ _02066E70:
 	mov r2, #8
 	str r0, [r1]
 	ldr r0, _02066F14 ; =0x0209B394
-	blx sub_02078684
+	blx MIi_CpuSend32
 	bl sub_0206596C
 	ldr r1, _02066EFC ; =0x04000400
 	mov r2, #0x30
-	blx sub_02078684
+	blx MIi_CpuSend32
 	ldr r0, _02066F18 ; =0x00001B19
 	ldr r1, _02066EFC ; =0x04000400
 	mov r2, #0x3c
 	str r0, [r1]
 	ldr r0, _02066F1C ; =0x0209B39C
-	blx sub_02078684
+	blx MIi_CpuSend32
 	b _02066EA8
 _02066EA0:
 	ldr r0, _02066F20 ; =0x0209B390
 	mov r2, #0x48
-	blx sub_02078684
+	blx MIi_CpuSend32
 _02066EA8:
 	cmp r7, #3
 	bne _02066EC2
@@ -2501,17 +2501,17 @@ _0206702A:
 	mov r2, #8
 	str r0, [r1]
 	ldr r0, _02067178 ; =0x0209B3DC
-	blx sub_02078684
+	blx MIi_CpuSend32
 	bl sub_02065BA4
 	ldr r1, _02067160 ; =0x04000400
 	mov r2, #0x30
-	blx sub_02078684
+	blx MIi_CpuSend32
 	ldr r0, _0206717C ; =0x00001B19
 	ldr r1, _02067160 ; =0x04000400
 	mov r2, #0x3c
 	str r0, [r1]
 	ldr r0, _02067158 ; =0x0209B3E4
-	blx sub_02078684
+	blx MIi_CpuSend32
 	b _02067106
 _020670CE:
 	mov r0, #2
@@ -2522,22 +2522,22 @@ _020670CE:
 	mov r2, #8
 	str r0, [r1]
 	ldr r0, _02067178 ; =0x0209B3DC
-	blx sub_02078684
+	blx MIi_CpuSend32
 	bl sub_0206596C
 	ldr r1, _02067160 ; =0x04000400
 	mov r2, #0x30
-	blx sub_02078684
+	blx MIi_CpuSend32
 	ldr r0, _0206717C ; =0x00001B19
 	ldr r1, _02067160 ; =0x04000400
 	mov r2, #0x3c
 	str r0, [r1]
 	ldr r0, _02067158 ; =0x0209B3E4
-	blx sub_02078684
+	blx MIi_CpuSend32
 	b _02067106
 _020670FE:
 	ldr r0, _02067180 ; =0x0209B3D8
 	mov r2, #0x48
-	blx sub_02078684
+	blx MIi_CpuSend32
 _02067106:
 	ldr r0, [sp]
 	cmp r0, #3
@@ -2617,7 +2617,7 @@ sub_02067184: ; 0x02067184
 	str r0, [sp, #0x14]
 	add r0, r6, #0
 	add r1, sp, #0x20
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02067B9C
 	add r0, r6, #0
 	str r0, [sp, #0x10]
@@ -3928,7 +3928,7 @@ _02067BAA:
 	ldr r1, _02067BD0 ; =0x04000400
 	add r0, r0, #4
 	lsl r2, r2, #2
-	blx sub_02078684
+	blx MIi_CpuSend32
 	ldr r0, _02067BCC ; =0x02146974
 	mov r1, #0
 	ldr r0, [r0]

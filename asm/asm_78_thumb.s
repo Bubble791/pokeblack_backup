@@ -405,7 +405,7 @@ sub_02079FE4: ; 0x02079FE4
 	mov r0, #0
 	add r1, #0x10
 	mov r2, #0x28
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r2, _0207A03C ; =0x04000204
 	add r4, #0x40
 	ldrh r1, [r2]

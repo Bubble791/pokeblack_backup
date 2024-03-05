@@ -2497,7 +2497,7 @@ sub_02006D64: ; 0x02006D64
 	mov r1, #0
 	mov r2, #0x28
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x5f
 	str r0, [sp]
 	ldr r1, _02006DD8 ; =0x00002014
@@ -2508,7 +2508,7 @@ sub_02006D64: ; 0x02006D64
 	ldr r2, _02006DD8 ; =0x00002014
 	mov r1, #0
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4, #0x24]
 	mov r0, #1
 	mov r5, #1

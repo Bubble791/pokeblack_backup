@@ -7,12 +7,12 @@
 sub_0207C33C: ; 0x0207C33C
 	add r1, r0, #0
 	ldr r0, _0207C348 ; =0x02FFFCF4
-	ldr r3, _0207C34C ; =sub_02078920
+	ldr r3, _0207C34C ; =MI_CpuCopy8
 	mov r2, #6
 	bx r3
 	nop
 _0207C348: .word 0x02FFFCF4
-_0207C34C: .word sub_02078920
+_0207C34C: .word MI_CpuCopy8
 	thumb_func_end sub_0207C33C
 
 	thumb_func_start sub_0207C350
@@ -45,13 +45,13 @@ sub_0207C350: ; 0x0207C350
 	strh r1, [r0]
 	add r0, r4, #6
 	add r1, r5, #4
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r4, #0x1c
 	add r1, r5, #0
 	add r0, r4, #0
 	add r1, #0x1c
 	mov r2, #0x34
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	mov r0, #0
 	strh r0, [r5, #0x18]
 	add r5, #0x50
@@ -103,13 +103,13 @@ sub_0207C3BC: ; 0x0207C3BC
 	strh r1, [r0]
 	add r0, r4, #6
 	add r1, r5, #4
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #0
 	add r1, r5, #0
 	add r0, #0x1c
 	add r1, #0x1c
 	mov r2, #0x34
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r5, #0
 	mov r6, #0
 	add r0, #0x50

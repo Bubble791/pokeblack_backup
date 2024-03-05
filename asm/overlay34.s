@@ -9,13 +9,13 @@ sub_02176B00: ; 0x02176B00
 	ldr r1, _02176B10 ; =0x00002E8C
 	mov r2, #0x96
 	add r0, r0, r1
-	ldr r3, _02176B14 ; =sub_020787A8
+	ldr r3, _02176B14 ; =MI_CpuFill8
 	mov r1, #0
 	lsl r2, r2, #2
 	bx r3
 	nop
 _02176B10: .word 0x00002E8C
-_02176B14: .word sub_020787A8
+_02176B14: .word MI_CpuFill8
 	thumb_func_end sub_02176B00
 
 	thumb_func_start sub_02176B18
@@ -352,7 +352,7 @@ _02176D6E:
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy34_2176d3c
 
@@ -579,7 +579,7 @@ _02176F2E:
 	mov r1, #0
 	add r0, r6, r0
 	mov r2, #6
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _02176F3E:
@@ -701,7 +701,7 @@ _02177012:
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x8c
-	blx sub_020787A8
+	blx MI_CpuFill8
 _02177030:
 	ldr r0, [sp, #0x20]
 	add r4, #0x8c
@@ -714,7 +714,7 @@ _02177030:
 	mov r2, #6
 	add r0, r0, r1
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -4650,7 +4650,7 @@ _02178DEA:
 	ldr r0, [r4, r0]
 	ldr r1, [r4, r1]
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	bl sub_02040440
 	mov r1, #3
 	mov r2, #0x14
@@ -9423,7 +9423,7 @@ _0217B26A:
 	ldr r0, _0217B334 ; =0x0217C3F4
 	add r1, r4, #0
 	mov r2, #0x30
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldrb r0, [r5]
 	add r6, #0xd6
 	add r2, r4, #0
@@ -9462,7 +9462,7 @@ _0217B2BE:
 	ldr r0, _0217B33C ; =0x0217C39C
 	add r1, r4, #0
 	mov r2, #0x28
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r0, #0x28
 	ldrb r1, [r5, #1]
 	add r0, #0xdc
@@ -10268,7 +10268,7 @@ ovy34_217b8c0: ; 0x0217B8C0
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	strh r7, [r4, #0x10]
 	ldr r0, [r5, #0x14]
@@ -10304,7 +10304,7 @@ ovy34_217b904: ; 0x0217B904
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy34_217b904
@@ -10588,7 +10588,7 @@ ovy34_217bb20: ; 0x0217BB20
 	mov r1, #0
 	mov r2, #0x14
 	add r7, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x18]
 	str r6, [r4]
 	strh r7, [r4, #0x10]
@@ -10624,7 +10624,7 @@ ovy34_217bb60: ; 0x0217BB60
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy34_217bb60
 

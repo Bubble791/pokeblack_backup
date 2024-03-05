@@ -2232,7 +2232,7 @@ _02151526:
 	add r1, #0xc
 	add r1, r1, r6
 	mov r2, #0x10
-	blx sub_02078920
+	blx MI_CpuCopy8
 	b _02151582
 _0215153A:
 	ldr r1, [sp, #8]
@@ -4979,7 +4979,7 @@ ovy12_2152990: ; 0x02152990
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0x7c
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	nop
@@ -5132,7 +5132,7 @@ _02152AB8:
 	add r0, r5, #0
 	add r1, r1, r7
 	mov r2, #0x64
-	blx sub_02078920
+	blx MI_CpuCopy8
 	bl sub_02173BC4
 _02152ACE:
 	add r4, r4, #1
@@ -5186,7 +5186,7 @@ _02152B1E:
 	add r1, r1, r5
 	sub r2, r2, r3
 _02152B28:
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r4, r4, #1
 	cmp r4, #0x12
 	blt _02152AE8
@@ -5356,7 +5356,7 @@ _02152C94:
 	ldr r1, [r5, #0xc]
 	ldr r2, [r5, #8]
 	add r0, #0x7c
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [r5, #0xc]
 	ldr r1, [r5, #8]
 	bl sub_0204405C
@@ -5868,7 +5868,7 @@ ovy12_215309c: ; 0x0215309C
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0x7c
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -7613,7 +7613,7 @@ ovy12_2153da4: ; 0x02153DA4
 	mov r0, #0
 	add r1, r5, #0
 	mov r2, #8
-	blx sub_02078658
+	blx MIi_CpuClear32
 	str r4, [r5, #4]
 	cmp r4, #0
 	beq _02153DC8
@@ -7952,7 +7952,7 @@ ovy12_2153fec: ; 0x02153FEC
 	bl sub_02153F20
 	add r1, r5, #0
 	mov r2, #0x7e
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	nop
@@ -7970,7 +7970,7 @@ ovy12_2154024: ; 0x02154024
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #0x7e
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -8010,13 +8010,13 @@ sub_02154064: ; 0x02154064
 	thumb_func_start sub_02154070
 sub_02154070: ; 0x02154070
 	ldr r1, _0215407C ; =0x0216e640
-	ldr r3, _02154080 ; =sub_02078658
+	ldr r3, _02154080 ; =MIi_CpuClear32
 	mov r0, #0
 	mov r2, #4
 	bx r3
 	nop
 _0215407C: .word 0x0216e640
-_02154080: .word sub_02078658
+_02154080: .word MIi_CpuClear32
 	thumb_func_end sub_02154070
 
 	thumb_func_start ovy12_2154084
@@ -9417,12 +9417,12 @@ ovy12_2154a64: ; 0x02154A64
 	sub r0, r6, #2
 	add r1, r4, r1
 	add r2, r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r1, r4, #0
 	ldr r0, _02154AAC ; =0x0000FFFF
 	add r1, #0x14
 	lsr r2, r5, #1
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r4, #0
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -9633,7 +9633,7 @@ ovy12_2154c00: ; 0x02154C00
 	add r1, r7, r4
 	lsl r2, r2, #2
 	strh r3, [r7, #8]
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r6, r7, #0
 	ldrh r0, [r7, #0xc]
 	add r6, #0x14
@@ -9666,7 +9666,7 @@ _02154C64:
 	ldr r0, [sp]
 	add r1, r6, #0
 	add r2, r4, #0
-	blx sub_02078624
+	blx MIi_CpuClear16
 _02154C70:
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -10602,7 +10602,7 @@ ovy12_215530c: ; 0x0215530C
 	mov r1, #0
 	mov r2, #0xa0
 	mov r6, #0xa0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #8]
 	add r1, r4, #0
 	strh r7, [r0, #0x34]
@@ -10624,7 +10624,7 @@ ovy12_215530c: ; 0x0215530C
 	ldr r0, [sp, #0x30]
 	str r0, [r4, #0x14]
 	mov r0, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r0, [r4, #0x14]
 	cmp r0, #0
 	bne _02155372
@@ -13438,7 +13438,7 @@ ovy12_21568bc: ; 0x021568BC
 	mov r1, #0
 	mov r2, #0x28
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, sp, #0xc
 	strh r7, [r0]
 	ldr r0, [sp, #4]
@@ -13521,7 +13521,7 @@ ovy12_2156948: ; 0x02156948
 	mov r1, #0
 	mov r2, #0x28
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #8]
 	add r1, sp, #0x20
 	strh r0, [r1]
@@ -13633,7 +13633,7 @@ ovy12_2156a30: ; 0x02156A30
 	add r0, sp, #0x20
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, [sp, #0x10]
 	add r0, sp, #0x20
 	strh r1, [r0, #2]
@@ -15245,7 +15245,7 @@ ovy12_2157814: ; 0x02157814
 	mov r1, #0
 	mov r2, #4
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	mov r2, #2
@@ -16301,7 +16301,7 @@ _02158118:
 	mov r1, #0
 	mov r2, #0xc
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r7, [sp]
 	ldr r2, [sp, #0xc]
 	ldr r0, [sp, #0x14]
@@ -16419,7 +16419,7 @@ ovy12_21581e4: ; 0x021581E4
 	mov r1, #0
 	mov r2, #4
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0xda
 	str r0, [sp]
 	ldr r3, _0215827C ; =0x0216E22C
@@ -17268,7 +17268,7 @@ ovy12_215887c: ; 0x0215887C
 	add r0, sp, #0
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _021588CC ; =0x00000014
 	ldr r2, _021588D0 ; =0x0216E715
 	add r0, r5, #0
@@ -18328,7 +18328,7 @@ ovy12_21590ec: ; 0x021590EC
 	mov r2, #0xe8
 	add r5, r0, #0
 	add r4, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	bl sub_02018D10
 	add r7, r0, #0
@@ -18501,7 +18501,7 @@ ovy12_2159230: ; 0x02159230
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	bl sub_021804D8
 	strh r0, [r4]
@@ -21163,7 +21163,7 @@ _0215A6BE:
 	mov r1, #0
 	mov r2, #0x44
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp]
 	cmp r0, #0
 	ble _0215A72A
@@ -21281,7 +21281,7 @@ ovy12_215a7a4: ; 0x0215A7A4
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x60
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4, #8]
 	str r7, [r4, #4]
 	str r6, [r4, #0xc]
@@ -21716,7 +21716,7 @@ _0215AB26:
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x24
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4, #4]
 	str r5, [r4]
 	str r7, [r4, #8]
@@ -21735,7 +21735,7 @@ _0215AB26:
 	str r0, [r4, #0x10]
 	mov r1, #0
 	mov r2, #0x44
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, [r4, #4]
 	ldr r0, [r4, #0x10]
 	sub r6, #0x45
@@ -22979,7 +22979,7 @@ ovy12_215b488: ; 0x0215B488
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x7c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r7, [r4]
 	add r1, r4, #0
 	str r5, [r4, #0x18]
@@ -23355,7 +23355,7 @@ ovy12_215b76c: ; 0x0215B76C
 	mov r2, #0x14
 	add r5, r0, #0
 	add r7, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x18]
 	str r6, [r5]
 	str r0, [r5, #8]
@@ -23863,7 +23863,7 @@ ovy12_215bad4: ; 0x0215BAD4
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #0x18]
 	ldr r0, [r0]
 	bl sub_02016AD8
@@ -25097,7 +25097,7 @@ ovy12_215c4f8: ; 0x0215C4F8
 	mov r1, #0
 	mov r2, #0x20
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp]
 	str r0, [r4, #0xc]
 	strh r7, [r4, #0x10]
@@ -25911,7 +25911,7 @@ ovy12_215cb48: ; 0x0215CB48
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x28
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r7, [r4]
 	add r0, r7, #0
 	bl sub_02016B20
@@ -26059,7 +26059,7 @@ ovy12_215cc78: ; 0x0215CC78
 	mov r2, #0x18
 	add r5, r0, #0
 	add r7, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x18]
 	str r4, [r5]
 	str r6, [r5, #4]
@@ -26401,11 +26401,11 @@ sub_0215CF04: ; 0x0215CF04
 	str r1, [r0, #0x28]
 	add r0, r0, r2
 	mov r2, #0x22
-	ldr r3, _0215CF2C ; =sub_020787A8
+	ldr r3, _0215CF2C ; =MI_CpuFill8
 	lsl r2, r2, #6
 	bx r3
 	.align 2, 0
-_0215CF2C: .word sub_020787A8
+_0215CF2C: .word MI_CpuFill8
 	thumb_func_end sub_0215CF04
 _0215CF30:
 	.byte 0x38, 0x30, 0x70, 0x47
@@ -28334,7 +28334,7 @@ ovy12_215dc6c: ; 0x0215DC6C
 	mov r1, #0
 	mov r2, #0x1c
 	mov r6, #0x1c
-	blx sub_0207883C
+	blx MI_CpuFill
 	add r0, r5, #0
 	bl sub_0216723C
 	str r0, [r4]
@@ -30858,7 +30858,7 @@ ovy12_215ef60: ; 0x0215EF60
 	mov r1, #0
 	mov r2, #0x20
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 _0215EF84:
 	add r0, r4, #0
 	add r1, r6, #0
@@ -31896,7 +31896,7 @@ _0215F706:
 	mov r1, #0
 	mov r2, #9
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrb r0, [r6]
 	strb r0, [r5]
 	ldrb r0, [r6, #1]
@@ -32041,7 +32041,7 @@ ovy12_215f810: ; 0x0215F810
 	mov r2, #0x68
 	add r5, r0, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #3
 	strb r0, [r5]
 	bl sub_02042A78
@@ -35346,7 +35346,7 @@ ovy12_2160ff4: ; 0x02160FF4
 	mov r1, #0
 	mov r2, #0x1c
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x14]
 	str r6, [r4]
 	str r0, [r4, #4]
@@ -35648,7 +35648,7 @@ ovy12_2161298: ; 0x02161298
 	str r3, [sp]
 	ldr r5, [sp, #0x18]
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	bl sub_0200E904
 	ldr r0, [sp]
@@ -35656,7 +35656,7 @@ ovy12_2161298: ; 0x02161298
 	lsl r0, r0, #2
 	add r0, r7, r0
 	lsl r2, r5, #2
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r7, #0
 	bl sub_0200E8BC
 	cmp r5, #0
@@ -35760,7 +35760,7 @@ ovy12_2161354: ; 0x02161354
 	lsl r2, r6, #2
 	add r5, r3, #0
 	ldr r4, [sp, #0x20]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	cmp r5, #0
 	bne _021613A0
 	ldr r0, [sp, #4]
@@ -36103,7 +36103,7 @@ _021615CE:
 	mov r1, #0
 	mov r2, #0x14
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	str r0, [sp]
 	add r0, #0x1c
@@ -36514,13 +36514,13 @@ sub_02161930: ; 0x02161930
 	ldr r1, _02161940 ; =0x00000668
 	add r2, r0, #0
 	add r1, r2, r1
-	ldr r3, _02161944 ; =sub_02078920
+	ldr r3, _02161944 ; =MI_CpuCopy8
 	add r0, #0x32
 	mov r2, #0x1c
 	bx r3
 	nop
 _02161940: .word 0x00000668
-_02161944: .word sub_02078920
+_02161944: .word MI_CpuCopy8
 	thumb_func_end sub_02161930
 
 	thumb_func_start sub_02161948
@@ -36826,7 +36826,7 @@ ovy12_2161b4c: ; 0x02161B4C
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r2, #0x1c
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02161B78:
 	pop {r4, r5, r6, pc}
 	nop
@@ -36884,7 +36884,7 @@ ovy12_2161bbc: ; 0x02161BBC
 	add r0, r7, #0
 	add r1, r5, r4
 	mov r2, #0x20
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02161BE0:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -37062,7 +37062,7 @@ ovy12_2161c88: ; 0x02161C88
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x28
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4, #8]
 	mov r0, #1
 	strb r0, [r5, #0xc]
@@ -37154,7 +37154,7 @@ _02161DB4:
 	ldr r1, [r4, r1]
 	add r0, #0x89
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r0, #0x67
 	lsl r0, r0, #2
 	sub r0, r0, #4
@@ -38020,7 +38020,7 @@ ovy12_2162490: ; 0x02162490
 	mov r2, #0x3c
 	add r4, r0, #0
 	str r3, [sp, #8]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	add r1, sp, #0x10
 	add r2, r6, #0
@@ -38558,7 +38558,7 @@ ovy12_21628c0: ; 0x021628C0
 	add r0, r5, #0
 	mov r1, #0
 	lsl r2, r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, sp, #0x18
 	ldrh r2, [r2]
 	add r0, r6, #0
@@ -39013,7 +39013,7 @@ ovy12_2162c14: ; 0x02162C14
 	mov r1, #0
 	mov r2, #0xc
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4, #8]
 	str r6, [r4, #4]
 	add r0, r7, #0
@@ -40402,7 +40402,7 @@ ovy12_216370c: ; 0x0216370C
 	bl sub_020658A4
 	ldr r0, _0216377C ; =0x0216DAA0
 	ldr r1, _02163780 ; =0x02143AC8
-	blx sub_0207873C
+	blx MI_Copy36B
 	ldr r1, _02163784 ; =0x02143A8C
 	mov r0, #0xa4
 	ldr r2, [r1, #0x7c]
@@ -43278,7 +43278,7 @@ ovy12_2164e22: ; 0x02164E22
 	mov r1, #0
 	mov r2, #0x3c
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x28]
 	str r5, [r4]
 	str r0, [r4, #0x28]
@@ -43670,7 +43670,7 @@ ovy12_2165154: ; 0x02165154
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x24
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r4, #0
 	ldmia r5!, {r0, r1}
 	add r2, #8
@@ -44808,7 +44808,7 @@ ovy12_21659ec: ; 0x021659EC
 	mov r1, #0
 	mov r2, #0x38
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x20]
 	str r5, [r4]
 	str r0, [r4, #0x18]
@@ -44857,7 +44857,7 @@ ovy12_2165a4c: ; 0x02165A4C
 	mov r1, #0
 	mov r2, #0x38
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #1
 	str r0, [r4]
 	str r7, [r4, #0x18]
@@ -45453,7 +45453,7 @@ _02165F18:
 	ldr r1, [r1]
 	add r0, #0x89
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r5, #0
 	add r0, #0xdc
 	ldr r1, [r5, #0x7c]
@@ -45582,7 +45582,7 @@ _02166010:
 	mov r1, #0
 	mov r2, #0x28
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp]
 	str r0, [r4, #8]
 	mov r0, #1
@@ -46639,7 +46639,7 @@ ovy12_2166880: ; 0x02166880
 	mov r1, #0
 	mov r2, #0x24
 	add r6, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r1, sp, #0x38
 	ldrh r2, [r1]
 	add r0, sp, #0
@@ -46786,7 +46786,7 @@ _0216698E:
 	strh r0, [r1, #6]
 	mov r0, #0
 	add r1, r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	pop {r4, pc}
 	thumb_func_end ovy12_2166940
 
@@ -47907,7 +47907,7 @@ ovy12_2167104: ; 0x02167104
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -47927,7 +47927,7 @@ ovy12_2167120: ; 0x02167120
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -47947,7 +47947,7 @@ ovy12_216713c: ; 0x0216713C
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -47967,7 +47967,7 @@ ovy12_2167158: ; 0x02167158
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -49189,7 +49189,7 @@ ovy12_21678b4: ; 0x021678B4
 	mov r2, #0x44
 	str r3, [sp]
 	str r1, [sp, #8]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	add r1, sp, #4
 	add r2, sp, #8
@@ -49522,7 +49522,7 @@ _02167B12:
 	strh r1, [r0, #6]
 	mov r0, #0
 	add r1, r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 _02167B2C:
 	add r4, r4, #1
 	cmp r4, r6
@@ -49821,12 +49821,12 @@ ovy12_2167d4c: ; 0x02167D4C
 	thumb_func_start sub_02167D64
 sub_02167D64: ; 0x02167D64
 	mov r2, #1
-	ldr r3, _02167D70 ; =sub_020787A8
+	ldr r3, _02167D70 ; =MI_CpuFill8
 	mov r1, #0
 	lsl r2, r2, #8
 	bx r3
 	nop
-_02167D70: .word sub_020787A8
+_02167D70: .word MI_CpuFill8
 	thumb_func_end sub_02167D64
 
 	thumb_func_start ovy12_2167d74
@@ -52329,7 +52329,7 @@ ovy12_216911c: ; 0x0216911C
 	add r1, r5, #0
 	mov r2, #0x2c
 	mov r7, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r6, #0
 	str r6, [r5]
 	bl sub_02016AD8
@@ -52435,7 +52435,7 @@ ovy12_21691c0: ; 0x021691C0
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x38
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	mov r0, #0xb2
 	str r0, [sp]
@@ -52519,7 +52519,7 @@ ovy12_2169274: ; 0x02169274
 	mov r1, #0
 	mov r2, #0x38
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	str r5, [r4, #0x30]
 	mov r0, #1
@@ -53205,7 +53205,7 @@ ovy12_2169770: ; 0x02169770
 	add r1, r5, #0
 	add r1, #0xa
 	mov r2, #0x10
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	b _021697F2
 _021697D6:
 	mov r0, #0x6f
@@ -53562,7 +53562,7 @@ _02169AAA:
 	mov r2, #6
 	add r1, #0x74
 	lsl r2, r2, #8
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldrb r0, [r5, #4]
 	mov r1, #0x40
 	bic r0, r1
@@ -53597,7 +53597,7 @@ ovy12_2169b04: ; 0x02169B04
 	mov r7, #0
 	mov r1, #0
 	mov r2, #0x1c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r7, [r4, #4]
 	str r5, [r4, #8]
 	str r7, [r4, #0x10]
@@ -53774,7 +53774,7 @@ ovy12_2169c7c: ; 0x02169C7C
 	mov r1, #0
 	mov r2, #0x1c
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	add sp, #4
 	pop {r3, r4, pc}
@@ -54558,7 +54558,7 @@ ovy12_216a260: ; 0x0216A260
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0xa
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}

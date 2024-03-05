@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204AA30
 .public sub_0204BC48
 .public sub_0204BBB8
@@ -14,7 +14,7 @@
 .public sub_0204C040
 .public sub_0204C488
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A24C
 .public sub_0219A178
 .public sub_0219A178
@@ -29,7 +29,7 @@
 .public sub_02199DC0
 .public sub_0219A1B8
 .public sub_0219A178
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D820
@@ -49,7 +49,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_02044668
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204B600
 .public sub_02060338
 .public sub_02045864
@@ -58,15 +58,15 @@
 .public sub_0204566C
 .public sub_02044F90
 .public sub_0203A24C
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_02199EF0
 .public sub_02199EF0
 .public sub_02199EF0
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C108
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204C138
 .public sub_0203DAC8
 .public sub_0203D564
@@ -104,12 +104,12 @@
 .public sub_02022888
 .public sub_02022888
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02048530
 .public sub_02048564
 .public sub_0203A24C
 .public sub_020485F8
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_020489E8
 .public sub_02048838
 .public sub_020485F8
@@ -118,7 +118,7 @@
 .public sub_020486F0
 .public sub_020486F0
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02045708
 .public sub_02045708
 .public sub_0204AA30
@@ -243,7 +243,7 @@
 .public sub_02033150
 .public sub_020480C0
 .public sub_0203A1FC
-.public sub_0207866C
+.public MIi_CpuCopy32
 .public sub_0203A24C
 .public sub_02048210
 .public sub_0203A24C
@@ -255,7 +255,7 @@
 .public sub_02021A18
 .public sub_0203A24C
 .public sub_0204B32C
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0203A24C
 .public sub_02035104
 .public sub_0219B3AC
@@ -331,7 +331,7 @@
 .public sub_020484EC
 .public sub_020484F4
 .public sub_02046EF4
-.public sub_0207866C
+.public MIi_CpuCopy32
 .public sub_0203368C
 .public sub_02033694
 .public sub_020454D4

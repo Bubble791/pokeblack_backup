@@ -297,7 +297,7 @@ G3X_GetClipMtx: ; 0x02074EBC
 	pop {r3, pc}
 _02074ED2:
 	add r0, #0x40
-	blx sub_0207877C
+	blx MI_Copy64B
 	mov r0, #0
 	pop {r3, pc}
 	.align 2, 0
@@ -319,7 +319,7 @@ G3X_GetVectorMtx: ; 0x02074EE0
 	pop {r3, pc}
 _02074EF6:
 	add r0, #0x80
-	blx sub_0207873C
+	blx MI_Copy36B
 	mov r0, #0
 	pop {r3, pc}
 	.align 2, 0
@@ -329,22 +329,22 @@ _02074F00: .word 0x04000600
 	thumb_func_start G3X_SetEdgeColorTable
 G3X_SetEdgeColorTable: ; 0x02074F04
 	ldr r1, _02074F0C ; =0x04000330
-	ldr r3, _02074F10 ; =sub_0207863C
+	ldr r3, _02074F10 ; =MIi_CpuCopy16
 	mov r2, #0x10
 	bx r3
 	.align 2, 0
 _02074F0C: .word 0x04000330
-_02074F10: .word sub_0207863C
+_02074F10: .word MIi_CpuCopy16
 	thumb_func_end G3X_SetEdgeColorTable
 
 	thumb_func_start G3X_SetFogTable
 G3X_SetFogTable: ; 0x02074F14
 	ldr r1, _02074F1C ; =0x04000360
-	ldr r3, _02074F20 ; =sub_02078720
+	ldr r3, _02074F20 ; =MI_Copy32B
 	bx r3
 	nop
 _02074F1C: .word 0x04000360
-_02074F20: .word sub_02078720
+_02074F20: .word MI_Copy32B
 	thumb_func_end G3X_SetFogTable
 
 	thumb_func_start G3X_SetClearColor
@@ -421,12 +421,12 @@ _02074FA8:
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x10
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r4, #0x30
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x60
-	blx sub_02078658
+	blx MIi_CpuClear32
 _02074FC0:
 	mov r2, #0
 	ldr r0, _02074FDC ; =0x040004D0

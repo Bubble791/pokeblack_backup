@@ -22,7 +22,7 @@ ovy256_21bb700: ; 0x021BB700
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	mov r0, #1
 	pop {r4, r5, r6, pc}

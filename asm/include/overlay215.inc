@@ -2,18 +2,18 @@
 #pragma once
 .public sub_02009790
 .public sub_0203A1FC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02017934
 .public sub_020096B8
 .public sub_0200965C
 .public sub_020096F8
 .public sub_0203A1FC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02017934
 .public sub_020096B8
 .public sub_0201CCF8
 .public sub_0203A1FC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02017934
 .public sub_020096B8
 .public sub_02009754
@@ -23,7 +23,7 @@
 .public sub_0203A24C
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_0203A970
 .public sub_0203A978
 .public sub_0203A988
@@ -51,7 +51,7 @@
 .public sub_02029BC8
 .public sub_02029A2C
 .public sub_0203A1FC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02009730
 .public sub_02048530
 .public sub_02009734
@@ -71,7 +71,7 @@
 .public sub_02029BE4
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02017BCC
 .public sub_02022D58
 .public sub_0203A78C
@@ -334,7 +334,7 @@
 .public sub_0204B758
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_02009790
 .public sub_0203A970
 .public sub_0203A980
@@ -392,8 +392,8 @@
 .public sub_0204AF50
 .public sub_0204B0D4
 .public sub_0204B28C
-.public sub_020786E8
-.public sub_020786E8
+.public MIi_CpuCopyFast
+.public MIi_CpuCopyFast
 .public sub_0203A24C
 .public sub_0204AB0C
 .public sub_02024D00
@@ -406,7 +406,7 @@
 .public sub_020331F4
 .public sub_0203368C
 .public sub_0203368C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02033254
 .public sub_0204875C
 .public sub_020241D4
@@ -606,7 +606,7 @@
 .public sub_02046DF8
 .public sub_0203A15C
 .public sub_0203A1FC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_021A8DF0
 .public sub_020056FC
 .public sub_02042BA8

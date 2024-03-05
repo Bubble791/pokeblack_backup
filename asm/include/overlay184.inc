@@ -2,10 +2,10 @@
 #pragma once
 .public sub_020444A4
 .public sub_02046C40
-.public sub_02078658
-.public sub_02078658
-.public sub_02078658
-.public sub_02078658
+.public MIi_CpuClear32
+.public MIi_CpuClear32
+.public MIi_CpuClear32
+.public MIi_CpuClear32
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738

@@ -89,7 +89,7 @@ ovy296_219d768: ; 0x0219D768
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r6, [r4]
 	strh r7, [r4, #0xc]
 	ldr r0, [sp, #0x10]
@@ -2614,7 +2614,7 @@ _0219EB56:
 	add r0, sp, #0x10
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, sp, #0x10
 	strh r4, [r0]
 	strh r6, [r0, #2]

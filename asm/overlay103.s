@@ -470,7 +470,7 @@ ovy103_21ef020: ; 0x021EF020
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x1c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r6, [r4, #4]
 	mov r0, #0
 	str r0, [r4, #8]
@@ -755,7 +755,7 @@ ovy103_21ef250: ; 0x021EF250
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x3c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	mov r1, #0
 	bl sub_0218105C

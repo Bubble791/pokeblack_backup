@@ -396,7 +396,7 @@ _021A7BAA:
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x18
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy203_21a7b9c
 
@@ -3280,7 +3280,7 @@ ovy203_21a90e4: ; 0x021A90E4
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy203_21a90e4

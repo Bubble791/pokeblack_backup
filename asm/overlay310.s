@@ -13570,13 +13570,13 @@ _021A3654:
 	thumb_func_start sub_021A3670
 sub_021A3670: ; 0x021A3670
 	mov r2, #0xa
-	ldr r3, _021A367C ; =sub_020787A8
+	ldr r3, _021A367C ; =MI_CpuFill8
 	add r0, #0x38
 	mov r1, #0
 	lsl r2, r2, #6
 	bx r3
 	.align 2, 0
-_021A367C: .word sub_020787A8
+_021A367C: .word MI_CpuFill8
 	thumb_func_end sub_021A3670
 
 	thumb_func_start ovy310_21a3680
@@ -15471,7 +15471,7 @@ ovy310_21a441c: ; 0x021A441C
 	mov r1, #0
 	mov r2, #0x40
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	str r4, [r5, #0x30]
 	str r4, [r5, #0x34]
@@ -20461,11 +20461,11 @@ sub_021A67A0: ; 0x021A67A0
 	ldr r0, [r2, #0xc]
 	ldr r1, [r2, #8]
 	ldrb r2, [r2, #0x10]
-	ldr r3, _021A67B0 ; =sub_02078920
+	ldr r3, _021A67B0 ; =MI_CpuCopy8
 	lsl r2, r2, #1
 	bx r3
 	nop
-_021A67B0: .word sub_02078920
+_021A67B0: .word MI_CpuCopy8
 	thumb_func_end sub_021A67A0
 
 	thumb_func_start sub_021A67B4
@@ -20508,7 +20508,7 @@ ovy310_21a67e4: ; 0x021A67E4
 	mov r1, #0
 	mov r2, #0x20
 	ldrh r4, [r5]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r4, [r5]
 	pop {r3, r4, r5, pc}
 	.align 2, 0

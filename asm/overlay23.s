@@ -1645,7 +1645,7 @@ ovy23_216f364: ; 0x0216F364
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	str r7, [r4, #4]
 	ldmia r5!, {r0, r1}
@@ -1738,7 +1738,7 @@ ovy23_216f41c: ; 0x0216F41C
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x1c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	str r7, [r4, #4]
 	ldmia r5!, {r0, r1}
@@ -2074,7 +2074,7 @@ ovy23_216f6a4: ; 0x0216F6A4
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	str r7, [r4, #4]
 	ldr r1, [r6]

@@ -152,7 +152,7 @@
 .public sub_0202DC00
 .public sub_0202DA54
 .public sub_0200AD5C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_021EF988
 .public sub_020120C8
 .public sub_0202DA54
@@ -306,7 +306,7 @@
 .public sub_020616D8
 .public G3i_LookAt_
 .public MTX_Inverse43
-.public sub_0207873C
+.public MI_Copy36B
 .public MTX_Copy33To44_
 .public MTX_Copy43To44_
 .public MTX_Concat44
@@ -666,8 +666,8 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204ADA8
-.public sub_0207863C
-.public sub_0207863C
+.public MIi_CpuCopy16
+.public MIi_CpuCopy16
 .public sub_02044F90
 .public sub_02044F90
 .public sub_02152614

@@ -19,7 +19,7 @@ ovy139_21998c0: ; 0x021998C0
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	ldr r0, [sp, #0x18]
 	strb r6, [r4, #0xc]
@@ -281,7 +281,7 @@ ovy139_2199aa0: ; 0x02199AA0
 	mov r1, #0
 	add r2, r4, #0
 	add r7, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #4]
 	str r0, [r7, #4]
 	ldr r0, [sp, #0x18]
@@ -731,7 +731,7 @@ ovy139_2199dc8: ; 0x02199DC8
 	mov r2, #0x14
 	str r3, [sp, #0x30]
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r5, #0xc]
 	bl sub_0202D7E0
 	add r1, r4, #0
@@ -850,7 +850,7 @@ ovy139_2199ebc: ; 0x02199EBC
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy139_2199ebc
 
@@ -966,7 +966,7 @@ ovy139_2199fb8: ; 0x02199FB8
 	mov r1, #0
 	mov r2, #0x38
 	add r4, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r5, #0
 	add r3, r4, #0
 	add r2, #0x18
@@ -983,7 +983,7 @@ ovy139_2199fb8: ; 0x02199FB8
 	mov r1, #0
 	mov r2, #8
 	str r7, [r5, #4]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #4
 	ldrsh r0, [r4, r0]
 	add r1, sp, #0x14
@@ -1102,7 +1102,7 @@ ovy139_219a0dc: ; 0x0219A0DC
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x38
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy139_219a0dc
@@ -1594,7 +1594,7 @@ ovy139_219a438: ; 0x0219A438
 	ldr r2, [sp, #8]
 	mov r1, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4, #4]
 	cmp r6, #0
 	bls _0219A47A
@@ -1649,7 +1649,7 @@ ovy139_219a4a4: ; 0x0219A4A4
 	ldr r1, [sp, #0x28]
 	sub r0, r0, #1
 	lsl r2, r6, #3
-	blx sub_02078658
+	blx MIi_CpuClear32
 	cmp r4, #0
 	beq _0219A52C
 	ldr r0, [sp]
@@ -1768,7 +1768,7 @@ ovy139_219a584: ; 0x0219A584
 	mov r1, #0
 	mov r2, #0xcc
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0xc]
 	cmp r5, #3
 	strh r0, [r4]
@@ -3172,7 +3172,7 @@ _0219B10E:
 	lsl r1, r5, #2
 	add r1, r2, r1
 	add r2, r7, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r5, r5, #1
 	cmp r5, r6
 	blo _0219B10E
@@ -3298,7 +3298,7 @@ ovy139_219b1e0: ; 0x0219B1E0
 	add r0, #0xc
 	mul r2, r3
 	lsl r2, r2, #1
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #0
 	bl sub_0203A24C
 	add sp, #8
@@ -6382,7 +6382,7 @@ _0219C8C0:
 	ldr r1, [sp, #0x18]
 	add r1, r1, r2
 	mov r2, #0x20
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

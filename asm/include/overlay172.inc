@@ -4,7 +4,7 @@
 .public sub_0203CE0C
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_0207869C
+.public MIi_CpuClearFast
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203CDC8

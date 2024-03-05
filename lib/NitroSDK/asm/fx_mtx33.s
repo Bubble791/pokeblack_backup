@@ -428,7 +428,7 @@ MTX_Inverse33: ; 0x0207272C
 	cmp sb, r0
 	bne _02072A04
 	ldr r1, [sp]
-	bl sub_0207873C
+	bl MI_Copy36B
 _02072A04:
 	mov r0, #0
 	add sp, sp, #0x50

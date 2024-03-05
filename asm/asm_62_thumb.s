@@ -35,7 +35,7 @@ sub_02075534: ; 0x02075534
 	pop {r3, r4, r5, r6, r7, pc}
 _0207556E:
 	add r1, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _02075576:
 	ldr r2, _0207559C ; =0x05000400
@@ -51,7 +51,7 @@ _02075588:
 	add r0, r4, #0
 	add r1, r5, r1
 	add r2, r3, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _02075598: .word 0x0209B528
@@ -90,7 +90,7 @@ sub_020755A0: ; 0x020755A0
 	pop {r3, r4, r5, r6, r7, pc}
 _020755DA:
 	add r1, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _020755E2:
 	ldr r2, _02075608 ; =0x05000200
@@ -106,7 +106,7 @@ _020755F4:
 	add r0, r4, #0
 	add r1, r5, r1
 	add r2, r3, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _02075604: .word 0x0209B528
@@ -145,7 +145,7 @@ sub_0207560C: ; 0x0207560C
 	pop {r3, r4, r5, r6, r7, pc}
 _02075646:
 	add r1, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _0207564E:
 	ldr r2, _02075674 ; =0x05000600
@@ -161,7 +161,7 @@ _02075660:
 	add r0, r4, #0
 	add r1, r5, r1
 	add r2, r3, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _02075670: .word 0x0209B528
@@ -206,7 +206,7 @@ _020756B6:
 	add r0, r5, #0
 	add r1, r4, r1
 	add r2, r3, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	pop {r3, r4, r5, pc}
 	nop
 _020756C8: .word 0x0209B528
@@ -246,7 +246,7 @@ _02075704:
 	add r0, r5, #0
 	add r1, r4, r1
 	add r2, r3, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	pop {r3, r4, r5, pc}
 	nop
 _02075714: .word 0x0209B528
@@ -287,7 +287,7 @@ _02075756:
 	add r1, r2, r4
 	add r0, r5, #0
 	add r2, r3, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	pop {r3, r4, r5, pc}
 	nop
 _02075764: .word 0x0209B528
@@ -327,7 +327,7 @@ _020757A2:
 	add r1, r2, r4
 	add r0, r5, #0
 	add r2, r3, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	pop {r3, r4, r5, pc}
 	nop
 _020757B0: .word 0x0209B528
@@ -370,7 +370,7 @@ _020757F6:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075804:
@@ -386,7 +386,7 @@ _02075816:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -430,7 +430,7 @@ _0207586A:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075878:
@@ -446,7 +446,7 @@ _0207588A:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -490,7 +490,7 @@ _020758DE:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _020758EC:
@@ -506,7 +506,7 @@ _020758FE:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -550,7 +550,7 @@ _02075952:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075960:
@@ -566,7 +566,7 @@ _02075972:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -610,7 +610,7 @@ _020759C6:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _020759D4:
@@ -626,7 +626,7 @@ _020759E6:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -670,7 +670,7 @@ _02075A3A:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075A48:
@@ -686,7 +686,7 @@ _02075A5A:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -730,7 +730,7 @@ _02075AAE:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075ABC:
@@ -746,7 +746,7 @@ _02075ACE:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -790,7 +790,7 @@ _02075B22:
 	add r1, r2, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075B30:
@@ -806,7 +806,7 @@ _02075B42:
 	add r1, r2, r6
 	add r0, r5, #0
 	add r2, r4, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -852,7 +852,7 @@ _02075B9A:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -898,7 +898,7 @@ _02075BF2:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -944,7 +944,7 @@ _02075C4A:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -990,7 +990,7 @@ _02075CA2:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -1036,7 +1036,7 @@ _02075CFA:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -1082,7 +1082,7 @@ _02075D52:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -1128,7 +1128,7 @@ _02075DAA:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -1174,7 +1174,7 @@ _02075E02:
 	add r1, r2, r5
 	add r0, r6, #0
 	add r2, r4, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -1278,7 +1278,7 @@ _02075EAC:
 	pop {r3, r4, r5, r6, pc}
 _02075EC6:
 	add r1, r3, #0
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

@@ -581,7 +581,7 @@ ovy287_21f48cc: ; 0x021F48CC
 	mul r5, r1
 	add r1, r4, #0
 	lsl r2, r5, #1
-	blx sub_02078920
+	blx MI_CpuCopy8
 	cmp r7, #5
 	bhi _021F49E0
 	add r0, r7, r7
@@ -10604,7 +10604,7 @@ ovy287_21f9940: ; 0x021F9940
 	mov r2, #0x20
 	add r1, r5, r1
 	mov r6, #0x20
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [r5]
 	add r1, r7, #0
 	ldrh r0, [r0, #0x10]
@@ -12378,7 +12378,7 @@ _021FA70E:
 	lsl r1, r4, #5
 	add r0, r6, r0
 	add r1, r5, r1
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

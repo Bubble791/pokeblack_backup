@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_021F47D0
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_021FA40C
 .public sub_0203A1FC
 .public sub_020454AC
@@ -657,7 +657,7 @@
 .public sub_02026EE8
 .public sub_0204AB0C
 .public sub_02026FD0
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02024D00
 .public sub_02026F7C
 .public sub_02026EE8
@@ -762,7 +762,7 @@
 .public sub_02024EEC
 .public sub_021F59A8
 .public sub_02045814
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_020330C8
 .public sub_02033150
 .public sub_02033150

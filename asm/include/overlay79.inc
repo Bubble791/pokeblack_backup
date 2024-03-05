@@ -49,10 +49,10 @@
 .public sub_0204B37C
 .public sub_0203A24C
 .public sub_0204B37C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204B37C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204ADA8
 .public sub_02045718
@@ -65,7 +65,7 @@
 .public sub_0204BDE0
 .public sub_0204BDE0
 .public sub_0204B37C
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0203A24C
 .public sub_02042F2C
 .public sub_02042BA8
@@ -96,7 +96,7 @@
 .public sub_02044F90
 .public G2x_SetBlendAlpha_
 .public sub_021EBB6C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203DA0C
 .public sub_0203DA0C
 .public sub_0203DA84
@@ -143,12 +143,12 @@
 .public sub_0203A850
 .public sub_0203A888
 .public sub_0203A910
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A870
 .public sub_02027880
 .public sub_0203A888
 .public sub_0203A910
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A870
 .public sub_021EAD0C
 .public sub_0202C9E8
@@ -316,7 +316,7 @@
 .public sub_0201749C
 .public sub_0202ECF4
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_021EA894
 .public sub_021ED2A0

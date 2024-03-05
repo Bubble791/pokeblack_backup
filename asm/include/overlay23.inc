@@ -184,7 +184,7 @@
 .public sub_02016AF0
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020195C0
 .public sub_02016D68
 .public sub_02016AD8
@@ -193,7 +193,7 @@
 .public sub_02016AF0
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020195C0
 .public sub_02016D68
 .public sub_02016AD8
@@ -224,7 +224,7 @@
 .public sub_02016AF0
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020195C0
 .public sub_02016D68
 .public sub_0204875C

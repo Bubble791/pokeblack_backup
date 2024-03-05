@@ -307,7 +307,7 @@ sub_020754B8: ; 0x020754B8
 	pop {r3, r4, r5, r6, r7, pc}
 _020754F4:
 	add r1, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _020754FC:
 	mov r2, #5
@@ -325,7 +325,7 @@ _02075510:
 	add r0, r4, #0
 	add r1, r5, r1
 	add r2, r3, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02075520: .word 0x0209B528

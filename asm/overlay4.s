@@ -31,7 +31,7 @@ _0214F53E:
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x54
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4, #4]
 	str r7, [r4, #8]
 	add r0, r6, #0

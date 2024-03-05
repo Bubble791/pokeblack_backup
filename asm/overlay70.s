@@ -49,7 +49,7 @@ _0217D008:
 	add r0, r5, #0
 	sub r2, r3, #4
 _0217D010:
-	blx sub_020786E8
+	blx MIi_CpuCopyFast
 	mov r5, #0x46
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
@@ -60,7 +60,7 @@ _0217D010:
 	mov r2, #0xe1
 	add r0, r4, r0
 	lsl r2, r2, #6
-	blx sub_020786E8
+	blx MIi_CpuCopyFast
 	ldr r4, [r4, r5]
 	add r0, r4, #0
 	bl sub_02048244
@@ -183,7 +183,7 @@ ovy70_217d100: ; 0x0217D100
 	mov r0, #0
 	add r1, r4, r1
 	lsl r2, r2, #6
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	ldr r0, [r4, #4]
 	ldr r0, [r0]
 	bl sub_0217CF84
@@ -411,7 +411,7 @@ ovy70_217d2b8: ; 0x0217D2B8
 	ldr r6, _0217D324 ; =0x00007AD0
 	add r0, r0, r1
 	add r1, r5, r6
-	blx sub_020786E8
+	blx MIi_CpuCopyFast
 	add r3, r5, r6
 	mov r0, #0
 	mov r2, #0
@@ -490,7 +490,7 @@ _0217D362:
 	ldr r2, _0217D44C ; =0x00009E84
 	mov r1, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x28
 	bl sub_020444A4
 	mov r0, #0x28
@@ -2403,7 +2403,7 @@ ovy70_217e364: ; 0x0217E364
 	mov r1, #0
 	mov r2, #4
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r7, sp, #0
 	strb r6, [r7, #2]
 	bl sub_0203FFC4
@@ -2487,7 +2487,7 @@ ovy70_217e408: ; 0x0217E408
 	add r0, r7, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #1
 	add r6, sp, #0
 	strb r0, [r6, #2]

@@ -35,7 +35,7 @@ _0219CEA4:
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4, #4]
 	add r0, r4, #0
 	strh r7, [r4]
@@ -984,7 +984,7 @@ _0219D6D8:
 	mov r1, #0
 	mov r2, #8
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x4d
 	lsl r0, r0, #2
 	sub r0, r0, #4
@@ -1050,7 +1050,7 @@ _0219D772:
 	add r0, sp, #0x48
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #2
 	add r0, sp, #0x3c
 	strb r1, [r0, #0x13]
@@ -1094,7 +1094,7 @@ _0219D7D0:
 	add r0, sp, #0x48
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #2
 	add r0, sp, #0x3c
 	strb r1, [r0, #0x13]
@@ -1127,7 +1127,7 @@ _0219D7D0:
 	add r0, sp, #0x48
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #2
 	add r0, sp, #0x3c
 	strb r1, [r0, #0x13]
@@ -1162,7 +1162,7 @@ _0219D7D0:
 	add r0, sp, #0x3c
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x30]
 	mov r7, #0x2d
 	str r0, [sp, #0x38]
@@ -6888,7 +6888,7 @@ ovy145_21a0610: ; 0x021A0610
 	ldrb r3, [r2, r6]
 	add r2, r3, #0
 	mul r2, r7
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #4]
 	bl sub_021A0C44
 	mov r0, #0xeb

@@ -150,7 +150,7 @@ _02175934:
 	ldr r1, _02175974 ; =0x021767B2
 	add r0, r5, #0
 	mov r2, #0xa6
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02175948:
 	add r1, r4, #0
 	ldr r0, _02175978 ; =0x021767A6
@@ -183,7 +183,7 @@ ovy31_2175980: ; 0x02175980
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #0xe8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _021759C4 ; =0x02176820
 	str r5, [r0, #0x3c]
 	bl sub_020812B8

@@ -192,17 +192,17 @@ ovy142_21999f0: ; 0x021999F0
 	add r0, r4, r6
 	add r1, sp, #0
 	mov r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r5, #0x24
 	lsl r7, r7, #2
 	add r0, r5, r7
 	add r1, r4, r6
 	mov r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, sp, #0
 	add r1, r5, r7
 	mov r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy142_21999f0
 
@@ -2274,7 +2274,7 @@ _0219AA30:
 	ldr r2, _0219AB28 ; =0x000004D8
 	add r0, #0x24
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r1, r4, #0
 	ldr r0, [r4, #0x18]
 	ldr r2, [r4, r5]
@@ -5483,7 +5483,7 @@ ovy142_219c444: ; 0x0219C444
 	mov r1, #0
 	add r4, r0, #0
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r6, #0x23
 	lsl r6, r6, #6
 	add r1, r6, #4
@@ -13237,7 +13237,7 @@ ovy142_21a03f0: ; 0x021A03F0
 	mov r1, #0
 	mov r4, #0
 	strh r3, [r5, #8]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r6, #0
 	mov r7, #1
 _021A040A:

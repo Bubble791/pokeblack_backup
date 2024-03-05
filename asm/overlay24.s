@@ -21,17 +21,17 @@ ovy24_216f900: ; 0x0216F900
 	add r2, r4, #0
 	add r7, r3, #0
 	strh r6, [r5]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #4
 	add r0, r5, r0
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r4, #0xc
 	add r0, r5, r4
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	bl sub_02168320
 	add r1, r0, #0
@@ -328,7 +328,7 @@ _0216FB50:
 	add r1, r5, r1
 	mov r2, #0x3c
 	mov r6, #5
-	blx sub_02078920
+	blx MI_CpuCopy8
 	b _0216FB72
 _0216FB64:
 	mov r0, #0x6b
@@ -348,7 +348,7 @@ _0216FB72:
 	add r0, r6, r7
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r4, [r6, r7]
 	mov r0, #0x1b
 	lsl r0, r0, #4

@@ -9,7 +9,7 @@
 .public sub_02046DF8
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204AA30
 .public sub_02199C90
 .public sub_0201361C
@@ -43,10 +43,10 @@
 .public sub_02046C40
 .public sub_020444A4
 .public sub_02044710
-.public sub_02078658
-.public sub_02078658
-.public sub_02078658
-.public sub_02078658
+.public MIi_CpuClear32
+.public MIi_CpuClear32
+.public MIi_CpuClear32
+.public MIi_CpuClear32
 .public sub_02026DC0
 .public sub_02026E04
 .public sub_02026E04
@@ -165,7 +165,7 @@
 .public sub_0204C378
 .public sub_0204C378
 .public sub_0204C378
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203CB80
 .public sub_0219A6C0
 .public sub_0219A6CC
@@ -174,7 +174,7 @@
 .public sub_02027880
 .public sub_020277E4
 .public sub_02027880
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219A6C0
 .public sub_0219A6D8
 .public sub_02027880
@@ -211,7 +211,7 @@
 .public sub_0203A24C
 .public sub_02016AD8
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219ACEC
 .public sub_02046D84
 .public sub_02016B20
@@ -264,7 +264,7 @@
 .public sub_020191AC
 .public sub_02019294
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B688
 .public sub_020484F4
 .public sub_02021C1C
@@ -375,7 +375,7 @@
 .public sub_02022888
 .public sub_02022888
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
@@ -445,7 +445,7 @@
 .public sub_02048564
 .public sub_02048564
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204875C
 .public sub_0219C9D0
 .public sub_020056FC
@@ -662,7 +662,7 @@
 .public sub_0202E96C
 .public sub_0202E8D8
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
@@ -739,7 +739,7 @@
 .public sub_02048564
 .public sub_02048244
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219E728
 .public sub_020056FC
 .public sub_0203D554
@@ -1000,7 +1000,7 @@
 .public sub_02048564
 .public sub_0202451C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244

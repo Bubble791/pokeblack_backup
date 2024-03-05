@@ -8,7 +8,7 @@
 .public sub_020056FC
 .public sub_02005680
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204875C
 .public sub_02017934
 .public sub_02010CB8

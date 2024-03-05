@@ -2,7 +2,7 @@
 #pragma once
 .public sub_021A5C44
 .public sub_021A5C44
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_021A5C5C
 .public sub_0215D8A8
 .public sub_02180538

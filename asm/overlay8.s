@@ -432,7 +432,7 @@ _0214F83A:
 	mov r1, #0
 	mov r2, #0x28
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #9
 	str r0, [r5]
 	add r4, #0xac

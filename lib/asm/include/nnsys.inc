@@ -349,7 +349,6 @@
 .public MI_Copy64B
 .public MI_CpuFill8
 .public MI_CpuCopy8
-.public MI_Zero36B
 .public SND_StopSeq
 .public SND_PrepareSeq
 .public SND_StartPreparedSeq

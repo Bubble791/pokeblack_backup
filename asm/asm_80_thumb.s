@@ -504,7 +504,7 @@ sub_0207A588: ; 0x0207A588
 	str r0, [r5, #0x3c]
 	mov r0, #0
 	sub r2, #0xc
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r5, #0
 	add r0, #0x84
 	str r4, [r0]
@@ -526,7 +526,7 @@ sub_0207A588: ; 0x0207A588
 	mov r2, #0xc
 	str r4, [r5, #0x78]
 	str r4, [r5, #0x7c]
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r5, #0xb0
 	ldr r0, [sp, #8]
 	str r4, [r5]

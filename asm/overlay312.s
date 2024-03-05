@@ -22,7 +22,7 @@ ovy312_217c940: ; 0x0217C940
 	mov r1, #0
 	add r2, r4, #0
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x7c
 	str r0, [r5]
 	str r6, [r5, #4]
@@ -1166,7 +1166,7 @@ _0217D2D6:
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	mov r4, #1
 	mov r1, #7
@@ -1174,20 +1174,20 @@ _0217D2D6:
 	mov r0, #0xc0
 	lsl r1, r1, #0x18
 	add r2, r4, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	mov r1, #5
 	mov r0, #0
 	lsl r1, r1, #0x18
 	add r2, r4, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	ldr r1, _0217D338 ; =0x07000400
 	mov r0, #0xc0
 	add r2, r4, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	ldr r1, _0217D33C ; =0x05000400
 	mov r0, #0
 	add r2, r4, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	add r0, sp, #0
 	bl sub_02046C40
 	add sp, #0x30

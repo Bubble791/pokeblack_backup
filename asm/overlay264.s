@@ -23,7 +23,7 @@ ovy264_21998c0: ; 0x021998C0
 	add r2, r7, #0
 	add r4, r0, #0
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	sub r0, r7, #4
 	str r6, [r4, r0]
@@ -328,7 +328,7 @@ ovy264_2199af8: ; 0x02199AF8
 	sub r2, r2, #4
 	ldr r0, [r0, #0xc]
 	ldr r2, [r1, r2]
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r0, r6, #0
 	bl sub_0203A24C
 	add sp, #4

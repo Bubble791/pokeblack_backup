@@ -24,7 +24,7 @@ ovy205_21b7380: ; 0x021B7380
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	cmp r5, #0
 	bne _021B73E4
 	mov r5, #4
@@ -271,23 +271,23 @@ ovy205_21b75c4: ; 0x021B75C4
 	mov r0, #0
 	lsl r1, r1, #0x18
 	add r2, r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x62
 	lsr r4, r5, #2
 	mov r0, #0
 	lsl r1, r1, #0x14
 	add r2, r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x19
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsr r2, r5, #1
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x66
 	mov r0, #0
 	lsl r1, r1, #0x14
 	add r2, r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r4, _021B76F4 ; =0x021B93F8
 	add r3, sp, #0x80
 	mov r2, #0xc

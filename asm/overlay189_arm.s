@@ -625,12 +625,12 @@ _021A9908:
 
 	arm_func_start sub_021A992C
 sub_021A992C: ; 0x021A992C
-	ldr ip, _021A993C ; =sub_020787A8
+	ldr ip, _021A993C ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x14
 	bx ip
 	.align 2, 0
-_021A993C: .word sub_020787A8
+_021A993C: .word MI_CpuFill8
 	arm_func_end sub_021A992C
 
 	arm_func_start sub_021A9940
@@ -673,7 +673,7 @@ sub_021A99A4: ; 0x021A99A4
 	mov r1, r4
 	mov r2, #0x110
 	mov r5, r0
-	bl sub_020787A8
+	bl MI_CpuFill8
 	str r4, [r5]
 	str r4, [r5, #0x108]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -724,7 +724,7 @@ sub_021A9A08: ; 0x021A9A08
 	ldr r2, [r6, #4]
 	mov r1, r4
 	mov r2, r2, lsl #2
-	bl sub_02078920
+	bl MI_CpuCopy8
 	ldr r0, [r6]
 	bl sub_021A9744
 _021A9A6C:
@@ -754,7 +754,7 @@ _021A9AA4:
 	ldr r1, [r4]
 	ldmia r5, {r0, r2}
 	mov r2, r2, lsl #2
-	bl sub_02078920
+	bl MI_CpuCopy8
 	ldr r0, [r5, #4]
 	str r0, [r4, #4]
 	cmp r0, #0
@@ -780,7 +780,7 @@ sub_021A9AF0: ; 0x021A9AF0
 	ldr r2, [r4, #8]
 	mov r1, #0
 	mov r2, r2, lsl #2
-	bl sub_020787A8
+	bl MI_CpuFill8
 _021A9B14:
 	mov r0, #0
 	str r0, [r4, #4]
@@ -1070,7 +1070,7 @@ _021A9EB0:
 _021A9ED4:
 	mov r2, r6, lsl #2
 	mov r1, #0
-	bl sub_020787A8
+	bl MI_CpuFill8
 	ldr r1, [r4, #4]
 	mov r0, r5
 	add r1, r1, r6
@@ -3699,7 +3699,7 @@ _021AC374:
 	ldr r0, [r0, r2, lsl #2]
 	mov r1, r6
 	mov r2, r4, lsl #2
-	bl sub_02078920
+	bl MI_CpuCopy8
 	cmp r5, #0
 	beq _021AC518
 _021AC394:

@@ -704,7 +704,7 @@ _0217089E:
 	ldr r0, [sp, #4]
 	add r1, r6, #0
 	mov r2, #0x64
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r2, r5, #0
 	ldr r0, [sp, #8]
 	add r2, #0x6a
@@ -752,13 +752,13 @@ _0217090A:
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #0xc]
 	mov r2, #0x64
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r1, [sp, #0xc]
 	add r0, r7, #0
 	add r1, #0x64
 	mov r2, #6
 	str r1, [sp, #0xc]
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r5, r6
 	add r0, #0x6b
 	add r1, r5, r6
@@ -867,7 +867,7 @@ ovy28_21709e0: ; 0x021709E0
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x64
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r4, #0x20]
 	cmp r0, #0
 	beq _02170A0E
@@ -888,7 +888,7 @@ _02170A14:
 	add r0, #0x64
 	add r1, r5, #0
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02170A1E:
 	bl sub_02042A78
 	lsl r0, r0, #0x18
@@ -1152,7 +1152,7 @@ ovy28_2170c64: ; 0x02170C64
 	add r4, r5, r0
 	add r0, r4, #0
 	mov r2, #0x80
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _02170C98 ; =0x0000FFFF
 	bl sub_02005748
 	strh r0, [r4, #0xc]
@@ -1188,7 +1188,7 @@ ovy28_2170ca8: ; 0x02170CA8
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #0x50
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r6, #0
 	bl sub_02170C9C
 	add r4, r6, #0
@@ -1266,7 +1266,7 @@ _02170D3C:
 	add r0, r7, #0
 	add r1, r5, #0
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [sp]
 	mov r1, #1
 	strb r0, [r5, #6]
@@ -1332,7 +1332,7 @@ _02170DA2:
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, r6, r7, pc}
 _02170DCA:
 	add r4, r4, #1
@@ -1351,7 +1351,7 @@ ovy28_2170de0: ; 0x02170DE0
 	mov r1, #0
 	add r5, r0, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r7, #0xff
 	mov r6, #0x24
 _02170DF2:
@@ -1361,7 +1361,7 @@ _02170DF2:
 	add r0, #0x1a
 	add r1, r7, #0
 	mov r2, #6
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r4, r4, #1
 	cmp r4, #0x1e
 	blt _02170DF2
@@ -1865,7 +1865,7 @@ ovy28_21711f8: ; 0x021711F8
 	add r0, r6, #0
 	add r1, #0x24
 	mov r2, #8
-	blx sub_02078920
+	blx MI_CpuCopy8
 _0217121A:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1880,7 +1880,7 @@ ovy28_2171220: ; 0x02171220
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0207C33C
 	mov r1, #1
@@ -2017,7 +2017,7 @@ ovy28_2171308: ; 0x02171308
 	add r0, r7, #0
 	ldr r1, [r4, r1]
 	add r2, r6, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02171334:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -2584,7 +2584,7 @@ ovy28_2171798: ; 0x02171798
 	mov r1, #0
 	mov r2, #0x28
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r7, #0
 	ldmia r4!, {r0, r1}
 	stmia r2!, {r0, r1}
@@ -2710,7 +2710,7 @@ ovy28_2171894: ; 0x02171894
 	mov r1, #0
 	mov r2, #0x28
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r7, #0
 	ldmia r4!, {r0, r1}
 	stmia r2!, {r0, r1}
@@ -4248,7 +4248,7 @@ ovy28_2172434: ; 0x02172434
 	add r0, r7, #0
 	add r1, r4, r1
 	add r2, r6, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 _02172466:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -4312,7 +4312,7 @@ ovy28_21724a0: ; 0x021724A0
 	ldr r1, [r1, r2]
 	ldr r0, [sp]
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r1, #1
 	add r0, r4, r5
 	add r6, #0x10
@@ -4534,7 +4534,7 @@ ovy28_2172648: ; 0x02172648
 	beq _02172674
 	add r0, r2, #0
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r1, #1
 	add r0, r4, r5
 	add r6, #0x10
@@ -4583,7 +4583,7 @@ ovy28_21726ac: ; 0x021726AC
 	add r0, r2, #0
 	add r1, r5, r4
 	add r2, r6, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r1, #1
 	add r0, r4, #4
 	strb r1, [r5, r0]
@@ -5183,7 +5183,7 @@ ovy28_2172b8c: ; 0x02172B8C
 	mov r2, #0x58
 	str r3, [sp, #4]
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #3
 	str r0, [r7, #0x44]
 	mov r0, #0x5a
@@ -5282,12 +5282,12 @@ _02172C5C: .word 0x021730B8
 
 	thumb_func_start sub_02172C60
 sub_02172C60: ; 0x02172C60
-	ldr r3, _02172C68 ; =sub_020787A8
+	ldr r3, _02172C68 ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x58
 	bx r3
 	.align 2, 0
-_02172C68: .word sub_020787A8
+_02172C68: .word MI_CpuFill8
 	thumb_func_end sub_02172C60
 
 	thumb_func_start ovy28_2172c6c

@@ -1576,7 +1576,7 @@ _021BAE56:
 	mov r2, #0x1b
 	ldr r0, [r4, #0x10]
 	lsl r2, r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 _021BAE8A:
 	ldr r0, [r4, #0x44]
 	cmp r0, #0
@@ -3793,7 +3793,7 @@ _021BBF4E:
 	add r0, r4, #0
 	add r4, sp, #0x194
 	add r1, r4, #0
-	blx sub_0207873C
+	blx MI_Copy36B
 	add r0, r4, #0
 	add r1, sp, #0x1e8
 	blx MTX_Copy33To44_
@@ -10362,12 +10362,12 @@ ovy209_21bf104: ; 0x021BF104
 	add r0, r6, #0
 	add r1, r5, r1
 	add r2, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r6, #0x20
 	add r0, r6, #0
 	add r1, sp, #0x18
 	add r2, r7, #0
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	ldr r0, _021BF2B4 ; =0x0000016A
 	ldr r7, _021BF2B4 ; =0x0000016A
 	add r0, #0x20

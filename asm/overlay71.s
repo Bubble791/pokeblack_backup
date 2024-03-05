@@ -37,7 +37,7 @@ _021E8C0A:
 	mov r0, #0
 	add r1, r4, #0
 	lsl r2, r2, #2
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy71_21e8bfc

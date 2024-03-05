@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02006FC8
 .public sub_0204E060
 .public sub_02046DF8
@@ -159,7 +159,7 @@
 .public sub_0204B758
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020072FC
 .public sub_02008DD0
 .public sub_0200C838
@@ -183,7 +183,7 @@
 .public sub_0202D6A8
 .public sub_021A000C
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_0203A954
 .public sub_02009B50
@@ -505,7 +505,7 @@
 .public sub_0204AA30
 .public sub_0203A1FC
 .public sub_0204B32C
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0203A24C
 .public sub_0204AB0C
 .public sub_0203A24C
@@ -648,7 +648,7 @@
 .public sub_0200749C
 .public sub_02008B0C
 .public sub_0200898C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021659EC
 .public sub_0203A970
 .public sub_0203CE0C
@@ -799,7 +799,7 @@
 .public sub_0205FA10
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046C40
@@ -847,7 +847,7 @@
 .public sub_0203A1D0
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203A954

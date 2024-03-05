@@ -24,7 +24,7 @@ ovy258_21998c0: ; 0x021998C0
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4]
 	mov r0, #0x4f
 	str r0, [sp]

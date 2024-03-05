@@ -73,7 +73,7 @@ _0216E6DE:
 	add r0, #0xc
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5]
 	ldr r1, _0216E768 ; =0x00000134
 	str r0, [r5, #0xc]

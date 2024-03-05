@@ -4,7 +4,7 @@
 
 	.public sub_02076F58
 	.public sub_02076F34
-	.public sub_0207873C
+	.public MI_Copy36B
 
 	.text
 
@@ -60,12 +60,12 @@ _02074C60: .word sub_02076F34
 G3_MultMtx33: ; 0x02074C64
 	ldr r1, _02074C70 ; =0x04000400
 	mov r2, #0x1a
-	ldr r3, _02074C74 ; =sub_0207873C
+	ldr r3, _02074C74 ; =MI_Copy36B
 	str r2, [r1]
 	bx r3
 	nop
 _02074C70: .word 0x04000400
-_02074C74: .word sub_0207873C
+_02074C74: .word MI_Copy36B
 	thumb_func_end G3_MultMtx33
 
 	thumb_func_start G3_MultTransMtx33
@@ -76,7 +76,7 @@ G3_MultTransMtx33: ; 0x02074C78
 	mov r1, #0x19
 	str r1, [r4]
 	add r1, r4, #0
-	blx sub_0207873C
+	blx MI_Copy36B
 	ldr r0, [r5]
 	str r0, [r4]
 	ldr r0, [r5, #4]

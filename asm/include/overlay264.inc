@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203AB10
 .public sub_0203A1D0
 .public GX_SetGraphicsMode
@@ -21,7 +21,7 @@
 .public sub_020279B4
 .public sub_020279B4
 .public sub_0204B37C
-.public sub_0207866C
+.public MIi_CpuCopy32
 .public sub_0203A24C
 .public sub_0203DEFC
 .public sub_02005FA8

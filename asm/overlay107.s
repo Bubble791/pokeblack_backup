@@ -405,7 +405,7 @@ _021EEF84:
 	mov r1, #0
 	mov r2, #0x10
 	add r6, r0, #0
-	blx sub_0207883C
+	blx MI_CpuFill
 	ldr r0, [sp]
 	strh r0, [r6]
 	str r5, [r6, #0xc]

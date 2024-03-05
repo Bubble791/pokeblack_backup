@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016B20
 .public sub_02024E80
 .public sub_02045E74
@@ -33,7 +33,7 @@
 .public sub_0219B11C
 .public sub_0219A9A4
 .public sub_02199B90
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02046DF8
@@ -69,7 +69,7 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204B6A8
 .public sub_0204BF1C
 .public sub_0204C028
@@ -86,7 +86,7 @@
 .public sub_0204B81C
 .public sub_0204BDE0
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C124
 .public sub_0204C468
@@ -107,8 +107,8 @@
 .public sub_0204BE64
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_020232D0
 .public sub_02022D58
 .public sub_02021998
@@ -120,15 +120,15 @@
 .public sub_020487D4
 .public sub_02021A18
 .public sub_02022DA8
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_020480C0
 .public sub_02048530
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020480C0
 .public sub_02048530
 .public sub_020484F4
@@ -139,7 +139,7 @@
 .public sub_02044F90
 .public sub_02048564
 .public sub_02048210
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
@@ -178,7 +178,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02048244
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B128
 .public sub_02006254
 .public sub_0204C124
@@ -230,10 +230,10 @@
 .public sub_0207BB0C
 .public sub_0208D5C4
 .public sub_02006254
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02199CB0
 .public sub_02199CC8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02040440
 .public sub_02042A6C
 .public sub_02199C78
@@ -243,7 +243,7 @@
 .public sub_0203DAC8
 .public sub_0208D868
 .public sub_0205FA10
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B128
 .public sub_0219C64C
 .public sub_02005748
@@ -259,7 +259,7 @@
 .public VEC_Subtract
 .public VEC_Normalize
 .public sub_02005748
-.public sub_020787A8
+.public MI_CpuFill8
 .public VEC_Subtract
 .public VEC_Mag
 .public VEC_Normalize
@@ -289,7 +289,7 @@
 .public sub_0208DA4C
 .public sub_0204C124
 .public sub_0204C378
-.public sub_020787A8
+.public MI_CpuFill8
 
 .public sub_02045A5C
 .public sub_0204B794

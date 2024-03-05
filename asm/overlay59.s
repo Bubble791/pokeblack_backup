@@ -4017,7 +4017,7 @@ ovy59_21e7a28: ; 0x021E7A28
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	cmp r4, #3
 	bhi _021E7AD0
 	add r0, r4, r4

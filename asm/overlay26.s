@@ -18,7 +18,7 @@ ovy26_216f900: ; 0x0216F900
 	mov r2, #0x50
 	str r0, [sp]
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #0x1c]
 	mov r1, #0
 	add r2, sp, #0x18

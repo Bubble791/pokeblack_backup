@@ -23,7 +23,7 @@ ovy295_219ce80: ; 0x0219CE80
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x4c
-	blx sub_02078658
+	blx MIi_CpuClear32
 	strh r7, [r4]
 	mov r0, #0x29
 	strh r0, [r4, #2]
@@ -379,7 +379,7 @@ ovy295_219d154: ; 0x0219D154
 	mov r0, #0
 	add r1, r6, #0
 	lsl r2, r2, #0xe
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	ldrh r0, [r5]
 	bl ovy295_219d250
@@ -745,7 +745,7 @@ ovy295_219d460: ; 0x0219D460
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x1c
-	blx sub_02078658
+	blx MIi_CpuClear32
 	strh r6, [r4]
 	ldr r0, [r5, #4]
 	str r0, [r4, #4]
@@ -789,7 +789,7 @@ _0219D4C4:
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	mov r6, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	ldrh r0, [r4]
 	bl ovy295_219d60c

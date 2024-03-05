@@ -220,7 +220,7 @@ _021E59A0:
 	mov r1, #0
 	mov r2, #0x80
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #1
 _021E59B0:
 	lsl r0, r5, #2
@@ -948,7 +948,7 @@ ovy65_21e5ed4: ; 0x021E5ED4
 	add r0, #0x68
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 _021E5F16:
 	mov r0, #0xc
 	mul r0, r5

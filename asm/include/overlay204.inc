@@ -4,7 +4,7 @@
 .public sub_0203CE0C
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020056FC
 .public sub_0203A6A8
 .public sub_0203AB10
@@ -37,7 +37,7 @@
 .public sub_02057EF8
 .public sub_0200A11C
 .public sub_0200A034
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02017238
 .public sub_0200A138
 .public sub_02009F80

@@ -5,7 +5,7 @@
 .public sub_02016AF0
 .public sub_02016D68
 .public sub_020193A4
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016AD4
 .public sub_02005C9C
 .public sub_02005C70

@@ -34,7 +34,7 @@ _0217C96A:
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #0x28
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r6, #0
 	ldmia r5!, {r0, r1}
 	stmia r2!, {r0, r1}

@@ -28,7 +28,7 @@ ovy318_219ce80: ; 0x0219CE80
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x58
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r6, [r4]
 	ldrh r0, [r4]
 	mov r1, #0
@@ -362,7 +362,7 @@ ovy318_219d16c: ; 0x0219D16C
 	mov r2, #0x24
 	add r5, r0, #0
 	add r7, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0xf
 	strh r0, [r5, #0x20]
 	ldr r0, [sp, #0x20]
@@ -425,7 +425,7 @@ ovy318_219d1f4: ; 0x0219D1F4
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x24
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy318_219d1f4
 
@@ -436,7 +436,7 @@ ovy318_219d210: ; 0x0219D210
 	mov r1, #0
 	mov r2, #0x1c
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	add r1, r4, #0
 	mov r2, #2
@@ -468,7 +468,7 @@ _0219D24A:
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x1c
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy318_219d23c
@@ -580,7 +580,7 @@ ovy318_219d324: ; 0x0219D324
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _0219D3B0 ; =0x04000050
 	ldr r0, _0219D3B4 ; =0x04001050
 	strh r7, [r1]
@@ -656,7 +656,7 @@ ovy318_219d3c4: ; 0x0219D3C4
 	str r2, [r0]
 	add r0, r4, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r3, r4, r5, pc}
@@ -697,7 +697,7 @@ ovy318_219d440: ; 0x0219D440
 	mov r1, #0
 	mov r2, #4
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	bl sub_020444A4
 	add r0, r5, #0
@@ -757,7 +757,7 @@ _0219D4AA:
 	add r0, r7, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0219D4D4: .word 0x0219D5B8
@@ -785,7 +785,7 @@ ovy318_219d4e4: ; 0x0219D4E4
 	mov r1, #0
 	mov r2, #4
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _0219D520 ; =0x0219D56C
 	add r1, r6, #0
 	add r2, r4, #0
@@ -817,7 +817,7 @@ ovy318_219d524: ; 0x0219D524
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy318_219d524

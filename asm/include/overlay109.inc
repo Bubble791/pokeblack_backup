@@ -89,4 +89,4 @@
 .public sub_0219AB18
 .public sub_02006254
 
-.public sub_02078658
+.public MIi_CpuClear32

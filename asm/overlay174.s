@@ -118,7 +118,7 @@ ovy174_219cf5c: ; 0x0219CF5C
 	ldr r0, _0219CF94 ; =0x05000400
 	ldr r1, [r4, r1]
 	lsl r2, r2, #8
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #9
@@ -514,7 +514,7 @@ ovy174_219d2a0: ; 0x0219D2A0
 	add r0, r6, #0
 	add r1, #0x18
 	mov r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 _0219D2CA:
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy174_219d2a0
@@ -2663,7 +2663,7 @@ _0219E454:
 	ldr r0, [r0, #0xc]
 	add r1, r5, #0
 	lsl r2, r2, #4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r4, #0
 	mov r7, #0x20
 	mov r6, #8
@@ -2676,7 +2676,7 @@ _0219E4A2:
 	add r0, r5, r0
 	add r1, r5, r1
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r4, r4, #1
 	cmp r4, #9
 	blt _0219E4A2
@@ -3864,7 +3864,7 @@ ovy174_219ee60: ; 0x0219EE60
 	mov r1, #0
 	add r4, r0, #0
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #0x91
 	lsl r1, r1, #2
 	str r5, [r4, r1]

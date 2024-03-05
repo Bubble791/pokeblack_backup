@@ -26,23 +26,23 @@ _0219F350:
 	mov r0, #0
 	lsl r1, r1, #0x18
 	add r2, r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x62
 	lsr r4, r5, #2
 	mov r0, #0
 	lsl r1, r1, #0x14
 	add r2, r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x19
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsr r2, r5, #1
-	blx sub_02078658
+	blx MIi_CpuClear32
 	mov r1, #0x66
 	mov r0, #0
 	lsl r1, r1, #0x14
 	add r2, r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r4, _0219F49C ; =0x0219F4AC
 	add r3, sp, #0xc
 	add r2, r3, #0

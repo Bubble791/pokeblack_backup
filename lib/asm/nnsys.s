@@ -14920,7 +14920,6 @@ _020C0924:
 	str r1, [sp]
 	ldrsh r1, [r6, #2]
 	str r1, [sp, #4]
-	bl MI_Zero36B
 	ldrh r0, [r7]
 	ldr r2, _020C0B38 ; =_02109494
 	ldr r1, _020C0B3C ; =_02109494 + 1
@@ -18939,7 +18938,6 @@ _020C3F30:
 	mov r4, r2, asr #4
 	ldrsh r7, [r1]
 	ldrsh r6, [r1, #2]
-	bl MI_Zero36B
 	ldrh r0, [r5]
 	ldr r1, _020C403C ; =_021094B8
 	mov r3, #0x1000

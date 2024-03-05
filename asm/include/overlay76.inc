@@ -222,7 +222,7 @@
 .public sub_02006294
 .public sub_02005748
 .public sub_02199C30
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02005748
 .public sub_02005748
 .public sub_02199780

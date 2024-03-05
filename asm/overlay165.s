@@ -802,7 +802,7 @@ ovy165_219a0d4: ; 0x0219A0D4
 	add r1, #0xa4
 	mov r2, #0x60
 	mov r4, #0x60
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	mov r1, #0x60
 	ldr r0, [sp]
 	add r1, #0xa4
@@ -2112,7 +2112,7 @@ ovy165_219a894: ; 0x0219A894
 	ldr r0, _0219AC1C ; =0x050000C0
 	add r1, r5, #0
 	mov r2, #0x60
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -14893,7 +14893,7 @@ _021A107A:
 	ldr r0, _021A10C0 ; =0x05000440
 	add r1, r5, r1
 	mov r2, #0x20
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

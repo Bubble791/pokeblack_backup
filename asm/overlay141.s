@@ -26,7 +26,7 @@ ovy141_219ce80: ; 0x0219CE80
 	mov r0, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	mov r0, #0
 	mov r1, #0
 	bl sub_02027B64

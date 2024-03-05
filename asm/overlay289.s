@@ -1282,7 +1282,7 @@ ovy289_21f4df0: ; 0x021F4DF0
 	mov r1, #0
 	mov r2, #8
 	add r6, r3, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x18]
 	add r7, r5, #0
 	ldrsh r2, [r6, r0]

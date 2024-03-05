@@ -3,7 +3,7 @@
 .public sub_0203CE0C
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016AD8
 .public sub_02017934
 .public sub_020092E4
@@ -54,13 +54,13 @@
 .public sub_0200E704
 .public sub_0200E5C0
 .public sub_0200E7A8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02008B0C
 .public sub_0203A24C
 .public sub_0201736C
 .public sub_02008B34
 .public sub_02008BB0
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020486F0
 .public sub_020485F8
 .public sub_020486F4
@@ -85,9 +85,9 @@
 .public sub_02017238
 .public sub_0201795C
 .public sub_0200EF84
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02008B94
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02008BD0
 .public sub_02008C0C
 .public sub_02008C10
@@ -118,7 +118,7 @@
 .public sub_0219D1A4
 .public sub_0219D3E4
 .public sub_0219D408
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0219D3E8
 .public sub_021B600C
 .public sub_021B600C
@@ -221,7 +221,7 @@
 .public sub_020256B0
 .public sub_02048210
 .public sub_020232D8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A7F4
 .public sub_0204AA30
 .public sub_0204B0D4
@@ -232,10 +232,10 @@
 .public sub_0204AFB0
 .public sub_0204AE3C
 .public sub_0204AFB0
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204B37C
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0202780C
 .public sub_0207B0AC
@@ -277,7 +277,7 @@
 .public sub_0201782C
 .public sub_02017850
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02046DF8
@@ -288,9 +288,9 @@
 .public sub_020056FC
 .public sub_0203A6A8
 .public sub_020232D8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A24C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020444A4
 .public sub_02048080
 .public sub_02044710
@@ -300,4 +300,4 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_020787A8
+.public MI_CpuFill8

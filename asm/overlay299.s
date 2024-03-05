@@ -23,7 +23,7 @@ ovy299_219fbc0: ; 0x0219FBC0
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	mov r0, #1
 	pop {r4, r5, r6, pc}
@@ -2578,7 +2578,7 @@ _021A10BC:
 	ldr r1, [sp, #0x14]
 	add r1, r1, r2
 	mov r2, #0x20
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10

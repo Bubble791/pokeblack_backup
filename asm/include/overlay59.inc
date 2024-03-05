@@ -663,7 +663,7 @@
 .public sub_021804D8
 .public sub_02154910
 .public sub_021548E8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021F1B94
 .public sub_02039518
 .public sub_021F14A8

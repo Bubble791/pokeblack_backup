@@ -36,7 +36,7 @@
 .public sub_021804BC
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_0207883C
+.public MI_CpuFill
 .public sub_021804F0
 .public sub_0219A6A0
 .public sub_02166E44

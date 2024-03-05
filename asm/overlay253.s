@@ -24,7 +24,7 @@ ovy253_217c940: ; 0x0217C940
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	sub r0, r5, #4
 	str r6, [r4, r0]
 	mov r0, #0x49
@@ -1078,7 +1078,7 @@ ovy253_217d178: ; 0x0217D178
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0
 	str r4, [r5, #0x1c]
 	str r0, [r5]

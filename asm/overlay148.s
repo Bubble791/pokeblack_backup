@@ -19,7 +19,7 @@ ovy148_21f59e0: ; 0x021F59E0
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x30
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r4, #0
 	ldmia r5!, {r0, r1}
 	add r2, #0x18
@@ -49,7 +49,7 @@ ovy148_21f5a1c: ; 0x021F5A1C
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x30
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, r4, #0
 	ldmia r5!, {r0, r1}
 	add r2, #0x18

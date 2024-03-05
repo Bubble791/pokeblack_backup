@@ -302,7 +302,7 @@ _021EEEB2:
 	add r0, sp, #0
 	add r1, r4, #0
 	mov r2, #0x10
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r1, #0
 	mov r3, #1
 	add r0, r1, #0

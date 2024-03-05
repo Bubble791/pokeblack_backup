@@ -25,7 +25,7 @@ ovy294_21a1b20: ; 0x021A1B20
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x24
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r6, [r4]
 	str r5, [r4, #4]
 	ldrh r2, [r4]
@@ -235,7 +235,7 @@ ovy294_21a1cf8: ; 0x021A1CF8
 	mov r1, #0
 	mov r2, #0x14
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _021A1DBC ; =0x04000050
 	mov r0, #0
 	strh r0, [r1]
@@ -342,7 +342,7 @@ ovy294_21a1dd4: ; 0x021A1DD4
 	str r2, [r0]
 	add r0, r4, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r3, r4, r5, pc}
@@ -410,7 +410,7 @@ ovy294_21a1e7c: ; 0x021A1E7C
 	mov r1, #0
 	mov r2, #4
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	bl sub_020444A4
 	add r0, r5, #0
@@ -457,7 +457,7 @@ ovy294_21a1edc: ; 0x021A1EDC
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy294_21a1edc
 
@@ -492,7 +492,7 @@ ovy294_21a1f14: ; 0x021A1F14
 	mov r1, #0
 	mov r2, #4
 	mov r5, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_020444A4
 	add r0, r4, #0
@@ -608,7 +608,7 @@ ovy294_21a2018: ; 0x021A2018
 	mov r1, #0
 	mov r2, #4
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _021A2054 ; =0x021A3D64
 	add r1, r6, #0
 	add r2, r4, #0
@@ -640,7 +640,7 @@ ovy294_21a2058: ; 0x021A2058
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy294_21a2058
@@ -1087,7 +1087,7 @@ ovy294_21a2320: ; 0x021A2320
 	add r0, #0xc
 	add r1, r6, #0
 	lsl r2, r2, #0xa
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #0
 	bl sub_0203A24C
 _021A23E0:
@@ -3223,7 +3223,7 @@ ovy294_21a334c: ; 0x021A334C
 	mov r2, #0xc
 	str r3, [sp, #4]
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
 	bl sub_02024F60
@@ -3258,7 +3258,7 @@ _021A33AE:
 	mov r1, #0
 	mov r2, #0x34
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x14]
 	add r2, sp, #0x18
 	ldr r0, [r0, #4]
@@ -3396,7 +3396,7 @@ ovy294_21a34b0: ; 0x021A34B0
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy294_21a34b0

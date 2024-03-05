@@ -1612,7 +1612,7 @@ ovy134_21ef87c: ; 0x021EF87C
 	ldr r1, [sp, #0xc]
 	mov r0, #0
 	lsl r2, r6, #9
-	blx sub_02078658
+	blx MIi_CpuClear32
 _021EF908:
 	ldr r0, [sp, #8]
 	mov r4, #0
@@ -1628,7 +1628,7 @@ _021EF910:
 	add r1, r1, r2
 	add r0, r7, r0
 	mov r2, #0x20
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021EF910
@@ -2631,7 +2631,7 @@ ovy134_21f012c: ; 0x021F012C
 	mov r0, #0
 	mov r2, #0x18
 	mov r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r1, [sp, #8]
 	add r7, #0xab
 	lsl r1, r1, #0x18
@@ -2834,7 +2834,7 @@ _021F02E8:
 	add r1, sp, #0x30
 	mov r2, #0xc
 	mov r4, #0
-	blx sub_02078624
+	blx MIi_CpuClear16
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x1c]
 	add r0, r0, #1
@@ -3054,7 +3054,7 @@ _021F0484:
 	mov r0, #0
 	add r1, #0xc
 	mov r2, #8
-	blx sub_02078624
+	blx MIi_CpuClear16
 	add r0, r4, #0
 	add r0, #0x18
 	bl sub_02029BB0

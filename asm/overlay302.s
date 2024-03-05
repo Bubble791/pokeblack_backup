@@ -22,7 +22,7 @@ ovy302_21acee0: ; 0x021ACEE0
 	mov r1, #0
 	mov r2, #0x3c
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r4, [r5]
 	mov r0, #0x69
 	bl sub_0203A970
@@ -712,7 +712,7 @@ ovy302_21ad3f4: ; 0x021AD3F4
 	mov r1, #0
 	add r2, r4, #0
 	str r0, [r5, #0x38]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5]
 	ldr r4, [r5, #0x38]
 	ldr r0, [r0]
@@ -848,7 +848,7 @@ ovy302_21ad4fc: ; 0x021AD4FC
 	mov r1, #0
 	add r2, r4, #0
 	str r0, [r5, #0x38]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5]
 	ldr r4, [r5, #0x38]
 	ldr r0, [r0]
@@ -1284,7 +1284,7 @@ _021AD852:
 	add r0, #2
 	mov r1, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r2, sp, #0x24
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x18]
@@ -1401,7 +1401,7 @@ _021AD93C:
 	ldr r2, _021ADADC ; =0x0000C144
 	add r0, #8
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0
 	str r0, [sp, #0x28]
 _021AD950:
@@ -1431,7 +1431,7 @@ _021AD978:
 	mov r1, #0
 	add r2, r4, #0
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrb r1, [r6, #4]
 	ldr r0, [sp, #0x20]
 	add r2, sp, #0x40
@@ -1455,7 +1455,7 @@ _021AD9A2:
 	str r0, [sp, #0x10]
 	add r1, r5, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r1, r4, #0
 	ldr r0, [sp, #0x10]
 	mov r2, #1
@@ -1661,7 +1661,7 @@ _021ADB2E:
 	ldr r2, _021ADC70 ; =0x00000352
 	add r0, r6, #0
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrb r1, [r5, #4]
 	ldr r0, [sp, #0xc]
 	add r2, r6, #0
@@ -1686,7 +1686,7 @@ _021ADB70:
 	ldr r2, _021ADC74 ; =0x000009CC
 	add r0, #8
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0
 	str r0, [sp, #8]
 _021ADB8A:
@@ -1704,7 +1704,7 @@ _021ADB8A:
 	add r0, sp, #0x24
 	mov r1, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrb r1, [r6, #4]
 	ldr r0, [sp, #0xc]
 	add r2, sp, #0x24
@@ -1836,7 +1836,7 @@ _021ADC96:
 	mov r1, #0
 	mov r2, #3
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #8]
 	mov r1, #0x1c
 	mul r1, r0
@@ -2066,7 +2066,7 @@ _021ADE22:
 	ldr r2, _021ADE70 ; =0x00000352
 	add r0, r7, #0
 	mov r1, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrb r1, [r6, #4]
 	ldr r0, [sp, #4]
 	add r2, r7, #0

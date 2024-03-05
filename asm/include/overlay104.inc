@@ -27,7 +27,7 @@
 .public sub_021804C0
 .public sub_0218056C
 .public sub_02180FF0
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_021B8278

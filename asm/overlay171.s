@@ -23,7 +23,7 @@ ovy171_21dda60: ; 0x021DDA60
 	mov r1, #0
 	add r2, r4, #0
 	add r6, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r6]
 	mov r0, #1
 	pop {r4, r5, r6, pc}
@@ -1789,7 +1789,7 @@ _021DE8B4:
 	add r0, r7, r0
 	add r1, r6, r1
 	mov r2, #0x20
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
@@ -1822,7 +1822,7 @@ _021DE8F0:
 	add r0, r7, r0
 	add r1, r6, r1
 	mov r2, #0x20
-	blx sub_0207863C
+	blx MIi_CpuCopy16
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10

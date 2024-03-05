@@ -4551,9 +4551,9 @@ _0689A4F2:
 
 	arm_func_start sub_0689A51C
 sub_0689A51C: ; 0x0689A51C
-	ldr pc, _0689A520 ; =sub_02078624
+	ldr pc, _0689A520 ; =MIi_CpuClear16
 	.align 2, 0
-_0689A520: .word sub_02078624
+_0689A520: .word MIi_CpuClear16
 	arm_func_end sub_0689A51C
 
 	thumb_func_start sub_0689A524
@@ -5785,12 +5785,12 @@ _0689ADF8:
 
 	thumb_func_start sub_0689AE04
 sub_0689AE04: ; 0x0689AE04
-	ldr r3, _0689AE0C ; =sub_020787A8
+	ldr r3, _0689AE0C ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #9
 	bx r3
 	.align 2, 0
-_0689AE0C: .word sub_020787A8
+_0689AE0C: .word MI_CpuFill8
 	thumb_func_end sub_0689AE04
 
 	thumb_func_start ovy169_689ae10
@@ -6162,9 +6162,9 @@ _0689B0BC:
 
 	arm_func_start sub_0689B0CC
 sub_0689B0CC: ; 0x0689B0CC
-	ldr pc, _0689B0D0 ; =sub_02078624
+	ldr pc, _0689B0D0 ; =MIi_CpuClear16
 	.align 2, 0
-_0689B0D0: .word sub_02078624
+_0689B0D0: .word MIi_CpuClear16
 	arm_func_end sub_0689B0CC
 
 	thumb_func_start sub_0689B0D4
@@ -9682,12 +9682,12 @@ _0689CC90:
 
 	thumb_func_start sub_0689CCC4
 sub_0689CCC4: ; 0x0689CCC4
-	ldr r3, _0689CCCC ; =sub_020787A8
+	ldr r3, _0689CCCC ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x48
 	bx r3
 	.align 2, 0
-_0689CCCC: .word sub_020787A8
+_0689CCCC: .word MI_CpuFill8
 	thumb_func_end sub_0689CCC4
 
 	thumb_func_start ovy169_689ccd0
@@ -10354,9 +10354,9 @@ _0689D18C:
 
 	arm_func_start sub_0689D19C
 sub_0689D19C: ; 0x0689D19C
-	ldr pc, _0689D1A0 ; =sub_020787A8
+	ldr pc, _0689D1A0 ; =MI_CpuFill8
 	.align 2, 0
-_0689D1A0: .word sub_020787A8
+_0689D1A0: .word MI_CpuFill8
 	arm_func_end sub_0689D19C
 
 	thumb_func_start ovy169_689d1a4

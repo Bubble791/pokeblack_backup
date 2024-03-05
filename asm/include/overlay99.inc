@@ -132,7 +132,7 @@
 .public sub_02006254
 .public sub_02006280
 .public sub_02006254
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021C19F4
 .public sub_02180578
 .public sub_021C09E4

@@ -26,7 +26,7 @@
 .public sub_021EFCE0
 .public sub_021EF3F8
 .public sub_021EFCEC
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_02017394

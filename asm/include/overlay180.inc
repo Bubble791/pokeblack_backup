@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016AD8
 .public sub_02016EE8
 .public sub_02021998
@@ -19,7 +19,7 @@
 .public sub_0204AA30
 .public sub_0204BC48
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219CB94
 .public sub_0219CB98
 .public sub_0204BCD0
@@ -37,7 +37,7 @@
 .public sub_0219B85C
 .public sub_02021A3C
 .public sub_0219B088
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B08C
 .public sub_0204E060
 .public sub_0204E0E0
@@ -99,7 +99,7 @@
 .public sub_0219AA10
 .public sub_0219B08C
 .public sub_0219A9A4
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020444A4
 .public sub_02048080
 .public sub_02044710
@@ -143,8 +143,8 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_0204B6A8
 .public sub_0204BF1C
 .public sub_0204C028
@@ -152,8 +152,8 @@
 .public sub_02046D84
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02046DF8
@@ -162,10 +162,10 @@
 .public sub_020232D0
 .public sub_020056FC
 .public sub_0203A6A8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B730
 .public sub_0219B7A8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219C548
 .public sub_02022D58
 .public sub_020241D4
@@ -193,7 +193,7 @@
 .public sub_0219C308
 .public sub_02024274
 .public sub_02022DA8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_02006254
@@ -220,7 +220,7 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046E28
 .public sub_02048530
 .public sub_02048530
@@ -253,7 +253,7 @@
 .public sub_0204B81C
 .public sub_0204BDE0
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204C040
 .public sub_02021034
 .public sub_0204C378
@@ -262,12 +262,12 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_02046EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020484F4
 .public sub_0204C178
 .public sub_0204C140
 .public sub_0204C124
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219B738
 .public sub_0219B738
 .public sub_0204B304
@@ -278,7 +278,7 @@
 .public sub_0200AFBC
 .public sub_0200AFC8
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0200B04C
 .public sub_02048530
 .public sub_0200AFE4
@@ -361,12 +361,12 @@
 .public sub_02024274
 .public sub_02046EF4
 .public sub_02046EF4
-.public sub_0207866C
+.public MIi_CpuCopy32
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02048530
 .public sub_02046E28
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B030
 .public sub_02046EDC

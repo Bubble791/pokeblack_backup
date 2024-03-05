@@ -87,8 +87,8 @@
 .public sub_0204B0D4
 .public sub_0204B0D4
 .public sub_0204B37C
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204AE3C
 .public sub_0204AFB0
@@ -177,9 +177,9 @@
 .public sub_0204C488
 .public sub_02042E84
 .public sub_020428C8
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02042E84
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02017238
 .public sub_02012E54
 .public sub_020428A8
@@ -217,10 +217,10 @@
 .public sub_0204C4A0
 .public sub_0204C488
 .public sub_02043E98
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046DF8
 .public GX_DispOn
 .public sub_020444A4

@@ -1553,7 +1553,7 @@ sub_021E63AA: ; 0x021E63AA
 	sub r0, #0x76
 	add r0, r6, r0
 	mov r2, #0x46
-	blx sub_020787A8
+	blx MI_CpuFill8
 	b _021E6998
 _021E63BC:
 	mov r0, #5
@@ -1874,7 +1874,7 @@ sub_021E65D8: ; 0x021E65D8
 	add r0, r6, r4
 	mov r2, #0x18
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [sp, #0x4c]
 	mov r1, #1
 	str r0, [r6, r4]
@@ -2227,7 +2227,7 @@ _021E6864:
 	add r0, r6, r4
 	mov r2, #0x28
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r1, r6, r4
 	ldr r0, [sp, #0x4c]
 	add r4, #0x1c

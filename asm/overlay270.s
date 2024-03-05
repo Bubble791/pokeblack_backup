@@ -23,7 +23,7 @@ ovy270_21ef1e0: ; 0x021EF1E0
 	mov r1, #0
 	mov r2, #0x58
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r6, [r4, #0x34]
 	ldr r0, [r6, #0x10]
 	bl sub_021F0948
@@ -415,7 +415,7 @@ _021EF528:
 	mov r1, #0
 	mov r2, #8
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrh r1, [r4, #8]
 	add r0, sp, #0
 	add r2, r7, #0
@@ -1200,7 +1200,7 @@ ovy270_21efb0c: ; 0x021EFB0C
 	add r0, sp, #0x1c
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x50
 	add r1, sp, #0x1c
 	strh r0, [r1]

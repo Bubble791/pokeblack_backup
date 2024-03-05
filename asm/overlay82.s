@@ -456,7 +456,7 @@ ovy82_21eabf0: ; 0x021EABF0
 	mov r0, #0
 	lsl r1, r1, #0x14
 	lsl r2, r2, #0x10
-	blx sub_02078658
+	blx MIi_CpuClear32
 	ldr r7, _021EACE0 ; =0x04001000
 	ldr r0, _021EACE4 ; =0xFFFF1FFF
 	ldr r1, [r7]
@@ -498,7 +498,7 @@ ovy82_21eabf0: ; 0x021EABF0
 	ldr r1, [sp, #0xc]
 	add r0, #0xc
 	lsl r2, r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r7, #0
 	bl sub_0203A24C
 	mov r0, #0xa0
@@ -606,7 +606,7 @@ ovy82_21ead18: ; 0x021EAD18
 	lsl r1, r7, #6
 	add r1, r4, r1
 	mov r2, #0xc0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [sp, #0x10]
 	bl sub_0203A24C
 	lsl r2, r7, #6
@@ -1156,7 +1156,7 @@ _021EB174:
 	mov r2, #7
 	add r1, r0, r1
 	lsl r2, r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r2, #7
 	str r2, [sp]
 	lsl r0, r5, #0x18
@@ -1454,7 +1454,7 @@ ovy82_21eb3b0: ; 0x021EB3B0
 	add r0, r3, r0
 	add r1, r3, r1
 	add r2, #0xe0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	mov r0, #6
 	bl sub_02045B7C
 	lsl r0, r6, #2
@@ -2017,7 +2017,7 @@ _021EB7DA:
 	add r0, #0x1a
 	add r1, r7, r1
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 _021EB7FC:
 	add r0, r6, #0
 	add r1, r5, #0

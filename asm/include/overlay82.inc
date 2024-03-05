@@ -45,12 +45,12 @@
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_02045814
 .public sub_0204B32C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204B0D4
 .public sub_0204B0B8
@@ -69,7 +69,7 @@
 .public sub_0204ADA8
 .public sub_02045814
 .public sub_0204B32C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204B0D4
 .public sub_0204AB0C
@@ -97,7 +97,7 @@
 .public sub_0203CB80
 .public sub_02006254
 .public sub_02045814
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0204566C
 .public sub_02045B7C
 .public sub_02034320
@@ -126,7 +126,7 @@
 .public sub_0203CB80
 .public sub_0203CB80
 .public sub_02045814
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02045B7C
 .public sub_02034380
 .public sub_020484F4
@@ -152,7 +152,7 @@
 .public sub_0204C140
 .public sub_0203DAC8
 .public sub_021B4620
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02006254
 .public sub_0203CB80
 .public sub_02045814

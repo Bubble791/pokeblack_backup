@@ -21,6 +21,6 @@
 .public VEC_DotProduct
 .public VEC_Normalize
 .public VEC_CrossProduct
-.public sub_02078758
+.public MI_Copy48B
 .public MTX_RotAxis33
 .public MTX_ScaleApply33

@@ -624,7 +624,7 @@ _021EF140:
 	add r0, sp, #4
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #4
 	add r0, sp, #4
 	strh r1, [r0]

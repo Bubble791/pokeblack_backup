@@ -1474,7 +1474,7 @@ ovy99_21ef81c: ; 0x021EF81C
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x20
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r2, #1
 	add r0, sp, #0
 	strh r2, [r0]

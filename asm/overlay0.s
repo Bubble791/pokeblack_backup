@@ -82,7 +82,7 @@ _0214F58A:
 	mov r1, #0
 	mov r2, #0x44
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r7, [r4, #0x50]
 	add r0, r6, #0
 	ldr r1, _0214F870 ; =0x000000C7

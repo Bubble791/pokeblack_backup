@@ -59,7 +59,7 @@ _0217C992:
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	b _0217C9D4
 _0217C9AC:
@@ -319,7 +319,7 @@ _0217CBAC:
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	add r0, r7, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -597,7 +597,7 @@ _0217CE22:
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_02076E7C
 	ldr r0, [sp, #4]
 	add sp, #0xc

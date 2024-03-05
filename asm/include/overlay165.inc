@@ -44,7 +44,7 @@
 .public sub_0219DA58
 .public sub_02021A3C
 .public sub_0204B794
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0205FA10
 .public sub_0219DA58
 .public sub_02046CF0
@@ -186,7 +186,7 @@
 .public sub_0202D8BC
 .public sub_0204BDE0
 .public sub_0204AB0C
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0203A24C
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -996,7 +996,7 @@
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0204AB0C
-.public sub_0207863C
+.public MIi_CpuCopy16
 .public sub_0203A1FC
 .public sub_0201FDF8
 .public sub_0201FF08

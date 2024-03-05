@@ -25,7 +25,7 @@ ovy324_219ce80: ; 0x0219CE80
 	mov r1, #0
 	lsl r2, r2, #2
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strh r6, [r4, #6]
 	str r5, [r4]
 	str r7, [r5, #0x20]
@@ -3382,7 +3382,7 @@ ovy324_219e92c: ; 0x0219E92C
 	str r0, [r1]
 	mov r1, #0
 	add r2, r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #3
 	add r7, r4, #0
 	add r7, #0x60
@@ -3397,7 +3397,7 @@ ovy324_219e92c: ; 0x0219E92C
 	str r0, [r1]
 	mov r1, #0
 	add r2, r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	add r0, #0x94
 	add r1, r4, #0
@@ -3413,7 +3413,7 @@ ovy324_219e92c: ; 0x0219E92C
 	ldr r0, [r0, #0xc]
 	ldr r1, [r1]
 	add r2, r4, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [sp, #4]
 	bl sub_0203A24C
 	add r0, r5, #0
@@ -3430,7 +3430,7 @@ ovy324_219e92c: ; 0x0219E92C
 	ldr r0, [r0, #0xc]
 	ldr r1, [r5]
 	add r2, r7, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r4, #0
 	bl sub_0203A24C
 	add sp, #0x10

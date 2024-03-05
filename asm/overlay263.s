@@ -23,7 +23,7 @@ ovy263_21c2560: ; 0x021C2560
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r3, r4, #0
 	add r6, r5, #0
 	add r3, #0xe4
@@ -542,7 +542,7 @@ ovy263_21c2958: ; 0x021C2958
 	mov r2, #4
 	add r4, r0, #0
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #4]
 	str r6, [r5, #8]
 	cmp r0, #0

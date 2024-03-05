@@ -22,7 +22,7 @@ ovy272_21f7f80: ; 0x021F7F80
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	sub r0, r6, #4
 	str r5, [r4, r0]
 	mov r0, #0x59
@@ -119,7 +119,7 @@ ovy272_21f8048: ; 0x021F8048
 	mov r1, #0
 	mov r2, #0x28
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A970
 	str r0, [r5]
@@ -241,7 +241,7 @@ _021F8120:
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x28
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	nop
 _021F8134: .word 0x021F8300
@@ -269,7 +269,7 @@ ovy272_21f8140: ; 0x021F8140
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _021F8184 ; =0x000017F0
 	ldr r0, [r5, r0]
 	add r5, #0x28

@@ -23,7 +23,7 @@ ovy319_219ce80: ; 0x0219CE80
 	mov r2, #0x78
 	add r5, r0, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0x90
 	strh r0, [r5]
 	str r6, [r5, #4]
@@ -456,7 +456,7 @@ ovy319_219d1e0: ; 0x0219D1E0
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _0219D26C ; =0x04000050
 	ldr r0, _0219D270 ; =0x04001050
 	strh r7, [r1]
@@ -532,7 +532,7 @@ ovy319_219d280: ; 0x0219D280
 	str r2, [r0]
 	add r0, r4, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r3, r4, r5, pc}
@@ -582,7 +582,7 @@ ovy319_219d308: ; 0x0219D308
 	mov r1, #0
 	mov r2, #4
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r5, #0
 	bl sub_020444A4
 	add r0, r5, #0
@@ -642,7 +642,7 @@ _0219D372:
 	add r0, r7, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0219D39C: .word 0x0219F760
@@ -670,7 +670,7 @@ ovy319_219d3ac: ; 0x0219D3AC
 	mov r1, #0
 	mov r2, #4
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _0219D3E8 ; =0x0219F714
 	add r1, r6, #0
 	add r2, r4, #0
@@ -702,7 +702,7 @@ ovy319_219d3ec: ; 0x0219D3EC
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy319_219d3ec
@@ -1605,7 +1605,7 @@ _0219DA80:
 	mov r1, #0
 	mov r2, #0x20
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, sp, #0
 	str r0, [sp, #0x40]
 	mov r0, #2

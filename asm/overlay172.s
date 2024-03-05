@@ -101,7 +101,7 @@ ovy172_219991c: ; 0x0219991C
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0xc
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	strh r6, [r4, #8]
 	ldrh r1, [r4, #8]
 	add r0, r5, #0

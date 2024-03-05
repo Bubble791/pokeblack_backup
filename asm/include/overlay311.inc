@@ -29,7 +29,7 @@
 .public sub_02045080
 .public sub_0203A24C
 .public sub_0204AB0C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02199AA0
 .public sub_02199CB8
 .public sub_02199D28
@@ -128,7 +128,7 @@
 .public sub_0203CE0C
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0219E064
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
@@ -219,7 +219,7 @@
 .public sub_02049100
 .public sub_02049214
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02046DF8
@@ -230,13 +230,13 @@
 .public sub_020056FC
 .public sub_0203A6A8
 .public sub_020232D8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A24C
 .public sub_0219E364
 .public sub_0219E2FC
 .public sub_0219E300
 .public sub_0219E36C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020444A4
 .public sub_02048080
 .public sub_02044710
@@ -246,8 +246,8 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_020787A8
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuFill8
 .public sub_0204B6A8
 .public sub_0204BF1C
 .public sub_0204C028
@@ -255,7 +255,7 @@
 .public sub_02046D84
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02048D28
 .public sub_0204A5C8
 .public sub_0204A630

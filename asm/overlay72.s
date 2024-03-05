@@ -83,7 +83,7 @@ _021E8C60:
 	ldr r2, _021E8C70 ; =0x000006FC
 	mov r0, #0
 	add r1, r5, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	nop
@@ -287,7 +287,7 @@ ovy72_21e8ddc: ; 0x021E8DDC
 	mov r2, #0x22
 	str r3, [sp, #8]
 	ldr r6, [r5, #0x40]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5, #8]
 	bl sub_020145D8
 	add r1, r5, #0

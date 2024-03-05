@@ -5474,15 +5474,15 @@ _021E8490:
 	add r0, r4, #0
 	add r1, sp, #0x38
 	mov r2, #0x58
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r2, #0x58
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, sp, #0x38
 	add r1, r6, #0
 	mov r2, #0x58
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r2, [sp]
 	lsl r0, r7, #1
 	ldrh r2, [r2, #0x18]
@@ -5649,15 +5649,15 @@ _021E8614:
 	add r0, r6, #0
 	add r1, sp, #0x30
 	mov r2, #0xc4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r7, #0
 	add r1, r6, #0
 	mov r2, #0xc4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, sp, #0x30
 	add r1, r7, #0
 	mov r2, #0xc4
-	blx sub_02078920
+	blx MI_CpuCopy8
 	lsl r0, r4, #1
 	add r2, r5, r0
 	ldr r0, [sp, #0x24]

@@ -559,13 +559,13 @@ _021EF0EC:
 
 	thumb_func_start sub_021EF0F0
 sub_021EF0F0: ; 0x021EF0F0
-	ldr r3, _021EF0FC ; =sub_02078658
+	ldr r3, _021EF0FC ; =MIi_CpuClear32
 	add r1, r0, #0
 	mov r0, #0
 	mov r2, #0x90
 	bx r3
 	nop
-_021EF0FC: .word sub_02078658
+_021EF0FC: .word MIi_CpuClear32
 	thumb_func_end sub_021EF0F0
 
 	thumb_func_start ovy109_21ef100

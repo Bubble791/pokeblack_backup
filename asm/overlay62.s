@@ -1212,7 +1212,7 @@ ovy62_21e61a0: ; 0x021E61A0
 	add r0, #0x59
 	add r1, #8
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, [r4, #0x4c]
 	strh r0, [r5, #0xe]
 	ldr r0, [r4, #0x50]
@@ -1308,7 +1308,7 @@ ovy62_21e6254: ; 0x021E6254
 	add r1, r4, #0
 	mov r2, #0x28
 	mov r7, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r5, #0
 	bl sub_0201735C
 	mov r1, #1
@@ -1604,7 +1604,7 @@ ovy62_21e648c: ; 0x021E648C
 	mov r1, #0
 	mov r2, #0x14
 	mov r5, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #0x13
 	ldr r0, [sp, #4]
 	lsl r1, r1, #4

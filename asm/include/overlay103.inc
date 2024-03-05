@@ -43,7 +43,7 @@
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02016AD8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0218105C
 .public sub_021EF1AC
 .public sub_021EF1AC
@@ -67,7 +67,7 @@
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02016AD8
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0218105C
 .public sub_02180494
 .public sub_02186394

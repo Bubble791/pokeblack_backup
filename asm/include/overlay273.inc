@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0201ECDC
 .public sub_0201ECDC
 .public sub_0201EEC4
@@ -9,7 +9,7 @@
 .public sub_0201EEC4
 .public sub_0201ECDC
 .public sub_0201ECDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0201EEC4
 .public sub_0201EEC4
 .public sub_0201EEC4
@@ -21,7 +21,7 @@
 .public sub_021E9FEC
 .public sub_020107E4
 .public sub_021EA00C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0201FDF8
 .public sub_0201FDF4
 .public sub_0201FDF8
@@ -32,7 +32,7 @@
 .public sub_0201CD1C
 .public sub_0201FD6C
 .public sub_0203A24C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02008B34
 .public sub_02008B34
 .public sub_02008BF0
@@ -43,13 +43,13 @@
 .public sub_020486F0
 .public sub_020486F4
 .public sub_020486F4
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_020089B4
-.public sub_020787A8
-.public sub_02078920
-.public sub_02078920
-.public sub_020787A8
+.public MI_CpuFill8
+.public MI_CpuCopy8
+.public MI_CpuCopy8
+.public MI_CpuFill8
 .public sub_0201FDF8
 .public sub_0201FDF4
 .public sub_0201FDF8

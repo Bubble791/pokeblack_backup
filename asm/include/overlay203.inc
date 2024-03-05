@@ -21,7 +21,7 @@
 .public sub_0204C468
 .public sub_0204C108
 .public sub_0204C108
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204C210
 .public sub_0204C210
 .public sub_0204C124
@@ -152,7 +152,7 @@
 .public sub_021A8384
 .public sub_021A9258
 .public sub_021A8384
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021A9298
 .public sub_021A8384
 .public sub_021A8384

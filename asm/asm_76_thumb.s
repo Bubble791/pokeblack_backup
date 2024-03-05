@@ -55,7 +55,7 @@ _02079220:
 	ldr r1, _02079274 ; =0x0214C120
 	mov r0, #0
 	mov r2, #0x58
-	blx sub_0207869C
+	blx MIi_CpuClearFast
 	bl sub_0207BAC0
 	cmp r0, #0
 	bne _0207924A

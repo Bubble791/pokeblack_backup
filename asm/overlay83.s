@@ -452,7 +452,7 @@ ovy83_21eab6c: ; 0x021EAB6C
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy83_21eab6c
 
@@ -556,7 +556,7 @@ ovy83_21eac3c: ; 0x021EAC3C
 	mov r1, #0
 	mov r2, #0xc
 	add r6, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r6, #4]
 	cmp r4, #0
 	beq _021EAC6A
@@ -690,7 +690,7 @@ ovy83_21ead3c: ; 0x021EAD3C
 	mov r1, #0
 	mov r2, #0xc
 	add r6, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r6, #4]
 	cmp r4, #0
 	beq _021EAD6A
@@ -745,7 +745,7 @@ ovy83_21eada0: ; 0x021EADA0
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	strb r6, [r4, #1]
 	strb r7, [r4]
 	ldrb r0, [r4]

@@ -114,8 +114,8 @@
 .public sub_0204B264
 .public sub_0204B354
 .public sub_02046EF4
-.public sub_02078658
-.public sub_0207866C
+.public MIi_CpuClear32
+.public MIi_CpuCopy32
 .public sub_02047FB4
 .public sub_02046EF4
 .public sub_0205FA10
@@ -228,7 +228,7 @@
 .public sub_02048564
 .public sub_0201CD1C
 .public sub_0201D5F4
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_021EFF0C
 .public sub_02005748
 .public sub_0201FD34
@@ -251,7 +251,7 @@
 .public sub_021E6BFC
 .public sub_021E6C44
 .public sub_0203A24C
-.public sub_02078624
+.public MIi_CpuClear16
 .public sub_021627C0
 .public sub_021E6F34
 .public sub_02162490
@@ -264,7 +264,7 @@
 .public sub_020308C0
 .public sub_021E5CA4
 .public sub_021E5E3C
-.public sub_02078624
+.public MIi_CpuClear16
 .public sub_02029BB0
 .public sub_02029BB0
 .public sub_021E5CAC

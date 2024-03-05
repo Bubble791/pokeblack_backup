@@ -385,7 +385,7 @@ _0214F7C2:
 	add r0, r5, r0
 	mov r1, #0
 	add r2, #0x38
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	bl sub_02016AD8
 	add r1, r6, #0
@@ -424,13 +424,13 @@ _0214F7C2:
 	add r2, r0, #0
 	ldr r0, [sp, #8]
 	ldr r1, [r5, r6]
-	blx sub_02078920
+	blx MI_CpuCopy8
 	add r0, r4, #0
 	sub r0, #0x48
 	add r0, r5, r0
 	mov r1, #0
 	mov r2, #0x28
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r7, #0
 	bl sub_02016AD8
 	add r1, r4, #0

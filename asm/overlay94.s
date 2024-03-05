@@ -1006,7 +1006,7 @@ _021EF408:
 	add r0, sp, #0xc
 	mov r1, #0
 	mov r2, #0x20
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0
 	strh r0, [r7, #8]
 	mov r0, #2
@@ -1875,7 +1875,7 @@ _021EFB86:
 	add r0, sp, #0x18
 	mov r1, #0
 	mov r2, #0x20
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, sp, #0
 	strh r5, [r0, #0x18]
 	mov r1, #2

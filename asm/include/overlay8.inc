@@ -38,7 +38,7 @@
 .public sub_0203021C
 .public sub_02019494
 .public sub_02016D68
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016AD8
 .public sub_02005DF4
 .public sub_0203A970

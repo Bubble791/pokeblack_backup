@@ -1381,7 +1381,7 @@
 .public sub_02016B20
 .public sub_0202BE14
 .public sub_021A446C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_021A4510
 .public sub_021A45A4
 .public sub_021A45CC
@@ -1761,7 +1761,7 @@
 .public sub_021A67A0
 .public sub_0202780C
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_0203A24C
 
@@ -1775,4 +1775,4 @@
 .public sub_02024274
 .public sub_0204B6A8
 .public sub_0204B758
-.public sub_02078920
+.public MI_CpuCopy8

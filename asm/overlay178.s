@@ -22,7 +22,7 @@ ovy178_219ad20: ; 0x0219AD20
 	mov r1, #0
 	add r2, r6, #0
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	sub r0, r6, #4
 	str r4, [r5, r0]
 	add r0, r5, #0
@@ -426,7 +426,7 @@ ovy178_219b0ac: ; 0x0219B0AC
 	mov r1, #0
 	mov r2, #0xbc
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0
 	bl sub_02046BE0
 	ldr r6, _0219B0F8 ; =0x0219C738
@@ -707,7 +707,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r2, #0xb4
 	add r5, r0, #0
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, _0219B460 ; =0x02093F08
 	add r1, r4, #0
 	add r2, r7, #0
@@ -796,7 +796,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	add r0, sp, #0xc
 	mov r1, #0
 	mov r2, #8
-	blx sub_020787A8
+	blx MI_CpuFill8
 _0219B3D4:
 	lsl r0, r6, #2
 	add r4, r5, r0
@@ -904,7 +904,7 @@ _0219B478:
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0xb4
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy178_219b464
@@ -949,7 +949,7 @@ ovy178_219b4e8: ; 0x0219B4E8
 	mov r2, #0x10
 	add r5, r0, #0
 	mov r7, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	bl sub_020232D0
 	cmp r6, #0
 	beq _0219B50A
@@ -1020,7 +1020,7 @@ ovy178_219b56c: ; 0x0219B56C
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy178_219b56c
 
@@ -1067,7 +1067,7 @@ ovy178_219b5b0: ; 0x0219B5B0
 	mov r2, #0x14
 	add r5, r0, #0
 	str r3, [sp, #0xc]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0xf
 	add r4, sp, #0x28
 	strh r0, [r5, #0x10]
@@ -1115,7 +1115,7 @@ ovy178_219b618: ; 0x0219B618
 	mov r2, #0x14
 	add r5, r0, #0
 	str r3, [sp, #0xc]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r4, sp, #0x28
 	ldrh r0, [r4, #0xc]
 	add r1, r7, #0
@@ -1167,7 +1167,7 @@ ovy178_219b688: ; 0x0219B688
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy178_219b688
 
@@ -1413,7 +1413,7 @@ ovy178_219b894: ; 0x0219B894
 	mov r2, #0x1c
 	add r5, r0, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 _0219B8A4:
 	add r1, r4, #0
 	add r0, r6, #0
@@ -1428,12 +1428,12 @@ _0219B8A4:
 
 	thumb_func_start sub_0219B8B8
 sub_0219B8B8: ; 0x0219B8B8
-	ldr r3, _0219B8C0 ; =sub_020787A8
+	ldr r3, _0219B8C0 ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x1c
 	bx r3
 	.align 2, 0
-_0219B8C0: .word sub_020787A8
+_0219B8C0: .word MI_CpuFill8
 	thumb_func_end sub_0219B8B8
 
 	thumb_func_start ovy178_219b8c4
@@ -2064,12 +2064,12 @@ _0219BD92:
 
 	thumb_func_start sub_0219BD98
 sub_0219BD98: ; 0x0219BD98
-	ldr r3, _0219BDA0 ; =sub_020787A8
+	ldr r3, _0219BDA0 ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x84
 	bx r3
 	.align 2, 0
-_0219BDA0: .word sub_020787A8
+_0219BDA0: .word MI_CpuFill8
 	thumb_func_end sub_0219BD98
 
 	thumb_func_start ovy178_219bda4
@@ -2263,7 +2263,7 @@ ovy178_219bee4: ; 0x0219BEE4
 	mov r1, #0
 	lsl r2, r2, #2
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #0xf
 	str r4, [r5]
 	ldr r2, _0219BF08 ; =0x0219C6E8
@@ -2289,7 +2289,7 @@ ovy178_219bf0c: ; 0x0219BF0C
 	add r0, r4, #0
 	mov r1, #0
 	lsl r2, r2, #2
-	blx sub_020787A8
+	blx MI_CpuFill8
 	pop {r4, pc}
 	thumb_func_end ovy178_219bf0c
 
@@ -2756,7 +2756,7 @@ ovy178_219c248: ; 0x0219C248
 	add r6, r3, #0
 	ldr r7, [sp, #0x20]
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r1, _0219C298 ; =0x00000534
 	ldr r0, [sp, #4]
 	sub r1, #0xc
@@ -2790,12 +2790,12 @@ _0219C298: .word 0x00000534
 	thumb_func_start sub_0219C29C
 sub_0219C29C: ; 0x0219C29C
 	ldr r2, _0219C2A4 ; =0x00000534
-	ldr r3, _0219C2A8 ; =sub_020787A8
+	ldr r3, _0219C2A8 ; =MI_CpuFill8
 	mov r1, #0
 	bx r3
 	.align 2, 0
 _0219C2A4: .word 0x00000534
-_0219C2A8: .word sub_020787A8
+_0219C2A8: .word MI_CpuFill8
 	thumb_func_end sub_0219C29C
 
 	thumb_func_start ovy178_219c2ac
@@ -3081,7 +3081,7 @@ ovy178_219c4c8: ; 0x0219C4C8
 	mov r1, #0
 	mov r2, #0x2c
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r4, [r5]
 	str r6, [r5, #4]
 	pop {r4, r5, r6, pc}
@@ -3271,7 +3271,7 @@ ovy178_219c650: ; 0x0219C650
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #1
 	str r0, [r4, #4]
 	pop {r4, pc}
@@ -3280,12 +3280,12 @@ ovy178_219c650: ; 0x0219C650
 
 	thumb_func_start sub_0219C664
 sub_0219C664: ; 0x0219C664
-	ldr r3, _0219C66C ; =sub_020787A8
+	ldr r3, _0219C66C ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x10
 	bx r3
 	.align 2, 0
-_0219C66C: .word sub_020787A8
+_0219C66C: .word MI_CpuFill8
 	thumb_func_end sub_0219C664
 
 	thumb_func_start ovy178_219c670

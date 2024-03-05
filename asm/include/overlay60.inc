@@ -523,9 +523,9 @@
 .public sub_02038680
 .public sub_02038680
 .public sub_02038680
-.public sub_02078920
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_02038860
 .public sub_020370EC
 .public sub_020370EC
@@ -536,9 +536,9 @@
 .public sub_020373EC
 .public sub_020373EC
 .public sub_020373EC
-.public sub_02078920
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_0200FE34
 .public sub_0204AC58
 .public sub_021E8708

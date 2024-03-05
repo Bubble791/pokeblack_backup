@@ -4,7 +4,7 @@
 .public sub_0219382C
 .public sub_0216FA34
 .public sub_02167534
-.public sub_02078658
+.public MIi_CpuClear32
 .public sub_0201FDF8
 .public sub_02014870
 .public sub_0201FF08
@@ -21,7 +21,7 @@
 .public sub_021670BC
 .public sub_02005748
 .public sub_0208D65C
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_020145D8
 .public sub_02005748
 .public sub_02005748

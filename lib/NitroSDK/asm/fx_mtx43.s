@@ -316,7 +316,7 @@ MTX_Inverse43: ; 0x02072D04
 	str r1, [sb, #0x2c]
 	bne _0207306C
 	ldr r1, [sp]
-	bl sub_02078758
+	bl MI_Copy48B
 _0207306C:
 	mov r0, #0
 	add sp, sp, #0x68

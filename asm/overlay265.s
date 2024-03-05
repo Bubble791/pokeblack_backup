@@ -22,7 +22,7 @@ ovy265_21998c0: ; 0x021998C0
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #1
 	str r5, [r4]
 	bl sub_02038BC8

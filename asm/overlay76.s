@@ -2357,7 +2357,7 @@ ovy76_21ea334: ; 0x021EA334
 	mov r1, #0
 	mov r2, #0x40
 	add r5, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #3
 	bl sub_02005748
 	str r0, [r5, #0x38]
@@ -2368,12 +2368,12 @@ ovy76_21ea334: ; 0x021EA334
 
 	thumb_func_start sub_021EA350
 sub_021EA350: ; 0x021EA350
-	ldr r3, _021EA358 ; =sub_020787A8
+	ldr r3, _021EA358 ; =MI_CpuFill8
 	mov r1, #0
 	mov r2, #0x40
 	bx r3
 	.align 2, 0
-_021EA358: .word sub_020787A8
+_021EA358: .word MI_CpuFill8
 	thumb_func_end sub_021EA350
 
 	thumb_func_start ovy76_21ea35c

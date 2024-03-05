@@ -2,10 +2,10 @@
 #pragma once
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_020787A8
+.public MI_CpuFill8
 .public G3i_PerspectiveW_
 .public G3X_Reset
 .public G3i_LookAt_

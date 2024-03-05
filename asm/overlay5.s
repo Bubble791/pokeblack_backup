@@ -20,7 +20,7 @@ ovy5_214f500: ; 0x0214F500
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0xc
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	str r6, [r4, #4]
 	mov r0, #0x69

@@ -5,10 +5,10 @@
 .public sub_02044148
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_0204B570
 .public sub_02044148
 .public sub_0203A24C
 .public sub_020486F4
 .public sub_020486F4
-.public sub_02078920
+.public MI_CpuCopy8

@@ -19,12 +19,12 @@
 .public MI_Copy36B
 .public MI_Copy64B
 .public GXi_DmaId
-.public sub_0207877C
-.public sub_0207863C
-.public sub_02078720
+.public MI_Copy64B
+.public MIi_CpuCopy16
+.public MI_Copy32B
 .public sub_02074810
 .public sub_02078150
-.public sub_02078658
-.public sub_0207873C
+.public MIi_CpuClear32
+.public MI_Copy36B
 .public sub_0207802C
 .public sub_027681B8

@@ -14,7 +14,7 @@
 .public sub_02075534
 .public sub_02026E48
 .public sub_02026DE8
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02075534
 .public sub_020279B4
 .public sub_0219CE98
@@ -48,7 +48,7 @@
 .public sub_02043E98
 .public sub_02040440
 .public sub_0203FFC4
-.public sub_02078920
+.public MI_CpuCopy8
 .public sub_02017934
 .public sub_02010044
 .public sub_02040440
@@ -293,8 +293,8 @@
 .public sub_02046DC0
 .public sub_0204AA30
 .public sub_0204B37C
-.public sub_02078920
-.public sub_02078920
+.public MI_CpuCopy8
+.public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0204AB0C
 .public sub_0219CE98
@@ -400,7 +400,7 @@
 .public sub_0202DA54
 .public sub_0203A15C
 .public sub_0203AAEC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_020429F0
 .public G2x_SetBlendAlpha_

@@ -251,7 +251,7 @@ ovy21_216e848: ; 0x0216E848
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x18
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, r4, #0
 	str r4, [r5]
 	str r6, [r5, #4]

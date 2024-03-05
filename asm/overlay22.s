@@ -135,7 +135,7 @@ ovy22_216e73c: ; 0x0216E73C
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	str r7, [r4, #4]
 	str r6, [r4, #8]
@@ -296,7 +296,7 @@ ovy22_216e878: ; 0x0216E878
 	mov r1, #0
 	mov r2, #0xc
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	str r7, [r4, #4]
 	ldr r0, [sp]
@@ -361,7 +361,7 @@ ovy22_216e8f8: ; 0x0216E8F8
 	mov r1, #0
 	mov r2, #0xc
 	add r4, r0, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	str r5, [r4]
 	str r7, [r4, #4]
 	ldr r0, [sp]

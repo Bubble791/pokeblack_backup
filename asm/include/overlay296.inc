@@ -6,7 +6,7 @@
 .public sub_0201CDAC
 .public sub_0201CCF8
 .public sub_0203A1FC
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_02021998
 .public sub_02044BD8
 .public sub_02044BD8
@@ -135,7 +135,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_020787A8
+.public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C438
 .public sub_0204C318

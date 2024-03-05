@@ -484,12 +484,12 @@ ovy135_21eefc4: ; 0x021EEFC4
 	ldr r0, [r5, #0x1c]
 	mov r1, #0
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r2, [r5]
 	ldr r0, [r5, #0x20]
 	ldrh r2, [r2, #0xa]
 	mov r1, #1
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldr r0, [r5]
 	ldrh r1, [r0, #0xa]
 	cmp r1, #0
@@ -561,7 +561,7 @@ _021EF03E:
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x10
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r0, #0xff
 	lsl r0, r0, #8
 	add r5, r5, #1
@@ -640,7 +640,7 @@ ovy135_21ef0dc: ; 0x021EF0DC
 	mov r1, #0
 	mov r2, #0x10
 	mov r4, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	mov r1, #0xff
 	lsl r1, r1, #8
 	strh r1, [r5]
@@ -1016,11 +1016,11 @@ ovy135_21ef390: ; 0x021EF390
 	mov r1, #0
 	mov r2, #0x20
 	str r5, [sp, #0x28]
-	blx sub_020787A8
+	blx MI_CpuFill8
 	add r0, sp, #0x2c
 	mov r1, #0
 	mov r2, #0x20
-	blx sub_020787A8
+	blx MI_CpuFill8
 _021EF3C2:
 	ldr r0, [sp, #4]
 	lsl r1, r5, #4
@@ -1205,7 +1205,7 @@ _021EF50C:
 	ldr r1, [sp, #4]
 	add r0, r4, #0
 	mov r2, #0x80
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	add r0, r4, #0
 	bl sub_0203A24C
 	add sp, #0x6c
@@ -1712,7 +1712,7 @@ ovy135_21ef904: ; 0x021EF904
 	mov r1, #0
 	mov r2, #0x1c
 	mov r6, #0
-	blx sub_020787A8
+	blx MI_CpuFill8
 	ldrh r1, [r5]
 	add r0, sp, #0
 	strh r1, [r0]
@@ -1856,7 +1856,7 @@ ovy135_21efa0c: ; 0x021EFA0C
 	mov r0, #0
 	add r1, r5, r6
 	mov r4, #0
-	blx sub_02078658
+	blx MIi_CpuClear32
 	sub r0, r6, #4
 	str r4, [r5, r0]
 	pop {r4, r5, r6, pc}
@@ -1899,7 +1899,7 @@ _021EFA66:
 	lsl r1, r1, #2
 	ldr r0, [sp]
 	add r1, r5, r1
-	blx sub_0207866C
+	blx MIi_CpuCopy32
 	ldr r0, _021EFAA4 ; =0x00000403
 	ldrb r0, [r5, r0]
 	bl sub_021E64E8
@@ -1910,7 +1910,7 @@ _021EFA84:
 	lsl r1, r1, #2
 	mov r0, #0
 	add r1, r5, r1
-	blx sub_02078658
+	blx MIi_CpuClear32
 _021EFA90:
 	add r0, r7, #0
 	add r1, r4, #0
@@ -1934,7 +1934,7 @@ ovy135_21efaa8: ; 0x021EFAA8
 	add r0, #0x59
 	add r1, r5, r4
 	mov r2, #6
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r1, [r6, #0x4c]
 	add r0, r4, #6
 	strh r1, [r5, r0]
@@ -2082,7 +2082,7 @@ ovy135_21efbb4: ; 0x021EFBB4
 	mov r0, #0
 	add r1, r4, #0
 	mov r2, #0x28
-	blx sub_02078658
+	blx MIi_CpuClear32
 	add r0, r6, #0
 	add r1, r5, #0
 	bl ovy135_21efb04

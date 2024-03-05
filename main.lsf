@@ -59,7 +59,7 @@ Static main
     Object asm/asm_70_thumb.o
     Object asm/asm_71_arm.o
     Object asm/asm_72_thumb.o
-    Object asm/asm_73_arm.o
+    Object lib/NitroSDK/asm/mi_memory.o
     Object asm/asm_74_thumb.o
     Object asm/asm_75_arm.o
     Object asm/asm_76_thumb.o
@@ -160,7 +160,7 @@ Static main
 	Object lib/NitroSDK/asm/mi_dma.o
 	Object lib/NitroSDK/asm/mi_dma_hblank.o
 	Object lib/NitroSDK/asm/mi_dma_gxcommand.o
-	Object lib/NitroSDK/asm/mi_memory.o
+	
 	Object lib/NitroSDK/asm/mi_swap.o
 	Object lib/NitroSDK/asm/mi_uncompress.o
 	Object lib/NitroSDK/asm/mi_dma_card.o

@@ -80,7 +80,7 @@ _021F5A5A:
 	add r0, r1, #0
 	add r1, r4, #0
 	mov r2, #0x40
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, _021F5B3C ; =0x0000FF5A
 	ldr r7, _021F5B3C ; =0x0000FF5A
 	str r0, [sp, #0xc]
@@ -275,7 +275,7 @@ _021F5BB4:
 	add r1, r4, #0
 	lsl r2, r2, #1
 	mov r5, #0
-	blx sub_02078920
+	blx MI_CpuCopy8
 	ldr r0, _021F5BFC ; =0x0000FF19
 	mov r3, #0
 	add r1, r0, #0
