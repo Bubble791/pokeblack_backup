@@ -21616,7 +21616,7 @@ ovy194_21c263c: ; 0x021C263C
 	sub sp, #0xc
 	add r6, r0, #0
 	str r1, [sp, #4]
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	mov r7, #0x51
 	lsl r7, r7, #4
 	add r0, r7, #0
@@ -21671,7 +21671,7 @@ _021C26A0:
 	mov r2, #2
 	add r0, r4, #0
 	lsl r2, r2, #8
-	bl sub_02076170
+	bl GX_LoadTex
 	ldr r0, [sp, #4]
 	add r5, r5, #1
 	cmp r5, r0
@@ -21679,7 +21679,7 @@ _021C26A0:
 _021C26C4:
 	add r0, r4, #0
 	bl sub_0203A24C
-	bl sub_02076278
+	bl GX_EndLoadTex
 	add r0, r6, #0
 	bl ovy194_21c2930
 	add sp, #0xc
@@ -21998,14 +21998,14 @@ ovy194_21c2930: ; 0x021C2930
 	add r0, r4, #0
 	add r0, #0x20
 	blx sub_0207B0AC
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	add r0, r4, #0
 	mov r1, #0x20
 	add r0, #0x20
 	lsl r1, r1, #8
 	mov r2, #0x20
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	ldr r1, _021C29B0 ; =0x00001134
 	add r4, #0x20
 	add r0, r4, #0
@@ -22068,15 +22068,15 @@ _021C29E4:
 	mov ip, r0
 	cmp r0, #0x10
 	blt _021C29C2
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	ldr r1, _021C2A20 ; =0x00001154
 	ldr r0, [sp]
 	mov r2, #0x20
 	add r0, r0, r1
 	mov r1, #2
 	lsl r1, r1, #0xc
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021C2A20: .word 0x00001154

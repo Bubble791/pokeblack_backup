@@ -2024,12 +2024,12 @@ sub_0205F75C: ; 0x0205F75C
 	add r5, r0, #0
 	add r4, r1, #0
 	add r6, r2, #0
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02076170
-	bl sub_02076278
+	bl GX_LoadTex
+	bl GX_EndLoadTex
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0205F75C
 
@@ -2039,12 +2039,12 @@ sub_0205F778: ; 0x0205F778
 	add r5, r0, #0
 	add r4, r1, #0
 	add r6, r2, #0
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0205F778
 
@@ -2053,11 +2053,11 @@ sub_0205F794: ; 0x0205F794
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r2, #0
-	bl sub_0207636C
+	bl GX_BeginLoadClearImage
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_020763CC
-	bl sub_02076484
+	bl GX_LoadClearImageColor
+	bl GX_EndLoadClearImage
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0205F794
 
@@ -2066,11 +2066,11 @@ sub_0205F7AC: ; 0x0205F7AC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r2, #0
-	bl sub_0207636C
+	bl GX_BeginLoadClearImage
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02076424
-	bl sub_02076484
+	bl GX_LoadClearImageDepth
+	bl GX_EndLoadClearImage
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0205F7AC
 
@@ -5150,12 +5150,12 @@ _02060BD2:
 	beq _02060C08
 	b _02060C12
 _02060BE8:
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	ldr r0, [r4, #0x14]
 	ldr r2, [r4, #0x10]
 	add r1, r7, #0
-	bl sub_02076170
-	bl sub_02076278
+	bl GX_LoadTex
+	bl GX_EndLoadTex
 	b _02060C12
 _02060BFC:
 	ldr r0, [r4, #0x14]
@@ -5335,12 +5335,12 @@ _02060D12:
 	beq _02060D48
 	b _02060D52
 _02060D28:
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	ldr r0, [r4, #0x14]
 	ldr r2, [r4, #0x10]
 	add r1, r7, #0
-	bl sub_02076170
-	bl sub_02076278
+	bl GX_LoadTex
+	bl GX_EndLoadTex
 	b _02060D52
 _02060D3C:
 	ldr r0, [r4, #0x14]
@@ -5691,12 +5691,12 @@ _02060F8C:
 	bl GXS_LoadOBJPltt
 	b _02060FAA
 _02060F98:
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	ldr r0, [sp, #4]
 	ldr r2, [sp]
 	add r1, r6, #0
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 _02060FAA:
 	ldr r0, [r5]
 	add r1, r4, #0
@@ -5804,13 +5804,13 @@ _0206106C:
 	bl GXS_LoadOBJPltt
 	b _0206108E
 _0206107A:
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	ldr r1, [sp, #8]
 	add r0, r4, r7
 	add r1, r1, r6
 	add r2, r5, #0
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 _0206108E:
 	ldr r0, [sp, #0x10]
 	add r0, r0, #1
@@ -14836,7 +14836,7 @@ sub_0206520C: ; 0x0206520C
 	str r1, [sp]
 	cmp r1, #0
 	beq _0206521A
-	bl sub_02076138
+	bl GX_BeginLoadTex
 _0206521A:
 	ldrh r0, [r5, #0xc]
 	lsl r2, r0, #3
@@ -14846,7 +14846,7 @@ _0206521A:
 	lsl r1, r1, #0x10
 	add r0, r5, r0
 	lsr r1, r1, #0xd
-	bl sub_02076170
+	bl GX_LoadTex
 	ldrh r1, [r5, #0x10]
 	mov r0, #1
 	orr r0, r1
@@ -14863,7 +14863,7 @@ _02065236:
 	add r1, r4, #0
 	add r0, r5, r0
 	ldr r7, [r5, #0x28]
-	bl sub_02076170
+	bl GX_LoadTex
 	ldr r1, _02065284 ; =0x0001FFFF
 	add r2, r4, #0
 	and r2, r1
@@ -14877,7 +14877,7 @@ _02065236:
 	add r1, r1, r2
 	add r0, r5, r7
 	lsr r2, r6, #1
-	bl sub_02076170
+	bl GX_LoadTex
 	ldrh r1, [r5, #0x20]
 	mov r0, #1
 	orr r0, r1
@@ -14886,7 +14886,7 @@ _02065276:
 	ldr r0, [sp]
 	cmp r0, #0
 	beq _02065280
-	bl sub_02076278
+	bl GX_EndLoadTex
 _02065280:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -14948,7 +14948,7 @@ sub_020652CC: ; 0x020652CC
 	add r5, r0, #0
 	add r4, r1, #0
 	beq _020652D8
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 _020652D8:
 	ldr r1, [r5, #0x2c]
 	ldrh r2, [r5, #0x30]
@@ -14957,14 +14957,14 @@ _020652D8:
 	add r0, r5, r0
 	lsr r1, r1, #0xd
 	lsl r2, r2, #3
-	bl sub_020762D4
+	bl GX_LoadTexPltt
 	ldrh r1, [r5, #0x32]
 	mov r0, #1
 	orr r0, r1
 	strh r0, [r5, #0x32]
 	cmp r4, #0
 	beq _020652FA
-	bl sub_02076334
+	bl GX_EndLoadTexPltt
 _020652FA:
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_020652CC

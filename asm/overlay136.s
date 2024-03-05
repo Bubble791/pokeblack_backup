@@ -217,7 +217,7 @@ ovy136_21eedc0: ; 0x021EEDC0
 	add r2, r4, #0
 	add r6, r0, #0
 	bl sub_02047FB4
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	ldr r0, [sp, #0x14]
 	mov r1, #0x20
 	lsl r4, r1, #6
@@ -228,9 +228,9 @@ ovy136_21eedc0: ; 0x021EEDC0
 	ldr r1, [sp, #8]
 	ldr r0, [r0, #0x14]
 	add r2, r4, #0
-	bl sub_02076170
-	bl sub_02076278
-	bl sub_020762B4
+	bl GX_LoadTex
+	bl GX_EndLoadTex
+	bl GX_BeginLoadTexPltt
 	ldr r0, [sp, #0x10]
 	mov r1, #0x20
 	ldr r0, [r0, #0xc]
@@ -239,8 +239,8 @@ ovy136_21eedc0: ; 0x021EEDC0
 	ldr r1, [sp, #0xc]
 	ldr r0, [r0, #0xc]
 	mov r2, #0x20
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	add r0, r7, #0
 	bl sub_0203A24C
 	add r0, r5, #0

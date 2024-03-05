@@ -323,7 +323,7 @@ sub_02050E48: ; 0x02050E48
 	sub sp, sp, #4
 	mov sl, r0
 	mov fp, r1
-	blx sub_020762B4
+	blx GX_BeginLoadTexPltt
 	ldrh r0, [sl, #0x32]
 	mov sb, #0
 	cmp r0, #0
@@ -353,7 +353,7 @@ _02050E7C:
 	ldr r2, [r7, #0x10]
 	add r0, r1, r0
 	mov r1, r6
-	blx sub_020762D4
+	blx GX_LoadTexPltt
 _02050ED0:
 	str r6, [r8, #8]
 	ldrh r0, [sl, #0x32]
@@ -362,7 +362,7 @@ _02050ED0:
 	cmp sb, r0
 	blt _02050E7C
 _02050EE8:
-	blx sub_02076334
+	blx GX_EndLoadTexPltt
 	mov r0, #1
 	add sp, sp, #4
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -375,7 +375,7 @@ sub_02050EFC: ; 0x02050EFC
 	sub sp, sp, #0xc
 	mov sl, r0
 	mov fp, r1
-	blx sub_02076138
+	blx GX_BeginLoadTex
 	ldrh r0, [sl, #0x32]
 	mov sb, #0
 	cmp r0, #0
@@ -412,7 +412,7 @@ _02050F68:
 	ldr r2, [r7, #8]
 	add r0, r0, #0x20
 	mov r1, r5
-	blx sub_02076170
+	blx GX_LoadTex
 	str r5, [r8, #4]
 _02050FA0:
 	ldrh r0, [sl, #0x32]
@@ -421,7 +421,7 @@ _02050FA0:
 	cmp sb, r0
 	blt _02050F34
 _02050FB4:
-	blx sub_02076278
+	blx GX_EndLoadTex
 	mov r0, #1
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}

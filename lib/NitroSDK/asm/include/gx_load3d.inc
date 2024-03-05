@@ -21,3 +21,15 @@
 .public MI_WaitDma
 .public MIi_CpuCopy32
 .public GXi_DmaId
+.public sub_02076CA0
+.public sub_02075524
+.public sub_02078080
+.public sub_02075ED8
+.public sub_020781F0
+.public sub_02075F20
+.public sub_0207829C
+.public sub_02076860
+.public sub_02076CB0
+.public sub_020769D4
+.public sub_0207695C
+.public sub_02076CC0

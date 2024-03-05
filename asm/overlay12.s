@@ -54391,15 +54391,15 @@ ovy12_216a0b8: ; 0x0216A0B8
 	add r0, r1, r0
 	asr r0, r0, #3
 	lsl r6, r0, #5
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	ldr r0, [sp, #0x1c]
 	add r1, r6, #0
 	blx sub_0207B0AC
 	ldr r0, [sp, #0x1c]
 	add r1, r4, r5
 	add r2, r6, #0
-	bl sub_02076170
-	bl sub_02076278
+	bl GX_LoadTex
+	bl GX_EndLoadTex
 	ldr r0, [sp, #0x18]
 	bl sub_02046EDC
 	add r0, r7, #0
@@ -54418,15 +54418,15 @@ ovy12_216a168: ; 0x0216A168
 	add r6, r1, #0
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0xd
-	bl sub_020762B4
+	bl GX_BeginLoadTexPltt
 	add r0, r6, #0
 	mov r1, #0x20
 	blx sub_0207B0AC
 	add r0, r6, #0
 	add r1, r5, r4
 	mov r2, #0x20
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy12_216a168
 

@@ -26802,7 +26802,7 @@ _0218C08A:
 ovy36_218c0b8: ; 0x0218C0B8
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	bl sub_02076138
+	bl GX_BeginLoadTex
 	ldr r4, _0218C104 ; =0x021D4BE4
 	mov r1, #0x20
 	add r0, r4, #0
@@ -26813,9 +26813,9 @@ ovy36_218c0b8: ; 0x0218C0B8
 	ldr r1, [r5, r4]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0xd
-	bl sub_02076170
-	bl sub_02076278
-	bl sub_020762B4
+	bl GX_LoadTex
+	bl GX_EndLoadTex
+	bl GX_BeginLoadTexPltt
 	ldr r6, _0218C10C ; =0x021D4C04
 	mov r1, #0x20
 	add r0, r6, #0
@@ -26826,8 +26826,8 @@ ovy36_218c0b8: ; 0x0218C0B8
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0xd
 	mov r2, #0x20
-	bl sub_020762D4
-	bl sub_02076334
+	bl GX_LoadTexPltt
+	bl GX_EndLoadTexPltt
 	pop {r4, r5, r6, pc}
 	nop
 _0218C104: .word 0x021D4BE4
