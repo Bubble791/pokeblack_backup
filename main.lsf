@@ -29,7 +29,6 @@ Static main
     Object asm/asm_30_thumb.o
     Object asm/asm_31_arm.o
     Object asm/asm_32_thumb.o
-    Object lib/NitroSDK/asm/fx_sincos.o
 	Object lib/NitroSDK/asm/fx_mtx22.o
 	Object lib/NitroSDK/asm/fx_mtx33.o
 	Object lib/NitroSDK/asm/fx_mtx43.o
@@ -58,8 +57,11 @@ Static main
     Object lib/NitroSDK/asm/mi_dma.o
 	Object lib/NitroSDK/asm/mi_dma_gxcommand.o
     Object lib/NitroSDK/asm/mi_memory.o
-    Object asm/asm_74_thumb.o
-    Object asm/asm_75_arm.o
+    Object lib/NitroSDK/asm/mi_uncompress.o
+    Object lib/NitroSDK/asm/mi_swap.o
+    Object lib/NitroSDK/asm/mi_dma_card.o
+    Object lib/NitroSDK/asm/mi_init.o
+
     Object asm/asm_76_thumb.o
     Object asm/asm_77_arm.o
     Object asm/asm_78_thumb.o
@@ -107,9 +109,6 @@ Static main
 	Object lib/asm/nnsys.o
 
 	### NitroSDK ###
-
-	
-	
 	Object lib/NitroSDK/asm/fx_trig.o
 	Object lib/NitroSDK/asm/g3b.o
 	Object lib/NitroSDK/asm/g3.o
@@ -143,13 +142,6 @@ Static main
 	Object lib/NitroSDK/src/os/os_entropy.o
 	Object lib/NitroSDK/src/os/os_terminate_proc.o
 	
-	
-	Object lib/NitroSDK/asm/mi_dma_hblank.o
-	Object lib/NitroSDK/asm/mi_swap.o
-	Object lib/NitroSDK/asm/mi_uncompress.o
-	Object lib/NitroSDK/asm/mi_dma_card.o
-	Object lib/NitroSDK/asm/mi_compress.o
-	Object lib/NitroSDK/asm/mi_init.o
 	Object lib/asm/nitro.o
 	Object lib/asm/msl.o
 }

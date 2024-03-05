@@ -21,7 +21,7 @@ sub_0207B12C: ; 0x0207B12C
 	bl sub_02079D10
 	bl sub_02079ED8
 	bl sub_0207B894
-	bl sub_020791D0
+	bl MI_Init
 	bl sub_0207BE40
 	bl sub_0207C4FC
 	bl sub_0207A4A4

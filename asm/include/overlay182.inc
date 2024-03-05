@@ -2390,7 +2390,7 @@
 .public sub_02070EAC
 .public sub_02070E40
 .public sub_02070DB4
-.public sub_0207909C
+.public MI_UncompressLZ8
 .public sub_02085D9C
 .public sub_02085D9C
 .public sub_02083A10

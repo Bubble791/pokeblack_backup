@@ -3,28 +3,6 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_020791D0
-sub_020791D0: ; 0x020791D0
-	push {r3, lr}
-	mov r0, #3
-	bl MI_SetWramBank
-	bl OS_IsRunOnTwl
-	cmp r0, #0
-	beq _020791E4
-	bl sub_020791EC
-_020791E4:
-	mov r0, #0
-	bl MI_StopDma
-	pop {r3, pc}
-	thumb_func_end sub_020791D0
-
-	thumb_func_start sub_020791EC
-sub_020791EC: ; 0x020791EC
-	bx pc
-	nop
-	thumb_func_end sub_020791EC
-_020791F0:
-	.byte 0x00, 0xC0, 0x9F, 0xE5, 0x1C, 0xFF, 0x2F, 0xE1, 0x39, 0x81, 0x76, 0x02
 
 	thumb_func_start sub_020791FC
 sub_020791FC: ; 0x020791FC

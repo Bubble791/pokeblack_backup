@@ -533,7 +533,7 @@ _0207A0E4:
 	str r0, [sp]
 	add r0, r5, #0
 	add r1, r6, #0
-	blx sub_02079094
+	blx MI_SwapWord
 	str r0, [sp, #4]
 	cmp r0, #0
 	bne _0207A0FC

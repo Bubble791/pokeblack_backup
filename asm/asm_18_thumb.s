@@ -1838,7 +1838,7 @@ _02066B82:
 	add r0, r4, #0
 	add r0, #0x28
 	str r1, [sp, #8]
-	bl sub_02079084
+	bl MI_Zero36B
 	mov r0, #1
 	ldrh r1, [r7]
 	lsl r0, r0, #8

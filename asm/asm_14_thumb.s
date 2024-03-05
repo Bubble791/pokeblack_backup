@@ -25057,7 +25057,7 @@ sub_02044F58: ; 0x02044F58
 	push {r3, r4, r5, lr}
 	cmp r2, #0
 	bne _02044F64
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	pop {r3, r4, r5, pc}
 _02044F64:
 	mov r4, #3
@@ -39227,7 +39227,7 @@ _0204B51A:
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r5, #0
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	add r0, r4, #0
 	bl sub_0203A24C
 	add r4, r5, #0
@@ -39295,7 +39295,7 @@ _0204B5A2:
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r5, #0
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	add r0, r4, #0
 	bl sub_0203A24C
 	add r4, r5, #0
@@ -39379,7 +39379,7 @@ _0204B642:
 	beq _0204B68C
 	add r0, r4, #0
 	add r1, r5, #0
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	add r0, r4, #0
 	bl sub_0203A24C
 _0204B68C:
@@ -44268,7 +44268,7 @@ sub_0204D7B0: ; 0x0204D7B0
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r5, #0
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	add r0, r4, #0
 	bl sub_0203A24C
 	b _0204D7FE

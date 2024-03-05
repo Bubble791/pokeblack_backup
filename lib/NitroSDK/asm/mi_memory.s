@@ -794,3 +794,15 @@ _0207903C:
 	strneb r3, [r1, #-1]!
 	bx lr
 	arm_func_end MI_CpuMove
+
+	thumb_func_start MI_Zero36B
+MI_Zero36B: ; 0x02079084
+	mov r1, #0
+	mov r2, #0
+	mov r3, #0
+	stmia r0!, {r1, r2, r3}
+	stmia r0!, {r1, r2, r3}
+	stmia r0!, {r1, r2, r3}
+	bx lr
+	.align 2, 0
+	thumb_func_end MI_Zero36B

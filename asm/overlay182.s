@@ -46866,7 +46866,7 @@ _021BB3FC:
 	add r4, r0, #0
 	ldr r0, [sp]
 	add r1, r4, #0
-	blx sub_0207909C
+	blx MI_UncompressLZ8
 	add r0, sp, #0
 	bl ovy182_21bc4f0
 	add r0, r4, #0

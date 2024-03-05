@@ -1715,7 +1715,7 @@ _020688DC:
 	add r0, r5, #0
 	add r0, #0x28
 	ldrsh r7, [r3, r2]
-	bl sub_02079084
+	bl MI_Zero36B
 	mov r0, #1
 	ldrh r1, [r4]
 	lsl r0, r0, #8

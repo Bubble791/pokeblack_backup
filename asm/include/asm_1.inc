@@ -379,7 +379,7 @@
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
-.public sub_0207909C
+.public MI_UncompressLZ8
 .public MIi_CpuCopy32
 .public MIi_CpuCopy16
 .public MI_CpuFill8
@@ -552,9 +552,9 @@
 .public GX_EndLoadOBJExtPltt
 .public GXS_BeginLoadOBJExtPltt
 .public GXS_EndLoadOBJExtPltt
-.public sub_0207909C
-.public sub_0207909C
-.public sub_0207909C
+.public MI_UncompressLZ8
+.public MI_UncompressLZ8
+.public MI_UncompressLZ8
 .public MI_CpuFill8
 .public sub_0207B0AC
 .public GX_LoadOBJ
@@ -602,7 +602,7 @@
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public MI_CpuFill8
-.public sub_0207909C
+.public MI_UncompressLZ8
 .public GX_GetBankForOBJExtPltt
 .public GX_SetBankForLCDC
 .public GX_SetBankForOBJExtPltt
@@ -1322,7 +1322,7 @@
 .public MIi_CpuClear32
 .public MIi_CpuClear32
 .public MIi_CpuClear32
-.public sub_02079084
+.public MI_Zero36B
 .public G3X_GetClipMtx
 .public MTX_Copy43To44_
 .public MTX_Concat44
@@ -1444,7 +1444,7 @@
 .public FX_Mul32x64cFunc
 .public FX_Mul32x64cFunc
 .public MIi_CpuClear16
-.public sub_02079084
+.public MI_Zero36B
 .public sub_02068D50
 .public sub_02068D50
 .public sub_02068D50
@@ -11803,8 +11803,8 @@
 .public MI_SendGXCommandAsync
 .public MIi_FIFOCallback
 .public MI_SendGXCommandAsyncFast
-.public sub_02079084
-.public sub_020791D0
+.public MI_Zero36B
+.public MI_Init
 .public sub_020791EC
 .public sub_020791FC
 .public sub_0207927C
@@ -12239,7 +12239,7 @@
 .public sub_01FF8BF0
 .public sub_0207C110
 .public sub_0207C124
-.public sub_02079094
+.public MI_SwapWord
 .public sub_0207AB70
 .public sub_0207ABBC
 .public sub_0207AB04
