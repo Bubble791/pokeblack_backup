@@ -41,7 +41,7 @@ GX_Init: ; 0x02074718
 	mov r1, #1
 	orr r1, r2
 	strh r1, [r0]
-	bl sub_02076F74
+	bl GX_InitGXState
 	ldr r6, _020747F8 ; =0x0214C04C
 	ldrh r0, [r6, #2]
 	cmp r0, #0

@@ -5,7 +5,7 @@
 	.text
 
 	arm_func_start GX_SendFifo48B
-GX_SendFifo48B: ; 0x020D0E2C
+GX_SendFifo48B: ; 0x02076F34
 	ldmia r0!, {r2, r3, ip}
 	stmia r1, {r2, r3, ip}
 	ldmia r0!, {r2, r3, ip}
@@ -18,7 +18,7 @@ GX_SendFifo48B: ; 0x020D0E2C
 	arm_func_end GX_SendFifo48B
 
 	arm_func_start GX_SendFifo64B
-GX_SendFifo64B: ; 0x020D0E50
+GX_SendFifo64B: ; 0x02076F58
 	stmdb sp!, {r4, r5, r6, r7, r8}
 	ldmia r0!, {r2, r3, r4, r5, r6, r7, r8, ip}
 	stmia r1, {r2, r3, r4, r5, r6, r7, r8, ip}

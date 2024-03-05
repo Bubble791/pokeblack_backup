@@ -2056,13 +2056,13 @@
 .public MI_Copy48B
 .public sub_0208D414
 
-.public sub_02076F74
+.public GX_InitGXState
 .public sub_0276814C
 .public sub_0207F6B8
-.public sub_02076F58
-.public sub_02076F34
-.public sub_02076F58
-.public sub_02076F34
+.public GX_SendFifo64B
+.public GX_SendFifo48B
+.public GX_SendFifo64B
+.public GX_SendFifo48B
 .public MI_Copy32B
 .public sub_02078150
 .public sub_027681B8
@@ -11760,7 +11760,7 @@
 .public GX_GetBankForLCDC
 .public GX_GetBankForSubOBJ
 .public GX_GetBankForSubOBJExtPltt
-.public sub_02076F74
+.public GX_InitGXState
 .public sub_02076FB0
 .public sub_02076FE8
 .public sub_02077320

@@ -17,7 +17,7 @@
 .public sIsDispOn
 .public GXi_DmaId
 .public GXi_VRamLockId
-.public sub_02076F74
+.public GX_InitGXState
 .public sub_0207A208
 .public sub_0207C774
 .public sub_0207802C

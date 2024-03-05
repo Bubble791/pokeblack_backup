@@ -2,8 +2,8 @@
 	.include "g3imm.inc"
 	.include "global.inc"
 
-	.public sub_02076F58
-	.public sub_02076F34
+	.public GX_SendFifo64B
+	.public GX_SendFifo48B
 	.public MI_Copy36B
 
 	.text
@@ -12,48 +12,48 @@
 G3_LoadMtx44: ; 0x02074C14
 	ldr r1, _02074C20 ; =0x04000400
 	mov r2, #0x16
-	ldr r3, _02074C24 ; =sub_02076F58
+	ldr r3, _02074C24 ; =GX_SendFifo64B
 	str r2, [r1]
 	bx r3
 	nop
 _02074C20: .word 0x04000400
-_02074C24: .word sub_02076F58
+_02074C24: .word GX_SendFifo64B
 	thumb_func_end G3_LoadMtx44
 
 	thumb_func_start G3_LoadMtx43
 G3_LoadMtx43: ; 0x02074C28
 	ldr r1, _02074C34 ; =0x04000400
 	mov r2, #0x17
-	ldr r3, _02074C38 ; =sub_02076F34
+	ldr r3, _02074C38 ; =GX_SendFifo48B
 	str r2, [r1]
 	bx r3
 	nop
 _02074C34: .word 0x04000400
-_02074C38: .word sub_02076F34
+_02074C38: .word GX_SendFifo48B
 	thumb_func_end G3_LoadMtx43
 
 	thumb_func_start G3_MultMtx44
 G3_MultMtx44: ; 0x02074C3C
 	ldr r1, _02074C48 ; =0x04000400
 	mov r2, #0x18
-	ldr r3, _02074C4C ; =sub_02076F58
+	ldr r3, _02074C4C ; =GX_SendFifo64B
 	str r2, [r1]
 	bx r3
 	nop
 _02074C48: .word 0x04000400
-_02074C4C: .word sub_02076F58
+_02074C4C: .word GX_SendFifo64B
 	thumb_func_end G3_MultMtx44
 
 	thumb_func_start G3_MultMtx43
 G3_MultMtx43: ; 0x02074C50
 	ldr r1, _02074C5C ; =0x04000400
 	mov r2, #0x19
-	ldr r3, _02074C60 ; =sub_02076F34
+	ldr r3, _02074C60 ; =GX_SendFifo48B
 	str r2, [r1]
 	bx r3
 	nop
 _02074C5C: .word 0x04000400
-_02074C60: .word sub_02076F34
+_02074C60: .word GX_SendFifo48B
 	thumb_func_end G3_MultMtx43
 
 	thumb_func_start G3_MultMtx33
