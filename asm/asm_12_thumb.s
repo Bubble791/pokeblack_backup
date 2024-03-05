@@ -45796,7 +45796,7 @@ _02019DE8:
 	ldr r1, _02019F94 ; =0x02143A14
 	add r0, r7, #0
 	add r2, r7, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	add r0, sp, #0x188
 	add r1, r7, #0
 	add r2, r0, #0

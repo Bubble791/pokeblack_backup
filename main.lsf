@@ -47,6 +47,7 @@ Static main
     Object asm/asm_41_arm.o
     Object asm/asm_42_thumb.o
     Object asm/asm_43_arm.o
+    Object lib/NitroSDK/asm/fx_mtx44.o
 	Object lib/NitroSDK/asm/fx_cp.o
     Object asm/asm_44_thumb.o
     Object asm/asm_45_arm.o
@@ -131,7 +132,7 @@ Static main
 	Object lib/NitroSDK/asm/fx_mtx22.o
 	Object lib/NitroSDK/asm/fx_mtx33.o
 	Object lib/NitroSDK/asm/fx_mtx43.o
-	Object lib/NitroSDK/asm/fx_mtx44.o
+	
 	Object lib/NitroSDK/asm/fx_vec.o
 	Object lib/NitroSDK/asm/fx_trig.o
 	Object lib/NitroSDK/asm/fx_atanidx.o
@@ -224,6 +225,11 @@ Overlay OVY_2
 {
     After main
     Object asm/overlay2.o
+}
+Overlay OVY_11
+{
+    After main
+    Object asm/overlay11.o
 }
 Overlay OVY_29
 {

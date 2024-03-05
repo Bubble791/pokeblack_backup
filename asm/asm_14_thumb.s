@@ -34094,7 +34094,7 @@ _02049052:
 	ldr r1, [r3, #0x24]
 	ldr r2, [r3, #0x28]
 	ldr r3, [r3, #0x2c]
-	blx sub_02073858
+	blx MTX_FrustumW
 	ldr r1, [r4, #0x7c]
 	mov r0, #0x50
 	bic r1, r0
@@ -34111,7 +34111,7 @@ _02049080:
 	ldr r1, [r3, #0x24]
 	ldr r2, [r3, #0x28]
 	ldr r3, [r3, #0x2c]
-	blx sub_02073858
+	blx MTX_FrustumW
 	ldr r1, [r4, #0x7c]
 	mov r0, #0x50
 	bic r1, r0

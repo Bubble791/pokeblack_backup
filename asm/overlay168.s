@@ -16725,7 +16725,7 @@ ovy168_21e5d98: ; 0x021E5D98
 	ldr r1, _021E5E30 ; =0x02143A14
 	add r0, r6, #0
 	add r2, r6, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	cmp r4, #0
 	beq _021E5DD0
 	ldr r1, [r5]

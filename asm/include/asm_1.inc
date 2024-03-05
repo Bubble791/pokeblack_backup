@@ -475,8 +475,8 @@
 .public sub_02074F24
 .public MTX_PerspectiveW
 .public MTX_PerspectiveW
-.public sub_02073858
-.public sub_02073858
+.public MTX_FrustumW
+.public MTX_FrustumW
 .public MTX_OrthoW
 .public MTX_OrthoW
 .public sub_02073328
@@ -1292,12 +1292,12 @@
 .public FX_Div
 .public FX_Div
 .public sub_02072C20
-.public sub_0207343C
+.public MTX_Identity44_
 .public sub_0207244C
 .public sub_0207272C
 .public sub_02072D04
 .public sub_0207877C
-.public sub_0207343C
+.public MTX_Identity44_
 .public FX_InvFx64c
 .public sub_02074674
 .public sub_02074674
@@ -1307,7 +1307,7 @@
 .public sub_02072C94
 .public sub_02072D04
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public sub_0207869C
 .public sub_0207866C
 .public sub_0207866C
@@ -1325,9 +1325,9 @@
 .public sub_02079084
 .public sub_02074EBC
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public sub_02074180
 .public sub_02074180
 .public sub_02074180
@@ -1340,9 +1340,9 @@
 .public sub_02078684
 .public sub_02074EBC
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public sub_02074180
 .public sub_02074180
 .public sub_02074180
@@ -1406,7 +1406,7 @@
 .public sub_020786E8
 .public sub_02078684
 .public sub_02074EBC
-.public sub_02073468
+.public MTX_Copy44To43_
 .public sub_02074EE0
 .public sub_02074C9C
 .public sub_02073290
@@ -3465,7 +3465,7 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public FX_Div
 .public FX_Div
 .public sub_0208D60C

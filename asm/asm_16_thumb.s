@@ -15529,7 +15529,7 @@ sub_02065698: ; 0x02065698
 	ldr r0, _0206574C ; =0x02143A58
 	blx sub_02072C20
 	ldr r0, _02065750 ; =0x02143A14
-	blx sub_0207343C
+	blx MTX_Identity44_
 	ldr r1, _02065754 ; =0x2D8B62D8
 	ldr r0, _02065740 ; =0x02143A8C
 	str r1, [r0]
@@ -15885,7 +15885,7 @@ sub_0206599C: ; 0x0206599C
 	add r1, sp, #0x34
 	blx sub_0207877C
 	ldr r0, [sp]
-	blx sub_0207343C
+	blx MTX_Identity44_
 	mov r0, #0
 	str r0, [sp, #0x30]
 	str r0, [sp, #0x28]
@@ -16188,7 +16188,7 @@ sub_02065BCC: ; 0x02065BCC
 	ldr r2, _02065C0C ; =0x02143C0C
 	add r0, r4, #0
 	add r1, sp, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	ldr r1, _02065C08 ; =0x02143A8C
 	mov r0, #0x40
 	ldr r2, [r1, #0x7c]

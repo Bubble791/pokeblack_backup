@@ -1853,7 +1853,7 @@ _02066DCE:
 	add r0, sp, #0x88
 	add r1, sp, #0x48
 	add r2, r0, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	b _02066E10
 _02066DF8:
 	mov r1, #2
@@ -1865,7 +1865,7 @@ _02066DF8:
 	add r0, sp, #0x88
 	add r1, sp, #8
 	add r2, r0, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 _02066E10:
 	ldr r1, [sp, #0xb8]
 	ldr r0, _02066F08 ; =0x0209B3C0
@@ -2121,7 +2121,7 @@ _02066FE8:
 	add r0, sp, #0x90
 	add r1, sp, #0x50
 	add r2, r0, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	b _0206702A
 _02067012:
 	mov r1, #2
@@ -2133,7 +2133,7 @@ _02067012:
 	add r0, sp, #0x90
 	add r1, sp, #0x10
 	add r2, r0, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 _0206702A:
 	ldr r1, [sp, #0xc0]
 	ldr r0, _0206716C ; =0x0209B408

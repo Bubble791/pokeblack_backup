@@ -309,7 +309,7 @@
 .public sub_0207873C
 .public sub_02072470
 .public sub_02072C48
-.public sub_0207349C
+.public MTX_Concat44
 .public FX_Div
 .public FX_Div
 .public sub_0208D374

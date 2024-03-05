@@ -17134,7 +17134,7 @@ ovy310_21a4ef4: ; 0x021A4EF4
 	ldr r3, _021A4FB4 ; =0x00001554
 	add r0, r4, #0
 	add r1, r6, #0
-	blx sub_02073BDC
+	blx MTX_OrthoW
 	ldr r1, [r5, #0x7c]
 	mov r0, #0x50
 	bic r1, r0

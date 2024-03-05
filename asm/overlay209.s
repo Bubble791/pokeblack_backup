@@ -3944,7 +3944,7 @@ _021BC048:
 	ldr r1, _021BC2A4 ; =0x02143A14
 	add r0, r6, #0
 	add r2, r6, #0
-	blx sub_0207349C
+	blx MTX_Concat44
 	add r7, sp, #0x228
 	add r1, r6, #0
 	add r6, sp, #0xb4

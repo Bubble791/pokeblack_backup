@@ -95,7 +95,7 @@ _02067DC0:
 	bne _02067DC0
 	add r0, sp, #0
 	add r1, r6, #0
-	blx sub_02073468
+	blx MTX_Copy44To43_
 _02067DD2:
 	cmp r5, #0
 	beq _02067DE0
