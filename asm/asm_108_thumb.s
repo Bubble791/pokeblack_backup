@@ -287,7 +287,7 @@ sub_0208287C: ; 0x0208287C
 	bl sub_0207ACBC
 	cmp r0, #0
 	bne _02082892
-	bl sub_0207C774
+	bl OS_Terminate
 _02082892:
 	ldr r0, [sp, #0x18]
 	add r1, r4, #0

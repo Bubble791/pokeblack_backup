@@ -9736,7 +9736,7 @@ _02154D62:
 	mov r1, #0
 	mov r2, #0x30
 	blx MI_CpuFill8
-	bl sub_0207C774
+	bl OS_Terminate
 _02154D72:
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
@@ -29234,7 +29234,7 @@ ovy11_215dec0: ; 0x0215DEC0
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0215DECE
-	bl sub_0207C774
+	bl OS_Terminate
 _0215DECE:
 	ldr r4, _0215DF28 ; =0x00001E5C
 	mov r0, #4
@@ -53189,7 +53189,7 @@ _0216A00A:
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0216A030
-	bl sub_0207C774
+	bl OS_Terminate
 _0216A030:
 	ldr r4, _0216A18C ; =0x02FFFE0C
 	add r1, r7, #0
@@ -53200,7 +53200,7 @@ _0216A030:
 	ldrb r0, [r4, #4]
 	cmp r0, #0
 	bne _0216A048
-	bl sub_0207C774
+	bl OS_Terminate
 _0216A048:
 	add r1, r7, #0
 	ldr r0, _0216A190 ; =0x02FFFE10
@@ -53879,7 +53879,7 @@ ovy11_216a5ec: ; 0x0216A5EC
 	bne _0216A608
 	ldr r5, _0216A638 ; =0x00001A10
 	add r0, r4, r5
-	bl sub_0207C6D0
+	bl OS_GetLowEntropyData
 	add r0, r4, r5
 	mov r1, #0x20
 	bl ovy11_2159d64
@@ -57389,7 +57389,7 @@ ovy11_216c1cc: ; 0x0216C1CC
 	bl sub_0207A828
 	cmp r0, #0
 	bne _0216C202
-	bl sub_0207C774
+	bl OS_Terminate
 _0216C202:
 	ldr r0, _0216C320 ; =0x02185AEC
 	mov r7, #0

@@ -692,7 +692,7 @@ sub_02070554: ; 0x02070554
 _0207056C:
 	cmp r1, #0
 	beq _02070574
-	bl sub_0207C774
+	bl OS_Terminate
 _02070574:
 	cmp r4, #0
 	bne _02070582
@@ -1250,7 +1250,7 @@ _02070966:
 _0207096C:
 	cmp r4, #0x10
 	blt _02070976
-	bl sub_0207C774
+	bl OS_Terminate
 	b _02070990
 _02070976:
 	ldr r0, _020709B4 ; =0x0214BD5C
@@ -1269,7 +1269,7 @@ _02070990:
 	add r4, r4, #1
 	b _0207096C
 _02070994:
-	bl sub_0207C774
+	bl OS_Terminate
 _02070998:
 	ldr r0, [r5, #0x14]
 	mov r4, #1
@@ -1295,7 +1295,7 @@ sub_020709B8: ; 0x020709B8
 	ldr r0, [r0]
 	cmp r4, r0
 	bne _020709C8
-	bl sub_0207C774
+	bl OS_Terminate
 _020709C8:
 	ldr r0, [r4]
 	cmp r0, #0
@@ -2418,7 +2418,7 @@ _020711A4:
 	mov r1, #0
 	add r2, r7, #0
 	blx MI_CpuFill8
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, r4, r5, r6, r7, pc}
 _020711B8:
 	ldr r0, [r5, #0x1c]
@@ -4589,7 +4589,7 @@ _020720BA:
 	bl sub_02071E24
 	cmp r0, #0
 	bne _020720EA
-	bl sub_0207C774
+	bl OS_Terminate
 _020720EA:
 	ldr r0, _020720FC ; =0x0214BF80
 	mov r1, #1

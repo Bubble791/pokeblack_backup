@@ -946,7 +946,7 @@ _0219D5F0:
 	cmp r2, r0
 	bne _0219D5FC
 _0219D5F8:
-	bl sub_0207C774
+	bl OS_Terminate
 _0219D5FC:
 	pop {r3, pc}
 	nop
@@ -962,7 +962,7 @@ ovy189_219d624: ; 0x0219D624
 	push {r4, lr}
 	ldr r4, _0219D638 ; =0x021AE6A4
 	add r0, r4, #0
-	bl sub_0207C6D0
+	bl OS_GetLowEntropyData
 	add r0, r4, #0
 	mov r1, #0x20
 	bl sub_02159D64
@@ -12378,7 +12378,7 @@ ovy189_21a28fc: ; 0x021A28FC
 	ble _021A2974
 	ldr r5, _021A29A0 ; =0x021B2884
 	add r0, r5, #0
-	bl sub_0207C6D0
+	bl OS_GetLowEntropyData
 	add r0, r5, #0
 	mov r1, #0x20
 	bl sub_02159D64

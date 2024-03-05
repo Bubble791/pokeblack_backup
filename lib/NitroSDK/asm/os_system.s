@@ -119,7 +119,7 @@ _0207C1A8:
 	tst r0, r5
 	bne _0207C1C4
 _0207C1B2:
-	blx sub_0207C7E8
+	blx OS_Halt
 	blx OS_EnableInterrupts
 	blx OS_DisableInterrupts
 	ldr r0, [r4, r6]

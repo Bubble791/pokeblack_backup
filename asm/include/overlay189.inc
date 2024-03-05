@@ -49,8 +49,8 @@
 .public sub_0219D5D0
 .public sub_0207A800
 .public sub_0207AD34
-.public sub_0207C774
-.public sub_0207C6D0
+.public OS_Terminate
+.public OS_GetLowEntropyData
 .public sub_02159D64
 .public sub_02157C50
 .public sub_02157D38
@@ -437,7 +437,7 @@
 .public sub_0216CCA8
 .public sub_0216CCA8
 .public sub_0216CCA8
-.public sub_0207C6D0
+.public OS_GetLowEntropyData
 .public sub_02159D64
 .public sub_0216DDDC
 .public sub_020839D0

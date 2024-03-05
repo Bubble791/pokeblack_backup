@@ -6772,7 +6772,7 @@ _02056C60:
 	bl sub_02056B54
 	cmp r0, #0
 	bne _02056C84
-	blx sub_0207C774
+	blx OS_Terminate
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 _02056C84:
@@ -7956,7 +7956,7 @@ sub_02057B00: ; 0x02057B00
 	add r4, sp, #0
 	mov r6, r0
 	mov r0, r4
-	blx sub_0207C6D0
+	blx OS_GetLowEntropyData
 	mov r2, #1
 _02057B1C:
 	add r0, r4, r2, lsl #2

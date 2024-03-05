@@ -7564,7 +7564,7 @@ sub_0206EEB0: ; 0x0206EEB0
 	bl sub_0206EEA4
 	cmp r0, #0
 	bne _0206EEBE
-	bl sub_0207C774
+	bl OS_Terminate
 _0206EEBE:
 	pop {r3, pc}
 	thumb_func_end sub_0206EEB0
@@ -7699,7 +7699,7 @@ sub_0206EF74: ; 0x0206EF74
 	ldr r0, [sp]
 	cmp r1, r0
 	beq _0206EFB4
-	bl sub_0207C774
+	bl OS_Terminate
 	b _0206EFB4
 _0206EF98:
 	add r4, r5, #0
@@ -7744,13 +7744,13 @@ sub_0206EFC8: ; 0x0206EFC8
 	cmp r0, #0
 	bne _0206EFE8
 _0206EFE2:
-	bl sub_0207C774
+	bl OS_Terminate
 	b _0206F00C
 _0206EFE8:
 	ldr r0, [r4, #0x24]
 	cmp r0, r6
 	beq _0206EFF2
-	bl sub_0207C774
+	bl OS_Terminate
 _0206EFF2:
 	ldr r0, [r4, #0x18]
 	sub r0, r0, #1
@@ -8119,7 +8119,7 @@ _0206F27C:
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0206F28A
-	bl sub_0207C774
+	bl OS_Terminate
 	b _0206F28C
 _0206F28A:
 	ldr r4, _0206F294 ; =0x027674A0
@@ -8851,7 +8851,7 @@ sub_0206F7D4: ; 0x0206F7D4
 	and r0, r5
 	cmp r5, r0
 	beq _0206F7F4
-	bl sub_0207C774
+	bl OS_Terminate
 _0206F7F4:
 	ldr r0, _0206F808 ; =0x0214B440
 	mov r1, #1
@@ -8907,7 +8907,7 @@ sub_0206F854: ; 0x0206F854
 	push {r4, lr}
 	add r4, r0, #0
 	bne _0206F85E
-	bl sub_0207C774
+	bl OS_Terminate
 _0206F85E:
 	mov r0, #0
 	mov r1, #0
@@ -9557,7 +9557,7 @@ sub_0206FD24: ; 0x0206FD24
 	mov r1, #4
 	tst r0, r1
 	bne _0206FD42
-	bl sub_0207C774
+	bl OS_Terminate
 _0206FD42:
 	ldr r2, [sp, #0x18]
 	ldr r3, [sp, #0x1c]

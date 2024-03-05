@@ -351,7 +351,7 @@
 .public MI_CpuMove
 .public MI_CpuMove
 .public MI_CpuFill8
-.public sub_0207C774
+.public OS_Terminate
 .public OS_RestoreInterrupts
 .public sub_0207A92C
 .public sub_0207BB0C
@@ -927,7 +927,7 @@
 .public sub_0207D244
 .public sub_0205752C
 .public sub_02085D9C
-.public sub_0207C774
+.public OS_Terminate
 .public sub_020586E4
 .public sub_020584CC
 .public MI_CpuFill8
@@ -2810,9 +2810,9 @@
 .public MI_CpuFill8
 .public sub_0207A2C0
 .public sub_0207A2C0
-.public sub_0207C774
+.public OS_Terminate
 .public MI_CpuCopy8
-.public sub_0207C774
+.public OS_Terminate
 .public MI_CpuCopy8
 .public OS_GetMacAddress
 .public sub_0207A290
@@ -2860,7 +2860,7 @@
 .public sub_0207A8E4
 .public sub_0207AE68
 .public sub_0207AEA4
-.public sub_0207C6D0
+.public OS_GetLowEntropyData
 .public sub_0207AE68
 .public sub_0207AEA4
 .public sub_0207AEA4
@@ -3013,7 +3013,7 @@
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public sub_0207A828
-.public sub_0207C774
+.public OS_Terminate
 .public sub_02085F00
 .public sub_020584CC
 .public sub_020584CC

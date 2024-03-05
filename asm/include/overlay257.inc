@@ -5,7 +5,7 @@
 .public OS_IsRunOnTwl
 .public sub_02199A68
 .public sub_02199A70
-.public sub_0207C774
+.public OS_Terminate
 .public OS_IsRunOnTwl
 .public sub_02199A78
 .public OS_IsRunOnTwl
@@ -14,7 +14,7 @@
 .public sub_02199A88
 .public OS_IsRunOnTwl
 .public sub_02199A90
-.public sub_0207C774
+.public OS_Terminate
 .public sub_02079E70
 .public OS_IsRunOnTwl
 .public sub_02199A98
@@ -34,7 +34,7 @@
 .public sub_02199B18
 .public OS_IsRunOnTwl
 .public sub_02199B20
-.public sub_0207C774
+.public OS_Terminate
 .public sub_0203D2BC
 .public sub_0207AA04
 .public OS_IsRunOnTwl
@@ -79,7 +79,7 @@
 .public sub_02199E20
 .public OS_IsRunOnTwl
 .public sub_02199E28
-.public sub_0207C774
+.public OS_Terminate
 .public sub_0203D2BC
 .public sub_0203D2BC
 .public OS_IsRunOnTwl
@@ -102,7 +102,7 @@
 .public sub_02199F40
 .public OS_IsRunOnTwl
 .public sub_02199FC0
-.public sub_0207C774
+.public OS_Terminate
 .public OS_IsRunOnTwl
 .public sub_02199FC8
 .public OS_IsRunOnTwl
@@ -2665,7 +2665,7 @@
 .public sub_021A8A00
 .public OS_IsRunOnTwl
 .public sub_021A8A08
-.public sub_0207C774
+.public OS_Terminate
 .public MIi_CpuCopy32
 .public OS_IsRunOnTwl
 .public sub_021A8A10
@@ -3164,7 +3164,7 @@
 .public OS_IsRunOnTwl
 .public MI_CpuCopy8
 .public OS_SpinWaitSysCycles
-.public sub_0207C774
+.public OS_Terminate
 
 .public sub_02700938
 .public sub_02700CB4

@@ -78,10 +78,10 @@ Static main
     Object lib/NitroSDK/asm/os_ownerInfo.o
     Object lib/NitroSDK/asm/os_ownerInfoEx.o
     Object lib/NitroSDK/asm/os_varmExclusive.o
-    Object asm/asm_92_thumb.o
-    Object asm/asm_93_arm.o
-    Object asm/asm_94_thumb.o
-    Object asm/asm_95_arm.o
+    Object lib/NitroSDK/asm/os_argument.o
+    Object lib/NitroSDK/asm/os_entropy.o
+    Object lib/NitroSDK/asm/os_terminate.o
+
     Object asm/asm_96_thumb.o
     Object asm/asm_97_arm.o
     Object asm/asm_98_thumb.o
@@ -136,8 +136,6 @@ Static main
 	Object lib/NitroSDK/src/os/os_alarm.o
 	Object lib/NitroSDK/src/os/os_valarm.o
 	Object lib/NitroSDK/src/os/os_vramExclusive.o
-	Object lib/NitroSDK/src/os/os_entropy.o
-	Object lib/NitroSDK/src/os/os_terminate_proc.o
 	
 	Object lib/asm/nitro.o
 	Object lib/asm/msl.o

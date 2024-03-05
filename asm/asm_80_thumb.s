@@ -629,7 +629,7 @@ _0207A6EA:
 	bl sub_0207A89C
 	bl sub_0207AAD8
 	bl sub_0207A918
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r4, pc}
 	nop
 _0207A70C: .word 0x0214C210

@@ -46,7 +46,7 @@ OS_ResetSystem: ; 0x0207C29C
 	tst r0, #4
 	beq _0207C2D4
 _0207C2D0:
-	blx sub_0207C774
+	blx OS_Terminate
 _0207C2D4:
 	blx OS_IsRunOnTwl
 	cmp r0, #0

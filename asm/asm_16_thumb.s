@@ -14280,7 +14280,7 @@ _02064E62:
 _02064E64:
 	cmp r0, #0
 	bne _02064E6C
-	bl sub_0207C774
+	bl OS_Terminate
 _02064E6C:
 	mov r6, #1
 _02064E6E:

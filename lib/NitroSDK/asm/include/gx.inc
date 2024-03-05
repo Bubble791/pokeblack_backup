@@ -19,7 +19,7 @@
 .public GXi_VRamLockId
 .public GX_InitGXState
 .public sub_0207A208
-.public sub_0207C774
+.public OS_Terminate
 .public MIi_DmaFill32
 .public MIi_CpuClear32
 .public sub_0276814C

@@ -8743,7 +8743,7 @@ _021A1486:
 	blt _021A146E
 	cmp r5, #0
 	bne _021A1494
-	bl sub_0207C774
+	bl OS_Terminate
 _021A1494:
 	mov r0, #2
 	str r0, [r4]
@@ -9877,7 +9877,7 @@ _021A1D1E:
 	str r1, [r5, #0xc]
 	pop {r3, r4, r5, r6, r7, pc}
 _021A1D4C:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, r4, r5, r6, r7, pc}
 _021A1D52:
 	add r1, r0, #0
@@ -9931,7 +9931,7 @@ _021A1DA6:
 _021A1DA8:
 	cmp r2, #1
 	bne _021A1DB0
-	bl sub_0207C774
+	bl OS_Terminate
 _021A1DB0:
 	ldr r0, [sp]
 	ldr r1, [sp]
@@ -11895,7 +11895,7 @@ _021A2C08:
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 _021A2C18:
-	bl sub_0207C774
+	bl OS_Terminate
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 _021A2C20:
@@ -12871,7 +12871,7 @@ _021A335E:
 	cmp r0, #0x17
 	pop {r3, r4, r5, r6, r7, pc}
 _021A336A:
-	bl sub_0207C774
+	bl OS_Terminate
 	add sp, #0x38
 	pop {r3, r4, r5, r6, r7, pc}
 _021A3372:
@@ -13498,7 +13498,7 @@ ovy181_21a3848: ; 0x021A3848
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	bne _021A3860
-	bl sub_0207C774
+	bl OS_Terminate
 _021A3860:
 	bl ovy181_21a37e4
 	add r0, r4, #0
@@ -13912,7 +13912,7 @@ ovy181_21a3b34: ; 0x021A3B34
 _021A3B4C:
 	cmp r4, r5
 	blo _021A3B54
-	bl sub_0207C774
+	bl OS_Terminate
 _021A3B54:
 	ldr r0, [r4, #0xc]
 	cmp r0, #0

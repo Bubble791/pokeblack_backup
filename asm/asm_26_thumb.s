@@ -84,7 +84,7 @@ _0206FF2E:
 	bl sub_0206F0F0
 	pop {r3, r4, r5, pc}
 _0206FF46:
-	bl sub_0207C774
+	bl OS_Terminate
 _0206FF4A:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -135,7 +135,7 @@ _0206FF88:
 	beq _0206FFA0
 	bl sub_0206FFBC
 _0206FFA0:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 	nop
 _0206FFA8: .word 0x02FFFFA8

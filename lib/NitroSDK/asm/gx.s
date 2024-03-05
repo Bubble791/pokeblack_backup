@@ -52,7 +52,7 @@ _02074748:
 	add r5, r0, #0
 	cmp r5, r4
 	bne _02074756
-	bl sub_0207C774
+	bl OS_Terminate
 _02074756:
 	strh r5, [r6, #2]
 	ldrh r0, [r6, #2]

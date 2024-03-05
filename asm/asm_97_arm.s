@@ -9,8 +9,8 @@ sub_0207C888: ; 0x0207C888
 	sub sp, sp, #0x300
 	add r0, sp, #0
 	mov r1, #0
-	blx sub_0207C574
-	blx sub_0207C624
+	blx OS_InitDeliverArgInfo
+	blx OS_DecodeDeliverArg
 	cmp r0, #0
 	bne _0207C8B4
 	blx sub_0207C6A4
@@ -49,12 +49,12 @@ _0207C918:
 	str r1, [r2]
 	add r0, sp, #0
 	str r1, [r2, #4]
-	blx sub_0207C574
-	blx sub_0207C5B0
+	blx OS_InitDeliverArgInfo
+	blx OS_EncodeDeliverArg
 	add sp, sp, #0x300
 	ldmia sp!, {r4, pc}
 _0207C93C:
-	blx sub_0207C698
+	blx OS_SetDeliverArgStateInvalid
 	add sp, sp, #0x300
 	ldmia sp!, {r4, pc}
 	.align 2, 0

@@ -184,7 +184,7 @@ _020793B6:
 	bl sub_0207AD34
 	cmp r0, #0
 	bne _020793CE
-	bl sub_0207C774
+	bl OS_Terminate
 _020793CE:
 	ldr r0, [sp, #8]
 	add sp, #0x2c
@@ -350,7 +350,7 @@ _02079716:
 	bl sub_0207AD34
 	cmp r0, #0
 	bne _0207972E
-	bl sub_0207C774
+	bl OS_Terminate
 _0207972E:
 	ldr r0, [sp, #8]
 	add sp, #0x2c
@@ -505,7 +505,7 @@ _02079906:
 	bl sub_0207AD34
 	cmp r0, #0
 	bne _0207991E
-	bl sub_0207C774
+	bl OS_Terminate
 _0207991E:
 	ldr r0, [sp, #8]
 	add sp, #0x2c

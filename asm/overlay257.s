@@ -52,7 +52,7 @@ _0219991C:
 _0219991E:
 	cmp r5, #7
 	bne _02199926
-	bl sub_0207C774
+	bl OS_Terminate
 _02199926:
 	cmp r5, #6
 	bne _02199930
@@ -98,7 +98,7 @@ _0219997C:
 _0219997E:
 	cmp r5, #7
 	bne _02199986
-	bl sub_0207C774
+	bl OS_Terminate
 _02199986:
 	cmp r5, #6
 	bne _02199990
@@ -179,7 +179,7 @@ _02199A36:
 _02199A38:
 	cmp r0, #0
 	bne _02199A40
-	bl sub_0207C774
+	bl OS_Terminate
 _02199A40:
 	ldr r0, _02199A64 ; =ovy257_2199b28
 	add r1, r4, #0
@@ -745,7 +745,7 @@ _02199E04:
 _02199E06:
 	cmp r0, #0
 	bne _02199E0E
-	bl sub_0207C774
+	bl OS_Terminate
 _02199E0E:
 	ldr r0, _02199E1C ; =ovy257_2199b28
 	add r1, r4, #0
@@ -965,7 +965,7 @@ _02199F82:
 _02199F84:
 	cmp r0, #7
 	bne _02199F8C
-	bl sub_0207C774
+	bl OS_Terminate
 _02199F8C:
 	mov r0, #0
 	str r0, [r4, #0x28]
@@ -30547,7 +30547,7 @@ _021A8974:
 _021A8976:
 	cmp r0, #0
 	bne _021A897E
-	bl sub_0207C774
+	bl OS_Terminate
 _021A897E:
 	mov r7, #1
 	mov r4, #0
@@ -45094,7 +45094,7 @@ _021AF704:
 	cmp r0, #1
 	beq _021AF71C
 _021AF718:
-	bl sub_0207C774
+	bl OS_Terminate
 _021AF71C:
 	ldr r0, _021AF730 ; =0x021B628C
 	mov r1, #0

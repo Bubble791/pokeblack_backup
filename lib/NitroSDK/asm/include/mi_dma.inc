@@ -18,7 +18,7 @@
 .public sub_02079DE4
 .public OS_DisableInterrupts
 .public OS_RestoreInterrupts
-.public sub_0207C774
+.public OS_Terminate
 
 .public sub_02079D88
 .public sub_02079D20

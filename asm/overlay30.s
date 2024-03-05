@@ -912,7 +912,7 @@ ovy30_2173780: ; 0x02173780
 	str r0, [sp]
 	cmp r0, #0x68
 	ble _021737AC
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, r4, r5, r6, r7, pc}
 _021737AC:
 	add r0, r6, #0

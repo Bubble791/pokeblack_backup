@@ -501,7 +501,7 @@ _020783A0:
 	cmp r0, r1
 	bne _020783D2
 _020783CE:
-	bl sub_0207C774
+	bl OS_Terminate
 _020783D2:
 	add r4, r4, #1
 	cmp r4, #3
@@ -550,7 +550,7 @@ _02078400:
 	cmp r3, r0
 	blo _02078424
 _02078420:
-	bl sub_0207C774
+	bl OS_Terminate
 _02078424:
 	pop {r4, pc}
 	.align 2, 0

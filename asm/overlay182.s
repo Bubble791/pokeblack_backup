@@ -19085,7 +19085,7 @@ _021ADAD4:
 	bl ovy182_21a6d04
 	cmp r0, #0
 	beq _021ADB1E
-	bl sub_0207C774
+	bl OS_Terminate
 _021ADB1E:
 	add sp, #0x104
 	pop {r4, r5, pc}
@@ -19287,12 +19287,12 @@ ovy182_21adc9c: ; 0x021ADC9C
 	bl sub_0207BAC0
 	cmp r0, #0
 	bne _021ADCC2
-	bl sub_0207C774
+	bl OS_Terminate
 _021ADCC2:
 	bl sub_0207BC18
 	cmp r0, #0
 	bne _021ADCCE
-	bl sub_0207C774
+	bl OS_Terminate
 _021ADCCE:
 	mov r4, #0
 	mov r0, #0
@@ -19912,7 +19912,7 @@ ovy182_21ae134: ; 0x021AE134
 	bl ovy182_21ba918
 	cmp r0, #0
 	bne _021AE1A4
-	bl sub_0207C774
+	bl OS_Terminate
 _021AE1A4:
 	ldr r1, _021AE1CC ; =ovy182_21ae254
 	mov r0, #0
@@ -20245,7 +20245,7 @@ ovy182_21ae3d8: ; 0x021AE3D8
 	bl ovy182_21aae5c
 	cmp r0, #1
 	beq _021AE408
-	bl sub_0207C774
+	bl OS_Terminate
 _021AE408:
 	mov r0, #0xa
 	bl sub_0207AA04
@@ -20264,7 +20264,7 @@ ovy182_21ae424: ; 0x021AE424
 	bl ovy182_21aaf44
 	cmp r0, #1
 	beq _021AE432
-	bl sub_0207C774
+	bl OS_Terminate
 _021AE432:
 	ldr r0, _021AE43C ; =0x021C40B4
 	bl ovy182_21bc4f0
@@ -20314,7 +20314,7 @@ _021AE47C:
 	bl ovy182_21ab010
 	cmp r0, #1
 	beq _021AE48A
-	bl sub_0207C774
+	bl OS_Terminate
 _021AE48A:
 	ldr r0, [sp, #0x20]
 	cmp r0, #0
@@ -20348,7 +20348,7 @@ ovy182_21ae4b0: ; 0x021AE4B0
 	bl ovy182_21ab010
 	cmp r0, #1
 	beq _021AE4C2
-	bl sub_0207C774
+	bl OS_Terminate
 _021AE4C2:
 	add r0, sp, #0
 	bl ovy182_21b7c60
@@ -36187,7 +36187,7 @@ _021B620A:
 	blx sub_02059F04
 	cmp r0, #0
 	bne _021B621C
-	bl sub_0207C774
+	bl OS_Terminate
 _021B621C:
 	ldr r0, [sp]
 	cmp r0, #0
@@ -38849,7 +38849,7 @@ _021B769A:
 	bl ovy182_21b75a8
 	pop {r3, pc}
 _021B76A0:
-	bl sub_0207C774
+	bl OS_Terminate
 _021B76A4:
 	pop {r3, pc}
 	nop
@@ -41371,7 +41371,7 @@ _021B8A44:
 	bl ovy182_21b8934
 	pop {r3, pc}
 _021B8A4A:
-	bl sub_0207C774
+	bl OS_Terminate
 _021B8A4E:
 	pop {r3, pc}
 	.align 2, 0
@@ -42675,7 +42675,7 @@ _021B9458:
 	bl sub_021A33BC
 	cmp r0, #0
 	beq _021B948A
-	bl sub_0207C774
+	bl OS_Terminate
 _021B948A:
 	mov r0, #1
 	lsl r0, r0, #8
@@ -42714,7 +42714,7 @@ _021B94D6:
 	bl ovy182_21b94e8
 	cmp r0, #0
 	bne _021B94E4
-	bl sub_0207C774
+	bl OS_Terminate
 _021B94E4:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -43419,7 +43419,7 @@ _021B9A3A:
 	bl sub_021B9A54
 	pop {r3, r4, r5, r6, r7, pc}
 _021B9A42:
-	bl sub_0207C774
+	bl OS_Terminate
 _021B9A46:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -44671,7 +44671,7 @@ ovy182_21ba350: ; 0x021BA350
 	ldr r0, [r0, #0x40]
 	cmp r0, #7
 	beq _021BA360
-	bl sub_0207C774
+	bl OS_Terminate
 _021BA360:
 	mov r0, #1
 	bl ovy182_21b9be4
@@ -44831,7 +44831,7 @@ ovy182_21ba478: ; 0x021BA478
 	bne _021BA48A
 	mov r0, #9
 	bl ovy182_21b9be4
-	bl sub_0207C774
+	bl OS_Terminate
 _021BA48A:
 	pop {r3, pc}
 	thumb_func_end ovy182_21ba478
@@ -44900,7 +44900,7 @@ ovy182_21ba4f8: ; 0x021BA4F8
 	ldr r0, [r0, #0x40]
 	cmp r0, #1
 	beq _021BA510
-	bl sub_0207C774
+	bl OS_Terminate
 	mov r0, #0
 _021BA510:
 	mov r1, #6
@@ -45193,7 +45193,7 @@ ovy182_21ba730: ; 0x021BA730
 	ldr r0, [r0, #0x40]
 	cmp r0, #1
 	beq _021BA740
-	bl sub_0207C774
+	bl OS_Terminate
 _021BA740:
 	mov r0, #3
 	bl ovy182_21b9be4
@@ -45899,7 +45899,7 @@ _021BAC82:
 	bl ovy182_21ba668
 	pop {r3, pc}
 _021BAC88:
-	bl sub_0207C774
+	bl OS_Terminate
 _021BAC8C:
 	pop {r3, pc}
 	nop
@@ -46593,7 +46593,7 @@ ovy182_21bb18c: ; 0x021BB18C
 	bl sub_02070EA0
 	cmp r0, #0
 	bne _021BB1B4
-	bl sub_0207C774
+	bl OS_Terminate
 _021BB1B4:
 	blx sub_0207A208
 	ldr r4, _021BB284 ; =0x021C418C
@@ -46624,7 +46624,7 @@ _021BB1B4:
 	bl sub_02070920
 	cmp r0, #0
 	bne _021BB200
-	bl sub_0207C774
+	bl OS_Terminate
 _021BB200:
 	ldr r4, _021BB284 ; =0x021C418C
 	ldr r1, _021BB290 ; =ovy182_21bb2f8
@@ -46648,7 +46648,7 @@ _021BB200:
 	bl sub_02071E24
 	cmp r0, #0
 	bne _021BB234
-	bl sub_0207C774
+	bl OS_Terminate
 _021BB234:
 	ldr r5, _021BB284 ; =0x021C418C
 	mov r1, #0
@@ -46819,7 +46819,7 @@ ovy182_21bb37c: ; 0x021BB37C
 	bl sub_02070EA0
 	cmp r0, #0
 	bne _021BB3AA
-	bl sub_0207C774
+	bl OS_Terminate
 _021BB3AA:
 	add r0, sp, #4
 	bl sub_02070EAC
@@ -47191,7 +47191,7 @@ _021BB668:
 	cmp r4, r0
 	bne _021BB67C
 _021BB678:
-	bl sub_0207C774
+	bl OS_Terminate
 _021BB67C:
 	ldr r0, [sp, #4]
 	bl sub_02079E70
@@ -47728,7 +47728,7 @@ ovy182_21bba00: ; 0x021BBA00
 	ldrb r0, [r5, #2]
 	cmp r6, r0
 	bne _021BBA24
-	bl sub_0207C774
+	bl OS_Terminate
 _021BBA24:
 	ldrb r0, [r5, #3]
 	lsl r0, r0, #2
@@ -49155,7 +49155,7 @@ ovy182_21bc468: ; 0x021BC468
 	cmp r0, #0
 	str r0, [r1]
 	bne _021BC48E
-	bl sub_0207C774
+	bl OS_Terminate
 _021BC48E:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -49190,7 +49190,7 @@ ovy182_21bc4a8: ; 0x021BC4A8
 	bl sub_0205EF80
 	add r4, r0, #0
 	bne _021BC4CA
-	bl sub_0207C774
+	bl OS_Terminate
 _021BC4CA:
 	add r0, r6, #0
 	bl sub_02079E70
@@ -49271,7 +49271,7 @@ ovy182_21bc544: ; 0x021BC544
 	bl sub_0207E180
 	cmp r0, #0
 	bne _021BC562
-	bl sub_0207C774
+	bl OS_Terminate
 _021BC562:
 	add r0, sp, #0
 	bl sub_0207E1FC
@@ -49287,7 +49287,7 @@ _021BC562:
 	bl sub_0207E750
 	cmp r0, #0
 	beq _021BC58A
-	bl sub_0207C774
+	bl OS_Terminate
 _021BC58A:
 	bl ovy182_21bc5bc
 	add sp, #8
@@ -50546,7 +50546,7 @@ _021BCE96:
 	cmp r4, r0
 	bne _021BCEAC
 _021BCEA8:
-	bl sub_0207C774
+	bl OS_Terminate
 _021BCEAC:
 	ldrh r1, [r7, #8]
 	ldr r0, [sp, #4]

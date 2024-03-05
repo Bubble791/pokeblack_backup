@@ -977,7 +977,7 @@ sub_0203A130: ; 0x0203A130
 	cmp r4, #0
 	bne _0203A158
 	bl sub_0203A098
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A158:
 	pop {r4, pc}
 	.align 2, 0
@@ -1034,19 +1034,19 @@ _0203A1A6: ; jump table
 	.short _0203A1C4 - _0203A1A6 - 2 ; case 4
 	.short _0203A1CA - _0203A1A6 - 2 ; case 5
 _0203A1B2:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A1B8:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A1BE:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A1C4:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A1CA:
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A1CE:
 	pop {r3, pc}
 	thumb_func_end sub_0203A194
@@ -1067,10 +1067,10 @@ sub_0203A1D0: ; 0x0203A1D0
 	beq _0203A1F6
 	pop {r4, pc}
 _0203A1F0:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r4, pc}
 _0203A1F6:
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A1FA:
 	pop {r4, pc}
 	thumb_func_end sub_0203A1D0
@@ -1092,7 +1092,7 @@ sub_0203A1FC: ; 0x0203A1FC
 	add r0, r6, #0
 	add r1, r5, #0
 	bl sub_0203A354
-	bl sub_0207C774
+	bl OS_Terminate
 	b _0203A248
 _0203A226:
 	add r2, sp, #0x18
@@ -1130,7 +1130,7 @@ sub_0203A25C: ; 0x0203A25C
 	bl sub_02039EB0
 	cmp r0, #0
 	bne _0203A26A
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A26A:
 	pop {r3, pc}
 	thumb_func_end sub_0203A25C
@@ -1158,13 +1158,13 @@ _0203A28A: ; jump table
 	.short _0203A2A6 - _0203A28A - 2 ; case 4
 	.short _0203A2A6 - _0203A28A - 2 ; case 5
 _0203A296:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A29C:
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, pc}
 _0203A2A2:
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A2A6:
 	pop {r3, pc}
 	thumb_func_end sub_0203A26C
@@ -1175,7 +1175,7 @@ sub_0203A2A8: ; 0x0203A2A8
 	bl sub_02039F60
 	add r4, r0, #0
 	bne _0203A2B6
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A2B6:
 	add r0, r4, #0
 	pop {r4, pc}
@@ -1195,7 +1195,7 @@ sub_0203A2BC: ; 0x0203A2BC
 	beq _0203A2DA
 	cmp r0, #3
 	bne _0203A2DA
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A2DA:
 	add r0, r4, #0
 	pop {r4, pc}
@@ -1483,7 +1483,7 @@ sub_0203A4DC: ; 0x0203A4DC
 	bl sub_0203A0A4
 	cmp r0, #0
 	bne _0203A4EA
-	bl sub_0207C774
+	bl OS_Terminate
 _0203A4EA:
 	pop {r3, pc}
 	thumb_func_end sub_0203A4DC
@@ -2361,7 +2361,7 @@ sub_0203AA60: ; 0x0203AA60
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _0203AA6E
-	blx sub_0207C7E8
+	blx OS_Halt
 _0203AA6E:
 	add r0, r4, #0
 	bl sub_0203A24C
@@ -7137,7 +7137,7 @@ _0203CCF2:
 	mov r1, #0
 	add r2, r4, #0
 	bl GX_LoadBG0Char
-	bl sub_0207C774
+	bl OS_Terminate
 	pop {r3, r4, r5, pc}
 	nop
 _0203CD2C: .word 0x02141874
@@ -7998,7 +7998,7 @@ sub_0203D2D8: ; 0x0203D2D8
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _0203D2E6
-	bl sub_0207C774
+	bl OS_Terminate
 _0203D2E6:
 	ldr r0, _0203D2EC ; =0x02141884
 	ldr r0, [r0]
@@ -23058,7 +23058,7 @@ sub_02044098: ; 0x02044098
 	add r4, sp, #0x1c
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_0207C6D0
+	bl OS_GetLowEntropyData
 	add r6, sp, #0x3c
 	add r0, r6, #0
 	bl MATH_SHA1Init
@@ -29517,7 +29517,7 @@ sub_02046F3C: ; 0x02046F3C
 	bl sub_020602A8
 	cmp r0, #0
 	bne _02046F88
-	bl sub_0207C774
+	bl OS_Terminate
 	add sp, #0xc
 	mov r0, #0
 	pop {r4, r5, r6, r7, pc}
@@ -33520,7 +33520,7 @@ sub_02048B90: ; 0x02048B90
 	bl sub_02070DB4
 	b _02048BFE
 _02048BFA:
-	bl sub_0207C774
+	bl OS_Terminate
 _02048BFE:
 	ldr r0, _02048C20 ; =0x02141920
 	mov r1, #0

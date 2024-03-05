@@ -694,7 +694,7 @@
 .public sub_02070DB4
 .public sub_021A3EA4
 .public sub_021A3D18
-.public sub_0207C774
+.public OS_Terminate
 .public MIi_CpuClear16
 .public sub_02070DF4
 .public sub_02070E40
@@ -745,8 +745,8 @@
 .public sub_021A3D0C
 .public OS_RestoreInterrupts
 .public MI_CpuCopy8
-.public sub_0207C774
-.public sub_0207C774
+.public OS_Terminate
+.public OS_Terminate
 .public sub_0208D868
 .public sub_021A1F10
 .public sub_0207B0AC
@@ -791,7 +791,7 @@
 .public sub_02080EAC
 .public sub_02080E7C
 .public sub_0208252C
-.public sub_0207C774
+.public OS_Terminate
 .public sub_02082560
 .public sub_020815C8
 .public sub_021A2638
@@ -807,7 +807,7 @@
 .public sub_02080EAC
 .public sub_020818F8
 .public sub_02081448
-.public sub_0207C774
+.public OS_Terminate
 .public OS_GetMacAddress
 .public sub_0208D868
 .public sub_020812B8
@@ -838,14 +838,14 @@
 .public sub_021A3CF8
 .public OS_RestoreInterrupts
 .public OS_DisableInterrupts
-.public sub_0207C774
+.public OS_Terminate
 .public OS_RestoreInterrupts
 .public sub_02081774
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public sub_02081998
 .public OS_DisableInterrupts
-.public sub_0207C774
+.public OS_Terminate
 .public OS_RestoreInterrupts
 .public OS_DisableInterrupts
 .public MI_CpuCopy8

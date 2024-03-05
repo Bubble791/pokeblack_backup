@@ -408,7 +408,7 @@ sub_0207BCF4: ; 0x0207BCF4
 	cmp r0, #0
 	beq _0207BD0C
 _0207BD08:
-	bl sub_0207C774
+	bl OS_Terminate
 _0207BD0C:
 	blx OS_DisableInterrupts
 	str r0, [sp]
@@ -608,7 +608,7 @@ sub_0207BF08: ; 0x0207BF08
 	cmp r0, #0
 	beq _0207BF28
 _0207BF24:
-	bl sub_0207C774
+	bl OS_Terminate
 _0207BF28:
 	ldr r0, _0207BF60 ; =0x04000006
 	ldrh r0, [r0]

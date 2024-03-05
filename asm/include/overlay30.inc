@@ -44,7 +44,7 @@
 .public sub_0203A24C
 .public sub_02042788
 .public sub_02042E84
-.public sub_0207C774
+.public OS_Terminate
 .public MI_CpuCopy8
 .public sub_02042E84
 .public sub_0203CB80

@@ -525,7 +525,7 @@ _0207EFA6:
 	beq _0207EFBA
 	bl sub_0206FFBC
 _0207EFBA:
-	blx sub_0207C7E8
+	blx OS_Halt
 	b _0207EFBA
 	.align 2, 0
 _0207EFC0: .word 0x00051D23
@@ -946,7 +946,7 @@ _0207F294:
 	cmp r0, #0
 	bne _0207F2C6
 _0207F2BC:
-	blx sub_0207C7E8
+	blx OS_Halt
 	ldr r0, [r6, #8]
 	cmp r0, #0
 	beq _0207F2BC
