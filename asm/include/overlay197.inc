@@ -29,7 +29,7 @@
 .public sub_02017144
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_0203CDC8
 .public sub_02005D8C
 .public sub_021BD0C8

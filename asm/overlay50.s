@@ -800,7 +800,7 @@ _021E5E2A:
 	bl sub_021E6996
 _021E5E2E:
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 	bl _021E6998
 _021E5E38:
 	ldr r0, [sp, #0x40]

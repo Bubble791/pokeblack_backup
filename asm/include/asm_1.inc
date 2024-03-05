@@ -248,7 +248,7 @@
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public sub_0206F890
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_02079BB0
 .public MI_CpuFill8
 .public sub_0207E13C
@@ -1973,7 +1973,7 @@
 .public sub_0207A868
 .public sub_0207A89C
 .public OS_GetBootType
-.public sub_0207C9FC
+.public PXI_SetFifoRecvCallback
 .public sub_0207A998
 .public sub_0207A8E4
 .public sub_0207A868
@@ -1984,9 +1984,9 @@
 .public sub_0207B040
 .public sub_0207B0D0
 .public sub_0207A8E4
-.public sub_0207CA48
+.public PXI_IsCallbackReady
 .public OS_SpinWaitSysCycles
-.public sub_0207CA48
+.public PXI_IsCallbackReady
 .public sub_0207B0D0
 .public sub_0207CA6C
 .public sub_0207CA6C
@@ -2002,8 +2002,8 @@
 .public sub_0207B79C
 .public OS_GetBootType
 .public sub_02767520
-.public sub_0207C94C
-.public sub_0207C9FC
+.public PXI_Init
+.public PXI_SetFifoRecvCallback
 .public sub_0207EF8C
 .public MI_StopAllDma
 .public sub_02769578
@@ -3077,7 +3077,7 @@
 .public sub_02042788
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_0203A15C
@@ -3328,7 +3328,7 @@
 .public sub_0203A1D0
 .public sub_0203A1D0
 .public sub_0203A1D0
-.public sub_0207C29C
+.public OS_ResetSystem
 .public MI_CpuFill8
 .public sub_0203A970
 .public sub_0203D594
@@ -11826,7 +11826,7 @@
 .public sub_02079E94
 .public sub_02079EB8
 .public sub_02079ED8
-.public sub_02079F44
+.public OSi_SendToPxi
 .public sub_02079F5C
 .public sub_02079FE4
 .public sub_0207A040
@@ -11973,10 +11973,10 @@
 .public sub_0207C7F4
 .public sub_0207C800
 .public sub_0207C864
-.public sub_0207C94C
+.public PXI_Init
 .public sub_0207C954
-.public sub_0207C9FC
-.public sub_0207CA48
+.public PXI_SetFifoRecvCallback
+.public PXI_IsCallbackReady
 .public sub_0207CA6C
 .public sub_0207CAD4
 .public sub_0207CB88
@@ -12245,7 +12245,7 @@
 .public sub_0207AB04
 .public sub_0207002C
 .public sub_0207006C
-.public sub_0207C248
+.public OS_InitReset
 .public sub_0207B104
 .public sub_0207C888
 .public sub_0207B86C

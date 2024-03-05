@@ -832,7 +832,7 @@
 .public MI_CpuFill8
 .public sub_021A2238
 .public OS_RestoreInterrupts
-.public sub_0207CA48
+.public PXI_IsCallbackReady
 .public sub_02081424
 .public OS_DisableInterrupts
 .public sub_021A3CF8

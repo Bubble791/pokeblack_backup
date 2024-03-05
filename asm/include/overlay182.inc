@@ -8,7 +8,7 @@
 .public sub_0203A15C
 .public sub_020116C0
 .public sub_0203CE0C
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_02011778
 .public sub_0203CDC8
 .public sub_0203A1D0

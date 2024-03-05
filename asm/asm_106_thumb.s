@@ -87,10 +87,10 @@ sub_0207EBB8: ; 0x0207EBB8
 	str r1, [r0, #0x34]
 	ldr r0, _0207EC10 ; =0x02FFF684
 	str r1, [r0]
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r0, #8
 	mov r1, #1
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	bne _0207EBF8
 	mov r5, #0x64
@@ -101,13 +101,13 @@ _0207EBE6:
 	bl sub_020044F6
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _0207EBE6
 _0207EBF8:
 	ldr r1, _0207EC14 ; =0x0207EC1D
 	mov r0, #8
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r0, _0207EC18 ; =0x02FFFC3C
 	ldr r1, [r0]
 	ldr r0, _0207EC0C ; =0x0214E240
@@ -1508,7 +1508,7 @@ sub_0207F6CC: ; 0x0207F6CC
 	push {r3, lr}
 	ldr r1, _0207F6E0 ; =0x0207F711
 	mov r0, #0x17
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r0, _0207F6E4 ; =0x0214E280
 	mov r1, #0
 	str r1, [r0]
@@ -3841,11 +3841,11 @@ _020807FE:
 	mov r0, #6
 	pop {r4, r5, r6, r7, pc}
 _02080810:
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r0, #0xa
 	mov r1, #1
 	mov r7, #1
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	bne _0208082E
 	ldr r0, [sp, #8]
@@ -3939,7 +3939,7 @@ _020808D4:
 	blt _020808BA
 	ldr r1, _02080904 ; =0x02080B01
 	mov r0, #0xa
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r0, _020808F4 ; =0x0214E298
 	mov r1, #1
 	strh r1, [r0]
@@ -3978,7 +3978,7 @@ _02080922:
 	bl sub_02080DA0
 	mov r0, #0xa
 	add r1, r4, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r0, _0208094C ; =0x0214E298
 	str r4, [r0, #4]
 	strh r4, [r0]

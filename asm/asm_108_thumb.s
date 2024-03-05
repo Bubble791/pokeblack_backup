@@ -256,10 +256,10 @@ sub_020827D0: ; 0x020827D0
 	bl sub_02082624
 	mov r0, #0xd
 	mov r1, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r1, _020827F0 ; =0x020827F5
 	mov r0, #0xd
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	mov r0, #1
 	bl sub_020827A0
 	pop {r3, pc}

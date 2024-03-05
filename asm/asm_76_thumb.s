@@ -18,18 +18,18 @@ _02079210:
 	mov r2, #1
 	str r2, [r1]
 	blx OS_RestoreInterrupts
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r5, #4
 	mov r4, #1
 _02079220:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _02079220
 	ldr r1, _02079270 ; =0x02079945
 	add r0, r5, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	ldr r1, _02079274 ; =0x0214C120
 	mov r0, #0
 	mov r2, #0x58

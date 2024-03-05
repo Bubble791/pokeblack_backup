@@ -368,7 +368,7 @@ _0207C7A4:
 	blx sub_0207C7D4
 _0207C7B8:
 	mov r0, #0x20
-	bl sub_02079F44
+	bl OSi_SendToPxi
 _0207C7BE:
 	bl sub_0207C7DC
 	pop {r4, pc}

@@ -75,7 +75,7 @@ Static main
     Object asm/asm_86_thumb.o
     Object lib/NitroSDK/asm/os_system.o
     Object lib/NitroSDK/asm/os_systemWork.o
-    Object asm/asm_89_arm.o
+    Object lib/NitroSDK/asm/os_reset.o
     Object asm/asm_90_thumb.o
     Object asm/asm_91_arm.o
     Object asm/asm_92_thumb.o
@@ -135,7 +135,6 @@ Static main
 	Object lib/NitroSDK/src/os/os_tick.o
 	Object lib/NitroSDK/src/os/os_alarm.o
 	Object lib/NitroSDK/src/os/os_valarm.o
-	Object lib/NitroSDK/src/os/os_reset.o
 	Object lib/NitroSDK/src/os/os_ownerInfo.o
 	Object lib/NitroSDK/src/os/os_vramExclusive.o
 	Object lib/NitroSDK/src/os/os_entropy.o
@@ -149,7 +148,6 @@ Autoload ITCM
 {
 	Address 0x01FF8000
 	Object lib/NitroSDK/src/os/os_irqHandler.o (.itcm)
-	Object lib/NitroSDK/src/os/os_reset.o (.itcm)
 	Object lib/NitroSDK/asm/mi_dma.o (.itcm)
 	Object lib/NitroSDK/asm/mi_dma_gxcommand.o (.itcm)
 	Object lib/asm/nitro.o (.itcm)

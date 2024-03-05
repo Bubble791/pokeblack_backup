@@ -14,7 +14,7 @@ _0207B128: .word sub_0207B12C
 	thumb_func_start sub_0207B12C
 sub_0207B12C: ; 0x0207B12C
 	push {r3, lr}
-	bl sub_0207C94C
+	bl PXI_Init
 	bl sub_0207B18C
 	bl sub_02079FE4
 	bl sub_0207B23C
@@ -25,7 +25,7 @@ sub_0207B12C: ; 0x0207B12C
 	bl sub_0207BE40
 	bl sub_0207C4FC
 	bl sub_0207A4A4
-	blx sub_0207C248
+	blx OS_InitReset
 	bl sub_0200548C
 	bl sub_0206EDE0
 	bl MI_InitWramManager

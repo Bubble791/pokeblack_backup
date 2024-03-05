@@ -7950,7 +7950,7 @@ _021A0F52:
 	blo _021A0F3A
 	bl sub_020056C8
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 _021A0F6A:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}

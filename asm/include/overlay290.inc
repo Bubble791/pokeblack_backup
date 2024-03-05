@@ -28,7 +28,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_02017144
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_0203A24C
 .public sub_0203AB10
 .public sub_0203A1D0

@@ -13376,7 +13376,7 @@ _021A36B8:
 	blx OS_RestoreInterrupts
 	mov r0, #0xf
 	mov r1, #1
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	ldr r2, [r4, #0x10]
 	ldr r1, _021A3790 ; =0x000074C8
 	str r0, [r2, r1]

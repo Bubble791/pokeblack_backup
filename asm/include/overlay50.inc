@@ -81,7 +81,7 @@
 .public sub_021E6772
 .public sub_021E675E
 .public sub_021E6996
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_0200E0F4
 .public sub_0200E114
 .public sub_021804F0

@@ -292,8 +292,8 @@ _02079F04:
 	.byte 0x41, 0x80, 0x02, 0xF0, 0x1F, 0xFC, 0x08, 0xBD, 0x02, 0xF0, 0x1C, 0xFC, 0x08, 0xBD, 0xC0, 0x46
 	.byte 0x08, 0xC2, 0x14, 0x02
 
-	thumb_func_start sub_02079F44
-sub_02079F44: ; 0x02079F44
+	thumb_func_start OSi_SendToPxi
+OSi_SendToPxi: ; 0x02079F44
 	push {r4, r5, r6, lr}
 	lsl r5, r0, #8
 	mov r4, #0xc
@@ -306,7 +306,7 @@ _02079F4C:
 	cmp r0, #0
 	bne _02079F4C
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_02079F44
+	thumb_func_end OSi_SendToPxi
 
 	thumb_func_start sub_02079F5C
 sub_02079F5C: ; 0x02079F5C

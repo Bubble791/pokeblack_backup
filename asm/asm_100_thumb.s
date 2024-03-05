@@ -1429,13 +1429,13 @@ sub_0207DA84: ; 0x0207DA84
 	ldr r1, _0207DABC ; =0x0207DA6D
 	mov r0, #7
 	mov r4, #7
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	bl sub_0207DB08
 	cmp r0, #0
 	beq _0207DABA
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	bne _0207DABA
 	mov r5, #0x32
@@ -1445,7 +1445,7 @@ _0207DAA8:
 	bl OS_SpinWaitSysCycles
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _0207DAA8
 _0207DABA:
@@ -2219,7 +2219,7 @@ sub_0207E13C: ; 0x0207E13C
 	bne _0207E176
 	mov r0, #1
 	strh r0, [r4]
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r0, #0
 	strh r0, [r4, #0x10]
 	str r0, [r4, #4]
@@ -2233,12 +2233,12 @@ sub_0207E13C: ; 0x0207E13C
 _0207E162:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _0207E162
 	ldr r1, _0207E17C ; =0x0207DFD1
 	add r0, r5, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 _0207E176:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -3069,13 +3069,13 @@ sub_0207E75C: ; 0x0207E75C
 	mov r1, #0
 	str r1, [r0, #4]
 	str r1, [r0, #8]
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r4, #9
 	mov r5, #1
 _0207E778:
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _0207E778
 	ldr r0, _0207E798 ; =0x02FFFF90
@@ -3083,7 +3083,7 @@ _0207E778:
 	str r1, [r0]
 	ldr r1, _0207E79C ; =0x0207E979
 	add r0, r4, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 _0207E792:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

@@ -75,7 +75,7 @@ ovy182_21a4998: ; 0x021A4998
 ovy182_21a49a4: ; 0x021A49A4
 	push {r3, lr}
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy182_21a49a4

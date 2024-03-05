@@ -29753,7 +29753,7 @@ sub_020131F0: ; 0x020131F0
 	mov r0, #0x67
 	bl sub_0203A1D0
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 	mov r0, #1
 	pop {r4, pc}
 	thumb_func_end sub_020131F0
@@ -37703,7 +37703,7 @@ sub_02016888: ; 0x02016888
 	mov r0, #5
 	bl sub_0203A1D0
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 	mov r0, #1
 	pop {r4, pc}
 	thumb_func_end sub_02016888

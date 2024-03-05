@@ -868,7 +868,7 @@
 .public sub_020076A4
 .public sub_02007534
 .public sub_020056C8
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_02027ACC
 .public sub_021A1170
 .public sub_02046BE0

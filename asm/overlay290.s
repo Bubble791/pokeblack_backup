@@ -175,7 +175,7 @@ _021FB9EC:
 	cmp r0, #1
 	beq _021FB9F8
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 _021FB9F8:
 	ldr r0, [r4, #0x14]
 	cmp r0, #0

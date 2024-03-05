@@ -30,14 +30,14 @@ _0206FED4: .word 0x0214BAAC
 	thumb_func_start sub_0206FED8
 sub_0206FED8: ; 0x0206FED8
 	push {r3, r4, r5, lr}
-	bl sub_0207C94C
+	bl PXI_Init
 	ldr r4, _0206FEF4 ; =0x0214BD40
 	mov r5, #0
 	str r5, [r4]
 	ldr r1, _0206FEF8 ; =sub_0206FEFC
 	mov r0, #0xe
 	str r5, [r4, #4]
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 	str r5, [r4, #8]
 	pop {r3, r4, r5, pc}
 	nop

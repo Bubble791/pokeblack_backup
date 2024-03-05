@@ -124,7 +124,7 @@ _021BEFBA:
 	ldr r0, [r4, #0xc]
 	bl sub_0203A24C
 	add r0, r7, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 _021BEFF0:
 	mov r0, #0x2a
 	lsl r0, r0, #4

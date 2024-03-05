@@ -2029,14 +2029,6 @@ _020D653C:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end SND_GetWaveDataAddress
 
-	arm_func_start PXI_Init
-PXI_Init: ; 0x020D6548
-	ldr ip, _020D6550 ; =PXI_InitFifo
-	bx ip
-	.align 2, 0
-_020D6550: .word PXI_InitFifo
-	arm_func_end PXI_Init
-
 	arm_func_start PXI_InitFifo
 PXI_InitFifo: ; 0x020D6554
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2111,44 +2103,6 @@ _020D6648: .word 0x04000184
 _020D664C: .word PXIi_HandlerRecvFifoNotEmpty
 _020D6650: .word 0x04000180
 	arm_func_end PXI_InitFifo
-
-	arm_func_start PXI_SetFifoRecvCallback
-PXI_SetFifoRecvCallback: ; 0x020D6654
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r4, r0
-	mov r5, r1
-	bl OS_DisableInterrupts
-	ldr r1, _020D6698 ; =_021E35A8
-	ldr r3, _020D669C ; =0x027FFC00
-	str r5, [r1, r4, lsl #2]
-	cmp r5, #0
-	ldrne r2, [r3, #0x388]
-	mov r1, #1
-	orrne r1, r2, r1, lsl r4
-	mvneq r1, r1, lsl r4
-	ldreq r2, [r3, #0x388]
-	andeq r1, r2, r1
-	str r1, [r3, #0x388]
-	bl OS_RestoreInterrupts
-	ldmia sp!, {r3, r4, r5, pc}
-	.align 2, 0
-_020D6698: .word _021E35A8
-_020D669C: .word 0x027FFC00
-	arm_func_end PXI_SetFifoRecvCallback
-
-	arm_func_start PXI_IsCallbackReady
-PXI_IsCallbackReady: ; 0x020D66A0
-	ldr r2, _020D66C0 ; =0x027FFC00
-	mov r3, #1
-	add r1, r2, r1, lsl #2
-	ldr r1, [r1, #0x388]
-	tst r1, r3, lsl r0
-	moveq r3, #0
-	mov r0, r3
-	bx lr
-	.align 2, 0
-_020D66C0: .word 0x027FFC00
-	arm_func_end PXI_IsCallbackReady
 
 	arm_func_start PXI_SendWordByFifo
 PXI_SendWordByFifo: ; 0x020D66C4

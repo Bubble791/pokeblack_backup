@@ -231,7 +231,7 @@ _021B55BC:
 	mov r0, #0x1d
 	bl sub_0203A1D0
 	mov r0, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 	ldr r0, _021B5644 ; =0x000000BD
 	bl sub_0203CDC8
 	bl sub_02005D8C

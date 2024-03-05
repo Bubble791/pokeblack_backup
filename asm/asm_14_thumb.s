@@ -8328,7 +8328,7 @@ _0203D51A:
 	ldrb r0, [r0]
 	bl sub_0203D420
 	add r0, r5, #0
-	blx sub_0207C29C
+	blx OS_ResetSystem
 _0203D53A:
 	add r0, r6, #0
 	add r1, r6, #0

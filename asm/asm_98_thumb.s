@@ -3,13 +3,13 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_0207C94C
-sub_0207C94C: ; 0x0207C94C
+	thumb_func_start PXI_Init
+PXI_Init: ; 0x0207C94C
 	ldr r3, _0207C950 ; =sub_0207C954
 	bx r3
 	.align 2, 0
 _0207C950: .word sub_0207C954
-	thumb_func_end sub_0207C94C
+	thumb_func_end PXI_Init
 
 	thumb_func_start sub_0207C954
 sub_0207C954: ; 0x0207C954
@@ -95,8 +95,8 @@ _0207C9F4: .word 0x04000184
 _0207C9F8: .word sub_0207CAD4
 	thumb_func_end sub_0207C954
 
-	thumb_func_start sub_0207C9FC
-sub_0207C9FC: ; 0x0207C9FC
+	thumb_func_start PXI_SetFifoRecvCallback
+PXI_SetFifoRecvCallback: ; 0x0207C9FC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -133,10 +133,10 @@ _0207CA36:
 	nop
 _0207CA40: .word 0x0214C5E8
 _0207CA44: .word 0x02FFFC00
-	thumb_func_end sub_0207C9FC
+	thumb_func_end PXI_SetFifoRecvCallback
 
-	thumb_func_start sub_0207CA48
-sub_0207CA48: ; 0x0207CA48
+	thumb_func_start PXI_IsCallbackReady
+PXI_IsCallbackReady: ; 0x0207CA48
 	push {r3, r4}
 	mov r2, #1
 	lsl r2, r0
@@ -156,7 +156,7 @@ _0207CA62:
 	bx lr
 	.align 2, 0
 _0207CA68: .word 0x02FFFC00
-	thumb_func_end sub_0207CA48
+	thumb_func_end PXI_IsCallbackReady
 
 	thumb_func_start sub_0207CA6C
 sub_0207CA6C: ; 0x0207CA6C
@@ -324,18 +324,18 @@ sub_0207CB88: ; 0x0207CB88
 	str r1, [r0, #0x20]
 	str r1, [r0, #0xc]
 	str r1, [r0, #0x10]
-	bl sub_0207C94C
+	bl PXI_Init
 	mov r5, #5
 	mov r4, #1
 _0207CBAA:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207CA48
+	bl PXI_IsCallbackReady
 	cmp r0, #0
 	beq _0207CBAA
 	ldr r1, _0207CBC4 ; =0x0207CD21
 	add r0, r5, #0
-	bl sub_0207C9FC
+	bl PXI_SetFifoRecvCallback
 _0207CBBE:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

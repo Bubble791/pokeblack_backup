@@ -965,7 +965,7 @@
 .public sub_02042788
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0207C29C
+.public OS_ResetSystem
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_0203A15C
@@ -1216,7 +1216,7 @@
 .public sub_0203A1D0
 .public sub_0203A1D0
 .public sub_0203A1D0
-.public sub_0207C29C
+.public OS_ResetSystem
 .public MI_CpuFill8
 .public sub_0203A970
 .public sub_0203D594
