@@ -492,8 +492,8 @@
 .public sub_02021A18
 .public sub_02022DA8
 .public sub_02046CFC
-.public sub_02074E78
-.public sub_02074F24
+.public G3X_SetFog
+.public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
 .public sub_0203A1FC

@@ -208,10 +208,10 @@
 .public sub_02067B9C
 .public sub_02048F44
 .public sub_02044528
-.public sub_02074E78
-.public sub_02074F14
-.public sub_02074F24
-.public sub_02074F04
+.public G3X_SetFog
+.public G3X_SetFogTable
+.public G3X_SetClearColor
+.public G3X_SetEdgeColorTable
 .public sub_02049214
 .public sub_0204F0F8
 .public sub_0204F224
@@ -246,7 +246,7 @@
 .public sub_02018F40
 .public sub_02018B94
 .public sub_0204A928
-.public sub_02074F04
+.public G3X_SetEdgeColorTable
 .public sub_02018F44
 .public sub_021C3C70
 .public sub_0204F224
@@ -368,9 +368,9 @@
 .public sub_0206578C
 .public sub_021B4340
 .public sub_021BB674
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_021BB674
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_020173AC
 .public sub_02015A90
 .public sub_021863C4
@@ -3641,8 +3641,8 @@
 .public sub_0203A1FC
 .public sub_0219769C
 .public sub_021976CC
-.public sub_02074E78
-.public sub_02074F14
+.public G3X_SetFog
+.public G3X_SetFogTable
 .public sub_0207866C
 .public sub_0208D65C
 .public sub_0208D65C
@@ -3670,7 +3670,7 @@
 .public sub_0206592C
 .public sub_0206594C
 .public sub_021975F4
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_0204AA04
 .public sub_0208D868
 .public sub_0204A928
@@ -10230,7 +10230,7 @@
 .public sub_02167060
 .public sub_021812F8
 .public sub_02044C98
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_021804A0
 .public sub_021975D4
 .public sub_0218049C

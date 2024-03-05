@@ -227,7 +227,7 @@ ovy151_21f5f54: ; 0x021F5F54
 	ldr r2, _021F5F7C ; =0x00007FFF
 	mov r1, #0x1f
 	str r3, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	add r0, r4, #0
 	bl sub_021F5A58
 	add sp, #4

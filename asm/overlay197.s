@@ -5995,13 +5995,13 @@ ovy197_21b8348: ; 0x021B8348
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	mov r0, #0
 	mov r1, #0
 	lsr r2, r5, #0x11
 	mov r3, #0x3f
 	str r4, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _021B83E0 ; =0xBFFF0000
 	ldr r0, _021B83E4 ; =0x04000580
 	str r1, [r0]

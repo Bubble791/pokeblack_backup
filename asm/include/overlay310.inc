@@ -1263,9 +1263,9 @@
 .public sub_021A3410
 .public sub_021A341C
 .public sub_021A6158
-.public sub_02074C9C
-.public sub_02074DC0
-.public sub_02074F04
+.public G3X_Init
+.public G3X_InitMtxStack
+.public G3X_SetEdgeColorTable
 .public sub_02044710
 .public sub_02044BB8
 .public sub_0204476C

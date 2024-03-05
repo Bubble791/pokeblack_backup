@@ -493,7 +493,7 @@ _021DDE3A:
 	mul r1, r0
 	ldr r0, [sp, #0x24]
 	add r0, r0, r1
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	ldr r0, [sp, #0x24]
 	bl sub_0203A24C
 	add r0, r4, #0

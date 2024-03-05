@@ -5617,7 +5617,7 @@
 .public sub_02044710
 .public sub_02048D28
 .public sub_02049214
-.public sub_02074E78
+.public G3X_SetFog
 .public G2x_SetBlendAlpha_
 .public sub_0204B6A8
 .public sub_021DF138

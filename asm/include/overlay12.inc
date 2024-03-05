@@ -3431,7 +3431,7 @@
 .public sub_02067D1C
 .public sub_02067D1C
 .public sub_02067B9C
-.public sub_0207504C
+.public G3X_GetBoxTestResult
 .public sub_02049430
 .public sub_0204AC0C
 .public sub_0204ABA4

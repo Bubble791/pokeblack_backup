@@ -2091,20 +2091,20 @@ ovy36_2180690: ; 0x02180690
 	strh r0, [r5]
 	mov r0, #0
 	mov r1, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	ldr r0, _02180710 ; =0x04000358
 	lsr r6, r6, #0x11
 	str r6, [r0]
 	ldr r0, _02180714 ; =0x021C9F5C
-	bl sub_02074F14
+	bl G3X_SetFogTable
 	mov r0, #0
 	mov r1, #0x1f
 	add r2, r6, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r0, _02180718 ; =0x021C9F00
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	ldrh r0, [r5]
 	sub r4, #0x1c
 	ldr r1, _0218071C ; =0xBFFF0000
@@ -2467,7 +2467,7 @@ _021809D8:
 	ldr r0, _02180A08 ; =0x021E57A0
 	strh r1, [r0, #0xe]
 	add r0, r4, #0
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021809F4: .word 0x04000060
@@ -3478,7 +3478,7 @@ ovy36_2181238: ; 0x02181238
 	mov r1, #0
 	mov r3, #0
 	str r0, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	bl sub_021BB674
 	mov r0, #0x4d
 	lsl r0, r0, #2
@@ -3500,7 +3500,7 @@ ovy36_2181264: ; 0x02181264
 	ldr r2, _0218128C ; =0x00007FFF
 	mov r1, #0x1f
 	str r3, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	mov r0, #0x53
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
@@ -50686,7 +50686,7 @@ ovy36_21975a0: ; 0x021975A0
 	ldrb r1, [r4, #1]
 	ldrb r2, [r4, #2]
 	ldr r3, [r4, #4]
-	bl sub_02074E78
+	bl G3X_SetFog
 	ldrb r0, [r4, #3]
 	ldrh r1, [r4, #8]
 	lsl r0, r0, #0x10
@@ -50695,7 +50695,7 @@ ovy36_21975a0: ; 0x021975A0
 	str r1, [r0]
 	add r0, r4, #0
 	add r0, #0xc
-	bl sub_02074F14
+	bl G3X_SetFogTable
 	mov r0, #0
 	str r0, [r4, #0x40]
 _021975CE:
@@ -51476,7 +51476,7 @@ _02197B30:
 	mov r1, #0x1f
 	mov r3, #0
 	str r5, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 _02197B74:
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
@@ -127093,7 +127093,7 @@ _021BBD0C:
 	mov r1, #0x1f
 	mov r3, #0
 	str r0, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 _021BBD22:
 	add r0, r7, #0
 	bl sub_021804A0

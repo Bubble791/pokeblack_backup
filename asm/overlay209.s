@@ -767,7 +767,7 @@ ovy209_21ba74c: ; 0x021BA74C
 	str r0, [r5, #0x18]
 	bl sub_0204A638
 	ldr r0, _021BA928 ; =0x021C2C54
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	ldr r4, _021BA92C ; =0x04000060
 	ldr r0, _021BA930 ; =0x0000CFDF
 	ldrh r1, [r4]
@@ -10122,7 +10122,7 @@ ovy209_21beecc: ; 0x021BEECC
 	str r0, [r1]
 	bl sub_0204A638
 	ldr r0, _021BF0E4 ; =0x021C2E08
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	add r0, r4, #0
 	add r0, #0x60
 	ldrh r2, [r0]

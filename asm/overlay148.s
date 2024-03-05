@@ -85,7 +85,7 @@ ovy148_21f5a58: ; 0x021F5A58
 	ldr r2, _021F5AD8 ; =0x00001555
 	str r4, [sp, #0xc]
 	bl G3i_PerspectiveW_
-	bl sub_02074D54
+	bl G3X_Reset
 	ldr r3, _021F5ADC ; =0x021F5D78
 	add r2, sp, #0x28
 	ldmia r3!, {r0, r1}

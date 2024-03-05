@@ -6,423 +6,538 @@
 
 	.text
 
-	arm_func_start G3X_Init
-G3X_Init: ; 0x020CF564
-	stmdb sp!, {r3, lr}
+	thumb_func_start G3X_Init
+G3X_Init: ; 0x02074C9C
+	push {r4, r5, r6, lr}
 	bl G3X_ClearFifo
-	ldr r1, _020CF650 ; =0x04000504
-	mov r0, #0
-	str r0, [r1]
-_020CF578:
-	ldr r0, [r1, #0xfc]
-	tst r0, #0x8000000
-	bne _020CF578
-	ldr r0, _020CF654 ; =0x04000060
-	mov r2, #0
-	strh r2, [r0]
-	str r2, [r1, #0xfc]
-	str r2, [r0, #-0x50]
-	ldrh ip, [r0]
-	ldr r2, _020CF658 ; =0xFFFFCFFD
-	ldr r3, _020CF65C ; =0x0000CFFB
-	orr ip, ip, #0x2000
-	strh ip, [r0]
-	ldrh ip, [r0]
-	orr ip, ip, #0x1000
-	strh ip, [r0]
-	ldrh ip, [r0]
-	and r2, ip, r2
-	strh r2, [r0]
-	ldrh r2, [r0]
-	bic r2, r2, #0x3000
-	orr r2, r2, #0x10
-	strh r2, [r0]
-	ldrh r2, [r0]
-	and r2, r2, r3
-	strh r2, [r0]
-	ldr r0, [r1, #0xfc]
-	orr r0, r0, #0x8000
-	str r0, [r1, #0xfc]
-	ldr r0, [r1, #0xfc]
-	bic r0, r0, #0xc0000000
-	orr r0, r0, #0x80000000
-	str r0, [r1, #0xfc]
+	ldr r0, _02074D34 ; =0x04000504
+	mov r1, #0
+	str r1, [r0]
+	mov r1, #2
+	add r0, #0xfc
+	lsl r1, r1, #0x1a
+_02074CAE:
+	ldr r2, [r0]
+	tst r2, r1
+	bne _02074CAE
+	ldr r4, _02074D38 ; =0x04000060
+	mov r5, #0
+	strh r5, [r4]
+	add r1, r4, #0
+	str r5, [r0]
+	sub r1, #0x50
+	str r5, [r1]
+	ldrh r2, [r4]
+	lsr r1, r4, #0xd
+	ldr r6, _02074D3C ; =0x3FFFFFFF
+	orr r1, r2
+	strh r1, [r4]
+	ldrh r2, [r4]
+	lsr r1, r4, #0xe
+	orr r1, r2
+	strh r1, [r4]
+	ldrh r2, [r4]
+	ldr r1, _02074D40 ; =0xFFFFCFFD
+	and r2, r1
+	strh r2, [r4]
+	ldrh r2, [r4]
+	add r1, r1, #2
+	and r2, r1
+	mov r1, #0x10
+	orr r2, r1
+	strh r2, [r4]
+	ldrh r3, [r4]
+	ldr r2, _02074D44 ; =0x0000CFFB
+	lsl r1, r1, #0xb
+	and r2, r3
+	strh r2, [r4]
+	ldr r2, [r0]
+	orr r1, r2
+	str r1, [r0]
+	ldr r1, [r0]
+	add r2, r1, #0
+	mov r1, #2
+	and r2, r6
+	lsl r1, r1, #0x1e
+	orr r1, r2
+	str r1, [r0]
 	bl G3X_InitMtxStack
-	ldr r1, _020CF660 ; =0x04000350
-	mov r2, #0
-	ldr r0, _020CF664 ; =0x00007FFF
-	str r2, [r1]
+	ldr r1, _02074D48 ; =0x04000350
+	lsr r0, r6, #0xf
+	str r5, [r1]
 	strh r0, [r1, #4]
-	strh r2, [r1, #6]
-	str r2, [r1, #8]
-	strh r2, [r1, #0xc]
-	sub r1, r1, #0x348
-	ldrh r0, [r1]
-	bic r0, r0, #3
-	strh r0, [r1]
+	strh r5, [r1, #6]
+	str r5, [r1, #8]
+	sub r4, #0x58
+	strh r5, [r1, #0xc]
+	ldrh r1, [r4]
+	mov r0, #3
+	bic r1, r0
+	strh r1, [r4]
 	bl G3X_InitTable
-	ldr r2, _020CF668 ; =0x001F0080
-	ldr r1, _020CF66C ; =0x040004A4
-	mov r0, #0
-	str r2, [r1]
-	str r0, [r1, #4]
-	str r0, [r1, #8]
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020CF650: .word 0x04000504
-_020CF654: .word 0x04000060
-_020CF658: .word 0xFFFFCFFD
-_020CF65C: .word 0x0000CFFB
-_020CF660: .word 0x04000350
-_020CF664: .word 0x00007FFF
-_020CF668: .word 0x001F0080
-_020CF66C: .word 0x040004A4
-	arm_func_end G3X_Init
+	ldr r1, _02074D4C ; =0x001F0080
+	ldr r0, _02074D50 ; =0x040004A4
+	str r1, [r0]
+	str r5, [r0, #4]
+	str r5, [r0, #8]
+	pop {r4, r5, r6, pc}
+	nop
+_02074D34: .word 0x04000504
+_02074D38: .word 0x04000060
+_02074D3C: .word 0x3FFFFFFF
+_02074D40: .word 0xFFFFCFFD
+_02074D44: .word 0x0000CFFB
+_02074D48: .word 0x04000350
+_02074D4C: .word 0x001F0080
+_02074D50: .word 0x040004A4
+	thumb_func_end G3X_Init
 
-	arm_func_start G3X_Reset
-G3X_Reset: ; 0x020CF670
-	stmdb sp!, {r3, lr}
-	ldr r2, _020CF6CC ; =0x04000600
-_020CF678:
-	ldr r0, [r2]
-	tst r0, #0x8000000
-	bne _020CF678
-	ldr r0, [r2]
-	ldr r1, _020CF6D0 ; =0x04000060
-	orr r0, r0, #0x8000
-	str r0, [r2]
-	ldrh r0, [r1]
-	orr r0, r0, #0x2000
-	strh r0, [r1]
-	ldrh r0, [r1]
-	orr r0, r0, #0x1000
-	strh r0, [r1]
-	bl G3X_ResetMtxStack
-	ldr r2, _020CF6D4 ; =0x001F0080
-	ldr r1, _020CF6D8 ; =0x040004A4
-	mov r0, #0
-	str r2, [r1]
-	str r0, [r1, #4]
-	str r0, [r1, #8]
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020CF6CC: .word 0x04000600
-_020CF6D0: .word 0x04000060
-_020CF6D4: .word 0x001F0080
-_020CF6D8: .word 0x040004A4
-	arm_func_end G3X_Reset
-
-	arm_func_start G3X_ClearFifo
-G3X_ClearFifo: ; 0x020CF6DC
-	stmdb sp!, {r3, lr}
-	ldr r0, _020CF6FC ; =0x04000400
-	bl GXi_NopClearFifo128_
-	ldr r1, _020CF700 ; =0x04000600
-_020CF6EC:
-	ldr r0, [r1]
-	tst r0, #0x8000000
-	bne _020CF6EC
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020CF6FC: .word 0x04000400
-_020CF700: .word 0x04000600
-	arm_func_end G3X_ClearFifo
-
-	arm_func_start G3X_InitMtxStack
-G3X_InitMtxStack: ; 0x020CF704
-	stmdb sp!, {r4, lr}
-	sub sp, sp, #8
-	ldr r1, _020CF790 ; =0x04000600
-	ldr r0, [r1]
-	orr r0, r0, #0x8000
-	str r0, [r1]
-	add r4, sp, #4
-_020CF720:
-	mov r0, r4
-	bl G3X_GetMtxStackLevelPV
-	cmp r0, #0
-	bne _020CF720
-	add r4, sp, #0
-_020CF734:
-	mov r0, r4
-	bl G3X_GetMtxStackLevelPJ
-	cmp r0, #0
-	bne _020CF734
-	ldr r1, _020CF794 ; =0x04000440
-	mov r0, #3
-	str r0, [r1]
-	mov r0, #0
-	str r0, [r1, #0x14]
-	str r0, [r1]
-	ldr r0, [sp]
-	mov r2, #0
-	cmp r0, #0
-	strne r0, [r1, #8]
-	ldr r1, _020CF798 ; =0x04000454
+	thumb_func_start G3X_Reset
+G3X_Reset: ; 0x02074D54
+	push {r3, lr}
 	mov r0, #2
-	str r2, [r1]
-	str r0, [r1, #-0x14]
-	ldr r0, [sp, #4]
-	str r0, [r1, #-0xc]
-	str r2, [r1]
-	add sp, sp, #8
-	ldmia sp!, {r4, pc}
-	.align 2, 0
-_020CF790: .word 0x04000600
-_020CF794: .word 0x04000440
-_020CF798: .word 0x04000454
-	arm_func_end G3X_InitMtxStack
-
-	arm_func_start G3X_ResetMtxStack
-G3X_ResetMtxStack: ; 0x020CF79C
-	stmdb sp!, {r4, lr}
-	sub sp, sp, #8
-	ldr r1, _020CF824 ; =0x04000600
-	ldr r0, [r1]
-	orr r0, r0, #0x8000
-	str r0, [r1]
-	add r4, sp, #4
-_020CF7B8:
-	mov r0, r4
-	bl G3X_GetMtxStackLevelPV
-	cmp r0, #0
-	bne _020CF7B8
-	add r4, sp, #0
-_020CF7CC:
-	mov r0, r4
-	bl G3X_GetMtxStackLevelPJ
-	cmp r0, #0
-	bne _020CF7CC
-	ldr r1, _020CF828 ; =0x04000440
-	mov r0, #3
-	str r0, [r1]
-	mov r0, #0
-	str r0, [r1, #0x14]
-	str r0, [r1]
-	ldr r0, [sp]
-	ldr r2, _020CF828 ; =0x04000440
-	cmp r0, #0
-	strne r0, [r1, #8]
+	ldr r2, _02074D90 ; =0x04000600
+	lsl r0, r0, #0x1a
+_02074D5C:
+	ldr r1, [r2]
+	tst r1, r0
+	bne _02074D5C
 	mov r0, #2
+	ldr r1, [r2]
+	lsl r0, r0, #0xe
+	orr r0, r1
 	str r0, [r2]
-	ldr r1, [sp, #4]
-	mov r0, #0
-	str r1, [r2, #8]
-	str r0, [r2, #0x14]
-	add sp, sp, #8
-	ldmia sp!, {r4, pc}
-	.align 2, 0
-_020CF824: .word 0x04000600
-_020CF828: .word 0x04000440
-	arm_func_end G3X_ResetMtxStack
-
-	arm_func_start G3X_SetFog
-G3X_SetFog: ; 0x020CF82C
-	cmp r0, #0
-	beq _020CF860
-	ldr ip, _020CF878 ; =0x0400035C
-	mov r0, r1, lsl #6
-	strh r3, [ip]
-	sub r3, ip, #0x2fc
-	ldrh r1, [r3]
-	orr r0, r0, r2, lsl #8
-	orr r0, r0, #0x80
-	bic r1, r1, #0x3f40
-	orr r0, r1, r0
-	strh r0, [r3]
-	bx lr
-_020CF860:
-	ldr r2, _020CF87C ; =0x04000060
-	ldr r0, _020CF880 ; =0x0000CF7F
+	ldr r2, _02074D94 ; =0x04000060
 	ldrh r1, [r2]
-	and r0, r1, r0
+	lsr r0, r2, #0xd
+	orr r0, r1
 	strh r0, [r2]
+	ldrh r1, [r2]
+	lsr r0, r2, #0xe
+	orr r0, r1
+	strh r0, [r2]
+	bl G3X_ResetMtxStack
+	ldr r0, _02074D98 ; =0x001F0080
+	ldr r1, _02074D9C ; =0x040004A4
+	str r0, [r1]
+	mov r0, #0
+	str r0, [r1, #4]
+	str r0, [r1, #8]
+	pop {r3, pc}
+	.align 2, 0
+_02074D90: .word 0x04000600
+_02074D94: .word 0x04000060
+_02074D98: .word 0x001F0080
+_02074D9C: .word 0x040004A4
+	thumb_func_end G3X_Reset
+
+	thumb_func_start G3X_ClearFifo
+G3X_ClearFifo: ; 0x02074DA0
+	push {r4, lr}
+	ldr r4, _02074DB8 ; =0x04000400
+	add r0, r4, #0
+	blx GXi_NopClearFifo128_
+	ldr r2, _02074DBC ; =0x04000600
+	lsl r0, r4, #0x11
+_02074DAE:
+	ldr r1, [r2]
+	tst r1, r0
+	bne _02074DAE
+	pop {r4, pc}
+	nop
+_02074DB8: .word 0x04000400
+_02074DBC: .word 0x04000600
+	thumb_func_end G3X_ClearFifo
+
+	thumb_func_start G3X_InitMtxStack
+G3X_InitMtxStack: ; 0x02074DC0
+	push {r4, lr}
+	sub sp, #8
+	ldr r2, _02074E18 ; =0x04000600
+	ldr r1, [r2]
+	lsr r0, r2, #0xb
+	orr r0, r1
+	str r0, [r2]
+	add r4, sp, #4
+_02074DD0:
+	add r0, r4, #0
+	bl G3X_GetMtxStackLevelPV
+	cmp r0, #0
+	bne _02074DD0
+	add r4, sp, #0
+_02074DDC:
+	add r0, r4, #0
+	bl G3X_GetMtxStackLevelPJ
+	cmp r0, #0
+	bne _02074DDC
+	ldr r1, _02074E1C ; =0x04000440
+	mov r0, #3
+	str r0, [r1]
+	mov r0, #0
+	str r0, [r1, #0x14]
+	str r0, [r1]
+	ldr r0, [sp]
+	cmp r0, #0
+	beq _02074DFA
+	str r0, [r1, #8]
+_02074DFA:
+	ldr r2, _02074E20 ; =0x04000454
+	mov r3, #0
+	add r0, r2, #0
+	str r3, [r2]
+	mov r1, #2
+	sub r0, #0x14
+	str r1, [r0]
+	add r0, r2, #0
+	ldr r1, [sp, #4]
+	sub r0, #0xc
+	str r1, [r0]
+	str r3, [r2]
+	add sp, #8
+	pop {r4, pc}
+	nop
+_02074E18: .word 0x04000600
+_02074E1C: .word 0x04000440
+_02074E20: .word 0x04000454
+	thumb_func_end G3X_InitMtxStack
+
+	thumb_func_start G3X_ResetMtxStack
+G3X_ResetMtxStack: ; 0x02074E24
+	push {r4, lr}
+	sub sp, #8
+	ldr r2, _02074E70 ; =0x04000600
+	ldr r1, [r2]
+	lsr r0, r2, #0xb
+	orr r0, r1
+	str r0, [r2]
+	add r4, sp, #4
+_02074E34:
+	add r0, r4, #0
+	bl G3X_GetMtxStackLevelPV
+	cmp r0, #0
+	bne _02074E34
+	add r4, sp, #0
+_02074E40:
+	add r0, r4, #0
+	bl G3X_GetMtxStackLevelPJ
+	cmp r0, #0
+	bne _02074E40
+	ldr r1, _02074E74 ; =0x04000440
+	mov r0, #3
+	str r0, [r1]
+	mov r0, #0
+	str r0, [r1, #0x14]
+	str r0, [r1]
+	ldr r0, [sp]
+	cmp r0, #0
+	beq _02074E5E
+	str r0, [r1, #8]
+_02074E5E:
+	ldr r1, _02074E74 ; =0x04000440
+	mov r0, #2
+	str r0, [r1]
+	ldr r0, [sp, #4]
+	str r0, [r1, #8]
+	mov r0, #0
+	str r0, [r1, #0x14]
+	add sp, #8
+	pop {r4, pc}
+	.align 2, 0
+_02074E70: .word 0x04000600
+_02074E74: .word 0x04000440
+	thumb_func_end G3X_ResetMtxStack
+
+	thumb_func_start G3X_SetFog
+G3X_SetFog: ; 0x02074E78
+	push {r3, r4}
+	cmp r0, #0
+	beq _02074E9C
+	ldr r0, _02074EAC ; =0x0400035C
+	lsl r2, r2, #8
+	strh r3, [r0]
+	ldr r0, _02074EB0 ; =0x04000060
+	lsl r1, r1, #6
+	ldrh r4, [r0]
+	ldr r3, _02074EB4 ; =0xFFFFC0BF
+	orr r2, r1
+	mov r1, #0x80
+	and r3, r4
+	orr r1, r2
+	orr r1, r3
+	strh r1, [r0]
+	pop {r3, r4}
 	bx lr
-	.align 2, 0
-_020CF878: .word 0x0400035C
-_020CF87C: .word 0x04000060
-_020CF880: .word 0x0000CF7F
-	arm_func_end G3X_SetFog
+_02074E9C:
+	ldr r2, _02074EB0 ; =0x04000060
+	ldr r0, _02074EB8 ; =0x0000CF7F
+	ldrh r1, [r2]
+	and r0, r1
+	strh r0, [r2]
+	pop {r3, r4}
+	bx lr
+	nop
+_02074EAC: .word 0x0400035C
+_02074EB0: .word 0x04000060
+_02074EB4: .word 0xFFFFC0BF
+_02074EB8: .word 0x0000CF7F
+	thumb_func_end G3X_SetFog
 
-	arm_func_start G3X_GetClipMtx
-G3X_GetClipMtx: ; 0x020CF884
-	stmdb sp!, {r3, lr}
-	ldr r2, _020CF8B0 ; =0x04000600
-	mov r1, r0
-	ldr r0, [r2]
-	tst r0, #0x8000000
-	mvnne r0, #0
-	ldmneia sp!, {r3, pc}
-	add r0, r2, #0x40
-	bl MI_Copy64B
+	thumb_func_start G3X_GetClipMtx
+G3X_GetClipMtx: ; 0x02074EBC
+	push {r3, lr}
+	add r1, r0, #0
+	ldr r0, _02074EDC ; =0x04000600
+	mov r2, #2
+	ldr r3, [r0]
+	lsl r2, r2, #0x1a
+	tst r2, r3
+	beq _02074ED2
 	mov r0, #0
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020CF8B0: .word 0x04000600
-	arm_func_end G3X_GetClipMtx
-
-	arm_func_start G3X_GetVectorMtx
-G3X_GetVectorMtx: ; 0x020CF8B4
-	stmdb sp!, {r3, lr}
-	ldr r2, _020CF8E0 ; =0x04000600
-	mov r1, r0
-	ldr r0, [r2]
-	tst r0, #0x8000000
-	mvnne r0, #0
-	ldmneia sp!, {r3, pc}
-	add r0, r2, #0x80
-	bl MI_Copy36B
+	mvn r0, r0
+	pop {r3, pc}
+_02074ED2:
+	add r0, #0x40
+	blx sub_0207877C
 	mov r0, #0
-	ldmia sp!, {r3, pc}
+	pop {r3, pc}
 	.align 2, 0
-_020CF8E0: .word 0x04000600
-	arm_func_end G3X_GetVectorMtx
+_02074EDC: .word 0x04000600
+	thumb_func_end G3X_GetClipMtx
 
-	arm_func_start G3X_SetEdgeColorTable
-G3X_SetEdgeColorTable: ; 0x020CF8E4
-	ldr ip, _020CF8F4 ; =MIi_CpuCopy16
-	ldr r1, _020CF8F8 ; =0x04000330
+	thumb_func_start G3X_GetVectorMtx
+G3X_GetVectorMtx: ; 0x02074EE0
+	push {r3, lr}
+	add r1, r0, #0
+	ldr r0, _02074F00 ; =0x04000600
+	mov r2, #2
+	ldr r3, [r0]
+	lsl r2, r2, #0x1a
+	tst r2, r3
+	beq _02074EF6
+	mov r0, #0
+	mvn r0, r0
+	pop {r3, pc}
+_02074EF6:
+	add r0, #0x80
+	blx sub_0207873C
+	mov r0, #0
+	pop {r3, pc}
+	.align 2, 0
+_02074F00: .word 0x04000600
+	thumb_func_end G3X_GetVectorMtx
+
+	thumb_func_start G3X_SetEdgeColorTable
+G3X_SetEdgeColorTable: ; 0x02074F04
+	ldr r1, _02074F0C ; =0x04000330
+	ldr r3, _02074F10 ; =sub_0207863C
 	mov r2, #0x10
-	bx ip
+	bx r3
 	.align 2, 0
-_020CF8F4: .word MIi_CpuCopy16
-_020CF8F8: .word 0x04000330
-	arm_func_end G3X_SetEdgeColorTable
+_02074F0C: .word 0x04000330
+_02074F10: .word sub_0207863C
+	thumb_func_end G3X_SetEdgeColorTable
 
-	arm_func_start G3X_SetFogTable
-G3X_SetFogTable: ; 0x020CF8FC
-	ldr ip, _020CF908 ; =MI_Copy32B
-	ldr r1, _020CF90C ; =0x04000360
-	bx ip
-	.align 2, 0
-_020CF908: .word MI_Copy32B
-_020CF90C: .word 0x04000360
-	arm_func_end G3X_SetFogTable
+	thumb_func_start G3X_SetFogTable
+G3X_SetFogTable: ; 0x02074F14
+	ldr r1, _02074F1C ; =0x04000360
+	ldr r3, _02074F20 ; =sub_02078720
+	bx r3
+	nop
+_02074F1C: .word 0x04000360
+_02074F20: .word sub_02078720
+	thumb_func_end G3X_SetFogTable
 
-	arm_func_start G3X_SetClearColor
-G3X_SetClearColor: ; 0x020CF910
-	ldr ip, [sp]
-	orr r0, r0, r1, lsl #16
-	orr r1, r0, r3, lsl #24
-	cmp ip, #0
-	ldr r0, _020CF934 ; =0x04000350
-	orrne r1, r1, #0x8000
+	thumb_func_start G3X_SetClearColor
+G3X_SetClearColor: ; 0x02074F24
+	lsl r1, r1, #0x10
+	lsl r3, r3, #0x18
+	orr r0, r1
+	add r1, r3, #0
+	orr r1, r0
+	ldr r0, [sp]
+	cmp r0, #0
+	beq _02074F3A
+	mov r0, #2
+	lsl r0, r0, #0xe
+	orr r1, r0
+_02074F3A:
+	ldr r0, _02074F44 ; =0x04000350
 	str r1, [r0]
 	strh r2, [r0, #4]
 	bx lr
-	.align 2, 0
-_020CF934: .word 0x04000350
-	arm_func_end G3X_SetClearColor
+	nop
+_02074F44: .word 0x04000350
+	thumb_func_end G3X_SetClearColor
 
-	arm_func_start G3X_InitTable
-G3X_InitTable: ; 0x020CF938
-	stmdb sp!, {r3, lr}
-	sub sp, sp, #8
-	ldr r0, _020CF9C8 ; =GXi_DmaId
-	mvn r1, #0
-	ldr r0, [r0]
+	thumb_func_start G3X_InitTable
+G3X_InitTable: ; 0x02074F48
+	push {r3, r4, r5, r6, lr}
+	sub sp, #0xc
+	ldr r4, _02074FD4 ; =0x0209B528
+	mov r1, #0
+	ldr r0, [r4]
+	mvn r1, r1
 	cmp r0, r1
-	ldr r1, _020CF9CC ; =0x04000330
-	beq _020CF988
+	beq _02074FA8
+	cmp r0, #3
+	ldr r5, _02074FD8 ; =0x04000330
+	bls _02074F82
+	mov r1, #0
+	str r1, [sp]
+	str r1, [sp, #4]
+	sub r0, r0, #4
+	add r1, r5, #0
 	mov r2, #0
-	str r2, [sp]
 	mov r3, #0x10
-	str r2, [sp, #4]
-	bl MI_DmaFill32Async
-	ldr r0, _020CF9C8 ; =GXi_DmaId
-	ldr r1, _020CF9D0 ; =0x04000360
-	ldr r0, [r0]
+	bl sub_02074FE0
+	ldr r0, [r4]
+	add r5, #0x30
+	sub r0, r0, #4
+	add r1, r5, #0
 	mov r2, #0
 	mov r3, #0x60
-	bl MI_DmaFill32
-	b _020CF9A4
-_020CF988:
-	mov r0, #0
-	mov r2, #0x10
-	bl MIi_CpuClear32
-	ldr r1, _020CF9D0 ; =0x04000360
-	mov r0, #0
-	mov r2, #0x60
-	bl MIi_CpuClear32
-_020CF9A4:
+	bl sub_02074810
+	b _02074FC0
+_02074F82:
+	mov r1, #0
+	str r1, [sp]
+	str r1, [sp, #4]
+	mov r6, #1
+	str r6, [sp, #8]
+	add r1, r5, #0
 	mov r2, #0
-	ldr r0, _020CF9D4 ; =0x040004D0
-	mov r1, r2
-_020CF9B0:
+	mov r3, #0x10
+	bl sub_02078150
+	str r6, [sp]
+	add r5, #0x30
+	ldr r0, [r4]
+	add r1, r5, #0
+	mov r2, #0
+	mov r3, #0x60
+	bl sub_0207802C
+	b _02074FC0
+_02074FA8:
+	ldr r4, _02074FD8 ; =0x04000330
+	mov r0, #0
+	add r1, r4, #0
+	mov r2, #0x10
+	blx sub_02078658
+	add r4, #0x30
+	mov r0, #0
+	add r1, r4, #0
+	mov r2, #0x60
+	blx sub_02078658
+_02074FC0:
+	mov r2, #0
+	ldr r0, _02074FDC ; =0x040004D0
+	add r1, r2, #0
+_02074FC6:
 	add r2, r2, #1
 	str r1, [r0]
 	cmp r2, #0x20
-	blt _020CF9B0
-	add sp, sp, #8
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020CF9C8: .word GXi_DmaId
-_020CF9CC: .word 0x04000330
-_020CF9D0: .word 0x04000360
-_020CF9D4: .word 0x040004D0
-	arm_func_end G3X_InitTable
+	blt _02074FC6
+	add sp, #0xc
+	pop {r3, r4, r5, r6, pc}
+	nop
+_02074FD4: .word 0x0209B528
+_02074FD8: .word 0x04000330
+_02074FDC: .word 0x040004D0
+	thumb_func_end G3X_InitTable
 
-	arm_func_start G3X_GetMtxStackLevelPV
-G3X_GetMtxStackLevelPV: ; 0x020CF9D8
-	ldr r2, _020CFA04 ; =0x04000600
-	ldr r1, [r2]
-	tst r1, #0x4000
-	mvnne r0, #0
-	bxne lr
-	ldr r1, [r2]
-	and r1, r1, #0x1f00
-	mov r1, r1, lsr #8
+	thumb_func_start sub_02074FE0
+sub_02074FE0: ; 0x02074FE0
+	bx pc
+	nop
+	thumb_func_end sub_02074FE0
+
+	arm_func_start sub_02074FE4
+sub_02074FE4: ; 0x02074FE4
+	ldr ip, _02074FEC ; =sub_027681B8
+	bx ip
+	.align 2, 0
+_02074FEC: .word sub_027681B8
+	arm_func_end sub_02074FE4
+
+	thumb_func_start G3X_GetMtxStackLevelPV
+G3X_GetMtxStackLevelPV: ; 0x02074FF0
+	ldr r3, _02075010 ; =0x04000600
+	ldr r2, [r3]
+	lsr r1, r3, #0xc
+	tst r1, r2
+	beq _02075000
+	mov r0, #0
+	mvn r0, r0
+	bx lr
+_02075000:
+	mov r1, #0x1f
+	ldr r2, [r3]
+	lsl r1, r1, #8
+	and r1, r2
+	lsr r1, r1, #8
 	str r1, [r0]
 	mov r0, #0
 	bx lr
 	.align 2, 0
-_020CFA04: .word 0x04000600
-	arm_func_end G3X_GetMtxStackLevelPV
+_02075010: .word 0x04000600
+	thumb_func_end G3X_GetMtxStackLevelPV
 
-	arm_func_start G3X_GetMtxStackLevelPJ
-G3X_GetMtxStackLevelPJ: ; 0x020CFA08
-	ldr r2, _020CFA34 ; =0x04000600
-	ldr r1, [r2]
-	tst r1, #0x4000
-	mvnne r0, #0
-	bxne lr
-	ldr r1, [r2]
-	and r1, r1, #0x2000
-	mov r1, r1, lsr #0xd
+	thumb_func_start G3X_GetMtxStackLevelPJ
+G3X_GetMtxStackLevelPJ: ; 0x02075014
+	ldr r3, _02075034 ; =0x04000600
+	ldr r2, [r3]
+	lsr r1, r3, #0xc
+	tst r1, r2
+	beq _02075024
+	mov r0, #0
+	mvn r0, r0
+	bx lr
+_02075024:
+	ldr r2, [r3]
+	lsr r1, r3, #0xd
+	and r1, r2
+	lsr r1, r1, #0xd
 	str r1, [r0]
 	mov r0, #0
 	bx lr
-	.align 2, 0
-_020CFA34: .word 0x04000600
-	arm_func_end G3X_GetMtxStackLevelPJ
+	nop
+_02075034: .word 0x04000600
+	thumb_func_end G3X_GetMtxStackLevelPJ
 
-	arm_func_start G3X_GetBoxTestResult
-G3X_GetBoxTestResult: ; 0x020CFA38
-	ldr r2, _020CFA60 ; =0x04000600
-	ldr r1, [r2]
-	tst r1, #1
-	mvnne r0, #0
-	bxne lr
-	ldr r1, [r2]
-	and r1, r1, #2
+	thumb_func_start G3X_SetDisp1DotDepth
+G3X_SetDisp1DotDepth: ; 0x02075038
+	asr r1, r0, #9
+	ldr r0, _02075044 ; =0x00007FFF
+	and r1, r0
+	ldr r0, _02075048 ; =0x04000610
+	strh r1, [r0]
+	bx lr
+	.align 2, 0
+_02075044: .word 0x00007FFF
+_02075048: .word 0x04000610
+	thumb_func_end G3X_SetDisp1DotDepth
+
+	thumb_func_start G3X_GetBoxTestResult
+G3X_GetBoxTestResult: ; 0x0207504C
+	ldr r3, _02075068 ; =0x04000600
+	mov r1, #1
+	ldr r2, [r3]
+	tst r2, r1
+	beq _0207505A
+	sub r0, r1, #2
+	bx lr
+_0207505A:
+	ldr r2, [r3]
+	mov r1, #2
+	and r1, r2
 	str r1, [r0]
 	mov r0, #0
 	bx lr
-	.align 2, 0
-_020CFA60: .word 0x04000600
-	arm_func_end G3X_GetBoxTestResult
-
-	arm_func_start G3X_SetHOffset
-G3X_SetHOffset: ; 0x020CFA64
-	ldr r1, _020CFA70 ; =0x04000010
-	str r0, [r1]
-	bx lr
-	.align 2, 0
-_020CFA70: .word 0x04000010
-	arm_func_end G3X_SetHOffset
+	nop
+_02075068: .word 0x04000600
+	thumb_func_end G3X_GetBoxTestResult
 
 	arm_func_start GXi_NopClearFifo128_
-GXi_NopClearFifo128_: ; 0x020CFA74
+GXi_NopClearFifo128_: ; 0x0207506C
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0

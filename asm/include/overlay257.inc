@@ -2155,7 +2155,7 @@
 .public sub_02049A64
 .public sub_02049A64
 .public sub_0203A5D0
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_02049AA0
 .public sub_02049A98
 .public sub_0204A638
@@ -2205,8 +2205,8 @@
 .public sub_02044F90
 .public sub_02048D28
 .public sub_02049214
-.public sub_02074F24
-.public sub_02074E78
+.public G3X_SetClearColor
+.public G3X_SetFog
 .public sub_0204A5C8
 .public sub_0204A638
 .public sub_0204A630

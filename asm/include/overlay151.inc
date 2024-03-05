@@ -19,7 +19,7 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_021C5E3C
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_021F5A58
 .public sub_0208D65C
 .public sub_0208D65C

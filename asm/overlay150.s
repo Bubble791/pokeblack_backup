@@ -264,7 +264,7 @@ ovy150_21f5f78: ; 0x021F5F78
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	mov r1, #0x1f
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	add r0, r4, #0
 	bl sub_021F5A58
 	pop {r3, r4, r5, pc}

@@ -33718,7 +33718,7 @@ sub_02048D28: ; 0x02048D28
 	add r1, #0x90
 	str r0, [r1]
 	bl sub_02067DF8
-	bl sub_02074DC0
+	bl G3X_InitMtxStack
 	bl sub_02065698
 	add r0, sp, #0x68
 	ldrh r0, [r0]
@@ -33901,13 +33901,13 @@ _02048EB2:
 	add r0, r6, #0
 	add r1, r6, #0
 	add r2, r6, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	add r0, r6, #0
 	add r1, r6, #0
 	lsr r2, r4, #0x11
 	mov r3, #0x3f
 	str r6, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _02048F3C ; =0xBFFF0000
 	ldr r0, _02048F40 ; =0x04000580
 	str r1, [r0]
@@ -35566,10 +35566,10 @@ _02049A94:
 
 	thumb_func_start sub_02049A98
 sub_02049A98: ; 0x02049A98
-	ldr r3, _02049A9C ; =sub_02074D54
+	ldr r3, _02049A9C ; =G3X_Reset
 	bx r3
 	.align 2, 0
-_02049A9C: .word sub_02074D54
+_02049A9C: .word G3X_Reset
 	thumb_func_end sub_02049A98
 
 	thumb_func_start sub_02049AA0
@@ -35841,7 +35841,7 @@ sub_02049C88: ; 0x02049C88
 	add r4, sp, #8
 _02049CC8:
 	add r0, r4, #0
-	bl sub_0207504C
+	bl G3X_GetBoxTestResult
 	cmp r0, #0
 	bne _02049CC8
 	ldr r0, [sp, #8]
@@ -47061,7 +47061,7 @@ sub_0204EBB0: ; 0x0204EBB0
 	add r4, r1, #0
 	add r5, r2, #0
 	str r0, [sp, #0x4c]
-	bl sub_02074D54
+	bl G3X_Reset
 	ldr r0, [sp, #4]
 	mov r1, #0
 	str r1, [r0, #0x28]

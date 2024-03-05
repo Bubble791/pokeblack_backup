@@ -491,13 +491,13 @@ ovy293_21a1ea4: ; 0x021A1EA4
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	mov r0, #0
 	mov r1, #0
 	lsr r2, r5, #0x11
 	mov r3, #0x3f
 	str r4, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _021A1F30 ; =0xBFFF0000
 	ldr r0, _021A1F34 ; =0x04000580
 	str r1, [r0]
@@ -1770,7 +1770,7 @@ _021A28DE:
 	beq _021A28F0
 	add r0, r5, #0
 	add r0, #0x3e
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 _021A28F0:
 	ldrh r0, [r5, #6]
 	ldrh r3, [r5, #0x34]
@@ -1783,7 +1783,7 @@ _021A28F0:
 	lsr r0, r0, #0x1f
 	lsr r1, r1, #0x1f
 	lsr r3, r3, #0x11
-	bl sub_02074E78
+	bl G3X_SetFog
 	ldrh r0, [r5, #6]
 	lsl r0, r0, #0x1b
 	lsr r0, r0, #0x1f
@@ -1807,7 +1807,7 @@ _021A2926:
 	str r2, [r0, r1]
 	cmp r3, #8
 	blo _021A2926
-	bl sub_02074F14
+	bl G3X_SetFogTable
 _021A293A:
 	ldrh r0, [r5, #6]
 	ldrh r3, [r5, #0x2c]
@@ -1819,9 +1819,9 @@ _021A293A:
 	ldrh r0, [r5, #0x28]
 	ldrh r2, [r5, #0x2e]
 	lsr r3, r3, #0x11
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r0, [r5, #0x24]
-	bl sub_02075038
+	bl G3X_SetDisp1DotDepth
 	ldrh r1, [r5, #6]
 	lsl r0, r1, #0x19
 	lsl r1, r1, #0x18

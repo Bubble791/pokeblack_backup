@@ -90,7 +90,7 @@ sub_02067DA4: ; 0x02067DA4
 	add r4, sp, #0
 _02067DC0:
 	add r0, r4, #0
-	bl sub_02074EBC
+	bl G3X_GetClipMtx
 	cmp r0, #0
 	bne _02067DC0
 	add r0, sp, #0
@@ -101,7 +101,7 @@ _02067DD2:
 	beq _02067DE0
 _02067DD6:
 	add r0, r5, #0
-	bl sub_02074EE0
+	bl G3X_GetVectorMtx
 	cmp r0, #0
 	bne _02067DD6
 _02067DE0:
@@ -121,7 +121,7 @@ _02067DF4: .word 0x04000448
 	thumb_func_start sub_02067DF8
 sub_02067DF8: ; 0x02067DF8
 	push {r3, lr}
-	bl sub_02074C9C
+	bl G3X_Init
 	bl sub_02065698
 	ldr r2, _02067E14 ; =0x04000600
 	ldr r0, _02067E18 ; =0x3FFFFFFF

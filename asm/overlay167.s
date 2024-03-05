@@ -108916,7 +108916,7 @@ ovy167_21ce678: ; 0x021CE678
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	add r1, r6, #0
 	sub r1, #0x48
 	ldrh r2, [r1]

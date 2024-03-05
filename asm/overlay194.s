@@ -20130,13 +20130,13 @@ _021C1A94:
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	mov r0, #0
 	mov r1, #0
 	lsr r2, r6, #0x11
 	mov r3, #0x3f
 	str r4, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _021C1B68 ; =0xBFFF0000
 	ldr r0, _021C1B6C ; =0x04000580
 	str r1, [r0]
@@ -21858,7 +21858,7 @@ _021C2840: .word 0x001F0041
 ovy194_21c2844: ; 0x021C2844
 	push {r3, r4, r5, r6, r7, lr}
 	add r4, r0, #0
-	bl sub_02074D54
+	bl G3X_Reset
 	mov r0, #0
 	str r0, [sp]
 	ldr r0, _021C2910 ; =0x021C6F5C
@@ -25350,13 +25350,13 @@ ovy194_21c4324: ; 0x021C4324
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	mov r0, #0
 	mov r1, #0
 	lsr r2, r5, #0x11
 	mov r3, #0x3f
 	str r4, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _021C43B0 ; =0xBFFF0000
 	ldr r0, _021C43B4 ; =0x04000580
 	str r1, [r0]

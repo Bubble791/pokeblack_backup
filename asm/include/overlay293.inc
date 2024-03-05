@@ -43,8 +43,8 @@
 .public sub_0206D1E8
 .public sub_0206D154
 .public sub_02044BB8
-.public sub_02074E78
-.public sub_02074F24
+.public G3X_SetFog
+.public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
 .public sub_0203A1FC
@@ -169,11 +169,11 @@
 .public sub_0204A6E4
 .public sub_0204A638
 .public sub_02019804
-.public sub_02074F04
-.public sub_02074E78
-.public sub_02074F14
-.public sub_02074F24
-.public sub_02075038
+.public G3X_SetEdgeColorTable
+.public G3X_SetFog
+.public G3X_SetFogTable
+.public G3X_SetClearColor
+.public G3X_SetDisp1DotDepth
 .public sub_02049214
 .public sub_021A298C
 .public sub_02015BC8

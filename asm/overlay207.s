@@ -739,7 +739,7 @@ ovy207_21b342c: ; 0x021B342C
 	str r0, [r5, #0x70]
 	bl sub_0204A638
 	ldr r0, _021B361C ; =0x021BAE54
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	add r4, #0x60
 	ldrh r1, [r4]
 	ldr r0, _021B3620 ; =0x0000CFDF

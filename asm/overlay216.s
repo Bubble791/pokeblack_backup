@@ -6405,13 +6405,13 @@ ovy216_21be90c: ; 0x021BE90C
 	orr r1, r2
 	strh r1, [r0]
 	ldr r0, _021BE970 ; =0x021C0C34
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	lsr r0, r4, #0x11
 	mov r1, #0
 	add r2, r0, #0
 	mov r3, #0x3f
 	str r1, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _021BE974 ; =0xBFFF0000
 	ldr r0, _021BE978 ; =0x04000580
 	str r1, [r0]
@@ -7810,7 +7810,7 @@ ovy216_21bf4e4: ; 0x021BF4E4
 	mov r1, #0
 	mov r3, #0
 	str r0, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	add sp, #4
 	pop {r3, r4, pc}
 	nop

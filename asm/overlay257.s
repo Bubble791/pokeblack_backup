@@ -24844,7 +24844,7 @@ _021A5BC8:
 	add r2, r0, #0
 	add r2, #0x4d
 	mov r3, #0x3f
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	bl sub_02049AA0
 _021A5C22:
 	add sp, #0x14
@@ -25097,7 +25097,7 @@ ovy257_21a5e30: ; 0x021A5E30
 	add r2, r0, #0
 	mov r3, #0x3f
 	str r7, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r0, _021A5EDC ; =0x04000060
 	ldr r2, _021A5EE0 ; =0xFFFFCFFF
 	ldrh r1, [r0]
@@ -25119,7 +25119,7 @@ ovy257_21a5e30: ; 0x021A5E30
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	ldr r6, _021A5EE8 ; =0x021B1E88
 	add r3, sp, #0x20
 	ldmia r6!, {r0, r1}

@@ -597,8 +597,8 @@
 .public sub_02044C98
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_02074F04
-.public sub_02074F24
+.public G3X_SetEdgeColorTable
+.public G3X_SetClearColor
 .public sub_02048D28
 .public sub_02049214
 .public sub_0204A5C8
@@ -780,7 +780,7 @@
 .public sub_020507D4
 .public sub_02049B5C
 .public sub_02049E00
-.public sub_02074F24
+.public G3X_SetClearColor
 .public sub_0204A5C0
 .public sub_020507D4
 .public sub_02049B5C

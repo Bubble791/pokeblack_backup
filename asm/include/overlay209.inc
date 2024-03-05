@@ -65,7 +65,7 @@
 .public sub_02049214
 .public sub_0204A5C8
 .public sub_0204A638
-.public sub_02074F04
+.public G3X_SetEdgeColorTable
 .public sub_02049214
 .public sub_0204E390
 .public sub_0204E488
@@ -646,7 +646,7 @@
 .public sub_02049214
 .public sub_0204A5C8
 .public sub_0204A638
-.public sub_02074F04
+.public G3X_SetEdgeColorTable
 .public sub_02049214
 .public sub_0204E390
 .public sub_0204E488

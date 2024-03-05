@@ -1779,8 +1779,8 @@
 .public sub_02016408
 .public sub_02016424
 .public sub_0204A638
-.public sub_02074E78
-.public sub_02074F24
+.public G3X_SetFog
+.public G3X_SetClearColor
 .public sub_02049100
 .public sub_02015CD0
 .public sub_02050208
@@ -1914,7 +1914,7 @@
 .public sub_021C2534
 .public sub_021C2548
 .public sub_021C2534
-.public sub_02074D54
+.public G3X_Reset
 .public G3i_LookAt_
 .public sub_021B7778
 .public sub_0208D65C
@@ -2123,8 +2123,8 @@
 .public sub_02044C98
 .public sub_02044BD8
 .public sub_02046CFC
-.public sub_02074E78
-.public sub_02074F24
+.public G3X_SetFog
+.public G3X_SetClearColor
 .public sub_02049100
 .public sub_02048D28
 .public sub_0204A5C8

@@ -32,7 +32,7 @@
 .public sub_0203A1FC
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_02074F04
+.public G3X_SetEdgeColorTable
 .public sub_0203A24C
 .public sub_02049888
 .public sub_02049404

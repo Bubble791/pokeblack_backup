@@ -59,7 +59,7 @@
 .public sub_02048D28
 .public sub_0204A5C8
 .public sub_0204A638
-.public sub_02074F04
+.public G3X_SetEdgeColorTable
 .public sub_02049214
 .public sub_02044BB8
 .public sub_020199E8

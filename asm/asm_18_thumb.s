@@ -2145,7 +2145,7 @@ _02066DB0:
 	str r0, [r1]
 _02066DCE:
 	add r0, sp, #0x88
-	bl sub_02074EBC
+	bl G3X_GetClipMtx
 	cmp r0, #0
 	bne _02066DCE
 	ldr r0, _02066F00 ; =0x02143A8C
@@ -2413,7 +2413,7 @@ _02066FD8:
 	str r0, [r1]
 _02066FE8:
 	add r0, sp, #0x90
-	bl sub_02074EBC
+	bl G3X_GetClipMtx
 	cmp r0, #0
 	bne _02066FE8
 	ldr r0, _02067164 ; =0x02143A8C
@@ -2800,7 +2800,7 @@ _02067320:
 	bne _02067346
 _02067326:
 	add r0, r5, #0
-	bl sub_02074EBC
+	bl G3X_GetClipMtx
 	cmp r0, #0
 	bne _02067326
 	ldr r0, _02067474 ; =0x04000440
@@ -2968,7 +2968,7 @@ _02067484:
 	bne _0206749C
 _02067492:
 	add r0, r7, #0
-	bl sub_02074EE0
+	bl G3X_GetVectorMtx
 	cmp r0, #0
 	bne _02067492
 _0206749C:
@@ -3803,7 +3803,7 @@ _02067ABE:
 	add r4, sp, #0x10
 _02067ACE:
 	add r0, r4, #0
-	bl sub_02074EBC
+	bl G3X_GetClipMtx
 	cmp r0, #0
 	bne _02067ACE
 	ldr r1, _02067B5C ; =0x04000448

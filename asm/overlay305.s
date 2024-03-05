@@ -2895,13 +2895,13 @@ ovy305_219e39c: ; 0x0219E39C
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	mov r0, #0
 	mov r1, #0
 	lsr r2, r5, #0x11
 	mov r3, #0x3f
 	str r4, [sp]
-	bl sub_02074F24
+	bl G3X_SetClearColor
 	ldr r1, _0219E438 ; =0xBFFF0000
 	ldr r0, _0219E43C ; =0x04000580
 	str r1, [r0]

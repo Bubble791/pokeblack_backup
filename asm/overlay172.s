@@ -390,7 +390,7 @@ ovy172_2199b2c: ; 0x02199B2C
 	mov r0, #0
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074E78
+	bl G3X_SetFog
 	sub r4, #0x48
 	ldrh r1, [r4]
 	mov r0, #3

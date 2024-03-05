@@ -13981,8 +13981,8 @@ _021A397E:
 	thumb_func_start ovy310_21a3990
 ovy310_21a3990: ; 0x021A3990
 	push {r3, lr}
-	bl sub_02074C9C
-	bl sub_02074DC0
+	bl G3X_Init
+	bl G3X_InitMtxStack
 	ldr r2, _021A39D0 ; =0x04000440
 	mov r3, #0
 	add r1, r2, #0
@@ -14006,7 +14006,7 @@ ovy310_21a3990: ; 0x021A3990
 	orr r1, r2
 	strh r1, [r0]
 	ldr r0, _021A39DC ; =0x021A7084
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	pop {r3, pc}
 	nop
 _021A39D0: .word 0x04000440

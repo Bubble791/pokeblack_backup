@@ -1090,7 +1090,7 @@ ovy208_219a16c: ; 0x0219A16C
 	str r0, [r5, r1]
 	bl sub_0204A638
 	ldr r0, _0219A334 ; =0x0219DBD8
-	bl sub_02074F04
+	bl G3X_SetEdgeColorTable
 	add r4, #0x60
 	ldrh r1, [r4]
 	ldr r0, _0219A338 ; =0x0000CFDF

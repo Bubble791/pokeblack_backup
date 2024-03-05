@@ -40873,7 +40873,7 @@ ovy12_2163a94: ; 0x02163A94
 	add r4, sp, #8
 _02163AD4:
 	add r0, r4, #0
-	bl sub_0207504C
+	bl G3X_GetBoxTestResult
 	cmp r0, #0
 	bne _02163AD4
 	ldr r0, [sp, #8]

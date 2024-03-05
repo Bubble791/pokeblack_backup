@@ -7,7 +7,7 @@
 .public sub_02016EDC
 .public sub_020787A8
 .public G3i_PerspectiveW_
-.public sub_02074D54
+.public G3X_Reset
 .public G3i_LookAt_
 .public sub_02016ED8
 .public sub_02016AF0
