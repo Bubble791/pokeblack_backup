@@ -15111,7 +15111,7 @@ _021E50AC:
 	ldrsh r3, [r7, r3]
 	add r0, r5, #0
 	add r1, sp, #0x94
-	blx sub_02072CE4
+	blx MTX_RotAxis43
 	ldr r0, [sp, #0xb8]
 	str r0, [r5, #0x24]
 	ldr r0, [sp, #0xbc]
@@ -15208,7 +15208,7 @@ _021E51E0:
 	add r0, sp, #0x4c
 	ldrsh r3, [r3, r5]
 	add r1, sp, #0x28
-	blx sub_02072CE4
+	blx MTX_RotAxis43
 	mov r1, #2
 	add r0, sp, #0x14
 	ldrsh r0, [r0, r1]
@@ -15224,7 +15224,7 @@ _021E51E0:
 	str r0, [sp, #0x48]
 	add r0, sp, #0x40
 	add r2, r0, #0
-	blx sub_02073290
+	blx MTX_MultVec43
 	add r0, sp, #0x40
 	add r1, r0, #0
 	blx sub_02074254
@@ -15613,7 +15613,7 @@ _021E551A:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r0, [r5, #0x5c]
 	cmp r0, #0
 	beq _021E5534
@@ -16721,7 +16721,7 @@ ovy168_21e5d98: ; 0x021E5D98
 	add r6, sp, #4
 	add r4, r1, #0
 	add r1, r6, #0
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	ldr r1, _021E5E30 ; =0x02143A14
 	add r0, r6, #0
 	add r2, r6, #0

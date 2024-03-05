@@ -45531,7 +45531,7 @@ sub_02019C0C: ; 0x02019C0C
 	str r0, [r1]
 	ldr r0, _02019F78 ; =0x02143A58
 	add r1, r4, #0
-	blx sub_02072D04
+	blx MTX_Inverse43
 	add r0, r4, #0
 	add r4, sp, #0xf4
 	add r1, r4, #0
@@ -45792,7 +45792,7 @@ _02019DE8:
 	orr r5, r0
 	ldr r0, _02019F78 ; =0x02143A58
 	add r1, r7, #0
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	ldr r1, _02019F94 ; =0x02143A14
 	add r0, r7, #0
 	add r2, r7, #0
@@ -106631,7 +106631,7 @@ _02034DD6:
 	add r0, sp, #0x60
 	add r1, sp, #0x48
 	add r2, sp, #0x54
-	blx sub_02073328
+	blx MTX_LookAt
 	ldr r1, [r4, #0x7c]
 	mov r0, #0xe8
 	bic r1, r0

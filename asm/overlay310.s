@@ -17117,7 +17117,7 @@ ovy310_21a4ef4: ; 0x021A4EF4
 	add r0, sp, #0x2c
 	add r1, sp, #0x20
 	add r2, sp, #0x14
-	blx sub_02073328
+	blx MTX_LookAt
 	ldr r5, _021A4FC8 ; =0x02143A8C
 	mov r0, #0xe8
 	ldr r1, [r5, #0x7c]

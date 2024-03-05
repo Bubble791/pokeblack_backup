@@ -49064,7 +49064,7 @@ ovy36_2196918: ; 0x02196918
 	add r0, r7, #0
 	add r1, sp, #0x60
 	add r3, r5, #0
-	blx sub_02073328
+	blx MTX_LookAt
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0
@@ -51778,12 +51778,12 @@ ovy36_2197d68: ; 0x02197D68
 	ldrsh r3, [r3, r6]
 	add r0, r7, #0
 	add r1, #0xc
-	blx sub_02072CE4
+	blx MTX_RotAxis43
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r7, #0
 	add r2, r5, #0
-	blx sub_02073290
+	blx MTX_MultVec43
 	add r0, r5, #0
 	add r1, r5, #0
 	blx sub_02074254
@@ -87474,7 +87474,7 @@ ovy36_21a8b20: ; 0x021A8B20
 	add r0, r6, #0
 	add r1, r7, #0
 	add r3, r4, #0
-	blx sub_02073328
+	blx MTX_LookAt
 	add r0, r4, #0
 	add r4, sp, #0
 	add r1, r4, #0
@@ -110629,7 +110629,7 @@ ovy36_21b41a0: ; 0x021B41A0
 	add r0, r7, #0
 	add r1, sp, #0x60
 	add r3, r5, #0
-	blx sub_02073328
+	blx MTX_LookAt
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0

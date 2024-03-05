@@ -1849,7 +1849,7 @@ _02066DCE:
 	beq _02066DF8
 	bl sub_02065B7C
 	add r1, sp, #0x48
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	add r0, sp, #0x88
 	add r1, sp, #0x48
 	add r2, r0, #0
@@ -1861,7 +1861,7 @@ _02066DF8:
 	beq _02066E10
 	ldr r0, _02066F04 ; =0x02143A58
 	add r1, sp, #8
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	add r0, sp, #0x88
 	add r1, sp, #8
 	add r2, r0, #0
@@ -2117,7 +2117,7 @@ _02066FE8:
 	beq _02067012
 	bl sub_02065B7C
 	add r1, sp, #0x50
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	add r0, sp, #0x90
 	add r1, sp, #0x50
 	add r2, r0, #0
@@ -2129,7 +2129,7 @@ _02067012:
 	beq _0206702A
 	ldr r0, _02067168 ; =0x02143A58
 	add r1, sp, #0x10
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	add r0, sp, #0x90
 	add r1, sp, #0x10
 	add r2, r0, #0

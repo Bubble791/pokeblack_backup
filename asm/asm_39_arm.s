@@ -422,34 +422,3 @@ sub_02072BA4: ; 0x02072BA4
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end sub_02072BA4
 
-	arm_func_start sub_02072C20
-sub_02072C20: ; 0x02072C20
-	mov r2, #0x1000
-	mov r3, #0
-	stmia r0!, {r2, r3}
-	mov r1, #0
-	stmia r0!, {r1, r3}
-	stmia r0!, {r2, r3}
-	stmia r0!, {r1, r3}
-	stmia r0!, {r2, r3}
-	stmia r0!, {r1, r3}
-	bx lr
-	arm_func_end sub_02072C20
-
-	arm_func_start sub_02072C48
-sub_02072C48: ; 0x02072C48
-	stmdb sp!, {r4}
-	mov ip, #0
-	ldmia r0!, {r2, r3, r4}
-	stmia r1!, {r2, r3, r4, ip}
-	ldmia r0!, {r2, r3, r4}
-	stmia r1!, {r2, r3, r4, ip}
-	ldmia r0!, {r2, r3, r4}
-	stmia r1!, {r2, r3, r4, ip}
-	mov ip, #0x1000
-	ldmia r0!, {r2, r3, r4}
-	stmia r1!, {r2, r3, r4, ip}
-	ldmia sp!, {r4}
-	bx lr
-	arm_func_end sub_02072C48
-

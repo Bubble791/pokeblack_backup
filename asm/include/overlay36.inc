@@ -3493,7 +3493,7 @@
 .public sub_0204A64C
 .public sub_0204A66C
 .public sub_0204A68C
-.public sub_02073328
+.public MTX_LookAt
 .public sub_0207873C
 .public sub_0207272C
 .public sub_02072BA4
@@ -3683,8 +3683,8 @@
 .public sub_02074054
 .public sub_020746C0
 .public sub_0208D65C
-.public sub_02072CE4
-.public sub_02073290
+.public MTX_RotAxis43
+.public MTX_MultVec43
 .public sub_02074254
 .public sub_02197F84
 .public sub_02197F84
@@ -6599,7 +6599,7 @@
 .public sub_0204A64C
 .public sub_0204A66C
 .public sub_0204A68C
-.public sub_02073328
+.public MTX_LookAt
 .public sub_0207873C
 .public sub_0207272C
 .public sub_02072BA4
@@ -8982,7 +8982,7 @@
 .public sub_0204A64C
 .public sub_0204A66C
 .public sub_0204A68C
-.public sub_02073328
+.public MTX_LookAt
 .public sub_0207873C
 .public sub_0207272C
 .public sub_02072BA4

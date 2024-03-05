@@ -18,3 +18,9 @@
 .public VEC_Normalize
 .public MI_Copy36B
 .public MI_Copy48B
+.public sub_02074018
+.public sub_02074254
+.public sub_02074098
+.public sub_02078758
+.public sub_020725D8
+.public sub_020724C0

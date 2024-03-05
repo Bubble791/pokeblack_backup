@@ -15527,7 +15527,7 @@ sub_02065698: ; 0x02065698
 	ldr r1, _02065748 ; =0x002A1B19
 	str r1, [r0, #0x38]
 	ldr r0, _0206574C ; =0x02143A58
-	blx sub_02072C20
+	blx MTX_Identity43_
 	ldr r0, _02065750 ; =0x02143A14
 	blx MTX_Identity44_
 	ldr r1, _02065754 ; =0x2D8B62D8
@@ -15862,7 +15862,7 @@ sub_0206596C: ; 0x0206596C
 	bne _0206598A
 	ldr r0, _02065994 ; =0x02143A58
 	ldr r1, _02065998 ; =0x02143B0C
-	blx sub_02072D04
+	blx MTX_Inverse43
 	ldr r1, _02065990 ; =0x02143A8C
 	mov r0, #8
 	ldr r2, [r1, #0x7c]
@@ -16104,7 +16104,7 @@ sub_02065B40: ; 0x02065B40
 	ldr r0, _02065B68 ; =0x02143AC8
 	ldr r1, _02065B6C ; =0x02143A58
 	ldr r2, _02065B70 ; =0x02143B3C
-	blx sub_02073078
+	blx MTX_Concat43
 	ldr r3, _02065B74 ; =0x02143A8C
 	ldr r0, [r3, #0x74]
 	str r0, [sp]
@@ -16112,10 +16112,10 @@ sub_02065B40: ; 0x02065B40
 	ldr r2, [r3, #0x6c]
 	ldr r3, [r3, #0x70]
 	add r1, r0, #0
-	blx sub_02072C94
+	blx MTX_ScaleApply43
 	ldr r0, _02065B70 ; =0x02143B3C
 	ldr r1, _02065B78 ; =0x02143B6C
-	blx sub_02072D04
+	blx MTX_Inverse43
 	pop {r3, pc}
 	.align 2, 0
 _02065B68: .word 0x02143AC8
@@ -16184,7 +16184,7 @@ sub_02065BCC: ; 0x02065BCC
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, sp, #0
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	ldr r2, _02065C0C ; =0x02143C0C
 	add r0, r4, #0
 	add r1, sp, #0

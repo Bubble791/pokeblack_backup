@@ -305,10 +305,10 @@
 .public sub_0203A24C
 .public sub_020616D8
 .public sub_02074B80
-.public sub_02072D04
+.public MTX_Inverse43
 .public sub_0207873C
 .public sub_02072470
-.public sub_02072C48
+.public MTX_Copy43To44_
 .public MTX_Concat44
 .public FX_Div
 .public FX_Div

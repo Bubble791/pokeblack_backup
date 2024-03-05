@@ -181,7 +181,7 @@ sub_02074B80: ; 0x02074B80
 	add r4, sp, #0
 _02074B8E:
 	add r3, r4, #0
-	blx sub_02073328
+	blx MTX_LookAt
 	cmp r5, #0
 	beq _02074BA4
 	ldr r0, _02074BA8 ; =0x04000440

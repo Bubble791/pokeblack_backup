@@ -1479,7 +1479,7 @@
 .public sub_02074B80
 .public sub_02074B48
 .public sub_02065698
-.public sub_02073328
+.public MTX_LookAt
 .public MTX_OrthoW
 .public sub_0206578C
 .public sub_021A5098

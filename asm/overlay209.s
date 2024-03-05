@@ -3789,7 +3789,7 @@ _021BBF4E:
 	add r4, sp, #0x1b8
 	ldr r0, _021BC298 ; =0x02143A58
 	add r1, r4, #0
-	blx sub_02072D04
+	blx MTX_Inverse43
 	add r0, r4, #0
 	add r4, sp, #0x194
 	add r1, r4, #0
@@ -3940,7 +3940,7 @@ _021BC048:
 	str r2, [sp, #0x144]
 	str r2, [sp, #0x148]
 	str r2, [sp, #0x14c]
-	blx sub_02072C48
+	blx MTX_Copy43To44_
 	ldr r1, _021BC2A4 ; =0x02143A14
 	add r0, r6, #0
 	add r2, r6, #0

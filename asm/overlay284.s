@@ -7307,7 +7307,7 @@ _021E6AFE:
 	mov r3, #2
 	ldrsh r2, [r2, r3]
 	add r0, sp, #0x1e0
-	bl sub_02072CC8
+	bl MTX_RotY43_
 	ldr r0, [r4, #0x50]
 	add r1, sp, #0x1e0
 	str r0, [sp, #0x1d4]
@@ -7316,7 +7316,7 @@ _021E6AFE:
 	str r0, [sp, #0x1dc]
 	add r0, sp, #0x1d4
 	add r2, sp, #0x210
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r0, [r4, #0x54]
 	str r0, [sp, #0x214]
 	ldr r0, [r4, #0x64]
@@ -7735,7 +7735,7 @@ _021E6E4C:
 	mov r3, #2
 	ldrsh r2, [r2, r3]
 	add r0, r7, #0
-	bl sub_02072CC8
+	bl MTX_RotY43_
 	ldr r0, [r4, #0x50]
 	add r2, r4, #0
 	str r0, [sp, #0x198]
@@ -7745,7 +7745,7 @@ _021E6E4C:
 	add r0, sp, #0x198
 	add r1, r7, #0
 	add r2, #0x68
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r0, [r4, #0x54]
 	str r0, [r4, #0x6c]
 	add r0, r5, #1
@@ -7995,7 +7995,7 @@ _021E7036:
 	mov r2, #2
 	ldrsh r2, [r3, r2]
 	add r0, sp, #0x168
-	bl sub_02072CC8
+	bl MTX_RotY43_
 	ldr r0, [r4, #0x50]
 	add r2, r4, #0
 	str r0, [sp, #0x15c]
@@ -8005,7 +8005,7 @@ _021E7036:
 	add r0, sp, #0x15c
 	add r1, sp, #0x168
 	add r2, #0x68
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r0, [r4, #0x54]
 	str r0, [r4, #0x6c]
 _021E7066:
@@ -8029,7 +8029,7 @@ _021E7076:
 	mov r2, #2
 	ldrsh r2, [r3, r2]
 	add r0, sp, #0x12c
-	bl sub_02072CC8
+	bl MTX_RotY43_
 	ldr r0, [r4, #0x50]
 	add r2, r4, #0
 	str r0, [sp, #0x120]
@@ -8039,7 +8039,7 @@ _021E7076:
 	add r0, sp, #0x120
 	add r1, sp, #0x12c
 	add r2, #0x68
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r2, [r4, #0x54]
 	str r2, [r4, #0x6c]
 	ldr r1, [r4, #0x68]

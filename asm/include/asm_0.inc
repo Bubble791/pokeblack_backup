@@ -1344,7 +1344,7 @@
 .public sub_0204AA30
 .public sub_0204AB0C
 .public sub_02067B9C
-.public sub_02072D04
+.public MTX_Inverse43
 .public sub_0207873C
 .public sub_02072470
 .public sub_02074B80
@@ -1352,7 +1352,7 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02072C48
+.public MTX_Copy43To44_
 .public MTX_Concat44
 .public FX_Div
 .public FX_Div
@@ -2669,7 +2669,7 @@
 .public sub_02076E7C
 .public sub_02076860
 .public MTX_PerspectiveW
-.public sub_02073328
+.public MTX_LookAt
 .public sub_02072588
 .public sub_02049B5C
 .public sub_0203A1FC

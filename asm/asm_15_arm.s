@@ -1853,7 +1853,7 @@ sub_02052394: ; 0x02052394
 	add r2, sp, #0x30
 	blx r3
 	add r0, sp, #0xc0
-	bl sub_02072C20
+	bl MTX_Identity43_
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r0, [r0, #0x14]
@@ -1929,7 +1929,7 @@ _020524F0:
 	str r7, [sp, #0xd8]
 	str r6, [sp, #0xdc]
 	str r3, [sp, #0xe0]
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r2, [r4, #0x30]
 	ldr r0, [r0, #0x20]
@@ -1989,11 +1989,11 @@ _02052618:
 _0205263C:
 	add r0, sp, #0x60
 	mov r3, r2
-	blx sub_02072C7C
+	blx MTX_Scale43_
 	add r0, sp, #0x30
 	add r1, sp, #0x60
 	add r2, sp, #0
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r3, [r0]
@@ -2156,7 +2156,7 @@ sub_02052814: ; 0x02052814
 	add r2, sp, #0x30
 	blx r3
 	add r0, sp, #0xc0
-	bl sub_02072C20
+	bl MTX_Identity43_
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r0, [r0]
@@ -2231,7 +2231,7 @@ _0205296C:
 	str r7, [sp, #0xd8]
 	str r6, [sp, #0xdc]
 	str r3, [sp, #0xe0]
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r2, [r4, #0x30]
 	ldr r0, [r0, #0x20]
@@ -2291,11 +2291,11 @@ _02052A94:
 _02052AB8:
 	add r0, sp, #0x60
 	mov r3, r2
-	blx sub_02072C7C
+	blx MTX_Scale43_
 	add r0, sp, #0x60
 	add r1, sp, #0x30
 	add r2, sp, #0
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r3, [r0]
@@ -2516,11 +2516,11 @@ _02052DEC:
 _02052E10:
 	add r0, sp, #0x60
 	mov r3, r2
-	blx sub_02072C7C
+	blx MTX_Scale43_
 	add r0, sp, #0x30
 	add r1, sp, #0x60
 	add r2, sp, #0
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r3, [r0]
@@ -2739,11 +2739,11 @@ _0205313C:
 _02053160:
 	add r0, sp, #0x60
 	mov r3, r2
-	blx sub_02072C7C
+	blx MTX_Scale43_
 	add r0, sp, #0x60
 	add r1, sp, #0x30
 	add r2, sp, #0
-	bl sub_02073078
+	bl MTX_Concat43
 	ldr r0, [r5, #0x40]
 	ldr r0, [r0, #0x20]
 	ldr r3, [r0]
@@ -3000,7 +3000,7 @@ _02053518:
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
-	bl sub_02073290
+	bl MTX_MultVec43
 	add r0, r6, #0x14
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
@@ -3164,7 +3164,7 @@ _020537A0:
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
-	bl sub_02073290
+	bl MTX_MultVec43
 	add r0, r6, #0x14
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
@@ -3453,7 +3453,7 @@ _02053BF8:
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
-	bl sub_02073290
+	bl MTX_MultVec43
 	add r0, r6, #0x14
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
@@ -3617,7 +3617,7 @@ _02053E80:
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
-	bl sub_02073290
+	bl MTX_MultVec43
 	add r0, r6, #0x14
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
@@ -3871,7 +3871,7 @@ _0205423C:
 	ldr r3, [r6, #0x40]
 	add r3, r8, r3
 	str r3, [sp, #8]
-	bl sub_02073290
+	bl MTX_MultVec43
 	ldrh r0, [r6, #0x20]
 	ldr r2, _0205453C ; =0x020946BC
 	mov sb, #0
@@ -3952,7 +3952,7 @@ _0205435C:
 	mov r2, r0
 	sub r3, r8, r3
 	str r3, [sp, #8]
-	bl sub_02073290
+	bl MTX_MultVec43
 	ldrh r0, [r6, #0x20]
 	ldr r2, _0205453C ; =0x020946BC
 	mov lr, #0
@@ -4157,7 +4157,7 @@ _02054680:
 	ldr r3, [r8, #0x40]
 	add r3, sl, r3
 	str r3, [sp, #8]
-	bl sub_02073290
+	bl MTX_MultVec43
 	ldrh r0, [r8, #0x20]
 	ldr r2, _02054988 ; =0x020946BC
 	ldr ip, [sp]
@@ -4238,7 +4238,7 @@ _020547AC:
 	mov r2, r0
 	sub r3, sl, r3
 	str r3, [sp, #8]
-	bl sub_02073290
+	bl MTX_MultVec43
 	ldrh r0, [r8, #0x20]
 	ldr r2, _02054988 ; =0x020946BC
 	mov r8, #0

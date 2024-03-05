@@ -957,7 +957,7 @@
 .public sub_020746C0
 .public sub_02074098
 .public sub_02074254
-.public sub_02072CE4
+.public MTX_RotAxis43
 .public sub_02050310
 .public sub_0205033C
 .public sub_020501B8
@@ -967,8 +967,8 @@
 .public sub_020746C0
 .public sub_02074098
 .public sub_02074254
-.public sub_02072CE4
-.public sub_02073290
+.public MTX_RotAxis43
+.public MTX_MultVec43
 .public sub_02074254
 .public sub_02050328
 .public sub_02050230
@@ -1001,7 +1001,7 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02073290
+.public MTX_MultVec43
 .public sub_02050208
 .public sub_02050188
 .public sub_02050248
@@ -1072,7 +1072,7 @@
 .public sub_021E7154
 .public sub_0205007C
 .public sub_0203A24C
-.public sub_02072C48
+.public MTX_Copy43To44_
 .public MTX_Concat44
 .public FX_Div
 .public FX_Div

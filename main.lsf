@@ -43,10 +43,7 @@ Static main
     Object asm/asm_37_arm.o
     Object asm/asm_38_thumb.o
     Object asm/asm_39_arm.o
-    Object asm/asm_40_thumb.o
-    Object asm/asm_41_arm.o
-    Object asm/asm_42_thumb.o
-    Object asm/asm_43_arm.o
+	Object lib/NitroSDK/asm/fx_mtx43.o
     Object lib/NitroSDK/asm/fx_mtx44.o
 	Object lib/NitroSDK/asm/fx_cp.o
     Object asm/asm_44_thumb.o
@@ -131,7 +128,6 @@ Static main
 	Object lib/NitroSDK/asm/fx_sincos.o
 	Object lib/NitroSDK/asm/fx_mtx22.o
 	Object lib/NitroSDK/asm/fx_mtx33.o
-	Object lib/NitroSDK/asm/fx_mtx43.o
 	
 	Object lib/NitroSDK/asm/fx_vec.o
 	Object lib/NitroSDK/asm/fx_trig.o

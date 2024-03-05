@@ -145,7 +145,7 @@ sub_02067E1C: ; 0x02067E1C
 	ldr r5, _02067F98 ; =0x02143A14
 	ldr r1, _02067F9C ; =0x02143A58
 	add r2, sp, #0x50
-	blx sub_02073290
+	blx MTX_MultVec43
 	ldr r0, [sp, #0x58]
 	ldr r2, [r5, #0x2c]
 	asr r1, r0, #0x1f
