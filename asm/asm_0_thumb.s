@@ -144,7 +144,7 @@ sub_02005234: ; 0x02005234
 	orr r0, r2
 	str r0, [r3, r1]
 	mov r0, #3
-	bl sub_0207829C
+	bl MI_WaitDma
 	pop {r3, pc}
 	nop
 _02005250: .word 0x02FE0000

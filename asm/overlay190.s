@@ -297,7 +297,7 @@ ovy190_21b31b4: ; 0x021B31B4
 	push {r3, r4, r5, lr}
 	ldr r4, _021B323C ; =0x021B52E0
 	add r5, r0, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021B31C8
 	mov r0, #0x79

@@ -35,7 +35,7 @@
 .public sub_0204C5BC
 .public sub_0204C520
 .public sub_02048210
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_02048838
 .public sub_021B2F84
 .public sub_02048838

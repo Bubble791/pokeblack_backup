@@ -11428,7 +11428,7 @@ _020DE30C:
 	mov r1, r6
 	mov r3, r7
 	mov r2, #0
-	bl MI_DmaFill32
+	bl MIi_DmaFill32
 	ldr r0, _020DE444 ; =_021E4220
 	add r1, r6, #0x200
 	str r6, [r0, #4]
@@ -15142,14 +15142,14 @@ _020E14D4:
 	mov r1, r6
 	mov r2, r5
 	mov r3, r4
-	bl MI_DmaCopy16
+	bl MIi_DmaCopy16
 	b _020E154C
 _020E14EC:
 	mov r0, r7
 	mov r1, r6
 	mov r2, r5
 	mov r3, r4
-	bl MI_DmaCopy32
+	bl MIi_DmaCopy32
 	b _020E154C
 _020E1504:
 	mov r0, r6
@@ -15409,7 +15409,7 @@ CTRDGi_InitModuleInfo: ; 0x020E1798
 	mov r0, #1
 	mov r3, #0x40
 	add r2, r2, #0x80
-	bl MI_DmaCopy16
+	bl MIi_DmaCopy16
 	ldr r2, _020E1970 ; =0x04000204
 	add r0, sp, #0
 	ldrh r1, [r2]

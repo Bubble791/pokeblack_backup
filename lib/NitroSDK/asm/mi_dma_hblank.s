@@ -31,7 +31,6 @@ MI_HBlankDmaCopy32: ; 0x020D43E8
 	mov r1, r6
 	mov r2, r5
 	orr r3, r3, r4, lsr #2
-	bl MIi_DmaSetParams
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020D4444: .word 0x96600000
@@ -60,7 +59,6 @@ MI_HBlankDmaCopy16: ; 0x020D4448
 	mov r1, r6
 	mov r2, r5
 	orr r3, r3, r4, lsr #1
-	bl MIi_DmaSetParams
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020D44A4: .word 0x92600000

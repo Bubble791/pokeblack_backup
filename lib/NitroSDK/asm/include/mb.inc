@@ -15,7 +15,7 @@
 .public OS_SpinWait
 .public OS_GetMacAddress
 .public OS_Terminate
-.public MI_DmaCopy16
+.public MIi_DmaCopy16
 .public MIi_CpuClear16
 .public MIi_CpuCopy16
 .public MIi_CpuClear32

@@ -91,9 +91,9 @@
 .public OS_Terminate
 .public OS_Halt
 .public MI_SetWramBank
-.public MI_DmaFill32
-.public MI_DmaCopy32
-.public MI_DmaCopy16
+.public MIi_DmaFill32
+.public MIi_DmaCopy32
+.public MIi_DmaCopy16
 .public MI_StopDma
 .public MIi_CheckAnotherAutoDMA
 .public MIi_CheckDma0SourceAddress

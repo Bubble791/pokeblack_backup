@@ -359,7 +359,7 @@ _0207C786:
 	strh r4, [r1]
 	blx sub_0207C0D0
 _0207C7A4:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C7B8
 	blx sub_0207C7CC

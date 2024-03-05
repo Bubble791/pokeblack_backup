@@ -2522,7 +2522,7 @@ sub_02006D64: ; 0x02006D64
 	orr r0, r5
 	str r0, [r4, #0x20]
 	bl sub_0207E75C
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _02006DCE
 	ldr r1, _02006DDC ; =0x02099F20

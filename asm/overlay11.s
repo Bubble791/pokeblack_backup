@@ -24779,7 +24779,7 @@ _0215BD38:
 	str r0, [r4]
 	b _0215BD52
 _0215BD3C:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0215BD48
 	mov r0, #0
@@ -24860,7 +24860,7 @@ _0215BDCA:
 	add r4, r0, #0
 	b _0215BDDE
 _0215BDCE:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215BDDC
 	bl sub_0215BDF0
@@ -24931,7 +24931,7 @@ _0215BE52:
 	add r5, r0, #0
 	b _0215BE66
 _0215BE56:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215BE64
 	bl sub_0215BE78
@@ -25005,7 +25005,7 @@ _0215BED6:
 	add r4, r0, #0
 	b _0215BEF0
 _0215BEDA:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215BEEE
 	add r0, r5, #0
@@ -25221,7 +25221,7 @@ _0215C072:
 	add r4, r0, #0
 	b _0215C086
 _0215C076:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C084
 	bl sub_0215C09C
@@ -25306,7 +25306,7 @@ _0215C118:
 	add r5, r0, #0
 	b _0215C12C
 _0215C11C:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C12A
 	bl sub_0215C140
@@ -25420,7 +25420,7 @@ _0215C1F6:
 	add r4, r0, #0
 	b _0215C20A
 _0215C1FA:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C208
 	bl sub_0215C21C
@@ -25561,7 +25561,7 @@ _0215C300:
 	bl ovy11_215d1f8
 	pop {r3, pc}
 _0215C306:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C314
 	bl sub_0215C31C
@@ -25892,7 +25892,7 @@ _0215C578:
 	thumb_func_start ovy11_215c580
 ovy11_215c580: ; 0x0215C580
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C58E
 	mov r0, #2
@@ -26055,7 +26055,7 @@ ovy11_215c6a0: ; 0x0215C6A0
 	ldrb r0, [r4, r5]
 	cmp r0, #0
 	bne _0215C716
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215C6D0
 	add r0, r5, #3
@@ -26535,7 +26535,7 @@ ovy11_215ca04: ; 0x0215CA04
 	mov r0, #0
 	pop {r3, r4, r5, r6, pc}
 _0215CA30:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	ldr r0, _0215CAB8 ; =0x000012DF
 	beq _0215CA66
@@ -26820,7 +26820,7 @@ _0215CC3C:
 	bl ovy11_215d184
 	b _0215CC62
 _0215CC4C:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0215CC62
 	lsl r2, r6, #0x10

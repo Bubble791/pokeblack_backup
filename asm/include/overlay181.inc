@@ -685,7 +685,7 @@
 .public sub_021A3EA4
 .public MI_CpuCopy8
 .public sub_0207062C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207062C
 .public sub_0206EEE8
 .public sub_02070C7C
@@ -796,11 +796,11 @@
 .public sub_020815C8
 .public sub_021A2638
 .public sub_0207B074
-.public sub_020780E8
+.public MIi_DmaCopy16
 .public MI_CpuCopy8
 .public MIi_CpuCopy16
 .public sub_0207B074
-.public sub_020780E8
+.public MIi_DmaCopy16
 .public sub_020815C8
 .public sub_020815C8
 .public sub_020816DC

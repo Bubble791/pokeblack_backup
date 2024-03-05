@@ -15,7 +15,7 @@
 .public sub_0203FF6C
 .public sub_02042B00
 .public sub_02042B20
-.public sub_0207829C
+.public MI_WaitDma
 .public sub_0203CE0C
 .public sub_0203CE0C
 .public sub_020425A0
@@ -44,18 +44,18 @@
 .public sub_0205F9D0
 .public sub_020827D0
 .public sub_02769588
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207B298
 .public sub_0207B2A4
 .public sub_0207B5DC
 .public sub_0207B418
 .public sub_0207B6B8
 .public sub_0207B4F4
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0203A130
 .public sub_0203A4DC
 .public sub_0203A15C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0203A178
 .public sub_0203A15C
 .public sub_02043E40
@@ -123,7 +123,7 @@
 .public sub_0206B8D4
 .public sub_0206D010
 .public sub_0206C9BC
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public _0209E278
 .public sub_02704364
 .public sub_0206D918
@@ -238,7 +238,7 @@
 .public sub_0207EFC4
 .public sub_0207EFF4
 .public sub_0207E75C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_027047C0
 .public sub_0207EFC4
 .public sub_0203A24C
@@ -2019,7 +2019,7 @@
 .public sub_0208D65C
 .public sub_020454D4
 .public sub_0203D5A8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_020454D4
 .public sub_02044F90
 .public sub_020454D4
@@ -2698,7 +2698,7 @@
 .public sub_0208D65C
 .public MI_CpuCopy8
 .public sub_0205FA10
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207C4B4
 .public sub_0207C4B4
 .public sub_0207C438

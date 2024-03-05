@@ -7014,7 +7014,7 @@ sub_02056F48: ; 0x02056F48
 	mov r2, #0x1000
 	mov r5, r0
 	bl MI_CpuFill8
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	mov r0, r5
 	beq _02056F74
@@ -9703,7 +9703,7 @@ sub_020590CC: ; 0x020590CC
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205913C
 	mov r0, r4
@@ -10890,7 +10890,7 @@ sub_02059F04: ; 0x02059F04
 	orr r2, r3, r2, lsr #26
 	strb r2, [r1, #0x4bc]
 	bl sub_02056A58
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205A178
 	add r1, r4, #0x1000
@@ -10953,7 +10953,7 @@ _0205A16C:
 	orrne r1, r2, #0x80
 	strneb r1, [r0, #0x4bc]
 _0205A178:
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	mov r1, #0x4800
 	beq _0205A1B8
@@ -11585,7 +11585,7 @@ sub_0205A928: ; 0x0205A928
 	blo _0205AA14
 	cmp r6, #0xc
 	bhi _0205AA14
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205AA14
 	sub r0, r6, #0xa
@@ -11741,7 +11741,7 @@ _0205AB74: .word 0x02141988
 	arm_func_start sub_0205AB78
 sub_0205AB78: ; 0x0205AB78
 	stmdb sp!, {r4, lr}
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205ABDC
 	ldr r0, _0205ABE4 ; =0x02141988
@@ -11777,7 +11777,7 @@ _0205ABE4: .word 0x02141988
 	arm_func_start sub_0205ABE8
 sub_0205ABE8: ; 0x0205ABE8
 	stmdb sp!, {r3, lr}
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205AC1C
 	blx sub_0207C438
@@ -11838,7 +11838,7 @@ sub_0205AC88: ; 0x0205AC88
 	ldr r0, _0205ACCC ; =0x0000FFFF
 	cmp r5, r0
 	ldmgtia sp!, {r3, r4, r5, pc}
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	ldrne r0, [r4, #4]
 	strne r5, [r0, #0xc]
@@ -12346,7 +12346,7 @@ _0205B338:
 	cmpne r0, #1
 	cmpne r0, #2
 	beq _0205B378
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205B3B8
 	ldr r0, [r5]
@@ -12812,7 +12812,7 @@ _0205B914:
 	moveq r0, r4
 	ldmeqia sp!, {r3, r4, r5, pc}
 _0205B94C:
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end sub_0205B890
@@ -13024,7 +13024,7 @@ _0205BBF8:
 	cmp r0, #3
 	add r1, r1, #0x100
 	blt _0205BB1C
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205BDB8
 	mov r0, #0
@@ -13629,7 +13629,7 @@ _0205C3C4:
 	rsb r1, r2, #0xd
 	add r0, r4, #0x1400
 	strh r1, [r0, #0xce]
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205C40C
 	add r0, r4, #0x1000
@@ -15114,7 +15114,7 @@ sub_0205D730: ; 0x0205D730
 	blo _0205D7A8
 	cmp r5, #0xc
 	bhi _0205D7A8
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	subne r0, r5, #0xa
 	andne r0, r0, #0xff
@@ -15297,7 +15297,7 @@ _0205D9D0:
 	str r0, [r5, #0x1c]
 _0205D9E8:
 	str r0, [r5, #0x20]
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205DA30
 	ldrh r1, [r4, #0xea]
@@ -15318,7 +15318,7 @@ _0205DA30:
 	mov r0, #0x240
 	str r0, [r5, #0x2c]
 _0205DA38:
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205DA64
 	ldrh r0, [r4, #0xea]

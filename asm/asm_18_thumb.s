@@ -3990,7 +3990,7 @@ _02067C14:
 	ldr r0, [r0, #8]
 	cmp r0, #0
 	beq _02067C88
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _02067C6C
 	ldr r0, _02067CEC ; =0x0209B528
@@ -4025,7 +4025,7 @@ _02067C5A:
 	add r0, r2, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02078594
+	bl MI_SendGXCommandAsyncFast
 	pop {r3, r4, r5, pc}
 _02067C6C:
 	ldr r0, _02067CEC ; =0x0209B528
@@ -4040,10 +4040,10 @@ _02067C78:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02078594
+	bl MI_SendGXCommandAsyncFast
 	pop {r3, r4, r5, pc}
 _02067C88:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _02067CD0
 	ldr r0, _02067CEC ; =0x0209B528
@@ -4078,7 +4078,7 @@ _02067CBE:
 	add r0, r2, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02078428
+	bl MI_SendGXCommandAsync
 	pop {r3, r4, r5, pc}
 _02067CD0:
 	ldr r0, _02067CEC ; =0x0209B528
@@ -4093,7 +4093,7 @@ _02067CDC:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02078428
+	bl MI_SendGXCommandAsync
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _02067CEC: .word 0x0209B528

@@ -708,14 +708,14 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207C0E4
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_020810CC
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215BDF0
 .public sub_0207C0F8
 .public sub_0207C0E4
@@ -723,12 +723,12 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215BE78
 .public sub_0207C0F8
 .public sub_0207C0E4
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215BF04
 .public sub_0207C0F8
 .public sub_0207C0E4
@@ -749,7 +749,7 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215C09C
 .public sub_0207C0F8
 .public sub_0207C0E4
@@ -757,7 +757,7 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215C140
 .public sub_0207C0F8
 .public sub_0207C0E4
@@ -766,7 +766,7 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215C21C
 .public sub_0207C0F8
 .public sub_0207C0E4
@@ -775,7 +775,7 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0215C32C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215C31C
 .public MI_CpuFill8
 .public sub_0208D65C
@@ -789,7 +789,7 @@
 .public sub_0207BD3C
 .public sub_0207BCF4
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207C0E4
 .public sub_0215C32C
 .public sub_0207C0F8
@@ -809,7 +809,7 @@
 .public sub_0207C0F8
 .public sub_0207C0F8
 .public sub_0215C32C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215C32C
 .public sub_0208D868
 .public sub_0215C32C
@@ -825,7 +825,7 @@
 .public MI_CpuComp8
 .public MI_CpuCopy
 .public sub_0215C32C
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215CABC
 .public MI_CpuFill8
 .public sub_0207AE4C
@@ -846,7 +846,7 @@
 .public sub_0207C0F8
 .public sub_0207AEA4
 .public sub_0207C0F8
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0215CC80
 .public sub_0207AEA4
 .public sub_0207C0F8

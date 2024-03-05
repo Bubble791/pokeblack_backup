@@ -54,8 +54,9 @@ Static main
     Object lib/NitroSDK/asm/dgt_md5.o
     Object lib/NitroSDK/asm/dgt_sha1.o
     Object lib/NitroSDK/asm/crc.o
-
-    Object asm/asm_72_thumb.o
+    Object lib/NitroSDK/asm/mi_wram.o
+    Object lib/NitroSDK/asm/mi_dma.o
+	Object lib/NitroSDK/asm/mi_dma_gxcommand.o
     Object lib/NitroSDK/asm/mi_memory.o
     Object asm/asm_74_thumb.o
     Object asm/asm_75_arm.o
@@ -141,11 +142,9 @@ Static main
 	Object lib/NitroSDK/src/os/os_vramExclusive.o
 	Object lib/NitroSDK/src/os/os_entropy.o
 	Object lib/NitroSDK/src/os/os_terminate_proc.o
-	Object lib/NitroSDK/asm/mi_wram.o
-	Object lib/NitroSDK/asm/mi_dma.o
-	Object lib/NitroSDK/asm/mi_dma_hblank.o
-	Object lib/NitroSDK/asm/mi_dma_gxcommand.o
 	
+	
+	Object lib/NitroSDK/asm/mi_dma_hblank.o
 	Object lib/NitroSDK/asm/mi_swap.o
 	Object lib/NitroSDK/asm/mi_uncompress.o
 	Object lib/NitroSDK/asm/mi_dma_card.o

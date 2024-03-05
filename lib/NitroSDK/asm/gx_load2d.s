@@ -71,7 +71,7 @@ _020754FC:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r5, r2
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _02075510:
 	mov r1, #5
@@ -140,7 +140,7 @@ _02075576:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r5, r2
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _02075588:
 	ldr r1, _0207559C ; =0x05000400
@@ -195,7 +195,7 @@ _020755E2:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r5, r2
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _020755F4:
 	ldr r1, _02075608 ; =0x05000200
@@ -250,7 +250,7 @@ _0207564E:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r5, r2
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	pop {r3, r4, r5, r6, r7, pc}
 _02075660:
 	ldr r1, _02075674 ; =0x05000600
@@ -294,7 +294,7 @@ _020756A4:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r4, r2
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	pop {r3, r4, r5, pc}
 _020756B6:
 	mov r1, #7
@@ -335,7 +335,7 @@ _020756F6:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r4, r2
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	pop {r3, r4, r5, pc}
 _02075704:
 	ldr r1, _02075718 ; =0x07000400
@@ -377,7 +377,7 @@ _02075748:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r2, r4
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	pop {r3, r4, r5, pc}
 _02075756:
 	add r1, r2, r4
@@ -417,7 +417,7 @@ _02075794:
 	str r1, [sp]
 	add r1, r5, #0
 	add r2, r2, r4
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	pop {r3, r4, r5, pc}
 _020757A2:
 	add r1, r2, r4
@@ -475,7 +475,7 @@ _02075804:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075816:
@@ -535,7 +535,7 @@ _02075878:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _0207588A:
@@ -595,7 +595,7 @@ _020758EC:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _020758FE:
@@ -655,7 +655,7 @@ _02075960:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075972:
@@ -715,7 +715,7 @@ _020759D4:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _020759E6:
@@ -775,7 +775,7 @@ _02075A48:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075A5A:
@@ -835,7 +835,7 @@ _02075ABC:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075ACE:
@@ -895,7 +895,7 @@ _02075B30:
 	add r1, r5, #0
 	add r2, r2, r6
 	add r3, r4, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075B42:
@@ -941,7 +941,7 @@ _02075B88:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075B9A:
@@ -987,7 +987,7 @@ _02075BE0:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075BF2:
@@ -1033,7 +1033,7 @@ _02075C38:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075C4A:
@@ -1079,7 +1079,7 @@ _02075C90:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075CA2:
@@ -1125,7 +1125,7 @@ _02075CE8:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075CFA:
@@ -1171,7 +1171,7 @@ _02075D40:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075D52:
@@ -1217,7 +1217,7 @@ _02075D98:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075DAA:
@@ -1263,7 +1263,7 @@ _02075DF0:
 	add r1, r6, #0
 	add r2, r2, r5
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02075E02:
@@ -1369,7 +1369,7 @@ _02075EAC:
 	add r2, r3, #0
 	add r1, r5, #0
 	add r3, r4, #0
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 _02075EC6:
@@ -1411,7 +1411,7 @@ GX_EndLoadBGExtPltt: ; 0x02075EE8
 	bl sub_02075F20
 	b _02075F06
 _02075F02:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02075F06:
 	ldr r4, _02075F1C ; =0x0214C050
 	ldr r0, [r4, #0x14]
@@ -1505,7 +1505,7 @@ _02075F94:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r3, r7, #0
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _02075FAE:
@@ -1533,7 +1533,7 @@ GX_EndLoadOBJExtPltt: ; 0x02075FC0
 	bl sub_02075F20
 	b _02075FDE
 _02075FDA:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02075FDE:
 	ldr r4, _02075FF4 ; =0x0214C050
 	ldr r0, [r4, #8]
@@ -1592,7 +1592,7 @@ _02076038:
 	add r0, r1, #0
 	add r1, r5, #0
 	add r2, r4, r2
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 _02076050:
@@ -1621,7 +1621,7 @@ GXS_EndLoadBGExtPltt: ; 0x02076064
 	bl sub_02075F20
 	b _02076082
 _0207607E:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02076082:
 	ldr r4, _02076094 ; =0x0214C050
 	ldr r0, [r4]
@@ -1679,7 +1679,7 @@ _020760D8:
 	add r0, r1, #0
 	add r1, r5, #0
 	add r2, r4, r2
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 _020760F0:
@@ -1708,7 +1708,7 @@ GXS_EndLoadOBJExtPltt: ; 0x02076104
 	bl sub_02075F20
 	b _02076122
 _0207611E:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02076122:
 	ldr r4, _02076134 ; =0x0214C050
 	ldr r0, [r4, #0x18]

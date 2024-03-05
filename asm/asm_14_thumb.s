@@ -8082,7 +8082,7 @@ sub_0203D348: ; 0x0203D348
 	blx sub_0208D868
 	cmp r1, #1
 	bne _0203D3A6
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0203D37E
 	add r0, sp, #0

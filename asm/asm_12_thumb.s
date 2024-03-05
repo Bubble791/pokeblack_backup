@@ -83014,7 +83014,7 @@ _0202A98E:
 	strb r1, [r4, #0xc]
 	ldrb r0, [r0, #5]
 	strb r0, [r4, #0xd]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	ldr r0, [r5]
 	beq _0202A9DE
@@ -107299,10 +107299,10 @@ _020352DC:
 
 	thumb_func_start sub_020352E0
 sub_020352E0: ; 0x020352E0
-	ldr r3, _020352E4 ; =sub_0207AC8C
+	ldr r3, _020352E4 ; =OS_IsRunOnTwl
 	bx r3
 	.align 2, 0
-_020352E4: .word sub_0207AC8C
+_020352E4: .word OS_IsRunOnTwl
 	thumb_func_end sub_020352E0
 
 	thumb_func_start sub_020352E8

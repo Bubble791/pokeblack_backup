@@ -110,7 +110,7 @@ sub_0207C210: ; 0x0207C210
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	bne _0207C234
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _0207C22E
 	ldr r0, _0207C244 ; =0x02FFE1BF

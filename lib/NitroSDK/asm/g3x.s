@@ -407,14 +407,14 @@ _02074F82:
 	add r1, r5, #0
 	mov r2, #0
 	mov r3, #0x10
-	bl sub_02078150
+	bl MIi_DmaFill32Async
 	str r6, [sp]
 	add r5, #0x30
 	ldr r0, [r4]
 	add r1, r5, #0
 	mov r2, #0
 	mov r3, #0x60
-	bl sub_0207802C
+	bl MIi_DmaFill32
 	b _02074FC0
 _02074FA8:
 	ldr r4, _02074FD8 ; =0x04000330

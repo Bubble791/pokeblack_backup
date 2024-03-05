@@ -4626,7 +4626,7 @@ _020B7F14:
 	beq _020B7F64
 	mov r3, r4
 	mov r2, #0xc0
-	bl MI_DmaFill32
+	bl MIi_DmaFill32
 	b _020B7FC8
 _020B7F64:
 	mov r2, r4

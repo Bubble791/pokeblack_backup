@@ -37,7 +37,6 @@ _020D4D34:
 	mov r0, r6
 	mov r1, r5
 	mov r2, r4
-	bl MIi_DmaSetParams
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020D4D58: .word 0xAF000001

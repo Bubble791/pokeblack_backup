@@ -30,7 +30,7 @@
 .public sub_02151F00
 .public sub_021B496C
 .public sub_021B2FAC
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_020425EC
 .public sub_020423E0
 .public sub_02042BA8

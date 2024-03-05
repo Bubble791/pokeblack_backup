@@ -38,7 +38,7 @@ sub_0207C29C: ; 0x0207C29C
 	ldrh r0, [r1]
 	cmp r0, #2
 	beq _0207C2D0
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #1
 	bne _0207C2D4
 	ldr r0, _0207C334 ; =0x02FFE234
@@ -48,7 +48,7 @@ sub_0207C29C: ; 0x0207C29C
 _0207C2D0:
 	blx sub_0207C774
 _0207C2D4:
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C2E4
 	blx sub_02769578
@@ -61,8 +61,8 @@ _0207C2E4:
 	blx sub_02079E50
 	mvn r0, #0
 	blx sub_02079EB8
-	blx sub_02078328
-	blx sub_0207AC8C
+	blx MI_StopAllDma
+	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C318
 	blx sub_02768298

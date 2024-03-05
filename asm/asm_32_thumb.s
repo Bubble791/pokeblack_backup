@@ -2144,7 +2144,7 @@ _02070F6E:
 	ldr r0, _02071054 ; =0x00000158
 	cmp r2, r0
 	blo _02070F7C
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _02071046
 _02070F7C:
@@ -2305,7 +2305,7 @@ sub_020710A8: ; 0x020710A8
 	blx MI_CpuCopy8
 	cmp r4, #0
 	bne _020710EC
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020710EC
 	ldr r0, _02071138 ; =0x0214BF60
@@ -2374,7 +2374,7 @@ sub_0207113C: ; 0x0207113C
 	ldr r0, _020711F0 ; =0x0276DDE0
 	cmp r1, r0
 	bhs _02071168
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _02071168
 	ldr r0, _020711F4 ; =0x0214BF60
@@ -4636,7 +4636,7 @@ sub_02072130: ; 0x02072130
 	bl sub_0207F95C
 	cmp r0, #0
 	bne _0207215C
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207215C
 	bl sub_0206EEE0

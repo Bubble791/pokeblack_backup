@@ -91,7 +91,7 @@ _02074796:
 	add r2, r5, #0
 	mov r3, #0x60
 	str r7, [sp]
-	bl sub_0207802C
+	bl MIi_DmaFill32
 	add r4, #0x68
 	strh r5, [r4]
 	str r7, [sp]
@@ -99,7 +99,7 @@ _02074796:
 	ldr r1, _02074804 ; =0x04001000
 	add r2, r5, #0
 	mov r3, #0x70
-	bl sub_0207802C
+	bl MIi_DmaFill32
 	b _020747D0
 _020747B8:
 	add r0, r5, #0

@@ -121,7 +121,7 @@ sub_0206FF68: ; 0x0206FF68
 	beq _0206FF7C
 	bl sub_0207EF8C
 _0206FF7C:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0206FF88
 	bl sub_0206FFAC
@@ -129,8 +129,8 @@ _0206FF88:
 	mov r0, #1
 	mov r1, #1
 	bl sub_0206FFFC
-	bl sub_02078328
-	bl sub_0207AC8C
+	bl MI_StopAllDma
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0206FFA0
 	bl sub_0206FFBC

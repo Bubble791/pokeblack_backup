@@ -135,7 +135,7 @@
 .public sub_02046D84
 .public sub_0204C520
 .public sub_0204C520
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0204C5C8
 .public sub_0204C124
 .public sub_0204C124
@@ -245,7 +245,7 @@
 .public sub_0208D868
 .public sub_0204C510
 .public sub_0204C504
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0204C510
 .public sub_0204C504
 .public sub_0203D5E8

@@ -7,14 +7,14 @@
 sub_020791D0: ; 0x020791D0
 	push {r3, lr}
 	mov r0, #3
-	bl sub_02078020
-	bl sub_0207AC8C
+	bl MI_SetWramBank
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020791E4
 	bl sub_020791EC
 _020791E4:
 	mov r0, #0
-	bl sub_020782D8
+	bl MI_StopDma
 	pop {r3, pc}
 	thumb_func_end sub_020791D0
 

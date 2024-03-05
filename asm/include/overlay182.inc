@@ -2,7 +2,7 @@
 #pragma once
 .public sub_0207C0E4
 .public sub_0203A1FC
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0203A24C
 .public sub_0207C0F8
 .public sub_0203A15C
@@ -579,7 +579,7 @@
 .public MI_CpuCopy8
 .public sub_0207C33C
 .public sub_0207C774
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_021ADC4C
 .public sub_021694E0
 .public sub_021694D4

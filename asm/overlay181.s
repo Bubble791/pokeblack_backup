@@ -8494,7 +8494,7 @@ ovy181_21a1290: ; 0x021A1290
 	bne _021A12AA
 	ldr r6, [r7, #0x18]
 _021A12AA:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021A12F6
 	ldr r0, _021A1340 ; =0x021A472C
@@ -12339,7 +12339,7 @@ _021A2F10:
 	add r2, r3, r2
 	add r1, r5, #0
 	mov r3, #0xc0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add r1, r6, #0
 	ldr r0, [sp, #0x34]
 	sub r1, #0x14
@@ -12435,7 +12435,7 @@ _021A2F90:
 	mov r3, #0xc0
 	str r1, [sp]
 	add r1, r5, #0
-	bl sub_020780E8
+	bl MIi_DmaCopy16
 	add r1, r7, #0
 	ldr r0, [sp, #0x34]
 	add r1, #0xc

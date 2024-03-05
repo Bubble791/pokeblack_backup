@@ -23,11 +23,11 @@
 .public GXi_DmaId
 .public GX_ResetBankForTex
 .public sub_02075524
-.public sub_02078080
+.public MIi_DmaCopy32
 .public sub_02075ED8
-.public sub_020781F0
+.public MIi_DmaCopy32Async
 .public sub_02075F20
-.public sub_0207829C
+.public MI_WaitDma
 .public GX_SetBankForTex
 .public GX_ResetBankForTexPltt
 .public GX_SetBankForClearImage

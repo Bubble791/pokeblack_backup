@@ -6,7 +6,7 @@
 	thumb_func_start sub_020054B8
 sub_020054B8: ; 0x020054B8
 	push {r3, r4, r5, r6, r7, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _020054FC
 	mov r0, #0
@@ -33,7 +33,7 @@ sub_020054B8: ; 0x020054B8
 	bl sub_0207B4F4
 	str r0, [r4, #4]
 _020054FC:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _02005508
 	ldr r0, _02005634 ; =0x0208EE58
@@ -54,7 +54,7 @@ _0200550A:
 	lsl r2, r2, #0xc
 	mov r4, #1
 	bl sub_0203A15C
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _02005542
 	ldr r0, _02005630 ; =0x0209DA58
@@ -931,7 +931,7 @@ sub_02005B80: ; 0x02005B80
 	bl sub_0206C9BC
 	mov r0, #1
 	bl sub_02005BCC
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _02005BB2
 	blx sub_02005BC4

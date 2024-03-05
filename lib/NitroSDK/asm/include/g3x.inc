@@ -23,8 +23,8 @@
 .public MIi_CpuCopy16
 .public MI_Copy32B
 .public sub_02074810
-.public sub_02078150
+.public MIi_DmaFill32Async
 .public MIi_CpuClear32
 .public MI_Copy36B
-.public sub_0207802C
+.public MIi_DmaFill32
 .public sub_027681B8

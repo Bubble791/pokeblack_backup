@@ -2675,7 +2675,7 @@ _021EBC38:
 	ldr r0, [r5, #0x7c]
 	mov r1, #0
 	bl sub_0204C520
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021EBC84
 	add r0, r5, #0
@@ -4318,7 +4318,7 @@ _021EC8CE:
 _021EC8EE:
 	add r5, #0x80
 	ldr r5, [r5]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021EC918
 	bl ovy79_21ec818

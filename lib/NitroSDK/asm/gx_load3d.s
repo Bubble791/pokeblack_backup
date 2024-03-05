@@ -112,7 +112,7 @@ _020761C2:
 	add r2, r2, r3
 	add r1, r5, #0
 	add r3, r4, #0
-	bl sub_02078080
+	bl MIi_DmaCopy32
 	b _020761DC
 _020761D2:
 	add r1, r2, r3
@@ -147,7 +147,7 @@ _02076202:
 	add r1, r5, r4
 	add r2, r7, #0
 	sub r3, r6, r4
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _0207621A:
@@ -183,7 +183,7 @@ _0207624C:
 	str r1, [sp, #8]
 	add r1, r5, #0
 	add r3, r6, #0
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _02076262:
@@ -213,7 +213,7 @@ GX_EndLoadTex: ; 0x02076278
 	bl sub_02075F20
 	b _02076296
 _02076292:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02076296:
 	ldr r4, _020762B0 ; =0x0214C06C
 	ldr r0, [r4, #0x14]
@@ -284,7 +284,7 @@ _02076308:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r3, r7, #0
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _02076322:
@@ -312,7 +312,7 @@ GX_EndLoadTexPltt: ; 0x02076334
 	bl sub_02075F20
 	b _02076352
 _0207634E:
-	bl sub_0207829C
+	bl MI_WaitDma
 _02076352:
 	ldr r4, _02076368 ; =0x0214C06C
 	ldr r0, [r4, #0xc]
@@ -411,7 +411,7 @@ _020763FA:
 	str r0, [sp, #8]
 	add r0, r1, #0
 	add r1, r4, #0
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r4, r5, pc}
 _02076410:
@@ -461,7 +461,7 @@ _02076458:
 	add r0, r1, #0
 	add r1, r4, #0
 	add r2, r2, r5
-	bl sub_020781F0
+	bl MIi_DmaCopy32Async
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 _02076470:
@@ -490,7 +490,7 @@ GX_EndLoadClearImage: ; 0x02076484
 	bl sub_02075F20
 	b _020764A2
 _0207649E:
-	bl sub_0207829C
+	bl MI_WaitDma
 _020764A2:
 	ldr r4, _020764B8 ; =0x0214C06C
 	ldr r0, [r4]

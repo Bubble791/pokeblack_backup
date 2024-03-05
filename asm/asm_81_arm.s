@@ -76,7 +76,7 @@ sub_0207ABBC: ; 0x0207ABBC
 	ldmia r0, {r0, r1, r2, r3, r4, r5, r6, r7, r8, sb, sl, fp, ip, sp, lr} ^
 	mov r0, r0
 	stmdb sp!, {r0, r1, r2, r3, ip, lr}
-	blx sub_0207AC8C
+	blx OS_IsRunOnTwl
 	beq _0207AC14
 	ldr r0, _0207AC20 ; =0x04000280
 _0207AC08:

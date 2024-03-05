@@ -663,7 +663,7 @@
 .public sub_0200A0E4
 .public sub_02017238
 .public sub_0200A340
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_020425EC
 .public sub_02042EFC
 .public sub_021A16F8

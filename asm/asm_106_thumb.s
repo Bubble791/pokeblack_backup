@@ -461,7 +461,7 @@ sub_0207EF28: ; 0x0207EF28
 	mov r1, #3
 	str r1, [r0, #0x14]
 	bl sub_0207F64C
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207EF48
 	ldr r0, _0207EF5C ; =0x0276B0EC
@@ -519,8 +519,8 @@ _0207EF98:
 	bne _0207EF98
 _0207EFA6:
 	blx sub_0207C0E4
-	bl sub_02078328
-	bl sub_0207AC8C
+	bl MI_StopAllDma
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207EFBA
 	bl sub_0206FFBC
@@ -614,7 +614,7 @@ _0207F03C:
 sub_0207F040: ; 0x0207F040
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207F054
 	add r0, r4, #0
@@ -759,7 +759,7 @@ _0207F128:
 	b _0207F148
 _0207F130:
 	add r0, r5, #0
-	bl sub_0207829C
+	bl MI_WaitDma
 	b _0207F148
 _0207F138:
 	ldr r1, [r3, r1]
@@ -769,9 +769,9 @@ _0207F138:
 	b _0207F130
 _0207F142:
 	add r0, r5, #0
-	bl sub_020782D8
+	bl MI_StopDma
 _0207F148:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207F156
 	add r0, r5, #0
@@ -847,7 +847,7 @@ _0207F1E4:
 	mov r0, #0x10
 	tst r0, r5
 	beq _0207F1FE
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207F1FA
 	bl sub_0208264C
@@ -3775,7 +3775,7 @@ sub_02080774: ; 0x02080774
 	add r4, r2, #0
 	blx sub_0207C0E4
 	str r0, [sp, #8]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020807A0
 	bl sub_020825EC
@@ -3809,7 +3809,7 @@ _020807C4:
 	bl sub_0207B780
 	cmp r0, #0
 	bne _020807E0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020807EC
 	add r0, r6, #0
@@ -3863,7 +3863,7 @@ _0208082E:
 	mov r2, #0
 	add r3, r4, #0
 	mov r5, #0
-	bl sub_0207802C
+	bl MIi_DmaFill32
 	ldr r4, _020808F4 ; =0x0214E298
 	lsl r0, r7, #9
 	str r6, [r4, #4]
@@ -4706,7 +4706,7 @@ _020810C8: .word 0x00000182
 	thumb_func_start sub_020810CC
 sub_020810CC: ; 0x020810CC
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020810E2
 	bl sub_02080E60
@@ -5228,7 +5228,7 @@ sub_02081474: ; 0x02081474
 	bl sub_02080AB0
 	cmp r0, #0
 	bne _02081512
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0208149A
 	bl sub_02080E60
@@ -5346,7 +5346,7 @@ sub_02081544: ; 0x02081544
 	bl sub_02080AB0
 	cmp r0, #0
 	bne _02081592
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0208156A
 	bl sub_02080E60
@@ -5420,7 +5420,7 @@ sub_020815C8: ; 0x020815C8
 	bl sub_02080AB0
 	cmp r0, #0
 	bne _020816AA
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020815F6
 	bl sub_02080E60
@@ -5564,7 +5564,7 @@ sub_020816DC: ; 0x020816DC
 	bl sub_02080AB0
 	cmp r0, #0
 	bne _02081770
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0208170A
 	bl sub_02080E60
@@ -7299,7 +7299,7 @@ _020825E4:
 	thumb_func_start sub_020825EC
 sub_020825EC: ; 0x020825EC
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020825FC
 	blx sub_02082600

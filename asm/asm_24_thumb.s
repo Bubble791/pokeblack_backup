@@ -7783,7 +7783,7 @@ _0206F024:
 	mov r4, #7
 	b _0206F076
 _0206F028:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0206F032
 	b _0206F024
@@ -8116,7 +8116,7 @@ _0206F26C:
 	ldr r4, _0206F290 ; =0x02094540
 	b _0206F28C
 _0206F27C:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0206F28A
 	bl sub_0207C774
@@ -9030,7 +9030,7 @@ sub_0206F928: ; 0x0206F928
 	push {r4, lr}
 	bl sub_0206EEE8
 	add r4, r0, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0206F956
 	bl sub_0207C1FC
@@ -9717,7 +9717,7 @@ sub_0206FE54: ; 0x0206FE54
 	add r0, r4, #0
 	blx sub_0207A260
 _0206FE9E:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0206FEAA
 	bl sub_0206FEB8

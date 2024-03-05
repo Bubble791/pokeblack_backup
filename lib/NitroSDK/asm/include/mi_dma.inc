@@ -5,8 +5,8 @@
 .public OS_RestoreInterrupts
 .public OS_Terminate
 .public MI_DmaFill32
-.public MI_DmaCopy32
-.public MI_DmaCopy16
+.public MIi_DmaCopy32
+.public MIi_DmaCopy16
 .public MI_DmaFill32Async
 .public MI_DmaCopy32Async
 .public MI_WaitDma
@@ -14,3 +14,14 @@
 .public MIi_CheckAnotherAutoDMA
 .public MIi_CheckDma0SourceAddress
 .public MIi_DmaSetParams
+.public sub_01FF8BF0
+.public sub_02079DE4
+.public sub_0207C0E4
+.public sub_0207C0F8
+.public sub_0207C774
+
+.public sub_02079D88
+.public sub_02079D20
+.public sub_02079E70
+.public sub_02079EB8
+.public sub_02079E94

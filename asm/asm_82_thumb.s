@@ -12,7 +12,7 @@ sub_0207AC24: ; 0x0207AC24
 	mvn r0, r0
 	cmp r1, r0
 	bne _0207AC4E
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207AC3E
 	ldr r0, _0207AC58 ; =0x01800004
@@ -64,8 +64,8 @@ _0207AC86:
 	.align 2, 0
 	thumb_func_end sub_0207AC74
 
-	thumb_func_start sub_0207AC8C
-sub_0207AC8C: ; 0x0207AC8C
+	thumb_func_start OS_IsRunOnTwl
+OS_IsRunOnTwl: ; 0x0207AC8C
 	ldr r0, _0207ACB4 ; =0x0214C484
 	ldr r0, [r0, #0x1c]
 	cmp r0, #0
@@ -90,14 +90,14 @@ _0207ACAC:
 	nop
 _0207ACB4: .word 0x0214C484
 _0207ACB8: .word 0x04004000
-	thumb_func_end sub_0207AC8C
+	thumb_func_end OS_IsRunOnTwl
 
 	thumb_func_start sub_0207ACBC
 sub_0207ACBC: ; 0x0207ACBC
-	ldr r3, _0207ACC0 ; =sub_0207AC8C
+	ldr r3, _0207ACC0 ; =OS_IsRunOnTwl
 	bx r3
 	.align 2, 0
-_0207ACC0: .word sub_0207AC8C
+_0207ACC0: .word OS_IsRunOnTwl
 	thumb_func_end sub_0207ACBC
 
 	thumb_func_start sub_0207ACC4

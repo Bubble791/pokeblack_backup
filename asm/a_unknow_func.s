@@ -799,3 +799,8 @@ sub_02703E90:
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02703E90
+
+	thumb_func_start sub_02768818
+sub_02768818:
+	bx lr
+	thumb_func_end sub_02768818

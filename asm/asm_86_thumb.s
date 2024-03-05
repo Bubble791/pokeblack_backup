@@ -26,7 +26,7 @@ _0207B8AC:
 	ldr r5, _0207B8D8 ; =0x0207B8E0
 	ldr r4, _0207B8D0 ; =0x02FFFD9C
 	str r5, [r4]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207B8C8
 	ldr r0, _0207B8DC ; =0xFF7FFFFF

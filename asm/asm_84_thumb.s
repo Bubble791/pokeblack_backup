@@ -28,15 +28,15 @@ sub_0207B12C: ; 0x0207B12C
 	blx sub_0207C248
 	bl sub_0200548C
 	bl sub_0206EDE0
-	bl sub_02078000
-	bl sub_0207AC8C
+	bl MI_InitWramManager
+	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _0207B176
 	bl sub_0207F6CC
 _0207B176:
 	bl sub_0207EBB8
 	blx sub_0207B104
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _0207B18A
 	blx sub_0207C888
@@ -130,7 +130,7 @@ sub_0207B23C: ; 0x0207B23C
 	add r1, r0, #0
 	mov r0, #2
 	bl sub_0207B418
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207B27E
 	mov r0, #1
@@ -198,7 +198,7 @@ _0207B2C2: ; jump table
 	.short _0207B34A - _0207B2C2 - 2 ; case 5
 	.short _0207B34E - _0207B2C2 - 2 ; case 6
 _0207B2D0:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207B2DE
 	mov r0, #0xbe
@@ -219,7 +219,7 @@ _0207B2EE:
 	mov r1, #0xf
 	add r4, r0, #0
 	and r4, r1
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207B30E
 	cmp r4, #4
@@ -307,7 +307,7 @@ _0207B386: ; jump table
 	.short _0207B3DE - _0207B386 - 2 ; case 5
 	.short _0207B3E2 - _0207B386 - 2 ; case 6
 _0207B394:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207B3A0
 	ldr r0, _0207B3EC ; =0x0276DDE0
@@ -327,7 +327,7 @@ _0207B3B0:
 	mov r1, #0xf
 	add r4, r0, #0
 	and r4, r1
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207B3CC
 	mov r0, #0
@@ -765,7 +765,7 @@ sub_0207B6B8: ; 0x0207B6B8
 	ldr r0, _0207B728 ; =0x0214C4AC
 	lsl r1, r6, #2
 	ldr r4, [r0, r1]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207B71A
 	ldr r0, _0207B72C ; =0x0209B714
@@ -824,7 +824,7 @@ _0207B730:
 sub_0207B744: ; 0x0207B744
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207B768
 	mov r0, #0xd

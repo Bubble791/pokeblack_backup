@@ -115,7 +115,7 @@ sub_0207C3BC: ; 0x0207C3BC
 	add r0, #0x50
 	strh r6, [r5, #0x18]
 	strh r6, [r0]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C41E
 	ldr r0, _0207C434 ; =0x02FFFDFC
@@ -145,7 +145,7 @@ _0207C434: .word 0x02FFFDFC
 	thumb_func_start sub_0207C438
 sub_0207C438: ; 0x0207C438
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C448
 	bl sub_0207C44C
@@ -166,7 +166,7 @@ _0207C450:
 	thumb_func_start sub_0207C45C
 sub_0207C45C: ; 0x0207C45C
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C478
 	ldr r0, _0207C47C ; =0x02FFFDFC
@@ -189,7 +189,7 @@ _0207C47C: .word 0x02FFFDFC
 	thumb_func_start sub_0207C480
 sub_0207C480: ; 0x0207C480
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C492
 	ldr r0, _0207C498 ; =0x02FFFDFC
@@ -206,7 +206,7 @@ _0207C498: .word 0x02FFFDFC
 	thumb_func_start sub_0207C49C
 sub_0207C49C: ; 0x0207C49C
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C4AC
 	ldr r0, _0207C4B0 ; =0x02FFE20E
@@ -222,7 +222,7 @@ _0207C4B0: .word 0x02FFE20E
 	thumb_func_start sub_0207C4B4
 sub_0207C4B4: ; 0x0207C4B4
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C4C6
 	ldr r0, _0207C4CC ; =0x02FFFDFC
@@ -239,7 +239,7 @@ _0207C4CC: .word 0x02FFFDFC
 	thumb_func_start sub_0207C4D0
 sub_0207C4D0: ; 0x0207C4D0
 	push {r3, lr}
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0207C4E0
 	bl sub_0207C4E4

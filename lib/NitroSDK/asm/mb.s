@@ -3982,7 +3982,7 @@ _0221F0E0:
 	ldrh r0, [r1]
 	add r1, r4, #0x440
 	mov r3, #0xc0
-	bl MI_DmaCopy16
+	bl MIi_DmaCopy16
 	str r5, [r4, #0x5ec]
 	b _0221F1A0
 _0221F12C:
@@ -4014,7 +4014,7 @@ _0221F130:
 	ldrh r0, [r1]
 	add r1, r4, #0x440
 	mov r3, #0xc0
-	bl MI_DmaCopy16
+	bl MIi_DmaCopy16
 	str r5, [r4, #0x5ec]
 _0221F1A0:
 	ldr r2, [r4, #0x51c]

@@ -21,7 +21,7 @@ ovy182_21a4920: ; 0x021A4920
 	mov r6, #1
 	bl sub_0203A1FC
 	add r5, r0, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _021A4954
 	add r0, r5, #0
@@ -19168,7 +19168,7 @@ ovy182_21adbc0: ; 0x021ADBC0
 	add r5, r0, #0
 	add r6, r1, #0
 	add r7, r2, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021ADBD6
 	mov r0, #1

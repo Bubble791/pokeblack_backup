@@ -405,7 +405,7 @@ ovy199_21b325c: ; 0x021B325C
 	sub r4, #0x4c
 	str r6, [r5, r4]
 _021B32A0:
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021B32D0
 	ldr r0, [r5, #0x28]

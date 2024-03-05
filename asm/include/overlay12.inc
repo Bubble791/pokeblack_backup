@@ -2703,7 +2703,7 @@
 .public sub_0202BE3C
 .public sub_0201736C
 .public sub_02008BD0
-.public sub_0207AC8C
+.public OS_IsRunOnTwl
 .public sub_0207C4B4
 .public sub_0207C4B4
 .public sub_0202D014

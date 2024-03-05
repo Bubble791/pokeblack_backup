@@ -9415,7 +9415,7 @@ ovy173_21a16a4: ; 0x021A16A4
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021A16B8
 	mov r1, #0x79

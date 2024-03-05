@@ -336,7 +336,7 @@
 .public OS_DisableInterrupts
 .public OS_RestoreInterrupts
 .public OS_Terminate
-.public MI_DmaFill32
+.public MIi_DmaFill32
 .public MI_SendGXCommandAsync
 .public MI_SendGXCommandAsyncFast
 .public MIi_CpuClear16

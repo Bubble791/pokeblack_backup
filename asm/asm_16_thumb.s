@@ -4960,7 +4960,7 @@ _02060AB6:
 	add r1, r4, r7
 	mov r2, #0xc0
 	add r3, r6, #0
-	bl sub_0207802C
+	bl MIi_DmaFill32
 	b _02060B10
 _02060ACE:
 	mov r0, #0xc0

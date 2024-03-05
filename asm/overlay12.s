@@ -32089,7 +32089,7 @@ ovy12_215f810: ; 0x0215F810
 	bl sub_0201736C
 	bl sub_02008BD0
 	str r0, [r5, #4]
-	bl sub_0207AC8C
+	bl OS_IsRunOnTwl
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
