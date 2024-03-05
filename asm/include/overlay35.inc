@@ -1,9 +1,9 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_02016AD8
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public MIi_CpuClearFast
-.public sub_02076E7C
+.public GX_DisableBankForLCDC
 .public sub_02034F6C
 .public sub_02034FB0
 .public sub_020173AC
@@ -50,9 +50,9 @@
 .public sub_020092E4
 .public sub_020092FC
 .public sub_02026CEC
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public MIi_CpuClearFast
-.public sub_02076E7C
+.public GX_DisableBankForLCDC
 .public sub_02016AD8
 .public sub_02017214
 .public sub_0201736C
@@ -107,9 +107,9 @@
 .public sub_020173AC
 .public sub_021649EC
 .public sub_02026CEC
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public MIi_CpuClearFast
-.public sub_02076E7C
+.public GX_DisableBankForLCDC
 .public sub_02034F2C
 .public sub_021804C0
 .public sub_02018894

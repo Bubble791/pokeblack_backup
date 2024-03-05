@@ -6971,10 +6971,10 @@ sub_0203CBB0: ; 0x0203CBB0
 	ldr r0, _0203CC84 ; =0xFFFFE0FF
 	and r0, r1
 	str r0, [r5]
-	bl sub_02076C40
+	bl GX_ResetBankForBG
 	mov r0, #1
 	mov r7, #1
-	bl sub_02076550
+	bl GX_SetBankForBG
 	add r4, #0xfc
 	ldrh r1, [r4]
 	ldr r0, _0203CC88 ; =0xFFFF7FFF
@@ -10780,12 +10780,12 @@ sub_0203E5EC: ; 0x0203E5EC
 	add r4, r1, #0
 	cmp r0, #1
 	bne _0203E5FE
-	bl sub_02076EEC
+	bl GX_GetBankForOBJ
 	mov r0, #1
 	lsl r0, r0, #0x1a
 	b _0203E604
 _0203E5FE:
-	bl sub_02076F1C
+	bl GX_GetBankForSubOBJ
 	ldr r0, _0203E644 ; =0x04001000
 _0203E604:
 	ldr r1, [r0]
@@ -10895,10 +10895,10 @@ sub_0203E6B8: ; 0x0203E6B8
 	push {r3, lr}
 	cmp r0, #1
 	bne _0203E6C4
-	bl sub_02076EEC
+	bl GX_GetBankForOBJ
 	b _0203E6C8
 _0203E6C4:
-	bl sub_02076F1C
+	bl GX_GetBankForSubOBJ
 _0203E6C8:
 	mov r0, #0
 	pop {r3, pc}
@@ -29013,14 +29013,14 @@ sub_02046BE0: ; 0x02046BE0
 	eor r2, r1
 	lsr r0, r1, #7
 	and r0, r2
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	mov r4, #1
 	mov r1, #7
 	lsl r4, r4, #0xa
@@ -29052,36 +29052,36 @@ _02046C3C: .word 0x05000400
 sub_02046C40: ; 0x02046C40
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_02076C40
-	bl sub_02076C60
-	bl sub_02076CD0
-	bl sub_02076CF0
-	bl sub_02076C50
-	bl sub_02076C80
-	bl sub_02076CE0
-	bl sub_02076D10
-	bl sub_02076CA0
-	bl sub_02076CB0
+	bl GX_ResetBankForBG
+	bl GX_ResetBankForBGExtPltt
+	bl GX_ResetBankForSubBG
+	bl GX_ResetBankForSubBGExtPltt
+	bl GX_ResetBankForOBJ
+	bl GX_ResetBankForOBJExtPltt
+	bl GX_ResetBankForSubOBJ
+	bl GX_ResetBankForSubOBJExtPltt
+	bl GX_ResetBankForTex
+	bl GX_ResetBankForTexPltt
 	ldr r0, [r4]
-	bl sub_02076550
+	bl GX_SetBankForBG
 	ldr r0, [r4, #4]
-	bl sub_02076758
+	bl GX_SetBankForBGExtPltt
 	ldr r0, [r4, #8]
-	bl sub_02076ADC
+	bl GX_SetBankForSubBG
 	ldr r0, [r4, #0xc]
-	bl sub_02076B7C
+	bl GX_SetBankForSubBGExtPltt
 	ldr r0, [r4, #0x10]
-	bl sub_020766A0
+	bl GX_SetBankForOBJ
 	ldr r0, [r4, #0x14]
-	bl sub_020767F4
+	bl GX_SetBankForOBJExtPltt
 	ldr r0, [r4, #0x18]
-	bl sub_02076B38
+	bl GX_SetBankForSubOBJ
 	ldr r0, [r4, #0x1c]
-	bl sub_02076BCC
+	bl GX_SetBankForSubOBJExtPltt
 	ldr r0, [r4, #0x20]
-	bl sub_02076860
+	bl GX_SetBankForTex
 	ldr r0, [r4, #0x24]
-	bl sub_0207695C
+	bl GX_SetBankForTexPltt
 	mov r2, #1
 	lsl r2, r2, #0x1a
 	ldr r1, [r2]
@@ -44638,11 +44638,11 @@ _0204DA9A:
 	bl sub_0204D798
 	cmp r0, #0
 	beq _0204DACC
-	bl sub_02076EF8
+	bl GX_GetBankForOBJExtPltt
 	add r7, r0, #0
 	cmp r4, #0
 	beq _0204DAB4
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 _0204DAB4:
 	ldr r3, [sp, #0x10]
 	ldr r0, [sp, #0x18]
@@ -44653,18 +44653,18 @@ _0204DAB4:
 	cmp r4, #0
 	beq _0204DACC
 	add r0, r7, #0
-	bl sub_020767F4
+	bl GX_SetBankForOBJExtPltt
 _0204DACC:
 	ldr r0, [sp, #8]
 	mov r1, #1
 	bl sub_0204D798
 	cmp r0, #0
 	beq _0204DAFE
-	bl sub_02076F28
+	bl GX_GetBankForSubOBJExtPltt
 	add r7, r0, #0
 	cmp r4, #0
 	beq _0204DAE6
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 _0204DAE6:
 	ldr r3, [sp, #0x10]
 	ldr r0, [sp, #0x18]
@@ -44675,7 +44675,7 @@ _0204DAE6:
 	cmp r4, #0
 	beq _0204DAFE
 	add r0, r7, #0
-	bl sub_02076BCC
+	bl GX_SetBankForSubOBJExtPltt
 _0204DAFE:
 	ldr r0, [sp]
 	ldr r2, _0204DB28 ; =0x7FFFFFFF
@@ -44742,11 +44742,11 @@ _0204DB56:
 	bl sub_0204D798
 	cmp r0, #0
 	beq _0204DBA2
-	bl sub_02076EF8
+	bl GX_GetBankForOBJExtPltt
 	str r0, [sp, #0x14]
 	cmp r4, #0
 	beq _0204DB8A
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 _0204DB8A:
 	str r6, [sp]
 	ldr r0, [sp, #0x1c]
@@ -44757,18 +44757,18 @@ _0204DB8A:
 	cmp r4, #0
 	beq _0204DBA2
 	ldr r0, [sp, #0x14]
-	bl sub_020767F4
+	bl GX_SetBankForOBJExtPltt
 _0204DBA2:
 	ldr r0, [sp, #8]
 	mov r1, #1
 	bl sub_0204D798
 	cmp r0, #0
 	beq _0204DBD4
-	bl sub_02076F28
+	bl GX_GetBankForSubOBJExtPltt
 	str r0, [sp, #0x10]
 	cmp r4, #0
 	beq _0204DBBC
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 _0204DBBC:
 	str r6, [sp]
 	ldr r0, [sp, #0x1c]
@@ -44779,7 +44779,7 @@ _0204DBBC:
 	cmp r4, #0
 	beq _0204DBD4
 	ldr r0, [sp, #0x10]
-	bl sub_02076BCC
+	bl GX_SetBankForSubOBJExtPltt
 _0204DBD4:
 	ldr r1, [r7, #0xc]
 	ldr r0, [sp, #0xc]
@@ -45679,9 +45679,9 @@ _0204E23C: .word 0xC0000C00
 	thumb_func_start sub_0204E240
 sub_0204E240: ; 0x0204E240
 	push {r4, lr}
-	bl sub_02076E7C
-	bl sub_02076E8C
-	bl sub_02076E9C
+	bl GX_DisableBankForLCDC
+	bl GX_DisableBankForSubBG
+	bl GX_DisableBankForSubOBJ
 	ldr r4, _0204E25C ; =0x02141948
 	ldr r0, [r4]
 	bl sub_0203A24C
@@ -45759,11 +45759,11 @@ sub_0204E2C0: ; 0x0204E2C0
 	lsr r0, r2, #0xb
 	orr r0, r1
 	strh r0, [r2]
-	bl sub_02076CE0
+	bl GX_ResetBankForSubOBJ
 	mov r0, #4
-	bl sub_02076ADC
+	bl GX_SetBankForSubBG
 	mov r0, #8
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r1, _0204E31C ; =0x80330010
 	ldr r0, _0204E320 ; =0x04000064
 	mov r2, #1
@@ -45810,11 +45810,11 @@ sub_0204E334: ; 0x0204E334
 	ldrh r1, [r2]
 	and r0, r1
 	strh r0, [r2]
-	bl sub_02076CD0
+	bl GX_ResetBankForSubBG
 	mov r0, #8
-	bl sub_02076B38
+	bl GX_SetBankForSubOBJ
 	mov r0, #4
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r1, _0204E380 ; =0x80320010
 	ldr r0, _0204E384 ; =0x04000064
 	mov r2, #1

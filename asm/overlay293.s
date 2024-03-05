@@ -2220,7 +2220,7 @@ _021A2C02:
 	str r7, [r4, #0x34]
 	mov r0, #0
 	str r0, [r4, #0x30]
-	bl sub_02076F10
+	bl GX_GetBankForLCDC
 	str r0, [r4]
 	add r0, r4, #4
 	bl ovy293_21a2d38
@@ -2244,7 +2244,7 @@ ovy293_21a2c38: ; 0x021A2C38
 	add r2, r3, #0
 	bl GX_SetGraphicsMode
 	ldr r0, [r4]
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r0, [r4, #4]
 	cmp r0, #0xa
 	bgt _021A2C64
@@ -2284,7 +2284,7 @@ _021A2C86:
 	b _021A2C70
 _021A2C8C:
 	mov r0, #0
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 _021A2C92:
 	ldr r0, [r4, #0x34]
 	bl sub_0203A870
@@ -2368,7 +2368,7 @@ _021A2D18:
 _021A2D1C:
 	mov r0, #0
 _021A2D1E:
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #8]
 	ldr r2, [r4, #0xc]

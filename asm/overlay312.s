@@ -1160,14 +1160,14 @@ _0217D2D6:
 	sub r2, r2, #1
 	bne _0217D2D6
 	ldr r0, _0217D334 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	mov r4, #1
 	mov r1, #7
 	lsl r4, r4, #0xa

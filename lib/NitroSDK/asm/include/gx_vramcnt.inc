@@ -45,3 +45,4 @@
 .public OSi_UnlockVram
 .public GXi_VRamLockId
 .public gGXState
+.public sub_0207C51C

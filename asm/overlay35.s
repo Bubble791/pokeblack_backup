@@ -53,14 +53,14 @@ _0217C98A: ; jump table
 	.short _0217C9EE - _0217C98A - 2 ; case 3
 _0217C992:
 	ldr r0, _0217CA04 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	b _0217C9D4
 _0217C9AC:
 	bl sub_02034F6C
@@ -313,14 +313,14 @@ _0217CBAC:
 	bl sub_020092FC
 	bl sub_02026CEC
 	ldr r0, _0217CBE8 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	add r0, r7, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -591,14 +591,14 @@ _0217CE22:
 	bl ovy35_217cbec
 	bl sub_02026CEC
 	ldr r0, _0217CE68 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	ldr r0, [sp, #4]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

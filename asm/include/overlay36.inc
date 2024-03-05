@@ -9718,11 +9718,11 @@
 .public sub_0204E0E0
 .public sub_0204E060
 .public sub_02181318
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public sub_0207C1E8
 .public sub_0207C1E8
 .public sub_02044710
-.public sub_02076550
+.public GX_SetBankForBG
 .public sub_02044BD8
 .public sub_02044C98
 .public sub_02160E68
@@ -9734,10 +9734,10 @@
 .public sub_0204E060
 .public sub_02181318
 .public sub_02044C98
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public MIi_CpuClearFast
-.public sub_02076E7C
-.public sub_02076550
+.public GX_DisableBankForLCDC
+.public GX_SetBankForBG
 .public sub_02160E88
 .public sub_02180490
 .public sub_021878BC
@@ -10205,7 +10205,7 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044710
-.public sub_02076550
+.public GX_SetBankForBG
 .public G2x_SetBlendAlpha_
 .public sub_02044C98
 .public sub_021804A0
@@ -10275,7 +10275,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public sub_020056FC
 .public sub_0203A6A8
 .public sub_0204588C
@@ -10409,8 +10409,8 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_020487D4
-.public sub_02076C40
-.public sub_02076550
+.public GX_ResetBankForBG
+.public GX_SetBankForBG
 .public MI_CpuFill8
 .public sub_02006254
 .public sub_02044C98

@@ -121039,7 +121039,7 @@ ovy36_21b8d80: ; 0x021B8D80
 	bl sub_02181318
 	bl ovy36_21c85fc
 	mov r0, #8
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r0, _021B8E00 ; =0x80330010
 	ldr r4, _021B8E04 ; =0x04000064
 	str r0, [r4]
@@ -121062,7 +121062,7 @@ ovy36_21b8d80: ; 0x021B8D80
 	orr r0, r1
 	strh r0, [r4]
 	mov r0, #8
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #2
 	mov r1, #0
 	bl sub_02044BD8
@@ -121163,15 +121163,15 @@ _021B8EA4:
 	bl sub_02044C98
 	mov r0, #8
 	mov r5, #8
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r0, #0
 	lsl r1, r1, #0x16
 	lsl r2, r5, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	mov r0, #8
-	bl sub_02076550
+	bl GX_SetBankForBG
 	bl sub_02160E88
 	b _021B8E8A
 _021B8ED0:
@@ -126871,7 +126871,7 @@ _021BBB06:
 	orr r0, r1
 	strh r0, [r4]
 	mov r0, #8
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #0
 	add r4, #0x44
 	str r0, [sp]
@@ -127972,7 +127972,7 @@ ovy36_21bc3b8: ; 0x021BC3B8
 	mov r0, #0
 	str r0, [r4, #0x70]
 	mov r0, #8
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	add r4, #0x70
 	ldr r0, _021BC3D4 ; =ovy36_21bc3d8
 	add r1, r4, #0
@@ -129495,7 +129495,7 @@ _021BCF5C:
 	thumb_func_start ovy36_21bcf64
 ovy36_21bcf64: ; 0x021BCF64
 	push {r3, r4, r5, r6, r7, lr}
-	bl sub_02076C40
+	bl GX_ResetBankForBG
 	mov r6, #3
 	ldr r4, _021BCFC8 ; =0x06860000
 	mov ip, r0
@@ -129540,7 +129540,7 @@ _021BCF76:
 	cmp r5, r6
 	blt _021BCF76
 	mov r0, ip
-	bl sub_02076550
+	bl GX_SetBankForBG
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021BCFC8: .word 0x06860000

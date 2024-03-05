@@ -108811,7 +108811,7 @@ ovy167_21ce604: ; 0x021CE604
 	ldr r0, _021CE62C ; =0x000000A8
 	bl sub_0203CE0C
 	mov r0, #0x80
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r0, _021CE630 ; =0x000000A9
 	bl sub_0203CE0C
 	bl sub_02042B20

@@ -372,7 +372,7 @@ ovy295_219d154: ; 0x0219D154
 	mov r4, #1
 	bl sub_02046DF8
 	ldr r0, _0219D204 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r6, #0x1a
 	lsl r6, r6, #0x16
 	mov r2, #0x29
@@ -380,7 +380,7 @@ ovy295_219d154: ; 0x0219D154
 	add r1, r6, #0
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	ldrh r0, [r5]
 	bl ovy295_219d250
 	ldrh r0, [r5]
@@ -782,7 +782,7 @@ _0219D4B8: ; jump table
 	.short _0219D5BE - _0219D4B8 - 2 ; case 5
 _0219D4C4:
 	ldr r0, _0219D5F4 ; =0x000001FF
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r1, #0x1a
 	mov r2, #0x29
 	mov r0, #0
@@ -790,7 +790,7 @@ _0219D4C4:
 	lsl r2, r2, #0xe
 	mov r6, #0
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	ldrh r0, [r4]
 	bl ovy295_219d60c
 	ldrh r0, [r4]

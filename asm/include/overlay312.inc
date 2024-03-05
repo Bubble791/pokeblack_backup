@@ -93,9 +93,9 @@
 .public sub_02024274
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public MIi_CpuClearFast
-.public sub_02076E7C
+.public GX_DisableBankForLCDC
 .public MIi_CpuClearFast
 .public MIi_CpuClearFast
 .public MIi_CpuClearFast

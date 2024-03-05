@@ -5602,7 +5602,7 @@
 .public sub_021CE53C
 .public sub_021CE544
 .public sub_0203CE0C
-.public sub_02076AC4
+.public GX_SetBankForLCDC
 .public sub_0203CE0C
 .public sub_02042B20
 .public sub_0203CE0C

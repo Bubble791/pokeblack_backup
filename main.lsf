@@ -47,7 +47,8 @@ Static main
     Object lib/NitroSDK/asm/gx_bgcnt.o
     Object lib/NitroSDK/asm/gx_load2d.o
     Object lib/NitroSDK/asm/gx_load3d.o
-    Object asm/asm_66_thumb.o
+    Object lib/NitroSDK/asm/gx_vramcnt.o
+    
     Object asm/asm_67_arm.o
     Object asm/asm_68_thumb.o
     Object asm/asm_69_arm.o
@@ -112,7 +113,7 @@ Static main
 	
 	
 	Object lib/NitroSDK/asm/gxstate.o
-	Object lib/NitroSDK/asm/gx_vramcnt.o
+	
 	
 	
 	Object lib/NitroSDK/asm/g3b.o

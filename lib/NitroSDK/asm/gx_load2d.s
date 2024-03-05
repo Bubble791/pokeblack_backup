@@ -1280,7 +1280,7 @@ _02075E10: .word 0x0209B528
 	thumb_func_start GX_BeginLoadBGExtPltt
 GX_BeginLoadBGExtPltt: ; 0x02075E14
 	push {r3, lr}
-	bl sub_02076C60
+	bl GX_ResetBankForBGExtPltt
 	ldr r1, _02075E64 ; =0x0214C050
 	cmp r0, #0x20
 	str r0, [r1, #0x14]
@@ -1415,7 +1415,7 @@ _02075F02:
 _02075F06:
 	ldr r4, _02075F1C ; =0x0214C050
 	ldr r0, [r4, #0x14]
-	bl sub_02076758
+	bl GX_SetBankForBGExtPltt
 	mov r0, #0
 	str r0, [r4, #0x14]
 	str r0, [r4, #0x10]
@@ -1443,7 +1443,7 @@ _02075F2C: .word sub_0276824C
 	thumb_func_start GX_BeginLoadOBJExtPltt
 GX_BeginLoadOBJExtPltt: ; 0x02075F30
 	push {r3, lr}
-	bl sub_02076C80
+	bl GX_ResetBankForOBJExtPltt
 	ldr r1, _02075F54 ; =0x0214C050
 	cmp r0, #0
 	str r0, [r1, #8]
@@ -1537,7 +1537,7 @@ _02075FDA:
 _02075FDE:
 	ldr r4, _02075FF4 ; =0x0214C050
 	ldr r0, [r4, #8]
-	bl sub_020767F4
+	bl GX_SetBankForOBJExtPltt
 	mov r0, #0
 	str r0, [r4, #8]
 	str r0, [r4, #4]
@@ -1550,7 +1550,7 @@ _02075FF4: .word 0x0214C050
 	thumb_func_start GXS_BeginLoadBGExtPltt
 GXS_BeginLoadBGExtPltt: ; 0x02075FF8
 	push {r3, lr}
-	bl sub_02076CF0
+	bl GX_ResetBankForSubBGExtPltt
 	ldr r1, _02076004 ; =0x0214C050
 	str r0, [r1]
 	pop {r3, pc}
@@ -1625,7 +1625,7 @@ _0207607E:
 _02076082:
 	ldr r4, _02076094 ; =0x0214C050
 	ldr r0, [r4]
-	bl sub_02076B7C
+	bl GX_SetBankForSubBGExtPltt
 	mov r0, #0
 	str r0, [r4]
 	pop {r4, pc}
@@ -1637,7 +1637,7 @@ _02076094: .word 0x0214C050
 	thumb_func_start GXS_BeginLoadOBJExtPltt
 GXS_BeginLoadOBJExtPltt: ; 0x02076098
 	push {r3, lr}
-	bl sub_02076D10
+	bl GX_ResetBankForSubOBJExtPltt
 	ldr r1, _020760A4 ; =0x0214C050
 	str r0, [r1, #0x18]
 	pop {r3, pc}
@@ -1712,7 +1712,7 @@ _0207611E:
 _02076122:
 	ldr r4, _02076134 ; =0x0214C050
 	ldr r0, [r4, #0x18]
-	bl sub_02076BCC
+	bl GX_SetBankForSubOBJExtPltt
 	mov r0, #0
 	str r0, [r4, #0x18]
 	pop {r4, pc}

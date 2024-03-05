@@ -141,11 +141,11 @@ ovy32_21999b8: ; 0x021999B8
 	ldr r0, _02199A48 ; =0x0400106C
 	add r1, r4, #0
 	bl GXx_SetMasterBrightness_
-	bl sub_02076C40
-	bl sub_02076CD0
+	bl GX_ResetBankForBG
+	bl GX_ResetBankForSubBG
 	mov r0, #4
 	mov r4, #4
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
@@ -408,8 +408,8 @@ ovy32_2199be0: ; 0x02199BE0
 	ldr r0, _02199C58 ; =0xFFFFE0FF
 	and r0, r1
 	str r0, [r2]
-	bl sub_02076CD0
-	bl sub_02076C40
+	bl GX_ResetBankForSubBG
+	bl GX_ResetBankForBG
 	add r0, r5, #0
 	mov r1, #0
 	bl GXx_SetMasterBrightness_

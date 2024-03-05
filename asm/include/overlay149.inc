@@ -17,8 +17,8 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0204E060
-.public sub_02076F04
-.public sub_02076860
+.public GX_GetBankForTex
+.public GX_SetBankForTex
 .public sub_02049344
 .public sub_02049344
 .public sub_021804C0
@@ -36,7 +36,7 @@
 .public sub_0204E060
 .public sub_02049A28
 .public sub_0204E0E0
-.public sub_02076860
+.public GX_SetBankForTex
 .public sub_02049934
 .public sub_02049888
 .public sub_020497D4

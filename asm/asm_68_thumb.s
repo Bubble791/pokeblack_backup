@@ -5,7 +5,7 @@
 	.text
 	thumb_func_start sub_02076F74
 sub_02076F74: ; 0x02076F74
-	ldr r0, _02076FA0 ; =0x0214C08C
+	ldr r0, _02076FA0 ; =gGXState
 	mov r1, #0
 	strh r1, [r0]
 	strh r1, [r0, #2]
@@ -28,7 +28,7 @@ sub_02076F74: ; 0x02076F74
 	strh r1, [r0, #8]
 	bx lr
 	.align 2, 0
-_02076FA0: .word 0x0214C08C
+_02076FA0: .word gGXState
 _02076FA4: .word 0x04000240
 	thumb_func_end sub_02076F74
 

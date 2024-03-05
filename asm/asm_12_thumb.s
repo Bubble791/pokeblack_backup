@@ -27838,12 +27838,12 @@ _020122EE:
 	bl GX_VBlankIntr
 	str r0, [r4, #0x20]
 _0201232A:
-	bl sub_02076C40
+	bl GX_ResetBankForBG
 	str r0, [r4, #0x24]
-	bl sub_02076CD0
+	bl GX_ResetBankForSubBG
 	str r0, [r4, #0x28]
 	mov r0, #4
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #4
 	lsl r5, r0, #0x18
 	ldr r0, [r5]
@@ -28114,12 +28114,12 @@ _02012520:
 	lsl r0, r0, #0xd
 	orr r0, r1
 	str r0, [r5]
-	bl sub_02076CD0
-	bl sub_02076C40
+	bl GX_ResetBankForSubBG
+	bl GX_ResetBankForBG
 	ldr r0, [r4, #0x24]
-	bl sub_02076550
+	bl GX_SetBankForBG
 	ldr r0, [r4, #0x28]
-	bl sub_02076ADC
+	bl GX_SetBankForSubBG
 	ldr r0, [r4, #0x1c]
 	bl GX_HBlankIntr
 	ldr r0, [r4, #0x20]
@@ -106459,7 +106459,7 @@ sub_02034C80: ; 0x02034C80
 	str r0, [sp, #4]
 	bl sub_020651DC
 	add r6, r0, #0
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	cmp r5, #3
 	bhi _02034D0E
 	add r1, r5, r5
@@ -106513,14 +106513,14 @@ sub_02034D30: ; 0x02034D30
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r6, r1, #0
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	add r7, r0, #0
 	mov r0, #0xc
 	add r4, r5, #0
 	mul r4, r0
 	ldr r0, _02034D94 ; =0x02092A2C
 	ldr r0, [r0, r4]
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r0, _02034D98 ; =0x02092A30
 	ldr r0, [r0, r4]
 	lsl r1, r0, #0x10
@@ -106530,12 +106530,12 @@ sub_02034D30: ; 0x02034D30
 	str r1, [r0]
 	bl sub_0207C1E8
 	bl sub_0207C1E8
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	add r0, r7, #0
-	bl sub_02076860
+	bl GX_SetBankForTex
 	cmp r5, r6
 	beq _02034D90
-	bl sub_02076CA0
+	bl GX_ResetBankForTex
 	mov r1, #0xc
 	ldr r2, _02034DA4 ; =0x02092A34
 	mul r1, r6
@@ -106545,9 +106545,9 @@ sub_02034D30: ; 0x02034D30
 	mov r2, #0xc
 	lsl r2, r2, #0xd
 	blx MIi_CpuCopyFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	add r0, r5, #0
-	bl sub_02076860
+	bl GX_SetBankForTex
 _02034D90:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -109182,11 +109182,11 @@ sub_02036098: ; 0x02036098
 	bl GX_HBlankIntr
 	mov r0, #0
 	bl GX_VBlankIntr
-	bl sub_02076C40
-	bl sub_02076CD0
+	bl GX_ResetBankForBG
+	bl GX_ResetBankForSubBG
 	mov r0, #4
 	mov r5, #4
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0

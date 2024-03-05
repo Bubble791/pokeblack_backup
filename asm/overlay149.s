@@ -199,7 +199,7 @@ _021F5B22:
 _021F5B3C:
 	b _021F5B10
 _021F5B3E:
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	str r0, [r4, #8]
 	mov r1, #0
 	str r1, [r4, #0xc]
@@ -211,7 +211,7 @@ _021F5B3E:
 	ldr r0, [r4, #8]
 	orr r0, r1
 	str r0, [r4, #8]
-	bl sub_02076860
+	bl GX_SetBankForTex
 _021F5B5C:
 	ldr r1, [r4, #0x2c]
 	mov r0, #0x82
@@ -311,7 +311,7 @@ _021F5C2C:
 	mov r1, #8
 	bic r0, r1
 	str r0, [r4, #8]
-	bl sub_02076860
+	bl GX_SetBankForTex
 _021F5C3E:
 	ldr r0, [r4, #0x28]
 	bl sub_02049934

@@ -19341,9 +19341,9 @@ ovy182_21add40: ; 0x021ADD40
 	mov r6, #0
 	bl GX_VBlankIntr
 	mov r0, #1
-	bl sub_02076550
+	bl GX_SetBankForBG
 	mov r0, #2
-	bl sub_020766A0
+	bl GX_SetBankForOBJ
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
@@ -19412,10 +19412,10 @@ ovy182_21add40: ; 0x021ADD40
 	bl G2x_SetBlendBrightness_
 	mov r4, #0x80
 	mov r0, #0x80
-	bl sub_02076ADC
+	bl GX_SetBankForSubBG
 	add r4, #0x80
 	add r0, r4, #0
-	bl sub_02076B38
+	bl GX_SetBankForSubOBJ
 	mov r0, #0
 	bl GXS_SetGraphicsMode
 	ldr r4, _021ADF58 ; =0x04001000
@@ -50636,35 +50636,35 @@ _021BCF2A:
 	thumb_func_start ovy182_21bcf38
 ovy182_21bcf38: ; 0x021BCF38
 	push {r4, lr}
-	bl sub_02076DDC
+	bl GX_DisableBankForBG
 	ldr r4, _021BCF98 ; =0x021C41D0
 	str r0, [r4]
-	bl sub_02076DEC
+	bl GX_DisableBankForOBJ
 	str r0, [r4, #4]
-	bl sub_02076DFC
+	bl GX_DisableBankForBGExtPltt
 	str r0, [r4, #8]
-	bl sub_02076E1C
+	bl GX_DisableBankForOBJExtPltt
 	str r0, [r4, #0xc]
-	bl sub_02076E3C
+	bl GX_DisableBankForTex
 	str r0, [r4, #0x10]
-	bl sub_02076E4C
+	bl GX_DisableBankForTexPltt
 	str r0, [r4, #0x14]
-	bl sub_02076E5C
+	bl GX_DisableBankForClearImage
 	str r0, [r4, #0x18]
-	bl sub_02076E8C
+	bl GX_DisableBankForSubBG
 	str r0, [r4, #0x1c]
-	bl sub_02076E9C
+	bl GX_DisableBankForSubOBJ
 	str r0, [r4, #0x20]
-	bl sub_02076EAC
+	bl GX_DisableBankForSubBGExtPltt
 	str r0, [r4, #0x24]
-	bl sub_02076ECC
+	bl GX_DisableBankForSubOBJExtPltt
 	str r0, [r4, #0x28]
-	bl sub_02076E6C
+	bl GX_DisableBankForARM7
 	str r0, [r4, #0x2c]
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	str r0, [r4, #0x30]
 	ldr r0, [r4, #0x2c]
-	bl sub_02076A6C
+	bl GX_SetBankForARM7
 	bl ovy182_21bd040
 	pop {r4, pc}
 	nop
@@ -50674,36 +50674,36 @@ _021BCF98: .word 0x021C41D0
 	thumb_func_start ovy182_21bcf9c
 ovy182_21bcf9c: ; 0x021BCF9C
 	push {r4, lr}
-	bl sub_02076DDC
-	bl sub_02076DEC
-	bl sub_02076E8C
-	bl sub_02076E9C
+	bl GX_DisableBankForBG
+	bl GX_DisableBankForOBJ
+	bl GX_DisableBankForSubBG
+	bl GX_DisableBankForSubOBJ
 	bl ovy182_21bd040
 	ldr r4, _021BD034 ; =0x021C41D0
 	ldr r0, [r4]
-	bl sub_02076550
+	bl GX_SetBankForBG
 	ldr r0, [r4, #4]
-	bl sub_020766A0
+	bl GX_SetBankForOBJ
 	ldr r0, [r4, #8]
-	bl sub_02076758
+	bl GX_SetBankForBGExtPltt
 	ldr r0, [r4, #0xc]
-	bl sub_020767F4
+	bl GX_SetBankForOBJExtPltt
 	ldr r0, [r4, #0x10]
-	bl sub_02076860
+	bl GX_SetBankForTex
 	ldr r0, [r4, #0x14]
-	bl sub_0207695C
+	bl GX_SetBankForTexPltt
 	ldr r0, [r4, #0x18]
-	bl sub_020769D4
+	bl GX_SetBankForClearImage
 	ldr r0, [r4, #0x1c]
-	bl sub_02076ADC
+	bl GX_SetBankForSubBG
 	ldr r0, [r4, #0x20]
-	bl sub_02076B38
+	bl GX_SetBankForSubOBJ
 	ldr r0, [r4, #0x24]
-	bl sub_02076B7C
+	bl GX_SetBankForSubBGExtPltt
 	ldr r0, [r4, #0x28]
-	bl sub_02076BCC
+	bl GX_SetBankForSubOBJExtPltt
 	ldr r0, [r4, #0x30]
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	ldr r3, _021BD038 ; =0x04000050
 	mov r0, #0
 	add r1, r3, #0
@@ -50742,7 +50742,7 @@ _021BD03C: .word 0x04001050
 ovy182_21bd040: ; 0x021BD040
 	push {r3, r4, r5, lr}
 	ldr r0, _021BD09C ; =0x000001F3
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	mov r4, #1
 	mov r1, #0x1a
 	lsl r4, r4, #0x12
@@ -50755,7 +50755,7 @@ ovy182_21bd040: ; 0x021BD040
 	mov r0, #0
 	lsl r2, r2, #0xe
 	blx MIi_CpuClearFast
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	lsr r5, r4, #9
 	mov r1, #7
 	lsr r4, r4, #8

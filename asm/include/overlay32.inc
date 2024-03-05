@@ -7,9 +7,9 @@
 .public sub_0203D0EC
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02076C40
-.public sub_02076CD0
-.public sub_02076550
+.public GX_ResetBankForBG
+.public GX_ResetBankForSubBG
+.public GX_SetBankForBG
 .public GX_SetGraphicsMode
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
@@ -54,7 +54,7 @@
 .public G2_GetBG1ScrPtr
 .public MIi_CpuClear16
 .public MIi_CpuClear16
-.public sub_02076CD0
-.public sub_02076C40
+.public GX_ResetBankForSubBG
+.public GX_ResetBankForBG
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_

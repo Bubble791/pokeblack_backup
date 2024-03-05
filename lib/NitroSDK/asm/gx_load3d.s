@@ -35,7 +35,7 @@ sSzTexBlk1: ; 0x021E1614
 	thumb_func_start GX_BeginLoadTex
 GX_BeginLoadTex: ; 0x02076138
 	push {r3, lr}
-	bl sub_02076CA0
+	bl GX_ResetBankForTex
 	ldr r2, _02076160 ; =0x0214C06C
 	mov r1, #6
 	str r0, [r2, #0x14]
@@ -217,7 +217,7 @@ _02076292:
 _02076296:
 	ldr r4, _020762B0 ; =0x0214C06C
 	ldr r0, [r4, #0x14]
-	bl sub_02076860
+	bl GX_SetBankForTex
 	mov r0, #0
 	str r0, [r4, #0x1c]
 	str r0, [r4, #0x18]
@@ -232,7 +232,7 @@ _020762B0: .word 0x0214C06C
 	thumb_func_start GX_BeginLoadTexPltt
 GX_BeginLoadTexPltt: ; 0x020762B4
 	push {r3, lr}
-	bl sub_02076CB0
+	bl GX_ResetBankForTexPltt
 	ldr r1, _020762CC ; =0x0214C06C
 	str r0, [r1, #0xc]
 	asr r0, r0, #4
@@ -316,7 +316,7 @@ _0207634E:
 _02076352:
 	ldr r4, _02076368 ; =0x0214C06C
 	ldr r0, [r4, #0xc]
-	bl sub_0207695C
+	bl GX_SetBankForTexPltt
 	mov r0, #0
 	str r0, [r4, #0xc]
 	str r0, [r4, #8]
@@ -329,7 +329,7 @@ _02076368: .word 0x0214C06C
 	thumb_func_start GX_BeginLoadClearImage
 GX_BeginLoadClearImage: ; 0x0207636C
 	push {r3, lr}
-	bl sub_02076CC0
+	bl GX_ResetBankForClearImage
 	ldr r1, _020763BC ; =0x0214C06C
 	cmp r0, #0xc
 	str r0, [r1]
@@ -494,7 +494,7 @@ _0207649E:
 _020764A2:
 	ldr r4, _020764B8 ; =0x0214C06C
 	ldr r0, [r4]
-	bl sub_020769D4
+	bl GX_SetBankForClearImage
 	mov r0, #0
 	str r0, [r4]
 	str r0, [r4, #0x10]

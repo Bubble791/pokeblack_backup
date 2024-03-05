@@ -223,7 +223,7 @@ _021F5B7C:
 	add r0, r6, #0
 	bl sub_02181290
 	str r0, [r4, #0xc]
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	mov r1, #8
 	add r2, r0, #0
 	str r0, [r4, #4]
@@ -235,9 +235,9 @@ _021F5B7C:
 	mov r0, #1
 	str r0, [r4, #8]
 _021F5BB4:
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	ldr r0, [r4, #4]
-	bl sub_02076860
+	bl GX_SetBankForTex
 	bl ovy148_21f5c60
 	str r0, [r4, #0x14]
 	b _021F5B48
@@ -271,7 +271,7 @@ _021F5BFC:
 	mov r1, #8
 	bic r0, r1
 	str r0, [r4, #4]
-	bl sub_02076860
+	bl GX_SetBankForTex
 _021F5C0E:
 	ldr r1, [r4, #0xc]
 	add r0, r6, #0
@@ -291,7 +291,7 @@ ovy148_21f5c20: ; 0x021F5C20
 	mov r0, #0
 	str r0, [r4, #0x10]
 	mov r0, #8
-	bl sub_02076AC4
+	bl GX_SetBankForLCDC
 	add r4, #0x10
 	ldr r0, _021F5C3C ; =ovy148_21f5c40
 	add r1, r4, #0
@@ -324,7 +324,7 @@ _021F5C5C: .word 0x04000064
 	thumb_func_start ovy148_21f5c60
 ovy148_21f5c60: ; 0x021F5C60
 	push {r3, lr}
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	mov r2, #4
 	add r3, r0, #0
 	mov r1, #0
@@ -401,7 +401,7 @@ _021F5CD4:
 	add r0, r6, #0
 	bl sub_02181290
 	str r0, [r4, #0xc]
-	bl sub_02076F04
+	bl GX_GetBankForTex
 	mov r1, #8
 	add r2, r0, #0
 	str r0, [r4, #4]
@@ -413,9 +413,9 @@ _021F5CD4:
 	mov r0, #1
 	str r0, [r4, #8]
 _021F5D0C:
-	bl sub_02076E7C
+	bl GX_DisableBankForLCDC
 	ldr r0, [r4, #4]
-	bl sub_02076860
+	bl GX_SetBankForTex
 	bl ovy148_21f5c60
 	str r0, [r4, #0x14]
 	b _021F5CCC
@@ -449,7 +449,7 @@ _021F5D54:
 	mov r1, #8
 	bic r0, r1
 	str r0, [r4, #4]
-	bl sub_02076860
+	bl GX_SetBankForTex
 _021F5D66:
 	ldr r1, [r4, #0xc]
 	add r0, r6, #0
