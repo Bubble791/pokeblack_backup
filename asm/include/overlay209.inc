@@ -307,7 +307,7 @@
 .public sub_02074B80
 .public MTX_Inverse43
 .public sub_0207873C
-.public sub_02072470
+.public MTX_Copy33To44_
 .public MTX_Copy43To44_
 .public MTX_Concat44
 .public FX_Div
@@ -326,8 +326,8 @@
 .public sub_02074BF4
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_020725C0
-.public sub_02072BA4
+.public MTX_RotZ33_
+.public MTX_MultVec33
 .public sub_02073FD4
 .public FX_Div
 .public FX_Div
@@ -467,7 +467,7 @@
 .public sub_0203A1FC
 .public sub_0203A24C
 .public sub_02049A64
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049B5C
 .public sub_02049344
 .public sub_02049344
@@ -493,8 +493,8 @@
 .public sub_021BBCB4
 .public sub_021BBCBC
 .public sub_02073FB4
-.public sub_020725C0
-.public sub_02072BA4
+.public MTX_RotZ33_
+.public MTX_MultVec33
 .public sub_02073FD4
 .public sub_021BBBA8
 .public sub_021BBBC0
@@ -504,10 +504,10 @@
 .public sub_0208D868
 .public sub_021BBCA8
 .public sub_021BBCB4
-.public sub_020725C0
-.public sub_02072BA4
+.public MTX_RotZ33_
+.public MTX_MultVec33
 .public sub_021BB5D8
-.public sub_02072BA4
+.public MTX_MultVec33
 .public sub_02073FD4
 .public sub_0208D374
 .public sub_0208DF14

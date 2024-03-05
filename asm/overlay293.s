@@ -1110,7 +1110,7 @@ _021A2392:
 	str r0, [r6, #0x54]
 	add r0, r6, #0
 	add r0, #0x58
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r6, #4]
 	bl ovy293_21a29c8
 	str r0, [r6, #0x3c]

@@ -340,7 +340,7 @@
 .public sub_02049DDC
 .public sub_0203A24C
 .public sub_0204A638
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0204A5C0
 .public sub_02049B5C
 .public sub_02074A6C

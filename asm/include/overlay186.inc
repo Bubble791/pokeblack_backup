@@ -435,7 +435,7 @@
 .public sub_020787A8
 .public sub_020056FC
 .public sub_020179BC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02048564
 .public sub_02048564
 .public sub_02024274
@@ -672,4 +672,4 @@
 .public sub_0204C178
 .public sub_0204C140
 
-.public sub_02072588
+.public MTX_RotX33_

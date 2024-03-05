@@ -37072,12 +37072,12 @@ _02016352:
 	add r0, sp, #0x44
 	add r1, r4, #0
 	add r2, r5, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add r1, r4, #0
 	add r4, sp, #8
 	add r0, sp, #0x38
 	add r2, r4, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add r6, sp, #0x2c
 	ldr r0, [sp, #4]
 	add r1, r6, #0
@@ -45538,7 +45538,7 @@ sub_02019C0C: ; 0x02019C0C
 	blx sub_0207873C
 	add r0, r4, #0
 	add r1, sp, #0x148
-	blx sub_02072470
+	blx MTX_Copy33To44_
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
@@ -106642,7 +106642,7 @@ _02034DD6:
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
 	add r0, sp, #0x24
-	bl sub_02072588
+	bl MTX_RotX33_
 	add r0, r5, #0
 	add r1, sp, #0xc
 	bl sub_02049B5C

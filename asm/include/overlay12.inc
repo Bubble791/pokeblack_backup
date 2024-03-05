@@ -3411,7 +3411,7 @@
 .public sub_02049808
 .public sub_02067D1C
 .public sub_02073FB4
-.public sub_020725A4
+.public MTX_RotY33_
 .public sub_02067D1C
 .public sub_02049CDC
 .public sub_02073FD4

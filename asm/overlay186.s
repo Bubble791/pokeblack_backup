@@ -7960,7 +7960,7 @@ _021AB44C:
 	sub r1, #0x28
 	add r0, r5, r0
 	str r2, [r5, r1]
-	blx sub_0207244C
+	blx MTX_Identity33_
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021AB49C: .word 0x00000302
@@ -10770,11 +10770,11 @@ sub_021ACA70: ; 0x021ACA70
 	lsl r2, r2, #1
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
-	ldr r3, _021ACA98 ; =sub_02072588
+	ldr r3, _021ACA98 ; =MTX_RotX33_
 	bx r3
 	nop
 _021ACA94: .word 0x020946BC
-_021ACA98: .word sub_02072588
+_021ACA98: .word MTX_RotX33_
 	thumb_func_end sub_021ACA70
 
 	thumb_func_start sub_021ACA9C

@@ -4080,7 +4080,7 @@ ovy294_21a39d0: ; 0x021A39D0
 	str r0, [sp, #0x10]
 	str r0, [sp, #0x14]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldrh r1, [r4, #0x10]
 	ldr r0, [r4, #8]
 	bl sub_0204A5C0

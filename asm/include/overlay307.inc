@@ -224,7 +224,7 @@
 .public sub_0204A638
 .public sub_02049AF0
 .public sub_0203A1FC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0203A1FC
 .public sub_0201CCF8
 .public sub_020056FC

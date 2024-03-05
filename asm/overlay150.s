@@ -434,7 +434,7 @@ _021F607E:
 	mov r3, #2
 	ldrsh r2, [r2, r3]
 	add r0, sp, #0x44
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r0, sp, #0x44
 	bl sub_02074C64
 	ldr r0, [sp, #0x14]
@@ -448,7 +448,7 @@ _021F607E:
 	mov r3, #2
 	ldrsh r2, [r2, r3]
 	add r0, sp, #0x44
-	bl sub_020725C0
+	bl MTX_RotZ33_
 	add r0, sp, #0x44
 	bl sub_02074C64
 	ldr r0, [sp, #0x30]

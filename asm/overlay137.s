@@ -3763,12 +3763,12 @@ ovy137_21f0818: ; 0x021F0818
 	add r0, r6, #0
 	ldr r1, [sp, #4]
 	add r0, #0x18
-	bl sub_02072588
+	bl MTX_RotX33_
 	add r0, r7, #0
 	ldr r1, [sp, #4]
 	ldr r2, [sp, #8]
 	add r0, #0x18
-	bl sub_02072588
+	bl MTX_RotX33_
 	mov r0, #0x7f
 	lsl r0, r0, #0xc
 	str r0, [r6]
@@ -4016,12 +4016,12 @@ ovy137_21f0a38: ; 0x021F0A38
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	add r7, #0x18
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021F0A7C: .word 0x02097DFC

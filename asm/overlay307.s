@@ -1968,7 +1968,7 @@ _021DEAEE:
 	str r1, [r0, #0x14]
 	str r1, [r0, #0x18]
 	add r0, #0x1c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10

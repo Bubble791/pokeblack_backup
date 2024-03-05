@@ -22,7 +22,7 @@
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0208D65C
-.public sub_020725A4
+.public MTX_RotY33_
 .public sub_02074C64
-.public sub_020725C0
+.public MTX_RotZ33_
 .public sub_02074C64

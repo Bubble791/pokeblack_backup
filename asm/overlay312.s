@@ -3578,7 +3578,7 @@ ovy312_217e630: ; 0x0217E630
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r6, r0, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	ldr r0, [r5]
 	add r7, sp, #0
 	lsl r0, r0, #0x10
@@ -3591,11 +3591,11 @@ ovy312_217e630: ; 0x0217E630
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r6, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	ldr r0, [r5, #8]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -3607,11 +3607,11 @@ ovy312_217e630: ; 0x0217E630
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_020725C0
+	bl MTX_RotZ33_
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r6, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -3635,7 +3635,7 @@ ovy312_217e6a4: ; 0x0217E6A4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r6, r0, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	ldr r0, [r5, #4]
 	add r7, sp, #0
 	neg r0, r0
@@ -3649,11 +3649,11 @@ ovy312_217e6a4: ; 0x0217E6A4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r6, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	ldr r0, [r5, #8]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -3665,11 +3665,11 @@ ovy312_217e6a4: ; 0x0217E6A4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_020725C0
+	bl MTX_RotZ33_
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r6, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -4040,7 +4040,7 @@ _0217E982:
 	ldr r0, [r3]
 	str r0, [r2]
 	add r0, sp, #0x5c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r6, #0
 	sub r0, #0x10
 	add r3, r5, r0
@@ -4106,7 +4106,7 @@ _0217EA2E:
 	add r1, sp, #0x5c
 	add r0, r0, r7
 	add r2, sp, #0x20
-	blx sub_02072A10
+	blx MTX_Concat33
 	add r0, r5, r7
 	add r0, #0x40
 	ldrh r0, [r0]

@@ -9516,7 +9516,7 @@ ovy36_2183fa8: ; 0x02183FA8
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
 	add r0, #0x3c
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r1, r4, #0
 	ldr r0, [r7]
 	add r1, #0x24
@@ -47301,12 +47301,12 @@ ovy36_2195a78: ; 0x02195A78
 	ldrsh r1, [r1, r2]
 	add r0, r7, #0
 	add r2, r6, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r4, sp, #0
 	add r0, r4, #0
 	add r1, r7, #0
 	add r2, r4, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add r0, r4, #0
 	add r1, r4, #0
 	blx sub_02074254
@@ -49071,11 +49071,11 @@ ovy36_2196918: ; 0x02196918
 	blx sub_0207873C
 	add r0, r5, #0
 	add r1, r5, #0
-	blx sub_0207272C
+	blx MTX_Inverse33
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add sp, #0x78
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -53876,7 +53876,7 @@ _02198DDA:
 	str r0, [r5, #0x1c]
 	add r0, r5, #0
 	add r0, #0x20
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldrh r0, [r4, #0x1c]
 	ldr r3, _02198E60 ; =0x020946BC
 	asr r0, r0, #4
@@ -53888,19 +53888,19 @@ _02198DDA:
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
 	add r0, #0x20
-	bl sub_020725C0
+	bl MTX_RotZ33_
 	add r6, sp, #0
 	mov r3, #1
 	ldr r1, [r4, #0x14]
 	ldr r2, [r4, #0x18]
 	add r0, r6, #0
 	lsl r3, r3, #0xc
-	bl sub_020724AC
+	bl MTX_Scale33_
 	add r5, #0x20
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r5, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	add sp, #0x24
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -80775,7 +80775,7 @@ _021A55C6:
 	cmp r0, #0
 	bne _021A55FA
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r6, #0
 	add r6, sp, #0
 	add r1, r6, #0
@@ -81068,7 +81068,7 @@ _021A57FA:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0
@@ -81319,7 +81319,7 @@ _021A59EA:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0
@@ -81744,7 +81744,7 @@ _021A5CE8:
 	str r0, [r3]
 	add r0, sp, #0x18
 	ldr r7, [r5]
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r4, #0
 _021A5CFE:
 	lsl r0, r4, #4
@@ -87481,11 +87481,11 @@ ovy36_21a8b20: ; 0x021A8B20
 	blx sub_0207873C
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_0207272C
+	blx MTX_Inverse33
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add sp, #0x78
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy36_21a8b20
@@ -110539,7 +110539,7 @@ _021B40D4:
 	bl sub_0206578C
 	bl sub_02067B9C
 	add r0, sp, #0x98
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r7, #0
 	add r7, sp, #0x80
 	add r1, r7, #0
@@ -110636,11 +110636,11 @@ ovy36_21b41a0: ; 0x021B41A0
 	blx sub_0207873C
 	add r0, r5, #0
 	add r1, r5, #0
-	blx sub_0207272C
+	blx MTX_Inverse33
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add sp, #0x78
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -119363,7 +119363,7 @@ _021B812A:
 	str r0, [r5, #0x1c]
 	add r0, r5, #0
 	add r0, #0x20
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r4, #0
 	str r4, [r5, #8]
 	str r4, [r5, #0xc]
@@ -120074,7 +120074,7 @@ _021B863E:
 	str r0, [r5, #0x1c]
 	add r0, r5, #0
 	add r0, #0x20
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r4, #0
 	str r4, [r5, #8]
 	str r4, [r5, #0xc]
@@ -126438,7 +126438,7 @@ ovy36_21bb7ac: ; 0x021BB7AC
 	str r0, [r4, #0x30]
 	add r0, r4, #0
 	add r0, #0x34
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r0, #0
 	str r0, [r4, #0x1c]
 	str r0, [r4, #0x20]
@@ -133506,7 +133506,7 @@ _021BED64:
 	ldr r0, [sp]
 	ldr r0, [r0, #0x14]
 	add r0, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r3, [sp]
 	add r0, r6, #0
 	ldr r3, [r3, #0x14]
@@ -135949,7 +135949,7 @@ _021C007E:
 _021C00CC:
 	add r2, #0x20
 	add r0, r2, #0
-	blx sub_0207244C
+	blx MTX_Identity33_
 	b _021C00EC
 _021C00D6:
 	ldrh r0, [r0]
@@ -136599,7 +136599,7 @@ _021C0520:
 	add r0, r6, #0
 	add r0, #0x20
 	str r1, [r6]
-	blx sub_0207244C
+	blx MTX_Identity33_
 _021C053E:
 	ldr r1, [r6]
 	mov r0, #3
@@ -141370,7 +141370,7 @@ _021C2952:
 	str r0, [r5, #8]
 _021C2964:
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r5, sp, #0
 	add r0, r6, #0
 	add r1, r5, #0
@@ -141618,7 +141618,7 @@ _021C2B36:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r4, #0
 	add r4, sp, #0
 	add r1, r4, #0
@@ -141795,7 +141795,7 @@ _021C2C8E:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0
@@ -142242,7 +142242,7 @@ _021C2FBE:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0
@@ -149480,7 +149480,7 @@ _021C66BC:
 	ldr r0, [r6]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r5, #0
 	add r5, sp, #0
 	add r1, r5, #0

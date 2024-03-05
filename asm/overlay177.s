@@ -1134,7 +1134,7 @@ _0219B646:
 _0219B660:
 	add r0, r5, #0
 	add r0, #0x34
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r0, #1
 	lsl r0, r0, #0xc
 	str r0, [r5, #0x28]

@@ -47117,17 +47117,17 @@ _0204EC0E:
 	blx sub_02074254
 	add r7, sp, #0x168
 	add r0, r7, #0
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r1, [sp, #0xa8]
 	ldr r2, [sp, #0xb0]
 	add r0, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	ldr r1, [sp, #0xa8]
 	ldr r2, [sp, #0xb0]
 	add r0, sp, #0x1b0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r0, sp, #0x18c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r4, #0
 	add r4, sp, #0x114
 	add r1, r6, #0
@@ -49831,7 +49831,7 @@ sub_0204FF54: ; 0x0204FF54
 	str r0, [r6, #4]
 	str r0, [r6, #8]
 	add r0, r7, #0
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r6, #0
 	bl sub_020658A4
 	ldr r1, _0204FFE4 ; =0x02143AC8
@@ -51103,7 +51103,7 @@ sub_020507D4: ; 0x020507D4
 	add r0, r7, #0
 	add r5, r1, #0
 	add r6, r2, #0
-	blx sub_0207244C
+	blx MTX_Identity33_
 	asr r0, r4, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -51113,7 +51113,7 @@ sub_020507D4: ; 0x020507D4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	asr r0, r5, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -51123,11 +51123,11 @@ sub_020507D4: ; 0x020507D4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r5, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	asr r0, r6, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -51136,11 +51136,11 @@ sub_020507D4: ; 0x020507D4
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r5, #0
-	bl sub_020725C0
+	bl MTX_RotZ33_
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -51178,7 +51178,7 @@ sub_02050844: ; 0x02050844
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_02072588
+	bl MTX_RotX33_
 	ldr r0, [r5]
 	ldr r1, [r5, #8]
 	bl sub_02074568
@@ -51191,11 +51191,11 @@ sub_02050844: ; 0x02050844
 	ldrsh r1, [r4, r1]
 	ldrsh r2, [r4, r2]
 	add r0, r5, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	blx sub_02072A10
+	blx MTX_Concat33
 	add sp, #0x54
 	pop {r4, r5, r6, r7, pc}
 	nop

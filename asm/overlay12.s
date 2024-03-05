@@ -40519,7 +40519,7 @@ _021637B8:
 	ldr r1, [sp]
 	add r0, sp, #0x14
 	add r2, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	mov r0, #0x19
 	add r1, sp, #0x14
 	mov r2, #0xc

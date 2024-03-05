@@ -797,7 +797,7 @@
 .public sub_020507D4
 .public sub_02049B5C
 .public sub_0204A5C0
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049B5C
 .public sub_02044330
 .public sub_02044304

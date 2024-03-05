@@ -311,7 +311,7 @@ ovy128_21eeec8: ; 0x021EEEC8
 	str r1, [sp, #4]
 	ldr r2, [sp, #4]
 	add r1, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	lsl r2, r5, #0x10
 	add r0, r6, #0
 	mov r1, #0
@@ -334,7 +334,7 @@ ovy128_21eeec8: ; 0x021EEEC8
 	str r1, [r0, #8]
 	add r0, #0x18
 	add r1, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	lsl r2, r4, #0x10
 	add r0, r6, #0
 	mov r1, #0
@@ -363,7 +363,7 @@ ovy128_21eeec8: ; 0x021EEEC8
 	str r1, [sp]
 	ldr r2, [sp]
 	add r1, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r2, r5, #2
 	lsl r2, r2, #0x10
 	add r0, r6, #0
@@ -388,7 +388,7 @@ ovy128_21eeec8: ; 0x021EEEC8
 	str r1, [r0, #8]
 	add r0, #0x18
 	add r1, r7, #0
-	bl sub_020725A4
+	bl MTX_RotY33_
 	add r2, r4, #2
 	lsl r2, r2, #0x10
 	add r0, r6, #0

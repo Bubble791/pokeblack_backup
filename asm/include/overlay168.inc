@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0203A1FC
 .public sub_0204A934
 .public sub_02049344
@@ -62,7 +62,7 @@
 .public sub_020498B8
 .public sub_02049974
 .public sub_020498B8
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049430
 .public sub_02068664
 .public sub_0203A1FC
@@ -88,7 +88,7 @@
 .public sub_020498B8
 .public sub_02049974
 .public sub_020498B8
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049430
 .public sub_02068664
 .public sub_0203A1FC

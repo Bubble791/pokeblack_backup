@@ -2996,7 +2996,7 @@ _02053518:
 	add r0, sp, #0x18
 	add r1, sp, #0x30
 	mov r2, r0
-	bl sub_02072BA4
+	bl MTX_MultVec33
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
@@ -3160,7 +3160,7 @@ _020537A0:
 	add r0, sp, #0x18
 	add r1, sp, #0x30
 	mov r2, r0
-	bl sub_02072BA4
+	bl MTX_MultVec33
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
@@ -3449,7 +3449,7 @@ _02053BF8:
 	add r0, sp, #0x18
 	add r1, sp, #0x30
 	mov r2, r0
-	bl sub_02072BA4
+	bl MTX_MultVec33
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
@@ -3613,7 +3613,7 @@ _02053E80:
 	add r0, sp, #0x18
 	add r1, sp, #0x30
 	mov r2, r0
-	bl sub_02072BA4
+	bl MTX_MultVec33
 	add r0, sp, #0xc
 	mov r1, r8
 	mov r2, r0
@@ -6308,7 +6308,7 @@ _0205664C:
 	mov r2, r1, lsl #1
 	ldrsh r1, [r3, ip]
 	ldrsh r2, [r3, r2]
-	blx sub_02072588
+	blx MTX_RotX33_
 	b _020566D8
 _0205667C:
 	ldrh r1, [r0]
@@ -6321,7 +6321,7 @@ _0205667C:
 	mov r2, r1, lsl #1
 	ldrsh r1, [r3, ip]
 	ldrsh r2, [r3, r2]
-	blx sub_020725A4
+	blx MTX_RotY33_
 	b _020566D8
 _020566AC:
 	ldrh r1, [r0]
@@ -6334,12 +6334,12 @@ _020566AC:
 	mov r2, r1, lsl #1
 	ldrsh r1, [r3, ip]
 	ldrsh r2, [r3, r2]
-	blx sub_020725C0
+	blx MTX_RotZ33_
 _020566D8:
 	add r0, r4, #8
 	add r1, sp, #0
 	mov r2, r0
-	bl sub_02072BA4
+	bl MTX_MultVec33
 	add sp, sp, #0x28
 	ldmia sp!, {r4, lr}
 	bx lr

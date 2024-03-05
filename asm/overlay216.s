@@ -8189,7 +8189,7 @@ _021BF7BE:
 	add r0, sp, #0x40
 	str r1, [sp, #0x2c]
 	str r2, [sp, #0x30]
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [sp, #0x14]
 	add r1, sp, #0x28
 	bl sub_02049B5C

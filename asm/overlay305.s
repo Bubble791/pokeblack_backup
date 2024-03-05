@@ -2470,7 +2470,7 @@ _0219E0C6:
 	str r0, [sp, #0x10]
 	str r0, [sp, #0x14]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldrh r1, [r4, #0xc]
 	ldr r0, [r4, #8]
 	bl sub_0204A5C0

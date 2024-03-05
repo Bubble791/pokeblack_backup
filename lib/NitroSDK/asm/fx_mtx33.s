@@ -4,7 +4,7 @@
 	.text
 
 	arm_func_start MTX_Identity33_
-MTX_Identity33_: ; 0x020CAFEC
+MTX_Identity33_: ; 0x0207244C
 	mov r2, #0x1000
 	str r2, [r0, #0x20]
 	mov r3, #0
@@ -16,60 +16,96 @@ MTX_Identity33_: ; 0x020CAFEC
 	bx lr
 	arm_func_end MTX_Identity33_
 
+	arm_func_start MTX_Copy33To44_
+MTX_Copy33To44_: ; 0x02072470
+	stmdb sp!, {r4}
+	mov ip, #0
+	ldmia r0!, {r2, r3, r4}
+	stmia r1!, {r2, r3, r4, ip}
+	ldmia r0!, {r2, r3, r4}
+	stmia r1!, {r2, r3, r4, ip}
+	ldmia r0!, {r2, r3, r4}
+	stmia r1!, {r2, r3, r4, ip}
+	mov r2, #0x1000
+	str ip, [r1]
+	str ip, [r1, #4]
+	str ip, [r1, #8]
+	str r2, [r1, #0xc]
+	ldmia sp!, {r4}
+	bx lr
+	arm_func_end MTX_Copy33To44_
+
+	thumb_func_start MTX_Scale33_
+MTX_Scale33_: ; 0x020724AC
+	stmia r0!, {r1}
+	mov r1, #0
+	str r3, [r0, #0x1c]
+	mov r3, #0
+	stmia r0!, {r1, r3}
+	stmia r0!, {r1, r2, r3}
+	mov r2, #0
+	stmia r0!, {r1, r3}
+	bx lr
+	.align 2, 0
+	thumb_func_end MTX_Scale33_
+
 	arm_func_start MTX_ScaleApply33
-MTX_ScaleApply33: ; 0x020CB010
-	stmdb sp!, {r4, lr}
-	ldr r4, [r0]
-	ldr ip, [sp, #8]
-	smull lr, r4, r2, r4
-	mov lr, lr, lsr #0xc
-	orr lr, lr, r4, lsl #20
-	str lr, [r1]
-	ldr r4, [r0, #4]
-	smull lr, r4, r2, r4
-	mov lr, lr, lsr #0xc
-	orr lr, lr, r4, lsl #20
-	str lr, [r1, #4]
-	ldr lr, [r0, #8]
-	smull r4, lr, r2, lr
-	mov r2, r4, lsr #0xc
-	orr r2, r2, lr, lsl #20
-	str r2, [r1, #8]
-	ldr r2, [r0, #0xc]
-	smull lr, r2, r3, r2
-	mov lr, lr, lsr #0xc
-	orr lr, lr, r2, lsl #20
-	str lr, [r1, #0xc]
-	ldr r2, [r0, #0x10]
-	smull lr, r2, r3, r2
-	mov lr, lr, lsr #0xc
-	orr lr, lr, r2, lsl #20
-	str lr, [r1, #0x10]
-	ldr r2, [r0, #0x14]
-	smull lr, r2, r3, r2
-	mov r3, lr, lsr #0xc
-	orr r3, r3, r2, lsl #20
-	str r3, [r1, #0x14]
-	ldr r2, [r0, #0x18]
-	smull r3, r2, ip, r2
-	mov r3, r3, lsr #0xc
-	orr r3, r3, r2, lsl #20
-	str r3, [r1, #0x18]
-	ldr r2, [r0, #0x1c]
-	smull r3, r2, ip, r2
-	mov r3, r3, lsr #0xc
-	orr r3, r3, r2, lsl #20
-	str r3, [r1, #0x1c]
+MTX_ScaleApply33: ; 0x020724C0
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	ldr r6, [r0]
+	ldr r5, [r0, #4]
+	smull r8, r7, r2, r6
+	ldr r4, [r0, #8]
+	ldr ip, [r0, #0xc]
+	smull fp, r4, r2, r4
+	str r4, [sp]
+	ldr sl, [r0, #0x10]
+	smull r6, r5, r2, r5
+	smull r4, lr, r3, ip
+	ldr sb, [r0, #0x14]
+	smull ip, r2, r3, sl
+	smull sl, sb, r3, sb
+	mov r3, r8, lsr #0xc
+	orr r3, r3, r7, lsl #20
+	mov r7, r6, lsr #0xc
+	orr r7, r7, r5, lsl #20
+	mov r8, ip, lsr #0xc
+	orr r8, r8, r2, lsl #20
+	str r3, [r1]
+	mov r3, r4, lsr #0xc
+	str r7, [r1, #4]
+	mov r4, sl, lsr #0xc
+	orr r3, r3, lr, lsl #20
+	orr r4, r4, sb, lsl #20
+	ldr r5, [sp]
+	mov r6, fp, lsr #0xc
+	orr r6, r6, r5, lsl #20
+	ldr r2, [sp, #0x28]
+	ldr r7, [r0, #0x18]
+	ldr r5, [r0, #0x1c]
+	str r6, [r1, #8]
 	ldr r0, [r0, #0x20]
-	smull r2, r0, ip, r0
-	mov r2, r2, lsr #0xc
+	str r3, [r1, #0xc]
+	smull sb, r7, r2, r7
+	str r8, [r1, #0x10]
+	mov r8, sb, lsr #0xc
+	orr r8, r8, r7, lsl #20
+	smull r6, r5, r2, r5
+	smull r3, r0, r2, r0
+	str r4, [r1, #0x14]
+	mov r4, r6, lsr #0xc
+	mov r2, r3, lsr #0xc
+	orr r4, r4, r5, lsl #20
 	orr r2, r2, r0, lsl #20
+	str r8, [r1, #0x18]
+	str r4, [r1, #0x1c]
 	str r2, [r1, #0x20]
-	ldmia sp!, {r4, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end MTX_ScaleApply33
 
+
 	thumb_func_start MTX_RotX33_
-MTX_RotX33_: ; 0x020CB0D0
+MTX_RotX33_: ; 0x02072588
 	mov r3, #1
 	lsl r3, r3, #0xc
 	str r3, [r0]
@@ -87,7 +123,7 @@ MTX_RotX33_: ; 0x020CB0D0
 	thumb_func_end MTX_RotX33_
 
 	thumb_func_start MTX_RotY33_
-MTX_RotY33_: ; 0x020CB0EC
+MTX_RotY33_: ; 0x020725A4
 	str r2, [r0]
 	str r2, [r0, #0x20]
 	mov r3, #0
@@ -105,7 +141,7 @@ MTX_RotY33_: ; 0x020CB0EC
 	thumb_func_end MTX_RotY33_
 
 	thumb_func_start MTX_RotZ33_
-MTX_RotZ33_: ; 0x020CB108
+MTX_RotZ33_: ; 0x020725C0
 	stmia r0!, {r2}
 	mov r3, #0
 	stmia r0!, {r1, r3}
@@ -120,17 +156,106 @@ MTX_RotZ33_: ; 0x020CB108
 	bx lr
 	thumb_func_end MTX_RotZ33_
 
+	arm_func_start MTX_RotAxis33
+MTX_RotAxis33: ; 0x020725D8
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	sub sp, sp, #0x14
+	rsb sb, r3, #0x1000
+	ldmia r1, {r5, r7}
+	smull lr, ip, sb, r5
+	umull r8, fp, r7, lr
+	ldr r6, [r1, #8]
+	mla fp, r7, ip, fp
+	umull sl, r1, r6, lr
+	str r1, [sp, #8]
+	smull r4, r1, r5, r5
+	str r1, [sp, #4]
+	mov r1, r8, lsr #0x18
+	smull r5, r8, r2, r5
+	mov r5, r5, lsr #0xc
+	orr r5, r5, r8, lsl #20
+	str r5, [sp, #0xc]
+	mov r5, r7, asr #0x1f
+	str r5, [sp]
+	str r1, [sp, #0x10]
+	mov r1, sl, lsr #0x18
+	ldr sl, [sp]
+	mov r5, r6, asr #0x1f
+	mla fp, sl, lr, fp
+	ldr sl, [sp, #0x10]
+	mov r8, sb, asr #0x1f
+	orr sl, sl, fp, lsl #8
+	str sl, [sp, #0x10]
+	ldr sl, [sp, #8]
+	mla sl, r6, ip, sl
+	mla sl, r5, lr, sl
+	str sl, [sp, #8]
+	orr r1, r1, sl, lsl #8
+	ldr sl, [sp, #4]
+	umull ip, fp, sb, r4
+	mla fp, sb, sl, fp
+	mla fp, r8, r4, fp
+	mov r4, ip, lsr #0x18
+	orr r4, r4, fp, lsl #8
+	add r4, r4, r3
+	str r4, [r0]
+	smull sl, r4, r7, r7
+	umull ip, fp, sb, sl
+	mla fp, sb, r4, fp
+	mla fp, r8, sl, fp
+	mov r4, ip, lsr #0x18
+	orr r4, r4, fp, lsl #8
+	add r4, r4, r3
+	str r4, [r0, #0x10]
+	smull sl, r4, r6, r6
+	umull ip, fp, sb, sl
+	mla fp, sb, r4, fp
+	mla fp, r8, sl, fp
+	mov r4, ip, lsr #0x18
+	orr r4, r4, fp, lsl #8
+	add r3, r4, r3
+	str r3, [r0, #0x20]
+	smull r4, r3, sb, r7
+	smull r8, r7, r2, r7
+	mov r8, r8, lsr #0xc
+	orr r8, r8, r7, lsl #20
+	smull sb, r7, r2, r6
+	mov sb, sb, lsr #0xc
+	ldr r2, [sp, #0x10]
+	orr sb, sb, r7, lsl #20
+	add r7, r2, sb
+	sub r2, r2, sb
+	str r2, [r0, #0xc]
+	sub r2, r1, r8
+	add r1, r1, r8
+	str r2, [r0, #8]
+	str r1, [r0, #0x18]
+	umull r2, r1, r6, r4
+	mla r1, r6, r3, r1
+	mla r1, r5, r4, r1
+	mov r3, r2, lsr #0x18
+	orr r3, r3, r1, lsl #8
+	ldr r1, [sp, #0xc]
+	str r7, [r0, #4]
+	add r2, r3, r1
+	sub r1, r3, r1
+	str r2, [r0, #0x14]
+	str r1, [r0, #0x1c]
+	add sp, sp, #0x14
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	arm_func_end MTX_RotAxis33
+
 	arm_func_start MTX_Inverse33
-MTX_Inverse33: ; 0x020CB120
+MTX_Inverse33: ; 0x0207272C
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x50
 	mov sl, r0
 	ldr r0, [sl, #0x14]
-	cmp sl, r1
-	addeq sb, sp, #0x2c
 	ldr r3, [sl, #0x18]
 	ldr r2, [sl, #0xc]
 	ldr r6, [sl, #0x20]
+	add sb, sp, #0x2c
+	cmp sl, r1
 	str r1, [sp]
 	movne sb, r1
 	smull fp, r8, r2, r6
@@ -181,7 +306,7 @@ MTX_Inverse33: ; 0x020CB120
 	addeq sp, sp, #0x50
 	subeq r0, r1, #1
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
-	bl FX_InvAsync
+	blx FX_InvAsync
 	ldr r1, [sl, #8]
 	ldr r2, [sl, #0x1c]
 	ldr fp, [sl, #0x10]
@@ -228,7 +353,7 @@ MTX_Inverse33: ; 0x020CB120
 	mov r0, r1, lsr #0xc
 	orr r0, r0, r3, lsl #20
 	str r0, [sp, #0x24]
-	bl FX_GetDivResult
+	blx FX_GetDivResult
 	smull r2, r1, r0, r5
 	mov r2, r2, lsr #0xc
 	orr r2, r2, r1, lsl #20
@@ -285,205 +410,167 @@ MTX_Inverse33: ; 0x020CB120
 	orr r2, r2, r1, lsl #20
 	rsb r1, r2, #0
 	str r1, [sb, #0x1c]
-	ldr r4, [sl]
-	ldr r3, [sl, #0x10]
+	ldr r3, [sl]
+	ldr r1, [sl, #0x10]
 	ldr r2, [sl, #0xc]
+	smull r5, r4, r3, r1
 	ldr r1, [sl, #4]
-	smull r6, r5, r4, r3
 	smull r3, r1, r2, r1
-	subs r2, r6, r3
-	sbc r1, r5, r1
+	subs r2, r5, r3
+	sbc r1, r4, r1
 	mov r2, r2, lsr #0xc
 	orr r2, r2, r1, lsl #20
-	mov r1, r2, asr #0x1f
-	umull r4, r3, r0, r2
-	mla r3, r0, r1, r3
+	smull r2, r1, r0, r2
+	mov r0, r2, lsr #0xc
+	orr r0, r0, r1, lsl #20
+	str r0, [sb, #0x20]
 	add r0, sp, #0x2c
-	mla r3, ip, r2, r3
-	mov r1, r4, lsr #0xc
-	orr r1, r1, r3, lsl #20
-	str r1, [sb, #0x20]
 	cmp sb, r0
-	bne _020CB404
+	bne _02072A04
 	ldr r1, [sp]
-	bl MI_Copy36B
-_020CB404:
+	bl sub_0207873C
+_02072A04:
 	mov r0, #0
 	add sp, sp, #0x50
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end MTX_Inverse33
 
 	arm_func_start MTX_Concat33
-MTX_Concat33: ; 0x020CB410
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
-	sub sp, sp, #0x40
+MTX_Concat33: ; 0x02072A10
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	sub sp, sp, #0x24
+	ldr sb, [r0, #4]
+	ldr r3, [r1, #0xc]
 	mov ip, r2
-	ldr r3, [r0, #4]
-	ldr r2, [r1, #0xc]
+	smull r6, r5, sb, r3
+	ldr sl, [r0]
+	ldr r3, [r1]
 	cmp ip, r1
-	smull r7, r5, r3, r2
-	ldr r6, [r0]
-	ldr r4, [r1]
-	addeq sl, sp, #0x1c
-	smlal r7, r5, r6, r4
-	ldr r2, [r0, #8]
+	smlal r6, r5, sl, r3
+	ldr r8, [r0, #8]
 	ldr r4, [r1, #0x18]
-	movne sl, ip
-	smlal r7, r5, r2, r4
-	mov r4, r7, lsr #0xc
+	addeq r2, sp, #0
+	smlal r6, r5, r8, r4
+	mov r4, r6, lsr #0xc
 	orr r4, r4, r5, lsl #20
-	str r4, [sl]
+	str r4, [r2]
 	ldr r4, [r1, #0x10]
 	ldr r5, [r1, #4]
-	smull r8, r7, r3, r4
-	smlal r8, r7, r6, r5
-	ldr r4, [r1, #0x1c]
-	smlal r8, r7, r2, r4
-	mov r4, r8, lsr #0xc
-	orr r4, r4, r7, lsl #20
-	str r4, [sl, #4]
-	ldr r4, [r1, #0x14]
-	ldr r5, [r1, #8]
-	smull r8, r7, r3, r4
-	smlal r8, r7, r6, r5
-	ldr r3, [r1, #0x20]
-	smlal r8, r7, r2, r3
-	mov r2, r8, lsr #0xc
-	orr r2, r2, r7, lsl #20
-	str r2, [sl, #8]
-	ldr sb, [r0, #0x10]
-	ldr r2, [r0, #0xc]
 	smull r7, r6, sb, r4
-	smlal r7, r6, r2, r5
-	ldr r4, [r0, #0x14]
-	smlal r7, r6, r4, r3
-	mov r3, r7, lsr #0xc
-	orr r3, r3, r6, lsl #20
-	str r3, [sl, #0x14]
-	ldr r3, [r1, #0x10]
-	ldr r5, [r1, #4]
-	smull r7, r6, sb, r3
-	smlal r7, r6, r2, r5
+	smlal r7, r6, sl, r5
 	ldr r5, [r1, #0x1c]
-	mov r3, sb, asr #0x1f
-	smlal r7, r6, r4, r5
-	str r3, [sp]
-	mov r3, r7, lsr #0xc
-	orr r3, r3, r6, lsl #20
-	str r3, [sl, #0x10]
-	mov r3, r2, asr #0x1f
-	str r3, [sp, #4]
-	mov r3, r4, asr #0x1f
-	ldr r8, [r1, #0xc]
-	str r3, [sp, #8]
-	mov r3, r8, asr #0x1f
-	str r3, [sp, #0x18]
-	ldr r7, [r1]
-	ldr r6, [r1, #0x18]
-	mov r3, r7, asr #0x1f
-	str r3, [sp, #0xc]
-	umull r3, r5, r4, r6
-	mov fp, r6, asr #0x1f
-	str r3, [sp, #0x10]
-	mla r5, r4, fp, r5
-	ldr r3, [sp, #8]
-	add lr, sp, #0x1c
-	mla r5, r3, r6, r5
-	umull r3, r4, r2, r7
-	str r3, [sp, #0x14]
-	ldr r3, [sp, #0xc]
-	mla r4, r2, r3, r4
-	ldr r2, [sp, #4]
-	umull r3, fp, sb, r8
-	mla r4, r2, r7, r4
-	ldr r2, [sp, #0x14]
-	adds r3, r2, r3
-	ldr r2, [sp, #0x18]
-	mla fp, sb, r2, fp
-	ldr r2, [sp]
-	mla fp, r2, r8, fp
-	adc r4, r4, fp
-	ldr r2, [sp, #0x10]
-	ldr fp, [sp, #0x18]
-	adds r3, r2, r3
-	adc r2, r5, r4
-	mov r3, r3, lsr #0xc
-	orr r3, r3, r2, lsl #20
-	str r3, [sl, #0xc]
-	ldr r2, [r0, #0x1c]
+	add lr, sp, #0
+	smlal r7, r6, r8, r5
+	mov r5, r7, lsr #0xc
+	orr r5, r5, r6, lsl #20
+	str r5, [r2, #4]
+	ldr fp, [r1, #0x14]
+	ldr r3, [r0, #0x10]
+	smull r6, r5, sb, fp
+	ldr r7, [r1, #8]
+	ldr r4, [r0, #0xc]
+	smlal r6, r5, sl, r7
+	smull sl, sb, r3, fp
+	smlal sl, sb, r4, r7
+	ldr r7, [r1, #0x20]
+	ldr fp, [r0, #0x14]
+	smlal r6, r5, r8, r7
+	mov r6, r6, lsr #0xc
+	orr r6, r6, r5, lsl #20
+	smlal sl, sb, fp, r7
+	mov r5, sl, lsr #0xc
+	str r6, [r2, #8]
+	orr r5, r5, sb, lsl #20
+	str r5, [r2, #0x14]
+	ldr r5, [r1, #0x10]
+	ldr r6, [r1, #4]
+	smull r8, r7, r3, r5
+	smlal r8, r7, r4, r6
+	ldr r5, [r1, #0x1c]
+	ldr r6, [r0, #0x1c]
+	smlal r8, r7, fp, r5
+	mov r5, r8, lsr #0xc
+	orr r5, r5, r7, lsl #20
+	str r5, [r2, #0x10]
+	ldr r5, [r1, #0xc]
+	ldr sl, [r1]
+	smull r8, r7, r3, r5
+	smlal r8, r7, r4, sl
+	smull r4, r3, r6, r5
 	ldr r5, [r0, #0x18]
-	ldr r4, [r0, #0x20]
-	umull r3, r0, r2, r8
-	mla r0, r2, fp, r0
-	mov sb, r2, asr #0x1f
-	mla r0, sb, r8, r0
-	smlal r3, r0, r5, r7
-	smlal r3, r0, r4, r6
-	mov r3, r3, lsr #0xc
-	orr r3, r3, r0, lsl #20
-	str r3, [sl, #0x18]
-	ldr r0, [r1, #0x10]
-	ldr r3, [r1, #4]
-	smull r7, r0, r2, r0
-	cmp sl, lr
-	smlal r7, r0, r5, r3
-	ldr r6, [r1, #0x1c]
-	addne sp, sp, #0x40
-	smlal r7, r0, r4, r6
-	mov r3, r7, lsr #0xc
-	orr r3, r3, r0, lsl #20
-	str r3, [sl, #0x1c]
-	ldr r0, [r1, #0x14]
-	ldr r6, [r1, #0x20]
+	ldr sb, [r1, #0x18]
+	smlal r4, r3, r5, sl
+	ldr r0, [r0, #0x20]
+	smlal r8, r7, fp, sb
+	smlal r4, r3, r0, sb
+	mov r8, r8, lsr #0xc
+	orr r8, r8, r7, lsl #20
+	mov r4, r4, lsr #0xc
+	cmp r2, lr
+	str r8, [r2, #0xc]
+	orr r4, r4, r3, lsl #20
+	str r4, [r2, #0x18]
+	ldr r3, [r1, #0x10]
+	ldr r4, [r1, #4]
+	smull r8, r3, r6, r3
+	smlal r8, r3, r5, r4
+	ldr r7, [r1, #0x1c]
+	addne sp, sp, #0x24
+	smlal r8, r3, r0, r7
+	mov r4, r8, lsr #0xc
+	orr r4, r4, r3, lsl #20
+	str r4, [r2, #0x1c]
+	ldr r4, [r1, #0x20]
 	ldr r3, [r1, #8]
-	smull r1, r0, r2, r0
-	smlal r1, r0, r5, r3
-	smlal r1, r0, r4, r6
-	mov r1, r1, lsr #0xc
-	orr r1, r1, r0, lsl #20
-	str r1, [sl, #0x20]
-	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldr r1, [r1, #0x14]
+	smull r7, r1, r6, r1
+	smlal r7, r1, r5, r3
+	smlal r7, r1, r0, r4
+	mov r0, r7, lsr #0xc
+	orr r0, r0, r1, lsl #20
+	str r0, [r2, #0x20]
+	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldmia lr!, {r0, r1, r2, r3}
 	stmia ip!, {r0, r1, r2, r3}
 	ldmia lr!, {r0, r1, r2, r3}
 	stmia ip!, {r0, r1, r2, r3}
 	ldr r0, [lr]
 	str r0, [ip]
-	add sp, sp, #0x40
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	add sp, sp, #0x24
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end MTX_Concat33
 
 	arm_func_start MTX_MultVec33
-MTX_MultVec33: ; 0x020CB630
-	stmdb sp!, {r4, r5, r6, lr}
-	ldr r4, [r1, #0xc]
-	ldmia r0, {r3, ip}
-	smull r6, r5, ip, r4
-	ldr r4, [r1]
-	ldr r0, [r0, #8]
-	smlal r6, r5, r3, r4
-	ldr r4, [r1, #0x18]
-	smlal r6, r5, r0, r4
-	mov r4, r6, lsr #0xc
-	orr r4, r4, r5, lsl #20
-	str r4, [r2]
+MTX_MultVec33: ; 0x02072BA4
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
+	ldr r6, [r0, #4]
+	ldr r3, [r1, #0xc]
 	ldr r4, [r1, #0x10]
-	ldr r5, [r1, #4]
-	smull r6, lr, ip, r4
-	smlal r6, lr, r3, r5
-	ldr r4, [r1, #0x1c]
-	smlal r6, lr, r0, r4
-	mov r4, r6, lsr #0xc
-	orr r4, r4, lr, lsl #20
-	str r4, [r2, #4]
 	ldr lr, [r1, #0x14]
-	ldr r4, [r1, #8]
-	smull r5, lr, ip, lr
-	smlal r5, lr, r3, r4
-	ldr r1, [r1, #0x20]
-	smlal r5, lr, r0, r1
+	smull r8, r7, r6, r4
+	smull ip, r3, r6, r3
+	smull r5, r4, r6, lr
+	ldr sl, [r0]
+	ldmib r1, {r6, lr}
+	ldr sb, [r1]
+	smlal r8, r7, sl, r6
+	smlal ip, r3, sl, sb
+	smlal r5, r4, sl, lr
+	ldr lr, [r0, #8]
+	ldr sb, [r1, #0x18]
+	ldr r6, [r1, #0x1c]
+	ldr r0, [r1, #0x20]
+	smlal r8, r7, lr, r6
+	smlal ip, r3, lr, sb
+	smlal r5, r4, lr, r0
+	mov r6, ip, lsr #0xc
+	mov r1, r8, lsr #0xc
 	mov r0, r5, lsr #0xc
-	orr r0, r0, lr, lsl #20
+	orr r6, r6, r3, lsl #20
+	orr r1, r1, r7, lsl #20
+	orr r0, r0, r4, lsl #20
+	str r6, [r2]
+	str r1, [r2, #4]
 	str r0, [r2, #8]
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end MTX_MultVec33

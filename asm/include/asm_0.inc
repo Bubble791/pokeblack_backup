@@ -1170,8 +1170,8 @@
 .public sub_0208DD34
 .public sub_0208DA80
 .public sub_020507D4
-.public sub_02072BA4
-.public sub_02072BA4
+.public MTX_MultVec33
+.public MTX_MultVec33
 .public sub_02073FB4
 .public sub_0204A65C
 .public sub_0204A69C
@@ -1346,7 +1346,7 @@
 .public sub_02067B9C
 .public MTX_Inverse43
 .public sub_0207873C
-.public sub_02072470
+.public MTX_Copy33To44_
 .public sub_02074B80
 .public sub_0208D60C
 .public sub_0208D60C
@@ -2670,7 +2670,7 @@
 .public sub_02076860
 .public MTX_PerspectiveW
 .public MTX_LookAt
-.public sub_02072588
+.public MTX_RotX33_
 .public sub_02049B5C
 .public sub_0203A1FC
 .public sub_0203A24C

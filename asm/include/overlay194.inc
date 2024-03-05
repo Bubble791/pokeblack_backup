@@ -1775,7 +1775,7 @@
 .public sub_0204A6B4
 .public sub_0204A6BC
 .public sub_0204A67C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02016408
 .public sub_02016424
 .public sub_0204A638

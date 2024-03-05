@@ -137,7 +137,7 @@
 .public sub_02049DDC
 .public sub_0219E55C
 .public sub_0204F954
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0204A5C0
 .public sub_02049B5C
 .public sub_0219E568

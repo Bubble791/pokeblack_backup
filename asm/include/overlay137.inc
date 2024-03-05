@@ -265,8 +265,8 @@
 .public sub_021B83B4
 .public sub_021B8224
 .public sub_021B8224
-.public sub_02072588
-.public sub_02072588
+.public MTX_RotX33_
+.public MTX_RotX33_
 .public sub_021B8258
 .public sub_021B8258
 .public sub_021B84A8
@@ -298,8 +298,8 @@
 .public sub_021B84E8
 .public sub_021B8224
 .public sub_021B8224
-.public sub_02072588
-.public sub_02072588
+.public MTX_RotX33_
+.public MTX_RotX33_
 .public sub_021B8224
 .public sub_021B8224
 .public sub_021862B4

@@ -107,7 +107,7 @@
 .public sub_02015AA8
 .public sub_0204E15C
 .public sub_020056B0
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0203A1FC
 .public sub_0208D3BC
 .public sub_0208DF14

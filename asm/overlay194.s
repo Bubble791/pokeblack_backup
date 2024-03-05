@@ -20069,7 +20069,7 @@ ovy194_21c1a40: ; 0x021C1A40
 	str r0, [r1, #0x14]
 	add r1, #0x18
 	add r0, r1, #0
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r1, [r5, #0xc]
 	cmp r1, #0
 	beq _021C1A94

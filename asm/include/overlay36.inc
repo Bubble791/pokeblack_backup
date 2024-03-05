@@ -849,7 +849,7 @@
 .public sub_02163590
 .public sub_02073FB4
 .public sub_0203A1FC
-.public sub_020725A4
+.public MTX_RotY33_
 .public sub_02163590
 .public sub_02073FB4
 .public sub_021852E0
@@ -3333,8 +3333,8 @@
 .public sub_02167078
 .public sub_021B0A8C
 .public sub_0208D60C
-.public sub_020725A4
-.public sub_02072BA4
+.public MTX_RotY33_
+.public MTX_MultVec33
 .public sub_02074254
 .public sub_0216711C
 .public sub_0216711C
@@ -3495,8 +3495,8 @@
 .public sub_0204A68C
 .public MTX_LookAt
 .public sub_0207873C
-.public sub_0207272C
-.public sub_02072BA4
+.public MTX_Inverse33
+.public MTX_MultVec33
 .public sub_02167170
 .public sub_0216737C
 .public sub_02193BCC
@@ -3870,10 +3870,10 @@
 .public FX_Div
 .public FX_Div
 .public FX_Div
-.public sub_0207244C
-.public sub_020725C0
-.public sub_020724AC
-.public sub_02072A10
+.public MTX_Identity33_
+.public MTX_RotZ33_
+.public MTX_Scale33_
+.public MTX_Concat33
 .public sub_02074C64
 .public sub_020496D8
 .public sub_020496FC
@@ -5642,7 +5642,7 @@
 .public sub_0208D65C
 .public sub_0201749C
 .public sub_0202ED50
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_0203A1FC
@@ -5668,7 +5668,7 @@
 .public sub_02049934
 .public sub_020497D4
 .public sub_02049A28
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_0203A1FC
@@ -5701,7 +5701,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_02049A64
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_0203A24C
@@ -5730,7 +5730,7 @@
 .public sub_021A3AFC
 .public sub_021A3AC8
 .public sub_02049A64
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049BAC
 .public sub_021804BC
 .public sub_02016AD8
@@ -6601,8 +6601,8 @@
 .public sub_0204A68C
 .public MTX_LookAt
 .public sub_0207873C
-.public sub_0207272C
-.public sub_02072BA4
+.public MTX_Inverse33
+.public MTX_MultVec33
 .public sub_021672F8
 .public sub_021551AC
 .public sub_021551A4
@@ -8972,7 +8972,7 @@
 .public sub_020786E8
 .public sub_0206578C
 .public sub_02067B9C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_020786E8
@@ -8984,8 +8984,8 @@
 .public sub_0204A68C
 .public MTX_LookAt
 .public sub_0207873C
-.public sub_0207272C
-.public sub_02072BA4
+.public MTX_Inverse33
+.public MTX_MultVec33
 .public sub_02180494
 .public sub_021862B4
 .public sub_02073FB4
@@ -9618,7 +9618,7 @@
 .public sub_02049E6C
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049968
 .public sub_0203A24C
 .public sub_0203A24C
@@ -9647,7 +9647,7 @@
 .public sub_0204AB0C
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049968
 .public sub_02018E3C
 .public sub_02018E3C
@@ -10164,7 +10164,7 @@
 .public sub_02049DDC
 .public sub_0203A24C
 .public sub_02049E00
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0204A638
 .public sub_0204A5A8
 .public sub_0204A5B0
@@ -10737,7 +10737,7 @@
 .public sub_0208E3C8
 .public sub_0208DD34
 .public sub_0208DA80
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_020507D4
 .public sub_0203A1FC
 .public sub_020787A8
@@ -10963,7 +10963,7 @@
 .public sub_0203A24C
 .public sub_02049BAC
 .public sub_02049B5C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049A28
 .public sub_02049A64
 .public sub_020499E4
@@ -10986,7 +10986,7 @@
 .public sub_0204980C
 .public sub_020498B8
 .public sub_02049974
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049888
 .public sub_02049964
 .public sub_02049934
@@ -11459,7 +11459,7 @@
 .public sub_020499E4
 .public sub_02049A28
 .public sub_020499CC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_021A3AFC
@@ -11487,7 +11487,7 @@
 .public sub_021A3AE8
 .public sub_02049A64
 .public sub_02049A28
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_02049BAC
@@ -11507,7 +11507,7 @@
 .public sub_020497D4
 .public sub_02049A64
 .public sub_02049A28
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_0203A1FC
@@ -11539,7 +11539,7 @@
 .public sub_02049934
 .public sub_020497D4
 .public sub_02049A28
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_02155184
@@ -12001,7 +12001,7 @@
 .public sub_02049934
 .public sub_02049888
 .public sub_02049A28
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_021A3AD4
 .public sub_02049BAC
 .public sub_0203A1FC

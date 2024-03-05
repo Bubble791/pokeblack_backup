@@ -15559,7 +15559,7 @@ sub_02065698: ; 0x02065698
 	str r1, [r0, #0x64]
 	str r1, [r0, #0x68]
 	ldr r0, _02065780 ; =0x02143AC8
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r2, #1
 	ldr r0, _02065740 ; =0x02143A8C
 	lsl r2, r2, #0xc
@@ -15689,7 +15689,7 @@ sub_02065808: ; 0x02065808
 	bl sub_02067D1C
 	ldr r0, _02065890 ; =0x02143AC8
 	add r1, sp, #4
-	blx sub_0207272C
+	blx MTX_Inverse33
 	mov r0, #0x17
 	add r1, sp, #4
 	mov r2, #0xc

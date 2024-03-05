@@ -763,7 +763,7 @@
 .public sub_021672F8
 .public sub_02049BAC
 .public sub_0216749C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0216749C
 .public sub_0204AA30
 .public sub_02049384
@@ -789,7 +789,7 @@
 .public sub_02049BAC
 .public sub_0216749C
 .public sub_0217BB7C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0216749C
 .public sub_02042A78
 .public sub_02042A78

@@ -466,7 +466,7 @@
 .public sub_021E756C
 .public sub_02048F84
 .public sub_0204914C
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_020658A4
 .public sub_0207873C
 .public sub_020658C8
@@ -810,7 +810,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0203A1FC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_0203A1FC
 .public sub_021E7BC8
 .public sub_0203A24C

@@ -26057,7 +26057,7 @@ ovy257_21a6598: ; 0x021A6598
 	add r0, sp, #0x24
 	add r1, sp, #0
 	add r2, #0x6c
-	blx sub_02072BA4
+	blx MTX_MultVec33
 	add r0, r4, #0
 	add r0, #0x6c
 	add r1, r0, #0
@@ -28061,7 +28061,7 @@ ovy257_21a7620: ; 0x021A7620
 	str r0, [r4, #0x28]
 	add r0, r4, #0
 	add r0, #0x2c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r2, #0
 	mov r0, #2
 	str r0, [r4, #0x54]
@@ -28479,7 +28479,7 @@ ovy257_21a78d0: ; 0x021A78D0
 	bne _021A7978
 	add r0, r5, #0
 	add r0, #0x2c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, _021A79C8 ; =0xFFFC4000
 	str r4, [r5, #0x14]
 	str r0, [r5, #0x18]
@@ -28500,7 +28500,7 @@ _021A7978:
 _021A7984:
 	add r0, r5, #0
 	add r0, #0x2c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r1, #0xc
 	add r0, r6, #0
 	ldr r2, _021A79CC ; =0x021B2218
@@ -28668,7 +28668,7 @@ _021A7AB8:
 	lsl r5, r0, #1
 	add r0, r4, #0
 	add r0, #0x2c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r2, r5, #1
 	add r0, r4, #0
 	ldr r3, _021A7CAC ; =0x020946BC
@@ -28677,7 +28677,7 @@ _021A7AB8:
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
 	add r0, #0x2c
-	bl sub_020725C0
+	bl MTX_RotZ33_
 _021A7ADE:
 	ldr r1, [r4, #0x68]
 	ldr r0, [r4, #0x64]
@@ -28859,7 +28859,7 @@ _021A7C20:
 	lsl r5, r0, #1
 	add r0, r4, #0
 	add r0, #0x2c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r2, r5, #1
 	add r0, r4, #0
 	ldr r3, _021A7CAC ; =0x020946BC
@@ -28868,7 +28868,7 @@ _021A7C20:
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
 	add r0, #0x2c
-	bl sub_020725C0
+	bl MTX_RotZ33_
 _021A7C46:
 	add r0, r4, #0
 	add r0, #0x5d
@@ -28991,7 +28991,7 @@ _021A7D2A:
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
 	add r0, sp, #0x1c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r5, #0x14]
 	add r1, sp, #4
 	str r0, [sp, #4]
@@ -29206,7 +29206,7 @@ ovy257_21a7e58: ; 0x021A7E58
 	str r0, [r4, #0x2c]
 	add r0, r4, #0
 	add r0, #0x30
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r0, #0x3c
 	add r1, r5, #0
 	mul r1, r0
@@ -29403,7 +29403,7 @@ _021A8026:
 	ldr r0, [r5, #0x2c]
 	str r0, [sp, #0x18]
 	add r0, sp, #0x1c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r5, #0x18]
 	str r0, [sp, #4]
 	ldr r0, [r5, #0x1c]

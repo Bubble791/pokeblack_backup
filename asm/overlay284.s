@@ -5028,7 +5028,7 @@ ovy284_21e57c0: ; 0x021E57C0
 	str r5, [r0, #4]
 	str r5, [r0, #8]
 	add r0, sp, #0xc
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, sp, #0
 	bl sub_020658A4
 	ldr r1, _021E5878 ; =0x02143AC8
@@ -9109,7 +9109,7 @@ _021E7842:
 	str r1, [r0, #0x14]
 	str r1, [r0, #0x18]
 	add r0, #0x1c
-	blx sub_0207244C
+	blx MTX_Identity33_
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10

@@ -118,7 +118,7 @@
 .public sub_020498B8
 .public sub_02049974
 .public sub_020683EC
-.public sub_0207244C
+.public MTX_Identity33_
 .public sub_02049934
 .public sub_02049888
 .public sub_020497D4

@@ -57,7 +57,7 @@ MTX_ScaleApply43: ; 0x02072C94
 	mov r5, r0
 	mov r4, r1
 	str ip, [sp]
-	bl sub_020724C0
+	bl MTX_ScaleApply33
 	ldr r2, [r5, #0x24]
 	ldr r1, [r5, #0x28]
 	ldr r0, [r5, #0x2c]
@@ -89,7 +89,7 @@ MTX_RotY43_: ; 0x02072CC8
 MTX_RotAxis43: ; 0x02072CE4
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl sub_020725D8
+	bl MTX_RotAxis33
 	mov r0, #0
 	str r0, [r4, #0x24]
 	str r0, [r4, #0x28]

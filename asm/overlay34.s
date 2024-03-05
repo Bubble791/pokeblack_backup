@@ -10397,7 +10397,7 @@ _0217B9AC:
 	ldr r0, [r5]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r4, #0xc]
 	cmp r0, #0
 	beq _0217B9D6
@@ -10719,7 +10719,7 @@ _0217BC00:
 	ldr r0, [r4]
 	str r0, [r3]
 	add r0, sp, #0x18
-	blx sub_0207244C
+	blx MTX_Identity33_
 	mov r4, #0
 	mov r7, #0x14
 _0217BC16:

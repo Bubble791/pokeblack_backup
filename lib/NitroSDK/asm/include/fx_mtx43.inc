@@ -22,5 +22,5 @@
 .public sub_02074254
 .public sub_02074098
 .public sub_02078758
-.public sub_020725D8
-.public sub_020724C0
+.public MTX_RotAxis33
+.public MTX_ScaleApply33

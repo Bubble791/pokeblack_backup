@@ -56,7 +56,7 @@ ovy168_21dda90: ; 0x021DDA90
 	str r2, [r1, #0x40]
 	str r2, [r1, #0x44]
 	str r2, [r1, #0x48]
-	blx sub_0207244C
+	blx MTX_Identity33_
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021DDAC0: .word 0x021F2F54
@@ -1095,7 +1095,7 @@ _021DE284:
 	str r0, [r4, #0x30]
 	add r0, r4, #0
 	add r0, #0x34
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r4]
 	bl sub_02049430
 	bl sub_02068664
@@ -1363,7 +1363,7 @@ _021DE4B2:
 	str r7, [r5, #0x1c]
 	str r7, [r5, #0x20]
 	str r7, [r5, #0x24]
-	blx sub_0207244C
+	blx MTX_Identity33_
 	ldr r0, [r5]
 	bl sub_02049430
 	bl sub_02068664
