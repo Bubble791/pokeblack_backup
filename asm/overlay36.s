@@ -13449,12 +13449,12 @@ ovy36_2185c98: ; 0x02185C98
 	blx VEC_Mag
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r4, sp, #8
 	strh r0, [r4, #2]
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	strh r0, [r4]
 	add r0, sp, #8
 	add r0, #2
@@ -13618,7 +13618,7 @@ ovy36_2185dec: ; 0x02185DEC
 	blx VEC_Normalize
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r1, r5, #0
 	add r1, #0x82
 	add r3, sp, #0xc
@@ -13651,7 +13651,7 @@ ovy36_2185dec: ; 0x02185DEC
 	add r1, r0, #0
 	beq _02185E56
 	add r0, r6, #0
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r4, r0, #0
 _02185E56:
 	add r5, #0x84
@@ -44982,7 +44982,7 @@ ovy36_21949a4: ; 0x021949A4
 	ldrsh r0, [r4, r6]
 	mov r6, #4
 	ldrsh r1, [r4, r6]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	sub r1, r0, r5
 	bpl _021949DC
 	lsl r0, r6, #0xe
@@ -76007,7 +76007,7 @@ ovy36_21a31a4: ; 0x021A31A4
 	blx VEC_Normalize
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	ldr r1, [r5, #8]
 	cmp r1, r4
 	bgt _021A3216
@@ -108827,7 +108827,7 @@ ovy36_21b3368: ; 0x021B3368
 	blx VEC_Normalize
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	ldr r1, [r4, #4]
 	add r5, r0, #0
 	lsl r1, r1, #0x10
@@ -108871,7 +108871,7 @@ ovy36_21b33e4: ; 0x021B33E4
 	ldrsh r1, [r2, r1]
 	neg r0, r0
 	neg r1, r1
-	bl sub_02074568
+	bl FX_Atan2Idx
 	ldr r1, [r5, #8]
 	add r6, r0, #0
 	lsl r1, r1, #0x10
@@ -108919,7 +108919,7 @@ ovy36_21b3450: ; 0x021B3450
 	ldrsh r1, [r4, r1]
 	neg r0, r0
 	neg r1, r1
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r7, r0, #0
 	mov r0, #6
 	ldrsh r0, [r4, r0]
@@ -108935,7 +108935,7 @@ ovy36_21b3450: ; 0x021B3450
 	mov r0, #8
 	ldrsh r0, [r4, r0]
 	neg r0, r0
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r2, r0, #0
 	ldr r1, [r5, #8]
 	add r0, r6, #0
@@ -108983,7 +108983,7 @@ ovy36_21b34e4: ; 0x021B34E4
 	ldrsh r1, [r1, r2]
 	neg r0, r0
 	neg r1, r1
-	bl sub_02074568
+	bl FX_Atan2Idx
 	ldr r1, [r4, #8]
 	str r0, [sp]
 	lsl r1, r1, #0x10

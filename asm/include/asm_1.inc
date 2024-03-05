@@ -705,9 +705,9 @@
 .public MTX_RotZ33_
 .public MTX_Concat33
 .public VEC_Mag
-.public sub_02074568
+.public FX_Atan2Idx
 .public MTX_RotX33_
-.public sub_02074568
+.public FX_Atan2Idx
 .public MTX_RotY33_
 .public MTX_Concat33
 .public sub_020762B4
@@ -11602,7 +11602,7 @@
 .public VEC_Add
 .public VEC_Subtract
 .public VEC_Fx16Add
-.public sub_02074568
+.public FX_Atan2Idx
 .public sub_02074658
 .public sub_02074694
 .public sub_020746C0

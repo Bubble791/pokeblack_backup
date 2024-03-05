@@ -51167,7 +51167,7 @@ sub_02050844: ; 0x02050844
 	add r1, r0, #0
 	ldr r0, [r5, #4]
 	neg r0, r0
-	bl sub_02074568
+	bl FX_Atan2Idx
 	asr r0, r0, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -51181,7 +51181,7 @@ sub_02050844: ; 0x02050844
 	bl MTX_RotX33_
 	ldr r0, [r5]
 	ldr r1, [r5, #8]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	asr r0, r0, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1

@@ -157,8 +157,8 @@
 .public sub_0204A638
 .public sub_0204A64C
 .public sub_0204A68C
-.public sub_02074568
-.public sub_02074568
+.public FX_Atan2Idx
+.public FX_Atan2Idx
 .public VEC_Mag
 .public sub_0219C988
 .public sub_0219C99C

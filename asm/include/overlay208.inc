@@ -621,7 +621,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_0208DA4C
-.public sub_02074568
+.public FX_Atan2Idx
 .public sub_021BB94C
 .public sub_0208D374
 .public sub_0208DF14
@@ -678,7 +678,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02074568
+.public FX_Atan2Idx
 .public sub_02006254
 .public sub_0219D9D8
 .public sub_021BB97C

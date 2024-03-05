@@ -5945,7 +5945,7 @@ _0219CA44:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r4, r0, #0
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #8]
@@ -6372,7 +6372,7 @@ _0219CDEE:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	add r0, r7, #0
-	bl sub_02074568
+	bl FX_Atan2Idx
 	add r7, r0, #0
 	ldr r0, [r5, #0x30]
 	cmp r0, #1

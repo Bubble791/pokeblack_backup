@@ -2347,11 +2347,11 @@ ovy168_21dec1c: ; 0x021DEC1C
 	str r0, [sp, #0x10]
 	sub r1, r2, r1
 	str r1, [sp, #0x14]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	str r0, [r5, #8]
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0xc]
-	bl sub_02074568
+	bl FX_Atan2Idx
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	blx VEC_Mag
