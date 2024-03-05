@@ -26684,7 +26684,7 @@ _0218BFD2:
 	add r1, sp, #0x14
 	add r2, sp, #8
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	add sp, #0x38
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy36_218bf5c

@@ -1893,7 +1893,7 @@
 .public sub_0204A69C
 .public sub_0204A6B4
 .public sub_0204A638
-.public sub_02074B80
+.public G3i_LookAt_
 .public sub_0204A64C
 .public sub_0204A66C
 .public sub_0204A68C

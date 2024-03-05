@@ -45636,7 +45636,7 @@ _02019CCE:
 	add r0, sp, #0xe8
 _02019CFA:
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	add r1, r4, #0
 	add r2, r4, #0
 	str r2, [sp, #0x40]
@@ -45965,7 +45965,7 @@ _02019F9C:
 	neg r0, r0
 	str r1, [sp, #0x38]
 	str r0, [sp, #0x34]
-	bl sub_02074BF4
+	bl G3_RotZ
 	add r2, r4, #0
 	add r2, #0xf0
 	ldr r0, [sp, #0x1ac]
@@ -46045,7 +46045,7 @@ _0201A04E:
 	ldr r2, _0201A324 ; =0x02143C64
 	mov r3, #1
 	str r7, [sp]
-	bl sub_02074B80
+	bl G3i_LookAt_
 	mov r0, #0x61
 	lsl r0, r0, #2
 	str r0, [sp, #0x64]
@@ -46091,7 +46091,7 @@ _0201A04E:
 	ldrsh r0, [r0, r2]
 	mov r2, #2
 	ldrsh r1, [r1, r2]
-	bl sub_02074BAC
+	bl G3_RotX
 	ldr r0, [sp, #0x2c]
 	mov r6, #0xe
 	ldr r0, [r0, #0x44]
@@ -46168,10 +46168,10 @@ _0201A04E:
 	mov r2, #2
 	ldrsh r1, [r1, r2]
 	neg r0, r0
-	bl sub_02074BF4
+	bl G3_RotZ
 	ldr r0, [sp, #0x34]
 	ldr r1, [sp, #0x38]
-	bl sub_02074BF4
+	bl G3_RotZ
 	mov r2, #0xc
 	add r2, #0xfc
 	ldr r0, [sp, #0x1ac]
@@ -46650,7 +46650,7 @@ _0201A4F4:
 	ldr r2, _0201A844 ; =0xFFF80000
 	lsl r0, r0, #0x10
 	lsl r3, r3, #0x13
-	bl sub_02074B48
+	bl G3i_OrthoW_
 	ldr r0, _0201A848 ; =0x04000440
 	mov r1, #2
 	str r1, [r0]
@@ -46733,7 +46733,7 @@ _0201A530:
 	lsl r2, r2, #1
 	ldrsh r1, [r1, r2]
 	neg r0, r0
-	bl sub_02074BF4
+	bl G3_RotZ
 	add r0, sp, #0x90
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -46927,7 +46927,7 @@ _0201A6F2:
 	lsl r2, r2, #1
 	ldrsh r1, [r1, r2]
 	neg r0, r0
-	bl sub_02074BF4
+	bl G3_RotZ
 	ldr r1, _0201A850 ; =0x040004AC
 	ldr r2, [r7, #8]
 	ldr r0, [r7, #4]

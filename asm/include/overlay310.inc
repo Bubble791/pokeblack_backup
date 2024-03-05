@@ -1476,8 +1476,8 @@
 .public sub_0208D65C
 .public sub_021A5740
 .public sub_021A54CC
-.public sub_02074B80
-.public sub_02074B48
+.public G3i_LookAt_
+.public G3i_OrthoW_
 .public sub_02065698
 .public MTX_LookAt
 .public MTX_OrthoW

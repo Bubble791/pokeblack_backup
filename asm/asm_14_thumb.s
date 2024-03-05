@@ -47087,7 +47087,7 @@ sub_0204EBB0: ; 0x0204EBB0
 	add r1, r7, #0
 	add r2, r4, #0
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	b _0204EC0E
 _0204EC02:
 	add r0, r6, #0
@@ -47453,7 +47453,7 @@ _0204EE9A:
 	mov r2, #2
 	ldrsh r1, [r1, r2]
 	neg r0, r0
-	bl sub_02074BF4
+	bl G3_RotZ
 	ldrh r0, [r4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x1e

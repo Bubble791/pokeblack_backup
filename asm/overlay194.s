@@ -21741,7 +21741,7 @@ ovy194_21c2714: ; 0x021C2714
 	lsl r1, r1, #1
 	ldrsh r0, [r4, r0]
 	ldrsh r1, [r4, r1]
-	bl sub_02074BD0
+	bl G3_RotY
 	mov r0, #0
 	str r0, [r5]
 	ldr r0, [sp, #4]
@@ -21752,7 +21752,7 @@ ovy194_21c2714: ; 0x021C2714
 	lsl r1, r1, #1
 	ldrsh r0, [r4, r0]
 	ldrsh r1, [r4, r1]
-	bl sub_02074BD0
+	bl G3_RotY
 	add r0, r5, #0
 	add r0, #0x2c
 	mov r1, #0
@@ -21769,7 +21769,7 @@ ovy194_21c2714: ; 0x021C2714
 	lsl r1, r1, #1
 	ldrsh r0, [r4, r0]
 	ldrsh r1, [r4, r1]
-	bl sub_02074BD0
+	bl G3_RotY
 	ldr r0, _021C2834 ; =0x021C6F44
 	ldrh r0, [r0, #2]
 	asr r0, r0, #4
@@ -21779,7 +21779,7 @@ ovy194_21c2714: ; 0x021C2714
 	lsl r1, r1, #1
 	ldrsh r0, [r4, r0]
 	ldrsh r1, [r4, r1]
-	bl sub_02074BAC
+	bl G3_RotX
 	add r0, r5, #0
 	ldr r1, _021C2838 ; =0x00000266
 	add r0, #0x28
@@ -21865,7 +21865,7 @@ ovy194_21c2844: ; 0x021C2844
 	ldr r1, _021C2914 ; =0x021C67B0
 	ldr r2, _021C2918 ; =0x021C6F50
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	ldr r0, _021C291C ; =0x2D8B6127
 	ldr r1, _021C2920 ; =0x040004C8
 	str r0, [r1]

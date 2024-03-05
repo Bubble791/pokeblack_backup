@@ -84,7 +84,7 @@ ovy148_21f5a58: ; 0x021F5A58
 	ldrsh r1, [r2, r1]
 	ldr r2, _021F5AD8 ; =0x00001555
 	str r4, [sp, #0xc]
-	bl sub_02074B14
+	bl G3i_PerspectiveW_
 	bl sub_02074D54
 	ldr r3, _021F5ADC ; =0x021F5D78
 	add r2, sp, #0x28
@@ -110,7 +110,7 @@ ovy148_21f5a58: ; 0x021F5A58
 	add r0, r7, #0
 	add r2, sp, #0x1c
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	ldr r0, [r5, #0x14]
 	lsl r0, r0, #0x10
 	lsr r1, r0, #0x10

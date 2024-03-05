@@ -17079,7 +17079,7 @@ ovy310_21a4ef4: ; 0x021A4EF4
 	mov r3, #1
 	str r5, [sp]
 	mov r6, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	ldr r7, _021A4FA8 ; =0x0000019A
 	mov r0, #5
 	str r7, [sp]
@@ -17093,7 +17093,7 @@ ovy310_21a4ef4: ; 0x021A4EF4
 	add r0, r4, #0
 	add r1, r6, #0
 	str r5, [sp, #0x10]
-	bl sub_02074B48
+	bl G3i_OrthoW_
 	bl sub_02065698
 	add r3, sp, #0x2c
 	ldr r2, _021A4FB8 ; =0x02143C4C

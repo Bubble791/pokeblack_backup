@@ -304,7 +304,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_020616D8
-.public sub_02074B80
+.public G3i_LookAt_
 .public MTX_Inverse43
 .public sub_0207873C
 .public MTX_Copy33To44_
@@ -323,7 +323,7 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public sub_02074C3C
-.public sub_02074BF4
+.public G3_RotZ
 .public sub_0208D60C
 .public sub_0208D60C
 .public MTX_RotZ33_
@@ -350,9 +350,9 @@
 .public sub_0208DA4C
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02074B48
-.public sub_02074BF4
-.public sub_02074BF4
+.public G3i_OrthoW_
+.public G3_RotZ
+.public G3_RotZ
 .public sub_0203A1FC
 .public sub_0203A24C
 .public sub_0203A24C

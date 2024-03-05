@@ -3785,7 +3785,7 @@ _021BBF48:
 	ldr r2, _021BC294 ; =0x021C2D94
 _021BBF4E:
 	mov r3, #1
-	bl sub_02074B80
+	bl G3i_LookAt_
 	add r4, sp, #0x1b8
 	ldr r0, _021BC298 ; =0x02143A58
 	add r1, r4, #0
@@ -4067,7 +4067,7 @@ _021BC178:
 	ldrsh r0, [r0, r1]
 	ldrsh r1, [r2, r6]
 	neg r0, r0
-	bl sub_02074BF4
+	bl G3_RotZ
 	add r2, r4, #0
 	add r2, #0xd8
 	ldr r0, [sp, #0x24c]
@@ -4801,7 +4801,7 @@ ovy209_21bc734: ; 0x021BC734
 	ldr r2, _021BC950 ; =0xFFF81000
 	lsl r0, r0, #0x10
 	lsl r3, r3, #0x13
-	bl sub_02074B48
+	bl G3i_OrthoW_
 	ldr r0, _021BC954 ; =0x04000440
 	mov r1, #2
 	str r1, [r0]
@@ -4882,7 +4882,7 @@ _021BC7F4:
 	ldr r1, _021BC964 ; =FX_SinCosTable_ ; 0x020946BC
 	neg r0, r0
 	ldrsh r1, [r1, r2]
-	bl sub_02074BF4
+	bl G3_RotZ
 	ldr r1, [r7]
 	ldr r4, _021BC968 ; =0x04000470
 	ldr r0, [sp, #0x24]
@@ -4901,7 +4901,7 @@ _021BC7F4:
 	ldr r1, _021BC964 ; =FX_SinCosTable_ ; 0x020946BC
 	neg r0, r0
 	ldrsh r1, [r1, r2]
-	bl sub_02074BF4
+	bl G3_RotZ
 	cmp r6, #0
 	bne _021BC860
 	ldr r2, [r5, #8]

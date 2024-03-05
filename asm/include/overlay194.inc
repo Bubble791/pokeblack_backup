@@ -1901,10 +1901,10 @@
 .public sub_02076170
 .public sub_0203A24C
 .public sub_02076278
-.public sub_02074BD0
-.public sub_02074BD0
-.public sub_02074BD0
-.public sub_02074BAC
+.public G3_RotY
+.public G3_RotY
+.public G3_RotY
+.public G3_RotX
 .public sub_021C26DC
 .public sub_021C2548
 .public sub_021C2534
@@ -1915,7 +1915,7 @@
 .public sub_021C2548
 .public sub_021C2534
 .public sub_02074D54
-.public sub_02074B80
+.public G3i_LookAt_
 .public sub_021B7778
 .public sub_0208D65C
 .public sub_0208D868

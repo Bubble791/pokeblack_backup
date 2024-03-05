@@ -6,9 +6,9 @@
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_020787A8
-.public sub_02074B14
+.public G3i_PerspectiveW_
 .public sub_02074D54
-.public sub_02074B80
+.public G3i_LookAt_
 .public sub_02016ED8
 .public sub_02016AF0
 .public sub_0204E060
