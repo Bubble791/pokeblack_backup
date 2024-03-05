@@ -7045,7 +7045,7 @@ ovy207_21b6840: ; 0x021B6840
 	add r0, r2, #0
 	add r1, #0x4c
 	add r2, r4, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5]
 	add r1, r4, #0
 	bl sub_0201AC70

@@ -1594,7 +1594,7 @@ _0217D57C:
 	add r0, #8
 	add r1, #0x14
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0x20]
 	lsl r0, r0, #4

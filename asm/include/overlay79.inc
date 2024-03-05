@@ -200,7 +200,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_020744EC
+.public VEC_Distance
 .public sub_021EBB6C
 .public sub_0201736C
 .public sub_02008BF0

@@ -284,10 +284,10 @@
 .public MTX_Concat33
 .public sub_0204A64C
 .public sub_0204A68C
-.public sub_02073FD4
-.public sub_02074180
-.public sub_02074254
-.public sub_02074494
+.public VEC_Subtract
+.public VEC_Mag
+.public VEC_Normalize
+.public VEC_MultAdd
 .public sub_0204A65C
 .public sub_02049A98
 .public sub_02049AA0

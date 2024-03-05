@@ -63,8 +63,8 @@
 .public sub_02167450
 .public sub_02015D20
 .public sub_02015D20
-.public sub_02073FD4
-.public sub_02074180
+.public VEC_Subtract
+.public VEC_Mag
 .public sub_0208D60C
 .public sub_02015B88
 .public sub_02015CC8

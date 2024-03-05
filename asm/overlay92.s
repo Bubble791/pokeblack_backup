@@ -2275,7 +2275,7 @@ _021EFD92:
 	ldr r1, [sp]
 	add r0, r7, r0
 	add r2, sp, #4
-	bl sub_02073FB4
+	bl VEC_Add
 	mov r0, #0x55
 	lsl r0, r0, #0xc
 	str r0, [sp, #8]

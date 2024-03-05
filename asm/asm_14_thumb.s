@@ -23564,12 +23564,12 @@ sub_02044404: ; 0x02044404
 	str r5, [sp, #0x38]
 	str r5, [sp, #0x2c]
 	str r5, [sp, #8]
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r6, sp, #0x24
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x28]
 	str r5, [sp, #0xc]
@@ -23592,15 +23592,15 @@ sub_02044404: ; 0x02044404
 	str r0, [sp, #0x1c]
 	add r0, sp, #0x18
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r5, sp, #0xc
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r5, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, sp, #0x18
 	add r1, r5, #0
-	blx sub_02074018
+	blx VEC_DotProduct
 	asr r0, r0, #0xc
 	bpl _02044494
 	neg r0, r0
@@ -47109,12 +47109,12 @@ _0204EC0E:
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	mov r0, #0
 	str r0, [sp, #0xac]
 	add r0, r7, #0
 	add r1, r7, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r7, sp, #0x168
 	add r0, r7, #0
 	blx MTX_Identity33_
@@ -47132,10 +47132,10 @@ _0204EC0E:
 	add r4, sp, #0x114
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp, #4]
 	ldr r0, [r0, #0x2c]
 	cmp r0, #1
@@ -50942,18 +50942,18 @@ sub_02050690: ; 0x02050690
 	add r0, #0xc
 	add r1, r6, #0
 	add r2, sp, #0x18
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, sp, #0xc
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, sp, #0x18
 	add r1, sp, #0xc
-	blx sub_02074018
+	blx VEC_DotProduct
 	add r7, r0, #0
 	add r0, sp, #0x18
 	add r1, r0, #0
-	blx sub_02074018
+	blx VEC_DotProduct
 	add r1, r0, #0
 	add r0, r7, #0
 	bl FX_Div
@@ -50970,9 +50970,9 @@ sub_02050690: ; 0x02050690
 	add r0, sp, #0x18
 	add r1, sp, #0xc
 	add r2, r7, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r7, #0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r2, [r5, #0xc]
 	ldr r1, [r6, #0x18]
 	str r0, [sp, #0x34]
@@ -50986,9 +50986,9 @@ _02050702:
 	add r6, sp, #0
 	add r0, r5, #0
 	add r2, r6, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r6, #0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, [r5, #0xc]
 	str r0, [sp, #0x34]
 	cmp r0, r1
@@ -51002,7 +51002,7 @@ _02050720:
 	ldr r0, [r3]
 	str r0, [r2]
 	add r0, r6, #0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, [r5, #0xc]
 	str r0, [sp, #0x34]
 	cmp r0, r1
@@ -51015,7 +51015,7 @@ _0205073E:
 	beq _02050758
 	add r0, sp, #0
 	add r1, sp, #0x28
-	blx sub_02074254
+	blx VEC_Normalize
 	add r2, sp, #0x24
 	ldmia r2!, {r0, r1}
 	stmia r4!, {r0, r1}
@@ -51163,7 +51163,7 @@ sub_02050844: ; 0x02050844
 	mov r0, #0
 	str r0, [sp, #0x4c]
 	add r0, r2, #0
-	blx sub_02074180
+	blx VEC_Mag
 	add r1, r0, #0
 	ldr r0, [r5, #4]
 	neg r0, r0

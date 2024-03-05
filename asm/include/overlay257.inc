@@ -2305,7 +2305,7 @@
 .public sub_0208D65C
 .public sub_020507D4
 .public MTX_MultVec33
-.public sub_02074254
+.public VEC_Normalize
 .public sub_02050784
 .public sub_02067E1C
 .public sub_0208D374
@@ -2314,7 +2314,7 @@
 .public sub_0208E3C8
 .public sub_0208DD34
 .public sub_0208DA4C
-.public sub_020744EC
+.public VEC_Distance
 .public FX_Div
 .public FX_Div
 .public sub_02049A98
@@ -2478,7 +2478,7 @@
 .public MTX_Identity33_
 .public sub_0203A6A8
 .public sub_021A29F4
-.public sub_02073FB4
+.public VEC_Add
 .public sub_0204A5A8
 .public sub_0204A5C0
 .public sub_020499E4
@@ -2494,7 +2494,7 @@
 .public sub_0204A5A8
 .public sub_0204A5C0
 .public sub_02049A64
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02040440
 .public sub_02042A6C
 .public sub_02042A78
@@ -2504,13 +2504,13 @@
 .public MTX_Identity33_
 .public sub_0203A6A8
 .public sub_0203A24C
-.public sub_02073FB4
+.public VEC_Add
 .public MTX_Identity33_
 .public MTX_RotZ33_
-.public sub_02073FB4
+.public VEC_Add
 .public MTX_Identity33_
 .public MTX_RotZ33_
-.public sub_02073FB4
+.public VEC_Add
 .public sub_0204A5A8
 .public sub_0204A5C0
 .public sub_020499E4
@@ -2534,8 +2534,8 @@
 .public sub_0208DA4C
 .public sub_0203A6A8
 .public sub_0203A24C
-.public sub_02073FB4
-.public sub_02073FB4
+.public VEC_Add
+.public VEC_Add
 .public sub_0204A5A8
 .public sub_0204A5C0
 .public sub_020499E4

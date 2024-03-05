@@ -24,7 +24,7 @@
 .public sub_0215E8C8
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_02073FD4
+.public VEC_Subtract
 .public sub_021B8598
 .public sub_021B8224
 .public sub_021B8248

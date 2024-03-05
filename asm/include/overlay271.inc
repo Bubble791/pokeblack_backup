@@ -639,7 +639,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02074180
+.public VEC_Mag
 .public sub_0208D60C
 .public FX_Div
 .public sub_0208D60C

@@ -163,7 +163,7 @@
 .public sub_02005784
 .public sub_020787A8
 .public sub_02006254
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02016B1C

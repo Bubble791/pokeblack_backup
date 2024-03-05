@@ -646,9 +646,9 @@ _021EF16C:
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
-	blx sub_02074180
+	blx VEC_Mag
 	mov r1, #5
 	lsl r1, r1, #0xc
 	sub r0, r0, r1

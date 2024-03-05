@@ -3026,10 +3026,10 @@ _0219C420:
 	add r0, sp, #0x24
 	add r1, sp, #0x30
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #4]
 	lsl r0, r0, #8
@@ -3102,13 +3102,13 @@ ovy178_219c4e0: ; 0x0219C4E0
 	add r0, #0x18
 	add r1, #0xc
 	add r2, r6, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r6, #0
-	blx sub_02074180
+	blx VEC_Mag
 	add r4, r0, #0
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [r5, #0x24]
 	ldr r1, [r5, #0x28]
 	mul r0, r4
@@ -3117,7 +3117,7 @@ ovy178_219c4e0: ; 0x0219C4E0
 	add r1, r6, #0
 	add r2, #0xc
 	add r3, sp, #4
-	blx sub_02074494
+	blx VEC_MultAdd
 	ldr r0, [sp, #4]
 	asr r1, r0, #0xc
 	add r0, sp, #0

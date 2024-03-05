@@ -1801,9 +1801,9 @@ _021EFB5C:
 	add r4, sp, #0x2c
 	add r0, r7, #0
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
-	blx sub_02074180
+	blx VEC_Mag
 	mov r2, #2
 	lsl r2, r2, #0x10
 	cmp r0, r2
@@ -2435,7 +2435,7 @@ _021F000C:
 	add r0, sp, #0x6c
 	add r1, r1, r2
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [sp]
 	bl sub_021804F0
 	add r1, sp, #0x60
@@ -2443,9 +2443,9 @@ _021F000C:
 	add r0, sp, #0x6c
 	add r1, sp, #0x60
 	add r2, sp, #0x54
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, sp, #0x54
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, [sp, #0x24]
 	cmp r1, r0
 	bgt _021F009C
@@ -2532,9 +2532,9 @@ _021F010C:
 	add r4, sp, #0x30
 	add r0, r7, #0
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
-	blx sub_02074180
+	blx VEC_Mag
 	mov r2, #2
 	lsl r2, r2, #0x10
 	cmp r0, r2

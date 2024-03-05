@@ -122,7 +122,7 @@ _021EED6A:
 	strh r7, [r5, #0xe]
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074368
+	blx VEC_Fx16Normalize
 	ldr r0, [r4, #8]
 	add r1, sp, #0x68
 	bl sub_021B09DC
@@ -353,13 +353,13 @@ _021EEF40:
 	add r0, #0x2c
 	add r1, #0x20
 	add r2, r5, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
-	blx sub_02074180
+	blx VEC_Mag
 	str r0, [sp, #0x18]
 	add r0, r5, #0
 	add r1, r5, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r2, [sp, #0x64]
 	ldr r1, [sp, #0x60]
 	ldr r0, [sp, #0x5c]
@@ -451,13 +451,13 @@ _021EF010:
 	add r1, r4, #0
 	add r1, #0x48
 	add r2, r0, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
 	add r0, #0x6c
 	add r1, r4, #0
 	add r1, #0x54
 	add r2, r0, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [r4, #4]
 	mov r1, #0
 	bl sub_021B3C18

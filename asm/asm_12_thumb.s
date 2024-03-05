@@ -37086,7 +37086,7 @@ _02016352:
 	add r5, sp, #0x20
 	add r0, r6, #0
 	add r2, r5, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [sp]
 	add r1, r6, #0
 	bl sub_0204A65C
@@ -45128,7 +45128,7 @@ _0201993E:
 	mul r1, r6
 	add r0, r4, r1
 	add r1, r4, r1
-	blx sub_02074368
+	blx VEC_Fx16Normalize
 	add r5, r5, #1
 	cmp r5, #4
 	blt _0201993E
@@ -100060,9 +100060,9 @@ sub_02031FD8: ; 0x02031FD8
 	add r5, sp, #0
 	add r0, r4, #4
 	add r2, r5, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, [r4, #0x10]
 	cmp r1, r0
 	bge _02031FFA
@@ -100171,11 +100171,11 @@ sub_0203207C: ; 0x0203207C
 	str r0, [r2]
 	add r0, r3, #0
 	add r2, sp, #0x78
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, sp, #0x6c
-	bl sub_02073FD4
+	bl VEC_Subtract
 	mov r5, #0
 	mov r4, #1
 	add r6, sp, #0x24
@@ -100185,28 +100185,28 @@ sub_0203207C: ; 0x0203207C
 	str r5, [sp, #0x54]
 	str r4, [sp, #0x58]
 	str r5, [sp, #0x5c]
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r6, #0
 	add r1, sp, #0x54
 	add r2, sp, #0x3c
-	blx sub_02074098
+	blx VEC_CrossProduct
 	add r0, sp, #0x3c
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r1, r6, #0
 	add r6, sp, #0x30
 	add r0, sp, #0x3c
 	add r2, r6, #0
-	blx sub_02074098
+	blx VEC_CrossProduct
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, sp, #0x6c
 	add r1, r6, #0
-	blx sub_02074018
+	blx VEC_DotProduct
 	add r7, r0, #0
 	ldr r0, [sp, #0x30]
 	asr r6, r7, #0x1f
@@ -100249,13 +100249,13 @@ sub_0203207C: ; 0x0203207C
 	add r0, sp, #0x6c
 	add r1, sp, #0x48
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, sp, #0x3c
 	add r1, r4, #0
-	blx sub_02074018
+	blx VEC_DotProduct
 	blx sub_0208D374
 	ldr r1, _020321A8 ; =0x45800000
 	blx sub_0208E3C8

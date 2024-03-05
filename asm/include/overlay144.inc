@@ -157,11 +157,11 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073FD4
-.public sub_02074180
-.public sub_02074254
+.public VEC_Subtract
+.public VEC_Mag
+.public VEC_Normalize
 .public sub_02050784
-.public sub_02074254
+.public VEC_Normalize
 .public sub_0204C140
 .public sub_0203DEFC
 .public sub_0203D564
@@ -405,8 +405,8 @@
 .public sub_0204C124
 .public sub_0203DAC8
 .public sub_0203DA84
-.public sub_02073FD4
-.public sub_02074180
+.public VEC_Subtract
+.public VEC_Mag
 .public sub_0203A1FC
 .public sub_020787A8
 .public sub_020056FC

@@ -11391,9 +11391,9 @@ _021A5228:
 	add r0, sp, #0x34
 	add r1, sp, #0x28
 	add r2, r7, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r7, #0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _021A53F4 ; =0x00001BB6
 	cmp r0, r1
 	bge _021A524E
@@ -11401,14 +11401,14 @@ _021A5228:
 	str r0, [sp, #8]
 _021A524E:
 	add r0, sp, #0x40
-	blx sub_02074180
+	blx VEC_Mag
 	mov r7, #1
 	lsl r7, r7, #0xc
 	cmp r0, r7
 	ble _021A526E
 	add r0, sp, #0x40
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, sp, #0x40
 	add r1, r7, #0
 	add r2, r0, #0
@@ -11437,7 +11437,7 @@ _021A527C:
 _021A5294:
 	add r0, sp, #0x4c
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r1, [sp, #0x4c]
 	ldr r2, [sp, #0x40]
 	lsl r0, r1, #1

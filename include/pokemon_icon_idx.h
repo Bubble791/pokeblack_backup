@@ -12,7 +12,7 @@ const u8 GetBattleMonIconPaletteEx(u32 species, u32 form, BOOL isEgg);
 const u8 Boxmon_GetIconPalette(BoxPokemon *boxMon);
 const u8 Pokemon_GetIconPalette(Pokemon *mon);
 u32 sub_02074490(void);
-u32 sub_02074494(void);
+u32 VEC_MultAdd(void);
 u32 sub_02074498(void);
 u32 sub_0207449C(void);
 u32 sub_020744A0(void);

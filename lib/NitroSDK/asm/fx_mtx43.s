@@ -525,20 +525,20 @@ MTX_LookAt: ; 0x02073328
 	str r4, [sp, #0x18]
 	str sb, [sp, #0x1c]
 	str r2, [sp, #0x20]
-	bl sub_02074254
+	bl VEC_Normalize
 	add sb, sp, #0xc
 	mov r0, r7
 	mov r1, r5
 	mov r2, sb
-	bl sub_02074098
+	bl VEC_CrossProduct
 	mov r0, sb
 	mov r1, sb
-	bl sub_02074254
+	bl VEC_Normalize
 	add r4, sp, #0
 	mov r0, r5
 	mov r1, sb
 	mov r2, r4
-	bl sub_02074098
+	bl VEC_CrossProduct
 	ldr r2, [sp, #0xc]
 	mov r1, sb
 	str r2, [r6]
@@ -559,17 +559,17 @@ MTX_LookAt: ; 0x02073328
 	str r2, [r6, #0x1c]
 	ldr r2, [sp, #0x20]
 	str r2, [r6, #0x20]
-	bl sub_02074018
+	bl VEC_DotProduct
 	rsb r0, r0, #0
 	str r0, [r6, #0x24]
 	mov r1, r4
 	mov r0, r8
-	bl sub_02074018
+	bl VEC_DotProduct
 	rsb r0, r0, #0
 	str r0, [r6, #0x28]
 	mov r1, r5
 	mov r0, r8
-	bl sub_02074018
+	bl VEC_DotProduct
 	rsb r0, r0, #0
 	str r0, [r6, #0x2c]
 	add sp, sp, #0x24

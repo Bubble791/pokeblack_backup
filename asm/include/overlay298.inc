@@ -818,12 +818,12 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073FD4
-.public sub_02074180
-.public sub_02074180
-.public sub_02074254
+.public VEC_Subtract
+.public VEC_Mag
+.public VEC_Mag
+.public VEC_Normalize
 .public sub_02050784
-.public sub_02074254
+.public VEC_Normalize
 .public sub_0204C140
 .public sub_02006254
 .public sub_0203DAC8

@@ -447,7 +447,7 @@ _021EEFF2:
 	add r4, sp, #0
 	add r0, r6, #0
 	add r2, r4, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5, #0x28]
 	add r1, r4, #0
 	bl sub_02167308

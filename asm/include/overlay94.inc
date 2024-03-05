@@ -56,7 +56,7 @@
 .public sub_0208DA4C
 .public sub_02050784
 .public sub_02050784
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02167308
 .public sub_0215EA80
 .public sub_021804C0

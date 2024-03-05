@@ -5668,7 +5668,7 @@ ovy33_21797ac: ; 0x021797AC
 	add r1, r2, r1
 	add r0, #8
 	add r2, r6, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5, #0x18]
 	mov r1, #0x62
 	add r2, r6, #0
@@ -6363,7 +6363,7 @@ ovy33_2179ce4: ; 0x02179CE4
 	add r1, r2, r1
 	add r0, #8
 	add r2, r6, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5, #0x18]
 	mov r1, #0x62
 	add r2, r6, #0
@@ -7261,7 +7261,7 @@ ovy33_217a3f4: ; 0x0217A3F4
 	add r0, r7, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	add r0, r4, #0
 	add r1, r7, #0
 	bl sub_02167308

@@ -3912,7 +3912,7 @@ _021EC5A8:
 	str r0, [sp, #8]
 	add r0, sp, #0xc
 	add r1, sp, #0
-	blx sub_020744EC
+	blx VEC_Distance
 	add sp, #0x18
 	pop {r4, r5, r6, pc}
 	.align 2, 0

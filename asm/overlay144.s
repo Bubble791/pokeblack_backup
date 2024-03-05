@@ -1585,16 +1585,16 @@ _0219DB6E:
 	add r0, sp, #0x1c
 	add r1, sp, #0x10
 	add r2, r6, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r6, #0
-	blx sub_02074180
+	blx VEC_Mag
 	mov r4, #1
 	lsl r4, r4, #0xc
 	cmp r0, r4
 	ble _0219DBA4
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r6, #0
@@ -1606,7 +1606,7 @@ _0219DBA6:
 	beq _0219DC44
 	add r0, sp, #0x34
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r1, [sp, #0x34]
 	ldr r2, [sp, #0x28]
 	lsl r0, r1, #1
@@ -4565,10 +4565,10 @@ _0219F248:
 	add r0, r5, #0
 	add r0, #0xc
 	add r2, #0x24
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
 	add r0, #0x24
-	blx sub_02074180
+	blx VEC_Mag
 	mov r1, #1
 	lsl r1, r1, #0xc
 	cmp r0, r1

@@ -2935,11 +2935,11 @@ _02069154:
 	str r0, [r4, #0x14]
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r4, #0
 	add r0, #0xc
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	cmp r6, #0
 	bne _0206920E
 	ldr r1, [r4, #0x18]
@@ -2963,7 +2963,7 @@ _02069154:
 	add r4, #0x18
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add sp, #0x60
 	pop {r3, r4, r5, r6, r7, pc}
 _0206920E:
@@ -3052,11 +3052,11 @@ _02069252:
 	str r0, [r4, #0x14]
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r4, #0
 	add r0, #0xc
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	cmp r6, #0
 	bne _020692EE
 	ldr r2, [r4, #0x18]
@@ -3074,7 +3074,7 @@ _02069252:
 	add r1, r2, r1
 	str r1, [r4, #0x20]
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add sp, #0x60
 	pop {r3, r4, r5, r6, r7, pc}
 _020692EE:
@@ -3153,7 +3153,7 @@ _0206937C:
 	add r4, #0x18
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add sp, #0x60
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -3250,7 +3250,7 @@ _02069434:
 	add r4, #0x18
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add sp, #0x64
 	pop {r4, r5, r6, r7, pc}
 _02069442:
@@ -3398,11 +3398,11 @@ _020694A4:
 	str r0, [r4, #0x14]
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r4, #0
 	add r0, #0xc
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp]
 	cmp r0, #0
 	bne _020695B8
@@ -3439,7 +3439,7 @@ _020694A4:
 	add r4, #0x18
 	add r0, r4, #0
 	add r1, r4, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add sp, #0x64
 	pop {r4, r5, r6, r7, pc}
 _020695B8:

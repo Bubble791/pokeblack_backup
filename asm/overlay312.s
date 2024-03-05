@@ -3928,13 +3928,13 @@ ovy312_217e8b0: ; 0x0217E8B0
 	add r0, r6, #0
 	add r1, sp, #0xc
 	add r2, sp, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, sp, #0
-	blx sub_02074180
+	blx VEC_Mag
 	add r6, r0, #0
 	add r0, sp, #0
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r4, #0
 	sub r0, #0x60
 	ldrh r0, [r5, r0]
@@ -3988,7 +3988,7 @@ _0217E93A:
 	add r1, sp, #0
 	add r2, sp, #0xc
 	add r3, r4, #0
-	blx sub_02074494
+	blx VEC_MultAdd
 	ldr r0, _0217E958 ; =0x0000C36C
 	add r1, r4, #0
 	ldr r0, [r5, r0]

@@ -739,7 +739,7 @@ _0219B2E6:
 	beq _0219B314
 	ldr r0, _0219B374 ; =0x0219CC58
 	add r1, r6, #0
-	blx sub_02074018
+	blx VEC_DotProduct
 	sub r4, #0x14
 	add r1, r0, #0
 	ldr r2, [sp, #4]
@@ -3306,7 +3306,7 @@ _0219C736:
 	add r1, sp, #0
 	add r2, r7, #0
 	str r4, [sp, #4]
-	bl sub_02073FD4
+	bl VEC_Subtract
 _0219C74C:
 	ldr r1, [sp, #0x30]
 	cmp r1, #0

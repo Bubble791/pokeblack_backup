@@ -1499,9 +1499,9 @@
 .public sub_021A54CC
 .public sub_021A5578
 .public sub_021A5564
-.public sub_02073FF4
+.public VEC_Fx16Add
 .public sub_0208D65C
-.public sub_02073FF4
+.public VEC_Fx16Add
 .public sub_021A54CC
 .public sub_0208D3BC
 .public sub_0208DA4C

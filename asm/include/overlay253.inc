@@ -158,7 +158,7 @@
 .public sub_0204C228
 .public sub_0204C228
 .public sub_0204C124
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02044304
 .public sub_0204C228
 .public sub_0204C228

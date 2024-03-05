@@ -17,7 +17,7 @@
 .public sub_0203A6A8
 .public sub_0203A24C
 .public sub_02195A58
-.public sub_02074368
+.public VEC_Fx16Normalize
 .public sub_021B09DC
 .public sub_0208D60C
 .public sub_0208D60C
@@ -30,9 +30,9 @@
 .public sub_021B3D90
 .public sub_021A29F4
 .public sub_021B06EC
-.public sub_02073FD4
-.public sub_02074180
-.public sub_02074254
+.public VEC_Subtract
+.public VEC_Mag
+.public VEC_Normalize
 .public FX_Div
 .public sub_02074694
 .public sub_02186730
@@ -48,8 +48,8 @@
 .public sub_021857C4
 .public sub_02186374
 .public sub_02186344
-.public sub_02073FD4
-.public sub_02073FD4
+.public VEC_Subtract
+.public VEC_Subtract
 .public sub_021B3C18
 .public sub_021857AC
 .public sub_021862DC

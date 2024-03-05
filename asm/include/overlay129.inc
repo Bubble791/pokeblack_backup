@@ -53,7 +53,7 @@
 .public sub_0218056C
 .public sub_02015C48
 .public sub_02015CD0
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02167308
 .public sub_021B8224
 .public sub_021672F8
@@ -83,7 +83,7 @@
 .public sub_02166FE8
 .public sub_021672F8
 .public sub_02015CD0
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02167308
 .public sub_0218105C
 .public sub_0218105C

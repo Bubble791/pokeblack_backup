@@ -5392,7 +5392,7 @@ _021C172C:
 	add r1, #0xc
 	str r4, [r5, #0x1c]
 	str r7, [r5, #0x20]
-	blx sub_020744EC
+	blx VEC_Distance
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r5, #0
@@ -5400,11 +5400,11 @@ _021C172C:
 	add r0, #0x18
 	add r1, #0xc
 	add r2, #0x24
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
 	add r0, #0x24
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp]
 	add r1, r0, #0
 	mul r1, r6
@@ -5471,7 +5471,7 @@ ovy332_21c1784: ; 0x021C1784
 	add r1, #0x24
 	add r2, #0xc
 	add r3, r5, #0
-	blx sub_02074494
+	blx VEC_MultAdd
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _021C17EA:

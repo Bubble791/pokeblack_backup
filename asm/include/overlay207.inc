@@ -618,7 +618,7 @@
 .public sub_0201AA80
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02073FB4
+.public VEC_Add
 .public sub_0201AC70
 .public sub_0201AC70
 .public sub_0201CD88

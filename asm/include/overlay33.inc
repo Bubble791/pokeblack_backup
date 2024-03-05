@@ -755,7 +755,7 @@
 .public sub_02183FA8
 .public sub_021840E4
 .public sub_020507D4
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02184074
 .public sub_02006254
 .public sub_02184110
@@ -825,7 +825,7 @@
 .public sub_0203A24C
 .public sub_021840E4
 .public sub_020507D4
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02184074
 .public sub_02006254
 .public sub_02184110
@@ -936,7 +936,7 @@
 .public sub_021671C4
 .public sub_02015CD0
 .public sub_02015CF8
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02167308
 .public sub_0216708C
 .public sub_0216708C

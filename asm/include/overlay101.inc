@@ -168,7 +168,7 @@
 .public sub_0208DA4C
 .public sub_02050784
 .public sub_02050784
-.public sub_02073FB4
+.public VEC_Add
 .public sub_0208D868
 .public sub_0219A670
 .public sub_021B8224
@@ -193,7 +193,7 @@
 .public sub_0208DA4C
 .public sub_02050784
 .public sub_02050784
-.public sub_02073FB4
+.public VEC_Add
 .public sub_021B8224
 .public sub_0208D65C
 .public sub_0218056C
@@ -232,9 +232,9 @@
 .public sub_0219AA8C
 .public sub_0219AC64
 .public sub_021B8224
-.public sub_02073FD4
+.public VEC_Subtract
 .public sub_020507AC
-.public sub_02073FB4
+.public VEC_Add
 .public sub_021B8258
 .public sub_021B84A8
 .public sub_021B8538

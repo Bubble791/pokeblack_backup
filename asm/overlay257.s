@@ -26061,7 +26061,7 @@ ovy257_21a6598: ; 0x021A6598
 	add r0, r4, #0
 	add r0, #0x6c
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r6, #0x24
 	ldrh r0, [r5, r6]
 	cmp r0, #0x14
@@ -26443,7 +26443,7 @@ ovy257_21a68f8: ; 0x021A68F8
 	add r0, sp, #0x14
 	add r1, sp, #8
 	str r2, [sp, #0x10]
-	blx sub_020744EC
+	blx VEC_Distance
 	ldr r1, [sp, #0x38]
 	cmp r0, r1
 	bge _021A69B6
@@ -28169,7 +28169,7 @@ _021A76FA:
 	ldr r0, [sp]
 	ldr r1, [sp, #4]
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 _021A7704:
 	add r0, r6, #1
 	lsl r0, r0, #0x18
@@ -28346,7 +28346,7 @@ _021A7852:
 	add r0, #0x20
 	add r1, sp, #0
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 _021A7866:
 	mov r0, #0x31
 	ldr r1, [r4, #0x64]
@@ -28588,7 +28588,7 @@ _021A7A20:
 	add r0, r4, #0
 	add r0, #0x20
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 _021A7A34:
 	add r0, r4, #0
 	add r0, #0x88
@@ -28730,7 +28730,7 @@ _021A7B26:
 	add r0, #0x20
 	add r1, sp, #0xc
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	mov r1, #0x7c
 	ldrsb r0, [r4, r1]
 	sub r2, r0, #2
@@ -28890,7 +28890,7 @@ _021A7C5C:
 	add r0, #0x20
 	add r1, sp, #0
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	add r0, r4, #0
 	add r0, #0x5d
 	ldrb r0, [r0]
@@ -29301,7 +29301,7 @@ _021A7F5E:
 	add r0, #0x24
 	add r1, sp, #0
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 _021A7F72:
 	mov r0, #0x26
 	ldr r1, [r4, #0x60]
@@ -29327,7 +29327,7 @@ _021A7F96:
 	add r1, r4, #0
 	add r1, #0x64
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r1, [r4, #0x1c]
 	ldr r0, [r4, #0x70]
 	cmp r1, r0

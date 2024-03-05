@@ -2972,16 +2972,16 @@ _0219C488:
 	add r0, sp, #0xc
 	add r1, sp, #0x18
 	add r2, sp, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, sp, #0
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	mov r0, #1
 	add r2, sp, #0x18
 	lsl r0, r0, #0x12
 	add r1, sp, #0
 	add r3, r2, #0
-	blx sub_02074494
+	blx VEC_MultAdd
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
 	add r1, sp, #0x18
@@ -3008,16 +3008,16 @@ _0219C4C6:
 	add r6, sp, #0
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r6, #0
 	add r1, r6, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	mov r0, #1
 	lsl r0, r0, #0x12
 	add r1, r6, #0
 	add r2, r7, #0
 	add r3, r7, #0
-	blx sub_02074494
+	blx VEC_MultAdd
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
 	add r1, r7, #0

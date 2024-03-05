@@ -169,7 +169,7 @@ _021EED62:
 	str r0, [r3]
 	add r0, r6, #0
 	add r2, #0x14
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r0, r5, #0
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}

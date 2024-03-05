@@ -2292,7 +2292,7 @@
 .public sub_02016EDC
 .public sub_02016AF0
 .public sub_0218050C
-.public sub_02073FD4
+.public VEC_Subtract
 .public sub_02006254
 .public sub_02016ED8
 .public sub_021675F4
@@ -2314,7 +2314,7 @@
 .public sub_0208DA4C
 .public sub_02050784
 .public sub_02050784
-.public sub_02073FB4
+.public VEC_Add
 .public sub_02167308
 .public sub_02016CB4
 .public sub_02016EDC
@@ -3410,12 +3410,12 @@
 .public sub_02049964
 .public sub_02049808
 .public sub_02067D1C
-.public sub_02073FB4
+.public VEC_Add
 .public MTX_RotY33_
 .public sub_02067D1C
 .public sub_02049CDC
-.public sub_02073FD4
-.public sub_02073FD4
+.public VEC_Subtract
+.public VEC_Subtract
 .public sub_02049430
 .public sub_02049430
 .public sub_0206865C

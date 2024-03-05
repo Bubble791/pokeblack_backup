@@ -4131,7 +4131,7 @@ _021BC178:
 	add r1, r4, r5
 	add r0, r4, r0
 	add r2, r1, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	add r1, r4, #0
 	add r1, #0xd4
 	ldr r0, [r4, r5]
@@ -7382,7 +7382,7 @@ ovy209_21bda58: ; 0x021BDA58
 	add r0, #0x18
 	add r1, #0x30
 	add r2, sp, #0x3c
-	bl sub_02073FB4
+	bl VEC_Add
 	add r0, r5, #0
 	add r0, #0x48
 	ldrh r1, [r0]
@@ -7411,7 +7411,7 @@ ovy209_21bda58: ; 0x021BDA58
 	add r1, #0x3c
 	add r0, sp, #0x24
 	add r2, r1, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r1, [sp, #0x3c]
 	ldr r0, [r4]
 	sub r1, r1, r0
@@ -7669,7 +7669,7 @@ _021BDC9A:
 	add r1, sp, #0x30
 	add r0, #0x28
 	add r2, r1, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r1, [sp]
 	ldr r0, _021BDDF0 ; =0x00000434
 	ldrh r0, [r1, r0]
@@ -8610,7 +8610,7 @@ _021BE3B2:
 	add r1, r0, #0
 	add r0, r5, #0
 	add r2, sp, #4
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r1, [sp, #4]
 	asr r0, r1, #3
 	lsr r0, r0, #0x1c
@@ -8694,7 +8694,7 @@ _021BE458:
 	add r0, r6, #0
 	add r0, #0x18
 	add r2, sp, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r1, [sp]
 	asr r0, r1, #3
 	lsr r0, r0, #0x1c
@@ -8789,7 +8789,7 @@ _021BE516:
 	add r7, sp, #0
 	add r0, #0x18
 	add r2, r7, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	mov r0, #7
 	ldr r1, [sp, #8]
 	lsl r0, r0, #0xe
@@ -8990,7 +8990,7 @@ _021BE6B2:
 	add r7, sp, #0
 	add r0, #0x18
 	add r2, r7, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r1, [r4, #4]
 	ldr r0, [r6, #0x10]
 	lsl r1, r1, #2
@@ -14963,7 +14963,7 @@ _021C13C4:
 	add r1, #0x1c
 	add r2, r5, #4
 	add r3, r4, #0
-	blx sub_02074494
+	blx VEC_MultAdd
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy209_21c137c
@@ -14984,7 +14984,7 @@ ovy209_21c13d8: ; 0x021C13D8
 	add r0, r6, #0
 	add r1, #8
 	add r2, r4, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldrh r0, [r5, #0x16]
 	add r0, r0, #1
 	strh r0, [r5, #0x16]
@@ -15610,7 +15610,7 @@ _021C186C:
 	strh r0, [r4, #0x2c]
 	add r0, r4, #0
 	add r0, #0x14
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [sp, #0x28]
 	add r1, r6, #0
 	blx sub_0208D65C
@@ -17069,7 +17069,7 @@ _021C2420:
 	strh r6, [r4, #0x2c]
 	add r0, #0x14
 	add r2, sp, #0x18
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [sp, #0x18]
 	add r1, r6, #0
 	blx sub_0208D65C
@@ -17529,7 +17529,7 @@ _021C27F8:
 	strh r6, [r4, #0x2c]
 	add r0, #0x14
 	add r2, sp, #0x18
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [sp, #0x18]
 	add r1, r6, #0
 	blx sub_0208D65C
@@ -17654,7 +17654,7 @@ _021C2916:
 	str r0, [sp, #0x30]
 	add r0, sp, #0x34
 	add r2, r0, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x14]
 	add r2, sp, #0x34

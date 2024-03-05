@@ -748,7 +748,7 @@ ovy293_21a20ec: ; 0x021A20EC
 	add r4, r1, #0
 	add r0, r2, #0
 	add r1, r6, #0
-	blx sub_02074368
+	blx VEC_Fx16Normalize
 	ldr r0, [r5, #0xc]
 	add r1, r4, #0
 	add r2, r6, #0

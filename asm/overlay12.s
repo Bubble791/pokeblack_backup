@@ -25686,7 +25686,7 @@ ovy12_215c94c: ; 0x0215C94C
 	ldr r0, [sp]
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, _0215C9A4 ; =0x0000055E
 	bl sub_02006254
 	ldr r0, [sp, #4]
@@ -25791,7 +25791,7 @@ _0215CA50:
 	add r6, sp, #4
 	add r0, r7, #0
 	add r2, r6, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r4, #0x24]
 	add r1, r6, #0
 	bl sub_02167308
@@ -40515,7 +40515,7 @@ _021637B8:
 	add r1, r1, r6
 	add r1, r1, #4
 	add r2, sp, #0x38
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r1, [sp]
 	add r0, sp, #0x14
 	add r2, r7, #0
@@ -40568,7 +40568,7 @@ ovy12_2163880: ; 0x02163880
 	add r1, r4, #4
 	add r2, sp, #8
 	ldr r7, [r4, #8]
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [r4, #0x18]
 	ldr r1, [r4, #0x28]
 	lsl r0, r0, #4
@@ -40599,7 +40599,7 @@ ovy12_21638c8: ; 0x021638C8
 	add r1, r4, #4
 	add r2, r7, #0
 	add r6, r3, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	ldr r0, [r4, #8]
 	add r1, r4, #0
 	str r0, [sp]

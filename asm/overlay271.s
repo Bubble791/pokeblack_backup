@@ -11092,7 +11092,7 @@ _021F53C6:
 	str r0, [sp, #8]
 	add r0, sp, #4
 	str r4, [sp, #0xc]
-	blx sub_02074180
+	blx VEC_Mag
 	str r0, [sp]
 	cmp r0, #0
 	beq _021F54B4

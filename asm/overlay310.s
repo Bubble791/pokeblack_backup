@@ -17782,7 +17782,7 @@ _021A53D0:
 	ldr r2, [sp, #0x18]
 	add r0, #2
 	add r2, r2, r3
-	bl sub_02073FF4
+	bl VEC_Fx16Add
 	ldr r0, [sp, #0x24]
 	strb r7, [r5, r0]
 	ldr r1, [sp, #4]
@@ -17802,7 +17802,7 @@ _021A53D0:
 	ldr r2, [sp, #0x18]
 	add r0, #2
 	add r2, r2, r3
-	bl sub_02073FF4
+	bl VEC_Fx16Add
 	ldr r0, [sp, #0x1c]
 	add r4, r4, #1
 	strb r7, [r5, r0]

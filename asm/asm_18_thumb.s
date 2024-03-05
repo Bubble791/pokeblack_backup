@@ -265,7 +265,7 @@ _02066044:
 	add r0, sl, #0x28
 	add r1, sl, #0x34
 	add r2, sl, #0x40
-	bl sub_02074098
+	bl VEC_CrossProduct
 	ldr r0, [sl, #0x28]
 	cmp r0, #0
 	ldreq r0, [sl, #0x2c]
@@ -281,7 +281,7 @@ _02066044:
 _02066094:
 	add r0, sl, #0x28
 	mov r1, r0
-	bl sub_02074254
+	bl VEC_Normalize
 _020660A0:
 	ldr r0, [sl, #0x40]
 	cmp r0, #0
@@ -298,12 +298,12 @@ _020660A0:
 _020660D0:
 	add r0, sl, #0x40
 	mov r1, r0
-	bl sub_02074254
+	bl VEC_Normalize
 _020660DC:
 	add r0, sl, #0x40
 	add r1, sl, #0x28
 	add r2, sl, #0x34
-	bl sub_02074098
+	bl VEC_CrossProduct
 	mov r0, #1
 	add sp, sp, #0x70
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -2181,15 +2181,15 @@ _02066E10:
 	ldr r1, [sp, #0xc0]
 	str r1, [r0, #8]
 	add r0, sp, #0x88
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02066F0C ; =0x0209B3CC
 	str r0, [r1]
 	add r0, sp, #0x98
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02066F0C ; =0x0209B3CC
 	str r0, [r1, #4]
 	add r0, sp, #0xa8
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02066F0C ; =0x0209B3CC
 	str r0, [r1, #8]
 	ldr r0, _02066F00 ; =0x02143A8C
@@ -2449,15 +2449,15 @@ _0206702A:
 	ldr r1, [sp, #0xc8]
 	str r1, [r0, #8]
 	add r0, sp, #0x90
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02067170 ; =0x0209B414
 	str r0, [r1]
 	add r0, sp, #0xa0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02067170 ; =0x0209B414
 	str r0, [r1, #4]
 	add r0, sp, #0xb0
-	blx sub_02074180
+	blx VEC_Mag
 	ldr r1, _02067170 ; =0x0209B414
 	ldr r2, [sp, #0xa0]
 	str r0, [r1, #8]
@@ -2482,15 +2482,15 @@ _0206702A:
 	str r0, [r7, #8]
 	add r0, r7, #0
 	add r1, r7, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp, #4]
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, r7, #0
 	add r7, #0x18
 	ldr r1, [sp, #4]
 	add r2, r7, #0
-	blx sub_02074098
+	blx VEC_CrossProduct
 	ldr r0, _02067164 ; =0x02143A8C
 	ldr r1, [r0, #0x7c]
 	mov r0, #1

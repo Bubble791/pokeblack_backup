@@ -1598,7 +1598,7 @@ _021EF93E:
 	add r0, sp, #0x18
 	add r1, r7, #0
 	add r2, sp, #0x24
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r4, #0x28]
 	ldr r1, [r4, #0x24]
 	add r0, r0, #1
@@ -1864,7 +1864,7 @@ _021EFB54:
 	add r6, sp, #0x24
 	add r0, r7, #0
 	add r2, r6, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	add r2, r5, #0
 	add r2, #0x5c
 	ldrh r2, [r2]
@@ -2294,7 +2294,7 @@ _021EFEC6:
 	add r7, sp, #0x1c
 	ldr r1, [sp, #8]
 	add r2, r7, #0
-	bl sub_02073FD4
+	bl VEC_Subtract
 	mov r1, #2
 	add r0, r7, #0
 	lsl r1, r1, #0xc
@@ -2303,7 +2303,7 @@ _021EFEC6:
 	ldr r0, [sp, #8]
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, _021EFF60 ; =0xFFFFC000
 	str r0, [r4, #4]
 _021EFEF8:

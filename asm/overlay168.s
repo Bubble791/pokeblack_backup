@@ -2354,7 +2354,7 @@ ovy168_21dec1c: ; 0x021DEC1C
 	bl sub_02074568
 	str r0, [r5, #0xc]
 	add r0, r4, #0
-	blx sub_02074180
+	blx VEC_Mag
 	str r0, [r5, #0x10]
 	add sp, #0x18
 	pop {r3, r4, r5, pc}
@@ -8103,11 +8103,11 @@ _021E1970:
 	add r5, sp, #0x30
 	add r1, r5, #0
 	add r2, r5, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	add r1, sp, #0x24
 	add r0, sp, #0xc
 	add r2, r1, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	bl sub_021E005C
 	str r6, [sp]
 	str r4, [sp, #4]
@@ -15028,7 +15028,7 @@ _021E5054:
 _021E505E:
 	add r0, sp, #0xb8
 	add r1, sp, #0xac
-	blx sub_020744EC
+	blx VEC_Distance
 	lsr r1, r0, #0x1f
 	add r1, r0, r1
 	asr r0, r1, #1
@@ -15082,7 +15082,7 @@ _021E50AC:
 	str r0, [sp, #0x90]
 	add r0, sp, #0x88
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	mov r0, #1
 	lsl r0, r0, #0xc
 	str r0, [sp, #0x7c]
@@ -15091,16 +15091,16 @@ _021E50AC:
 	str r0, [sp, #0x84]
 	add r0, sp, #0x7c
 	add r1, sp, #0x88
-	blx sub_02074018
+	blx VEC_DotProduct
 	bl sub_020746C0
 	add r7, r0, #0
 	add r0, sp, #0x7c
 	add r1, sp, #0x88
 	add r2, sp, #0x94
-	blx sub_02074098
+	blx VEC_CrossProduct
 	add r0, sp, #0x94
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	asr r0, r7, #4
 	lsl r3, r0, #1
 	lsl r2, r3, #1
@@ -15172,22 +15172,22 @@ _021E512E:
 	str r0, [sp, #0x48]
 	add r0, sp, #0x40
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, sp, #0x34
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	add r0, sp, #0x40
 	add r1, sp, #0x34
-	blx sub_02074018
+	blx VEC_DotProduct
 	bl sub_020746C0
 	add r7, r0, #0
 	add r0, sp, #0x40
 	add r1, sp, #0x34
 	add r2, sp, #0x28
-	blx sub_02074098
+	blx VEC_CrossProduct
 	add r0, sp, #0x28
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	asr r0, r7, #4
 	lsl r5, r0, #1
 	ldr r2, _021E51DC ; =0x020946BC
@@ -15227,7 +15227,7 @@ _021E51E0:
 	blx MTX_MultVec43
 	add r0, sp, #0x40
 	add r1, r0, #0
-	blx sub_02074254
+	blx VEC_Normalize
 	ldr r0, [sp, #8]
 	cmp r0, #1
 	bne _021E522E

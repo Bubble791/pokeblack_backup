@@ -309,7 +309,7 @@ _021EEF04:
 	add r0, r7, #0
 	add r1, r6, r1
 	add r2, r7, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r6]
 	add r1, r7, #0
 	bl sub_02167308
@@ -519,7 +519,7 @@ ovy129_21ef078: ; 0x021EF078
 	add r0, r6, #0
 	add r1, r5, r1
 	add r2, r6, #0
-	bl sub_02073FB4
+	bl VEC_Add
 	ldr r0, [r5]
 	add r1, r6, #0
 	bl sub_02167308

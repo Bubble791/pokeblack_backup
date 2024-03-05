@@ -74,7 +74,7 @@
 .public FX_Div
 .public sub_0208D60C
 .public sub_0219C8F0
-.public sub_02074018
+.public VEC_DotProduct
 .public sub_0219C954
 .public sub_0219AA10
 .public sub_0219B08C
@@ -315,7 +315,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02073FD4
+.public VEC_Subtract
 .public sub_0208D60C
 .public sub_0208D65C
 .public sub_0208D3BC

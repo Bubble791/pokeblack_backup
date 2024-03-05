@@ -69,7 +69,7 @@
 .public sub_0204A798
 .public sub_0204A744
 .public sub_0204A798
-.public sub_02074368
+.public VEC_Fx16Normalize
 .public sub_0204A774
 .public sub_021A21E0
 .public sub_021A224C

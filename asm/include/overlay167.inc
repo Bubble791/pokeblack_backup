@@ -6632,13 +6632,13 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_020744EC
-.public sub_02073FD4
-.public sub_02074254
+.public VEC_Distance
+.public VEC_Subtract
+.public VEC_Normalize
 .public FX_Div
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02074494
+.public VEC_MultAdd
 .public sub_0203A1FC
 .public sub_0204B570
 .public sub_0203A24C
