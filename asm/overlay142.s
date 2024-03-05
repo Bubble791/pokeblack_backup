@@ -3967,7 +3967,7 @@ _0219B854:
 	add r0, r7, #0
 	mov r2, #0xc
 	str r4, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	ble _0219B88C
@@ -4085,7 +4085,7 @@ _0219B950:
 	add r0, r6, #0
 	mov r2, #0xc
 	str r5, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	ble _0219B982
@@ -4209,7 +4209,7 @@ _0219BA56:
 	add r0, r7, #0
 	mov r2, #0xc
 	str r4, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #0xc]
 	cmp r0, #0
 	ble _0219BA88
@@ -4432,7 +4432,7 @@ _0219BC26:
 	ldr r3, _0219BCA0 ; =ovy142_219b754
 	mov r2, #0xc
 	str r4, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #0x18]
 	cmp r0, #0
 	ble _0219BC66
@@ -13763,7 +13763,7 @@ _021A07A0:
 	add r0, r5, #0
 	mov r2, #0xc
 	str r4, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #4]
 	cmp r0, #0
 	ble _021A07D4
@@ -13877,7 +13877,7 @@ _021A088C:
 	add r0, r6, #0
 	mov r2, #0xc
 	str r4, [sp]
-	blx sub_02077A4C
+	blx MATH_QSort
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	ble _021A08C6

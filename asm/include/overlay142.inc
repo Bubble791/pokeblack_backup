@@ -290,7 +290,7 @@
 .public sub_02026820
 .public sub_0203A24C
 .public sub_0204AB0C
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_02008074
 .public sub_0203A24C
 .public sub_0203A24C
@@ -298,7 +298,7 @@
 .public sub_0203A1FC
 .public sub_02008074
 .public sub_020084AC
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_02008074
 .public sub_0203A24C
 .public sub_0203A24C
@@ -307,7 +307,7 @@
 .public sub_02008074
 .public sub_020084AC
 .public sub_02026B40
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_02008074
 .public sub_0203A24C
 .public sub_0203A24C
@@ -324,7 +324,7 @@
 .public sub_02026820
 .public sub_0203A24C
 .public sub_0204AB0C
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_02008074
 .public sub_0203A24C
 .public sub_0203A24C
@@ -1075,7 +1075,7 @@
 .public sub_02008308
 .public sub_0203A1FC
 .public sub_020084F8
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_0203A24C
 .public sub_0203A1FC
 .public sub_020084F8
@@ -1085,7 +1085,7 @@
 .public sub_02026820
 .public sub_0203A24C
 .public sub_0204AB0C
-.public sub_02077A4C
+.public MATH_QSort
 .public sub_0203A24C
 
 .public sub_02035178

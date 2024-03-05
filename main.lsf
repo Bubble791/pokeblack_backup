@@ -55,8 +55,6 @@ Static main
     Object lib/NitroSDK/asm/dgt_sha1.o
     Object lib/NitroSDK/asm/crc.o
 
-    Object asm/asm_70_thumb.o
-    Object asm/asm_71_arm.o
     Object asm/asm_72_thumb.o
     Object lib/NitroSDK/asm/mi_memory.o
     Object asm/asm_74_thumb.o
