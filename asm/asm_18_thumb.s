@@ -2682,7 +2682,7 @@ _020671D0:
 	mul r1, r0
 	ldr r0, [sp, #0x1c]
 	add r0, r0, r1
-	bl sub_02074C50
+	bl G3_MultMtx43
 _02067232:
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
@@ -2812,7 +2812,7 @@ _02067326:
 	ldr r0, [sp, #0x1c]
 	add r0, r0, r1
 	add r0, #0x30
-	bl sub_02074C64
+	bl G3_MultMtx33
 _02067346:
 	ldr r0, [sp, #0x14]
 	ldr r2, [r5]
@@ -3080,12 +3080,12 @@ _020674AA:
 	add r0, r2, r0
 	str r0, [sp, #0x70]
 	add r0, sp, #0x50
-	bl sub_02074C28
+	bl G3_LoadMtx43
 	ldr r0, _020675C0 ; =0x04000440
 	mov r1, #1
 	str r1, [r0]
 	add r0, sp, #0x20
-	bl sub_02074C28
+	bl G3_LoadMtx43
 	ldr r1, _020675C0 ; =0x04000440
 	mov r0, #0
 	str r0, [r1]

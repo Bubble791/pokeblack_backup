@@ -436,7 +436,7 @@ _021F607E:
 	add r0, sp, #0x44
 	bl MTX_RotY33_
 	add r0, sp, #0x44
-	bl sub_02074C64
+	bl G3_MultMtx33
 	ldr r0, [sp, #0x14]
 	ldr r1, _021F61C4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r0, [r0, #0x20]
@@ -450,7 +450,7 @@ _021F607E:
 	add r0, sp, #0x44
 	bl MTX_RotZ33_
 	add r0, sp, #0x44
-	bl sub_02074C64
+	bl G3_MultMtx33
 	ldr r0, [sp, #0x30]
 	mov r1, #1
 	str r1, [r0]

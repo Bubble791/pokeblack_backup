@@ -322,7 +322,7 @@
 .public sub_0208D374
 .public sub_0208E144
 .public sub_0208DA4C
-.public sub_02074C3C
+.public G3_MultMtx44
 .public G3_RotZ
 .public sub_0208D60C
 .public sub_0208D60C

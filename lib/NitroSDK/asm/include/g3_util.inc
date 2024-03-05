@@ -9,6 +9,6 @@
 .public G3_RotX
 .public G3_RotY
 .public G3_RotZ
-.public sub_02074C14
-.public sub_02074C28
+.public G3_LoadMtx44
+.public G3_LoadMtx43
 .public MTX_PerspectiveW

@@ -53621,7 +53621,7 @@ _02198C3A:
 	bne _02198C3A
 	add r6, sp, #0
 	add r0, r6, #0
-	bl sub_02074C14
+	bl G3_LoadMtx44
 	add r2, r5, #0
 	ldr r4, _02198C84 ; =0x04000440
 	mov r0, #2
@@ -53919,7 +53919,7 @@ ovy36_2198e64: ; 0x02198E64
 	str r0, [r5, #0x14]
 	add r0, r4, #0
 	add r0, #0x20
-	bl sub_02074C64
+	bl G3_MultMtx33
 	mov r0, #2
 	str r0, [r5]
 	add r0, r5, #0

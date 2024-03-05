@@ -45925,7 +45925,7 @@ _02019F3C:
 	cmp r0, #0
 	bne _02019F5C
 	add r0, sp, #0x148
-	bl sub_02074C3C
+	bl G3_MultMtx44
 _02019F5C:
 	mov r6, #1
 	add r0, sp, #0x1a4

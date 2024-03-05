@@ -10879,7 +10879,7 @@ sub_0206367C: ; 0x0206367C
 	ldr r0, _020637FC ; =0x02143A08
 	ldr r0, [r0]
 	add r0, #0x40
-	bl sub_02074C28
+	bl G3_LoadMtx43
 	ldr r0, _020637FC ; =0x02143A08
 	ldr r0, [r0]
 	ldr r1, [r0, #0x24]

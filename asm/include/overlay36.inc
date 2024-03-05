@@ -3852,7 +3852,7 @@
 .public sub_0203A24C
 .public sub_02198D9C
 .public sub_02067B9C
-.public sub_02074C14
+.public G3_LoadMtx44
 .public sub_02198F50
 .public sub_02198D9C
 .public sub_02198D9C
@@ -3874,7 +3874,7 @@
 .public MTX_RotZ33_
 .public MTX_Scale33_
 .public MTX_Concat33
-.public sub_02074C64
+.public G3_MultMtx33
 .public sub_020496D8
 .public sub_020496FC
 .public sub_0203A1FC

@@ -4038,7 +4038,7 @@ _021BC13C:
 	lsr r0, r0, #0x1f
 	bne _021BC15A
 	add r0, sp, #0x1e8
-	bl sub_02074C3C
+	bl G3_MultMtx44
 _021BC15A:
 	ldr r1, _021BC2A8 ; =0x04000470
 	mov r0, #0

@@ -2014,9 +2014,9 @@ _0205263C:
 	add r0, r1, r0
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C28
+	blx G3_LoadMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _0205275C
 _020526B8:
 	ldr r2, [r4, #8]
@@ -2057,9 +2057,9 @@ _020526B8:
 	str r2, [r0]
 	str r3, [r0]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 _0205275C:
 	ldr r0, [r5, #0x40]
 	ldrh r4, [r4, #0x36]
@@ -2316,9 +2316,9 @@ _02052AB8:
 	add r0, r1, r0
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C28
+	blx G3_LoadMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02052BD8
 _02052B34:
 	ldr r2, [r4, #8]
@@ -2359,9 +2359,9 @@ _02052B34:
 	str r2, [r0]
 	str r3, [r0]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02052BD8:
 	ldr r0, [r5, #0x40]
 	ldrh r4, [r4, #0x36]
@@ -2541,9 +2541,9 @@ _02052E10:
 	add r0, r1, r0
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C28
+	blx G3_LoadMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02052F30
 _02052E8C:
 	ldr r2, [r4, #8]
@@ -2584,9 +2584,9 @@ _02052E8C:
 	str r2, [r0]
 	str r3, [r0]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02052F30:
 	ldr r0, [r5, #0x40]
 	ldrh r4, [r4, #0x36]
@@ -2764,9 +2764,9 @@ _02053160:
 	add r0, r1, r0
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C28
+	blx G3_LoadMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02053280
 _020531DC:
 	ldr r2, [r4, #8]
@@ -2807,9 +2807,9 @@ _020531DC:
 	str r2, [r0]
 	str r3, [r0]
 	ldr r0, [r5, #0x44]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	add r0, sp, #0
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02053280:
 	ldr r0, [r5, #0x40]
 	ldrh r4, [r4, #0x36]
@@ -3098,7 +3098,7 @@ _02053518:
 	str r4, [sp, #0x74]
 	str r3, [sp, #0x80]
 	str r1, [r2]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02053988
 _020536DC:
 	ldr r3, [r6, #8]
@@ -3272,7 +3272,7 @@ _020537A0:
 	str r2, [r1]
 	str r3, [r1]
 	str r4, [r1]
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02053988:
 	ldr r0, [r7, #0x40]
 	ldrh r4, [r6, #0x36]
@@ -3551,7 +3551,7 @@ _02053BF8:
 	str r4, [sp, #0x74]
 	str r3, [sp, #0x80]
 	str r1, [r2]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02054068
 _02053DBC:
 	ldr r3, [r6, #8]
@@ -3725,7 +3725,7 @@ _02053E80:
 	str r2, [r1]
 	str r3, [r1]
 	str r4, [r1]
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02054068:
 	ldr r0, [r7, #0x40]
 	ldrh r4, [r6, #0x36]
@@ -3923,7 +3923,7 @@ _0205423C:
 	str sb, [sp, #0x28]
 	str r1, [sp, #0x38]
 	str sb, [r2]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _020544C0
 _0205435C:
 	ldr r8, [r6, #8]
@@ -4014,7 +4014,7 @@ _0205435C:
 	str r2, [r1]
 	str r3, [r1]
 	str r4, [r1]
-	blx sub_02074C50
+	blx G3_MultMtx43
 _020544C0:
 	ldr r0, [r7, #0x40]
 	ldrh r4, [r6, #0x36]
@@ -4209,7 +4209,7 @@ _02054680:
 	str r8, [sp, #0x24]
 	str r8, [sp, #0x28]
 	str r8, [r1]
-	blx sub_02074C50
+	blx G3_MultMtx43
 	b _02054910
 _020547AC:
 	ldr r3, [r8, #8]
@@ -4300,7 +4300,7 @@ _020547AC:
 	str r2, [r1]
 	str r3, [r1]
 	str r6, [r1]
-	blx sub_02074C50
+	blx G3_MultMtx43
 _02054910:
 	and r1, r5, #0x1f
 	and r0, r4, #0x1f

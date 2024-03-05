@@ -23,6 +23,6 @@
 .public sub_0208D65C
 .public sub_0208D65C
 .public MTX_RotY33_
-.public sub_02074C64
+.public G3_MultMtx33
 .public MTX_RotZ33_
-.public sub_02074C64
+.public G3_MultMtx33

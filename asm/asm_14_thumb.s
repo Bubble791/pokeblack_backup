@@ -47442,7 +47442,7 @@ _0204EE9A:
 	add r0, sp, #0x144
 	add r0, r0, r2
 	add r1, sp, #0x9c
-	bl sub_02074C78
+	bl G3_MultTransMtx33
 	ldrh r0, [r4, #0x16]
 	ldr r1, _0204EFE4 ; =FX_SinCosTable_ ; 0x020946BC
 	ldr r2, _0204EFE4 ; =FX_SinCosTable_ ; 0x020946BC

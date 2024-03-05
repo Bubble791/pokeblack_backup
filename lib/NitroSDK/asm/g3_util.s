@@ -26,7 +26,7 @@ _02074B20:
 	mov r1, #0
 	str r1, [r0]
 	add r0, r4, #0
-	bl sub_02074C14
+	bl G3_LoadMtx44
 _02074B40:
 	add sp, #0x4c
 	pop {r4, r5, pc}
@@ -58,7 +58,7 @@ _02074B54:
 	mov r1, #0
 	str r1, [r0]
 	add r0, r4, #0
-	bl sub_02074C14
+	bl G3_LoadMtx44
 _02074B78:
 	add sp, #0x50
 	pop {r3, r4, r5, pc}
@@ -84,7 +84,7 @@ _02074B8E:
 	mov r1, #2
 	str r1, [r0]
 	add r0, r4, #0
-	bl sub_02074C28
+	bl G3_LoadMtx43
 _02074BA4:
 	add sp, #0x30
 	pop {r3, r4, r5, pc}
