@@ -3,18 +3,18 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_0207C7F4
-sub_0207C7F4: ; 0x0207C7F4
+	thumb_func_start OS_InitEvent
+OS_InitEvent: ; 0x0207C7F4
 	mov r1, #0
 	str r1, [r0, #8]
 	str r1, [r0, #4]
 	str r1, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207C7F4
+	thumb_func_end OS_InitEvent
 
-	thumb_func_start sub_0207C800
-sub_0207C800: ; 0x0207C800
+	thumb_func_start OS_WaitEventEx
+OS_WaitEventEx: ; 0x0207C800
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r0, #0
@@ -69,10 +69,10 @@ _0207C858:
 	add r0, r6, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_0207C800
+	thumb_func_end OS_WaitEventEx
 
-	thumb_func_start sub_0207C864
-sub_0207C864: ; 0x0207C864
+	thumb_func_start OS_SignalEvent
+OS_SignalEvent: ; 0x0207C864
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -84,10 +84,10 @@ sub_0207C864: ; 0x0207C864
 	orr r0, r4
 	str r0, [r5]
 	add r0, r5, #4
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _0207C880:
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_0207C864
+	thumb_func_end OS_SignalEvent
 

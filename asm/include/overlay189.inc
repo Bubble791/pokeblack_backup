@@ -263,7 +263,7 @@
 .public sub_021A0D84
 .public sub_0219D550
 .public sub_0207A868
-.public sub_0207A89C
+.public OS_WakeupThread
 .public sub_021A0DCC
 .public sub_021A0DD4
 .public sub_021A0B78

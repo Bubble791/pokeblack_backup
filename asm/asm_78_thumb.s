@@ -14,8 +14,8 @@ sub_02079D10: ; 0x02079D10
 _02079D1C: .word 0x02FE00A0
 	thumb_func_end sub_02079D10
 
-	thumb_func_start sub_02079D20
-sub_02079D20: ; 0x02079D20
+	thumb_func_start OS_SetIrqFunction
+OS_SetIrqFunction: ; 0x02079D20
 	push {r4, r5, r6, r7}
 	add r5, r1, #0
 	mov r3, #0
@@ -74,7 +74,7 @@ _02079D74:
 	.align 2, 0
 _02079D80: .word 0x02FE0020
 _02079D84: .word 0x0214C178
-	thumb_func_end sub_02079D20
+	thumb_func_end OS_SetIrqFunction
 
 	thumb_func_start sub_02079D88
 sub_02079D88: ; 0x02079D88
@@ -144,7 +144,7 @@ sub_02079DE4: ; 0x02079DE4
 	ldr r0, _02079E10 ; =0x0214C180
 	str r2, [r0, r5]
 	add r0, r4, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r1, r4, #0
 	and r1, r0
 	ldr r0, _02079E14 ; =0x0214C17C
@@ -172,7 +172,7 @@ sub_02079E20: ; 0x02079E20
 	add r1, r0, #3
 	mov r0, #1
 	lsl r0, r1
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	ldr r0, _02079E4C ; =0x0214C1DC
 	str r4, [r0, r5]
 	pop {r3, r4, r5, pc}
@@ -202,8 +202,8 @@ sub_02079E50: ; 0x02079E50
 _02079E6C: .word 0x04000208
 	thumb_func_end sub_02079E50
 
-	thumb_func_start sub_02079E70
-sub_02079E70: ; 0x02079E70
+	thumb_func_start OS_EnableIrqMask
+OS_EnableIrqMask: ; 0x02079E70
 	push {r3, r4}
 	ldr r4, _02079E90 ; =0x04000208
 	mov r1, #0
@@ -221,7 +221,7 @@ sub_02079E70: ; 0x02079E70
 	bx lr
 	nop
 _02079E90: .word 0x04000208
-	thumb_func_end sub_02079E70
+	thumb_func_end OS_EnableIrqMask
 
 	thumb_func_start sub_02079E94
 sub_02079E94: ; 0x02079E94
@@ -245,8 +245,8 @@ sub_02079E94: ; 0x02079E94
 _02079EB4: .word 0x04000208
 	thumb_func_end sub_02079E94
 
-	thumb_func_start sub_02079EB8
-sub_02079EB8: ; 0x02079EB8
+	thumb_func_start OS_ResetRequestIrqMask
+OS_ResetRequestIrqMask: ; 0x02079EB8
 	push {r3, r4}
 	ldr r4, _02079ED4 ; =0x04000208
 	mov r1, #0
@@ -263,7 +263,7 @@ sub_02079EB8: ; 0x02079EB8
 	bx lr
 	.align 2, 0
 _02079ED4: .word 0x04000208
-	thumb_func_end sub_02079EB8
+	thumb_func_end OS_ResetRequestIrqMask
 
 	thumb_func_start sub_02079ED8
 sub_02079ED8: ; 0x02079ED8
@@ -302,7 +302,7 @@ _02079F4C:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bne _02079F4C
 	pop {r4, r5, r6, pc}

@@ -109,7 +109,7 @@ _020792D6:
 	add r0, r5, #0
 	blx OS_RestoreInterrupts
 	ldr r0, _020792F0 ; =0x0214C170
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	mov r0, #3
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -243,7 +243,7 @@ _0207943C:
 	str r6, [r4]
 	blx OS_RestoreInterrupts
 	ldr r0, _02079454 ; =0x0214C170
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	mov r0, #3
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -422,7 +422,7 @@ _020797B2:
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
 	ldr r0, _020797D0 ; =0x0214C170
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	mov r0, #3
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -548,7 +548,7 @@ sub_020799C8: ; 0x020799C8
 	mov r0, #4
 	mov r2, #0
 	mov r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _020799DC
 	mov r4, #1
@@ -582,7 +582,7 @@ sub_02079A5C: ; 0x02079A5C
 	orr r1, r2
 	mov r2, #0
 	mov r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _02079A80
 	add r0, r4, #0
@@ -595,7 +595,7 @@ _02079A80:
 	orr r1, r2
 	mov r0, #4
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _02079A9A
 	add r0, r4, #0
@@ -607,7 +607,7 @@ _02079A9A:
 	orr r1, r2
 	mov r0, #4
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _02079AB2
 	add r0, r4, #0
@@ -620,7 +620,7 @@ _02079AB2:
 	orr r1, r2
 	mov r0, #4
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _02079ACC
 	add r0, r4, #0
@@ -632,7 +632,7 @@ _02079ACC:
 	orr r1, r2
 	mov r0, #4
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _02079AE4
 	add r0, r4, #0
@@ -644,7 +644,7 @@ _02079AE4:
 	mov r0, #4
 	orr r1, r2
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _02079AFA
 	mov r4, #1

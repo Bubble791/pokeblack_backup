@@ -6186,7 +6186,7 @@ _0206E4BC:
 	mov r0, #0x43
 	lsl r0, r0, #6
 	add r0, r4, r0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -7427,7 +7427,7 @@ sub_0206ED94: ; 0x0206ED94
 	beq _0206EDB0
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0207C864
+	bl OS_SignalEvent
 	add sp, #4
 	pop {r3, r4, pc}
 _0206EDB0:
@@ -7623,7 +7623,7 @@ sub_0206EEF0: ; 0x0206EEF0
 	bl sub_0206EF74
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207C7F4
+	bl OS_InitEvent
 	add r0, sp, #0xc
 	bl sub_0207BEFC
 	ldr r0, _0206EF34 ; =sub_0206EDCC
@@ -7636,7 +7636,7 @@ sub_0206EEF0: ; 0x0206EEF0
 	mov r1, #1
 	mov r2, #0
 	mov r3, #1
-	bl sub_0207C800
+	bl OS_WaitEventEx
 	add sp, #0x40
 	pop {r4}
 	pop {r3}
@@ -7763,7 +7763,7 @@ _0206EFF2:
 	str r0, [r4, #0x24]
 	add r4, #0x1c
 	add r0, r4, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _0206F00C:
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
@@ -8082,7 +8082,7 @@ sub_0206F224: ; 0x0206F224
 	add r6, #8
 	add r0, r5, r6
 	str r1, [r5, #4]
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
 	cmp r4, #0
@@ -8248,7 +8248,7 @@ _0206F36E:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0206F36E
 	cmp r4, #0
@@ -8258,7 +8258,7 @@ _0206F382:
 	mov r0, #0xb
 	add r1, r6, #0
 	mov r2, #1
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0206F382
 _0206F390:
@@ -9374,7 +9374,7 @@ _0206FBB6:
 	add r0, r5, #0
 	bl sub_02079E94
 	add r0, r5, #0
-	bl sub_02079EB8
+	bl OS_ResetRequestIrqMask
 	mov r0, #0
 	str r0, [r6, #0xc]
 	bl sub_0206F994
@@ -9403,11 +9403,11 @@ sub_0206FBF0: ; 0x0206FBF0
 	str r5, [r0, #0xc]
 	ldr r1, _0206FC38 ; =sub_0206FB8C
 	add r0, r6, #0
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	add r0, r6, #0
-	bl sub_02079EB8
+	bl OS_ResetRequestIrqMask
 	add r0, r6, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
 	ldr r4, _0206FC3C ; =0x0214B940

@@ -37,7 +37,7 @@ _0207EB52:
 	cmp r0, #0
 	bne _0207EB64
 _0207EB60:
-	bl sub_0207CAD4
+	bl PXIi_HandlerRecvFifoNotEmpty
 _0207EB64:
 	ldr r0, [r5]
 	cmp r0, #0
@@ -715,7 +715,7 @@ _0207F0E0:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bne _0207F0E0
 	pop {r4, r5, r6, pc}
@@ -4084,7 +4084,7 @@ _020809E6:
 	mov r0, #0xa
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	add r5, r0, #0
 	ldr r0, _02080A18 ; =0x0214E2B0
 	add r1, r4, #0
@@ -4124,7 +4124,7 @@ _02080A2E:
 	mov r0, #0xa
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	add r5, r0, #0
 	ldr r0, _02080A60 ; =0x0214E2B0
 	add r1, r4, #0

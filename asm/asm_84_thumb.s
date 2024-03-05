@@ -39,7 +39,7 @@ _0207B176:
 	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _0207B18A
-	blx sub_0207C888
+	blx OSi_InitPrevTitleId
 _0207B18A:
 	pop {r3, pc}
 	thumb_func_end sub_0207B12C

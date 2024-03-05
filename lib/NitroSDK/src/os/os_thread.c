@@ -428,21 +428,6 @@ void OS_SleepThread(OSThreadQueue *queue) {
     OS_RestoreInterrupts(enable);
 }
 
-void OS_WakeupThread(OSThreadQueue *queue) {
-    OSIntrMode enable = OS_DisableInterrupts();
-    if (queue->head) {
-        while (queue->head) {
-            OSThread *thread = OSi_RemoveLinkFromQueue(queue);
-            thread->state = OS_THREAD_STATE_READY;
-            thread->queue = NULL;
-            thread->link.prev = thread->link.next = NULL;
-        }
-        OS_InitThreadQueue(queue);
-        OSi_RescheduleThread();
-    }
-    OS_RestoreInterrupts(enable);
-}
-
 void OS_WakeupThreadDirect(OSThread *thread) {
     OSIntrMode enable = OS_DisableInterrupts();
     thread->state = OS_THREAD_STATE_READY;

@@ -154,7 +154,7 @@ _0207AD0E:
 	str r0, [r4, #0x1c]
 	add r4, #8
 	add r0, r4, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
 	mov r0, #1
@@ -207,7 +207,7 @@ _0207AD78:
 	sub r0, r0, #1
 	str r0, [r5, #0x1c]
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
 	mov r0, #1
@@ -257,7 +257,7 @@ _0207ADD2:
 	str r0, [r4, #0x1c]
 	add r4, #8
 	add r0, r4, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
 	mov r0, #1
@@ -389,7 +389,7 @@ _0207AEC4:
 	str r6, [r0, #8]
 	and r1, r7
 	str r1, [r0, #0xc]
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r5, #0
 	add r0, #0x88
 	ldr r0, [r0]
@@ -536,7 +536,7 @@ _0207AFD0:
 	and r0, r1
 	str r0, [r5, #0xc]
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _0207AFEE:
 	add r0, r7, #0
 	blx OS_RestoreInterrupts

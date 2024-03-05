@@ -468,7 +468,7 @@
 .public OS_RestoreInterrupts
 .public OS_DisableInterrupts
 .public MI_CpuCopy
-.public sub_0207A89C
+.public OS_WakeupThread
 .public OS_RestoreInterrupts
 .public sub_0207AEEC
 .public sub_0207AE68
@@ -480,7 +480,7 @@
 .public MI_CpuCopy
 .public MI_CpuCopy
 .public sub_02156184
-.public sub_0207A89C
+.public OS_WakeupThread
 .public OS_DisableInterrupts
 .public OS_RestoreInterrupts
 .public sub_0208D65C
@@ -505,7 +505,7 @@
 .public sub_02157B1C
 .public sub_02157B0C
 .public OS_RestoreInterrupts
-.public sub_0207A89C
+.public OS_WakeupThread
 .public OS_DisableInterrupts
 .public sub_02157B1C
 .public sub_02157B84
@@ -850,7 +850,7 @@
 .public sub_0215CC80
 .public sub_0207AEA4
 .public OS_RestoreInterrupts
-.public sub_0207A89C
+.public OS_WakeupThread
 .public MI_CpuCopy
 .public MI_CpuCopy
 .public OS_DisableInterrupts
@@ -919,7 +919,7 @@
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public sub_0215CB0C
-.public sub_0207A89C
+.public OS_WakeupThread
 .public sub_0215CB0C
 .public MI_CpuCopy8
 .public sub_0207CCF4

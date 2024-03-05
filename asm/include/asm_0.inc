@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_02079D20
-.public sub_02079D20
-.public sub_02079E70
+.public OS_SetIrqFunction
+.public OS_SetIrqFunction
+.public OS_EnableIrqMask
 .public GX_HBlankIntr
 .public GX_VBlankIntr
 .public OS_EnableInterrupts

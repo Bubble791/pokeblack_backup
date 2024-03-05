@@ -107,9 +107,9 @@ sub_0207BA7C: ; 0x0207BA7C
 	strh r0, [r1]
 	ldr r1, _0207BABC ; =0x0207BACD
 	mov r0, #8
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	mov r0, #8
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	str r4, [r5, #4]
 _0207BAB2:
 	pop {r3, r4, r5, pc}
@@ -243,7 +243,7 @@ _0207BBD4:
 	strh r6, [r1]
 	strh r0, [r1, #2]
 	mov r0, #0x10
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0207BBE4: .word 0x04000106
@@ -645,7 +645,7 @@ sub_0207BF64: ; 0x0207BF64
 	ldr r1, _0207BF8C ; =0x0207BF95
 	add r4, r0, #0
 	mov r0, #4
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	mov r0, #0x10
 	ldrsh r0, [r4, r0]
 	bl GX_SetVCountEqVal
@@ -655,7 +655,7 @@ sub_0207BF64: ; 0x0207BF64
 	orr r0, r1
 	strh r0, [r2]
 	mov r0, #4
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	pop {r4, pc}
 	nop
 _0207BF8C: .word 0x0207BF95

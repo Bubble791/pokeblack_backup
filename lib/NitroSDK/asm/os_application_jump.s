@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	arm_func_start sub_0207C888
-sub_0207C888: ; 0x0207C888
+	arm_func_start OSi_InitPrevTitleId
+OSi_InitPrevTitleId: ; 0x0207C888
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x300
 	add r0, sp, #0
@@ -59,5 +59,5 @@ _0207C93C:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0207C948: .word 0x0276B0DC
-	arm_func_end sub_0207C888
+	arm_func_end OSi_InitPrevTitleId
 

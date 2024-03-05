@@ -44,7 +44,7 @@ sub_0207D094: ; 0x0207D094
 	mov r0, #5
 	mov r2, #0
 	mov r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207D0B0
 	mov r4, #1
@@ -1192,7 +1192,7 @@ _0207D8B2:
 	mov r0, #7
 	mov r2, #0
 	mov r6, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bge _0207D922
 	ldr r0, [sp]
@@ -1231,7 +1231,7 @@ _0207D90E:
 	ldr r1, [r4, #8]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207D8E2
 _0207D922:
@@ -1463,7 +1463,7 @@ _0207DAC6:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207DAC6
 	pop {r3, r4, r5, pc}
@@ -2409,7 +2409,7 @@ sub_0207E29C: ; 0x0207E29C
 	lsl r1, r0, #0x17
 	mov r2, #0
 	mov r5, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207E2B6
 	mov r5, #1
@@ -2511,14 +2511,14 @@ _0207E352:
 	mov r2, #0
 	mov r6, #6
 	mov r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207E382
 	ldr r1, _0207E3D0 ; =0x01010000
 	add r0, r6, #0
 	orr r1, r7
 	add r2, r4, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207E382
 	mov r4, #1
@@ -2572,7 +2572,7 @@ sub_0207E3D8: ; 0x0207E3D8
 	mov r0, #6
 	mov r2, #0
 	mov r5, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	blt _0207E3F2
 	mov r5, #1

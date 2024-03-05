@@ -14073,7 +14073,7 @@ _02156D60:
 	mov r0, #0x43
 	lsl r0, r0, #2
 	add r0, r4, r0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	ldr r0, [sp, #8]
 	blx OS_RestoreInterrupts
 	mov r0, #1
@@ -14649,7 +14649,7 @@ _0215717C:
 	strh r2, [r0, r1]
 	add r1, r1, #2
 	add r0, r0, r1
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r6, #0
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -15165,7 +15165,7 @@ _02157520:
 	ldr r2, [r0]
 	add r0, r1, #4
 	add r0, r2, r0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r5, #0
 	add r0, #0xa0
 	b _02157560
@@ -26864,7 +26864,7 @@ ovy11_215cc90: ; 0x0215CC90
 	bne _0215CCAA
 	mov r1, #0
 	str r1, [r0, #8]
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _0215CCAA:
 	pop {r3, pc}
 	.align 2, 0
@@ -29000,7 +29000,7 @@ ovy11_215dd08: ; 0x0215DD08
 	bl ovy11_215c52c
 _0215DD26:
 	add r0, r4, #4
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _0215DD2C:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

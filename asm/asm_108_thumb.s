@@ -230,7 +230,7 @@ sub_020827A0: ; 0x020827A0
 	mov r0, #0xd
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	beq _020827CC
 	mov r4, #1
@@ -242,7 +242,7 @@ _020827B8:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bne _020827B8
 _020827CC:

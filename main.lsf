@@ -81,9 +81,10 @@ Static main
     Object lib/NitroSDK/asm/os_argument.o
     Object lib/NitroSDK/asm/os_entropy.o
     Object lib/NitroSDK/asm/os_terminate.o
+    Object lib/NitroSDK/asm/os_event.o
+    Object lib/NitroSDK/asm/os_application_jump.o
+    Object lib/NitroSDK/asm/pxi_init.o
 
-    Object asm/asm_96_thumb.o
-    Object asm/asm_97_arm.o
     Object asm/asm_98_thumb.o
     Object asm/asm_99_arm.o
     Object asm/asm_100_thumb.o

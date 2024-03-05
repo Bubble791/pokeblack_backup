@@ -73,7 +73,7 @@ _02070114:
 	str r1, [r5, #0xc]
 	add r5, #0x18
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
@@ -538,7 +538,7 @@ _0207043C:
 	beq _02070452
 	add r6, #0x18
 	add r0, r6, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	mov r6, #0
 _02070452:
 	ldr r0, [sp]
@@ -572,7 +572,7 @@ _0207047A:
 	str r0, [r5, #0x14]
 	add r5, #0xc
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 _02070494:
 	ldr r0, [sp, #4]
 _02070496:
@@ -600,7 +600,7 @@ _020704AA:
 	beq _020704C6
 	add r5, #0x18
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	mov r5, #0
 _020704C6:
 	add r0, r4, #0
@@ -1565,7 +1565,7 @@ sub_02070B88: ; 0x02070B88
 	str r5, [r4, #0x14]
 	add r4, #0x18
 	add r0, r4, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}

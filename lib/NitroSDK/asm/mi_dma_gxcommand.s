@@ -69,9 +69,9 @@ _0207844E:
 	str r0, [r4]
 	ldr r1, _020784CC ; =MIi_FIFOCallback
 	add r0, r5, #0
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	add r0, r5, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	bl MIi_FIFOCallback
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
@@ -121,7 +121,7 @@ _020784E4:
 	orr r3, r5
 	bl sub_01FF8BF0
 	lsl r0, r4, #0xb
-	bl sub_02079EB8
+	bl OS_ResetRequestIrqMask
 	pop {r3, r4, r5, r6, r7, pc}
 _0207851E:
 	mov r0, #0
@@ -135,7 +135,7 @@ _0207851E:
 	orr r3, r5
 	bl sub_01FF8BF0
 	lsl r0, r4, #0xb
-	bl sub_02079EB8
+	bl OS_ResetRequestIrqMask
 _0207853A:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -164,7 +164,7 @@ MIi_DMACallback: ; 0x02078550
 	str r0, [r2]
 	ldr r1, [r4, #0x1c]
 	add r0, r5, #0
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	mov r0, #0
 	str r0, [r4]
 	ldr r1, [r4, #0x10]

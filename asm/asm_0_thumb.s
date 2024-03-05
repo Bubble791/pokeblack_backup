@@ -10,13 +10,13 @@ NitroMain: ; 0x02005124
 	bl sub_020054B8
 	ldr r1, _020051C4 ; =sub_0200522C
 	mov r0, #2
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	ldr r1, _020051C8 ; =sub_02005234
 	mov r0, #1
 	mov r4, #1
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	mov r0, #3
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	ldr r6, _020051CC ; =0x04000208
 	ldrh r0, [r6]
 	mov r0, #1

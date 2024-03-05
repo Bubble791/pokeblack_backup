@@ -626,7 +626,7 @@ _0207A6EA:
 	str r0, [r4, #0x64]
 	add r4, #0x9c
 	add r0, r4, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	bl sub_0207AAD8
 	bl sub_0207A918
 	bl OS_Terminate
@@ -664,7 +664,7 @@ _0207A742:
 	str r0, [r5, #0x64]
 	add r5, #0x9c
 	add r0, r5, #0
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	bl sub_0207AAD8
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
@@ -784,8 +784,8 @@ _0207A886:
 _0207A898: .word 0x0214C210
 	thumb_func_end sub_0207A868
 
-	thumb_func_start sub_0207A89C
-sub_0207A89C: ; 0x0207A89C
+	thumb_func_start OS_WakeupThread
+OS_WakeupThread: ; 0x0207A89C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
@@ -821,7 +821,7 @@ _0207A8DA:
 	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end sub_0207A89C
+	thumb_func_end OS_WakeupThread
 
 	thumb_func_start sub_0207A8E4
 sub_0207A8E4: ; 0x0207A8E4

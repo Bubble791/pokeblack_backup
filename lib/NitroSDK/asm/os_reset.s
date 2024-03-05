@@ -60,7 +60,7 @@ _0207C2E4:
 	mov r0, #0x40000
 	blx sub_02079E50
 	mvn r0, #0
-	blx sub_02079EB8
+	blx OS_ResetRequestIrqMask
 	blx MI_StopAllDma
 	blx OS_IsRunOnTwl
 	cmp r0, #0

@@ -110,7 +110,7 @@ _02199990:
 	str r0, [r4, #0x28]
 	mov r0, #2
 	lsl r0, r0, #0x1c
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	bl OS_IsRunOnTwl
 	cmp r0, #1
 	bne _021999AA

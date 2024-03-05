@@ -21,7 +21,7 @@
 .public OS_Terminate
 
 .public sub_02079D88
-.public sub_02079D20
-.public sub_02079E70
-.public sub_02079EB8
+.public OS_SetIrqFunction
+.public OS_EnableIrqMask
+.public OS_ResetRequestIrqMask
 .public sub_02079E94

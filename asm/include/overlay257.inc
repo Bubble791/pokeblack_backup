@@ -15,7 +15,7 @@
 .public OS_IsRunOnTwl
 .public sub_02199A90
 .public OS_Terminate
-.public sub_02079E70
+.public OS_EnableIrqMask
 .public OS_IsRunOnTwl
 .public sub_02199A98
 .public OS_IsRunOnTwl

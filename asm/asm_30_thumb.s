@@ -36,7 +36,7 @@ sub_0206FFFC: ; 0x0206FFFC
 	mov r0, #0xe
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	beq _02070028
 	mov r6, #0xe
@@ -47,7 +47,7 @@ _02070014:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_0207CA6C
+	bl PXI_SendWordByFifo
 	cmp r0, #0
 	bne _02070014
 _02070028:

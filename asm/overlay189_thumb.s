@@ -8145,7 +8145,7 @@ ovy189_21a0a80: ; 0x021A0A80
 	mov r1, #0
 	add r0, #0x1c
 	str r1, [r4, #0xc]
-	bl sub_0207A89C
+	bl OS_WakeupThread
 	pop {r4, pc}
 	thumb_func_end ovy189_21a0a80
 

@@ -47194,7 +47194,7 @@ _021BB678:
 	bl OS_Terminate
 _021BB67C:
 	ldr r0, [sp, #4]
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	ldr r1, [sp]
 	ldr r0, [sp, #8]
 	strb r1, [r0, #0xc]
@@ -47736,7 +47736,7 @@ _021BBA24:
 	str r4, [r0, #4]
 	add r0, r7, #0
 	strb r6, [r5, #3]
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy182_21bba00
@@ -47764,7 +47764,7 @@ ovy182_21bba38: ; 0x021BBA38
 	ldr r4, [r0, #4]
 _021BBA62:
 	add r0, r6, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy182_21bba38
@@ -49193,7 +49193,7 @@ ovy182_21bc4a8: ; 0x021BC4A8
 	bl OS_Terminate
 _021BC4CA:
 	add r0, r6, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -49228,7 +49228,7 @@ ovy182_21bc4f0: ; 0x021BC4F0
 	ldr r0, [r0]
 	bl sub_0205F088
 	add r0, r4, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	mov r0, #0
 	str r0, [r5]
 _021BC514:
@@ -49251,7 +49251,7 @@ ovy182_21bc51c: ; 0x021BC51C
 	ldr r0, [r0]
 	bl sub_0205F088
 	add r0, r4, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 _021BC53C:
 	pop {r3, r4, r5, pc}
 	nop
@@ -50020,15 +50020,15 @@ ovy182_21bcaac: ; 0x021BCAAC
 	bl sub_02079E50
 	mov r0, #1
 	mov r4, #1
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	mov r0, #1
 	bl sub_02079D88
 	str r0, [r6]
 	ldr r1, _021BCAF4 ; =ovy182_21bcb1c
 	mov r0, #1
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	mov r0, #1
-	bl sub_02079EB8
+	bl OS_ResetRequestIrqMask
 	sub r5, #8
 	ldrh r0, [r5]
 	strh r4, [r5]
@@ -50053,7 +50053,7 @@ ovy182_21bcaf8: ; 0x021BCAF8
 	bl sub_02079E50
 	ldr r1, [r4]
 	mov r0, #1
-	bl sub_02079D20
+	bl OS_SetIrqFunction
 	pop {r4, pc}
 	.align 2, 0
 _021BCB14: .word 0x04000208
@@ -50126,7 +50126,7 @@ ovy182_21bcb6c: ; 0x021BCB6C
 	mov r1, #0
 	str r1, [r4, #4]
 	str r1, [r4]
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy182_21bcb6c
@@ -50144,7 +50144,7 @@ ovy182_21bcb90: ; 0x021BCB90
 	str r1, [r4]
 	str r5, [r4, #4]
 	str r4, [r5]
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy182_21bcb90
@@ -50552,7 +50552,7 @@ _021BCEAC:
 	ldr r0, [sp, #4]
 	str r1, [r0]
 	ldr r0, [sp, #0xc]
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r0, r7, #0
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -51012,7 +51012,7 @@ _021BD252:
 	b _021BD244
 _021BD256:
 	add r0, r7, #0
-	bl sub_02079E70
+	bl OS_EnableIrqMask
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
