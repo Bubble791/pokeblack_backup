@@ -741,3 +741,60 @@ sub_02769594: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02769594
+
+    thumb_func_start sub_02768588
+sub_02768588: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02768588
+
+    thumb_func_start sub_027683D4
+sub_027683D4: ; 0x02073FB4
+	bl sub_0206A130 ; 23号文件编译
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_027683D4
+
+	thumb_func_start sub_02767520
+sub_02767520:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02767520
+
+	thumb_func_start sub_0276814C
+sub_0276814C:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_0276814C
+
+	thumb_func_start sub_027681B8
+sub_027681B8:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_027681B8
+
+	thumb_func_start sub_02768180
+sub_02768180:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02768180
+
+	thumb_func_start sub_027681F4
+sub_027681F4:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_027681F4
+
+	thumb_func_start sub_0276824C
+sub_0276824C:
+	bl sub_0207E958
+	bl sub_0207E970
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_0276824C
+
+	thumb_func_start sub_02703E90
+sub_02703E90:
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02703E90

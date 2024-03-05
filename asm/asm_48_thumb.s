@@ -205,3 +205,10 @@ sub_02074810: ; 0x02074810
 	nop
 	thumb_func_end sub_02074810
 
+	arm_func_start sub_02074814
+sub_02074814: ; 0x02074814
+	ldr ip, _0207481C ; =sub_0276814C
+	bx ip
+	.align 2, 0
+_0207481C: .word sub_0276814C
+	arm_func_end sub_02074814

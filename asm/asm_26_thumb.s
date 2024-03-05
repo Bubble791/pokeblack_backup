@@ -3,6 +3,14 @@
 	.include "global.inc"
 
 	.text
+	arm_func_start sub_0206FEBC
+sub_0206FEBC: ; 0x0206FEBC
+	ldr ip, _0206FEC4 ; =sub_02767520
+	bx ip
+	.align 2, 0
+_0206FEC4: .word sub_02767520
+	arm_func_end sub_0206FEBC
+
 	thumb_func_start sub_0206FEC8
 sub_0206FEC8: ; 0x0206FEC8
 	ldr r3, _0206FECC ; =sub_0206F07C
@@ -139,3 +147,24 @@ sub_0206FFAC: ; 0x0206FFAC
 	nop
 	thumb_func_end sub_0206FFAC
 
+	arm_func_start sub_0206FFB0
+sub_0206FFB0: ; 0x0206FFB0
+	ldr ip, _0206FFB8 ; =sub_02769578
+	bx ip
+	.align 2, 0
+_0206FFB8: .word sub_02769578
+	arm_func_end sub_0206FFB0
+
+	thumb_func_start sub_0206FFBC
+sub_0206FFBC: ; 0x0206FFBC
+	bx pc
+	nop
+	thumb_func_end sub_0206FFBC
+
+	arm_func_start sub_0206FFC0
+sub_0206FFC0: ; 0x0206FFC0
+	ldr ip, _0206FFC8 ; =sub_02768298
+	bx ip
+	.align 2, 0
+_0206FFC8: .word sub_02768298
+	arm_func_end sub_0206FFC0

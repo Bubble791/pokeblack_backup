@@ -12260,3 +12260,4 @@
 .public sub_02704328
 .public sub_0276934C
 .public sub_0207D04C
+.public sub_0206A130
