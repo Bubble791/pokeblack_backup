@@ -79,7 +79,7 @@ ovy314_219ce80: ; 0x0219CE80
 	str r1, [r0]
 	bl sub_02046D78
 	add r0, r4, #0
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	bl sub_02046D58
 _0219CF38:
 	mov r0, #0x2c

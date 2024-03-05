@@ -33,7 +33,7 @@
 .public sub_0208D65C
 .public sub_02026E64
 .public sub_02027ACC
-.public sub_02074994
+.public GXx_GetMasterBrightness_
 .public sub_02016AF0
 .public sub_021812E8
 .public sub_0204C520

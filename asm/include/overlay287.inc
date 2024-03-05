@@ -571,7 +571,7 @@
 .public sub_021FA234
 .public sub_021FAC7C
 .public sub_0203A7F4
-.public sub_02074970
+.public GXx_SetMasterBrightness_
 .public sub_0203A78C
 .public sub_021F4260
 .public sub_021F42FC

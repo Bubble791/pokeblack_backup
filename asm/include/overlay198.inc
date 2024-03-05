@@ -222,7 +222,7 @@
 .public sub_0203AAEC
 .public sub_020787A8
 .public sub_02046DF8
-.public sub_020748D4
+.public GX_DispOn
 .public sub_020444A4
 .public sub_02048080
 .public sub_020232D0

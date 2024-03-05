@@ -3642,7 +3642,7 @@ ovy195_21b4d24: ; 0x021B4D24
 	lsl r0, r0, #0x10
 	orr r0, r1
 	str r0, [r2]
-	bl sub_020748D4
+	bl GX_DispOn
 	add r0, r4, #0
 	add r0, #0xf4
 	ldrh r0, [r0]

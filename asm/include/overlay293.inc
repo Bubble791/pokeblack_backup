@@ -191,13 +191,13 @@
 .public sub_0203A910
 .public sub_02076F10
 .public sub_020056FC
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_02076AC4
 .public sub_0207869C
 .public sub_02076AC4
 .public sub_0203A870
 .public sub_02076AC4
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_0203A6A8
 .public sub_0207869C
 .public sub_020061DC

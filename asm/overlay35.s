@@ -5134,7 +5134,7 @@ _0217F202:
 	blx sub_0208DA4C
 	add r1, r0, #0
 	ldr r0, _0217F2BC ; =0x0400106C
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _0217F27A:
@@ -5323,7 +5323,7 @@ _0217F3E4:
 	ldr r6, _0217F450 ; =0x0400006C
 	mov r1, #0
 	add r0, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	sub r6, #0x1c
 	mov r2, #8
 	add r0, r6, #0

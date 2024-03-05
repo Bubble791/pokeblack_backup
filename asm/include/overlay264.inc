@@ -5,7 +5,7 @@
 .public sub_020787A8
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_02050610
 .public sub_020749CC
 .public sub_020749CC

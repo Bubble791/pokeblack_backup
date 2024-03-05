@@ -19278,7 +19278,7 @@ ovy182_21adc9c: ; 0x021ADC9C
 	ldrh r0, [r1]
 	mov r0, #0
 	strh r0, [r1]
-	bl sub_020748A0
+	bl GX_DispOff
 	ldr r2, _021ADD34 ; =0x04001000
 	ldr r0, _021ADD38 ; =0xFFFEFFFF
 	ldr r1, [r2]
@@ -19296,13 +19296,13 @@ _021ADCC2:
 _021ADCCE:
 	mov r4, #0
 	mov r0, #0
-	bl sub_0207486C
+	bl GX_VBlankIntr
 	bl sub_02074658
 	sub r0, r4, #1
 	bl sub_02072390
 	bl sub_0207E13C
 	bl sub_0207CB88
-	bl sub_020748A0
+	bl GX_DispOff
 	ldr r4, _021ADD34 ; =0x04001000
 	ldr r0, _021ADD38 ; =0xFFFEFFFF
 	ldr r1, [r4]
@@ -19339,7 +19339,7 @@ ovy182_21add40: ; 0x021ADD40
 	sub sp, #0x1c
 	mov r0, #0
 	mov r6, #0
-	bl sub_0207486C
+	bl GX_VBlankIntr
 	mov r0, #1
 	bl sub_02076550
 	mov r0, #2
@@ -19347,7 +19347,7 @@ ovy182_21add40: ; 0x021ADD40
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	mov r5, #1
 	lsl r5, r5, #0x1a
 	ldr r1, [r5]
@@ -19361,7 +19361,7 @@ ovy182_21add40: ; 0x021ADD40
 	add r0, r5, #0
 	add r0, #0x6c
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r7, r5, #0
 	ldr r1, [r5]
 	ldr r0, _021ADF4C ; =0xFFCFFFEF
@@ -19417,7 +19417,7 @@ ovy182_21add40: ; 0x021ADD40
 	add r0, r4, #0
 	bl sub_02076B38
 	mov r0, #0
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	ldr r4, _021ADF58 ; =0x04001000
 	ldr r0, _021ADF44 ; =0xFFFFE0FF
 	ldr r1, [r4]
@@ -19430,7 +19430,7 @@ ovy182_21add40: ; 0x021ADD40
 	add r0, r4, #0
 	add r0, #0x6c
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r1, [r4]
 	ldr r0, _021ADF4C ; =0xFFCFFFEF
 	mov r2, #0x10
@@ -19567,13 +19567,13 @@ ovy182_21add40: ; 0x021ADD40
 	bl ovy182_21bcbc8
 	bl ovy182_21bccec
 	bl ovy182_21bb480
-	bl sub_020748D4
+	bl GX_DispOn
 	ldr r1, [r4]
 	lsr r0, r5, #0xa
 	orr r0, r1
 	str r0, [r4]
 	mov r0, #1
-	bl sub_0207486C
+	bl GX_VBlankIntr
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -19592,7 +19592,7 @@ _021ADF68: .word 0xFFFF7FFF
 	thumb_func_start ovy182_21adf6c
 ovy182_21adf6c: ; 0x021ADF6C
 	push {r3, lr}
-	bl sub_020748A0
+	bl GX_DispOff
 	ldr r2, _021ADFB4 ; =0x04001000
 	ldr r0, _021ADFB8 ; =0xFFFEFFFF
 	ldr r1, [r2]
@@ -49969,7 +49969,7 @@ ovy182_21bca28: ; 0x021BCA28
 	cmp r0, #0
 	beq _021BCA98
 	bl sub_0207C1E8
-	bl sub_020748D4
+	bl GX_DispOn
 	ldr r2, _021BCAA4 ; =0x04001000
 	lsl r0, r5, #0x10
 	ldr r1, [r2]
@@ -49987,7 +49987,7 @@ _021BCA68:
 	asr r0, r0, #0xf
 	beq _021BCA98
 	bl sub_0207C1E8
-	bl sub_020748A0
+	bl GX_DispOff
 	ldr r2, _021BCAA4 ; =0x04001000
 	ldr r0, _021BCAA8 ; =0xFFFEFFFF
 	ldr r1, [r2]

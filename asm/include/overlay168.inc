@@ -1615,7 +1615,7 @@
 .public sub_02026FE4
 .public sub_0203A614
 .public sub_0203A1FC
-.public sub_02074994
+.public GXx_GetMasterBrightness_
 .public sub_0204E060
 .public sub_0203A614
 .public sub_02026FE4

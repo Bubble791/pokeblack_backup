@@ -165,7 +165,7 @@ ovy66_21e5910: ; 0x021E5910
 	ldr r4, _021E5974 ; =0x0400006C
 	mov r1, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r5, #0x3d
 	sub r4, #0x1c
 	sub r5, #0x4d
@@ -176,7 +176,7 @@ ovy66_21e5910: ; 0x021E5910
 	ldr r4, _021E5978 ; =0x0400106C
 	mov r1, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	sub r4, #0x1c
 	add r0, r4, #0
 	mov r1, #0x3f

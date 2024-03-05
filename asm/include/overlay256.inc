@@ -85,12 +85,12 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046DF8
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_02042BA8
 .public sub_021BB774
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_0203CDC8

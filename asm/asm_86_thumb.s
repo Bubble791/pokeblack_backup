@@ -648,7 +648,7 @@ sub_0207BF64: ; 0x0207BF64
 	bl sub_02079D20
 	mov r0, #0x10
 	ldrsh r0, [r4, r0]
-	bl sub_02074820
+	bl GX_SetVCountEqVal
 	ldr r2, _0207BF90 ; =0x04000004
 	mov r0, #0x20
 	ldrh r1, [r2]

@@ -8309,7 +8309,7 @@ ovy287_21f880c: ; 0x021F880C
 	strh r4, [r0]
 	add r0, #0x1c
 	sub r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, [r5]
 	mov r2, #1
 	ldrh r0, [r0, #0x10]

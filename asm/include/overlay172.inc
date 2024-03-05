@@ -95,7 +95,7 @@
 .public sub_0204E060
 .public sub_02005EA0
 .public sub_0204E0E0
-.public sub_02074994
+.public GXx_GetMasterBrightness_
 .public sub_0204E060
 .public sub_0204E060
 .public sub_0203A1FC

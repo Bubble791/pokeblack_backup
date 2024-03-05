@@ -7739,7 +7739,7 @@ _021A350E:
 	mov r1, #5
 	mov r2, #0
 	mov r6, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 _021A351E:
 	mov r0, #0x2c
 	mul r0, r6
@@ -8128,7 +8128,7 @@ _021A3874:
 	mov r1, #0
 	mov r2, #0
 	mov r4, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 _021A388A:
 	mov r0, #0x2c
 	add r7, r4, #0
@@ -16715,7 +16715,7 @@ _021A7C2A:
 	mov r0, #1
 	mov r1, #0
 	mov r2, #1
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r1, [sp, #0x1c]
 	ldr r0, [sp, #0x34]
 	ldrh r1, [r1]
@@ -17188,7 +17188,7 @@ _021A8034:
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	add sp, #0x38
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}

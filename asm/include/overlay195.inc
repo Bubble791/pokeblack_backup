@@ -379,7 +379,7 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046DF8
-.public sub_020748D4
+.public GX_DispOn
 .public sub_020444A4
 .public sub_0204B6A8
 .public sub_0204BF1C

@@ -20,8 +20,8 @@
 .public sub_0204BF1C
 .public sub_020444A4
 .public sub_02048080
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_021A30B0
 .public sub_0203A614
 .public sub_0219D484
@@ -74,7 +74,7 @@
 .public sub_02044C98
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_020748D4
+.public GX_DispOn
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204AB0C
@@ -916,8 +916,8 @@
 .public sub_0204C124
 .public sub_0204C488
 .public sub_0203CE0C
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_0203A15C
 .public sub_0203AAEC
 .public sub_020787A8

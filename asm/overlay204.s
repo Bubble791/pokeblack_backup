@@ -554,11 +554,11 @@ ovy204_21a9f6c: ; 0x021A9F6C
 	sub r7, #0x10
 	add r0, #0x1c
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046DF8
 	mov r0, #0x3e

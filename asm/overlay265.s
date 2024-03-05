@@ -1249,11 +1249,11 @@ ovy265_219a224: ; 0x0219A224
 	sub r4, #0x10
 	add r0, #0x1c
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	bl sub_021999D4
 	add r0, r5, #0
 	bl ovy265_2199bdc
@@ -1281,11 +1281,11 @@ ovy265_219a274: ; 0x0219A274
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _0219A2BC ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	sub r5, #0x1c
 	strh r0, [r5]

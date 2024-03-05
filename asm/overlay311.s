@@ -1185,11 +1185,11 @@ _0219D7A0:
 	mvn r6, r6
 	ldr r0, _0219D86C ; =0x0400006C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r5, _0219D870 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r5, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldrh r1, [r4]
 	mov r0, #0
 	bl ovy311_219e12c

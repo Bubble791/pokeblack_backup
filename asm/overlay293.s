@@ -2242,7 +2242,7 @@ ovy293_21a2c38: ; 0x021A2C38
 	add r0, r1, #0
 	add r1, r2, #0
 	add r2, r3, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r0, [r4]
 	bl sub_02076AC4
 	ldr r0, [r4, #4]
@@ -2372,7 +2372,7 @@ _021A2D1E:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #8]
 	ldr r2, [r4, #0xc]
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	mov r0, #1
 	str r0, [r4, #0x30]
 	add r0, r5, #0

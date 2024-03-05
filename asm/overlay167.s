@@ -567,7 +567,7 @@ _02199D0A:
 _02199D22:
 	ldr r7, _02199EB8 ; =0x0400006C
 	add r0, r7, #0
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	cmp r0, #0
 	beq _02199D4E
 	mov r6, #0xf
@@ -577,10 +577,10 @@ _02199D22:
 	str r6, [r4, r0]
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _02199EBC ; =0x0400106C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, [r5]
 	add r0, r0, #2
 	b _02199D52
@@ -603,23 +603,23 @@ _02199D56:
 	sub r0, r2, #1
 	str r0, [r4, r6]
 	add r0, r5, #0
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	ldr r1, [r4, r6]
 	cmp r0, r1
 	ble _02199D7C
 	add r0, r5, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _02199D7C:
 	ldr r5, _02199EBC ; =0x0400106C
 	add r0, r5, #0
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	mov r1, #0x46
 	lsl r1, r1, #4
 	ldr r1, [r4, r1]
 	cmp r0, r1
 	ble _02199DAA
 	add r0, r5, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	b _02199EB0
 _02199D96:
 	b _02199D50
@@ -114953,7 +114953,7 @@ ovy167_21d12f8: ; 0x021D12F8
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _021D1324 ; =0x0400006C
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	cmp r0, #0
 	bgt _021D1314
 	mov r0, #3

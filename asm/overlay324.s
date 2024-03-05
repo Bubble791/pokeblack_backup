@@ -713,11 +713,11 @@ ovy324_219d434: ; 0x0219D434
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _0219D480 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	mov r6, #0
 	bl sub_02046D38

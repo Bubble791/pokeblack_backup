@@ -719,10 +719,10 @@ ovy185_219d330: ; 0x0219D330
 	sub r7, #0x90
 	ldr r0, _0219D3F0 ; =0x0400006C
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _0219D3F4 ; =0x0400106C
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r6, #0
 	bl sub_021A30B0
 	ldr r1, _0219D3F8 ; =ovy185_219d48c
@@ -1238,7 +1238,7 @@ _0219D784:
 	mov r0, #0x10
 	mov r1, #1
 	bl sub_02046D84
-	bl sub_020748D4
+	bl GX_DispOn
 	str r6, [sp]
 	str r6, [sp, #4]
 	mov r7, #0x2a
@@ -14214,10 +14214,10 @@ ovy185_21a3a14: ; 0x021A3A14
 	mvn r6, r6
 	ldr r0, _021A3ABC ; =0x0400006C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021A3AC0 ; =0x0400106C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r2, #7
 	mov r0, #1
 	mov r1, #0x51

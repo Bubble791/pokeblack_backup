@@ -65,8 +65,8 @@
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0205F9C0
-.public sub_02074910
-.public sub_02074910
+.public GX_SetGraphicsMode
+.public GX_SetGraphicsMode
 .public sub_02048D28
 .public sub_0204A5C8
 .public sub_0204A638

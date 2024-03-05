@@ -1300,7 +1300,7 @@ ovy79_21eb184: ; 0x021EB184
 	pop {r4, pc}
 _021EB194:
 	ldr r0, _021EB1B8 ; =0x0400106C
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	cmp r0, #0
 	beq _021EB1A2
 	mov r0, #0

@@ -362,11 +362,11 @@ _021BA41C:
 	mov r1, #0xf
 	add r0, r6, #0
 	mvn r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r1, #0xf
 	ldr r0, _021BA4A4 ; =0x0400106C
 	mvn r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0x1f
 	sub r6, #0x1c
 	str r0, [sp]
@@ -9654,10 +9654,10 @@ _021BEB94:
 	mvn r6, r6
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021BECC4 ; =0x0400106C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r4, #0
 	mov r3, #0x1f
 	sub r0, #0x1c

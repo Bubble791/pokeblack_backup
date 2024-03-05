@@ -374,8 +374,8 @@
 .public sub_0204B758
 .public sub_020787A8
 .public sub_02044B84
-.public sub_02074910
-.public sub_02074910
+.public GX_SetGraphicsMode
+.public GX_SetGraphicsMode
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98

@@ -13,12 +13,12 @@ ovy143_21998c0: ; 0x021998C0
 	add r0, r5, #0
 	mvn r1, r1
 	add r7, r2, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _021999F8 ; =0x0400106C
 	mov r1, #0xf
 	add r0, r4, #0
 	mvn r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046D38
 	mov r0, #0

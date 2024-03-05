@@ -1647,11 +1647,11 @@ ovy300_21a090c: ; 0x021A090C
 	mov r4, #0
 	sub r4, #0x10
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, [r5]
 	ldr r0, [r0, #4]
 	bl sub_0200D1F8
@@ -1752,11 +1752,11 @@ _021A09FE:
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _021A0A78 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	sub r5, #0x1c
 	strh r0, [r5]
@@ -1823,10 +1823,10 @@ _021A0AAA:
 	bl ovy300_21a382c
 	ldr r0, _021A0B14 ; =0x0400006C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021A0B18 ; =0x0400106C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r1, #0
 	add r0, r4, #0
 	sub r1, #8

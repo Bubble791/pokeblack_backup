@@ -104,8 +104,8 @@
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84

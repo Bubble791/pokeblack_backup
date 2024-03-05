@@ -1396,7 +1396,7 @@ ovy190_21b3a80: ; 0x021B3A80
 	ldr r1, [r2]
 	orr r0, r1
 	str r0, [r2]
-	bl sub_020748D4
+	bl GX_DispOn
 	ldrh r0, [r4, #0xc]
 	bl sub_020444A4
 	ldr r0, _021B3B34 ; =0x021B5388

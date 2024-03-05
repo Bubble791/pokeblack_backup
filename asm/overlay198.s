@@ -2150,7 +2150,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	lsl r0, r0, #0x10
 	orr r0, r1
 	str r0, [r7]
-	bl sub_020748D4
+	bl GX_DispOn
 	ldrh r0, [r4, #0xc]
 	bl sub_020444A4
 	ldrh r0, [r4, #0xc]

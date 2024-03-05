@@ -69311,7 +69311,7 @@ ovy36_219ff20: ; 0x0219FF20
 	ldr r0, _021A0190 ; =0x0400106C
 	mvn r1, r1
 	add r7, r2, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r1, _021A0194 ; =0x021CFEE0
 	mov r0, #5
 	mov r2, #0
@@ -92891,10 +92891,10 @@ _021AB5C6:
 	sub r6, #0x10
 	ldr r0, _021AB734 ; =0x0400006C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021AB738 ; =0x0400106C
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r6, #1
 _021AB5E0:
 	mov r0, #2
@@ -92908,10 +92908,10 @@ _021AB5E8:
 	bne _021AB600
 	ldr r0, _021AB734 ; =0x0400006C
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021AB738 ; =0x0400106C
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r6, #1
 _021AB600:
 	mov r0, #4
@@ -129759,7 +129759,7 @@ ovy36_21bd140: ; 0x021BD140
 	ldr r0, _021BD190 ; =0x0400006C
 	asr r1, r1, #0xc
 	neg r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _021BD156:
 	ldr r1, [r4]
 	mov r0, #2
@@ -129769,7 +129769,7 @@ _021BD156:
 	ldr r0, _021BD194 ; =0x0400106C
 	asr r1, r1, #0xc
 	neg r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _021BD16A:
 	ldr r1, [r4]
 	mov r0, #4
@@ -129778,7 +129778,7 @@ _021BD16A:
 	ldr r1, [r4, #4]
 	ldr r0, _021BD190 ; =0x0400006C
 	asr r1, r1, #0xc
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _021BD17C:
 	ldr r1, [r4]
 	mov r0, #8
@@ -129787,7 +129787,7 @@ _021BD17C:
 	ldr r1, [r4, #4]
 	ldr r0, _021BD194 ; =0x0400106C
 	asr r1, r1, #0xc
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _021BD18E:
 	pop {r4, pc}
 	.align 2, 0
@@ -152766,7 +152766,7 @@ _021C8056:
 	mov r1, #0x36
 	ldrsb r1, [r5, r1]
 	ldr r0, _021C8098 ; =0x0400006C
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r5, #0
 	mov r1, #0
 	add r0, #0x34
@@ -152780,7 +152780,7 @@ _021C8078:
 	mov r1, #0x37
 	ldrsb r1, [r5, r1]
 	ldr r0, _021C809C ; =0x0400106C
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	add r5, #0x35
 	strb r0, [r5]

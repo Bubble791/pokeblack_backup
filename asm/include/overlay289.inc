@@ -17,7 +17,7 @@
 .public sub_0203A24C
 .public sub_021F490C
 .public sub_021F518C
-.public sub_02074970
+.public GXx_SetMasterBrightness_
 .public sub_0203A78C
 .public sub_02021998
 .public sub_0204A934

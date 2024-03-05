@@ -6983,13 +6983,13 @@ sub_0203CBB0: ; 0x0203CBB0
 	strh r0, [r4]
 	mov r0, #1
 	mov r1, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r4, _0203CC8C ; =0x04000050
 	mov r1, #0
 	add r0, r4, #0
 	strh r6, [r4]
 	add r0, #0x1c
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r1, [r5]
 	ldr r0, _0203CC90 ; =0xFFFF1FFF
 	and r1, r0
@@ -8309,10 +8309,10 @@ sub_0203D4F8: ; 0x0203D4F8
 	add r4, r0, #0
 	ldr r0, _0203D54C ; =0x0400006C
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _0203D550 ; =0x0400106C
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02042860
 	mov r6, #1
@@ -23939,9 +23939,9 @@ sub_02044710: ; 0x02044710
 	ldr r0, [r4]
 	ldr r1, [r4, #4]
 	ldr r2, [r4, #0xc]
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r0, [r4, #8]
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	mov r2, #1
 	lsl r2, r2, #0x1a
 	ldr r1, [r2]
@@ -23968,12 +23968,12 @@ sub_02044748: ; 0x02044748
 	ldr r0, [r2]
 	ldr r1, [r2, #4]
 	ldr r2, [r2, #0xc]
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	bl sub_02046CF0
 	pop {r3, pc}
 _02044760:
 	ldr r0, [r2, #8]
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	bl sub_02046D78
 	pop {r3, pc}
 	thumb_func_end sub_02044748
@@ -29275,7 +29275,7 @@ _02046DDC: .word 0xFFFFE0FF
 	thumb_func_start sub_02046DE0
 sub_02046DE0: ; 0x02046DE0
 	push {r3, lr}
-	bl sub_020748D4
+	bl GX_DispOn
 	ldr r2, _02046DF4 ; =0x04001000
 	mov r0, #1
 	ldr r1, [r2]
@@ -45519,7 +45519,7 @@ sub_0204E0F8: ; 0x0204E0F8
 	ldr r1, [r2, #8]
 	ldr r0, _0204E154 ; =0x0400006C
 	neg r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _0204E10E:
 	ldr r0, _0204E150 ; =0x02141944
 	ldr r2, [r0]
@@ -45530,7 +45530,7 @@ _0204E10E:
 	ldr r1, [r2, #8]
 	ldr r0, _0204E158 ; =0x0400106C
 	neg r1, r1
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _0204E124:
 	ldr r0, _0204E150 ; =0x02141944
 	ldr r2, [r0]
@@ -45540,7 +45540,7 @@ _0204E124:
 	beq _0204E138
 	ldr r0, _0204E154 ; =0x0400006C
 	ldr r1, [r2, #8]
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _0204E138:
 	ldr r0, _0204E150 ; =0x02141944
 	ldr r2, [r0]
@@ -45550,7 +45550,7 @@ _0204E138:
 	beq _0204E14C
 	ldr r0, _0204E158 ; =0x0400106C
 	ldr r1, [r2, #8]
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 _0204E14C:
 	pop {r3, pc}
 	nop
@@ -45770,9 +45770,9 @@ sub_0204E2C0: ; 0x0204E2C0
 	str r1, [r0]
 	mov r0, #1
 	mov r1, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	mov r0, #5
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	ldr r0, _0204E324 ; =0x04001000
 	ldr r1, _0204E328 ; =0xFFFFE0FF
 	ldr r2, [r0]
@@ -45821,9 +45821,9 @@ sub_0204E334: ; 0x0204E334
 	str r1, [r0]
 	mov r0, #1
 	mov r1, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	mov r0, #5
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	ldr r2, _0204E388 ; =0x04001000
 	ldr r0, _0204E38C ; =0xFFFFE0FF
 	ldr r1, [r2]

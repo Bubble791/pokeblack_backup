@@ -485,7 +485,7 @@
 .public sub_0203CDC8
 .public sub_0219FD34
 .public sub_0219FD38
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_02044B84
 .public sub_0204476C
 .public sub_02045708
@@ -522,7 +522,7 @@
 .public sub_021A1474
 .public sub_0219FE88
 .public sub_021A3CD8
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_02044B84
 .public sub_0204476C
 .public sub_02045708
@@ -1272,7 +1272,7 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044BD8
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_0204C318
 .public sub_0201AD7C
 .public sub_0201AE2C
@@ -1309,7 +1309,7 @@
 .public sub_021A1474
 .public sub_0219FE88
 .public sub_0219FE88
-.public sub_02074910
+.public GX_SetGraphicsMode
 .public sub_0203A5D0
 .public sub_02019AE8
 .public sub_0219FD34

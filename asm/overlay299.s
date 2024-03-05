@@ -1286,11 +1286,11 @@ ovy299_21a0618: ; 0x021A0618
 	sub r6, #0x10
 	add r0, #0x1c
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r4, #0x1c
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046DF8
 	add r0, r5, #0
@@ -1376,11 +1376,11 @@ _021A06E6:
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _021A075C ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	sub r5, #0x1c
 	strh r0, [r5]
@@ -1456,10 +1456,10 @@ _021A07C0:
 	bne _021A080C
 	ldr r0, _021A0814 ; =0x0400006C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021A0818 ; =0x0400106C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r5, #0
 	mov r6, #0x10
 	mov r1, #0x10

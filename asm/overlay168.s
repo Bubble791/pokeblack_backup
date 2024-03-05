@@ -26655,7 +26655,7 @@ ovy168_21ea99c: ; 0x021EA99C
 	bl sub_0203A1FC
 	add r4, r0, #0
 	ldr r0, _021EAA1C ; =0x0400106C
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	cmp r0, #0
 	bgt _021EA9D4
 	mov r0, #2

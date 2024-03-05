@@ -1154,10 +1154,10 @@ ovy70_217d914: ; 0x0217D914
 	mvn r4, r4
 	ldr r0, _0217D950 ; =0x0400006C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _0217D954 ; =0x0400106C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #5
 	bl sub_02044B84
 	mov r0, #4

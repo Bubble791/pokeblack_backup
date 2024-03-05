@@ -7080,7 +7080,7 @@ _021F3426:
 	mov r0, #1
 	mov r1, #0
 	mov r2, #1
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021F3438: .word 0x021F77F4
@@ -7100,7 +7100,7 @@ ovy271_21f343c: ; 0x021F343C
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r7, _021F349C ; =0x021F77F4
 _021F345A:
 	mov r0, #0x2c

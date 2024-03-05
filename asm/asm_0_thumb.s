@@ -21,9 +21,9 @@ NitroMain: ; 0x02005124
 	ldrh r0, [r6]
 	mov r0, #1
 	strh r4, [r6]
-	bl sub_02074844
+	bl GX_HBlankIntr
 	mov r0, #1
-	bl sub_0207486C
+	bl GX_VBlankIntr
 	blx sub_0207C0D0
 	bl sub_02005264
 	ldr r4, _020051D0 ; =0x0209DC18
@@ -262,7 +262,7 @@ sub_02005364: ; 0x02005364
 	bl sub_0207BA7C
 	bl sub_0207BBF4
 	bl sub_0207CB88
-	bl sub_02074718
+	bl GX_Init
 	bl sub_02074658
 	bl sub_0207AC24
 	mov r1, #3

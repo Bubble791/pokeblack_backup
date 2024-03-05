@@ -135,7 +135,7 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046DF8
-.public sub_020748D4
+.public GX_DispOn
 .public sub_020444A4
 .public sub_02046C40
 .public sub_02044710

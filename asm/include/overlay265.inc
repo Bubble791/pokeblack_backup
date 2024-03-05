@@ -131,13 +131,13 @@
 .public sub_0219B6F4
 .public sub_02046D38
 .public sub_02046DC0
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_021999D4
 .public sub_02199C94
 .public sub_021999E0
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02027ACC

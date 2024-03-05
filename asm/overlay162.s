@@ -402,11 +402,11 @@ ovy162_219d1b8: ; 0x0219D1B8
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _0219D204 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	mov r6, #0
 	bl sub_02046D38
@@ -6861,10 +6861,10 @@ ovy162_21a0684: ; 0x021A0684
 	mvn r4, r4
 	ldr r0, _021A0760 ; =0x0400006C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021A0764 ; =0x0400106C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046D38
 	mov r0, #0
@@ -7385,11 +7385,11 @@ _021A0A7C:
 	sub r7, #0x15
 	add r0, r5, #0
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #7
 _021A0AF0:
 	strh r0, [r4]
@@ -7398,11 +7398,11 @@ _021A0AF4:
 	add r5, #0x1c
 	add r0, r5, #0
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #1
 	b _021A0AF0
 _021A0B0C:

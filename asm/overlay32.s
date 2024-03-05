@@ -137,10 +137,10 @@ ovy32_21999b8: ; 0x021999B8
 	mvn r4, r4
 	ldr r0, _02199A44 ; =0x0400006C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _02199A48 ; =0x0400106C
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	bl sub_02076C40
 	bl sub_02076CD0
 	mov r0, #4
@@ -151,7 +151,7 @@ ovy32_21999b8: ; 0x021999B8
 	mov r2, #0
 	mov r7, #1
 	mov r6, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	lsl r0, r4, #0x18
 	ldr r2, [r0]
 	ldr r1, _02199A4C ; =0xFFFFE0FF
@@ -185,10 +185,10 @@ ovy32_21999b8: ; 0x021999B8
 	bl ovy32_2199b28
 	ldr r0, _02199A44 ; =0x0400006C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _02199A48 ; =0x0400106C
 	mov r1, #0x10
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _02199A44: .word 0x0400006C
@@ -380,11 +380,11 @@ ovy32_2199be0: ; 0x02199BE0
 	mvn r4, r4
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r6, _02199C54 ; =0x0400106C
 	add r1, r4, #0
 	add r0, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	bl sub_02046DC0
 	bl sub_020753A0
@@ -412,10 +412,10 @@ ovy32_2199be0: ; 0x02199BE0
 	bl sub_02076C40
 	add r0, r5, #0
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	pop {r4, r5, r6, pc}
 	nop
 _02199C50: .word 0x0400006C

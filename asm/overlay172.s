@@ -853,7 +853,7 @@ ovy172_2199f64: ; 0x02199F64
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _02199F90 ; =0x0400006C
-	bl sub_02074994
+	bl GXx_GetMasterBrightness_
 	cmp r0, #0
 	bgt _02199F80
 	mov r0, #3

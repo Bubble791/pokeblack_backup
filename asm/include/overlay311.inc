@@ -130,8 +130,8 @@
 .public sub_0203AAEC
 .public sub_020787A8
 .public sub_0219E064
-.public sub_02074970
-.public sub_02074970
+.public GXx_SetMasterBrightness_
+.public GXx_SetMasterBrightness_
 .public sub_021998C0
 .public sub_0219E244
 .public sub_0219D560

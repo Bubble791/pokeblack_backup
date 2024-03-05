@@ -75,7 +75,7 @@ ovy264_219992c: ; 0x0219992C
 	mov r1, #5
 	mov r2, #0
 	mov r5, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r4, _021999CC ; =0x0400000C
 	mov r1, #0x43
 	ldrh r0, [r4]

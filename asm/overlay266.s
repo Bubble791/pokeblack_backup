@@ -101,11 +101,11 @@ ovy266_219cf04: ; 0x0219CF04
 	mov r4, #1
 	sub r4, #0x11
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r6, #0x1c
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0xd7
 	mov r1, #0x8e
 	bl sub_0204AA30
@@ -190,11 +190,11 @@ _0219CFD8:
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _0219D038 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	sub r5, #0x1c
 	strh r0, [r5]
@@ -2209,10 +2209,10 @@ _0219DF36:
 	add r6, #0x1c
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _0219E064 ; =0x0400106C
 	mov r1, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r5, #4
 	strh r7, [r4, r0]
 	ldrb r0, [r4, r5]

@@ -30,9 +30,9 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_021805F0
-.public sub_02074970
+.public GXx_SetMasterBrightness_
 .public sub_02074A88
-.public sub_02074970
+.public GXx_SetMasterBrightness_
 .public sub_02074A88
 .public sub_0215516C
 .public sub_021EED04

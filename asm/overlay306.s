@@ -3005,7 +3005,7 @@ ovy306_219e5f4: ; 0x0219E5F4
 	str r1, [r0]
 	bl sub_02046D78
 	mov r0, #0
-	bl sub_0207495C
+	bl GXS_SetGraphicsMode
 	bl sub_02046D58
 	ldr r7, _0219E6D4 ; =0x0219ED64
 _0219E634:

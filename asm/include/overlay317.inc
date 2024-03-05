@@ -9,7 +9,7 @@
 .public sub_02044BD8
 .public sub_020056FC
 .public sub_02046D78
-.public sub_0207495C
+.public GXS_SetGraphicsMode
 .public sub_02046D58
 .public sub_0204476C
 .public sub_02045708

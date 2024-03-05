@@ -828,11 +828,11 @@ ovy256_21bbd44: ; 0x021BBD44
 	sub r4, #0x10
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r7, #0x1c
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	add r0, r5, #0
 	bl ovy256_21bbb68
 	bl ovy256_21bb7b0
@@ -885,11 +885,11 @@ ovy256_21bbdd8: ; 0x021BBDD8
 	mvn r6, r6
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r4, _021BBE40 ; =0x0400106C
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	sub r5, #0x1c
 	strh r0, [r5]

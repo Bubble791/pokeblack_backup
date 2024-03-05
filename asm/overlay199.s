@@ -1894,18 +1894,18 @@ _021B3EC2:
 	ldr r7, _021B4038 ; =0x0400006C
 	add r1, r4, #0
 	add r0, r7, #0
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r0, _021B403C ; =0x0400106C
 	add r1, r4, #0
 	str r0, [sp, #0xc]
-	bl sub_02074970
+	bl GXx_SetMasterBrightness_
 	ldr r2, [sp, #0xc]
 	lsr r0, r7, #0xa
 	sub r2, #0x6c
 	ldr r1, [r2]
 	orr r0, r1
 	str r0, [r2]
-	bl sub_020748D4
+	bl GX_DispOn
 	ldrh r0, [r5, #0xc]
 	bl sub_020444A4
 	ldrh r0, [r5, #0xc]
@@ -3505,7 +3505,7 @@ ovy199_21b4b48: ; 0x021B4B48
 	lsl r1, r1, #0x10
 	orr r1, r2
 	str r1, [r0]
-	bl sub_020748D4
+	bl GX_DispOn
 	ldrh r0, [r4, r7]
 	bl sub_020444A4
 	ldr r6, _021B4C08 ; =0x021B9A68
@@ -11059,7 +11059,7 @@ ovy199_21b88d0: ; 0x021B88D0
 	ldr r1, [r2]
 	orr r0, r1
 	str r0, [r2]
-	bl sub_020748D4
+	bl GX_DispOn
 	ldrh r0, [r5, r4]
 	bl sub_020444A4
 	ldr r6, _021B897C ; =0x021B9BBC

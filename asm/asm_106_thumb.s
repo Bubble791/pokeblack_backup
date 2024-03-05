@@ -1208,10 +1208,10 @@ sub_0207F4D4: ; 0x0207F4D4
 	cmp r4, #1
 	beq _0207F4EA
 	mov r4, #0
-	bl sub_02074894
+	bl GX_IsDispOn
 	cmp r0, #0
 	beq _0207F4EA
-	bl sub_020748A0
+	bl GX_DispOff
 _0207F4EA:
 	add r0, r4, #0
 	mov r1, #0

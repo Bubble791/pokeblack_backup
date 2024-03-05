@@ -17,3 +17,10 @@
 .public sIsDispOn
 .public GXi_DmaId
 .public GXi_VRamLockId
+.public sub_02076F74
+.public sub_0207A208
+.public sub_0207C774
+.public sub_0207802C
+.public sub_02078658
+.public sub_0276814C
+.public sub_0207F6B8

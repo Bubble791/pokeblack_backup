@@ -1266,7 +1266,7 @@ ovy165_219a4bc: ; 0x0219A4BC
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	ldr r0, _0219A4D4 ; =0x021A4AAC
 	mov r1, #0
 	mov r2, #0
@@ -1285,7 +1285,7 @@ ovy165_219a4d8: ; 0x0219A4D8
 	mov r6, #0
 	mov r1, #0
 	mov r2, #1
-	bl sub_02074910
+	bl GX_SetGraphicsMode
 	str r6, [sp]
 	ldrh r0, [r5]
 	mov r1, #1
