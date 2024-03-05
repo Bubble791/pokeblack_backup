@@ -518,7 +518,7 @@ _0219D16C:
 	mov r2, #0x3f
 	mov r3, #8
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0x2a
 	lsl r0, r0, #5
 	str r4, [r5, r0]
@@ -531,7 +531,7 @@ _0219D16C:
 	ldr r3, [r5, r3]
 	mov r1, #4
 	mov r2, #0x3a
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

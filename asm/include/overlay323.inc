@@ -39,7 +39,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204AB0C
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204AF50

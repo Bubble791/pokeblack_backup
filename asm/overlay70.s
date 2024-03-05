@@ -2179,7 +2179,7 @@ _0217E176:
 	ldr r0, _0217E1AC ; =0x04000050
 	mov r1, #0xe
 	sub r2, #0x14
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	bl ovy70_217e134
 	add r0, r4, #0

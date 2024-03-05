@@ -1855,7 +1855,7 @@ ovy294_21a290c: ; 0x021A290C
 	mov r1, #1
 	mov r2, #9
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r5, #0x10]
 	ldr r1, [r4]
 	ldr r2, [r4, #4]
@@ -2461,7 +2461,7 @@ _021A2D9E:
 	mov r1, #0
 	mov r2, #0xc
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r4, _021A2E08 ; =0x000010A8
 	mov r1, #1
 	ldr r0, [r5, r4]
@@ -2531,7 +2531,7 @@ _021A2E24:
 	mov r2, #0xc
 	mov r3, #0x10
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r6, _021A2E98 ; =0x000010A8
 	mov r7, #1
 _021A2E38:
@@ -3748,7 +3748,7 @@ ovy294_21a3760: ; 0x021A3760
 	mov r1, #1
 	mov r2, #9
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	cmp r4, #0x1f
 	bls _021A377E
 	mov r4, #0x1f
@@ -4110,7 +4110,7 @@ _021A3A28:
 	mov r1, #1
 	mov r2, #9
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021A3AB4 ; =0x00000555
 	bl sub_02006254
 	ldr r0, [r5, #0x24]

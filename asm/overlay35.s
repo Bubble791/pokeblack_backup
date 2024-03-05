@@ -5086,7 +5086,7 @@ ovy35_217f1c0: ; 0x0217F1C0
 	add r2, r0, #0
 	ldr r0, _0217F2B8 ; =0x04000050
 	mov r1, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _0217F202:
@@ -5116,7 +5116,7 @@ _0217F202:
 	mov r2, #0x11
 	sub r3, r3, r4
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r5, #0x18]
 	blx sub_0208D3BC
 	add r4, r0, #0
@@ -5155,7 +5155,7 @@ _0217F27A:
 	add r2, r0, #0
 	ldr r0, _0217F2B8 ; =0x04000050
 	mov r1, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 _0217F2AC:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -5190,7 +5190,7 @@ ovy35_217f2c0: ; 0x0217F2C0
 	add r2, r0, #0
 	ldr r0, _0217F340 ; =0x04000050
 	mov r1, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, r4, r5, pc}
 _0217F2FE:
 	cmp r1, #4
@@ -5213,7 +5213,7 @@ _0217F2FE:
 	add r2, r0, #0
 	ldr r0, _0217F340 ; =0x04000050
 	mov r1, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 _0217F336:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -5329,7 +5329,7 @@ _0217F3E4:
 	add r0, r6, #0
 	mov r1, #8
 	sub r2, #0x18
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r4, #0
 	bl ovy35_217f4c8
 _0217F412:

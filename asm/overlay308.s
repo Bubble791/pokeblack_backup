@@ -764,14 +764,14 @@ ovy308_219fe0c: ; 0x0219FE0C
 	add r1, r6, #0
 	mov r2, #0x1e
 	mov r3, #0xb
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #3
 	str r0, [sp]
 	ldr r0, _0219FF9C ; =0x04001050
 	mov r1, #3
 	mov r2, #0x1f
 	mov r3, #0xd
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

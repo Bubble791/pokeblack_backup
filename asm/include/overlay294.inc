@@ -138,7 +138,7 @@
 .public sub_020062A8
 .public sub_02006AD4
 .public sub_02006C40
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_021A3AB8
 .public sub_021A3ABC
 .public sub_0203DEFC
@@ -180,12 +180,12 @@
 .public sub_0204BCD0
 .public sub_0204BE64
 .public sub_0204C108
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204C318
 .public sub_0204C124
 .public sub_0204C370
 .public sub_0204C318
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204C318
 .public sub_0204C318
 .public sub_0204C124
@@ -312,7 +312,7 @@
 .public sub_0201AF04
 .public sub_0201AD28
 .public sub_0201AE08
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0201AE98
 .public sub_0201AC8C
 .public sub_0201AC9C
@@ -343,7 +343,7 @@
 .public MTX_Identity33_
 .public sub_0204A5C0
 .public sub_02049B5C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02006254
 .public sub_0204A5C0
 .public sub_02049A28

@@ -85,7 +85,7 @@
 .public sub_02026FE4
 .public sub_02005718
 .public sub_02026FE4
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204875C
 .public sub_02022D58
 .public sub_020241D4

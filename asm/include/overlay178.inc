@@ -15,7 +15,7 @@
 .public sub_0219B5A4
 .public sub_0219A89C
 .public sub_02199B8C
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_020056FC
 .public sub_0219B93C
 .public sub_0203A6A8

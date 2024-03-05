@@ -425,7 +425,7 @@ ovy323_219d1e8: ; 0x0219D1E8
 	mov r1, #4
 	mov r5, #0x10
 	mov r2, #0x10
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r5, #0xff
 	add r0, r5, #0
 	mov r1, #0xa1

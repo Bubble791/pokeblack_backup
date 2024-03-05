@@ -1961,7 +1961,7 @@ ovy79_21eb6f0: ; 0x021EB6F0
 	mov r1, #2
 	mov r2, #0x1e
 	mov r3, #0x15
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	.align 2, 0
 _021EB704: .word 0x04001050

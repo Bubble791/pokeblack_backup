@@ -199,7 +199,7 @@ _021EAA14:
 	mov r2, #0x3f
 	mov r1, #0x3f
 	sub r2, #0x47
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 _021EAA1E:
 	ldr r0, [r5, #0x40]
 	bl sub_02021A3C

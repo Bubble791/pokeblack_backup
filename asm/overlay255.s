@@ -691,7 +691,7 @@ ovy255_21bbc84: ; 0x021BBC84
 	mov r1, #0
 	mov r2, #0x2a
 	mov r3, #6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 _021BBC9C:
 	ldr r0, _021BBCA4 ; =0x04000050

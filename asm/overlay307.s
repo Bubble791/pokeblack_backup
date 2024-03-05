@@ -607,7 +607,7 @@ _021DE032:
 	mov r2, #0x2f
 	add r3, r7, #0
 	str r7, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r1, _021DE100 ; =0x00004210
 	add r0, r7, #0
 	bl sub_02045350

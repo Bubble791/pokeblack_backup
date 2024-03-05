@@ -30,7 +30,7 @@
 .public sub_021F61A0
 .public sub_021F6160
 .public sub_0203D554
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_020279B4
 .public sub_02027ACC
 .public sub_021E00AC

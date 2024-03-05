@@ -454,7 +454,7 @@ _021F47D0:
 	mov r1, #0
 	mov r2, #0x3f
 	mov r3, #8
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

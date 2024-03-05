@@ -1687,7 +1687,7 @@ _021F50EE:
 	mov r1, #6
 	mov r2, #0x39
 	sub r3, r3, r6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add r2, r7, #0
 	sub r2, #8
 	ldrh r3, [r2]

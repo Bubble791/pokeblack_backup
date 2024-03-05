@@ -195,7 +195,7 @@ ovy155_21f5b34: ; 0x021F5B34
 	add r0, #0x42
 	mov r1, #8
 	mov r2, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add r0, r5, #0
 	bl sub_02180490
 	add r5, r0, #0
@@ -608,7 +608,7 @@ ovy155_21f5e88: ; 0x021F5E88
 	ldr r0, _021F5EC4 ; =0x04000050
 	mov r1, #8
 	mov r2, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r4, #0x24]
 	cmp r0, #0x1e
 	blo _021F5EBC

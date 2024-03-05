@@ -131,7 +131,7 @@
 .public sub_02199A5C
 .public sub_0204C124
 .public sub_0204C438
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02049D24
 .public sub_0204F918
 .public sub_02049DDC

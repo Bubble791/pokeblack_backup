@@ -35106,7 +35106,7 @@ _02160E2E:
 	add r1, r4, #0
 	mov r2, #0x80
 	mov r3, #0x5c
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02160E50:
 	add sp, #0x18
 	pop {r4, r5, r6, pc}
@@ -35136,7 +35136,7 @@ ovy12_2160e88: ; 0x02160E88
 	add r1, r4, #0
 	mov r2, #0x80
 	mov r3, #0x5c
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	bl sub_020056C8
 	add sp, #0x18
 	pop {r4, pc}

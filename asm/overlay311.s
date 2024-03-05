@@ -1240,7 +1240,7 @@ _0219D7A0:
 	mov r1, #4
 	mov r2, #8
 	mov r3, #6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _0219D878 ; =0x0219DB1D
 	add r1, r4, #0
 	mov r2, #0

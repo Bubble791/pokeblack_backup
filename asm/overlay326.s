@@ -10618,7 +10618,7 @@ ovy326_21a2138: ; 0x021A2138
 _021A2146:
 	ldr r0, _021A2158 ; =0x04000050
 	mov r1, #0x1e
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy326_21a232c
@@ -10639,7 +10639,7 @@ ovy326_21a215c: ; 0x021A215C
 _021A216A:
 	ldr r0, _021A2190 ; =0x04000050
 	mov r1, #0x1e
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r2, #0
 	cmp r4, #1
 	bne _021A217A

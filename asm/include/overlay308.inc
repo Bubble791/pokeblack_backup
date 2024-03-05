@@ -80,8 +80,8 @@
 .public sub_0204AB1C
 .public sub_020602D8
 .public sub_0204AB0C
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_0203A24C
 .public sub_020787A8
 .public sub_02199AA0

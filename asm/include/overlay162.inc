@@ -497,8 +497,8 @@
 .public sub_020335C4
 .public sub_020335C4
 .public sub_020335C4
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_02007468
 .public sub_0200CA50
 .public sub_0200CA50

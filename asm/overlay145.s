@@ -693,7 +693,7 @@ _0219D2EC:
 	mov r1, #2
 	mov r2, #0x1d
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	bl sub_0219E118
 	lsl r0, r0, #0x18
@@ -803,7 +803,7 @@ _0219D534:
 	mov r2, #0
 	mov r3, #0x1f
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	bl sub_020480A8
 	bl sub_02044528
 	pop {r3, r4, r5, r6, r7, pc}
@@ -5422,7 +5422,7 @@ _0219FA3A:
 	add r0, r6, #0
 	mov r1, #0x1d
 	sub r2, #0x25
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r0, #1
 	bl sub_0219E118
 	lsl r0, r0, #0x18
@@ -5472,7 +5472,7 @@ _0219FAB0:
 	ldr r0, _0219FBD4 ; =0x04000050
 	mov r1, #0
 	mov r2, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r1, r6, #4
 	mov r0, #0
 	str r0, [r4, r1]

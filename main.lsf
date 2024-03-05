@@ -40,8 +40,8 @@ Static main
     Object lib/NitroSDK/asm/fx.o
     Object lib/NitroSDK/asm/fx_asinacosidx.o
     Object lib/NitroSDK/asm/gx.o
+    Object lib/NitroSDK/asm/g2.o
 
-    Object asm/asm_51_arm.o
     Object asm/asm_52_thumb.o
     Object asm/asm_54_thumb.o
     Object asm/asm_55_arm.o
@@ -119,7 +119,7 @@ Static main
 	Object lib/NitroSDK/asm/gxstate.o
 	Object lib/NitroSDK/asm/gx_vramcnt.o
 	Object lib/NitroSDK/asm/gx_bgcnt.o
-	Object lib/NitroSDK/asm/g2.o
+	
 	Object lib/NitroSDK/asm/g3b.o
 	Object lib/NitroSDK/asm/g3imm.o
 	Object lib/NitroSDK/asm/g3x.o

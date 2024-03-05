@@ -33,9 +33,9 @@
 .public sub_0219DE14
 .public sub_0219DE24
 .public sub_0219DE34
-.public sub_02074AA4
+.public G2x_SetBlendBrightnessExt_
 .public sub_0219DDCC
-.public sub_02074AA4
+.public G2x_SetBlendBrightnessExt_
 .public sub_0219DE34
 .public sub_0204E0E0
 .public sub_0219DE1C

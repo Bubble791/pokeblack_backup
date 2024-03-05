@@ -10697,7 +10697,7 @@ ovy332_21c3fc0: ; 0x021C3FC0
 	mov r2, #0xe
 	mov r3, #0x10
 	mov r4, #0xe
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	lsl r2, r5, #0x16
 	add r3, r6, #0
 	ldr r1, [r2]
@@ -18387,7 +18387,7 @@ _021C7B40:
 	mov r1, #1
 	mov r2, #0x1f
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r6, _021C7CBC ; =0x05000280
 	ldr r0, _021C7CC0 ; =0x00007FFF
 	add r1, r6, #0
@@ -20100,7 +20100,7 @@ ovy332_21c8838: ; 0x021C8838
 	mov r1, #0
 	mov r2, #0xf
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r4, #0xc]
 	mov r5, #1
 	mov r1, #1

@@ -3790,7 +3790,7 @@ _021A37F6:
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	mov r1, #1
 	bl sub_02044C98

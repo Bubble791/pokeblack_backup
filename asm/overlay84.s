@@ -1098,7 +1098,7 @@ ovy84_21eb63c: ; 0x021EB63C
 	mov r1, #4
 	mov r2, #0x1e
 	mov r3, #0xd
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #4
 	mov r1, #1
 	bl sub_02044C98

@@ -2328,7 +2328,7 @@ _021B6EF8:
 	ldr r0, _021B6F9C ; =0x04000050
 	mov r1, #1
 	mov r3, #8
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r4, _021B6FA0 ; =0x0000096C
 	ldr r0, [sp, #0x10]
 	mov r1, #0

@@ -974,7 +974,7 @@
 .public sub_02026FE4
 .public sub_02005718
 .public sub_02026FE4
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0204C488
 .public sub_0204C488
 .public sub_0204C488
@@ -985,7 +985,7 @@
 .public sub_02005718
 .public sub_02026FE4
 .public sub_0204C138
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0204C488
 .public sub_0204C488
 .public sub_0204C488

@@ -4,8 +4,8 @@
 .public GXx_SetMasterBrightness_
 .public sub_02046D38
 .public sub_02046DC0
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_02046DF8
 .public sub_0203A15C
 .public sub_0203AAEC
@@ -657,8 +657,8 @@
 .public sub_02048838
 .public sub_02021D28
 .public sub_02048564
-.public sub_02074A88
-.public sub_02074A6C
+.public G2x_SetBlendBrightness_
+.public G2x_SetBlendAlpha_
 .public sub_0202E96C
 .public sub_0202E8D8
 .public sub_0203AAEC

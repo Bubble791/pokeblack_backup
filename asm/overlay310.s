@@ -2299,13 +2299,13 @@ ovy310_219df88: ; 0x0219DF88
 	mov r1, #2
 	mov r2, #1
 	mov r3, #7
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _0219E034 ; =0x04000050
 	str r4, [sp]
 	mov r1, #4
 	mov r2, #2
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #4]
 	bl sub_02048080
 	pop {r3, r4, r5, pc}
@@ -7037,13 +7037,13 @@ ovy310_21a0368: ; 0x021A0368
 	mov r2, #1
 	mov r3, #0x10
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021A0428 ; =0x04000050
 	mov r1, #4
 	mov r2, #2
 	mov r3, #0x10
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #8]
 	bl sub_02048080
 	pop {r3, r4, r5, pc}
@@ -14070,13 +14070,13 @@ ovy310_21a39e0: ; 0x021A39E0
 	mov r1, #2
 	mov r2, #1
 	mov r3, #7
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021A3A98 ; =0x04000050
 	str r4, [sp]
 	mov r1, #4
 	mov r2, #2
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #4]
 	bl sub_02048080
 	pop {r3, r4, r5, pc}

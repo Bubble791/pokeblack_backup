@@ -2972,9 +2972,9 @@
 .public sub_0208E144
 .public sub_0208DA4C
 .public MTX_Scale22_
-.public sub_020749CC
+.public G2x_SetBGyAffine_
 .public MTX_Identity22_
-.public sub_020749CC
+.public G2x_SetBGyAffine_
 .public sub_020056C8
 .public sub_02018C74
 .public sub_02017290

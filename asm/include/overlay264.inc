@@ -7,8 +7,8 @@
 .public sub_0203A1D0
 .public GX_SetGraphicsMode
 .public sub_02050610
-.public sub_020749CC
-.public sub_020749CC
+.public G2x_SetBGyAffine_
+.public G2x_SetBGyAffine_
 .public sub_0203A1FC
 .public sub_02075984
 .public sub_02075A6C

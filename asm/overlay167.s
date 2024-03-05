@@ -108931,7 +108931,7 @@ ovy167_21ce678: ; 0x021CE678
 	add r0, r6, #0
 	mov r1, #2
 	mov r2, #0x3d
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021CE744 ; =0x021DA8E4
 	add r1, r7, #0
 	add r2, r4, #0
@@ -119630,7 +119630,7 @@ ovy167_21d36ec: ; 0x021D36EC
 	mov r1, #2
 	mov r2, #0x3d
 	mov r3, #0x1f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	nop
 _021D3714: .word 0x04000050
@@ -119788,7 +119788,7 @@ _021D380A:
 	lsl r3, r3, #0x18
 	mov r2, #0x3d
 	lsr r3, r3, #0x18
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0
 	pop {r3, pc}
 	nop

@@ -103,7 +103,7 @@ ovy264_219992c: ; 0x0219992C
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add r0, r4, #0
 	str r5, [sp]
 	add r0, #0x24
@@ -111,7 +111,7 @@ ovy264_219992c: ; 0x0219992C
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	mov r0, #0x5a
 	str r0, [sp]
 	lsl r5, r4, #0xd

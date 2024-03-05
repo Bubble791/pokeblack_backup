@@ -2116,7 +2116,7 @@ _021A8710:
 	add r0, r4, #0
 	mov r1, #0xc
 	sub r2, #0x14
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r1, #0xe
 	add r0, r4, #0
 	add r3, r4, #0
@@ -2158,7 +2158,7 @@ _021A8762:
 	add r0, r4, #0
 	mov r1, #0xc
 	sub r2, #0x14
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r1, r4, #0
 	add r3, r4, #0
 	mov r0, #0x20
@@ -2451,7 +2451,7 @@ ovy186_21a8958: ; 0x021A8958
 	ldr r3, [r5, r3]
 	add r0, r6, #0
 	add r1, r7, #0
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add r0, r4, #0
 	add r0, #0x18
 	ldr r0, [r5, r0]
@@ -2468,7 +2468,7 @@ ovy186_21a8958: ; 0x021A8958
 	ldr r3, [r5, r4]
 	add r0, r6, #0
 	add r1, r7, #0
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	ldr r1, _021A89D8 ; =0x000032EE
 	mov r0, #4
 	ldrb r2, [r5, r1]
@@ -3849,7 +3849,7 @@ ovy186_21a943c: ; 0x021A943C
 	mov r2, #0x80
 	mov r3, #0x60
 	str r5, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add r4, #0x10
 	str r5, [sp]
 	add r0, r4, #0
@@ -3857,7 +3857,7 @@ ovy186_21a943c: ; 0x021A943C
 	mov r2, #0x80
 	mov r3, #0x60
 	str r5, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	bl sub_0207C1E8
 	str r5, [sp]
 	ldr r0, _021A94A4 ; =0x04000030
@@ -3865,7 +3865,7 @@ ovy186_21a943c: ; 0x021A943C
 	mov r2, #0x80
 	mov r3, #0
 	str r5, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add sp, #0x18
 	pop {r4, r5, r6, pc}
 	nop

@@ -215,7 +215,7 @@ _0219ADDC:
 	ldr r0, _0219AF1C ; =0x04000050
 	mov r1, #0x22
 	sub r2, #0x2a
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	ldr r0, _0219AF20 ; =0x0219C6C9
 	add r1, r5, #0
 	mov r2, #0

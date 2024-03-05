@@ -149,14 +149,14 @@ ovy309_219ce80: ; 0x0219CE80
 	mov r1, #4
 	mov r2, #8
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0xf
 	str r0, [sp]
 	ldr r0, _0219D020 ; =0x04001050
 	mov r1, #4
 	mov r2, #8
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	sub r5, #0x28
 	ldr r0, [r4, r5]
 	cmp r0, #0

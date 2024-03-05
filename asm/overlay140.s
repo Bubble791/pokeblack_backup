@@ -3277,7 +3277,7 @@ ovy140_219e794: ; 0x0219E794
 	ldr r0, _0219E7BC ; =0x04000050
 	mov r1, #0x17
 	mov r2, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r0, #3
 	mov r1, #1
 	bl sub_02044C98
@@ -3308,7 +3308,7 @@ ovy140_219e7c8: ; 0x0219E7C8
 	ldr r0, _0219E808 ; =0x04000050
 	mov r1, #0x17
 	mov r2, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r0, #3
 	mov r1, #1
 	bl sub_02044C98
@@ -3342,7 +3342,7 @@ ovy140_219e810: ; 0x0219E810
 	ldr r0, _0219E838 ; =0x04000050
 	mov r1, #0x17
 	mov r2, #8
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r0, #3
 	mov r1, #1
 	bl sub_02044C98

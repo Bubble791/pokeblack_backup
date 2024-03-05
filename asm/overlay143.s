@@ -48,7 +48,7 @@ ovy143_21998c0: ; 0x021998C0
 	add r0, r5, #0
 	mov r1, #4
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0xf
 	sub r4, #0x1c
 	str r0, [sp]
@@ -56,7 +56,7 @@ ovy143_21998c0: ; 0x021998C0
 	mov r1, #4
 	mov r2, #8
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	bl sub_02046DF8
 	mov r2, #1
@@ -7504,7 +7504,7 @@ _0219D2F4:
 	ldr r4, _0219D314 ; =0x04001050
 	mov r1, #0x1c
 	add r0, r4, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	cmp r5, #0
 	bne _0219D310
 	mov r3, #0xf
@@ -7512,7 +7512,7 @@ _0219D2F4:
 	mov r1, #4
 	mov r2, #8
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219D310:
 	pop {r3, r4, r5, pc}
 	nop

@@ -508,7 +508,7 @@ ovy298_219fea0: ; 0x0219FEA0
 	str r0, [sp, #4]
 	ldr r0, _0219FED8 ; =0x04000050
 	ldmia r2!, {r1, r2}
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	add sp, #8
 	pop {r3, pc}
 _0219FEC2:
@@ -519,7 +519,7 @@ _0219FEC2:
 	str r0, [sp, #4]
 	ldr r0, _0219FEDC ; =0x04001050
 	ldmia r2!, {r1, r2}
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	add sp, #8
 	pop {r3, pc}
 	.align 2, 0
@@ -13222,7 +13222,7 @@ ovy298_21a6098: ; 0x021A6098
 	mov r1, #0
 	mov r2, #0x3f
 	mov r3, #0xc
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	.align 2, 0
 _021A60AC: .word 0x04000050
@@ -13327,7 +13327,7 @@ ovy298_21a6150: ; 0x021A6150
 	ldr r0, _021A6178 ; =0x04000050
 	mov r1, #0
 	mov r2, #0x3f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add r0, r4, #4
 	add r0, r5, r0
 	add r1, r5, r4
@@ -13355,7 +13355,7 @@ ovy298_21a617c: ; 0x021A617C
 	ldr r0, _021A61A4 ; =0x04000050
 	mov r1, #0
 	mov r2, #0x3f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021A61A4: .word 0x04000050
@@ -13476,7 +13476,7 @@ _021A625A:
 	mov r1, #8
 	mov r2, #0x3f
 	mov r3, #0xc
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -16348,13 +16348,13 @@ _021A7948:
 	mov r2, #0x3f
 	mov r3, #0x10
 	mov r4, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021A7988 ; =0x04001050
 	add r1, r6, #0
 	mov r2, #0x3f
 	mov r3, #0xc
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -24840,13 +24840,13 @@ _021ABD48:
 	mov r2, #0x3f
 	mov r3, #0xc
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021ABD88 ; =0x04001050
 	mov r1, #8
 	mov r2, #0x3f
 	mov r3, #0xc
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021ABD80: .word 0x000005E4

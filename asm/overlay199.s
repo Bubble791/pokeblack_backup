@@ -2013,7 +2013,7 @@ _021B3EC2:
 	mov r2, #1
 	mov r3, #0xf
 	str r0, [sp, #0xc]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add r4, #0x1c
 	ldr r0, [r6, r4]
 	cmp r0, #0
@@ -2826,7 +2826,7 @@ _021B4622:
 	ldr r0, _021B46A8 ; =0x04001050
 	mov r1, #9
 	sub r2, #0x11
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	add sp, #0x14
 	pop {r4, r5, pc}
@@ -4607,7 +4607,7 @@ _021B5470:
 	mov r2, #0x37
 	add r3, r4, #0
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _021B547E:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -10773,7 +10773,7 @@ _021B8626:
 	ldr r0, _021B86AC ; =0x04001050
 	mov r1, #0x11
 	sub r2, #0x19
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	add sp, #0x14
 	pop {r4, r5, pc}
@@ -11697,7 +11697,7 @@ _021B8E54:
 	ldr r0, _021B8EB0 ; =0x04000050
 	mov r1, #1
 	mov r3, #8
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r1, _021B8EB4 ; =0x00000974
 	ldr r0, [sp, #0xc]
 	mov r2, #0

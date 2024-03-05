@@ -754,7 +754,7 @@
 .public sub_02045B7C
 .public sub_02045B7C
 .public sub_02045B7C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_021C095C
 .public sub_02045B7C
 .public sub_02045738
@@ -1169,7 +1169,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02078624
 .public sub_02078920
 .public sub_02006254
@@ -1287,7 +1287,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_020787A8
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204C124
 .public sub_0207BB0C
 .public sub_0208D5C4

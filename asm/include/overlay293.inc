@@ -338,7 +338,7 @@
 .public FX_Div
 .public sub_02044BD8
 .public sub_02044BD8
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02044C98
 .public sub_0208D374
 .public sub_0208DF14

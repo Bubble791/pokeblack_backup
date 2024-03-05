@@ -20,7 +20,7 @@
 .public sub_02016B20
 .public sub_0202BDF4
 .public sub_0203E84C
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02021A3C
 .public sub_02034220
 .public sub_020484F4

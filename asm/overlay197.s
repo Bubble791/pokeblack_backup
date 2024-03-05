@@ -2800,7 +2800,7 @@ _021B6A14:
 	mov r1, #4
 	mov r2, #0x18
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #6
 	b _021B69DA
 _021B6A84:
@@ -3001,7 +3001,7 @@ _021B6BBE:
 	mov r1, #4
 	mov r2, #0x18
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #6
 	b _021B6B84
 _021B6C22:
@@ -3230,7 +3230,7 @@ _021B6D94:
 	mov r2, #0x18
 	mov r3, #0xf
 	mov r7, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	mov r1, #0x1d
 	bl sub_02042BA8
@@ -3645,7 +3645,7 @@ _021B711A:
 	mov r1, #4
 	mov r2, #0x18
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0xa5
 	lsl r0, r0, #2
 	add r0, r4, r0
@@ -3780,7 +3780,7 @@ _021B71B4:
 	mov r1, #4
 	mov r2, #0x18
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _021B724A:
 	add sp, #0x44
 	pop {r3, r4, r5, r6, pc}
@@ -4902,7 +4902,7 @@ _021B7B24:
 	mov r2, #8
 	mov r3, #0
 	mov r5, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #2
 	mov r1, #1
 	mov r6, #2
@@ -5111,7 +5111,7 @@ _021B7CCE:
 	mov r2, #8
 	mov r3, #0
 	mov r5, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #2
 	mov r1, #1
 	mov r6, #2
@@ -5194,7 +5194,7 @@ _021B7D6A:
 	mov r2, #0x1f
 	mov r3, #0
 	mov r5, #0x1f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0x1f
 	add r0, #0xf9
 	add r0, r4, r0
@@ -12593,7 +12593,7 @@ _021BB660:
 	add r2, r0, #0
 	ldr r0, _021BB788 ; =0x04000050
 	mov r1, #0x1e
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r1, r5, #0
 	add r1, #0x1c
 	add r0, r5, #0
@@ -12642,7 +12642,7 @@ _021BB6C4:
 	ldr r0, _021BB788 ; =0x04000050
 	mov r1, #0x1e
 	sub r2, r2, r3
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r1, r5, #0
 	add r1, #0x1c
 	add r0, r5, #0
@@ -12942,7 +12942,7 @@ _021BB912:
 	add r2, r0, #0
 	ldr r0, _021BBAA4 ; =0x04000050
 	mov r1, #0x1e
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	add r0, #0x1c
 	ldr r2, [r4, r0]
@@ -13058,7 +13058,7 @@ _021BB9FC:
 	ldr r0, _021BBAA4 ; =0x04000050
 	mov r1, #0x1e
 	sub r2, r2, r3
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	add r0, #0x1c
 	ldr r2, [r4, r0]
@@ -15376,7 +15376,7 @@ _021BCC9A:
 	ldr r0, _021BCD1C ; =0x04000050
 	mov r1, #0
 	mov r3, #2
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 _021BCCDC:
@@ -15398,7 +15398,7 @@ _021BCCDC:
 	ldr r0, _021BCD20 ; =0x04001050
 	mov r1, #0
 	mov r3, #2
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 _021BCD08:

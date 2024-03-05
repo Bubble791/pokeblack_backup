@@ -17,8 +17,8 @@
 .public sub_02170B50
 .public sub_02014AA0
 .public sub_020145EC
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_020279B4
 .public sub_0203A24C
 .public sub_020487D4

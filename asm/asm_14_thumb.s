@@ -24998,7 +24998,7 @@ _02044ED4:
 	ldr r0, [r4, #0x18]
 	str r0, [sp, #4]
 	ldr r0, _02044F48 ; =0x04000020
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add sp, #8
 	pop {r4, pc}
 _02044EF0:
@@ -25012,7 +25012,7 @@ _02044EF0:
 	ldr r0, [r4, #0x18]
 	str r0, [sp, #4]
 	ldr r0, _02044F4C ; =0x04000030
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add sp, #8
 	pop {r4, pc}
 _02044F0C:
@@ -25026,7 +25026,7 @@ _02044F0C:
 	ldr r0, [r4, #0x18]
 	str r0, [sp, #4]
 	ldr r0, _02044F50 ; =0x04001020
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	add sp, #8
 	pop {r4, pc}
 _02044F28:
@@ -25040,7 +25040,7 @@ _02044F28:
 	ldr r0, [r4, #0x18]
 	str r0, [sp, #4]
 	ldr r0, _02044F54 ; =0x04001030
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02044F40:
 	add sp, #8
 	pop {r4, pc}
@@ -26840,7 +26840,7 @@ _02045C08:
 	ldr r0, _02045DF8 ; =0x04000020
 	ldr r2, [r2]
 	ldr r3, [r3]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02045C3C:
 	ldr r3, [r5]
 	mov r0, #8
@@ -26896,7 +26896,7 @@ _02045C6C:
 	ldr r0, _02045E00 ; =0x04000030
 	ldr r2, [r2]
 	ldr r3, [r3]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02045CAC:
 	ldr r1, [r5]
 	mov r0, #0x10
@@ -26991,7 +26991,7 @@ _02045D24:
 	ldr r0, _02045E10 ; =0x04001020
 	ldr r3, [r3, r4]
 	add r1, r7, #0
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02045D66:
 	ldr r6, [r5]
 	mov r4, #0x80
@@ -27051,7 +27051,7 @@ _02045D9C:
 	ldr r0, _02045E18 ; =0x04001030
 	ldr r3, [r3, r4]
 	add r1, r7, #0
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 _02045DDE:
 	add sp, #0x48
 	pop {r3, r4, r5, r6, r7, pc}

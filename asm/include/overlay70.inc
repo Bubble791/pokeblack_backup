@@ -211,7 +211,7 @@
 .public sub_0203FFC4
 .public sub_0217F224
 .public sub_02006254
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0204C124
 .public sub_0217F224
 .public sub_0217F224

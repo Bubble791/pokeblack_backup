@@ -2230,7 +2230,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	mov r1, #4
 	mov r2, #1
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #6
 	str r0, [sp]
 	mov r0, #1

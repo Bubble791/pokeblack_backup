@@ -172,7 +172,7 @@ ovy66_21e5910: ; 0x021E5910
 	add r0, r4, #0
 	mov r1, #0x3d
 	add r2, r5, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	ldr r4, _021E5978 ; =0x0400106C
 	mov r1, #0
 	add r0, r4, #0
@@ -181,7 +181,7 @@ ovy66_21e5910: ; 0x021E5910
 	add r0, r4, #0
 	mov r1, #0x3f
 	add r2, r5, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r0, #0
 	pop {r4, r5, r6, pc}
 	.align 2, 0

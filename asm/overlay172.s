@@ -1450,7 +1450,7 @@ ovy172_219a3fc: ; 0x0219A3FC
 	mov r1, #2
 	mov r2, #0x3d
 	mov r3, #0x1f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	nop
 _0219A424: .word 0x04000050
@@ -1606,7 +1606,7 @@ _0219A516:
 	lsl r3, r3, #0x18
 	mov r2, #0x3d
 	lsr r3, r3, #0x18
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0
 	pop {r3, pc}
 	nop

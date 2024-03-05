@@ -8545,13 +8545,13 @@ ovy204_21addcc: ; 0x021ADDCC
 	bne _021ADDDE
 	mov r1, #0x1c
 	mov r2, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, pc}
 _021ADDDE:
 	mov r2, #0x1c
 	mov r1, #0x1c
 	sub r2, #0x24
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, pc}
 	nop
 _021ADDEC: .word 0x04000050

@@ -422,7 +422,7 @@ _0219D118:
 _0219D1E2:
 	add r2, r4, #0
 	add r3, r7, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	b _0219D40A
 _0219D1EC:
 	add r0, r4, #0
@@ -2470,7 +2470,7 @@ _0219E256:
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	str r6, [r4, r5]
 	pop {r3, r4, r5, r6, r7, pc}
 _0219E27C:
@@ -2498,7 +2498,7 @@ _0219E290:
 	mov r1, #2
 	mov r3, #0
 	mov r7, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r4, r6]
 	cmp r0, #8
 	bne _0219E2CE
@@ -2529,7 +2529,7 @@ _0219E2D6:
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #5
 	str r0, [r4, r5]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -2546,7 +2546,7 @@ _0219E2EC:
 	add r0, r6, #0
 	mov r1, #2
 	mov r2, #1
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r1, [r4, r7]
 	mov r0, #0x10
 	sub r1, r0, r1
@@ -2601,7 +2601,7 @@ _0219E358:
 	add r0, r6, #0
 	mov r1, #2
 	mov r2, #1
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r1, [r4, r7]
 	mov r0, #0x10
 	sub r0, r0, r1
@@ -3723,7 +3723,7 @@ _0219EBBA:
 	mov r1, #2
 	mov r3, #0
 	mov r7, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r4, r6]
 	cmp r0, #8
 	bne _0219EBF8
@@ -3779,7 +3779,7 @@ _0219EC26:
 _0219EC3E:
 	add r2, r5, #0
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0xf1
 	mov r1, #5
 	lsl r0, r0, #2
@@ -3795,7 +3795,7 @@ _0219EC50:
 	mov r1, #6
 	mov r2, #5
 	mov r7, #6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	lsl r0, r6, #7
 	ldr r0, [r4, r0]
 	add r1, r0, #1

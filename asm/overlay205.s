@@ -129,7 +129,7 @@ _021B73F6:
 	mov r1, #0
 	mov r2, #6
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #8
 	add r7, #0x50
 	str r0, [sp]
@@ -137,7 +137,7 @@ _021B73F6:
 	mov r1, #0
 	mov r2, #0xe
 	mov r3, #7
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021B74D0 ; =ovy205_21b76fc
 	add r1, r4, #0
 	mov r2, #0x10

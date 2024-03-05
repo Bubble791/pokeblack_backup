@@ -12529,7 +12529,7 @@ _0219FDBA:
 	mov r1, #6
 	mov r2, #0
 	mov r6, #6
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r0, r5, #0
 	bl ovy142_219ff60
 	ldr r4, _0219FF38 ; =0x00000724
@@ -12615,7 +12615,7 @@ _0219FEC6:
 	mov r1, #6
 	sub r2, #0xe
 _0219FECE:
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	ldr r4, _0219FF3C ; =0x00000744
 	mov r1, #4
 	ldr r0, [r5, r4]

@@ -698,7 +698,7 @@
 .public sub_02015A04
 .public sub_02015A04
 .public sub_02015A04
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02015A04
 .public sub_02015A04
 .public sub_02015A04
@@ -885,7 +885,7 @@
 .public sub_02044BD8
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02006280
 .public sub_021E006C
 .public sub_021E006C
@@ -1726,7 +1726,7 @@
 .public sub_0204826C
 .public sub_02044F90
 .public sub_021EE6F8
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02048244
 .public sub_021EB7C0
 .public sub_0204AF50
@@ -1903,11 +1903,11 @@
 .public sub_0203A1FC
 .public sub_0203A614
 .public sub_021E0050
-.public sub_02074A88
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
+.public G2x_SetBlendBrightness_
 .public sub_0203A1FC
 .public sub_020056FC
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02022888
 .public FX_ModS32
 .public sub_02048530

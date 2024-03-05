@@ -1157,7 +1157,7 @@ ovy325_219d734: ; 0x0219D734
 	mov r2, #0x37
 	mov r3, #8
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, pc}
 	nop

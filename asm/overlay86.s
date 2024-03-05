@@ -280,7 +280,7 @@ ovy86_21ea990: ; 0x021EA990
 	mov r1, #0x10
 	mov r2, #0x18
 	mov r3, #1
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r1, [r4]
 	mov r0, #0
 	bl sub_02042BA8

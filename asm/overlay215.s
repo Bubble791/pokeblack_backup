@@ -838,7 +838,7 @@ _021A7BF8:
 	str r1, [sp]
 	mov r2, #8
 	mov r3, #0x1c
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	bl sub_02005718
 	str r6, [sp]
 	str r5, [sp, #4]
@@ -2580,7 +2580,7 @@ ovy215_21a89fc: ; 0x021A89FC
 	mov r2, #0
 	mov r3, #0x1f
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, pc}
 	nop
 _021A8A40: .word 0x04000050
@@ -6811,7 +6811,7 @@ ovy215_21aab80: ; 0x021AAB80
 	mov r1, #4
 	mov r2, #8
 	mov r3, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, pc}
 _021AABC0:
 	mov r1, #0
@@ -6863,7 +6863,7 @@ ovy215_21aabf4: ; 0x021AABF4
 	mov r1, #4
 	mov r2, #8
 	mov r3, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0

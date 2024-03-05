@@ -270,7 +270,7 @@ ovy200_21b3128: ; 0x021B3128
 	mov r2, #8
 	mov r3, #0xf
 	str r6, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r4, _021B3230 ; =0x02093F08
 	add r3, sp, #4
 	ldmia r4!, {r0, r1}

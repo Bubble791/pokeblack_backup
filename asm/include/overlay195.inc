@@ -514,7 +514,7 @@
 .public sub_0204BDE0
 .public sub_0204BBB8
 .public sub_0204AB0C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_021B57B8
 .public sub_0204AA30
 .public sub_0204AFB0

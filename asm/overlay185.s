@@ -3936,7 +3936,7 @@ ovy185_219ec08: ; 0x0219EC08
 	add r0, r4, #0
 	mov r1, #2
 	sub r2, #0xc
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	add r3, r4, #0
 	sub r3, #8
 	ldrh r2, [r3]
@@ -4581,7 +4581,7 @@ ovy185_219f150: ; 0x0219F150
 	mov r1, #2
 	mov r2, #0x3f
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	mov r1, #1
 	bl sub_02044C98
@@ -6746,7 +6746,7 @@ _021A01C6:
 	str r0, [sp]
 	ldr r0, _021A01D8 ; =0x04000050
 	ldmia r2!, {r1, r2}
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0
@@ -6761,7 +6761,7 @@ ovy185_21a01dc: ; 0x021A01DC
 	add r6, r2, #0
 	add r7, r3, #0
 	add r4, r1, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	ldr r1, [sp, #0x18]
 	lsl r2, r6, #0xc
 	lsl r0, r7, #0xc
@@ -13341,7 +13341,7 @@ ovy185_21a3380: ; 0x021A3380
 	mov r3, #0
 	mov r6, #4
 	mov r7, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #2
 	mov r1, #1
 	bl sub_02044C98

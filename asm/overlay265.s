@@ -242,14 +242,14 @@ ovy265_2199a18: ; 0x02199A18
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	str r4, [sp]
 	ldr r0, _02199B00 ; =0x04001030
 	add r1, r7, #0
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	mov r0, #3
 	mov r1, #0
 	mov r2, #0xa0
@@ -395,13 +395,13 @@ ovy265_2199bac: ; 0x02199BAC
 	mov r2, #0x2e
 	mov r3, #6
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _02199BD8 ; =0x04001050
 	mov r1, #1
 	mov r2, #0x2e
 	mov r3, #6
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, pc}
 	nop

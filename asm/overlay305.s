@@ -2416,7 +2416,7 @@ ovy305_219e060: ; 0x0219E060
 	mov r1, #1
 	mov r2, #0x1f
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0x10
 	mov r1, #0x14
 	add r2, r6, #0

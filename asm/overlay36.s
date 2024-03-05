@@ -1999,7 +1999,7 @@ ovy36_21805f0: ; 0x021805F0
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	mov r0, #3
 	bl sub_02044BB8
 	ldr r0, [r5, #0x28]
@@ -2030,7 +2030,7 @@ ovy36_2180630: ; 0x02180630
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #4]
-	blx sub_020749CC
+	blx G2x_SetBGyAffine_
 	mov r0, #3
 	bl sub_02044BB8
 	ldr r0, [r5, #0x28]
@@ -22681,7 +22681,7 @@ _0218A1DE:
 	str r1, [sp]
 	mov r2, #0x1b
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #2]
 	mov r1, #1
 	lsl r0, r0, #0x18
@@ -22815,7 +22815,7 @@ _0218A2FA:
 	str r1, [sp]
 	mov r2, #0x1b
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #2]
 	mov r1, #1
 	lsl r0, r0, #0x18
@@ -22998,7 +22998,7 @@ _0218A450:
 	mov r2, #0x1b
 	mov r3, #0x10
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0218A47E:
 	mov r0, #2
 	mov r1, #2
@@ -23139,7 +23139,7 @@ ovy36_218a57c: ; 0x0218A57C
 	mov r2, #0x1b
 	mov r3, #0x10
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0218A590:
 	pop {r3, pc}
 	nop
@@ -32117,7 +32117,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	mov r2, #1
 	mov r3, #0xf
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldrh r1, [r4, #0x10]
 	mov r0, #0
 	bl sub_02042BA8
@@ -32131,7 +32131,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	mov r1, #0x10
 	mov r2, #3
 	mov r3, #9
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
@@ -121133,7 +121133,7 @@ _021B8E3E:
 	mov r1, #4
 	mov r2, #1
 	mov r6, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [r5, #0xc]
 	mov r1, #0x10
 	mov r2, #0
@@ -126879,7 +126879,7 @@ _021BBB06:
 	mov r1, #0
 	mov r2, #4
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #2
 	mov r1, #1
 	bl sub_02044C98
@@ -133728,7 +133728,7 @@ _021BEEF6:
 	mov r1, #2
 	mov r2, #0x11
 	mov r3, #0xc
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, [sp, #0x14]
 	cmp r0, #0
 	beq _021BEFB2
@@ -152861,7 +152861,7 @@ ovy36_21c8110: ; 0x021C8110
 	ldr r1, [r3]
 	ldr r2, [r3, #4]
 	ldr r3, [r3, #8]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 _021C812A:
 	str r0, [sp]
@@ -152869,7 +152869,7 @@ _021C812A:
 	ldr r1, [r3]
 	ldr r2, [r3, #4]
 	ldr r3, [r3, #8]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	nop
 _021C813C: .word 0x04000050
@@ -152884,12 +152884,12 @@ ovy36_21c8144: ; 0x021C8144
 	beq _021C8156
 	ldr r0, _021C8160 ; =0x04000050
 	ldmia r2!, {r1, r2}
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, pc}
 _021C8156:
 	ldr r0, _021C8164 ; =0x04001050
 	ldmia r2!, {r1, r2}
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, pc}
 	.align 2, 0
 _021C8160: .word 0x04000050
@@ -152911,7 +152911,7 @@ ovy36_21c8168: ; 0x021C8168
 	ldr r2, [r3, #4]
 	ldr r0, _021C81A0 ; =0x04000050
 	ldr r3, [r3, #8]
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	add sp, #8
 	pop {r3, pc}
 _021C818A:
@@ -152922,7 +152922,7 @@ _021C818A:
 	ldr r2, [r3, #4]
 	ldr r0, _021C81A4 ; =0x04001050
 	ldr r3, [r3, #8]
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	add sp, #8
 	pop {r3, pc}
 	.align 2, 0
@@ -152942,12 +152942,12 @@ ovy36_21c81d0: ; 0x021C81D0
 	beq _021C81E2
 	ldr r0, _021C81EC ; =0x04000050
 	ldr r1, [r2]
-	bl sub_02074AD8
+	bl G2x_ChangeBlendBrightness_
 	pop {r3, pc}
 _021C81E2:
 	ldr r0, _021C81F0 ; =0x04001050
 	ldr r1, [r2]
-	bl sub_02074AD8
+	bl G2x_ChangeBlendBrightness_
 	pop {r3, pc}
 	.align 2, 0
 _021C81EC: .word 0x04000050

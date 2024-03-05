@@ -21,8 +21,8 @@
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02050610
-.public sub_020749CC
-.public sub_020749CC
+.public G2x_SetBGyAffine_
+.public G2x_SetBGyAffine_
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045E1C
@@ -47,8 +47,8 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204AB0C
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_0204875C
 .public sub_02022D58
 .public sub_02022D58

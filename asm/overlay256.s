@@ -482,7 +482,7 @@ ovy256_21bbaac: ; 0x021BBAAC
 	mov r1, #6
 	mov r2, #0x11
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	.align 2, 0
 _021BBAC0: .word 0x04000050

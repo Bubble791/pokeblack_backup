@@ -127,7 +127,7 @@
 .public sub_020232D0
 .public sub_020056FC
 .public sub_020444A4
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02044710
 .public sub_0204476C
 .public sub_02044C98
@@ -163,7 +163,7 @@
 .public sub_0203A6A8
 .public sub_02045708
 .public sub_02044B84
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02044528
 .public sub_02048080
 .public sub_021E9710

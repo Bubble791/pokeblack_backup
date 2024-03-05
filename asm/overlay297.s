@@ -273,7 +273,7 @@ _021F4482:
 	ldr r0, _021F457C ; =0x04000050
 	mov r1, #0xf
 	mov r2, #0xf
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	ldr r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021F455E
@@ -303,7 +303,7 @@ _021F44C0:
 	ldr r0, _021F457C ; =0x04000050
 	mov r1, #0xf
 	mov r2, #0xf
-	bl sub_02074AA4
+	bl G2x_SetBlendBrightnessExt_
 	ldr r0, [r4, #0x18]
 	cmp r0, #0x10
 	bne _021F455E

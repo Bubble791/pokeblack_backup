@@ -646,8 +646,8 @@
 .public sub_0204C4D4
 .public sub_0204C488
 .public sub_0204C520
-.public sub_02074A88
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
+.public G2x_SetBlendBrightness_
 .public sub_0204C4D4
 .public sub_0204C488
 .public sub_0204826C

@@ -14,7 +14,7 @@
 .public sub_02016AD8
 .public sub_02017394
 .public sub_02017934
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02042BA8
 .public sub_021EA884
 .public sub_0203A6A8

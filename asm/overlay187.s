@@ -1177,7 +1177,7 @@ ovy187_21e9504: ; 0x021E9504
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _021E9708 ; =0x021E9F0C
 	bl sub_02044710
 	ldr r7, _021E970C ; =0x021E9F78
@@ -1449,7 +1449,7 @@ _021E9748:
 	mov r2, #0
 	mov r3, #0x1f
 	str r1, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	bl sub_02044528
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

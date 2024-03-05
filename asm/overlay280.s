@@ -4478,7 +4478,7 @@ _021DB79C:
 	mov r1, #0xa
 _021DB7A2:
 	mov r2, #0x2f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 _021DB7AC:

@@ -31,9 +31,9 @@
 .public sub_02046DC0
 .public sub_021805F0
 .public GXx_SetMasterBrightness_
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0215516C
 .public sub_021EED04
 .public sub_0215516C

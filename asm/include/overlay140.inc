@@ -283,13 +283,13 @@
 .public sub_0202DBE4
 .public sub_0202DC00
 .public sub_0202DA54
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02044C98
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02044C98
 .public sub_0204875C
 .public sub_020487D4
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_02044C98
 .public sub_02044C98
 .public sub_020787A8

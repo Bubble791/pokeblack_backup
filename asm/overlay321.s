@@ -227,7 +227,7 @@ _0219CFF4:
 	add r1, r4, #0
 	mov r2, #0x3f
 	mov r3, #8
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	add r1, r4, #0
 	bl sub_02044C98

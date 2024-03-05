@@ -33,11 +33,11 @@ ovy192_21b2f80: ; 0x021B2F80
 	ldr r0, _021B2FC8 ; =0x04000050
 	mov r1, #0x1e
 	add r2, r4, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	ldr r0, _021B2FCC ; =0x04001050
 	mov r1, #0x1f
 	add r2, r4, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 _021B2FC6:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

@@ -6202,7 +6202,7 @@ ovy303_21a2db0: ; 0x021A2DB0
 	ldr r0, _021A2DD8 ; =0x04001050
 	mov r1, #0
 	mov r2, #0x3f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add r0, r4, #4
 	add r0, r5, r0
 	add r1, r5, r4
@@ -6231,7 +6231,7 @@ ovy303_21a2ddc: ; 0x021A2DDC
 	ldr r0, _021A2E04 ; =0x04001050
 	mov r1, #0
 	mov r2, #0x3f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021A2E04: .word 0x04001050

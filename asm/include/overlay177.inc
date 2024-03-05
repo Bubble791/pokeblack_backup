@@ -62,7 +62,7 @@
 .public sub_02045118
 .public sub_0204AE3C
 .public sub_0204AB0C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_02044668
 .public sub_02045264
 .public sub_02044B84

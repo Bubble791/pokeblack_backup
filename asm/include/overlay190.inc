@@ -230,7 +230,7 @@
 .public sub_0202780C
 .public sub_0207B0AC
 .public sub_020056FC
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204AB0C
 .public sub_020754B8
 .public sub_02075534
@@ -256,8 +256,8 @@
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C124
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_02005680
 .public sub_02029B54
 .public sub_0204B6A8
@@ -275,9 +275,9 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_0204B7C8
-.public sub_02074A6C
-.public sub_02074A6C
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
+.public G2x_SetBlendAlpha_
 .public sub_0203A1FC
 .public sub_02048080
 .public sub_020232D0
@@ -351,7 +351,7 @@
 .public sub_0202D974
 .public sub_02048564
 .public sub_02048564
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
 .public sub_0202DEF8
 .public sub_0202DA54
 .public sub_0202DB70

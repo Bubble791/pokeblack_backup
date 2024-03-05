@@ -3897,7 +3897,7 @@ ovy174_219ee60: ; 0x0219EE60
 	mov r1, #0x10
 	mov r2, #3
 	mov r3, #9
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

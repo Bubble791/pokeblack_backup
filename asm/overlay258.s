@@ -4066,7 +4066,7 @@ ovy258_219b988: ; 0x0219B988
 	mov r2, #0x1e
 	mov r1, #0x1e
 	sub r2, #0x26
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	pop {r3, pc}
 _0219B99C:
 	mov r1, #0

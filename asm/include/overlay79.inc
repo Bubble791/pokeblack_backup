@@ -94,7 +94,7 @@
 .public sub_02044BD8
 .public sub_02045604
 .public sub_02044F90
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_021EBB6C
 .public sub_02078920
 .public sub_0203DA0C

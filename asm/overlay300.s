@@ -734,14 +734,14 @@ ovy300_21a0234: ; 0x021A0234
 	mov r1, #8
 	mov r2, #4
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0xa
 	str r0, [sp]
 	ldr r0, _021A0268 ; =0x04001050
 	mov r1, #2
 	mov r2, #6
 	mov r3, #6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 _021A025C:
 	ldr r0, _021A0268 ; =0x04001050

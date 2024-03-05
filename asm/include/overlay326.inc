@@ -558,8 +558,8 @@
 .public sub_02048564
 .public sub_0203DA0C
 .public sub_0203D9C8
-.public sub_02074A88
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
+.public G2x_SetBlendBrightness_
 .public sub_020754B8
 .public sub_0204C138
 .public sub_0204C550

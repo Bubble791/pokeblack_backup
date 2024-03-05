@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0208D65C
-.public sub_02074A88
-.public sub_02074A88
+.public G2x_SetBlendBrightness_
+.public G2x_SetBlendBrightness_
 .public sub_021B7808
 .public sub_021B7808
 .public sub_021B7D04

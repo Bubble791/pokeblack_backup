@@ -1709,7 +1709,7 @@ _021E3E98:
 	mov r1, #1
 	mov r2, #0x3e
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021E3EB4: .word 0x0000008B

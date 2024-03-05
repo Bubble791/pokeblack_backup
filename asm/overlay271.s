@@ -11444,7 +11444,7 @@ ovy271_21f5658: ; 0x021F5658
 	mov r1, #7
 	mov r2, #0x1f
 	add r3, r4, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	cmp r4, #0
 	bne _021F5698
 	add r0, r6, #0
@@ -11479,7 +11479,7 @@ _021F56B0:
 	mov r1, #3
 	mov r2, #7
 	add r3, r4, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	cmp r4, #0
 	bne _021F56E2
 	mov r0, #1
@@ -11684,7 +11684,7 @@ _021F5818:
 	mov r2, #0x1f
 	add r3, r6, #0
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _021F582C:
 	ldr r1, [r5, #4]
 	mov r0, #2
@@ -11695,7 +11695,7 @@ _021F582C:
 	mov r2, #7
 	add r3, r6, #0
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _021F5842:
 	mov r0, #0
 	str r0, [r5, #0x10]
@@ -11987,7 +11987,7 @@ _021F5A68:
 	mov r2, #7
 	add r3, r7, #0
 	str r5, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0
 	str r0, [r4, #0x10]
 	ldr r0, [r4, #0x18]

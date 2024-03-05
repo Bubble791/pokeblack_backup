@@ -1882,7 +1882,7 @@ _0219DCD4:
 	mov r1, #2
 	mov r2, #0x21
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219DCEE:
 	ldr r0, _0219DDB8 ; =0x00000233
 	mov r1, #2
@@ -1894,7 +1894,7 @@ _0219DCEE:
 	ldr r0, _0219DDBC ; =0x04001050
 	mov r2, #0x21
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219DD06:
 	ldr r0, _0219DDB8 ; =0x00000233
 	ldrb r2, [r4, r0]
@@ -2025,7 +2025,7 @@ _0219DDE0:
 	mov r1, #2
 	mov r2, #0x21
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219DDFA:
 	ldr r0, _0219DF00 ; =0x00000233
 	mov r1, #2
@@ -2037,7 +2037,7 @@ _0219DDFA:
 	ldr r0, _0219DF04 ; =0x04001050
 	mov r2, #0x21
 	mov r3, #0x10
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219DE12:
 	ldr r0, _0219DEF8 ; =0x00000232
 	ldrb r1, [r4, r0]
@@ -2202,7 +2202,7 @@ _0219DF36:
 	mov r2, #0x20
 	mov r3, #0
 	mov r7, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #8
 	mov r1, #1
 	bl sub_02046CFC
@@ -2399,7 +2399,7 @@ _0219E0B2:
 	ldr r0, _0219E2A8 ; =0x04000050
 	mov r2, #0x2e
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219E0C8:
 	ldrb r1, [r4, #1]
 	mov r0, #2
@@ -2411,7 +2411,7 @@ _0219E0C8:
 	mov r1, #1
 	mov r2, #0x2e
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 _0219E0E0:
 	mov r0, #2
 	add sp, #8
@@ -2422,7 +2422,7 @@ _0219E0E8:
 	ldr r0, _0219E2A8 ; =0x04000050
 	mov r1, #0x11
 	sub r2, #0x21
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	mov r6, #0xa2
 	lsl r6, r6, #2
 	ldr r0, [r5, r6]
@@ -2686,7 +2686,7 @@ _0219E300:
 	bne _0219E310
 	ldr r0, _0219E344 ; =0x04000050
 	neg r1, r1
-	bl sub_02074AD8
+	bl G2x_ChangeBlendBrightness_
 	b _0219E330
 _0219E310:
 	ldrb r3, [r4, #1]

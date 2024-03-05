@@ -663,7 +663,7 @@ ovy207_21b342c: ; 0x021B342C
 	mov r1, #4
 	mov r2, #0x1e
 	mov r3, #0xd
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0x10
 	str r0, [sp]
 	add r0, r6, #0
@@ -671,7 +671,7 @@ ovy207_21b342c: ; 0x021B342C
 	mov r2, #8
 	mov r3, #0xd
 	mov r6, #8
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r3, _021B360C ; =0x02093F08
 	add r2, sp, #0x20
 	ldmia r3!, {r0, r1}

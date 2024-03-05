@@ -1137,7 +1137,7 @@ ovy208_219a16c: ; 0x0219A16C
 	add r1, r7, #0
 	mov r2, #0xf
 	mov r3, #4
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r4, _0219A35C ; =0x02093F08
 	add r3, sp, #0x3c
 	ldmia r4!, {r0, r1}

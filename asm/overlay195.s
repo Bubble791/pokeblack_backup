@@ -4842,7 +4842,7 @@ _021B5744:
 	mov r1, #5
 	mov r2, #0x18
 	mov r3, #0xf
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

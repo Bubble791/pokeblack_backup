@@ -2209,7 +2209,7 @@ _0219E01A:
 	ldr r0, _0219E050 ; =0x04001050
 	mov r2, #0x3f
 	mov r3, #0
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0219E050: .word 0x04001050
@@ -2306,7 +2306,7 @@ _0219E0E4:
 	ldr r0, _0219E118 ; =0x04001050
 	mov r1, #0
 	mov r2, #0x3f
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, r4, r5, r6, r7, pc}
 _0219E0FC:
 	mov r0, #3
@@ -2318,7 +2318,7 @@ _0219E102:
 	mov r1, #4
 	mov r2, #0x3f
 	str r3, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	mov r0, #0
 	str r0, [r5, r4]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -4309,13 +4309,13 @@ ovy316_219f028: ; 0x0219F028
 	mov r2, #0x3f
 	mov r3, #8
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	ldr r0, _0219F0A0 ; =0x04001050
 	mov r1, #4
 	mov r2, #0x3f
 	mov r3, #8
 	str r4, [sp]
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	str r6, [r5, #0x10]
 	mov r0, #3
 	add sp, #4

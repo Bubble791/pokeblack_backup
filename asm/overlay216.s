@@ -6330,7 +6330,7 @@ ovy216_21be83c: ; 0x021BE83C
 	add r0, #0x48
 	mov r1, #4
 	mov r2, #0x28
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0

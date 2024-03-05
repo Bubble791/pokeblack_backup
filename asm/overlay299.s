@@ -628,7 +628,7 @@ ovy299_21a0134: ; 0x021A0134
 	mov r1, #4
 	mov r2, #8
 	mov r3, #6
-	bl sub_02074A6C
+	bl G2x_SetBlendAlpha_
 	pop {r3, pc}
 	.align 2, 0
 _021A0148: .word 0x04001050

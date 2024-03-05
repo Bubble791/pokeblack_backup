@@ -599,10 +599,10 @@
 .public sub_0219F730
 .public sub_0219F730
 .public sub_0204C140
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_021ADE74
 .public sub_021ADEC0
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204C124
 .public sub_0204C488
 .public sub_0204C124

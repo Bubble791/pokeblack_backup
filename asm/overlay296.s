@@ -574,7 +574,7 @@ _0219DAFA:
 	mov r2, #0x10
 	mov r1, #0x10
 	sub r2, #0x20
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 _0219DB78:
 	add r0, r4, #0
 	mov r5, #0x6d
@@ -769,7 +769,7 @@ _0219DCD2:
 	mov r1, #0x10
 	mov r5, #0
 	mov r2, #0
-	bl sub_02074A88
+	bl G2x_SetBlendBrightness_
 	str r5, [sp]
 	str r5, [sp, #4]
 	str r5, [sp, #8]

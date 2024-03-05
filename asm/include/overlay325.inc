@@ -99,7 +99,7 @@
 .public sub_0204C318
 .public sub_0204C318
 .public sub_0204C318
-.public sub_02074A6C
+.public G2x_SetBlendAlpha_
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204C108
