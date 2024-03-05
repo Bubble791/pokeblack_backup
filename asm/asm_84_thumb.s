@@ -23,7 +23,7 @@ sub_0207B12C: ; 0x0207B12C
 	bl sub_0207B894
 	bl MI_Init
 	bl sub_0207BE40
-	bl sub_0207C4FC
+	bl OSi_InitVramExclusive
 	bl sub_0207A4A4
 	blx OS_InitReset
 	bl sub_0200548C

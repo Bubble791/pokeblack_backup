@@ -11959,8 +11959,8 @@
 .public OS_GetParentalControlInfoPtr
 .public OS_IsParentalControledApp
 .public sub_0207C4E4
-.public sub_0207C4FC
-.public sub_0207C51C
+.public OSi_InitVramExclusive
+.public OSi_UnlockVram
 .public sub_0207C574
 .public sub_0207C5B0
 .public sub_0207C624
@@ -12252,7 +12252,7 @@
 .public OS_SpinWait
 .public sub_01FF8FAC
 .public sub_02005BC4
-.public sub_0207C4F4
+.public OsCountZeroBits
 .public SVC_GetCRC16
 .public sub_0207C7CC
 .public sub_0207C7D4

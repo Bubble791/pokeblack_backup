@@ -1300,7 +1300,7 @@ _02076DA4:
 	lsl r0, r4, #0x10
 	ldrh r1, [r1]
 	lsr r0, r0, #0x10
-	bl sub_0207C51C
+	bl OSi_UnlockVram
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0

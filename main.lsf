@@ -61,7 +61,6 @@ Static main
     Object lib/NitroSDK/asm/mi_swap.o
     Object lib/NitroSDK/asm/mi_dma_card.o
     Object lib/NitroSDK/asm/mi_init.o
-
     Object asm/asm_76_thumb.o
     Object asm/asm_77_arm.o
     Object asm/asm_78_thumb.o
@@ -78,7 +77,7 @@ Static main
     Object lib/NitroSDK/asm/os_reset.o
     Object lib/NitroSDK/asm/os_ownerInfo.o
     Object lib/NitroSDK/asm/os_ownerInfoEx.o
-    Object asm/asm_91_arm.o
+    Object lib/NitroSDK/asm/os_varmExclusive.o
     Object asm/asm_92_thumb.o
     Object asm/asm_93_arm.o
     Object asm/asm_94_thumb.o
