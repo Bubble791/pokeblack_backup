@@ -5379,7 +5379,7 @@ ovy261_2179434: ; 0x02179434
 	blx MI_CpuCopy8
 	add r0, r5, #0
 	add r0, #0x20
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r6, #0
 	bl sub_02017934
 	bl sub_0200EF7C

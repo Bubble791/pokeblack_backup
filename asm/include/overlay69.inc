@@ -3,7 +3,7 @@
 .public sub_0203A1FC
 .public sub_02042BC4
 .public MI_CpuFill8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042A6C
 .public sub_0217CF4C

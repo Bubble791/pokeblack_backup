@@ -3836,7 +3836,7 @@ ovy30_2174e90: ; 0x02174E90
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r0, sp, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, _02174F14 ; =0x02FFFC3C
 	ldr r3, [r0]
 	add r0, sp, #0

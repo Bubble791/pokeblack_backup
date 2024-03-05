@@ -45,7 +45,7 @@ _0217C96A:
 	ldmia r5!, {r0, r1}
 	stmia r2!, {r0, r1}
 	add r0, sp, #0x24
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	bl sub_02040440
 	bl sub_02042A6C
 	add r2, r0, #0

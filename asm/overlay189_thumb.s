@@ -21070,7 +21070,7 @@ ovy189_21a6b34: ; 0x021A6B34
 	add r6, sp, #4
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r4, sp, #8
 	mov r5, #0
 	add r4, #2

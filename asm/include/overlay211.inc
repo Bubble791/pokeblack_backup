@@ -7,7 +7,7 @@
 .public sub_0201736C
 .public sub_020425EC
 .public sub_02008B34
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02042A78
 .public sub_02042860
 .public sub_02040C64

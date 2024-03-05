@@ -902,7 +902,7 @@ _0219D5D2:
 _0219D5DE:
 	add r6, sp, #0
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	bl sub_02040440
 	ldr r1, _0219D614 ; =0x00000C04
 	mov r2, #6

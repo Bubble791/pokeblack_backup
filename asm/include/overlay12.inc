@@ -869,7 +869,7 @@
 .public sub_02155174
 .public sub_02155174
 .public sub_020173AC
-.public sub_0207C3BC
+.public OS_GetOwnerInfoEx
 .public sub_02155174
 .public sub_020171F4
 .public sub_02008BF0
@@ -2704,8 +2704,8 @@
 .public sub_0201736C
 .public sub_02008BD0
 .public OS_IsRunOnTwl
-.public sub_0207C4B4
-.public sub_0207C4B4
+.public OS_GetParentalControlInfoPtr
+.public OS_GetParentalControlInfoPtr
 .public sub_0202D014
 .public sub_0202CFAC
 .public sub_0202CE9C
@@ -3087,7 +3087,7 @@
 .public sub_0218AE38
 .public sub_0201736C
 .public sub_02008B34
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040C20
 .public sub_02040440
 .public sub_02042D04

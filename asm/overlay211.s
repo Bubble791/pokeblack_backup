@@ -76,7 +76,7 @@ _021EF25A:
 	bl sub_02008B34
 	add r0, r4, #0
 	add r0, #0x40
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r4, #0
 	ldr r1, _021EF284 ; =0x00003A0B
 	add r0, #0x46

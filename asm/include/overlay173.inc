@@ -1389,4 +1389,4 @@
 .public sub_02151AB4
 .public sub_02151ADC
 .public sub_02151AF0
-.public sub_0207C33C
+.public OS_GetMacAddress

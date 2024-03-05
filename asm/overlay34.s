@@ -371,7 +371,7 @@ ovy34_2176d80: ; 0x02176D80
 	cmp r0, #0
 	beq _02176E3A
 	add r0, sp, #0x1c
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r7, r5, #0
 	mov r4, #0
 	add r7, #0x28
@@ -1307,7 +1307,7 @@ ovy34_2177480: ; 0x02177480
 	beq _021774EC
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r1, r4, #0
 	add r0, r5, #0
 	mov r2, #6

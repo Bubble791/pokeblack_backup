@@ -3896,7 +3896,7 @@ ovy181_219eec8: ; 0x0219EEC8
 	add r0, #2
 	add r6, r1, #0
 	add r7, r2, #0
-	bl sub_0207C3BC
+	bl OS_GetOwnerInfoEx
 	add r4, sp, #4
 	ldrb r0, [r4, #0x14]
 	mov r1, #0xf
@@ -12895,7 +12895,7 @@ ovy181_21a3388: ; 0x021A3388
 	sub sp, #8
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r2, #0
 	mov r1, #0
 _021A3398:

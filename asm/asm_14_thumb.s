@@ -14945,7 +14945,7 @@ sub_02040504: ; 0x02040504
 	bne _02040560
 	add r7, sp, #0
 	add r0, r7, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r4, #0
 	add r1, sp, #0
 	strb r6, [r1, #6]
@@ -15416,7 +15416,7 @@ sub_02040880: ; 0x02040880
 	ldrb r0, [r5, #6]
 	strb r0, [r4, #0xc]
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldrb r0, [r5, #8]
 	cmp r0, #0
 	beq _02040916
@@ -15566,7 +15566,7 @@ _020409C2:
 	bl sub_0204092C
 _020409C8:
 	add r0, sp, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r5, #6
 	add r1, sp, #0
 	mov r2, #6
@@ -21514,7 +21514,7 @@ _02043512:
 	mov r0, #0
 	str r0, [sp]
 	add r0, sp, #4
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r7, #6
 _0204351E:
 	ldr r0, [sp]

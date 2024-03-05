@@ -100,7 +100,7 @@
 .public sub_02040440
 .public sub_02040664
 .public sub_0219CE98
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042BE8
 .public sub_02040440

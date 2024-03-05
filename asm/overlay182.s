@@ -8741,7 +8741,7 @@ _021A8B08: .word 0x021C3024
 	thumb_func_start ovy182_21a8b0c
 ovy182_21a8b0c: ; 0x021A8B0C
 	push {r3, lr}
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r0, #1
 	pop {r3, pc}
 	.align 2, 0
@@ -19079,7 +19079,7 @@ _021ADAD4:
 	ldr r1, [r1, #4]
 	add r0, #0xa
 	add r0, r1, r0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, _021ADB30 ; =0x021ADBAD
 	ldr r1, _021ADB34 ; =0x021ADBB9
 	bl ovy182_21a6d04
@@ -21673,7 +21673,7 @@ ovy182_21aefac: ; 0x021AEFAC
 	bl ovy182_21bbdec
 	str r0, [sp, #0x14]
 	add r0, sp, #0x18
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r3, sp, #0x18
 	ldrb r0, [r3, #1]
 	ldr r2, _021AF0E8 ; =0x021C0E10
@@ -37348,7 +37348,7 @@ ovy182_21b6b1c: ; 0x021B6B1C
 	bl ovy182_21ab6a4
 	add r0, sp, #0x14
 	add r0, #2
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r4, sp, #0
 	mov r0, #0
 	add r1, r4, #0
@@ -41174,7 +41174,7 @@ _021B8888:
 	add r1, #8
 	strh r0, [r2, r1]
 	add r0, sp, #0
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r1, r4, #0
 	ldr r2, [r5]
 	add r1, #0x14
@@ -44452,7 +44452,7 @@ ovy182_21ba1a8: ; 0x021BA1A8
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r0, sp, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, _021BA228 ; =0x02FFFC3C
 	ldr r3, [r0]
 	add r0, sp, #0

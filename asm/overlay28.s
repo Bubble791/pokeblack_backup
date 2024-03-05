@@ -875,7 +875,7 @@ ovy28_21709e0: ; 0x021709E0
 	cmp r0, #1
 	bne _02170A0A
 	add r0, r5, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	b _02170A1E
 _02170A0A:
 	ldr r0, [r4, #0x20]
@@ -1194,7 +1194,7 @@ ovy28_2170ca8: ; 0x02170CA8
 	add r4, r6, #0
 	add r4, #0x1c
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, [r5]
 	ldr r0, [r0]
 	bl sub_02008BF4
@@ -1882,7 +1882,7 @@ ovy28_2171220: ; 0x02171220
 	mov r2, #8
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r1, #1
 	add r0, sp, #0
 	strb r1, [r0, #6]
@@ -2130,7 +2130,7 @@ _0217140A:
 	pop {r4, r5, r6, r7, pc}
 _02171418:
 	add r0, sp, #4
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r7, #0
 	bl sub_0201736C
 	add r2, r0, #0
@@ -2595,7 +2595,7 @@ ovy28_2171798: ; 0x02171798
 	ldmia r4!, {r0, r1}
 	stmia r2!, {r0, r1}
 	add r0, sp, #0x30
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	bl sub_02040440
 	str r7, [sp]
 	mov r1, #1
@@ -2721,7 +2721,7 @@ ovy28_2171894: ; 0x02171894
 	ldmia r4!, {r0, r1}
 	stmia r2!, {r0, r1}
 	add r0, sp, #0x30
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	bl sub_02040440
 	str r7, [sp]
 	mov r1, #1
@@ -4822,7 +4822,7 @@ _021728B8:
 	bl sub_02008B34
 	add r0, r5, r6
 	add r0, #0x20
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r5, r6
 	mov r1, #1
 	add r0, #0x26

@@ -673,7 +673,7 @@ ovy175_2199d4c: ; 0x02199D4C
 	add r4, r0, #0
 	add r0, sp, #0x10
 	add r5, r1, #0
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r0, r4, #0
 	bl sub_02016AD8
 	add r4, r0, #0

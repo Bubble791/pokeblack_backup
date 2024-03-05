@@ -766,7 +766,7 @@
 .public sub_0207AEA4
 .public sub_0207AE68
 .public sub_0207AEA4
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0208D5C4
 .public sub_0208D60C
 .public sub_0208D868

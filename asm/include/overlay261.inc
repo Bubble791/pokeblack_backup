@@ -465,7 +465,7 @@
 .public sub_0201736C
 .public sub_02008B08
 .public MI_CpuCopy8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02017934
 .public sub_0200EF7C
 .public sub_0200EF90

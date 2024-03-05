@@ -404,7 +404,7 @@
 .public sub_0203D4F8
 .public sub_020120C8
 .public sub_020120DC
-.public sub_0207C3BC
+.public OS_GetOwnerInfoEx
 .public MI_CpuCopy8
 .public sub_02042EA4
 .public sub_0203CB94
@@ -808,7 +808,7 @@
 .public sub_020818F8
 .public sub_02081448
 .public sub_0207C774
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0208D868
 .public sub_020812B8
 .public OS_DisableInterrupts

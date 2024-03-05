@@ -587,7 +587,7 @@ _021507BC:
 	add r0, sp, #0x10
 	strh r4, [r5]
 	strh r4, [r5, #2]
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	ldr r2, _0215088C ; =ovy11_2150e0c
 	add r0, r5, #0
 	mov r1, #0
@@ -27208,7 +27208,7 @@ _0215CEE0:
 _0215CEF6:
 	add r6, sp, #0
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r6, #0
 	bl sub_0215CCB0
 	ldr r0, _0215CF4C ; =ovy11_215d2d8
@@ -29711,7 +29711,7 @@ ovy11_215e25c: ; 0x0215E25C
 	bne _0215E2E4
 	add r7, sp, #8
 	add r0, r7, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	bl sub_0207BB0C
 	ldr r6, [sp, #8]
 	str r1, [sp, #4]
@@ -53212,7 +53212,7 @@ _0216A048:
 	add r6, #2
 	strb r0, [r7, #0x1d]
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r4, r7, #0
 	mov r5, #0
 	add r4, #0x1f
@@ -53227,7 +53227,7 @@ _0216A068:
 	blt _0216A068
 	add r4, sp, #0x3c
 	add r0, r4, #0
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	ldrb r0, [r4]
 	cmp r0, #8
 	blo _0216A08C

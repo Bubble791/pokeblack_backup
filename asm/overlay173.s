@@ -18987,11 +18987,11 @@ ovy173_21a621c: ; 0x021A621C
 
 	thumb_func_start ovy173_21A6240
 ovy173_21A6240: ; 0x021A6240
-	ldr r3, _021A6248 ; =sub_0207C33C
+	ldr r3, _021A6248 ; =OS_GetMacAddress
 	add r0, #0xe
 	bx r3
 	nop
-_021A6248: .word sub_0207C33C
+_021A6248: .word OS_GetMacAddress
 	thumb_func_end ovy173_21A6240
 
 	thumb_func_start sub_021A624C

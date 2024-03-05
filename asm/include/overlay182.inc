@@ -395,7 +395,7 @@
 .public sub_020839D0
 .public sub_02083964
 .public sub_02083964
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02083A10
 .public sub_02083964
 .public sub_020839D0
@@ -577,7 +577,7 @@
 .public sub_021BCC9C
 .public MIi_CpuClear16
 .public MI_CpuCopy8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0207C774
 .public OS_IsRunOnTwl
 .public sub_021ADC4C
@@ -746,7 +746,7 @@
 .public OS_SpinWaitSysCycles
 .public sub_0207EF8C
 .public sub_021ADFBC
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0207A2C0
 .public sub_02056A90
 .public sub_0208D5D0
@@ -1956,7 +1956,7 @@
 .public sub_021ADFBC
 .public sub_021ADFC8
 .public sub_021ADFBC
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public MIi_CpuClear16
 .public MIi_CpuCopy16
 .public sub_021B80F4
@@ -2150,7 +2150,7 @@
 .public sub_020813C4
 .public sub_02080F40
 .public sub_020811A4
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public sub_020815C8
@@ -2288,7 +2288,7 @@
 .public sub_02081424
 .public sub_021B9C34
 .public sub_021B9C34
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_021B9C34
 .public sub_021B9C34
 .public sub_020810CC

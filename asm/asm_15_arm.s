@@ -7185,7 +7185,7 @@ sub_02057138: ; 0x02057138
 	adds sb, sb, r0
 _020571C0:
 	add r0, sp, #0
-	blx sub_0207C33C
+	blx OS_GetMacAddress
 	ldrb r0, [sp, #1]
 	ldr r6, _020572F4 ; =0x5D588B65
 	ldr r7, _020572F8 ; =0x00269EC3
@@ -7364,7 +7364,7 @@ sub_02057398: ; 0x02057398
 	adds r8, r8, r0
 _0205743C:
 	add r0, sp, #0
-	blx sub_0207C33C
+	blx OS_GetMacAddress
 	ldrb r0, [sp, #1]
 	ldr r6, _02057520 ; =0x5D588B65
 	ldr r7, _02057524 ; =0x00269EC3
@@ -11750,15 +11750,15 @@ sub_0205AB78: ; 0x0205AB78
 	ldrb r0, [r0, #0x4cc]
 	cmp r0, #0
 	bne _0205ABCC
-	blx sub_0207C45C
+	blx OS_IsAgreeEULA
 	cmp r0, #0
 	beq _0205ABD4
-	blx sub_0207C480
+	blx OS_GetAgreedEULAVersion
 	cmp r0, #0
 	beq _0205ABD4
-	blx sub_0207C480
+	blx OS_GetAgreedEULAVersion
 	mov r4, r0
-	blx sub_0207C49C
+	blx OS_GetROMHeaderEULAVersion
 	cmp r4, r0
 	blo _0205ABD4
 _0205ABCC:
@@ -11780,10 +11780,10 @@ sub_0205ABE8: ; 0x0205ABE8
 	blx OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0205AC1C
-	blx sub_0207C438
+	blx OS_IsAvailableWireless
 	cmp r0, #1
 	bne _0205AC14
-	blx sub_0207C4D0
+	blx OS_IsParentalControledApp
 	cmp r0, #0
 	moveq r0, #1
 	ldmeqia sp!, {r3, pc}

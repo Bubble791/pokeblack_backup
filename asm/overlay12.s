@@ -11207,7 +11207,7 @@ ovy12_2155794: ; 0x02155794
 	bl ovy12_21548e8
 	add r5, r0, #0
 	add r0, sp, #0
-	bl sub_0207C3BC
+	bl OS_GetOwnerInfoEx
 	add r0, sp, #0
 	ldrb r1, [r0, #2]
 	strh r1, [r4]
@@ -32129,12 +32129,12 @@ _0215F8BE:
 	lsr r0, r0, #0x1f
 	cmp r0, #1
 	bne _0215F90A
-	bl sub_0207C4B4
+	bl OS_GetParentalControlInfoPtr
 	ldr r0, [r0]
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
 	beq _0215F8F6
-	bl sub_0207C4B4
+	bl OS_GetParentalControlInfoPtr
 	ldr r0, [r0]
 	lsl r0, r0, #0x1a
 	lsr r0, r0, #0x1f
@@ -36417,7 +36417,7 @@ ovy12_2161858: ; 0x02161858
 	bl sub_02008B34
 	add r0, r4, #0
 	add r0, #0x20
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, _02161880 ; =0x00003A0B
 	strh r0, [r4, #0x26]
 	add r0, r4, #0

@@ -26,7 +26,7 @@
 .public sub_02040C64
 .public sub_02199F70
 .public sub_02199FA4
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public sub_02016AD8
 .public sub_0201736C
 .public sub_02008B34

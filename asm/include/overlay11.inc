@@ -31,7 +31,7 @@
 .public sub_0205AF98
 .public sub_021505D4
 .public sub_0205AE58
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public sub_021505D4
 .public sub_020424AC
 .public sub_0215E4D4
@@ -862,7 +862,7 @@
 .public sub_0215C32C
 .public sub_02080758
 .public sub_02080E7C
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0215CCB0
 .public sub_020812FC
 .public sub_0215C32C
@@ -963,7 +963,7 @@
 .public sub_02086048
 .public sub_02085D9C
 .public sub_02085E80
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0207BB0C
 .public sub_0208D60C
 .public sub_0208D60C
@@ -2814,9 +2814,9 @@
 .public MI_CpuCopy8
 .public sub_0207C774
 .public MI_CpuCopy8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0207A290
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public sub_0207A2C0
 .public MI_CpuCopy8
 .public sub_0207A2C0

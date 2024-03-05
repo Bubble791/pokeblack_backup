@@ -8364,7 +8364,7 @@
 .public sub_02017934
 .public sub_0200AFBC
 .public sub_02163124
-.public sub_0207C350
+.public OS_GetOwnerInfo
 .public sub_0200B05C
 .public sub_0200B014
 .public sub_0200AFE4
@@ -9012,7 +9012,7 @@
 .public sub_0203CB80
 .public sub_02008B98
 .public sub_0203CB80
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02008BF0
 .public sub_02024AD4
 .public MI_CpuCopy8
@@ -11886,7 +11886,7 @@
 .public sub_02040C20
 .public MI_CpuFill8
 .public sub_02008B34
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042C18
 .public sub_02040440

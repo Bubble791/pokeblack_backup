@@ -45,7 +45,7 @@
 .public sub_02043E98
 .public MI_CpuFill8
 .public sub_02042BC4
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public MI_CpuCopy8
 .public sub_02042A78
 .public sub_02008B98
@@ -67,7 +67,7 @@
 .public sub_02005748
 .public MI_CpuFill8
 .public sub_02170C9C
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02008BF4
 .public sub_02008BF0
 .public sub_02043E98
@@ -129,7 +129,7 @@
 .public sub_02042A6C
 .public MI_CpuCopy8
 .public MI_CpuFill8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042BE8
 .public sub_02040440
@@ -153,7 +153,7 @@
 .public sub_02042C18
 .public sub_02016AD8
 .public sub_0203CB80
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_0201736C
 .public sub_021C3F34
 .public sub_0203CB80
@@ -194,7 +194,7 @@
 .public sub_0217CD98
 .public sub_0217CD88
 .public MI_CpuFill8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042C9C
 .public sub_0203CB80
@@ -207,7 +207,7 @@
 .public sub_0217CD98
 .public sub_0217CE40
 .public MI_CpuFill8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02040440
 .public sub_02042C9C
 .public sub_02040440
@@ -381,7 +381,7 @@
 .public sub_0201735C
 .public sub_020200AC
 .public sub_02008B34
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02169770
 .public sub_02169508
 .public sub_0203A24C

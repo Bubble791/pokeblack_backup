@@ -5744,14 +5744,14 @@ sub_020092FC: ; 0x020092FC
 	push {r3, r4, lr}
 	sub sp, #0x54
 	add r4, r0, #0
-	bl sub_0207C3A8
+	bl OS_GetOwnerRtcOffset
 	str r0, [r4]
 	add r0, r4, #0
 	add r0, #8
 	str r1, [r4, #4]
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, sp, #0
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r0, sp, #0
 	ldrb r1, [r0, #2]
 	strb r1, [r4, #0xe]
@@ -5766,7 +5766,7 @@ sub_020092FC: ; 0x020092FC
 sub_02009328: ; 0x02009328
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207C3A8
+	bl OS_GetOwnerRtcOffset
 	ldr r2, [r4]
 	ldr r3, [r4, #4]
 	eor r0, r2
@@ -17375,7 +17375,7 @@ sub_0200DE68: ; 0x0200DE68
 	bl sub_0200EF7C
 	add r7, r0, #0
 	add r0, sp, #0x18
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r0, sp, #8
 	str r0, [sp]
 	ldr r0, [sp, #4]
@@ -20350,7 +20350,7 @@ sub_0200F1C4: ; 0x0200F1C4
 	mov r2, #0x5a
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	pop {r4, pc}
 	thumb_func_end sub_0200F1C4
 
@@ -20490,7 +20490,7 @@ sub_0200F2A0: ; 0x0200F2A0
 	bl sub_0200E864
 	add r4, #0x9c
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end sub_0200F2A0
@@ -20535,7 +20535,7 @@ sub_0200F2DC: ; 0x0200F2DC
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, #0x9c
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r4, #0
 	mov r1, #1
 	add r0, #0xa2
@@ -20569,7 +20569,7 @@ sub_0200F308: ; 0x0200F308
 	add r4, sp, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r5, #0x9c
 	add r0, r5, #0
 	add r1, r4, #0
@@ -20659,7 +20659,7 @@ sub_0200F38C: ; 0x0200F38C
 	bl sub_0207D12C
 	add r4, r0, #0
 	add r5, r1, #0
-	bl sub_0207C3A8
+	bl OS_GetOwnerRtcOffset
 	sub r0, r4, r0
 	sbc r5, r1
 	add r1, r5, #0
@@ -29251,7 +29251,7 @@ sub_02012E54: ; 0x02012E54
 	bl sub_02042E84
 	add r6, sp, #0
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r4, #0
 _02012E70:
 	add r0, r4, #0
@@ -31424,7 +31424,7 @@ sub_02013D38: ; 0x02013D38
 	ldr r0, [r1, #0xc]
 	lsl r0, r0, #0x10
 	lsr r5, r0, #0x1c
-	bl sub_0207C3B4
+	bl OS_GetFavoriteColorTable
 	lsl r1, r5, #0x1c
 	lsr r1, r1, #0x1b
 	ldrh r0, [r0, r1]
@@ -87736,7 +87736,7 @@ sub_0202CAE4: ; 0x0202CAE4
 	bl sub_0200EF7C
 	str r0, [sp]
 	add r0, sp, #0x14
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	mov r0, #0xff
 	strb r0, [r5]
 	add r0, r6, #0
@@ -107311,12 +107311,12 @@ sub_020352E8: ; 0x020352E8
 	bl sub_020352E0
 	cmp r0, #0
 	beq _02035312
-	bl sub_0207C4B4
+	bl OS_GetParentalControlInfoPtr
 	ldr r0, [r0]
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
 	beq _0203530E
-	bl sub_0207C4B4
+	bl OS_GetParentalControlInfoPtr
 	ldr r0, [r0]
 	lsl r0, r0, #0x1a
 	lsr r0, r0, #0x1f
@@ -107334,10 +107334,10 @@ _02035312:
 
 	thumb_func_start sub_02035318
 sub_02035318: ; 0x02035318
-	ldr r3, _0203531C ; =sub_0207C438
+	ldr r3, _0203531C ; =OS_IsAvailableWireless
 	bx r3
 	.align 2, 0
-_0203531C: .word sub_0207C438
+_0203531C: .word OS_IsAvailableWireless
 	thumb_func_end sub_02035318
 
 	thumb_func_start sub_02035320
@@ -107346,7 +107346,7 @@ sub_02035320: ; 0x02035320
 	bl sub_020352E0
 	cmp r0, #1
 	bne _02035330
-	bl sub_0207C45C
+	bl OS_IsAgreeEULA
 	pop {r3, pc}
 _02035330:
 	mov r0, #1
@@ -107360,7 +107360,7 @@ sub_02035334: ; 0x02035334
 	add r5, r0, #0
 	add r0, sp, #0
 	add r4, r1, #0
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r0, sp, #0
 	ldrb r1, [r0, #2]
 	strb r1, [r5]

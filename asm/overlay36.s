@@ -101659,7 +101659,7 @@ ovy36_21afcfc: ; 0x021AFCFC
 	bl sub_02163124
 	add r5, r0, #0
 	add r0, sp, #0xc
-	bl sub_0207C350
+	bl OS_GetOwnerInfo
 	add r2, sp, #0xc
 	ldrb r1, [r2, #2]
 	ldrb r2, [r2, #3]
@@ -111049,7 +111049,7 @@ _021B44C6:
 	add r0, r4, #0
 	add r0, #0x1a
 	strh r7, [r4, #0x18]
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	add r0, r5, #0
 	bl sub_02008BF0
 	add r1, r4, #0
@@ -147901,7 +147901,7 @@ ovy36_21c5acc: ; 0x021C5ACC
 	bl sub_02008B34
 	add r6, sp, #0x30
 	add r0, r6, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	strb r5, [r6, #6]
 	cmp r4, #1
 	bne _021C5B16

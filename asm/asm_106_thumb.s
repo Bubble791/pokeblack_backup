@@ -4381,10 +4381,10 @@ _02080E48:
 	thumb_func_start sub_02080E60
 sub_02080E60: ; 0x02080E60
 	push {r3, lr}
-	bl sub_0207C438
+	bl OS_IsAvailableWireless
 	cmp r0, #1
 	bne _02080E76
-	bl sub_0207C4D0
+	bl OS_IsParentalControledApp
 	cmp r0, #0
 	bne _02080E76
 	mov r0, #1
@@ -4448,7 +4448,7 @@ sub_02080EAC: ; 0x02080EAC
 	str r6, [sp, #0x20]
 	strh r7, [r0, #0x12]
 	add r0, sp, #0x18
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 _02080EE8:
 	blx OS_DisableInterrupts
 	add r7, r0, #0
@@ -4785,7 +4785,7 @@ sub_0208115C: ; 0x0208115C
 	sub sp, #8
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r2, #0
 	mov r1, #0
 _0208116C:
@@ -4824,7 +4824,7 @@ sub_020811A4: ; 0x020811A4
 	sub sp, #8
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	mov r2, #0
 	mov r1, #0
 _020811B4:

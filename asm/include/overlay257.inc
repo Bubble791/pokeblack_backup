@@ -1483,7 +1483,7 @@
 .public sub_02008B94
 .public sub_02008BF0
 .public sub_02008BD0
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02018B38
 .public sub_02018B78
 .public MI_CpuCopy8

@@ -76,7 +76,8 @@ Static main
     Object lib/NitroSDK/asm/os_system.o
     Object lib/NitroSDK/asm/os_systemWork.o
     Object lib/NitroSDK/asm/os_reset.o
-    Object asm/asm_90_thumb.o
+    Object lib/NitroSDK/asm/os_ownerInfo.o
+    Object lib/NitroSDK/asm/os_ownerInfoEx.o
     Object asm/asm_91_arm.o
     Object asm/asm_92_thumb.o
     Object asm/asm_93_arm.o
@@ -135,7 +136,6 @@ Static main
 	Object lib/NitroSDK/src/os/os_tick.o
 	Object lib/NitroSDK/src/os/os_alarm.o
 	Object lib/NitroSDK/src/os/os_valarm.o
-	Object lib/NitroSDK/src/os/os_ownerInfo.o
 	Object lib/NitroSDK/src/os/os_vramExclusive.o
 	Object lib/NitroSDK/src/os/os_entropy.o
 	Object lib/NitroSDK/src/os/os_terminate_proc.o

@@ -16599,7 +16599,7 @@ _021A1986:
 	bl sub_02008BD0
 	str r0, [sp, #0x14]
 	add r0, sp, #0x34
-	bl sub_0207C33C
+	bl OS_GetMacAddress
 	ldr r0, [sp, #0x20]
 	add r0, #0x21
 	ldrb r0, [r0]

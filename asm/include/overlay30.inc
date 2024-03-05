@@ -242,7 +242,7 @@
 .public sub_02174154
 .public sub_02174140
 .public sub_02174140
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02174140
 .public sub_02174154
 .public sub_02174140

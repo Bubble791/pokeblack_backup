@@ -16,7 +16,7 @@
 .public sub_0218051C
 .public sub_02166940
 .public MI_CpuFill8
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02043E98
 .public sub_02176B18
 .public sub_0200F770
@@ -77,7 +77,7 @@
 .public sub_02176BB4
 .public sub_02166FD0
 .public sub_021B445C
-.public sub_0207C33C
+.public OS_GetMacAddress
 .public sub_02043E98
 .public sub_02170C2C
 .public sub_02170C2C
