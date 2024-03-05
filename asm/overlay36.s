@@ -29120,13 +29120,13 @@ ovy36_218d25c: ; 0x0218D25C
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _0218D2CC
 _0218D2C2:
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _0218D2CC:
 	add r0, r4, #0
 	add r1, r5, #0
@@ -29174,13 +29174,13 @@ _0218D31C:
 	ldr r0, [r5, r6]
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	add r0, r6, #4
 	sub r4, #0xa0
 	ldr r0, [r5, r0]
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r4, r5, r6, pc}
 	nop
 _0218D340: .word 0x05000600
@@ -69941,7 +69941,7 @@ ovy36_21a040c: ; 0x021A040C
 	add r0, #2
 	add r1, #0xe
 	mov r2, #2
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	mov r0, #0x1f
 	add r1, r4, #0
 	mul r1, r0
@@ -69972,7 +69972,7 @@ ovy36_21a040c: ; 0x021A040C
 	add r0, sp, #0
 	add r1, #0x2a
 	mov r2, #2
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	ldr r0, [r5, r6]
 	add r0, r0, #6
 	str r0, [r5, r6]

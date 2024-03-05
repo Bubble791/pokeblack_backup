@@ -66,7 +66,7 @@ ovy267_219ce80: ; 0x0219CE80
 	add r0, r7, #0
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _0219CF12:
 	mov r0, #0x10
 	mov r1, #0

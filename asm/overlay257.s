@@ -2670,7 +2670,7 @@ _0219AB64:
 	mov r1, #0
 	add r2, r6, #0
 	mov r5, #0
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 	add sp, #0x48
 	strb r5, [r4, #0x10]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3104,7 +3104,7 @@ _0219AE7E:
 	lsl r2, r2, #9
 	add r1, r1, r2
 	lsl r2, r3, #1
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 	add r0, r4, r5
 	add r0, #0x46
 	ldrh r0, [r0]
@@ -30470,7 +30470,7 @@ _021A88D6:
 	add r1, r4, r1
 	lsl r1, r1, #9
 	add r1, r7, r1
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -30816,7 +30816,7 @@ _021A8B4E:
 	add r1, r4, r1
 	lsl r1, r1, #9
 	add r1, r7, r1
-	bl sub_02075AE0
+	bl GXS_LoadBG3Scr
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -32350,7 +32350,7 @@ ovy257_21a96d4: ; 0x021A96D4
 	mov r1, #0
 	add r2, r6, #0
 	mov r4, #0
-	bl sub_02075AE0
+	bl GXS_LoadBG3Scr
 	str r4, [r5, #0x4c]
 _021A96FC:
 	bl sub_0204B7C8

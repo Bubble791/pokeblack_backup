@@ -10,12 +10,12 @@
 .public sub_02027880
 .public sub_02026FD8
 .public sub_0207B0AC
-.public sub_0207560C
-.public sub_02075534
+.public GXS_LoadOBJPltt
+.public GXS_LoadBGPltt
 .public sub_02026E48
 .public sub_02026DE8
 .public MI_CpuCopy8
-.public sub_02075534
+.public GXS_LoadBGPltt
 .public sub_020279B4
 .public sub_0219CE98
 .public sub_0204AA30
@@ -404,7 +404,7 @@
 .public sub_0203A1FC
 .public sub_020429F0
 .public G2x_SetBlendAlpha_
-.public sub_020754B8
+.public GX_LoadBGPltt
 .public sub_0202DB70
 .public sub_0202E37C
 .public sub_0202E37C

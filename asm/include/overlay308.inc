@@ -188,10 +188,10 @@
 .public sub_021A133C
 .public sub_0203DAC8
 .public sub_0207B0AC
-.public sub_020754B8
-.public sub_02075534
-.public sub_020755A0
-.public sub_0207560C
+.public GX_LoadBGPltt
+.public GXS_LoadBGPltt
+.public GX_LoadOBJPltt
+.public GXS_LoadOBJPltt
 .public sub_02199D08
 .public sub_02199D08
 .public sub_02199D08

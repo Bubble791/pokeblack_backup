@@ -3285,7 +3285,7 @@ ovy191_21b6d18: ; 0x021B6D18
 	add r0, r1, r0
 	mov r1, #0x28
 	mov r2, #0xe
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	sub r0, r4, #3
 	ldrsh r0, [r5, r0]
 	add r1, r5, r6
@@ -3293,7 +3293,7 @@ ovy191_21b6d18: ; 0x021B6D18
 	lsl r0, r0, #5
 	add r0, r1, r0
 	mov r1, #0x28
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	sub r0, r4, #3
 	ldrsh r0, [r5, r0]
 	add r1, r0, #1

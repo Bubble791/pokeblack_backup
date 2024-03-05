@@ -1101,7 +1101,7 @@ _021BC002:
 	lsl r0, r0, #5
 	add r0, r2, r0
 	mov r2, #0x20
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	pop {r3, r4, r5, pc}
 _021BC01C:
 	ldr r0, [r1, #0x20]
@@ -3838,7 +3838,7 @@ ovy216_21bd590: ; 0x021BD590
 	add r0, r1, r0
 	lsl r1, r5, #5
 	mov r2, #0x20
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	mov r0, #0x72
 	str r0, [sp]
 	mov r0, #0x1f

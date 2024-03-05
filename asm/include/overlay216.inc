@@ -101,7 +101,7 @@
 .public sub_0203A6A8
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_020755A0
+.public GX_LoadOBJPltt
 .public sub_0204B7C8
 .public sub_02045A5C
 .public sub_02021A3C
@@ -404,7 +404,7 @@
 .public sub_0204C488
 .public sub_02006254
 .public sub_0204B354
-.public sub_020755A0
+.public GX_LoadOBJPltt
 .public sub_0204B2B4
 .public sub_0204BA40
 .public sub_0203A24C

@@ -9,7 +9,7 @@
 .public sub_02044BD8
 .public sub_020056FC
 .public sub_02015878
-.public sub_02075534
+.public GXS_LoadBGPltt
 .public sub_02044B84
 .public sub_0219D0E0
 .public sub_0203A6A8

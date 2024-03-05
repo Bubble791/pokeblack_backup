@@ -1244,7 +1244,7 @@ _0219D7D4:
 	add r0, r5, #0
 	mov r1, #0
 	lsl r2, r2, #0xe
-	bl sub_02075984
+	bl GX_LoadBG2Scr
 	add r0, r5, #0
 	bl sub_0203A24C
 _0219D7EE:

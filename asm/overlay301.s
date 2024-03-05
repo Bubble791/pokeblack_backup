@@ -482,30 +482,30 @@ ovy301_219ff30: ; 0x0219FF30
 	add r0, r5, #0
 	add r1, r4, #0
 	blx sub_0207B0AC
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	mov r1, #1
 	lsl r7, r1, #0xe
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02075E74
+	bl GX_LoadBGExtPltt
 	mov r1, #6
 	add r0, r5, #0
 	lsl r1, r1, #0xc
 	add r2, r4, #0
-	bl sub_02075E74
-	bl sub_02075EE8
-	bl sub_02075FF8
+	bl GX_LoadBGExtPltt
+	bl GX_EndLoadBGExtPltt
+	bl GXS_BeginLoadBGExtPltt
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02076008
+	bl GXS_LoadBGExtPltt
 	mov r1, #6
 	add r0, r5, #0
 	lsl r1, r1, #0xc
 	add r2, r4, #0
-	bl sub_02076008
-	bl sub_02076064
+	bl GXS_LoadBGExtPltt
+	bl GXS_EndLoadBGExtPltt
 _0219FFE2:
 	add r0, r6, #0
 	mov r1, #7

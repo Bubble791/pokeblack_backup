@@ -28543,7 +28543,7 @@ _021C5CE0:
 	add r2, r7, #0
 	lsl r0, r0, #8
 	add r0, r6, r0
-	bl sub_02075768
+	bl GXS_LoadOBJ
 	add r4, r4, #1
 	add r5, r5, r7
 	cmp r4, #8
@@ -28817,25 +28817,25 @@ _021C5F18:
 	add r0, r4, r5
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _021C5F46
 _021C5F24:
 	add r0, r4, r5
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	b _021C5F46
 _021C5F30:
 	add r0, r4, r5
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	b _021C5F46
 _021C5F3C:
 	add r0, r4, r5
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 _021C5F46:
 	add r6, r6, #1
 	cmp r6, #0x10
@@ -28892,7 +28892,7 @@ _021C5F98:
 	ldr r0, [r5, r4]
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	pop {r4, r5, r6, pc}
 _021C5FB6:
 	cmp r4, #1
@@ -28906,7 +28906,7 @@ _021C5FB6:
 	ldr r0, [r5, r4]
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021C5FD2:
 	pop {r4, r5, r6, pc}
 	.align 2, 0

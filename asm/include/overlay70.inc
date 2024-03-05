@@ -311,7 +311,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_02044360
-.public sub_020755A0
+.public GX_LoadOBJPltt
 .public sub_0217CF60
 .public sub_0203FFC4
 .public sub_0204C124

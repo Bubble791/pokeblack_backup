@@ -816,10 +816,10 @@
 .public sub_02046EF4
 .public sub_02046F00
 .public sub_0207B0AC
-.public sub_0207571C
-.public sub_0207571C
-.public sub_0207571C
-.public sub_0207571C
+.public GX_LoadOBJ
+.public GX_LoadOBJ
+.public GX_LoadOBJ
+.public GX_LoadOBJ
 .public sub_0204C488
 .public sub_0204C124
 .public sub_0204C124

@@ -14715,13 +14715,13 @@ ovy182_21ab90c: ; 0x021AB90C
 	pop {r3, pc}
 _021AB930:
 	ldr r0, _021AB954 ; =0x021C0924
-	ldr r1, _021AB958 ; =sub_0207589C
+	ldr r1, _021AB958 ; =GX_LoadBG1Scr
 	ldr r0, [r0]
 	bl ovy182_21ab67c
 	pop {r3, pc}
 _021AB93C:
 	ldr r0, _021AB954 ; =0x021C0924
-	ldr r1, _021AB958 ; =sub_0207589C
+	ldr r1, _021AB958 ; =GX_LoadBG1Scr
 	ldr r0, [r0, #4]
 	bl ovy182_21ab67c
 	pop {r3, pc}
@@ -14730,7 +14730,7 @@ _021AB948: .word 0x021C4074
 _021AB94C: .word 0x021C0974
 _021AB950: .word 0x02075C05
 _021AB954: .word 0x021C0924
-_021AB958: .word sub_0207589C
+_021AB958: .word GX_LoadBG1Scr
 	thumb_func_end ovy182_21ab90c
 
 	thumb_func_start sub_021AB95C
@@ -14807,7 +14807,7 @@ ovy182_21ab9d4: ; 0x021AB9D4
 	ldr r0, [r4]
 	mov r1, #0
 	mov r2, #0xc0
-	bl sub_0207589C
+	bl GX_LoadBG1Scr
 	mov r0, #1
 	add r1, r5, #0
 	bl sub_021BD268
@@ -20470,7 +20470,7 @@ _021AE5AA:
 	ldr r1, _021AE69C ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021AE6A0 ; =0x021C0D20
-	ldr r1, _021AE6A4 ; =sub_020754B8
+	ldr r1, _021AE6A4 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021AE6A8 ; =0x021C0D38
 	ldr r1, _021AE6AC ; =0x0207571D
@@ -20490,7 +20490,7 @@ _021AE61C:
 _021AE620:
 	ldr r0, _021AE6BC ; =0x021C0D7C
 _021AE622:
-	ldr r1, _021AE6C0 ; =sub_02075910
+	ldr r1, _021AE6C0 ; =GXS_LoadBG1Scr
 	bl ovy182_21ab67c
 _021AE628:
 	ldr r2, _021AE6C4 ; =0x0400100A
@@ -20536,14 +20536,14 @@ _021AE694: .word 0x0207560D
 _021AE698: .word 0x021C0D08
 _021AE69C: .word 0x02075CB5
 _021AE6A0: .word 0x021C0D20
-_021AE6A4: .word sub_020754B8
+_021AE6A4: .word GX_LoadBGPltt
 _021AE6A8: .word 0x021C0D38
 _021AE6AC: .word 0x0207571D
 _021AE6B0: .word 0x021C0D50
 _021AE6B4: .word 0x020755A1
 _021AE6B8: .word 0x021C0D68
 _021AE6BC: .word 0x021C0D7C
-_021AE6C0: .word sub_02075910
+_021AE6C0: .word GXS_LoadBG1Scr
 _021AE6C4: .word 0x0400100A
 _021AE6C8: .word 0x0400000A
 _021AE6CC: .word ovy182_21ae6d0
@@ -20663,10 +20663,10 @@ _021AE7AA:
 	ldr r1, _021AE818 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021AE81C ; =0x021C0DA8
-	ldr r1, _021AE820 ; =sub_020754B8
+	ldr r1, _021AE820 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021AE824 ; =0x021C0DC0
-	ldr r1, _021AE828 ; =sub_02075984
+	ldr r1, _021AE828 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	add r0, sp, #0
 	bl ovy182_21ab63c
@@ -20703,9 +20703,9 @@ _021AE810: .word 0x021BFFB8
 _021AE814: .word 0x021C0D90
 _021AE818: .word 0x02075CB5
 _021AE81C: .word 0x021C0DA8
-_021AE820: .word sub_020754B8
+_021AE820: .word GX_LoadBGPltt
 _021AE824: .word 0x021C0DC0
-_021AE828: .word sub_02075984
+_021AE828: .word GX_LoadBG2Scr
 _021AE82C: .word 0x021C40BC
 _021AE830: .word 0x04001008
 _021AE834: .word 0x0400000A
@@ -21083,7 +21083,7 @@ _021AEB2C: .word ovy182_21aeb80
 ovy182_21aeb30: ; 0x021AEB30
 	push {r3, lr}
 	ldr r0, _021AEB70 ; =0x021C0DD4
-	ldr r1, _021AEB74 ; =sub_02075984
+	ldr r1, _021AEB74 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AEB78 ; =0x04001008
 	mov r0, #3
@@ -21113,7 +21113,7 @@ ovy182_21aeb30: ; 0x021AEB30
 	pop {r3, pc}
 	nop
 _021AEB70: .word 0x021C0DD4
-_021AEB74: .word sub_02075984
+_021AEB74: .word GX_LoadBG2Scr
 _021AEB78: .word 0x04001008
 _021AEB7C: .word 0x04000008
 	thumb_func_end ovy182_21aeb30
@@ -21416,7 +21416,7 @@ _021AEDC8: .word ovy182_21aee1c
 ovy182_21aedcc: ; 0x021AEDCC
 	push {r3, lr}
 	ldr r0, _021AEE0C ; =0x021C0DE8
-	ldr r1, _021AEE10 ; =sub_02075984
+	ldr r1, _021AEE10 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AEE14 ; =0x04001008
 	mov r0, #3
@@ -21446,7 +21446,7 @@ ovy182_21aedcc: ; 0x021AEDCC
 	pop {r3, pc}
 	nop
 _021AEE0C: .word 0x021C0DE8
-_021AEE10: .word sub_02075984
+_021AEE10: .word GX_LoadBG2Scr
 _021AEE14: .word 0x04001008
 _021AEE18: .word 0x04000008
 	thumb_func_end ovy182_21aedcc
@@ -21628,7 +21628,7 @@ _021AEF58: .word ovy182_21af0f8
 ovy182_21aef5c: ; 0x021AEF5C
 	push {r3, lr}
 	ldr r0, _021AEF9C ; =0x021C0DFC
-	ldr r1, _021AEFA0 ; =sub_02075984
+	ldr r1, _021AEFA0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AEFA4 ; =0x04001008
 	mov r0, #3
@@ -21658,7 +21658,7 @@ ovy182_21aef5c: ; 0x021AEF5C
 	pop {r3, pc}
 	nop
 _021AEF9C: .word 0x021C0DFC
-_021AEFA0: .word sub_02075984
+_021AEFA0: .word GX_LoadBG2Scr
 _021AEFA4: .word 0x04001008
 _021AEFA8: .word 0x04000008
 	thumb_func_end ovy182_21aef5c
@@ -22090,7 +22090,7 @@ _021AF30A:
 	ldr r1, _021AF3D8 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021AF3DC ; =0x021C0E70
-	ldr r1, _021AF3E0 ; =sub_02075984
+	ldr r1, _021AF3E0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	add r0, sp, #0x18
 	bl ovy182_21ab63c
@@ -22141,7 +22141,7 @@ _021AF380:
 	ldr r0, [sp]
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	ldr r0, [sp]
 	bl ovy182_21bb420
 	ldr r3, _021AF3E8 ; =0x04001008
@@ -22173,7 +22173,7 @@ _021AF3D0: .word 0x021C0020
 _021AF3D4: .word 0x021C0E58
 _021AF3D8: .word 0x02075CB5
 _021AF3DC: .word 0x021C0E70
-_021AF3E0: .word sub_02075984
+_021AF3E0: .word GX_LoadBG2Scr
 _021AF3E4: .word 0x021C40C8
 _021AF3E8: .word 0x04001008
 _021AF3EC: .word 0x0400000A
@@ -22588,7 +22588,7 @@ _021AF73C: .word ovy182_21af790
 ovy182_21af740: ; 0x021AF740
 	push {r3, lr}
 	ldr r0, _021AF780 ; =0x021C0E88
-	ldr r1, _021AF784 ; =sub_02075984
+	ldr r1, _021AF784 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AF788 ; =0x04001008
 	mov r0, #3
@@ -22618,7 +22618,7 @@ ovy182_21af740: ; 0x021AF740
 	pop {r3, pc}
 	nop
 _021AF780: .word 0x021C0E88
-_021AF784: .word sub_02075984
+_021AF784: .word GX_LoadBG2Scr
 _021AF788: .word 0x04001008
 _021AF78C: .word 0x04000008
 	thumb_func_end ovy182_21af740
@@ -23212,7 +23212,7 @@ _021AFBD4: .word ovy182_21afc28
 ovy182_21afbd8: ; 0x021AFBD8
 	push {r3, lr}
 	ldr r0, _021AFC18 ; =0x021C0E9C
-	ldr r1, _021AFC1C ; =sub_02075984
+	ldr r1, _021AFC1C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AFC20 ; =0x04001008
 	mov r0, #3
@@ -23242,7 +23242,7 @@ ovy182_21afbd8: ; 0x021AFBD8
 	pop {r3, pc}
 	nop
 _021AFC18: .word 0x021C0E9C
-_021AFC1C: .word sub_02075984
+_021AFC1C: .word GX_LoadBG2Scr
 _021AFC20: .word 0x04001008
 _021AFC24: .word 0x04000008
 	thumb_func_end ovy182_21afbd8
@@ -23497,7 +23497,7 @@ _021AFE0C: .word ovy182_21afe58
 ovy182_21afe10: ; 0x021AFE10
 	push {r3, lr}
 	ldr r0, _021AFE48 ; =0x021C0EB0
-	ldr r1, _021AFE4C ; =sub_02075984
+	ldr r1, _021AFE4C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AFE50 ; =0x04001008
 	mov r0, #3
@@ -23523,7 +23523,7 @@ ovy182_21afe10: ; 0x021AFE10
 	pop {r3, pc}
 	nop
 _021AFE48: .word 0x021C0EB0
-_021AFE4C: .word sub_02075984
+_021AFE4C: .word GX_LoadBG2Scr
 _021AFE50: .word 0x04001008
 _021AFE54: .word 0x0400000A
 	thumb_func_end ovy182_21afe10
@@ -23675,7 +23675,7 @@ _021AFF64: .word ovy182_21affb8
 ovy182_21aff68: ; 0x021AFF68
 	push {r3, lr}
 	ldr r0, _021AFFA8 ; =0x021C0EC4
-	ldr r1, _021AFFAC ; =sub_02075984
+	ldr r1, _021AFFAC ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021AFFB0 ; =0x04001008
 	mov r0, #3
@@ -23705,7 +23705,7 @@ ovy182_21aff68: ; 0x021AFF68
 	pop {r3, pc}
 	nop
 _021AFFA8: .word 0x021C0EC4
-_021AFFAC: .word sub_02075984
+_021AFFAC: .word GX_LoadBG2Scr
 _021AFFB0: .word 0x04001008
 _021AFFB4: .word 0x04000008
 	thumb_func_end ovy182_21aff68
@@ -24014,7 +24014,7 @@ _021B0218: .word ovy182_21b026c
 ovy182_21b021c: ; 0x021B021C
 	push {r3, lr}
 	ldr r0, _021B025C ; =0x021C0ED8
-	ldr r1, _021B0260 ; =sub_02075984
+	ldr r1, _021B0260 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B0264 ; =0x04001008
 	mov r0, #3
@@ -24044,7 +24044,7 @@ ovy182_21b021c: ; 0x021B021C
 	pop {r3, pc}
 	nop
 _021B025C: .word 0x021C0ED8
-_021B0260: .word sub_02075984
+_021B0260: .word GX_LoadBG2Scr
 _021B0264: .word 0x04001008
 _021B0268: .word 0x04000008
 	thumb_func_end ovy182_21b021c
@@ -24317,7 +24317,7 @@ _021B0470: .word ovy182_21b04c4
 ovy182_21b0474: ; 0x021B0474
 	push {r3, lr}
 	ldr r0, _021B04B4 ; =0x021C0EEC
-	ldr r1, _021B04B8 ; =sub_02075984
+	ldr r1, _021B04B8 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B04BC ; =0x04001008
 	mov r0, #3
@@ -24347,7 +24347,7 @@ ovy182_21b0474: ; 0x021B0474
 	pop {r3, pc}
 	nop
 _021B04B4: .word 0x021C0EEC
-_021B04B8: .word sub_02075984
+_021B04B8: .word GX_LoadBG2Scr
 _021B04BC: .word 0x04001008
 _021B04C0: .word 0x04000008
 	thumb_func_end ovy182_21b0474
@@ -24676,10 +24676,10 @@ ovy182_21b073c: ; 0x021B073C
 	ldr r1, _021B0790 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B0794 ; =0x021C0F18
-	ldr r1, _021B0798 ; =sub_020754B8
+	ldr r1, _021B0798 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B079C ; =0x021C0F30
-	ldr r1, _021B07A0 ; =sub_02075984
+	ldr r1, _021B07A0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B07A4 ; =0x04001008
 	mov r0, #3
@@ -24711,9 +24711,9 @@ ovy182_21b073c: ; 0x021B073C
 _021B078C: .word 0x021C0F00
 _021B0790: .word 0x02075CB5
 _021B0794: .word 0x021C0F18
-_021B0798: .word sub_020754B8
+_021B0798: .word GX_LoadBGPltt
 _021B079C: .word 0x021C0F30
-_021B07A0: .word sub_02075984
+_021B07A0: .word GX_LoadBG2Scr
 _021B07A4: .word 0x04001008
 _021B07A8: .word 0x04000008
 	thumb_func_end ovy182_21b073c
@@ -25131,7 +25131,7 @@ _021B0AF8: .word ovy182_21b0b44
 ovy182_21b0afc: ; 0x021B0AFC
 	push {r3, lr}
 	ldr r0, _021B0B34 ; =0x021C0F44
-	ldr r1, _021B0B38 ; =sub_02075984
+	ldr r1, _021B0B38 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B0B3C ; =0x04001008
 	mov r0, #3
@@ -25157,7 +25157,7 @@ ovy182_21b0afc: ; 0x021B0AFC
 	pop {r3, pc}
 	nop
 _021B0B34: .word 0x021C0F44
-_021B0B38: .word sub_02075984
+_021B0B38: .word GX_LoadBG2Scr
 _021B0B3C: .word 0x04001008
 _021B0B40: .word 0x0400000A
 	thumb_func_end ovy182_21b0afc
@@ -27134,10 +27134,10 @@ ovy182_21b1ab4: ; 0x021B1AB4
 	ldr r1, _021B1B18 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B1B1C ; =0x021C0FA4
-	ldr r1, _021B1B20 ; =sub_020754B8
+	ldr r1, _021B1B20 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B1B24 ; =0x021C0FBC
-	ldr r1, _021B1B28 ; =sub_02075984
+	ldr r1, _021B1B28 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B1B2C ; =0x04001008
 	mov r1, #3
@@ -27171,9 +27171,9 @@ _021B1B10: .word 0x020755A1
 _021B1B14: .word 0x021C0F8C
 _021B1B18: .word 0x02075CB5
 _021B1B1C: .word 0x021C0FA4
-_021B1B20: .word sub_020754B8
+_021B1B20: .word GX_LoadBGPltt
 _021B1B24: .word 0x021C0FBC
-_021B1B28: .word sub_02075984
+_021B1B28: .word GX_LoadBG2Scr
 _021B1B2C: .word 0x04001008
 _021B1B30: .word 0x04000008
 	thumb_func_end ovy182_21b1ab4
@@ -28061,10 +28061,10 @@ ovy182_21b2210: ; 0x021B2210
 	ldr r1, _021B2274 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B2278 ; =0x021C1040
-	ldr r1, _021B227C ; =sub_020754B8
+	ldr r1, _021B227C ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B2280 ; =0x021C1058
-	ldr r1, _021B2284 ; =sub_02075984
+	ldr r1, _021B2284 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B2288 ; =0x04001008
 	mov r1, #3
@@ -28098,9 +28098,9 @@ _021B226C: .word 0x020755A1
 _021B2270: .word 0x021C1028
 _021B2274: .word 0x02075CB5
 _021B2278: .word 0x021C1040
-_021B227C: .word sub_020754B8
+_021B227C: .word GX_LoadBGPltt
 _021B2280: .word 0x021C1058
-_021B2284: .word sub_02075984
+_021B2284: .word GX_LoadBG2Scr
 _021B2288: .word 0x04001008
 _021B228C: .word 0x04000008
 	thumb_func_end ovy182_21b2210
@@ -28996,7 +28996,7 @@ _021B2950: .word ovy182_21b2bbc
 ovy182_21b2954: ; 0x021B2954
 	push {r3, lr}
 	ldr r0, _021B2994 ; =0x021C1088
-	ldr r1, _021B2998 ; =sub_02075984
+	ldr r1, _021B2998 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B299C ; =0x04001008
 	mov r0, #3
@@ -29026,7 +29026,7 @@ ovy182_21b2954: ; 0x021B2954
 	pop {r3, pc}
 	nop
 _021B2994: .word 0x021C1088
-_021B2998: .word sub_02075984
+_021B2998: .word GX_LoadBG2Scr
 _021B299C: .word 0x04001008
 _021B29A0: .word 0x04000008
 	thumb_func_end ovy182_21b2954
@@ -29698,7 +29698,7 @@ _021B2E9E:
 	bl ovy182_21ab67c
 	add r6, sp, #0x14
 	add r6, #2
-	ldr r1, _021B2F98 ; =sub_020754B8
+	ldr r1, _021B2F98 ; =GX_LoadBGPltt
 	add r0, r6, #0
 	bl ovy182_21ab67c
 	ldr r0, _021B2F9C ; =0x021C10E4
@@ -29775,7 +29775,7 @@ _021B2F88: .word 0x021C10B4
 _021B2F8C: .word 0x02075D65
 _021B2F90: .word 0x021C10CC
 _021B2F94: .word 0x02075CB5
-_021B2F98: .word sub_020754B8
+_021B2F98: .word GX_LoadBGPltt
 _021B2F9C: .word 0x021C10E4
 _021B2FA0: .word 0x02075A6D
 _021B2FA4: .word 0x021C410C
@@ -32475,10 +32475,10 @@ ovy182_21b4420: ; 0x021B4420
 	ldr r1, _021B446C ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B4470 ; =0x021C1138
-	ldr r1, _021B4474 ; =sub_020754B8
+	ldr r1, _021B4474 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B4478 ; =0x021C1150
-	ldr r1, _021B447C ; =sub_02075984
+	ldr r1, _021B447C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B4480 ; =0x04001008
 	mov r0, #3
@@ -32506,9 +32506,9 @@ ovy182_21b4420: ; 0x021B4420
 _021B4468: .word 0x021C1120
 _021B446C: .word 0x02075CB5
 _021B4470: .word 0x021C1138
-_021B4474: .word sub_020754B8
+_021B4474: .word GX_LoadBGPltt
 _021B4478: .word 0x021C1150
-_021B447C: .word sub_02075984
+_021B447C: .word GX_LoadBG2Scr
 _021B4480: .word 0x04001008
 _021B4484: .word 0x0400000A
 	thumb_func_end ovy182_21b4420
@@ -32687,7 +32687,7 @@ _021B45CC: .word ovy182_21b4620
 ovy182_21b45d0: ; 0x021B45D0
 	push {r3, lr}
 	ldr r0, _021B4610 ; =0x021C1164
-	ldr r1, _021B4614 ; =sub_02075984
+	ldr r1, _021B4614 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B4618 ; =0x04001008
 	mov r0, #3
@@ -32717,7 +32717,7 @@ ovy182_21b45d0: ; 0x021B45D0
 	pop {r3, pc}
 	nop
 _021B4610: .word 0x021C1164
-_021B4614: .word sub_02075984
+_021B4614: .word GX_LoadBG2Scr
 _021B4618: .word 0x04001008
 _021B461C: .word 0x04000008
 	thumb_func_end ovy182_21b45d0
@@ -33056,7 +33056,7 @@ _021B48A8: .word ovy182_21b48fc
 ovy182_21b48ac: ; 0x021B48AC
 	push {r3, lr}
 	ldr r0, _021B48EC ; =0x021C1178
-	ldr r1, _021B48F0 ; =sub_02075984
+	ldr r1, _021B48F0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B48F4 ; =0x04001008
 	mov r0, #3
@@ -33086,7 +33086,7 @@ ovy182_21b48ac: ; 0x021B48AC
 	pop {r3, pc}
 	nop
 _021B48EC: .word 0x021C1178
-_021B48F0: .word sub_02075984
+_021B48F0: .word GX_LoadBG2Scr
 _021B48F4: .word 0x04001008
 _021B48F8: .word 0x04000008
 	thumb_func_end ovy182_21b48ac
@@ -33421,7 +33421,7 @@ _021B4B90: .word ovy182_21b4be4
 ovy182_21b4b94: ; 0x021B4B94
 	push {r3, lr}
 	ldr r0, _021B4BD4 ; =0x021C118C
-	ldr r1, _021B4BD8 ; =sub_02075984
+	ldr r1, _021B4BD8 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B4BDC ; =0x04001008
 	mov r0, #3
@@ -33451,7 +33451,7 @@ ovy182_21b4b94: ; 0x021B4B94
 	pop {r3, pc}
 	nop
 _021B4BD4: .word 0x021C118C
-_021B4BD8: .word sub_02075984
+_021B4BD8: .word GX_LoadBG2Scr
 _021B4BDC: .word 0x04001008
 _021B4BE0: .word 0x04000008
 	thumb_func_end ovy182_21b4b94
@@ -33632,10 +33632,10 @@ ovy182_21b4d28: ; 0x021B4D28
 	ldr r1, _021B4D7C ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B4D80 ; =0x021C11B8
-	ldr r1, _021B4D84 ; =sub_020754B8
+	ldr r1, _021B4D84 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B4D88 ; =0x021C11D0
-	ldr r1, _021B4D8C ; =sub_02075984
+	ldr r1, _021B4D8C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B4D90 ; =0x04001008
 	mov r0, #3
@@ -33667,9 +33667,9 @@ ovy182_21b4d28: ; 0x021B4D28
 _021B4D78: .word 0x021C11A0
 _021B4D7C: .word 0x02075CB5
 _021B4D80: .word 0x021C11B8
-_021B4D84: .word sub_020754B8
+_021B4D84: .word GX_LoadBGPltt
 _021B4D88: .word 0x021C11D0
-_021B4D8C: .word sub_02075984
+_021B4D8C: .word GX_LoadBG2Scr
 _021B4D90: .word 0x04001008
 _021B4D94: .word 0x04000008
 	thumb_func_end ovy182_21b4d28
@@ -34019,10 +34019,10 @@ ovy182_21b5050: ; 0x021B5050
 	ldr r1, _021B50A4 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B50A8 ; =0x021C11FC
-	ldr r1, _021B50AC ; =sub_020754B8
+	ldr r1, _021B50AC ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B50B0 ; =0x021C1214
-	ldr r1, _021B50B4 ; =sub_02075984
+	ldr r1, _021B50B4 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B50B8 ; =0x04001008
 	mov r0, #3
@@ -34054,9 +34054,9 @@ ovy182_21b5050: ; 0x021B5050
 _021B50A0: .word 0x021C11E4
 _021B50A4: .word 0x02075CB5
 _021B50A8: .word 0x021C11FC
-_021B50AC: .word sub_020754B8
+_021B50AC: .word GX_LoadBGPltt
 _021B50B0: .word 0x021C1214
-_021B50B4: .word sub_02075984
+_021B50B4: .word GX_LoadBG2Scr
 _021B50B8: .word 0x04001008
 _021B50BC: .word 0x04000008
 	thumb_func_end ovy182_21b5050
@@ -34445,10 +34445,10 @@ _021B53BE:
 	ldr r1, _021B5444 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B5448 ; =0x021C1254
-	ldr r1, _021B544C ; =sub_020754B8
+	ldr r1, _021B544C ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B5450 ; =0x021C126C
-	ldr r1, _021B5454 ; =sub_02075984
+	ldr r1, _021B5454 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	add r0, sp, #0
 	bl ovy182_21ab63c
@@ -34491,9 +34491,9 @@ _021B543C: .word 0x020755A1
 _021B5440: .word 0x021C123C
 _021B5444: .word 0x02075CB5
 _021B5448: .word 0x021C1254
-_021B544C: .word sub_020754B8
+_021B544C: .word GX_LoadBGPltt
 _021B5450: .word 0x021C126C
-_021B5454: .word sub_02075984
+_021B5454: .word GX_LoadBG2Scr
 _021B5458: .word 0x021C412C
 _021B545C: .word 0x04001008
 _021B5460: .word 0x0400000A
@@ -35543,10 +35543,10 @@ _021B5C92:
 	ldr r1, _021B5D00 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B5D04 ; =0x021C12B0
-	ldr r1, _021B5D08 ; =sub_020754B8
+	ldr r1, _021B5D08 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B5D0C ; =0x021C12C8
-	ldr r1, _021B5D10 ; =sub_02075984
+	ldr r1, _021B5D10 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	add r0, sp, #0
 	bl ovy182_21ab63c
@@ -35583,9 +35583,9 @@ _021B5CF8: .word 0x021C0320
 _021B5CFC: .word 0x021C1298
 _021B5D00: .word 0x02075CB5
 _021B5D04: .word 0x021C12B0
-_021B5D08: .word sub_020754B8
+_021B5D08: .word GX_LoadBGPltt
 _021B5D0C: .word 0x021C12C8
-_021B5D10: .word sub_02075984
+_021B5D10: .word GX_LoadBG2Scr
 _021B5D14: .word 0x021C4134
 _021B5D18: .word 0x04001008
 _021B5D1C: .word 0x0400000A
@@ -36115,10 +36115,10 @@ ovy182_21b616c: ; 0x021B616C
 	ldr r1, _021B61C0 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B61C4 ; =0x021C12F4
-	ldr r1, _021B61C8 ; =sub_020754B8
+	ldr r1, _021B61C8 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B61CC ; =0x021C130C
-	ldr r1, _021B61D0 ; =sub_02075984
+	ldr r1, _021B61D0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B61D4 ; =0x04001008
 	mov r0, #3
@@ -36150,9 +36150,9 @@ ovy182_21b616c: ; 0x021B616C
 _021B61BC: .word 0x021C12DC
 _021B61C0: .word 0x02075CB5
 _021B61C4: .word 0x021C12F4
-_021B61C8: .word sub_020754B8
+_021B61C8: .word GX_LoadBGPltt
 _021B61CC: .word 0x021C130C
-_021B61D0: .word sub_02075984
+_021B61D0: .word GX_LoadBG2Scr
 _021B61D4: .word 0x04001008
 _021B61D8: .word 0x04000008
 	thumb_func_end ovy182_21b616c
@@ -36429,7 +36429,7 @@ _021B63FC: .word ovy182_21b6448
 ovy182_21b6400: ; 0x021B6400
 	push {r3, lr}
 	ldr r0, _021B6438 ; =0x021C1320
-	ldr r1, _021B643C ; =sub_02075984
+	ldr r1, _021B643C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B6440 ; =0x04001008
 	mov r0, #3
@@ -36455,7 +36455,7 @@ ovy182_21b6400: ; 0x021B6400
 	pop {r3, pc}
 	nop
 _021B6438: .word 0x021C1320
-_021B643C: .word sub_02075984
+_021B643C: .word GX_LoadBG2Scr
 _021B6440: .word 0x04001008
 _021B6444: .word 0x0400000A
 	thumb_func_end ovy182_21b6400
@@ -36654,7 +36654,7 @@ _021B65C4: .word ovy182_21b6610
 ovy182_21b65c8: ; 0x021B65C8
 	push {r3, lr}
 	ldr r0, _021B6600 ; =0x021C1334
-	ldr r1, _021B6604 ; =sub_02075984
+	ldr r1, _021B6604 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B6608 ; =0x04001008
 	mov r0, #3
@@ -36680,7 +36680,7 @@ ovy182_21b65c8: ; 0x021B65C8
 	pop {r3, pc}
 	nop
 _021B6600: .word 0x021C1334
-_021B6604: .word sub_02075984
+_021B6604: .word GX_LoadBG2Scr
 _021B6608: .word 0x04001008
 _021B660C: .word 0x0400000A
 	thumb_func_end ovy182_21b65c8
@@ -36852,7 +36852,7 @@ _021B6754: .word ovy182_21b67a8
 ovy182_21b6758: ; 0x021B6758
 	push {r3, lr}
 	ldr r0, _021B6798 ; =0x021C1348
-	ldr r1, _021B679C ; =sub_02075984
+	ldr r1, _021B679C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B67A0 ; =0x04001008
 	mov r0, #3
@@ -36882,7 +36882,7 @@ ovy182_21b6758: ; 0x021B6758
 	pop {r3, pc}
 	nop
 _021B6798: .word 0x021C1348
-_021B679C: .word sub_02075984
+_021B679C: .word GX_LoadBG2Scr
 _021B67A0: .word 0x04001008
 _021B67A4: .word 0x04000008
 	thumb_func_end ovy182_21b6758
@@ -37042,10 +37042,10 @@ ovy182_21b68c8: ; 0x021B68C8
 	ldr r1, _021B691C ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B6920 ; =0x021C1374
-	ldr r1, _021B6924 ; =sub_020754B8
+	ldr r1, _021B6924 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B6928 ; =0x021C138C
-	ldr r1, _021B692C ; =sub_02075984
+	ldr r1, _021B692C ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B6930 ; =0x04001008
 	mov r0, #3
@@ -37077,9 +37077,9 @@ ovy182_21b68c8: ; 0x021B68C8
 _021B6918: .word 0x021C135C
 _021B691C: .word 0x02075CB5
 _021B6920: .word 0x021C1374
-_021B6924: .word sub_020754B8
+_021B6924: .word GX_LoadBGPltt
 _021B6928: .word 0x021C138C
-_021B692C: .word sub_02075984
+_021B692C: .word GX_LoadBG2Scr
 _021B6930: .word 0x04001008
 _021B6934: .word 0x04000008
 	thumb_func_end ovy182_21b68c8
@@ -37387,10 +37387,10 @@ ovy182_21b6b8c: ; 0x021B6B8C
 	ldr r1, _021B6BE0 ; =0x02075CB5
 	bl ovy182_21ab67c
 	ldr r0, _021B6BE4 ; =0x021C13B8
-	ldr r1, _021B6BE8 ; =sub_020754B8
+	ldr r1, _021B6BE8 ; =GX_LoadBGPltt
 	bl ovy182_21ab67c
 	ldr r0, _021B6BEC ; =0x021C13D0
-	ldr r1, _021B6BF0 ; =sub_02075984
+	ldr r1, _021B6BF0 ; =GX_LoadBG2Scr
 	bl ovy182_21ab67c
 	ldr r3, _021B6BF4 ; =0x04001008
 	mov r0, #3
@@ -37422,9 +37422,9 @@ ovy182_21b6b8c: ; 0x021B6B8C
 _021B6BDC: .word 0x021C13A0
 _021B6BE0: .word 0x02075CB5
 _021B6BE4: .word 0x021C13B8
-_021B6BE8: .word sub_020754B8
+_021B6BE8: .word GX_LoadBGPltt
 _021B6BEC: .word 0x021C13D0
-_021B6BF0: .word sub_02075984
+_021B6BF0: .word GX_LoadBG2Scr
 _021B6BF4: .word 0x04001008
 _021B6BF8: .word 0x04000008
 	thumb_func_end ovy182_21b6b8c
@@ -37944,7 +37944,7 @@ ovy182_21b6fe0: ; 0x021B6FE0
 	add r0, r0, #4
 	add r2, r5, #0
 	mov r7, #0
-	bl sub_02075984
+	bl GX_LoadBG2Scr
 	ldr r0, [r4]
 	strb r7, [r0, r6]
 _021B700A:
@@ -41103,7 +41103,7 @@ ovy182_21b8804: ; 0x021B8804
 	ldr r0, [r4]
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_02075910
+	bl GXS_LoadBG1Scr
 	ldr r0, [r4]
 	bl ovy182_21bb420
 	mov r0, #1
@@ -48371,7 +48371,7 @@ ovy182_21bbed4: ; 0x021BBED4
 	ldr r0, [r0, r4]
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_02075B54
+	bl GX_LoadBG0Char
 	b _021BBF28
 _021BBF0A:
 	add r0, r4, #0
@@ -48386,7 +48386,7 @@ _021BBF0A:
 	ldr r0, [r0, r4]
 	add r1, r7, #0
 	add r2, r7, #0
-	bl sub_02075BAC
+	bl GXS_LoadBG0Char
 _021BBF28:
 	mov r0, #0
 	strb r0, [r5]
@@ -50228,13 +50228,13 @@ ovy182_21bcc2c: ; 0x021BCC2C
 	ldr r0, [r4]
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_02075678
+	bl GX_LoadOAM
 	ldr r1, [r4]
 	add r0, r5, #0
 	add r0, r1, r0
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_020756CC
+	bl GXS_LoadOAM
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021BCC58: .word 0x021C41C8

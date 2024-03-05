@@ -232,8 +232,8 @@
 .public sub_020056FC
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C
-.public sub_020754B8
-.public sub_02075534
+.public GX_LoadBGPltt
+.public GXS_LoadBGPltt
 .public sub_02044CFC
 .public sub_0204AA30
 .public sub_0204B0D4

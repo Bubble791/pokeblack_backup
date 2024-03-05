@@ -123,11 +123,11 @@ ovy264_219992c: ; 0x0219992C
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_02075984
+	bl GX_LoadBG2Scr
 	add r0, r4, #0
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 	add r0, r4, #0
 	bl sub_0203A24C
 	mov r0, #0x13
@@ -749,13 +749,13 @@ ovy264_2199e5c: ; 0x02199E5C
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r5, #0
-	bl sub_02075984
+	bl GX_LoadBG2Scr
 	b _02199E8E
 _02199E84:
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r5, #0
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 _02199E8E:
 	add r0, r4, #0
 	bl sub_0203A24C

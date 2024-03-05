@@ -3479,7 +3479,7 @@ ovy324_219ea08: ; 0x0219EA08
 	add r0, r1, r0
 	mov r1, #0
 	mov r2, #0x80
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	add r5, #0x9c
 	ldr r1, [r5]
 	mov r2, #0xa0
@@ -3487,7 +3487,7 @@ ovy324_219ea08: ; 0x0219EA08
 	mul r0, r2
 	add r0, r1, r0
 	mov r1, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy324_219ea08

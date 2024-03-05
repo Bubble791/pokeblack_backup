@@ -353,7 +353,7 @@ _0219FE20:
 	add r0, sp, #0
 	mov r1, #0
 	mov r2, #2
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	mov r0, #6
 	mov r1, #0
 	bl sub_02044C98
@@ -4249,7 +4249,7 @@ ovy303_21a1d7c: ; 0x021A1D7C
 	add r0, sp, #0
 	mov r1, #0
 	mov r2, #2
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	mov r0, #0xa5
 	bl sub_020444A4
 	ldr r4, _021A1F7C ; =0x021A3578

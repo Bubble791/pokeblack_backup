@@ -899,9 +899,9 @@
 .public sub_02068664
 .public sub_0204BB80
 .public sub_0207B0AC
-.public sub_0207560C
+.public GXS_LoadOBJPltt
 .public sub_0207B0AC
-.public sub_02075768
+.public GXS_LoadOBJ
 .public sub_0203A24C
 .public sub_0204C124
 .public sub_0204C124

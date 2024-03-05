@@ -4183,7 +4183,7 @@ _021B5224:
 	lsl r1, r0, #5
 	add r0, r6, r1
 	lsl r2, r2, #5
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _021B5270
 _021B5250:
 	ldr r0, [sp, #0x10]
@@ -4199,7 +4199,7 @@ _021B5250:
 	lsl r1, r0, #5
 	add r0, r6, r1
 	lsl r2, r2, #5
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021B5270:
 	ldr r0, [sp, #0x10]
 	add r1, r0, #1
@@ -4474,7 +4474,7 @@ _021B5468:
 	ldr r0, [r4, r6]
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	add r0, r6, #4
 	ldr r0, [r4, r0]
 	add r1, r5, #0
@@ -4483,7 +4483,7 @@ _021B5468:
 	ldr r0, [r4, r0]
 	mov r1, #0
 	add r2, r5, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021B5498:
 	add sp, #0x5c
 	pop {r4, r5, r6, r7, pc}

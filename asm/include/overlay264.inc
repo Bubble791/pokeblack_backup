@@ -10,8 +10,8 @@
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
 .public sub_0203A1FC
-.public sub_02075984
-.public sub_02075A6C
+.public GX_LoadBG2Scr
+.public GX_LoadBG3Scr
 .public sub_0203A24C
 .public sub_02046CFC
 .public sub_02046CFC
@@ -52,8 +52,8 @@
 .public sub_02044BD8
 .public sub_0204B600
 .public sub_0207B0AC
-.public sub_02075984
-.public sub_02075A6C
+.public GX_LoadBG2Scr
+.public GX_LoadBG3Scr
 .public sub_0203A24C
 .public sub_0204ADA8
 .public sub_0204AF50

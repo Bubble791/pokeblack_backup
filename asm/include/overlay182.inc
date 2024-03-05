@@ -471,7 +471,7 @@
 .public sub_021B781C
 .public sub_021B781C
 .public sub_0207B0AC
-.public sub_0207589C
+.public GX_LoadBG1Scr
 .public sub_021BD268
 .public sub_021BD280
 .public sub_021BCC9C
@@ -785,7 +785,7 @@
 .public sub_02056A90
 .public MI_CpuCopy8
 .public sub_0207B0AC
-.public sub_020754B8
+.public GX_LoadBGPltt
 .public sub_021ADFBC
 .public sub_021BBAAC
 .public sub_021BBAAC
@@ -2022,7 +2022,7 @@
 .public sub_021BD280
 .public MIi_CpuCopy16
 .public sub_0207B0AC
-.public sub_02075984
+.public GX_LoadBG2Scr
 .public MIi_CpuCopy16
 .public sub_021BD268
 .public MIi_CpuCopy16
@@ -2144,7 +2144,7 @@
 .public sub_021BD264
 .public sub_021BD268
 .public sub_0207B0AC
-.public sub_02075910
+.public GXS_LoadBG1Scr
 .public sub_021BD268
 .public sub_0207BB0C
 .public sub_020813C4
@@ -2431,9 +2431,9 @@
 .public G2_GetBG0ScrPtr
 .public sub_02064778
 .public sub_0207B0AC
-.public sub_02075B54
+.public GX_LoadBG0Char
 .public sub_0207B0AC
-.public sub_02075BAC
+.public GXS_LoadBG0Char
 .public sub_021BD280
 .public G2_GetBG0CharPtr
 .public G2_GetBG0CharPtr
@@ -2497,8 +2497,8 @@
 .public sub_02079E70
 .public MIi_CpuClearFast
 .public sub_0207B0AC
-.public sub_02075678
-.public sub_020756CC
+.public GX_LoadOAM
+.public GXS_LoadOAM
 .public sub_021BD280
 .public sub_021BCBBC
 .public sub_021BCBB0

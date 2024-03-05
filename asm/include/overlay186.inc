@@ -233,8 +233,8 @@
 .public sub_02045814
 .public sub_02045B7C
 .public sub_02045080
-.public sub_02075534
-.public sub_02075534
+.public GXS_LoadBGPltt
+.public GXS_LoadBGPltt
 .public sub_0203D9C8
 .public sub_0203D9C8
 .public sub_0203DA84

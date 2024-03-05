@@ -37373,7 +37373,7 @@ _020165F2:
 	add r1, r0, #0
 	add r0, r4, r6
 	mov r2, #0x20
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	b _02016620
 _0201660A:
 	mov r0, #0x20
@@ -37398,7 +37398,7 @@ _02016620:
 	add r1, r0, #0
 	add r0, r4, r6
 	mov r2, #0x20
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _02016654
 _0201663E:
 	mov r0, #0x20
@@ -75807,93 +75807,93 @@ _0202767E:
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	b _02027740
 _0202768A:
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	b _02027740
 _02027696:
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	b _02027740
 _020276A2:
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _02027740
 _020276AE:
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	ldr r0, [r4, #4]
 	mov r1, #0
 _020276B6:
 	ldr r2, [r4, #8]
-	bl sub_02075E74
-	bl sub_02075EE8
+	bl GX_LoadBGExtPltt
+	bl GX_EndLoadBGExtPltt
 	b _02027740
 _020276C2:
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	ldr r0, [r4, #4]
 	add r1, r7, #0
 	b _020276B6
 _020276CC:
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	mov r1, #1
 	ldr r0, [r4, #4]
 	lsl r1, r1, #0xe
 	b _020276B6
 _020276D8:
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	mov r1, #6
 	ldr r0, [r4, #4]
 	lsl r1, r1, #0xc
 	b _020276B6
 _020276E4:
-	bl sub_02075FF8
+	bl GXS_BeginLoadBGExtPltt
 	ldr r0, [r4, #4]
 	mov r1, #0
 _020276EC:
 	ldr r2, [r4, #8]
-	bl sub_02076008
-	bl sub_02076064
+	bl GXS_LoadBGExtPltt
+	bl GXS_EndLoadBGExtPltt
 	b _02027740
 _020276F8:
-	bl sub_02075FF8
+	bl GXS_BeginLoadBGExtPltt
 	ldr r0, [r4, #4]
 	add r1, r7, #0
 	b _020276EC
 _02027702:
-	bl sub_02075FF8
+	bl GXS_BeginLoadBGExtPltt
 	mov r1, #1
 	ldr r0, [r4, #4]
 	lsl r1, r1, #0xe
 	b _020276EC
 _0202770E:
-	bl sub_02075FF8
+	bl GXS_BeginLoadBGExtPltt
 	mov r1, #6
 	ldr r0, [r4, #4]
 	lsl r1, r1, #0xc
 	b _020276EC
 _0202771A:
-	bl sub_02075F30
+	bl GX_BeginLoadOBJExtPltt
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_02075F60
-	bl sub_02075FC0
+	bl GX_LoadOBJExtPltt
+	bl GX_EndLoadOBJExtPltt
 	b _02027740
 _0202772E:
-	bl sub_02076098
+	bl GXS_BeginLoadOBJExtPltt
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #8]
 	mov r1, #0
-	bl sub_020760A8
-	bl sub_02076104
+	bl GXS_LoadOBJExtPltt
+	bl GXS_EndLoadOBJExtPltt
 _02027740:
 	add r5, r5, #1
 	cmp r5, #0xe
@@ -76531,11 +76531,11 @@ sub_02027BD0: ; 0x02027BD0
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #2
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #2
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r4}
 	pop {r3}
 	add sp, #0x10
@@ -84007,10 +84007,10 @@ sub_0202B0F4: ; 0x0202B0F4
 	ldr r0, [r6, #0x64]
 	cmp r0, #0
 	bne _0202B11A
-	ldr r0, _0202B204 ; =sub_0207571C
+	ldr r0, _0202B204 ; =GX_LoadOBJ
 	b _0202B11C
 _0202B11A:
-	ldr r0, _0202B208 ; =sub_02075768
+	ldr r0, _0202B208 ; =GXS_LoadOBJ
 _0202B11C:
 	str r0, [sp]
 	ldr r0, [r6]
@@ -84133,8 +84133,8 @@ _0202B1FE:
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
-_0202B204: .word sub_0207571C
-_0202B208: .word sub_02075768
+_0202B204: .word GX_LoadOBJ
+_0202B208: .word GXS_LoadOBJ
 	thumb_func_end sub_0202B0F4
 
 	thumb_func_start sub_0202B20C

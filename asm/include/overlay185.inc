@@ -396,10 +396,10 @@
 .public sub_021A2FB8
 .public sub_021A2FC4
 .public sub_021A2FC4
-.public sub_020754B8
-.public sub_02075534
-.public sub_020754B8
-.public sub_02075534
+.public GX_LoadBGPltt
+.public GXS_LoadBGPltt
+.public GX_LoadBGPltt
+.public GXS_LoadBGPltt
 .public sub_021A2FB8
 .public sub_0219E530
 .public sub_0204C124

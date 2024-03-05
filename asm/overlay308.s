@@ -2046,25 +2046,25 @@ _021A095C:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021A0968:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021A0974:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021A0980:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 _021A098A:
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy308_21a0934

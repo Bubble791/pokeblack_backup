@@ -5646,23 +5646,23 @@ ovy185_219f9ac: ; 0x0219F9AC
 	add r0, r4, r5
 	mov r1, #0
 	mov r2, #0x20
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	add r0, r4, r5
 	mov r1, #0
 	mov r2, #0x20
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, pc}
 _0219F9E6:
 	add r0, r4, #0
 	add r0, #0x58
 	mov r1, #0
 	mov r2, #0x20
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	add r4, #0x58
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x20
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy185_219f9ac
 

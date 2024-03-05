@@ -3686,7 +3686,7 @@ _0217ED06:
 	add r0, sp, #0
 	mov r1, #0x18
 	mov r2, #2
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	pop {r3, pc}
 	thumb_func_end ovy70_217ecf0
 

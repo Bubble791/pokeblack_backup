@@ -9,8 +9,8 @@
 .public sub_0200746C
 .public sub_0203DEFC
 .public sub_02015878
-.public sub_02075534
-.public sub_02075534
+.public GXS_LoadBGPltt
+.public GXS_LoadBGPltt
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_02006254

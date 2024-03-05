@@ -4227,7 +4227,7 @@ _021A9718:
 	add r0, r1, #6
 	mov r1, #6
 	mov r2, #4
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r4, pc}
 _021A972C:
 	cmp r0, #4
@@ -4236,7 +4236,7 @@ _021A972C:
 	add r0, r1, #0
 	mov r1, #6
 	mov r2, #4
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021A973C:
 	pop {r4, pc}
 	nop

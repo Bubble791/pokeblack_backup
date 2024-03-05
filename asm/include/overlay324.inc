@@ -312,8 +312,8 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_0207560C
-.public sub_02075534
+.public GXS_LoadOBJPltt
+.public GXS_LoadBGPltt
 .public sub_0219EAD8
 .public sub_0219EB24
 .public sub_0219EB24

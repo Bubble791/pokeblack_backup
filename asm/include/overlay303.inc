@@ -25,7 +25,7 @@
 .public sub_021A32A4
 .public sub_021A2B04
 .public sub_0204C124
-.public sub_02075534
+.public GXS_LoadBGPltt
 .public sub_02044C98
 .public sub_02044C98
 .public sub_021A28EC
@@ -356,7 +356,7 @@
 .public sub_020484F4
 .public sub_0202E870
 .public sub_02048244
-.public sub_02075534
+.public GXS_LoadBGPltt
 .public sub_020444A4
 .public sub_02044710
 .public sub_0204476C

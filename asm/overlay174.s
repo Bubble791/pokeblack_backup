@@ -90,13 +90,13 @@ ovy174_219ced0: ; 0x0219CED0
 	add r0, r7, #0
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _0219CF4A
 _0219CF40:
 	add r0, r7, #0
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _0219CF4A:
 	add r0, r4, #0
 	add r1, r5, #0
@@ -130,7 +130,7 @@ _0219CF7E:
 	ldr r0, [r4, r0]
 	mov r1, #0
 	lsl r2, r2, #4
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r4, pc}
 	nop
 _0219CF90: .word 0x00000CB4
@@ -3929,7 +3929,7 @@ ovy174_219eeec: ; 0x0219EEEC
 	mov r2, #0x20
 	lsl r0, r0, #5
 	add r0, r4, r0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	add r0, r5, #0
 	sub r0, #8
 	ldrh r0, [r4, r0]

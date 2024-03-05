@@ -560,7 +560,7 @@
 .public sub_0203D9C8
 .public G2x_SetBlendBrightness_
 .public G2x_SetBlendBrightness_
-.public sub_020754B8
+.public GX_LoadBGPltt
 .public sub_0204C138
 .public sub_0204C550
 .public sub_0204C540

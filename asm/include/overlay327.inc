@@ -215,8 +215,8 @@
 .public sub_02024D20
 .public sub_02024D20
 .public sub_0204B0B8
-.public sub_020754B8
-.public sub_02075534
+.public GX_LoadBGPltt
+.public GXS_LoadBGPltt
 .public sub_02044CFC
 .public sub_02044668
 .public sub_02044668

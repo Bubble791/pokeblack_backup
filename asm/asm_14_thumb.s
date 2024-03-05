@@ -7136,7 +7136,7 @@ _0203CCF2:
 	add r0, r5, #0
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02075B54
+	bl GX_LoadBG0Char
 	bl sub_0207C774
 	pop {r3, r4, r5, pc}
 	nop
@@ -10976,11 +10976,11 @@ sub_0203E74C: ; 0x0203E74C
 	mov r1, #0
 	add r0, r4, #0
 	mov r2, #0x20
-	bl sub_02075678
+	bl GX_LoadOAM
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x20
-	bl sub_020756CC
+	bl GXS_LoadOAM
 	pop {r4, pc}
 	nop
 _0203E768: .word 0x020932D0
@@ -25573,13 +25573,13 @@ sub_02045320: ; 0x02045320
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _02045342:
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end sub_02045320
@@ -27596,49 +27596,49 @@ _020461CA:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_020757B4
+	bl GX_LoadBG0Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _020461D6:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_0207589C
+	bl GX_LoadBG1Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _020461E2:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075984
+	bl GX_LoadBG2Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _020461EE:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075A6C
+	bl GX_LoadBG3Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _020461FA:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075828
+	bl GXS_LoadBG0Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _02046206:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075910
+	bl GXS_LoadBG1Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _02046212:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_020759F8
+	bl GXS_LoadBG2Scr
 	pop {r3, r4, r5, r6, r7, pc}
 _0204621E:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075AE0
+	bl GXS_LoadBG3Scr
 _02046228:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -27728,49 +27728,49 @@ _020462CE:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075B54
+	bl GX_LoadBG0Char
 	pop {r3, r4, r5, r6, r7, pc}
 _020462DA:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075C04
+	bl GX_LoadBG1Char
 	pop {r3, r4, r5, r6, r7, pc}
 _020462E6:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075CB4
+	bl GX_LoadBG2Char
 	pop {r3, r4, r5, r6, r7, pc}
 _020462F2:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075D64
+	bl GX_LoadBG3Char
 	pop {r3, r4, r5, r6, r7, pc}
 _020462FE:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075BAC
+	bl GXS_LoadBG0Char
 	pop {r3, r4, r5, r6, r7, pc}
 _0204630A:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075C5C
+	bl GXS_LoadBG1Char
 	pop {r3, r4, r5, r6, r7, pc}
 _02046316:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075D0C
+	bl GXS_LoadBG2Char
 	pop {r3, r4, r5, r6, r7, pc}
 _02046322:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02075DBC
+	bl GXS_LoadBG3Char
 _0204632C:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -38759,7 +38759,7 @@ _0204B1CE: ; jump table
 	.short _0204B1F8 - _0204B1CE - 2 ; case 6
 	.short _0204B22C - _0204B1CE - 2 ; case 7
 _0204B1DE:
-	bl sub_02075E14
+	bl GX_BeginLoadBGExtPltt
 	ldr r0, [sp, #0xc]
 	ldr r3, _0204B260 ; =0x02093E24
 	lsl r4, r4, #2
@@ -38768,10 +38768,10 @@ _0204B1DE:
 	add r1, r6, #0
 	add r2, r5, #0
 	blx r3
-	bl sub_02075EE8
+	bl GX_EndLoadBGExtPltt
 	b _0204B256
 _0204B1F8:
-	bl sub_02075FF8
+	bl GXS_BeginLoadBGExtPltt
 	ldr r0, [sp, #0xc]
 	ldr r3, _0204B260 ; =0x02093E24
 	lsl r4, r4, #2
@@ -38780,10 +38780,10 @@ _0204B1F8:
 	add r1, r6, #0
 	add r2, r5, #0
 	blx r3
-	bl sub_02076064
+	bl GXS_EndLoadBGExtPltt
 	b _0204B256
 _0204B212:
-	bl sub_02075F30
+	bl GX_BeginLoadOBJExtPltt
 	ldr r0, [sp, #0xc]
 	ldr r3, _0204B260 ; =0x02093E24
 	lsl r4, r4, #2
@@ -38792,10 +38792,10 @@ _0204B212:
 	add r1, r6, #0
 	add r2, r5, #0
 	blx r3
-	bl sub_02075FC0
+	bl GX_EndLoadOBJExtPltt
 	b _0204B256
 _0204B22C:
-	bl sub_02076098
+	bl GXS_BeginLoadOBJExtPltt
 	ldr r0, [sp, #0xc]
 	ldr r3, _0204B260 ; =0x02093E24
 	lsl r4, r4, #2
@@ -38804,7 +38804,7 @@ _0204B22C:
 	add r1, r6, #0
 	add r2, r5, #0
 	blx r3
-	bl sub_02076104
+	bl GXS_EndLoadOBJExtPltt
 	b _0204B256
 _0204B246:
 	ldr r0, [sp, #0xc]
@@ -39886,7 +39886,7 @@ sub_0204BA40: ; 0x0204BA40
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x10]
 	add r1, r6, #0
-	bl sub_0207571C
+	bl GX_LoadOBJ
 _0204BA7C:
 	ldr r6, _0204BAB4 ; =0x0214193C
 	mov r7, #0x43
@@ -39910,7 +39910,7 @@ _0204BA7C:
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x10]
 	add r1, r4, #0
-	bl sub_02075768
+	bl GXS_LoadOBJ
 _0204BAB2:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -39957,7 +39957,7 @@ _0204BACC:
 	add r0, r6, #0
 	add r1, r4, r1
 	add r2, r7, #0
-	bl sub_0207571C
+	bl GX_LoadOBJ
 _0204BB0C:
 	ldr r0, [sp, #0x18]
 	sub r0, r0, #1
@@ -39989,7 +39989,7 @@ _0204BB0C:
 	add r0, r6, #0
 	add r1, r4, r1
 	add r2, r7, #0
-	bl sub_02075768
+	bl GXS_LoadOBJ
 _0204BB52:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -40273,7 +40273,7 @@ _0204BD1C:
 	ldr r0, [r5, #0xc]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 _0204BD5C:
 	ldr r7, _0204BD98 ; =0x0214193C
 	mov r0, #0x11
@@ -40299,7 +40299,7 @@ _0204BD5C:
 	ldr r0, [r5, #0xc]
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 _0204BD96:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -45668,7 +45668,7 @@ _0204E1DE:
 	add r0, #0xc
 	lsl r1, r1, #4
 	mov r2, #0x60
-	bl sub_020756CC
+	bl GXS_LoadOAM
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0204E234: .word 0x04001000

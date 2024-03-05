@@ -10652,7 +10652,7 @@ _021A217A:
 	add r0, r1, r0
 	mov r1, #0xe0
 	mov r2, #0x20
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, pc}
 	nop
 _021A2190: .word 0x04000050

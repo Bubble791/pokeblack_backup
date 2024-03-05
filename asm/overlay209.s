@@ -14331,7 +14331,7 @@ ovy209_21c0ecc: ; 0x021C0ECC
 	ldr r2, [sp, #0x28]
 	add r0, r4, r6
 	lsl r1, r1, #5
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x2c]
 	blx sub_0207B0AC
@@ -14410,7 +14410,7 @@ _021C0F98:
 	ldr r1, [sp, #0x24]
 	add r1, r1, r2
 	mov r2, #4
-	bl sub_02075768
+	bl GXS_LoadOBJ
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

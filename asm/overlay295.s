@@ -103,7 +103,7 @@ _0219CF1C:
 	add r1, r6, #0
 	mov r2, #2
 	strh r6, [r0]
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	mov r0, #3
 	b _0219CF5E
 _0219CF4C:
@@ -113,7 +113,7 @@ _0219CF4C:
 	strh r2, [r1]
 	add r1, r6, #0
 	mov r2, #2
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	mov r0, #0xc
 _0219CF5E:
 	mov r1, #0x10

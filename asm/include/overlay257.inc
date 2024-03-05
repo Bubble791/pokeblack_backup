@@ -194,7 +194,7 @@
 .public sub_021AAA9C
 .public sub_021AAAB8
 .public sub_0207B0AC
-.public sub_02075A6C
+.public GX_LoadBG3Scr
 .public sub_021AAAB8
 .public sub_0219CCB8
 .public sub_0219CCD8
@@ -209,7 +209,7 @@
 .public sub_0219CCD8
 .public sub_020352E8
 .public sub_0207B0AC
-.public sub_02075A6C
+.public GX_LoadBG3Scr
 .public sub_0219A1DC
 .public sub_021AAA0C
 .public sub_021AAADC
@@ -2658,7 +2658,7 @@
 .public sub_02045B7C
 .public sub_02022410
 .public sub_0207B0AC
-.public sub_02075A6C
+.public GX_LoadBG3Scr
 .public sub_02042EA4
 .public sub_02042EA4
 .public sub_0207AC8C
@@ -2684,7 +2684,7 @@
 .public sub_021A8654
 .public sub_0204C378
 .public sub_0207B0AC
-.public sub_02075AE0
+.public GXS_LoadBG3Scr
 .public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_02042A78
@@ -2793,7 +2793,7 @@
 .public sub_021A8E00
 .public sub_021A8E6C
 .public sub_0207B0AC
-.public sub_02075AE0
+.public GXS_LoadBG3Scr
 .public sub_0204B7C8
 .public sub_0203A1FC
 .public MI_CpuFill8

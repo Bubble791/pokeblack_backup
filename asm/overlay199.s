@@ -1348,13 +1348,13 @@ ovy199_21b3a00: ; 0x021B3A00
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	b _021B3A70
 _021B3A66:
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021B3A70:
 	add r0, r4, #0
 	add r1, r5, #0
@@ -1401,13 +1401,13 @@ _021B3AC0:
 	ldr r0, [r5, r4]
 	mov r1, #0
 	sub r2, #0xc0
-	bl sub_0207560C
+	bl GXS_LoadOBJPltt
 	add r0, r4, #4
 	mov r2, #0x12
 	ldr r0, [r5, r0]
 	mov r1, #0
 	lsl r2, r2, #4
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021B3AE0: .word 0x05000600
@@ -3882,11 +3882,11 @@ ovy199_21b4eb0: ; 0x021B4EB0
 	add r0, r4, r6
 	mov r1, #0x40
 	mov r2, #0x20
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	add r0, r4, r6
 	mov r1, #0x40
 	mov r2, #0x20
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 _021B4EF2:
 	ldr r0, _021B4F00 ; =0x00004568
 	ldr r1, [r5, r0]
@@ -4448,28 +4448,28 @@ ovy199_21b5300: ; 0x021B5300
 	blt _021B5342
 	ldr r0, _021B53A0 ; =0x021B9A54
 	sub r1, #0xbd
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021B5342:
 	cmp r0, #0
 	bne _021B5350
 	ldr r0, _021B53A4 ; =0x021B9A66
 	sub r1, #0xbd
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021B5350:
 	cmp r4, #0xc8
 	ble _021B535E
 	ldr r0, _021B53A0 ; =0x021B9A54
 	sub r1, #0xbd
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021B535E:
 	cmp r0, r4
 	ble _021B536C
 	ldr r0, _021B53A0 ; =0x021B9A54
 	sub r1, #0xbd
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021B536C:
 	sub r0, r4, r0
@@ -4481,13 +4481,13 @@ _021B536C:
 	lsl r0, r0, #1
 	add r0, r3, r0
 	sub r1, #0xbd
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	pop {r3, r4, r5, r6, r7, pc}
 _021B5384:
 	ldr r0, _021B53A4 ; =0x021B9A66
 	ldr r1, _021B53A8 ; =0x00000142
 	mov r2, #2
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 _021B538E:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -5395,7 +5395,7 @@ ovy199_21b5a84: ; 0x021B5A84
 	add r0, r5, r4
 	add r1, #0xe0
 	mov r2, #0x20
-	bl sub_020755A0
+	bl GX_LoadOBJPltt
 	add sp, #0x24
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -11737,7 +11737,7 @@ ovy199_21b8eb8: ; 0x021B8EB8
 	add r0, r1, r0
 	mov r1, #0x28
 	mov r2, #0xe
-	bl sub_020754B8
+	bl GX_LoadBGPltt
 	sub r0, r4, #3
 	ldrsh r0, [r5, r0]
 	add r1, r5, r6
@@ -11745,7 +11745,7 @@ ovy199_21b8eb8: ; 0x021B8EB8
 	lsl r0, r0, #5
 	add r0, r1, r0
 	mov r1, #0x28
-	bl sub_02075534
+	bl GXS_LoadBGPltt
 	sub r0, r4, #3
 	ldrsh r0, [r5, r0]
 	add r1, r0, #1

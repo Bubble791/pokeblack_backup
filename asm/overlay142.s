@@ -10316,7 +10316,7 @@ _0219EC2E:
 	add r0, r4, r0
 	add r1, #0x80
 	mov r2, #0x80
-	bl sub_0207571C
+	bl GX_LoadOBJ
 	mov r0, #0xa
 	mov r1, #1
 	lsl r0, r0, #6
@@ -10324,20 +10324,20 @@ _0219EC2E:
 	add r0, r4, r0
 	add r1, r6, r1
 	mov r2, #0x80
-	bl sub_0207571C
+	bl GX_LoadOBJ
 	ldr r1, [sp, #0x10]
 	mov r2, #1
 	add r0, r4, #0
 	add r1, r6, r1
 	lsl r2, r2, #8
-	bl sub_0207571C
+	bl GX_LoadOBJ
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #8]
 	mov r2, #1
 	add r0, r4, r0
 	add r1, r6, r1
 	lsl r2, r2, #8
-	bl sub_0207571C
+	bl GX_LoadOBJ
 	ldr r0, [sp, #4]
 	ldr r1, [r5, r0]
 	ldr r0, _0219ECE8 ; =0x00000684
