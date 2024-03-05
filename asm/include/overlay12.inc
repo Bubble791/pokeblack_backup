@@ -4100,7 +4100,7 @@
 .public sub_021937D0
 .public sub_021937F8
 .public sub_02193804
-.public sub_0207C184
+.public OS_WaitInterrupt
 .public sub_02193804
 .public sub_02166FC8
 .public sub_02166F4C

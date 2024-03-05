@@ -6,7 +6,7 @@
 	thumb_func_start sub_0207E958
 sub_0207E958: ; 0x0207E958
 	push {r3, lr}
-	bl sub_0207C210
+	bl OSi_IsCodecTwlMode
 	cmp r0, #1
 	bne _0207E968
 	blx sub_0207E970

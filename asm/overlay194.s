@@ -20522,7 +20522,7 @@ ovy194_21c1db4: ; 0x021C1DB4
 _021C1DDC:
 	add r0, r6, #0
 	add r1, r6, #0
-	bl sub_0207C184
+	bl OS_WaitInterrupt
 	bl sub_02005718
 	add r1, r5, #0
 	add r3, r0, #0
@@ -20549,7 +20549,7 @@ ovy194_21c1e08: ; 0x021C1E08
 _021C1E10:
 	add r0, r6, #0
 	add r1, r6, #0
-	bl sub_0207C184
+	bl OS_WaitInterrupt
 	bl sub_02005718
 	add r1, r5, #0
 	add r3, r0, #0

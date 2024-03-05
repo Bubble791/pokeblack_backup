@@ -68589,7 +68589,7 @@ _02171484:
 	cmp r0, #0
 	bne _02171484
 _02171492:
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 _02171496:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

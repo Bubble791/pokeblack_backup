@@ -39,7 +39,7 @@ _0207AC5C: .word 0x80000001
 	thumb_func_start sub_0207AC60
 sub_0207AC60: ; 0x0207AC60
 	push {r3, lr}
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	lsl r1, r0, #2
 	ldr r0, _0207AC70 ; =0x02098858
 	ldr r0, [r0, r1]

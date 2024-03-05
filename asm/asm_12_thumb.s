@@ -106528,8 +106528,8 @@ sub_02034D30: ; 0x02034D30
 	orr r1, r0
 	ldr r0, _02034DA0 ; =0x04000064
 	str r1, [r0]
-	bl sub_0207C1E8
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
+	bl OS_WaitVBlankIntr
 	bl GX_DisableBankForLCDC
 	add r0, r7, #0
 	bl GX_SetBankForTex

@@ -46532,7 +46532,7 @@ _021667AA:
 	bl ovy12_2166778
 	add r0, r4, #0
 	add r1, r4, #0
-	bl sub_0207C184
+	bl OS_WaitInterrupt
 	add r0, r5, #0
 	bl ovy12_216678c
 	add r0, r5, #0

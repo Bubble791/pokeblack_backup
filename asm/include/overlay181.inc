@@ -786,7 +786,7 @@
 .public sub_0208252C
 .public sub_02081544
 .public sub_020818F8
-.public sub_0207C160
+.public OS_SpinWaitSysCycles
 .public sub_02081448
 .public sub_02080EAC
 .public sub_02080E7C

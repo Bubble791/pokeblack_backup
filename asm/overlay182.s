@@ -19206,7 +19206,7 @@ _021ADC10:
 	bl ovy182_21bd19c
 	bl ovy182_21bca28
 	bl ovy182_21bd0ac
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	ldrb r0, [r4, #1]
 	cmp r0, #0
 	beq _021ADC10
@@ -21599,7 +21599,7 @@ ovy182_21aef10: ; 0x021AEF10
 	cmp r0, #0
 	bne _021AEF32
 	lsl r0, r4, #0x17
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	bl sub_0207EF8C
 _021AEF32:
 	pop {r4, pc}
@@ -22971,7 +22971,7 @@ ovy182_21afa04: ; 0x021AFA04
 	cmp r0, #0
 	bne _021AFA26
 	lsl r0, r4, #0x17
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	bl sub_0207EF8C
 _021AFA26:
 	pop {r4, pc}
@@ -49968,14 +49968,14 @@ ovy182_21bca28: ; 0x021BCA28
 	bl sub_0207F4D4
 	cmp r0, #0
 	beq _021BCA98
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	bl GX_DispOn
 	ldr r2, _021BCAA4 ; =0x04001000
 	lsl r0, r5, #0x10
 	ldr r1, [r2]
 	orr r0, r1
 	str r0, [r2]
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	mov r0, #0
 	strb r0, [r4]
 	pop {r3, r4, r5, pc}
@@ -49986,14 +49986,14 @@ _021BCA68:
 	and r0, r1
 	asr r0, r0, #0xf
 	beq _021BCA98
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	bl GX_DispOff
 	ldr r2, _021BCAA4 ; =0x04001000
 	ldr r0, _021BCAA8 ; =0xFFFEFFFF
 	ldr r1, [r2]
 	and r0, r1
 	str r0, [r2]
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	mov r0, #0
 	bl sub_0207F4D4
 	cmp r0, #0

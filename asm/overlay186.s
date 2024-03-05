@@ -3840,7 +3840,7 @@ ovy186_21a943c: ; 0x021A943C
 	str r5, [sp, #0xc]
 	str r5, [sp, #0x10]
 	str r0, [sp, #0x14]
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	ldr r4, _021A94A0 ; =0x04001020
 	add r6, sp, #8
 	str r5, [sp]
@@ -3858,7 +3858,7 @@ ovy186_21a943c: ; 0x021A943C
 	mov r3, #0x60
 	str r5, [sp, #4]
 	blx G2x_SetBGyAffine_
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
 	str r5, [sp]
 	ldr r0, _021A94A4 ; =0x04000030
 	add r1, r6, #0

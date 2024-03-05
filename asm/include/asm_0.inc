@@ -2660,8 +2660,8 @@
 .public sub_020651FC
 .public GX_GetBankForTex
 .public GX_SetBankForLCDC
-.public sub_0207C1E8
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
+.public OS_WaitVBlankIntr
 .public GX_DisableBankForLCDC
 .public GX_SetBankForTex
 .public GX_ResetBankForTex

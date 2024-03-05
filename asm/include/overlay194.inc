@@ -1809,10 +1809,10 @@
 .public sub_0203A1FC
 .public sub_0204F968
 .public sub_0204FDF8
-.public sub_0207C184
+.public OS_WaitInterrupt
 .public sub_02005718
 .public sub_0204FEE0
-.public sub_0207C184
+.public OS_WaitInterrupt
 .public sub_02005718
 .public sub_0204FEE0
 .public sub_0204FB4C

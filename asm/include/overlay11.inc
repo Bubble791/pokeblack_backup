@@ -3342,7 +3342,7 @@
 .public MIi_CpuCopyFast
 .public MIi_CpuClearFast
 .public sub_0207A2DC
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public sub_0207BB0C
 .public sub_0208D5C4
 .public sub_0217158C

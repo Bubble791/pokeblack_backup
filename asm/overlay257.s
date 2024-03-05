@@ -45062,7 +45062,7 @@ _021AF6AA:
 	mov r4, #5
 _021AF6D4:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	bl ovy257_21ae3b0
 	cmp r0, #0
 	beq _021AF6D4

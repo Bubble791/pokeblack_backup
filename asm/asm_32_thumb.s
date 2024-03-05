@@ -2040,7 +2040,7 @@ _02070EB8: .word sub_02070680
 	thumb_func_start sub_02070EBC
 sub_02070EBC: ; 0x02070EBC
 	push {r4, lr}
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #2
 	bne _02070ED6
 	mov r2, #0
@@ -2384,7 +2384,7 @@ sub_0207113C: ; 0x0207113C
 	mov r1, #1
 	str r1, [r0]
 _02071168:
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	beq _020711B8
 	ldr r0, [r5, #0x1c]
@@ -4802,7 +4802,7 @@ sub_02072238: ; 0x02072238
 	mov r2, #3
 	mov r6, #3
 	bl sub_02070920
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	bne _020722B0
 	bl sub_0206EEE0

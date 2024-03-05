@@ -221,10 +221,10 @@
 .public sub_0204B7C8
 .public FX_Inv
 .public FX_Inv
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public G2x_SetBGyAffine_
 .public sub_02045080
 .public sub_020454D4

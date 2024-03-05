@@ -7469,7 +7469,7 @@ sub_0206EDE0: ; 0x0206EDE0
 	bne _0206EE88
 	mov r0, #1
 	str r0, [r5, #4]
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	bne _0206EE04
 	mov r2, #0x16
@@ -7530,7 +7530,7 @@ _0206EE04:
 	bl sub_0207A8E4
 	bl sub_0206F0C0
 	bl sub_0206FE54
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	bne _0206EE84
 	mov r0, #1
@@ -7776,7 +7776,7 @@ _0206F014: .word 0x0214B440
 sub_0206F018: ; 0x0206F018
 	push {r4, lr}
 	mov r4, #0
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	bne _0206F028
 _0206F024:
@@ -8218,7 +8218,7 @@ sub_0206F30C: ; 0x0206F30C
 	mov r7, #0xb
 _0206F334:
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r7, #0
 	mov r1, #1
 	bl sub_0207CA48
@@ -9033,7 +9033,7 @@ sub_0206F928: ; 0x0206F928
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _0206F956
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	beq _0206F956
 	mov r0, #0x6d
@@ -9691,7 +9691,7 @@ sub_0206FE54: ; 0x0206FE54
 	ldr r1, _0206FEAC ; =sub_0206FAB4
 	ldr r0, _0206FEB0 ; =0x0214BA80
 	str r1, [r0, #4]
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	cmp r0, #1
 	bne _0206FE9E
 	bl sub_0206EEE0

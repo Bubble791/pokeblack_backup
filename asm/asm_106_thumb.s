@@ -201,7 +201,7 @@ _0207ED50:
 	beq _0207ED80
 _0207ED66:
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, sp, #4
 	str r0, [sp]
 	ldr r3, _0207EDAC ; =0x0207EB79
@@ -217,7 +217,7 @@ _0207ED80:
 	bne _0207ED92
 _0207ED86:
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	ldr r0, [sp, #4]
 	cmp r0, r7
 	beq _0207ED86
@@ -226,7 +226,7 @@ _0207ED92:
 	cmp r0, #0
 	beq _0207EDA0
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	b _0207ED50
 _0207EDA0:
 	add sp, #8
@@ -513,7 +513,7 @@ sub_0207EF8C: ; 0x0207EF8C
 	ldr r4, _0207EFC0 ; =0x00051D23
 _0207EF98:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	bl sub_0207EF60
 	cmp r0, #0
 	bne _0207EF98
@@ -834,7 +834,7 @@ _0207F1B2:
 	mov r0, #8
 	tst r0, r5
 	beq _0207F1E4
-	bl sub_0207C1FC
+	bl OS_GetBootType
 	ldr r1, _0207F378 ; =0x0000FFFE
 	add r0, r0, r1
 	lsl r0, r0, #0x10
@@ -875,7 +875,7 @@ _0207F1FE:
 	ldr r6, _0207F380 ; =0x00051D23
 _0207F222:
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r7, #0
 	add r1, sp, #0x20
 	bl sub_0207F068
@@ -891,7 +891,7 @@ _0207F234:
 	mov r7, #2
 _0207F244:
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r7, #0
 	mov r1, #0
 	bl sub_0207EF0C
@@ -996,7 +996,7 @@ _0207F30E:
 	mov r6, #1
 _0207F31C:
 	add r0, r5, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r6, #0
 	bl sub_0207EE94
 	cmp r0, #0
@@ -1012,7 +1012,7 @@ _0207F32C:
 _0207F33A:
 	mov r0, #0x36
 	lsl r0, r0, #0x10
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	ldr r5, _0207F374 ; =0x04000208
 	ldrh r0, [r5]
 	mov r0, #0
@@ -1076,7 +1076,7 @@ _0207F3B4:
 	ldr r4, _0207F4C8 ; =0x00051D23
 _0207F3C8:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r5, #0
 	bl sub_0207EE94
 	cmp r0, #0
@@ -1093,7 +1093,7 @@ _0207F3DA:
 	mov r6, #0
 _0207F3EC:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r6, #0
@@ -1114,7 +1114,7 @@ _0207F400:
 	ldr r5, _0207F4C8 ; =0x00051D23
 _0207F418:
 	add r0, r5, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	ldr r0, [r4, #0x18]
 	bl sub_0207EFD4
 	cmp r0, #0
@@ -1130,7 +1130,7 @@ _0207F42A:
 	mov r6, #0
 _0207F438:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r6, #0
 	bl sub_0207EFD4
 	cmp r0, #0
@@ -1166,7 +1166,7 @@ _0207F45E:
 	ldr r4, _0207F4C8 ; =0x00051D23
 _0207F484:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r5, #0
 	bl sub_0207EE94
 	cmp r0, #0
@@ -1183,7 +1183,7 @@ _0207F496:
 	mov r6, #0
 _0207F4A8:
 	add r0, r4, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r6, #0
@@ -1444,7 +1444,7 @@ sub_0207F64C: ; 0x0207F64C
 	push {r3, r4, r5, r6, r7, lr}
 	mov r0, #0x36
 	lsl r0, r0, #0x10
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	ldr r0, _0207F6B0 ; =0x0209B78C
 	mov r1, #0xe
 	ldr r7, [r0]
@@ -1462,7 +1462,7 @@ sub_0207F64C: ; 0x0207F64C
 	mov r6, #0
 _0207F678:
 	add r0, r5, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r4, #0
 	add r1, r6, #0
 	bl sub_0207EF0C
@@ -1477,7 +1477,7 @@ _0207F68A:
 	mov r4, #1
 _0207F698:
 	add r0, r5, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r4, #0
 	bl sub_0207F4D4
 	cmp r0, #0

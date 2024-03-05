@@ -9719,8 +9719,8 @@
 .public sub_0204E060
 .public sub_02181318
 .public GX_SetBankForLCDC
-.public sub_0207C1E8
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
+.public OS_WaitVBlankIntr
 .public sub_02044710
 .public GX_SetBankForBG
 .public sub_02044BD8

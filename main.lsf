@@ -73,8 +73,8 @@ Static main
     Object asm/asm_84_thumb.o
     Object asm/asm_85_arm.o
     Object asm/asm_86_thumb.o
-    Object asm/asm_87_arm.o
-    Object asm/asm_88_thumb.o
+    Object lib/NitroSDK/asm/os_system.o
+    Object lib/NitroSDK/asm/os_systemWork.o
     Object asm/asm_89_arm.o
     Object asm/asm_90_thumb.o
     Object asm/asm_91_arm.o

@@ -1008,7 +1008,7 @@ _0207D75A:
 	add r0, r5, #0
 	blx OS_RestoreInterrupts
 	add r0, r6, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	blx OS_DisableInterrupts
 	add r5, r0, #0
 	bl sub_0207DCC4
@@ -1442,7 +1442,7 @@ sub_0207DA84: ; 0x0207DA84
 	mov r6, #1
 _0207DAA8:
 	add r0, r5, #0
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 	add r0, r4, #0
 	add r1, r6, #0
 	bl sub_0207CA48
@@ -3303,7 +3303,7 @@ _0207E904:
 sub_0207E934: ; 0x0207E934
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207C210
+	bl OSi_IsCodecTwlMode
 	cmp r0, #1
 	bne _0207E948
 	add r0, r4, #0

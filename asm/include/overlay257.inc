@@ -3163,7 +3163,7 @@
 .public MI_CpuFill8
 .public OS_IsRunOnTwl
 .public MI_CpuCopy8
-.public sub_0207C160
+.public OS_SpinWaitSysCycles
 .public sub_0207C774
 
 .public sub_02700938

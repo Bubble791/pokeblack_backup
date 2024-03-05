@@ -11652,7 +11652,7 @@ _021A2A2A:
 	cmp r1, #1
 	bne _021A2A34
 	ldr r0, _021A2A68 ; =0x00001964
-	bl sub_0207C160
+	bl OS_SpinWaitSysCycles
 _021A2A34:
 	ldr r0, [r5, #0xc]
 	ldr r6, _021A2A6C ; =0x0000050C

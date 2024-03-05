@@ -121043,8 +121043,8 @@ ovy36_21b8d80: ; 0x021B8D80
 	ldr r0, _021B8E00 ; =0x80330010
 	ldr r4, _021B8E04 ; =0x04000064
 	str r0, [r4]
-	bl sub_0207C1E8
-	bl sub_0207C1E8
+	bl OS_WaitVBlankIntr
+	bl OS_WaitVBlankIntr
 	ldr r5, _021B8E08 ; =0x021D1624
 	add r3, sp, #0
 	add r2, r3, #0

@@ -584,7 +584,7 @@
 .public sub_021694E0
 .public sub_021694D4
 .public sub_021ADFBC
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public sub_021694D4
 .public GX_DispOff
 .public sub_0207BAC0
@@ -743,7 +743,7 @@
 .public sub_021ADFBC
 .public sub_021BBAAC
 .public sub_021BBAAC
-.public sub_0207C160
+.public OS_SpinWaitSysCycles
 .public sub_0207EF8C
 .public sub_021ADFBC
 .public sub_0207C33C
@@ -870,7 +870,7 @@
 .public sub_021ADFBC
 .public sub_021BBAAC
 .public sub_021BBAAC
-.public sub_0207C160
+.public OS_SpinWaitSysCycles
 .public sub_0207EF8C
 .public sub_021AFA40
 .public sub_021ADFBC
@@ -2476,12 +2476,12 @@
 .public FX_ModS32
 .public sub_021BC888
 .public sub_0207F4D4
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public GX_DispOn
-.public sub_0207C1E8
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
+.public OS_WaitVBlankIntr
 .public GX_DispOff
-.public sub_0207C1E8
+.public OS_WaitVBlankIntr
 .public sub_0207F4D4
 .public sub_02079E50
 .public sub_02079E70
