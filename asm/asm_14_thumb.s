@@ -5317,7 +5317,7 @@ _0203C01C:
 	add r1, r7, #0
 	mov r3, #0
 	bl sub_0206F80C
-	bl sub_0206F888
+	bl CARD_WaitBackupAsync
 	add r6, r0, #0
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
@@ -5490,11 +5490,11 @@ _0203C188: .word 0x02141860
 sub_0203C18C: ; 0x0203C18C
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	bl sub_0206F890
+	bl CARD_TryWaitBackupAsync
 	cmp r0, #0
 	bne _0203C1A0
-	bl sub_0206F898
-	bl sub_0206F888
+	bl CARD_CancelBackupAsync
+	bl CARD_WaitBackupAsync
 _0203C1A0:
 	ldr r5, _0203C1BC ; =0x02141860
 	ldr r0, [r5]
@@ -8320,7 +8320,7 @@ _0203D51A:
 	bl sub_02042AB8
 	cmp r0, #0
 	beq _0203D53A
-	bl sub_0206F890
+	bl CARD_TryWaitBackupAsync
 	cmp r0, #0
 	beq _0203D53A
 	add r0, r4, #0

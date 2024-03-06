@@ -3,7 +3,11 @@
 	.include "global.inc"
 	.public ProcessBlock
 	.public PXIi_HandlerRecvFifoNotEmpty
-
+	.public CARDi_CheckPulledOutCore
+	.public CARDi_ReadRomIDCore
+	.public CARDi_WaitAsync
+	.public CARDi_SetRomOp
+	
 	.bss
 
 	.public GXi_DmaId
@@ -5165,43 +5169,6 @@ CARD_Enable: ; 0x020DC8E0
 _020DC8EC: .word _021E37A8
 	arm_func_end CARD_Enable
 
-	arm_func_start CARDi_WaitAsync
-CARDi_WaitAsync: ; 0x020DC8F0
-	stmdb sp!, {r3, r4, r5, lr}
-	ldr r4, _020DC938 ; =_021E3820
-	bl OS_DisableInterrupts
-	mov r5, r0
-	b _020DC90C
-_020DC904:
-	add r0, r4, #0x10c
-	bl OS_SleepThread
-_020DC90C:
-	ldr r0, [r4, #0x114]
-	tst r0, #4
-	bne _020DC904
-	mov r0, r5
-	bl OS_RestoreInterrupts
-	ldr r0, [r4]
-	ldr r0, [r0]
-	cmp r0, #0
-	moveq r0, #1
-	movne r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
-	.align 2, 0
-_020DC938: .word _021E3820
-	arm_func_end CARDi_WaitAsync
-
-	arm_func_start CARDi_TryWaitAsync
-CARDi_TryWaitAsync: ; 0x020DC93C
-	ldr r0, _020DC954 ; =_021E3820
-	ldr r0, [r0, #0x114]
-	tst r0, #4
-	moveq r0, #1
-	movne r0, #0
-	bx lr
-	.align 2, 0
-_020DC954: .word _021E3820
-	arm_func_end CARDi_TryWaitAsync
 
 	arm_func_start CARD_GetResultCode
 CARD_GetResultCode: ; 0x020DC958
@@ -5213,26 +5180,7 @@ CARD_GetResultCode: ; 0x020DC958
 _020DC968: .word _021E3820
 	arm_func_end CARD_GetResultCode
 
-	arm_func_start CARD_LockRom
-CARD_LockRom: ; 0x020DC96C
-	stmdb sp!, {r4, lr}
-	mov r4, r0
-	mov r1, #1
-	bl CARDi_LockResource
-	mov r0, r4
-	ldmia sp!, {r4, pc}
-	arm_func_end CARD_LockRom
 
-	arm_func_start CARD_UnlockRom
-CARD_UnlockRom: ; 0x020DC988
-	stmdb sp!, {r4, lr}
-	mov r4, r0
-
-	mov r0, r4
-	mov r1, #1
-	bl CARDi_UnlockResource
-	ldmia sp!, {r4, pc}
-	arm_func_end CARD_UnlockRom
 
 	arm_func_start CARD_LockBackup
 CARD_LockBackup: ; 0x020DC9A4
@@ -5823,35 +5771,6 @@ _020DD190: .word _021E3820
 _020DD194: .word OSi_ThreadInfo
 	arm_func_end CARD_IdentifyBackup
 
-	arm_func_start CARD_WaitBackupAsync
-CARD_WaitBackupAsync: ; 0x020DD198
-	ldr ip, _020DD1A0 ; =CARDi_WaitAsync
-	bx ip
-	.align 2, 0
-_020DD1A0: .word CARDi_WaitAsync
-	arm_func_end CARD_WaitBackupAsync
-
-	arm_func_start CARD_TryWaitBackupAsync
-CARD_TryWaitBackupAsync: ; 0x020DD1A4
-	ldr ip, _020DD1AC ; =CARDi_TryWaitAsync
-	bx ip
-	.align 2, 0
-_020DD1AC: .word CARDi_TryWaitAsync
-	arm_func_end CARD_TryWaitBackupAsync
-
-	arm_func_start CARD_CancelBackupAsync
-CARD_CancelBackupAsync: ; 0x020DD1B0
-	stmdb sp!, {r3, lr}
-	bl OS_DisableInterrupts
-	ldr r1, _020DD1D0 ; =_021E3820
-	ldr r2, [r1, #0x114]
-	orr r2, r2, #0x40
-	str r2, [r1, #0x114]
-	bl OS_RestoreInterrupts
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020DD1D0: .word _021E3820
-	arm_func_end CARD_CancelBackupAsync
 
 	arm_func_start CARDi_ReadFromCache
 CARDi_ReadFromCache: ; 0x020DD1D4
@@ -5894,35 +5813,6 @@ _020DD248:
 _020DD25C: .word _021E3820
 	arm_func_end CARDi_ReadFromCache
 
-	arm_func_start CARDi_SetRomOp
-CARDi_SetRomOp: ; 0x020DD260
-	ldr r3, _020DD2B8 ; =0x040001A4
-_020DD264:
-	ldr r2, [r3]
-	tst r2, #0x80000000
-	bne _020DD264
-	ldr r3, _020DD2BC ; =0x040001A1
-	mov r2, #0xc0
-	strb r2, [r3]
-	mov r2, r0, lsr #0x18
-	strb r2, [r3, #7]
-	mov r2, r0, lsr #0x10
-	strb r2, [r3, #8]
-	mov r2, r0, lsr #8
-	strb r2, [r3, #9]
-	strb r0, [r3, #0xa]
-	mov r0, r1, lsr #0x18
-	strb r0, [r3, #0xb]
-	mov r0, r1, lsr #0x10
-	strb r0, [r3, #0xc]
-	mov r0, r1, lsr #8
-	strb r0, [r3, #0xd]
-	strb r1, [r3, #0xe]
-	bx lr
-	.align 2, 0
-_020DD2B8: .word 0x040001A4
-_020DD2BC: .word 0x040001A1
-	arm_func_end CARDi_SetRomOp
 
 	arm_func_start CARDi_SetCardDma
 CARDi_SetCardDma: ; 0x020DD2C0
@@ -6196,151 +6086,6 @@ _020DD658: .word 0x040001A4
 _020DD65C: .word 0x04100010
 	arm_func_end CARDi_ReadCard
 
-	arm_func_start CARDi_ReadRomIDCore
-CARDi_ReadRomIDCore: ; 0x020DD660
-	stmdb sp!, {r3, lr}
-	mov r0, #0xb8000000
-	mov r1, #0
-	bl CARDi_SetRomOp
-	ldr r1, _020DD6B0 ; =_02110FB8
-	mov r0, #0x2000
-	ldr r1, [r1]
-	rsb r0, r0, #0
-	ldr r2, [r1, #0x60]
-	ldr r1, _020DD6B4 ; =0x040001A4
-	bic r2, r2, #0x7000000
-	orr r2, r2, #0xa7000000
-	and r0, r2, r0
-	str r0, [r1]
-_020DD698:
-	ldr r0, [r1]
-	tst r0, #0x800000
-	beq _020DD698
-	ldr r0, _020DD6B8 ; =0x04100010
-	ldr r0, [r0]
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020DD6B0: .word _02110FB8
-_020DD6B4: .word 0x040001A4
-_020DD6B8: .word 0x04100010
-	arm_func_end CARDi_ReadRomIDCore
-
-	arm_func_start CARDi_ReadRomSyncCore
-CARDi_ReadRomSyncCore: ; 0x020DD6BC
-	stmdb sp!, {r3, r4, r5, r6, r7, lr}
-	ldr r4, _020DD74C ; =_021E3E60
-	mov r0, r4
-	bl CARDi_ReadFromCache
-	cmp r0, #0
-	beq _020DD6E0
-	ldr r1, [r4]
-	mov r0, r4
-	blx r1
-_020DD6E0:
-	ldr r4, _020DD750 ; =_021E3820
-	bl CARDi_ReadRomIDCore
-	bl CARDi_CheckPulledOutCore
-	ldr r0, [r4]
-	mov r1, #0
-	str r1, [r0]
-	ldr r5, [r4, #0x38]
-	ldr r6, [r4, #0x3c]
-	bl OS_DisableInterrupts
-	ldr r1, [r4, #0x114]
-	mov r7, r0
-	bic r0, r1, #0x4c
-	str r0, [r4, #0x114]
-	add r0, r4, #0x10c
-	bl OS_WakeupThread
-	ldr r0, [r4, #0x114]
-	tst r0, #0x10
-	beq _020DD730
-	add r0, r4, #0x44
-	bl OS_WakeupThreadDirect
-_020DD730:
-	mov r0, r7
-	bl OS_RestoreInterrupts
-	cmp r5, #0
-	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
-	mov r0, r6
-	blx r5
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-_020DD74C: .word _021E3E60
-_020DD750: .word _021E3820
-	arm_func_end CARDi_ReadRomSyncCore
-
-	arm_func_start CARDi_ReadRom
-CARDi_ReadRom: ; 0x020DD754
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
-	mov sl, r0
-	mov sb, r1
-	mov r8, r2
-	mov r7, r3
-	ldr r4, _020DD838 ; =_021E3E60
-	ldr r5, _020DD83C ; =_021E3820
-	bl CARD_CheckEnabled
-	bl OS_DisableInterrupts
-	mov r6, r0
-	b _020DD788
-_020DD780:
-	add r0, r5, #0x10c
-	bl OS_SleepThread
-_020DD788:
-	ldr r0, [r5, #0x114]
-	tst r0, #4
-	bne _020DD780
-	ldr r0, [r5, #0x114]
-	ldr r2, [sp, #0x20]
-	ldr r1, [sp, #0x24]
-	orr r3, r0, #4
-	mov r0, r6
-	str r3, [r5, #0x114]
-	str r2, [r5, #0x38]
-	str r1, [r5, #0x3c]
-	bl OS_RestoreInterrupts
-	ldr r0, _020DD840 ; =_021E3E40
-	str sl, [r5, #0x28]
-	ldr r0, [r0]
-	str r8, [r5, #0x20]
-	add r0, sb, r0
-	str r0, [r5, #0x1c]
-	str r7, [r5, #0x24]
-	cmp sl, #3
-	bhi _020DD7E4
-	mov r0, sl
-	bl MI_StopDma
-_020DD7E4:
-	mov r0, r4
-	bl CARDi_TryReadCardDma
-	cmp r0, #0
-	beq _020DD808
-	ldr r0, [sp, #0x28]
-	cmp r0, #0
-	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
-	bl CARD_WaitRomAsync
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
-_020DD808:
-	ldr r0, [sp, #0x28]
-	cmp r0, #0
-	beq _020DD820
-	ldr r0, _020DD844 ; =CARDi_ReadRomSyncCore
-	bl CARDi_SetTask
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
-_020DD820:
-	ldr r1, _020DD848 ; =OSi_ThreadInfo
-	mov r0, r5
-	ldr r1, [r1, #4]
-	str r1, [r5, #0x104]
-	bl CARDi_ReadRomSyncCore
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
-	.align 2, 0
-_020DD838: .word _021E3E60
-_020DD83C: .word _021E3820
-_020DD840: .word _021E3E40
-_020DD844: .word CARDi_ReadRomSyncCore
-_020DD848: .word OSi_ThreadInfo
-	arm_func_end CARDi_ReadRom
 
 
 
@@ -6505,156 +6250,8 @@ _020DDA94:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end CARDi_Request
 
-	arm_func_start CARD_InitPulledOutCallback
-CARD_InitPulledOutCallback: ; 0x020DDAA4
-	stmdb sp!, {r3, lr}
-	bl PXI_Init
-	ldr r1, _020DDAC8 ; =CARDi_PulledOutCallback
-	mov r0, #0xe
-	bl PXI_SetFifoRecvCallback
-	ldr r0, _020DDACC ; =_021E4080
-	mov r1, #0
-	str r1, [r0, #4]
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020DDAC8: .word CARDi_PulledOutCallback
-_020DDACC: .word _021E4080
-	arm_func_end CARD_InitPulledOutCallback
 
-	arm_func_start CARDi_PulledOutCallback
-CARDi_PulledOutCallback: ; 0x020DDAD0
-	stmdb sp!, {r3, lr}
-	and r0, r1, #0x3f
-	cmp r0, #0x11
-	bne _020DDB18
-	ldr r1, _020DDB20 ; =_021E4080
-	ldr r0, [r1]
-	cmp r0, #0
-	ldmneia sp!, {r3, pc}
-	mov r0, #1
-	str r0, [r1]
-	ldr r1, [r1, #4]
-	cmp r1, #0
-	beq _020DDB08
-	blx r1
-_020DDB08:
-	cmp r0, #0
-	ldmeqia sp!, {r3, pc}
-	bl CARD_TerminateForPulledOut
-	ldmia sp!, {r3, pc}
-_020DDB18:
-	bl OS_Terminate
-	ldmia sp!, {r3, pc}
-	.align 2, 0
-_020DDB20: .word _021E4080
-	arm_func_end CARDi_PulledOutCallback
 
-	arm_func_start CARD_IsPulledOut
-CARD_IsPulledOut: ; 0x020DDB24
-	ldr r0, _020DDB30 ; =_021E4080
-	ldr r0, [r0]
-	bx lr
-	.align 2, 0
-_020DDB30: .word _021E4080
-	arm_func_end CARD_IsPulledOut
-
-	arm_func_start CARD_TerminateForPulledOut
-CARD_TerminateForPulledOut: ; 0x020DDB34
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r0, #0
-	mov r5, #1
-	bl MI_StopDma
-	mov r0, r5
-	bl MI_StopDma
-	mov r0, #2
-	bl MI_StopDma
-	mov r0, #3
-	bl MI_StopDma
-	ldr r0, _020DDBB8 ; =0x027FFFA8
-	ldrh r0, [r0]
-	and r0, r0, #0x8000
-	movs r0, r0, asr #0xf
-	beq _020DDB9C
-	bl PM_ForceToPowerOff
-	cmp r0, #4
-	bne _020DDB94
-	ldr r4, _020DDBBC ; =0x000A3A47
-_020DDB80:
-	mov r0, r4
-	bl OS_SpinWait
-	bl PM_ForceToPowerOff
-	cmp r0, #4
-	beq _020DDB80
-_020DDB94:
-	cmp r0, #0
-	moveq r5, #0
-_020DDB9C:
-	cmp r5, #0
-	beq _020DDBB0
-	mov r0, #1
-	mov r1, r0
-	bl CARDi_SendtoPxi
-_020DDBB0:
-	bl OS_Terminate
-	ldmia sp!, {r3, r4, r5, pc}
-	.align 2, 0
-_020DDBB8: .word 0x027FFFA8
-_020DDBBC: .word 0x000A3A47
-	arm_func_end CARD_TerminateForPulledOut
-
-	arm_func_start CARDi_CheckPulledOutCore
-CARDi_CheckPulledOutCore: ; 0x020DDBC0
-	stmdb sp!, {r3, r4, lr}
-	sub sp, sp, #4
-	ldr r2, _020DDC1C ; =0x027FFC10
-	ldrh r1, [r2]
-	cmp r1, #0
-	subeq r1, r2, #0x410
-	subne r1, r2, #0x10
-	ldr r1, [r1]
-	str r1, [sp]
-	ldr r1, [sp]
-	cmp r0, r1
-	addeq sp, sp, #4
-	ldmeqia sp!, {r3, r4, pc}
-	bl OS_DisableInterrupts
-	mov r4, r0
-	mov r0, #0xe
-	mov r1, #0x11
-	mov r2, #0
-	bl CARDi_PulledOutCallback
-	mov r0, r4
-	bl OS_RestoreInterrupts
-	add sp, sp, #4
-	ldmia sp!, {r3, r4, pc}
-	.align 2, 0
-_020DDC1C: .word 0x027FFC10
-	arm_func_end CARDi_CheckPulledOutCore
-
-	arm_func_start CARDi_SendtoPxi
-CARDi_SendtoPxi: ; 0x020DDC20
-	stmdb sp!, {r3, r4, r5, r6, r7, lr}
-	mov r7, r0
-	mov r6, r1
-	mov r1, r7
-	mov r0, #0xe
-	mov r2, #0
-	bl PXI_SendWordByFifo
-	cmp r0, #0
-	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
-	mov r5, #0xe
-	mov r4, #0
-_020DDC4C:
-	mov r0, r6
-	bl SVC_WaitByLoop
-	mov r0, r5
-	mov r1, r7
-	mov r2, r4
-	bl PXI_SendWordByFifo
-	cmp r0, #0
-	bne _020DDC4C
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
-	arm_func_end CARDi_SendtoPxi
 
 	; Functions presumably in libcard but not present in plat
 

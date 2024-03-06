@@ -2380,10 +2380,10 @@
 .public FS_UnloadArchive
 .public FS_ReleaseArchiveName
 .public OS_ReleaseLockID
-.public sub_0206EEF0
-.public sub_0206EF38
+.public CARD_LockRom
+.public CARD_UnlockRom
 .public FS_GetArchiveBase
-.public sub_0206FD24
+.public CARDi_ReadRom
 .public FS_InitFile
 .public FS_OpenFile
 .public OS_Terminate

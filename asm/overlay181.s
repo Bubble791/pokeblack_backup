@@ -1877,7 +1877,7 @@ _0219DE76:
 	bl sub_02044C98
 _0219DE86:
 	ldr r0, _0219DEA8 ; =ovy181_219ed50
-	bl sub_0206FF50
+	bl CARD_SetPulledOutCallback
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1898,7 +1898,7 @@ ovy181_219deac: ; 0x0219DEAC
 	bl sub_0203CDC8
 	mov r0, #0
 	mov r4, #0
-	bl sub_0206FF50
+	bl CARD_SetPulledOutCallback
 	ldr r0, [r5, #0x50]
 	bl sub_0203A24C
 	ldr r0, [r5, #0x54]

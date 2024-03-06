@@ -35,7 +35,7 @@ _02072160: .word 0x0209B518
 FSi_OnRomReadDone: ; 0x02072164
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0206FF5C
+	bl CARD_IsPulledOut
 	mov r1, #5
 	cmp r0, #0
 	bne _02072174
@@ -60,7 +60,7 @@ FSi_ReadRomCallback: ; 0x0207217C
 	add r1, r2, #0
 	ldr r0, [r0]
 	add r2, r5, #0
-	bl sub_0206FD24
+	bl CARDi_ReadRom
 	add r4, #0xff
 	add r0, r4, #0
 	add sp, #0xc
@@ -99,7 +99,7 @@ _020721D2:
 	ldr r0, [r0, #4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EEF0
+	bl CARD_LockRom
 	mov r0, #0
 	pop {r3, pc}
 _020721E2:
@@ -107,7 +107,7 @@ _020721E2:
 	ldr r0, [r0, #4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF38
+	bl CARD_UnlockRom
 	mov r0, #0
 	pop {r3, pc}
 _020721F2:

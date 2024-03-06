@@ -234,9 +234,9 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_0206FF50
+.public CARD_SetPulledOutCallback
 .public sub_0203CDC8
-.public sub_0206FF50
+.public CARD_SetPulledOutCallback
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_02044C98

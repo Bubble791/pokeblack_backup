@@ -56,7 +56,7 @@ _0207C2E4:
 	bl OS_GetLockID
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
-	blx sub_0206EEF0
+	blx CARD_LockRom
 	mov r0, #0x40000
 	blx OS_SetIrqMask
 	mvn r0, #0

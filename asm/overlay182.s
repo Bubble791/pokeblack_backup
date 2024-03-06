@@ -46746,7 +46746,7 @@ _021BB308:
 	ldr r0, [r0]
 	add r0, #0xe4
 	ldrh r0, [r0]
-	bl sub_0206EEF0
+	bl CARD_LockRom
 	mov r0, #0
 	pop {r3, pc}
 _021BB318:
@@ -46754,7 +46754,7 @@ _021BB318:
 	ldr r0, [r0]
 	add r0, #0xe4
 	ldrh r0, [r0]
-	bl sub_0206EF38
+	bl CARD_UnlockRom
 	mov r0, #0
 	pop {r3, pc}
 _021BB328:
@@ -46787,7 +46787,7 @@ ovy182_21bb338: ; 0x021BB338
 	add r2, r6, #0
 	add r3, r7, #0
 	str r4, [sp, #8]
-	bl sub_0206FD24
+	bl CARDi_ReadRom
 	add r4, #0xff
 	add r0, r4, #0
 	add sp, #0xc
