@@ -63,8 +63,8 @@ Static main
     Object lib/NitroSDK/asm/mi_dma.o
 	Object lib/NitroSDK/asm/mi_dma_gxcommand.o
     Object lib/NitroSDK/asm/mi_memory.o
-    Object lib/NitroSDK/asm/mi_uncompress.o
     Object lib/NitroSDK/asm/mi_swap.o
+    Object lib/NitroSDK/asm/mi_uncompress.o
     Object lib/NitroSDK/asm/mi_dma_card.o
     Object lib/NitroSDK/asm/mi_init.o
     Object asm/asm_76_thumb.o
@@ -117,26 +117,10 @@ Static main
 
 	### Vendor libraries ###
 	Object asm/middleware.o
-	Object lib/asm/jn_spl.o
-	Object lib/NitroSDK/asm/wvr.o
-	Object lib/NitroDWC/asm/dwcbm.o
-	Object lib/NitroDWC/asm/dwcaccount.o
-	Object lib/asm/wifi.o
-	Object lib/asm/libVCT.o
-	Object lib/asm/nnsys.o
+    Object lib/asm/nnsys.o
 
 	### NitroSDK ###
-	Object lib/NitroSDK/asm/fx_trig.o
-	Object lib/NitroSDK/asm/g3b.o
-	Object lib/NitroSDK/asm/g3.o
 	
-	Object lib/NitroSDK/src/os/os_irqHandler.o
-	Object lib/NitroSDK/src/os/os_irqTable.o
-
-
-	Object lib/NitroSDK/src/os/os_vramExclusive.o
-	
-	Object lib/asm/nitro.o
 	Object lib/asm/msl.o
 }
 

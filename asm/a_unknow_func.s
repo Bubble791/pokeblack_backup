@@ -2,6 +2,8 @@
 	.include "asm_1.inc"
 	.include "global.inc"
 
+	.public MIi_CardDmaCopy32
+
 	.text
 
 	thumb_func_start sub_0216B2A4
@@ -827,5 +829,6 @@ sub_027692EC:
 	
 	thumb_func_start sub_027692B8
 sub_027692B8:
+	bl MIi_CardDmaCopy32
 	bx lr
 	thumb_func_end sub_027692B8
