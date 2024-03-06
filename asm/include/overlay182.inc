@@ -593,7 +593,7 @@
 .public OS_Terminate
 .public GX_VBlankIntr
 .public sub_02074658
-.public sub_02072390
+.public FS_Init
 .public sub_0207E13C
 .public RTC_Init
 .public GX_DispOff

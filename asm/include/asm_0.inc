@@ -30,10 +30,10 @@
 .public sub_02074658
 .public OS_GetConsoleType
 .public sub_0207F6E8
-.public sub_02072390
-.public sub_02072358
+.public FS_Init
+.public FS_TryLoadTable
 .public OS_AllocFromArenaLo
-.public sub_02072358
+.public FS_TryLoadTable
 .public sub_0205F9A8
 .public sub_0207F0AC
 .public sub_0207EFC4

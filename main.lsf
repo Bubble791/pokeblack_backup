@@ -30,7 +30,10 @@ Static main
     Object lib/NitroSDK/asm/cp_context.o
     Object lib/NitroSDK/asm/fs_archive.o
     Object lib/NitroSDK/asm/fs_file.o
-    Object asm/asm_32_thumb.o
+    Object lib/NitroSDK/asm/fs_overlay.o
+    Object lib/NitroSDK/asm/fs_proc_default.o
+    Object lib/NitroSDK/asm/fs_proc_mem.o
+    Object lib/NitroSDK/asm/fs_proc_rom.o
 	Object lib/NitroSDK/asm/fx_mtx22.o
 	Object lib/NitroSDK/asm/fx_mtx33.o
 	Object lib/NitroSDK/asm/fx_mtx43.o

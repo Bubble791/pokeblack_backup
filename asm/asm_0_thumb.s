@@ -285,18 +285,18 @@ _020053A2:
 	ldrh r0, [r1]
 	mov r0, #1
 	strh r0, [r1]
-	bl sub_02072390
+	bl FS_Init
 	mov r0, #0
 	mov r1, #0
 	mov r4, #0
-	bl sub_02072358
+	bl FS_TryLoadTable
 	add r5, r0, #0
 	mov r0, #0
 	add r1, r5, #0
 	mov r2, #4
 	bl OS_AllocFromArenaLo
 	add r1, r5, #0
-	bl sub_02072358
+	bl FS_TryLoadTable
 	ldr r0, _02005410 ; =0x0209D758
 	mov r1, #0x30
 	bl sub_0205F9A8

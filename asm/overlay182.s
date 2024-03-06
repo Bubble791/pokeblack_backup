@@ -19299,7 +19299,7 @@ _021ADCCE:
 	bl GX_VBlankIntr
 	bl sub_02074658
 	sub r0, r4, #1
-	bl sub_02072390
+	bl FS_Init
 	bl sub_0207E13C
 	bl RTC_Init
 	bl GX_DispOff

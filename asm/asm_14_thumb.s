@@ -7316,7 +7316,7 @@ _0203CE6E:
 	bhi _0203CE7E
 	mov r0, #0
 	mvn r0, r0
-	bl sub_02072324
+	bl FS_SetDefaultDMA
 	add r7, r0, #0
 _0203CE7E:
 	mov r0, #0
@@ -7326,7 +7326,7 @@ _0203CE7E:
 	cmp r4, #1
 	bhi _0203CE92
 	add r0, r7, #0
-	bl sub_02072324
+	bl FS_SetDefaultDMA
 _0203CE92:
 	mov r0, #0
 	cmp r5, #0
@@ -37494,7 +37494,7 @@ _0204A858:
 	ldr r1, [r1, r2]
 	sub r2, r0, r1
 	add r0, r5, #0
-	bl sub_02072108
+	bl FS_CreateFileFromMemory
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _0204A86C: .word 0x02141930
@@ -37767,7 +37767,7 @@ sub_0204AA60: ; 0x0204AA60
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02072108
+	bl FS_CreateFileFromMemory
 	add r0, r4, #0
 	bl sub_0204AA9C
 	add r0, r4, #0
