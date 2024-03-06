@@ -1239,7 +1239,7 @@ _0219D7C4:
 _0219D7D4:
 	ldr r1, [sp, #4]
 	add r0, r5, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r2, #6
 	add r0, r5, #0
 	mov r1, #0

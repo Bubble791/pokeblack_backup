@@ -1848,7 +1848,7 @@ _0219A890:
 	bl sub_020652C8
 	ldr r1, [r5, #8]
 	add r0, r5, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_020652CC

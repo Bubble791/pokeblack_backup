@@ -58,7 +58,7 @@
 .public sub_02045080
 .public sub_02045320
 .public sub_02045320
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_BeginLoadBGExtPltt
 .public GX_LoadBGExtPltt
 .public GX_LoadBGExtPltt

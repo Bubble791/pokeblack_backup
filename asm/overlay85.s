@@ -4299,7 +4299,7 @@ _021ECF46:
 	add r4, r4, #1
 	cmp r4, #0x10
 	blt _021ECF46
-	blx sub_0207B040
+	blx DC_FlushAll
 	ldr r0, [sp, #0xc]
 	bl sub_0204AB0C
 	add sp, #0x34

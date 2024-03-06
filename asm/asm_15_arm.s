@@ -7178,10 +7178,10 @@ sub_02057138: ; 0x02057138
 	sbcs r2, r1, r0
 	addlt sp, sp, #0x24
 	ldmltia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
-	blx sub_0207BAC0
+	blx OS_IsTickAvailable
 	cmp r0, #0
 	beq _020571C0
-	ldr r0, _020572F0 ; =sub_0207BB0C
+	ldr r0, _020572F0 ; =OS_GetTick
 	adds sb, sb, r0
 _020571C0:
 	add r0, sp, #0
@@ -7267,7 +7267,7 @@ _020572E4:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
-_020572F0: .word sub_0207BB0C
+_020572F0: .word OS_GetTick
 _020572F4: .word 0x5D588B65
 _020572F8: .word 0x00269EC3
 _020572FC: .word 0x000009BF
@@ -7357,10 +7357,10 @@ sub_02057398: ; 0x02057398
 	addlt sp, sp, #0x24
 	movlt r0, r7
 	ldmltia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
-	blx sub_0207BAC0
+	blx OS_IsTickAvailable
 	cmp r0, #0
 	beq _0205743C
-	ldr r0, _0205751C ; =sub_0207BB0C
+	ldr r0, _0205751C ; =OS_GetTick
 	adds r8, r8, r0
 _0205743C:
 	add r0, sp, #0
@@ -7424,7 +7424,7 @@ _02057510:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
-_0205751C: .word sub_0207BB0C
+_0205751C: .word OS_GetTick
 _02057520: .word 0x5D588B65
 _02057524: .word 0x00269EC3
 _02057528: .word 0x000009BF
@@ -8786,8 +8786,8 @@ sub_02058520: ; 0x02058520
 	mov r8, r2
 	mov r6, #0
 	bl sub_020586D0
-	blx sub_0207BA7C
-	blx sub_0207BBF4
+	blx OS_InitTick
+	blx OS_InitAlarm
 	blx RTC_Init
 	mov r0, #2
 	mov r1, #0x1000
@@ -9078,7 +9078,7 @@ sub_02058854: ; 0x02058854
 	ldr r0, [r1]
 	mov r1, #0x400
 	add r0, r0, #0xf00
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	ldrh r0, [r7, #2]
 	cmp r0, #0
 	ldreqh r0, [r7, #8]
@@ -10475,7 +10475,7 @@ _02059B0C:
 	cmp r0, #9
 	bne _02059B30
 	strb r4, [r1, #0x4c5]
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r8, #0x1000
 	str r0, [r2, #0x460]
 	str r1, [r2, #0x464]
@@ -11544,7 +11544,7 @@ _0205A8B4:
 	movs r5, r0
 	beq _0205A90C
 	mov r1, #0x20
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	ldr r1, [r4, #0xc]
 	mov r0, r5
 	add r1, r1, #0x18
@@ -12328,7 +12328,7 @@ _0205B300:
 	mov r6, #6
 	mov r7, r0
 	mov r1, r6
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	cmp r7, #0
 	bne _0205B338
 	mov r0, r4
@@ -12358,7 +12358,7 @@ _0205B378:
 	blx sub_0215CB48
 	mov r6, r0
 	mov r1, #0x20
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	cmp r6, #0
 	bne _0205B3A8
 	mov r0, r4
@@ -13296,7 +13296,7 @@ _0205BF7C:
 	cmp r0, #0
 	cmpeq r2, #0
 	bne _0205C1A8
-	blx sub_0207BB0C
+	blx OS_GetTick
 	ldr r2, [r5]
 	str r0, [r2, #8]
 	str r1, [r2, #0xc]
@@ -13306,7 +13306,7 @@ _0205BFC0:
 	str r0, [r5, #8]
 	b _0205C1A8
 _0205BFCC:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	ldr r4, [r5]
 	mov r3, #0
 	ldr r2, [r4, #8]
@@ -13747,7 +13747,7 @@ sub_0205C520: ; 0x0205C520
 	beq _0205C638
 	ldmia sp!, {r4, r5, r6, pc}
 _0205C550:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	str r0, [r2, #0x460]
 	str r1, [r2, #0x464]
@@ -13776,7 +13776,7 @@ _0205C584:
 	moveq r5, #0
 	cmp r5, #1
 	bne _0205C618
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	str r0, [r2, #0x460]
 	str r1, [r2, #0x464]
@@ -13808,7 +13808,7 @@ _0205C618:
 	strb r0, [r2, r1, lsl #2]
 	ldmia sp!, {r4, r5, r6, pc}
 _0205C638:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	str r0, [r2, #0x460]
 	str r1, [r2, #0x464]
@@ -13835,7 +13835,7 @@ _0205C684: .word 0x02184FE4
 sub_0205C688: ; 0x0205C688
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	str r0, [r2, #0x460]
 	mov r0, #0
@@ -13843,7 +13843,7 @@ sub_0205C688: ; 0x0205C688
 	bl sub_0205CD90
 	add r1, r4, #0x1000
 	strb r0, [r1, #0x4c1]
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	add r3, r4, #0x1400
 	str r0, [r2, #0x460]
@@ -13892,7 +13892,7 @@ sub_0205C6F4: ; 0x0205C6F4
 sub_0205C748: ; 0x0205C748
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r5, #0x1000
 	ldr ip, [r2, #0x460]
 	mov r4, #0
@@ -13924,7 +13924,7 @@ sub_0205C748: ; 0x0205C748
 	bl sub_0205CB08
 	ldmia sp!, {r3, r4, r5, pc}
 _0205C7CC:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r3, r5, #0x1400
 	add r2, r5, #0x1000
 	str r0, [r2, #0x460]
@@ -13950,7 +13950,7 @@ _0205C810: .word 0x02184FE4
 sub_0205C814: ; 0x0205C814
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r4, r0
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	ldr ip, [r2, #0x460]
 	ldr lr, [r2, #0x464]
@@ -14026,7 +14026,7 @@ _0205C908:
 	moveq r6, #0
 	cmp r6, #1
 	bne _0205C994
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r3, r4, #0x1000
 	ldrb r5, [r3, #0x4bf]
 	mov r2, #0xc0
@@ -14067,7 +14067,7 @@ _0205C9B8: .word 0x000082EA
 sub_0205C9BC: ; 0x0205C9BC
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	ldr ip, [r2, #0x460]
 	ldr lr, [r2, #0x464]
@@ -14130,7 +14130,7 @@ _0205CA88:
 	bl sub_0205CB08
 	ldmia sp!, {r4, pc}
 _0205CAB4:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r3, r4, #0x1000
 	add r2, r4, #0x104
 	add r4, r4, #0x1400
@@ -15127,7 +15127,7 @@ _0205D7A8:
 	mov r0, #0xd
 	ldmia sp!, {r3, r4, r5, pc}
 _0205D7B0:
-	blx sub_0207BB0C
+	blx OS_GetTick
 	add r2, r4, #0x1000
 	ldr ip, [r2, #0x460]
 	mov r3, #0
@@ -15449,7 +15449,7 @@ sub_0205DBC0: ; 0x0205DBC0
 	mov r0, r6
 	mov r1, sb
 	mov r4, #0
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	ldr r0, _0205DC6C ; =0x000001FE
 	mov r1, sb
 	mov r2, r6
@@ -15465,7 +15465,7 @@ _0205DC24:
 	ldr r8, _0205DC74 ; =0x02141A00
 	mov r1, sb
 	mov r0, r8
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	mov r0, sb
 	mov r1, sb
 	mov r2, r8
@@ -15533,7 +15533,7 @@ sub_0205DCA4: ; 0x0205DCA4
 	movhi r4, r5
 	movhi r1, r5
 	strhi r5, [sp]
-	bl sub_0207B074
+	bl DC_InvalidateRange
 	mov r1, r4, lsl #0x10
 	ldr r0, [sp, #4]
 	mov r2, r6
@@ -15572,7 +15572,7 @@ sub_0205DD40: ; 0x0205DD40
 	cmp r1, r5
 	movhi r1, r5
 	strhi r5, [sp]
-	bl sub_0207B090
+	bl DC_StoreRange
 	mvn r6, #0
 	mov r5, #0
 _0205DDAC:
@@ -15685,10 +15685,10 @@ _0205DF00:
 	mov r5, r0
 	cmp r5, #1
 	bne _0205DF48
-	blx sub_0207BAC0
+	blx OS_IsTickAvailable
 	cmp r0, #0
 	beq _0205DF3C
-	blx sub_0207BC18
+	blx OS_IsAlarmAvailable
 	cmp r0, #0
 	beq _0205DF3C
 	mov r0, r4
@@ -15718,10 +15718,10 @@ _0205DF68:
 	mov r5, r0
 	cmp r5, #1
 	bne _0205DFB0
-	blx sub_0207BAC0
+	blx OS_IsTickAvailable
 	cmp r0, #0
 	beq _0205DFA4
-	blx sub_0207BC18
+	blx OS_IsAlarmAvailable
 	cmp r0, #0
 	beq _0205DFA4
 	mov r0, r4
@@ -15751,10 +15751,10 @@ _0205DFD0:
 	mov r5, r0
 	cmp r5, #1
 	bne _0205E018
-	blx sub_0207BAC0
+	blx OS_IsTickAvailable
 	cmp r0, #0
 	beq _0205E00C
-	blx sub_0207BC18
+	blx OS_IsAlarmAvailable
 	cmp r0, #0
 	beq _0205E00C
 	mov r0, r4

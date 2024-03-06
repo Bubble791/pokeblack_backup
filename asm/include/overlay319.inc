@@ -115,7 +115,7 @@
 .public sub_02021A3C
 .public sub_0203A1FC
 .public sub_0204B610
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBG2Scr
 .public sub_0203A24C
 .public sub_0203CE0C

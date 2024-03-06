@@ -481,7 +481,7 @@ ovy301_219ff30: ; 0x0219FF30
 	bl sub_02045320
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	bl GX_BeginLoadBGExtPltt
 	mov r1, #1
 	lsl r7, r1, #0xe

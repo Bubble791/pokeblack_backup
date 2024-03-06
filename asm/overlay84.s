@@ -1398,7 +1398,7 @@ _021EB99A:
 	add r4, r4, #1
 	cmp r4, #0xc
 	blt _021EB99A
-	blx sub_0207B040
+	blx DC_FlushAll
 	ldr r0, [sp, #0x14]
 	bl sub_0204AB0C
 	add sp, #0x50

@@ -152,7 +152,7 @@ MIi_DMACallback: ; 0x02078550
 	mov r5, #2
 	lsl r5, r5, #0x14
 	add r0, r5, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	ldr r4, _02078588 ; =0x0214C0AC
 	ldr r2, _0207858C ; =0x04000600
 	ldr r3, [r4, #0x18]

@@ -2028,7 +2028,7 @@ ovy308_21a0934: ; 0x021A0934
 	add r1, r7, #0
 	add r5, r0, #0
 	lsl r4, r2, #1
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r6, #3
 	bhi _021A098A
 	add r0, r6, r6

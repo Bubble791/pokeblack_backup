@@ -277,7 +277,7 @@
 .public sub_020602D8
 .public sub_0204AB1C
 .public sub_02060278
-.public sub_0207B040
+.public DC_FlushAll
 .public sub_0204AB0C
 .public sub_0203A24C
 .public sub_0203A24C

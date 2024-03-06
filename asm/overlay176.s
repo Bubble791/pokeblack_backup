@@ -1527,7 +1527,7 @@ _0219B98A:
 	mov r1, #0
 	add r0, #0xc
 	str r1, [r5, r0]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r1, _0219BA88 ; =0x000082EA
 	lsl r0, r0, #6
 	blx sub_0208D868
@@ -1577,7 +1577,7 @@ _0219B9F0:
 	add r0, r5, #0
 	bl sub_0219B6C8
 _0219BA00:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r1, _0219BA88 ; =0x000082EA
 	lsl r0, r0, #6
 	blx sub_0208D868

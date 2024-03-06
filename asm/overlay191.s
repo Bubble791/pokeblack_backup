@@ -3194,7 +3194,7 @@ _021B6C6A:
 	lsl r5, r5, #2
 	add r0, r0, r5
 	lsl r1, r1, #6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	str r1, [r0, #0x10]

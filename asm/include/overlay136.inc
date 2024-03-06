@@ -29,11 +29,11 @@
 .public sub_02046E74
 .public sub_02047FB4
 .public GX_BeginLoadTex
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTex
 .public GX_EndLoadTex
 .public GX_BeginLoadTexPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTexPltt
 .public GX_EndLoadTexPltt
 .public sub_0203A24C

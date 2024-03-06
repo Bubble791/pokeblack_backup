@@ -82,7 +82,7 @@ ovy174_219ced0: ; 0x0219CED0
 	bl sub_02026FD8
 	add r1, r6, #0
 	add r7, r0, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r5, #1
 	beq _0219CF40
 	cmp r5, #3

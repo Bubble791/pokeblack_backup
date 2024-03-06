@@ -77,7 +77,7 @@
 .public sub_0217333C
 .public sub_02042E84
 .public sub_0204405C
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_02174E58
 .public sub_02174E34
 .public sub_02042E84
@@ -171,7 +171,7 @@
 .public sub_02174140
 .public sub_02174140
 .public sub_02012EDC
-.public sub_0207B074
+.public DC_InvalidateRange
 .public MI_CpuCopy8
 .public sub_02012EBC
 .public sub_02042D94
@@ -236,7 +236,7 @@
 .public sub_02174140
 .public sub_02174154
 .public sub_02174140
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_02081998
 .public sub_02174154
 .public sub_02174154

@@ -832,7 +832,7 @@ _02199E70:
 	bl sub_0204A928
 	ldr r0, [r4, #0x48]
 	ldr r1, [r4, #0x4c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	pop {r3, r4, r5, pc}
 	nop
 _02199EA8: .word 0x021B25A0
@@ -873,7 +873,7 @@ ovy257_2199ec0: ; 0x02199EC0
 	bl sub_0204A928
 	ldr r0, [r4, #0x48]
 	ldr r1, [r4, #0x4c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	pop {r4, pc}
 	.align 2, 0
 _02199EF4: .word 0x021B25A0
@@ -2665,7 +2665,7 @@ _0219AB64:
 	lsl r6, r6, #0xe
 	ldr r0, [r4, #4]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4, #4]
 	mov r1, #0
 	add r2, r6, #0
@@ -3064,7 +3064,7 @@ _0219AE60:
 	str r0, [sp, #0x18]
 	lsl r1, r1, #1
 _0219AE66:
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	mov r1, #0x1c
 	add r5, r0, #0
@@ -30452,7 +30452,7 @@ ovy257_21a88b0: ; 0x021A88B0
 	mul r1, r6
 	lsl r1, r1, #1
 	str r0, [sp, #0x20]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r4, #0
 	cmp r6, #0
 	ble _021A88F8
@@ -30798,7 +30798,7 @@ ovy257_21a8b28: ; 0x021A8B28
 	mul r1, r6
 	lsl r1, r1, #1
 	str r0, [sp, #0x20]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r4, #0
 	cmp r6, #0
 	ble _021A8B70
@@ -32345,7 +32345,7 @@ ovy257_21a96d4: ; 0x021A96D4
 	mov r6, #6
 	lsl r6, r6, #0xe
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r5, #0x48]
 	mov r1, #0
 	add r2, r6, #0

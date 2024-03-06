@@ -182,13 +182,13 @@
 .public sub_0219B6C8
 .public sub_02199C40
 .public sub_0219B6C8
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D868
 .public sub_0219BEBC
 .public sub_0219AA60
 .public sub_0219BECC
 .public sub_0219B6C8
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D868
 .public sub_0219AA14
 .public sub_0219BEB8

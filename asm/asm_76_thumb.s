@@ -34,18 +34,18 @@ _02079220:
 	mov r0, #0
 	mov r2, #0x58
 	blx MIi_CpuClearFast
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	cmp r0, #0
 	bne _0207924A
-	bl sub_0207BA7C
+	bl OS_InitTick
 _0207924A:
-	bl sub_0207BC18
+	bl OS_IsAlarmAvailable
 	cmp r0, #0
 	bne _02079256
-	bl sub_0207BBF4
+	bl OS_InitAlarm
 _02079256:
 	ldr r0, _02079278 ; =0x0214C12C
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	ldr r0, _02079274 ; =0x0214C120
 	mov r1, #0
 	str r1, [r0, #0x54]
@@ -398,7 +398,7 @@ _0207976A:
 	str r0, [r4, #0x40]
 	ldr r0, _020797CC ; =0x0214C100
 	mov r4, #0x20
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	blx OS_DisableInterrupts
 	add r7, r0, #0
 	cmp r5, #0x20

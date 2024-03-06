@@ -206,7 +206,7 @@
 .public sub_02049430
 .public sub_02049620
 .public sub_020652C8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_020652CC
 .public sub_0204E664
 .public sub_021BB5F4

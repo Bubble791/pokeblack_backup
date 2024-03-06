@@ -1340,7 +1340,7 @@ ovy199_21b3a00: ; 0x021B3A00
 	bl sub_02026FD8
 	add r1, r7, #0
 	add r6, r0, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r5, #1
 	beq _021B3A66
 	cmp r5, #3
@@ -5390,7 +5390,7 @@ ovy199_21b5a84: ; 0x021B5A84
 	add r5, #0xc0
 	add r0, r5, r4
 	mov r1, #0x20
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r1, #0x20
 	add r0, r5, r4
 	add r1, #0xe0
@@ -11680,7 +11680,7 @@ _021B8E54:
 	add r0, r0, r1
 	mov r1, #0x1e
 	lsl r1, r1, #6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	mov r1, #1
 	str r1, [r0, #0xc]

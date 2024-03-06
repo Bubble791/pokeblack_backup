@@ -1251,7 +1251,7 @@ _02193CA4:
 	arm_func_start sub_02193CB0
 sub_02193CB0: ; 0x02193CB0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
-	bl sub_0207BB84
+	bl OS_GetTickLo
 	ldr r2, _02193D8C ; =0x02197444
 	ldr r1, _02193D90 ; =0x021973DC
 	mov r3, #1
@@ -1393,7 +1393,7 @@ _02193E48:
 	cmp r0, #1
 	bne _02193EDC
 	bl sub_021967C0
-	bl sub_0207BB84
+	bl OS_GetTickLo
 	strh r0, [r7]
 	strh r4, [r7, #0x10]
 	strb r4, [r7, #0x12]
@@ -1527,7 +1527,7 @@ _02194050:
 	add r1, r2, #1
 	strh r1, [r0]
 	strh r2, [r5, #6]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	mov r2, r4
 	mov r3, #0
 	bl sub_0208D5C4
@@ -1562,7 +1562,7 @@ sub_021940AC: ; 0x021940AC
 	movs r4, r0
 	beq _021942C4
 _021940E4:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	mov r8, r0
 	mov r0, sl
 	mov sb, r1
@@ -3100,7 +3100,7 @@ _021954E0:
 	adc r3, r0, #0
 	str r2, [r6, #0x46c]
 	str r3, [r6, #0x470]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr lr, [r6, #0x46c]
 	ldr r2, _021956BC ; =0x00008B18
 	ldr ip, [r6, #0x470]
@@ -3555,7 +3555,7 @@ _02195B00:
 	str r4, [r1, #4]
 	ldr r0, _02195B60 ; =0x02199898
 	str r4, [r1]
-	ldr r3, _02195B64 ; =sub_0207BB0C
+	ldr r3, _02195B64 ; =OS_GetTick
 	str r4, [r0, #0x14]
 	ldr r1, _02195B68 ; =0x5D588B65
 	str r3, [r2, #8]
@@ -3570,7 +3570,7 @@ _02195B54: .word 0x021983CC
 _02195B58: .word 0x021983B4
 _02195B5C: .word 0x02198390
 _02195B60: .word 0x02199898
-_02195B64: .word sub_0207BB0C
+_02195B64: .word OS_GetTick
 _02195B68: .word 0x5D588B65
 _02195B6C: .word 0x00269EC3
 	arm_func_end sub_02195A5C
@@ -3589,7 +3589,7 @@ _02195B84: .word 0x021983A0
 	arm_func_start sub_02195B88
 sub_02195B88: ; 0x02195B88
 	stmdb sp!, {r3, r4, r5, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r5, _02195C1C ; =0x02199898
 	ldr r2, [r5, #0x10]
 	cmp r2, #2
@@ -4295,7 +4295,7 @@ _02196498:
 	bne _021964D4
 	mov r0, #1
 	bl sub_02195E84
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, _021964F8 ; =0x02198390
 	str r0, [r2, #8]
 	str r1, [r2, #0xc]
@@ -5241,7 +5241,7 @@ sub_021970CC: ; 0x021970CC
 	mov r4, #0
 	str r4, [r5]
 	str r4, [r5, #4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldrb r2, [r7, #4]
 	and r3, r2, #0xf0
 	cmp r3, #0x40

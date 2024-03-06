@@ -20106,7 +20106,7 @@ ovy332_21c8838: ; 0x021C8838
 	mov r1, #1
 	bl sub_0204C124
 	str r5, [r4, #0x1c]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2
@@ -20129,7 +20129,7 @@ ovy332_21c887c: ; 0x021C887C
 	ldr r0, [r5, #0x1c]
 	cmp r0, #0
 	beq _021C890A
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2

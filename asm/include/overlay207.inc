@@ -1290,7 +1290,7 @@
 .public sub_0204C124
 .public sub_02046EF4
 .public sub_02046F00
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_02046EF8
 .public sub_02046EFC
 .public sub_02046EF8

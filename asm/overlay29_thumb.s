@@ -396,7 +396,7 @@ ovy29_21925b4: ; 0x021925B4
 	ldr r4, _021926CC ; =0x000019B0
 	ldr r1, [r5]
 	strh r0, [r1, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r0, r4, #0
 	ldr r6, [r5]

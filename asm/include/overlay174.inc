@@ -9,7 +9,7 @@
 .public sub_02026F7C
 .public sub_02027880
 .public sub_02026FD8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
 .public GXS_LoadBGPltt
 .public sub_02026E48

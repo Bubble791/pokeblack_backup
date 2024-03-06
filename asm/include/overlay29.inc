@@ -30,7 +30,7 @@
 .public sub_02193EF4
 .public sub_021956FC
 .public sub_02151674
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D868
 .public sub_02197014
 .public sub_02197014
@@ -77,7 +77,7 @@
 .public sub_021939A4
 .public sub_02193264
 .public sub_02192C3C
-.public sub_0207BB84
+.public OS_GetTickLo
 .public sub_021969F8
 .public sub_02194E8C
 .public sub_02195164
@@ -86,16 +86,16 @@
 .public sub_02195164
 .public sub_02194E8C
 .public sub_021967C0
-.public sub_0207BB84
+.public OS_GetTickLo
 .public sub_021951F0
 .public sub_02194EC8
 .public sub_02194AE4
 .public sub_021967C0
 .public MIi_CpuCopyFast
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D5C4
 .public sub_02195154
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_021950B4
 .public MIi_CpuCopyFast
 .public sub_0219678C
@@ -179,7 +179,7 @@
 .public sub_02195248
 .public sub_02195248
 .public sub_02195268
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_02195CA4
 .public sub_02195FF0
 .public sub_0219614C
@@ -195,7 +195,7 @@
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public MI_CpuFill8
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_02195E84
 .public sub_021964FC
 .public sub_02196248
@@ -228,7 +228,7 @@
 .public sub_0219603C
 .public sub_02195F44
 .public sub_02195E84
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_02195E84
 .public sub_021961C8
 .public sub_02195D58
@@ -257,7 +257,7 @@
 .public sub_02194990
 .public sub_021948C4
 .public sub_021970CC
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_021946E0
 .public sub_02195C30
 

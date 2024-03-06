@@ -535,13 +535,13 @@ ovy264_2199ca0: ; 0x02199CA0
 	eor r1, r3
 	orr r0, r1
 	bne _02199CD4
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, r5]
 	add r0, r5, #4
 	str r1, [r4, r0]
 	b _02199D4C
 _02199CD4:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0xc]
 	add r0, r5, #0
 	add r0, #8
@@ -742,7 +742,7 @@ ovy264_2199e5c: ; 0x02199E5C
 	bl sub_0204B600
 	add r1, r5, #0
 	add r4, r0, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	bne _02199E84

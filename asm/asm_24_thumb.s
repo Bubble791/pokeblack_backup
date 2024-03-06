@@ -139,7 +139,7 @@ _0206B9CA:
 	add r2, r0, #0
 	mul r2, r1
 	add r0, r3, r2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	mov r0, #0
 	bl sub_0207D864
 	mov r0, #1
@@ -2377,10 +2377,10 @@ sub_0206C96C: ; 0x0206C96C
 	blx MIi_CpuClear32
 	ldr r0, [r4, #0xc]
 	ldr r1, [r4, #0x14]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4, #0x10]
 	ldr r1, [r4, #0x14]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r1, [r4, #0x2c]
 	cmp r1, #0
 	blt _0206C9AA
@@ -4118,7 +4118,7 @@ _0206D54A:
 _0206D560:
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, r5, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -4356,7 +4356,7 @@ _0206D704:
 	blx MI_CpuFill8
 	ldr r1, [sp, #8]
 	add r0, r4, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	cmp r7, #0
 	beq _0206D734
 	add r0, r5, #0
@@ -4550,7 +4550,7 @@ _0206D87A:
 _0206D890:
 	ldr r0, [sp, #0xc]
 	add r1, r6, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	ldr r2, [sp, #0xc]
 	add r0, r5, #0
 	add r1, r4, #0
@@ -7075,7 +7075,7 @@ _0206EB44:
 	ldr r1, [sp, #8]
 	ldr r0, [r4, #0x14]
 	ldr r1, [r1, #0x2c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #8]
 	add r5, r5, #1
 	ldr r0, [r0, #0x10]
@@ -7438,7 +7438,7 @@ _0206EDB0:
 	add r0, r4, #0
 	mov r1, #0xc0
 	add r2, #0x47
-	bl sub_0207BF08
+	bl OS_SetVAlarm
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
@@ -7625,7 +7625,7 @@ sub_0206EEF0: ; 0x0206EEF0
 	add r0, r4, #0
 	bl OS_InitEvent
 	add r0, sp, #0xc
-	bl sub_0207BEFC
+	bl OS_CreateVAlarm
 	ldr r0, _0206EF34 ; =sub_0206EDCC
 	str r0, [sp, #0x34]
 	add r0, sp, #0x48
@@ -7888,7 +7888,7 @@ sub_0206F0C0: ; 0x0206F0C0
 	blx MIi_CpuClearFast
 	add r0, r4, #0
 	mov r1, #0x60
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r1, _0206F0EC ; =sub_0206F2E4
 	mov r0, #0xb
 	bl PXI_SetFifoRecvCallback
@@ -8136,10 +8136,10 @@ sub_0206F298: ; 0x0206F298
 	push {r3, lr}
 	cmp r1, r2
 	blo _0206F2A4
-	blx sub_0207B0DC
+	blx IC_InvalidateAll
 	pop {r3, pc}
 _0206F2A4:
-	blx sub_0207B0E8
+	blx IC_InvalidateRange
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end sub_0206F298
@@ -8151,7 +8151,7 @@ sub_0206F2AC: ; 0x0206F2AC
 	add r5, r0, #0
 	cmp r4, r2
 	blo _0206F2BC
-	blx sub_0207B040
+	blx DC_FlushAll
 	pop {r3, r4, r5, pc}
 _0206F2BC:
 	mov r0, #0x1f
@@ -8160,16 +8160,16 @@ _0206F2BC:
 	sub r5, r5, r0
 	add r0, r5, #0
 	mov r1, #0x20
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, r5, r4
 	mov r1, #0x20
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r4, #0x20
 _0206F2D6:
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B074
-	blx sub_0207B0D0
+	blx DC_InvalidateRange
+	blx DC_WaitWriteBufferEmpty
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0206F2AC
 
@@ -8232,8 +8232,8 @@ _0206F346:
 _0206F350:
 	ldr r0, [r5]
 	mov r1, #0x60
-	blx sub_0207B0AC
-	blx sub_0207B0D0
+	blx DC_FlushRange
+	blx DC_WaitWriteBufferEmpty
 	ldr r0, _0206F3D8 ; =0x0214C22C
 	mov r7, #0xb
 	ldr r1, [r0, #4]
@@ -8280,7 +8280,7 @@ _0206F3AC:
 	blx OS_RestoreInterrupts
 	ldr r0, [r5]
 	mov r1, #0x60
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5]
 	ldr r1, [r0]
 	cmp r1, #4
@@ -8398,7 +8398,7 @@ _0206F482: ; jump table
 _0206F48A:
 	add r0, r7, #0
 	add r1, r5, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, _0206F530 ; =0x000004FC
 	ldr r1, [r4, r0]
 	ldr r0, [r4]
@@ -8414,8 +8414,8 @@ _0206F4A0:
 	blx MI_CpuCopy8
 	add r0, r7, #0
 	add r1, r5, #0
-	blx sub_0207B0AC
-	blx sub_0207B0D0
+	blx DC_FlushRange
+	blx DC_WaitWriteBufferEmpty
 	ldr r0, [r4]
 	str r7, [r0, #0xc]
 	ldr r0, [sp, #0x18]
@@ -9184,7 +9184,7 @@ _0206FA58:
 	ldr r0, [r5]
 	cmp r0, #0
 	beq _0206FA6C
-	bl sub_0207BC18
+	bl OS_IsAlarmAvailable
 	cmp r0, #0
 	beq _0206FA6C
 	add r0, r6, #0
@@ -9372,7 +9372,7 @@ _0206FBB6:
 	blx r1
 	lsl r5, r5, #0xa
 	add r0, r5, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r0, r5, #0
 	bl OS_ResetRequestIrqMask
 	mov r0, #0

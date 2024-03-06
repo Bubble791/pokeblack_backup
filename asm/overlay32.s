@@ -221,7 +221,7 @@ ovy32_2199a58: ; 0x02199A58
 	ldr r1, [sp, #0xc]
 	ldr r0, [r1, #0x14]
 	ldr r1, [r1, #0x10]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
 	bl G2_GetBG1CharPtr
@@ -247,7 +247,7 @@ _02199AA2:
 	add r0, r1, #0
 	ldr r1, [r1, #8]
 	add r0, #0xc
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
 	bl G2_GetBG1ScrPtr
@@ -275,7 +275,7 @@ _02199AE0:
 	ldr r0, [sp, #4]
 	mov r1, #0x20
 	ldr r0, [r0, #0xc]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #4]
 	mov r1, #5
 	ldr r0, [r0, #0xc]

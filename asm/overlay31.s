@@ -1003,7 +1003,7 @@ ovy31_2175fcc: ; 0x02175FCC
 	mov r1, #1
 	bl ovy31_217659c
 	str r5, [r4, #0x20]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x28]
 	str r1, [r4, #0x2c]
 _02175FF8:
@@ -1211,7 +1211,7 @@ ovy31_2176130: ; 0x02176130
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _02176144:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r4, _02176180 ; =0x02176888
 	ldr r2, [r4, #0x28]
 	ldr r3, [r4, #0x2c]
@@ -1336,7 +1336,7 @@ _02176220:
 	mov r0, #0
 	pop {r4, r5, r6, pc}
 _0217622E:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x28]
 	ldr r0, _02176350 ; =0x021768B8
 	str r1, [r4, #0x2c]
@@ -1525,14 +1525,14 @@ _02176380: .word 0x02176784
 	thumb_func_start ovy31_2176384
 ovy31_2176384: ; 0x02176384
 	push {r3, r4, r5, r6, r7, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	mov r7, #0xfa
 	add r4, r0, #0
 	add r5, r1, #0
 	lsl r7, r7, #8
 	mov r6, #0
 _02176394:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r4
 	sbc r1, r5
 	add r2, r7, #0
@@ -1597,12 +1597,12 @@ _02176404: .word 0x0000FFFD
 ovy31_2176408: ; 0x02176408
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	mov r6, #0
 _02176416:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r4
 	sbc r1, r5
 	mov r2, #0xfa
@@ -1649,12 +1649,12 @@ _0217646C: .word 0x040001A2
 ovy31_2176470: ; 0x02176470
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	mov r6, #0
 _0217647E:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r4
 	sbc r1, r5
 	mov r2, #0xfa

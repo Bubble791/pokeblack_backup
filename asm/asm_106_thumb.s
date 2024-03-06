@@ -813,9 +813,9 @@ sub_0207F17C: ; 0x0207F17C
 	blx OS_DisableInterrupts
 	str r0, [sp, #0x1c]
 	sub r0, r4, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	str r0, [sp, #0x18]
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	mov r1, #8
 	cmp r0, #0
 	bne _0207F1B2
@@ -951,7 +951,7 @@ _0207F2BC:
 	cmp r0, #0
 	beq _0207F2BC
 _0207F2C6:
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	mov r1, #8
 	cmp r0, #0
 	bne _0207F2D2
@@ -3856,7 +3856,7 @@ _02080810:
 _0208082E:
 	add r0, r6, #0
 	add r1, r4, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	str r7, [sp]
 	ldr r0, [sp, #4]
 	add r1, r6, #0
@@ -3927,7 +3927,7 @@ _020808BA:
 	strh r6, [r4, r0]
 	add r0, r4, r0
 	add r1, r7, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	lsl r1, r5, #8
 	ldr r0, _020808F8 ; =0x0214E2B0
 	add r1, r4, r1
@@ -4022,7 +4022,7 @@ _0208097C:
 	ldr r0, [sp]
 	mov r1, #2
 	mov r4, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r1, [sp]
 	lsl r0, r4, #0xe
 	ldrh r2, [r1]
@@ -4080,7 +4080,7 @@ _020809E6:
 	mov r1, #1
 	add r0, r4, #0
 	lsl r1, r1, #8
-	blx sub_0207B090
+	blx DC_StoreRange
 	mov r0, #0xa
 	add r1, r4, #0
 	mov r2, #0
@@ -4120,7 +4120,7 @@ _02080A2E:
 	blx MI_CpuCopy8
 	add r0, r4, #0
 	add r1, r5, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	mov r0, #0xa
 	add r1, r4, #0
 	mov r2, #0
@@ -4174,7 +4174,7 @@ sub_02080A84: ; 0x02080A84
 	mov r1, #2
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #4]
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #4]
 	ldrh r0, [r0]
@@ -4201,7 +4201,7 @@ sub_02080AB0: ; 0x02080AB0
 	mov r1, #2
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #4]
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	add r3, sp, #0x10
 	ldr r0, [r0, #4]
@@ -4508,7 +4508,7 @@ _02080F5A:
 	lsl r6, r6, #4
 	ldr r0, [r4, #4]
 	add r1, r6, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	add r1, r5, #0
 	add r2, r6, #0
@@ -4536,7 +4536,7 @@ _02080F8E:
 	mov r1, #4
 	add r0, #0xc
 	mov r4, #4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	ldr r1, [r0, #0xc]
 	cmp r1, #1
@@ -4546,7 +4546,7 @@ _02080F8E:
 _02080FA6:
 	add r0, #0x3c
 	add r1, r4, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	mov r1, #0x1f
 	ldrh r0, [r0, #0x3c]
@@ -4574,7 +4574,7 @@ _02080FD8:
 	ldr r0, [r5, #4]
 	mov r1, #4
 	add r0, #0xc
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r1, [r5, #4]
 	ldr r0, [r1, #0xc]
 	cmp r0, #1
@@ -4586,7 +4586,7 @@ _02080FEE:
 	lsl r4, r4, #2
 	add r0, r1, r4
 	add r1, r6, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	mov r6, #1
 	ldrh r1, [r0, r4]
@@ -4597,14 +4597,14 @@ _02081006:
 	add r0, #0x3e
 	mov r1, #2
 	mov r7, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	cmp r6, #1
 	ldrh r4, [r0, #0x3e]
 	bne _02081036
 	add r0, #0xf8
 	add r1, r7, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	add r4, #0xc
 	add r0, #0xf8
@@ -4652,7 +4652,7 @@ _0208106A:
 	ldr r7, _020810C8 ; =0x00000182
 	mov r1, #2
 	add r0, r0, r7
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r6, #4]
 	ldrh r1, [r0, r7]
 	mov r0, #1
@@ -4743,7 +4743,7 @@ _02081110:
 	ldr r0, [r5, #4]
 	mov r1, #2
 	mov r6, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	ldrh r1, [r0]
 	cmp r1, #9
@@ -4757,7 +4757,7 @@ _0208112C:
 	ldr r4, _02081158 ; =0x00000182
 	add r1, r6, #0
 	add r0, r0, r4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	ldrh r1, [r0, r4]
 	cmp r1, #0
@@ -4767,7 +4767,7 @@ _0208112C:
 _02081142:
 	add r0, #0xbc
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	add r0, #0xbc
 	ldrh r0, [r0]
@@ -5285,12 +5285,12 @@ _020814E0:
 	bl sub_02080950
 	add r0, r4, #0
 	mov r1, #0x40
-	blx sub_0207B090
+	blx DC_StoreRange
 	ldrh r1, [r4, #4]
 	cmp r1, #0
 	beq _02081502
 	ldr r0, [r4]
-	blx sub_0207B090
+	blx DC_StoreRange
 _02081502:
 	mov r0, #7
 	mov r1, #1
@@ -5583,7 +5583,7 @@ _02081714:
 	ldrh r1, [r5]
 	add r0, r5, #0
 	lsl r1, r1, #1
-	blx sub_0207B090
+	blx DC_StoreRange
 	bl sub_02080A64
 	mov r2, #0x15
 	lsl r2, r2, #4
@@ -5665,7 +5665,7 @@ _020817B4:
 	ldr r7, _020817F8 ; =0x00000182
 	add r0, r1, r7
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	ldrh r1, [r0, r7]
 	mov r0, #1
@@ -5720,11 +5720,11 @@ sub_020817FC: ; 0x020817FC
 	lsl r6, r6, #2
 	add r0, r4, r6
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	add r0, r4, #0
 	add r0, #0xc6
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldrh r0, [r4, r6]
 	cmp r0, #0
 	beq _02081848
@@ -5740,7 +5740,7 @@ _02081848:
 	add r0, r4, #0
 	add r0, #0xc
 	mov r1, #4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #0xc]
 	cmp r0, #1
 	bne _0208185E
@@ -5767,7 +5767,7 @@ _0208187A:
 	add r0, r4, #0
 	add r0, #0x9c
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	add r4, #0x9c
 	ldrh r0, [r4]
 	cmp r0, #0
@@ -5930,7 +5930,7 @@ sub_02081998: ; 0x02081998
 	lsl r0, r0, #2
 	add r0, r4, r0
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	mov r0, #0x62
 	lsl r0, r0, #2
 	ldrh r0, [r4, r0]
@@ -5941,7 +5941,7 @@ sub_02081998: ; 0x02081998
 	sub r0, r0, #6
 	add r0, r4, r0
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	mov r0, #0x62
 	lsl r0, r0, #2
 	sub r0, r0, #6
@@ -5949,7 +5949,7 @@ sub_02081998: ; 0x02081998
 	add r0, r4, #0
 	add r0, #0x86
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 _020819F0:
 	cmp r5, #0
 	bne _020819FA
@@ -5967,7 +5967,7 @@ _02081A04:
 	add r0, #0x7c
 	mov r1, #2
 	mov r7, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #0x7c]
 	cmp r5, r0
 	bne _02081A1C
@@ -5990,7 +5990,7 @@ _02081A28:
 _02081A32:
 	add r0, r5, #0
 	add r1, r6, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, sp, #0x30
 	ldrh r1, [r0]
 	add r2, r5, #0
@@ -6032,7 +6032,7 @@ sub_02081A68: ; 0x02081A68
 	ldr r0, [r4, #4]
 	mov r1, #4
 	add r0, #0xc
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #0xc]
 	cmp r0, #0
@@ -6069,7 +6069,7 @@ sub_02081AB0: ; 0x02081AB0
 	ldr r0, [r6, #4]
 	mov r1, #4
 	add r0, #0x10
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r6, #4]
 	ldr r0, [r0, #0x10]
 	cmp r0, #1
@@ -6089,7 +6089,7 @@ _02081AE8:
 _02081AF0:
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	mov r0, #0x11
 	add r1, r7, #0
 	bl sub_02080950
@@ -6125,7 +6125,7 @@ sub_02081B18: ; 0x02081B18
 	ldr r0, [r4, #4]
 	mov r1, #4
 	add r0, #0x10
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
@@ -6143,7 +6143,7 @@ _02081B4E:
 _02081B5A:
 	add r0, r6, #0
 	add r1, r5, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	mov r0, #0x12
 	add r1, r7, #0
 	bl sub_02080950
@@ -6182,7 +6182,7 @@ sub_02081B94: ; 0x02081B94
 	ldr r0, [r5, #4]
 	mov r1, #4
 	add r0, #0x10
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5, #4]
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
@@ -7077,7 +7077,7 @@ _0208243C:
 _02082448:
 	add r0, r4, #0
 	mov r1, #0x50
-	blx sub_0207B090
+	blx DC_StoreRange
 _02082450:
 	mov r0, #0x14
 	add r1, r6, #0
@@ -7120,7 +7120,7 @@ _0208248A:
 _02082496:
 	add r0, r4, #0
 	mov r1, #0x50
-	blx sub_0207B090
+	blx DC_StoreRange
 _0208249E:
 	mov r0, #0x27
 	add r1, r7, #0
@@ -7171,7 +7171,7 @@ _020824EA:
 	blx MIi_CpuCopy16
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B090
+	blx DC_StoreRange
 	mov r0, #0x18
 	add r1, r7, #0
 	bl sub_02080950

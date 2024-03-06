@@ -186,8 +186,8 @@
 .public MI_CpuFill8
 .public sub_0208D868
 .public sub_0203A1FC
-.public sub_0207BB0C
-.public sub_0207BB0C
+.public OS_GetTick
+.public OS_GetTick
 .public MI_CpuFill8
 .public sub_0203A24C
 .public sub_0203A24C

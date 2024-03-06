@@ -29,7 +29,7 @@
 .public sub_021819FC
 .public sub_021819FC
 .public sub_02181A10
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_021BAC48
 .public sub_02043F2C
 .public sub_0208D60C
@@ -37,7 +37,7 @@
 .public sub_021819FC
 .public sub_021BB368
 .public sub_02181A10
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_021BAC48
 .public sub_02043F2C
 .public sub_0208D60C
@@ -58,7 +58,7 @@
 .public sub_02181A84
 .public sub_02015924
 .public sub_0201592C
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_021BAC48
 .public sub_02015A04
 .public sub_02015A04

@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	arm_func_start sub_0207B040
-sub_0207B040: ; 0x0207B040
+	arm_func_start DC_FlushAll
+DC_FlushAll: ; 0x0207B040
 	mov ip, #0
 	mov r1, #0
 _0207B048:
@@ -20,10 +20,10 @@ _0207B04C:
 	cmp r1, #0
 	bne _0207B048
 	bx lr
-	arm_func_end sub_0207B040
+	arm_func_end DC_FlushAll
 
-	arm_func_start sub_0207B074
-sub_0207B074: ; 0x0207B074
+	arm_func_start DC_InvalidateRange
+DC_InvalidateRange: ; 0x0207B074
 	add r1, r1, r0
 	bic r0, r0, #0x1f
 _0207B07C:
@@ -32,10 +32,10 @@ _0207B07C:
 	cmp r0, r1
 	blt _0207B07C
 	bx lr
-	arm_func_end sub_0207B074
+	arm_func_end DC_InvalidateRange
 
-	arm_func_start sub_0207B090
-sub_0207B090: ; 0x0207B090
+	arm_func_start DC_StoreRange
+DC_StoreRange: ; 0x0207B090
 	add r1, r1, r0
 	bic r0, r0, #0x1f
 _0207B098:
@@ -44,10 +44,10 @@ _0207B098:
 	cmp r0, r1
 	blt _0207B098
 	bx lr
-	arm_func_end sub_0207B090
+	arm_func_end DC_StoreRange
 
-	arm_func_start sub_0207B0AC
-sub_0207B0AC: ; 0x0207B0AC
+	arm_func_start DC_FlushRange
+DC_FlushRange: ; 0x0207B0AC
 	mov ip, #0
 	add r1, r1, r0
 	bic r0, r0, #0x1f
@@ -58,24 +58,24 @@ _0207B0B8:
 	cmp r0, r1
 	blt _0207B0B8
 	bx lr
-	arm_func_end sub_0207B0AC
+	arm_func_end DC_FlushRange
 
-	arm_func_start sub_0207B0D0
-sub_0207B0D0: ; 0x0207B0D0
+	arm_func_start DC_WaitWriteBufferEmpty
+DC_WaitWriteBufferEmpty: ; 0x0207B0D0
 	mov r0, #0
 	mcr p15, 0, r0, c7, c10, 4
 	bx lr
-	arm_func_end sub_0207B0D0
+	arm_func_end DC_WaitWriteBufferEmpty
 
-	arm_func_start sub_0207B0DC
-sub_0207B0DC: ; 0x0207B0DC
+	arm_func_start IC_InvalidateAll
+IC_InvalidateAll: ; 0x0207B0DC
 	mov r0, #0
 	mcr p15, 0, r0, c7, c5, 0
 	bx lr
-	arm_func_end sub_0207B0DC
+	arm_func_end IC_InvalidateAll
 
-	arm_func_start sub_0207B0E8
-sub_0207B0E8: ; 0x0207B0E8
+	arm_func_start IC_InvalidateRange
+IC_InvalidateRange: ; 0x0207B0E8
 	add r1, r1, r0
 	bic r0, r0, #0x1f
 _0207B0F0:
@@ -84,6 +84,4 @@ _0207B0F0:
 	cmp r0, r1
 	blt _0207B0F0
 	bx lr
-	arm_func_end sub_0207B0E8
-
-
+	arm_func_end IC_InvalidateRange

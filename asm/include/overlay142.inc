@@ -815,7 +815,7 @@
 .public sub_0204BB80
 .public sub_02046EF4
 .public sub_02046F00
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadOBJ
 .public GX_LoadOBJ
 .public GX_LoadOBJ

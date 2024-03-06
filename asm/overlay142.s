@@ -10309,7 +10309,7 @@ _0219EC2E:
 	bl sub_02046F00
 	add r1, r0, #0
 	add r0, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r0, #1
 	lsl r0, r0, #8
 	add r1, r6, #0

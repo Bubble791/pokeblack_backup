@@ -19,13 +19,13 @@ ovy338_217c940: ; 0x0217C940
 	bl sub_0206EF4C
 	ldrh r0, [r4]
 	bl sub_0207A178
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	mov r7, #0x40
 	mov r4, #0
 _0217C96A:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r6
 	sbc r1, r5
 	add r2, r7, #0
@@ -52,13 +52,13 @@ _0217C96A:
 	bl ovy338_217ca44
 	add r1, sp, #0
 	strb r0, [r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	mov r7, #0x40
 	mov r4, #0
 _0217C9BA:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r6
 	sbc r1, r5
 	add r2, r7, #0
@@ -128,12 +128,12 @@ _0217CA40: .word 0x040001A0
 ovy338_217ca44: ; 0x0217CA44
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	mov r6, #0
 _0217CA52:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r4
 	sbc r1, r5
 	mov r2, #0xfa
@@ -174,12 +174,12 @@ _0217CAA0: .word 0x040001A2
 ovy338_217caa4: ; 0x0217CAA4
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	mov r6, #0
 _0217CAB2:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r0, r0, r4
 	sbc r1, r5
 	mov r2, #0xfa

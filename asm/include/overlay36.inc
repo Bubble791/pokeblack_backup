@@ -1907,11 +1907,11 @@
 .public sub_0204B0B8
 .public sub_0204AD88
 .public GX_BeginLoadTex
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTex
 .public GX_EndLoadTex
 .public GX_BeginLoadTexPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTexPltt
 .public GX_EndLoadTexPltt
 .public sub_02045738
@@ -2019,7 +2019,7 @@
 .public sub_02026F7C
 .public sub_02027880
 .public sub_02026FD8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
 .public GXS_LoadBGPltt
 .public sub_02026E48

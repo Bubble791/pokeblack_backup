@@ -26806,7 +26806,7 @@ ovy36_218c0b8: ; 0x0218C0B8
 	ldr r4, _0218C104 ; =0x021D4BE4
 	mov r1, #0x20
 	add r0, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r4, #0
 	ldr r4, _0218C108 ; =0x00000CC8
 	mov r2, #0x20
@@ -26819,7 +26819,7 @@ ovy36_218c0b8: ; 0x0218C0B8
 	ldr r6, _0218C10C ; =0x021D4C04
 	mov r1, #0x20
 	add r0, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r1, r4, #4
 	ldr r1, [r5, r1]
 	add r0, r6, #0
@@ -29112,7 +29112,7 @@ ovy36_218d25c: ; 0x0218D25C
 	bl sub_02026FD8
 	add r1, r7, #0
 	add r6, r0, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r5, #1
 	beq _0218D2C2
 	cmp r5, #3

@@ -259,8 +259,8 @@ _0200535A:
 sub_02005364: ; 0x02005364
 	push {r3, r4, r5, lr}
 	bl OS_Init
-	bl sub_0207BA7C
-	bl sub_0207BBF4
+	bl OS_InitTick
+	bl OS_InitAlarm
 	bl RTC_Init
 	bl GX_Init
 	bl sub_02074658

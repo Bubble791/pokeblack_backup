@@ -5618,7 +5618,7 @@ ovy185_219f948: ; 0x0219F948
 	add r5, #0x58
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r6, #0
 	bl sub_0203A24C
 	add sp, #0xc

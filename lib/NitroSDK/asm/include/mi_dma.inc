@@ -24,4 +24,4 @@
 .public OS_SetIrqFunction
 .public OS_EnableIrqMask
 .public OS_ResetRequestIrqMask
-.public sub_02079E94
+.public OS_DisableIrqMask

@@ -3143,7 +3143,7 @@ ovy55_21e6f34: ; 0x021E6F34
 	add r7, r1, #0
 	add r4, r2, #0
 	add r5, r3, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r1, [sp, #0x24]
 	ldr r3, [sp, #0x20]
 	add r0, r4, #0
@@ -3161,7 +3161,7 @@ ovy55_21e6f34: ; 0x021E6F34
 	bl ovy55_21e6e34
 	add r0, r5, #0
 	bl ovy55_21e6d88
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy55_21e6f34

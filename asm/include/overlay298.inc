@@ -1162,7 +1162,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0204B0F0
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D5C4
 .public sub_021A7080
 .public sub_0208D65C
@@ -1183,7 +1183,7 @@
 .public sub_0219FD40
 .public sub_0200D3C8
 .public sub_020069F4
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0203A1FC
 .public sub_020480C0
 .public sub_02046E28

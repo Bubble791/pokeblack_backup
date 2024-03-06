@@ -187,7 +187,7 @@
 .public sub_021A092C
 .public sub_021A133C
 .public sub_0203DAC8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBGPltt
 .public GXS_LoadBGPltt
 .public GX_LoadOBJPltt

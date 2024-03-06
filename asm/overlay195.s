@@ -4177,7 +4177,7 @@ _021B5224:
 	lsl r0, r0, #5
 	add r0, r6, r0
 	lsl r1, r1, #5
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r5, r7]
 	ldr r2, [r4, r7]
 	lsl r1, r0, #5
@@ -4193,7 +4193,7 @@ _021B5250:
 	lsl r0, r0, #5
 	add r0, r6, r0
 	lsl r1, r1, #5
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r5, r7]
 	ldr r2, [r4, r7]
 	lsl r1, r0, #5
@@ -4470,7 +4470,7 @@ _021B5468:
 	add r5, #0xdc
 	ldr r0, [r4, r6]
 	add r1, r5, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4, r6]
 	mov r1, #0
 	add r2, r5, #0
@@ -4478,7 +4478,7 @@ _021B5468:
 	add r0, r6, #4
 	ldr r0, [r4, r0]
 	add r1, r5, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r6, #4
 	ldr r0, [r4, r0]
 	mov r1, #0

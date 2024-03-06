@@ -16,7 +16,7 @@ OS_GetLowEntropyData: ; 0x0207C6D0
 	add r4, #0x80
 	str r4, [sp]
 	add r4, #0x74
-	bl sub_0207BB84
+	bl OS_GetTickLo
 	lsl r1, r7, #0x10
 	orr r0, r1
 	str r0, [r5]

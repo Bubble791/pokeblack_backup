@@ -9520,7 +9520,7 @@ _021A1A82:
 	beq _021A1A90
 	ldr r1, [sp, #4]
 	add r0, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 _021A1A90:
 	ldr r0, [sp, #0x34]
 	add sp, #0x90
@@ -10284,8 +10284,8 @@ ovy181_21a2018: ; 0x021A2018
 	mov r2, #0x1f
 	add r0, r6, #0
 	bic r1, r2
-	blx sub_0207B0AC
-	blx sub_0207B0D0
+	blx DC_FlushRange
+	blx DC_WaitWriteBufferEmpty
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r4, #0
@@ -12326,7 +12326,7 @@ _021A2F10:
 	mul r0, r4
 	add r0, r1, r0
 	mov r1, #0xc0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, _021A2F68 ; =0x021A4890
 	ldr r2, [sp, #0x34]
 	ldrh r0, [r0]
@@ -12421,7 +12421,7 @@ _021A2F90:
 	mul r0, r4
 	add r0, r1, r0
 	mov r1, #0xc0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, _021A3320 ; =0x021A4890
 	ldr r2, [sp, #0x34]
 	lsl r3, r6, #3

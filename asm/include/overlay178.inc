@@ -223,11 +223,11 @@
 .public sub_02199C40
 .public sub_02199ACC
 .public sub_0219B94C
-.public sub_0207BAC0
-.public sub_0207BA7C
-.public sub_0207BB0C
+.public OS_IsTickAvailable
+.public OS_InitTick
+.public OS_GetTick
 .public sub_0208D5C4
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D5C4
 .public sub_02006254
 .public MI_CpuFill8

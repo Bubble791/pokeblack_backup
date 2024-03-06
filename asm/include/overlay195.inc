@@ -462,9 +462,9 @@
 .public sub_02026F7C
 .public sub_02027880
 .public sub_02026FD8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadBGPltt
 .public sub_02026E48
 .public sub_02026DE8
@@ -478,9 +478,9 @@
 .public sub_02026DE8
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadBGPltt
 .public sub_0204B7C8
 .public sub_02044CFC

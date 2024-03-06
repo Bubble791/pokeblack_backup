@@ -853,7 +853,7 @@ _0207D8B2:
 	mov r1, #6
 	ldr r0, _0207D964 ; =0x0214C980
 	lsl r1, r1, #0xa
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r1, [r4, #8]
 	mov r0, #7
 	mov r2, #0
@@ -882,7 +882,7 @@ _0207D8E2:
 	mov r1, #6
 	ldr r0, _0207D964 ; =0x0214C980
 	lsl r1, r1, #0xa
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	bne _0207D90E
@@ -1255,7 +1255,7 @@ sub_0207DBB8: ; 0x0207DBB8
 	mov r1, #4
 	ldr r0, [r4]
 	add r0, r0, #4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
 	pop {r4, pc}
@@ -1270,7 +1270,7 @@ sub_0207DBD0: ; 0x0207DBD0
 	mov r1, #2
 	ldr r0, [r4]
 	add r0, #8
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4]
 	ldrh r0, [r0, #8]
 	pop {r4, pc}
@@ -1289,7 +1289,7 @@ sub_0207DBE8: ; 0x0207DBE8
 	add r0, #0x40
 	add r0, r0, r4
 	mov r1, #4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r5]
 	add r0, r0, r4
 	ldr r0, [r0, #0x40]
@@ -1410,7 +1410,7 @@ sub_0207DCC4: ; 0x0207DCC4
 	ldr r4, _0207DCD8 ; =0x0214E1E0
 	mov r1, #4
 	ldr r0, [r4]
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r0, [r4]
 	ldr r0, [r0]
 	pop {r4, pc}
@@ -1460,7 +1460,7 @@ _0207DD14:
 	mov r1, #0xa
 	add r0, r4, #0
 	lsl r1, r1, #6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end sub_0207DCDC
 
@@ -1558,7 +1558,7 @@ _0207DDC6:
 	str r0, [r6, #4]
 	add r0, r6, #0
 _0207DDD0:
-	blx sub_0207B090
+	blx DC_StoreRange
 _0207DDD4:
 	add r2, r5, #0
 	ldr r0, [r4, #0x18]
@@ -1572,10 +1572,10 @@ _0207DDD4:
 	bl sub_0207D6A8
 	add r0, r5, #0
 	mov r1, #0x3c
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, r4, #0
 	mov r1, #0x3c
-	blx sub_0207B090
+	blx DC_StoreRange
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end sub_0207DD80
 
@@ -1618,7 +1618,7 @@ _0207DE38:
 	str r1, [r0, #4]
 	mov r1, #8
 _0207DE3E:
-	blx sub_0207B090
+	blx DC_StoreRange
 _0207DE42:
 	add r4, r4, #1
 	cmp r4, #4
@@ -1643,7 +1643,7 @@ _0207DE62:
 	add r1, r6, #0
 	str r4, [r0]
 	str r4, [r0, #4]
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, r5, #0
 	cmp r5, #0
 	bne _0207DE62
@@ -1821,7 +1821,7 @@ sub_0207DF84: ; 0x0207DF84
 	str r6, [r5, r0]
 	add r0, r5, r0
 	mov r1, #4
-	blx sub_0207B090
+	blx DC_StoreRange
 	bl sub_0207D6A8
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0207DF84

@@ -15410,7 +15410,7 @@ ovy298_21a71f8: ; 0x021A71F8
 	str r2, [sp, #4]
 	cmp r0, #0
 	beq _021A7270
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [r4, #0x6c]
 	add r5, r0, #0
 	ldr r3, [r4, #0x70]
@@ -15674,7 +15674,7 @@ _021A73DA:
 	add r1, #0x74
 	mov r0, #0
 	strh r0, [r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r5, #0x6c]
 	str r1, [r5, #0x70]
 	mov r0, #1

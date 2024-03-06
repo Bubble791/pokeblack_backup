@@ -1289,9 +1289,9 @@
 .public MI_CpuFill8
 .public G2x_SetBlendAlpha_
 .public sub_0204C124
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D5C4
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0208D5C4
 .public sub_0204C140
 .public sub_0204C318

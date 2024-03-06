@@ -63,15 +63,6 @@ BOOL OS_DisableIrq(void) {
 
 
 
-OSIrqMask OS_DisableIrqMask(OSIrqMask newMask) {
-    BOOL ime = OS_DisableIrq();
-    OSIrqMask prep = reg_OS_IE;
-    reg_OS_IE = prep & ~newMask;
-    OS_RestoreIrq(ime);
-    return prep;
-}
-
-
 
 extern void SDK_IRQ_STACKSIZE(void);
 

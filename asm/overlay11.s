@@ -4437,7 +4437,7 @@ ovy11_21525ec: ; 0x021525EC
 	beq _0215260C
 	b _02152610
 _0215260C:
-	bl sub_0207BB0C
+	bl OS_GetTick
 _02152610:
 	str r0, [r4, #0x78]
 	ldr r2, _02152710 ; =0x6C078965
@@ -4549,7 +4549,7 @@ _0215266A:
 	add r0, r7, #0
 	bl sub_0207A8E4
 	ldr r0, _02152750 ; =0x0218BA9C
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	str r5, [sp]
 	ldr r0, [r4]
 	ldr r1, _02152754 ; =ovy11_21554d8
@@ -4632,7 +4632,7 @@ ovy11_21527a4: ; 0x021527A4
 	ldr r0, _021527F8 ; =0x0218BE44
 	bl sub_0207A710
 	ldr r0, _021527FC ; =0x0218BA9C
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	blx OS_DisableInterrupts
 	ldr r4, _02152800 ; =0x0218BCC4
 	add r5, r0, #0
@@ -5329,7 +5329,7 @@ _02152CA4:
 	add r6, r2, r4
 	cmp r5, r1
 	bne _02152CC2
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x10
 	lsl r1, r1, #0x10
 	ldr r0, _02152CE8 ; =0x0218BB2E
@@ -5508,7 +5508,7 @@ ovy11_2152df8: ; 0x02152DF8
 	bl sub_021529C0
 	cmp r0, #0
 	bne _02152EAC
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -6476,7 +6476,7 @@ _02153578:
 	mov r1, #0
 	add r0, #0x32
 	strb r1, [r0]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x2c]
 _0215358E:
 	ldr r0, [sp, #0x14]
@@ -7299,7 +7299,7 @@ _02153B7C:
 	ldrb r0, [r0]
 	cmp r0, #2
 	bhs _02153BAC
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r1, [r4, #0x2c]
 	sub r1, r0, r1
 	ldr r0, _02153BB8 ; =0x0001991B
@@ -7426,7 +7426,7 @@ ovy11_2153c7c: ; 0x02153C7C
 	mov r0, #3
 	add r5, r1, #0
 	strb r0, [r4, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -8789,7 +8789,7 @@ _0215469E:
 	strh r7, [r4, #6]
 	mov r0, #0
 	strh r0, [r4, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -9358,7 +9358,7 @@ _02154AAC:
 	mov r0, #2
 	str r7, [r5, #0x34]
 	strb r0, [r5, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -9497,7 +9497,7 @@ ovy11_2154ba0: ; 0x02154BA0
 	add r0, r4, #0
 	bl ovy11_215a5b4
 _02154BBA:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r5, r0, #0x10
 	orr r5, r1
@@ -9513,7 +9513,7 @@ _02154BCC:
 	ldrb r0, [r4, #8]
 	cmp r0, #0
 	beq _02154BEA
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -9898,7 +9898,7 @@ ovy11_2154e70: ; 0x02154E70
 	str r0, [sp, #0x20]
 	str r0, [r5, #0x40]
 	mov r4, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r0, r0, #0x10
 	lsl r1, r1, #0x10
 	str r0, [sp, #0x18]
@@ -9915,7 +9915,7 @@ _02154E96:
 	ldr r3, [sp, #0x14]
 	str r4, [sp, #4]
 	bl ovy11_2154e4c
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r6, r0, #0x10
 	ldr r7, _02154FC0 ; =0x0218BA0C
@@ -9933,7 +9933,7 @@ _02154EB6:
 	ldr r0, [r5, #0x3c]
 	cmp r1, r0
 	beq _02154EEA
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -9960,7 +9960,7 @@ _02154EFA:
 	str r0, [sp, #0x20]
 	cmp r7, #0
 	beq _02154F12
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r0, r0, #0x10
 	lsl r1, r1, #0x10
 	str r0, [sp, #0x18]
@@ -9979,7 +9979,7 @@ _02154F12:
 	bne _02154F64
 	cmp r4, #0
 	bne _02154F66
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r6, r0, #0x10
 	orr r6, r1
@@ -9995,7 +9995,7 @@ _02154F40:
 	blx r0
 	cmp r0, #0
 	beq _02154F5A
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -10045,7 +10045,7 @@ _02154F90:
 	ldrb r0, [r5, #8]
 	cmp r0, #4
 	bne _02154FBA
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x10
 	lsl r1, r1, #0x10
 	ldr r0, [sp, #0x18]
@@ -10258,7 +10258,7 @@ ovy11_2155114: ; 0x02155114
 	bl sub_0207AA04
 	ldr r0, [r4, #0x50]
 	bl ovy11_2152cec
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r5, r0, #0x10
 	orr r5, r1
@@ -10278,7 +10278,7 @@ _02155148:
 	blx r0
 	cmp r0, #0
 	beq _02155160
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -10352,7 +10352,7 @@ _021551C8:
 	beq _021551DA
 	b _021553FA
 _021551DA:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r4, r0, #0x10
 	ldr r0, _02155414 ; =0x0218BA0C
 	lsl r1, r1, #0x10
@@ -10678,7 +10678,7 @@ ovy11_2155434: ; 0x02155434
 	mvn r4, r4
 	blx OS_DisableInterrupts
 	str r0, [sp, #4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	ldr r0, _021554C4 ; =0x0214C22C
 	ldr r5, [r0, #8]
@@ -10730,13 +10730,13 @@ _0215549A:
 	beq _021554B8
 	ldr r5, _021554D0 ; =0x0218BA9C
 	add r0, r5, #0
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	mov r2, #0
 	ldr r3, _021554D4 ; =0x02155505
 	add r0, r5, #0
 	add r1, r4, #0
 	str r2, [sp]
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 _021554B8:
 	ldr r0, [sp, #4]
 	blx OS_RestoreInterrupts
@@ -11055,7 +11055,7 @@ ovy11_2155730: ; 0x02155730
 	mov r0, #7
 	mul r0, r1
 	str r0, [sp, #4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r0, r0, #0x10
 	lsl r1, r1, #0x10
 	str r0, [sp, #8]
@@ -11324,7 +11324,7 @@ _0215592C:
 	beq _02155950
 	cmp r6, #0
 	bne _02155950
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x10
 	lsl r1, r1, #0x10
 	ldr r0, [sp, #8]
@@ -11620,7 +11620,7 @@ _02155B4C:
 	add r1, r1, #5
 	sub r1, r1, r0
 	bl ovy11_2155044
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r0, r0, #0x10
 	lsl r1, r1, #0x10
 	str r0, [sp, #8]
@@ -11746,7 +11746,7 @@ _02155C50:
 	beq _02155C70
 	cmp r7, #0
 	bne _02155C70
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x10
 	lsl r1, r1, #0x10
 	ldr r0, [sp, #8]
@@ -17119,7 +17119,7 @@ _021582DE:
 	add r1, r7, #0
 	mov r2, #0x30
 	blx MI_CpuCopy8
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r1, r1, #0x10
 	lsr r0, r0, #0x10
 	orr r0, r1
@@ -17149,7 +17149,7 @@ ovy11_215833c: ; 0x0215833C
 	add r6, r2, #0
 	blx OS_DisableInterrupts
 	str r0, [sp, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r0, r0, #0x10
 	ldr r7, _021583EC ; =0x0218DE04
 	lsl r1, r1, #0x10
@@ -24703,21 +24703,21 @@ _0215BC74:
 	strb r4, [r1, r0]
 	bl sub_0215C3F4
 	bl ovy11_215cac4
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	cmp r0, #0
 	bne _0215BCB2
-	bl sub_0207BA7C
+	bl OS_InitTick
 _0215BCB2:
-	bl sub_0207BC18
+	bl OS_IsAlarmAvailable
 	cmp r0, #0
 	bne _0215BCBE
-	bl sub_0207BBF4
+	bl OS_InitAlarm
 _0215BCBE:
 	ldr r0, _0215BCD4 ; =0x0218DF74
 	ldr r1, [r0, #4]
 	ldr r0, _0215BCDC ; =0x00001294
 	add r0, r1, r0
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
 	mov r0, #0
@@ -25815,7 +25815,7 @@ ovy11_215c4bc: ; 0x0215C4BC
 	beq _0215C4E0
 	sub r0, #0x4a
 	add r0, r2, r0
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 _0215C4E0:
 	ldr r0, _0215C518 ; =0x0218DF74
 	ldr r2, [r0, #4]
@@ -25831,14 +25831,14 @@ _0215C4EE:
 	ldr r6, _0215C520 ; =0x00001294
 	ldr r0, [r4, #4]
 	add r0, r0, r6
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	mov r2, #0
 	str r2, [sp]
 	ldr r0, [r4, #4]
 	ldr r1, _0215C524 ; =0x022F5341
 	ldr r3, _0215C528 ; =0x0215C579
 	add r0, r0, r6
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 _0215C50E:
 	add r0, r5, #0
 	blx OS_RestoreInterrupts
@@ -25862,7 +25862,7 @@ ovy11_215c52c: ; 0x0215C52C
 	ldr r0, [r4, #4]
 	ldr r6, _0215C56C ; =0x00001294
 	add r0, r0, r6
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	add r0, r6, #0
 	ldr r1, [r4, #4]
 	add r0, #0x4a
@@ -25874,7 +25874,7 @@ ovy11_215c52c: ; 0x0215C52C
 	ldr r1, _0215C570 ; =0x022F5341
 	ldr r3, _0215C574 ; =0x0215C579
 	str r2, [sp]
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 _0215C55C:
 	add r0, r5, #0
 	blx OS_RestoreInterrupts
@@ -27329,7 +27329,7 @@ _0215CFD4:
 	add r1, r5, #4
 	ldrh r1, [r4, r1]
 	ldr r0, [r4, r5]
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	add r0, r5, #0
 	add r0, #0x44
 	ldr r0, [r4, r0]
@@ -27473,7 +27473,7 @@ ovy11_215d0f0: ; 0x0215D0F0
 	bl sub_02080DBC
 	add r5, r0, #0
 	mov r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldrh r0, [r5]
 	cmp r0, #0
 	beq _0215D114
@@ -28027,7 +28027,7 @@ _0215D50E:
 	ldr r0, [r7, r1]
 	add r1, r1, #4
 	ldrh r1, [r7, r1]
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldrh r0, [r4, #0xe]
 	mov r5, #0
 	cmp r0, #0
@@ -28097,7 +28097,7 @@ _0215D594:
 	sub r0, r4, #6
 	ldrh r1, [r7, r1]
 	ldr r0, [r7, r0]
-	blx sub_0207B090
+	blx DC_StoreRange
 	add r0, r4, #0
 	add r0, #0x3e
 	ldr r0, [r7, r0]
@@ -28518,7 +28518,7 @@ _0215D90E:
 	mov r1, #0x62
 	ldr r0, [r4, #8]
 	lsl r1, r1, #4
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	ldr r3, [r4, #8]
 	add r0, r3, #0
 	add r1, r3, #0
@@ -29712,7 +29712,7 @@ ovy11_215e25c: ; 0x0215E25C
 	add r7, sp, #8
 	add r0, r7, #0
 	bl OS_GetMacAddress
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r6, [sp, #8]
 	str r1, [sp, #4]
 	lsr r1, r6, #0x18
@@ -30598,7 +30598,7 @@ ovy11_215e8f4: ; 0x0215E8F4
 	beq _0215E90C
 	mov r0, #0
 	str r0, [r1, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [r4, #0xc]
 	str r0, [r2, #0xc]
 	str r1, [r2, #0x10]
@@ -30726,7 +30726,7 @@ _0215E9D8: .word 0x0218E000
 ovy11_215e9dc: ; 0x0215E9DC
 	push {r4, r5, r6, lr}
 	mov r4, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r6, _0215EA2C ; =0x0218E000
 	ldr r5, [r6, #0xc]
 	ldr r2, [r5, #0xc]
@@ -30753,7 +30753,7 @@ ovy11_215e9dc: ; 0x0215E9DC
 	ldr r0, [r0, #4]
 	bl ovy11_2172450
 	add r4, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [r6, #0xc]
 	str r0, [r2, #0xc]
 	str r1, [r2, #0x10]
@@ -32154,7 +32154,7 @@ _0215F4C8:
 	ldr r0, [r0, #0x30]
 	cmp r0, #0
 	beq _0215F508
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r3, [r4]
 	ldr r2, [r3, #0x34]
 	ldr r3, [r3, #0x38]
@@ -32439,7 +32439,7 @@ ovy11_215f700: ; 0x0215F700
 	sub sp, #0xc
 	add r5, r0, #0
 	add r4, r1, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r6, _0215F744 ; =0x0218E014
 	mov r3, #0x52
 	ldr r2, [r6]
@@ -32524,7 +32524,7 @@ _0215F7AA:
 	blx sub_02057B00
 	b _0215F7D2
 _0215F7B4:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, _0215F808 ; =0x6C078965
 	ldr r3, _0215F80C ; =0x5D588B65
 	blx sub_0208D60C
@@ -36614,7 +36614,7 @@ _02161854:
 	bne _02161864
 	b _0216199C
 _02161864:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -36756,7 +36756,7 @@ _0216199C:
 	ldr r0, [r0, r4]
 	cmp r0, #0
 	beq _02161A82
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -36833,7 +36833,7 @@ _02161A3C:
 _02161A4A:
 	ldr r4, _02161B38 ; =0x00002EE0
 _02161A4C:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -36889,7 +36889,7 @@ _02161AA8:
 	eor r0, r2
 	orr r0, r1
 	beq _02161B5C
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -36954,7 +36954,7 @@ _02161B5C:
 	ldrb r0, [r0, r1]
 	cmp r0, #6
 	bne _02161B9C
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -37052,7 +37052,7 @@ _02161C36:
 	ldrb r0, [r0, #0x15]
 	cmp r0, #0
 	bne _02161C7E
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37079,7 +37079,7 @@ _02161C7E:
 	ldrb r0, [r0, #0x15]
 	cmp r0, #0
 	beq _02161CBA
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37125,7 +37125,7 @@ _02161CDE:
 	ldrb r0, [r0, r1]
 	cmp r0, #8
 	bne _02161DC4
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -37179,7 +37179,7 @@ _02161D54:
 	ldrb r0, [r0, r1]
 	cmp r0, #0
 	beq _02161DC4
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37245,7 +37245,7 @@ _02161DE6:
 	add r1, r4, #0
 	add r1, #0x12
 	strb r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -37341,7 +37341,7 @@ _02161EDE:
 	bl ovy11_21677e8
 	cmp r0, #0
 	beq _02161FA0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37425,7 +37425,7 @@ _02161F9C:
 	mov r0, #0xb
 	b _0216190E
 _02161FA0:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37474,7 +37474,7 @@ _02161FE8:
 	bl ovy11_2180b98
 	b _021620C0
 _02162012:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37505,7 +37505,7 @@ _02162048:
 	ldr r0, [r0, r1]
 	cmp r0, #0
 	ble _021620C0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37576,7 +37576,7 @@ _021620D6:
 	eor r0, r2
 	orr r0, r1
 	beq _02162136
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37660,7 +37660,7 @@ _0216217A:
 	str r0, [r5, #0x1c]
 	str r1, [r5, #0x20]
 _021621AC:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [r5, #0x1c]
 	ldr r3, [r5, #0x20]
 	sub r0, r2, r0
@@ -37772,7 +37772,7 @@ _02162290:
 	eor r0, r2
 	orr r0, r1
 	beq _021622EC
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -37818,7 +37818,7 @@ _02162328:
 	ldr r0, [r0, r4]
 	cmp r0, #0x15
 	bne _02162370
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -38752,7 +38752,7 @@ _02162ADC:
 	add r1, r4, #0
 	sub r1, #0x24
 	strb r6, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -39026,7 +39026,7 @@ _02162D1A:
 	bne _02162D44
 	mov r0, #0x15
 	bl ovy11_2167f78
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -39845,7 +39845,7 @@ _0216340C:
 _02163436:
 	cmp r5, #0
 	bne _02163458
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r4, r1, #0
 	bl sub_02167F6C
@@ -40392,7 +40392,7 @@ _02163898:
 	add r1, r4, #0
 	add r1, #0x8c
 	str r5, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0x14]
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -41234,7 +41234,7 @@ _02163FB8:
 	ldr r2, _021640B4 ; =0x00002EE0
 	add r1, #0x28
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -41252,7 +41252,7 @@ _02163FDC:
 	ldr r0, [r0, r1]
 	cmp r5, r0
 	bne _02164068
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -41279,7 +41279,7 @@ _02163FDC:
 	mov r2, #1
 	sub r1, #0x38
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -41928,7 +41928,7 @@ _021645A0:
 	add r0, r6, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _021645C2:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -42017,7 +42017,7 @@ sub_0216464E: ; 0x0216464E
 	bl ovy11_2160170
 	b _0216473E
 _0216467A:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -42094,7 +42094,7 @@ _021646D8:
 	mov r2, #0
 	add r1, r1, #4
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -42177,7 +42177,7 @@ _02164784:
 	bl ovy11_21685fc
 _021647C2:
 	mov r4, #2
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -42673,7 +42673,7 @@ _02164BC2:
 	ldr r4, _02164D40 ; =0x00000638
 	mov r1, #1
 	str r1, [r0, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -42758,7 +42758,7 @@ _02164C7E:
 _02164C8E:
 	ldr r1, _02164D5C ; =0x00000644
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -43039,7 +43039,7 @@ _02164F0E:
 	ldr r1, _02164F4C ; =0x00000BB8
 	ldr r4, _02164F50 ; =0x00000644
 	str r1, [r0, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -43077,7 +43077,7 @@ ovy11_2164f54: ; 0x02164F54
 	sub r2, #0x54
 	mov r1, #0
 	strb r1, [r0, r2]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -43116,7 +43116,7 @@ _02164FAE:
 	mov r2, #1
 	sub r1, #0x98
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -43793,7 +43793,7 @@ _02165592:
 	bl ovy11_2168024
 	cmp r0, #1
 	bne _021655C8
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r4, r1, #0
 	bl sub_02167F6C
@@ -44878,7 +44878,7 @@ _02165EAA:
 	mov r2, #0
 	blx sub_02058728
 _02165EC6:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -44918,7 +44918,7 @@ ovy11_2165ef4: ; 0x02165EF4
 	cmp r0, #0x14
 	bne _02165F50
 _02165F20:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45009,7 +45009,7 @@ _02165FAE:
 	add r1, r4, #0
 	sub r1, #0x2c
 	strb r7, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45109,7 +45109,7 @@ _021660B0:
 	cmp r0, #0
 	beq _021660DC
 _021660C0:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45216,7 +45216,7 @@ _02166176:
 	mov r0, #0
 	pop {r3, r4, r5, r6, pc}
 _02166196:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45292,7 +45292,7 @@ _02166222:
 	ldr r0, [r0, r4]
 	cmp r0, #0x11
 	bne _0216632E
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45452,7 +45452,7 @@ ovy11_2166364: ; 0x02166364
 	cmp r0, #0x12
 	bne _021663B8
 _02166386:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45541,7 +45541,7 @@ _02166434:
 	add r1, r4, #0
 	sub r1, #0x33
 	strb r7, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -45818,7 +45818,7 @@ ovy11_2166648: ; 0x02166648
 	ldr r4, _0216666C ; =0x0000062E
 	mov r1, #0
 	strb r1, [r0, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -46203,7 +46203,7 @@ ovy11_216689c: ; 0x0216689C
 	str r2, [r0, r1]
 	b _02166904
 _021668E0:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0x1c]
 	add r7, r1, #0
 	bl sub_02167F6C
@@ -46419,7 +46419,7 @@ _02166AA8:
 	ldr r4, _02166BB0 ; =0x000005E4
 	mov r1, #2
 	str r1, [r0, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -46501,7 +46501,7 @@ _02166B74:
 	mov r2, #2
 	sub r1, #0x38
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r5, r0, #0
 	add r4, r1, #0
 	bl sub_02167F6C
@@ -46774,7 +46774,7 @@ _02166DFE:
 	mov r2, #2
 	sub r1, #0x38
 	str r2, [r0, r1]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r5, r0, #0
 	add r4, r1, #0
 	bl sub_02167F6C
@@ -47684,7 +47684,7 @@ _0216756E:
 	add r1, r5, #4
 	strh r2, [r0, r1]
 _02167598:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -47770,7 +47770,7 @@ _02167640:
 	cmp r0, #0
 	pop {r4, r5, r6, r7, pc}
 _02167656:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0x10]
 	add r7, r1, #0
 	bl sub_02167F6C
@@ -48214,7 +48214,7 @@ _021679F2:
 _021679F8:
 	cmp r4, #0
 	bne _02167A30
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -48281,7 +48281,7 @@ _02167A88:
 	cmp r5, r0
 	blt _02167A58
 _02167A92:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -48604,7 +48604,7 @@ ovy11_2167d24: ; 0x02167D24
 	bl sub_02167F6C
 	str r7, [r0, #0x20]
 	str r7, [r0, #0x24]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -48704,7 +48704,7 @@ _02167E12:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _02167E60
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02167F6C
@@ -48734,7 +48734,7 @@ _02167E12:
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _02167E60:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r4, r1, #0
 	bl sub_02167F6C
@@ -48784,7 +48784,7 @@ _02167E60:
 	add r0, r7, #0
 	pop {r4, r5, r6, r7, pc}
 _02167ED2:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	bl sub_02167F6C
@@ -48859,7 +48859,7 @@ ovy11_2167f58: ; 0x02167F58
 	push {r4, lr}
 	ldr r4, _02167F68 ; =0x0218E1C0
 	str r0, [r4, #4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x18]
 	str r1, [r4, #0x1c]
 	pop {r4, pc}
@@ -49485,7 +49485,7 @@ ovy11_21683b8: ; 0x021683B8
 	sub sp, #0x14
 	bl ovy11_2168224
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r1, [sp, #4]
 	ldr r1, _0216845C ; =0x0017F898
 	mov r6, #0
@@ -49952,7 +49952,7 @@ _02168768: .word 0x02185AD4
 	thumb_func_start ovy11_216876c
 ovy11_216876c: ; 0x0216876C
 	push {r3, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, _0216877C ; =0x0218E1C0
 	str r0, [r2, #0x18]
 	str r1, [r2, #0x1c]
@@ -50701,7 +50701,7 @@ _02168CB2:
 	mul r5, r2
 	add r0, r3, r5
 	str r1, [r0, #0x2c]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [r4]
 	add r2, r2, r5
 	str r0, [r2, #0x24]
@@ -50847,7 +50847,7 @@ _02168DBE:
 	add r0, sp, #0x28
 	bl ovy11_21602f0
 	str r0, [sp, #0x14]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r7, r0, #0
 	add r6, r1, #0
 	bl sub_02168CF0
@@ -50959,7 +50959,7 @@ _02168EA6:
 	bl ovy11_2160370
 	cmp r0, #0
 	beq _02168F14
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r0, r4, #0
 	add r7, r1, #0
@@ -51128,7 +51128,7 @@ _02168FFC: .word ovy11_2168828
 ovy11_2169000: ; 0x02169000
 	push {r4, r5, r6, lr}
 	add r6, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r0, r6, #0
 	add r5, r1, #0
@@ -51522,7 +51522,7 @@ _021692F0:
 	ldr r0, [r5, #0x2c]
 	cmp r0, #0
 	beq _0216930A
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r5, #0x24]
 	str r1, [r5, #0x28]
 _0216930A:
@@ -51666,7 +51666,7 @@ _02169406:
 	ldr r0, [r4, #0x2c]
 	cmp r0, #0
 	beq _02169420
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x24]
 	str r1, [r4, #0x28]
 _02169420:
@@ -51750,7 +51750,7 @@ ovy11_21694ac: ; 0x021694AC
 	bl ovy11_21602c0
 	cmp r4, r0
 	beq _021694D2
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r5, r0, #0
 	add r0, r4, #0
 	add r6, r1, #0
@@ -52286,10 +52286,10 @@ _021698F0:
 	mov r0, #1
 _021698F6:
 	str r0, [sp]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r2, r0, r6
 	sbc r1, r5
 	lsr r0, r2, #0x1a
@@ -52341,7 +52341,7 @@ _02169964:
 	bl sub_0207AEA4
 	ldr r0, _02169A04 ; =0x00001388
 	bl sub_0207AA04
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r2, r1, #0
 	sub r1, r0, r6
 	sbc r2, r5
@@ -52953,7 +52953,7 @@ ovy11_2169e50: ; 0x02169E50
 	str r0, [r6, #0x40]
 	ldr r0, [sp, #0x1c]
 	str r0, [r6, #0x44]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, _02169EA8 ; =0x0218E944
 	str r0, [r2, #0x14]
 	str r1, [r2, #0x18]
@@ -53284,7 +53284,7 @@ _0216A0CC:
 	bl ovy11_215cb14
 	mov r1, #6
 	add r4, r0, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	cmp r4, #0
 	bne _0216A110
 	ldr r0, [sp, #0x14]
@@ -53324,7 +53324,7 @@ _0216A138:
 	mov r1, #0x20
 	add r4, r0, #0
 	mov r5, #0x20
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	cmp r4, #0
 	bne _0216A164
 	ldr r0, [sp, #0x14]
@@ -54154,7 +54154,7 @@ _0216A82E:
 	ldr r0, [r6, #0xc]
 	add r0, r1, r0
 	str r0, [r6, #8]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #8]
 	ldr r7, [sp, #0x2c]
@@ -54185,7 +54185,7 @@ _0216A86A:
 	cmp r0, #0
 	blt _0216A926
 	ble _0216A8E0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [sp, #0x18]
 	add r0, sp, #0x38
 	str r1, [sp, #4]
@@ -54244,7 +54244,7 @@ _0216A8E0:
 	cmp r0, r1
 	bge _0216A926
 _0216A8F0:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, [sp, #0x18]
 	sub r2, r0, r2
 	ldr r0, [sp, #4]
@@ -61941,7 +61941,7 @@ sub_0216E320: ; 0x0216E320
 	thumb_func_start ovy11_216e324
 ovy11_216e324: ; 0x0216E324
 	push {r3, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2
@@ -61957,7 +61957,7 @@ _0216E33C: .word 0x000082EA
 	thumb_func_start ovy11_216e340
 ovy11_216e340: ; 0x0216E340
 	push {r3, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	mov r2, #0xfa
 	lsl r2, r2, #8
 	mov r3, #0
@@ -68603,7 +68603,7 @@ _021714A4: .word 0x02191748
 ovy11_21714a8: ; 0x021714A8
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2

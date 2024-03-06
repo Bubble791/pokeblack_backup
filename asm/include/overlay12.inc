@@ -802,9 +802,9 @@
 .public sub_02154064
 .public sub_020304E0
 .public sub_020304E0
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_02019200
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_0203A1FC
 .public sub_02153EA4
 .public sub_02016AD8
@@ -4334,7 +4334,7 @@
 .public sub_0208D60C
 .public sub_02016B08
 .public sub_02014864
-.public sub_0207BB0C
+.public OS_GetTick
 .public sub_02014580
 .public sub_0201458C
 .public sub_0216F900
@@ -4704,13 +4704,13 @@
 .public sub_02046E28
 .public sub_02046EF4
 .public GX_BeginLoadTex
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTex
 .public GX_EndLoadTex
 .public sub_02046EDC
 .public sub_02046EDC
 .public GX_BeginLoadTexPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTexPltt
 .public GX_EndLoadTexPltt
 .public sub_020134B8

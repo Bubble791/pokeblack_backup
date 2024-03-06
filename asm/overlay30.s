@@ -1638,7 +1638,7 @@ ovy30_2173d44: ; 0x02173D44
 	strh r0, [r5]
 	add r0, r5, #0
 	add r1, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	bl sub_02174E58
 	cmp r0, #1
 	bne _02173D82
@@ -2973,7 +2973,7 @@ _02174800:
 	lsl r1, r1, #0xc
 	add r0, r0, r1
 	lsr r1, r1, #2
-	blx sub_0207B074
+	blx DC_InvalidateRange
 _02174814:
 	mov r0, #0
 	str r0, [sp]
@@ -3636,7 +3636,7 @@ ovy30_2174d2c: ; 0x02174D2C
 	ldr r0, [r2, r1]
 	add r1, #0x24
 	ldr r1, [r2, r1]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, _02174D78 ; =0x0000FFFF
 	add r1, r6, #0
 	str r0, [sp]

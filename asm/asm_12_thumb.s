@@ -28197,7 +28197,7 @@ sub_0201260C: ; 0x0201260C
 	ldr r1, [sp, #0xc]
 	ldr r0, [r1, #0x14]
 	ldr r1, [r1, #0x10]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
 	bl G2_GetBG1CharPtr
@@ -28224,7 +28224,7 @@ _02012660:
 	add r0, r1, #0
 	ldr r1, [r1, #8]
 	add r0, #0xc
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
 	bl G2_GetBG1ScrPtr
@@ -28253,7 +28253,7 @@ _020126A0:
 	ldr r0, [sp, #4]
 	mov r1, #0x20
 	ldr r0, [r0, #0xc]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #4]
 	mov r1, #5
 	ldr r0, [r0, #0xc]
@@ -37356,7 +37356,7 @@ _02016578:
 	ldr r6, [r4, #0x38]
 	mov r1, #0x20
 	add r0, r4, r6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	add r1, sp, #0x2c
 	bl sub_0204C3D0
@@ -62986,7 +62986,7 @@ _02021AB0:
 	add r2, r4, #0
 	bl sub_020232E8
 _02021ACC:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r6, r0, #0
 	ldr r0, [r5, #0x10]
 	add r4, r1, #0
@@ -63048,7 +63048,7 @@ _02021B3E:
 	add r2, r7, #0
 	bl sub_02021EFC
 	str r0, [r5, #0x14]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	sub r3, r0, r6
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0xc]
@@ -74481,7 +74481,7 @@ sub_02026CEC: ; 0x02026CEC
 	str r0, [r4, #8]
 	str r0, [r4, #0xc]
 	str r0, [r4, #0x10]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r4, #0x14]
 	str r1, [r4, #0x18]
 	pop {r4, pc}
@@ -74498,7 +74498,7 @@ sub_02026D0C: ; 0x02026D0C
 	ldr r0, [r6]
 	cmp r0, #0
 	beq _02026DB4
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	ldr r0, [r6, #4]
@@ -74557,7 +74557,7 @@ _02026D3A:
 	str r0, [r7, #0x10]
 	pop {r3, r4, r5, r6, r7, pc}
 _02026D90:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r4, r0, #0
 	add r5, r1, #0
 	str r4, [r7, #0x14]
@@ -75779,7 +75779,7 @@ _02027644:
 	add r4, r6, r0
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #8]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r5, #0xd
 	bhi _02027740
 	add r0, r5, r5
@@ -84003,7 +84003,7 @@ sub_0202B0F4: ; 0x0202B0F4
 	bl sub_02046F00
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r6, #0x64]
 	cmp r0, #0
 	bne _0202B11A
@@ -109274,7 +109274,7 @@ sub_02036164: ; 0x02036164
 	ldr r1, [sp, #0xc]
 	ldr r0, [r1, #0x14]
 	ldr r1, [r1, #0x10]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	ldr r5, [r0, #0x10]
 	bl G2_GetBG1CharPtr
@@ -109300,7 +109300,7 @@ _020361AE:
 	add r0, r1, #0
 	ldr r1, [r1, #8]
 	add r0, #0xc
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #8]
 	ldr r5, [r0, #8]
 	bl G2_GetBG1ScrPtr
@@ -109328,7 +109328,7 @@ _020361EC:
 	ldr r0, [sp, #4]
 	mov r1, #0x20
 	ldr r0, [r0, #0xc]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #4]
 	mov r1, #5
 	ldr r0, [r0, #0xc]

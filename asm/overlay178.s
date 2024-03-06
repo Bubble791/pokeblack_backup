@@ -2076,12 +2076,12 @@ _0219BDA0: .word MI_CpuFill8
 ovy178_219bda4: ; 0x0219BDA4
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	cmp r0, #0
 	beq _0219BDB4
-	bl sub_0207BA7C
+	bl OS_InitTick
 _0219BDB4:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2
@@ -2118,7 +2118,7 @@ ovy178_219bde4: ; 0x0219BDE4
 	ldrh r0, [r0]
 	cmp r0, #0xa
 	bhs _0219BE44
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2

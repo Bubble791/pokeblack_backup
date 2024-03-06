@@ -15399,7 +15399,7 @@ ovy207_21bab64: ; 0x021BAB64
 	bl sub_02046F00
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r7, #0x10]
 	cmp r0, #0
 	bne _021BAB8A

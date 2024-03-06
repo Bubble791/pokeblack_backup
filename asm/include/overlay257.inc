@@ -89,12 +89,12 @@
 .public sub_0204AA04
 .public sub_02042EA4
 .public sub_0204A928
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_02042ED0
 .public sub_0204AA04
 .public sub_02042EA4
 .public sub_0204A928
-.public sub_0207B0AC
+.public DC_FlushRange
 .public OS_IsRunOnTwl
 .public sub_02199F28
 .public sub_02199F30
@@ -193,7 +193,7 @@
 .public sub_021AAA14
 .public sub_021AAA9C
 .public sub_021AAAB8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBG3Scr
 .public sub_021AAAB8
 .public sub_0219CCB8
@@ -208,7 +208,7 @@
 .public sub_0219CCB8
 .public sub_0219CCD8
 .public sub_020352E8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBG3Scr
 .public sub_0219A1DC
 .public sub_021AAA0C
@@ -2657,7 +2657,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02022410
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBG3Scr
 .public sub_02042EA4
 .public sub_02042EA4
@@ -2683,7 +2683,7 @@
 .public sub_0204C378
 .public sub_021A8654
 .public sub_0204C378
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadBG3Scr
 .public MI_CpuFill8
 .public sub_0203A1FC
@@ -2792,7 +2792,7 @@
 .public sub_021A8E6C
 .public sub_021A8E00
 .public sub_021A8E6C
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadBG3Scr
 .public sub_0204B7C8
 .public sub_0203A1FC

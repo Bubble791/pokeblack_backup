@@ -223,7 +223,7 @@ ovy136_21eedc0: ; 0x021EEDC0
 	lsl r4, r1, #6
 	ldr r0, [r0, #0x14]
 	add r1, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #8]
 	ldr r0, [r0, #0x14]
@@ -234,7 +234,7 @@ ovy136_21eedc0: ; 0x021EEDC0
 	ldr r0, [sp, #0x10]
 	mov r1, #0x20
 	ldr r0, [r0, #0xc]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0xc]
 	ldr r0, [r0, #0xc]

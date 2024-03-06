@@ -14326,7 +14326,7 @@ ovy209_21c0ecc: ; 0x021C0ECC
 	str r0, [sp, #0x24]
 	ldr r1, [sp, #0x28]
 	add r0, r4, r6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r1, [sp]
 	ldr r2, [sp, #0x28]
 	add r0, r4, r6
@@ -14334,7 +14334,7 @@ ovy209_21c0ecc: ; 0x021C0ECC
 	bl GXS_LoadOBJPltt
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x2c]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	cmp r5, #0x22
 	beq _021C0F3C
 	cmp r5, #0x23

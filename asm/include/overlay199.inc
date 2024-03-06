@@ -131,7 +131,7 @@
 .public sub_02026F7C
 .public sub_02027880
 .public sub_02026FD8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
 .public GXS_LoadBGPltt
 .public sub_02026E48
@@ -561,7 +561,7 @@
 .public sub_0204C378
 .public sub_0204C40C
 .public MI_CpuCopy8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadOBJPltt
 .public sub_0204AA30
 .public sub_02020F94
@@ -1261,7 +1261,7 @@
 .public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0202780C
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_020056FC
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C

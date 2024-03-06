@@ -359,7 +359,7 @@ _0217F8B6:
 	mov r0, #0xef
 	and r0, r1
 	strb r0, [r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r2, r5, #0
 	add r2, #0xd0
 	str r0, [r2]
@@ -604,7 +604,7 @@ _0217FA88:
 	mov r0, #0xef
 	and r0, r1
 	strb r0, [r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r2, r5, #0
 	add r2, #0xd0
 	str r0, [r2]
@@ -986,7 +986,7 @@ _0217FD5A:
 	str r0, [r1]
 	b _0217FDC4
 _0217FD88:
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r2, r5, #0
 	add r2, #0xd0
 	ldr r3, [r2]

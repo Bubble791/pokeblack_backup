@@ -223,8 +223,8 @@ OS_EnableIrqMask: ; 0x02079E70
 _02079E90: .word 0x04000208
 	thumb_func_end OS_EnableIrqMask
 
-	thumb_func_start sub_02079E94
-sub_02079E94: ; 0x02079E94
+	thumb_func_start OS_DisableIrqMask
+OS_DisableIrqMask: ; 0x02079E94
 	push {r3, r4}
 	ldr r2, _02079EB4 ; =0x04000208
 	mov r3, #0
@@ -243,7 +243,7 @@ sub_02079E94: ; 0x02079E94
 	bx lr
 	.align 2, 0
 _02079EB4: .word 0x04000208
-	thumb_func_end sub_02079E94
+	thumb_func_end OS_DisableIrqMask
 
 	thumb_func_start OS_ResetRequestIrqMask
 OS_ResetRequestIrqMask: ; 0x02079EB8

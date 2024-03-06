@@ -691,7 +691,7 @@ sub_0207A7F0: ; 0x0207A7F0
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0207A7FE
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 _0207A7FE:
 	pop {r3, pc}
 	thumb_func_end sub_0207A7F0
@@ -1001,7 +1001,7 @@ sub_0207AA04: ; 0x0207AA04
 	add r6, sp, #8
 	add r5, r0, #0
 	add r0, r6, #0
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	ldr r0, _0207AA68 ; =0x0214C210
 	ldr r0, [r0, #8]
 	ldr r0, [r0]
@@ -1026,7 +1026,7 @@ sub_0207AA04: ; 0x0207AA04
 	add r1, r3, #0
 	ldr r3, _0207AA70 ; =0x0207AA75
 	add r0, r6, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 	ldr r0, [sp, #4]
 	cmp r0, #0
 	beq _0207AA5E

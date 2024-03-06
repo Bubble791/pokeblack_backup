@@ -898,9 +898,9 @@
 .public sub_0204B4E4
 .public sub_02068664
 .public sub_0204BB80
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJ
 .public sub_0203A24C
 .public sub_0204C124

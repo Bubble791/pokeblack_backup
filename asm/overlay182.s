@@ -4963,14 +4963,14 @@ _021A6ED4:
 	b _021A6FEC
 _021A6EE8:
 	add r0, sp, #0x18
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	mov r0, #0x13
 	str r0, [sp]
 	ldr r1, _021A7004 ; =0x003FEC42
 	ldr r3, _021A7008 ; =0x021A6CF1
 	add r0, sp, #0x18
 	add r2, r6, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 _021A6EFE:
 	ldr r0, _021A700C ; =0x021C2960
 	add r1, sp, #0x14
@@ -5084,7 +5084,7 @@ _021A6FC0:
 	blt _021A6FC0
 _021A6FD2:
 	add r0, sp, #0x18
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	ldr r5, _021A700C ; =0x021C2960
 	add r4, sp, #0x14
 	mov r6, #0
@@ -5189,14 +5189,14 @@ _021A709C:
 	mov r0, #0
 	str r0, [sp, #8]
 	add r0, sp, #0x14
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	mov r0, #0x12
 	str r0, [sp]
 	ldr r1, _021A71CC ; =0x003FEC42
 	ldr r3, _021A71D0 ; =0x021A6CF1
 	add r0, sp, #0x14
 	mov r2, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 	b _021A718C
 _021A70B8:
 	ldr r0, _021A71D4 ; =0x021C2960
@@ -5243,7 +5243,7 @@ _021A7104:
 	cmp r6, #0
 	bne _021A718C
 	add r0, sp, #0x14
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	ldr r0, _021A71D8 ; =0x021C2980
 	mov r1, #1
 	bl ovy182_21a751c
@@ -5314,7 +5314,7 @@ _021A718C:
 	cmp r4, #0
 	bne _021A70B8
 	add r0, sp, #0x14
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	ldr r5, _021A71D4 ; =0x021C2960
 	add r4, sp, #0x10
 	mov r6, #0
@@ -7377,14 +7377,14 @@ _021A80E2:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A80F6:
 	add r0, sp, #4
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	mov r0, #0x12
 	str r0, [sp]
 	ldr r1, _021A81D8 ; =0x003FEC42
 	ldr r3, _021A81DC ; =0x021A7FBD
 	add r0, sp, #4
 	mov r2, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 	mov r7, #0
 _021A810E:
 	bl ovy182_21aada4
@@ -7467,7 +7467,7 @@ _021A819C:
 	bne _021A810E
 _021A81A0:
 	add r0, sp, #4
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 _021A81A6:
 	bl ovy182_21a7f54
 	cmp r0, #0
@@ -7845,14 +7845,14 @@ _021A8458:
 	b _021A8676
 _021A847A:
 	add r0, sp, #0x24
-	bl sub_0207BC24
+	bl OS_CreateAlarm
 	mov r0, #0x13
 	str r0, [sp]
 	ldr r1, _021A869C ; =0x000FFB10
 	ldr r3, _021A86A0 ; =0x021A7FBD
 	add r0, sp, #0x24
 	mov r2, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 	ldr r7, _021A8690 ; =0x021C2AF0
 	mov r5, #1
 	mov r4, #0
@@ -7912,14 +7912,14 @@ _021A84F4:
 	ble _021A8520
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 	mov r0, #0x13
 	str r0, [sp]
 	ldr r1, _021A869C ; =0x000FFB10
 	ldr r3, _021A86A0 ; =0x021A7FBD
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_0207BCF4
+	bl OS_SetAlarm
 	b _021A8520
 _021A851A:
 	mov r5, #0
@@ -7935,7 +7935,7 @@ _021A8528:
 	bne _021A8498
 _021A852C:
 	add r0, sp, #0x24
-	bl sub_0207BD3C
+	bl OS_CancelAlarm
 _021A8532:
 	bl ovy182_21a7f54
 	cmp r0, #0
@@ -13204,7 +13204,7 @@ ovy182_21aad7c: ; 0x021AAD7C
 	thumb_func_start ovy182_21aada4
 ovy182_21aada4: ; 0x021AADA4
 	push {r3, lr}
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsr r2, r0, #0x1a
 	lsl r1, r1, #6
 	orr r1, r2
@@ -14376,7 +14376,7 @@ ovy182_21ab67c: ; 0x021AB67C
 	bl ovy182_21bb37c
 	ldr r1, [sp]
 	add r4, r0, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r2, [sp]
 	add r0, r4, #0
 	mov r1, #0
@@ -14803,7 +14803,7 @@ ovy182_21ab9d4: ; 0x021AB9D4
 	add r5, r0, #0
 	ldr r0, [r4]
 	mov r1, #0xc0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4]
 	mov r1, #0
 	mov r2, #0xc0
@@ -19284,12 +19284,12 @@ ovy182_21adc9c: ; 0x021ADC9C
 	ldr r1, [r2]
 	and r0, r1
 	str r0, [r2]
-	bl sub_0207BAC0
+	bl OS_IsTickAvailable
 	cmp r0, #0
 	bne _021ADCC2
 	bl OS_Terminate
 _021ADCC2:
-	bl sub_0207BC18
+	bl OS_IsAlarmAvailable
 	cmp r0, #0
 	bne _021ADCCE
 	bl OS_Terminate
@@ -22137,7 +22137,7 @@ _021AF380:
 	lsl r4, r4, #8
 	ldr r0, [sp]
 	add r1, r4, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp]
 	mov r1, #0
 	add r2, r4, #0
@@ -37938,7 +37938,7 @@ ovy182_21b6fe0: ; 0x021B6FE0
 	sub r5, r6, #4
 	add r0, r1, #4
 	add r1, r5, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4]
 	mov r1, #0
 	add r0, r0, #4
@@ -38872,7 +38872,7 @@ ovy182_21b76b0: ; 0x021B76B0
 	add r0, r1, r0
 	mov r1, #1
 	lsl r1, r1, #0xa
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	mov r0, #0
 	str r0, [sp, #4]
 	ldr r0, [sp]
@@ -41099,7 +41099,7 @@ ovy182_21b8804: ; 0x021B8804
 	lsl r6, r6, #8
 	ldr r0, [r4]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r4]
 	mov r1, #0
 	add r2, r6, #0
@@ -41127,7 +41127,7 @@ ovy182_21b8834: ; 0x021B8834
 	ldr r4, _021B8914 ; =0x00001370
 	str r0, [r5]
 	str r7, [r0, r4]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r2, r6, #0
 	ldr r3, [r5]
 	sub r2, #0x18
@@ -41398,7 +41398,7 @@ _021B8A6A:
 	ldr r4, [r0, #0x10]
 	mov r1, #0xc0
 	add r0, r4, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	add r0, r4, #0
 	ldr r1, _021B8B38 ; =0x021C046E
 	add r0, #0xc
@@ -41527,7 +41527,7 @@ _021B8B68:
 	mov r1, #1
 	add r0, r2, r0
 	lsl r1, r1, #0xa
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	mov r0, #0
 	str r0, [sp, #0xc]
 	ldr r0, [sp]
@@ -41616,7 +41616,7 @@ ovy182_21b8c18: ; 0x021B8C18
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r2, _021B8CD8 ; =0x021C4174
 	ldr r3, _021B8CDC ; =0x00001B88
 	ldr r5, [r2]
@@ -45284,12 +45284,12 @@ ovy182_21ba768: ; 0x021BA768
 	mov r2, #2
 	sub r0, #0x34
 	strb r2, [r1, r0]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	ldr r1, [r6]
 	add r0, r7, #4
 	add r0, r1, r0
 	blx sub_02056CE8
-	bl sub_0207BB0C
+	bl OS_GetTick
 	bl sub_021B7E6C
 	ldr r1, [r6]
 	sub r4, #0x5c
@@ -47090,7 +47090,7 @@ ovy182_21bb594: ; 0x021BB594
 	bl ovy182_21bba38
 	str r0, [sp, #8]
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	str r0, [sp, #4]
 	cmp r6, #0
 	beq _021BB61E
@@ -47718,7 +47718,7 @@ ovy182_21bba00: ; 0x021BBA00
 	add r5, r0, #0
 	mov r0, #1
 	add r4, r1, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r7, r0, #0
 	ldrb r0, [r5, #3]
 	ldrh r1, [r5]
@@ -47747,7 +47747,7 @@ ovy182_21bba38: ; 0x021BBA38
 	add r5, r0, #0
 	mov r0, #1
 	mov r4, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r6, r0, #0
 	ldrb r2, [r5, #3]
 	ldrb r0, [r5, #2]
@@ -48365,7 +48365,7 @@ ovy182_21bbed4: ; 0x021BBED4
 	ldr r0, [r1, r0]
 	lsl r7, r7, #0xc
 	add r1, r7, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r6]
 	sub r4, #0x44
 	ldr r0, [r0, r4]
@@ -48380,7 +48380,7 @@ _021BBF0A:
 	ldr r0, [r1, r0]
 	lsl r7, r7, #0xc
 	add r1, r7, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r6]
 	sub r4, #0x14
 	ldr r0, [r0, r4]
@@ -49181,7 +49181,7 @@ ovy182_21bc4a8: ; 0x021BC4A8
 	add r5, r0, #0
 	mov r0, #1
 	add r4, r1, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r6, r0, #0
 	ldr r0, _021BC4D4 ; =0x021C41A4
 	add r1, r5, #0
@@ -49219,7 +49219,7 @@ ovy182_21bc4f0: ; 0x021BC4F0
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	ldr r1, [r5]
 	add r4, r0, #0
 	cmp r1, #0
@@ -49242,7 +49242,7 @@ ovy182_21bc51c: ; 0x021BC51C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r4, r0, #0
 	cmp r5, #0
 	beq _021BC53C
@@ -50116,7 +50116,7 @@ ovy182_21bcb6c: ; 0x021BCB6C
 	push {r4, lr}
 	add r4, r0, #0
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	ldr r2, [r4, #4]
 	ldr r1, [r4]
 	str r2, [r1, #4]
@@ -50137,7 +50137,7 @@ ovy182_21bcb90: ; 0x021BCB90
 	add r5, r0, #0
 	mov r0, #1
 	add r4, r1, #0
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	ldr r1, [r5]
 	str r4, [r1, #4]
 	ldr r1, [r5]
@@ -50223,7 +50223,7 @@ ovy182_21bcc2c: ; 0x021BCC2C
 	lsl r6, r6, #0xa
 	ldr r0, [r4]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	lsr r5, r6, #1
 	ldr r0, [r4]
 	mov r1, #0
@@ -50448,7 +50448,7 @@ ovy182_21bcdbc: ; 0x021BCDBC
 	asr r5, r1, #2
 	strh r5, [r7, #0xa]
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	str r0, [sp, #0xc]
 	ldr r0, [sp]
 	cmp r0, #0
@@ -50994,7 +50994,7 @@ ovy182_21bd210: ; 0x021BD210
 	ldrb r0, [r0]
 	strb r0, [r4, #0x11]
 	mov r0, #1
-	bl sub_02079E94
+	bl OS_DisableIrqMask
 	add r7, r0, #0
 	ldr r0, _021BD260 ; =0x021C4204
 	ldr r0, [r0]

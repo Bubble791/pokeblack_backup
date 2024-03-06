@@ -2099,10 +2099,10 @@ sub_02070F18: ; 0x02070F18
 	add r6, r5, r0
 	add r0, r4, #0
 	add r1, r6, #0
-	blx sub_0207B0E8
+	blx IC_InvalidateRange
 	add r0, r4, #0
 	add r1, r6, #0
-	blx sub_0207B074
+	blx DC_InvalidateRange
 	add r0, r4, r5
 	mov r1, #0
 	sub r2, r6, r5
@@ -2432,7 +2432,7 @@ _020711B8:
 _020711CA:
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #8]
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r4, [r5, #0x10]
 	ldr r5, [r5, #0x14]
 	cmp r4, r5

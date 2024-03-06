@@ -729,7 +729,7 @@
 .public sub_02070E40
 .public sub_02070E28
 .public sub_02070DB4
-.public sub_0207B0AC
+.public DC_FlushRange
 .public MI_CpuFill8
 .public MI_CpuCopy8
 .public OS_DisableInterrupts
@@ -749,8 +749,8 @@
 .public OS_Terminate
 .public sub_0208D868
 .public sub_021A1F10
-.public sub_0207B0AC
-.public sub_0207B0D0
+.public DC_FlushRange
+.public DC_WaitWriteBufferEmpty
 .public MIi_CpuClear16
 .public MIi_CpuClearFast
 .public MIi_CpuCopy16
@@ -795,11 +795,11 @@
 .public sub_02082560
 .public sub_020815C8
 .public sub_021A2638
-.public sub_0207B074
+.public DC_InvalidateRange
 .public MIi_DmaCopy16
 .public MI_CpuCopy8
 .public MIi_CpuCopy16
-.public sub_0207B074
+.public DC_InvalidateRange
 .public MIi_DmaCopy16
 .public sub_020815C8
 .public sub_020815C8

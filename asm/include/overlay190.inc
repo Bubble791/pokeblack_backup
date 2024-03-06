@@ -228,7 +228,7 @@
 .public MI_CpuCopy8
 .public sub_0203A24C
 .public sub_0202780C
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_020056FC
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C

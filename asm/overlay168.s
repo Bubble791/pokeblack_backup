@@ -42174,7 +42174,7 @@ _021F2356:
 	str r0, [r5, #0x4c]
 	ldr r0, [sp, #0x10]
 	str r0, [r5, #0x50]
-	bl sub_0207BB0C
+	bl OS_GetTick
 	str r0, [r5, #0x5c]
 	add r0, r5, #0
 	str r1, [r5, #0x60]
@@ -42281,7 +42281,7 @@ ovy168_21f2418: ; 0x021F2418
 	bne _021F2450
 	cmp r3, #1
 	bne _021F2450
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r2, r4, #3
 	add r2, r5, r2
 	str r0, [r2, #0x54]
@@ -42307,7 +42307,7 @@ ovy168_21f245c: ; 0x021F245C
 	push {r4, r5, r6, lr}
 	add r6, r1, #0
 	add r5, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r2, r6, #3
 	add r3, r5, r2
 	ldr r2, [r3, #0x54]
@@ -42355,7 +42355,7 @@ _021F24B4:
 _021F24B6:
 	str r0, [sp, #0xc]
 	lsl r6, r4, #2
-	bl sub_0207BB0C
+	bl OS_GetTick
 	lsl r2, r4, #3
 	add r3, r5, r2
 	ldr r2, [r3, #0x54]

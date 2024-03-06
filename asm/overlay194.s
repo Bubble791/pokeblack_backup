@@ -21663,7 +21663,7 @@ _021C26A0:
 	mov r1, #2
 	add r0, r4, #0
 	lsl r1, r1, #8
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r1, #3
 	lsl r2, r5, #9
 	lsl r1, r1, #0xc
@@ -21985,7 +21985,7 @@ ovy194_21c2930: ; 0x021C2930
 	ldr r4, [r0, #0xc]
 	add r0, r4, #0
 	add r0, #0x20
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r4, #0
 	add r1, r4, #0
 	add r0, #0x20
@@ -21997,7 +21997,7 @@ ovy194_21c2930: ; 0x021C2930
 	strh r0, [r4, #0x20]
 	add r0, r4, #0
 	add r0, #0x20
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	bl GX_BeginLoadTexPltt
 	add r0, r4, #0
 	mov r1, #0x20
@@ -28534,7 +28534,7 @@ _021C5CB0:
 	bl sub_02046F00
 	add r1, r0, #0
 	add r0, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	mov r4, #0
 _021C5CE0:
 	add r0, sp, #0x10
@@ -28798,7 +28798,7 @@ _021C5EEA:
 	lsl r5, r6, #5
 	add r0, r4, r5
 	add r1, r7, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #8]
 	cmp r0, #3
 	bhi _021C5F46
@@ -28888,7 +28888,7 @@ _021C5F98:
 	lsl r6, r6, #8
 	ldr r0, [r5, r4]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r5, r4]
 	mov r1, #0
 	add r2, r6, #0
@@ -28902,7 +28902,7 @@ _021C5FB6:
 	lsl r6, r6, #8
 	ldr r0, [r5, r4]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [r5, r4]
 	mov r1, #0
 	add r2, r6, #0

@@ -2263,7 +2263,7 @@ _021B4212:
 	add r0, r0, r1
 	mov r1, #0x1e
 	lsl r1, r1, #6
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0xc]
 	mov r1, #1
 	str r1, [r0, #0x14]

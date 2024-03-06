@@ -391,7 +391,7 @@
 .public sub_0204B0D4
 .public sub_0204B37C
 .public MIi_CpuCopy16
-.public sub_0207B0AC
+.public DC_FlushRange
 .public sub_0203A24C
 .public sub_021A2FB8
 .public sub_021A2FC4

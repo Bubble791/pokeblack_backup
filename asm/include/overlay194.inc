@@ -1897,7 +1897,7 @@
 .public GX_BeginLoadTex
 .public sub_0203A1FC
 .public MI_CpuFill8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadTex
 .public sub_0203A24C
 .public GX_EndLoadTex
@@ -1925,9 +1925,9 @@
 .public sub_0208D65C
 .public sub_0204AA30
 .public sub_0204B37C
-.public sub_0207B0AC
+.public DC_FlushRange
 .public MI_CpuMove
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_BeginLoadTexPltt
 .public GX_LoadTexPltt
 .public GX_EndLoadTexPltt
@@ -2377,7 +2377,7 @@
 .public sub_0204BB80
 .public sub_02046EF4
 .public sub_02046F00
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJ
 .public sub_0204AA30
 .public sub_0204B32C
@@ -2399,7 +2399,7 @@
 .public sub_02026F7C
 .public sub_02027880
 .public sub_02026FD8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
 .public GXS_LoadBGPltt
 .public GX_LoadOBJPltt
@@ -2407,9 +2407,9 @@
 .public sub_02026E48
 .public sub_02026DE8
 .public MI_CpuCopy8
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadOBJPltt
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GXS_LoadBGPltt
 .public sub_02005718
 .public sub_0203A614

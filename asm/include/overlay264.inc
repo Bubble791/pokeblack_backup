@@ -40,8 +40,8 @@
 .public sub_02199A08
 .public sub_021999E0
 .public sub_02027ACC
-.public sub_0207BB0C
-.public sub_0207BB0C
+.public OS_GetTick
+.public OS_GetTick
 .public sub_0208D60C
 .public sub_0208D5C4
 .public sub_02044BD8
@@ -51,7 +51,7 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_0204B600
-.public sub_0207B0AC
+.public DC_FlushRange
 .public GX_LoadBG2Scr
 .public GX_LoadBG3Scr
 .public sub_0203A24C

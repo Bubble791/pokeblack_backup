@@ -10265,7 +10265,7 @@ _02155070: .word sub_02019200
 ovy12_2155074: ; 0x02155074
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	mov r7, #0x5f
 	ldr r6, _021550A0 ; =0x0216C9A8
 	mov r4, #0
@@ -10281,7 +10281,7 @@ _02155084:
 	add r4, r4, #1
 	cmp r4, #0xc
 	blt _02155084
-	bl sub_0207BB0C
+	bl OS_GetTick
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021550A0: .word 0x0216C9A8
@@ -50724,7 +50724,7 @@ ovy12_21683f4: ; 0x021683F4
 	add r4, r0, #0
 	bl sub_02014864
 	add r7, r0, #0
-	bl sub_0207BB0C
+	bl OS_GetTick
 	add r0, r4, #0
 	bl sub_02014580
 	cmp r0, #0
@@ -54394,7 +54394,7 @@ ovy12_216a0b8: ; 0x0216A0B8
 	bl GX_BeginLoadTex
 	ldr r0, [sp, #0x1c]
 	add r1, r6, #0
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	ldr r0, [sp, #0x1c]
 	add r1, r4, r5
 	add r2, r6, #0
@@ -54421,7 +54421,7 @@ ovy12_216a168: ; 0x0216A168
 	bl GX_BeginLoadTexPltt
 	add r0, r6, #0
 	mov r1, #0x20
-	blx sub_0207B0AC
+	blx DC_FlushRange
 	add r0, r6, #0
 	add r1, r5, r4
 	mov r2, #0x20
