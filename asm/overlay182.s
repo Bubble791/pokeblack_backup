@@ -42734,10 +42734,10 @@ ovy182_21b94e8: ; 0x021B94E8
 _021B94FA:
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r1, [r6]
 	add r0, r4, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	cmp r0, #0
 	bne _021B9514
 	add sp, #0x48
@@ -42776,7 +42776,7 @@ _021B9552:
 	add r0, sp, #0
 	cmp r4, r0
 	bne _021B955C
-	bl sub_02070DB4
+	bl FS_CloseFile
 _021B955C:
 	add r0, r5, #0
 	add sp, #0x48
@@ -46587,10 +46587,10 @@ ovy182_21bb18c: ; 0x021BB18C
 	add r4, sp, #0xa0
 	str r0, [r1]
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r1, _021BB288 ; =0x021C1AD8
 	add r0, r4, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	cmp r0, #0
 	bne _021BB1B4
 	bl OS_Terminate
@@ -46602,26 +46602,26 @@ _021BB1B4:
 	add r1, #0xe4
 	strh r0, [r1]
 	add r0, r6, #0
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	add r5, r0, #0
 	add r0, r6, #0
 	add r1, sp, #0x18
 	mov r2, #8
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, r6, #0
 	add r1, sp, #0x10
 	mov r2, #8
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, r6, #0
-	bl sub_02070DB4
+	bl FS_CloseFile
 	ldr r0, [r4]
 	add r0, #0x88
-	bl sub_0207090C
+	bl FS_InitArchive
 	ldr r0, [r4]
 	ldr r1, _021BB28C ; =0x021C0580
 	add r0, #0x88
 	mov r2, #3
-	bl sub_02070920
+	bl FS_RegisterArchiveName
 	cmp r0, #0
 	bne _021BB200
 	bl OS_Terminate
@@ -46631,7 +46631,7 @@ _021BB200:
 	ldr r0, [r4]
 	ldr r2, _021BB294 ; =0x00000602
 	add r0, #0x88
-	bl sub_02071EC4
+	bl FS_SetArchiveProc
 	ldr r0, [sp, #0x18]
 	add r1, r5, #0
 	str r0, [sp]
@@ -46645,7 +46645,7 @@ _021BB200:
 	ldr r2, [sp, #0x10]
 	ldr r3, [sp, #0x14]
 	add r0, #0x88
-	bl sub_02071E24
+	bl FS_LoadArchive
 	cmp r0, #0
 	bne _021BB234
 	bl OS_Terminate
@@ -46655,7 +46655,7 @@ _021BB234:
 	ldr r0, [r5]
 	mov r2, #0
 	add r0, #0x88
-	bl sub_02071EDC
+	bl FS_LoadArchiveTables
 	mov r1, #4
 	add r4, r0, #0
 	bl ovy182_21bc4d8
@@ -46666,7 +46666,7 @@ _021BB234:
 	add r0, r1, #0
 	ldr r1, [r1]
 	add r0, #0x88
-	bl sub_02071EDC
+	bl FS_LoadArchiveTables
 	ldr r1, [r5]
 	mov r0, #0x20
 	add r1, r1, #4
@@ -46681,7 +46681,7 @@ _021BB234:
 	add r0, r4, #0
 	bl OS_SPrintf
 	add r0, r4, #0
-	bl sub_02070EB4
+	bl FS_ChangeDir
 	add sp, #0xe8
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -46699,17 +46699,17 @@ _021BB2A0: .word 0x021C1AF0
 ovy182_21bb2a4: ; 0x021BB2A4
 	push {r3, r4, r5, lr}
 	ldr r0, _021BB2EC ; =0x021C1AF8
-	bl sub_02070EB4
+	bl FS_ChangeDir
 	ldr r5, _021BB2F0 ; =0x021C418C
 	ldr r0, [r5]
 	add r0, #0x88
-	bl sub_02071FA0
+	bl FS_UnloadArchiveTables
 	ldr r0, [r5]
 	add r0, #0x88
-	bl sub_02071E6C
+	bl FS_UnloadArchive
 	ldr r0, [r5]
 	add r0, #0x88
-	bl sub_020709B8
+	bl FS_ReleaseArchiveName
 	ldr r0, [r5]
 	add r0, #0xe4
 	ldrh r0, [r0]
@@ -46776,7 +46776,7 @@ ovy182_21bb338: ; 0x021BB338
 	add r6, r1, #0
 	add r5, r2, #0
 	add r7, r3, #0
-	bl sub_02071FF0
+	bl FS_GetArchiveBase
 	add r1, r0, #0
 	ldr r0, _021BB368 ; =0x021BB36D
 	add r1, r5, r1
@@ -46813,16 +46813,16 @@ ovy182_21bb37c: ; 0x021BB37C
 	bl ovy182_21bba38
 	add r6, sp, #4
 	add r0, r6, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	cmp r0, #0
 	bne _021BB3AA
 	bl OS_Terminate
 _021BB3AA:
 	add r0, sp, #4
-	bl sub_02070EAC
+	bl FS_GetLength
 	add r6, r0, #0
 	cmp r5, #0
 	beq _021BB3B8
@@ -46845,9 +46845,9 @@ _021BB3CC:
 	add r0, sp, #4
 	add r2, r6, #0
 	str r1, [sp]
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, sp, #4
-	bl sub_02070DB4
+	bl FS_CloseFile
 	cmp r4, #0
 	ble _021BB3F0
 	ldr r0, [sp]

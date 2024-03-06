@@ -2422,7 +2422,7 @@ sub_0206C9BC: ; 0x0206C9BC
 	add r0, r5, #0
 	add r0, #0x7c
 	add r6, r3, #0
-	bl sub_02070CC8
+	bl FS_ConvertPathToFileID
 	cmp r0, #0
 	bne _0206C9EE
 	mov r0, #0
@@ -2430,13 +2430,13 @@ sub_0206C9BC: ; 0x0206C9BC
 _0206C9EE:
 	add r0, r5, #0
 	add r0, #0x34
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r3, r5, #0
 	add r3, #0x7c
 	add r0, r5, #0
 	ldmia r3!, {r1, r2}
 	add r0, #0x34
-	bl sub_02070D38
+	bl FS_OpenFileFast
 	cmp r0, #0
 	bne _0206CA0C
 	mov r0, #0
@@ -2471,7 +2471,7 @@ sub_0206CA30: ; 0x0206CA30
 	add r6, r2, #0
 	add r0, #0x34
 	add r2, r1, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	cmp r0, #0
 	bne _0206CA4E
 	add sp, #4
@@ -2482,7 +2482,7 @@ _0206CA4E:
 	add r0, #0x34
 	add r1, r5, #0
 	mov r2, #0x30
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0x30
 	beq _0206CA64
 	add sp, #4
@@ -2516,7 +2516,7 @@ _0206CA90:
 	ldr r1, [r5, #0x18]
 	add r0, #0x34
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	cmp r0, #0
 	bne _0206CAA6
 	add sp, #4
@@ -2529,7 +2529,7 @@ _0206CAA6:
 	ldr r1, [r1]
 	ldr r2, [r5, #0x1c]
 	add r0, #0x34
-	bl sub_02070E40
+	bl FS_ReadFile
 	ldr r1, [r5, #0x1c]
 	cmp r0, r1
 	beq _0206CAC2
@@ -2560,7 +2560,7 @@ _0206CAE8:
 	ldr r1, [r5, #0x20]
 	add r0, #0x34
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	cmp r0, #0
 	bne _0206CAFE
 	add sp, #4
@@ -2573,7 +2573,7 @@ _0206CAFE:
 	ldr r1, [r1]
 	ldr r2, [r5, #0x24]
 	add r0, #0x34
-	bl sub_02070E40
+	bl FS_ReadFile
 	ldr r1, [r5, #0x24]
 	cmp r0, r1
 	beq _0206CB1A
@@ -2608,7 +2608,7 @@ _0206CB48:
 	ldr r1, [r5, #0x10]
 	add r0, #0x34
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	cmp r0, #0
 	bne _0206CB5E
 	add sp, #4
@@ -2621,7 +2621,7 @@ _0206CB5E:
 	ldr r1, [r1]
 	ldr r2, [r5, #0x14]
 	add r0, #0x34
-	bl sub_02070E40
+	bl FS_ReadFile
 	ldr r1, [r5, #0x14]
 	cmp r0, r1
 	beq _0206CB7A
@@ -3234,7 +3234,7 @@ _0206CF4C:
 	ldr r1, [r1]
 	mov r2, #0
 	add r1, r1, r6
-	bl sub_02070E28
+	bl FS_SeekFile
 	cmp r0, #0
 	bne _0206CF6A
 	mov r0, #0
@@ -3245,7 +3245,7 @@ _0206CF6A:
 	ldr r0, [sp, #4]
 	add r1, r7, #0
 	add r2, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0
 	blt _0206CF86
 	add r4, r4, r0
@@ -4962,7 +4962,7 @@ _0206DB96:
 	str r1, [r5, r0]
 	add r0, r5, #0
 	add r0, #0x64
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r5, #0
 	bl sub_0206C480
 	mov r0, #0x15
@@ -7171,7 +7171,7 @@ _0206EBFC:
 	add r0, r5, #0
 	ldmia r3!, {r1, r2}
 	add r0, #0x64
-	bl sub_02070D38
+	bl FS_OpenFileFast
 	cmp r0, #0
 	bne _0206EC2E
 	bl sub_0206CFA4
@@ -7180,7 +7180,7 @@ _0206EBFC:
 	add r0, r5, #0
 	add r0, #0x64
 	mov r2, #1
-	bl sub_02070D68
+	bl FS_OpenFileEx
 	cmp r0, #0
 	bne _0206EC2E
 	add sp, #8
@@ -7199,11 +7199,11 @@ _0206EC2E:
 
 	thumb_func_start sub_0206EC40
 sub_0206EC40: ; 0x0206EC40
-	ldr r3, _0206EC48 ; =sub_02070DB4
+	ldr r3, _0206EC48 ; =FS_CloseFile
 	add r0, #0x64
 	bx r3
 	nop
-_0206EC48: .word sub_02070DB4
+_0206EC48: .word FS_CloseFile
 	thumb_func_end sub_0206EC40
 
 	thumb_func_start sub_0206EC4C
@@ -7218,23 +7218,23 @@ sub_0206EC4C: ; 0x0206EC4C
 	add r0, #0x64
 	add r1, r1, r3
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	add r5, #0x64
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end sub_0206EC4C
 
 	thumb_func_start sub_0206EC74
 sub_0206EC74: ; 0x0206EC74
-	ldr r3, _0206EC7C ; =sub_02070C98
+	ldr r3, _0206EC7C ; =FS_CancelFile
 	add r0, #0x64
 	bx r3
 	nop
-_0206EC7C: .word sub_02070C98
+_0206EC7C: .word FS_CancelFile
 	thumb_func_end sub_0206EC74
 
 	thumb_func_start sub_0206EC80
@@ -7588,21 +7588,21 @@ sub_0206EECC: ; 0x0206EECC
 _0206EED4: .word 0x0214B440
 	thumb_func_end sub_0206EECC
 
-	thumb_func_start sub_0206EED8
-sub_0206EED8: ; 0x0206EED8
+	thumb_func_start CARD_GetRomHeader
+CARD_GetRomHeader: ; 0x0206EED8
 	ldr r0, _0206EEDC ; =0x02FFFA80
 	bx lr
 	.align 2, 0
 _0206EEDC: .word 0x02FFFA80
-	thumb_func_end sub_0206EED8
+	thumb_func_end CARD_GetRomHeader
 
-	thumb_func_start sub_0206EEE0
-sub_0206EEE0: ; 0x0206EEE0
+	thumb_func_start CARD_GetOwnRomHeader
+CARD_GetOwnRomHeader: ; 0x0206EEE0
 	ldr r0, _0206EEE4 ; =0x02FFFE00
 	bx lr
 	.align 2, 0
 _0206EEE4: .word 0x02FFFE00
-	thumb_func_end sub_0206EEE0
+	thumb_func_end CARD_GetOwnRomHeader
 
 	thumb_func_start sub_0206EEE8
 sub_0206EEE8: ; 0x0206EEE8
@@ -9694,7 +9694,7 @@ sub_0206FE54: ; 0x0206FE54
 	bl OS_GetBootType
 	cmp r0, #1
 	bne _0206FE9E
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r0, #0x80
 	ldr r0, [r0]
 	cmp r0, #0
@@ -9704,7 +9704,7 @@ sub_0206FE54: ; 0x0206FE54
 	lsr r4, r0, #0x10
 	add r0, r4, #0
 	bl sub_0206EEF0
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r2, r0, #0
 	add r2, #0x80
 	ldr r1, _0206FEB4 ; =0x0214BAAC

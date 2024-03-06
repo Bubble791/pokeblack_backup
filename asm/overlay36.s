@@ -129267,7 +129267,7 @@ ovy36_21bcd84: ; 0x021BCD84
 	add r4, r1, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	mov r3, #0
 	add r1, r3, #0
 _021BCD94:

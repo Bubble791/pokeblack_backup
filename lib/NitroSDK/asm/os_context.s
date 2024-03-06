@@ -38,7 +38,7 @@ OS_InitContext: ; 0x0207AB04
 OS_SaveContext: ; 0x0207AB70
 	stmdb sp!, {r0, lr}
 	add r0, r0, #0x48
-	ldr r1, _0207ABB8 ; =sub_0207002C
+	ldr r1, _0207ABB8 ; =CP_SaveContext
 	blx r1
 	ldmia sp!, {r0, lr}
 	add r1, r0, #0
@@ -55,7 +55,7 @@ OS_SaveContext: ; 0x0207AB70
 	mov r0, #0
 	bx lr
 	.align 2, 0
-_0207ABB8: .word sub_0207002C
+_0207ABB8: .word CP_SaveContext
 	arm_func_end OS_SaveContext
 
 	arm_func_start OS_LoadContext

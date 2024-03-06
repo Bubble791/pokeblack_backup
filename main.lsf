@@ -27,7 +27,9 @@ Static main
     Object asm/asm_24_thumb.o
     Object asm/asm_26_thumb.o
     Object asm/asm_30_thumb.o
-    Object asm/asm_31_arm.o
+    Object lib/NitroSDK/asm/cp_context.o
+    Object lib/NitroSDK/asm/fs_archive.o
+    Object lib/NitroSDK/asm/fs_file.o
     Object asm/asm_32_thumb.o
 	Object lib/NitroSDK/asm/fx_mtx22.o
 	Object lib/NitroSDK/asm/fx_mtx33.o

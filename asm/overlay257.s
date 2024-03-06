@@ -43777,7 +43777,7 @@ _021AEC7A:
 	ldr r0, [r5, #0x14]
 	strb r1, [r0, r2]
 	add r0, r6, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r0, #0
 	ble _021AECC4
 _021AECAC:
@@ -43789,7 +43789,7 @@ _021AECAC:
 	add r4, r4, #1
 	strb r2, [r1, r0]
 	add r0, r6, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r4, r0
 	blt _021AECAC
 _021AECC4:

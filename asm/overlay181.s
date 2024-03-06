@@ -471,10 +471,10 @@ _0219D23A:
 	add r6, sp, #0xc
 	add r5, r0, #0
 	add r0, r6, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	cmp r0, #0
 	bne _0219D260
 	ldr r0, _0219D3E4 ; =0x021A4348
@@ -487,9 +487,9 @@ _0219D260:
 	mov r1, #0
 	mov r2, #0
 	mov r5, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	add r0, r6, #0
-	bl sub_02070EAC
+	bl FS_GetLength
 	str r0, [r4, #0x64]
 	ldr r0, _0219D3EC ; =0x00000299
 	ldr r3, _0219D3F0 ; =0x021A4354
@@ -502,9 +502,9 @@ _0219D260:
 	ldr r2, [r4, #0x64]
 	add r0, r6, #0
 	str r1, [r4, #0x60]
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, r6, #0
-	bl sub_02070DB4
+	bl FS_CloseFile
 	cmp r0, #0
 	bne _0219D2A6
 	ldr r0, _0219D3E4 ; =0x021A4348
@@ -4028,10 +4028,10 @@ ovy181_219efdc: ; 0x0219EFDC
 _0219EFEE:
 	add r4, sp, #4
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r1, [r6]
 	add r0, r4, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	cmp r0, #0
 	bne _0219F008
 	add sp, #0x4c
@@ -4077,7 +4077,7 @@ _0219F056:
 	add r0, sp, #4
 	cmp r4, r0
 	bne _0219F060
-	bl sub_02070DB4
+	bl FS_CloseFile
 _0219F060:
 	add r0, r5, #0
 	add sp, #0x4c
@@ -8489,7 +8489,7 @@ ovy181_21a1290: ; 0x021A1290
 	ldr r1, [r7, #0x14]
 	add r0, #0x10
 	ldr r5, [r4, #4]
-	bl sub_0207062C
+	bl FS_FindArchive
 	add r6, r0, #0
 	bne _021A12AA
 	ldr r6, [r7, #0x18]
@@ -8499,7 +8499,7 @@ _021A12AA:
 	beq _021A12F6
 	ldr r0, _021A1340 ; =0x021A472C
 	mov r1, #3
-	bl sub_0207062C
+	bl FS_FindArchive
 	cmp r6, r0
 	bne _021A12F6
 	bl sub_0206EEE8
@@ -8533,7 +8533,7 @@ _021A12EA:
 _021A12F6:
 	add r7, sp, #4
 	add r0, r7, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r2, [r4]
 	mov r0, #0
 	mvn r0, r0
@@ -8541,20 +8541,20 @@ _021A12F6:
 	add r0, r7, #0
 	add r1, r6, #0
 	add r3, r2, r5
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	cmp r0, #0
 	beq _021A132C
 	ldr r1, [r4, #8]
 	add r0, r7, #0
 	add r2, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r5, r0
 	bne _021A1326
 	mov r0, #2
 	str r0, [r4, #0xc]
 _021A1326:
 	add r0, sp, #4
-	bl sub_02070DB4
+	bl FS_CloseFile
 _021A132C:
 	ldr r0, [r4, #0xc]
 	cmp r0, #2
@@ -9031,12 +9031,12 @@ ovy181_21a1698: ; 0x021A1698
 	mov r5, #0
 	cmp r6, #0
 	beq _021A16C8
-	bl sub_02070DF4
+	bl FS_GetFilePosition
 	add r7, r0, #0
 	add r0, r6, #0
 	add r1, sp, #0
 	mov r2, #0x60
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0x60
 	blo _021A16BC
 	add r4, sp, #0
@@ -9044,7 +9044,7 @@ _021A16BC:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	b _021A16CA
 _021A16C8:
 	ldr r4, _021A16EC ; =0x02FFFE00
@@ -9081,7 +9081,7 @@ ovy181_21a16f0: ; 0x021A16F0
 	str r0, [sp, #0x34]
 	cmp r7, #0
 	bne _021A1718
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	ldrb r1, [r0, #0x12]
 	mov r0, #2
 	tst r0, r1
@@ -9115,12 +9115,12 @@ _021A1724:
 	cmp r7, #0
 	beq _021A176A
 	add r0, r7, #0
-	bl sub_02070DF4
+	bl FS_GetFilePosition
 	str r0, [sp, #0x28]
 	add r0, r7, #0
 	add r1, r6, #0
 	sub r2, r5, #4
-	bl sub_02070E40
+	bl FS_ReadFile
 	sub r1, r5, #4
 	cmp r0, r1
 	bge _021A175A
@@ -9148,10 +9148,10 @@ _021A1778:
 	add r7, sp, #0x48
 	str r0, [sp, #0x30]
 	add r0, r7, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r0, _021A1A28 ; =0x021A4734
 	mov r1, #3
-	bl sub_0207062C
+	bl FS_FindArchive
 	add r1, r0, #0
 	mov r0, #3
 	sub r0, r0, #4
@@ -9160,7 +9160,7 @@ _021A1778:
 	add r0, r7, #0
 	mov r2, #0
 	add r3, #0x88
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	cmp r0, #0
 	bne _021A17AA
 	add sp, #0x90
@@ -9168,7 +9168,7 @@ _021A1778:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A17AA:
 	add r0, r7, #0
-	bl sub_02070DF4
+	bl FS_GetFilePosition
 	str r0, [sp, #0x28]
 	mov r2, #0x16
 	ldr r0, _021A1A24 ; =0x02FFFE00
@@ -9196,11 +9196,11 @@ _021A17E0:
 	add r0, r7, #0
 	add r1, r1, r5
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #0x88
-	bl sub_02070E40
+	bl FS_ReadFile
 _021A17F6:
 	ldr r0, [sp, #0x2c]
 	add r4, #0x88
@@ -9263,14 +9263,14 @@ _021A185A:
 	str r0, [r4]
 	add r0, r7, #0
 	str r4, [sp, #0x20]
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	ldr r1, [sp, #0x28]
 	ldr r2, [r6, #0x20]
 	add r0, r1, r0
 	add r0, r2, r0
 	str r0, [r4, #4]
 	add r0, r7, #0
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	ldr r1, [sp, #0x28]
 	ldr r2, [r6, #0x30]
 	add r0, r1, r0
@@ -9291,7 +9291,7 @@ _021A1890:
 	cmp r0, r1
 	blo _021A191A
 	add r0, r7, #0
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x20]
 	ldr r5, [r6, #0x2c]
@@ -9314,11 +9314,11 @@ _021A1890:
 _021A18CA:
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	ldr r1, [sp, #0x18]
 	add r0, r7, #0
 	add r2, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	mov r0, #3
 	str r0, [sp]
 	ldr r1, [sp, #0x20]
@@ -9334,11 +9334,11 @@ _021A18CA:
 	add r0, r7, #0
 	sub r1, r2, r1
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	ldr r2, [r6, #0x3c]
 	add r0, r7, #0
 	add r1, r4, r5
-	bl sub_02070E40
+	bl FS_ReadFile
 	mov r0, #3
 	str r0, [sp]
 	ldr r1, [sp, #0x20]
@@ -9353,7 +9353,7 @@ _021A191A:
 	cmp r0, r1
 	blo _021A19F4
 	add r0, r7, #0
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #0x20]
 	str r4, [sp, #0xc]
@@ -9380,11 +9380,11 @@ _021A191A:
 _021A1956:
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x10]
 	add r0, r7, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	mov r0, #3
 	str r0, [sp]
 	mov r2, #0x11
@@ -9400,14 +9400,14 @@ _021A1956:
 	add r0, r7, #0
 	sub r1, r2, r1
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	mov r1, #0x11
 	lsl r1, r1, #0xa
 	mov r2, #0x11
 	add r0, r7, #0
 	add r1, r4, r1
 	lsl r2, r2, #0xa
-	bl sub_02070E40
+	bl FS_ReadFile
 	mov r2, #0x11
 	mov r0, #2
 	mov r1, #0x11
@@ -9426,14 +9426,14 @@ _021A1956:
 	add r0, r7, #0
 	sub r1, r2, r1
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	mov r1, #0x11
 	lsl r1, r1, #0xb
 	mov r2, #0x11
 	add r0, r7, #0
 	add r1, r4, r1
 	lsl r2, r2, #0xa
-	bl sub_02070E40
+	bl FS_ReadFile
 	mov r2, #0x11
 	lsl r2, r2, #0xa
 	mov r0, #2
@@ -9453,12 +9453,12 @@ _021A19F4:
 	ldr r1, [sp, #0x28]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	beq _021A1A82
 	add r0, sp, #0x48
-	bl sub_02070DB4
+	bl FS_CloseFile
 	ldr r0, [sp, #0x34]
 	cmp r0, #0
 	beq _021A1A82
@@ -10439,12 +10439,12 @@ _021A2142:
 _021A214C:
 	add r7, sp, #0
 	add r0, r7, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r1, r6, #0
 	add r0, r7, #0
 	mov r2, #1
 	mov r6, #1
-	bl sub_02070D68
+	bl FS_OpenFileEx
 	cmp r0, #0
 	bne _021A216A
 	add sp, #0x48
@@ -10452,11 +10452,11 @@ _021A214C:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A216A:
 	add r0, r7, #0
-	bl sub_02070DC0
+	bl FS_GetFileLength
 	cmp r4, r0
 	beq _021A2180
 	add r0, r7, #0
-	bl sub_02070DB4
+	bl FS_CloseFile
 	add sp, #0x48
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -10464,9 +10464,9 @@ _021A2180:
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, r7, #0
-	bl sub_02070DB4
+	bl FS_CloseFile
 	add r0, r6, #0
 	add sp, #0x48
 	pop {r3, r4, r5, r6, r7, pc}

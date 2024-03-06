@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	arm_func_start sub_0207002C
-sub_0207002C: ; 0x0207002C
+	arm_func_start CP_SaveContext
+CP_SaveContext: ; 0x0207002C
 	ldr r1, _02070068 ; =0x04000290
 	stmdb sp!, {r4}
 	ldmia r1, {r2, r3, r4, ip}
@@ -22,7 +22,7 @@ sub_0207002C: ; 0x0207002C
 	bx lr
 	.align 2, 0
 _02070068: .word 0x04000290
-	arm_func_end sub_0207002C
+	arm_func_end CP_SaveContext
 
 	arm_func_start CPi_RestoreContext
 CPi_RestoreContext: ; 0x0207006C

@@ -1419,10 +1419,10 @@ _0219D960: .word MI_CpuCopy8
 
 	thumb_func_start sub_0219D964
 sub_0219D964: ; 0x0219D964
-	ldr r3, _0219D968 ; =sub_0207F8AC
+	ldr r3, _0219D968 ; =STD_GetStringLength
 	bx r3
 	.align 2, 0
-_0219D968: .word sub_0207F8AC
+_0219D968: .word STD_GetStringLength
 	thumb_func_end sub_0219D964
 
 	thumb_func_start sub_0219D96C

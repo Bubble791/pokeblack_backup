@@ -1026,7 +1026,7 @@
 
 .public OS_SendMessage
 .public sub_02157BD0
-.public sub_0207F8AC
+.public STD_GetStringLength
 .public sub_0207F900
 .public sub_0207F95C
 .public sub_020586F4

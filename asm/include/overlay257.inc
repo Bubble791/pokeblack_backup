@@ -3145,8 +3145,8 @@
 .public RTC_GetDateTime
 .public sub_020800E8
 .public sub_0207F7CC
-.public sub_0207F8AC
-.public sub_0207F8AC
+.public STD_GetStringLength
+.public STD_GetStringLength
 .public MI_CpuCopy
 .public sub_0207F7CC
 .public sub_0207F7CC

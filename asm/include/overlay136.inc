@@ -39,7 +39,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_02046EDC
-.public sub_0207F8AC
+.public STD_GetStringLength
 .public sub_02068458
 .public sub_021EEE94
 .public sub_02068458

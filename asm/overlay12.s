@@ -54005,7 +54005,7 @@ ovy12_2169e18: ; 0x02169E18
 	ldrh r0, [r0, #0xe]
 	str r0, [sp, #0x10]
 	add r0, r5, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r0, #0
 	ble _02169E62
 	add r7, sp, #0x3c
@@ -54014,7 +54014,7 @@ _02169E52:
 	strb r0, [r7, r4]
 	add r0, r5, #0
 	add r4, r4, #1
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r4, r0
 	blt _02169E52
 _02169E62:
@@ -54091,7 +54091,7 @@ _02169EDC:
 	mov r4, #0
 	ldrh r7, [r0, #0x34]
 	add r0, r6, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r0, #0
 	ble _02169EFE
 	add r5, sp, #0x2c
@@ -54100,7 +54100,7 @@ _02169EEE:
 	strb r0, [r5, r4]
 	add r0, r6, #0
 	add r4, r4, #1
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	cmp r4, r0
 	blt _02169EEE
 _02169EFE:

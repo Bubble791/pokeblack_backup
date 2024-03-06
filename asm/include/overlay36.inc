@@ -10380,7 +10380,7 @@
 .public sub_021BCCF0
 .public sub_02068458
 .public sub_021BCD00
-.public sub_0207F8AC
+.public STD_GetStringLength
 .public sub_0204A5B8
 .public sub_0204875C
 .public sub_020241D4

@@ -25191,7 +25191,7 @@ NNS_SndArcInit: ; 0x020C9300
 	mov r5, r2
 	mov r4, r3
 	str ip, [r6, #0x90]
-	bl FS_ConvertPathToFileID
+
 	cmp r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
 	add r0, r6, #0x34
@@ -25226,7 +25226,7 @@ NNS_SndArcSetup: ; 0x020C9380
 	mov r6, r2
 	mov r2, r1
 	add r0, r5, #0x34
-	bl FS_SeekFile
+
 	cmp r0, #0
 	addeq sp, sp, #4
 	moveq r0, #0
@@ -25256,7 +25256,7 @@ NNS_SndArcSetup: ; 0x020C9380
 	ldr r1, [r5, #0x18]
 	add r0, r5, #0x34
 	mov r2, #0
-	bl FS_SeekFile
+
 	cmp r0, #0
 	addeq sp, sp, #4
 	moveq r0, #0
@@ -25284,7 +25284,7 @@ NNS_SndArcSetup: ; 0x020C9380
 	ldr r1, [r5, #0x20]
 	add r0, r5, #0x34
 	mov r2, #0
-	bl FS_SeekFile
+
 	cmp r0, #0
 	addeq sp, sp, #4
 	moveq r0, #0
@@ -25316,7 +25316,7 @@ NNS_SndArcSetup: ; 0x020C9380
 	ldr r1, [r5, #0x10]
 	add r0, r5, #0x34
 	mov r2, #0
-	bl FS_SeekFile
+
 	cmp r0, #0
 	addeq sp, sp, #4
 	moveq r0, #0
@@ -25656,7 +25656,7 @@ _020C9928:
 	mov r2, #0
 	add r0, r7, #0x34
 	add r1, r1, r8
-	bl FS_SeekFile
+
 	cmp r0, #0
 	mvneq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}

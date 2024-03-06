@@ -102,7 +102,7 @@
 .public sub_021B84A8
 .public sub_021B84F4
 .public sub_021B8258
-.public sub_0207F8AC
+.public STD_GetStringLength
 .public sub_02068458
 .public sub_021EF7B4
 .public sub_02068458

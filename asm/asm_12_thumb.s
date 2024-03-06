@@ -73397,10 +73397,10 @@ sub_020265FC: ; 0x020265FC
 	bl sub_020057B8
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02070EA0
+	bl FS_OpenFile
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_020265FC
 
@@ -73418,7 +73418,7 @@ sub_02026618: ; 0x02026618
 	cmp r5, #0
 	bne _02026638
 	add r0, sp, #4
-	bl sub_02070EAC
+	bl FS_GetLength
 	add r5, r0, #0
 _02026638:
 	mov r0, #0xb2
@@ -73433,13 +73433,13 @@ _02026638:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02070E28
+	bl FS_SeekFile
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	add r0, r6, #0
-	bl sub_02070DB4
+	bl FS_CloseFile
 	add r0, r4, #0
 	add sp, #0x4c
 	pop {r4, r5, r6, r7, pc}

@@ -4680,11 +4680,11 @@
 .public sub_02020260
 .public sub_0203A24C
 .public sub_02049620
-.public sub_0207F8AC
-.public sub_0207F8AC
+.public STD_GetStringLength
+.public STD_GetStringLength
 .public sub_02068458
-.public sub_0207F8AC
-.public sub_0207F8AC
+.public STD_GetStringLength
+.public STD_GetStringLength
 .public sub_02068458
 .public sub_02022D58
 .public sub_02022DA8

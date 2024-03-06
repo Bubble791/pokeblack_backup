@@ -3,2039 +3,7 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_020700A8
-sub_020700A8: ; 0x020700A8
-	sub r0, #9
-	mov r3, #0
-	cmp r0, #0x1a
-	bhi _020700BE
-	mov r2, #1
-	lsl r2, r0
-	ldr r0, _020700C4 ; =0x0400030F
-	mov r1, #1
-	tst r0, r2
-	beq _020700BE
-	add r3, r1, #0
-_020700BE:
-	add r0, r3, #0
-	bx lr
-	nop
-_020700C4: .word 0x0400030F
-	thumb_func_end sub_020700A8
 
-	thumb_func_start sub_020700C8
-sub_020700C8: ; 0x020700C8
-	push {r3, r4, r5, r6, r7, lr}
-	add r5, r0, #0
-	add r6, r1, #0
-	blx OS_DisableInterrupts
-	ldr r4, [r5, #8]
-	str r0, [sp]
-	cmp r4, #0
-	beq _020700FA
-	ldr r0, [r4, #8]
-	add r1, r4, #0
-	add r1, #8
-	cmp r0, #0
-	beq _020700F6
-_020700E4:
-	cmp r0, r5
-	bne _020700EE
-	ldr r0, [r5]
-	str r0, [r1]
-	b _020700F6
-_020700EE:
-	add r1, r0, #0
-	ldr r0, [r0]
-	cmp r0, #0
-	bne _020700E4
-_020700F6:
-	mov r0, #0
-	str r0, [r5]
-_020700FA:
-	ldr r0, [r5, #0xc]
-	lsr r0, r0, #8
-	lsl r0, r0, #0x18
-	lsr r7, r0, #0x18
-	add r0, r7, #0
-	bl sub_020700A8
-	cmp r0, #0
-	bne _02070114
-	cmp r4, #0
-	beq _02070114
-	str r7, [r4, #0x18]
-	str r6, [r4, #0x1c]
-_02070114:
-	ldr r1, [r5, #0xc]
-	mov r0, #0xcf
-	bic r1, r0
-	str r6, [r5, #0x14]
-	str r1, [r5, #0xc]
-	add r5, #0x18
-	add r0, r5, #0
-	bl OS_WakeupThread
-	ldr r0, [sp]
-	blx OS_RestoreInterrupts
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-	thumb_func_end sub_020700C8
-
-	thumb_func_start sub_02070130
-sub_02070130: ; 0x02070130
-	push {r3, r4, r5, r6, r7, lr}
-	add r5, r0, #0
-	mov r0, #1
-	lsl r0, r0, #8
-	cmp r1, r0
-	bne _0207016C
-	blx OS_DisableInterrupts
-	add r7, r0, #0
-	ldr r1, [r5, #0xc]
-	mov r0, #8
-	tst r0, r1
-	bne _0207015C
-	add r4, r5, #0
-	add r4, #0x18
-	mov r6, #8
-_02070150:
-	add r0, r4, #0
-	bl OS_SleepThread
-	ldr r0, [r5, #0xc]
-	tst r0, r6
-	beq _02070150
-_0207015C:
-	add r0, r7, #0
-	blx OS_RestoreInterrupts
-	ldr r1, [r5, #0xc]
-	mov r0, #8
-	bic r1, r0
-	str r1, [r5, #0xc]
-	ldr r1, [r5, #0x14]
-_0207016C:
-	add r0, r1, #0
-	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02070130
-
-	thumb_func_start sub_02070170
-sub_02070170: ; 0x02070170
-	push {r3, r4, r5, r6, lr}
-	sub sp, #4
-	add r4, r0, #0
-	ldr r0, [r4, #8]
-	add r6, r1, #0
-	ldr r5, [r0, #0x24]
-	cmp r6, #0x23
-	blo _02070182
-	b _02070358
-_02070182:
-	lsl r1, r6, #2
-	ldr r1, [r5, r1]
-	cmp r1, #0
-	bne _0207018C
-	b _02070358
-_0207018C:
-	cmp r6, #0x22
-	bls _02070192
-	b _02070358
-_02070192:
-	add r1, r6, r6
-	add r1, pc
-	ldrh r1, [r1, #6]
-	lsl r1, r1, #0x10
-	asr r1, r1, #0x10
-	add pc, r1
-_0207019E: ; jump table
-	.short _020701E4 - _0207019E - 2 ; case 0
-	.short _020701F4 - _0207019E - 2 ; case 1
-	.short _02070200 - _0207019E - 2 ; case 2
-	.short _0207020A - _0207019E - 2 ; case 3
-	.short _02070216 - _0207019E - 2 ; case 4
-	.short _02070226 - _0207019E - 2 ; case 5
-	.short _02070236 - _0207019E - 2 ; case 6
-	.short _02070240 - _0207019E - 2 ; case 7
-	.short _0207024E - _0207019E - 2 ; case 8
-	.short _02070256 - _0207019E - 2 ; case 9
-	.short _02070260 - _0207019E - 2 ; case 10
-	.short _0207026A - _0207019E - 2 ; case 11
-	.short _02070274 - _0207019E - 2 ; case 12
-	.short _0207027E - _0207019E - 2 ; case 13
-	.short _0207028C - _0207019E - 2 ; case 14
-	.short _02070296 - _0207019E - 2 ; case 15
-	.short _0207029E - _0207019E - 2 ; case 16
-	.short _020702A6 - _0207019E - 2 ; case 17
-	.short _020702B0 - _0207019E - 2 ; case 18
-	.short _020702BA - _0207019E - 2 ; case 19
-	.short _020702C0 - _0207019E - 2 ; case 20
-	.short _020702CC - _0207019E - 2 ; case 21
-	.short _020702D4 - _0207019E - 2 ; case 22
-	.short _020702E4 - _0207019E - 2 ; case 23
-	.short _020702F0 - _0207019E - 2 ; case 24
-	.short _020702FC - _0207019E - 2 ; case 25
-	.short _02070308 - _0207019E - 2 ; case 26
-	.short _02070310 - _0207019E - 2 ; case 27
-	.short _02070320 - _0207019E - 2 ; case 28
-	.short _02070358 - _0207019E - 2 ; case 29
-	.short _02070328 - _0207019E - 2 ; case 30
-	.short _0207032E - _0207019E - 2 ; case 31
-	.short _02070338 - _0207019E - 2 ; case 32
-	.short _02070346 - _0207019E - 2 ; case 33
-	.short _0207034E - _0207019E - 2 ; case 34
-_020701E4:
-	ldr r3, [r4, #0x10]
-	add r1, r4, #0
-	ldr r2, [r3]
-	add r3, r3, #4
-_020701EC:
-	ldr r5, [r5]
-_020701EE:
-	blx r5
-_020701F0:
-	add r5, r0, #0
-	b _0207035A
-_020701F4:
-	ldr r3, [r4, #0x10]
-	ldr r5, [r5, #4]
-	ldr r2, [r3]
-	add r1, r4, #0
-	add r3, r3, #4
-_020701FE:
-	b _020701EE
-_02070200:
-	ldr r3, [r4, #0x10]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	ldr r5, [r5, #8]
-	b _020701FE
-_0207020A:
-	ldr r2, [r4, #0x10]
-	ldr r3, [r5, #0xc]
-	ldr r2, [r2]
-	add r1, r4, #0
-_02070212:
-	blx r3
-	b _02070254
-_02070216:
-	ldr r3, [r4, #0x10]
-	ldr r1, [r3, #0xc]
-	str r1, [sp]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	add r3, #8
-	ldr r5, [r5, #0x10]
-	b _020701FE
-_02070226:
-	ldr r3, [r4, #0x10]
-	add r1, r3, #0
-	add r1, #8
-	str r1, [sp]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	ldr r5, [r5, #0x14]
-	b _020701FE
-_02070236:
-	ldr r3, [r4, #0x10]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	ldr r5, [r5, #0x18]
-	b _020701FE
-_02070240:
-	ldr r3, [r4, #0x10]
-	add r1, r4, #0
-	str r3, [sp]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	ldr r5, [r5, #0x1c]
-	b _020701FE
-_0207024E:
-	ldr r2, [r5, #0x20]
-	add r1, r4, #0
-_02070252:
-	blx r2
-_02070254:
-	b _020701F0
-_02070256:
-	ldr r1, [r5, #0x24]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_02070260:
-	ldr r1, [r5, #0x28]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_0207026A:
-	ldr r1, [r5, #0x2c]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_02070274:
-	ldr r1, [r5, #0x30]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_0207027E:
-	ldr r3, [r4, #0x10]
-	ldr r1, [r3, #8]
-	str r1, [sp]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	ldr r5, [r5, #0x34]
-	b _020701FE
-_0207028C:
-	ldr r2, [r4, #0x10]
-	add r1, r4, #0
-	ldr r3, [r2, #4]
-	ldr r5, [r5, #0x38]
-	b _020701FE
-_02070296:
-	add r1, r4, #0
-	ldr r2, [r4, #0x10]
-	ldr r3, [r5, #0x3c]
-	b _02070212
-_0207029E:
-	add r1, r4, #0
-	ldr r2, [r4, #0x10]
-	ldr r3, [r5, #0x40]
-	b _02070212
-_020702A6:
-	ldr r1, [r5, #0x44]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_020702B0:
-	ldr r1, [r5, #0x48]
-	blx r1
-	add sp, #4
-	mov r0, #0
-	pop {r3, r4, r5, r6, pc}
-_020702BA:
-	ldr r1, [r4, #0x10]
-	ldr r2, [r5, #0x4c]
-	b _02070252
-_020702C0:
-	ldr r3, [r4, #0x10]
-	ldr r5, [r5, #0x50]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	b _020701FE
-_020702CC:
-	ldr r2, [r4, #0x10]
-	ldr r3, [r5, #0x54]
-	ldmia r2!, {r1, r2}
-	b _02070212
-_020702D4:
-	ldr r3, [r4, #0x10]
-	ldr r1, [r3, #0xc]
-	str r1, [sp]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	ldr r5, [r5, #0x58]
-	b _020701FE
-_020702E4:
-	ldr r3, [r4, #0x10]
-	ldr r5, [r5, #0x5c]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	b _020701FE
-_020702F0:
-	ldr r3, [r4, #0x10]
-	ldr r5, [r5, #0x60]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	b _020701FE
-_020702FC:
-	ldr r3, [r4, #0x10]
-	ldr r5, [r5, #0x64]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	b _020701FE
-_02070308:
-	ldr r2, [r4, #0x10]
-	ldr r3, [r5, #0x68]
-	ldmia r2!, {r1, r2}
-	b _02070212
-_02070310:
-	ldr r3, [r4, #0x10]
-	ldr r1, [r3, #0xc]
-	str r1, [sp]
-	ldr r1, [r3]
-	ldr r2, [r3, #4]
-	ldr r3, [r3, #8]
-	ldr r5, [r5, #0x6c]
-	b _020701FE
-_02070320:
-	ldr r1, [r4, #0x10]
-	ldr r2, [r5, #0x70]
-	ldr r1, [r1]
-	b _02070252
-_02070328:
-	add r1, r4, #0
-	ldr r2, [r5, #0x78]
-	b _02070252
-_0207032E:
-	ldr r2, [r4, #0x10]
-	add r1, r4, #0
-	ldr r2, [r2]
-	ldr r3, [r5, #0x7c]
-	b _02070212
-_02070338:
-	ldr r3, [r4, #0x10]
-	add r5, #0x80
-	ldr r1, [r3, #8]
-	str r1, [sp]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	b _020701EC
-_02070346:
-	add r5, #0x84
-	add r1, r4, #0
-	ldr r2, [r5]
-	b _02070252
-_0207034E:
-	ldr r3, [r4, #0x10]
-	add r1, r4, #0
-	ldmia r3!, {r2, r3}
-	add r5, #0x88
-	b _020701EC
-_02070358:
-	mov r5, #4
-_0207035A:
-	add r0, r6, #0
-	bl sub_020700A8
-	cmp r0, #0
-	bne _02070386
-	ldr r1, [r4, #0xc]
-	mov r0, #4
-	tst r1, r0
-	beq _02070378
-	add r0, r4, #0
-	add r1, r5, #0
-	bl sub_02070130
-	add r5, r0, #0
-	b _02070386
-_02070378:
-	add r0, #0xfc
-	cmp r5, r0
-	beq _02070386
-	add r0, r4, #0
-	add r1, r5, #0
-	bl sub_020700C8
-_02070386:
-	add r0, r5, #0
-	add sp, #4
-	pop {r3, r4, r5, r6, pc}
-	thumb_func_end sub_02070170
-
-	thumb_func_start sub_0207038C
-sub_0207038C: ; 0x0207038C
-	push {r4, r5, r6, r7, lr}
-	sub sp, #0x54
-	add r5, r0, #0
-	add r7, r1, #0
-	mov r6, #0
-	blx OS_DisableInterrupts
-	str r0, [sp, #8]
-	ldr r2, [r5, #0x14]
-	mov r0, #0x20
-	tst r0, r2
-	beq _020703D6
-	mov r1, #0x20
-	bic r2, r1
-	ldr r0, [r5, #8]
-	str r2, [r5, #0x14]
-	cmp r0, #0
-	beq _020703D6
-_020703B0:
-	ldr r2, [r0, #0xc]
-	mov r1, #2
-	ldr r4, [r0]
-	tst r1, r2
-	beq _020703BE
-	mov r1, #1
-	b _020703C0
-_020703BE:
-	mov r1, #0
-_020703C0:
-	cmp r1, #0
-	beq _020703D0
-	mov r1, #3
-	bl sub_020700C8
-	cmp r4, #0
-	bne _020703D0
-	ldr r4, [r5, #8]
-_020703D0:
-	add r0, r4, #0
-	cmp r4, #0
-	bne _020703B0
-_020703D6:
-	ldr r0, [sp, #8]
-	blx OS_RestoreInterrupts
-	blx OS_DisableInterrupts
-	str r0, [sp, #4]
-	ldr r0, [r5, #0x14]
-	mov r1, #0x40
-	tst r1, r0
-	bne _02070456
-	mov r1, #8
-	tst r1, r0
-	bne _02070456
-	ldr r1, [r5, #8]
-	cmp r1, #0
-	beq _02070456
-	cmp r7, #0
-	beq _02070404
-	mov r1, #0x10
-	tst r0, r1
-	bne _02070404
-	mov r4, #1
-	b _02070406
-_02070404:
-	mov r4, #0
-_02070406:
-	cmp r4, #0
-	beq _02070412
-	ldr r1, [r5, #0x14]
-	mov r0, #0x10
-	orr r0, r1
-	str r0, [r5, #0x14]
-_02070412:
-	ldr r0, [sp, #4]
-	blx OS_RestoreInterrupts
-	cmp r4, #0
-	beq _02070424
-	ldr r0, [r5, #8]
-	mov r1, #9
-	bl sub_02070170
-_02070424:
-	blx OS_DisableInterrupts
-	str r0, [sp]
-	cmp r7, #0
-	bne _02070432
-	cmp r4, #0
-	beq _0207043C
-_02070432:
-	ldr r6, [r5, #8]
-	mov r0, #0x40
-	ldr r1, [r6, #0xc]
-	orr r0, r1
-	str r0, [r6, #0xc]
-_0207043C:
-	cmp r7, #0
-	beq _02070452
-	ldr r1, [r6, #0xc]
-	mov r0, #4
-	tst r0, r1
-	beq _02070452
-	add r6, #0x18
-	add r0, r6, #0
-	bl OS_WakeupThread
-	mov r6, #0
-_02070452:
-	ldr r0, [sp]
-	b _02070496
-_02070456:
-	cmp r7, #0
-	beq _02070494
-	mov r1, #0x10
-	tst r0, r1
-	beq _0207047A
-	add r4, sp, #0xc
-	add r0, r4, #0
-	bl sub_02070C7C
-	str r5, [sp, #0x14]
-	ldr r1, [r5, #0x14]
-	mov r0, #0x10
-	bic r1, r0
-	str r1, [r5, #0x14]
-	add r0, r4, #0
-	mov r1, #0xa
-	bl sub_02070170
-_0207047A:
-	ldr r1, [r5, #0x14]
-	mov r0, #0x40
-	tst r0, r1
-	beq _02070494
-	mov r0, #0x40
-	bic r1, r0
-	mov r0, #8
-	orr r0, r1
-	str r0, [r5, #0x14]
-	add r5, #0xc
-	add r0, r5, #0
-	bl OS_WakeupThread
-_02070494:
-	ldr r0, [sp, #4]
-_02070496:
-	blx OS_RestoreInterrupts
-	add r0, r6, #0
-	add sp, #0x54
-	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_0207038C
-
-	thumb_func_start sub_020704A0
-sub_020704A0: ; 0x020704A0
-	push {r3, r4, r5, r6, r7, lr}
-	add r5, r0, #0
-	ldr r6, [r5, #8]
-	beq _020704F2
-	mov r7, #4
-_020704AA:
-	blx OS_DisableInterrupts
-	add r4, r0, #0
-	ldr r1, [r5, #0xc]
-	mov r0, #0x40
-	orr r0, r1
-	str r0, [r5, #0xc]
-	tst r0, r7
-	beq _020704C6
-	add r5, #0x18
-	add r0, r5, #0
-	bl OS_WakeupThread
-	mov r5, #0
-_020704C6:
-	add r0, r4, #0
-	blx OS_RestoreInterrupts
-	cmp r5, #0
-	beq _020704F2
-	ldr r1, [r5, #0xc]
-	add r0, r5, #0
-	lsr r1, r1, #8
-	lsl r1, r1, #0x18
-	lsr r1, r1, #0x18
-	bl sub_02070170
-	mov r1, #1
-	lsl r1, r1, #8
-	cmp r0, r1
-	beq _020704F2
-	add r0, r6, #0
-	mov r1, #1
-	bl sub_0207038C
-	add r5, r0, #0
-	bne _020704AA
-_020704F2:
-	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_020704A0
-
-	thumb_func_start sub_020704F4
-sub_020704F4: ; 0x020704F4
-	push {r3, r4, r5, r6, r7, lr}
-	add r5, r0, #0
-	blx OS_DisableInterrupts
-	add r4, r5, #0
-	str r0, [sp]
-	add r4, #0x18
-	mov r7, #1
-	mov r6, #0x40
-	b _0207050E
-_02070508:
-	add r0, r4, #0
-	bl OS_SleepThread
-_0207050E:
-	ldr r1, [r5, #0xc]
-	add r0, r1, #0
-	tst r0, r6
-	bne _0207051C
-	add r0, r1, #0
-	tst r0, r7
-	bne _02070508
-_0207051C:
-	ldr r0, [sp]
-	blx OS_RestoreInterrupts
-	ldr r1, [r5, #0xc]
-	mov r0, #0x40
-	tst r0, r1
-	beq _02070552
-	ldr r1, [r5, #0xc]
-	ldr r4, [r5, #8]
-	lsr r1, r1, #8
-	lsl r1, r1, #0x18
-	add r0, r5, #0
-	lsr r1, r1, #0x18
-	bl sub_02070170
-	add r1, r0, #0
-	add r0, r5, #0
-	bl sub_020700C8
-	add r0, r4, #0
-	mov r1, #1
-	bl sub_0207038C
-	cmp r0, #0
-	beq _02070552
-	bl sub_020704A0
-_02070552:
-	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_020704F4
-
-	thumb_func_start sub_02070554
-sub_02070554: ; 0x02070554
-	push {r4, r5, r6, r7, lr}
-	sub sp, #0xc
-	add r5, r0, #0
-	ldr r0, [r5, #0xc]
-	str r1, [sp]
-	mov r1, #1
-	add r7, r2, #0
-	mov r6, #0
-	ldr r4, [r5, #8]
-	tst r0, r1
-	bne _0207056C
-	add r1, r6, #0
-_0207056C:
-	cmp r1, #0
-	beq _02070574
-	bl OS_Terminate
-_02070574:
-	cmp r4, #0
-	bne _02070582
-	mov r0, #6
-	str r0, [r5, #0x14]
-	add sp, #0xc
-	mov r0, #0
-	pop {r4, r5, r6, r7, pc}
-_02070582:
-	mov r0, #2
-	str r0, [r5, #0x14]
-	ldr r2, [r5, #0xc]
-	ldr r0, _02070628 ; =0xFFFF00FF
-	add r1, r5, #0
-	and r0, r2
-	ldr r2, [sp]
-	add r1, #0xc
-	lsl r2, r2, #8
-	orr r2, r0
-	mov r0, #1
-	orr r0, r2
-	mov r2, #0
-	str r0, [r5, #0xc]
-	str r2, [r5]
-	cmp r7, #0
-	beq _020705AA
-	mov r2, #4
-	orr r0, r2
-	str r0, [r1]
-_020705AA:
-	blx OS_DisableInterrupts
-	str r0, [sp, #8]
-	ldr r1, [r4, #0x14]
-	mov r0, #0x80
-	tst r0, r1
-	beq _020705C2
-	add r0, r5, #0
-	mov r1, #3
-	bl sub_020700C8
-	b _020705D6
-_020705C2:
-	ldr r1, [r4, #8]
-	add r0, r4, #0
-	add r0, #8
-	cmp r1, #0
-	beq _020705D4
-_020705CC:
-	add r0, r1, #0
-	ldr r1, [r1]
-	cmp r1, #0
-	bne _020705CC
-_020705D4:
-	str r5, [r0]
-_020705D6:
-	mov r0, #0
-	str r0, [sp, #4]
-	ldr r0, [r4, #8]
-	cmp r0, r5
-	bne _020705EC
-	ldr r1, [r4, #0x14]
-	mov r0, #0x10
-	tst r0, r1
-	bne _020705EC
-	mov r0, #1
-	str r0, [sp, #4]
-_020705EC:
-	ldr r0, [sp, #8]
-	blx OS_RestoreInterrupts
-	ldr r0, [r5, #0x14]
-	cmp r0, #3
-	beq _02070620
-	ldr r1, [sp, #4]
-	add r0, r4, #0
-	bl sub_0207038C
-	cmp r7, #0
-	beq _02070616
-	add r0, r5, #0
-	bl sub_020704F4
-	ldr r0, [r5, #0x14]
-	mov r6, #1
-	cmp r0, #0
-	beq _02070620
-	mov r6, #0
-	b _02070620
-_02070616:
-	cmp r0, #0
-	beq _0207061E
-	bl sub_020704A0
-_0207061E:
-	mov r6, #1
-_02070620:
-	add r0, r6, #0
-	add sp, #0xc
-	pop {r4, r5, r6, r7, pc}
-	nop
-_02070628: .word 0xFFFF00FF
-	thumb_func_end sub_02070554
-
-	thumb_func_start sub_0207062C
-sub_0207062C: ; 0x0207062C
-	push {r3, r4, r5, r6, r7, lr}
-	add r7, r0, #0
-	add r5, r1, #0
-	blx OS_DisableInterrupts
-	str r0, [sp]
-	ldr r0, _0207067C ; =0x0214BD4C
-	ldr r4, [r0]
-	cmp r4, #0
-	beq _02070672
-_02070640:
-	ldr r1, [r4, #0x14]
-	mov r0, #2
-	tst r0, r1
-	beq _0207064C
-	mov r0, #1
-	b _0207064E
-_0207064C:
-	mov r0, #0
-_0207064E:
-	cmp r0, #0
-	beq _0207066C
-	add r0, r4, #0
-	bl sub_02070A24
-	add r1, r7, #0
-	add r2, r5, #0
-	add r6, r0, #0
-	bl sub_0207F9C8
-	cmp r0, #0
-	bne _0207066C
-	ldrsb r0, [r5, r6]
-	cmp r0, #0
-	beq _02070672
-_0207066C:
-	ldr r4, [r4, #4]
-	cmp r4, #0
-	bne _02070640
-_02070672:
-	ldr r0, [sp]
-	blx OS_RestoreInterrupts
-	add r0, r4, #0
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-_0207067C: .word 0x0214BD4C
-	thumb_func_end sub_0207062C
-
-	thumb_func_start sub_02070680
-sub_02070680: ; 0x02070680
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #0x160
-	add r7, sp, #0x5c
-	mov r5, #0
-	add r1, sp, #0
-	add r2, r7, #0
-	str r5, [sp]
-	bl sub_02070734
-	add r4, r0, #0
-	beq _020706EC
-	ldr r6, _020706F4 ; =0x0214BD4C
-	mov r2, #0x41
-	str r4, [r6, #4]
-	strh r5, [r6, #8]
-	strh r5, [r6, #0xa]
-	str r5, [r6, #0xc]
-	ldr r5, _020706F8 ; =0x0214BE5C
-	add r1, r7, #0
-	add r0, r5, #0
-	lsl r2, r2, #2
-	bl sub_0207F7CC
-	ldr r0, [r4, #0x24]
-	ldr r0, [r0, #0x10]
-	cmp r0, #0
-	beq _020706EA
-	add r0, sp, #0x14
-	bl sub_02070C7C
-	add r0, sp, #4
-	str r0, [sp, #0x24]
-	ldr r0, [sp]
-	mov r1, #4
-	str r0, [sp, #4]
-	mov r0, #1
-	str r0, [sp, #0x10]
-	add r0, sp, #0x14
-	mov r2, #1
-	str r4, [sp, #0x1c]
-	str r7, [sp, #8]
-	bl sub_02070554
-	cmp r0, #0
-	beq _020706EA
-	ldr r0, [sp, #0xc]
-	mov r2, #0x41
-	strh r0, [r6, #8]
-	add r0, r5, #0
-	add r1, r7, #0
-	lsl r2, r2, #2
-	bl sub_0207F7CC
-_020706EA:
-	mov r5, #1
-_020706EC:
-	add r0, r5, #0
-	add sp, #0x160
-	pop {r3, r4, r5, r6, r7, pc}
-	nop
-_020706F4: .word 0x0214BD4C
-_020706F8: .word 0x0214BE5C
-	thumb_func_end sub_02070680
-
-	thumb_func_start sub_020706FC
-sub_020706FC: ; 0x020706FC
-	push {r4, r5}
-	sub r5, r1, #1
-	cmp r5, r3
-	blt _02070706
-	add r5, r3, #0
-_02070706:
-	mov r1, #0
-	b _0207070E
-_0207070A:
-	strb r4, [r0, r1]
-	add r1, r1, #1
-_0207070E:
-	cmp r1, r5
-	bge _02070718
-	ldrsb r4, [r2, r1]
-	cmp r4, #0
-	bne _0207070A
-_02070718:
-	cmp r1, r3
-	bge _02070728
-	ldrsb r2, [r2, r1]
-	cmp r2, #0
-	beq _02070728
-	ldr r2, [sp, #8]
-	mov r3, #1
-	str r3, [r2]
-_02070728:
-	mov r2, #0
-	strb r2, [r0, r1]
-	add r0, r1, #0
-	pop {r4, r5}
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_020706FC
-
-	thumb_func_start sub_02070734
-sub_02070734: ; 0x02070734
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #0x10
-	add r5, r0, #0
-	ldr r0, _02070900 ; =0x0214BD4C
-	add r7, r1, #0
-	mov r4, #0
-	ldr r1, [r0, #4]
-	str r2, [sp, #4]
-	str r4, [sp, #0xc]
-	cmp r1, #0
-	bne _02070758
-	ldr r1, [r0]
-	str r1, [r0, #4]
-	strh r4, [r0, #8]
-	str r4, [r0, #0xc]
-	strh r4, [r0, #0xa]
-	ldr r0, _02070904 ; =0x0214BE5C
-	strb r4, [r0]
-_02070758:
-	ldrb r0, [r5]
-	cmp r0, #0x2f
-	beq _02070762
-	cmp r0, #0x5c
-	bne _02070774
-_02070762:
-	ldr r0, _02070900 ; =0x0214BD4C
-	add r5, r5, #1
-	ldr r0, [r0, #4]
-	cmp r7, #0
-	str r0, [sp, #8]
-	beq _0207080E
-_0207076E:
-	mov r0, #0
-	str r0, [r7]
-	b _0207080E
-_02070774:
-	mov r6, #0
-	mov r0, #1
-	mov r2, #0x20
-_0207077A:
-	ldrb r1, [r5, r6]
-	cmp r1, #0
-	beq _02070788
-	cmp r1, #0x2f
-	beq _02070788
-	cmp r1, #0x5c
-	bne _020707D6
-_02070788:
-	ldr r1, _02070900 ; =0x0214BD4C
-	cmp r7, #0
-	ldr r0, [r1, #4]
-	str r0, [sp, #8]
-	beq _02070796
-	ldrh r0, [r1, #8]
-	str r0, [r7]
-_02070796:
-	ldr r0, [sp, #4]
-	cmp r0, #0
-	beq _0207080E
-	ldr r0, _02070900 ; =0x0214BD4C
-	ldrh r0, [r0, #8]
-	cmp r0, #0
-	bne _0207080E
-	ldr r2, _02070904 ; =0x0214BE5C
-	mov r0, #0
-	ldrsb r0, [r2, r0]
-	cmp r0, #0
-	beq _0207080E
-	mov r7, #0x41
-	lsl r7, r7, #2
-	add r6, sp, #0xc
-	ldr r0, [sp, #4]
-	add r1, r7, #0
-	add r3, r7, #0
-	str r6, [sp]
-	bl sub_020706FC
-	add r4, r4, r0
-	ldr r0, [sp, #4]
-	ldr r2, _02070908 ; =0x0209B508
-	add r0, r0, r4
-	sub r1, r7, r4
-	mov r3, #1
-	str r6, [sp]
-	bl sub_020706FC
-	add r4, r4, r0
-	b _0207080E
-_020707D6:
-	cmp r1, #0x3a
-	bne _020707FA
-	add r0, r5, #0
-	add r1, r6, #0
-	bl sub_0207062C
-	str r0, [sp, #8]
-	add r0, r6, #1
-	add r5, r5, r0
-	ldrb r0, [r5]
-	cmp r0, #0x2f
-	beq _020707F2
-	cmp r0, #0x5c
-	bne _020707F4
-_020707F2:
-	add r5, r5, #1
-_020707F4:
-	cmp r7, #0
-	beq _0207080E
-	b _0207076E
-_020707FA:
-	eor r1, r2
-	sub r1, #0xa1
-	cmp r1, #0x3c
-	bhs _02070806
-	add r1, r0, #0
-	b _02070808
-_02070806:
-	mov r1, #0
-_02070808:
-	add r3, r6, #1
-	add r6, r3, r1
-	b _0207077A
-_0207080E:
-	ldr r0, [sp, #4]
-	cmp r0, #0
-	beq _020708EE
-	ldr r0, [sp, #0xc]
-	mov r6, #0
-	cmp r0, #0
-	bne _020708E4
-_0207081C:
-	ldrsb r7, [r5, r6]
-	add r1, r5, r6
-	cmp r7, #0
-	beq _0207086A
-	lsl r2, r7, #0x18
-	lsr r2, r2, #0x18
-	mov r0, #1
-	cmp r2, #0x2f
-	beq _02070834
-	cmp r2, #0x5c
-	beq _02070834
-	mov r0, #0
-_02070834:
-	cmp r0, #0
-	bne _0207086A
-	lsl r2, r7, #0x18
-	lsr r3, r2, #0x18
-	mov r2, #0x20
-	eor r2, r3
-	sub r2, #0xa1
-	mov r0, #0
-	cmp r2, #0x3c
-	bhs _0207085C
-	mov r2, #1
-	ldrsb r1, [r1, r2]
-	cmp r1, #0x7f
-	beq _0207085C
-	sub r1, #0x40
-	lsl r1, r1, #0x18
-	lsr r1, r1, #0x18
-	cmp r1, #0xbc
-	bhi _0207085C
-	add r0, r2, #0
-_0207085C:
-	cmp r0, #0
-	beq _02070864
-	mov r0, #2
-	b _02070866
-_02070864:
-	mov r0, #1
-_02070866:
-	add r6, r6, r0
-	b _020708DE
-_0207086A:
-	cmp r6, #0
-	beq _020708D4
-	cmp r6, #1
-	bne _0207087A
-	mov r0, #0
-	ldrsb r0, [r5, r0]
-	cmp r0, #0x2e
-	beq _020708D4
-_0207087A:
-	cmp r6, #2
-	bne _020708A0
-	mov r0, #0
-	ldrsb r0, [r5, r0]
-	cmp r0, #0x2e
-	bne _020708A0
-	mov r0, #1
-	ldrsb r0, [r5, r0]
-	cmp r0, #0x2e
-	bne _020708A0
-	cmp r4, #0
-	ble _02070894
-	sub r4, r4, #1
-_02070894:
-	ldr r0, [sp, #4]
-	add r1, r4, #0
-	bl sub_02070C34
-	add r4, r0, #1
-	b _020708D4
-_020708A0:
-	add r0, sp, #0xc
-	str r0, [sp]
-	ldr r0, [sp, #4]
-	mov r1, #0x41
-	lsl r1, r1, #2
-	add r0, r0, r4
-	sub r1, r1, r4
-	add r2, r5, #0
-	add r3, r6, #0
-	bl sub_020706FC
-	add r4, r4, r0
-	cmp r7, #0
-	beq _020708D4
-	add r0, sp, #0xc
-	str r0, [sp]
-	ldr r0, [sp, #4]
-	mov r1, #0x41
-	lsl r1, r1, #2
-	ldr r2, _02070908 ; =0x0209B508
-	add r0, r0, r4
-	sub r1, r1, r4
-	mov r3, #1
-	bl sub_020706FC
-	add r4, r4, r0
-_020708D4:
-	cmp r7, #0
-	beq _020708E4
-	add r0, r6, #1
-	add r5, r5, r0
-	mov r6, #0
-_020708DE:
-	ldr r0, [sp, #0xc]
-	cmp r0, #0
-	beq _0207081C
-_020708E4:
-	ldr r0, [sp, #4]
-	mov r1, #0
-	strb r1, [r0, r4]
-	bl sub_02070C50
-_020708EE:
-	ldr r0, [sp, #0xc]
-	cmp r0, #0
-	beq _020708F8
-	mov r0, #0
-	str r0, [sp, #8]
-_020708F8:
-	ldr r0, [sp, #8]
-	add sp, #0x10
-	pop {r3, r4, r5, r6, r7, pc}
-	nop
-_02070900: .word 0x0214BD4C
-_02070904: .word 0x0214BE5C
-_02070908: .word 0x0209B508
-	thumb_func_end sub_02070734
-
-	thumb_func_start sub_0207090C
-sub_0207090C: ; 0x0207090C
-	push {r3, r4, r5, lr}
-	mov r1, #0
-	mov r2, #0x5c
-	add r5, r0, #0
-	mov r4, #0
-	blx MI_CpuFill8
-	str r4, [r5, #0x10]
-	str r4, [r5, #0xc]
-	pop {r3, r4, r5, pc}
-	thumb_func_end sub_0207090C
-
-	thumb_func_start sub_02070920
-sub_02070920: ; 0x02070920
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #8
-	str r1, [sp]
-	add r5, r0, #0
-	add r7, r2, #0
-	mov r4, #0
-	blx OS_DisableInterrupts
-	str r0, [sp, #4]
-	ldr r0, [sp]
-	add r1, r7, #0
-	bl sub_0207062C
-	cmp r0, #0
-	bne _020709A0
-	ldr r0, _020709AC ; =0x0214BD4C
-	ldr r1, _020709B0 ; =0x0214BD4C
-	ldr r0, [r0]
-	cmp r0, #0
-	beq _02070950
-_02070948:
-	add r1, r0, #4
-	ldr r0, [r0, #4]
-	cmp r0, #0
-	bne _02070948
-_02070950:
-	str r5, [r1]
-	cmp r7, #3
-	bhi _02070966
-	mov r0, #0
-	str r0, [r5]
-	ldr r1, [sp]
-	add r0, r5, #0
-	add r2, r7, #1
-	bl sub_0207F7CC
-	b _02070998
-_02070966:
-	cmp r7, #0xf
-	bhi _02070994
-	mov r4, #0
-_0207096C:
-	cmp r4, #0x10
-	blt _02070976
-	bl OS_Terminate
-	b _02070990
-_02070976:
-	ldr r0, _020709B4 ; =0x0214BD5C
-	lsl r1, r4, #4
-	add r6, r0, r1
-	ldrsb r0, [r0, r1]
-	cmp r0, #0
-	bne _02070990
-	ldr r1, [sp]
-	add r0, r6, #0
-	add r2, r7, #1
-	bl sub_0207F7CC
-	str r6, [r5]
-	b _02070998
-_02070990:
-	add r4, r4, #1
-	b _0207096C
-_02070994:
-	bl OS_Terminate
-_02070998:
-	ldr r0, [r5, #0x14]
-	mov r4, #1
-	orr r0, r4
-	str r0, [r5, #0x14]
-_020709A0:
-	ldr r0, [sp, #4]
-	blx OS_RestoreInterrupts
-	add r0, r4, #0
-	add sp, #8
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-_020709AC: .word 0x0214BD4C
-_020709B0: .word 0x0214BD4C
-_020709B4: .word 0x0214BD5C
-	thumb_func_end sub_02070920
-
-	thumb_func_start sub_020709B8
-sub_020709B8: ; 0x020709B8
-	push {r4, lr}
-	add r4, r0, #0
-	ldr r0, _02070A1C ; =0x0214BD4C
-	ldr r0, [r0]
-	cmp r4, r0
-	bne _020709C8
-	bl OS_Terminate
-_020709C8:
-	ldr r0, [r4]
-	cmp r0, #0
-	beq _02070A18
-	blx OS_DisableInterrupts
-	ldr r1, _02070A1C ; =0x0214BD4C
-	ldr r2, _02070A20 ; =0x0214BD4C
-	ldr r1, [r1]
-	cmp r1, #0
-	beq _020709EE
-_020709DC:
-	cmp r1, r4
-	bne _020709E6
-	ldr r1, [r1, #4]
-	str r1, [r2]
-	b _020709EE
-_020709E6:
-	add r2, r1, #4
-	ldr r1, [r1, #4]
-	cmp r1, #0
-	bne _020709DC
-_020709EE:
-	mov r1, #3
-	ldrsb r1, [r4, r1]
-	cmp r1, #0
-	beq _020709FC
-	ldr r1, [r4]
-	mov r2, #0
-	strb r2, [r1]
-_020709FC:
-	ldr r2, [r4, #0x14]
-	mov r1, #1
-	mov r3, #0
-	bic r2, r1
-	ldr r1, _02070A1C ; =0x0214BD4C
-	str r3, [r4]
-	str r3, [r4, #4]
-	str r2, [r4, #0x14]
-	ldr r2, [r1, #4]
-	cmp r2, r4
-	bne _02070A14
-	str r3, [r1, #4]
-_02070A14:
-	blx OS_RestoreInterrupts
-_02070A18:
-	pop {r4, pc}
-	nop
-_02070A1C: .word 0x0214BD4C
-_02070A20: .word 0x0214BD4C
-	thumb_func_end sub_020709B8
-
-	thumb_func_start sub_02070A24
-sub_02070A24: ; 0x02070A24
-	mov r1, #3
-	ldrsb r1, [r0, r1]
-	cmp r1, #0
-	beq _02070A2E
-	ldr r0, [r0]
-_02070A2E:
-	bx lr
-	thumb_func_end sub_02070A24
-
-	thumb_func_start sub_02070A30
-sub_02070A30: ; 0x02070A30
-	push {r3, r4, r5, lr}
-	sub sp, #0x48
-	add r4, r0, #0
-	add r5, sp, #0
-	str r1, [r4, #0x20]
-	str r2, [r4, #0x24]
-	add r0, r5, #0
-	bl sub_02070C7C
-	str r4, [sp, #8]
-	add r0, r5, #0
-	mov r1, #0x11
-	bl sub_02070170
-	ldr r1, [r4, #0x14]
-	mov r0, #2
-	orr r0, r1
-	str r0, [r4, #0x14]
-	mov r0, #1
-	add sp, #0x48
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070A30
-
-	thumb_func_start sub_02070A5C
-sub_02070A5C: ; 0x02070A5C
-	push {r4, r5, r6, r7, lr}
-	sub sp, #0x4c
-	add r5, r0, #0
-	blx OS_DisableInterrupts
-	str r0, [sp]
-	ldr r1, [r5, #0x14]
-	mov r0, #2
-	tst r0, r1
-	beq _02070A74
-	mov r0, #1
-	b _02070A76
-_02070A74:
-	mov r0, #0
-_02070A76:
-	cmp r0, #0
-	beq _02070AC8
-	add r0, r5, #0
-	bl sub_02070AD4
-	add r7, r0, #0
-	ldr r2, [r5, #0x14]
-	mov r1, #0x80
-	orr r1, r2
-	ldr r0, [r5, #8]
-	str r1, [r5, #0x14]
-	cmp r0, #0
-	beq _02070AA0
-	mov r6, #3
-_02070A92:
-	ldr r4, [r0]
-	add r1, r6, #0
-	bl sub_020700C8
-	add r0, r4, #0
-	cmp r4, #0
-	bne _02070A92
-_02070AA0:
-	mov r0, #0
-	str r0, [r5, #8]
-	cmp r7, #0
-	beq _02070AAE
-	add r0, r5, #0
-	bl sub_02070B44
-_02070AAE:
-	add r4, sp, #4
-	add r0, r4, #0
-	bl sub_02070C7C
-	str r5, [sp, #0xc]
-	add r0, r4, #0
-	mov r1, #0x12
-	bl sub_02070170
-	ldr r1, [r5, #0x14]
-	mov r0, #0xa2
-	bic r1, r0
-	str r1, [r5, #0x14]
-_02070AC8:
-	ldr r0, [sp]
-	blx OS_RestoreInterrupts
-	mov r0, #1
-	add sp, #0x4c
-	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_02070A5C
-
-	thumb_func_start sub_02070AD4
-sub_02070AD4: ; 0x02070AD4
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #8
-	add r5, r0, #0
-	blx OS_DisableInterrupts
-	str r0, [sp, #4]
-	ldr r1, [r5, #0x14]
-	mov r0, #8
-	tst r0, r1
-	beq _02070AEC
-	mov r0, #1
-	b _02070AEE
-_02070AEC:
-	mov r0, #0
-_02070AEE:
-	mov r7, #1
-	cmp r0, #0
-	beq _02070AF6
-	mov r7, #0
-_02070AF6:
-	cmp r7, #0
-	beq _02070B36
-	ldr r1, [r5, #0x14]
-	mov r0, #0x10
-	tst r0, r1
-	bne _02070B0A
-	mov r0, #8
-	orr r0, r1
-	str r0, [r5, #0x14]
-	b _02070B36
-_02070B0A:
-	mov r4, #0x40
-	add r0, r1, #0
-	orr r0, r4
-	str r0, [r5, #0x14]
-	blx OS_DisableInterrupts
-	str r0, [sp]
-	ldr r0, [r5, #0x14]
-	tst r0, r4
-	beq _02070B30
-	add r4, r5, #0
-	add r4, #0xc
-	mov r6, #0x40
-_02070B24:
-	add r0, r4, #0
-	bl OS_SleepThread
-	ldr r0, [r5, #0x14]
-	tst r0, r6
-	bne _02070B24
-_02070B30:
-	ldr r0, [sp]
-	blx OS_RestoreInterrupts
-_02070B36:
-	ldr r0, [sp, #4]
-	blx OS_RestoreInterrupts
-	add r0, r7, #0
-	add sp, #8
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-	thumb_func_end sub_02070AD4
-
-	thumb_func_start sub_02070B44
-sub_02070B44: ; 0x02070B44
-	push {r3, r4, r5, lr}
-	add r5, r0, #0
-	blx OS_DisableInterrupts
-	ldr r2, [r5, #0x14]
-	mov r1, #8
-	tst r1, r2
-	beq _02070B58
-	mov r1, #1
-	b _02070B5A
-_02070B58:
-	mov r1, #0
-_02070B5A:
-	mov r4, #1
-	cmp r1, #0
-	beq _02070B62
-	mov r4, #0
-_02070B62:
-	cmp r4, #0
-	bne _02070B6E
-	ldr r2, [r5, #0x14]
-	mov r1, #8
-	bic r2, r1
-	str r2, [r5, #0x14]
-_02070B6E:
-	blx OS_RestoreInterrupts
-	add r0, r5, #0
-	mov r1, #1
-	bl sub_0207038C
-	cmp r0, #0
-	beq _02070B82
-	bl sub_020704A0
-_02070B82:
-	add r0, r4, #0
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070B44
-
-	thumb_func_start sub_02070B88
-sub_02070B88: ; 0x02070B88
-	push {r4, r5, r6, lr}
-	add r6, r0, #0
-	ldr r4, [r6, #8]
-	mov r0, #4
-	ldr r2, [r4, #0xc]
-	add r5, r1, #0
-	tst r0, r2
-	beq _02070BB8
-	blx OS_DisableInterrupts
-	add r6, r0, #0
-	ldr r1, [r4, #0xc]
-	mov r0, #8
-	orr r0, r1
-	str r0, [r4, #0xc]
-	str r5, [r4, #0x14]
-	add r4, #0x18
-	add r0, r4, #0
-	bl OS_WakeupThread
-	add r0, r6, #0
-	blx OS_RestoreInterrupts
-	pop {r4, r5, r6, pc}
-_02070BB8:
-	add r0, r4, #0
-	bl sub_020700C8
-	add r0, r6, #0
-	mov r1, #1
-	bl sub_0207038C
-	cmp r0, #0
-	beq _02070BCE
-	bl sub_020704A0
-_02070BCE:
-	pop {r4, r5, r6, pc}
-	thumb_func_end sub_02070B88
-
-	thumb_func_start sub_02070BD0
-sub_02070BD0: ; 0x02070BD0
-	push {r3, r4}
-	sub r2, r1, #1
-	mov r4, #0x20
-	b _02070BDA
-_02070BD8:
-	sub r2, r2, #1
-_02070BDA:
-	cmp r2, #0
-	ble _02070BEC
-	add r3, r0, r2
-	sub r3, r3, #1
-	ldrb r3, [r3]
-	eor r3, r4
-	sub r3, #0xa1
-	cmp r3, #0x3c
-	blo _02070BD8
-_02070BEC:
-	sub r3, r1, #1
-	sub r1, r3, r2
-	mov r0, #1
-	and r0, r1
-	sub r0, r3, r0
-	pop {r3, r4}
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02070BD0
-
-	thumb_func_start sub_02070BFC
-sub_02070BFC: ; 0x02070BFC
-	push {r3, r4, r5, r6}
-	mov r2, #0
-	mov r3, #1
-	mov r5, #0x20
-	b _02070C1C
-_02070C06:
-	lsl r4, r6, #0x18
-	lsr r4, r4, #0x18
-	eor r4, r5
-	sub r4, #0xa1
-	cmp r4, #0x3c
-	bhs _02070C16
-	add r4, r3, #0
-	b _02070C18
-_02070C16:
-	add r4, r2, #0
-_02070C18:
-	add r1, r1, #1
-	add r1, r1, r4
-_02070C1C:
-	ldrsb r6, [r0, r1]
-	cmp r6, #0
-	beq _02070C2E
-	lsl r4, r6, #0x18
-	lsr r4, r4, #0x18
-	cmp r4, #0x2f
-	beq _02070C2E
-	cmp r4, #0x5c
-	bne _02070C06
-_02070C2E:
-	add r0, r1, #0
-	pop {r3, r4, r5, r6}
-	bx lr
-	thumb_func_end sub_02070BFC
-
-	thumb_func_start sub_02070C34
-sub_02070C34: ; 0x02070C34
-	push {r4, lr}
-	add r4, r0, #0
-_02070C38:
-	add r0, r4, #0
-	bl sub_02070BD0
-	add r1, r0, #0
-	bmi _02070C4C
-	ldrb r0, [r4, r1]
-	cmp r0, #0x2f
-	beq _02070C4C
-	cmp r0, #0x5c
-	bne _02070C38
-_02070C4C:
-	add r0, r1, #0
-	pop {r4, pc}
-	thumb_func_end sub_02070C34
-
-	thumb_func_start sub_02070C50
-sub_02070C50: ; 0x02070C50
-	push {r3, r4, r5, lr}
-	add r5, r0, #0
-	bl sub_0207F8AC
-	add r4, r0, #0
-	add r0, r5, #0
-	add r1, r4, #0
-	bl sub_02070BD0
-	cmp r0, #0
-	blt _02070C76
-	ldrb r1, [r5, r0]
-	cmp r1, #0x2f
-	beq _02070C70
-	cmp r1, #0x5c
-	bne _02070C76
-_02070C70:
-	mov r1, #0
-	add r4, r0, #0
-	strb r1, [r5, r0]
-_02070C76:
-	add r0, r4, #0
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070C50
-
-	thumb_func_start sub_02070C7C
-sub_02070C7C: ; 0x02070C7C
-	mov r1, #0x23
-	mov r2, #0
-	lsl r1, r1, #8
-	orr r1, r2
-	str r2, [r0, #8]
-	str r2, [r0, #4]
-	str r2, [r0]
-	str r2, [r0, #0x1c]
-	str r2, [r0, #0x18]
-	str r1, [r0, #0xc]
-	str r2, [r0, #0x10]
-	str r2, [r0, #0x14]
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02070C7C
-
-	thumb_func_start sub_02070C98
-sub_02070C98: ; 0x02070C98
-	push {r4, lr}
-	add r4, r0, #0
-	blx OS_DisableInterrupts
-	ldr r1, [r4, #0xc]
-	mov r2, #1
-	tst r1, r2
-	bne _02070CAA
-	mov r2, #0
-_02070CAA:
-	cmp r2, #0
-	beq _02070CC0
-	ldr r2, [r4, #0xc]
-	mov r1, #2
-	orr r1, r2
-	str r1, [r4, #0xc]
-	ldr r3, [r4, #8]
-	mov r1, #0x20
-	ldr r2, [r3, #0x14]
-	orr r1, r2
-	str r1, [r3, #0x14]
-_02070CC0:
-	blx OS_RestoreInterrupts
-	pop {r4, pc}
-	.align 2, 0
-	thumb_func_end sub_02070C98
-
-	thumb_func_start sub_02070CC8
-sub_02070CC8: ; 0x02070CC8
-	push {r4, r5, r6, r7, lr}
-	sub sp, #0x174
-	add r7, sp, #0x5c
-	add r5, r0, #0
-	mov r4, #0
-	add r0, r1, #0
-	add r1, sp, #0
-	add r2, r7, #0
-	str r4, [sp]
-	bl sub_02070734
-	add r6, r0, #0
-	beq _02070D0E
-	add r0, sp, #0x14
-	bl sub_02070C7C
-	add r0, sp, #4
-	str r0, [sp, #0x24]
-	ldr r0, [sp]
-	str r7, [sp, #8]
-	str r0, [sp, #4]
-	add r0, sp, #0x14
-	mov r1, #4
-	mov r2, #1
-	str r6, [sp, #0x1c]
-	str r4, [sp, #0x10]
-	mov r7, #1
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070D0E
-	str r6, [r5]
-	ldr r0, [sp, #0xc]
-	add r4, r7, #0
-	str r0, [r5, #4]
-_02070D0E:
-	add r0, r4, #0
-	add sp, #0x174
-	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_02070CC8
-
-	thumb_func_start sub_02070D14
-sub_02070D14: ; 0x02070D14
-	push {r3, lr}
-	sub sp, #0x10
-	str r1, [r0, #8]
-	add r1, sp, #0
-	str r1, [r0, #0x10]
-	ldr r1, [sp, #0x18]
-	str r2, [sp, #4]
-	str r1, [sp]
-	mov r1, #0
-	str r1, [sp, #0xc]
-	mov r1, #7
-	mov r2, #1
-	str r3, [sp, #8]
-	bl sub_02070554
-	add sp, #0x10
-	pop {r3, pc}
-	.align 2, 0
-	thumb_func_end sub_02070D14
-
-	thumb_func_start sub_02070D38
-sub_02070D38: ; 0x02070D38
-	push {r0, r1, r2, r3}
-	push {r3, lr}
-	sub sp, #8
-	ldr r1, [sp, #0x14]
-	mov r3, #0
-	ldr r2, [sp, #0x18]
-	cmp r1, #0
-	beq _02070D5C
-	str r1, [r0, #8]
-	add r1, sp, #0
-	str r1, [r0, #0x10]
-	str r2, [sp]
-	mov r1, #6
-	mov r2, #1
-	str r3, [sp, #4]
-	bl sub_02070554
-	add r3, r0, #0
-_02070D5C:
-	add r0, r3, #0
-	add sp, #8
-	pop {r3}
-	pop {r3}
-	add sp, #0x10
-	bx r3
-	thumb_func_end sub_02070D38
-
-	thumb_func_start sub_02070D68
-sub_02070D68: ; 0x02070D68
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #0x128
-	add r5, r0, #0
-	add r6, r2, #0
-	mov r4, #0
-	add r0, r1, #0
-	add r1, sp, #0
-	add r2, sp, #0x10
-	str r4, [sp]
-	bl sub_02070734
-	add r7, r0, #0
-	beq _02070DAE
-	add r0, r5, #0
-	bl sub_02070C7C
-	add r0, sp, #4
-	str r7, [r5, #8]
-	str r0, [r5, #0x10]
-	ldr r0, [sp]
-	str r6, [sp, #0xc]
-	str r0, [sp, #4]
-	add r0, sp, #0x10
-	str r0, [sp, #8]
-	add r0, r5, #0
-	mov r1, #0xd
-	mov r2, #1
-	mov r6, #1
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070DAC
-	add r4, r6, #0
-	b _02070DAE
-_02070DAC:
-	str r4, [r5, #8]
-_02070DAE:
-	add r0, r4, #0
-	add sp, #0x128
-	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02070D68
-
-	thumb_func_start sub_02070DB4
-sub_02070DB4: ; 0x02070DB4
-	ldr r3, _02070DBC ; =sub_02070554
-	mov r1, #8
-	mov r2, #1
-	bx r3
-	.align 2, 0
-_02070DBC: .word sub_02070554
-	thumb_func_end sub_02070DB4
-
-	thumb_func_start sub_02070DC0
-sub_02070DC0: ; 0x02070DC0
-	push {r3, r4, r5, lr}
-	sub sp, #8
-	mov r4, #0
-	add r1, sp, #4
-	add r5, r0, #0
-	str r4, [sp, #4]
-	bl sub_02071E74
-	cmp r0, #0
-	bne _02070DEC
-	add r0, sp, #0
-	str r0, [r5, #0x10]
-	add r0, r5, #0
-	mov r1, #0xf
-	mov r2, #1
-	str r4, [sp]
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070DEC
-	ldr r0, [sp]
-	str r0, [sp, #4]
-_02070DEC:
-	ldr r0, [sp, #4]
-	add sp, #8
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070DC0
-
-	thumb_func_start sub_02070DF4
-sub_02070DF4: ; 0x02070DF4
-	push {r3, r4, r5, lr}
-	sub sp, #8
-	mov r4, #0
-	add r1, sp, #4
-	add r5, r0, #0
-	str r4, [sp, #4]
-	bl sub_02071E9C
-	cmp r0, #0
-	bne _02070E20
-	add r0, sp, #0
-	str r0, [r5, #0x10]
-	add r0, r5, #0
-	mov r1, #0x10
-	mov r2, #1
-	str r4, [sp]
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070E20
-	ldr r0, [sp]
-	str r0, [sp, #4]
-_02070E20:
-	ldr r0, [sp, #4]
-	add sp, #8
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070DF4
-
-	thumb_func_start sub_02070E28
-sub_02070E28: ; 0x02070E28
-	push {r3, lr}
-	sub sp, #8
-	add r3, sp, #0
-	str r3, [r0, #0x10]
-	str r1, [sp]
-	str r2, [sp, #4]
-	mov r1, #0xe
-	mov r2, #1
-	bl sub_02070554
-	add sp, #8
-	pop {r3, pc}
-	thumb_func_end sub_02070E28
-
-	thumb_func_start sub_02070E40
-sub_02070E40: ; 0x02070E40
-	push {r3, r4, r5, lr}
-	sub sp, #8
-	add r5, r0, #0
-	add r3, sp, #0
-	str r3, [r5, #0x10]
-	str r1, [sp]
-	str r2, [sp, #4]
-	mov r1, #0
-	mov r2, #1
-	mov r4, #1
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070E5E
-	b _02070E66
-_02070E5E:
-	ldr r0, [r5, #0x14]
-	sub r2, r4, #2
-	cmp r0, #6
-	beq _02070E68
-_02070E66:
-	ldr r2, [sp, #4]
-_02070E68:
-	add r0, r2, #0
-	add sp, #8
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070E40
-
-	thumb_func_start sub_02070E70
-sub_02070E70: ; 0x02070E70
-	push {r3, r4, r5, lr}
-	sub sp, #8
-	add r5, r0, #0
-	add r3, sp, #0
-	str r3, [r5, #0x10]
-	str r1, [sp]
-	str r2, [sp, #4]
-	mov r1, #1
-	mov r2, #1
-	mov r4, #1
-	bl sub_02070554
-	cmp r0, #0
-	beq _02070E8E
-	b _02070E96
-_02070E8E:
-	ldr r0, [r5, #0x14]
-	sub r2, r4, #2
-	cmp r0, #6
-	beq _02070E98
-_02070E96:
-	ldr r2, [sp, #4]
-_02070E98:
-	add r0, r2, #0
-	add sp, #8
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end sub_02070E70
-
-	thumb_func_start sub_02070EA0
-sub_02070EA0: ; 0x02070EA0
-	ldr r3, _02070EA8 ; =sub_02070D68
-	mov r2, #1
-	bx r3
-	nop
-_02070EA8: .word sub_02070D68
-	thumb_func_end sub_02070EA0
-
-	thumb_func_start sub_02070EAC
-sub_02070EAC: ; 0x02070EAC
-	ldr r3, _02070EB0 ; =sub_02070DC0
-	bx r3
-	.align 2, 0
-_02070EB0: .word sub_02070DC0
-	thumb_func_end sub_02070EAC
-
-	thumb_func_start sub_02070EB4
-sub_02070EB4: ; 0x02070EB4
-	ldr r3, _02070EB8 ; =sub_02070680
-	bx r3
-	.align 2, 0
-_02070EB8: .word sub_02070680
-	thumb_func_end sub_02070EB4
 
 	thumb_func_start sub_02070EBC
 sub_02070EBC: ; 0x02070EBC
@@ -2066,7 +34,7 @@ _02070EE0:
 	mov r0, #0x40
 	str r0, [r4, #0x1c]
 	ldr r0, _02070F00 ; =0x0209B50C
-	bl sub_0207062C
+	bl FS_FindArchive
 	str r0, [r4, #4]
 	pop {r4, pc}
 	.align 2, 0
@@ -2075,8 +43,8 @@ _02070EFC: .word 0x02094548
 _02070F00: .word 0x0209B50C
 	thumb_func_end sub_02070EBC
 
-	thumb_func_start sub_02070F04
-sub_02070F04: ; 0x02070F04
+	thumb_func_start FSi_GetOverlayBinarySize
+FSi_GetOverlayBinarySize: ; 0x02070F04
 	ldr r2, [r0, #0x1c]
 	mov r1, #1
 	lsr r3, r2, #0x18
@@ -2088,10 +56,10 @@ sub_02070F04: ; 0x02070F04
 _02070F14:
 	ldr r0, [r0, #8]
 	bx lr
-	thumb_func_end sub_02070F04
+	thumb_func_end FSi_GetOverlayBinarySize
 
-	thumb_func_start sub_02070F18
-sub_02070F18: ; 0x02070F18
+	thumb_func_start FS_ClearOverlayImage
+FS_ClearOverlayImage: ; 0x02070F18
 	push {r4, r5, r6, lr}
 	ldr r4, [r0, #4]
 	ldr r5, [r0, #8]
@@ -2109,10 +77,10 @@ sub_02070F18: ; 0x02070F18
 	blx MI_CpuFill8
 	pop {r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end sub_02070F18
+	thumb_func_end FS_ClearOverlayImage
 
-	thumb_func_start sub_02070F40
-sub_02070F40: ; 0x02070F40
+	thumb_func_start FS_GetOverlayFileID
+FS_GetOverlayFileID: ; 0x02070F40
 	sub sp, #8
 	ldr r2, _02070F54 ; =0x0214BF60
 	ldr r1, [r1, #0x18]
@@ -2125,10 +93,10 @@ sub_02070F40: ; 0x02070F40
 	bx lr
 	.align 2, 0
 _02070F54: .word 0x0214BF60
-	thumb_func_end sub_02070F40
+	thumb_func_end FS_GetOverlayFileID
 
-	thumb_func_start sub_02070F58
-sub_02070F58: ; 0x02070F58
+	thumb_func_start FS_LoadOverlayInfo
+FS_LoadOverlayInfo: ; 0x02070F58
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xa4
 	add r4, r0, #0
@@ -2155,7 +123,7 @@ _02070F7C:
 	cmp r6, r0
 	bhs _02071046
 	add r0, sp, #0x5c
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r0, [r5]
 	add r1, r4, #0
 	add r0, r0, r6
@@ -2165,29 +133,29 @@ _02070F7C:
 	add r0, r5, #0
 	add r1, r4, #0
 	str r7, [r4, #0x20]
-	bl sub_02070F40
+	bl FS_GetOverlayFileID
 	add r0, sp, #0x5c
 	ldmia r5!, {r1, r2}
-	bl sub_02070D38
+	bl FS_OpenFileFast
 	cmp r0, #0
 	beq _02071046
 	add r0, sp, #0x5c
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	str r0, [r4, #0x24]
 	add r0, sp, #0x5c
-	bl sub_02070DC0
+	bl FS_GetFileLength
 	str r0, [r4, #0x28]
 	add r0, sp, #0x5c
 	b _0207103E
 _02070FC6:
 	cmp r7, #0
 	bne _02070FD4
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r5, r0, #0
 	add r5, #0x50
 	b _02070FDC
 _02070FD4:
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r5, r0, #0
 	add r5, #0x58
 _02070FDC:
@@ -2195,45 +163,45 @@ _02070FDC:
 	cmp r6, r0
 	bhs _02071046
 	add r0, sp, #0x14
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r2, [r5]
 	ldr r3, [r5, #4]
 	add r1, r2, r6
 	add r0, sp, #0x14
 	add r2, r2, r3
-	bl sub_0207236C
+	bl FS_CreateFileFromRom
 	cmp r0, #0
 	beq _02071046
 	add r0, sp, #0x14
 	add r1, r4, #0
 	mov r2, #0x20
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0x20
 	add r0, sp, #0x14
 	beq _02071010
-	bl sub_02070DB4
+	bl FS_CloseFile
 	b _02071046
 _02071010:
-	bl sub_02070DB4
+	bl FS_CloseFile
 	add r5, sp, #4
 	add r0, r5, #0
 	add r1, r4, #0
 	str r7, [r4, #0x20]
-	bl sub_02070F40
+	bl FS_GetOverlayFileID
 	add r0, sp, #0x14
 	ldmia r5!, {r1, r2}
-	bl sub_02070D38
+	bl FS_OpenFileFast
 	cmp r0, #0
 	beq _02071046
 	add r0, sp, #0x14
-	bl sub_02072010
+	bl FS_GetFileImageTop
 	str r0, [r4, #0x24]
 	add r0, sp, #0x14
-	bl sub_02070DC0
+	bl FS_GetFileLength
 	str r0, [r4, #0x28]
 	add r0, sp, #0x14
 _0207103E:
-	bl sub_02070DB4
+	bl FS_CloseFile
 	mov r0, #1
 	str r0, [sp]
 _02071046:
@@ -2244,49 +212,49 @@ _02071046:
 _0207104C: .word 0x0214BF68
 _02071050: .word 0x0214BF70
 _02071054: .word 0x00000158
-	thumb_func_end sub_02070F58
+	thumb_func_end FS_LoadOverlayInfo
 
-	thumb_func_start sub_02071058
-sub_02071058: ; 0x02071058
+	thumb_func_start FS_LoadOverlayImage
+FS_LoadOverlayImage: ; 0x02071058
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x50
 	add r7, sp, #8
 	add r4, r0, #0
 	add r0, r7, #0
 	mov r6, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r5, sp, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02070F40
+	bl FS_GetOverlayFileID
 	add r0, r7, #0
 	ldmia r5!, {r1, r2}
-	bl sub_02070D38
+	bl FS_OpenFileFast
 	cmp r0, #0
 	beq _020710A2
 	add r0, r4, #0
-	bl sub_02070F04
+	bl FSi_GetOverlayBinarySize
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02070F18
+	bl FS_ClearOverlayImage
 	ldr r1, [r4, #4]
 	add r0, r7, #0
 	add r2, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r5, r0
 	bne _0207109C
 	mov r6, #1
 _0207109C:
 	add r0, sp, #8
-	bl sub_02070DB4
+	bl FS_CloseFile
 _020710A2:
 	add r0, r6, #0
 	add sp, #0x50
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071058
+	thumb_func_end FS_LoadOverlayImage
 
-	thumb_func_start sub_020710A8
-sub_020710A8: ; 0x020710A8
+	thumb_func_start FSi_CompareDigest
+FSi_CompareDigest: ; 0x020710A8
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x5c
 	add r5, r0, #0
@@ -2359,13 +327,13 @@ _02071132:
 	pop {r4, r5, r6, r7, pc}
 	nop
 _02071138: .word 0x0214BF60
-	thumb_func_end sub_020710A8
+	thumb_func_end FSi_CompareDigest
 
-	thumb_func_start sub_0207113C
-sub_0207113C: ; 0x0207113C
+	thumb_func_start FS_StartOverlay
+FS_StartOverlay: ; 0x0207113C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_02070F04
+	bl FSi_GetOverlayBinarySize
 	add r7, r0, #0
 	ldr r1, [r5, #4]
 	ldr r0, _020711EC ; =0x02700000
@@ -2409,7 +377,7 @@ _02071168:
 	add r0, r0, r1
 	ldr r1, [r5, #4]
 	add r3, r6, #0
-	bl sub_020710A8
+	bl FSi_CompareDigest
 	add r6, r0, #0
 _020711A4:
 	cmp r6, #0
@@ -2454,10 +422,10 @@ _020711F0: .word 0x0276DDE0
 _020711F4: .word 0x0214BF60
 _020711F8: .word 0x0209D728
 _020711FC: .word 0x0209BC48
-	thumb_func_end sub_0207113C
+	thumb_func_end FS_StartOverlay
 
-	thumb_func_start sub_02071200
-sub_02071200: ; 0x02071200
+	thumb_func_start FS_EndOverlay
+FS_EndOverlay: ; 0x02071200
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
@@ -2551,19 +519,19 @@ _0207129C:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020712A0: .word 0x0214F4F8
-	thumb_func_end sub_02071200
+	thumb_func_end FS_EndOverlay
 
-	thumb_func_start sub_020712A4
-sub_020712A4: ; 0x020712A4
+	thumb_func_start FS_UnloadOverlayImage
+FS_UnloadOverlayImage: ; 0x020712A4
 	push {r3, lr}
-	bl sub_02071200
+	bl FS_EndOverlay
 	mov r0, #1
 	pop {r3, pc}
 	.align 2, 0
-	thumb_func_end sub_020712A4
+	thumb_func_end FS_UnloadOverlayImage
 
-	thumb_func_start sub_020712B0
-sub_020712B0: ; 0x020712B0
+	thumb_func_start FS_LoadOverlay
+FS_LoadOverlay: ; 0x020712B0
 	push {r4, r5, lr}
 	sub sp, #0x2c
 	add r3, r0, #0
@@ -2572,24 +540,24 @@ sub_020712B0: ; 0x020712B0
 	add r0, r4, #0
 	add r1, r3, #0
 	mov r5, #0
-	bl sub_02070F58
+	bl FS_LoadOverlayInfo
 	cmp r0, #0
 	beq _020712DA
 	add r0, r4, #0
-	bl sub_02071058
+	bl FS_LoadOverlayImage
 	cmp r0, #0
 	beq _020712DA
 	add r0, r4, #0
-	bl sub_0207113C
+	bl FS_StartOverlay
 	mov r5, #1
 _020712DA:
 	add r0, r5, #0
 	add sp, #0x2c
 	pop {r4, r5, pc}
-	thumb_func_end sub_020712B0
+	thumb_func_end FS_LoadOverlay
 
-	thumb_func_start sub_020712E0
-sub_020712E0: ; 0x020712E0
+	thumb_func_start FS_UnloadOverlay
+FS_UnloadOverlay: ; 0x020712E0
 	push {r3, r4, lr}
 	sub sp, #0x2c
 	add r3, r0, #0
@@ -2597,11 +565,11 @@ sub_020712E0: ; 0x020712E0
 	add r2, r1, #0
 	add r0, r4, #0
 	add r1, r3, #0
-	bl sub_02070F58
+	bl FS_LoadOverlayInfo
 	cmp r0, #0
 	beq _02071306
 	add r0, r4, #0
-	bl sub_020712A4
+	bl FS_UnloadOverlayImage
 	cmp r0, #0
 	beq _02071306
 	add sp, #0x2c
@@ -2611,10 +579,10 @@ _02071306:
 	mov r0, #0
 	add sp, #0x2c
 	pop {r3, r4, pc}
-	thumb_func_end sub_020712E0
+	thumb_func_end FS_UnloadOverlay
 
-	thumb_func_start sub_0207130C
-sub_0207130C: ; 0x0207130C
+	thumb_func_start FSi_ReadTable
+FSi_ReadTable: ; 0x0207130C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r4, [r5]
@@ -2635,32 +603,32 @@ _02071326:
 	blx r6
 	add r1, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_02070130
+	bl FSi_WaitForArchiveCompletion
 _02071338:
 	ldr r1, [r5, #4]
 	add r1, r1, r7
 	str r1, [r5, #4]
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_0207130C
+	thumb_func_end FSi_ReadTable
 
-	thumb_func_start sub_02071340
-sub_02071340: ; 0x02071340
+	thumb_func_start FSi_SeekDirDirect
+FSi_SeekDirDirect: ; 0x02071340
 	ldr r2, [r0, #8]
 	strh r1, [r0, #0x34]
 	mov r1, #0
 	str r2, [r0, #0x30]
-	ldr r3, _02071354 ; =sub_020718AC
+	ldr r3, _02071354 ; =FSi_TranslateCommand
 	strh r1, [r0, #0x36]
 	str r1, [r0, #0x38]
 	mov r1, #2
 	mov r2, #1
 	bx r3
 	.align 2, 0
-_02071354: .word sub_020718AC
-	thumb_func_end sub_02071340
+_02071354: .word FSi_TranslateCommand
+	thumb_func_end FSi_SeekDirDirect
 
-	thumb_func_start sub_02071358
-sub_02071358: ; 0x02071358
+	thumb_func_start FSi_SeekDirDefault
+FSi_SeekDirDefault: ; 0x02071358
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -2677,7 +645,7 @@ sub_02071358: ; 0x02071358
 	str r0, [sp, #4]
 	add r0, sp, #0
 	add r1, sp, #8
-	bl sub_0207130C
+	bl FSi_ReadTable
 	add r7, r0, #0
 	bne _020713B2
 	add r3, r4, #0
@@ -2712,10 +680,10 @@ _020713B2:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020713B8: .word 0x00000FFF
-	thumb_func_end sub_02071358
+	thumb_func_end FSi_SeekDirDefault
 
-	thumb_func_start sub_020713BC
-sub_020713BC: ; 0x020713BC
+	thumb_func_start FSi_ReadDirDefault
+FSi_ReadDirDefault: ; 0x020713BC
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r5, r0, #0
@@ -2729,7 +697,7 @@ sub_020713BC: ; 0x020713BC
 	add r0, r7, #0
 	mov r2, #1
 	mov r6, #1
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _0207145E
 	add r1, sp, #0
@@ -2752,7 +720,7 @@ _020713F8:
 	add r1, r4, #0
 	add r0, r7, #0
 	add r1, #0x14
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _0207145E
 	ldr r1, [r4, #0x10]
@@ -2781,7 +749,7 @@ _02071432:
 	add r0, sp, #4
 	add r1, #2
 	mov r2, #2
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _02071456
 	ldr r1, [r5, #8]
@@ -2804,10 +772,10 @@ _0207145E:
 	pop {r4, r5, r6, r7, pc}
 	nop
 _02071464: .word 0x00000FFF
-	thumb_func_end sub_020713BC
+	thumb_func_end FSi_ReadDirDefault
 
-	thumb_func_start sub_02071468
-sub_02071468: ; 0x02071468
+	thumb_func_start FSi_FindPathDefault
+FSi_FindPathDefault: ; 0x02071468
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xa0
 	add r1, r0, #0
@@ -2817,7 +785,7 @@ sub_02071468: ; 0x02071468
 	mov r1, #2
 	mov r2, #1
 	str r0, [sp]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	mov r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #0
@@ -2827,7 +795,7 @@ _02071488:
 	add r0, r4, #0
 	mov r1, #0
 	mov r6, #0
-	bl sub_02070BFC
+	bl FSi_IncrementSjisPositionToSlash
 	add r5, r0, #0
 	mov r0, #1
 	str r0, [sp, #4]
@@ -2867,7 +835,7 @@ _020714C0:
 	ldr r0, [sp]
 	add r1, r0, #0
 	ldr r1, [r1, #0x2c]
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 _020714DE:
 	add r4, r4, #2
 	b _02071592
@@ -2891,7 +859,7 @@ _020714FC:
 	ldr r0, [sp]
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	beq _02071510
 	add sp, #0xa0
@@ -2949,7 +917,7 @@ _0207154E:
 	ldr r0, [sp]
 	mov r2, #1
 	add r4, r4, r5
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	b _02071592
 _02071574:
 	ldr r0, [sp, #8]
@@ -3003,10 +971,10 @@ _020715B4:
 	mov r0, #0
 	add sp, #0xa0
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071468
+	thumb_func_end FSi_FindPathDefault
 
-	thumb_func_start sub_020715D0
-sub_020715D0: ; 0x020715D0
+	thumb_func_start FSi_GetPathDefault
+FSi_GetPathDefault: ; 0x020715D0
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xfc
 	add r4, r0, #0
@@ -3018,7 +986,7 @@ sub_020715D0: ; 0x020715D0
 	add r0, #0x30
 	str r0, [sp, #0x10]
 	add r0, sp, #0x20
-	bl sub_02070C7C
+	bl FS_InitFile
 	ldr r0, [sp, #0x14]
 	str r0, [sp, #0x28]
 	ldr r1, [r4, #0xc]
@@ -3049,7 +1017,7 @@ _02071608:
 _0207161A:
 	ldr r1, [sp, #0xc]
 	add r0, r6, #0
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 	ldr r0, [sp, #0xc]
 	cmp r0, #0
 	bne _0207162C
@@ -3063,7 +1031,7 @@ _0207162C:
 	add r0, r6, #0
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _02071662
 _02071642:
@@ -3080,7 +1048,7 @@ _02071654:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	beq _02071642
 _02071662:
@@ -3108,13 +1076,13 @@ _02071674:
 _0207168A:
 	ldr r0, [sp, #0x14]
 	add r6, r5, #0
-	bl sub_02070A24
-	bl sub_0207F8AC
+	bl FS_GetArchiveName
+	bl STD_GetStringLength
 	add r0, r0, #2
 	str r0, [sp, #4]
 	add r0, r7, #0
 	add r1, r5, #0
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 	mov r0, #1
 	lsl r0, r0, #0x10
 	cmp r4, r0
@@ -3129,7 +1097,7 @@ _020716B2:
 _020716B6:
 	ldr r1, [sp, #0x4c]
 	add r0, r7, #0
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 	add r0, sp, #0x68
 	str r0, [sp, #0x50]
 	mov r0, #1
@@ -3137,7 +1105,7 @@ _020716B6:
 	add r0, r7, #0
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _020716FC
 _020716D4:
@@ -3158,7 +1126,7 @@ _020716EE:
 	add r0, r7, #0
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	beq _020716D4
 _020716FC:
@@ -3182,9 +1150,9 @@ _02071704:
 	cmp r0, r6
 	blo _02071812
 	ldr r0, [sp, #0x14]
-	bl sub_02070A24
+	bl FS_GetArchiveName
 	str r0, [sp, #0x18]
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	add r7, r0, #0
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp]
@@ -3200,7 +1168,7 @@ _02071704:
 	blx MI_CpuCopy8
 	add r0, sp, #0x20
 	add r1, r5, #0
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 	lsl r0, r7, #0xf
 	cmp r4, r0
 	beq _020717A0
@@ -3211,7 +1179,7 @@ _02071704:
 	add r0, sp, #0x20
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _0207178A
 	mov r7, #3
@@ -3226,7 +1194,7 @@ _0207177C:
 	add r0, sp, #0x20
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	beq _02071770
 _0207178A:
@@ -3255,7 +1223,7 @@ _020717AC:
 _020717B4:
 	ldr r1, [sp, #0x4c]
 	add r0, r4, #0
-	bl sub_02071340
+	bl FSi_SeekDirDirect
 	mov r0, #0
 	str r0, [sp, #0x54]
 	ldr r0, [sp]
@@ -3268,7 +1236,7 @@ _020717B4:
 	mov r1, #3
 	mov r2, #1
 	sub r6, r6, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _0207180A
 _020717DC:
@@ -3291,7 +1259,7 @@ _020717FC:
 	add r0, r4, #0
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	beq _020717DC
 _0207180A:
@@ -3305,10 +1273,10 @@ _02071812:
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
 _02071818: .word 0x0209B510
-	thumb_func_end sub_020715D0
+	thumb_func_end FSi_GetPathDefault
 
-	thumb_func_start sub_0207181C
-sub_0207181C: ; 0x0207181C
+	thumb_func_start FSi_OpenFileFastDefault
+FSi_OpenFileFastDefault: ; 0x0207181C
 	push {r3, r4, r5, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -3330,7 +1298,7 @@ _02071836:
 	str r0, [sp, #4]
 	add r0, sp, #0
 	add r1, sp, #8
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _02071860
 	ldr r0, [sp, #8]
@@ -3341,14 +1309,14 @@ _02071836:
 	str r0, [r5, #0x34]
 	add r0, r5, #0
 	str r4, [r5, #0x38]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 _02071860:
 	add sp, #0x10
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_0207181C
+	thumb_func_end FSi_OpenFileFastDefault
 
-	thumb_func_start sub_02071864
-sub_02071864: ; 0x02071864
+	thumb_func_start FSi_OpenFileDirectDefault
+FSi_OpenFileDirectDefault: ; 0x02071864
 	ldr r1, [r0, #0x30]
 	str r1, [r0, #0x24]
 	str r1, [r0, #0x2c]
@@ -3359,10 +1327,10 @@ sub_02071864: ; 0x02071864
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071864
+	thumb_func_end FSi_OpenFileDirectDefault
 
-	thumb_func_start sub_02071878
-sub_02071878: ; 0x02071878
+	thumb_func_start FSi_ReadFileDefault
+FSi_ReadFileDefault: ; 0x02071878
 	push {r4, r5, r6, lr}
 	ldr r6, [r0, #8]
 	ldr r2, [r0, #0x2c]
@@ -3375,10 +1343,10 @@ sub_02071878: ; 0x02071878
 	add r0, r6, #0
 	blx r4
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_02071878
+	thumb_func_end FSi_ReadFileDefault
 
-	thumb_func_start sub_02071890
-sub_02071890: ; 0x02071890
+	thumb_func_start FSi_WriteFileDefault
+FSi_WriteFileDefault: ; 0x02071890
 	push {r4, r5, r6, lr}
 	ldr r6, [r0, #8]
 	ldr r2, [r0, #0x2c]
@@ -3391,16 +1359,16 @@ sub_02071890: ; 0x02071890
 	add r0, r6, #0
 	blx r4
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_02071890
+	thumb_func_end FSi_WriteFileDefault
 
-	thumb_func_start sub_020718A8
-sub_020718A8: ; 0x020718A8
+	thumb_func_start FSi_IgnoredCommand
+FSi_IgnoredCommand: ; 0x020718A8
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_020718A8
+	thumb_func_end FSi_IgnoredCommand
 
-	thumb_func_start sub_020718AC
-sub_020718AC: ; 0x020718AC
+	thumb_func_start FSi_TranslateCommand
+FSi_TranslateCommand: ; 0x020718AC
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	str r2, [sp]
@@ -3468,7 +1436,7 @@ _02071920:
 	beq _02071930
 	ldr r0, [sp, #8]
 	add r1, r6, #0
-	bl sub_02070130
+	bl FSi_WaitForArchiveCompletion
 	add r6, r0, #0
 _02071930:
 	add r0, r6, #0
@@ -3477,10 +1445,10 @@ _02071930:
 	nop
 _02071938: .word 0x00000101
 _0207193C: .word 0x02094588
-	thumb_func_end sub_020718AC
+	thumb_func_end FSi_TranslateCommand
 
-	thumb_func_start sub_02071940
-sub_02071940: ; 0x02071940
+	thumb_func_start FSi_ROMFAT_ReadFile
+FSi_ROMFAT_ReadFile: ; 0x02071940
 	push {r4, lr}
 	ldr r0, [r1, #4]
 	ldr r4, [r0, #8]
@@ -3498,13 +1466,13 @@ _02071952:
 	str r0, [r1, #0x38]
 	add r0, r1, #0
 	mov r1, #0
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_02071940
+	thumb_func_end FSi_ROMFAT_ReadFile
 
-	thumb_func_start sub_02071968
-sub_02071968: ; 0x02071968
+	thumb_func_start FSi_ROMFAT_WriteFile
+FSi_ROMFAT_WriteFile: ; 0x02071968
 	push {r4, lr}
 	ldr r0, [r1, #4]
 	ldr r4, [r0, #8]
@@ -3522,13 +1490,13 @@ _0207197A:
 	str r0, [r1, #0x38]
 	add r0, r1, #0
 	mov r1, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_02071968
+	thumb_func_end FSi_ROMFAT_WriteFile
 
-	thumb_func_start sub_02071990
-sub_02071990: ; 0x02071990
+	thumb_func_start FSi_ROMFAT_SeekDirectory
+FSi_ROMFAT_SeekDirectory: ; 0x02071990
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -3542,7 +1510,7 @@ sub_02071990: ; 0x02071990
 	mov r2, #1
 	str r5, [r4, #8]
 	str r5, [r4, #0x30]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _020719C6
 	ldr r2, [r4, #0xc]
@@ -3557,10 +1525,10 @@ sub_02071990: ; 0x02071990
 	str r1, [r4, #4]
 _020719C6:
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_02071990
+	thumb_func_end FSi_ROMFAT_SeekDirectory
 
-	thumb_func_start sub_020719C8
-sub_020719C8: ; 0x020719C8
+	thumb_func_start FSi_ROMFAT_ReadDirectory
+FSi_ROMFAT_ReadDirectory: ; 0x020719C8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xa8
 	add r5, r2, #0
@@ -3574,7 +1542,7 @@ sub_020719C8: ; 0x020719C8
 	str r7, [r2, #4]
 	mov r1, #3
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	str r0, [sp]
 	cmp r0, #0
 	bne _02071AA4
@@ -3631,7 +1599,7 @@ _02071A2A:
 	add r0, sp, #4
 	add r1, sp, #0xc
 	mov r7, #8
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _02071A82
 	ldr r1, [sp, #0x10]
@@ -3674,10 +1642,10 @@ _02071AA4:
 	add sp, #0xa8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end sub_020719C8
+	thumb_func_end FSi_ROMFAT_ReadDirectory
 
-	thumb_func_start sub_02071AAC
-sub_02071AAC: ; 0x02071AAC
+	thumb_func_start FSi_ROMFAT_FindPath
+FSi_ROMFAT_FindPath: ; 0x02071AAC
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x54
 	add r5, r0, #0
@@ -3685,7 +1653,7 @@ sub_02071AAC: ; 0x02071AAC
 	add r6, r1, #0
 	add r7, r2, #0
 	add r4, r3, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, sp, #0xc
 	mov r1, #0
 	strh r6, [r0, #0x34]
@@ -3701,7 +1669,7 @@ sub_02071AAC: ; 0x02071AAC
 	str r5, [sp, #0x14]
 	str r5, [sp, #0x3c]
 	str r7, [sp, #0x48]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _02071AF8
 	ldr r1, [sp, #0x68]
@@ -3718,10 +1686,10 @@ _02071AF4:
 _02071AF8:
 	add sp, #0x54
 	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071AAC
+	thumb_func_end FSi_ROMFAT_FindPath
 
-	thumb_func_start sub_02071AFC
-sub_02071AFC: ; 0x02071AFC
+	thumb_func_start FSi_ROMFAT_GetPath
+FSi_ROMFAT_GetPath: ; 0x02071AFC
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	ldr r5, [sp, #0x10]
@@ -3735,17 +1703,17 @@ sub_02071AFC: ; 0x02071AFC
 	str r0, [r4, #4]
 	add r0, r1, #0
 	mov r1, #5
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _02071B22
 	ldr r1, [r4, #4]
 	str r1, [r5]
 _02071B22:
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_02071AFC
+	thumb_func_end FSi_ROMFAT_GetPath
 
-	thumb_func_start sub_02071B24
-sub_02071B24: ; 0x02071B24
+	thumb_func_start FSi_ROMFAT_OpenFileFast
+FSi_ROMFAT_OpenFileFast: ; 0x02071B24
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	add r5, r0, #0
@@ -3756,7 +1724,7 @@ sub_02071B24: ; 0x02071B24
 	mov r1, #6
 	mov r2, #1
 	str r5, [r4, #0x30]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _02071B54
 	ldr r2, [r4, #0xc]
@@ -3772,10 +1740,10 @@ sub_02071B24: ; 0x02071B24
 _02071B54:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071B24
+	thumb_func_end FSi_ROMFAT_OpenFileFast
 
-	thumb_func_start sub_02071B58
-sub_02071B58: ; 0x02071B58
+	thumb_func_start FSi_ROMFAT_OpenFileDirect
+FSi_ROMFAT_OpenFileDirect: ; 0x02071B58
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	add r5, r0, #0
@@ -3788,7 +1756,7 @@ sub_02071B58: ; 0x02071B58
 	str r0, [r1, #8]
 	add r0, r4, #0
 	mov r1, #7
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	cmp r0, #0
 	bne _02071B8C
 	ldr r2, [r4, #0xc]
@@ -3804,16 +1772,16 @@ sub_02071B58: ; 0x02071B58
 _02071B8C:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071B58
+	thumb_func_end FSi_ROMFAT_OpenFileDirect
 
-	thumb_func_start sub_02071B90
-sub_02071B90: ; 0x02071B90
+	thumb_func_start FSi_ROMFAT_CloseFile
+FSi_ROMFAT_CloseFile: ; 0x02071B90
 	push {r4, lr}
 	add r4, r1, #0
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #1
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	mov r1, #0
 	str r1, [r4, #4]
 	ldr r2, [r4, #0xc]
@@ -3821,82 +1789,82 @@ sub_02071B90: ; 0x02071B90
 	bic r2, r1
 	str r2, [r4, #0xc]
 	pop {r4, pc}
-	thumb_func_end sub_02071B90
+	thumb_func_end FSi_ROMFAT_CloseFile
 
-	thumb_func_start sub_02071BAC
-sub_02071BAC: ; 0x02071BAC
+	thumb_func_start FSi_ROMFAT_Activate
+FSi_ROMFAT_Activate: ; 0x02071BAC
 	push {r3, r4, r5, lr}
 	sub sp, #0x48
 	add r4, sp, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r4, #0
 	mov r1, #9
 	mov r2, #0
 	str r5, [sp, #8]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	add sp, #0x48
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071BAC
+	thumb_func_end FSi_ROMFAT_Activate
 
-	thumb_func_start sub_02071BCC
-sub_02071BCC: ; 0x02071BCC
+	thumb_func_start FSi_ROMFAT_Idle
+FSi_ROMFAT_Idle: ; 0x02071BCC
 	push {r3, r4, r5, lr}
 	sub sp, #0x48
 	add r4, sp, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r4, #0
 	mov r1, #0xa
 	mov r2, #0
 	str r5, [sp, #8]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	add sp, #0x48
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071BCC
+	thumb_func_end FSi_ROMFAT_Idle
 
-	thumb_func_start sub_02071BEC
-sub_02071BEC: ; 0x02071BEC
+	thumb_func_start FSi_ROMFAT_Suspend
+FSi_ROMFAT_Suspend: ; 0x02071BEC
 	push {r3, r4, r5, lr}
 	sub sp, #0x48
 	add r4, sp, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r4, #0
 	mov r1, #0xb
 	mov r2, #0
 	str r5, [sp, #8]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	add sp, #0x48
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071BEC
+	thumb_func_end FSi_ROMFAT_Suspend
 
-	thumb_func_start sub_02071C0C
-sub_02071C0C: ; 0x02071C0C
+	thumb_func_start FSi_ROMFAT_Resume
+FSi_ROMFAT_Resume: ; 0x02071C0C
 	push {r3, r4, r5, lr}
 	sub sp, #0x48
 	add r4, sp, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02070C7C
+	bl FS_InitFile
 	add r0, r4, #0
 	mov r1, #0xc
 	mov r2, #0
 	str r5, [sp, #8]
-	bl sub_020718AC
+	bl FSi_TranslateCommand
 	add sp, #0x48
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071C0C
+	thumb_func_end FSi_ROMFAT_Resume
 
-	thumb_func_start sub_02071C2C
-sub_02071C2C: ; 0x02071C2C
+	thumb_func_start FSi_ROMFAT_OpenFile
+FSi_ROMFAT_OpenFile: ; 0x02071C2C
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r4, r1, #0
@@ -3906,22 +1874,22 @@ sub_02071C2C: ; 0x02071C2C
 	add r2, r3, #0
 	add r3, sp, #4
 	add r5, r0, #0
-	bl sub_02071AAC
+	bl FSi_ROMFAT_FindPath
 	cmp r0, #0
 	bne _02071C52
 	ldr r2, [sp, #4]
 	ldr r3, [sp, #0x18]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02071B24
+	bl FSi_ROMFAT_OpenFileFast
 _02071C52:
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071C2C
+	thumb_func_end FSi_ROMFAT_OpenFile
 
-	thumb_func_start sub_02071C58
-sub_02071C58: ; 0x02071C58
+	thumb_func_start FSi_ROMFAT_SeekFile
+FSi_ROMFAT_SeekFile: ; 0x02071C58
 	ldr r0, [r1, #4]
 	ldr r1, [r2]
 	cmp r3, #0
@@ -3956,10 +1924,10 @@ _02071C86:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071C58
+	thumb_func_end FSi_ROMFAT_SeekFile
 
-	thumb_func_start sub_02071C90
-sub_02071C90: ; 0x02071C90
+	thumb_func_start FSi_ROMFAT_GetFileLength
+FSi_ROMFAT_GetFileLength: ; 0x02071C90
 	ldr r0, [r1, #4]
 	ldr r1, [r0, #8]
 	ldr r0, [r0, #4]
@@ -3968,10 +1936,10 @@ sub_02071C90: ; 0x02071C90
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071C90
+	thumb_func_end FSi_ROMFAT_GetFileLength
 
-	thumb_func_start sub_02071CA0
-sub_02071CA0: ; 0x02071CA0
+	thumb_func_start FSi_ROMFAT_GetFilePosition
+FSi_ROMFAT_GetFilePosition: ; 0x02071CA0
 	ldr r0, [r1, #4]
 	ldr r1, [r0, #0xc]
 	ldr r0, [r0, #4]
@@ -3980,13 +1948,13 @@ sub_02071CA0: ; 0x02071CA0
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071CA0
+	thumb_func_end FSi_ROMFAT_GetFilePosition
 
-	thumb_func_start sub_02071CB0
-sub_02071CB0: ; 0x02071CB0
+	thumb_func_start FSi_ROMFAT_Unmount
+FSi_ROMFAT_Unmount: ; 0x02071CB0
 	push {r4, lr}
 	ldr r4, [r0, #0x20]
-	bl sub_02072000
+	bl FS_IsArchiveTableLoaded
 	mov r0, #0
 	str r0, [r4]
 	str r0, [r4, #4]
@@ -3997,18 +1965,18 @@ sub_02071CB0: ; 0x02071CB0
 	str r0, [r4, #0x18]
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_02071CB0
+	thumb_func_end FSi_ROMFAT_Unmount
 
-	thumb_func_start sub_02071CCC
-sub_02071CCC: ; 0x02071CCC
+	thumb_func_start FSi_ROMFAT_GetArchiveCaps
+FSi_ROMFAT_GetArchiveCaps: ; 0x02071CCC
 	mov r0, #0
 	str r0, [r1]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071CCC
+	thumb_func_end FSi_ROMFAT_GetArchiveCaps
 
-	thumb_func_start sub_02071CD4
-sub_02071CD4: ; 0x02071CD4
+	thumb_func_start FSi_ROMFAT_OpenDirectory
+FSi_ROMFAT_OpenDirectory: ; 0x02071CD4
 	push {r4, r5, r6, lr}
 	sub sp, #8
 	mov r6, #0
@@ -4020,22 +1988,22 @@ sub_02071CD4: ; 0x02071CD4
 	add r2, r3, #0
 	add r3, sp, #4
 	add r5, r0, #0
-	bl sub_02071AAC
+	bl FSi_ROMFAT_FindPath
 	cmp r0, #0
 	bne _02071CFE
 	ldr r2, [sp, #4]
 	add r0, r5, #0
 	add r1, r4, #0
 	add r3, r6, #0
-	bl sub_02071990
+	bl FSi_ROMFAT_SeekDirectory
 _02071CFE:
 	add sp, #8
 	pop {r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end sub_02071CD4
+	thumb_func_end FSi_ROMFAT_OpenDirectory
 
-	thumb_func_start sub_02071D04
-sub_02071D04: ; 0x02071D04
+	thumb_func_start FSi_ROMFAT_CloseDirectory
+FSi_ROMFAT_CloseDirectory: ; 0x02071D04
 	ldr r3, [r1, #0xc]
 	mov r2, #0x30
 	mov r0, #0
@@ -4044,10 +2012,10 @@ sub_02071D04: ; 0x02071D04
 	str r3, [r1, #0xc]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071D04
+	thumb_func_end FSi_ROMFAT_CloseDirectory
 
-	thumb_func_start sub_02071D14
-sub_02071D14: ; 0x02071D14
+	thumb_func_start FSi_ROMFAT_GetPathInfo
+FSi_ROMFAT_GetPathInfo: ; 0x02071D14
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x20
 	add r5, r0, #0
@@ -4067,7 +2035,7 @@ sub_02071D14: ; 0x02071D14
 	add r0, r5, #0
 	add r3, sp, #0x1c
 	str r7, [sp]
-	bl sub_02071AAC
+	bl FSi_ROMFAT_FindPath
 	cmp r0, #0
 	bne _02071D4E
 	add r7, #0xff
@@ -4082,7 +2050,7 @@ _02071D4E:
 	ldr r2, [sp, #8]
 	add r0, r5, #0
 	add r3, sp, #0x1c
-	bl sub_02071AAC
+	bl FSi_ROMFAT_FindPath
 	cmp r0, #0
 	bne _02071DB0
 	mov r0, #0
@@ -4105,7 +2073,7 @@ _02071D4E:
 	add r0, sp, #0xc
 	add r1, sp, #0x14
 	mov r6, #8
-	bl sub_0207130C
+	bl FSi_ReadTable
 	cmp r0, #0
 	bne _02071DAE
 	ldr r1, [sp, #0x18]
@@ -4132,13 +2100,13 @@ _02071DB0:
 	add r0, r6, #0
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071D14
+	thumb_func_end FSi_ROMFAT_GetPathInfo
 
-	thumb_func_start sub_02071DC0
-sub_02071DC0: ; 0x02071DC0
+	thumb_func_start FSi_ROMFAT_GetArchiveResource
+FSi_ROMFAT_GetArchiveResource: ; 0x02071DC0
 	push {r4, lr}
 	add r4, r1, #0
-	bl sub_0206EED8
+	bl CARD_GetRomHeader
 	mov r2, #0
 	str r2, [r4, #0x20]
 	str r2, [r4, #0x24]
@@ -4159,29 +2127,29 @@ sub_02071DC0: ; 0x02071DC0
 	pop {r4, pc}
 	.align 2, 0
 _02071DEC: .word 0x7FFFFFFF
-	thumb_func_end sub_02071DC0
+	thumb_func_end FSi_ROMFAT_GetArchiveResource
 
-	thumb_func_start sub_02071DF0
-sub_02071DF0: ; 0x02071DF0
+	thumb_func_start FSi_ReadMemCallback
+FSi_ReadMemCallback: ; 0x02071DF0
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
 	add r4, r3, #0
 	add r1, r2, #0
-	bl sub_02071FF8
+	bl FS_GetArchiveOffset
 	add r1, r5, #0
 	add r2, r4, #0
 	blx MI_CpuCopy8
 	mov r0, #0
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_02071DF0
+	thumb_func_end FSi_ReadMemCallback
 
-	thumb_func_start sub_02071E08
-sub_02071E08: ; 0x02071E08
+	thumb_func_start FSi_WriteMemCallback
+FSi_WriteMemCallback: ; 0x02071E08
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
 	add r4, r3, #0
 	add r1, r2, #0
-	bl sub_02071FF8
+	bl FS_GetArchiveOffset
 	add r1, r0, #0
 	add r0, r5, #0
 	add r2, r4, #0
@@ -4189,10 +2157,10 @@ sub_02071E08: ; 0x02071E08
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_02071E08
+	thumb_func_end FSi_WriteMemCallback
 
-	thumb_func_start sub_02071E24
-sub_02071E24: ; 0x02071E24
+	thumb_func_start FS_LoadArchive
+FS_LoadArchive: ; 0x02071E24
 	push {r4, lr}
 	add r4, r0, #0
 	add r4, #0x28
@@ -4208,37 +2176,37 @@ sub_02071E24: ; 0x02071E24
 	str r2, [r4, #0x14]
 	cmp r1, #0
 	bne _02071E44
-	ldr r1, _02071E60 ; =sub_02071DF0
+	ldr r1, _02071E60 ; =FSi_ReadMemCallback
 _02071E44:
 	str r1, [r4, #0x20]
 	ldr r1, [sp, #0x14]
 	cmp r1, #0
 	bne _02071E4E
-	ldr r1, _02071E64 ; =sub_02071E08
+	ldr r1, _02071E64 ; =FSi_WriteMemCallback
 _02071E4E:
 	ldr r2, _02071E68 ; =0x020945BC
 	str r1, [r4, #0x24]
 	mov r3, #0
 	add r1, r4, #0
 	str r3, [r4, #0x1c]
-	bl sub_02070A30
+	bl FS_MountArchive
 	pop {r4, pc}
 	nop
-_02071E60: .word sub_02071DF0
-_02071E64: .word sub_02071E08
+_02071E60: .word FSi_ReadMemCallback
+_02071E64: .word FSi_WriteMemCallback
 _02071E68: .word 0x020945BC
-	thumb_func_end sub_02071E24
+	thumb_func_end FS_LoadArchive
 
-	thumb_func_start sub_02071E6C
-sub_02071E6C: ; 0x02071E6C
-	ldr r3, _02071E70 ; =sub_02070A5C
+	thumb_func_start FS_UnloadArchive
+FS_UnloadArchive: ; 0x02071E6C
+	ldr r3, _02071E70 ; =FS_UnmountArchive
 	bx r3
 	.align 2, 0
-_02071E70: .word sub_02070A5C
-	thumb_func_end sub_02071E6C
+_02071E70: .word FS_UnmountArchive
+	thumb_func_end FS_UnloadArchive
 
-	thumb_func_start sub_02071E74
-sub_02071E74: ; 0x02071E74
+	thumb_func_start FSi_GetFileLengthIfProc
+FSi_GetFileLengthIfProc: ; 0x02071E74
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #8]
@@ -4249,7 +2217,7 @@ sub_02071E74: ; 0x02071E74
 	cmp r3, r1
 	bne _02071E92
 	add r1, r5, #0
-	bl sub_02071C90
+	bl FSi_ROMFAT_GetFileLength
 	cmp r0, #0
 	bne _02071E92
 	mov r4, #1
@@ -4258,10 +2226,10 @@ _02071E92:
 	pop {r3, r4, r5, pc}
 	nop
 _02071E98: .word 0x020945BC
-	thumb_func_end sub_02071E74
+	thumb_func_end FSi_GetFileLengthIfProc
 
-	thumb_func_start sub_02071E9C
-sub_02071E9C: ; 0x02071E9C
+	thumb_func_start FSi_GetFilePositionIfProc
+FSi_GetFilePositionIfProc: ; 0x02071E9C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #8]
@@ -4272,7 +2240,7 @@ sub_02071E9C: ; 0x02071E9C
 	cmp r3, r1
 	bne _02071EBA
 	add r1, r5, #0
-	bl sub_02071CA0
+	bl FSi_ROMFAT_GetFilePosition
 	cmp r0, #0
 	bne _02071EBA
 	mov r4, #1
@@ -4281,10 +2249,10 @@ _02071EBA:
 	pop {r3, r4, r5, pc}
 	nop
 _02071EC0: .word 0x020945BC
-	thumb_func_end sub_02071E9C
+	thumb_func_end FSi_GetFilePositionIfProc
 
-	thumb_func_start sub_02071EC4
-sub_02071EC4: ; 0x02071EC4
+	thumb_func_start FS_SetArchiveProc
+FS_SetArchiveProc: ; 0x02071EC4
 	add r0, #0x28
 	cmp r2, #0
 	bne _02071ECE
@@ -4299,10 +2267,10 @@ _02071ED4:
 	str r2, [r0, #0x30]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071EC4
+	thumb_func_end FS_SetArchiveProc
 
-	thumb_func_start sub_02071EDC
-sub_02071EDC: ; 0x02071EDC
+	thumb_func_start FS_LoadArchiveTables
+FS_LoadArchiveTables: ; 0x02071EDC
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x50
 	add r7, r1, #0
@@ -4310,11 +2278,11 @@ sub_02071EDC: ; 0x02071EDC
 	add r5, r2, #0
 	cmp r7, #0
 	beq _02071EF8
-	bl sub_02072000
+	bl FS_IsArchiveTableLoaded
 	cmp r0, #0
 	beq _02071EF8
 	add r0, r6, #0
-	bl sub_02071FA0
+	bl FS_UnloadArchiveTables
 _02071EF8:
 	ldr r4, [r6, #0x20]
 	ldr r1, [r4, #8]
@@ -4332,7 +2300,7 @@ _02071EF8:
 	add r5, #0x1f
 	add r0, sp, #8
 	bic r5, r1
-	bl sub_02070C7C
+	bl FS_InitFile
 	mov r0, #0
 	ldr r2, [r4, #4]
 	mvn r0, r0
@@ -4341,13 +2309,13 @@ _02071EF8:
 	add r0, sp, #8
 	add r1, r6, #0
 	add r3, r2, r3
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	cmp r0, #0
 	beq _02071F52
 	ldr r2, [r4, #8]
 	add r0, sp, #8
 	add r1, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0
 	bge _02071F4C
 	ldr r2, [r4, #8]
@@ -4356,7 +2324,7 @@ _02071EF8:
 	blx MI_CpuFill8
 _02071F4C:
 	add r0, sp, #8
-	bl sub_02070DB4
+	bl FS_CloseFile
 _02071F52:
 	str r5, [r4, #4]
 	ldr r0, [r4, #8]
@@ -4369,13 +2337,13 @@ _02071F52:
 	add r0, sp, #8
 	add r1, r6, #0
 	add r3, r2, r3
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	cmp r0, #0
 	beq _02071F8E
 	ldr r2, [r4, #0x10]
 	add r0, sp, #8
 	add r1, r5, #0
-	bl sub_02070E40
+	bl FS_ReadFile
 	cmp r0, #0
 	bge _02071F88
 	ldr r2, [r4, #0x10]
@@ -4384,7 +2352,7 @@ _02071F52:
 	blx MI_CpuFill8
 _02071F88:
 	add r0, sp, #8
-	bl sub_02070DB4
+	bl FS_CloseFile
 _02071F8E:
 	str r5, [r4, #0xc]
 	str r7, [r4, #0x1c]
@@ -4396,10 +2364,10 @@ _02071F9A:
 	ldr r0, [sp, #4]
 	add sp, #0x50
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071EDC
+	thumb_func_end FS_LoadArchiveTables
 
-	thumb_func_start sub_02071FA0
-sub_02071FA0: ; 0x02071FA0
+	thumb_func_start FS_UnloadArchiveTables
+FS_UnloadArchiveTables: ; 0x02071FA0
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r1, [r5, #0x14]
@@ -4416,10 +2384,10 @@ _02071FB4:
 	beq _02071FEC
 	add r0, r5, #0
 	ldr r4, [r5, #0x20]
-	bl sub_02070AD4
+	bl FS_SuspendArchive
 	add r7, r0, #0
 	add r0, r5, #0
-	bl sub_02072000
+	bl FS_IsArchiveTableLoaded
 	cmp r0, #0
 	beq _02071FE2
 	ldr r1, [r5, #0x14]
@@ -4437,30 +2405,30 @@ _02071FE2:
 	cmp r7, #0
 	beq _02071FEC
 	add r0, r5, #0
-	bl sub_02070B44
+	bl FS_ResumeArchive
 _02071FEC:
 	add r0, r6, #0
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02071FA0
+	thumb_func_end FS_UnloadArchiveTables
 
-	thumb_func_start sub_02071FF0
-sub_02071FF0: ; 0x02071FF0
+	thumb_func_start FS_GetArchiveBase
+FS_GetArchiveBase: ; 0x02071FF0
 	ldr r0, [r0, #0x20]
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02071FF0
+	thumb_func_end FS_GetArchiveBase
 
-	thumb_func_start sub_02071FF8
-sub_02071FF8: ; 0x02071FF8
+	thumb_func_start FS_GetArchiveOffset
+FS_GetArchiveOffset: ; 0x02071FF8
 	ldr r0, [r0, #0x20]
 	ldr r0, [r0]
 	add r0, r0, r1
 	bx lr
-	thumb_func_end sub_02071FF8
+	thumb_func_end FS_GetArchiveOffset
 
-	thumb_func_start sub_02072000
-sub_02072000: ; 0x02072000
+	thumb_func_start FS_IsArchiveTableLoaded
+FS_IsArchiveTableLoaded: ; 0x02072000
 	ldr r1, [r0, #0x14]
 	mov r0, #4
 	tst r0, r1
@@ -4470,13 +2438,13 @@ sub_02072000: ; 0x02072000
 _0207200C:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_02072000
+	thumb_func_end FS_IsArchiveTableLoaded
 
-	thumb_func_start sub_02072010
-sub_02072010: ; 0x02072010
+	thumb_func_start FS_GetFileImageTop
+FS_GetFileImageTop: ; 0x02072010
 	ldr r0, [r0, #0x24]
 	bx lr
-	thumb_func_end sub_02072010
+	thumb_func_end FS_GetFileImageTop
 
 	thumb_func_start sub_02072014
 sub_02072014: ; 0x02072014
@@ -4510,9 +2478,9 @@ _02072036:
 	pop {r3, r4, r5, r6, r7, pc}
 _02072048:
 	add r0, r6, #0
-	bl sub_02070A24
+	bl FS_GetArchiveName
 	add r7, r0, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	add r0, r0, #1
 	str r0, [r5, #0x10]
 	mov r0, #1
@@ -4572,12 +2540,12 @@ _020720B6:
 _020720BA:
 	ldr r5, _02072100 ; =0x0214BF84
 	add r0, r5, #0
-	bl sub_0207090C
+	bl FS_InitArchive
 	mov r2, #0
 	ldr r1, _02072104 ; =sub_02072014
 	add r0, r5, #0
 	mvn r2, r2
-	bl sub_02071EC4
+	bl FS_SetArchiveProc
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -4586,7 +2554,7 @@ _020720BA:
 	mov r2, #0
 	mov r3, #0
 	str r1, [sp, #0xc]
-	bl sub_02071E24
+	bl FS_LoadArchive
 	cmp r0, #0
 	bne _020720EA
 	bl OS_Terminate
@@ -4619,7 +2587,7 @@ sub_02072108: ; 0x02072108
 	add r0, r5, #0
 	add r2, r6, #0
 	add r3, r6, r4
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -4631,7 +2599,7 @@ sub_02072130: ; 0x02072130
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
 	mov r4, #0
-	bl sub_02070A24
+	bl FS_GetArchiveName
 	ldr r1, _02072160 ; =0x0209B518
 	bl sub_0207F95C
 	cmp r0, #0
@@ -4639,7 +2607,7 @@ sub_02072130: ; 0x02072130
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _0207215C
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r0, #0x92
 	ldrh r0, [r0]
 	lsl r0, r0, #0x13
@@ -4664,7 +2632,7 @@ sub_02072164: ; 0x02072164
 	mov r1, #0
 _02072174:
 	add r0, r4, #0
-	bl sub_02070B88
+	bl FS_NotifyArchiveAsyncEnd
 	pop {r4, pc}
 	thumb_func_end sub_02072164
 
@@ -4796,26 +2764,26 @@ sub_02072238: ; 0x02072238
 	blx OS_GetLockID
 	str r0, [r4, #4]
 	ldr r0, _02072300 ; =0x0214BFE8
-	bl sub_0207090C
+	bl FS_InitArchive
 	ldr r0, _02072300 ; =0x0214BFE8
 	ldr r1, _02072304 ; =0x0209B518
 	mov r2, #3
 	mov r6, #3
-	bl sub_02070920
+	bl FS_RegisterArchiveName
 	bl OS_GetBootType
 	cmp r0, #1
 	bne _020722B0
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r7, r0, #0
 	add r4, r7, #0
 	add r4, #0x40
-	bl sub_0206EEE0
+	bl CARD_GetOwnRomHeader
 	add r5, r0, #0
 	ldr r0, _02072300 ; =0x0214BFE8
 	ldr r1, _02072308 ; =sub_020721A8
 	ldr r2, _0207230C ; =0x00000682
 	add r5, #0x48
-	bl sub_02071EC4
+	bl FS_SetArchiveProc
 	ldr r1, [r7, #0x40]
 	sub r0, r6, #4
 	cmp r1, r0
@@ -4836,7 +2804,7 @@ sub_02072238: ; 0x02072238
 	str r1, [sp, #0xc]
 	ldr r0, _02072300 ; =0x0214BFE8
 	ldr r3, [r5, #4]
-	bl sub_02071E24
+	bl FS_LoadArchive
 	b _020722B6
 _020722B0:
 	ldr r0, _02072300 ; =0x0214BFE8
@@ -4859,7 +2827,7 @@ _020722C6:
 	ldr r1, _02072314 ; =sub_0207221C
 	add r0, r4, #0
 	mvn r2, r2
-	bl sub_02071EC4
+	bl FS_SetArchiveProc
 	mov r1, #0
 	str r1, [sp]
 	ldr r0, _02072318 ; =sub_0207222C
@@ -4870,10 +2838,10 @@ _020722C6:
 	str r0, [sp, #0xc]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_02071E24
+	bl FS_LoadArchive
 _020722F0:
 	ldr r0, _02072320 ; =0x0209B51C
-	bl sub_02070680
+	bl FS_SetCurrentDirectory
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -4898,12 +2866,12 @@ sub_02072324: ; 0x02072324
 	add r7, r0, #0
 	ldr r0, _02072354 ; =0x0214BFE8
 	ldr r6, [r4]
-	bl sub_02070AD4
+	bl FS_SuspendArchive
 	str r5, [r4]
 	cmp r0, #0
 	beq _02072344
 	ldr r0, _02072354 ; =0x0214BFE8
-	bl sub_02070B44
+	bl FS_ResumeArchive
 _02072344:
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
@@ -4920,15 +2888,15 @@ sub_02072358: ; 0x02072358
 	add r2, r1, #0
 	add r1, r3, #0
 	ldr r0, _02072364 ; =0x0214BFE8
-	ldr r3, _02072368 ; =sub_02071EDC
+	ldr r3, _02072368 ; =FS_LoadArchiveTables
 	bx r3
 	.align 2, 0
 _02072364: .word 0x0214BFE8
-_02072368: .word sub_02071EDC
+_02072368: .word FS_LoadArchiveTables
 	thumb_func_end sub_02072358
 
-	thumb_func_start sub_0207236C
-sub_0207236C: ; 0x0207236C
+	thumb_func_start FS_CreateFileFromRom
+FS_CreateFileFromRom: ; 0x0207236C
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, r1, #0
@@ -4938,13 +2906,13 @@ sub_0207236C: ; 0x0207236C
 	ldr r1, _0207238C ; =0x0214BFE8
 	add r2, r4, #0
 	add r3, r4, r3
-	bl sub_02070D14
+	bl FS_OpenFileDirect
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
 _02072388: .word 0x0000FFFF
 _0207238C: .word 0x0214BFE8
-	thumb_func_end sub_0207236C
+	thumb_func_end FS_CreateFileFromRom
 
 	thumb_func_start sub_02072390
 sub_02072390: ; 0x02072390

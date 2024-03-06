@@ -283,7 +283,7 @@ ovy136_21eeeb4: ; 0x021EEEB4
 	add r4, r1, #0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_0207F8AC
+	bl STD_GetStringLength
 	mov r3, #0
 	add r1, r3, #0
 _021EEEC4:
