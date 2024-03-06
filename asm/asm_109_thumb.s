@@ -28,7 +28,7 @@ sub_020828C8: ; 0x020828C8
 	ldr r7, _02082984 ; =0x0214EE14
 	mov r4, r0
 	mov r0, r7
-	blx sub_0207AEEC
+	blx OS_TryLockMutex
 	cmp r0, #0
 	bne _02082908
 	ldr r0, _02082988 ; =0x0214C22C
@@ -53,7 +53,7 @@ _02082908:
 	streq r1, [r0]
 	beq _02082954
 	mov r0, r7
-	blx sub_0207AE68
+	blx OS_LockMutex
 	ldr r1, [r5, #4]
 	ldr r0, _02082990 ; =0x0214EDF0
 	ldr r2, [r1, #0x6c]
@@ -70,7 +70,7 @@ _02082954:
 	str r0, [r1]
 	bne _0208297C
 	ldr r0, _02082984 ; =0x0214EE14
-	blx sub_0207AEA4
+	blx OS_UnlockMutex
 _0208297C:
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}

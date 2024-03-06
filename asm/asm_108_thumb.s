@@ -284,7 +284,7 @@ sub_0208287C: ; 0x0208287C
 	add r4, r1, #0
 	add r6, r2, #0
 	add r7, r3, #0
-	bl sub_0207ACBC
+	bl OSi_IsRunOnTwl
 	cmp r0, #0
 	bne _02082892
 	bl OS_Terminate

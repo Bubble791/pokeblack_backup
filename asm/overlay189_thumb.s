@@ -843,18 +843,18 @@ ovy189_219d504: ; 0x0219D504
 
 	thumb_func_start sub_0219D550
 sub_0219D550: ; 0x0219D550
-	ldr r3, _0219D554 ; =sub_0207AE4C
+	ldr r3, _0219D554 ; =OS_InitMutex
 	bx r3
 	.align 2, 0
-_0219D554: .word sub_0207AE4C
+_0219D554: .word OS_InitMutex
 	thumb_func_end sub_0219D550
 
 	thumb_func_start sub_0219D558
 sub_0219D558: ; 0x0219D558
-	ldr r3, _0219D55C ; =sub_0207AE68
+	ldr r3, _0219D55C ; =OS_LockMutex
 	bx r3
 	.align 2, 0
-_0219D55C: .word sub_0207AE68
+_0219D55C: .word OS_LockMutex
 	thumb_func_end sub_0219D558
 
 	thumb_func_start ovy189_219d560
@@ -871,7 +871,7 @@ ovy189_219d560: ; 0x0219D560
 	add r0, r5, #0
 	add r1, #0x20
 	mov r2, #3
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 	add r0, r5, #0
 	bl sub_0219EC2C
 _0219D584:
@@ -914,18 +914,18 @@ ovy189_219d5c4: ; 0x0219D5C4
 	push {r3, lr}
 	add r1, sp, #0
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	pop {r3, pc}
 	thumb_func_end ovy189_219d5c4
 
 	thumb_func_start sub_0219D5D0
 sub_0219D5D0: ; 0x0219D5D0
-	ldr r3, _0219D5D8 ; =sub_0207ACD8
+	ldr r3, _0219D5D8 ; =OS_SendMessage
 	mov r1, #0
 	mov r2, #0
 	bx r3
 	.align 2, 0
-_0219D5D8: .word sub_0207ACD8
+_0219D5D8: .word OS_SendMessage
 	thumb_func_end sub_0219D5D0
 
 	thumb_func_start ovy189_219d5dc
@@ -8129,7 +8129,7 @@ ovy189_21a0a60: ; 0x021A0A60
 	add r4, #0x1c
 _021A0A72:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #0xc]
 	cmp r0, #0
 	bne _021A0A72
@@ -8673,10 +8673,10 @@ _021A0DD0: .word sub_0219D558
 
 	thumb_func_start sub_021A0DD4
 sub_021A0DD4: ; 0x021A0DD4
-	ldr r3, _021A0DD8 ; =sub_0207AEA4
+	ldr r3, _021A0DD8 ; =OS_UnlockMutex
 	bx r3
 	.align 2, 0
-_021A0DD8: .word sub_0207AEA4
+_021A0DD8: .word OS_UnlockMutex
 	thumb_func_end sub_021A0DD4
 
 	thumb_func_start ovy189_21a0ddc
@@ -18156,13 +18156,13 @@ ovy189_21a54d4: ; 0x021A54D4
 	ldr r5, _021A550C ; =0x021B28C4
 	str r0, [r4, #0x18]
 	add r0, r5, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	mov r0, #3
 	str r0, [r4, #0x14]
 	mov r0, #4
 	str r0, [r4, #0x10]
 	add r0, r5, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021A5504: .word 0x021B28A8
@@ -18318,7 +18318,7 @@ ovy189_21a5634: ; 0x021A5634
 	bl ovy189_21a5e74
 _021A5648:
 	ldr r0, _021A566C ; =0x021B28C4
-	bl sub_0207AE68
+	bl OS_LockMutex
 	mov r1, #3
 	ldr r0, _021A5670 ; =0x021B28A8
 	cmp r5, #0
@@ -18331,7 +18331,7 @@ _021A5648:
 	str r1, [r0, #0x14]
 _021A5662:
 	ldr r0, _021A566C ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	pop {r4, r5, r6, pc}
 	nop
 _021A566C: .word 0x021B28C4
@@ -18354,9 +18354,9 @@ ovy189_21a5674: ; 0x021A5674
 _021A568C:
 	ldr r7, _021A5754 ; =0x021B28C4
 	add r0, r7, #0
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	add r0, r7, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r4, _021A5758 ; =0x021B28A8
 	ldr r0, [r4, #0x14]
 	cmp r0, #0
@@ -18365,7 +18365,7 @@ _021A568C:
 	mov r1, #0
 	bl ovy189_21a5e74
 	add r0, r7, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add sp, #0xc
 	mov r0, #0
 	pop {r4, r5, r6, r7, pc}
@@ -18373,7 +18373,7 @@ _021A56B6:
 	mov r0, #2
 	str r0, [r4, #0x14]
 	add r0, r7, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r7, #0
 	str r7, [r4, #0x10]
 	str r7, [r4, #0xc]
@@ -18455,7 +18455,7 @@ ovy189_21a5768: ; 0x021A5768
 	ldr r0, _021A57D4 ; =0x021B28C4
 	mov r4, #0
 	mov r5, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r1, _021A57D8 ; =0x021B28A8
 	ldr r0, [r1, #0x10]
 	cmp r0, #0
@@ -18487,7 +18487,7 @@ _021A579C:
 	mov r5, #1
 _021A57AA:
 	ldr r0, _021A57D4 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	ldr r2, _021A57D8 ; =0x021B28A8
 	ldr r3, [r2]
 	cmp r3, #0
@@ -18525,19 +18525,19 @@ ovy189_21a57dc: ; 0x021A57DC
 _021A57EA:
 	ldr r4, _021A5828 ; =0x021B28C4
 	add r0, r4, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	bne _021A5802
 	add r0, r4, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021A5802:
 	mov r0, #2
 	str r0, [r5, #0x14]
 	add r0, r4, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	ldr r0, [r5, #0x18]
 	ldr r0, [r0, #0x40]
 	cmp r0, #0
@@ -18588,7 +18588,7 @@ ovy189_21a5850: ; 0x021A5850
 	pop {r3, r4, r5, r6, r7, pc}
 _021A5864:
 	ldr r0, _021A58C0 ; =0x021B28C4
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r7, _021A58C4 ; =0x021B28A8
 	ldr r0, [r7, #0x14]
 	cmp r0, #1
@@ -18597,14 +18597,14 @@ _021A5864:
 	mov r1, #0
 	bl ovy189_21a5e74
 	ldr r0, _021A58C0 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _021A5884:
 	mov r0, #2
 	str r0, [r7, #0x14]
 	ldr r0, _021A58C0 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r2, #0xb0
 	add r0, r5, #0
 	mov r1, #0
@@ -18620,11 +18620,11 @@ _021A5884:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A58AC:
 	ldr r0, _021A58C0 ; =0x021B28C4
-	bl sub_0207AE68
+	bl OS_LockMutex
 	mov r0, #1
 	str r0, [r7, #0x14]
 	ldr r0, _021A58C0 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -18645,7 +18645,7 @@ ovy189_21a58c8: ; 0x021A58C8
 	pop {r3, r4, r5, r6, r7, pc}
 _021A58DC:
 	ldr r0, _021A5930 ; =0x021B28C4
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r7, _021A5934 ; =0x021B28A8
 	ldr r0, [r7, #0x14]
 	cmp r0, #1
@@ -18654,14 +18654,14 @@ _021A58DC:
 	mov r1, #0
 	bl ovy189_21a5e74
 	ldr r0, _021A5930 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _021A58FC:
 	mov r0, #2
 	str r0, [r7, #0x14]
 	ldr r0, _021A5930 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add r1, r4, #0
 	add r0, r5, #0
 	add r2, r6, #0
@@ -18674,11 +18674,11 @@ _021A58FC:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A591C:
 	ldr r0, _021A5930 ; =0x021B28C4
-	bl sub_0207AE68
+	bl OS_LockMutex
 	mov r0, #1
 	str r0, [r7, #0x14]
 	ldr r0, _021A5930 ; =0x021B28C4
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -18697,18 +18697,18 @@ ovy189_21a5938: ; 0x021A5938
 _021A5946:
 	ldr r4, _021A5978 ; =0x021B28C4
 	add r0, r4, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _021A597C ; =0x021B28A8
 	ldr r0, [r0, #0x14]
 	cmp r0, #2
 	beq _021A5960
 	add r0, r4, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r4, pc}
 _021A5960:
 	add r0, r4, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	bl ovy189_21a5f04
 	cmp r0, #0
 	beq _021A5972
@@ -18735,18 +18735,18 @@ ovy189_21a5980: ; 0x021A5980
 _021A5992:
 	ldr r6, _021A59BC ; =0x021B28C4
 	add r0, r6, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _021A59C0 ; =0x021B28A8
 	ldr r0, [r0, #0x14]
 	cmp r0, #2
 	beq _021A59AC
 	add r0, r6, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	mov r0, #0
 	pop {r4, r5, r6, pc}
 _021A59AC:
 	add r0, r6, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy189_21a6844
@@ -20955,7 +20955,7 @@ _021A6A80: .word 0x021AE27C
 ovy189_21a6a84: ; 0x021A6A84
 	push {r3, lr}
 	ldr r0, _021A6A90 ; =0x021B2978
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	mov r0, #1
 	pop {r3, pc}
 	.align 2, 0
@@ -20971,28 +20971,28 @@ sub_021A6A94: ; 0x021A6A94
 	thumb_func_start sub_021A6A98
 sub_021A6A98: ; 0x021A6A98
 	ldr r0, _021A6AA0 ; =0x021B2978
-	ldr r3, _021A6AA4 ; =sub_0207AE68
+	ldr r3, _021A6AA4 ; =OS_LockMutex
 	bx r3
 	nop
 _021A6AA0: .word 0x021B2978
-_021A6AA4: .word sub_0207AE68
+_021A6AA4: .word OS_LockMutex
 	thumb_func_end sub_021A6A98
 
 	thumb_func_start sub_021A6AA8
 sub_021A6AA8: ; 0x021A6AA8
 	ldr r0, _021A6AB0 ; =0x021B2978
-	ldr r3, _021A6AB4 ; =sub_0207AEA4
+	ldr r3, _021A6AB4 ; =OS_UnlockMutex
 	bx r3
 	nop
 _021A6AB0: .word 0x021B2978
-_021A6AB4: .word sub_0207AEA4
+_021A6AB4: .word OS_UnlockMutex
 	thumb_func_end sub_021A6AA8
 
 	thumb_func_start ovy189_21a6ab8
 ovy189_21a6ab8: ; 0x021A6AB8
 	push {r3, lr}
 	ldr r0, _021A6ACC ; =0x021B2960
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	ldr r0, _021A6AD0 ; =0x021B28DC
 	mov r1, #0
 	str r1, [r0, #0x20]
@@ -21013,7 +21013,7 @@ sub_021A6AD4: ; 0x021A6AD4
 ovy189_21a6ad8: ; 0x021A6AD8
 	push {r4, lr}
 	ldr r0, _021A6B00 ; =0x021B2960
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _021A6B04 ; =0x021B28DC
 	mov r4, #1
 	ldr r0, [r0, #0x20]
@@ -21028,7 +21028,7 @@ _021A6AEC:
 	str r1, [r0, #0x20]
 _021A6AF6:
 	ldr r0, _021A6B00 ; =0x021B2960
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
@@ -21041,12 +21041,12 @@ ovy189_21a6b08: ; 0x021A6B08
 	push {r4, lr}
 	ldr r4, _021A6B20 ; =0x021B2960
 	add r0, r4, #0
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _021A6B24 ; =0x021B28DC
 	mov r1, #0
 	str r1, [r0, #0x20]
 	add r0, r4, #0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	pop {r4, pc}
 	.align 2, 0
 _021A6B20: .word 0x021B2960
@@ -21055,12 +21055,12 @@ _021A6B24: .word 0x021B28DC
 
 	thumb_func_start sub_021A6B28
 sub_021A6B28: ; 0x021A6B28
-	ldr r3, _021A6B30 ; =sub_0207ACD8
+	ldr r3, _021A6B30 ; =OS_SendMessage
 	mov r1, #0
 	mov r2, #0
 	bx r3
 	.align 2, 0
-_021A6B30: .word sub_0207ACD8
+_021A6B30: .word OS_SendMessage
 	thumb_func_end sub_021A6B28
 
 	thumb_func_start ovy189_21a6b34

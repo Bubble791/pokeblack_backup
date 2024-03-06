@@ -2289,7 +2289,7 @@ _0206C8E4:
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r7, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #0
 	bne _0206C8E4
 _0206C8F2:
@@ -4942,7 +4942,7 @@ _0206DB7E:
 	cmp r5, #8
 	blt _0206DB70
 	ldr r0, _0206DBF8 ; =0x02149968
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	ldr r1, _0206DBFC ; =0x02149B00
 	ldr r0, _0206DBEC ; =0x02149950
 	mov r4, #0
@@ -5757,14 +5757,14 @@ sub_0206E17C: ; 0x0206E17C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _0206E1DC ; =0x0214B3B8
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _0206E1E0 ; =0x02149950
 	ldr r1, [r0, #4]
 	cmp r1, #0
 	beq _0206E196
 	ldr r0, _0206E1E4 ; =0x000010C8
 	add r0, r1, r0
-	bl sub_0207AE68
+	bl OS_LockMutex
 _0206E196:
 	mov r0, #0x46
 	lsl r0, r0, #2
@@ -5789,14 +5789,14 @@ _0206E1BC:
 	add r0, r4, #0
 	bl sub_0206E1E8
 	ldr r0, _0206E1DC ; =0x0214B3B8
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	ldr r0, _0206E1E0 ; =0x02149950
 	ldr r1, [r0, #4]
 	cmp r1, #0
 	beq _0206E1D8
 	ldr r0, _0206E1E4 ; =0x000010C8
 	add r0, r1, r0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 _0206E1D8:
 	pop {r4, pc}
 	nop
@@ -5905,7 +5905,7 @@ sub_0206E278: ; 0x0206E278
 	bl sub_0205EA3C
 	ldr r0, _0206E2C4 ; =0x000010C8
 	add r0, r4, r0
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	ldr r0, _0206E2C8 ; =0x000010C4
 	mov r1, #0
 	str r1, [r4, r0]
@@ -6033,14 +6033,14 @@ sub_0206E390: ; 0x0206E390
 	cmp r0, r1
 	bne _0206E3F8
 	ldr r0, _0206E3FC ; =0x0214B3B8
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _0206E400 ; =0x02149950
 	ldr r1, [r0, #4]
 	cmp r1, #0
 	beq _0206E3B4
 	ldr r0, _0206E404 ; =0x000010C8
 	add r0, r1, r0
-	bl sub_0207AE68
+	bl OS_LockMutex
 _0206E3B4:
 	add r0, r4, #0
 	bl sub_0206E17C
@@ -6065,14 +6065,14 @@ _0206E3B4:
 	str r1, [r4, r0]
 _0206E3E2:
 	ldr r0, _0206E3FC ; =0x0214B3B8
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	ldr r0, _0206E400 ; =0x02149950
 	ldr r1, [r0, #4]
 	cmp r1, #0
 	beq _0206E3F8
 	ldr r0, _0206E404 ; =0x000010C8
 	add r0, r1, r0
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 _0206E3F8:
 	pop {r4, pc}
 	nop
@@ -6590,7 +6590,7 @@ _0206E7C2:
 	cmp r0, #2
 	bne _0206E7D6
 	ldr r0, _0206EAA0 ; =0x02149968
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r0, _0206EAA4 ; =0x02149950
 	ldr r1, [r0, #8]
 _0206E7D6:
@@ -6630,7 +6630,7 @@ _0206E816:
 	b _0206EA74
 _0206E818:
 	ldr r0, _0206EAA0 ; =0x02149968
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	b _0206EA74
 _0206E820:
 	ldr r0, [sp, #0x48]
@@ -6929,7 +6929,7 @@ _0206EA1E:
 	strh r1, [r0]
 _0206EA2A:
 	ldr r0, _0206EAA0 ; =0x02149968
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	b _0206EA5A
 _0206EA32:
 	mov r0, #0x46
@@ -7293,23 +7293,23 @@ _0206ECCA:
 	mov r0, #0x43
 	lsl r0, r0, #6
 	add r0, r5, r0
-	bl sub_0207A868
+	bl OS_SleepThread
 _0206ECD4:
 	add r0, r5, r6
-	bl sub_0207AE68
+	bl OS_LockMutex
 	add r0, r5, r7
 	bl sub_0206E310
 	add r4, r0, #0
 	bne _0206ECEC
 	add r0, r5, r6
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	b _0206ECCA
 _0206ECEC:
 	bl sub_0206E5E0
 	add r0, r4, #0
 	bl sub_0206E370
 	add r0, r5, r6
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	b _0206ECD4
 	nop
 _0206ED00: .word 0x000010C8
@@ -7709,7 +7709,7 @@ _0206EF98:
 	b _0206EFA8
 _0206EFA2:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 _0206EFA8:
 	ldr r0, [r5, #0x14]
 	cmp r0, r6
@@ -7997,7 +7997,7 @@ _0206F196:
 	tst r0, r4
 	bne _0206F1A4
 	add r0, r6, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	b _0206F196
 _0206F1A4:
 	add r0, r7, #0
@@ -8030,7 +8030,7 @@ sub_0206F1C0: ; 0x0206F1C0
 	mov r6, #4
 _0206F1DE:
 	add r0, r5, r4
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #4]
 	tst r0, r6
 	bne _0206F1DE
@@ -8271,7 +8271,7 @@ _0206F390:
 	mov r6, #0x20
 _0206F3A0:
 	mov r0, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #4]
 	tst r0, r6
 	bne _0206F3A0

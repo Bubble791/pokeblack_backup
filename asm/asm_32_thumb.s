@@ -99,7 +99,7 @@ sub_02070130: ; 0x02070130
 	mov r6, #8
 _02070150:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #0xc]
 	tst r0, r6
 	beq _02070150
@@ -639,7 +639,7 @@ sub_020704F4: ; 0x020704F4
 	b _0207050E
 _02070508:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 _0207050E:
 	ldr r1, [r5, #0xc]
 	add r0, r1, #0
@@ -1491,7 +1491,7 @@ _02070B0A:
 	mov r6, #0x40
 _02070B24:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #0x14]
 	tst r0, r6
 	bne _02070B24

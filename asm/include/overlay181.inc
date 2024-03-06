@@ -852,7 +852,7 @@
 .public OS_RestoreInterrupts
 .public OS_DisableInterrupts
 .public sub_0207A998
-.public sub_0207A868
+.public OS_SleepThread
 .public sub_0207A998
 .public OS_RestoreInterrupts
 .public OS_DisableInterrupts

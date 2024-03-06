@@ -14003,7 +14003,7 @@ _021A3BEA:
 	add r1, r4, #0
 	bl sub_0207A998
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	add r0, r5, #0
 	add r0, #0xc0
 	ldr r0, [r0]

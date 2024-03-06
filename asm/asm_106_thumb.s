@@ -3915,7 +3915,7 @@ _020808A0:
 	ldr r0, _020808F8 ; =0x0214E2B0
 	ldr r1, _020808FC ; =0x0214E2D0
 	mov r2, #0xa
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 	mov r6, #2
 	mov r5, #0
 	lsl r6, r6, #0xe
@@ -3932,7 +3932,7 @@ _020808BA:
 	ldr r0, _020808F8 ; =0x0214E2B0
 	add r1, r4, r1
 	mov r2, #1
-	bl sub_0207ACD8
+	bl OS_SendMessage
 	add r5, r5, #1
 _020808D4:
 	cmp r5, #0xa
@@ -4012,7 +4012,7 @@ sub_02080960: ; 0x02080960
 	add r0, r6, #0
 	mov r2, #0
 	mov r5, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #0
 	bne _0208097C
 	add sp, #4
@@ -4030,7 +4030,7 @@ _0208097C:
 	bne _0208099E
 	add r0, r6, #0
 	mov r2, #1
-	bl sub_0207AD9C
+	bl OS_JamMessage
 	add sp, #4
 	add r0, r5, #0
 	pop {r3, r4, r5, r6, pc}
@@ -4089,7 +4089,7 @@ _020809E6:
 	ldr r0, _02080A18 ; =0x0214E2B0
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_0207ACD8
+	bl OS_SendMessage
 	mov r0, #8
 	cmp r5, #0
 	blt _02080A0E
@@ -4129,7 +4129,7 @@ _02080A2E:
 	ldr r0, _02080A60 ; =0x0214E2B0
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_0207ACD8
+	bl OS_SendMessage
 	mov r0, #8
 	cmp r5, #0
 	blt _02080A5E

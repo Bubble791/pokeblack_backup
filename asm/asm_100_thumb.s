@@ -562,7 +562,7 @@ sub_0207D670: ; 0x0207D670
 	mov r1, #1
 	str r1, [r0]
 	ldr r0, _0207D694 ; =0x0214C694
-	bl sub_0207AE4C
+	bl OS_InitMutex
 	bl sub_0207D6B8
 	bl sub_0207DB34
 _0207D68C:
@@ -575,21 +575,21 @@ _0207D694: .word 0x0214C694
 	thumb_func_start sub_0207D698
 sub_0207D698: ; 0x0207D698
 	ldr r0, _0207D6A0 ; =0x0214C694
-	ldr r3, _0207D6A4 ; =sub_0207AE68
+	ldr r3, _0207D6A4 ; =OS_LockMutex
 	bx r3
 	nop
 _0207D6A0: .word 0x0214C694
-_0207D6A4: .word sub_0207AE68
+_0207D6A4: .word OS_LockMutex
 	thumb_func_end sub_0207D698
 
 	thumb_func_start sub_0207D6A8
 sub_0207D6A8: ; 0x0207D6A8
 	ldr r0, _0207D6B0 ; =0x0214C694
-	ldr r3, _0207D6B4 ; =sub_0207AEA4
+	ldr r3, _0207D6B4 ; =OS_UnlockMutex
 	bx r3
 	nop
 _0207D6B0: .word 0x0214C694
-_0207D6B4: .word sub_0207AEA4
+_0207D6B4: .word OS_UnlockMutex
 	thumb_func_end sub_0207D6A8
 
 	thumb_func_start sub_0207D6B8
@@ -1165,7 +1165,7 @@ _0207DB04: .word 0x0214C6AC
 	thumb_func_start sub_0207DB08
 sub_0207DB08: ; 0x0207DB08
 	push {r4, lr}
-	bl sub_0207AC74
+	bl OS_IsRunOnEmulator
 	cmp r0, #0
 	bne _0207DB16
 	mov r0, #1

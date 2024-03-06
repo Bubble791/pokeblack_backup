@@ -360,17 +360,7 @@ BOOL OS_IsThreadTerminated(const OSThread *thread) {
     return thread->state == OS_THREAD_STATE_TERMINATED ? TRUE : FALSE;
 }
 
-void OS_SleepThread(OSThreadQueue *queue) {
-    OSIntrMode enable = OS_DisableInterrupts();
-    OSThread *currentThread = OSi_GetCurrentThread();
-    if (queue) {
-        currentThread->queue = queue;
-        OSi_InsertLinkToQueue(queue, currentThread);
-    }
-    currentThread->state = OS_THREAD_STATE_WAITING;
-    OSi_RescheduleThread();
-    OS_RestoreInterrupts(enable);
-}
+
 
 void OS_WakeupThreadDirect(OSThread *thread) {
     OSIntrMode enable = OS_DisableInterrupts();

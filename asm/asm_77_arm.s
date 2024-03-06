@@ -29,7 +29,7 @@ _02079BE0:
 	add r6, r0, #0x3c00
 _02079C04:
 	mov r0, r5
-	blx sub_0207A868
+	blx OS_SleepThread
 	ldr r0, [r6]
 	tst r4, r0
 	beq _02079C04

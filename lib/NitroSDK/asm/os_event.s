@@ -36,7 +36,7 @@ _0207C81E:
 	beq _0207C834
 _0207C826:
 	add r0, r5, #4
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5]
 	and r0, r4
 	cmp r4, r0
@@ -49,7 +49,7 @@ _0207C836:
 	bne _0207C848
 _0207C83C:
 	add r0, r5, #4
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5]
 	tst r0, r4
 	beq _0207C83C

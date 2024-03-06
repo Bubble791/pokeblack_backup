@@ -143,7 +143,7 @@ _0207936C:
 	add r0, sp, #0xc
 	add r1, sp, #4
 	mov r2, #1
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 _02079376:
 	blx OS_DisableInterrupts
 	add r4, r0, #0
@@ -158,7 +158,7 @@ _02079376:
 	cmp r0, #1
 	bne _0207939A
 	ldr r0, _020793DC ; =0x0214C170
-	bl sub_0207A868
+	bl OS_SleepThread
 	b _020793AE
 _0207939A:
 	cmp r0, #3
@@ -181,7 +181,7 @@ _020793B6:
 	add r0, sp, #0xc
 	add r1, sp, #8
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #0
 	bne _020793CE
 	bl OS_Terminate
@@ -309,7 +309,7 @@ _020796CC:
 	add r0, sp, #0xc
 	add r1, sp, #4
 	mov r2, #1
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 _020796D6:
 	blx OS_DisableInterrupts
 	add r4, r0, #0
@@ -324,7 +324,7 @@ _020796D6:
 	cmp r0, #1
 	bne _020796FA
 	ldr r0, _0207973C ; =0x0214C170
-	bl sub_0207A868
+	bl OS_SleepThread
 	b _0207970E
 _020796FA:
 	cmp r0, #3
@@ -347,7 +347,7 @@ _02079716:
 	add r0, sp, #0xc
 	add r1, sp, #8
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #0
 	bne _0207972E
 	bl OS_Terminate
@@ -464,7 +464,7 @@ _020798BC:
 	add r0, sp, #0xc
 	add r1, sp, #4
 	mov r2, #1
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 _020798C6:
 	blx OS_DisableInterrupts
 	add r4, r0, #0
@@ -479,7 +479,7 @@ _020798C6:
 	cmp r0, #1
 	bne _020798EA
 	ldr r0, _0207992C ; =0x0214C170
-	bl sub_0207A868
+	bl OS_SleepThread
 	b _020798FE
 _020798EA:
 	cmp r0, #3
@@ -502,7 +502,7 @@ _02079906:
 	add r0, sp, #0xc
 	add r1, sp, #8
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #0
 	bne _0207991E
 	bl OS_Terminate

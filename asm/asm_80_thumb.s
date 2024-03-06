@@ -613,7 +613,7 @@ sub_0207A6CC: ; 0x0207A6CC
 	ldr r4, [r0]
 	bl sub_0207AAB4
 	add r0, r4, #0
-	bl sub_0207AEB0
+	bl OSi_UnlockAllMutex
 	ldr r0, [r4, #0x78]
 	cmp r0, #0
 	beq _0207A6EA
@@ -649,7 +649,7 @@ sub_0207A710: ; 0x0207A710
 _0207A726:
 	bl sub_0207AAB4
 	add r0, r5, #0
-	bl sub_0207AEB0
+	bl OSi_UnlockAllMutex
 	add r0, r5, #0
 	bl sub_0207A7F0
 	ldr r0, [r5, #0x78]
@@ -709,7 +709,7 @@ sub_0207A800: ; 0x0207A800
 	add r4, #0x9c
 _0207A814:
 	add r0, r4, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [r5, #0x64]
 	cmp r0, #2
 	bne _0207A814
@@ -758,8 +758,8 @@ _0207A860:
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0207A838
 
-	thumb_func_start sub_0207A868
-sub_0207A868: ; 0x0207A868
+	thumb_func_start OS_SleepThread
+OS_SleepThread: ; 0x0207A868
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
@@ -782,7 +782,7 @@ _0207A886:
 	pop {r4, r5, r6, pc}
 	nop
 _0207A898: .word 0x0214C210
-	thumb_func_end sub_0207A868
+	thumb_func_end OS_SleepThread
 
 	thumb_func_start OS_WakeupThread
 OS_WakeupThread: ; 0x0207A89C
@@ -1033,7 +1033,7 @@ sub_0207AA04: ; 0x0207AA04
 	mov r5, #0
 _0207AA52:
 	add r0, r5, #0
-	bl sub_0207A868
+	bl OS_SleepThread
 	ldr r0, [sp, #4]
 	cmp r0, #0
 	bne _0207AA52

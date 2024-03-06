@@ -4709,7 +4709,7 @@ ovy182_21a6d04: ; 0x021A6D04
 	ldr r1, _021A6DB8 ; =0x021C2950
 	mov r2, #4
 	mov r4, #1
-	bl sub_0207ACC4
+	bl OS_InitMessageQueue
 	cmp r5, #0
 	beq _021A6D1E
 	cmp r6, #0
@@ -4751,7 +4751,7 @@ _021A6D5E:
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	ldr r0, [sp]
 	cmp r0, #0xf
 	bhi _021A6D9E
@@ -4826,7 +4826,7 @@ _021A6DEA:
 	add r0, r7, #0
 	add r1, sp, #0
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	ldr r0, [sp]
 	cmp r0, #0x14
 	bhi _021A6E3C
@@ -4898,7 +4898,7 @@ _021A6E74:
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	ldr r0, [sp]
 	cmp r0, #0xe
 	bne _021A6E8A
@@ -4975,7 +4975,7 @@ _021A6EFE:
 	ldr r0, _021A700C ; =0x021C2960
 	add r1, sp, #0x14
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	ldr r0, [sp, #0x14]
 	cmp r0, #0x13
 	bhi _021A6FD2
@@ -5092,7 +5092,7 @@ _021A6FDE:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #1
 	beq _021A6FDE
 _021A6FEC:
@@ -5202,7 +5202,7 @@ _021A70B8:
 	ldr r0, _021A71D4 ; =0x021C2960
 	add r1, sp, #0x10
 	mov r2, #1
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	ldr r0, [sp, #0x10]
 	cmp r0, #0x13
 	bhi _021A718A
@@ -5322,7 +5322,7 @@ _021A719C:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_0207AD34
+	bl OS_ReceiveMessage
 	cmp r0, #1
 	beq _021A719C
 _021A71AA:
@@ -7089,14 +7089,14 @@ ovy182_21a7ed4: ; 0x021A7ED4
 	cmp r4, #0
 	ble _021A7EF6
 	ldr r0, _021A7EFC ; =0x021C2B84
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r1, _021A7F00 ; =0x021C2AF0
 	add r0, r4, #0
 	ldr r1, [r1, #4]
 	blx r1
 	add r4, r0, #0
 	ldr r0, _021A7EFC ; =0x021C2B84
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 	add r0, r4, #0
 	pop {r4, pc}
 _021A7EF6:
@@ -7115,13 +7115,13 @@ ovy182_21a7f04: ; 0x021A7F04
 	cmp r2, #0
 	ble _021A7F22
 	ldr r0, _021A7F24 ; =0x021C2B84
-	bl sub_0207AE68
+	bl OS_LockMutex
 	ldr r1, _021A7F28 ; =0x021C2AF0
 	add r0, r4, #0
 	ldr r1, [r1, #0xc]
 	blx r1
 	ldr r0, _021A7F24 ; =0x021C2B84
-	bl sub_0207AEA4
+	bl OS_UnlockMutex
 _021A7F22:
 	pop {r4, pc}
 	.align 2, 0
