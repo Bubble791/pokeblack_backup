@@ -15,12 +15,12 @@
 .public MIi_CheckDma0SourceAddress
 .public MIi_DmaSetParams
 .public sub_01FF8BF0
-.public sub_02079DE4
+.public OSi_EnterDmaCallback
 .public OS_DisableInterrupts
 .public OS_RestoreInterrupts
 .public OS_Terminate
 
-.public sub_02079D88
+.public OS_GetIrqFunction
 .public OS_SetIrqFunction
 .public OS_EnableIrqMask
 .public OS_ResetRequestIrqMask

@@ -2483,13 +2483,13 @@
 .public GX_DispOff
 .public OS_WaitVBlankIntr
 .public sub_0207F4D4
-.public sub_02079E50
+.public OS_SetIrqMask
 .public OS_EnableIrqMask
-.public sub_02079D88
+.public OS_GetIrqFunction
 .public OS_SetIrqFunction
 .public OS_ResetRequestIrqMask
 .public OS_EnableInterrupts
-.public sub_02079E50
+.public OS_SetIrqMask
 .public OS_SetIrqFunction
 .public OS_DisableIrqMask
 .public OS_EnableIrqMask

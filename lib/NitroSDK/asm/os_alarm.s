@@ -19,7 +19,7 @@ OSi_SetTimer: ; 0x0207BB90
 	ldr r1, _0207BBE8 ; =OSi_AlarmHandler
 	mov r0, #1
 	mov r2, #0
-	bl sub_02079E20
+	bl OSi_EnterTimerCallback
 	mov r1, #0
 	mov r0, #0
 	sub r1, r5, r1

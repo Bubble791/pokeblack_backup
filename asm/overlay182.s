@@ -50017,12 +50017,12 @@ ovy182_21bcaac: ; 0x021BCAAC
 	ldr r0, [r5]
 	str r0, [r6, #4]
 	ldr r0, _021BCAF0 ; =0x00040018
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	mov r0, #1
 	mov r4, #1
 	bl OS_EnableIrqMask
 	mov r0, #1
-	bl sub_02079D88
+	bl OS_GetIrqFunction
 	str r0, [r6]
 	ldr r1, _021BCAF4 ; =ovy182_21bcb1c
 	mov r0, #1
@@ -50050,7 +50050,7 @@ ovy182_21bcaf8: ; 0x021BCAF8
 	mov r0, #0
 	strh r0, [r1]
 	ldr r0, [r4, #4]
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	ldr r1, [r4]
 	mov r0, #1
 	bl OS_SetIrqFunction

@@ -88,7 +88,7 @@ OSi_CountUpTick: ; 0x0207BACC
 	str r3, [r0, #4]
 _0207BAF0:
 	ldr r1, _0207BB04 ; =OSi_CountUpTick
-	ldr r3, _0207BB08 ; =sub_02079E20
+	ldr r3, _0207BB08 ; =OSi_EnterTimerCallback
 	mov r0, #0
 	mov r2, #0
 	bx r3
@@ -96,7 +96,7 @@ _0207BAF0:
 _0207BAFC: .word 0x0214C570
 _0207BB00: .word 0x04000102
 _0207BB04: .word OSi_CountUpTick
-_0207BB08: .word sub_02079E20
+_0207BB08: .word OSi_EnterTimerCallback
 	thumb_func_end OSi_CountUpTick
 
 	thumb_func_start OS_GetTick

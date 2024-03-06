@@ -5023,11 +5023,11 @@
 .public PXIi_HandlerRecvFifoNotEmpty
 .public sub_0206FFBC
 .public MI_StopDma
-.public sub_02079E50
+.public OS_SetIrqMask
 .public sub_0208264C
-.public sub_02079E50
-.public sub_02079E50
-.public sub_02079E50
+.public OS_SetIrqMask
+.public OS_SetIrqMask
+.public OS_SetIrqMask
 .public GX_IsDispOn
 .public GX_DispOff
 .public sub_01FF936C
@@ -11818,10 +11818,10 @@
 .public sub_02079A5C
 .public OS_InitIrqTable
 .public OS_SetIrqFunction
-.public sub_02079D88
-.public sub_02079DE4
-.public sub_02079E20
-.public sub_02079E50
+.public OS_GetIrqFunction
+.public OSi_EnterDmaCallback
+.public OSi_EnterTimerCallback
+.public OS_SetIrqMask
 .public OS_EnableIrqMask
 .public OS_DisableIrqMask
 .public OS_ResetRequestIrqMask
@@ -12266,3 +12266,4 @@
 .public RTCi_WriteRawStatus2Async
 .public RTC_GetDayOfWeek
 .public sub_02700000
+.public sub_027692B8

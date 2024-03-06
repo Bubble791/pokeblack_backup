@@ -58,7 +58,7 @@ _0207C2E4:
 	mov r0, r0, lsr #0x10
 	blx sub_0206EEF0
 	mov r0, #0x40000
-	blx sub_02079E50
+	blx OS_SetIrqMask
 	mvn r0, #0
 	blx OS_ResetRequestIrqMask
 	blx MI_StopAllDma

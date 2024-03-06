@@ -63,6 +63,7 @@ Static main
     Object lib/NitroSDK/asm/mi_init.o
     Object asm/asm_76_thumb.o
     Object asm/asm_77_arm.o
+    Object lib/NitroSDK/asm/os_interrupt.o
     Object asm/asm_78_thumb.o
     Object lib/NitroSDK/asm/os_spinLock.o
     Object lib/NitroSDK/asm/os_printf.o
@@ -125,7 +126,6 @@ Static main
 	
 	Object lib/NitroSDK/src/os/os_irqHandler.o
 	Object lib/NitroSDK/src/os/os_irqTable.o
-	Object lib/NitroSDK/src/os/os_interrupt.o
 
 
 	Object lib/NitroSDK/src/os/os_vramExclusive.o

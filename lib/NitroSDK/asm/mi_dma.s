@@ -193,7 +193,7 @@ _0207816C:
 	ldr r2, [sp, #0x24]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02079DE4
+	bl OSi_EnterDmaCallback
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
 	beq _0207819E
@@ -281,7 +281,7 @@ _02078216:
 	ldr r2, [sp, #0x24]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02079DE4
+	bl OSi_EnterDmaCallback
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
 	beq _0207824A

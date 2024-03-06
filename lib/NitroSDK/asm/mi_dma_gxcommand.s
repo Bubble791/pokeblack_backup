@@ -59,7 +59,7 @@ _0207844E:
 	mov r0, #1
 	lsl r5, r0, #0x15
 	add r0, r5, #0
-	bl sub_02079D88
+	bl OS_GetIrqFunction
 	str r0, [r6, #0x1c]
 	ldr r1, [r4]
 	ldr r0, _020784C8 ; =0x3FFFFFFF
@@ -110,7 +110,7 @@ _020784E4:
 	ldr r1, _02078540 ; =0x02078551
 	mov r7, #0
 	mov r2, #0
-	bl sub_02079DE4
+	bl OSi_EnterDmaCallback
 	str r7, [sp]
 	add r1, r4, #0
 	ldr r4, _02078544 ; =0x04000400
@@ -220,7 +220,7 @@ _020785AA:
 	ldr r1, _02078600 ; =0x0207860D
 	add r0, r5, #0
 	mov r2, #0
-	bl sub_02079DE4
+	bl OSi_EnterDmaCallback
 	ldr r3, _02078604 ; =0xFC400000
 	lsr r4, r4, #2
 	ldr r2, _02078608 ; =0x04000400

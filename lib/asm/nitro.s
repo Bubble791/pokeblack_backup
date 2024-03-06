@@ -8105,7 +8105,6 @@ CARD_LockRom: ; 0x020DC96C
 	mov r1, #1
 	bl CARDi_LockResource
 	mov r0, r4
-	bl OS_LockCard
 	ldmia sp!, {r4, pc}
 	arm_func_end CARD_LockRom
 
@@ -8113,7 +8112,7 @@ CARD_LockRom: ; 0x020DC96C
 CARD_UnlockRom: ; 0x020DC988
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl OS_UnlockCard
+
 	mov r0, r4
 	mov r1, #1
 	bl CARDi_UnlockResource
@@ -9733,7 +9732,6 @@ CARD_SpiWaitReadRange: ; 0x020DDE94
 	bl CARD_LockBackup
 	ldr r0, _020DDFCC ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_LockCard
 	ldr r2, _020DDFD0 ; =0x040001A0
 _020DDED8:
 	ldrh r0, [r2]
@@ -9796,7 +9794,7 @@ _020DDF98:
 	bne _020DDF98
 	ldr r0, _020DDFCC ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_UnLockCard
+
 	ldr r0, _020DDFCC ; =_02110FBC
 	ldrh r0, [r0]
 	bl CARD_UnlockBackup
@@ -9829,7 +9827,6 @@ CARD_SpiWaitWriteRange: ; 0x020DDFE0
 	bl CARD_LockBackup
 	ldr r0, _020DE0B4 ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_LockCard
 	ldr r2, _020DE0B8 ; =0x040001A0
 _020DE024:
 	ldrh r0, [r2]
@@ -9864,7 +9861,7 @@ _020DE084:
 	bne _020DE084
 	ldr r0, _020DE0B4 ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_UnLockCard
+
 	ldr r0, _020DE0B4 ; =_02110FBC
 	ldrh r0, [r0]
 	bl CARD_UnlockBackup
@@ -9894,7 +9891,6 @@ CARD_SpiWaitGetStatus: ; 0x020DE0C8
 	bl CARD_LockBackup
 	ldr r0, _020DE230 ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_LockCard
 	bl OS_GetTick
 	mov fp, #0
 	mov r4, r0
@@ -9967,7 +9963,7 @@ _020DE1FC:
 	bne _020DE1FC
 	ldr r0, _020DE230 ; =_02110FBC
 	ldrh r0, [r0]
-	bl OS_UnLockCard
+
 	ldr r0, _020DE230 ; =_02110FBC
 	ldrh r0, [r0]
 	bl CARD_UnlockBackup
@@ -13603,12 +13599,12 @@ _020E12D0:
 	bl OS_DisableInterrupts
 	str r0, [r6, #4]
 	mov r0, r5
-	bl OS_ReadOwnerOfLockWord
+
 	ands r0, r0, #0x40
 	str r0, [r6]
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	mov r0, r7
-	bl OS_TryLockCartridge
+
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, [r6, #4]
@@ -13629,7 +13625,7 @@ CTRDGi_UnlockByProcessor: ; 0x020E1318
 	ldr r1, [r4]
 	cmp r1, #0
 	bne _020E1330
-	bl OS_UnLockCartridge
+
 _020E1330:
 	ldr r0, [r4, #4]
 	bl OS_RestoreInterrupts
@@ -13731,7 +13727,7 @@ CTRDGi_CopyCommon: ; 0x020E1434
 	bl CTRDG_CheckEnabled
 	ldr r0, _020E156C ; =_021E4D40
 	ldrh r0, [r0, #6]
-	bl OS_LockCartridge
+
 	ldr r0, [sp, #0x18]
 	tst r0, #1
 	bne _020E1488
@@ -13802,7 +13798,7 @@ _020E1538:
 _020E154C:
 	ldr r0, _020E156C ; =_021E4D40
 	ldrh r0, [r0, #6]
-	bl OS_UnLockCartridge
+
 	bl CTRDG_IsExisting
 	cmp r0, #0
 	movne r0, #1
@@ -13837,7 +13833,7 @@ CTRDGi_AccessCommon: ; 0x020E1588
 	bl CTRDG_CheckEnabled
 	ldr r0, _020E1664 ; =_021E4D40
 	ldrh r0, [r0, #6]
-	bl OS_LockCartridge
+
 	cmp r4, #0x21
 	bhi _020E15F4
 	bhs _020E1620
@@ -13882,7 +13878,7 @@ _020E1640:
 _020E1644:
 	ldr r0, _020E1664 ; =_021E4D40
 	ldrh r0, [r0, #6]
-	bl OS_UnLockCartridge
+
 	bl CTRDG_IsExisting
 	cmp r0, #0
 	movne r0, #1
@@ -14151,7 +14147,7 @@ CTRDG_IdentifyAgbBackup: ; 0x020E1A3C
 	ldr r1, _020E1BA8 ; =_021E4F2C
 	strh r0, [r1]
 	ldrh r0, [r1]
-	bl OS_LockCartridge
+
 	ldr r4, _020E1BAC ; =0x04000204
 	ldr r1, _020E1BB0 ; =_0210E1DC
 	ldrh r3, [r4]
@@ -14175,7 +14171,7 @@ CTRDG_IdentifyAgbBackup: ; 0x020E1A3C
 	strh r1, [r2]
 	ldrh r0, [r0]
 	ldreq r5, _020E1BBC ; =_0210E1E0
-	bl OS_UnlockCartridge
+
 	ldr r3, [r5]
 	mov r0, #1
 	ldrh r1, [r3, #0x38]
@@ -14519,7 +14515,7 @@ CTRDGi_ReadAgbFlashCore: ; 0x020E1F14
 	ldr r6, [sp, #0x14]
 	ldr r7, [sp, #0x1c]
 	ldr r8, [sp, #0x18]
-	bl OS_LockCartridge
+
 	ldr r3, _020E2000 ; =0x04000204
 	ldr r0, _020E2004 ; =_02110FC4
 	ldrh r2, [r3]
@@ -14560,7 +14556,7 @@ _020E1FD0:
 	orr r1, r1, r4
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, #0
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -14606,7 +14602,7 @@ CTRDGi_VerifyAgbFlashCore: ; 0x020E203C
 	ldrh r5, [sp, #0x20]
 	ldr r6, [sp, #0xc]
 	ldr r7, [sp, #0x18]
-	bl OS_LockCartridge
+
 	ldr r3, _020E2110 ; =0x04000204
 	ldr r0, _020E2114 ; =_02110FC4
 	ldrh r2, [r3]
@@ -14640,7 +14636,7 @@ _020E20BC:
 	orr r0, r0, r4
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r5
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, pc}
@@ -14749,7 +14745,7 @@ CTRDGi_EraseFlashChipCoreAT: ; 0x020E2230
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r0, _020E22FC ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r0, _020E2300 ; =0x04000204
 	ldr r1, _020E2304 ; =_02110FC4
 	ldrh r3, [r0]
@@ -14794,7 +14790,7 @@ CTRDGi_EraseFlashChipCoreAT: ; 0x020E2230
 	orr r0, r0, r5
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -14824,7 +14820,7 @@ CTRDGi_EraseFlashSectorCoreAT: ; 0x020E2318
 	ldrh r0, [r0]
 	mov r1, r1, lsl #7
 	add r5, r1, #0xa000000
-	bl OS_LockCartridge
+
 	ldr ip, _020E2428 ; =0x04000204
 	ldr r1, _020E242C ; =_02110FC4
 	ldrh r0, [ip]
@@ -14874,7 +14870,7 @@ _020E23F8:
 	orr r1, r1, r4
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, r5
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, pc}
@@ -14953,7 +14949,7 @@ CTRDGi_WriteFlashSectorCoreAT: ; 0x020E24E8
 	ldrh r0, [r0]
 	str r1, [r4]
 	ldr r5, [sp, #0xc]
-	bl OS_LockCartridge
+
 	ldr r1, _020E25EC ; =0x04000204
 	ldr r2, _020E25F0 ; =_02110FC4
 	ldrh r0, [r1]
@@ -15001,7 +14997,7 @@ _020E2584:
 	orr r0, r0, r4
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r5
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, pc}
@@ -15217,7 +15213,7 @@ CTRDGi_EraseFlashChipCoreLE: ; 0x020E2844
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r0, _020E2910 ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r0, _020E2914 ; =0x04000204
 	ldr r1, _020E2918 ; =_02110FC4
 	ldrh r3, [r0]
@@ -15262,7 +15258,7 @@ CTRDGi_EraseFlashChipCoreLE: ; 0x020E2844
 	orr r0, r0, r5
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -15294,7 +15290,7 @@ CTRDGi_EraseFlashSectorCoreLE: ; 0x020E292C
 	ldmhsia sp!, {r3, r4, r5, r6, pc}
 	ldr r0, _020E2A44 ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r0, _020E2A48 ; =0x04000204
 	ldr r1, _020E2A4C ; =_02110FC4
 	ldrh r3, [r0]
@@ -15342,7 +15338,7 @@ CTRDGi_EraseFlashSectorCoreLE: ; 0x020E292C
 	orr r0, r0, r5
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r4
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
@@ -15446,7 +15442,7 @@ _020E2B70:
 _020E2B8C:
 	ldr r0, _020E2C70 ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r1, _020E2C74 ; =0x04000204
 	ldr r2, _020E2C68 ; =_02110FC4
 	ldrh r0, [r1]
@@ -15496,7 +15492,7 @@ _020E2C24:
 	orr r1, r1, r8
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, r4
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
@@ -15538,7 +15534,7 @@ CTRDGi_VerifyFlashErase: ; 0x020E2CB8
 	mov r5, r0
 	ldrh r0, [r2]
 	mov r4, r1
-	bl OS_LockCartridge
+
 	ldr ip, _020E2D38 ; =0x04000204
 	ldr r0, _020E2D3C ; =_02110FC4
 	ldrh r3, [ip]
@@ -15561,7 +15557,7 @@ CTRDGi_VerifyFlashErase: ; 0x020E2CB8
 	orr r1, r1, r6
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, r5
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
@@ -15659,7 +15655,7 @@ CTRDGi_EraseFlashChipCoreMX: ; 0x020E2E24
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r0, _020E2EF0 ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r0, _020E2EF4 ; =0x04000204
 	ldr r1, _020E2EF8 ; =_02110FC4
 	ldrh r3, [r0]
@@ -15704,7 +15700,7 @@ CTRDGi_EraseFlashChipCoreMX: ; 0x020E2E24
 	orr r0, r0, r5
 	strh r0, [r3]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -15739,7 +15735,7 @@ CTRDGi_EraseFlashSectorCoreMX: ; 0x020E2F0C
 	ldmhsia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldr r0, _020E307C ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r5, _020E3080 ; =0x04000204
 	ldr r0, _020E3074 ; =_02110FC4
 	ldrh r3, [r5]
@@ -15807,7 +15803,7 @@ _020E3044:
 	orr r0, r3, r0
 	strh r0, [r2]
 	ldrh r0, [r1]
-	bl OS_UnlockCartridge
+
 	mov r0, sb
 	add sp, sp, #0x28
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -15876,7 +15872,7 @@ CTRDGi_WriteFlashSectorCoreMX: ; 0x020E30E8
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	ldr r0, _020E324C ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r5, _020E3250 ; =0x04000204
 	ldr r0, _020E3244 ; =_02110FC4
 	ldrh r3, [r5]
@@ -15935,7 +15931,7 @@ _020E3204:
 	orr r1, r1, r5
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, r6
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -16060,7 +16056,7 @@ CTRDGi_WriteFlashSectorCoreMX5: ; 0x020E3340
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	ldr r0, _020E3464 ; =_021E4F2C
 	ldrh r0, [r0]
-	bl OS_LockCartridge
+
 	ldr r5, _020E3468 ; =0x04000204
 	ldr r0, _020E345C ; =_02110FC4
 	ldrh r3, [r5]
@@ -16103,7 +16099,7 @@ _020E3430:
 	orr r1, r1, r5
 	strh r1, [r2]
 	ldrh r0, [r0]
-	bl OS_UnlockCartridge
+
 	mov r0, r6
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}

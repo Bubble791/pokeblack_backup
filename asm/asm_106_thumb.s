@@ -824,7 +824,7 @@ _0207F1B2:
 	mov r0, #1
 	lsl r0, r0, #0x12
 	orr r0, r1
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	ldr r0, [sp, #0x1c]
 	blx OS_RestoreInterrupts
 	ldr r1, _0207F374 ; =0x04000208
@@ -929,7 +929,7 @@ _0207F28A:
 _0207F294:
 	mov r0, #1
 	lsl r0, r0, #0x12
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	add r0, r5, #0
 	orr r0, r6
 	orr r0, r7
@@ -960,7 +960,7 @@ _0207F2D2:
 	mov r0, #1
 	lsl r0, r0, #0x12
 	orr r0, r1
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	mov r0, #8
 	add r1, r5, #0
 	tst r1, r0
@@ -1018,7 +1018,7 @@ _0207F33A:
 	mov r0, #0
 	strh r0, [r5]
 	ldr r0, [sp, #0x18]
-	bl sub_02079E50
+	bl OS_SetIrqMask
 	ldr r0, [sp, #0x1c]
 	blx OS_RestoreInterrupts
 	ldrh r0, [r5]
