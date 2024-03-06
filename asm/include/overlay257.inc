@@ -881,7 +881,7 @@
 .public sub_021AAAB8
 .public sub_0203A1FC
 .public sub_0207E75C
-.public sub_0207EBB8
+.public PM_Init
 .public sub_0207EFC4
 .public sub_0207F008
 .public OS_IsRunOnTwl

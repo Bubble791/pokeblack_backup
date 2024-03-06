@@ -4,12 +4,6 @@ extern OSThreadQueue OSi_IrqThreadQueue;
 
 static u32 OSi_IrqStackWarningOffset = 0;
 
-void OS_InitIrqTable(void) {
-    OS_InitThreadQueue(&OSi_IrqThreadQueue);
-#ifdef SDK_ARM7
-    OSi_SetVBlankCount(0);
-#endif
-}
 
 
 
@@ -101,8 +95,3 @@ extern void SDK_IRQ_STACKSIZE(void);
 #define  OSi_IRQ_STACK_CHECKNUM_WARN       0xbdf7db3dUL
 #endif
 
-
-void OS_SetIrqStackChecker(void) {
-    *(u32 *)(OSi_IRQ_STACK_BOTTOM - sizeof(u32)) = OSi_IRQ_STACK_CHECKNUM_BOTTOM;
-    *(u32 *)(OSi_IRQ_STACK_TOP) = OSi_IRQ_STACK_CHECKNUM_TOP;
-}

@@ -69,7 +69,9 @@ Static main
     Object asm/asm_81_arm.o
     Object asm/asm_82_thumb.o
     Object asm/asm_83_arm.o
-    Object asm/asm_84_thumb.o
+    Object lib/NitroSDK/asm/os_init.o
+    Object lib/NitroSDK/asm/os_arena.o
+    Object lib/NitroSDK/asm/os_alloc.o
     Object asm/asm_85_arm.o
     Object asm/asm_86_thumb.o
     Object lib/NitroSDK/asm/os_system.o
@@ -126,17 +128,14 @@ Static main
 	Object lib/NitroSDK/src/os/os_message.o
 	Object lib/NitroSDK/src/os/os_mutex.o
 	Object lib/NitroSDK/src/os/os_cache.o
-	Object lib/NitroSDK/src/os/os_init.o
-	Object lib/NitroSDK/src/os/os_arena.o
-	Object lib/NitroSDK/src/os/os_alloc.o
-	Object lib/NitroSDK/src/os/os_tcm.o
+
 	Object lib/NitroSDK/src/os/os_protectionUnit.o
 	Object lib/NitroSDK/src/os/os_protectionRegion.o
-	Object lib/NitroSDK/src/os/os_exception.o
+
 	Object lib/NitroSDK/src/os/os_timer.o
 	Object lib/NitroSDK/src/os/os_tick.o
 	Object lib/NitroSDK/src/os/os_alarm.o
-	Object lib/NitroSDK/src/os/os_valarm.o
+
 	Object lib/NitroSDK/src/os/os_vramExclusive.o
 	
 	Object lib/asm/nitro.o

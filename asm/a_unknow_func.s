@@ -824,3 +824,8 @@ sub_02769334:
 sub_02700000:
 	bx lr
 	thumb_func_end sub_02700000
+
+	thumb_func_start sub_027692EC
+sub_027692EC:
+	bx lr
+	thumb_func_end sub_027692EC

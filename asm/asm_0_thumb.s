@@ -258,13 +258,13 @@ _0200535A:
 	thumb_func_start sub_02005364
 sub_02005364: ; 0x02005364
 	push {r3, r4, r5, lr}
-	bl sub_0207B124
+	bl OS_Init
 	bl sub_0207BA7C
 	bl sub_0207BBF4
 	bl RTC_Init
 	bl GX_Init
 	bl sub_02074658
-	bl sub_0207AC24
+	bl OS_GetConsoleType
 	mov r1, #3
 	lsl r1, r1, #0x18
 	tst r0, r1
@@ -294,7 +294,7 @@ _020053A2:
 	mov r0, #0
 	add r1, r5, #0
 	mov r2, #4
-	bl sub_0207B424
+	bl OS_AllocFromArenaLo
 	add r1, r5, #0
 	bl sub_02072358
 	ldr r0, _02005410 ; =0x0209D758

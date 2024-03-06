@@ -850,8 +850,8 @@
 .public sub_021A9548
 .public MATH_CalcSHA1
 .public sub_021A9654
-.public sub_0207B4F4
-.public sub_0207B598
+.public OS_AllocFromHeap
+.public OS_FreeToHeap
 .public sub_021A9790
 .public sub_021A9AF0
 .public sub_021A9838

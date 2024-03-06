@@ -5584,7 +5584,7 @@
 .public sub_021BCF70
 .public sub_021BCF70
 .public sub_021BCF70
-.public sub_0207AC24
+.public OS_GetConsoleType
 .public sub_0203CE0C
 .public sub_0203CDC8
 .public sub_021CE53C

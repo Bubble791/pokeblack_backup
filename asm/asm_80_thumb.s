@@ -339,8 +339,8 @@ _0207A49C: .word 0x0214C210
 _0207A4A0: .word 0x0214C22C
 	thumb_func_end sub_0207A434
 
-	thumb_func_start sub_0207A4A4
-sub_0207A4A4: ; 0x0207A4A4
+	thumb_func_start OS_InitThread
+OS_InitThread: ; 0x0207A4A4
 	push {r4, lr}
 	sub sp, #8
 	ldr r0, _0207A540 ; =0x0214C210
@@ -435,7 +435,7 @@ _0207A56C: .word 0x02FFFFA0
 _0207A570: .word 0x0214C23C
 _0207A574: .word 0x0207AAA9
 _0207A578: .word 0x0214C484
-	thumb_func_end sub_0207A4A4
+	thumb_func_end OS_InitThread
 
 	thumb_func_start sub_0207A57C
 sub_0207A57C: ; 0x0207A57C

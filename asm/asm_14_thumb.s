@@ -109,13 +109,13 @@ _02039B1E:
 	mov r0, #0
 	add r1, r3, #0
 	mov r2, #4
-	bl sub_0207B424
+	bl OS_AllocFromArenaLo
 _02039B28:
 	mov r0, #0
 	lsl r1, r6, #4
 	mov r2, #4
 	mov r4, #0
-	bl sub_0207B424
+	bl OS_AllocFromArenaLo
 	ldr r2, _02039BD8 ; =0x0214181C
 	cmp r6, #0
 	str r0, [r2]
@@ -145,7 +145,7 @@ _02039B62:
 	mov r0, #0
 	mov r2, #4
 	mov r4, #0
-	bl sub_0207B424
+	bl OS_AllocFromArenaLo
 	ldr r1, _02039BD8 ; =0x0214181C
 	str r0, [r1, #4]
 	ldr r0, [sp, #4]
@@ -176,7 +176,7 @@ _02039B9C:
 	ldr r1, [r5, r6]
 	mov r0, #0
 	mov r2, #4
-	bl sub_0207B424
+	bl OS_AllocFromArenaLo
 	cmp r0, #0
 	beq _02039BC0
 	ldr r1, [r5, r6]
@@ -899,27 +899,27 @@ sub_0203A0A4: ; 0x0203A0A4
 	pop {r3, r4, r5, r6, r7, pc}
 _0203A0B4:
 	mov r0, #4
-	bl sub_0207B2A4
+	bl OS_GetArenaLo
 	add r6, r0, #0
 	ldr r1, _0203A0FC ; =0x02FE0000
 	add r5, #0x80
 	mov r0, #4
 	add r1, r1, r5
-	bl sub_0207B40C
+	bl OS_SetArenaHi
 	mov r0, #4
 	add r1, r6, #0
 	add r2, r6, r4
 	mov r3, #1
 	mov r5, #1
-	bl sub_0207B5DC
+	bl OS_InitAlloc
 	add r7, r0, #0
 	mov r0, #4
 	add r1, r7, #0
-	bl sub_0207B418
+	bl OS_SetArenaLo
 	mov r0, #4
 	add r1, r7, #0
 	add r2, r6, r4
-	bl sub_0207B650
+	bl OS_CreateHeap
 	ldr r1, _0203A100 ; =0x0214182C
 	str r0, [r1, #4]
 	sub r1, r5, #2
@@ -939,12 +939,12 @@ sub_0203A104: ; 0x0203A104
 	ldr r1, _0203A110 ; =0x0214182C
 	add r2, r0, #0
 	ldr r1, [r1, #4]
-	ldr r3, _0203A114 ; =sub_0207B4F4
+	ldr r3, _0203A114 ; =OS_AllocFromHeap
 	mov r0, #4
 	bx r3
 	.align 2, 0
 _0203A110: .word 0x0214182C
-_0203A114: .word sub_0207B4F4
+_0203A114: .word OS_AllocFromHeap
 	thumb_func_end sub_0203A104
 
 	thumb_func_start sub_0203A118
@@ -954,7 +954,7 @@ sub_0203A118: ; 0x0203A118
 	add r2, r0, #0
 	ldr r1, [r1, #4]
 	mov r0, #4
-	bl sub_0207B598
+	bl OS_FreeToHeap
 	mov r0, #1
 	pop {r3, pc}
 	nop
@@ -971,9 +971,9 @@ sub_0203A130: ; 0x0203A130
 	bl sub_02039AF0
 	add r4, r0, #0
 	mov r0, #0
-	bl sub_0207B2A4
+	bl OS_GetArenaLo
 	mov r0, #0
-	bl sub_0207B298
+	bl OS_GetArenaHi
 	cmp r4, #0
 	bne _0203A158
 	bl sub_0203A098

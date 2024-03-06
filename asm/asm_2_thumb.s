@@ -66,13 +66,13 @@ sub_02005484: ; 0x02005484
 _02005488: .word sub_0205F9D0
 	thumb_func_end sub_02005484
 
-	thumb_func_start sub_0200548C
-sub_0200548C: ; 0x0200548C
+	thumb_func_start CTRDG_Init
+CTRDG_Init: ; 0x0200548C
 	ldr r3, _02005490 ; =sub_020827D0
 	bx r3
 	.align 2, 0
 _02005490: .word sub_020827D0
-	thumb_func_end sub_0200548C
+	thumb_func_end CTRDG_Init
 
 	thumb_func_start sub_02005494
 sub_02005494: ; 0x02005494

@@ -4790,7 +4790,7 @@ sub_02072238: ; 0x02072238
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r0, #0
-	bl sub_0206EDE0
+	bl CARD_Init
 	ldr r4, _020722FC ; =0x0214BFE0
 	str r5, [r4]
 	blx sub_0207A208

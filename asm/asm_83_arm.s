@@ -86,16 +86,4 @@ _0207B0F0:
 	bx lr
 	arm_func_end sub_0207B0E8
 
-	arm_func_start sub_0207B104
-sub_0207B104: ; 0x0207B104
-	mov ip, #0x4000000
-	ldr r1, [ip, #0x208]
-	str ip, [ip, #0x208]
-_0207B110:
-	ldrh r0, [ip, #6]
-	cmp r0, #0
-	bne _0207B110
-	str r1, [ip, #0x208]
-	bx lr
-	arm_func_end sub_0207B104
 

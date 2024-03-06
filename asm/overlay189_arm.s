@@ -452,7 +452,7 @@ sub_021A9710: ; 0x021A9710
 _021A9730:
 	mov r0, #0
 	sub r1, r0, #1
-	bl sub_0207B4F4
+	bl OS_AllocFromHeap
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _021A9740: .word 0x021B2F6C
@@ -471,7 +471,7 @@ sub_021A9744: ; 0x021A9744
 _021A9764:
 	mov r0, #0
 	sub r1, r0, #1
-	bl sub_0207B598
+	bl OS_FreeToHeap
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _021A9774: .word 0x021B2F6C

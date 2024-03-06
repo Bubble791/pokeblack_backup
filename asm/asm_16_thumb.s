@@ -1447,10 +1447,10 @@ sub_0205F3B4: ; 0x0205F3B4
 	add r2, r1, #0
 	ldr r0, [r3, #8]
 	ldr r1, [r3, #4]
-	ldr r3, _0205F3C0 ; =sub_0207B4F4
+	ldr r3, _0205F3C0 ; =OS_AllocFromHeap
 	bx r3
 	.align 2, 0
-_0205F3C0: .word sub_0207B4F4
+_0205F3C0: .word OS_AllocFromHeap
 	thumb_func_end sub_0205F3B4
 
 	thumb_func_start sub_0205F3C4
@@ -1459,10 +1459,10 @@ sub_0205F3C4: ; 0x0205F3C4
 	add r2, r1, #0
 	ldr r0, [r3, #8]
 	ldr r1, [r3, #4]
-	ldr r3, _0205F3D0 ; =sub_0207B598
+	ldr r3, _0205F3D0 ; =OS_FreeToHeap
 	bx r3
 	.align 2, 0
-_0205F3D0: .word sub_0207B598
+_0205F3D0: .word OS_FreeToHeap
 	thumb_func_end sub_0205F3C4
 
 	thumb_func_start sub_0205F3D4

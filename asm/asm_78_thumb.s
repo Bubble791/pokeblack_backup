@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_02079D10
-sub_02079D10: ; 0x02079D10
+	thumb_func_start OS_InitIrqTable
+OS_InitIrqTable: ; 0x02079D10
 	ldr r0, _02079D1C ; =0x02FE00A0
 	mov r1, #0
 	str r1, [r0, #4]
@@ -12,7 +12,7 @@ sub_02079D10: ; 0x02079D10
 	bx lr
 	nop
 _02079D1C: .word 0x02FE00A0
-	thumb_func_end sub_02079D10
+	thumb_func_end OS_InitIrqTable
 
 	thumb_func_start OS_SetIrqFunction
 OS_SetIrqFunction: ; 0x02079D20
@@ -265,8 +265,8 @@ OS_ResetRequestIrqMask: ; 0x02079EB8
 _02079ED4: .word 0x04000208
 	thumb_func_end OS_ResetRequestIrqMask
 
-	thumb_func_start sub_02079ED8
-sub_02079ED8: ; 0x02079ED8
+	thumb_func_start OS_SetIrqStackChecker
+OS_SetIrqStackChecker: ; 0x02079ED8
 	ldr r3, _02079EF0 ; =0x02FE0000
 	ldr r1, _02079EF4 ; =0xFDDB597D
 	ldr r0, _02079EF8 ; =0x00003F7C
@@ -284,7 +284,7 @@ _02079EF4: .word 0xFDDB597D
 _02079EF8: .word 0x00003F7C
 _02079EFC: .word 0x7BF9DD5B
 _02079F00: .word 0x00000800
-	thumb_func_end sub_02079ED8
+	thumb_func_end OS_SetIrqStackChecker
 _02079F04:
 	.byte 0x01, 0x48, 0x00, 0x88, 0x70, 0x47, 0xC0, 0x46, 0x08, 0xC2, 0x14, 0x02
 	.byte 0x08, 0xB5, 0x7F, 0x20, 0x00, 0x02, 0x08, 0x40, 0x00, 0x02, 0x00, 0x0C, 0x10, 0x28, 0x03, 0xD1
@@ -387,8 +387,8 @@ _02079FE0:
 	.align 2, 0
 	thumb_func_end sub_02079F5C
 
-	thumb_func_start sub_02079FE4
-sub_02079FE4: ; 0x02079FE4
+	thumb_func_start OS_InitLock
+OS_InitLock: ; 0x02079FE4
 	push {r4, lr}
 	ldr r0, _0207A030 ; =0x0214C20C
 	ldr r1, [r0]
@@ -429,7 +429,7 @@ _0207A030: .word 0x0214C20C
 _0207A034: .word 0x02FFFFB0
 _0207A038: .word 0xFFFF0000
 _0207A03C: .word 0x04000204
-	thumb_func_end sub_02079FE4
+	thumb_func_end OS_InitLock
 
 	thumb_func_start sub_0207A040
 sub_0207A040: ; 0x0207A040

@@ -73,8 +73,8 @@ _0207EBA6:
 _0207EBB4: .word 0x02FFFC3C
 	thumb_func_end sub_0207EB9C
 
-	thumb_func_start sub_0207EBB8
-sub_0207EBB8: ; 0x0207EBB8
+	thumb_func_start PM_Init
+PM_Init: ; 0x0207EBB8
 	push {r4, r5, r6, lr}
 	ldr r0, _0207EC0C ; =0x0214E240
 	ldrh r1, [r0]
@@ -120,7 +120,7 @@ _0207EC0C: .word 0x0214E240
 _0207EC10: .word 0x02FFF684
 _0207EC14: .word 0x0207EC1D
 _0207EC18: .word 0x02FFFC3C
-	thumb_func_end sub_0207EBB8
+	thumb_func_end PM_Init
 _0207EC1C:
 	.byte 0x38, 0xB5, 0x7F, 0x20
 	.byte 0x00, 0x02, 0x08, 0x40, 0x09, 0x06, 0x09, 0x0E, 0x00, 0x02, 0x09, 0x04, 0x01, 0x23, 0x00, 0x0C
@@ -1503,8 +1503,8 @@ _0207F6C4: .word 0x02FFFC3C
 _0207F6C8: .word 0x0214E240
 	thumb_func_end sub_0207F6B8
 
-	thumb_func_start sub_0207F6CC
-sub_0207F6CC: ; 0x0207F6CC
+	thumb_func_start SCFG_Init
+SCFG_Init: ; 0x0207F6CC
 	push {r3, lr}
 	ldr r1, _0207F6E0 ; =0x0207F711
 	mov r0, #0x17
@@ -1516,7 +1516,7 @@ sub_0207F6CC: ; 0x0207F6CC
 	nop
 _0207F6E0: .word 0x0207F711
 _0207F6E4: .word 0x0214E280
-	thumb_func_end sub_0207F6CC
+	thumb_func_end SCFG_Init
 
 	thumb_func_start sub_0207F6E8
 sub_0207F6E8: ; 0x0207F6E8
@@ -3806,14 +3806,14 @@ _020807B4:
 	pop {r4, r5, r6, r7, pc}
 _020807C4:
 	add r0, r6, #0
-	bl sub_0207B780
+	bl OS_IsOnVram
 	cmp r0, #0
 	bne _020807E0
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _020807EC
 	add r0, r6, #0
-	bl sub_0207B744
+	bl OS_IsOnExtendedMainMemory
 	cmp r0, #0
 	beq _020807EC
 _020807E0:

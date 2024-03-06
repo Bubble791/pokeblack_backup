@@ -108051,7 +108051,7 @@ _021CE106:
 	thumb_func_start ovy167_21ce10c
 ovy167_21ce10c: ; 0x021CE10C
 	push {r3, lr}
-	bl sub_0207AC24
+	bl OS_GetConsoleType
 	mov r1, #2
 	lsl r1, r1, #0x18
 	tst r0, r1

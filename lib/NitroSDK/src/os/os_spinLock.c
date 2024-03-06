@@ -28,39 +28,6 @@ static inline void OSi_WaitByLoop(void) {
 }
 #endif
 
-void OS_InitLock(void) {
-    static BOOL isInitialized = FALSE;
-    OSLockWord *lockp;
-
-    if (isInitialized)
-        return;
-
-    isInitialized = TRUE;
-    lockp = (OSLockWord *)HW_INIT_LOCK_BUF;
-
-#ifdef SDK_ARM9
-    lockp->lockFlag = 0;
-    OS_LockByWord(OS_MAINP_SYSTEM_LOCK_ID - 1, lockp, NULL);
-    while (lockp->extension != 0) {
-        OSi_WaitByLoop();
-    }
-    ((u32 *)OSi_ANYP_LOCK_ID_FLAG)[0] = OSi_LOCKID_INITIAL_FLAG_0;
-    ((u32 *)OSi_ANYP_LOCK_ID_FLAG)[1] = OSi_LOCKID_INITIAL_FLAG_1;
-    MI_CpuClear32((void *)HW_SHARED_LOCK_BUF, HW_CTRDG_LOCK_BUF - HW_SHARED_LOCK_BUF);
-    MIi_SetCardProcessor(MI_PROCESSOR_ARM7);
-    MIi_SetCartridgeProcessor(MI_PROCESSOR_ARM7);
-    OS_UnlockByWord(OS_MAINP_SYSTEM_LOCK_ID - 1, lockp, NULL);
-    OS_LockByWord(OS_MAINP_SYSTEM_LOCK_ID, lockp, NULL);
-#else
-    lockp->extension = 0;
-    while (lockp->ownerID != OS_MAINP_SYSTEM_LOCK_ID) {
-        OSi_WaitByLoop();
-    }
-    ((u32 *)OSi_ANYP_LOCK_ID_FLAG)[0] = OSi_LOCKID_INITIAL_FLAG_0;
-    ((u32 *)OSi_ANYP_LOCK_ID_FLAG)[1] = OSi_LOCKID_INITIAL_FLAG_1;
-    lockp->extension = OS_SUBP_SYSTEM_LOCK_ID;
-#endif
-}
 
 #ifdef SDK_ARM7
 asm void VENEER_SVC_WaitByLoop(register s32 count) {

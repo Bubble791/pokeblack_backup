@@ -8,7 +8,7 @@
 ovy29_21922c0: ; 0x021922C0
 	push {r4, r5, r6, lr}
 	bl sub_0207E75C
-	bl sub_0207EBB8
+	bl PM_Init
 	mov r0, #1
 	bl sub_0207EFC4
 	mov r0, #3

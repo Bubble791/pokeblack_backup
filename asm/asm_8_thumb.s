@@ -10,27 +10,27 @@ sub_020054B8: ; 0x020054B8
 	cmp r0, #0
 	bne _020054FC
 	mov r0, #0
-	bl sub_0207B298
+	bl OS_GetArenaHi
 	add r4, r0, #0
 	mov r0, #0
-	bl sub_0207B2A4
+	bl OS_GetArenaLo
 	add r1, r0, #0
 	mov r0, #0
 	add r2, r4, #0
 	mov r3, #1
-	bl sub_0207B5DC
+	bl OS_InitAlloc
 	add r1, r0, #0
 	mov r0, #0
-	bl sub_0207B418
+	bl OS_SetArenaLo
 	mov r0, #0
-	bl sub_0207B6B8
+	bl OS_CreateExtraHeap
 	mov r2, #0x3f
 	add r1, r0, #0
 	ldr r4, _02005630 ; =0x0209DA58
 	mov r0, #0
 	lsl r2, r2, #8
 	str r1, [r4, #8]
-	bl sub_0207B4F4
+	bl OS_AllocFromHeap
 	str r0, [r4, #4]
 _020054FC:
 	bl OS_IsRunOnTwl
@@ -81,7 +81,7 @@ _0200554E:
 	mov r0, #0
 	mov r1, #0
 	bl sub_0203D00C
-	bl sub_0207AC24
+	bl OS_GetConsoleType
 	mov r1, #0x81
 	lsl r1, r1, #0x18
 	tst r0, r1

@@ -96,11 +96,11 @@ _020829A8: .word sub_0208D2F0
 sub_020829AC: ; 0x020829AC
 	mov r2, r0
 	mov r0, #0
-	ldr ip, _020829C0 ; =sub_0207B4F4
+	ldr ip, _020829C0 ; =OS_AllocFromHeap
 	sub r1, r0, #1
 	bx ip
 	.align 2, 0
-_020829C0: .word sub_0207B4F4
+_020829C0: .word OS_AllocFromHeap
 	arm_func_end sub_020829AC
 _020829C4:
 	.byte 0x00, 0x20, 0xA0, 0xE1, 0x00, 0x00, 0xA0, 0xE3, 0x04, 0xC0, 0x9F, 0xE5

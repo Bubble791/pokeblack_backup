@@ -7459,8 +7459,8 @@ _0206EDDC:
 	pop {r3, pc}
 	thumb_func_end sub_0206EDCC
 
-	thumb_func_start sub_0206EDE0
-sub_0206EDE0: ; 0x0206EDE0
+	thumb_func_start CARD_Init
+CARD_Init: ; 0x0206EDE0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	ldr r5, _0206EE8C ; =0x0214B440
@@ -7547,7 +7547,7 @@ _0206EE94: .word 0x02FFFA80
 _0206EE98: .word 0x000004FC
 _0206EE9C: .word 0x0214BA80
 _0206EEA0: .word sub_0206F188
-	thumb_func_end sub_0206EDE0
+	thumb_func_end CARD_Init
 
 	thumb_func_start sub_0206EEA4
 sub_0206EEA4: ; 0x0206EEA4
@@ -9481,11 +9481,11 @@ _0206FCA2:
 	cmp r1, #0
 	beq _0206FCC6
 	mov r6, #1
-	blx sub_0207B79C
+	blx OS_GetDTCMAddress
 	add r1, r5, r4
 	cmp r1, r0
 	bls _0206FCC0
-	blx sub_0207B79C
+	blx OS_GetDTCMAddress
 	lsl r1, r6, #0xe
 	add r0, r0, r1
 	cmp r5, r0

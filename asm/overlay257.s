@@ -11488,7 +11488,7 @@ ovy257_219ef4c: ; 0x0219EF4C
 	bl sub_0203A1FC
 	add r4, r0, #0
 	bl sub_0207E75C
-	bl sub_0207EBB8
+	bl PM_Init
 	mov r0, #1
 	bl sub_0207EFC4
 	mov r0, #0x50

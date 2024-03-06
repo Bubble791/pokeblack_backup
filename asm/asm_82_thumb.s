@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	thumb_func_start sub_0207AC24
-sub_0207AC24: ; 0x0207AC24
+	thumb_func_start OS_GetConsoleType
+OS_GetConsoleType: ; 0x0207AC24
 	push {r4, lr}
 	ldr r4, _0207AC54 ; =0x0209B70C
 	mov r0, #0
@@ -34,7 +34,7 @@ _0207AC4E:
 _0207AC54: .word 0x0209B70C
 _0207AC58: .word 0x01800004
 _0207AC5C: .word 0x80000001
-	thumb_func_end sub_0207AC24
+	thumb_func_end OS_GetConsoleType
 
 	thumb_func_start sub_0207AC60
 sub_0207AC60: ; 0x0207AC60
@@ -51,7 +51,7 @@ _0207AC70: .word 0x02098858
 	thumb_func_start sub_0207AC74
 sub_0207AC74: ; 0x0207AC74
 	push {r3, lr}
-	bl sub_0207AC24
+	bl OS_GetConsoleType
 	mov r1, #1
 	lsl r1, r1, #0x1c
 	tst r0, r1
