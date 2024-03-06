@@ -2841,7 +2841,7 @@ sub_020800E8: ; 0x020800E8
 	ldr r1, _02080104 ; =0x7FFFFFFF
 	ldr r2, [sp, #0xc]
 	add r3, r4, #4
-	bl sub_02080124
+	bl STD_TVSNPrintf
 	pop {r4}
 	pop {r3}
 	add sp, #0x10
@@ -2859,7 +2859,7 @@ sub_02080108: ; 0x02080108
 	bic r4, r3
 	ldr r2, [sp, #0x10]
 	add r3, r4, #4
-	bl sub_02080124
+	bl STD_TVSNPrintf
 	pop {r4}
 	pop {r3}
 	add sp, #0x10
@@ -2867,8 +2867,8 @@ sub_02080108: ; 0x02080108
 	.align 2, 0
 	thumb_func_end sub_02080108
 
-	thumb_func_start sub_02080124
-sub_02080124: ; 0x02080124
+	thumb_func_start STD_TVSNPrintf
+STD_TVSNPrintf: ; 0x02080124
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x50
 	add r6, r2, #0
@@ -3746,7 +3746,7 @@ _0208074C:
 	add sp, #0x50
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end sub_02080124
+	thumb_func_end STD_TVSNPrintf
 
 	thumb_func_start sub_02080758
 sub_02080758: ; 0x02080758

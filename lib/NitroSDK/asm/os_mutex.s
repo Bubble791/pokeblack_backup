@@ -77,7 +77,7 @@ OSi_UnlockAllMutex: ; 0x0207AEB0
 	mov r6, #0
 _0207AEC4:
 	add r0, r4, #0
-	bl sub_0207A3B4
+	bl OSi_RemoveMutexLinkFromQueue
 	ldr r2, [r0, #0xc]
 	mov r1, #0xff
 	lsl r1, r1, #0x18

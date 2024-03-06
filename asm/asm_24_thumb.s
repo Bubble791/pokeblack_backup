@@ -5898,7 +5898,7 @@ sub_0206E278: ; 0x0206E278
 	ldr r1, _0206E2BC ; =sub_0206ECC0
 	add r2, r4, #0
 	add r3, r4, r3
-	bl sub_0207A588
+	bl OS_CreateThread
 	ldr r0, _0206E2C0 ; =0x000010E0
 	mov r1, #0
 	add r0, r4, r0
@@ -5913,7 +5913,7 @@ sub_0206E278: ; 0x0206E278
 	sub r0, r0, #4
 	str r1, [r4, r0]
 	add r0, r4, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	add sp, #8
 	pop {r4, pc}
 	nop
@@ -7524,10 +7524,10 @@ _0206EE04:
 	add r0, #0x28
 	mov r2, #0
 	add r3, r5, r4
-	bl sub_0207A588
+	bl OS_CreateThread
 	add r5, #0x28
 	add r0, r5, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	bl sub_0206F0C0
 	bl sub_0206FE54
 	bl OS_GetBootType
@@ -7947,7 +7947,7 @@ sub_0206F134: ; 0x0206F134
 	add r0, r4, #0
 	ldr r1, [r4, #8]
 	add r0, #0x28
-	bl sub_0207A998
+	bl OS_SetThreadPriority
 	ldr r0, _0206F184 ; =0x000004E8
 	str r5, [r4, r0]
 	ldr r1, [r4, #4]
@@ -7956,7 +7956,7 @@ sub_0206F134: ; 0x0206F134
 	str r0, [r4, #4]
 	add r0, r4, #0
 	add r0, #0x28
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	b _0206F168
 _0206F15E:
 	add r0, r4, #0
@@ -8187,7 +8187,7 @@ sub_0206F2E4: ; 0x0206F2E4
 	ldr r0, _0206F308 ; =0x0214B940
 	str r2, [r1, #4]
 	ldr r0, [r0, #0x1c]
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 _0206F300:
 	pop {r3, pc}
 	nop
@@ -9188,7 +9188,7 @@ _0206FA58:
 	cmp r0, #0
 	beq _0206FA6C
 	add r0, r6, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 _0206FA6C:
 	bl sub_0206F9E4
 	tst r0, r4
@@ -9699,7 +9699,7 @@ sub_0206FE54: ; 0x0206FE54
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0206FE9E
-	blx sub_0207A208
+	blx OS_GetLockID
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	add r0, r4, #0
@@ -9715,7 +9715,7 @@ sub_0206FE54: ; 0x0206FE54
 	add r0, r4, #0
 	bl sub_0206EF38
 	add r0, r4, #0
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 _0206FE9E:
 	bl OS_IsRunOnTwl
 	cmp r0, #0

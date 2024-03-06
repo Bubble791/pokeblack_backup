@@ -164,7 +164,7 @@ _0207939A:
 	cmp r0, #3
 	bne _020793A6
 	mov r0, #1
-	bl sub_0207AA04
+	bl OS_Sleep
 	b _020793AE
 _020793A6:
 	add r0, r4, #0
@@ -330,7 +330,7 @@ _020796FA:
 	cmp r0, #3
 	bne _02079706
 	mov r0, #1
-	bl sub_0207AA04
+	bl OS_Sleep
 	b _0207970E
 _02079706:
 	add r0, r4, #0
@@ -485,7 +485,7 @@ _020798EA:
 	cmp r0, #3
 	bne _020798F6
 	mov r0, #1
-	bl sub_0207AA04
+	bl OS_Sleep
 	b _020798FE
 _020798F6:
 	add r0, r4, #0

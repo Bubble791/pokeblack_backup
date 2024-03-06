@@ -5222,7 +5222,7 @@ _0203BF78: .word 0x0214185C
 	thumb_func_start sub_0203BF7C
 sub_0203BF7C: ; 0x0203BF7C
 	push {r3, r4, r5, lr}
-	blx sub_0207A208
+	blx OS_GetLockID
 	add r4, r0, #0
 	mov r0, #2
 	mvn r0, r0
@@ -5248,7 +5248,7 @@ _0203BFAC:
 	bl sub_0206EF58
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	mov r0, #1
 	cmp r5, #0
 	bne _0203BFC4
@@ -5290,7 +5290,7 @@ sub_0203BFF8: ; 0x0203BFF8
 	add r7, r1, #0
 	str r2, [sp, #0x14]
 	add r5, r3, #0
-	blx sub_0207A208
+	blx OS_GetLockID
 	add r4, r0, #0
 	mov r0, #2
 	mvn r0, r0
@@ -5324,7 +5324,7 @@ _0203C01C:
 	bl sub_0206EF58
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	cmp r6, #0
 	bne _0203C060
 	cmp r5, #0
@@ -5357,7 +5357,7 @@ sub_0203C07C: ; 0x0203C07C
 	add r6, r1, #0
 	add r7, r2, #0
 	str r3, [sp, #0x14]
-	blx sub_0207A208
+	blx OS_GetLockID
 	add r4, r0, #0
 	mov r0, #2
 	mvn r0, r0
@@ -5436,7 +5436,7 @@ sub_0203C11C: ; 0x0203C11C
 	bne _0203C17E
 	bl sub_0206EF58
 	add r0, r6, #0
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	ldr r0, _0203C188 ; =0x02141860
 	mov r6, #0
 	str r6, [r0]
@@ -5503,7 +5503,7 @@ _0203C1A0:
 	add r0, r4, #0
 	bl sub_0206EF58
 	add r0, r4, #0
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	mov r0, #0
 	str r0, [r5]
 _0203C1B8:
@@ -5520,7 +5520,7 @@ sub_0203C1C0: ; 0x0203C1C0
 	add r4, r2, #0
 	bl sub_0206EF58
 	add r0, r5, #0
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	mov r1, #0
 	ldr r0, _0203C1E4 ; =0x02141860
 	cmp r4, #0

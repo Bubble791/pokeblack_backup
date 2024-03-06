@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	arm_func_start sub_0207AB04
-sub_0207AB04: ; 0x0207AB04
+	arm_func_start OS_InitContext
+OS_InitContext: ; 0x0207AB04
 	add r1, r1, #4
 	str r1, [r0, #0x40]
 	str r2, [r0, #0x44]
@@ -32,10 +32,10 @@ sub_0207AB04: ; 0x0207AB04
 	str r1, [r0, #0x34]
 	str r1, [r0, #0x3c]
 	bx lr
-	arm_func_end sub_0207AB04
+	arm_func_end OS_InitContext
 
-	arm_func_start sub_0207AB70
-sub_0207AB70: ; 0x0207AB70
+	arm_func_start OS_SaveContext
+OS_SaveContext: ; 0x0207AB70
 	stmdb sp!, {r0, lr}
 	add r0, r0, #0x48
 	ldr r1, _0207ABB8 ; =sub_0207002C
@@ -56,13 +56,13 @@ sub_0207AB70: ; 0x0207AB70
 	bx lr
 	.align 2, 0
 _0207ABB8: .word sub_0207002C
-	arm_func_end sub_0207AB70
+	arm_func_end OS_SaveContext
 
-	arm_func_start sub_0207ABBC
-sub_0207ABBC: ; 0x0207ABBC
+	arm_func_start OS_LoadContext
+OS_LoadContext: ; 0x0207ABBC
 	stmdb sp!, {r0, lr}
 	add r0, r0, #0x48
-	ldr r1, _0207AC1C ; =sub_0207006C
+	ldr r1, _0207AC1C ; =CPi_RestoreContext
 	blx r1
 	ldmia sp!, {r0, lr}
 	mrs r1, cpsr
@@ -87,7 +87,7 @@ _0207AC14:
 	ldmia sp!, {r0, r1, r2, r3, ip, lr}
 	subs pc, lr, #4
 	.align 2, 0
-_0207AC1C: .word sub_0207006C
+_0207AC1C: .word CPi_RestoreContext
 _0207AC20: .word 0x04000280
-	arm_func_end sub_0207ABBC
+	arm_func_end OS_LoadContext
 

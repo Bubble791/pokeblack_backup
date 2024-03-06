@@ -343,7 +343,7 @@ ovy257_2199b28: ; 0x02199B28
 	b _02199B38
 _02199B32:
 	add r0, r4, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 _02199B38:
 	add r5, r6, #0
 	bl OS_IsRunOnTwl

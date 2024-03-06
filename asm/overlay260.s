@@ -19284,7 +19284,7 @@ _021BC3BA:
 	add r0, r2, #0
 	ldr r2, _021BC3E8 ; =0x021C0770
 _021BC3CA:
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	cmp r0, #0
 	bge _021BC3D8
 	add sp, #0xc
@@ -19360,7 +19360,7 @@ _021BC440:
 	mov r1, #0x80
 	add r3, r4, #4
 _021BC44E:
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	cmp r0, #0
 	bge _021BC45C
 	add sp, #8
@@ -19823,7 +19823,7 @@ ovy260_21bc7c4: ; 0x021BC7C4
 	ldr r2, _021BC80C ; =0x021C0990
 	mov r1, #0x80
 	add r3, r3, #4
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 _021BC7E0:
 	str r4, [sp]
 	ldr r1, [r4, #0x20]
@@ -21498,7 +21498,7 @@ _021BD490:
 	mov r6, #0
 _021BD49A:
 	add r0, r5, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 	add r0, r6, #0
 	bl sub_0216C910
 	ldr r0, [r4]
@@ -22025,7 +22025,7 @@ ovy260_21bd86a: ; 0x021BD86A
 	ldr r2, _021BD8A0 ; =0x021C107C
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r1, r0, #0
 	add r0, r5, r1
 	sub r1, r4, r1
@@ -22034,7 +22034,7 @@ ovy260_21bd86a: ; 0x021BD86A
 	bic r4, r3
 	ldr r2, [sp, #0x114]
 	add r3, r4, #4
-	bl sub_0207A2DC
+	bl OS_VSNPrintf
 	add sp, #0x100
 	pop {r3, r4, r5}
 	pop {r3}
@@ -22260,7 +22260,7 @@ ovy260_21bda1c: ; 0x021BDA1C
 	add r0, r4, #0
 	mov r1, #0x80
 	add r3, r5, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r4, #0
 	bl sub_021A1160
 	ldr r4, _021BDA8C ; =0x021C24DC
@@ -22268,7 +22268,7 @@ ovy260_21bda1c: ; 0x021BDA1C
 	add r0, r4, #0
 	mov r1, #0x80
 	add r3, r5, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r4, #0
 	bl sub_021A1160
 	pop {r3, r4, r5, pc}
@@ -22279,7 +22279,7 @@ _021BDA52:
 	add r0, r4, #0
 	mov r1, #0x80
 	add r3, r5, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r4, #0
 	bl sub_021A1160
 	ldr r4, _021BDA8C ; =0x021C24DC
@@ -22287,7 +22287,7 @@ _021BDA52:
 	add r0, r4, #0
 	mov r1, #0x80
 	add r3, r5, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r4, #0
 	bl sub_021A1160
 	pop {r3, r4, r5, pc}
@@ -22317,7 +22317,7 @@ ovy260_21bda9c: ; 0x021BDA9C
 	ldr r2, _021BDAE8 ; =0x021C1240
 	ldr r3, _021BDAEC ; =0x0219069C
 	mov r1, #0x80
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	b _021BDAC2
 _021BDABE:
 	mov r0, #1
@@ -22452,7 +22452,7 @@ ovy260_21bdb94: ; 0x021BDB94
 	ldr r2, _021BDBD0 ; =0x021C1240
 	ldr r3, _021BDBD4 ; =0x0219069C
 	mov r1, #0x80
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 _021BDBB2:
 	ldr r0, _021BDBCC ; =0x021C23D4
 	pop {r3, pc}
@@ -25061,7 +25061,7 @@ ovy260_21bef5a: ; 0x021BEF5A
 	ldr r2, _021BEF90 ; =0x021C1754
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r1, r0, #0
 	add r0, r5, r1
 	sub r1, r4, r1
@@ -25070,7 +25070,7 @@ ovy260_21bef5a: ; 0x021BEF5A
 	bic r4, r3
 	ldr r2, [sp, #0x114]
 	add r3, r4, #4
-	bl sub_0207A2DC
+	bl OS_VSNPrintf
 	add sp, #0x100
 	pop {r3, r4, r5}
 	pop {r3}
@@ -25903,7 +25903,7 @@ ovy260_21bf578: ; 0x021BF578
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 	add r5, sp, #0x80
@@ -25911,7 +25911,7 @@ ovy260_21bf578: ; 0x021BF578
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 	add r5, sp, #0
@@ -25919,7 +25919,7 @@ ovy260_21bf578: ; 0x021BF578
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 	b _021BF602
@@ -25930,7 +25930,7 @@ _021BF5C4:
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 	add r5, sp, #0x80
@@ -25938,7 +25938,7 @@ _021BF5C4:
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 	add r5, sp, #0
@@ -25946,7 +25946,7 @@ _021BF5C4:
 	add r0, r5, #0
 	mov r1, #0x80
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	add r0, r5, #0
 	bl sub_021A1160
 _021BF602:
@@ -25986,7 +25986,7 @@ ovy260_21bf63c: ; 0x021BF63C
 	ldr r2, _021BF66C ; =0x021C1AE4
 	ldr r3, _021BF670 ; =0x0219069C
 	mov r1, #0x80
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 _021BF65A:
 	mov r0, #1
 	pop {r3, pc}
@@ -26015,7 +26015,7 @@ ovy260_21bf674: ; 0x021BF674
 	ldr r2, _021BF6B0 ; =0x021C1AE4
 	ldr r3, _021BF6B4 ; =0x0219069C
 	mov r1, #0x80
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 _021BF692:
 	ldr r0, _021BF6AC ; =0x021C24DC
 	pop {r3, pc}

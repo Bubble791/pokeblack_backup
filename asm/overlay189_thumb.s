@@ -884,10 +884,10 @@ _0219D584:
 	mov r2, #0
 	add r3, r6, r3
 	str r4, [sp, #4]
-	bl sub_0207A588
+	bl OS_CreateThread
 	add r5, #0x2c
 	add r0, r5, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	mov r0, #1
 	add sp, #8
 	pop {r4, r5, r6, pc}
@@ -904,7 +904,7 @@ ovy189_219d5ac: ; 0x0219D5AC
 	bl sub_0219D5D0
 	add r4, #0x2c
 	add r0, r4, #0
-	bl sub_0207A800
+	bl OS_JoinThread
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy189_219d5ac
@@ -1027,7 +1027,7 @@ _0219D68C:
 	b _0219D6A0
 _0219D694:
 	add r0, r6, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 	bl sub_021575F8
 	add r4, r4, r6
 _0219D6A0:
@@ -10210,7 +10210,7 @@ ovy189_21a1894: ; 0x021A1894
 	add r5, r0, #0
 	ldr r1, _021A18B4 ; =0x021AD2E8
 	add r0, r4, #0
-	bl sub_0207A290
+	bl OS_SPrintf
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #0
@@ -15254,7 +15254,7 @@ _021A3E92:
 	ldr r3, [sp, #0xc]
 	ldr r3, [r3, #4]
 _021A3E96:
-	bl sub_0207A290
+	bl OS_SPrintf
 _021A3E9A:
 	mov r0, #0x66
 	lsl r0, r0, #2
@@ -16520,7 +16520,7 @@ _021A482A:
 	ldr r1, _021A4934 ; =0x021ADF28
 	ldr r2, [r5, r2]
 	add r0, r6, #0
-	bl sub_0207A290
+	bl OS_SPrintf
 	ldr r1, _021A4938 ; =0x021ADF2C
 	add r0, r4, #0
 	add r2, r6, #0
@@ -17696,7 +17696,7 @@ _021A5146:
 	ldr r0, [r5, r0]
 	ldr r1, _021A52AC ; =0x021AE028
 	ldr r2, [r5, #0x18]
-	bl sub_0207A290
+	bl OS_SPrintf
 	b _021A5172
 _021A515A:
 	add r0, r6, #0
@@ -18149,7 +18149,7 @@ ovy189_21a54d4: ; 0x021A54D4
 	ldr r0, _021A5508 ; =0x000009B8
 	ldr r1, [r4, #0x18]
 	add r0, r1, r0
-	bl sub_0207A800
+	bl OS_JoinThread
 	ldr r0, [r4, #0x18]
 	bl sub_021A54C4
 	mov r0, #0
@@ -18214,7 +18214,7 @@ _021A5556:
 	add r0, r7, #0
 	add r1, r5, #0
 	add r3, r4, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	ldr r4, [r6, #0x18]
 	add r0, r4, #0
 	add r0, #0x89
@@ -18293,7 +18293,7 @@ _021A55FE:
 	pop {r3, r4, r5, r6, r7, pc}
 _021A560E:
 	add r0, r4, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 	b _021A5518
 _021A5616:
 	.byte 0x7F, 0xB0, 0x29, 0xB0, 0xF8, 0xBD
@@ -18433,11 +18433,11 @@ _021A5728:
 	ldr r1, _021A5764 ; =ovy189_21a5510
 	add r2, r7, #0
 	add r3, r6, r3
-	bl sub_0207A588
+	bl OS_CreateThread
 	ldr r0, [r4, #0x18]
 	sub r5, #0xc0
 	add r0, r0, r5
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	mov r0, #1
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -19652,7 +19652,7 @@ ovy189_21a6058: ; 0x021A6058
 	ldr r2, _021A606C ; =0x021AE1B8
 	mov r1, #0x21
 	mov r3, #5
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	pop {r3, pc}
 	nop
 _021A606C: .word 0x021AE1B8
@@ -22593,7 +22593,7 @@ _021A8FA8:
 	add r0, sp, #0x34
 	mov r1, #0x10
 	add r3, r6, #0
-	bl sub_0207A2C0
+	bl OS_SNPrintf
 	str r0, [sp, #0x1c]
 	ldr r0, _021A90C0 ; =0x021AE630
 	blx sub_02085D9C
@@ -22642,7 +22642,7 @@ _021A9022:
 	ldr r1, _021A90D4 ; =0x021AE638
 	ldr r2, [r2]
 	ldr r3, _021A90C8 ; =0x021AE510
-	bl sub_0207A290
+	bl OS_SPrintf
 	ldr r5, [r4, #0x54]
 	add r0, r5, #0
 	blx sub_02085D9C

@@ -2,63 +2,16 @@
 	.include "asm_1.inc"
 	.include "global.inc"
 
+    .bss
+
+	.public OSi_ThreadInfo
+OSi_ThreadInfo:
+    .space 0x10
+
 	.text
-	thumb_func_start sub_0207A290
-sub_0207A290: ; 0x0207A290
-	push {r0, r1, r2, r3}
-	push {r3, lr}
-	add r3, sp, #0xc
-	mov r2, #3
-	bic r3, r2
-	ldr r1, [sp, #0xc]
-	add r2, r3, #4
-	bl sub_0207A2AC
-	pop {r3}
-	pop {r3}
-	add sp, #0x10
-	bx r3
-	.align 2, 0
-	thumb_func_end sub_0207A290
 
-	thumb_func_start sub_0207A2AC
-sub_0207A2AC: ; 0x0207A2AC
-	push {r4, lr}
-	add r4, r1, #0
-	add r3, r2, #0
-	ldr r1, _0207A2BC ; =0x7FFFFFFF
-	add r2, r4, #0
-	bl sub_0207A2DC
-	pop {r4, pc}
-	.align 2, 0
-_0207A2BC: .word 0x7FFFFFFF
-	thumb_func_end sub_0207A2AC
-
-	thumb_func_start sub_0207A2C0
-sub_0207A2C0: ; 0x0207A2C0
-	push {r0, r1, r2, r3}
-	push {r4, lr}
-	add r4, sp, #0x10
-	mov r3, #3
-	bic r4, r3
-	ldr r2, [sp, #0x10]
-	add r3, r4, #4
-	bl sub_0207A2DC
-	pop {r4}
-	pop {r3}
-	add sp, #0x10
-	bx r3
-	.align 2, 0
-	thumb_func_end sub_0207A2C0
-
-	thumb_func_start sub_0207A2DC
-sub_0207A2DC: ; 0x0207A2DC
-	push {r3, lr}
-	bl sub_02080124
-	pop {r3, pc}
-	thumb_func_end sub_0207A2DC
-
-	thumb_func_start sub_0207A2E4
-sub_0207A2E4: ; 0x0207A2E4
+	thumb_func_start OSi_GetUnusedThreadId
+OSi_GetUnusedThreadId: ; 0x0207A2E4
 	ldr r1, _0207A2F0 ; =0x0214C210
 	ldr r0, [r1, #0x18]
 	add r0, r0, #1
@@ -66,10 +19,10 @@ sub_0207A2E4: ; 0x0207A2E4
 	bx lr
 	nop
 _0207A2F0: .word 0x0214C210
-	thumb_func_end sub_0207A2E4
+	thumb_func_end OSi_GetUnusedThreadId
 
-	thumb_func_start sub_0207A2F4
-sub_0207A2F4: ; 0x0207A2F4
+	thumb_func_start OSi_InsertLinkToQueue
+OSi_InsertLinkToQueue: ; 0x0207A2F4
 	push {r3, r4}
 	ldr r4, [r0]
 	b _0207A302
@@ -125,10 +78,10 @@ _0207A34A:
 	pop {r3, r4}
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207A2F4
+	thumb_func_end OSi_InsertLinkToQueue
 
-	thumb_func_start sub_0207A350
-sub_0207A350: ; 0x0207A350
+	thumb_func_start OSi_RemoveLinkFromQueue
+OSi_RemoveLinkFromQueue: ; 0x0207A350
 	ldr r2, [r0]
 	cmp r2, #0
 	beq _0207A36E
@@ -149,10 +102,10 @@ _0207A36E:
 	add r0, r2, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207A350
+	thumb_func_end OSi_RemoveLinkFromQueue
 
-	thumb_func_start sub_0207A374
-sub_0207A374: ; 0x0207A374
+	thumb_func_start OSi_RemoveSpecifiedLinkFromQueue
+OSi_RemoveSpecifiedLinkFromQueue: ; 0x0207A374
 	push {r4, r5}
 	ldr r5, [r0]
 	add r3, r5, #0
@@ -191,10 +144,10 @@ _0207A3AC:
 	pop {r4, r5}
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207A374
+	thumb_func_end OSi_RemoveSpecifiedLinkFromQueue
 
-	thumb_func_start sub_0207A3B4
-sub_0207A3B4: ; 0x0207A3B4
+	thumb_func_start OSi_RemoveMutexLinkFromQueue
+OSi_RemoveMutexLinkFromQueue: ; 0x0207A3B4
 	ldr r2, [r0]
 	cmp r2, #0
 	beq _0207A3CC
@@ -211,10 +164,10 @@ _0207A3C8:
 _0207A3CC:
 	add r0, r2, #0
 	bx lr
-	thumb_func_end sub_0207A3B4
+	thumb_func_end OSi_RemoveMutexLinkFromQueue
 
-	thumb_func_start sub_0207A3D0
-sub_0207A3D0: ; 0x0207A3D0
+	thumb_func_start OSi_InsertThreadToList
+OSi_InsertThreadToList: ; 0x0207A3D0
 	push {r4, r5}
 	ldr r1, _0207A404 ; =0x0214C210
 	mov r4, #0
@@ -247,10 +200,10 @@ _0207A3FA:
 	bx lr
 	.align 2, 0
 _0207A404: .word 0x0214C210
-	thumb_func_end sub_0207A3D0
+	thumb_func_end OSi_InsertThreadToList
 
-	thumb_func_start sub_0207A408
-sub_0207A408: ; 0x0207A408
+	thumb_func_start OSi_RemoveThreadFromList
+OSi_RemoveThreadFromList: ; 0x0207A408
 	ldr r1, _0207A430 ; =0x0214C210
 	mov r2, #0
 	ldr r1, [r1, #0x24]
@@ -276,10 +229,10 @@ _0207A428:
 	bx lr
 	nop
 _0207A430: .word 0x0214C210
-	thumb_func_end sub_0207A408
+	thumb_func_end OSi_RemoveThreadFromList
 
-	thumb_func_start sub_0207A434
-sub_0207A434: ; 0x0207A434
+	thumb_func_start OSi_RescheduleThread
+OSi_RescheduleThread: ; 0x0207A434
 	push {r4, r5, r6, lr}
 	ldr r4, _0207A49C ; =0x0214C210
 	ldr r0, [r4, #4]
@@ -299,7 +252,7 @@ _0207A44E:
 _0207A454:
 	ldr r0, [r4, #8]
 	ldr r4, [r0]
-	bl sub_0207A900
+	bl OS_SelectThread
 	add r5, r0, #0
 	cmp r4, r5
 	beq _0207A49A
@@ -309,7 +262,7 @@ _0207A454:
 	cmp r0, #2
 	beq _0207A476
 	add r0, r4, #0
-	blx sub_0207AB70
+	blx OS_SaveContext
 	cmp r0, #0
 	bne _0207A49A
 _0207A476:
@@ -331,13 +284,13 @@ _0207A490:
 	ldr r0, _0207A49C ; =0x0214C210
 	str r5, [r0, #0x20]
 	add r0, r5, #0
-	blx sub_0207ABBC
+	blx OS_LoadContext
 _0207A49A:
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0207A49C: .word 0x0214C210
 _0207A4A0: .word 0x0214C22C
-	thumb_func_end sub_0207A434
+	thumb_func_end OSi_RescheduleThread
 
 	thumb_func_start OS_InitThread
 OS_InitThread: ; 0x0207A4A4
@@ -401,7 +354,7 @@ _0207A4E2:
 	ldr r0, _0207A56C ; =0x02FFFFA0
 	str r1, [r0]
 	mov r0, #0
-	bl sub_0207AA8C
+	bl OS_SetSwitchThreadCallback
 	mov r0, #0xc8
 	str r0, [sp]
 	mov r0, #0x1f
@@ -411,7 +364,7 @@ _0207A4E2:
 	ldr r3, _0207A578 ; =0x0214C484
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_0207A588
+	bl OS_CreateThread
 	mov r0, #0x20
 	str r0, [r4, #0x70]
 	mov r0, #1
@@ -437,17 +390,17 @@ _0207A574: .word 0x0207AAA9
 _0207A578: .word 0x0214C484
 	thumb_func_end OS_InitThread
 
-	thumb_func_start sub_0207A57C
-sub_0207A57C: ; 0x0207A57C
+	thumb_func_start OS_IsThreadAvailable
+OS_IsThreadAvailable: ; 0x0207A57C
 	ldr r0, _0207A584 ; =0x0214C21C
 	ldr r0, [r0]
 	bx lr
 	nop
 _0207A584: .word 0x0214C21C
-	thumb_func_end sub_0207A57C
+	thumb_func_end OS_IsThreadAvailable
 
-	thumb_func_start sub_0207A588
-sub_0207A588: ; 0x0207A588
+	thumb_func_start OS_CreateThread
+OS_CreateThread: ; 0x0207A588
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r5, r0, #0
@@ -456,7 +409,7 @@ sub_0207A588: ; 0x0207A588
 	add r6, r3, #0
 	blx OS_DisableInterrupts
 	str r0, [sp, #8]
-	bl sub_0207A2E4
+	bl OSi_GetUnusedThreadId
 	mov r4, #0
 	ldr r1, [sp, #0x24]
 	str r0, [r5, #0x6c]
@@ -464,7 +417,7 @@ sub_0207A588: ; 0x0207A588
 	str r1, [r5, #0x70]
 	str r4, [r5, #0x64]
 	str r4, [r5, #0x74]
-	bl sub_0207A3D0
+	bl OSi_InsertThreadToList
 	add r0, r5, #0
 	add r0, #0x94
 	str r6, [r0]
@@ -495,11 +448,11 @@ sub_0207A588: ; 0x0207A588
 	str r4, [r0]
 	ldr r1, [sp]
 	add r0, r5, #0
-	blx sub_0207AB04
+	blx OS_InitContext
 	ldr r0, [sp, #4]
 	ldr r2, [sp, #0x20]
 	str r0, [r5, #4]
-	ldr r0, _0207A64C ; =sub_0207A650
+	ldr r0, _0207A64C ; =OS_ExitThread
 	add r1, r7, #4
 	str r0, [r5, #0x3c]
 	mov r0, #0
@@ -516,7 +469,7 @@ sub_0207A588: ; 0x0207A588
 	str r4, [r0]
 	add r0, r5, #0
 	mov r1, #0
-	bl sub_0207AAFC
+	bl OS_SetThreadDestructor
 	add r0, r5, #0
 	add r0, #0x80
 	add r1, r5, #0
@@ -536,24 +489,24 @@ sub_0207A588: ; 0x0207A588
 	nop
 _0207A644: .word 0xFDDB597D
 _0207A648: .word 0x7BF9DD5B
-_0207A64C: .word sub_0207A650
-	thumb_func_end sub_0207A588
+_0207A64C: .word OS_ExitThread
+	thumb_func_end OS_CreateThread
 
-	thumb_func_start sub_0207A650
-sub_0207A650: ; 0x0207A650
+	thumb_func_start OS_ExitThread
+OS_ExitThread: ; 0x0207A650
 	push {r3, lr}
 	blx OS_DisableInterrupts
 	ldr r0, _0207A664 ; =0x0214C210
 	mov r1, #0
 	ldr r0, [r0, #0x20]
-	bl sub_0207A668
+	bl OSi_ExitThread_ArgSpecified
 	pop {r3, pc}
 	nop
 _0207A664: .word 0x0214C210
-	thumb_func_end sub_0207A650
+	thumb_func_end OS_ExitThread
 
-	thumb_func_start sub_0207A668
-sub_0207A668: ; 0x0207A668
+	thumb_func_start OSi_ExitThread_ArgSpecified
+OSi_ExitThread_ArgSpecified: ; 0x0207A668
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	ldr r1, _0207A69C ; =0x0214C210
@@ -561,8 +514,8 @@ sub_0207A668: ; 0x0207A668
 	ldr r2, [r1, #0x14]
 	cmp r2, #0
 	beq _0207A692
-	ldr r1, _0207A6A0 ; =sub_0207A6A4
-	blx sub_0207AB04
+	ldr r1, _0207A6A0 ; =OSi_ExitThread
+	blx OS_InitContext
 	ldr r1, [r5]
 	mov r0, #0x80
 	orr r0, r1
@@ -571,19 +524,19 @@ sub_0207A668: ; 0x0207A668
 	str r0, [r5, #0x64]
 	add r0, r5, #0
 	str r4, [r5, #4]
-	blx sub_0207ABBC
+	blx OS_LoadContext
 	pop {r3, r4, r5, pc}
 _0207A692:
 	add r0, r4, #0
-	bl sub_0207A6A4
+	bl OSi_ExitThread
 	pop {r3, r4, r5, pc}
 	nop
 _0207A69C: .word 0x0214C210
-_0207A6A0: .word sub_0207A6A4
-	thumb_func_end sub_0207A668
+_0207A6A0: .word OSi_ExitThread
+	thumb_func_end OSi_ExitThread_ArgSpecified
 
-	thumb_func_start sub_0207A6A4
-sub_0207A6A4: ; 0x0207A6A4
+	thumb_func_start OSi_ExitThread
+OSi_ExitThread: ; 0x0207A6A4
 	push {r3, lr}
 	ldr r1, _0207A6C8 ; =0x0214C210
 	ldr r1, [r1, #8]
@@ -599,44 +552,44 @@ sub_0207A6A4: ; 0x0207A6A4
 	blx r2
 	blx OS_DisableInterrupts
 _0207A6C2:
-	bl sub_0207A6CC
+	bl OSi_ExitThread_Destroy
 	pop {r3, pc}
 	.align 2, 0
 _0207A6C8: .word 0x0214C210
-	thumb_func_end sub_0207A6A4
+	thumb_func_end OSi_ExitThread
 
-	thumb_func_start sub_0207A6CC
-sub_0207A6CC: ; 0x0207A6CC
+	thumb_func_start OSi_ExitThread_Destroy
+OSi_ExitThread_Destroy: ; 0x0207A6CC
 	push {r4, lr}
 	ldr r0, _0207A70C ; =0x0214C210
 	ldr r0, [r0, #8]
 	ldr r4, [r0]
-	bl sub_0207AAB4
+	bl OS_DisableScheduler
 	add r0, r4, #0
 	bl OSi_UnlockAllMutex
 	ldr r0, [r4, #0x78]
 	cmp r0, #0
 	beq _0207A6EA
 	add r1, r4, #0
-	bl sub_0207A374
+	bl OSi_RemoveSpecifiedLinkFromQueue
 _0207A6EA:
 	add r0, r4, #0
-	bl sub_0207A408
+	bl OSi_RemoveThreadFromList
 	mov r0, #2
 	str r0, [r4, #0x64]
 	add r4, #0x9c
 	add r0, r4, #0
 	bl OS_WakeupThread
-	bl sub_0207AAD8
-	bl sub_0207A918
+	bl OS_EnableScheduler
+	bl OS_RescheduleThread
 	bl OS_Terminate
 	pop {r4, pc}
 	nop
 _0207A70C: .word 0x0214C210
-	thumb_func_end sub_0207A6CC
+	thumb_func_end OSi_ExitThread_Destroy
 
-	thumb_func_start sub_0207A710
-sub_0207A710: ; 0x0207A710
+	thumb_func_start OS_DestroyThread
+OS_DestroyThread: ; 0x0207A710
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
@@ -645,47 +598,102 @@ sub_0207A710: ; 0x0207A710
 	ldr r0, [r0, #0x20]
 	cmp r0, r5
 	bne _0207A726
-	bl sub_0207A6CC
+	bl OSi_ExitThread_Destroy
 _0207A726:
-	bl sub_0207AAB4
+	bl OS_DisableScheduler
 	add r0, r5, #0
 	bl OSi_UnlockAllMutex
 	add r0, r5, #0
-	bl sub_0207A7F0
+	bl OSi_CancelThreadAlarmForSleep
 	ldr r0, [r5, #0x78]
 	cmp r0, #0
 	beq _0207A742
 	add r1, r5, #0
-	bl sub_0207A374
+	bl OSi_RemoveSpecifiedLinkFromQueue
 _0207A742:
 	add r0, r5, #0
-	bl sub_0207A408
+	bl OSi_RemoveThreadFromList
 	mov r0, #2
 	str r0, [r5, #0x64]
 	add r5, #0x9c
 	add r0, r5, #0
 	bl OS_WakeupThread
-	bl sub_0207AAD8
+	bl OS_EnableScheduler
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
-	bl sub_0207A918
+	bl OS_RescheduleThread
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _0207A764: .word 0x0214C210
-	thumb_func_end sub_0207A710
-_0207A768:
-	.byte 0x38, 0xB5, 0x05, 0x1C, 0x0C, 0x1C, 0x00, 0xF0
-	.byte 0x47, 0xF9, 0x02, 0x1C, 0x28, 0x1C, 0x21, 0x1C, 0x00, 0xF0, 0x02, 0xF8, 0x38, 0xBD, 0x00, 0x00
-	.byte 0xF8, 0xB5, 0x05, 0x1C, 0x0C, 0x1C, 0x16, 0x1C, 0x01, 0xF0, 0xAC, 0xEC, 0x07, 0x1C, 0x16, 0x48
-	.byte 0x00, 0x6A, 0x85, 0x42, 0x03, 0xD1, 0x28, 0x1C, 0x21, 0x1C, 0xFF, 0xF7, 0x65, 0xFF, 0x28, 0x1C
-	.byte 0x00, 0xF0, 0x26, 0xF8, 0x10, 0x48, 0x42, 0x69, 0x00, 0x2A, 0x03, 0xD1, 0x28, 0x1C, 0x94, 0x30
-	.byte 0x02, 0x68, 0x08, 0x3A, 0x0D, 0x49, 0x28, 0x1C, 0x00, 0xF0, 0xA4, 0xE9, 0x29, 0x68, 0x80, 0x20
-	.byte 0x08, 0x43, 0x28, 0x60, 0x01, 0x20, 0x6C, 0x60, 0x68, 0x66, 0x00, 0xF0, 0x73, 0xF9, 0x28, 0x1C
-	.byte 0x31, 0x1C, 0x00, 0xF0, 0xE1, 0xF8, 0x00, 0xF0, 0x7F, 0xF9, 0xFF, 0xF7, 0x2B, 0xFE, 0x38, 0x1C
-	.byte 0x01, 0xF0, 0x8A, 0xEC, 0xF8, 0xBD, 0xC0, 0x46, 0x10, 0xC2, 0x14, 0x02, 0xA5, 0xA6, 0x07, 0x02
+	thumb_func_end OS_DestroyThread
 
-	thumb_func_start sub_0207A7F0
-sub_0207A7F0: ; 0x0207A7F0
+	thumb_func_start OS_KillThread
+OS_KillThread: ; 0x0207A768
+	push {r3, r4, r5, lr}
+	add r5, r0, #0
+	add r4, r1, #0
+	bl OS_GetThreadPriority
+	add r2, r0, #0
+	add r0, r5, #0
+	add r1, r4, #0
+	bl OS_KillThreadWithPriority
+	pop {r3, r4, r5, pc}
+	.align 2, 0
+	thumb_func_end OS_KillThread
+
+	thumb_func_start OS_KillThreadWithPriority
+OS_KillThreadWithPriority: ; 0x0207A780
+	push {r3, r4, r5, r6, r7, lr}
+	add r5, r0, #0
+	add r4, r1, #0
+	add r6, r2, #0
+	blx OS_DisableInterrupts
+	add r7, r0, #0
+	ldr r0, _0207A7E8 ; =0x0214C210
+	ldr r0, [r0, #0x20]
+	cmp r5, r0
+	bne _0207A79E
+	add r0, r5, #0
+	add r1, r4, #0
+	bl OSi_ExitThread_ArgSpecified
+_0207A79E:
+	add r0, r5, #0
+	bl OSi_CancelThreadAlarmForSleep
+	ldr r0, _0207A7E8 ; =0x0214C210
+	ldr r2, [r0, #0x14]
+	cmp r2, #0
+	bne _0207A7B4
+	add r0, r5, #0
+	add r0, #0x94
+	ldr r2, [r0]
+	sub r2, #8
+_0207A7B4:
+	ldr r1, _0207A7EC ; =OSi_ExitThread
+	add r0, r5, #0
+	blx OS_InitContext
+	ldr r1, [r5]
+	mov r0, #0x80
+	orr r0, r1
+	str r0, [r5]
+	mov r0, #1
+	str r4, [r5, #4]
+	str r0, [r5, #0x64]
+	bl OS_DisableScheduler
+	add r0, r5, #0
+	add r1, r6, #0
+	bl OS_SetThreadPriority
+	bl OS_EnableScheduler
+	bl OSi_RescheduleThread
+	add r0, r7, #0
+	blx OS_RestoreInterrupts
+	pop {r3, r4, r5, r6, r7, pc}
+	nop
+_0207A7E8: .word 0x0214C210
+_0207A7EC: .word OSi_ExitThread
+	thumb_func_end OS_KillThreadWithPriority
+
+	thumb_func_start OSi_CancelThreadAlarmForSleep
+OSi_CancelThreadAlarmForSleep: ; 0x0207A7F0
 	push {r3, lr}
 	add r0, #0xb0
 	ldr r0, [r0]
@@ -694,10 +702,10 @@ sub_0207A7F0: ; 0x0207A7F0
 	bl OS_CancelAlarm
 _0207A7FE:
 	pop {r3, pc}
-	thumb_func_end sub_0207A7F0
+	thumb_func_end OSi_CancelThreadAlarmForSleep
 
-	thumb_func_start sub_0207A800
-sub_0207A800: ; 0x0207A800
+	thumb_func_start OS_JoinThread
+OS_JoinThread: ; 0x0207A800
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
@@ -717,10 +725,10 @@ _0207A820:
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_0207A800
+	thumb_func_end OS_JoinThread
 
-	thumb_func_start sub_0207A828
-sub_0207A828: ; 0x0207A828
+	thumb_func_start OS_IsThreadTerminated
+OS_IsThreadTerminated: ; 0x0207A828
 	ldr r0, [r0, #0x64]
 	cmp r0, #2
 	bne _0207A832
@@ -730,10 +738,10 @@ _0207A832:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207A828
+	thumb_func_end OS_IsThreadTerminated
 
-	thumb_func_start sub_0207A838
-sub_0207A838: ; 0x0207A838
+	thumb_func_start OS_SleepThreadDirect
+OS_SleepThreadDirect: ; 0x0207A838
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -747,16 +755,16 @@ sub_0207A838: ; 0x0207A838
 	add r0, r4, #0
 	add r1, r5, #0
 	str r4, [r5, #0x78]
-	bl sub_0207A2F4
+	bl OSi_InsertLinkToQueue
 _0207A858:
 	mov r0, #0
 	str r0, [r5, #0x64]
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 _0207A860:
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_0207A838
+	thumb_func_end OS_SleepThreadDirect
 
 	thumb_func_start OS_SleepThread
 OS_SleepThread: ; 0x0207A868
@@ -772,11 +780,11 @@ OS_SleepThread: ; 0x0207A868
 	add r0, r5, #0
 	add r1, r4, #0
 	str r5, [r4, #0x78]
-	bl sub_0207A2F4
+	bl OSi_InsertLinkToQueue
 _0207A886:
 	mov r0, #0
 	str r0, [r4, #0x64]
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	pop {r4, r5, r6, pc}
@@ -798,7 +806,7 @@ OS_WakeupThread: ; 0x0207A89C
 	mov r6, #0
 _0207A8B2:
 	add r0, r5, #0
-	bl sub_0207A350
+	bl OSi_RemoveLinkFromQueue
 	str r4, [r0, #0x64]
 	add r1, r0, #0
 	str r6, [r0, #0x78]
@@ -815,7 +823,7 @@ _0207A8D0:
 	mov r0, #0
 	str r0, [r5, #4]
 	str r0, [r5]
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 _0207A8DA:
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
@@ -823,23 +831,23 @@ _0207A8DA:
 	.align 2, 0
 	thumb_func_end OS_WakeupThread
 
-	thumb_func_start sub_0207A8E4
-sub_0207A8E4: ; 0x0207A8E4
+	thumb_func_start OS_WakeupThreadDirect
+OS_WakeupThreadDirect: ; 0x0207A8E4
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
 	add r4, r0, #0
 	mov r0, #1
 	str r0, [r5, #0x64]
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_0207A8E4
+	thumb_func_end OS_WakeupThreadDirect
 
-	thumb_func_start sub_0207A900
-sub_0207A900: ; 0x0207A900
+	thumb_func_start OS_SelectThread
+OS_SelectThread: ; 0x0207A900
 	ldr r0, _0207A914 ; =0x0214C210
 	ldr r0, [r0, #0x24]
 	b _0207A908
@@ -855,21 +863,21 @@ _0207A912:
 	bx lr
 	.align 2, 0
 _0207A914: .word 0x0214C210
-	thumb_func_end sub_0207A900
+	thumb_func_end OS_SelectThread
 
-	thumb_func_start sub_0207A918
-sub_0207A918: ; 0x0207A918
+	thumb_func_start OS_RescheduleThread
+OS_RescheduleThread: ; 0x0207A918
 	push {r4, lr}
 	blx OS_DisableInterrupts
 	add r4, r0, #0
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
 	pop {r4, pc}
-	thumb_func_end sub_0207A918
+	thumb_func_end OS_RescheduleThread
 
-	thumb_func_start sub_0207A92C
-sub_0207A92C: ; 0x0207A92C
+	thumb_func_start OS_YieldThread
+OS_YieldThread: ; 0x0207A92C
 	push {r3, r4, r5, r6, r7, lr}
 	ldr r0, _0207A994 ; =0x0214C210
 	mov r7, #0
@@ -922,16 +930,16 @@ _0207A982:
 	ldr r0, [r6, #0x68]
 	str r0, [r5, #0x68]
 	str r5, [r6, #0x68]
-	bl sub_0207A434
+	bl OSi_RescheduleThread
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0207A994: .word 0x0214C210
-	thumb_func_end sub_0207A92C
+	thumb_func_end OS_YieldThread
 
-	thumb_func_start sub_0207A998
-sub_0207A998: ; 0x0207A998
+	thumb_func_start OS_SetThreadPriority
+OS_SetThreadPriority: ; 0x0207A998
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r0, _0207A9F8 ; =0x0214C210
@@ -976,8 +984,8 @@ _0207A9DE:
 _0207A9E2:
 	add r0, r5, #0
 	str r7, [r5, #0x70]
-	bl sub_0207A3D0
-	bl sub_0207A434
+	bl OSi_InsertThreadToList
+	bl OSi_RescheduleThread
 _0207A9EE:
 	ldr r0, [sp]
 	blx OS_RestoreInterrupts
@@ -986,16 +994,16 @@ _0207A9EE:
 	.align 2, 0
 _0207A9F8: .word 0x0214C210
 _0207A9FC: .word 0x0214C23C
-	thumb_func_end sub_0207A998
+	thumb_func_end OS_SetThreadPriority
 
-	thumb_func_start sub_0207AA00
-sub_0207AA00: ; 0x0207AA00
+	thumb_func_start OS_GetThreadPriority
+OS_GetThreadPriority: ; 0x0207AA00
 	ldr r0, [r0, #0x70]
 	bx lr
-	thumb_func_end sub_0207AA00
+	thumb_func_end OS_GetThreadPriority
 
-	thumb_func_start sub_0207AA04
-sub_0207AA04: ; 0x0207AA04
+	thumb_func_start OS_Sleep
+OS_Sleep: ; 0x0207AA04
 	push {r3, r4, r5, r6, lr}
 	sub sp, #0x34
 	add r6, sp, #8
@@ -1046,13 +1054,25 @@ _0207AA5E:
 _0207AA68: .word 0x0214C210
 _0207AA6C: .word 0x000082EA
 _0207AA70: .word 0x0207AA75
-	thumb_func_end sub_0207AA04
-_0207AA74:
-	.byte 0x02, 0x68, 0x00, 0x21, 0x01, 0x60, 0x10, 0x1C, 0xB0, 0x30, 0x01, 0x60
-	.byte 0x01, 0x4B, 0x10, 0x1C, 0x18, 0x47, 0xC0, 0x46, 0xE5, 0xA8, 0x07, 0x02
+	thumb_func_end OS_Sleep
 
-	thumb_func_start sub_0207AA8C
-sub_0207AA8C: ; 0x0207AA8C
+	thumb_func_start OSi_SleepAlarmCallback
+OSi_SleepAlarmCallback: ; 0x0207AA74
+	ldr r2, [r0]
+	mov r1, #0
+	str r1, [r0]
+	add r0, r2, #0
+	add r0, #0xb0
+	str r1, [r0]
+	ldr r3, _0207AA88 ; =OS_WakeupThreadDirect
+	add r0, r2, #0
+	bx r3
+	nop
+_0207AA88: .word OS_WakeupThreadDirect
+	thumb_func_end OSi_SleepAlarmCallback
+
+	thumb_func_start OS_SetSwitchThreadCallback
+OS_SetSwitchThreadCallback: ; 0x0207AA8C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	blx OS_DisableInterrupts
@@ -1064,13 +1084,19 @@ sub_0207AA8C: ; 0x0207AA8C
 	pop {r3, r4, r5, pc}
 	nop
 _0207AAA4: .word 0x0214C210
-	thumb_func_end sub_0207AA8C
-_0207AAA8:
-	.byte 0x08, 0xB5, 0x01, 0xF0, 0x12, 0xEB, 0x01, 0xF0
-	.byte 0x9C, 0xEE, 0xFC, 0xE7
+	thumb_func_end OS_SetSwitchThreadCallback
 
-	thumb_func_start sub_0207AAB4
-sub_0207AAB4: ; 0x0207AAB4
+	thumb_func_start OSi_IdleThreadProc
+OSi_IdleThreadProc: ; 0x0207AAA8
+	push {r3, lr}
+	blx OS_EnableInterrupts
+_0207AAAE:
+	blx OS_Halt
+	b _0207AAAE
+	thumb_func_end OSi_IdleThreadProc
+
+	thumb_func_start OS_DisableScheduler
+OS_DisableScheduler: ; 0x0207AAB4
 	push {r4, lr}
 	blx OS_DisableInterrupts
 	ldr r2, _0207AAD4 ; =0x0214C210
@@ -1088,10 +1114,10 @@ _0207AACC:
 	pop {r4, pc}
 	.align 2, 0
 _0207AAD4: .word 0x0214C210
-	thumb_func_end sub_0207AAB4
+	thumb_func_end OS_DisableScheduler
 
-	thumb_func_start sub_0207AAD8
-sub_0207AAD8: ; 0x0207AAD8
+	thumb_func_start OS_EnableScheduler
+OS_EnableScheduler: ; 0x0207AAD8
 	push {r4, lr}
 	blx OS_DisableInterrupts
 	ldr r1, _0207AAF8 ; =0x0214C210
@@ -1108,13 +1134,13 @@ _0207AAEE:
 	pop {r4, pc}
 	nop
 _0207AAF8: .word 0x0214C210
-	thumb_func_end sub_0207AAD8
+	thumb_func_end OS_EnableScheduler
 
-	thumb_func_start sub_0207AAFC
-sub_0207AAFC: ; 0x0207AAFC
+	thumb_func_start OS_SetThreadDestructor
+OS_SetThreadDestructor: ; 0x0207AAFC
 	add r0, #0xb4
 	str r1, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0207AAFC
+	thumb_func_end OS_SetThreadDestructor
 

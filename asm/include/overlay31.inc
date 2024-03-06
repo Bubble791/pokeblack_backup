@@ -47,8 +47,8 @@
 .public OS_GetTick
 .public sub_0208D60C
 .public sub_0208D5C4
-.public sub_0207A208
-.public sub_0207A260
+.public OS_GetLockID
+.public OS_ReleaseLockID
 .public OS_GetTick
 .public OS_GetTick
 .public sub_0208D60C

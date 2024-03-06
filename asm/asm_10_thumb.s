@@ -152,7 +152,7 @@ sub_02005CBC: ; 0x02005CBC
 	pop {r3, pc}
 _02005CCA:
 	ldr r0, _02005CE0 ; =0x0209DC18
-	bl sub_0207A828
+	bl OS_IsThreadTerminated
 	cmp r0, #0
 	bne _02005CD8
 	mov r0, #1
@@ -772,7 +772,7 @@ _0200611C:
 	pop {r3, r4, r5, r6, pc}
 _02006138:
 	mov r0, #1
-	bl sub_0207AA04
+	bl OS_Sleep
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _02006142:
@@ -799,7 +799,7 @@ _02006142:
 	pop {r3, r4, r5, r6, pc}
 _02006178:
 	mov r0, #1
-	bl sub_0207AA04
+	bl OS_Sleep
 _0200617E:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -1137,11 +1137,11 @@ _02006398:
 _020063A6:
 	ldr r2, _020063D0 ; =0x0209DB30
 	ldr r3, _020063D4 ; =_0209E278
-	bl sub_0207A588
+	bl OS_CreateThread
 _020063AE:
 	ldr r4, _020063C4 ; =0x0209DC18
 	add r0, r4, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	ldr r0, _020063C0 ; =0x0209DB24
 	str r4, [r0, #0x14]
 	add sp, #8
@@ -1164,11 +1164,11 @@ sub_020063D8: ; 0x020063D8
 	beq _020063F8
 	ldr r5, _02006400 ; =0x0209DC18
 	add r0, r5, #0
-	bl sub_0207A828
+	bl OS_IsThreadTerminated
 	cmp r0, #0
 	bne _020063F8
 	add r0, r5, #0
-	bl sub_0207A710
+	bl OS_DestroyThread
 	mov r0, #0
 	str r0, [r4, #0x14]
 _020063F8:
@@ -1189,7 +1189,7 @@ sub_02006404: ; 0x02006404
 	pop {r3, pc}
 _02006412:
 	ldr r0, _02006420 ; =0x0209DC18
-	bl sub_0207A828
+	bl OS_IsThreadTerminated
 	pop {r3, pc}
 	nop
 _0200641C: .word 0x0209DB24
@@ -1263,7 +1263,7 @@ _02006478:
 	pop {r3, r4, r5, r6, pc}
 _020064AA:
 	mov r0, #2
-	bl sub_0207AA04
+	bl OS_Sleep
 _020064B0:
 	mov r0, #0
 	add sp, #4
@@ -1998,7 +1998,7 @@ sub_020069F4: ; 0x020069F4
 	mov r4, #2
 _02006A0A:
 	add r0, r4, #0
-	bl sub_0207AA04
+	bl OS_Sleep
 	bl sub_02005CBC
 	cmp r0, #1
 	beq _02006A0A

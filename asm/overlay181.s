@@ -14001,7 +14001,7 @@ _021A3BD8:
 _021A3BEA:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207A998
+	bl OS_SetThreadPriority
 	add r0, r4, #0
 	bl OS_SleepThread
 	add r0, r5, #0
@@ -14023,7 +14023,7 @@ _021A3C02:
 	ldr r1, [r4, #4]
 	add r0, r5, #0
 	lsr r1, r1, #1
-	bl sub_0207A998
+	bl OS_SetThreadPriority
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
 	ldr r1, [r4, #8]
@@ -14036,7 +14036,7 @@ _021A3C30:
 	add r7, r0, #0
 	add r0, r5, #0
 	ldr r6, [r4, #0xc]
-	bl sub_0207AA00
+	bl OS_GetThreadPriority
 	add r1, r5, #0
 	add r1, #0xc0
 	ldr r1, [r1]
@@ -14064,7 +14064,7 @@ _021A3C68:
 	cmp r1, r0
 	beq _021A3C72
 	add r0, r5, #0
-	bl sub_0207A998
+	bl OS_SetThreadPriority
 _021A3C72:
 	mov r0, #0
 	str r0, [r4]
@@ -14085,7 +14085,7 @@ _021A3C86:
 	blx OS_RestoreInterrupts
 	b _021A3BD8
 _021A3C96:
-	bl sub_0207A650
+	bl OS_ExitThread
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy181_21a3bd4
 
@@ -14120,9 +14120,9 @@ ovy181_21a3c9c: ; 0x021A3C9C
 	add r0, r5, #0
 	add r2, r5, #0
 	add r3, r3, r4
-	bl sub_0207A588
+	bl OS_CreateThread
 	add r0, r5, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 _021A3CE4:
 	add r0, r6, #0
 	blx OS_RestoreInterrupts
@@ -14191,7 +14191,7 @@ ovy181_21a3d28: ; 0x021A3D28
 	cmp r4, #0x1f
 	bls _021A3D76
 	add r0, r6, #0
-	bl sub_0207AA00
+	bl OS_GetThreadPriority
 	cmp r4, #0x20
 	bne _021A3D60
 	sub r4, r0, #1
@@ -14245,7 +14245,7 @@ _021A3DAC:
 	add r0, #0xc0
 	str r5, [r0]
 	add r0, r6, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 	b _021A3E04
 _021A3DBA:
 	add r0, r6, #0

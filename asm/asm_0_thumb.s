@@ -44,23 +44,23 @@ _02005166:
 	strh r0, [r5]
 _0200518A:
 	add r0, r4, #0
-	bl sub_0207A828
+	bl OS_IsThreadTerminated
 	cmp r0, #0
 	bne _0200519C
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_0207A838
+	bl OS_SleepThreadDirect
 _0200519C:
 	mov r0, #1
 	mov r1, #1
 	blx sub_02079BB0
 	bl sub_02005258
 	add r0, r4, #0
-	bl sub_0207A828
+	bl OS_IsThreadTerminated
 	cmp r0, #0
 	bne _020051B8
 	add r0, r4, #0
-	bl sub_0207A8E4
+	bl OS_WakeupThreadDirect
 _020051B8:
 	cmp r6, #0
 	beq _02005166

@@ -24,8 +24,8 @@ sub_0207002C: ; 0x0207002C
 _02070068: .word 0x04000290
 	arm_func_end sub_0207002C
 
-	arm_func_start sub_0207006C
-sub_0207006C: ; 0x0207006C
+	arm_func_start CPi_RestoreContext
+CPi_RestoreContext: ; 0x0207006C
 	stmdb sp!, {r4}
 	ldr r1, _020700A4 ; =0x04000290
 	ldmia r0, {r2, r3, r4, ip}
@@ -42,5 +42,5 @@ sub_0207006C: ; 0x0207006C
 	bx lr
 	.align 2, 0
 _020700A4: .word 0x04000290
-	arm_func_end sub_0207006C
+	arm_func_end CPi_RestoreContext
 

@@ -36,7 +36,7 @@
 .public sub_02199B20
 .public OS_Terminate
 .public sub_0203D2BC
-.public sub_0207AA04
+.public OS_Sleep
 .public OS_IsRunOnTwl
 .public sub_02199B80
 .public OS_IsRunOnTwl

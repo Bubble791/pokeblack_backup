@@ -53,7 +53,7 @@ _0207C2D4:
 	beq _0207C2E4
 	blx sub_02769578
 _0207C2E4:
-	bl sub_0207A208
+	bl OS_GetLockID
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
 	blx sub_0206EEF0

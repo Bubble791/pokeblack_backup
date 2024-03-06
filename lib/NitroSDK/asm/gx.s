@@ -48,7 +48,7 @@ GX_Init: ; 0x02074718
 	bne _0207475E
 	asr r4, r4, #8
 _02074748:
-	blx sub_0207A208
+	blx OS_GetLockID
 	add r5, r0, #0
 	cmp r5, r4
 	bne _02074756

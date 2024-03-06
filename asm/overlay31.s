@@ -1564,7 +1564,7 @@ ovy31_21763c0: ; 0x021763C0
 	ldrh r1, [r4]
 	cmp r1, r0
 	bne _021763D8
-	blx sub_0207A208
+	blx OS_GetLockID
 	strh r0, [r4]
 _021763D8:
 	pop {r4, pc}
@@ -1583,7 +1583,7 @@ ovy31_21763e8: ; 0x021763E8
 	mvn r1, r1
 	cmp r0, r1
 	beq _021763FE
-	blx sub_0207A260
+	blx OS_ReleaseLockID
 	ldr r0, _02176404 ; =0x0000FFFD
 	strh r0, [r4]
 _021763FE:

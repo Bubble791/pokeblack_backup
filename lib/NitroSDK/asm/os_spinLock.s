@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.text
-	arm_func_start sub_0207A208
-sub_0207A208: ; 0x0207A208
+	arm_func_start OS_GetLockID
+OS_GetLockID: ; 0x0207A208
 	ldr r3, _0207A258 ; =0x02FFFFB0
 	ldr r1, [r3]
 	clz r2, r1
@@ -29,10 +29,10 @@ _0207A23C:
 	.align 2, 0
 _0207A258: .word 0x02FFFFB0
 _0207A25C: .word 0xFFFFFFFD
-	arm_func_end sub_0207A208
+	arm_func_end OS_GetLockID
 
-	arm_func_start sub_0207A260
-sub_0207A260: ; 0x0207A260
+	arm_func_start OS_ReleaseLockID
+OS_ReleaseLockID: ; 0x0207A260
 	ldr r3, _0207A28C ; =0x02FFFFB0
 	cmp r0, #0x60
 	addpl r3, r3, #4
@@ -46,5 +46,5 @@ sub_0207A260: ; 0x0207A260
 	bx lr
 	.align 2, 0
 _0207A28C: .word 0x02FFFFB0
-	arm_func_end sub_0207A260
+	arm_func_end OS_ReleaseLockID
 

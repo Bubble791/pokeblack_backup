@@ -18,7 +18,7 @@
 .public GXi_DmaId
 .public GXi_VRamLockId
 .public GX_InitGXState
-.public sub_0207A208
+.public OS_GetLockID
 .public OS_Terminate
 .public MIi_DmaFill32
 .public MIi_CpuClear32

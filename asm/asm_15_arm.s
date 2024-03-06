@@ -7905,7 +7905,7 @@ sub_020579EC: ; 0x020579EC
 	mov r3, r6
 	mov r1, #0x15
 	str r4, [sp, #0x10]
-	blx sub_0207A2C0
+	blx OS_SNPrintf
 	add sp, sp, #0x40
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -12233,7 +12233,7 @@ _0205B1EC:
 	mov r4, #0xa
 _0205B1FC:
 	mov r0, r4
-	blx sub_0207AA04
+	blx OS_Sleep
 	bl sub_0205A3E4
 	cmp r0, #0
 	beq _0205B1FC
@@ -15692,7 +15692,7 @@ _0205DF00:
 	cmp r0, #0
 	beq _0205DF3C
 	mov r0, r4
-	blx sub_0207AA04
+	blx OS_Sleep
 _0205DF3C:
 	add r6, r6, #1
 	cmp r6, #5
@@ -15725,7 +15725,7 @@ _0205DF68:
 	cmp r0, #0
 	beq _0205DFA4
 	mov r0, r4
-	blx sub_0207AA04
+	blx OS_Sleep
 _0205DFA4:
 	add r6, r6, #1
 	cmp r6, #5
@@ -15758,7 +15758,7 @@ _0205DFD0:
 	cmp r0, #0
 	beq _0205E00C
 	mov r0, r4
-	blx sub_0207AA04
+	blx OS_Sleep
 _0205E00C:
 	add r6, r6, #1
 	cmp r6, #5
