@@ -34,11 +34,6 @@ sub_02004190: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_02004190
 
-    thumb_func_start sub_020044F6
-sub_020044F6: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_020044F6
 
     thumb_func_start sub_02004DF4
 sub_02004DF4: ; 0x02073FB4

@@ -1708,7 +1708,7 @@ ovy31_21764cc: ; 0x021764CC
 	ldrh r0, [r4]
 	bl sub_0206EF4C
 	ldrh r0, [r4]
-	bl sub_0207A178
+	bl OS_LockCard
 	ldr r2, _0217658C ; =0x040001A0
 	mov r0, #0x80
 _021764F2:
@@ -1809,7 +1809,7 @@ ovy31_217659c: ; 0x0217659C
 	ldrh r0, [r4]
 	bl sub_0206EF4C
 	ldrh r0, [r4]
-	bl sub_0207A178
+	bl OS_LockCard
 	ldr r2, _0217661C ; =0x040001A0
 	mov r0, #0x80
 _021765C2:

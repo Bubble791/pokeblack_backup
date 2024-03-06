@@ -7449,7 +7449,7 @@ _0206EDC8: .word sub_0206ED94
 sub_0206EDCC: ; 0x0206EDCC
 	push {r3, lr}
 	ldrh r0, [r0]
-	bl sub_0207A1A8
+	bl OS_TryLockCard
 	cmp r0, #0
 	bne _0206EDDC
 	mov r0, #1
@@ -7650,7 +7650,7 @@ _0206EF34: .word sub_0206EDCC
 sub_0206EF38: ; 0x0206EF38
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0207A18C
+	bl OS_UnlockCard
 	add r0, r4, #0
 	mov r1, #1
 	bl sub_0206EFC8

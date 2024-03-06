@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0206EF4C
-.public sub_0207A178
+.public OS_LockCard
 .public OS_GetTick
 .public OS_GetTick
 .public sub_0208D60C

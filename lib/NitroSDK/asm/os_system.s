@@ -146,7 +146,7 @@ _0207C1E4: .word 0x00003FF8
 OS_WaitVBlankIntr: ; 0x0207C1E8
 	push {r3, lr}
 	mov r0, #1
-	bl sub_020044F6
+	bl SVC_WaitByLoop
 	mov r0, #1
 	mov r1, #1
 	blx sub_02079BB0

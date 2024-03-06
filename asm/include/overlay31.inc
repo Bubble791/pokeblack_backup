@@ -58,10 +58,10 @@
 .public sub_0208D60C
 .public sub_0208D5C4
 .public sub_0206EF4C
-.public sub_0207A178
+.public OS_LockCard
 .public sub_0207A1A0
 .public sub_0206EF58
 .public sub_0206EF4C
-.public sub_0207A178
+.public OS_LockCard
 .public sub_0207A1A0
 .public sub_0206EF58

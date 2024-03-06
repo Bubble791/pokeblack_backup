@@ -98,7 +98,7 @@ PM_Init: ; 0x0207EBB8
 	mov r6, #1
 _0207EBE6:
 	add r0, r5, #0
-	bl sub_020044F6
+	bl SVC_WaitByLoop
 	add r0, r4, #0
 	add r1, r6, #0
 	bl PXI_IsCallbackReady

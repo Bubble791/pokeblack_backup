@@ -18,7 +18,7 @@ ovy338_217c940: ; 0x0217C940
 	ldrh r0, [r4]
 	bl sub_0206EF4C
 	ldrh r0, [r4]
-	bl sub_0207A178
+	bl OS_LockCard
 	bl OS_GetTick
 	add r6, r0, #0
 	add r5, r1, #0

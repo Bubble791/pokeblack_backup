@@ -43,7 +43,7 @@ sub_0206FFFC: ; 0x0206FFFC
 	mov r7, #0
 _02070014:
 	add r0, r4, #0
-	bl sub_020044F6
+	bl SVC_WaitByLoop
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0

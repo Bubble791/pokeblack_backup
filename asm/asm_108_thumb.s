@@ -189,18 +189,18 @@ _02082756:
 	blx OS_DisableInterrupts
 	str r0, [r4, #4]
 	add r0, r7, #0
-	bl sub_0207A204
+	bl OS_ReadOwnerOfLockWord
 	and r0, r6
 	str r0, [r4]
 	bne _02082780
 	add r0, r5, #0
-	bl sub_0207A140
+	bl OS_TryLockCartridge
 	cmp r0, #0
 	beq _02082780
 	ldr r0, [r4, #4]
 	blx OS_RestoreInterrupts
 	mov r0, #1
-	bl sub_020044F6
+	bl SVC_WaitByLoop
 	b _02082756
 _02082780:
 	pop {r3, r4, r5, r6, r7, pc}
@@ -238,7 +238,7 @@ sub_020827A0: ; 0x020827A0
 	mov r7, #0
 _020827B8:
 	add r0, r4, #0
-	bl sub_020044F6
+	bl SVC_WaitByLoop
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0
