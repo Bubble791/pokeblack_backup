@@ -13935,7 +13935,6 @@ CTRDG_Enable: ; 0x020E1678
 	movne r1, #0x1000
 	moveq r1, #0x5000
 	mov r0, #0xf000
-	bl OS_SetDPermissionsForProtectionRegion
 _020E16B0:
 	mov r0, r4
 	bl OS_RestoreInterrupts
