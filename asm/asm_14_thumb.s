@@ -5238,7 +5238,7 @@ _0203BF96:
 	bl sub_0206EF4C
 	ldr r5, _0203BFD0 ; =0x00FF1302
 	add r0, r5, #0
-	bl sub_0206F854
+	bl CARD_IdentifyBackup
 	cmp r0, #0
 	bne _0203BFAC
 	mov r5, #0
@@ -5316,7 +5316,7 @@ _0203C01C:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0
-	bl sub_0206F80C
+	bl CARDi_RequestStreamCommand
 	bl CARD_WaitBackupAsync
 	add r6, r0, #0
 	lsl r0, r4, #0x10
@@ -5386,7 +5386,7 @@ _0203C0A0:
 	add r1, sp, #0x18
 	mov r2, #4
 	mov r3, #0
-	bl sub_0206F80C
+	bl CARDi_RequestStreamCommand
 	cmp r0, #0
 	bne _0203C0DA
 	lsl r0, r4, #0x10
@@ -5411,7 +5411,7 @@ _0203C0DA:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_0206F80C
+	bl CARDi_RequestStreamCommand
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
 	add sp, #0x1c
