@@ -39481,16 +39481,16 @@ ovy12_2162fac: ; 0x02162FAC
 	add r0, r5, #4
 	add r1, #0x14
 	str r3, [sp]
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r0, [sp, #0x14]
 	str r1, [sp, #0x10]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r0, [sp, #0x18]
 	add r0, r4, #0
 	str r1, [sp, #8]
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	add r7, r0, #0
 	ldr r0, [sp]
 	mov r3, #0
@@ -44054,7 +44054,7 @@ _02165440:
 	add r0, sp, #0xc
 	add r1, sp, #0
 	sbc r3, r5
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	ldr r0, [sp, #0xc]
 	cmp r0, #0
 	bne _02165470
@@ -53332,7 +53332,7 @@ _021698A4:
 	ldr r3, [r3, #0x28]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	add r0, r5, #0
 	ldr r1, [sp, #0x3c]
 	add r0, #0x2f
@@ -53371,7 +53371,7 @@ _021698A4:
 _0216992C:
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	add r0, r5, #0
 	ldr r1, [sp, #0x3c]
 	add r0, #0x32

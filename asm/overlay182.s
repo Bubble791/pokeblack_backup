@@ -4526,7 +4526,7 @@ ovy182_21a6b98: ; 0x021A6B98
 	mov r2, #0xc
 	bl sub_021A6A60
 	add r0, sp, #0
-	bl sub_0207CC80
+	bl RTC_GetTime
 	cmp r0, #0
 	bne _021A6BCA
 	ldr r0, [sp]
@@ -19301,7 +19301,7 @@ _021ADCCE:
 	sub r0, r4, #1
 	bl sub_02072390
 	bl sub_0207E13C
-	bl sub_0207CB88
+	bl RTC_Init
 	bl GX_DispOff
 	ldr r4, _021ADD34 ; =0x04001000
 	ldr r0, _021ADD38 ; =0xFFFEFFFF

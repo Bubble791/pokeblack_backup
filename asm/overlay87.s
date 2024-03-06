@@ -549,7 +549,7 @@ _021EAC3A:
 	bl sub_0204898C
 	str r0, [sp, #0x3c]
 	add r0, sp, #0x74
-	bl sub_0207CC10
+	bl RTC_GetDate
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -605,7 +605,7 @@ _021EAC3A:
 	bl sub_0204898C
 	str r0, [sp, #0x40]
 	add r0, sp, #0x68
-	bl sub_0207CC80
+	bl RTC_GetTime
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1

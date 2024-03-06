@@ -84,9 +84,10 @@ Static main
     Object lib/NitroSDK/asm/os_event.o
     Object lib/NitroSDK/asm/os_application_jump.o
     Object lib/NitroSDK/asm/pxi_init.o
+    Object lib/NitroSDK/asm/rtc_external.o
+    Object lib/NitroSDK/asm/rtc_internal.o
+    Object lib/NitroSDK/asm/rtc_convert.o
 
-    Object asm/asm_98_thumb.o
-    Object asm/asm_99_arm.o
     Object asm/asm_100_thumb.o
     Object asm/asm_101_arm.o
     Object asm/asm_102_thumb.o

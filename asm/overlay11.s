@@ -17281,13 +17281,13 @@ ovy11_215843c: ; 0x0215843C
 	sub sp, #0x1c
 	add r5, sp, #0xc
 	add r0, r5, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	add r4, sp, #0
 	add r0, r4, #0
-	bl sub_0207CC80
+	bl RTC_GetTime
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	ldr r1, _02158460 ; =0x386D4380
 	add r0, r0, r1
 	add sp, #0x1c
@@ -18324,7 +18324,7 @@ ovy11_2158ba2: ; 0x02158BA2
 	mvn r0, r0
 	str r0, [r5, r4]
 	add r0, sp, #0x50
-	bl sub_0207CC10
+	bl RTC_GetDate
 	mov r1, #0x7d
 	lsl r1, r1, #4
 	ldr r2, [sp, #0x50]
@@ -29093,7 +29093,7 @@ ovy11_215dda8: ; 0x0215DDA8
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _0215DDBA:
-	bl sub_0207CCF4
+	bl RTC_GetDateTime
 	cmp r0, #0
 	beq _0215DDC6
 	mov r0, #0
@@ -29101,7 +29101,7 @@ _0215DDBA:
 _0215DDC6:
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	add r3, r1, #0
 	mov r2, #0
 	mov r1, #0
@@ -29150,7 +29150,7 @@ _0215DE1E:
 _0215DE22:
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
@@ -29416,12 +29416,12 @@ _0215E044:
 	add r6, sp, #0x28
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_0207CCF4
+	bl RTC_GetDateTime
 	cmp r0, #0
 	bne _0215E14A
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r1, [sp, #4]
 	add r7, r0, #0
 	mov r1, #0
@@ -29514,7 +29514,7 @@ _0215E0C8:
 	beq _0215E14A
 	add r0, sp, #0x34
 	add r1, sp, #0x28
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	mov r3, #0
 	mov r2, #0
 	mvn r3, r3
@@ -53256,7 +53256,7 @@ _0216A08C:
 	bl sub_0207A2C0
 	add r0, sp, #0x2c
 	add r1, sp, #0x20
-	bl sub_0207CCF4
+	bl RTC_GetDateTime
 	cmp r0, #0
 	beq _0216A0CC
 	add sp, #0x90

@@ -95,7 +95,7 @@
 .public sub_02017994
 .public sub_020095AC
 .public sub_021631A0
-.public sub_0207CC10
+.public RTC_GetDate
 .public sub_0201735C
 .public sub_02017934
 .public sub_020074EC

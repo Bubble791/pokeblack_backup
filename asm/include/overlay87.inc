@@ -76,7 +76,7 @@
 .public sub_02021C7C
 .public sub_02048564
 .public sub_0204898C
-.public sub_0207CC10
+.public RTC_GetDate
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
@@ -85,7 +85,7 @@
 .public sub_02021C7C
 .public sub_02048564
 .public sub_0204898C
-.public sub_0207CC80
+.public RTC_GetTime
 .public sub_0202451C
 .public sub_0202451C
 .public sub_02024920

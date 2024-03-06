@@ -4722,9 +4722,9 @@ sub_02008CF8: ; 0x02008CF8
 	sub sp, #0x1c
 	add r4, r0, #0
 	add r0, sp, #0xc
-	bl sub_0207CC10
+	bl RTC_GetDate
 	add r0, sp, #0
-	bl sub_0207CC80
+	bl RTC_GetTime
 	ldr r2, [r4, #4]
 	mov r0, #0x7f
 	bic r2, r0
@@ -5652,7 +5652,7 @@ sub_02009258: ; 0x02009258
 	bl sub_02044210
 	add r0, sp, #0x14
 	add r1, sp, #8
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	mov ip, r0
 	lsl r0, r5, #2
 	str r1, [sp, #4]
@@ -5803,12 +5803,12 @@ sub_0200934C: ; 0x0200934C
 	add r1, #0x14
 	bl sub_02044210
 	add r0, r4, #4
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	add r1, r4, #0
 	str r0, [r4, #0x20]
 	add r0, r4, #4
 	add r1, #0x14
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r0, [r4, #0x24]
 	mov r0, #0
 	str r1, [r4, #0x28]
@@ -5866,7 +5866,7 @@ sub_020093B0: ; 0x020093B0
 	add r1, #0x14
 	bl sub_02044210
 	add r0, r4, #4
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	str r0, [r4, #0x20]
 	pop {r4, pc}
 	.align 2, 0
@@ -20656,7 +20656,7 @@ sub_0200F38C: ; 0x0200F38C
 	bl sub_02044210
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	add r4, r0, #0
 	add r5, r1, #0
 	bl OS_GetOwnerRtcOffset
@@ -110167,7 +110167,7 @@ sub_02036834: ; 0x02036834
 	ldr r3, [r6, #0x28]
 	add r0, r7, #0
 	add r1, sp, #0x20
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	add r0, r7, #0
 	bl sub_02036384
 	strh r0, [r4, #0xc]
@@ -110182,7 +110182,7 @@ sub_02036834: ; 0x02036834
 	ldr r3, [r6, #0x30]
 	add r0, r7, #0
 	add r1, sp, #0x20
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	add r0, r7, #0
 	bl sub_02036384
 	strh r0, [r4, #0xe]
@@ -112427,7 +112427,7 @@ _0203786E:
 	ldrb r0, [r0]
 	str r0, [sp, #0x10]
 	add r0, sp, #0x18
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r0, [sp, #8]
 	str r1, [sp, #4]
 	add r0, r4, #0
@@ -113850,7 +113850,7 @@ sub_02038218: ; 0x02038218
 	bl sub_02044210
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	str r0, [sp, #8]
 	ldr r0, [r7]
 	mov r5, #0
@@ -115271,7 +115271,7 @@ sub_02038BC8: ; 0x02038BC8
 	bl sub_02036384
 	str r0, [sp, #0x38]
 	add r0, r5, #0
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	str r0, [sp, #0x30]
 	mov r5, #0
 	mov r7, #0
@@ -115292,7 +115292,7 @@ _02038BF8:
 	add r1, sp, #0x64
 	bl sub_020363A0
 	add r0, sp, #0x64
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	cmp r6, #0
 	bne _02038C28
 	add r0, r7, #0
@@ -115512,10 +115512,10 @@ _02038D86:
 	add r1, sp, #0x44
 	bl sub_020363A0
 	add r0, sp, #0x54
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	str r0, [sp, #4]
 	add r0, sp, #0x44
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	ldr r1, [sp, #0x24]
 	cmp r1, #0
 	bne _02038E04

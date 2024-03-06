@@ -626,13 +626,13 @@
 .public sub_0204C488
 .public sub_021ACA9C
 .public sub_02044210
-.public sub_0207D12C
+.public RTC_ConvertDateTimeToSecond
 .public sub_02009210
 .public sub_020092B8
 .public sub_02009220
-.public sub_0207D244
+.public RTC_ConvertSecondToDateTime
 .public sub_02044210
-.public sub_0207D12C
+.public RTC_ConvertDateTimeToSecond
 .public sub_0208D414
 .public sub_020092A8
 .public sub_0208D65C

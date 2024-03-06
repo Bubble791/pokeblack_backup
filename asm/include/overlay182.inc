@@ -220,7 +220,7 @@
 .public sub_021580D0
 .public sub_02157CD0
 .public sub_021A6A60
-.public sub_0207CC80
+.public RTC_GetTime
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
 .public MIi_CpuClear16
@@ -595,7 +595,7 @@
 .public sub_02074658
 .public sub_02072390
 .public sub_0207E13C
-.public sub_0207CB88
+.public RTC_Init
 .public GX_DispOff
 .public sub_02056F48
 .public GX_VBlankIntr

@@ -3142,7 +3142,7 @@
 .public OS_IsRunOnTwl
 .public sub_021AE228
 .public MI_CpuCopy
-.public sub_0207CCF4
+.public RTC_GetDateTime
 .public sub_020800E8
 .public sub_0207F7CC
 .public sub_0207F8AC

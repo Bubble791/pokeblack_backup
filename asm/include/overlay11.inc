@@ -568,9 +568,9 @@
 .public OS_DisableInterrupts
 .public sub_02083A10
 .public OS_RestoreInterrupts
-.public sub_0207CC10
-.public sub_0207CC80
-.public sub_0207D12C
+.public RTC_GetDate
+.public RTC_GetTime
+.public RTC_ConvertDateTimeToSecond
 .public sub_0207AA00
 .public sub_0207A998
 .public sub_0207A998
@@ -583,7 +583,7 @@
 .public sub_02083A10
 .public sub_02158B40
 .public sub_02158B40
-.public sub_0207CC10
+.public RTC_GetDate
 .public MI_CpuCopy8
 .public sub_02083A10
 .public MI_CpuCopy8
@@ -922,9 +922,9 @@
 .public OS_WakeupThread
 .public sub_0215CB0C
 .public MI_CpuCopy8
-.public sub_0207CCF4
-.public sub_0207D12C
-.public sub_0207D244
+.public RTC_GetDateTime
+.public RTC_ConvertDateTimeToSecond
+.public RTC_ConvertSecondToDateTime
 .public sub_0205752C
 .public sub_02085D9C
 .public OS_Terminate
@@ -939,8 +939,8 @@
 .public sub_020584CC
 .public sub_02085D9C
 .public sub_02085D9C
-.public sub_0207CCF4
-.public sub_0207D12C
+.public RTC_GetDateTime
+.public RTC_ConvertDateTimeToSecond
 .public sub_02085DB8
 .public sub_02087B00
 .public sub_02085F00
@@ -948,7 +948,7 @@
 .public sub_02087B00
 .public sub_02087B00
 .public sub_02087B00
-.public sub_0207D12C
+.public RTC_ConvertDateTimeToSecond
 .public sub_0207A2C0
 .public sub_02085D9C
 .public sub_02086048
@@ -2820,7 +2820,7 @@
 .public sub_0207A2C0
 .public MI_CpuCopy8
 .public sub_0207A2C0
-.public sub_0207CCF4
+.public RTC_GetDateTime
 .public sub_0207A2C0
 .public OS_DisableInterrupts
 .public sub_0207B074

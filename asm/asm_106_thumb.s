@@ -4983,9 +4983,9 @@ sub_020812B8: ; 0x020812B8
 	lsl r0, r0, #0x10
 	cmp r1, r0
 	bne _020812E4
-	bl sub_0207CB88
+	bl RTC_Init
 	add r0, sp, #0
-	bl sub_0207CC80
+	bl RTC_GetTime
 	cmp r0, #0
 	bne _020812E4
 	ldr r0, [sp, #4]

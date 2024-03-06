@@ -9882,7 +9882,7 @@ ovy186_21ac3e0: ; 0x021AC3E0
 	bl sub_02044210
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	mov r7, #3
 	lsl r7, r7, #8
 	add r3, r0, #0
@@ -9922,14 +9922,14 @@ ovy186_21ac428: ; 0x021AC428
 	add r1, sp, #0xc
 	add r2, r4, #0
 	add r3, r5, #0
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 	add r7, sp, #0x34
 	add r0, r7, #0
 	add r1, sp, #0x18
 	bl sub_02044210
 	add r0, r7, #0
 	add r1, sp, #0x18
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	sub r0, r0, r4
 	sbc r1, r5
 	mov r2, #0xe1

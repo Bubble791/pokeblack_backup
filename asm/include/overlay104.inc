@@ -74,7 +74,7 @@
 .public sub_021EFCF8
 .public sub_021EFCF8
 .public sub_020241D4
-.public sub_0207CC10
+.public RTC_GetDate
 .public sub_0202451C
 .public sub_02024900
 .public sub_0202451C
@@ -110,10 +110,10 @@
 .public sub_02048564
 .public sub_020487D4
 .public sub_02024274
-.public sub_0207CC10
-.public sub_0207CC10
-.public sub_0207CC10
-.public sub_0207CC10
+.public RTC_GetDate
+.public RTC_GetDate
+.public RTC_GetDate
+.public RTC_GetDate
 .public sub_021EFCF4
 .public sub_020241D4
 .public sub_020243D0

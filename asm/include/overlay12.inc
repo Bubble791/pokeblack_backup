@@ -3315,9 +3315,9 @@
 .public sub_020092F0
 .public sub_02044210
 .public sub_02009390
-.public sub_0207D12C
-.public sub_0207D12C
-.public sub_0207D0B4
+.public RTC_ConvertDateTimeToSecond
+.public RTC_ConvertDateTimeToSecond
+.public RTC_ConvertDateToDay
 .public sub_0208D414
 .public sub_02017934
 .public sub_02017394
@@ -3836,7 +3836,7 @@
 .public sub_0200CA7C
 .public sub_0200CACC
 .public sub_02044284
-.public sub_0207D244
+.public RTC_ConvertSecondToDateTime
 .public sub_0200ECF0
 .public sub_0200ED14
 .public sub_021652EC
@@ -4621,8 +4621,8 @@
 .public sub_020091E8
 .public sub_02009204
 .public sub_0200EF90
-.public sub_0207D244
-.public sub_0207D244
+.public RTC_ConvertSecondToDateTime
+.public RTC_ConvertSecondToDateTime
 .public sub_0200C924
 .public sub_0200C62C
 .public sub_0201361C

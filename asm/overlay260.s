@@ -10323,12 +10323,12 @@ _021B7FE6:
 	beq _021B8006
 	add r0, sp, #0x18
 	add r1, sp, #0xc
-	bl sub_0207D12C
+	bl RTC_ConvertDateTimeToSecond
 	add r2, r0, #0
 	add r3, r1, #0
 	add r0, sp, #0x18
 	add r1, sp, #0xc
-	bl sub_0207D244
+	bl RTC_ConvertSecondToDateTime
 _021B8006:
 	add r0, r6, #0
 	mov r1, #4
@@ -10359,13 +10359,13 @@ _021B8006:
 	mov r0, #0
 	str r0, [sp, #0x34]
 	add r0, sp, #0x38
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	add r6, r0, #0
 	add r0, sp, #0x28
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	str r0, [sp]
 	add r0, sp, #0x18
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	cmp r7, #0
 	beq _021B8072
 	cmp r0, r6

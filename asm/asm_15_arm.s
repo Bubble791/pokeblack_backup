@@ -7154,24 +7154,24 @@ sub_02057138: ; 0x02057138
 	mov r5, r0
 	mov r8, #0
 	bl sub_02056A90
-	blx sub_0207CB88
+	blx RTC_Init
 	add r6, sp, #0x14
 	mov r0, r6
-	blx sub_0207CC10
+	blx RTC_GetDate
 	cmp r0, #0
 	addne sp, sp, #0x24
 	movne r0, r8
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	add r4, sp, #8
 	mov r0, r4
-	blx sub_0207CC80
+	blx RTC_GetTime
 	cmp r0, #0
 	addne sp, sp, #0x24
 	movne r0, r8
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	mov r0, r6
 	mov r1, r4
-	blx sub_0207D12C
+	blx RTC_ConvertDateTimeToSecond
 	mov sb, r0
 	mov r0, r8
 	subs r2, sb, r0
@@ -7333,24 +7333,24 @@ sub_02057398: ; 0x02057398
 	strb r7, [r1, #4]
 	strb r7, [r1, #5]
 	bl sub_02056A90
-	blx sub_0207CB88
+	blx RTC_Init
 	add r6, sp, #0x14
 	mov r0, r6
-	blx sub_0207CC10
+	blx RTC_GetDate
 	cmp r0, #0
 	addne sp, sp, #0x24
 	movne r0, r7
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	add r4, sp, #8
 	mov r0, r4
-	blx sub_0207CC80
+	blx RTC_GetTime
 	cmp r0, #0
 	addne sp, sp, #0x24
 	movne r0, r7
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	mov r0, r6
 	mov r1, r4
-	blx sub_0207D12C
+	blx RTC_ConvertDateTimeToSecond
 	mov r8, r0
 	subs r0, r8, r7
 	sbcs r0, r1, r7
@@ -8788,7 +8788,7 @@ sub_02058520: ; 0x02058520
 	bl sub_020586D0
 	blx sub_0207BA7C
 	blx sub_0207BBF4
-	blx sub_0207CB88
+	blx RTC_Init
 	mov r0, #2
 	mov r1, #0x1000
 	bl sub_020586E4

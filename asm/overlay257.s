@@ -42552,7 +42552,7 @@ _021AE398: .word 0x021B628C
 	thumb_func_start ovy257_21ae39c
 ovy257_21ae39c: ; 0x021AE39C
 	push {r3, lr}
-	bl sub_0207CCF4
+	bl RTC_GetDateTime
 	cmp r0, #0
 	bne _021AE3AA
 	mov r0, #1

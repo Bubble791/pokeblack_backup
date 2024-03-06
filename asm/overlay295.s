@@ -664,7 +664,7 @@ ovy295_219d3d4: ; 0x0219D3D4
 	sub sp, #0x10
 	add r5, r0, #0
 	add r0, sp, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	ldr r0, [r5, #4]
 	bl sub_0201735C
 	add r6, r0, #0

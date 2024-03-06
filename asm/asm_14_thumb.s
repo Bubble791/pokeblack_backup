@@ -23174,7 +23174,7 @@ _0204416C: .word 0x00006073
 	thumb_func_start sub_02044170
 sub_02044170: ; 0x02044170
 	push {r3, r4, r5, lr}
-	bl sub_0207CB88
+	bl RTC_Init
 	ldr r5, _02044194 ; =0x021418C4
 	mov r4, #0
 	add r0, r5, #0
@@ -23254,7 +23254,7 @@ sub_020441F0: ; 0x020441F0
 	add r0, #0x2c
 	add r1, #0x3c
 	add r3, r4, #0
-	bl sub_0207CCA4
+	bl RTC_GetDateTimeAsync
 	str r0, [r4, #0xc]
 	pop {r4, pc}
 	.align 2, 0
@@ -23334,12 +23334,12 @@ _02044280: .word 0x021418E4
 sub_02044284: ; 0x02044284
 	ldr r0, _0204428C ; =0x021418D4
 	ldr r1, _02044290 ; =0x021418E4
-	ldr r3, _02044294 ; =sub_0207D12C
+	ldr r3, _02044294 ; =RTC_ConvertDateTimeToSecond
 	bx r3
 	.align 2, 0
 _0204428C: .word 0x021418D4
 _02044290: .word 0x021418E4
-_02044294: .word sub_0207D12C
+_02044294: .word RTC_ConvertDateTimeToSecond
 	thumb_func_end sub_02044284
 
 	thumb_func_start sub_02044298
@@ -23389,9 +23389,9 @@ _020442DA:
 	str r0, [sp, #4]
 	str r0, [sp, #8]
 	add r0, r2, #0
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	add r0, r5, #0
-	bl sub_0207D0B4
+	bl RTC_ConvertDateToDay
 	add r0, r4, #0
 	add sp, #0x10
 	pop {r4, r5, r6, pc}

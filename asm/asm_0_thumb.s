@@ -261,7 +261,7 @@ sub_02005364: ; 0x02005364
 	bl sub_0207B124
 	bl sub_0207BA7C
 	bl sub_0207BBF4
-	bl sub_0207CB88
+	bl RTC_Init
 	bl GX_Init
 	bl sub_02074658
 	bl sub_0207AC24

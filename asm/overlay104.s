@@ -986,7 +986,7 @@ ovy104_21ef3c0: ; 0x021EF3C0
 	bl sub_020241D4
 	add r4, r0, #0
 	add r0, sp, #8
-	bl sub_0207CC10
+	bl RTC_GetDate
 	mov r6, #2
 	str r6, [sp]
 	mov r7, #1
@@ -1292,7 +1292,7 @@ ovy104_21ef658: ; 0x021EF658
 	sub sp, #0x2c
 	add r4, r0, #0
 	add r0, sp, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	ldr r0, [sp, #0xc]
 	cmp r0, #6
 	bhi _021EF6AE
@@ -1370,7 +1370,7 @@ ovy104_21ef6dc: ; 0x021EF6DC
 	sub sp, #0x2c
 	add r4, r0, #0
 	add r0, sp, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	ldr r0, [sp, #0xc]
 	cmp r0, #6
 	bhi _021EF732
@@ -1448,7 +1448,7 @@ ovy104_21ef760: ; 0x021EF760
 	sub sp, #0x2c
 	add r4, r0, #0
 	add r0, sp, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	ldr r0, [sp, #0xc]
 	cmp r0, #6
 	bhi _021EF7B6
@@ -1526,7 +1526,7 @@ ovy104_21ef7e4: ; 0x021EF7E4
 	sub sp, #0x2c
 	add r4, r0, #0
 	add r0, sp, #0
-	bl sub_0207CC10
+	bl RTC_GetDate
 	ldr r0, [sp, #0xc]
 	cmp r0, #6
 	bhi _021EF83A
