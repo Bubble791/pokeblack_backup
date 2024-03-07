@@ -73,6 +73,12 @@ struct PatchDef gPatchDefs[] = {
         "caa84dd90b1987ab7b42749bd5c9dcfdcfef59f3",
         g20sp2p4Patches
     },
+    {
+        "mwasmarm dsi/1.6sp1",
+        "a601de1627529c6c8a8baf780bfb56f8bd2ae886",
+        "ca4b3596919b15d7cbecc10ae67a00495326f724",
+        gdsi16sp1Patches
+    },
     {0}
 };
 

@@ -5,6 +5,7 @@ BACK_REL     := ..
 TOOLSDIR     := ../tools
 ELFNAME      := ichneumon_sub
 MWCCVER      := 2.0/sp2p3
+MWASMVER     := 2.0/sp2p2
 PROC         := arm7tdmi
 PROC_S       := arm4t
 PROC_LD      := v4t

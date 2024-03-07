@@ -1,4 +1,5 @@
 MWCCVER        := dsi/1.6sp1
+MWASMVER	   := 2.0/sp2p2
 PROC           := arm946e
 PROC_S         := arm5te
 PROC_LD        := v5te
