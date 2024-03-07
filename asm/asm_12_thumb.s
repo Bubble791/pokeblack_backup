@@ -92879,7 +92879,7 @@ sub_0202EED4: ; 0x0202EED4
 	bl sub_0206CC4C
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	cmp r0, #0
 	bne _0202EEEA
 	mov r0, #0
@@ -92889,7 +92889,7 @@ _0202EEEA:
 	bl sub_0206CCE4
 	add r5, r0, #0
 	ldr r0, [r5]
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	cmp r0, #0
 	bne _0202EF00
 	mov r0, #0
@@ -92907,7 +92907,7 @@ _0202EF04:
 	ldr r0, [r0]
 	lsl r0, r0, #8
 	lsr r0, r0, #8
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	cmp r0, #0
 	bne _0202EF24
 	mov r0, #0

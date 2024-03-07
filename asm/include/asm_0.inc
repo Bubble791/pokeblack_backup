@@ -195,7 +195,7 @@
 .public sub_0206CFD4
 .public sub_0206CFD4
 .public sub_0206CD30
-.public sub_0206CFB4
+.public NNS_SndArcGetFileAddress
 .public sub_0207DFA4
 .public sub_0207DF84
 .public sub_0206D974
@@ -211,7 +211,7 @@
 .public sub_0208D65C
 .public sub_0206CD30
 .public sub_0206CECC
-.public sub_0206CEEC
+.public NNS_SndArcReadFile
 .public sub_0207DF80
 .public sub_0208D5C4
 .public sub_0208D5C4
@@ -2311,11 +2311,11 @@
 .public sub_021C7390
 .public sub_021C73B0
 .public sub_0206CC4C
-.public sub_0206CFB4
+.public NNS_SndArcGetFileAddress
 .public sub_0206CCE4
-.public sub_0206CFB4
+.public NNS_SndArcGetFileAddress
 .public sub_0206CD30
-.public sub_0206CFB4
+.public NNS_SndArcGetFileAddress
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0208D65C

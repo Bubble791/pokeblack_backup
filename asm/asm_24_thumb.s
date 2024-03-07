@@ -2944,8 +2944,8 @@ _0206CD72:
 _0206CD78: .word 0x02149910
 	thumb_func_end sub_0206CD30
 
-	thumb_func_start sub_0206CD7C
-sub_0206CD7C: ; 0x0206CD7C
+	thumb_func_start NNS_SndArcGetStrmInfo
+NNS_SndArcGetStrmInfo: ; 0x0206CD7C
 	ldr r1, _0206CDC4 ; =0x02149910
 	ldr r1, [r1]
 	add r2, r1, #0
@@ -2989,7 +2989,7 @@ _0206CDBE:
 	bx lr
 	nop
 _0206CDC4: .word 0x02149910
-	thumb_func_end sub_0206CD7C
+	thumb_func_end NNS_SndArcGetStrmInfo
 
 	thumb_func_start sub_0206CDC8
 sub_0206CDC8: ; 0x0206CDC8
@@ -3172,8 +3172,8 @@ _0206CEDE:
 _0206CEE8: .word 0x02149910
 	thumb_func_end sub_0206CECC
 
-	thumb_func_start sub_0206CEEC
-sub_0206CEEC: ; 0x0206CEEC
+	thumb_func_start NNS_SndArcReadFile
+NNS_SndArcReadFile: ; 0x0206CEEC
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r7, r1, #0
@@ -3261,7 +3261,7 @@ _0206CF86:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0206CF8C: .word 0x02149910
-	thumb_func_end sub_0206CEEC
+	thumb_func_end NNS_SndArcReadFile
 
 	thumb_func_start sub_0206CF90
 sub_0206CF90: ; 0x0206CF90
@@ -3288,8 +3288,8 @@ sub_0206CFA4: ; 0x0206CFA4
 _0206CFB0: .word 0x02149910
 	thumb_func_end sub_0206CFA4
 
-	thumb_func_start sub_0206CFB4
-sub_0206CFB4: ; 0x0206CFB4
+	thumb_func_start NNS_SndArcGetFileAddress
+NNS_SndArcGetFileAddress: ; 0x0206CFB4
 	ldr r1, _0206CFD0 ; =0x02149910
 	ldr r1, [r1]
 	add r1, #0x88
@@ -3306,7 +3306,7 @@ _0206CFC6:
 	bx lr
 	nop
 _0206CFD0: .word 0x02149910
-	thumb_func_end sub_0206CFB4
+	thumb_func_end NNS_SndArcGetFileAddress
 
 	thumb_func_start sub_0206CFD4
 sub_0206CFD4: ; 0x0206CFD4
@@ -3866,7 +3866,7 @@ _0206D370:
 	mov r0, #6
 	pop {r3, r4, r5, r6, r7, pc}
 _0206D39C:
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 _0206D3A0:
 	ldr r1, [sp, #0x18]
 	cmp r1, #0
@@ -3902,7 +3902,7 @@ _0206D3C0:
 	mov r0, #7
 	pop {r4, r5, r6, pc}
 _0206D3D8:
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 _0206D3DC:
 	ldr r1, [sp, #0x10]
 	cmp r1, #0
@@ -3941,7 +3941,7 @@ _0206D400:
 	mov r0, #8
 	pop {r3, r4, r5, r6, r7, pc}
 _0206D41C:
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r6, r0, #0
 _0206D422:
 	ldr r0, [sp, #4]
@@ -4060,7 +4060,7 @@ _0206D4F6:
 	ldr r0, [r0]
 	lsl r0, r0, #8
 	lsr r0, r0, #8
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 _0206D500:
 	ldr r1, [sp, #0x10]
 	cmp r1, #0
@@ -4109,7 +4109,7 @@ _0206D54A:
 	add r1, r5, #0
 	add r2, r4, #0
 	mov r3, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	cmp r4, r0
 	beq _0206D560
 	add sp, #8
@@ -4131,7 +4131,7 @@ sub_0206D570: ; 0x0206D570
 	add r7, r0, #0
 	add r6, r1, #0
 	add r5, r2, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r4, r0, #0
 	bne _0206D5AC
 	cmp r5, #0
@@ -4168,7 +4168,7 @@ sub_0206D5B4: ; 0x0206D5B4
 	add r7, r0, #0
 	add r6, r1, #0
 	add r5, r2, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r4, r0, #0
 	bne _0206D5F0
 	cmp r5, #0
@@ -4205,7 +4205,7 @@ sub_0206D5F8: ; 0x0206D5F8
 	add r7, r0, #0
 	add r6, r1, #0
 	add r5, r2, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r4, r0, #0
 	bne _0206D634
 	cmp r5, #0
@@ -4242,7 +4242,7 @@ sub_0206D63C: ; 0x0206D63C
 	add r7, r0, #0
 	add r6, r1, #0
 	add r5, r2, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r4, r0, #0
 	bne _0206D678
 	cmp r5, #0
@@ -4280,14 +4280,14 @@ sub_0206D680: ; 0x0206D680
 	add r5, r0, #0
 	str r1, [sp, #4]
 	add r7, r2, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r4, r0, #0
 	bne _0206D734
 	ldr r1, _0206D73C ; =0x02149914
 	add r0, r5, #0
 	mov r2, #0x3c
 	mov r3, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	cmp r0, #0x3c
 	beq _0206D6A8
 	add sp, #0xc
@@ -4333,7 +4333,7 @@ _0206D6E8:
 	add r1, r4, #0
 	add r2, #0x3c
 	mov r3, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	add r1, r6, #0
 	add r1, #0x3c
 	cmp r0, r1
@@ -4386,7 +4386,7 @@ sub_0206D748: ; 0x0206D748
 	bl sub_0206CC1C
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	cmp r5, r0
 	bne _0206D774
 	add r0, r6, #0
@@ -4541,7 +4541,7 @@ _0206D87A:
 	ldr r1, [sp, #0xc]
 	add r2, r6, #0
 	add r3, r7, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	cmp r6, r0
 	beq _0206D890
 	add sp, #0x10
@@ -4750,7 +4750,7 @@ sub_0206D9E4: ; 0x0206D9E4
 	pop {r3, r4, r5, r6, r7, pc}
 _0206D9FE:
 	ldr r0, [r0]
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r6, r0, #0
 	bne _0206DA0E
 	add sp, #0x10
@@ -5082,7 +5082,7 @@ sub_0206DC94: ; 0x0206DC94
 	add r6, r0, #0
 	add r0, r5, #0
 	add r4, r2, #0
-	bl sub_0206CD7C
+	bl NNS_SndArcGetStrmInfo
 	add r1, r0, #0
 	bne _0206DCAE
 	add sp, #0x18
@@ -5469,7 +5469,7 @@ sub_0206DF34: ; 0x0206DF34
 	pop {r3, r4, r5, r6, r7, pc}
 _0206DF4C:
 	ldr r1, [r6]
-	bl sub_0206EB70
+	bl SetupStreamFunction
 	mov r2, #0x5b
 	lsl r2, r2, #2
 	ldr r1, [r6]
@@ -5677,7 +5677,7 @@ _0206E0C6:
 	str r0, [sp]
 	mov r0, #4
 	str r0, [sp, #4]
-	ldr r0, _0206E138 ; =sub_0206E408
+	ldr r0, _0206E138 ; =StrmCallback
 	add r1, r7, #0
 	str r0, [sp, #8]
 	str r4, [sp, #0xc]
@@ -5714,7 +5714,7 @@ _0206E132:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_0206E138: .word sub_0206E408
+_0206E138: .word StrmCallback
 	thumb_func_end sub_0206DF34
 
 	thumb_func_start sub_0206E13C
@@ -5895,7 +5895,7 @@ sub_0206E278: ; 0x0206E278
 	add r4, r0, #0
 	str r1, [sp, #4]
 	add r3, #0xc0
-	ldr r1, _0206E2BC ; =sub_0206ECC0
+	ldr r1, _0206E2BC ; =StrmThread
 	add r2, r4, #0
 	add r3, r4, r3
 	bl OS_CreateThread
@@ -5917,7 +5917,7 @@ sub_0206E278: ; 0x0206E278
 	add sp, #8
 	pop {r4, pc}
 	nop
-_0206E2BC: .word sub_0206ECC0
+_0206E2BC: .word StrmThread
 _0206E2C0: .word 0x000010E0
 _0206E2C4: .word 0x000010C8
 _0206E2C8: .word 0x000010C4
@@ -6081,8 +6081,8 @@ _0206E400: .word 0x02149950
 _0206E404: .word 0x000010C8
 	thumb_func_end sub_0206E390
 
-	thumb_func_start sub_0206E408
-sub_0206E408: ; 0x0206E408
+	thumb_func_start StrmCallback
+StrmCallback: ; 0x0206E408
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
@@ -6194,10 +6194,10 @@ _0206E4DC: .word 0x0214B3D0
 _0206E4E0: .word 0x0214A2F0
 _0206E4E4: .word 0x02149950
 _0206E4E8: .word 0x000010E0
-	thumb_func_end sub_0206E408
+	thumb_func_end StrmCallback
 
-	thumb_func_start sub_0206E4EC
-sub_0206E4EC: ; 0x0206E4EC
+	thumb_func_start OnDataEnd
+OnDataEnd: ; 0x0206E4EC
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	mov r4, #0x15
@@ -6224,7 +6224,7 @@ sub_0206E4EC: ; 0x0206E4EC
 	cmp r0, #0
 	beq _0206E5DC
 	ldr r0, [sp]
-	bl sub_0206CD7C
+	bl NNS_SndArcGetStrmInfo
 	add r6, r0, #0
 	beq _0206E5DC
 	add r0, r5, #0
@@ -6240,7 +6240,7 @@ sub_0206E4EC: ; 0x0206E4EC
 	blx r1
 	ldr r1, [r6]
 	add r0, r5, #0
-	bl sub_0206EB70
+	bl SetupStreamFunction
 	mov r2, #0x5b
 	lsl r2, r2, #2
 	ldr r1, [r6]
@@ -6321,10 +6321,10 @@ _0206E5D0:
 _0206E5DC:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_0206E4EC
+	thumb_func_end OnDataEnd
 
-	thumb_func_start sub_0206E5E0
-sub_0206E5E0: ; 0x0206E5E0
+	thumb_func_start MakeWaveData
+MakeWaveData: ; 0x0206E5E0
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x4c
 	str r0, [sp, #8]
@@ -7027,7 +7027,7 @@ _0206EAC8:
 	cmp r0, #0
 	beq _0206EAF8
 	ldr r0, [sp, #0x48]
-	bl sub_0206E4EC
+	bl OnDataEnd
 _0206EAF8:
 	ldr r0, [sp, #0x3c]
 	cmp r0, #0
@@ -7095,60 +7095,60 @@ _0206EB5A:
 _0206EB6C:
 	add sp, #0x4c
 	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_0206E5E0
+	thumb_func_end MakeWaveData
 
-	thumb_func_start sub_0206EB70
-sub_0206EB70: ; 0x0206EB70
+	thumb_func_start SetupStreamFunction
+SetupStreamFunction: ; 0x0206EB70
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	cmp r0, #0
 	bne _0206EB9C
 	mov r1, #0x5b
-	ldr r0, _0206EBBC ; =sub_0206EBDC
+	ldr r0, _0206EBBC ; =OpenFileStream
 	lsl r1, r1, #2
 	str r0, [r4, r1]
-	ldr r2, _0206EBC0 ; =sub_0206EC40
+	ldr r2, _0206EBC0 ; =CloseFileStream
 	add r0, r1, #4
 	str r2, [r4, r0]
 	add r0, r1, #0
-	ldr r2, _0206EBC4 ; =sub_0206EC4C
+	ldr r2, _0206EBC4 ; =ReadFileStream
 	add r0, #8
 	str r2, [r4, r0]
-	ldr r0, _0206EBC8 ; =sub_0206EC74
+	ldr r0, _0206EBC8 ; =CancelFileStream
 	add r1, #0xc
 	str r0, [r4, r1]
 	pop {r4, pc}
 _0206EB9C:
 	mov r1, #0x5b
-	ldr r0, _0206EBCC ; =sub_0206EC80
+	ldr r0, _0206EBCC ; =OpenMemoryStream
 	lsl r1, r1, #2
 	str r0, [r4, r1]
-	ldr r2, _0206EBD0 ; =sub_0206ECA4
+	ldr r2, _0206EBD0 ; =CloseMemoryStream
 	add r0, r1, #4
 	str r2, [r4, r0]
 	add r0, r1, #0
-	ldr r2, _0206EBD4 ; =sub_0206ECA8
+	ldr r2, _0206EBD4 ; =ReadMemoryStream
 	add r0, #8
 	str r2, [r4, r0]
-	ldr r0, _0206EBD8 ; =sub_0206ECBC
+	ldr r0, _0206EBD8 ; =CancelMemoryStream
 	add r1, #0xc
 	str r0, [r4, r1]
 	pop {r4, pc}
 	nop
-_0206EBBC: .word sub_0206EBDC
-_0206EBC0: .word sub_0206EC40
-_0206EBC4: .word sub_0206EC4C
-_0206EBC8: .word sub_0206EC74
-_0206EBCC: .word sub_0206EC80
-_0206EBD0: .word sub_0206ECA4
-_0206EBD4: .word sub_0206ECA8
-_0206EBD8: .word sub_0206ECBC
-	thumb_func_end sub_0206EB70
+_0206EBBC: .word OpenFileStream
+_0206EBC0: .word CloseFileStream
+_0206EBC4: .word ReadFileStream
+_0206EBC8: .word CancelFileStream
+_0206EBCC: .word OpenMemoryStream
+_0206EBD0: .word CloseMemoryStream
+_0206EBD4: .word ReadMemoryStream
+_0206EBD8: .word CancelMemoryStream
+	thumb_func_end SetupStreamFunction
 
-	thumb_func_start sub_0206EBDC
-sub_0206EBDC: ; 0x0206EBDC
+	thumb_func_start OpenFileStream
+OpenFileStream: ; 0x0206EBDC
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r5, r0, #0
@@ -7158,7 +7158,7 @@ sub_0206EBDC: ; 0x0206EBDC
 	add r1, #0xb0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	cmp r0, #0x40
 	beq _0206EBFC
 	add sp, #8
@@ -7195,19 +7195,19 @@ _0206EC2E:
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_0206EBDC
+	thumb_func_end OpenFileStream
 
-	thumb_func_start sub_0206EC40
-sub_0206EC40: ; 0x0206EC40
+	thumb_func_start CloseFileStream
+CloseFileStream: ; 0x0206EC40
 	ldr r3, _0206EC48 ; =FS_CloseFile
 	add r0, #0x64
 	bx r3
 	nop
 _0206EC48: .word FS_CloseFile
-	thumb_func_end sub_0206EC40
+	thumb_func_end CloseFileStream
 
-	thumb_func_start sub_0206EC4C
-sub_0206EC4C: ; 0x0206EC4C
+	thumb_func_start ReadFileStream
+ReadFileStream: ; 0x0206EC4C
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -7226,23 +7226,23 @@ sub_0206EC4C: ; 0x0206EC4C
 	bl FS_ReadFile
 	pop {r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end sub_0206EC4C
+	thumb_func_end ReadFileStream
 
-	thumb_func_start sub_0206EC74
-sub_0206EC74: ; 0x0206EC74
+	thumb_func_start CancelFileStream
+CancelFileStream: ; 0x0206EC74
 	ldr r3, _0206EC7C ; =FS_CancelFile
 	add r0, #0x64
 	bx r3
 	nop
 _0206EC7C: .word FS_CancelFile
-	thumb_func_end sub_0206EC74
+	thumb_func_end CancelFileStream
 
-	thumb_func_start sub_0206EC80
-sub_0206EC80: ; 0x0206EC80
+	thumb_func_start OpenMemoryStream
+OpenMemoryStream: ; 0x0206EC80
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r1, r4, #0
 	add r1, #0xac
 	str r0, [r1]
@@ -7255,16 +7255,16 @@ sub_0206EC80: ; 0x0206EC80
 	blx MI_CpuCopy8
 	mov r0, #1
 	pop {r4, pc}
-	thumb_func_end sub_0206EC80
+	thumb_func_end OpenMemoryStream
 
-	thumb_func_start sub_0206ECA4
-sub_0206ECA4: ; 0x0206ECA4
+	thumb_func_start CloseMemoryStream
+CloseMemoryStream: ; 0x0206ECA4
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0206ECA4
+	thumb_func_end CloseMemoryStream
 
-	thumb_func_start sub_0206ECA8
-sub_0206ECA8: ; 0x0206ECA8
+	thumb_func_start ReadMemoryStream
+ReadMemoryStream: ; 0x0206ECA8
 	push {r4, lr}
 	add r0, #0xac
 	ldr r0, [r0]
@@ -7274,16 +7274,16 @@ sub_0206ECA8: ; 0x0206ECA8
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_0206ECA8
+	thumb_func_end ReadMemoryStream
 
-	thumb_func_start sub_0206ECBC
-sub_0206ECBC: ; 0x0206ECBC
+	thumb_func_start CancelMemoryStream
+CancelMemoryStream: ; 0x0206ECBC
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0206ECBC
+	thumb_func_end CancelMemoryStream
 
-	thumb_func_start sub_0206ECC0
-sub_0206ECC0: ; 0x0206ECC0
+	thumb_func_start StrmThread
+StrmThread: ; 0x0206ECC0
 	push {r3, r4, r5, r6, r7, lr}
 	ldr r6, _0206ED00 ; =0x000010C8
 	add r5, r0, #0
@@ -7305,7 +7305,7 @@ _0206ECD4:
 	bl OS_UnlockMutex
 	b _0206ECCA
 _0206ECEC:
-	bl sub_0206E5E0
+	bl MakeWaveData
 	add r0, r4, #0
 	bl sub_0206E370
 	add r0, r5, r6
@@ -7313,7 +7313,7 @@ _0206ECEC:
 	b _0206ECD4
 	nop
 _0206ED00: .word 0x000010C8
-	thumb_func_end sub_0206ECC0
+	thumb_func_end StrmThread
 
 	thumb_func_start sub_0206ED04
 sub_0206ED04: ; 0x0206ED04
@@ -7415,8 +7415,8 @@ _0206ED90:
 	bx lr
 	thumb_func_end sub_0206ED84
 
-	thumb_func_start sub_0206ED94
-sub_0206ED94: ; 0x0206ED94
+	thumb_func_start CARDi_PeekEventListener
+CARDi_PeekEventListener: ; 0x0206ED94
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, r0, #0
@@ -7434,7 +7434,7 @@ _0206EDB0:
 	str r4, [sp]
 	add r4, #0xc
 	mov r2, #0xc0
-	ldr r3, _0206EDC8 ; =sub_0206ED94
+	ldr r3, _0206EDC8 ; =CARDi_PeekEventListener
 	add r0, r4, #0
 	mov r1, #0xc0
 	add r2, #0x47
@@ -7442,5 +7442,5 @@ _0206EDB0:
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
-_0206EDC8: .word sub_0206ED94
-	thumb_func_end sub_0206ED94
+_0206EDC8: .word CARDi_PeekEventListener
+	thumb_func_end CARDi_PeekEventListener

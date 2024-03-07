@@ -1339,7 +1339,7 @@ _0200653C:
 	ldr r0, [r0]
 	lsl r0, r0, #8
 	lsr r0, r0, #8
-	bl sub_0206CFB4
+	bl NNS_SndArcGetFileAddress
 	add r7, r0, #0
 	bne _0200654E
 	mov r0, #0
@@ -1796,7 +1796,7 @@ _02006874:
 	add r2, r6, #0
 	mov r4, #0
 	mov r3, #0
-	bl sub_0206CEEC
+	bl NNS_SndArcReadFile
 	sub r1, r4, #1
 	cmp r0, r1
 	bne _02006890

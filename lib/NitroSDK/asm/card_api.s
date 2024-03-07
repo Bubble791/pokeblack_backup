@@ -190,7 +190,7 @@ CARD_LockRom: ; 0x0206EEF0
 	add r0, sp, #0x48
 	str r0, [sp, #0x38]
 	add r0, r4, #0
-	bl sub_0206ED94
+	bl CARDi_PeekEventListener
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #0
