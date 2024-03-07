@@ -30,7 +30,7 @@ ovy115_21eec80: ; 0x021EEC80
 	bl sub_0218049C
 	ldr r1, _021EECC4 ; =0x0000416B
 	mov r2, #1
-	bl sub_02197A8C
+	bl ovy36_2197a8c
 	pop {r3, r4, r5, pc}
 	nop
 _021EECC4: .word 0x0000416B

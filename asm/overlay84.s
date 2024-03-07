@@ -6905,7 +6905,7 @@ _021EE37E:
 	mov r0, #0x43
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_021EAAA8
+	bl ovy83_21eaaa8
 	mov r0, #6
 	strb r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -7239,7 +7239,7 @@ _021EE61C:
 	mov r0, #0x43
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_021EAAA8
+	bl ovy83_21eaaa8
 	mov r0, #6
 	strb r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}

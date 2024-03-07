@@ -479,7 +479,7 @@ _021EF03C:
 	ldr r2, _021EF068 ; =0xFFF38000
 	mov r1, #0xa
 	mov r5, #0xa
-	bl sub_021C0648
+	bl ovy36_21c0648
 	strb r5, [r6, #0x13]
 	b _021EEF9C
 _021EF04C:

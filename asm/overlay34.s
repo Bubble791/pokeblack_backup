@@ -2611,7 +2611,7 @@ _02177E5E:
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _02177E80:
-	bl sub_02171220
+	bl ovy28_2171220
 	cmp r0, #1
 	bne _02177F32
 	ldr r0, [r4, #0x1c]
@@ -2768,7 +2768,7 @@ _02177F98:
 	add r0, r5, #0
 	ldr r1, [r5, #0x20]
 	add r0, #0x14
-	bl sub_02170D80
+	bl ovy28_2170d80
 	bl sub_02040440
 	mov r1, #2
 	mov r2, #0x14
@@ -3045,7 +3045,7 @@ _021781C6:
 	add r0, r5, #0
 	add r0, #0x2d
 	ldrb r0, [r0]
-	bl sub_02171194
+	bl ovy28_2171194
 	cmp r0, #1
 	bne _02178264
 	add r0, r5, #0
@@ -3158,7 +3158,7 @@ _02178296:
 	add r0, r5, #0
 	ldr r1, [r5, #0x20]
 	add r0, #0x14
-	bl sub_02170D80
+	bl ovy28_2170d80
 	bl sub_02040440
 	mov r1, #2
 	mov r2, #0x14

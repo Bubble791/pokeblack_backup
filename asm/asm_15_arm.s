@@ -10212,7 +10212,7 @@ _020597A0:
 	cmp r0, #0xe
 	bne _020597BC
 	blx sub_0216B24C
-	blx sub_0216B1D4
+	blx ovy11_216b1d4
 	mov r0, #0xc
 	strb r0, [r4]
 	b _020597D4
@@ -12265,10 +12265,10 @@ _0205B24C: .word 0x0214199C
 
 	arm_func_start sub_0205B250
 sub_0205B250: ; 0x0205B250
-	ldr ip, _0205B258 ; =sub_0215CD58
+	ldr ip, _0205B258 ; =ovy11_215cd58
 	bx ip
 	.align 2, 0
-_0205B258: .word sub_0215CD58
+_0205B258: .word ovy11_215cd58
 	arm_func_end sub_0205B250
 
 	arm_func_start sub_0205B25C
@@ -12324,7 +12324,7 @@ _0205B2EC:
 _0205B300:
 	bl OS_DisableInterrupts
 	mov r4, r0
-	blx sub_0215CB14
+	blx ovy11_215cb14
 	mov r6, #6
 	mov r7, r0
 	mov r1, r6
@@ -15048,7 +15048,7 @@ _0205D6A0:
 	b _0205D678
 _0205D6A4:
 	blx sub_0216B24C
-	blx sub_0216B1D4
+	blx ovy11_216b1d4
 _0205D6AC:
 	add r0, r5, #0x1000
 	ldrb r0, [r0, #0x4c3]
@@ -15159,7 +15159,7 @@ sub_0205D810: ; 0x0205D810
 	stmdb sp!, {r3, lr}
 	mov r0, #8
 	bl sub_0205A78C
-	blx sub_0216B14C
+	blx ovy11_216b14c
 	cmp r0, #0
 	moveq r0, #0xe
 	ldmeqia sp!, {r3, pc}
@@ -15188,7 +15188,7 @@ sub_0205D83C: ; 0x0205D83C
 	blx sub_0216B2CC
 	str r0, [r4, #0x10]
 _0205D87C:
-	blx sub_0216B1D4
+	blx ovy11_216b1d4
 	cmp r6, #0xb
 	beq _0205D8C0
 	add r0, r5, #0x1000

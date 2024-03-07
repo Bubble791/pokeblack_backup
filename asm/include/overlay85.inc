@@ -134,7 +134,7 @@
 .public sub_021EA9EC
 .public sub_021EC6D4
 .public sub_021EC6D4
-.public sub_021EAAA8
+.public ovy83_21eaaa8
 .public sub_021EAA68
 .public sub_021EADA0
 .public sub_021EA88C
@@ -147,7 +147,7 @@
 .public sub_021EA968
 .public sub_021EA9EC
 .public sub_021EC6D4
-.public sub_021EAAA8
+.public ovy83_21eaaa8
 .public sub_021EAA68
 .public sub_021EADA0
 .public sub_021EA88C

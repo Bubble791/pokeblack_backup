@@ -3843,7 +3843,7 @@
 .public sub_0203CE0C
 .public sub_021804BC
 .public sub_021EA860
-.public sub_021EA8CC
+.public ovy88_21ea8cc
 .public sub_0203CDC8
 .public sub_021804BC
 .public sub_021F1D44
@@ -4408,7 +4408,7 @@
 .public sub_02017240
 .public sub_021672F8
 .public sub_0215CF68
-.public sub_021EEEB8
+.public ovy91_21eeeb8
 .public sub_0203A1FC
 .public sub_0219AFC4
 .public sub_0219AFC8
@@ -4686,7 +4686,7 @@
 .public sub_02167018
 .public sub_0219ACF4
 .public sub_02167C64
-.public sub_02167C3C
+.public ovy12_2167c3c
 .public sub_021672F8
 .public sub_0219A670
 .public sub_021B3D84
@@ -6911,7 +6911,7 @@
 .public ovy12_2154910
 .public sub_0215517C
 .public ovy12_2167a14
-.public sub_02167C3C
+.public ovy12_2167c3c
 .public ovy12_2154910
 .public ovy12_21548e8
 .public sub_0215517C
@@ -7109,7 +7109,7 @@
 .public sub_02153EA8
 .public sub_02180578
 .public ovy12_215e8c8
-.public sub_02167C3C
+.public ovy12_2167c3c
 .public sub_02167308
 .public sub_0216732C
 .public sub_0215516C
@@ -12797,7 +12797,7 @@
 .public sub_021EA9F8
 .public sub_021EAA5C
 .public sub_021EAA90
-.public sub_021EAAA8
+.public ovy83_21eaaa8
 .public sub_0204FDF8
 .public sub_0204F954
 .public sub_02040C64

@@ -787,8 +787,8 @@
 .public sub_02017394
 .public sub_02016B20
 .public sub_02034F20
-.public sub_0215363C
-.public sub_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
 .public sub_02019294
 .public sub_02017394
 .public sub_02019294
@@ -1382,11 +1382,11 @@
 .public sub_0215516C
 .public sub_02016AF0
 .public sub_02180590
-.public sub_021BD59C
+.public ovy36_21bd59c
 .public sub_0215516C
 .public sub_02016AF0
 .public sub_02180590
-.public sub_021BD610
+.public ovy36_21bd610
 .public sub_0201CCF8
 .public sub_0215516C
 .public sub_02016AF0
@@ -3951,7 +3951,7 @@
 .public sub_020061B8
 .public sub_02006268
 .public sub_02006254
-.public sub_021C7A38
+.public ovy36_21c7a38
 .public sub_02016D68
 .public sub_021EED18
 .public sub_021EEDC8
@@ -4007,7 +4007,7 @@
 .public sub_021672F8
 .public sub_02180494
 .public sub_021862B4
-.public sub_021A8BEC
+.public ovy36_21a8bec
 .public sub_021A8C00
 .public sub_02188798
 .public sub_02016AD8
@@ -4068,7 +4068,7 @@
 .public sub_0201738C
 .public sub_02167A60
 .public sub_021672F8
-.public sub_021A8C54
+.public ovy36_21a8c54
 .public sub_02180494
 .public sub_021862B4
 .public sub_021A8BEC
@@ -4098,7 +4098,7 @@
 .public sub_0218ED18
 .public sub_0203A5D0
 .public sub_021937D0
-.public sub_021937F8
+.public ovy36_21937f8
 .public sub_02193804
 .public OS_WaitInterrupt
 .public sub_02193804
@@ -4150,9 +4150,9 @@
 .public sub_02167FF0
 .public sub_02166FE8
 .public sub_02166FDC
-.public sub_02194924
+.public ovy36_2194924
 .public sub_02166FDC
-.public sub_02194938
+.public ovy36_2194938
 .public sub_0203A6A8
 .public sub_02166FE8
 .public sub_02167020
@@ -4387,7 +4387,7 @@
 .public sub_02016AD8
 .public sub_02017994
 .public sub_02017C60
-.public sub_021A1DB4
+.public ovy36_21a1db4
 .public sub_021804D8
 .public sub_020185D0
 .public sub_020095A0

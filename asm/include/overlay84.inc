@@ -468,7 +468,7 @@
 .public sub_021EA9EC
 .public sub_021EAF60
 .public sub_021EAF60
-.public sub_021EAAA8
+.public ovy83_21eaaa8
 .public sub_021EAA68
 .public sub_021EEB0C
 .public sub_021EADA0
@@ -487,7 +487,7 @@
 .public sub_021EAF60
 .public sub_02014964
 .public sub_02014D40
-.public sub_021EAAA8
+.public ovy83_21eaaa8
 .public sub_021EAA68
 .public sub_021EADA0
 .public sub_021EA88C

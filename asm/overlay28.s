@@ -1790,10 +1790,6 @@ _02171190: .word 0x00002830
 	thumb_func_start ovy28_2171194
 ovy28_2171194: ; 0x02171194
 	push {r0, r1, r2, r3}
-	thumb_func_end ovy28_2171194
-
-	non_word_aligned_thumb_func_start ovy28_2171196
-ovy28_2171196: ; 0x02171196
 	push {r3, lr}
 	bl sub_02040440
 	ldr r1, _021711B0 ; =0x00001401
@@ -1806,7 +1802,7 @@ ovy28_2171196: ; 0x02171196
 	bx r3
 	nop
 _021711B0: .word 0x00001401
-	thumb_func_end ovy28_2171196
+	thumb_func_end ovy28_2171194
 
 	thumb_func_start ovy28_21711b4
 ovy28_21711b4: ; 0x021711B4

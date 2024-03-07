@@ -146,7 +146,7 @@ ovy35_217ca2c: ; 0x0217CA2C
 	bl ovy35_217ed20
 	add r0, r5, #0
 	bl sub_02017214
-	bl sub_0215CD58
+	bl ovy11_215cd58
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy35_217ca2c
 
@@ -348,7 +348,7 @@ ovy35_217cbec: ; 0x0217CBEC
 	bl ovy35_217ed20
 	add r0, r5, #0
 	bl sub_02017214
-	bl sub_0215CD58
+	bl ovy11_215cd58
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy35_217cbec
 

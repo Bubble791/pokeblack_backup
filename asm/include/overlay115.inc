@@ -5,7 +5,7 @@
 .public sub_0218105C
 .public ovy36_0218056c
 .public sub_0218049C
-.public sub_02197A8C
+.public ovy36_2197a8c
 .public sub_0218105C
 .public sub_021EEDC8
 .public sub_021EEE58

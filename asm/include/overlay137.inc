@@ -249,7 +249,7 @@
 .public sub_021F110C
 .public sub_021672A8
 .public sub_021672D8
-.public sub_02167C3C
+.public ovy12_2167c3c
 .public sub_021F1D00
 .public sub_021672A8
 .public sub_02167CAC

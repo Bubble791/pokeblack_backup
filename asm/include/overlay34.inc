@@ -183,7 +183,7 @@
 .public sub_02170C2C
 .public sub_021704EC
 .public sub_0203DEFC
-.public sub_02171220
+.public ovy28_2171220
 .public sub_02170C2C
 .public sub_02170C2C
 .public sub_021775CC
@@ -196,7 +196,7 @@
 .public sub_02170C2C
 .public sub_02170C9C
 .public sub_02170C2C
-.public sub_02170D80
+.public ovy28_2170d80
 .public sub_02040440
 .public sub_02040624
 .public sub_02040440
@@ -219,7 +219,7 @@
 .public sub_021775CC
 .public sub_021775CC
 .public sub_0217B210
-.public sub_02171194
+.public ovy28_2171194
 .public sub_021775CC
 .public sub_0217AAB8
 .public sub_021775CC

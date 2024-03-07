@@ -3457,7 +3457,7 @@ _021F0612:
 	add r1, r6, #0
 	mov r2, #0
 	str r5, [sp]
-	bl sub_02167C3C
+	bl ovy12_2167c3c
 	b _021F05D8
 _021F0628:
 	add r0, r7, #0

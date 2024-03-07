@@ -139,35 +139,11 @@ sub_0215C2E0: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0215C2E0
 
-    thumb_func_start sub_0215CB14
-sub_0215CB14: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0215CB14
-
     thumb_func_start sub_0215CB48
 sub_0215CB48: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0215CB48
-
-    thumb_func_start sub_0215CD58
-sub_0215CD58: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0215CD58
-
-    thumb_func_start sub_0216B14C
-sub_0216B14C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0216B14C
-
-    thumb_func_start sub_0216B1D4
-sub_0216B1D4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0216B1D4
 
     thumb_func_start sub_0216B24C
 sub_0216B24C: ; 0x02073FB4
@@ -228,12 +204,6 @@ sub_027698B4: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_027698B4
-
-    thumb_func_start sub_0215363C
-sub_0215363C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0215363C
 
     thumb_func_start sub_02153640
 sub_02153640: ; 0x02073FB4
@@ -486,12 +456,6 @@ sub_021505CC: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021505CC
-
-    thumb_func_start sub_021516D4
-sub_021516D4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021516D4
 
     thumb_func_start sub_021523CC
 sub_021523CC: ; 0x02073FB4
@@ -1715,59 +1679,17 @@ sub_021937D0: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_021937D0
 
-    thumb_func_start sub_021937F8
-sub_021937F8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021937F8
-
-    thumb_func_start sub_02194924
-sub_02194924: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02194924
-
-    thumb_func_start sub_02194938
-sub_02194938: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02194938
-
     thumb_func_start sub_02197604
 sub_02197604: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02197604
 
-    thumb_func_start sub_02197A8C
-sub_02197A8C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02197A8C
-
     thumb_func_start sub_0219A6DC
 sub_0219A6DC: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0219A6DC
-
-    thumb_func_start sub_021A1DB4
-sub_021A1DB4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021A1DB4
-
-    thumb_func_start sub_021A8BEC
-sub_021A8BEC: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021A8BEC
-
-    thumb_func_start sub_021A8C54
-sub_021A8C54: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021A8C54
 
     thumb_func_start sub_021B67D8
 sub_021B67D8: ; 0x02073FB4
@@ -1780,12 +1702,6 @@ sub_021B8278: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021B8278
-
-    thumb_func_start sub_021C7A38
-sub_021C7A38: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021C7A38
 
     thumb_func_start sub_021EECD4
 sub_021EECD4: ; 0x02073FB4
@@ -2507,12 +2423,6 @@ sub_021704A4: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_021704A4
 
-    thumb_func_start sub_02170D80
-sub_02170D80: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02170D80
-
     thumb_func_start sub_02170DD4
 sub_02170DD4: ; 0x02073FB4
 	bx lr
@@ -2525,23 +2435,11 @@ sub_02170E64: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_02170E64
 
-    thumb_func_start sub_02171194
-sub_02171194: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02171194
-
     thumb_func_start sub_021711D8
 sub_021711D8: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021711D8
-
-    thumb_func_start sub_02171220
-sub_02171220: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02171220
 
     thumb_func_start sub_021712DC
 sub_021712DC: ; 0x02073FB4
@@ -5315,18 +5213,6 @@ sub_021BD58C: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_021BD58C
 
-    thumb_func_start sub_021BD59C
-sub_021BD59C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BD59C
-
-    thumb_func_start sub_021BD610
-sub_021BD610: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BD610
-
     thumb_func_start sub_021C1C6C
 sub_021C1C6C: ; 0x02073FB4
 	bx lr
@@ -5650,12 +5536,6 @@ sub_021674E8: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021674E8
-
-    thumb_func_start sub_02167C3C
-sub_02167C3C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02167C3C
 
     thumb_func_start sub_021682E8
 sub_021682E8: ; 0x02073FB4
@@ -6808,24 +6688,6 @@ sub_0217E900: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0217E900
-
-    thumb_func_start sub_021EA8CC
-sub_021EA8CC: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021EA8CC
-
-    thumb_func_start sub_021EAAA8
-sub_021EAAA8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021EAAA8
-
-    thumb_func_start sub_021EEEB8
-sub_021EEEB8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021EEEB8
 
     thumb_func_start sub_021F1D44
 sub_021F1D44: ; 0x02073FB4
@@ -8783,12 +8645,6 @@ sub_021C5750: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_021C5750
 
-    thumb_func_start sub_021C57A4
-sub_021C57A4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021C57A4
-
     thumb_func_start sub_021C5C4C
 sub_021C5C4C: ; 0x02073FB4
 	bx lr
@@ -8800,3 +8656,40 @@ sub_021C5C88: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C88
+
+    thumb_func_start sub_02153FA8
+sub_02153FA8: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02153FA8
+
+    thumb_func_start sub_02184590
+sub_02184590: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_02184590
+
+    thumb_func_start sub_0218578C
+sub_0218578C: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_0218578C
+
+    thumb_func_start sub_021B9494
+sub_021B9494: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_021B9494
+
+    thumb_func_start sub_021BA624
+sub_021BA624: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_021BA624
+
+    thumb_func_start sub_021C05D4
+sub_021C05D4: ; 0x02073FB4
+	bx lr
+	.align 2, 0
+	thumb_func_end sub_021C05D4
+

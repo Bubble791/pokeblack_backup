@@ -28,7 +28,7 @@
 .public sub_02021A18
 .public sub_020487D4
 .public sub_02022DA8
-.public sub_021C57A4
+.public ovy262_21c57a4
 .public sub_02021A3C
 .public sub_021C5C74
 .public sub_021C5C74

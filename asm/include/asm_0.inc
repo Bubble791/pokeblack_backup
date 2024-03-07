@@ -794,7 +794,7 @@
 .public sub_02042F10
 .public sub_02042E84
 .public sub_02042540
-.public sub_021516D4
+.public ovy11_21516d4
 .public sub_0203CB80
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
@@ -2502,10 +2502,10 @@
 .public sub_0215F318
 .public sub_02159224
 .public sub_0215922C
-.public sub_0215363C
-.public sub_0215363C
-.public sub_0215363C
-.public sub_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
 .public sub_0204424C
 .public sub_0203A1FC
 .public sub_0203A1FC

@@ -12,15 +12,18 @@ make[2]: 'build/heartgold.us/main.lcf' is up to date.
 make build/heartgold.us/main.response
 make[2]: 'build/heartgold.us/main.response' is up to date.
 cd build/heartgold.us && LM_LICENSE_FILE=../..//mnt/d/pokeblack2/pokeblack2//tools/mwccarm/license.dat  /mnt/d/pokeblack2/pokeblack2//tools/mwccarm/dsi/1.6sp1/mwldarm.exe -proc arm946e -sym on -nopic -nopid -interworking -map closure,unused -symtab sort -m _start -msgstyle gcc -Llib -lsyscall -nostdlib -o ../../build/heartgold.us/main.elf main.lcf @main.response lib/asm/crt0.o
-mwldarm.exe: Ambiguous reference to symbol "sub_021EEF78",
-mwldarm.exe: which is multiply-defined in overlays "OVY_210" and "OVY_122" of 
-mwldarm.exe: overlay group "OVY_210"
-mwldarm.exe: Unresolved reference occurs in overlay "OVY_209" of overlay group 
-mwldarm.exe: "OVY_209"
-mwldarm.exe: Ambiguous reference to symbol "ovy11_02151DEC",
-mwldarm.exe: which is multiply-defined in overlays "MAIN" and "OVY_11" of 
-mwldarm.exe: overlay group "<unknown> (possibly "main_application" or defined 
-mwldarm.exe: in LCF)"
-mwldarm.exe: Unresolved reference occurs in overlay "OVY_173" of overlay group 
-mwldarm.exe: "OVY_173"
+mwldarm.exe: Undefined : "sub_02153FA8"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "sub_02184590"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "sub_0218578C"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "sub_021B9494"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "sub_021BA624"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "sub_021C05D4"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
+mwldarm.exe: Undefined : "ovy36_21c0648"
+mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
 mwldarm.exe: alert: Link failed. 

@@ -216,7 +216,7 @@ ovy261_2176c9c: ; 0x02176C9C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_021C57A4
+	bl ovy262_21c57a4
 	ldr r0, [r4, #0x14]
 	bl sub_02021A3C
 	pop {r4, pc}

@@ -17,7 +17,7 @@
 .public sub_0201736C
 .public sub_02017934
 .public sub_02017214
-.public sub_0215CD58
+.public ovy11_215cd58
 .public sub_02016AD8
 .public sub_02017394
 .public sub_02153914

@@ -390,7 +390,7 @@ _021B32B4:
 	ldr r0, [r4, #0xc]
 	bl sub_02021A3C
 	ldr r0, [r4, #0x24]
-	bl sub_021C57A4
+	bl ovy262_21c57a4
 	ldr r0, [r4, #0x20]
 	bl sub_021C4F2C
 	ldr r0, [r4, #4]
@@ -5489,7 +5489,7 @@ _021B5A24:
 	ldr r0, [r4, #0x10]
 	bl sub_02021A3C
 	ldr r0, [r4, #0x2c]
-	bl sub_021C57A4
+	bl ovy262_21c57a4
 	ldr r0, [r4, #0x28]
 	bl sub_021C4F2C
 	ldr r0, [r4, #4]

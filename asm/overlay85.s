@@ -2862,7 +2862,7 @@ _021EC3B2:
 	bl ovy85_21ed7dc
 	add r5, #0xfc
 	ldr r0, [r5]
-	bl sub_021EAAA8
+	bl ovy83_21eaaa8
 	mov r0, #6
 	strb r0, [r4]
 	pop {r4, r5, r6, pc}
@@ -3076,7 +3076,7 @@ _021EC552:
 _021EC562:
 	add r5, #0xfc
 	ldr r0, [r5]
-	bl sub_021EAAA8
+	bl ovy83_21eaaa8
 	mov r0, #6
 	strb r0, [r4]
 	pop {r4, r5, r6, pc}

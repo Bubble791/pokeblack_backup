@@ -930,7 +930,7 @@
 .public MIi_CpuClear32
 .public MIi_CpuClear32
 .public sub_0216B24C
-.public sub_0216B1D4
+.public ovy11_216b1d4
 .public sub_0215C22C
 .public sub_0215BCE0
 .public sub_0215BE00
@@ -987,11 +987,11 @@
 .public sub_0215C22C
 .public sub_02158464
 .public OS_Sleep
-.public sub_0215CD58
+.public ovy11_215cd58
 .public MI_CpuCopy8
 .public MI_CpuFill8
 .public OS_DisableInterrupts
-.public sub_0215CB14
+.public ovy11_215cb14
 .public DC_InvalidateRange
 .public OS_RestoreInterrupts
 .public MI_CpuCopy8
@@ -1073,7 +1073,7 @@
 .public OS_IsRunOnTwl
 .public OS_GetTick
 .public sub_0208D5C4
-.public sub_0216B14C
+.public ovy11_216b14c
 .public ovy11_216b2a4
 .public sub_0216B2CC
 .public sub_0216B1D4
@@ -2906,7 +2906,7 @@
 .public sub_02042F10
 .public sub_02042E84
 .public sub_02042540
-.public sub_021516D4
+.public ovy11_21516d4
 .public sub_0203CB80
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
@@ -4614,10 +4614,10 @@
 .public sub_0215F318
 .public sub_02159224
 .public sub_0215922C
-.public sub_0215363C
-.public sub_0215363C
-.public sub_0215363C
-.public sub_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
+.public ovy12_0215363C
 .public sub_0204424C
 .public sub_0203A1FC
 .public sub_0203A1FC
