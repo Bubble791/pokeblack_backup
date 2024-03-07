@@ -21,6 +21,10 @@
 #define REG_FIFO_CNT_ADDR             (HW_REG_BASE + REG_FIFO_CNT_OFFSET)
 #define reg_PXI_FIFO_CNT              (*(REGType16v *)REG_FIFO_CNT_ADDR)
 
+#define REG_A9ROM_OFFSET            0x4000
+#define REG_A9ROM_ADDR              (HW_REG_BASE + REG_A9ROM_OFFSET)
+#define reg_SCFG_A9ROM              (*(const REGType8v *) REG_A9ROM_ADDR)
+
 #define REG_PXI_INTF_I_SHIFT                          14
 #define REG_PXI_INTF_I_SIZE                           1
 #define REG_PXI_INTF_I_MASK                           0x4000

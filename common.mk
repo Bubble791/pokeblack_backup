@@ -170,7 +170,7 @@ BUILD_C ?= $(MW_COMPILE) -c -o
 
 $(DEPFILES):
 
-$(BUILD_DIR)/lib/NitroSDK/%.o: MWCCVER := 2.0/sp2p3
+$(BUILD_DIR)/lib/NitroSDK/%.o: MWCCVER := dsi/1.6sp1
 
 $(BUILD_DIR)/%.o: %.c
 $(BUILD_DIR)/%.o: %.c $(BUILD_DIR)/%.d

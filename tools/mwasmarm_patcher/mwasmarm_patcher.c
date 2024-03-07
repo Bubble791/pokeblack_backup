@@ -44,6 +44,12 @@ struct PatchPair g20sp2p4Patches[] = {
     {0}
 };
 
+struct PatchPair gdsi16sp1Patches[] = {
+    { 0x580C4, 0x5  },
+    { 0xD47,   0x8D },
+    {0}
+};
+
 // Table of definitions for each assembler version
 struct PatchDef gPatchDefs[] = {
     // mwasmarm 1.2/base definition

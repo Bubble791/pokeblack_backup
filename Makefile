@@ -1,4 +1,4 @@
-MWCCVER        := 2.0/sp2p2
+MWCCVER        := dsi/1.6sp1
 PROC           := arm946e
 PROC_S         := arm5te
 PROC_LD        := v5te
@@ -33,7 +33,7 @@ MAKEFLAGS += --no-print-directory
 
 all:
 	$(MAKE) tools
-	$(MAKE) patch_mwasmarm
+#	$(MAKE) patch_mwasmarm
 	$(MAKE) $(ROM)
 
 tidy:
