@@ -3162,7 +3162,7 @@ ovy199_21b4924: ; 0x021B4924
 	mov r0, #0
 	mov r1, #0
 	mov r4, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	add r0, r5, #0
 	add r0, #0xb8
 	ldr r0, [r0]
@@ -3192,7 +3192,7 @@ ovy199_21b495c: ; 0x021B495C
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _021B4978
-	bl sub_021A57DC
+	bl ovy189_21a57dc
 	cmp r0, #0
 	beq _021B4978
 	add r0, r4, #0
@@ -3221,7 +3221,7 @@ ovy199_21b4988: ; 0x021B4988
 	ldr r0, _021B49B0 ; =ovy199_21b4870
 	ldr r1, _021B49B4 ; =0x021B9A24
 	ldr r2, _021B49B8 ; =0x021B9A2C
-	bl sub_021A5674
+	bl ovy189_21a5674
 	cmp r0, #0
 	bne _021B49A4
 	add r0, r4, #0
@@ -3229,7 +3229,7 @@ ovy199_21b4988: ; 0x021B4988
 _021B49A4:
 	ldr r0, _021B49BC ; =ovy199_21b495c
 	add r1, r5, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -3311,7 +3311,7 @@ ovy199_21b4a18: ; 0x021B4A18
 	ldr r2, _021B4A4C ; =0x021B9A14
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021A5830
+	bl ovy189_21a5830
 	cmp r0, #0
 	beq _021B4A42
 	mov r4, #1
@@ -3367,7 +3367,7 @@ _021B4A70:
 	mov r4, #1
 	add r0, #0xd0
 	str r4, [r0]
-	bl sub_021A5938
+	bl ovy189_21a5938
 	cmp r0, #0
 	bne _021B4AA4
 	add r5, #0xc8
@@ -3396,7 +3396,7 @@ ovy199_21b4aac: ; 0x021B4AAC
 	str r4, [r1]
 	mov r1, #0
 	mov r2, #1
-	bl sub_021A5850
+	bl ovy189_21a5850
 	cmp r0, #0
 	bne _021B4AD2
 	add r5, r4, #0
@@ -3427,7 +3427,7 @@ ovy199_21b4ad8: ; 0x021B4AD8
 	add r1, #0xb8
 	ldr r1, [r1]
 	add r2, #0x40
-	bl sub_021A58C8
+	bl ovy189_21a58c8
 	cmp r0, #0
 	bne _021B4B08
 	add r5, r4, #0
@@ -3447,7 +3447,7 @@ ovy199_21b4b0c: ; 0x021B4B0C
 	mov r4, #0
 	add r0, #0xb0
 	str r4, [r0]
-	bl sub_021A57DC
+	bl ovy189_21a57dc
 	cmp r0, #0
 	bne _021B4B2A
 	add r0, r4, #0
@@ -3464,7 +3464,7 @@ ovy199_21b4b30: ; 0x021B4B30
 	bl ovy199_21b4a60
 	cmp r0, #0
 	beq _021B4B3E
-	bl sub_021A5768
+	bl ovy189_21a5768
 _021B4B3E:
 	pop {r3, pc}
 	thumb_func_end ovy199_21b4b30
@@ -10206,7 +10206,7 @@ _021B81FA:
 	beq _021B820A
 	mov r0, #0
 	mov r1, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 _021B820A:
 	ldr r0, [r4, #0x10]
 	cmp r0, #0

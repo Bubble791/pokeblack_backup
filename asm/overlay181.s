@@ -3534,7 +3534,7 @@ _0219EBDC:
 	bne _0219EC38
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_021659B4
+	bl ovy12_21659b4
 	cmp r0, #1
 	bne _0219EC38
 	mov r0, #2

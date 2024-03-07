@@ -10,7 +10,7 @@
 .public sub_0219A598
 .public sub_0216763C
 .public sub_02167788
-.public sub_02167580
+.public ovy12_2167580
 .public sub_021675E8
 .public sub_02180570
 .public sub_0203A614
@@ -93,5 +93,5 @@
 .public sub_02166FF0
 .public sub_0216763C
 .public sub_02167788
-.public sub_02167580
+.public ovy12_2167580
 .public sub_021675F4

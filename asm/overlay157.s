@@ -249,7 +249,7 @@ ovy157_21f5b4c: ; 0x021F5B4C
 	add r1, #0x98
 	str r0, [r1]
 	ldr r0, [r5, #0x24]
-	bl sub_0216740C
+	bl ovy12_216740c
 	pop {r3, r4, r5, pc}
 	nop
 _021F5BE0: .word 0x00007FFF
@@ -275,7 +275,7 @@ ovy157_21f5be4: ; 0x021F5BE4
 	ldr r0, [r4, #0x74]
 	bl sub_02170B00
 	ldr r0, [r4, #0x24]
-	bl sub_02167450
+	bl ovy12_2167450
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy157_21f5be4
@@ -985,7 +985,7 @@ ovy157_21f6144: ; 0x021F6144
 	ldr r0, [r5, #0x74]
 	ldr r1, [r1]
 	add r2, #0x48
-	bl sub_02170D90
+	bl ovy27_2170d90
 	add r1, r5, #0
 	add r1, #0x94
 	ldr r1, [r1]

@@ -119,7 +119,7 @@ ovy309_219ce80: ; 0x0219CE80
 	sub r0, #0x80
 	ldrh r1, [r4]
 	ldr r0, [r4, r0]
-	bl sub_02170B50
+	bl ovy27_2170b50
 	add r1, r5, #0
 	sub r1, #0x7c
 	str r0, [r4, r1]
@@ -2149,7 +2149,7 @@ ovy309_219df5c: ; 0x0219DF5C
 	ldr r0, [r5, r0]
 	ldr r2, [r2, #0x10]
 	add r1, r6, #0
-	bl sub_02170D90
+	bl ovy27_2170d90
 	b _0219E216
 _0219DF9C:
 	cmp r0, #1

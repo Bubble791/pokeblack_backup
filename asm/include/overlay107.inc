@@ -15,9 +15,9 @@
 .public sub_0203A1FC
 .public sub_021A373C
 .public sub_021804B8
-.public sub_02167870
+.public ovy12_2167870
 .public sub_02167008
-.public sub_02167870
+.public ovy12_2167870
 .public sub_021804C0
 .public sub_021804BC
 .public sub_02016AD8
@@ -41,11 +41,11 @@
 .public sub_0219A6A0
 .public sub_02166E44
 .public sub_0218EFBC
-.public sub_02166E88
+.public ovy12_2166e88
 .public sub_02006254
 .public sub_02166E44
 .public sub_0218EFBC
-.public sub_02166E88
+.public ovy12_2166e88
 .public sub_02166ECC
 .public sub_02166EF8
 .public sub_02166EF8
@@ -54,7 +54,7 @@
 .public sub_0219A6A0
 .public sub_02166E44
 .public sub_0218EFBC
-.public sub_02166E88
+.public ovy12_2166e88
 .public sub_02006254
 .public sub_021C29CC
 .public sub_021C29F0
@@ -91,7 +91,7 @@
 .public sub_021C2BAC
 .public sub_021804B8
 .public sub_021804D8
-.public sub_02166880
+.public ovy12_2166880
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_0201793C

@@ -1956,7 +1956,7 @@ _0215128E:
 _0215129E:
 	b _0215132C
 _021512A0:
-	bl sub_021A57DC
+	bl ovy189_21a57dc
 	b _0215132C
 _021512A6:
 	ldr r0, [r4]
@@ -35321,7 +35321,7 @@ _02160D1C:
 ovy11_2160d24: ; 0x02160D24
 	push {r4, lr}
 	bl sub_0217D39C
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	ldr r4, _02160D44 ; =0x0218E018
 	ldr r1, _02160D48 ; =0xFFFE8515
 	str r0, [r4]
@@ -58770,10 +58770,6 @@ _0216CCA4: .word 0x021907C0
 	thumb_func_start ovy11_216cca8
 ovy11_216cca8: ; 0x0216CCA8
 	push {r0, r1, r2, r3}
-	thumb_func_end ovy11_216cca8
-
-	non_word_aligned_thumb_func_start ovy11_216ccaa
-ovy11_216ccaa: ; 0x0216CCAA
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, sp, #0x1c
@@ -58788,7 +58784,7 @@ ovy11_216ccaa: ; 0x0216CCAA
 	pop {r3}
 	add sp, #0x10
 	bx r3
-	thumb_func_end ovy11_216ccaa
+	thumb_func_end ovy11_216cca8
 
 	thumb_func_start ovy11_216ccc8
 ovy11_216ccc8: ; 0x0216CCC8
@@ -61406,14 +61402,14 @@ _0216DFA2:
 	.align 2, 0
 	thumb_func_end ovy11_216df90
 
-	thumb_func_start sub_0216DFA8
-sub_0216DFA8: ; 0x0216DFA8
+	thumb_func_start ovy11_0216DFA8
+ovy11_0216DFA8: ; 0x0216DFA8
 	ldr r0, _0216DFB0 ; =0x02190894
 	ldr r0, [r0, #4]
 	bx lr
 	nop
 _0216DFB0: .word 0x02190894
-	thumb_func_end sub_0216DFA8
+	thumb_func_end ovy11_0216DFA8
 
 	thumb_func_start ovy11_216dfb4
 ovy11_216dfb4: ; 0x0216DFB4
@@ -61575,10 +61571,6 @@ _0216E0CC: .word 0x02186F18
 	thumb_func_start ovy11_216e0d0
 ovy11_216e0d0: ; 0x0216E0D0
 	push {r0, r1, r2, r3}
-	thumb_func_end ovy11_216e0d0
-
-	non_word_aligned_thumb_func_start ovy11_216e0d2
-ovy11_216e0d2: ; 0x0216E0D2
 	push {r3, r4, lr}
 	sub sp, #4
 	ldr r1, _0216E104 ; =0x0000FFFF
@@ -61606,7 +61598,7 @@ _0216E0F6:
 	nop
 _0216E104: .word 0x0000FFFF
 _0216E108: .word 0x00001002
-	thumb_func_end ovy11_216e0d2
+	thumb_func_end ovy11_216e0d0
 
 	thumb_func_start ovy11_216e10c
 ovy11_216e10c: ; 0x0216E10C
@@ -61862,8 +61854,14 @@ _0216E2A2:
 	.align 2, 0
 _0216E2B0: .word 0x02186FD0
 	thumb_func_end ovy11_216e26c
-_0216E2B4:
-	.byte 0x00, 0x4B, 0x18, 0x47, 0xFD, 0xDD, 0x16, 0x02
+
+	thumb_func_start ovy11_216e2b4
+ovy11_216e2b4: ; 0x02187C70
+	ldr r3, _02187C78 ; =0x0216ddfc
+	bx r3
+	nop
+_02187C78: .word 0x0216ddfc
+	thumb_func_end ovy11_216e2b4
 
 	thumb_func_start ovy11_216e2bc
 ovy11_216e2bc: ; 0x0216E2BC
@@ -63249,7 +63247,7 @@ _0216EC40:
 	cmp r1, #0
 	beq _0216EC4C
 	ldr r0, [r4, #0x28]
-	bl sub_021A3050
+	bl ovy189_21a3050
 _0216EC4C:
 	add r0, r4, #0
 	bl ovy11_216ddfc
@@ -65579,9 +65577,28 @@ _0216FEBA:
 	.align 2, 0
 _0216FEC0: .word 0x02187680
 	thumb_func_end ovy11_216fea8
-_0216FEC4:
-	.byte 0x70, 0x47, 0x00, 0x00, 0x70, 0x47, 0x00, 0x00, 0x00, 0x68, 0x70, 0x47
-	.byte 0x40, 0x68, 0x70, 0x47
+
+	thumb_func_start ovy11_216fec4
+ovy11_216fec4:
+	bx lr
+	thumb_func_end ovy11_216fec4
+
+	thumb_func_start ovy11_216fec8
+ovy11_216fec8:
+	bx lr
+	thumb_func_end ovy11_216fec8
+
+	thumb_func_start ovy11_216fecc
+ovy11_216fecc:
+	ldr r0, [r0, #0x0]
+	bx lr
+	thumb_func_end ovy11_216fecc
+
+	thumb_func_start ovy11_216fed0
+ovy11_216fed0:
+	ldr r0, [r0, #0x4]
+	bx lr
+	thumb_func_end ovy11_216fed0
 
 	thumb_func_start ovy11_216fed4
 ovy11_216fed4: ; 0x0216FED4
@@ -76040,7 +76057,7 @@ ovy11_2174ecc: ; 0x02174ECC
 	cmp r4, r0
 	bne _02174F46
 	ldr r0, [sp, #0x10]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	mov r1, #0
 	sub r1, r1, #6
 	cmp r0, r1
@@ -76306,7 +76323,7 @@ _021750E2:
 	cmp r5, r0
 	bne _0217511E
 	ldr r0, [sp, #0x10]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	ldr r1, [sp, #0x2c]
 	cmp r0, r1
 	beq _0217517A
@@ -77431,7 +77448,7 @@ _02175946:
 	cmp r0, r1
 	bne _0217599C
 	ldr r0, [r4, r6]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	add r1, r5, #0
 	sub r1, #0xe
 	cmp r0, r1
@@ -85348,7 +85365,7 @@ _021798D4:
 	cmp r0, r1
 	bne _02179934
 	ldr r0, [r4, #4]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	add r1, r6, #0
 	sub r1, #0xe
 	cmp r0, r1
@@ -94781,7 +94798,7 @@ _0217E056:
 	cmp r2, r7
 	bne _0217E0F6
 	ldr r0, [r5]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	mov r1, #0xe
 	mvn r1, r1
 	cmp r0, r1
@@ -96270,7 +96287,7 @@ _0217EB64:
 	cmp r0, r1
 	bne _0217EC20
 	ldr r0, [r5]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	add r1, r6, #0
 	sub r1, #0x17
 	cmp r0, r1
@@ -96897,7 +96914,7 @@ _0217F006:
 	cmp r7, r0
 	bne _0217F03E
 	add r0, r6, #0
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	str r0, [sp]
 	ldr r3, _0217F28C ; =0x02189148
 	mov r0, #7
@@ -98826,7 +98843,7 @@ _0217FEEA:
 	cmp r1, r4
 	bne _0217FF26
 	ldr r0, [r5, #0x18]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	ldr r1, [r5, #4]
 	ldr r3, _0218011C ; =0x0218967C
 	str r1, [sp]
@@ -100270,7 +100287,7 @@ _02180A6C:
 	b _02180A8C
 _02180A7C:
 	ldr r0, [r5]
-	bl sub_0216DFA8
+	bl ovy11_0216DFA8
 	str r0, [sp]
 	ldr r3, _02180AAC ; =0x0218ACB0
 	mov r0, #3

@@ -6,8 +6,8 @@
 .public sub_02016AF0
 .public sub_0203A1FC
 .public sub_02019708
-.public sub_02153880
-.public sub_021548E8
+.public ovy12_2153880
+.public ovy12_21548e8
 .public sub_02155174
 .public sub_02017934
 .public sub_0200C838

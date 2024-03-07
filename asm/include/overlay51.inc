@@ -6,7 +6,7 @@
 .public sub_02016AD8
 .public sub_02017394
 .public sub_02017944
-.public sub_02154910
+.public ovy12_2154910
 .public sub_020191AC
 .public sub_021C2080
 .public sub_0215516C
@@ -22,7 +22,7 @@
 .public sub_02016AD8
 .public sub_02017944
 .public sub_020159E8
-.public sub_021548E8
+.public ovy12_21548e8
 .public sub_021C21B8
 .public sub_02155184
 .public sub_0215516C
@@ -37,10 +37,10 @@
 .public sub_0215516C
 .public sub_02016AD8
 .public sub_02017944
-.public sub_02154910
+.public ovy12_2154910
 .public sub_020159E8
 .public sub_020159E8
-.public sub_02154910
+.public ovy12_2154910
 .public sub_021C2254
 .public sub_0215516C
 .public sub_02016AF0

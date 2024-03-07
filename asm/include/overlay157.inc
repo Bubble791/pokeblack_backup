@@ -29,14 +29,14 @@
 .public sub_020241E4
 .public sub_02048530
 .public sub_02048530
-.public sub_0216740C
+.public ovy12_216740c
 .public sub_02048564
 .public sub_02048564
 .public sub_02024274
 .public sub_020487D4
 .public sub_0201362C
 .public sub_02170B00
-.public sub_02167450
+.public ovy12_2167450
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02188498
@@ -123,7 +123,7 @@
 .public sub_02048838
 .public sub_02170D04
 .public sub_0202437C
-.public sub_02170D90
+.public ovy27_2170d90
 .public sub_0208D65C
 .public sub_0202451C
 .public sub_0208D65C

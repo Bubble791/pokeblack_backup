@@ -3143,7 +3143,7 @@ _0219B43A:
 	ldr r0, [r2, #0x24]
 	ldr r2, [r2, #0x28]
 	mov r6, #6
-	bl sub_021659B4
+	bl ovy12_21659b4
 	cmp r0, #1
 	bne _0219B482
 	ldr r1, [r4, #0x3c]

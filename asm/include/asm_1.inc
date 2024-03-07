@@ -1074,7 +1074,7 @@
 .public OS_GetTick
 .public sub_0208D5C4
 .public sub_0216B14C
-.public sub_0216B2A4
+.public ovy11_216b2a4
 .public sub_0216B2CC
 .public sub_0216B1D4
 .public sub_02157714

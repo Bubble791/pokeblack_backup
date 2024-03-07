@@ -277,7 +277,7 @@ _021B560C:
 _021B560E:
 	ldr r0, _021B5888 ; =0x021B5BD1
 	add r1, r4, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	ldrh r2, [r5, #0xc]
 	add r0, r4, #0
 	add r1, r6, #0
@@ -287,7 +287,7 @@ _021B560E:
 	ldr r0, _021B588C ; =0x021B5CC1
 	ldr r1, _021B5890 ; =0x021B5D38
 	ldr r2, _021B5894 ; =0x021B5D40
-	bl sub_021A5674
+	bl ovy189_21a5674
 	cmp r0, #0
 	bne _021B563A
 	mov r0, #5
@@ -323,7 +323,7 @@ _021B5662:
 	ldr r0, [r6, #4]
 	ldr r1, [r6, #8]
 	ldr r2, [r6, #0xc]
-	bl sub_021A5830
+	bl ovy189_21a5830
 	cmp r0, #0
 	bne _021B567E
 _021B5670:
@@ -343,7 +343,7 @@ _021B5682:
 	ldr r0, [r4]
 	ldr r2, [r6]
 	mov r1, #0
-	bl sub_021A5850
+	bl ovy189_21a5850
 	cmp r0, #0
 	bne _021B5692
 	b _021B5670
@@ -437,7 +437,7 @@ _021B571C:
 	add r1, r5, #0
 	ldr r2, [r2]
 	add r1, #0x7c
-	bl sub_021A58C8
+	bl ovy189_21a58c8
 	cmp r0, #0
 	bne _021B573C
 	b _021B5670
@@ -451,7 +451,7 @@ _021B573C:
 	mov r1, #6
 	b _021B5680
 _021B574C:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -484,7 +484,7 @@ _021B5788:
 	add r1, r4, #0
 	add r0, #0x18
 	add r1, #0x1c
-	bl sub_021A5980
+	bl ovy189_21a5980
 	cmp r0, #1
 	bne _021B5882
 	ldr r1, [r4, #0x18]
@@ -518,7 +518,7 @@ _021B57C8:
 	mov r3, #8
 	b _021B5654
 _021B57D0:
-	bl sub_021A5938
+	bl ovy189_21a5938
 	mov r1, #8
 	b _021B5680
 _021B57D8:
@@ -529,13 +529,13 @@ _021B57DA:
 	mov r0, #0
 	mov r1, #0
 	mov r5, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	add sp, #8
 	str r5, [r4, #0x2c]
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _021B57F2:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -580,7 +580,7 @@ _021B5840:
 	beq _021B5882
 	b _021B587E
 _021B5848:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -664,7 +664,7 @@ _021B58E2:
 _021B58E4:
 	ldr r0, _021B5AB0 ; =0x021B5BD1
 	add r1, r4, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	ldrh r2, [r6, #0xc]
 	add r0, r4, #0
 	add r1, r7, #0
@@ -674,7 +674,7 @@ _021B58E4:
 	ldr r0, _021B5AB4 ; =0x021B5CC1
 	ldr r1, _021B5AB8 ; =0x021B5D38
 	ldr r2, _021B5ABC ; =0x021B5D40
-	bl sub_021A5674
+	bl ovy189_21a5674
 	cmp r0, #0
 	bne _021B5910
 	mov r0, #5
@@ -708,7 +708,7 @@ _021B5936:
 	ldr r0, _021B5AC0 ; =0x021B5D54
 	add r1, r0, #0
 	add r2, r0, #0
-	bl sub_021A5830
+	bl ovy189_21a5830
 	cmp r0, #0
 	bne _021B5952
 _021B5944:
@@ -731,7 +731,7 @@ _021B5956:
 	add r2, #0xac
 	ldr r2, [r2]
 	add r1, #0x7c
-	bl sub_021A58C8
+	bl ovy189_21a58c8
 	cmp r0, #0
 	bne _021B596C
 	b _021B5944
@@ -745,7 +745,7 @@ _021B596C:
 	mov r0, #3
 	b _021B5954
 _021B597C:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -778,7 +778,7 @@ _021B59B8:
 	add r1, r4, #0
 	add r0, #0x18
 	add r1, #0x1c
-	bl sub_021A5980
+	bl ovy189_21a5980
 	cmp r0, #1
 	bne _021B5AAC
 	ldr r1, [r4, #0x18]
@@ -812,7 +812,7 @@ _021B59F8:
 	mov r3, #5
 	b _021B5928
 _021B5A00:
-	bl sub_021A5938
+	bl ovy189_21a5938
 	mov r0, #5
 	b _021B5954
 _021B5A08:
@@ -823,12 +823,12 @@ _021B5A0A:
 	mov r5, #0
 	mov r0, #0
 	mov r1, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	str r5, [r4, #0x2c]
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _021B5A20:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -872,7 +872,7 @@ _021B5A6C:
 	beq _021B5AAC
 	b _021B5AA8
 _021B5A74:
-	bl sub_021A5768
+	bl ovy189_21a5768
 	ldr r1, [r4, #0x24]
 	add r0, r1, #1
 	str r0, [r4, #0x24]
@@ -963,9 +963,9 @@ _021B5AFC:
 	ldrh r1, [r5, #0xc]
 	strh r1, [r0, #6]
 	add r0, sp, #0
-	bl sub_02152990
+	bl ovy12_2152990
 	str r0, [r5, #0x50]
-	bl sub_02152B64
+	bl ovy12_2152b64
 	str r7, [r5, #0x54]
 	str r7, [r5, #0x14]
 _021B5B3A:
@@ -984,9 +984,9 @@ _021B5B42:
 	b _021B5B3A
 _021B5B54:
 	ldr r0, [r5, #0x50]
-	bl sub_02152BEC
+	bl ovy12_2152bec
 	ldr r0, [r5, #0x50]
-	bl sub_02152BD4
+	bl ovy12_2152bd4
 	cmp r0, #0
 	beq _021B5B6C
 	mov r0, #1
@@ -1002,7 +1002,7 @@ _021B5B6C:
 	b _021B5B66
 _021B5B76:
 	ldr r0, [r5, #0x50]
-	bl sub_02152BFC
+	bl ovy12_2152bfc
 	b _021B5B3A
 _021B5B7E:
 	bl sub_02042AB8
@@ -1167,7 +1167,7 @@ ovy196_21b5c98: ; 0x021B5C98
 	str r5, [r0, #0x24]
 	mov r0, #0xc8
 	str r0, [r4]
-	bl sub_021A57DC
+	bl ovy189_21a57dc
 	cmp r0, #0
 	bne _021B5CB8
 	ldr r0, [sp, #0x10]

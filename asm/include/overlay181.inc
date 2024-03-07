@@ -370,7 +370,7 @@
 .public sub_02017354
 .public sub_0201736C
 .public sub_02017974
-.public sub_021659B4
+.public ovy12_21659b4
 .public sub_02017BCC
 .public sub_021A035C
 .public sub_02017354

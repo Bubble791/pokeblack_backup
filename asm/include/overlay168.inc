@@ -160,10 +160,10 @@
 .public FX_Atan2Idx
 .public FX_Atan2Idx
 .public VEC_Mag
-.public sub_0219C988
+.public ovy167_0219C988
 .public sub_0219C99C
 .public sub_0203A1FC
-.public sub_0219E39C
+.public ovy167_0219E39C
 .public sub_0219BEEC
 .public sub_0219C850
 .public sub_0219C860
@@ -198,7 +198,7 @@
 .public sub_02019804
 .public sub_02049100
 .public sub_0203A24C
-.public sub_0219E39C
+.public ovy167_0219E39C
 .public sub_0204F918
 .public sub_0219DAC4
 .public sub_020056FC
@@ -1632,7 +1632,7 @@
 .public sub_0203A1FC
 .public sub_0203A1FC
 .public sub_021E012C
-.public sub_0219C988
+.public ovy167_0219C988
 .public sub_020232E8
 .public sub_0204898C
 .public sub_0203A1FC
@@ -1772,7 +1772,7 @@
 .public sub_02048244
 .public sub_0204BFD4
 .public sub_021E012C
-.public sub_0219C988
+.public ovy167_0219C988
 .public sub_021EB7C0
 .public sub_0204AF50
 .public sub_021EB7C0
@@ -1784,7 +1784,7 @@
 .public sub_02044F90
 .public sub_02048244
 .public sub_021E012C
-.public sub_0219C988
+.public ovy167_0219C988
 .public sub_0204BDE0
 .public sub_0204BBB8
 .public sub_0204B2DC

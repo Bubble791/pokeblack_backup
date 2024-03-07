@@ -7645,7 +7645,7 @@ ovy261_217a58c: ; 0x0217A58C
 	bl sub_0203CB80
 _0217A5D6:
 	add r0, sp, #0
-	bl sub_0215309C
+	bl ovy12_215309c
 	ldr r1, _0217A5EC ; =0x00001018
 	str r0, [r5, r1]
 	mov r0, #0

@@ -149,7 +149,7 @@ ovy55_21e58fc: ; 0x021E58FC
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	ldr r1, [r4]
 	cmp r1, #0
 	beq _021E5920
@@ -167,7 +167,7 @@ _021E5922:
 ovy55_21e5928: ; 0x021E5928
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -182,7 +182,7 @@ ovy55_21e5928: ; 0x021E5928
 ovy55_21e5944: ; 0x021E5944
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -217,7 +217,7 @@ ovy55_21e5960: ; 0x021E5960
 ovy55_21e5988: ; 0x021E5988
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -232,7 +232,7 @@ ovy55_21e5988: ; 0x021E5988
 ovy55_21e59a4: ; 0x021E59A4
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -247,7 +247,7 @@ ovy55_21e59a4: ; 0x021E59A4
 ovy55_21e59c0: ; 0x021E59C0
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -262,7 +262,7 @@ ovy55_21e59c0: ; 0x021E59C0
 ovy55_21e59dc: ; 0x021E59DC
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -277,7 +277,7 @@ ovy55_21e59dc: ; 0x021E59DC
 ovy55_21e59f8: ; 0x021E59F8
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -292,7 +292,7 @@ ovy55_21e59f8: ; 0x021E59F8
 ovy55_21e5a14: ; 0x021E5A14
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -307,7 +307,7 @@ ovy55_21e5a14: ; 0x021E5A14
 ovy55_21e5a30: ; 0x021E5A30
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -322,7 +322,7 @@ ovy55_21e5a30: ; 0x021E5A30
 ovy55_21e5a4c: ; 0x021E5A4C
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy55_21e5800
@@ -353,15 +353,15 @@ ovy55_21e5a84: ; 0x021E5A84
 	push {r3, r4, r5, r6, r7, lr}
 	add r4, r0, #0
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r7, r0, #0
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r6, r0, #0
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	lsl r2, r6, #0x18
 	add r4, r0, #0
 	add r0, r5, #0
@@ -384,7 +384,7 @@ ovy55_21e5ab8: ; 0x021E5AB8
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_021E5D7C
@@ -413,7 +413,7 @@ ovy55_21e5adc: ; 0x021E5ADC
 	add r0, r0, #1
 	str r0, [r5, #0x20]
 	add r0, r5, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r6, r0, #0
 	add r0, r7, #0
 	bl sub_02153ECC
@@ -440,7 +440,7 @@ ovy55_21e5adc: ; 0x021E5ADC
 ovy55_21e5b38: ; 0x021E5B38
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r1, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r0, r5, #0
 	bl sub_02155184
 	str r0, [sp]
@@ -468,7 +468,7 @@ ovy55_21e5b38: ; 0x021E5B38
 	bl sub_02016EA0
 	add r1, r0, #0
 	ldr r0, [sp]
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

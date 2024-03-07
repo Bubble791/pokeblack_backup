@@ -10,5 +10,5 @@
 .public sub_02016AD8
 .public sub_02017934
 .public sub_02008F00
-.public sub_021548E8
+.public ovy12_21548e8
 .public sub_020090F4

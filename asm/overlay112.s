@@ -13,14 +13,14 @@ ovy112_21eec80: ; 0x021EEC80
 	add r0, r5, #0
 	mov r1, #1
 	mov r3, #0x10
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	add r0, r5, #0
 	mov r1, #1
 	bl sub_0218105C
 	add r4, r0, #0
 	str r5, [r4, #4]
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	str r0, [r4]
 	mov r0, #0
 	str r0, [r4, #8]
@@ -47,7 +47,7 @@ _021EECCE:
 	bl sub_021EEEC8
 	add r0, r5, #0
 	mov r1, #1
-	bl sub_0218102C
+	bl ovy36_218102c
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy112_21eecb8
@@ -212,7 +212,7 @@ ovy112_21eee0c: ; 0x021EEE0C
 	ldr r0, [r5]
 	ldr r1, _021EEEBC ; =0x021EEF78
 	mov r2, #0
-	bl sub_021B8598
+	bl ovy36_21b8598
 _021EEE20:
 	ldr r0, [sp, #8]
 	ldr r2, [sp, #8]
@@ -260,7 +260,7 @@ _021EEE76:
 	mov r1, #0
 	add r2, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r7, r0, #0
 	mov r1, #0
 	bl sub_021B84F0
@@ -274,7 +274,7 @@ _021EEE76:
 	mov r1, #0
 	add r2, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r0, [sp, #4]
 	add r4, r4, #1
 	cmp r4, r0
@@ -296,20 +296,20 @@ _021EEEC4: .word 0x02FB8000
 	thumb_func_start sub_021EEEC8
 sub_021EEEC8: ; 0x021EEEC8
 	ldr r0, [r0]
-	ldr r3, _021EEED0 ; =sub_021B81BC
+	ldr r3, _021EEED0 ; =ovy36_21b81bc
 	mov r1, #0
 	bx r3
 	.align 2, 0
-_021EEED0: .word sub_021B81BC
+_021EEED0: .word ovy36_21b81bc
 	thumb_func_end sub_021EEEC8
 
 	thumb_func_start sub_021EEED4
 sub_021EEED4: ; 0x021EEED4
 	ldr r0, [r0]
-	ldr r3, _021EEEDC ; =sub_021B83B4
+	ldr r3, _021EEEDC ; =ovy36_21b83b4
 	bx r3
 	nop
-_021EEEDC: .word sub_021B83B4
+_021EEEDC: .word ovy36_21b83b4
 	thumb_func_end sub_021EEED4
 
 	thumb_func_start ovy112_21eeee0
@@ -336,7 +336,7 @@ _021EEF02:
 	mov r1, #0
 	add r2, r5, #0
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r7, r0, #0
 	mov r0, #1
 	lsl r3, r4, #0x10
@@ -345,7 +345,7 @@ _021EEF02:
 	mov r1, #0
 	add r2, r5, #0
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	mov r0, #0
 	lsl r3, r4, #0x10
 	str r0, [sp]
@@ -353,7 +353,7 @@ _021EEF02:
 	mov r1, #0
 	add r2, r5, #0
 	lsr r3, r3, #0x10
-	bl sub_021B8504
+	bl ovy36_21b8504
 	add r0, r7, #0
 	mov r1, #0
 	bl sub_021B84F0

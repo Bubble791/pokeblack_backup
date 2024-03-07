@@ -14,8 +14,8 @@
 .public sub_021B06EC
 .public sub_021A5C74
 .public sub_021A5C2C
-.public sub_0215366C
-.public sub_021538D4
+.public ovy12_215366c
+.public ovy12_21538d4
 .public sub_02153FA8
 .public sub_02180538
 .public sub_0215D4D0

@@ -1,14 +1,14 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_021804C0
-.public sub_0218056C
-.public sub_021B80B4
-.public sub_02180FF0
+.public ovy36_0218056c
+.public ovy36_21b80b4
+.public ovy36_2180ff0
 .public sub_02031CF0
 .public sub_0218105C
 .public sub_02031CF0
 .public sub_021BEC04
-.public sub_0218102C
+.public ovy36_218102c
 .public sub_0218105C
 .public sub_02180494
 .public sub_021862B4
@@ -18,7 +18,7 @@
 .public sub_021EEEFC
 .public sub_021BEC40
 .public sub_021804C0
-.public sub_0218056C
+.public ovy36_0218056c
 .public sub_021804BC
 .public sub_02016B1C
 .public sub_02031958

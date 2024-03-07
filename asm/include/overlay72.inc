@@ -3,7 +3,7 @@
 .public sub_0216FA28
 .public sub_0219382C
 .public sub_0216FA34
-.public sub_02167534
+.public ovy12_2167534
 .public MIi_CpuClear32
 .public sub_0201FDF8
 .public sub_02014870
@@ -34,4 +34,4 @@
 .public sub_0215D388
 .public sub_0219584C
 .public sub_0215D3B8
-.public sub_02166940
+.public ovy12_2166940

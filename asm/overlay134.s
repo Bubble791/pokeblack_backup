@@ -17,12 +17,12 @@ ovy134_21eec80: ; 0x021EEC80
 	add r0, r5, #0
 	mov r1, #1
 	mov r3, #0x30
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	add r4, r0, #0
 	mov r0, #0x15
 	strh r0, [r4]
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	str r0, [r4, #4]
 	str r5, [r4, #8]
 	add r0, r6, #0
@@ -46,7 +46,7 @@ ovy134_21eecc8: ; 0x021EECC8
 	bl ovy134_21ef280
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0218102C
+	bl ovy36_218102c
 	pop {r4, pc}
 	thumb_func_end ovy134_21eecc8
 
@@ -309,12 +309,12 @@ _021EEE6A:
 	beq _021EEEEE
 	ldr r0, [r4, #4]
 	mov r1, #2
-	bl sub_021B81BC
+	bl ovy36_21b81bc
 _021EEEEE:
 	ldr r0, [r4, #4]
 	add r1, sp, #0x18
 	mov r2, #2
-	bl sub_021B8598
+	bl ovy36_21b8598
 	mov r6, #1
 	str r6, [r4, #0x10]
 	ldr r0, [r4, #4]
@@ -346,7 +346,7 @@ _021EEF32:
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r5, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r6, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -354,7 +354,7 @@ _021EEF32:
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r5, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r6, #0
 	add r1, r7, #0
 	bl sub_021B84F0
@@ -391,7 +391,7 @@ _021EEF92:
 	add r1, r7, #0
 	mov r2, #5
 	add r3, r5, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r4, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -399,7 +399,7 @@ _021EEF92:
 	add r1, r7, #0
 	mov r2, #5
 	add r3, r5, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r4, #0
 	add r1, r7, #0
 	bl sub_021B84F0
@@ -518,7 +518,7 @@ ovy134_21ef07c: ; 0x021EF07C
 	ldr r0, [r5, #4]
 	ldr r1, _021EF270 ; =0x021F09E8
 	mov r2, #0
-	bl sub_021B8598
+	bl ovy36_21b8598
 	ldr r3, _021EF274 ; =0x021F0A04
 	add r2, sp, #0x20
 	add r4, r2, #0
@@ -757,13 +757,13 @@ ovy134_21ef280: ; 0x021EF280
 	add r4, r0, #0
 	ldr r0, [r4, #4]
 	mov r1, #0
-	bl sub_021B81BC
+	bl ovy36_21b81bc
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021EF29A
 	ldr r0, [r4, #4]
 	mov r1, #2
-	bl sub_021B81BC
+	bl ovy36_21b81bc
 _021EF29A:
 	pop {r4, pc}
 	thumb_func_end ovy134_21ef280
@@ -773,7 +773,7 @@ ovy134_21ef29c: ; 0x021EF29C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #4]
-	bl sub_021B83B4
+	bl ovy36_21b83b4
 	ldr r0, [r5, #0x14]
 	cmp r0, #1
 	bne _021EF318
@@ -783,7 +783,7 @@ ovy134_21ef29c: ; 0x021EF29C
 	mov r3, #0
 	mov r4, #0
 	mov r6, #5
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	bl sub_021B84F4
 	cmp r0, #1
 	bne _021EF318
@@ -803,7 +803,7 @@ _021EF2DE:
 	add r1, r7, #0
 	mov r2, #6
 	add r3, r4, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r6, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -811,7 +811,7 @@ _021EF2DE:
 	add r1, r7, #0
 	mov r2, #6
 	add r3, r4, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_021B84F0
@@ -872,7 +872,7 @@ _021EF360:
 	mov r1, #0
 	add r2, r5, #0
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r7, r0, #0
 	mov r1, #0
 	bl sub_021B84F0
@@ -886,7 +886,7 @@ _021EF360:
 	mov r1, #0
 	add r2, r5, #0
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r0, [sp, #4]
 	add r4, r4, #1
 	cmp r4, r0
@@ -911,7 +911,7 @@ ovy134_21ef3a4: ; 0x021EF3A4
 	mov r1, #0
 	add r2, r4, #0
 	add r3, r6, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	str r0, [sp, #4]
 	add r0, r5, #0
 	mov r1, #0
@@ -931,14 +931,14 @@ ovy134_21ef3a4: ; 0x021EF3A4
 	mov r1, #0
 	add r2, r4, #0
 	add r3, r6, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	mov r0, #0
 	str r0, [sp]
 	add r0, r5, #0
 	mov r1, #0
 	add r2, r4, #0
 	add r3, r6, #0
-	bl sub_021B8504
+	bl ovy36_21b8504
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1041,7 +1041,7 @@ _021EF4A8:
 	add r1, r7, #0
 	mov r2, #4
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r4, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -1050,7 +1050,7 @@ _021EF4A8:
 	add r1, r7, #0
 	mov r2, #4
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r4, #0
 	mov r1, #1
 	bl sub_021B84F0
@@ -1298,7 +1298,7 @@ _021EF6A6:
 	mov r2, #0
 	mov r3, #1
 	mov r7, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	bl sub_021B84F4
 	cmp r0, #1
 	bne _021EF6DE
@@ -1408,7 +1408,7 @@ _021EF782:
 	mov r2, #2
 	mov r3, #1
 	mov r6, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	bl sub_021B84F4
 	cmp r0, #1
 	bne _021EF7AE
@@ -1817,12 +1817,12 @@ _021EFA2C:
 	beq _021EFA9E
 	ldr r0, [r5, #4]
 	add r1, r2, #0
-	bl sub_021B81BC
+	bl ovy36_21b81bc
 _021EFA9E:
 	ldr r0, [r5, #4]
 	add r1, sp, #0x28
 	mov r2, #2
-	bl sub_021B8598
+	bl ovy36_21b8598
 	mov r0, #1
 	str r0, [r5, #0x10]
 	ldr r0, [r5, #4]
@@ -1854,7 +1854,7 @@ _021EFA9E:
 	mov r1, #2
 	mov r2, #0
 	mov r3, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	str r0, [sp, #8]
 	mov r0, #1
 	str r0, [sp]
@@ -1862,7 +1862,7 @@ _021EFA9E:
 	mov r1, #2
 	mov r2, #0
 	mov r3, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r0, [sp, #8]
 	mov r1, #0
 	bl sub_021B84F0
@@ -1874,7 +1874,7 @@ _021EFA9E:
 	mov r1, #2
 	mov r2, #0
 	mov r3, #0
-	bl sub_021B8504
+	bl ovy36_21b8504
 	ldr r0, [r5, #4]
 	mov r1, #2
 	mov r2, #1
@@ -1898,7 +1898,7 @@ _021EFB4A:
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r4, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r6, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -1906,7 +1906,7 @@ _021EFB4A:
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r4, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r6, #0
 	mov r1, #0
 	bl sub_021B84F0
@@ -1980,7 +1980,7 @@ _021EFBF0:
 	mov r3, #0
 	mov r4, #2
 	mov r5, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	bl sub_021B84F4
 	cmp r0, #1
 	bne _021EFC58
@@ -1995,14 +1995,14 @@ _021EFC16:
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r5, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r4, r0, #0
 	add r0, r6, #0
 	mov r1, #2
 	add r2, r7, #0
 	add r3, r5, #0
 	str r7, [sp]
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_021B84F0
@@ -2279,7 +2279,7 @@ ovy134_21efe24: ; 0x021EFE24
 	ldr r1, [r5, #0x10]
 	mov r2, #1
 	mov r3, #7
-	bl sub_02187BFC
+	bl ovy36_2187bfc
 	str r0, [r5, #8]
 	ldr r0, [r5, #4]
 	bl sub_021E5D7C
@@ -2330,14 +2330,14 @@ _021EFEA0:
 	ldr r3, [r5, #0x18]
 	mov r1, #0
 	lsr r2, r2, #0x10
-	bl sub_02187C4C
+	bl ovy36_2187c4c
 	ldr r0, [sp, #0x10]
 	add r4, r4, #1
 	cmp r4, r0
 	blt _021EFE86
 _021EFED8:
 	ldr r0, [r5, #8]
-	bl sub_02187C9C
+	bl ovy36_2187c9c
 	bl sub_020484D4
 	bl sub_02044F90
 	add sp, #0x18

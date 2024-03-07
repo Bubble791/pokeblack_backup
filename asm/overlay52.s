@@ -17,7 +17,7 @@ ovy52_21e5800: ; 0x021E5800
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r1, r0, #0
 	sub r1, r1, #1
 	lsl r1, r1, #0x10
@@ -40,7 +40,7 @@ ovy52_21e5834: ; 0x021E5834
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_02180494
@@ -174,7 +174,7 @@ ovy52_21e592c: ; 0x021E592C
 	pop {r3, r4, r5, pc}
 _021E594A:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e592c
@@ -225,7 +225,7 @@ ovy52_21e598c: ; 0x021E598C
 	pop {r3, r4, r5, pc}
 _021E59AA:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e598c
@@ -272,7 +272,7 @@ ovy52_21e59dc: ; 0x021E59DC
 	pop {r4, r5, r6, pc}
 _021E5A08:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -294,7 +294,7 @@ ovy52_21e5a14: ; 0x021E5A14
 	pop {r3, r4, r5, pc}
 _021E5A32:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e5a14
@@ -352,7 +352,7 @@ ovy52_21e5a7c: ; 0x021E5A7C
 	pop {r3, r4, r5, pc}
 _021E5A9A:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e5a7c
@@ -373,7 +373,7 @@ ovy52_21e5aa4: ; 0x021E5AA4
 	pop {r3, r4, r5, pc}
 _021E5AC2:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e5aa4
@@ -394,7 +394,7 @@ ovy52_21e5acc: ; 0x021E5ACC
 	pop {r3, r4, r5, pc}
 _021E5AEA:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy52_21e5acc

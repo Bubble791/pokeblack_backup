@@ -2,8 +2,8 @@
 #pragma once
 .public sub_02016AD8
 .public sub_0201361C
-.public sub_0215366C
-.public sub_021538D4
+.public ovy12_215366c
+.public ovy12_21538d4
 .public sub_02013488
 .public sub_02017934
 .public sub_02009408
@@ -18,7 +18,7 @@
 .public sub_0215FCD0
 .public sub_02160340
 .public sub_0201362C
-.public sub_0215366C
+.public ovy12_215366c
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02016AD8
@@ -32,13 +32,13 @@
 .public sub_020241D4
 .public sub_02048530
 .public sub_02048530
-.public sub_0216740C
+.public ovy12_216740c
 .public sub_02048564
 .public sub_02048564
 .public sub_02024274
 .public sub_020487D4
 .public sub_0201362C
-.public sub_02167450
+.public ovy12_2167450
 .public sub_0204E060
 .public sub_02006254
 .public sub_0204E0E0

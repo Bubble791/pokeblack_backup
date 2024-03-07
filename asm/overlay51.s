@@ -22,7 +22,7 @@ ovy51_21e5800: ; 0x021E5800
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_020191AC
@@ -69,7 +69,7 @@ ovy51_21e5868: ; 0x021E5868
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r5, r0, #0
 	ldr r0, [r4]
 	add r1, r7, #0
@@ -120,7 +120,7 @@ ovy51_21e58ec: ; 0x021E58EC
 	add r7, r0, #0
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp]
 	add r0, r4, #0
 	bl sub_020159E8
@@ -129,7 +129,7 @@ ovy51_21e58ec: ; 0x021E58EC
 	bl sub_020159E8
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	cmp r5, #8
 	bhi _021E595A
 	add r1, r5, r5

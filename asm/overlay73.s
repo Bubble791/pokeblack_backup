@@ -100,10 +100,10 @@ ovy73_21e8c64: ; 0x021E8C64
 	bne _021E8CA8
 	ldr r0, [r4, #0x1c]
 	mov r1, #0xe0
-	bl sub_02167A14
+	bl ovy12_2167a14
 	cmp r0, #0
 	beq _021E8CA8
-	bl sub_02166940
+	bl ovy12_2166940
 	mov r0, #1
 	pop {r4, pc}
 _021E8CA8:

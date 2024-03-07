@@ -11,7 +11,7 @@ ovy130_21eec80: ; 0x021EEC80
 	bl sub_021804C0
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r0, r5, #0
 	bl sub_021804BC
 	add r6, r0, #0
@@ -26,10 +26,10 @@ ovy130_21eec80: ; 0x021EEC80
 	mov r1, #0
 	add r2, r4, #0
 	mov r3, #0x10
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	str r0, [r4]
 	add r0, r4, #0
 	str r5, [r4, #4]
@@ -51,14 +51,14 @@ ovy130_21eecdc: ; 0x021EECDC
 	bl sub_02016AD8
 	bl sub_0201793C
 	add r0, r4, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0218105C
-	bl sub_021EEED4
+	bl ovy130_021EEED4
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_0218102C
+	bl ovy36_218102c
 	pop {r4, pc}
 	thumb_func_end ovy130_21eecdc
 
@@ -72,7 +72,7 @@ ovy130_21eed08: ; 0x021EED08
 	add r7, r0, #0
 	bl sub_0201793C
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r4, r0, #0
 	add r0, r5, #0
 	mov r1, #0
@@ -164,7 +164,7 @@ ovy130_21eedd0: ; 0x021EEDD0
 	ldr r1, _021EEECC ; =0x021EF1AC
 	mov r2, #0
 	mov r4, #0
-	bl sub_021B80B4
+	bl ovy36_21b80b4
 	add r6, r4, #0
 	mov r7, #1
 _021EEDE6:
@@ -248,7 +248,7 @@ _021EEE84:
 	mov r1, #0
 	add r2, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r7, r0, #0
 	mov r1, #0
 	bl sub_021B84F0
@@ -262,7 +262,7 @@ _021EEE84:
 	mov r1, #0
 	add r2, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r0, [sp, #8]
 	add r4, r4, #1
 	cmp r4, r0
@@ -280,23 +280,23 @@ _021EEECC: .word 0x021EF1AC
 _021EEED0: .word 0x021EF19C
 	thumb_func_end ovy130_21eedd0
 
-	thumb_func_start sub_021EEED4
-sub_021EEED4: ; 0x021EEED4
+	thumb_func_start ovy130_021EEED4
+ovy130_021EEED4: ; 0x021EEED4
 	ldr r0, [r0]
-	ldr r3, _021EEEDC ; =sub_021B81BC
+	ldr r3, _021EEEDC ; =ovy36_21b81bc
 	mov r1, #0
 	bx r3
 	.align 2, 0
-_021EEEDC: .word sub_021B81BC
-	thumb_func_end sub_021EEED4
+_021EEEDC: .word ovy36_21b81bc
+	thumb_func_end ovy130_021EEED4
 
 	thumb_func_start sub_021EEEE0
 sub_021EEEE0: ; 0x021EEEE0
 	ldr r0, [r0]
-	ldr r3, _021EEEE8 ; =sub_021B83B4
+	ldr r3, _021EEEE8 ; =ovy36_21b83b4
 	bx r3
 	nop
-_021EEEE8: .word sub_021B83B4
+_021EEEE8: .word ovy36_21b83b4
 	thumb_func_end sub_021EEEE0
 
 	thumb_func_start ovy130_21eeeec
@@ -310,7 +310,7 @@ ovy130_21eeeec: ; 0x021EEEEC
 	add r2, r5, #0
 	add r3, r4, #0
 	add r6, r0, #0
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	str r0, [sp, #4]
 	mov r1, #0
 	bl sub_021B84E8
@@ -324,14 +324,14 @@ ovy130_21eeeec: ; 0x021EEEEC
 	mov r1, #0
 	add r2, r5, #0
 	add r3, r4, #0
-	bl sub_021B8538
+	bl ovy36_21b8538
 	mov r0, #0
 	str r0, [sp]
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r5, #0
 	add r3, r4, #0
-	bl sub_021B8504
+	bl ovy36_21b8504
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy130_21eeeec
@@ -343,7 +343,7 @@ ovy130_21eef38: ; 0x021EEF38
 	add r4, r2, #0
 	add r6, r3, #0
 	add r0, r1, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r1, r0, #0
 	add r0, r4, #0
 	add r2, r6, #0

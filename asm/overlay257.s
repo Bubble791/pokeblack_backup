@@ -18712,14 +18712,14 @@ sub_021A29E4: ; 0x021A29E4
 _021A29F0: .word 0x000004FC
 	thumb_func_end sub_021A29E4
 
-	thumb_func_start sub_021A29F4
-sub_021A29F4: ; 0x021A29F4
+	thumb_func_start ovy257_021A29F4
+ovy257_021A29F4: ; 0x021A29F4
 	ldr r1, _021A29FC ; =0x000004FC
 	ldrh r0, [r0, r1]
 	bx lr
 	nop
 _021A29FC: .word 0x000004FC
-	thumb_func_end sub_021A29F4
+	thumb_func_end ovy257_021A29F4
 
 	thumb_func_start sub_021A2A00
 sub_021A2A00: ; 0x021A2A00
@@ -28116,7 +28116,7 @@ ovy257_21a768c: ; 0x021A768C
 	sub sp, #8
 	add r5, r0, #0
 	ldr r0, [r5, #8]
-	bl sub_021A29F4
+	bl ovy257_021A29F4
 	add r1, r5, #0
 	add r1, #0x78
 	ldrh r1, [r1]

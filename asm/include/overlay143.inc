@@ -789,7 +789,7 @@
 .public sub_0219A530
 .public sub_0219A7A0
 .public sub_0202BDD4
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_0201472C
 .public sub_0202BD80
 .public sub_0202BDD4
@@ -883,13 +883,13 @@
 .public sub_02046E28
 .public sub_02046EDC
 .public sub_02048530
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_02170D04
 .public sub_02021D28
 .public sub_02048564
 .public sub_0204713C
 .public sub_02048530
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_02170D04
 .public sub_02021D28
 .public sub_02048564
@@ -966,7 +966,7 @@
 .public sub_0201736C
 .public sub_02017934
 .public sub_0200C838
-.public sub_021659B4
+.public ovy12_21659b4
 .public sub_020191AC
 .public sub_020191AC
 .public sub_02016AD8
@@ -994,7 +994,7 @@
 .public sub_02006254
 .public sub_0203DEFC
 .public sub_02048530
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_02170D04
 .public sub_0202437C
 .public sub_02048564
@@ -1035,7 +1035,7 @@
 .public sub_02048564
 .public sub_02170AC4
 .public sub_0204AA30
-.public sub_02170B50
+.public ovy27_2170b50
 .public sub_02170B00
 .public sub_0204AB0C
 .public sub_0203A24C
@@ -1045,9 +1045,9 @@
 .public sub_02048564
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_02048530
-.public sub_02170D90
+.public ovy27_2170d90
 .public sub_020484F4
 .public sub_02021C54
 .public sub_02048564
@@ -1071,7 +1071,7 @@
 .public sub_02016AD8
 .public sub_02017934
 .public sub_02010DEC
-.public sub_02170CF8
+.public ovy27_2170cf8
 .public sub_02010F14
 .public sub_02010EBC
 .public sub_0204898C

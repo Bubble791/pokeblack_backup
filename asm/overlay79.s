@@ -4,8 +4,8 @@
 
 	.text
 
-	thumb_func_start sub_021EA860
-sub_021EA860: ; 0x021EA860
+	thumb_func_start ovy79_021EA860
+ovy79_021EA860: ; 0x021EA860
 	str r1, [r0]
 	ldr r1, _021EA870 ; =0x000002FD
 	mov r2, #0
@@ -15,7 +15,7 @@ sub_021EA860: ; 0x021EA860
 	bx lr
 	nop
 _021EA870: .word 0x000002FD
-	thumb_func_end sub_021EA860
+	thumb_func_end ovy79_021EA860
 
 	thumb_func_start sub_021EA874
 sub_021EA874: ; 0x021EA874
@@ -39,10 +39,10 @@ _021EA890: .word ovy79_21ec98c
 
 	thumb_func_start sub_021EA894
 sub_021EA894: ; 0x021EA894
-	ldr r3, _021EA898 ; =sub_021EA860
+	ldr r3, _021EA898 ; =ovy79_021EA860
 	bx r3
 	.align 2, 0
-_021EA898: .word sub_021EA860
+_021EA898: .word ovy79_021EA860
 	thumb_func_end sub_021EA894
 
 	thumb_func_start ovy79_21ea89c

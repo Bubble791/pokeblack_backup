@@ -41,7 +41,7 @@ ovy53_21e5800: ; 0x021E5800
 	bl sub_02019708
 	add r1, r0, #0
 	ldr r0, [sp, #0xc]
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -59,7 +59,7 @@ ovy53_21e5868: ; 0x021E5868
 	ldrb r5, [r2]
 	add r2, r2, #1
 	str r2, [r0, #0x20]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r6, #0
 	bl sub_02155174

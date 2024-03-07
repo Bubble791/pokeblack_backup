@@ -86,7 +86,7 @@
 .public sub_021505D4
 .public sub_021BEC44
 .public sub_021BEC44
-.public sub_021A57DC
+.public ovy189_21a57dc
 .public sub_0205B198
 .public sub_021505D4
 .public sub_020424AC
@@ -1188,7 +1188,7 @@
 .public sub_020584CC
 .public sub_021605B4
 .public sub_0217D39C
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_020584CC
 .public sub_02167F6C
 .public sub_02167F6C
@@ -3171,7 +3171,7 @@
 .public sub_021A305C
 .public sub_021A2E98
 .public sub_021A2FF4
-.public sub_021A3050
+.public ovy189_21a3050
 .public sub_02085D9C
 .public sub_02085D9C
 .public sub_02083964
@@ -3501,12 +3501,12 @@
 .public sub_02083964
 .public sub_02085D9C
 .public OS_SPrintf
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_02083964
 .public sub_02171588
 .public sub_02085D9C
 .public sub_0217BAD4
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_0217BAD4
 .public sub_02083964
 .public sub_02083984
@@ -3520,7 +3520,7 @@
 .public sub_02085CB4
 .public sub_0208D868
 .public sub_02085E80
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_0217BAD4
 .public sub_0217BAD4
 .public sub_020839D0
@@ -3714,7 +3714,7 @@
 .public sub_02087B00
 .public sub_0217BAD4
 .public sub_0217BAD4
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_0217BAD4
 .public sub_020839D0
 .public sub_0217BAD4
@@ -3990,7 +3990,7 @@
 .public sub_02083A10
 .public sub_0217E694
 .public sub_02083A10
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_02171588
 .public sub_02171588
 .public sub_0217C960
@@ -4011,7 +4011,7 @@
 .public sub_020839D0
 .public sub_02171588
 .public sub_0217158C
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_02171588
 .public sub_0217158C
 .public sub_0217D350
@@ -4021,7 +4021,7 @@
 .public sub_02087B00
 .public sub_02085D9C
 .public OS_SPrintf
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_02083A10
 .public sub_02082BA8
 .public sub_02082BA8
@@ -4044,7 +4044,7 @@
 .public sub_02085D9C
 .public sub_0217F2AC
 .public OS_SNPrintf
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_0217FE88
 .public sub_02171588
 .public sub_0217158C
@@ -4053,7 +4053,7 @@
 .public sub_0208D65C
 .public sub_020839D0
 .public OS_SPrintf
-.public sub_0216DFA8
+.public ovy11_0216DFA8
 .public sub_0216E320
 .public OS_SPrintf
 .public sub_02085D9C

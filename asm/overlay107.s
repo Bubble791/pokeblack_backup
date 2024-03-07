@@ -163,7 +163,7 @@ _021EED96:
 	add r1, sp, #0x14
 	add r2, sp, #0x18
 	add r7, r0, #0
-	bl sub_02167870
+	bl ovy12_2167870
 	cmp r0, #0
 	beq _021EEDDC
 	add r6, r4, #0
@@ -185,7 +185,7 @@ _021EEDCE:
 	add r0, r7, #0
 	add r1, sp, #0x14
 	add r2, sp, #0x18
-	bl sub_02167870
+	bl ovy12_2167870
 	cmp r0, #0
 	bne _021EEDB2
 _021EEDDC:
@@ -448,7 +448,7 @@ _021EEFDC:
 	bl sub_0218EFBC
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldr r0, _021EF06C ; =0x000006CE
 _021EEFF6:
 	bl sub_02006254
@@ -485,7 +485,7 @@ _021EF02A:
 	add r1, r0, #0
 	ldr r0, [r4, #8]
 	ldr r0, [r0]
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldr r0, [r4, #4]
 	sub r0, r0, #1
 	str r0, [r4, #4]
@@ -548,7 +548,7 @@ _021EF0A2:
 	bl sub_0218EFBC
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldr r0, _021EF100 ; =0x0000055A
 	bl sub_02006254
 	ldr r0, [r4]
@@ -861,7 +861,7 @@ ovy107_21ef2f8: ; 0x021EF2F8
 	add r0, r7, #0
 	asr r1, r1, #0x10
 	asr r2, r2, #0x10
-	bl sub_02166880
+	bl ovy12_2166880
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy107_21ef2f8

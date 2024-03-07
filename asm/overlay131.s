@@ -51,7 +51,7 @@ _021EECD6:
 	bl sub_02167788
 	ldr r0, [r4, #0x10]
 	mov r1, #0
-	bl sub_02167580
+	bl ovy12_2167580
 	ldr r0, [r4, #0x10]
 	bl sub_021675E8
 	add r0, r5, #0
@@ -787,7 +787,7 @@ _021EF2FE:
 	bl sub_02167788
 	ldr r0, [r4, #0x10]
 	mov r1, #1
-	bl sub_02167580
+	bl ovy12_2167580
 	ldr r0, [r4, #0x10]
 	bl sub_021675F4
 	mov r0, #9

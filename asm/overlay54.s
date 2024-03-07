@@ -40,7 +40,7 @@ ovy54_21e5830: ; 0x021E5830
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r6, #0
 	bl sub_020090F4

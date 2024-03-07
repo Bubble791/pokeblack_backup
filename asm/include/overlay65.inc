@@ -16,8 +16,8 @@
 .public sub_02017934
 .public sub_0200FB40
 .public sub_0200F978
-.public sub_021548E8
-.public sub_021548E8
+.public ovy12_21548e8
+.public ovy12_21548e8
 .public sub_02155174
 .public sub_02017934
 .public sub_0200FB40
@@ -157,8 +157,8 @@
 .public sub_02016AD8
 .public sub_02017934
 .public sub_0200F2BC
-.public sub_02154910
-.public sub_021548E8
+.public ovy12_2154910
+.public ovy12_21548e8
 .public sub_0200F300
 .public sub_0200F308
 .public sub_0200F334
@@ -183,8 +183,8 @@
 .public sub_02016AD8
 .public sub_02017934
 .public sub_0200F2C4
-.public sub_02154910
-.public sub_02154910
+.public ovy12_2154910
+.public ovy12_2154910
 .public sub_0200F37C
 .public sub_02009408
 .public sub_020095A0
@@ -193,7 +193,7 @@
 .public sub_02016AD8
 .public sub_02017934
 .public sub_0200F2C4
-.public sub_02154910
+.public ovy12_2154910
 .public sub_0201795C
 .public sub_0200E318
 .public sub_02017934

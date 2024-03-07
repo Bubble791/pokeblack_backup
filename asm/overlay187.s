@@ -134,6 +134,15 @@ _021E8CDC:
 	.byte 0x18, 0x6A, 0x01, 0x4B
 	.byte 0x18, 0x47, 0xC0, 0x46, 0x29, 0x8F, 0x1E, 0x02
 
+	thumb_func_start ovy187_021E8CDC
+ovy187_021E8CDC:
+	ldr r0, [r3, #0x20]
+	ldr r3, ovy187_021E8CE4
+	bx r3
+	.align 2, 0
+ovy187_021E8CE4: .word 0x021E8F29
+	thumb_func_end ovy187_021E8CDC
+
 	thumb_func_start ovy187_21e8ce8
 ovy187_21e8ce8: ; 0x021E8CE8
 	push {r3, r4, r5, r6, r7, lr}

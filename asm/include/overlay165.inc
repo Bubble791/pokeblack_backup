@@ -217,7 +217,7 @@
 .public sub_02044F90
 .public sub_02038BC8
 .public sub_02006254
-.public sub_021659B4
+.public ovy12_21659b4
 .public sub_021A039C
 .public sub_021A03AC
 .public sub_021A03AC

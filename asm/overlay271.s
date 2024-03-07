@@ -13095,7 +13095,7 @@ ovy271_21f6224: ; 0x021F6224
 	str r0, [r4, r5]
 	ldr r0, _021F62FC ; =ovy271_21f69c8
 	add r1, r4, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	add r0, r4, #0
 	add sp, #0x34
 	pop {r4, r5, r6, r7, pc}
@@ -13120,7 +13120,7 @@ ovy271_21f6300: ; 0x021F6300
 	mov r0, #0
 	mov r1, #0
 	mov r6, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 	ldr r4, _021F6340 ; =0x000005AC
 	ldr r0, [r5, r4]
 	bl sub_021F6998
@@ -14022,7 +14022,7 @@ _021F69F8:
 _021F6A0A:
 	mov r0, #0
 	mov r1, #0
-	bl sub_0215205C
+	bl ovy11_215205c
 _021F6A12:
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}

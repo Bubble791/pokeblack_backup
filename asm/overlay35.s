@@ -1187,7 +1187,7 @@ _0217D2FC:
 	bl ovy35_217ce6c
 	add r0, r7, #0
 	bl sub_021804B8
-	bl sub_0216740C
+	bl ovy12_216740c
 	add r0, r5, #0
 	add r1, r6, #0
 	bl ovy35_217cecc
@@ -3564,7 +3564,7 @@ ovy35_217e5dc: ; 0x0217E5DC
 	add r4, r1, #0
 	bl sub_02017240
 	add r7, r0, #0
-	bl sub_0215D198
+	bl ovy12_0215D198
 	str r0, [sp, #4]
 	cmp r0, #0
 	beq _0217E61A
@@ -3575,7 +3575,7 @@ ovy35_217e5dc: ; 0x0217E5DC
 	bl sub_0201738C
 	add r5, r0, #0
 	add r0, r7, #0
-	bl sub_0215D194
+	bl ovy12_0215D194
 	mov r2, #4
 	add r1, r0, #0
 	ldrsh r2, [r4, r2]
@@ -3942,7 +3942,7 @@ ovy35_217e900: ; 0x0217E900
 	bl sub_021804F0
 	bl sub_0219A6A0
 	add r1, r4, #0
-	bl sub_02167534
+	bl ovy12_2167534
 	pop {r4, pc}
 	thumb_func_end ovy35_217e900
 
@@ -5350,7 +5350,7 @@ _0217F41C:
 	cmp r1, r0
 	bne _0217F448
 	ldr r0, [r4, #4]
-	bl sub_021805F0
+	bl ovy36_21805f0
 	mov r0, #3
 	mov r1, #1
 	bl sub_02044C98

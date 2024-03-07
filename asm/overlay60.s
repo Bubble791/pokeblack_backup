@@ -10,35 +10,35 @@ ovy60_21e58c0: ; 0x021E58C0
 	sub sp, #0x3c
 	str r0, [sp, #4]
 	str r1, [sp, #8]
-	bl sub_02154910
+	bl ovy12_2154910
 	add r6, r0, #0
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_02154910
+	bl ovy12_2154910
 	add r7, r0, #0
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	str r0, [sp, #0x10]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl sub_021548E8
+	bl ovy12_21548e8
 	str r0, [sp, #0x20]
 	ldr r0, [sp, #8]
 	bl sub_0215516C

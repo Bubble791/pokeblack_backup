@@ -167,7 +167,7 @@
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_021804B8
-.public sub_0216740C
+.public ovy12_216740c
 .public sub_021B733C
 .public sub_02016D68
 .public sub_02016D68
@@ -442,10 +442,10 @@
 .public sub_02167E8C
 .public sub_021666DC
 .public sub_02017240
-.public sub_0215D198
+.public ovy12_0215D198
 .public sub_02017394
 .public sub_0201738C
-.public sub_0215D194
+.public ovy12_0215D194
 .public sub_021668C0
 .public sub_0201738C
 .public sub_021669A8
@@ -515,7 +515,7 @@
 .public sub_02016AF0
 .public sub_021804F0
 .public sub_0219A6A0
-.public sub_02167534
+.public ovy12_2167534
 .public sub_0201793C
 .public sub_0200BA9C
 .public sub_0204AA30
@@ -696,7 +696,7 @@
 .public GXx_SetMasterBrightness_
 .public G2x_SetBlendBrightness_
 .public sub_0217F4A8
-.public sub_021805F0
+.public ovy36_21805f0
 .public sub_02044C98
 .public sub_021812F0
 .public sub_02044C98

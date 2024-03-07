@@ -15176,7 +15176,7 @@ sub_0205D83C: ; 0x0205D83C
 	mov r0, #1
 	bl sub_0205A78C
 	mov r4, r0
-	blx sub_0216B2A4
+	blx ovy11_216b2a4
 	movs r6, r0
 	beq _0205D8C8
 	add r0, r5, #0x1000

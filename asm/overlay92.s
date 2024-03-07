@@ -15,7 +15,7 @@ ovy92_21eec80: ; 0x021EEC80
 	mov r1, #0
 	add r2, r6, #0
 	mov r3, #0x20
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy92_21eeef8
@@ -26,7 +26,7 @@ ovy92_21eec80: ; 0x021EEC80
 	bl sub_02031954
 	str r0, [r4, #0xc]
 	add r0, r5, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r1, r6, #0
 	bl ovy92_21ef060
 	str r0, [r4, #8]
@@ -98,7 +98,7 @@ ovy92_21eed2c: ; 0x021EED2C
 	bl ovy92_21ef124
 	add r0, r5, #0
 	mov r1, #0
-	bl sub_0218102C
+	bl ovy36_218102c
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy92_21eed2c
 
@@ -486,7 +486,7 @@ ovy92_21ef060: ; 0x021EF060
 	ldr r1, _021EF120 ; =0x021EFFD8
 	mov r2, #0
 	mov r5, #0
-	bl sub_021B80B4
+	bl ovy36_21b80b4
 	add r7, r5, #0
 _021EF092:
 	add r0, r4, #0
@@ -554,7 +554,7 @@ ovy92_21ef124: ; 0x021EF124
 	add r4, r0, #0
 	ldr r0, [r4, #4]
 	mov r1, #0
-	bl sub_021B81BC
+	bl ovy36_21b81bc
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -602,7 +602,7 @@ _021EF172:
 	mov r1, #1
 	bl ovy92_21ef1a0
 	ldr r0, [r5, #4]
-	bl sub_021B83B4
+	bl ovy36_21b83b4
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021EF190: .word 0x02FFFC3C
@@ -689,7 +689,7 @@ ovy92_21ef1f4: ; 0x021EF1F4
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r1, [r5]
 	ldr r2, [r5, #4]
 	lsl r1, r1, #0x10
@@ -699,7 +699,7 @@ ovy92_21ef1f4: ; 0x021EF1F4
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	mov r1, #0
 	bl sub_021B84E8
 	str r6, [sp]
@@ -712,7 +712,7 @@ ovy92_21ef1f4: ; 0x021EF1F4
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B8504
+	bl ovy36_21b8504
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end ovy92_21ef1f4
@@ -732,7 +732,7 @@ ovy92_21ef250: ; 0x021EF250
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	lsl r1, r4, #0x18
 	lsr r1, r1, #0x18
 	bl sub_021B84E8
@@ -753,7 +753,7 @@ ovy92_21ef278: ; 0x021EF278
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	bl sub_021B84F4
 	pop {r3, pc}
 	.align 2, 0
@@ -844,7 +844,7 @@ _021EF31E:
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r2, [r5, #4]
 	add r4, r4, #1
 	lsl r0, r2, #4
@@ -918,7 +918,7 @@ _021EF3A4:
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r1, r6, #0
 	bl sub_021B84F0
 	ldr r2, [r5, #4]
@@ -957,7 +957,7 @@ _021EF3EC:
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B8538
+	bl ovy36_21b8538
 	ldr r1, [r5]
 	ldr r2, [r5, #4]
 	lsl r1, r1, #0x10
@@ -967,12 +967,12 @@ _021EF3EC:
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B84A8
+	bl ovy36_21b84a8
 	add r6, r0, #0
 	add r1, r7, #0
 	bl sub_021B84E8
 	add r0, r6, #0
-	bl sub_021B8580
+	bl ovy36_21b8580
 	str r0, [sp]
 	ldr r1, [r5]
 	ldr r2, [r5, #4]
@@ -983,7 +983,7 @@ _021EF3EC:
 	lsr r1, r1, #0x10
 	lsr r2, r2, #0x10
 	lsr r3, r3, #0x10
-	bl sub_021B8504
+	bl ovy36_21b8504
 	ldr r2, [r5, #4]
 	ldr r0, _021EF454 ; =0x021F0134
 	lsl r1, r2, #4
@@ -1320,7 +1320,7 @@ ovy92_21ef68c: ; 0x021EF68C
 	bne _021EF6B2
 	ldr r0, [r5]
 	add r1, r4, #0
-	bl sub_02167A14
+	bl ovy12_2167a14
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_021EF710

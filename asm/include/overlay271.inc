@@ -811,8 +811,8 @@
 .public sub_02017934
 .public sub_0200DE34
 .public sub_0200DE68
-.public sub_0215205C
-.public sub_0215205C
+.public ovy11_215205c
+.public ovy11_215205c
 .public sub_021F6998
 .public sub_0200DE60
 .public sub_021B5534
@@ -884,7 +884,7 @@
 .public sub_020178BC
 .public sub_021B5EF8
 .public sub_021B5534
-.public sub_0215205C
+.public ovy11_215205c
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_02021998

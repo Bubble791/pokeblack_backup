@@ -285,9 +285,9 @@ _021E8DE4:
 	mov r2, #0
 	mov r3, #0x15
 	mov r5, #0
-	bl sub_0215366C
+	bl ovy12_215366c
 	add r4, r0, #0
-	bl sub_021538D4
+	bl ovy12_21538d4
 	add r1, r6, #0
 	mov r2, #0
 	mov r3, #0

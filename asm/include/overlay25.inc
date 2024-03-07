@@ -19,7 +19,7 @@
 .public sub_0208DA4C
 .public sub_021682C0
 .public sub_021682D4
-.public sub_02166874
+.public ovy12_2166874
 .public sub_02166FE8
 .public sub_02016AD8
 .public sub_02017240

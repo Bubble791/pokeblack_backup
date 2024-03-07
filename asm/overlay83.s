@@ -4,13 +4,13 @@
 
 	.text
 
-	thumb_func_start sub_021EA860
-sub_021EA860: ; 0x021EA860
+	thumb_func_start ovy83_021EA860
+ovy83_021EA860: ; 0x021EA860
 	ldr r3, _021EA864 ; =sub_02006254
 	bx r3
 	.align 2, 0
 _021EA864: .word sub_02006254
-	thumb_func_end sub_021EA860
+	thumb_func_end ovy83_021EA860
 
 	thumb_func_start ovy83_21ea868
 ovy83_21ea868: ; 0x021EA868
@@ -272,7 +272,7 @@ _021EAA42:
 	bl sub_0202E430
 _021EAA4A:
 	add r0, r7, #0
-	bl sub_021EA860
+	bl ovy83_021EA860
 	str r4, [sp]
 _021EAA52:
 	ldr r0, [r6, #0x20]

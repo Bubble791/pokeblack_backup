@@ -348,7 +348,7 @@ _0216FB66:
 	add r4, r6, r0
 	ldr r0, [sp, #4]
 	ldr r2, [sp]
-	bl sub_02166874
+	bl ovy12_2166874
 	ldr r1, [sp, #0x1c]
 	str r0, [r4, r1]
 	ldr r0, [sp, #0x18]

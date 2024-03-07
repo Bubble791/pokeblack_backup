@@ -19,7 +19,7 @@ ovy95_21eec80: ; 0x021EEC80
 	add r0, r4, #0
 	mov r1, #1
 	mov r3, #4
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy95_21eec80

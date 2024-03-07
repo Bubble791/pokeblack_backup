@@ -16,15 +16,15 @@ ovy67_21e5800: ; 0x021E5800
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r3, r0, #0
 	ldr r2, [sp]
 	add r0, r6, #0
@@ -48,19 +48,19 @@ ovy67_21e5840: ; 0x021E5840
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp, #4]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp, #8]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp, #0xc]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	str r0, [sp]
 	ldr r1, [sp, #4]
 	ldr r2, [sp, #8]
@@ -74,7 +74,7 @@ ovy67_21e5840: ; 0x021E5840
 	pop {r3, r4, r5, r6, r7, pc}
 _021E5896:
 	add r0, r6, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}

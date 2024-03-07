@@ -26,7 +26,7 @@ ovy64_21e5800: ; 0x021E5800
 	pop {r4, r5, r6, pc}
 _021E582C:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -45,7 +45,7 @@ ovy64_21e5838: ; 0x021E5838
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r7, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	mov r2, #1
 	cmp r0, #1
 	bne _021E585E
@@ -106,7 +106,7 @@ ovy64_21e58ac: ; 0x021E58AC
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r1, r0, #0
 	add r0, r7, #0
 	bl ovy64_21e5984
@@ -116,7 +116,7 @@ ovy64_21e58ac: ; 0x021E58AC
 	pop {r3, r4, r5, r6, r7, pc}
 _021E58DA:
 	add r0, r6, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy64_21e58ac
@@ -133,7 +133,7 @@ ovy64_21e58e4: ; 0x021E58E4
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r5, r0, #0
 	add r0, r4, #0
 	bl ovy64_21e5ab4
@@ -155,7 +155,7 @@ ovy64_21e5910: ; 0x021E5910
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r7, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	mov r2, #1
 	cmp r0, #0
 	bne _021E5936

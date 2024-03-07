@@ -687,7 +687,7 @@
 .public MI_CpuCopy8
 .public MI_CpuFill8
 .public sub_0203CB80
-.public sub_0215309C
+.public ovy12_215309c
 .public sub_0215313C
 .public sub_021530F8
 .public sub_02153130

@@ -17,7 +17,7 @@ ovy63_21e5800: ; 0x021E5800
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	lsl r0, r0, #0x18
 	lsr r1, r0, #0x18
 	add r0, r7, #0
@@ -28,7 +28,7 @@ ovy63_21e5800: ; 0x021E5800
 	pop {r3, r4, r5, r6, r7, pc}
 _021E5830:
 	add r0, r6, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -50,7 +50,7 @@ ovy63_21e583c: ; 0x021E583C
 	pop {r3, r4, r5, pc}
 _021E585A:
 	add r0, r4, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy63_21e583c

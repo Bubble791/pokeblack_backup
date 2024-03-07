@@ -132,11 +132,11 @@ ovy65_21e58f0: ; 0x021E58F0
 	push {r4, r5, r6, lr}
 	add r4, r0, #0
 	add r6, r1, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r6, #0
 	bl ovy65_21e58c0
@@ -1813,11 +1813,11 @@ ovy65_21e6508: ; 0x021E6508
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r6, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_021548E8
+	bl ovy12_21548e8
 	add r4, r0, #0
 	cmp r6, #4
 	bhi _021E6588
@@ -1913,11 +1913,11 @@ ovy65_21e65dc: ; 0x021E65DC
 	str r0, [sp]
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r1, r0, #0
 	cmp r4, #4
 	beq _021E661C
@@ -1953,7 +1953,7 @@ ovy65_21e6634: ; 0x021E6634
 	bl sub_0200F2C4
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_0201795C

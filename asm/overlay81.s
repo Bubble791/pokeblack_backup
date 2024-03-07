@@ -4,11 +4,11 @@
 
 	.text
 
-	thumb_func_start sub_021EA860
-sub_021EA860: ; 0x021EA860
+	thumb_func_start ovy81_021EA860
+ovy81_021EA860: ; 0x021EA860
 	str r1, [r0]
 	bx lr
-	thumb_func_end sub_021EA860
+	thumb_func_end ovy81_021EA860
 
 	thumb_func_start ovy81_21ea864
 ovy81_21ea864: ; 0x021EA864
@@ -25,7 +25,7 @@ ovy81_21ea864: ; 0x021EA864
 	bl ovy81_21eab94
 	ldr r1, _021EA890 ; =0x021EA8E5
 	add r0, r4, #0
-	bl sub_021EA860
+	bl ovy81_021EA860
 	pop {r4, pc}
 	nop
 _021EA890: .word 0x021EA8E5

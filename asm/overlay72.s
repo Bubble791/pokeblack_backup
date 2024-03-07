@@ -49,7 +49,7 @@ ovy72_21e8c08: ; 0x021E8C08
 	mov r0, #0x6d
 	lsl r0, r0, #2
 	ldr r0, [r2, r0]
-	bl sub_02167534
+	bl ovy12_2167534
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy72_21e909c
@@ -654,7 +654,7 @@ ovy72_21e909c: ; 0x021E909C
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021E90B4
-	bl sub_02166940
+	bl ovy12_2166940
 	mov r0, #0
 	str r0, [r4, r5]
 _021E90B4:

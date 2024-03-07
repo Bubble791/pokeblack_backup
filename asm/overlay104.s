@@ -8,7 +8,7 @@
 ovy104_21eec80: ; 0x021EEC80
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_021804BC
@@ -21,7 +21,7 @@ ovy104_21eec80: ; 0x021EEC80
 	lsl r1, r2, #4
 	add r0, r5, #0
 	add r1, r3, r1
-	bl sub_021B8598
+	bl ovy36_21b8598
 	add r0, r4, #0
 	bl ovy104_21eee34
 	add r4, r0, #0
@@ -83,8 +83,8 @@ ovy104_21eed20: ; 0x021EED20
 	ldr r1, [r1]
 	bl ovy104_21efcc4
 	add r0, r4, #0
-	bl sub_0218056C
-	bl sub_021B83B4
+	bl ovy36_0218056c
+	bl ovy36_21b83b4
 	pop {r4, pc}
 	.align 2, 0
 _021EED40: .word 0x021F0620
@@ -235,13 +235,13 @@ ovy104_21eee34: ; 0x021EEE34
 	bl sub_021804C0
 	add r5, r0, #0
 	add r0, r6, #0
-	bl sub_0218056C
+	bl ovy36_0218056c
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0
 	add r2, r5, #0
 	mov r3, #0x68
-	bl sub_02180FF0
+	bl ovy36_2180ff0
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x68
@@ -287,7 +287,7 @@ ovy104_21eeea0: ; 0x021EEEA0
 	bl ovy104_21ef168
 	ldr r0, [r4, #4]
 	mov r1, #0
-	bl sub_0218102C
+	bl ovy36_218102c
 _021EEEB8:
 	pop {r4, pc}
 	.align 2, 0
@@ -417,7 +417,7 @@ ovy104_21eef98: ; 0x021EEF98
 	sub sp, #4
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_0218056C
+	bl ovy36_0218056c
 	mov r1, #1
 	str r1, [sp]
 	ldr r3, [r4, #0x1c]
@@ -426,7 +426,7 @@ ovy104_21eef98: ; 0x021EEF98
 	lsl r4, r3, #1
 	ldr r3, _021EEFBC ; =0x021F066C
 	ldrh r3, [r3, r4]
-	bl sub_021B8538
+	bl ovy36_21b8538
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0
@@ -438,7 +438,7 @@ ovy104_21eefc0: ; 0x021EEFC0
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #4]
-	bl sub_0218056C
+	bl ovy36_0218056c
 	mov r1, #1
 	mov r2, #0
 	mov r4, #0
@@ -2050,7 +2050,7 @@ ovy104_21efb90: ; 0x021EFB90
 	str r0, [sp]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02154910
+	bl ovy12_2154910
 	add r4, r0, #0
 	ldr r0, _021EFBD4 ; =0x00000547
 	bl sub_02006254
@@ -2060,7 +2060,7 @@ ovy104_21efb90: ; 0x021EFB90
 	bl ovy104_21f02fc
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_02153880
+	bl ovy12_2153880
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

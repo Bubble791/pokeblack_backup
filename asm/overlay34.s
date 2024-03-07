@@ -85,7 +85,7 @@ _02176B64:
 	ldr r0, [sp, #4]
 	ldr r2, _02176BB0 ; =0x000001A6
 	add r1, r4, #0
-	bl sub_02166874
+	bl ovy12_2166874
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -249,7 +249,7 @@ ovy34_2176c90: ; 0x02176C90
 	ldr r0, [r0, #8]
 	bl sub_0201738C
 	add r1, r4, #0
-	bl sub_02167A14
+	bl ovy12_2167a14
 	add r4, r0, #0
 	bne _02176CBA
 	ldr r0, _02176CC0 ; =0x0217C6C0
@@ -300,7 +300,7 @@ _02176CD4:
 	cmp r1, #0
 	bne _02176D12
 	add r1, r7, #0
-	bl sub_02167534
+	bl ovy12_2167534
 _02176D12:
 	ldr r0, [sp, #0x1c]
 	str r5, [r0]
@@ -348,7 +348,7 @@ ovy34_2176d3c: ; 0x02176D3C
 	bl ovy34_217b800
 _02176D6E:
 	add r0, r5, #0
-	bl sub_02166940
+	bl ovy12_2166940
 	add r0, r6, #0
 	mov r1, #0
 	mov r2, #0xc
@@ -569,7 +569,7 @@ _02176EC4:
 	ldr r0, [r0, #8]
 	bl sub_0201738C
 	add r1, r4, #0
-	bl sub_02167A14
+	bl ovy12_2167a14
 	add r1, r0, #0
 	beq _02176F2E
 	add r0, r7, #0
@@ -999,7 +999,7 @@ _02177236:
 	bne _021772BE
 	add r0, r4, #0
 	mov r1, #0x31
-	bl sub_02166E88
+	bl ovy12_2166e88
 	b _021772BE
 _0217726A:
 	ldrb r1, [r5, #6]
@@ -1093,10 +1093,10 @@ _021772E8:
 _02177322:
 	add r0, r4, #0
 	mov r1, #0x44
-	bl sub_02166E88
+	bl ovy12_2166e88
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_02167534
+	bl ovy12_2167534
 	ldrb r0, [r5]
 	add r0, r0, #1
 	strb r0, [r5]
@@ -1136,7 +1136,7 @@ _0217736E:
 	bne _02177398
 	add r0, r4, #0
 	mov r1, #0x43
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldrb r0, [r5]
 	add r0, r0, #1
 	strb r0, [r5]
@@ -1207,7 +1207,7 @@ _021773FA:
 	mov r1, #2
 _021773FC:
 	add r0, r5, #0
-	bl sub_02166E88
+	bl ovy12_2166e88
 _02177402:
 	ldrb r0, [r4]
 	add r0, r0, #1
@@ -6744,7 +6744,7 @@ _02179EDA:
 	lsl r1, r1, #0x10
 	add r0, r5, #0
 	lsr r1, r1, #0x10
-	bl sub_02166E88
+	bl ovy12_2166e88
 	b _02179E76
 _02179EE6:
 	add r0, r7, #0
@@ -6861,7 +6861,7 @@ _02179FC6:
 	lsl r1, r1, #0x10
 	add r0, r6, #0
 	lsr r1, r1, #0x10
-	bl sub_02166E88
+	bl ovy12_2166e88
 	b _02179F70
 _02179FD2:
 	add r0, r6, #0
@@ -7806,7 +7806,7 @@ _0217A72A:
 	bne _0217A75A
 	add r0, r6, #0
 	mov r1, #8
-	bl sub_02166E88
+	bl ovy12_2166e88
 	b _0217A6E6
 _0217A73E:
 	add r0, r6, #0

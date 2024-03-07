@@ -376,7 +376,7 @@ _021EF24C:
 	ldr r0, [sp]
 	ldr r1, _021EF2A0 ; =0x021EFBE0
 	ldr r2, [sp, #4]
-	bl sub_02166874
+	bl ovy12_2166874
 	mov r4, #0
 	str r0, [r7, #0xc]
 	add r0, r5, #0
@@ -389,7 +389,7 @@ _021EF24C:
 	ldr r0, [r7, #0xc]
 	mov r1, #1
 	mov r5, #1
-	bl sub_02167534
+	bl ovy12_2167534
 	ldr r0, [r7, #0xc]
 	mov r1, #1
 	bl sub_021677BC
@@ -417,7 +417,7 @@ ovy121_21ef2a4: ; 0x021EF2A4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_02166940
+	bl ovy12_2166940
 	mov r0, #0
 	str r0, [r4, #0xc]
 	pop {r4, pc}
@@ -450,7 +450,7 @@ ovy121_21ef2cc: ; 0x021EF2CC
 	ldr r0, [r5, #0xc]
 	mov r1, #0
 	add r4, r3, #0
-	bl sub_02167534
+	bl ovy12_2167534
 	ldr r6, _021EF348 ; =0x021EFBE0
 	add r3, sp, #0
 	mov r2, #4
@@ -537,11 +537,11 @@ sub_021EF37C: ; 0x021EF37C
 	strb r1, [r0, #3]
 	strb r1, [r0, #1]
 	ldr r0, [r0, #0xc]
-	ldr r3, _021EF390 ; =sub_02167534
+	ldr r3, _021EF390 ; =ovy12_2167534
 	mov r1, #1
 	bx r3
 	nop
-_021EF390: .word sub_02167534
+_021EF390: .word ovy12_2167534
 	thumb_func_end sub_021EF37C
 
 	thumb_func_start ovy121_21ef394
@@ -629,7 +629,7 @@ _021EF42E:
 	add r1, r1, r5
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02166E88
+	bl ovy12_2166e88
 	mov r0, #1
 	strh r0, [r4, #0x14]
 	strh r5, [r4, #0x16]
@@ -1010,7 +1010,7 @@ ovy121_21ef6e4: ; 0x021EF6E4
 	bl sub_02167788
 	ldr r0, [r4, #0xc]
 	mov r1, #0
-	bl sub_02167580
+	bl ovy12_2167580
 	mov r1, #0x7d
 	ldr r0, [r4, #0xc]
 	lsl r1, r1, #4
@@ -1030,7 +1030,7 @@ ovy121_21ef70c: ; 0x021EF70C
 	bl sub_02167788
 	ldr r0, [r4, #0xc]
 	mov r1, #1
-	bl sub_02167580
+	bl ovy12_2167580
 	mov r1, #0x7d
 	ldr r0, [r4, #0xc]
 	lsl r1, r1, #4
@@ -1090,7 +1090,7 @@ _021EF78A:
 	add r1, r2, r1
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldrh r0, [r5, #4]
 	sub r0, r0, #1
 	strh r0, [r5, #4]
@@ -1181,7 +1181,7 @@ _021EF83C:
 	add r1, r2, r1
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02166E88
+	bl ovy12_2166e88
 	ldrh r0, [r5, #4]
 	mov r1, #0x7d
 	lsl r1, r1, #4
@@ -1215,7 +1215,7 @@ ovy121_21ef86c: ; 0x021EF86C
 	add r1, sp, #4
 	add r2, sp, #8
 	add r7, r3, #0
-	bl sub_02167870
+	bl ovy12_2167870
 	cmp r0, #1
 	bne _021EF8D2
 _021EF88C:
@@ -1228,7 +1228,7 @@ _021EF88C:
 	cmp r0, #0
 	bne _021EF8C4
 	ldr r0, [sp, #4]
-	bl sub_02167520
+	bl ovy12_2167520
 	cmp r0, #0
 	bne _021EF8C4
 	ldr r1, [sp, #4]
@@ -1248,7 +1248,7 @@ _021EF8C4:
 	add r0, r4, #0
 	add r1, sp, #4
 	add r2, sp, #8
-	bl sub_02167870
+	bl ovy12_2167870
 	cmp r0, #1
 	beq _021EF88C
 _021EF8D2:

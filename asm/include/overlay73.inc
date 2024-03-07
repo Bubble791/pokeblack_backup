@@ -10,8 +10,8 @@
 .public sub_02017934
 .public sub_0200F6F4
 .public sub_0200F8E4
-.public sub_02167A14
-.public sub_02166940
+.public ovy12_2167a14
+.public ovy12_2166940
 .public sub_02014864
 .public sub_02014864
 .public sub_02014864

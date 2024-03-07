@@ -14,7 +14,7 @@
 .public sub_0202E7A4
 .public sub_02170AC4
 .public sub_0204AA30
-.public sub_02170B50
+.public ovy27_2170b50
 .public sub_02014AA0
 .public sub_020145EC
 .public G2x_SetBlendAlpha_
@@ -104,7 +104,7 @@
 .public sub_0204898C
 .public sub_02048564
 .public sub_02048530
-.public sub_02170D90
+.public ovy27_2170d90
 .public sub_02048530
 .public sub_02170D04
 .public sub_0202451C

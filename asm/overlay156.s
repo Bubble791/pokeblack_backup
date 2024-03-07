@@ -21,9 +21,9 @@ ovy156_21f59e0: ; 0x021F59E0
 	mov r2, #0
 	mov r3, #0x15
 	mov r7, #0
-	bl sub_0215366C
+	bl ovy12_215366c
 	str r0, [sp, #0x10]
-	bl sub_021538D4
+	bl ovy12_21538d4
 	str r0, [sp, #0xc]
 	add r0, r5, #0
 	bl sub_02013488
@@ -112,7 +112,7 @@ ovy156_21f5ac4: ; 0x021F5AC4
 	ldr r1, _021F5AD4 ; =0x000028C4
 	mov r2, #0
 	mov r3, #0x15
-	bl sub_0215366C
+	bl ovy12_215366c
 	pop {r3, pc}
 	nop
 _021F5AD4: .word 0x000028C4
@@ -203,7 +203,7 @@ ovy156_21f5b28: ; 0x021F5B28
 	bl sub_02048530
 	str r0, [r4, #0x38]
 	ldr r0, [r4, #0x1c]
-	bl sub_0216740C
+	bl ovy12_216740c
 	pop {r4, pc}
 	nop
 _021F5B94: .word 0x00007FFF
@@ -225,7 +225,7 @@ ovy156_21f5b9c: ; 0x021F5B9C
 	ldr r0, [r4, #0x30]
 	bl sub_0201362C
 	ldr r0, [r4, #0x1c]
-	bl sub_02167450
+	bl ovy12_2167450
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy156_21f5b9c

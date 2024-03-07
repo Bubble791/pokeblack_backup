@@ -2365,7 +2365,7 @@ ovy168_21dec68: ; 0x021DEC68
 	push {r3, lr}
 	cmp r0, #0
 	beq _021DEC74
-	bl sub_0219C988
+	bl ovy167_0219C988
 	pop {r3, pc}
 _021DEC74:
 	mov r0, #0
@@ -2434,7 +2434,7 @@ ovy168_21dec88: ; 0x021DEC88
 	cmp r0, #0
 	beq _021DECF8
 	add r0, r7, #0
-	bl sub_0219E39C
+	bl ovy167_0219E39C
 	mov r1, #0x24
 	ldrsh r0, [r0, r1]
 	strh r0, [r4, #0x2e]
@@ -2873,7 +2873,7 @@ _021DF01A:
 	ldr r1, [r5]
 	add r0, #0x48
 	ldr r0, [r1, r0]
-	bl sub_0219E39C
+	bl ovy167_0219E39C
 	add r1, r0, #0
 	ldr r2, [r5]
 	add r0, r7, #4
@@ -27348,7 +27348,7 @@ _021EAF68:
 	str r0, [sp, #0x14]
 	mov r5, #0
 	bl sub_021E012C
-	bl sub_0219C988
+	bl ovy167_0219C988
 	cmp r0, #2
 	bne _021EAF7C
 	add r5, r7, #0
@@ -30014,7 +30014,7 @@ ovy168_21ec4d0: ; 0x021EC4D0
 	add r5, r1, #0
 	mov r4, #0
 	bl sub_021E012C
-	bl sub_0219C988
+	bl ovy167_0219C988
 	cmp r0, #2
 	bne _021EC4E8
 	mov r4, #1
@@ -30160,7 +30160,7 @@ _021EC60E:
 	add r1, r6, #0
 	bl ovy168_21ef3f0
 	bl sub_021E012C
-	bl sub_0219C988
+	bl ovy167_0219C988
 _021EC61E:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
