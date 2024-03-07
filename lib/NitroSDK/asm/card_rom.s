@@ -68,7 +68,7 @@ _0206F924: .word 0xFFFFDFFF
 	thumb_func_start CARDi_IsNormalMode
 CARDi_IsNormalMode: ; 0x0206F928
 	push {r4, lr}
-	bl sub_0206EEE8
+	bl CARD_GetOwnRomHeaderTWL
 	add r4, r0, #0
 	bl OS_IsRunOnTwl
 	cmp r0, #0
@@ -592,8 +592,8 @@ CARDi_ReadRom: ; 0x0206FD24
 	add r6, r2, #0
 	add r7, r3, #0
 	ldr r5, _0206FE2C ; =0x0214B440
-	bl sub_0206EEB0
-	bl sub_0206F018
+	bl CARD_CheckEnabled
+	bl CARDi_GetAccessLevel
 	mov r1, #4
 	tst r0, r1
 	bne _0206FD42
@@ -603,9 +603,9 @@ _0206FD42:
 	ldr r3, [sp, #0x1c]
 	add r0, r5, #0
 	mov r1, #1
-	bl sub_0206F1C0
+	bl CARDi_WaitForTask
 	add r0, r4, #0
-	bl sub_0206F25C
+	bl CARDi_GetDmaInterface
 	ldr r1, _0206FE30 ; =0x0000050C
 	cmp r0, #0
 	str r0, [r5, r1]
@@ -683,7 +683,7 @@ _0206FDD8:
 	add r1, r1, #4
 	ldr r1, [r5, r1]
 	ldr r2, [r5, #0x10]
-	bl sub_0206F2AC
+	bl CARDi_DCInvalidateSmart
 _0206FDF0:
 	add r0, r6, #0
 	blx OS_RestoreInterrupts

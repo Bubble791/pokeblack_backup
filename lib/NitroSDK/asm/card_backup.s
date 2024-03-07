@@ -678,8 +678,8 @@ CARDi_BeginBackupCommand: ; 0x0206F7D4
 	add r4, r1, #0
 	add r6, r2, #0
 	blx sub_02004EB0
-	bl sub_0206EEB0
-	bl sub_0206F018
+	bl CARD_CheckEnabled
+	bl CARDi_GetAccessLevel
 	and r0, r5
 	cmp r5, r0
 	beq _0206F7F4
@@ -689,7 +689,7 @@ _0206F7F4:
 	mov r1, #1
 	add r2, r4, #0
 	add r3, r6, #0
-	bl sub_0206F1C0
+	bl CARDi_WaitForTask
 	pop {r4, r5, r6, pc}
 	nop
 _0206F804: .word _version_NINTENDO_BACKUP

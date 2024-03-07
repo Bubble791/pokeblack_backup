@@ -25,6 +25,8 @@ Static main
     Object asm/asm_22_thumb.o
     Object asm/asm_23_arm.o
     Object asm/asm_24_thumb.o
+    Object lib/NitroSDK/asm/card_api.o
+    Object lib/NitroSDK/asm/card_utility.o
     Object lib/NitroSDK/asm/card_backup.o
     Object lib/NitroSDK/asm/card_rom.o
     Object lib/NitroSDK/asm/card_pullOut.o

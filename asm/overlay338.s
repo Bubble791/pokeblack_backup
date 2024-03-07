@@ -16,7 +16,7 @@ ovy338_217c940: ; 0x0217C940
 	ldr r4, _0217CA18 ; =0x0217CB20
 	strb r0, [r2]
 	ldrh r0, [r4]
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	ldrh r0, [r4]
 	bl OS_LockCard
 	bl OS_GetTick
@@ -87,7 +87,7 @@ _0217C9BA:
 	ldrh r0, [r4]
 	bl sub_0207A1A0
 	ldrh r0, [r4]
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	add r0, sp, #0
 	ldrb r0, [r0]
 	pop {r3, r4, r5, r6, r7, pc}

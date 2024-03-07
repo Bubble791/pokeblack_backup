@@ -8502,7 +8502,7 @@ _021A12AA:
 	bl FS_FindArchive
 	cmp r6, r0
 	bne _021A12F6
-	bl sub_0206EEE8
+	bl CARD_GetOwnRomHeaderTWL
 	mov r1, #0x1e
 	lsl r1, r1, #4
 	add r3, r1, #4

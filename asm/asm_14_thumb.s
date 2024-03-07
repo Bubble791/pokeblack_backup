@@ -5235,7 +5235,7 @@ sub_0203BF7C: ; 0x0203BF7C
 _0203BF96:
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	ldr r5, _0203BFD0 ; =0x00FF1302
 	add r0, r5, #0
 	bl CARD_IdentifyBackup
@@ -5245,7 +5245,7 @@ _0203BF96:
 _0203BFAC:
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
 	blx OS_ReleaseLockID
@@ -5303,7 +5303,7 @@ sub_0203BFF8: ; 0x0203BFF8
 _0203C01C:
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	mov r2, #0
 	str r2, [sp]
 	mov r1, #1
@@ -5321,7 +5321,7 @@ _0203C01C:
 	add r6, r0, #0
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
 	blx OS_ReleaseLockID
@@ -5370,7 +5370,7 @@ sub_0203C07C: ; 0x0203C07C
 _0203C0A0:
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	ldr r1, _0203C110 ; =0x02141860
 	mov r0, #1
 	str r0, [r1]
@@ -5434,7 +5434,7 @@ sub_0203C11C: ; 0x0203C11C
 	add r4, r2, #0
 	cmp r1, #1
 	bne _0203C17E
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	add r0, r6, #0
 	blx OS_ReleaseLockID
 	ldr r0, _0203C188 ; =0x02141860
@@ -5501,7 +5501,7 @@ _0203C1A0:
 	cmp r0, #1
 	bne _0203C1B8
 	add r0, r4, #0
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	add r0, r4, #0
 	blx OS_ReleaseLockID
 	mov r0, #0
@@ -5518,7 +5518,7 @@ sub_0203C1C0: ; 0x0203C1C0
 	add r5, r0, #0
 	add r6, r1, #0
 	add r4, r2, #0
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	add r0, r5, #0
 	blx OS_ReleaseLockID
 	mov r1, #0

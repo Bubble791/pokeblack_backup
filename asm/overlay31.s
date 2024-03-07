@@ -1706,7 +1706,7 @@ ovy31_21764cc: ; 0x021764CC
 	mov r0, #0
 	strb r0, [r5]
 	ldrh r0, [r4]
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	ldrh r0, [r4]
 	bl OS_LockCard
 	ldr r2, _0217658C ; =0x040001A0
@@ -1780,7 +1780,7 @@ _02176566:
 	ldrh r0, [r4]
 	bl sub_0207A1A0
 	ldrh r0, [r4]
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	add r0, r6, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -1807,7 +1807,7 @@ ovy31_217659c: ; 0x0217659C
 	ldr r4, _02176618 ; =0x02176788
 	strb r0, [r2]
 	ldrh r0, [r4]
-	bl sub_0206EF4C
+	bl CARD_LockBackup
 	ldrh r0, [r4]
 	bl OS_LockCard
 	ldr r2, _0217661C ; =0x040001A0
@@ -1849,7 +1849,7 @@ _021765FA:
 	ldrh r0, [r4]
 	bl sub_0207A1A0
 	ldrh r0, [r4]
-	bl sub_0206EF58
+	bl CARD_UnlockBackup
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02176610: .word 0x02176A38

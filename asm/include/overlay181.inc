@@ -687,7 +687,7 @@
 .public FS_FindArchive
 .public OS_IsRunOnTwl
 .public FS_FindArchive
-.public sub_0206EEE8
+.public CARD_GetOwnRomHeaderTWL
 .public FS_InitFile
 .public FS_OpenFileDirect
 .public FS_ReadFile
