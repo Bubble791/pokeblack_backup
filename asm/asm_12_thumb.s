@@ -26866,7 +26866,7 @@ sub_02011BDC: ; 0x02011BDC
 	bl sub_02042B20
 	cmp r0, #0
 	beq _02011BF2
-	bl sub_02151DEC
+	bl ovy11_02151DEC
 	cmp r0, #0
 	bne _02011BFA
 _02011BF2:

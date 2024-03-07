@@ -3,6 +3,13 @@
 	.include "global.inc"
 
 	.text
+	thumb_func_start ovy11_21503C0
+ovy11_21503C0: ; 0x021503C0
+	ldr r3, _021503C4 ; =ovy11_2152078
+	bx r3
+	.align 2, 0
+_021503C4: .word ovy11_2152078
+	thumb_func_end ovy11_21503C0
 
 	thumb_func_start ovy11_21503c8
 ovy11_21503c8: ; 0x021503C8
@@ -307,10 +314,10 @@ _021505A6:
 
 	thumb_func_start ovy11_21505AC
 ovy11_21505AC: ; 0x021505AC
-	ldr r3, _021505B0 ; =sub_02151DEC
+	ldr r3, _021505B0 ; =ovy11_02151DEC
 	bx r3
 	.align 2, 0
-_021505B0: .word sub_02151DEC
+_021505B0: .word ovy11_02151DEC
 	thumb_func_end ovy11_21505AC
 _021505B4:
 	.byte 0x00, 0x4B, 0x18, 0x47, 0x09, 0x1E, 0x15, 0x02, 0x00, 0x4B, 0x18, 0x47
@@ -1935,7 +1942,7 @@ _0215126E:
 	ldr r1, _02151374 ; =0xFFFF5BF1
 	cmp r0, r1
 	blt _0215127E
-	bl sub_021BEC44
+	bl ovy260_21bec44
 _0215127E:
 	ldr r1, [r4]
 	cmp r1, #0
@@ -1952,7 +1959,7 @@ _0215128E:
 	ldr r1, _02151374 ; =0xFFFF5BF1
 	cmp r0, r1
 	blt _0215132C
-	bl sub_021BEC44
+	bl ovy260_21bec44
 _0215129E:
 	b _0215132C
 _021512A0:
@@ -3442,8 +3449,8 @@ _02151DE0: .word 0x00000774
 _02151DE4:
 	.byte 0x00, 0x4B, 0x18, 0x47, 0xB9, 0x29, 0x19, 0x02
 
-	thumb_func_start sub_02151DEC
-sub_02151DEC: ; 0x02151DEC
+	thumb_func_start ovy11_02151DEC
+ovy11_02151DEC: ; 0x02151DEC
 	ldr r0, _02151E00 ; =0x0218BA04
 	ldr r1, [r0]
 	cmp r1, #0
@@ -3457,7 +3464,7 @@ _02151DFA:
 	nop
 _02151E00: .word 0x0218BA04
 _02151E04: .word 0x00000782
-	thumb_func_end sub_02151DEC
+	thumb_func_end ovy11_02151DEC
 _02151E08:
 	.byte 0x04, 0x48, 0x01, 0x68, 0x00, 0x29, 0x02, 0xD0
 	.byte 0x03, 0x48, 0x08, 0x58, 0x70, 0x47, 0x00, 0x20, 0x70, 0x47, 0xC0, 0x46, 0x04, 0xBA, 0x18, 0x02
@@ -58325,7 +58332,7 @@ _0216C96A:
 	ldr r0, [sp]
 	cmp r0, #0
 	beq _0216C98C
-	bl sub_021A2E5C
+	bl ovy189_21a2e5c
 	ldr r0, [r6, #0x28]
 	cmp r0, #0
 	beq _0216C988
@@ -61089,6 +61096,7 @@ _0216DD94:
 	bx lr
 	.align 2, 0
 	thumb_func_end ovy11_216dd50
+
 _0216DD9C:
 	.byte 0x00, 0x4B, 0x18, 0x47
 	.byte 0xF0, 0x29, 0x08, 0x02, 0x00, 0x4B, 0x18, 0x47, 0x08, 0x2A, 0x08, 0x02, 0x00, 0x4B, 0x18, 0x47
@@ -61859,7 +61867,7 @@ _0216E2B0: .word 0x02186FD0
 ovy11_216e2b4: ; 0x02187C70
 	ldr r3, _02187C78 ; =0x0216ddfc
 	bx r3
-	nop
+	.align 2, 0
 _02187C78: .word 0x0216ddfc
 	thumb_func_end ovy11_216e2b4
 

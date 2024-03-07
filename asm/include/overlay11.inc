@@ -84,8 +84,8 @@
 .public sub_020583B0
 .public sub_02058490
 .public sub_021505D4
-.public sub_021BEC44
-.public sub_021BEC44
+.public ovy260_21bec44
+.public ovy260_21bec44
 .public ovy189_21a57dc
 .public sub_0205B198
 .public sub_021505D4
@@ -3062,7 +3062,7 @@
 .public sub_0216E23C
 .public sub_02171588
 .public sub_0217158C
-.public sub_021A2E5C
+.public ovy189_21a2e5c
 .public sub_0216E244
 .public sub_0216C764
 .public sub_0216E23C

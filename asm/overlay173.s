@@ -12508,7 +12508,7 @@ _021A2EDE:
 	add r0, r7, #0
 	pop {r3, r4, r5, r6, r7, pc}
 _021A2F16:
-	bl sub_02151DEC
+	bl ovy11_02151DEC
 	cmp r0, #1
 	bne _021A2F3E
 	bl sub_02151E08

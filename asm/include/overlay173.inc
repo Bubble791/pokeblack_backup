@@ -941,7 +941,7 @@
 .public sub_021A6254
 .public sub_020421AC
 .public sub_02151E24
-.public sub_02151DEC
+.public ovy11_02151DEC
 .public sub_02151E08
 .public sub_02151E40
 .public sub_021A61D0

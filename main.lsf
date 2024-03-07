@@ -201,6 +201,7 @@ Overlay OVY_10
 }
 Overlay OVY_11
 {
+    Address 0x21503c0
     After main
     Object asm/overlay11.o
 }
@@ -1092,9 +1093,9 @@ Overlay OVY_188
 }
 Overlay OVY_189
 {
-    After main
-    Object asm/overlay189_arm.o
+    After OVY_11
     Object asm/overlay189_thumb.o
+    Object asm/overlay189_arm.o
 }
 Overlay OVY_190
 {

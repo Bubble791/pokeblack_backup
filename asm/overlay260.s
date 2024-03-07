@@ -2108,7 +2108,7 @@ _021B3FFE:
 	ldr r1, [r6, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5C94
+	bl ovy262_21c5c94
 _021B4032:
 	add r0, r4, #0
 	add r0, #0xfc
@@ -2378,7 +2378,7 @@ _021B4246:
 	ldr r1, [r6, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5CD4
+	bl ovy262_21c5cd4
 	ldr r0, [r4, #0x24]
 	ldr r1, [r4, #0x10]
 	mov r2, #0x28
@@ -3797,7 +3797,7 @@ _021B4D44:
 	ldr r1, [r6, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5C94
+	bl ovy262_21c5c94
 	ldr r0, [r4, #0x30]
 	bl sub_021B928C
 	mov r0, #7
@@ -3871,7 +3871,7 @@ _021B4DF0:
 	ldr r1, [r6, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5CD4
+	bl ovy262_21c5cd4
 	ldr r0, [r4, #0x24]
 	ldr r1, [r4, #0x10]
 	mov r2, #0x28
@@ -9417,7 +9417,7 @@ _021B78C0:
 	ldr r1, [r5, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5C94
+	bl ovy262_21c5c94
 _021B78F4:
 	add r0, r4, #0
 	add r0, #0xf8
@@ -9676,7 +9676,7 @@ _021B7AEC:
 	ldr r1, [r5, #0x2c]
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_021C5CD4
+	bl ovy262_21c5cd4
 _021B7AFE:
 	mov r1, #0x41
 	lsl r1, r1, #2

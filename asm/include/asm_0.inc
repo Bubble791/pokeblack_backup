@@ -780,7 +780,7 @@
 .public MI_CpuCopy8
 .public sub_02057C50
 .public sub_02042B20
-.public sub_02151DEC
+.public ovy11_02151DEC
 .public sub_0203A15C
 .public MI_CpuFill8
 .public MI_CpuFill8
