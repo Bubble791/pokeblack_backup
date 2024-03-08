@@ -161,7 +161,7 @@ Overlay OVY_2
 }
 Overlay OVY_3
 {
-    After main
+    Address 0x214f500
     Object asm/overlay3.o
 }
 Overlay OVY_4
