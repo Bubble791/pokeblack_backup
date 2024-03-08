@@ -736,8 +736,8 @@ ovy168_21ddfd4: ; 0x021DDFD4
 	bx lr
 	thumb_func_end ovy168_21ddfd4
 
-	thumb_func_start sub_021DE004
-sub_021DE004: ; 0x021DE004
+	thumb_func_start ovy168_21de004
+ovy168_21de004: ; 0x021DE004
 	add r0, #0xb4
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -747,7 +747,7 @@ sub_021DE004: ; 0x021DE004
 _021DE010:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_021DE004
+	thumb_func_end ovy168_21de004
 
 	thumb_func_start ovy168_21de014
 ovy168_21de014: ; 0x021DE014
@@ -1596,8 +1596,8 @@ ovy168_21de664: ; 0x021DE664
 	bx lr
 	thumb_func_end ovy168_21de664
 
-	thumb_func_start sub_021DE694
-sub_021DE694: ; 0x021DE694
+	thumb_func_start ovy168_21de694
+ovy168_21de694: ; 0x021DE694
 	add r0, #0x60
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -1607,10 +1607,10 @@ sub_021DE694: ; 0x021DE694
 _021DE6A0:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_021DE694
+	thumb_func_end ovy168_21de694
 
-	thumb_func_start sub_021DE6A4
-sub_021DE6A4: ; 0x021DE6A4
+	thumb_func_start ovy168_21de6a4
+ovy168_21de6a4: ; 0x021DE6A4
 	ldr r3, [r0, #0x68]
 	mov r2, #1
 	bic r3, r2
@@ -1619,7 +1619,7 @@ sub_021DE6A4: ; 0x021DE6A4
 	orr r1, r3
 	str r1, [r0, #0x68]
 	bx lr
-	thumb_func_end sub_021DE6A4
+	thumb_func_end ovy168_21de6a4
 
 	thumb_func_start ovy168_21de6b4
 ovy168_21de6b4: ; 0x021DE6B4
@@ -1666,7 +1666,7 @@ ovy168_21de6b4: ; 0x021DE6B4
 	add r1, r4, #0
 	add r0, #0x18
 	add r1, #0x24
-	bl sub_021DEA80
+	bl ovy168_21dea80
 	add r0, r4, #0
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
@@ -1692,13 +1692,13 @@ ovy168_21de738: ; 0x021DE738
 	.align 2, 0
 	thumb_func_end ovy168_21de738
 
-	thumb_func_start sub_021DE74C
-sub_021DE74C: ; 0x021DE74C
+	thumb_func_start ovy168_21de74c
+ovy168_21de74c: ; 0x021DE74C
 	ldr r3, _021DE750 ; =ovy168_21deab4
 	bx r3
 	.align 2, 0
 _021DE750: .word ovy168_21deab4
-	thumb_func_end sub_021DE74C
+	thumb_func_end ovy168_21de74c
 
 	thumb_func_start ovy168_21de754
 ovy168_21de754: ; 0x021DE754
@@ -2105,8 +2105,8 @@ ovy168_21de980: ; 0x021DE980
 _021DEA7C: .word FX_SinCosTable_
 	thumb_func_end ovy168_21de980
 
-	thumb_func_start sub_021DEA80
-sub_021DEA80: ; 0x021DEA80
+	thumb_func_start ovy168_21dea80
+ovy168_21dea80: ; 0x021DEA80
 	ldr r2, _021DEA98 ; =0x00006B33
 	str r2, [r0]
 	str r2, [r0, #4]
@@ -2122,10 +2122,10 @@ sub_021DEA80: ; 0x021DEA80
 _021DEA98: .word 0x00006B33
 _021DEA9C: .word 0x000114CD
 _021DEAA0: .word 0x0000299A
-	thumb_func_end sub_021DEA80
+	thumb_func_end ovy168_21dea80
 
-	thumb_func_start sub_021DEAA4
-sub_021DEAA4: ; 0x021DEAA4
+	thumb_func_start ovy168_21deaa4
+ovy168_21deaa4: ; 0x021DEAA4
 	ldr r0, [r0, #0x14]
 	cmp r0, #0
 	beq _021DEAAE
@@ -2135,7 +2135,7 @@ _021DEAAE:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021DEAA4
+	thumb_func_end ovy168_21deaa4
 
 	thumb_func_start ovy168_21deab4
 ovy168_21deab4: ; 0x021DEAB4
@@ -2377,7 +2377,7 @@ ovy168_21dec78: ; 0x021DEC78
 	push {r3, lr}
 	cmp r0, #0
 	beq _021DEC84
-	bl sub_0219C99C
+	bl ovy167_219c99c
 	pop {r3, pc}
 _021DEC84:
 	mov r0, #0
@@ -2474,28 +2474,28 @@ _021DED2C:
 	cmp r1, #4
 	blo _021DED2C
 	add r0, r5, #0
-	bl sub_0219BEEC
+	bl ovy167_219beec
 	cmp r0, #1
 	bne _021DEDA0
 	add r0, r5, #0
-	bl sub_0219C850
+	bl ovy167_219c850
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_0219C860
+	bl ovy167_219c860
 	str r0, [sp, #0x18]
 	add r0, r5, #0
-	bl sub_0219C86C
+	bl ovy167_219c86c
 	add r7, r0, #0
 	ldr r1, [sp, #0x18]
 	add r0, r5, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	lsl r1, r6, #2
 	strh r0, [r4, r1]
 	cmp r7, #4
 	beq _021DED78
 	add r0, r5, #0
 	add r1, r7, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	mov r1, #1
 	eor r1, r6
 	lsl r1, r1, #2
@@ -2503,49 +2503,49 @@ _021DED2C:
 _021DED78:
 	add r0, r5, #0
 	mov r1, #0
-	bl sub_0219C8B8
+	bl ovy167_219c8b8
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	add r4, sp, #0x1c
 	strh r0, [r4, #2]
 	add r0, r5, #0
 	mov r1, #1
-	bl sub_0219C8B8
+	bl ovy167_219c8b8
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	strh r0, [r4, #6]
 	b _021DEDC8
 _021DEDA0:
 	add r0, r5, #0
-	bl sub_0219C860
+	bl ovy167_219c860
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	add r4, sp, #0x1c
 	strh r0, [r4]
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_0219C8B8
+	bl ovy167_219c8b8
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	strh r0, [r4, #2]
 	strh r6, [r4, #4]
 	strh r6, [r4, #6]
 _021DEDC8:
 	add r0, r5, #0
-	bl sub_0219BD80
+	bl ovy167_219bd80
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_0219BED4
+	bl ovy167_219bed4
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_0219BF60
+	bl ovy167_219bf60
 	add r7, r0, #0
 	add r0, r5, #0
-	bl sub_0219BEEC
+	bl ovy167_219beec
 	add r3, r0, #0
 	add r0, sp, #0x1c
 	str r0, [sp]
@@ -2686,7 +2686,7 @@ _021DEE30:
 	cmp r0, #2
 	bne _021DEF22
 	ldr r0, [r4, #0x28]
-	bl sub_0219C9B0
+	bl ovy167_219c9b0
 	add r1, r0, #0
 	ldr r2, _021DF128 ; =0x021F3F70
 	ldr r0, [r7]
@@ -2752,7 +2752,7 @@ _021DEF62:
 	beq _021DEFA8
 	mov r1, #1
 	lsl r1, r1, #0xa
-	bl sub_0219DAC4
+	bl ovy167_219dac4
 	ldrh r1, [r4, #0x2c]
 	str r1, [sp]
 	ldrh r1, [r4, #0x2e]
@@ -2909,7 +2909,7 @@ _021DF0C8:
 	beq _021DF0FE
 	mov r1, #2
 	lsl r1, r1, #0xa
-	bl sub_0219DAC4
+	bl ovy167_219dac4
 	cmp r0, #0
 	beq _021DF0F4
 	add r1, r4, #0
@@ -3016,7 +3016,7 @@ ovy168_21df138: ; 0x021DF138
 	ldr r1, [r5]
 	add r0, #0x28
 	ldr r0, [r1, r0]
-	bl sub_021F26D8
+	bl ovy168_21f26d8
 	bl sub_0204FB4C
 	ldr r1, [r5]
 	sub r0, r4, #4
@@ -3079,7 +3079,7 @@ ovy168_21df214: ; 0x021DF214
 	ldr r1, [r5]
 	add r0, #0x14
 	ldr r0, [r1, r0]
-	bl sub_021DE74C
+	bl ovy168_21de74c
 	add r0, r4, #0
 	ldr r1, [r5]
 	add r0, #0x1c
@@ -3089,7 +3089,7 @@ ovy168_21df214: ; 0x021DF214
 	ldr r1, [r5]
 	add r0, #0x18
 	ldr r0, [r1, r0]
-	bl sub_021E98A4
+	bl ovy168_21e98a4
 	bl sub_02049A98
 	bl sub_02049AF0
 	add r0, r4, #0
@@ -3105,7 +3105,7 @@ ovy168_21df214: ; 0x021DF214
 	ldr r0, [r5]
 	add r4, #8
 	ldr r0, [r0, r4]
-	bl sub_021E6B88
+	bl ovy168_21e6b88
 	ldr r4, _021DF2C4 ; =0x04000604
 	ldrh r0, [r4]
 	bl sub_0204F954
@@ -3317,7 +3317,7 @@ ovy168_21df460: ; 0x021DF460
 	bne _021DF4A6
 	add r4, sp, #4
 	add r0, r4, #0
-	bl sub_021E1234
+	bl ovy168_21e1234
 	ldr r1, [r5, #0x10]
 	add r0, sp, #4
 	strb r1, [r0]
@@ -3482,7 +3482,7 @@ _021DF5BA:
 _021DF5BC:
 	str r0, [r4, #0x10]
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, _021DF5FC ; =0x021f4240
 	mov r7, #0x7d
 	add r6, r0, #0
@@ -3527,7 +3527,7 @@ ovy168_21df618: ; 0x021DF618
 	bl ovy168_21df35c
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_021E04D8
+	bl ovy168_21e04d8
 	pop {r4, pc}
 	.align 2, 0
 _021DF62C: .word 0x0000023B
@@ -3542,7 +3542,7 @@ ovy168_21df630: ; 0x021DF630
 	add r5, r1, #0
 	add r4, r2, #0
 	add r6, r3, #0
-	bl sub_021E1234
+	bl ovy168_21e1234
 	add r0, sp, #4
 	strb r4, [r0, #3]
 	ldr r1, [sp, #0x28]
@@ -3579,7 +3579,7 @@ ovy168_21df678: ; 0x021DF678
 	add r5, r0, #0
 	add r0, r6, #0
 	add r4, r1, #0
-	bl sub_021E1234
+	bl ovy168_21e1234
 	add r0, sp, #4
 	strh r4, [r0, #0xc]
 	str r6, [sp]
@@ -3648,7 +3648,7 @@ ovy168_21df6b4: ; 0x021DF6B4
 	add r3, r5, #0
 	bl ovy168_21e818c
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	mov r1, #0x7e
 	lsl r1, r1, #2
 	ldr r2, [r6]
@@ -3758,8 +3758,8 @@ _021DF81C:
 	.byte 0x0A, 0x1C, 0x01, 0x68, 0x19, 0x20, 0x00, 0x01, 0x08, 0x58, 0x19, 0x1C, 0x01, 0x4B, 0x18, 0x47
 	.byte 0x40, 0x42, 0x1F, 0x02, 0x95, 0x6B, 0x1E, 0x02
 
-	thumb_func_start sub_021DF838
-sub_021DF838: ; 0x021DF838
+	thumb_func_start ovy168_21df838
+ovy168_21df838: ; 0x021DF838
 	add r1, r0, #0
 	ldr r0, _021DF848 ; =0x021f4240
 	ldr r3, _021DF84C ; =ovy168_21e6e58
@@ -3771,7 +3771,7 @@ sub_021DF838: ; 0x021DF838
 	.align 2, 0
 _021DF848: .word 0x021f4240
 _021DF84C: .word ovy168_21e6e58
-	thumb_func_end sub_021DF838
+	thumb_func_end ovy168_21df838
 
 	thumb_func_start ovy168_21df850
 ovy168_21df850: ; 0x021DF850
@@ -3832,7 +3832,7 @@ _021DF8AA:
 	ldr r0, [r0, r1]
 	mov r1, #0
 	mov r5, #0
-	bl sub_0219D97C
+	bl ovy167_219d97c
 	bl sub_02008BF0
 	cmp r0, #0
 	beq _021DF8D6
@@ -3844,7 +3844,7 @@ _021DF8C6:
 	sub r1, r1, #4
 	ldr r0, [r0, r1]
 	mov r1, #0
-	bl sub_0219D938
+	bl ovy167_219d938
 	add r5, r0, #0
 _021DF8D6:
 	mov r0, #1
@@ -4104,7 +4104,7 @@ ovy168_21dfafc: ; 0x021DFAFC
 	add r4, r1, #0
 	add r0, r2, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	cmp r0, #0x64
 	bge _021DFB20
 	ldr r0, _021DFB24 ; =0x021f4240
@@ -4124,10 +4124,10 @@ _021DFB28:
 	.byte 0x02, 0x1C, 0x03, 0x48, 0x03, 0x68, 0x69, 0x20
 	.byte 0x80, 0x00, 0x18, 0x58, 0x01, 0x4B, 0x18, 0x47, 0x40, 0x42, 0x1F, 0x02, 0xDD, 0x08, 0x1F, 0x02
 
-	thumb_func_start sub_021DFB40
-sub_021DFB40: ; 0x021DFB40
+	thumb_func_start ovy168_21dfb40
+ovy168_21dfb40: ; 0x021DFB40
 	ldr r0, _021DFB50 ; =0x021f4240
-	ldr r3, _021DFB54 ; =sub_021F1854
+	ldr r3, _021DFB54 ; =ovy168_21f1854
 	ldr r1, [r0]
 	mov r0, #0x69
 	lsl r0, r0, #2
@@ -4135,14 +4135,14 @@ sub_021DFB40: ; 0x021DFB40
 	bx r3
 	nop
 _021DFB50: .word 0x021f4240
-_021DFB54: .word sub_021F1854
-	thumb_func_end sub_021DFB40
+_021DFB54: .word ovy168_21f1854
+	thumb_func_end ovy168_21dfb40
 _021DFB58:
 	.byte 0x03, 0x48, 0x04, 0x4B, 0x01, 0x68, 0x69, 0x20
 	.byte 0x80, 0x00, 0x08, 0x58, 0x18, 0x47, 0xC0, 0x46, 0x40, 0x42, 0x1F, 0x02, 0x7D, 0x0A, 0x1F, 0x02
 
-	thumb_func_start sub_021DFB70
-sub_021DFB70: ; 0x021DFB70
+	thumb_func_start ovy168_21dfb70
+ovy168_21dfb70: ; 0x021DFB70
 	add r3, r0, #0
 	ldr r0, _021DFB84 ; =0x021f4240
 	add r2, r1, #0
@@ -4156,10 +4156,10 @@ sub_021DFB70: ; 0x021DFB70
 	.align 2, 0
 _021DFB84: .word 0x021f4240
 _021DFB88: .word ovy168_21f0ab4
-	thumb_func_end sub_021DFB70
+	thumb_func_end ovy168_21dfb70
 
-	thumb_func_start sub_021DFB8C
-sub_021DFB8C: ; 0x021DFB8C
+	thumb_func_start ovy168_21dfb8c
+ovy168_21dfb8c: ; 0x021DFB8C
 	add r3, r0, #0
 	ldr r0, _021DFBA0 ; =0x021f4240
 	add r2, r1, #0
@@ -4173,7 +4173,7 @@ sub_021DFB8C: ; 0x021DFB8C
 	.align 2, 0
 _021DFBA0: .word 0x021f4240
 _021DFBA4: .word ovy168_21f0af8
-	thumb_func_end sub_021DFB8C
+	thumb_func_end ovy168_21dfb8c
 _021DFBA8:
 	.byte 0x03, 0x1C, 0x04, 0x48, 0x0A, 0x1C, 0x01, 0x68
 	.byte 0x69, 0x20, 0x80, 0x00, 0x08, 0x58, 0x19, 0x1C, 0x01, 0x4B, 0x18, 0x47, 0x40, 0x42, 0x1F, 0x02
@@ -4322,7 +4322,7 @@ _021DFD12:
 	mov r0, #0x65
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_021DE004
+	bl ovy168_21de004
 	add r7, r0, #0
 _021DFD22:
 	cmp r5, #1
@@ -4337,7 +4337,7 @@ _021DFD2E:
 	mov r0, #0x66
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_021DE694
+	bl ovy168_21de694
 	add r6, r0, #0
 _021DFD3E:
 	sub r0, r5, #3
@@ -4403,7 +4403,7 @@ _021DFDA4:
 	mov r0, #0x66
 	lsl r0, r0, #2
 	ldr r0, [r2, r0]
-	bl sub_021DE6A4
+	bl ovy168_21de6a4
 	pop {r3, pc}
 _021DFDB4:
 	mov r1, #1
@@ -4474,7 +4474,7 @@ _021DFE2A:
 	str r7, [r4, #8]
 	str r0, [r4, #0xc]
 	add r0, r7, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r2, _021DFE74 ; =0x021f4240
 	mov r1, #0x7d
 	ldr r6, [r2]
@@ -4515,8 +4515,8 @@ _021DFE8C:
 	.byte 0x0A, 0x1C, 0x01, 0x68, 0x19, 0x20, 0x00, 0x01, 0x08, 0x58, 0x19, 0x1C, 0x01, 0x4B, 0x18, 0x47
 	.byte 0x40, 0x42, 0x1F, 0x02, 0x39, 0x75, 0x1E, 0x02
 
-	thumb_func_start sub_021DFEA8
-sub_021DFEA8: ; 0x021DFEA8
+	thumb_func_start ovy168_21dfea8
+ovy168_21dfea8: ; 0x021DFEA8
 	ldr r1, _021DFEBC ; =0x021f4240
 	sub r0, #8
 	ldr r1, [r1]
@@ -4528,7 +4528,7 @@ sub_021DFEA8: ; 0x021DFEA8
 	bx lr
 	nop
 _021DFEBC: .word 0x021f4240
-	thumb_func_end sub_021DFEA8
+	thumb_func_end ovy168_21dfea8
 _021DFEC0:
 	.byte 0x03, 0x1C, 0x04, 0x48, 0x0A, 0x1C, 0x01, 0x68, 0x1B, 0x20, 0x00, 0x01, 0x08, 0x58, 0x19, 0x1C
 	.byte 0x01, 0x4B, 0x18, 0x47, 0x40, 0x42, 0x1F, 0x02, 0x75, 0x22, 0x1F, 0x02
@@ -4682,7 +4682,7 @@ ovy168_21e0000: ; 0x021E0000
 	ldr r0, [r1, r0]
 	add r1, r4, #0
 	add r2, r3, #0
-	bl sub_021E7154
+	bl ovy168_21e7154
 	ldr r1, [r4]
 	ldr r0, _021E0044 ; =0x00004B33
 	add r0, r1, r0
@@ -4708,17 +4708,17 @@ _021E0048: .word 0x00002299
 _021E004C: .word 0x000099CD
 	thumb_func_end ovy168_21e0000
 
-	thumb_func_start sub_021E0050
-sub_021E0050: ; 0x021E0050
+	thumb_func_start ovy168_21e0050
+ovy168_21e0050: ; 0x021E0050
 	ldr r0, _021E0058 ; =0x021f4240
 	ldr r0, [r0]
 	bx lr
 	nop
 _021E0058: .word 0x021f4240
-	thumb_func_end sub_021E0050
+	thumb_func_end ovy168_21e0050
 
-	thumb_func_start sub_021E005C
-sub_021E005C: ; 0x021E005C
+	thumb_func_start ovy168_21e005c
+ovy168_21e005c: ; 0x021E005C
 	ldr r0, _021E0068 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x67
@@ -4727,10 +4727,10 @@ sub_021E005C: ; 0x021E005C
 	bx lr
 	.align 2, 0
 _021E0068: .word 0x021f4240
-	thumb_func_end sub_021E005C
+	thumb_func_end ovy168_21e005c
 
-	thumb_func_start sub_021E006C
-sub_021E006C: ; 0x021E006C
+	thumb_func_start ovy168_21e006c
+ovy168_21e006c: ; 0x021E006C
 	ldr r0, _021E0078 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x19
@@ -4739,10 +4739,10 @@ sub_021E006C: ; 0x021E006C
 	bx lr
 	.align 2, 0
 _021E0078: .word 0x021f4240
-	thumb_func_end sub_021E006C
+	thumb_func_end ovy168_21e006c
 
-	thumb_func_start sub_021E007C
-sub_021E007C: ; 0x021E007C
+	thumb_func_start ovy168_21e007c
+ovy168_21e007c: ; 0x021E007C
 	ldr r0, _021E0088 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x65
@@ -4751,10 +4751,10 @@ sub_021E007C: ; 0x021E007C
 	bx lr
 	.align 2, 0
 _021E0088: .word 0x021f4240
-	thumb_func_end sub_021E007C
+	thumb_func_end ovy168_21e007c
 
-	thumb_func_start sub_021E008C
-sub_021E008C: ; 0x021E008C
+	thumb_func_start ovy168_21e008c
+ovy168_21e008c: ; 0x021E008C
 	ldr r0, _021E0098 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x69
@@ -4763,10 +4763,10 @@ sub_021E008C: ; 0x021E008C
 	bx lr
 	.align 2, 0
 _021E0098: .word 0x021f4240
-	thumb_func_end sub_021E008C
+	thumb_func_end ovy168_21e008c
 
-	thumb_func_start sub_021E009C
-sub_021E009C: ; 0x021E009C
+	thumb_func_start ovy168_21e009c
+ovy168_21e009c: ; 0x021E009C
 	ldr r0, _021E00A8 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x62
@@ -4775,20 +4775,20 @@ sub_021E009C: ; 0x021E009C
 	bx lr
 	.align 2, 0
 _021E00A8: .word 0x021f4240
-	thumb_func_end sub_021E009C
+	thumb_func_end ovy168_21e009c
 
-	thumb_func_start sub_021E00AC
-sub_021E00AC: ; 0x021E00AC
+	thumb_func_start ovy168_21e00ac
+ovy168_21e00ac: ; 0x021E00AC
 	ldr r0, _021E00B4 ; =0x021f4240
 	ldr r0, [r0]
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
 _021E00B4: .word 0x021f4240
-	thumb_func_end sub_021E00AC
+	thumb_func_end ovy168_21e00ac
 
-	thumb_func_start sub_021E00B8
-sub_021E00B8: ; 0x021E00B8
+	thumb_func_start ovy168_21e00b8
+ovy168_21e00b8: ; 0x021E00B8
 	ldr r0, _021E00C4 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x63
@@ -4797,10 +4797,10 @@ sub_021E00B8: ; 0x021E00B8
 	bx lr
 	.align 2, 0
 _021E00C4: .word 0x021f4240
-	thumb_func_end sub_021E00B8
+	thumb_func_end ovy168_21e00b8
 
-	thumb_func_start sub_021E00C8
-sub_021E00C8: ; 0x021E00C8
+	thumb_func_start ovy168_21e00c8
+ovy168_21e00c8: ; 0x021E00C8
 	ldr r0, _021E00D4 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x1a
@@ -4809,10 +4809,10 @@ sub_021E00C8: ; 0x021E00C8
 	bx lr
 	.align 2, 0
 _021E00D4: .word 0x021f4240
-	thumb_func_end sub_021E00C8
+	thumb_func_end ovy168_21e00c8
 
-	thumb_func_start sub_021E00D8
-sub_021E00D8: ; 0x021E00D8
+	thumb_func_start ovy168_21e00d8
+ovy168_21e00d8: ; 0x021E00D8
 	ldr r0, _021E00E4 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x6d
@@ -4821,10 +4821,10 @@ sub_021E00D8: ; 0x021E00D8
 	bx lr
 	.align 2, 0
 _021E00E4: .word 0x021f4240
-	thumb_func_end sub_021E00D8
+	thumb_func_end ovy168_21e00d8
 
-	thumb_func_start sub_021E00E8
-sub_021E00E8: ; 0x021E00E8
+	thumb_func_start ovy168_21e00e8
+ovy168_21e00e8: ; 0x021E00E8
 	ldr r0, _021E00F4 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x6f
@@ -4833,10 +4833,10 @@ sub_021E00E8: ; 0x021E00E8
 	bx lr
 	.align 2, 0
 _021E00F4: .word 0x021f4240
-	thumb_func_end sub_021E00E8
+	thumb_func_end ovy168_21e00e8
 
-	thumb_func_start sub_021E00F8
-sub_021E00F8: ; 0x021E00F8
+	thumb_func_start ovy168_21e00f8
+ovy168_21e00f8: ; 0x021E00F8
 	ldr r0, _021E0104 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #7
@@ -4845,10 +4845,10 @@ sub_021E00F8: ; 0x021E00F8
 	bx lr
 	.align 2, 0
 _021E0104: .word 0x021f4240
-	thumb_func_end sub_021E00F8
+	thumb_func_end ovy168_21e00f8
 
-	thumb_func_start sub_021E0108
-sub_021E0108: ; 0x021E0108
+	thumb_func_start ovy168_21e0108
+ovy168_21e0108: ; 0x021E0108
 	ldr r0, _021E0114 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x77
@@ -4857,10 +4857,10 @@ sub_021E0108: ; 0x021E0108
 	bx lr
 	.align 2, 0
 _021E0114: .word 0x021f4240
-	thumb_func_end sub_021E0108
+	thumb_func_end ovy168_21e0108
 
-	thumb_func_start sub_021E0118
-sub_021E0118: ; 0x021E0118
+	thumb_func_start ovy168_21e0118
+ovy168_21e0118: ; 0x021E0118
 	ldr r1, _021E0128 ; =0x021f4240
 	lsl r0, r0, #1
 	ldr r1, [r1]
@@ -4871,10 +4871,10 @@ sub_021E0118: ; 0x021E0118
 	bx lr
 	.align 2, 0
 _021E0128: .word 0x021f4240
-	thumb_func_end sub_021E0118
+	thumb_func_end ovy168_21e0118
 
-	thumb_func_start sub_021E012C
-sub_021E012C: ; 0x021E012C
+	thumb_func_start ovy168_21e012c
+ovy168_21e012c: ; 0x021E012C
 	ldr r0, _021E0138 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x79
@@ -4883,10 +4883,10 @@ sub_021E012C: ; 0x021E012C
 	bx lr
 	.align 2, 0
 _021E0138: .word 0x021f4240
-	thumb_func_end sub_021E012C
+	thumb_func_end ovy168_21e012c
 
-	thumb_func_start sub_021E013C
-sub_021E013C: ; 0x021E013C
+	thumb_func_start ovy168_21e013c
+ovy168_21e013c: ; 0x021E013C
 	ldr r0, _021E0148 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x1e
@@ -4895,7 +4895,7 @@ sub_021E013C: ; 0x021E013C
 	bx lr
 	.align 2, 0
 _021E0148: .word 0x021f4240
-	thumb_func_end sub_021E013C
+	thumb_func_end ovy168_21e013c
 _021E014C:
 	.byte 0x03, 0x48, 0x04, 0x4B
 	.byte 0x01, 0x68, 0x69, 0x20, 0x80, 0x00, 0x08, 0x58, 0x18, 0x47, 0xC0, 0x46, 0x40, 0x42, 0x1F, 0x02
@@ -4910,7 +4910,7 @@ ovy168_21e0164: ; 0x021E0164
 	ldr r0, [r4]
 	lsl r6, r6, #2
 	ldr r0, [r0, r6]
-	bl sub_021F1734
+	bl ovy168_21f1734
 	cmp r0, #0
 	beq _021E0188
 	ldr r0, [r4]
@@ -4953,12 +4953,12 @@ ovy168_21e01c4: ; 0x021E01C4
 	ldr r2, [r5]
 	sub r0, #0x58
 	ldr r0, [r2, r0]
-	bl sub_021F1758
+	bl ovy168_21f1758
 	add r0, r4, #0
 	ldr r1, [r5]
 	sub r0, #0x58
 	ldr r0, [r1, r0]
-	bl sub_021F1734
+	bl ovy168_21f1734
 	cmp r0, #0
 	bne _021E01FC
 	ldr r0, [r5]
@@ -4976,7 +4976,7 @@ _021E0200: .word 0x021f4240
 ovy168_21e0204: ; 0x021E0204
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_021E0050
+	bl ovy168_21e0050
 	mov r1, #0x66
 	lsl r1, r1, #2
 	ldr r0, [r0, r1]
@@ -4986,8 +4986,8 @@ ovy168_21e0204: ; 0x021E0204
 	.align 2, 0
 	thumb_func_end ovy168_21e0204
 
-	thumb_func_start sub_021E021C
-sub_021E021C: ; 0x021E021C
+	thumb_func_start ovy168_21e021c
+ovy168_21e021c: ; 0x021E021C
 	ldr r0, _021E0228 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x7f
@@ -4996,7 +4996,7 @@ sub_021E021C: ; 0x021E021C
 	bx lr
 	.align 2, 0
 _021E0228: .word 0x021f4240
-	thumb_func_end sub_021E021C
+	thumb_func_end ovy168_21e021c
 
 	thumb_func_start ovy168_21e022c
 ovy168_21e022c: ; 0x021E022C
@@ -5007,7 +5007,7 @@ ovy168_21e022c: ; 0x021E022C
 	mov r0, #0x69
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_021F1734
+	bl ovy168_21f1734
 	cmp r0, #1
 	bne _021E0246
 	bl sub_02005F0C
@@ -5053,8 +5053,8 @@ _021E0290: .word 0x021f4240
 _021E0294: .word 0xFC03FFFF
 	thumb_func_end ovy168_21e0274
 
-	thumb_func_start sub_021E0298
-sub_021E0298: ; 0x021E0298
+	thumb_func_start ovy168_21e0298
+ovy168_21e0298: ; 0x021E0298
 	ldr r0, _021E02A8 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x7d
@@ -5065,7 +5065,7 @@ sub_021E0298: ; 0x021E0298
 	bx lr
 	.align 2, 0
 _021E02A8: .word 0x021f4240
-	thumb_func_end sub_021E0298
+	thumb_func_end ovy168_21e0298
 
 	thumb_func_start ovy168_21e02ac
 ovy168_21e02ac: ; 0x021E02AC
@@ -5088,8 +5088,8 @@ _021E02C8: .word 0x021f4240
 _021E02CC: .word 0xFBFFFFFF
 	thumb_func_end ovy168_21e02ac
 
-	thumb_func_start sub_021E02D0
-sub_021E02D0: ; 0x021E02D0
+	thumb_func_start ovy168_21e02d0
+ovy168_21e02d0: ; 0x021E02D0
 	ldr r0, _021E02E0 ; =0x021f4240
 	ldr r1, [r0]
 	mov r0, #0x7d
@@ -5100,7 +5100,7 @@ sub_021E02D0: ; 0x021E02D0
 	bx lr
 	.align 2, 0
 _021E02E0: .word 0x021f4240
-	thumb_func_end sub_021E02D0
+	thumb_func_end ovy168_21e02d0
 
 	thumb_func_start ovy168_21e02e4
 ovy168_21e02e4: ; 0x021E02E4
@@ -5113,7 +5113,7 @@ ovy168_21e02e4: ; 0x021E02E4
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	beq _021E02FC
-	bl sub_0219DB08
+	bl ovy167_219db08
 	add r2, r0, #0
 _021E02FC:
 	add r0, r2, #0
@@ -5133,7 +5133,7 @@ ovy168_21e0304: ; 0x021E0304
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	beq _021E031C
-	bl sub_0219DB28
+	bl ovy167_219db28
 	add r2, r0, #0
 _021E031C:
 	add r0, r2, #0
@@ -5200,8 +5200,8 @@ ovy168_21e035c: ; 0x021E035C
 _021E0388: .word 0x021f4240
 	thumb_func_end ovy168_21e035c
 
-	thumb_func_start sub_021E038C
-sub_021E038C: ; 0x021E038C
+	thumb_func_start ovy168_21e038c
+ovy168_21e038c: ; 0x021E038C
 	ldr r1, _021E03A8 ; =0x021f4240
 	mov r2, #0
 	ldr r3, [r1]
@@ -5219,13 +5219,13 @@ _021E03A2:
 	bx lr
 	nop
 _021E03A8: .word 0x021f4240
-	thumb_func_end sub_021E038C
+	thumb_func_end ovy168_21e038c
 
 	thumb_func_start ovy168_21e03ac
 ovy168_21e03ac: ; 0x021E03AC
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	bl sub_021E038C
+	bl ovy168_21e038c
 	add r4, r0, #0
 	cmp r5, #0
 	beq _021E03F8
@@ -5342,7 +5342,7 @@ ovy168_21e0468: ; 0x021E0468
 	ldr r0, [r1, r0]
 	mov r1, #1
 	lsl r1, r1, #0xa
-	bl sub_0219DAC4
+	bl ovy167_219dac4
 	cmp r0, #0
 	beq _021E0494
 	add r4, #0x11
@@ -5386,8 +5386,8 @@ ovy168_21e04b0: ; 0x021E04B0
 _021E04D4: .word 0x021f4240
 	thumb_func_end ovy168_21e04b0
 
-	thumb_func_start sub_021E04D8
-sub_021E04D8: ; 0x021E04D8
+	thumb_func_start ovy168_21e04d8
+ovy168_21e04d8: ; 0x021E04D8
 	ldr r2, _021E04E8 ; =0x021f4240
 	lsl r0, r0, #2
 	ldr r2, [r2]
@@ -5398,7 +5398,7 @@ sub_021E04D8: ; 0x021E04D8
 	bx lr
 	.align 2, 0
 _021E04E8: .word 0x021f4240
-	thumb_func_end sub_021E04D8
+	thumb_func_end ovy168_21e04d8
 _021E04EC:
 	.byte 0x03, 0x49, 0x80, 0x00
 	.byte 0x09, 0x68, 0x09, 0x18, 0x22, 0x20, 0x00, 0x01, 0x08, 0x58, 0x70, 0x47, 0x40, 0x42, 0x1F, 0x02
@@ -5582,7 +5582,7 @@ ovy168_21e0668: ; 0x021E0668
 	push {r3, r4, r5, lr}
 	bl sub_0203A6D0
 	ldr r0, [r0]
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, _021E069C ; =0x021f4240
 	mov r4, #0x7d
 	ldr r2, [r1]
@@ -5901,7 +5901,7 @@ ovy168_21e08e8: ; 0x021E08E8
 	push {r3, r4, r5, lr}
 	bl sub_0203A6D0
 	ldr r0, [r0]
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, _021E0918 ; =0x021f4240
 	mov r4, #0x7d
 	ldr r2, [r1]
@@ -5997,7 +5997,7 @@ ovy168_21e09a0: ; 0x021E09A0
 	push {r3, r4, r5, lr}
 	bl sub_0203A6D0
 	ldr r0, [r0, #8]
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, _021E09D0 ; =0x021f4240
 	mov r4, #0x7d
 	ldr r2, [r1]
@@ -6143,7 +6143,7 @@ _021E0AA2:
 	ldr r0, [r1, r0]
 	mov r1, #1
 	lsl r1, r1, #0xa
-	bl sub_0219DAC4
+	bl ovy167_219dac4
 	cmp r0, #0
 	beq _021E0AF0
 	mov r6, #0
@@ -6503,13 +6503,13 @@ _021E0D44:
 	.align 2, 0
 	thumb_func_end ovy168_21e0c50
 
-	thumb_func_start sub_021E0D4C
-sub_021E0D4C: ; 0x021E0D4C
+	thumb_func_start ovy168_21e0d4c
+ovy168_21e0d4c: ; 0x021E0D4C
 	mov r1, #1
 	lsl r1, r0
 	add r0, r1, #0
 	bx lr
-	thumb_func_end sub_021E0D4C
+	thumb_func_end ovy168_21e0d4c
 
 	thumb_func_start ovy168_21e0d54
 ovy168_21e0d54: ; 0x021E0D54
@@ -6682,7 +6682,7 @@ _021E0E86:
 	beq _021E0EC2
 	mov r0, #1
 	mov r1, #2
-	bl sub_021DFB70
+	bl ovy168_21dfb70
 	ldr r0, [r5]
 	lsl r0, r0, #0x19
 	lsr r0, r0, #0x1f
@@ -6805,7 +6805,7 @@ _021E0F78:
 	sub r2, #0x4c
 	str r0, [r4, r1]
 	ldrh r0, [r4, r2]
-	bl sub_021E6798
+	bl ovy168_21e6798
 	cmp r0, #0
 	bne _021E0F96
 	mov r0, #0
@@ -6847,7 +6847,7 @@ _021E0F96:
 	beq _021E0FE4
 	mov r0, #0
 	mov r1, #2
-	bl sub_021DFB70
+	bl ovy168_21dfb70
 _021E0FE4:
 	mov r0, #1
 	mov r1, #0
@@ -6927,7 +6927,7 @@ _021E107A:
 	add r6, r6, r0
 _021E1082:
 	mov r7, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	add r1, #0xdc
 	ldr r1, [r1]
@@ -6954,7 +6954,7 @@ _021E10AC:
 	ldr r1, _021E11C8 ; =0x0000010B
 	cmp r0, r1
 	beq _021E10CE
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	add r1, #0xdc
 	ldr r1, [r1]
@@ -7149,8 +7149,8 @@ _021E122E:
 	.align 2, 0
 	thumb_func_end ovy168_21e1214
 
-	thumb_func_start sub_021E1234
-sub_021E1234: ; 0x021E1234
+	thumb_func_start ovy168_21e1234
+ovy168_21e1234: ; 0x021E1234
 	mov r1, #0
 	strb r1, [r0]
 	strb r1, [r0, #1]
@@ -7161,7 +7161,7 @@ sub_021E1234: ; 0x021E1234
 	strh r1, [r0, #0xc]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021E1234
+	thumb_func_end ovy168_21e1234
 
 	thumb_func_start ovy168_21e1248
 ovy168_21e1248: ; 0x021E1248
@@ -7175,7 +7175,7 @@ ovy168_21e1248: ; 0x021E1248
 	ldr r7, [sp, #0x3c]
 	bl sub_020159DC
 	add r4, r0, #0
-	bl sub_021E02D0
+	bl ovy168_21e02d0
 	cmp r0, #1
 	beq _021E1322
 	mov r0, #1
@@ -7546,7 +7546,7 @@ _021E1530: ; jump table
 	.short _021E15F2 - _021E1530 - 2 ; case 11
 	.short _021E1612 - _021E1530 - 2 ; case 12
 _021E154A:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r5, #0xf
 	bne _021E1558
 	add r1, r4, #0
@@ -7636,7 +7636,7 @@ _021E15D8:
 	mov r5, #0x13
 	b _021E16C4
 _021E15DC:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #0
 	beq _021E15E8
 	cmp r0, #3
@@ -7648,13 +7648,13 @@ _021E15E8:
 	ldr r0, [r4, r0]
 	pop {r3, r4, r5, r6, r7, pc}
 _021E15F2:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #0
 	beq _021E15FE
 	cmp r0, #3
 	bne _021E1610
 _021E15FE:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	bl ovy168_21e6ecc
 	mov r0, #0x8f
 	lsl r0, r0, #2
@@ -7664,7 +7664,7 @@ _021E15FE:
 _021E1610:
 	b _021E16C2
 _021E1612:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #0
 	beq _021E161E
 	cmp r0, #3
@@ -7685,7 +7685,7 @@ _021E1626:
 _021E1634:
 	b _021E15B4
 _021E1636:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	add r1, r4, #0
 	add r1, #0xdc
 	ldr r5, [r1]
@@ -7756,7 +7756,7 @@ _021E16A6:
 	and r5, r0
 	b _021E16C4
 _021E16B4:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #0
 	beq _021E16C0
 	cmp r0, #3
@@ -7823,7 +7823,7 @@ _021E1724:
 	str r0, [sp, #0x18]
 	b _021E185E
 _021E1728:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #3
 	bne _021E1738
 	sub r1, r5, #2
@@ -7967,7 +7967,7 @@ _021E181A:
 _021E1834:
 	add r0, sp, #0x1c
 	add r1, sp, #0x10
-	bl sub_021DEA80
+	bl ovy168_21dea80
 	ldr r0, [r4]
 	lsl r0, r0, #0x12
 	lsr r0, r0, #0x1f
@@ -7993,13 +7993,13 @@ _021E185E:
 	beq _021E1878
 	b _021E188A
 _021E186A:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	add r1, sp, #0x1c
 	add r2, sp, #0x10
 	bl ovy168_21de754
 	b _021E188A
 _021E1878:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	str r6, [sp]
 	ldr r3, [sp, #8]
 	add r1, sp, #0x1c
@@ -8082,19 +8082,19 @@ ovy168_21e18ec: ; 0x021E18EC
 	beq _021E1970
 	b _021E19A6
 _021E1956:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	add r1, sp, #0x30
 	add r2, sp, #0x24
 	bl ovy168_21de754
 	b _021E19A6
 _021E1964:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	str r6, [sp]
 	str r4, [sp, #4]
 	add r1, sp, #0x30
 	b _021E199E
 _021E1970:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	add r5, sp, #0x18
 	add r1, r5, #0
 	add r2, sp, #0xc
@@ -8108,7 +8108,7 @@ _021E1970:
 	add r0, sp, #0xc
 	add r2, r1, #0
 	bl VEC_Add
-	bl sub_021E005C
+	bl ovy168_21e005c
 	str r6, [sp]
 	str r4, [sp, #4]
 	add r1, r5, #0
@@ -8155,13 +8155,13 @@ ovy168_21e19b0: ; 0x021E19B0
 	beq _021E1A04
 	b _021E1A2C
 _021E19F6:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	ldr r2, [sp, #8]
 	add r1, r7, #0
 	bl ovy168_21de798
 	b _021E1A2C
 _021E1A04:
-	bl sub_021E005C
+	bl ovy168_21e005c
 	add r1, r7, #0
 	add r7, sp, #0x20
 	add r4, sp, #0x14
@@ -8169,7 +8169,7 @@ _021E1A04:
 	add r3, r7, #0
 	str r4, [sp]
 	bl ovy168_21de980
-	bl sub_021E005C
+	bl ovy168_21e005c
 	ldr r1, [sp, #0x10]
 	ldr r3, [sp, #0xc]
 	str r1, [sp]
@@ -8209,7 +8209,7 @@ ovy168_21e1a38: ; 0x021E1A38
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E005C
+	bl ovy168_21e005c
 	str r6, [sp]
 	str r7, [sp, #4]
 	ldr r1, [sp, #0xc]
@@ -8256,13 +8256,13 @@ _021E1AB2:
 _021E1AC8:
 	cmp r6, #1
 	bne _021E1ADA
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r1, r5, #2
 	ldr r1, [r7, r1]
 	bl ovy168_21e6f88
 	b _021E1AE6
 _021E1ADA:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r1, r5, #2
 	ldr r1, [r7, r1]
 	bl ovy168_21e6f54
@@ -8287,7 +8287,7 @@ ovy168_21e1af8: ; 0x021E1AF8
 	mov r0, #1
 	lsl r4, r4, #2
 	str r0, [r5, r4]
-	bl sub_021E005C
+	bl ovy168_21e005c
 	add r2, r4, #0
 	add r1, r4, #4
 	add r2, #0x10
@@ -8428,7 +8428,7 @@ _021E1B42:
 	ldr r1, [sp, #0x14]
 	add r0, r5, #0
 	add r2, r4, #0
-	bl sub_021E4CF0
+	bl ovy168_21e4cf0
 _021E1C32:
 	ldr r0, [sp, #0x14]
 	lsl r0, r0, #2
@@ -8493,7 +8493,7 @@ ovy168_21e1c78: ; 0x021E1C78
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -8586,7 +8586,7 @@ ovy168_21e1d48: ; 0x021E1D48
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -8695,7 +8695,7 @@ ovy168_21e1e44: ; 0x021E1E44
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -8867,11 +8867,11 @@ ovy168_21e1fbc: ; 0x021E1FBC
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	str r0, [sp, #0xc]
 	ldr r1, [sp, #0xc]
 	add r0, r6, #0
-	bl sub_021E4D14
+	bl ovy168_21e4d14
 	add r7, r0, #0
 	str r5, [r4]
 	add r0, r5, #0
@@ -9029,7 +9029,7 @@ ovy168_21e2144: ; 0x021E2144
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	cmp r0, #0x10
 	beq _021E2176
 	add r6, r5, #0
@@ -9079,7 +9079,7 @@ ovy168_21e2180: ; 0x021E2180
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -9186,7 +9186,7 @@ ovy168_21e2270: ; 0x021E2270
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -9301,7 +9301,7 @@ ovy168_21e2374: ; 0x021E2374
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -9480,7 +9480,7 @@ ovy168_21e24fc: ; 0x021E24FC
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r6, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	str r0, [sp, #0x10]
 	add r0, r5, #0
 	bl sub_02015A04
@@ -9665,7 +9665,7 @@ ovy168_21e269c: ; 0x021E269C
 	beq _021E270E
 	ble _021E270E
 _021E26EE:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -9742,7 +9742,7 @@ _021E278E:
 	lsl r0, r5, #2
 	ldr r0, [r7, r0]
 	str r0, [sp, #0x28]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r6, #0
 	bl ovy168_21e779c
 	add r5, r5, #1
@@ -9806,7 +9806,7 @@ _021E2816:
 	lsl r0, r5, #2
 	ldr r0, [r7, r0]
 	str r0, [sp, #0x34]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r6, #0
 	bl ovy168_21e7888
 	add r5, r5, #1
@@ -9860,7 +9860,7 @@ ovy168_21e2838: ; 0x021E2838
 	cmp r4, #0
 	ble _021E28B0
 _021E2890:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -9917,7 +9917,7 @@ ovy168_21e28bc: ; 0x021E28BC
 	beq _021E2928
 	ble _021E2928
 _021E2908:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -9973,7 +9973,7 @@ ovy168_21e2934: ; 0x021E2934
 	cmp r4, #0
 	ble _021E299E
 _021E297E:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -10030,7 +10030,7 @@ ovy168_21e29ac: ; 0x021E29AC
 	cmp r4, #0
 	ble _021E2A16
 _021E29F6:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -10085,7 +10085,7 @@ _021E2A5E:
 	cmp r4, #0
 	ble _021E2A7E
 _021E2A64:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	str r6, [sp]
 	lsl r2, r5, #2
 	add r1, sp, #0xc
@@ -10128,7 +10128,7 @@ ovy168_21e2a8c: ; 0x021E2A8C
 	cmp r4, #0
 	ble _021E2ACC
 _021E2AB8:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r1, r5, #2
 	ldr r1, [r7, r1]
 	add r2, r6, #0
@@ -10185,7 +10185,7 @@ ovy168_21e2ad8: ; 0x021E2AD8
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x18]
 _021E2B2E:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	str r6, [sp]
 	str r7, [sp, #4]
 	lsl r2, r5, #2
@@ -10225,7 +10225,7 @@ ovy168_21e2b58: ; 0x021E2B58
 	add r6, r0, #0
 	cmp r6, #5
 	bne _021E2B88
-	bl sub_021E006C
+	bl ovy168_21e006c
 	bl ovy168_21e83f4
 	b _021E2BA6
 _021E2B88:
@@ -10235,7 +10235,7 @@ _021E2B88:
 	cmp r4, #0
 	ble _021E2BA6
 _021E2B92:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r1, r5, #2
 	ldr r1, [r7, r1]
 	add r2, r6, #0
@@ -10276,7 +10276,7 @@ ovy168_21e2bb4: ; 0x021E2BB4
 	lsl r0, r0, #0x18
 	lsr r6, r0, #0x18
 _021E2BE2:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r1, r5, #2
 	ldr r1, [r7, r1]
 	add r2, r6, #0
@@ -10333,7 +10333,7 @@ ovy168_21e2c04: ; 0x021E2C04
 	cmp r4, #0
 	ble _021E2C7C
 _021E2C5C:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x10]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -10375,7 +10375,7 @@ ovy168_21e2c88: ; 0x021E2C88
 _021E2CA8:
 	lsl r0, r5, #2
 	ldr r0, [r6, r0]
-	bl sub_021DF838
+	bl ovy168_21df838
 	add r5, r5, #1
 	cmp r5, r4
 	blt _021E2CA8
@@ -10436,7 +10436,7 @@ ovy168_21e2d18: ; 0x021E2D18
 	add r5, r0, #0
 	add r6, r1, #0
 	bl sub_02015A04
-	bl sub_021DFEA8
+	bl ovy168_21dfea8
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02015A04
@@ -10459,17 +10459,17 @@ ovy168_21e2d18: ; 0x021E2D18
 	add r0, r5, #0
 	bl sub_02015A04
 	add r5, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	mov r2, #1
 	bl ovy168_21e81bc
 	cmp r0, #1
 	bne _021E2D7C
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e8208
 _021E2D7C:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x10]
 	str r1, [sp]
@@ -10495,18 +10495,18 @@ ovy168_21e2d9c: ; 0x021E2D9C
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r2, r4, #0
 	bl ovy168_21e81bc
 	cmp r0, #1
 	bne _021E2DD8
-	bl sub_021E006C
+	bl ovy168_21e006c
 	mov r2, #1
 	add r1, r5, #0
 	lsl r2, r2, #0xc
 	bl ovy168_21e7220
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e8208
 _021E2DD8:
@@ -10573,7 +10573,7 @@ ovy168_21e2df4: ; 0x021E2DF4
 	mov r0, #0x5e
 	add r1, r4, #0
 	bl sub_0204AF18
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -10601,7 +10601,7 @@ ovy168_21e2df4: ; 0x021E2DF4
 	add r1, r7, #0
 	add r1, #0x30
 	str r0, [r5, r1]
-	bl sub_021E00D8
+	bl ovy168_21e00d8
 	mov r1, #0
 	mov r2, #0
 	bl ovy168_21f26e0
@@ -10644,7 +10644,7 @@ ovy168_21e2eb4: ; 0x021E2EB4
 	mov r1, #0xe
 	bl ovy168_21e4a80
 	add r5, r0, #0
-	bl sub_021E00D8
+	bl ovy168_21e00d8
 	str r6, [sp]
 	ldr r1, [sp, #0x18]
 	str r7, [sp, #4]
@@ -10685,7 +10685,7 @@ ovy168_21e2f18: ; 0x021E2F18
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E00D8
+	bl ovy168_21e00d8
 	str r6, [sp]
 	str r7, [sp, #4]
 	ldr r1, [sp, #0xc]
@@ -11053,10 +11053,10 @@ ovy168_21e3218: ; 0x021E3218
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r2, [sp, #0x10]
 	add r1, sp, #0x24
-	bl sub_021E7154
+	bl ovy168_21e7154
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x28]
 	add r0, r0, r7
@@ -11068,7 +11068,7 @@ ovy168_21e3218: ; 0x021E3218
 	add r0, sp, #0x24
 	add r1, sp, #0x20
 	bl sub_02067E1C
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	ldr r1, [sp, #0x1c]
 	ldr r2, [sp, #0xc]
 	lsl r1, r1, #0x10
@@ -11120,7 +11120,7 @@ ovy168_21e32b4: ; 0x021E32B4
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	ldr r1, [sp, #0x10]
 	str r7, [sp]
 	str r1, [sp, #4]
@@ -11169,7 +11169,7 @@ ovy168_21e331c: ; 0x021E331C
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	ldr r1, [sp, #0x10]
 	str r7, [sp]
 	str r1, [sp, #4]
@@ -11199,7 +11199,7 @@ ovy168_21e3388: ; 0x021E3388
 	add r0, r6, #0
 	bl sub_02015A04
 	add r6, r0, #0
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r1, #0xcc
@@ -11233,7 +11233,7 @@ ovy168_21e33b8: ; 0x021E33B8
 	add r0, r4, #0
 	bl sub_02015A04
 	add r4, r0, #0
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	ldr r1, [sp, #0xc]
 	ldr r3, [sp, #8]
 	lsl r1, r1, #0x18
@@ -11266,7 +11266,7 @@ ovy168_21e3418: ; 0x021E3418
 	add r5, r6, #0
 	add r5, #0xcc
 	lsl r4, r0, #2
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	ldr r1, [r5, r4]
 	bl ovy168_21e9c98
 	mov r0, #0
@@ -11303,7 +11303,7 @@ _021E3468:
 	ldr r1, [sp]
 	add r1, #0xdc
 	ldr r1, [r1]
-	bl sub_021DFB8C
+	bl ovy168_21dfb8c
 	b _021E357C
 _021E3474:
 	add r7, sp, #0x30
@@ -11320,13 +11320,13 @@ _021E3474:
 _021E348C:
 	ldr r0, [sp, #4]
 	ldr r1, [r7, r6]
-	bl sub_021DFB8C
+	bl ovy168_21dfb8c
 	add r5, r5, #1
 	cmp r5, r4
 	blt _021E348C
 	b _021E357C
 _021E349C:
-	bl sub_021DFB70
+	bl ovy168_21dfb70
 	b _021E357C
 _021E34A2:
 	mov r4, #0
@@ -11442,7 +11442,7 @@ _021E354C:
 	add r0, sp, #0xc
 	strh r2, [r0]
 _021E356A:
-	bl sub_021E008C
+	bl ovy168_21e008c
 	ldr r1, [r6, r7]
 	add r2, sp, #0xc
 	bl ovy168_21f06cc
@@ -12119,7 +12119,7 @@ ovy168_21e3a6c: ; 0x021E3A6C
 	cmp r4, #0
 	ble _021E3AB6
 _021E3A9E:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	lsl r2, r5, #2
 	add r1, sp, #4
 	ldr r1, [r1, r2]
@@ -12143,7 +12143,7 @@ _021E3AB6:
 ovy168_21e3ac4: ; 0x021E3AC4
 	push {r4, lr}
 	add r4, r1, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	add r2, r4, #0
 	add r1, #0xe0
@@ -12200,7 +12200,7 @@ _021E3B3C:
 	add r0, r4, #0
 	bl ovy168_21e60b0
 	str r0, [sp, #0x20]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0x14]
 	lsl r2, r5, #2
 	str r1, [sp]
@@ -12370,11 +12370,11 @@ ovy168_21e3c70: ; 0x021E3C70
 	add r0, r4, #0
 	bl sub_02015A04
 	add r6, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, sp, #0x30
 	ldr r2, [sp, #0x20]
 	add r1, r4, #0
-	bl sub_021E7154
+	bl ovy168_21e7154
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x34]
 	add r0, r0, r7
@@ -12402,7 +12402,7 @@ _021E3CE8:
 	mov r0, #0x11
 _021E3CEE:
 	lsl r4, r0, #1
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	mov r1, #0xe7
 	str r1, [sp]
 	mov r1, #0xe8
@@ -12761,7 +12761,7 @@ _021E3F9A:
 	mvn r0, r0
 	cmp r7, r0
 	beq _021E3FBE
-	bl sub_021E00C8
+	bl ovy168_21e00c8
 	add r1, r7, #0
 	bl ovy168_21e9c98
 	add r1, r5, r6
@@ -12820,10 +12820,10 @@ _021E4012:
 	lsl r0, r0, #0x1b
 	lsr r0, r0, #0x1f
 	beq _021E405E
-	bl sub_021E013C
+	bl ovy168_21e013c
 	cmp r0, #0
 	beq _021E4034
-	bl sub_021D0FF8
+	bl ovy167_21d0ff8
 _021E4034:
 	mov r0, #3
 	mov r1, #0
@@ -12867,7 +12867,7 @@ _021E407E:
 	bl sub_02006280
 _021E408A:
 	mov r6, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r1, #0xdc
 	ldr r1, [r1]
@@ -12895,7 +12895,7 @@ _021E40B6:
 	ldr r0, _021E4258 ; =0x0000010B
 	cmp r1, r0
 	beq _021E40D8
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r1, #0xdc
 	ldr r1, [r1]
@@ -13018,7 +13018,7 @@ _021E41B0:
 	ldr r1, _021E4264 ; =0x000001F6
 	cmp r0, r1
 	bne _021E41D6
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r1, #0xdc
 	ldr r1, [r1]
@@ -13100,8 +13100,8 @@ ovy168_21e426c: ; 0x021E426C
 	ldr r0, [r5, r4]
 	cmp r0, #1
 	bhi _021E42A6
-	bl sub_021E005C
-	bl sub_021DEAA4
+	bl ovy168_21e005c
+	bl ovy168_21deaa4
 	cmp r0, #1
 	bne _021E428A
 	mov r0, #0
@@ -13117,7 +13117,7 @@ _021E428A:
 	mov r1, #1
 	add r0, r4, #4
 	str r1, [r5, r0]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	bl ovy168_21e6ecc
 _021E42A6:
 	mov r0, #9
@@ -13132,7 +13132,7 @@ _021E42B4:
 	cmp r4, #0xe
 	bge _021E42D2
 _021E42BA:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e7a38
 	cmp r0, #1
@@ -13153,12 +13153,12 @@ _021E42D2:
 	cmp r4, #0xe
 	bge _021E4308
 _021E42E2:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e7b24
 	cmp r0, #0
 	beq _021E4302
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e8234
 	cmp r0, #1
@@ -13178,8 +13178,8 @@ _021E4308:
 	cmp r0, #5
 	bne _021E4326
 _021E4316:
-	bl sub_021E00D8
-	bl sub_021F27B8
+	bl ovy168_21e00d8
+	bl ovy168_21f27b8
 	cmp r0, #1
 	bne _021E4326
 	mov r0, #0
@@ -13451,8 +13451,8 @@ _021E4508:
 	cmp r0, #0x13
 	bne _021E4520
 _021E4510:
-	bl sub_021E00D8
-	bl sub_021F28D4
+	bl ovy168_21e00d8
+	bl ovy168_21f28d4
 	cmp r0, #1
 	bne _021E4520
 	mov r0, #0
@@ -13568,7 +13568,7 @@ _021E45FE:
 	str r0, [r5]
 	cmp r0, #0xff
 	bne _021E4700
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	mov r4, #0
 	cmp r0, #0
 	beq _021E4618
@@ -13921,7 +13921,7 @@ ovy168_21e4868: ; 0x021E4868
 	str r0, [r6]
 	cmp r0, #0xff
 	bne _021E497A
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	mov r4, #0
 	cmp r0, #0
 	beq _021E488C
@@ -14037,7 +14037,7 @@ _021E494C:
 	bl ovy168_21df850
 	cmp r0, #0
 	beq _021E4974
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp]
 	ldr r1, [r5, r1]
 	bl ovy168_21e70a8
@@ -14068,7 +14068,7 @@ _021E4982:
 	bl ovy168_21df850
 	cmp r0, #0
 	beq _021E49AA
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e70a8
 	cmp r0, #0
@@ -14151,7 +14151,7 @@ _021E4A1C:
 	bl ovy168_21df850
 	cmp r0, #0
 	beq _021E4A3A
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e70a8
 	cmp r0, #0
@@ -14173,7 +14173,7 @@ _021E4A48:
 	bl ovy168_21df850
 	cmp r0, #0
 	beq _021E4A66
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e70a8
 	cmp r0, #0
@@ -14398,7 +14398,7 @@ ovy168_21e4bdc: ; 0x021E4BDC
 	add r5, r1, #0
 	bl sub_020159DC
 	add r4, r0, #0
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	add r1, r4, #0
 	add r1, #0xe0
 	ldr r1, [r1]
@@ -14555,18 +14555,18 @@ _021E4CE6:
 	.align 2, 0
 	thumb_func_end ovy168_21e4cb0
 
-	thumb_func_start sub_021E4CF0
-sub_021E4CF0: ; 0x021E4CF0
+	thumb_func_start ovy168_21e4cf0
+ovy168_21e4cf0: ; 0x021E4CF0
 	lsl r1, r1, #2
 	add r0, r0, r1
 	ldrh r2, [r2, #8]
 	add r0, #0x8c
 	str r2, [r0]
 	bx lr
-	thumb_func_end sub_021E4CF0
+	thumb_func_end ovy168_21e4cf0
 
-	thumb_func_start sub_021E4CFC
-sub_021E4CFC: ; 0x021E4CFC
+	thumb_func_start ovy168_21e4cfc
+ovy168_21e4cfc: ; 0x021E4CFC
 	mov r3, #0
 _021E4CFE:
 	lsl r2, r3, #2
@@ -14581,17 +14581,17 @@ _021E4D0E:
 	add r0, r3, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021E4CFC
+	thumb_func_end ovy168_21e4cfc
 
-	thumb_func_start sub_021E4D14
-sub_021E4D14: ; 0x021E4D14
+	thumb_func_start ovy168_21e4d14
+ovy168_21e4d14: ; 0x021E4D14
 	lsl r1, r1, #2
 	add r0, r0, r1
 	add r0, #0x8c
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021E4D14
+	thumb_func_end ovy168_21e4d14
 
 	thumb_func_start ovy168_21e4d20
 ovy168_21e4d20: ; 0x021E4D20
@@ -14653,7 +14653,7 @@ _021E4D82:
 	str r0, [sp, #0xc0]
 	b _021E4DF4
 _021E4D90:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0xc
 	add r2, r5, #0
 	add r1, sp, #0xb8
@@ -14663,7 +14663,7 @@ _021E4D90:
 	sub r0, r5, #2
 	b _021E4DF2
 _021E4DA6:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x10
 	add r1, sp, #0xb8
 	add r2, r5, #0
@@ -14716,10 +14716,10 @@ _021E4DF4:
 	beq _021E4E0E
 	cmp r5, #8
 	beq _021E4E0E
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, sp, #0xb8
 	add r2, r5, #0
-	bl sub_021E7154
+	bl ovy168_21e7154
 _021E4E0E:
 	ldr r5, [r4, #8]
 	cmp r5, #0x15
@@ -14780,7 +14780,7 @@ _021E4E6E:
 	add r1, #8
 	bl ovy168_21e4bdc
 	add r5, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r2, [r4, #8]
 	add r1, sp, #0xac
 	add r3, r5, #0
@@ -14795,7 +14795,7 @@ _021E4E8A:
 	str r0, [sp, #0xb4]
 	b _021E4EFC
 _021E4E98:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0xc
 	add r2, r5, #0
 	add r1, sp, #0xac
@@ -14805,7 +14805,7 @@ _021E4E98:
 	sub r0, r5, #2
 	b _021E4E54
 _021E4EAE:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x10
 	add r1, sp, #0xac
 	add r2, r5, #0
@@ -14858,12 +14858,12 @@ _021E4EFC:
 	beq _021E4F16
 	cmp r5, #8
 	beq _021E4F16
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, sp, #0xac
 	add r2, r5, #0
-	bl sub_021E7154
+	bl ovy168_21e7154
 _021E4F16:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	mov r1, #5
 	ldr r0, [sp, #0xc0]
 	lsl r1, r1, #8
@@ -15798,11 +15798,11 @@ ovy168_21e5674: ; 0x021E5674
 	ldr r0, [r0, r1]
 	cmp r0, #1
 	bne _021E568A
-	bl sub_021E006C
+	bl ovy168_21e006c
 	bl ovy168_21e6f10
 	pop {r3, pc}
 _021E568A:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	bl ovy168_21e6ecc
 	pop {r3, pc}
 	thumb_func_end ovy168_21e5674
@@ -15952,12 +15952,12 @@ _021E571C: ; jump table
 	.short _021E58FE - _021E571C - 2 ; case 74
 	.short _021E5918 - _021E571C - 2 ; case 75
 _021E57B4:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e7cac
 	pop {r3, r4, r5, pc}
 _021E57C0:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7cac
@@ -16002,7 +16002,7 @@ _021E5804:
 	ldr r0, [r4]
 	pop {r3, r4, r5, pc}
 _021E580A:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e70a8
@@ -16014,7 +16014,7 @@ _021E5818:
 	and r0, r1
 	pop {r3, r4, r5, pc}
 _021E5822:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x14
 	add r1, r5, #0
 	bl ovy168_21e7cd8
@@ -16027,7 +16027,7 @@ _021E5838:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021E583C:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7cd8
@@ -16040,36 +16040,36 @@ _021E5852:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021E5856:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x1d
 	add r1, r5, #0
 	bl ovy168_21e7d08
 	pop {r3, r4, r5, pc}
 _021E5864:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7d08
 	pop {r3, r4, r5, pc}
 _021E5872:
-	bl sub_021E0108
+	bl ovy168_21e0108
 	pop {r3, r4, r5, pc}
 _021E5878:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	pop {r3, r4, r5, pc}
 _021E587E:
 	sub r5, #0x28
 	add r0, r5, #0
-	bl sub_021E0118
+	bl ovy168_21e0118
 	pop {r3, r4, r5, pc}
 _021E5888:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x2c
 	add r1, r5, #0
 	bl ovy168_21e7d4c
 	pop {r3, r4, r5, pc}
 _021E5896:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7d4c
@@ -16099,7 +16099,7 @@ _021E58C4:
 	ldr r0, [r4]
 	pop {r3, r4, r5, pc}
 _021E58CA:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x3a
 	add r1, r5, #0
 	bl ovy168_21e7cd8
@@ -16112,7 +16112,7 @@ _021E58E0:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021E58E4:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7cd8
@@ -16125,7 +16125,7 @@ _021E58FA:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021E58FE:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	sub r5, #0x43
 	add r1, r5, #0
 	bl ovy168_21e7cd8
@@ -16138,7 +16138,7 @@ _021E5914:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021E5918:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, #0xdc
 	ldr r1, [r4]
 	bl ovy168_21e7cd8
@@ -16284,7 +16284,7 @@ _021E5A08:
 	mov r1, #1
 	str r1, [r0, #0x58]
 _021E5A2E:
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #3
 	bhi _021E5A4A
 	add r0, r0, r0
@@ -16472,7 +16472,7 @@ ovy168_21e5b80: ; 0x021E5B80
 	bl ovy168_21e5f6c
 	add r1, r0, #0
 	add r0, r5, #0
-	bl sub_021E4CFC
+	bl ovy168_21e4cfc
 	str r0, [sp, #0x18]
 	add r0, r7, #0
 	bl sub_02015A04
@@ -16655,10 +16655,10 @@ _021E5D12:
 _021E5D16:
 	bl ovy168_21e4a80
 	add r6, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #4
 	add r2, r6, #0
-	bl sub_021E7154
+	bl ovy168_21e7154
 	b _021E5D38
 _021E5D2A:
 	add r0, r7, #0
@@ -16945,7 +16945,7 @@ ovy168_21e5f6c: ; 0x021E5F6C
 	add r4, r1, #0
 	cmp r6, #9
 	bne _021E5F8A
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r5, #0xdc
 	ldr r1, [r5]
 _021E5F84:
@@ -16954,7 +16954,7 @@ _021E5F84:
 _021E5F8A:
 	cmp r6, #8
 	beq _021E5F96
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r6, #0
 	b _021E5F84
 _021E5F96:
@@ -17142,12 +17142,12 @@ ovy168_21e60d8: ; 0x021E60D8
 	cmp r4, #8
 	bge _021E60FE
 _021E60E0:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e7b24
 	cmp r0, #1
 	bne _021E60F8
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e825c
 _021E60F8:
@@ -17166,12 +17166,12 @@ ovy168_21e6100: ; 0x021E6100
 	bge _021E612A
 	add r4, r5, #0
 _021E610A:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e7b24
 	cmp r0, #1
 	bne _021E6124
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r2, r4, #0
 	bl ovy168_21e71ec
@@ -17392,7 +17392,7 @@ ovy168_21e6284: ; 0x021E6284
 	ldr r0, [r4]
 	bl ovy168_21e60b0
 	add r5, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [r4, #0x10]
 	str r1, [sp]
 	ldr r1, [r4, #0x14]
@@ -17754,28 +17754,28 @@ _021E6538:
 	bl ovy168_21df850
 	cmp r0, #0
 	beq _021E6576
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	bl ovy168_21e7a38
 	cmp r0, #0
 	bne _021E6582
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, [r6, #8]
 	tst r0, r1
 	bne _021E6582
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r2, r7, #0
 	bl ovy168_21e7064
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r2, r7, #0
 	bl ovy168_21e71ec
 	b _021E6576
 _021E6576:
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, [r4]
 	orr r0, r1
 	str r0, [r4]
@@ -17890,7 +17890,7 @@ _021E661C:
 	mov r4, #0xe7
 	bl sub_0204B354
 	add r6, r0, #0
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r1, #0
 	bl sub_02026FD0
 	add r1, r0, #0
@@ -17904,7 +17904,7 @@ _021E661C:
 	add r1, r1, r2
 	mov r2, #0x20
 	blx MIi_CpuCopy16
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r1, #8
 	mov r2, #0
 	bl sub_02027994
@@ -17973,10 +17973,10 @@ ovy168_21e66e8: ; 0x021E66E8
 	str r2, [sp, #0xc]
 	str r3, [sp, #0x10]
 	ldr r7, [sp, #0x50]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_021E6E94
+	bl ovy168_21e6e94
 	mov r4, #0
 	cmp r4, #8
 	bge _021E678E
@@ -17993,15 +17993,15 @@ ovy168_21e66e8: ; 0x021E66E8
 	lsr r0, r0, #1
 	str r0, [sp, #0x24]
 _021E6720:
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	bl ovy168_21e7b24
 	cmp r0, #0
 	beq _021E6788
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_021E71C8
+	bl ovy168_21e71c8
 	mov r1, #1
 	tst r1, r4
 	beq _021E674E
@@ -18029,7 +18029,7 @@ _021E675A:
 	mov r0, #1
 	lsl r0, r0, #0xc
 	str r0, [sp, #0x34]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [sp, #0xc]
 	mov r2, #1
 	str r1, [sp]
@@ -18050,8 +18050,8 @@ _021E678E:
 _021E6794: .word 0x00000000
 	thumb_func_end ovy168_21e66e8
 
-	thumb_func_start sub_021E6798
-sub_021E6798: ; 0x021E6798
+	thumb_func_start ovy168_21e6798
+ovy168_21e6798: ; 0x021E6798
 	ldr r2, _021E67B4 ; =0x021F3028
 	mov r3, #0
 _021E679C:
@@ -18069,7 +18069,7 @@ _021E67A8:
 	bx lr
 	nop
 _021E67B4: .word 0x021F3028
-	thumb_func_end sub_021E6798
+	thumb_func_end ovy168_21e6798
 
 	thumb_func_start ovy168_21e67b8
 ovy168_21e67b8: ; 0x021E67B8
@@ -18275,7 +18275,7 @@ _021E6926:
 	cmp r1, #0
 	bne _021E696E
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, [sp, #0x10]
 	ldr r1, [r4, r1]
 	tst r0, r1
@@ -18562,14 +18562,14 @@ _021E6B80: .word 0x00007DEF
 _021E6B84: .word 0x00003C0F
 	thumb_func_end ovy168_21e68a4
 
-	thumb_func_start sub_021E6B88
-sub_021E6B88: ; 0x021E6B88
+	thumb_func_start ovy168_21e6b88
+ovy168_21e6b88: ; 0x021E6B88
 	ldr r0, [r0, #4]
 	ldr r3, _021E6B90 ; =sub_02019C0C
 	bx r3
 	nop
 _021E6B90: .word sub_02019C0C
-	thumb_func_end sub_021E6B88
+	thumb_func_end ovy168_21e6b88
 
 	thumb_func_start ovy168_21e6b94
 ovy168_21e6b94: ; 0x021E6B94
@@ -18698,7 +18698,7 @@ _021E6C78:
 	ldr r2, [sp, #8]
 	add r0, r6, #0
 	add r1, sp, #0x30
-	bl sub_021E9648
+	bl ovy168_21e9648
 	add r0, r6, #0
 	str r0, [sp, #0x10]
 	add r0, #8
@@ -18881,11 +18881,11 @@ _021E6DD4:
 	str r1, [r6, r4]
 	add r1, sp, #0x10
 	add r2, r7, #0
-	bl sub_021E8440
+	bl ovy168_21e8440
 	add r0, r5, #0
 	add r1, sp, #4
 	add r2, r7, #0
-	bl sub_021E9648
+	bl ovy168_21e9648
 	add r0, sp, #0x10
 	str r0, [sp]
 	ldr r0, [r5, #4]
@@ -18945,8 +18945,8 @@ _021E6E90:
 	.align 2, 0
 	thumb_func_end ovy168_21e6e58
 
-	thumb_func_start sub_021E6E94
-sub_021E6E94: ; 0x021E6E94
+	thumb_func_start ovy168_21e6e94
+ovy168_21e6e94: ; 0x021E6E94
 	ldr r3, _021E6EA0 ; =0x00000538
 	str r1, [r0, r3]
 	add r1, r3, #4
@@ -18954,7 +18954,7 @@ sub_021E6E94: ; 0x021E6E94
 	bx lr
 	nop
 _021E6EA0: .word 0x00000538
-	thumb_func_end sub_021E6E94
+	thumb_func_end ovy168_21e6e94
 
 	thumb_func_start ovy168_21e6ea4
 ovy168_21e6ea4: ; 0x021E6EA4
@@ -19332,13 +19332,13 @@ _021E7152:
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy168_21e70d4
 
-	thumb_func_start sub_021E7154
-sub_021E7154: ; 0x021E7154
-	ldr r3, _021E7158 ; =sub_021E9648
+	thumb_func_start ovy168_21e7154
+ovy168_21e7154: ; 0x021E7154
+	ldr r3, _021E7158 ; =ovy168_21e9648
 	bx r3
 	.align 2, 0
-_021E7158: .word sub_021E9648
-	thumb_func_end sub_021E7154
+_021E7158: .word ovy168_21e9648
+	thumb_func_end ovy168_21e7154
 
 	thumb_func_start ovy168_21e715c
 ovy168_21e715c: ; 0x021E715C
@@ -19406,13 +19406,13 @@ _021E71C0: .word 0x021F32AC
 _021E71C4: .word 0x021F3384
 	thumb_func_end ovy168_21e715c
 
-	thumb_func_start sub_021E71C8
-sub_021E71C8: ; 0x021E71C8
-	ldr r3, _021E71CC ; =sub_021E96D4
+	thumb_func_start ovy168_21e71c8
+ovy168_21e71c8: ; 0x021E71C8
+	ldr r3, _021E71CC ; =ovy168_21e96d4
 	bx r3
 	.align 2, 0
-_021E71CC: .word sub_021E96D4
-	thumb_func_end sub_021E71C8
+_021E71CC: .word ovy168_21e96d4
+	thumb_func_end ovy168_21e71c8
 
 	thumb_func_start ovy168_21e71d0
 ovy168_21e71d0: ; 0x021E71D0
@@ -19541,7 +19541,7 @@ _021E72A6:
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_021E9648
+	bl ovy168_21e9648
 	mov r6, #1
 _021E72B6:
 	cmp r6, #6
@@ -19549,7 +19549,7 @@ _021E72B6:
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_021E9648
+	bl ovy168_21e9648
 	mov r6, #0
 _021E72C6:
 	cmp r6, #0
@@ -19589,7 +19589,7 @@ _021E72DA:
 	add r0, r7, #0
 	bl ovy168_21e84ec
 	add r0, r5, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, [sp, #0x28]
 	sub r1, #0x2e
 	ldr r1, [r7, r1]
@@ -19655,7 +19655,7 @@ ovy168_21e7338: ; 0x021E7338
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x38
 	ldr r1, [r5, r1]
@@ -19717,7 +19717,7 @@ ovy168_21e73b8: ; 0x021E73B8
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x3e
 	ldr r1, [r5, r1]
@@ -19780,7 +19780,7 @@ ovy168_21e7438: ; 0x021E7438
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x48
 	ldr r1, [r5, r1]
@@ -19843,7 +19843,7 @@ ovy168_21e74b8: ; 0x021E74B8
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x5e
 	ldr r1, [r5, r1]
@@ -19893,7 +19893,7 @@ _021E754E:
 	ldr r2, [r2, r3]
 	add r0, r5, #0
 	add r1, sp, #0x28
-	bl sub_021E9648
+	bl ovy168_21e9648
 	add r0, sp, #0x20
 	ldr r0, [r0, r6]
 	mov r2, #0
@@ -19906,9 +19906,9 @@ _021E754E:
 	add r0, r5, #0
 	add r3, sp, #0x28
 	bl ovy168_21e7248
-	bl sub_021E008C
+	bl ovy168_21e008c
 	ldr r1, [sp, #0xc]
-	bl sub_021F1864
+	bl ovy168_21f1864
 	add r0, sp, #0x18
 	ldr r1, [r0, r6]
 	mov r0, #0x5c
@@ -20024,7 +20024,7 @@ _021E7628:
 	mov r2, #2
 	bl ovy168_21e035c
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r1, _021E76A4 ; =0x00000528
 	ldr r2, [r5, r1]
 	orr r0, r2
@@ -20136,7 +20136,7 @@ _021E7738:
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x6a
 	ldr r1, [r5, r1]
@@ -20252,7 +20252,7 @@ _021E7826:
 	mov r2, #2
 	bl ovy168_21e035c
 	ldr r0, [r4, #4]
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r5, #0
 	sub r1, #0x2e
 	ldr r1, [r6, r1]
@@ -20339,7 +20339,7 @@ _021E78D4:
 	mov r2, #2
 	bl ovy168_21e035c
 	ldr r0, [r5, #4]
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x2e
 	ldr r1, [r4, r1]
@@ -20453,7 +20453,7 @@ _021E79D4:
 	add r0, r5, #0
 	bl ovy168_21e84ec
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r6, #0
 	sub r1, #0x74
 	ldr r1, [r5, r1]
@@ -20489,54 +20489,54 @@ ovy168_21e7a38: ; 0x021E7A38
 	add r6, r0, #0
 _021E7A5E:
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	ldr r7, _021E7AF0 ; =0x00000514
 	ldr r1, [r5, r7]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #4
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #0x10
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #0xc
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #8
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #0x14
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #0x18
 	ldr r1, [r5, r1]
 	tst r0, r1
 	bne _021E7AE8
 	add r0, r4, #0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r7, #0
 	add r1, #0x1c
 	ldr r1, [r5, r1]
@@ -21295,7 +21295,7 @@ _021E8042:
 _021E8048:
 	ldr r7, [r0, r1]
 _021E804A:
-	bl sub_021E012C
+	bl ovy168_21e012c
 	add r1, sp, #0x20
 	mov r6, #0
 	str r1, [sp, #0x1c]
@@ -21303,7 +21303,7 @@ _021E804A:
 	beq _021E8066
 	ldr r2, [sp, #0x1c]
 	add r1, r4, #0
-	bl sub_0219D228
+	bl ovy167_219d228
 	cmp r0, #0
 	bne _021E8068
 	b _021E8066
@@ -21598,7 +21598,7 @@ ovy168_21e825c: ; 0x021E825C
 	add r0, r5, #0
 	add r1, sp, #0x18
 	add r2, r7, #0
-	bl sub_021E9648
+	bl ovy168_21e9648
 	add r7, r5, #0
 	add r7, #8
 	ldr r0, [r7, r4]
@@ -21676,7 +21676,7 @@ ovy168_21e82fc: ; 0x021E82FC
 	ldr r0, [sp]
 	cmp r0, #1
 	bne _021E8358
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #3
 	bhi _021E8358
 	add r0, r0, r0
@@ -21839,8 +21839,8 @@ _021E843C:
 	.align 2, 0
 	thumb_func_end ovy168_21e83f4
 
-	thumb_func_start sub_021E8440
-sub_021E8440: ; 0x021E8440
+	thumb_func_start ovy168_21e8440
+ovy168_21e8440: ; 0x021E8440
 	mov r3, #1
 	tst r2, r3
 	beq _021E8448
@@ -21851,7 +21851,7 @@ _021E8448:
 	bx r3
 	nop
 _021E8450: .word sub_0201C0F0
-	thumb_func_end sub_021E8440
+	thumb_func_end ovy168_21e8440
 
 	thumb_func_start ovy168_21e8454
 ovy168_21e8454: ; 0x021E8454
@@ -21876,7 +21876,7 @@ ovy168_21e8454: ; 0x021E8454
 	lsl r2, r2, #0x1d
 	add r1, r6, #0
 	lsr r2, r2, #0x1f
-	bl sub_021E96D4
+	bl ovy168_21e96d4
 	mov r7, #1
 	add r1, r6, #0
 	tst r1, r7
@@ -21911,7 +21911,7 @@ _021E8496:
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_021E96D4
+	bl ovy168_21e96d4
 	str r0, [sp]
 	str r0, [sp, #4]
 	mov r0, #1
@@ -22219,7 +22219,7 @@ ovy168_21e8730: ; 0x021E8730
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E8760
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x2e
@@ -22318,7 +22318,7 @@ ovy168_21e87f0: ; 0x021E87F0
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E8822
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x38
@@ -22415,7 +22415,7 @@ ovy168_21e88b0: ; 0x021E88B0
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E88E0
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x3e
@@ -22514,7 +22514,7 @@ ovy168_21e8974: ; 0x021E8974
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E89A4
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x48
@@ -22613,7 +22613,7 @@ ovy168_21e8a38: ; 0x021E8A38
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E8A68
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x5e
@@ -22694,7 +22694,7 @@ ovy168_21e8ad0: ; 0x021E8AD0
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E8B00
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x60
@@ -22787,7 +22787,7 @@ ovy168_21e8b84: ; 0x021E8B84
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E8BB4
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x6a
@@ -23147,7 +23147,7 @@ ovy168_21e8e38: ; 0x021E8E38
 	ldr r2, [r5, #0x38]
 	cmp r2, r1
 	bne _021E8E68
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x2e
@@ -23315,7 +23315,7 @@ ovy168_21e8f9c: ; 0x021E8F9C
 	ldr r2, [r5, #0x28]
 	cmp r2, r1
 	bne _021E8FCC
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x2e
@@ -23420,7 +23420,7 @@ ovy168_21e906c: ; 0x021E906C
 	ldr r2, [r5, #0x50]
 	cmp r2, r1
 	bne _021E909C
-	bl sub_021E0D4C
+	bl ovy168_21e0d4c
 	add r1, r4, #0
 	ldr r3, [r5]
 	sub r1, #0x74
@@ -23443,7 +23443,7 @@ ovy168_21e90a4: ; 0x021E90A4
 	sub sp, #8
 	add r5, r1, #0
 	str r0, [sp]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	str r0, [sp, #4]
 	mov r0, #0
 	ldr r7, [r5, #4]
@@ -23514,7 +23514,7 @@ _021E9132:
 	ldr r0, [r0, r1]
 	cmp r0, #0
 	bne _021E9150
-	bl sub_021E009C
+	bl ovy168_21e009c
 	bl ovy168_21e1214
 	cmp r0, #0
 	bne _021E9194
@@ -23650,7 +23650,7 @@ _021E9226:
 _021E9248:
 	ldr r4, _021E947C ; =0xFFFFF000
 _021E924A:
-	bl sub_021E007C
+	bl ovy168_21e007c
 	mov r1, #0x3c
 	str r1, [sp]
 	ldr r1, [r5, #8]
@@ -23820,7 +23820,7 @@ _021E9366:
 	ldr r0, [r5]
 	ldr r2, [r4, r2]
 	add r1, sp, #0x20
-	bl sub_021E9648
+	bl ovy168_21e9648
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -23872,13 +23872,13 @@ _021E93EC:
 	bl ovy168_21e9794
 	add r1, sp, #0x14
 	str r0, [r1, r4]
-	bl sub_021E008C
+	bl ovy168_21e008c
 	ldr r2, [r5, #8]
 	mov r1, #0xc
 	mul r1, r2
 	add r1, r7, r1
 	ldr r1, [r4, r1]
-	bl sub_021F1864
+	bl ovy168_21f1864
 	add r6, r6, #1
 	cmp r6, #3
 	blt _021E93EC
@@ -23960,7 +23960,7 @@ ovy168_21e94b8: ; 0x021E94B8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp, #4]
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r4, r0, #0
 	mov r0, #0
 	ldr r1, [sp, #4]
@@ -23976,7 +23976,7 @@ ovy168_21e94b8: ; 0x021E94B8
 	ldr r0, [r6, r5]
 	cmp r0, #0
 	beq _021E959E
-	bl sub_021E009C
+	bl ovy168_21e009c
 	bl ovy168_21e1214
 	cmp r0, #0
 	beq _021E959E
@@ -24080,7 +24080,7 @@ ovy168_21e95b0: ; 0x021E95B0
 	add r4, r0, #0
 	str r2, [sp]
 	add r6, r3, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	add r5, r0, #0
 	lsl r0, r4, #0x10
 	lsr r1, r0, #0x10
@@ -24152,7 +24152,7 @@ _021E9628:
 ovy168_21e9634: ; 0x021E9634
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	mov r1, #0x5c
 	mul r1, r4
 	mov r2, #0
@@ -24161,8 +24161,8 @@ ovy168_21e9634: ; 0x021E9634
 	pop {r4, pc}
 	thumb_func_end ovy168_21e9634
 
-	thumb_func_start sub_021E9648
-sub_021E9648: ; 0x021E9648
+	thumb_func_start ovy168_21e9648
+ovy168_21e9648: ; 0x021E9648
 	cmp r2, #0xd
 	bhi _021E96B2
 	add r3, r2, r2
@@ -24241,10 +24241,10 @@ _021E96C4: .word 0x021F32AC
 _021E96C8: .word 0x021F33CC
 _021E96CC: .word 0x021F3384
 _021E96D0: .word 0x021F333C
-	thumb_func_end sub_021E9648
+	thumb_func_end ovy168_21e9648
 
-	thumb_func_start sub_021E96D4
-sub_021E96D4: ; 0x021E96D4
+	thumb_func_start ovy168_21e96d4
+ovy168_21e96d4: ; 0x021E96D4
 	cmp r2, #0
 	bne _021E9766
 	cmp r1, #0xd
@@ -24348,7 +24348,7 @@ _021E9784: .word 0x021F3234
 _021E9788: .word 0x021F3264
 _021E978C: .word 0x021F31FC
 _021E9790: .word 0x021F324C
-	thumb_func_end sub_021E96D4
+	thumb_func_end ovy168_21e96d4
 
 	thumb_func_start ovy168_21e9794
 ovy168_21e9794: ; 0x021E9794
@@ -24499,13 +24499,13 @@ _021E9890:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy168_21e9874
 
-	thumb_func_start sub_021E98A4
-sub_021E98A4: ; 0x021E98A4
+	thumb_func_start ovy168_21e98a4
+ovy168_21e98a4: ; 0x021E98A4
 	ldr r3, _021E98A8 ; =sub_0204B794
 	bx r3
 	.align 2, 0
 _021E98A8: .word sub_0204B794
-	thumb_func_end sub_021E98A4
+	thumb_func_end ovy168_21e98a4
 
 	thumb_func_start ovy168_21e98ac
 ovy168_21e98ac: ; 0x021E98AC
@@ -24624,7 +24624,7 @@ _021E992A:
 	add r6, #0x14
 	bl sub_0204BDE0
 	str r0, [r6, r7]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	str r0, [sp, #0x24]
 	ldr r0, [sp, #0x20]
 	mov r1, #0
@@ -24800,7 +24800,7 @@ _021E9A9E:
 	add r2, #0x6d
 	bl sub_0204BDE0
 	str r0, [r5, #0x44]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r7, r0, #0
 	ldr r0, [r5, #0x10]
 	mov r1, #0
@@ -25238,9 +25238,9 @@ ovy168_21e9e34: ; 0x021E9E34
 	lsl r1, r0
 	lsl r0, r1, #0x10
 	lsr r6, r0, #0x10
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r7, r0, #0
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	str r5, [sp]
 	str r4, [sp, #4]
 	add r4, sp, #0x28
@@ -25728,7 +25728,7 @@ ovy168_21ea210: ; 0x021EA210
 	add r0, r4, #0
 	lsr r1, r1, #0x10
 	mov r2, #0
-	bl sub_021D4EC0
+	bl ovy167_21d4ec0
 	ldr r1, [sp, #8]
 	add r0, r4, #0
 	mov r2, #0
@@ -26246,7 +26246,7 @@ ovy168_21ea51c: ; 0x021EA51C
 	ldr r0, [r5, r0]
 	cmp r0, #1
 	bne _021EA6A2
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021EA6B4 ; =ovy168_21ea504
 	add r2, r5, #0
 	mov r3, #0
@@ -27011,7 +27011,7 @@ _021EAC68:
 _021EACB0:
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_021EE6F8
+	bl ovy168_21ee6f8
 	ldr r0, [sp, #0x24]
 	ldr r1, [r0]
 	mov r0, #0x72
@@ -27347,7 +27347,7 @@ _021EAF68:
 	mov r0, #0
 	str r0, [sp, #0x14]
 	mov r5, #0
-	bl sub_021E012C
+	bl ovy168_21e012c
 	bl ovy167_0219C988
 	cmp r0, #2
 	bne _021EAF7C
@@ -27681,7 +27681,7 @@ _021EB206:
 	sub r0, r0, #1
 	cmp r0, #2
 	bhi _021EB21C
-	bl sub_021DFB40
+	bl ovy168_21dfb40
 _021EB21C:
 	ldr r0, [r4, #0x58]
 	cmp r0, #6
@@ -28009,7 +28009,7 @@ _021EB444:
 	b _021EB4A4
 _021EB492:
 	ldr r0, [r5, #0x60]
-	bl sub_021F2E98
+	bl ovy168_21f2e98
 	add r4, r0, #0
 	cmp r4, #1
 	bne _021EB4A4
@@ -28052,7 +28052,7 @@ _021EB4E0:
 	mov r1, #8
 	tst r0, r1
 	beq _021EB4EE
-	bl sub_021DFB40
+	bl ovy168_21dfb40
 _021EB4EE:
 	mov r0, #0
 	ldr r1, [r5, #0x70]
@@ -28163,7 +28163,7 @@ _021EB5A8:
 	mov r0, #0x33
 	lsl r0, r0, #4
 	ldr r0, [r1, r0]
-	bl sub_021BC554
+	bl ovy167_21bc554
 	str r4, [sp]
 	str r0, [sp, #4]
 	ldr r2, [r5, #0x68]
@@ -28189,7 +28189,7 @@ _021EB5E8:
 	mov r0, #0x33
 	lsl r0, r0, #4
 	ldr r0, [r1, r0]
-	bl sub_021BC554
+	bl ovy167_21bc554
 	str r4, [sp]
 	str r0, [sp, #4]
 	ldr r2, [r5, #0x68]
@@ -28249,7 +28249,7 @@ _021EB65C:
 	mov r0, #0x33
 	lsl r0, r0, #4
 	ldr r0, [r1, r0]
-	bl sub_021BC554
+	bl ovy167_21bc554
 	cmp r0, #1
 	beq _021EB68A
 	add r7, #0x20
@@ -28413,8 +28413,8 @@ _021EB7B8:
 _021EB7BC:
 	.byte 0x80, 0x6D, 0x70, 0x47
 
-	thumb_func_start sub_021EB7C0
-sub_021EB7C0: ; 0x021EB7C0
+	thumb_func_start ovy168_21eb7c0
+ovy168_21eb7c0: ; 0x021EB7C0
 	ldr r2, _021EB7CC ; =0x00000329
 	ldrb r1, [r1, r2]
 	cmp r1, #0
@@ -28424,7 +28424,7 @@ _021EB7CA:
 	bx lr
 	.align 2, 0
 _021EB7CC: .word 0x00000329
-	thumb_func_end sub_021EB7C0
+	thumb_func_end ovy168_21eb7c0
 
 	thumb_func_start ovy168_21eb7d0
 ovy168_21eb7d0: ; 0x021EB7D0
@@ -28439,11 +28439,11 @@ ovy168_21eb7d0: ; 0x021EB7D0
 	lsl r6, r6, #2
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	str r0, [sp, #0xc]
 	sub r0, r6, #2
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -28459,7 +28459,7 @@ ovy168_21eb7d0: ; 0x021EB7D0
 	add r0, r6, #0
 	add r0, #0x15
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	mov r0, #4
 	lsl r0, r0, #0xd
@@ -28476,7 +28476,7 @@ ovy168_21eb7d0: ; 0x021EB7D0
 	add r0, r6, #0
 	add r0, #0x16
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	add r0, r4, #0
@@ -28505,7 +28505,7 @@ ovy168_21eb7d0: ; 0x021EB7D0
 	ldr r0, [r5, r0]
 	cmp r0, #1
 	bne _021EB890
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r1, #1
 	bl sub_02026FD0
 	sub r4, #0x21
@@ -28692,7 +28692,7 @@ _021EB9EE:
 	lsl r0, r0, #2
 	add r1, r6, #0
 	str r0, [sp, #0x10]
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	str r7, [sp]
 	str r7, [sp, #4]
 	add r1, r0, #0
@@ -28816,7 +28816,7 @@ _021EBB14:
 	ldr r6, _021EBCB8 ; =0x00000169
 	add r1, r5, #0
 	add r0, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -28834,7 +28834,7 @@ _021EBB14:
 	add r6, #0x12
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -28906,7 +28906,7 @@ _021EBBD8:
 	ldr r0, _021EBCB8 ; =0x00000169
 _021EBBDA:
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r3, #0
 	add r1, r0, #0
 	str r3, [sp]
@@ -29168,7 +29168,7 @@ _021EBDDE:
 	mov r0, #0x5d
 	lsl r0, r0, #2
 	add r1, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	str r7, [sp]
 	str r7, [sp, #4]
 	add r1, r0, #0
@@ -29246,7 +29246,7 @@ _021EBEA0:
 	lsr r1, r1, #0x1d
 	bne _021EBEDC
 	mov r1, #1
-	bl sub_021EE6F8
+	bl ovy168_21ee6f8
 	mov r0, #0x72
 	ldr r1, [r4]
 	lsl r0, r0, #2
@@ -29284,7 +29284,7 @@ ovy168_21ebee4: ; 0x021EBEE4
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -29333,7 +29333,7 @@ _021EBF56:
 _021EBF58:
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -29415,7 +29415,7 @@ _021EBFEA:
 	lsl r4, r4, #2
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -29544,7 +29544,7 @@ _021EC0F8:
 	ldr r6, _021EC204 ; =0x00000169
 	add r1, r5, #0
 	add r0, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -29562,7 +29562,7 @@ _021EC0F8:
 	add r6, #0x11
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -29813,7 +29813,7 @@ _021EC31C:
 	ldr r6, _021EC4BC ; =0x00000169
 	add r1, r5, #0
 	add r0, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -29831,7 +29831,7 @@ _021EC31C:
 	add r6, #0x12
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -29894,7 +29894,7 @@ _021EC3C6:
 	mov r0, #0x17
 	lsl r0, r0, #4
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	str r7, [sp]
 	mov r6, #0xb1
@@ -30013,7 +30013,7 @@ ovy168_21ec4d0: ; 0x021EC4D0
 	add r6, r0, #0
 	add r5, r1, #0
 	mov r4, #0
-	bl sub_021E012C
+	bl ovy168_21e012c
 	bl ovy167_0219C988
 	cmp r0, #2
 	bne _021EC4E8
@@ -30031,7 +30031,7 @@ _021EC4F2:
 	ldr r4, _021EC624 ; =0x0000016E
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -30049,7 +30049,7 @@ _021EC4F2:
 	add r0, r4, #0
 	add r0, #0xb
 	add r1, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -30159,7 +30159,7 @@ _021EC60E:
 	ldr r0, [r5]
 	add r1, r6, #0
 	bl ovy168_21ef3f0
-	bl sub_021E012C
+	bl ovy168_21e012c
 	bl ovy167_0219C988
 _021EC61E:
 	add sp, #0x10
@@ -30384,18 +30384,18 @@ _021EC7C8:
 	.align 2, 0
 	thumb_func_end ovy168_21ec7ac
 
-	thumb_func_start sub_021EC7E4
-sub_021EC7E4: ; 0x021EC7E4
+	thumb_func_start ovy168_21ec7e4
+ovy168_21ec7e4: ; 0x021EC7E4
 	add r2, r0, #0
 	lsr r2, r1
 	mov r0, #1
 	and r0, r2
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021EC7E4
+	thumb_func_end ovy168_21ec7e4
 
-	thumb_func_start sub_021EC7F0
-sub_021EC7F0: ; 0x021EC7F0
+	thumb_func_start ovy168_21ec7f0
+ovy168_21ec7f0: ; 0x021EC7F0
 	mov r2, #1
 	ldr r3, [r0]
 	lsl r2, r1
@@ -30404,7 +30404,7 @@ sub_021EC7F0: ; 0x021EC7F0
 	str r1, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021EC7F0
+	thumb_func_end ovy168_21ec7f0
 
 	thumb_func_start ovy168_21ec800
 ovy168_21ec800: ; 0x021EC800
@@ -30425,7 +30425,7 @@ ovy168_21ec800: ; 0x021EC800
 _021EC81C:
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_021EC7F0
+	bl ovy168_21ec7f0
 	ldrb r0, [r5, r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -30438,7 +30438,7 @@ _021EC82C:
 _021EC834:
 	ldr r0, [r5, r6]
 	add r1, r4, #0
-	bl sub_021EC7E4
+	bl ovy168_21ec7e4
 	cmp r0, #0
 	bne _021EC84C
 	add r0, r5, #0
@@ -30766,7 +30766,7 @@ ovy168_21eca80: ; 0x021ECA80
 	bl ovy168_21ecb4c
 	add r1, r0, #0
 	add r0, r4, #0
-	bl sub_021ECB38
+	bl ovy168_21ecb38
 	add r1, r5, #0
 	sub r1, #0x8d
 	ldr r1, [r4, r1]
@@ -30774,7 +30774,7 @@ ovy168_21eca80: ; 0x021ECA80
 	lsl r2, r1, #2
 	ldr r1, _021ECB30 ; =0x021F361E
 	ldrsh r1, [r1, r2]
-	bl sub_021ECB84
+	bl ovy168_21ecb84
 	add r0, r0, #1
 	sub r5, #0x89
 	str r0, [r4, r5]
@@ -30800,8 +30800,8 @@ _021ECB30: .word 0x021F361E
 _021ECB34: .word 0x021F41B0
 	thumb_func_end ovy168_21eca80
 
-	thumb_func_start sub_021ECB38
-sub_021ECB38: ; 0x021ECB38
+	thumb_func_start ovy168_21ecb38
+ovy168_21ecb38: ; 0x021ECB38
 	mov r2, #0xa7
 	lsl r2, r2, #2
 	str r1, [r0, r2]
@@ -30812,7 +30812,7 @@ sub_021ECB38: ; 0x021ECB38
 	str r3, [r0, r2]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021ECB38
+	thumb_func_end ovy168_21ecb38
 
 	thumb_func_start ovy168_21ecb4c
 ovy168_21ecb4c: ; 0x021ECB4C
@@ -30826,7 +30826,7 @@ ovy168_21ecb4c: ; 0x021ECB4C
 _021ECB5A:
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_021ECB84
+	bl ovy168_21ecb84
 	cmp r0, r5
 	beq _021ECB6C
 	mov r1, #1
@@ -30849,14 +30849,14 @@ _021ECB80:
 	.align 2, 0
 	thumb_func_end ovy168_21ecb4c
 
-	thumb_func_start sub_021ECB84
-sub_021ECB84: ; 0x021ECB84
+	thumb_func_start ovy168_21ecb84
+ovy168_21ecb84: ; 0x021ECB84
 	ldr r3, _021ECB8C ; =sub_02005748
 	add r0, r1, #0
 	bx r3
 	nop
 _021ECB8C: .word sub_02005748
-	thumb_func_end sub_021ECB84
+	thumb_func_end ovy168_21ecb84
 
 	thumb_func_start ovy168_21ecb90
 ovy168_21ecb90: ; 0x021ECB90
@@ -30874,7 +30874,7 @@ _021ECBA2:
 	ldr r4, _021ECC88 ; =0x0000016F
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r7, #0
 	add r1, r0, #0
 	str r7, [sp]
@@ -30892,7 +30892,7 @@ _021ECBA2:
 	add r0, r4, #0
 	add r0, #8
 	add r1, r6, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0xb1
@@ -30993,14 +30993,14 @@ ovy168_21ecc94: ; 0x021ECC94
 	cmp r0, #2
 	b _021ECD7A
 _021ECCAA:
-	bl sub_021E0298
+	bl ovy168_21e0298
 	cmp r0, #1
 	bne _021ECCCC
 	ldr r6, [r5]
 	ldr r4, _021ECDC0 ; =0x0000023B
 	add r1, r6, #0
 	add r0, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r3, #0
 	str r3, [sp]
 	str r3, [sp, #4]
@@ -31013,7 +31013,7 @@ _021ECCCC:
 	mov r0, #0x17
 	lsl r0, r0, #4
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	mov r3, #0
 	add r1, r0, #0
 	str r3, [sp]
@@ -32267,7 +32267,7 @@ ovy168_21ed698: ; 0x021ED698
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
-	bl sub_021E0050
+	bl ovy168_21e0050
 	cmp r0, #0
 	beq _021ED6B4
 	ldr r0, [r4, #4]
@@ -32800,7 +32800,7 @@ _021ED98C:
 	add r1, r6, r5
 	ldrb r0, [r1, #8]
 	ldrb r1, [r1, #0xc]
-	bl sub_021EE2F4
+	bl ovy168_21ee2f4
 	mov r1, #0x1f
 	and r1, r0
 	lsl r1, r1, #0x18
@@ -33160,7 +33160,7 @@ _021EDD90:
 	add r0, r3, r0
 	ldr r0, [r1, r0]
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	ldr r1, [sp, #4]
 	mov r7, #3
 	str r0, [r1, #0xc]
@@ -33326,7 +33326,7 @@ ovy168_21edec4: ; 0x021EDEC4
 	add r7, #0xf7
 	add r0, r7, #0
 	add r1, r5, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	add r1, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -33367,7 +33367,7 @@ _021EDF74:
 	add r0, r5, r0
 	lsl r6, r6, #4
 	ldr r0, [r0, r6]
-	bl sub_021BAC48
+	bl ovy167_21bac48
 	cmp r0, #0
 	ble _021EDFD4
 	add r7, sp, #0x18
@@ -33383,7 +33383,7 @@ _021EDF9E:
 	lsr r1, r1, #0x18
 	add r2, r7, r4
 	add r3, r3, r4
-	bl sub_021BAD28
+	bl ovy167_21bad28
 	lsl r2, r4, #1
 	add r1, sp, #0x10
 	strh r0, [r1, r2]
@@ -33394,7 +33394,7 @@ _021EDF9E:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_021BAC48
+	bl ovy167_21bac48
 	cmp r4, r0
 	blt _021EDF9E
 _021EDFD4:
@@ -33446,7 +33446,7 @@ _021EE01C:
 	add r0, r5, r0
 	lsl r4, r4, #4
 	ldr r0, [r0, r4]
-	bl sub_021BB368
+	bl ovy167_21bb368
 	cmp r0, #0
 	beq _021EE086
 	mov r1, #0
@@ -33669,7 +33669,7 @@ _021EE19E:
 	bl sub_02048564
 	ldr r0, [sp, #0xc]
 	bl sub_02048564
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r1, #1
 	bl sub_02026FD0
 	add r1, r0, #0
@@ -33770,8 +33770,8 @@ _021EE2EC: .word 0x000002DE
 _021EE2F0: .word 0x000002E6
 	thumb_func_end ovy168_21ee240
 
-	thumb_func_start sub_021EE2F4
-sub_021EE2F4: ; 0x021EE2F4
+	thumb_func_start ovy168_21ee2f4
+ovy168_21ee2f4: ; 0x021EE2F4
 	cmp r0, #0
 	bne _021EE2FE
 	mov r0, #0x1d
@@ -33830,7 +33830,7 @@ _021EE352:
 	mov r0, #0x11
 	lsl r0, r0, #6
 	bx lr
-	thumb_func_end sub_021EE2F4
+	thumb_func_end ovy168_21ee2f4
 
 	thumb_func_start ovy168_21ee358
 ovy168_21ee358: ; 0x021EE358
@@ -34285,8 +34285,8 @@ _021EE6F0: .word 0x00007FFF
 _021EE6F4: .word ovy168_21ed734
 	thumb_func_end ovy168_21ee630
 
-	thumb_func_start sub_021EE6F8
-sub_021EE6F8: ; 0x021EE6F8
+	thumb_func_start ovy168_21ee6f8
+ovy168_21ee6f8: ; 0x021EE6F8
 	mov r2, #0x71
 	lsl r2, r2, #2
 	ldr r0, [r0, r2]
@@ -34294,7 +34294,7 @@ sub_021EE6F8: ; 0x021EE6F8
 	bx r3
 	nop
 _021EE704: .word sub_0204BFD4
-	thumb_func_end sub_021EE6F8
+	thumb_func_end ovy168_21ee6f8
 
 	thumb_func_start ovy168_21ee708
 ovy168_21ee708: ; 0x021EE708
@@ -35931,13 +35931,13 @@ ovy168_21ef35c: ; 0x021EF35C
 ovy168_21ef380: ; 0x021EF380
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	bl sub_021E008C
+	bl ovy168_21e008c
 	mov r4, #0xbf
 	lsl r4, r4, #2
 	ldr r1, [r5, r4]
 	bl ovy168_21f0b74
 	add r6, r0, #0
-	bl sub_021E006C
+	bl ovy168_21e006c
 	ldr r1, [r5, r4]
 	bl ovy168_21e8364
 	orr r0, r6
@@ -35976,8 +35976,8 @@ ovy168_21ef3c0: ; 0x021EF3C0
 	.align 2, 0
 	thumb_func_end ovy168_21ef3c0
 
-	thumb_func_start sub_021EF3D8
-sub_021EF3D8: ; 0x021EF3D8
+	thumb_func_start ovy168_21ef3d8
+ovy168_21ef3d8: ; 0x021EF3D8
 	mov r3, #0
 _021EF3DA:
 	lsl r2, r3, #2
@@ -35992,14 +35992,14 @@ _021EF3EA:
 	add r0, r3, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021EF3D8
+	thumb_func_end ovy168_21ef3d8
 
 	thumb_func_start ovy168_21ef3f0
 ovy168_21ef3f0: ; 0x021EF3F0
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r0, #0
 	add r5, r1, #0
-	bl sub_021EF3D8
+	bl ovy168_21ef3d8
 	add r4, r0, #0
 	cmp r5, #0
 	beq _021EF436
@@ -36234,8 +36234,8 @@ ovy168_21ef588: ; 0x021EF588
 	push {r3, r4, lr}
 	sub sp, #0x24
 	add r4, r0, #0
-	bl sub_021E012C
-	bl sub_0219BED4
+	bl ovy168_21e012c
+	bl ovy167_219bed4
 	cmp r0, #4
 	beq _021EF5C8
 	bl ovy168_21e0304
@@ -36251,7 +36251,7 @@ ovy168_21ef588: ; 0x021EF588
 	mov r2, #0x10
 	mov r3, #8
 	bl sub_0202780C
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	mov r3, #0x20
 	add r1, r4, #0
 	mov r2, #1
@@ -36271,7 +36271,7 @@ ovy168_21ef5cc: ; 0x021EF5CC
 	ldr r0, [r4, r5]
 	cmp r0, #1
 	bne _021EF5EC
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r5, #0x48
 	mov r3, #0x20
 	add r1, r4, r5
@@ -36294,7 +36294,7 @@ ovy168_21ef5f0: ; 0x021EF5F0
 	bne _021EF662
 	cmp r0, #2
 	bne _021EF646
-	bl sub_021E0298
+	bl ovy168_21e0298
 	cmp r0, #1
 	bne _021EF628
 	mov r0, #0xbf
@@ -36304,12 +36304,12 @@ ovy168_21ef5f0: ; 0x021EF5F0
 	bne _021EF61E
 	ldr r0, _021EF6AC ; =0x00000171
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF61E:
 	ldr r0, _021EF6B0 ; =0x0000016B
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF628:
 	mov r0, #0xbf
@@ -36319,25 +36319,25 @@ _021EF628:
 	bne _021EF63C
 	ldr r0, _021EF6B4 ; =0x00000169
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF63C:
 	ldr r0, _021EF6B8 ; =0x0000016A
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF646:
-	bl sub_021E0298
+	bl ovy168_21e0298
 	cmp r0, #1
 	bne _021EF658
 	ldr r0, _021EF6AC ; =0x00000171
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF658:
 	ldr r0, _021EF6B4 ; =0x00000169
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF662:
 	cmp r0, #2
@@ -36347,31 +36347,31 @@ _021EF662:
 	ldr r0, [r4, r0]
 	cmp r0, #4
 	beq _021EF68C
-	bl sub_021E0298
+	bl ovy168_21e0298
 	cmp r0, #1
 	bne _021EF682
 	ldr r0, _021EF6BC ; =0x00000173
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF682:
 	ldr r0, _021EF6C0 ; =0x0000016D
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF68C:
-	bl sub_021E0298
+	bl ovy168_21e0298
 	cmp r0, #1
 	bne _021EF69E
 	ldr r0, _021EF6C4 ; =0x00000172
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 _021EF69E:
 	mov r0, #0x5b
 	lsl r0, r0, #2
 	add r1, r4, #0
-	bl sub_021EB7C0
+	bl ovy168_21eb7c0
 	pop {r4, pc}
 	nop
 _021EF6AC: .word 0x00000171
@@ -36383,8 +36383,8 @@ _021EF6C0: .word 0x0000016D
 _021EF6C4: .word 0x00000172
 	thumb_func_end ovy168_21ef5f0
 
-	thumb_func_start sub_021EF6C8
-sub_021EF6C8: ; 0x021EF6C8
+	thumb_func_start ovy168_21ef6c8
+ovy168_21ef6c8: ; 0x021EF6C8
 	ldr r1, [r0, #0x58]
 	cmp r1, #6
 	beq _021EF6E6
@@ -36405,12 +36405,12 @@ _021EF6E6:
 	mov r0, #1
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_021EF6C8
+	thumb_func_end ovy168_21ef6c8
 
 	thumb_func_start ovy168_21ef6ec
 ovy168_21ef6ec: ; 0x021EF6EC
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF6FC
 	ldr r0, _021EF700 ; =0x00000555
@@ -36424,7 +36424,7 @@ _021EF700: .word 0x00000555
 	thumb_func_start ovy168_21ef704
 ovy168_21ef704: ; 0x021EF704
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF714
 	ldr r0, _021EF718 ; =0x00000548
@@ -36438,7 +36438,7 @@ _021EF718: .word 0x00000548
 	thumb_func_start ovy168_21ef71c
 ovy168_21ef71c: ; 0x021EF71C
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF72C
 	ldr r0, _021EF730 ; =0x0000054D
@@ -36452,7 +36452,7 @@ _021EF730: .word 0x0000054D
 	thumb_func_start ovy168_21ef734
 ovy168_21ef734: ; 0x021EF734
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF744
 	ldr r0, _021EF748 ; =0x00000552
@@ -36466,7 +36466,7 @@ _021EF748: .word 0x00000552
 	thumb_func_start ovy168_21ef74c
 ovy168_21ef74c: ; 0x021EF74C
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF75C
 	ldr r0, _021EF760 ; =0x00000579
@@ -36480,7 +36480,7 @@ _021EF760: .word 0x00000579
 	thumb_func_start ovy168_21ef764
 ovy168_21ef764: ; 0x021EF764
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF774
 	ldr r0, _021EF778 ; =0x0000054D
@@ -36494,7 +36494,7 @@ _021EF778: .word 0x0000054D
 	thumb_func_start ovy168_21ef77c
 ovy168_21ef77c: ; 0x021EF77C
 	push {r3, lr}
-	bl sub_021EF6C8
+	bl ovy168_21ef6c8
 	cmp r0, #0
 	beq _021EF78C
 	ldr r0, _021EF790 ; =0x00000557
@@ -36550,7 +36550,7 @@ ovy168_21ef794: ; 0x021EF794
 	bl sub_0203A1FC
 	add r4, r0, #0
 	str r5, [r4]
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021EF838 ; =ovy168_21f1ab4
 	add r2, r4, #0
 	mov r3, #0
@@ -36573,7 +36573,7 @@ ovy168_21ef794: ; 0x021EF794
 	b _021EF82A
 _021EF824:
 	add r0, r5, #0
-	bl sub_021F1844
+	bl ovy168_21f1844
 _021EF82A:
 	add r0, r5, #0
 	add sp, #0xc
@@ -36627,7 +36627,7 @@ ovy168_21ef884: ; 0x021EF884
 	lsl r0, r0, #9
 	lsr r0, r0, #0x1f
 	beq _021EF950
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	ldr r2, [r6, r4]
 	ldr r1, _021EFA8C ; =0xFFBFFFFF
 	and r1, r2
@@ -36913,13 +36913,13 @@ ovy168_21efaa0: ; 0x021EFAA0
 	blx MIi_CpuClear16
 	add r0, r6, #0
 	mov r1, #0xd
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r1, r5, r4
 	add r1, #0x88
 	str r0, [r1]
 	add r0, r6, #0
 	mov r1, #0xe
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r1, r5, r4
 	add r2, r1, #0
 	add r2, #0x8c
@@ -36938,7 +36938,7 @@ ovy168_21efaa0: ; 0x021EFAA0
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	ldr r1, [sp, #0xc]
 	add r2, r7, #0
 	strb r0, [r1, r4]
@@ -36964,15 +36964,15 @@ ovy168_21efaa0: ; 0x021EFAA0
 	cmp r0, #0x64
 	bhs _021EFBB0
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x10]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	str r0, [sp, #0x14]
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	ldr r1, [sp, #0x14]
 	lsl r2, r2, #0x10
@@ -36984,22 +36984,22 @@ ovy168_21efaa0: ; 0x021EFAA0
 	str r0, [sp, #0x18]
 	add r0, r6, #0
 	mov r1, #0x14
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	ldr r1, [sp, #0x18]
 	sub r1, r0, r1
 	add r0, r5, r4
 	add r0, #0x94
 	str r1, [r0]
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x1c]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	str r0, [sp, #0x20]
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	ldr r1, [sp, #0x20]
 	add r2, r2, #1
@@ -37037,12 +37037,12 @@ _021EFBBC:
 	strb r2, [r0]
 	ldr r0, [sp]
 	add r1, r6, #0
-	bl sub_0219BF70
+	bl ovy167_219bf70
 	add r1, r5, r4
 	add r1, #0xaf
 	strb r0, [r1]
 	add r0, r6, #0
-	bl sub_021BB064
+	bl ovy167_21bb064
 	mov r1, #0xad
 	mov r2, #0
 	bl sub_0201CCF8
@@ -37055,7 +37055,7 @@ _021EFBBC:
 	b _021EFC0E
 _021EFBFE:
 	add r0, r6, #0
-	bl sub_021BB064
+	bl ovy167_21bb064
 	bl sub_0201CEB4
 	add r1, r5, r4
 	add r1, #0xad
@@ -37063,19 +37063,19 @@ _021EFBFE:
 _021EFC0E:
 	add r0, r6, #0
 	mov r1, #5
-	bl sub_021BBB14
-	bl sub_021CE2B8
+	bl ovy167_21bbb14
+	bl ovy167_21ce2b8
 	cmp r0, #1
 	bne _021EFC2C
 	add r0, r6, #0
-	bl sub_021BBAA8
+	bl ovy167_21bbaa8
 	cmp r0, #5
 	bne _021EFC2C
 	mov r1, #6
 	b _021EFC34
 _021EFC2C:
 	add r0, r6, #0
-	bl sub_021BBAA8
+	bl ovy167_21bbaa8
 	add r1, r0, #0
 _021EFC34:
 	add r0, r5, #0
@@ -37094,7 +37094,7 @@ _021EFC34:
 	add r0, r0, r4
 	bl ovy168_21f0644
 	add r0, r6, #0
-	bl sub_021BB064
+	bl ovy167_21bb064
 	add r3, r0, #0
 	ldr r1, [sp, #4]
 	add r0, r5, #0
@@ -37308,13 +37308,13 @@ _021EFDDE:
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy168_21efc70
 
-	thumb_func_start sub_021EFE1C
-sub_021EFE1C: ; 0x021EFE1C
+	thumb_func_start ovy168_21efe1c
+ovy168_21efe1c: ; 0x021EFE1C
 	ldr r0, _021EFE20 ; =0x000001AF
 	bx lr
 	.align 2, 0
 _021EFE20: .word 0x000001AF
-	thumb_func_end sub_021EFE1C
+	thumb_func_end ovy168_21efe1c
 
 	thumb_func_start ovy168_21efe24
 ovy168_21efe24: ; 0x021EFE24
@@ -37337,7 +37337,7 @@ ovy168_21efe24: ; 0x021EFE24
 _021EFE44:
 	lsl r0, r6, #2
 	add r7, r5, r0
-	bl sub_021EFE1C
+	bl ovy168_21efe1c
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
 	lsl r3, r6, #0x15
@@ -37348,7 +37348,7 @@ _021EFE44:
 	ldr r0, [r5, #4]
 	bl sub_0204BBA0
 	str r0, [r7, #0x18]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	str r0, [sp, #8]
 	ldr r0, [r7, #0x18]
 	add r1, r4, #0
@@ -37421,7 +37421,7 @@ _021EFE44:
 	add r3, r7, #0
 	bl sub_0204BBA0
 	str r0, [r5, #0x3c]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x38]
 	add r1, r4, #0
@@ -37433,7 +37433,7 @@ _021EFE44:
 	lsr r2, r2, #0x10
 	mov r3, #0x20
 	bl sub_02026F7C
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	str r0, [sp, #0x10]
 	ldr r0, [r5, #0x3c]
 	add r1, r4, #0
@@ -37445,7 +37445,7 @@ _021EFE44:
 	lsr r2, r2, #0x10
 	mov r3, #0x20
 	bl sub_02026F7C
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r2, r7, #0
 	mov r1, #2
 	add r2, #0xe0
@@ -37467,7 +37467,7 @@ _021EFE44:
 	ldr r0, [sp, #0x28]
 	ldr r0, [r0, #0x14]
 	str r0, [r5, #0x14]
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #3
 	bhi _021EFFA8
 	add r0, r0, r0
@@ -37603,13 +37603,13 @@ _021F007E:
 _021F0080: .word 0xFF7FFFFF
 	thumb_func_end ovy168_21f0014
 
-	thumb_func_start sub_021F0084
-sub_021F0084: ; 0x021F0084
+	thumb_func_start ovy168_21f0084
+ovy168_21f0084: ; 0x021F0084
 	ldr r0, _021F0088 ; =0x000001B1
 	bx lr
 	.align 2, 0
 _021F0088: .word 0x000001B1
-	thumb_func_end sub_021F0084
+	thumb_func_end ovy168_21f0084
 
 	thumb_func_start ovy168_21f008c
 ovy168_21f008c: ; 0x021F008C
@@ -37702,10 +37702,10 @@ _021F010E:
 _021F011A:
 	cmp r6, #4
 	bge _021F0124
-	bl sub_021EFE1C
+	bl ovy168_21efe1c
 	b _021F0128
 _021F0124:
-	bl sub_021F0084
+	bl ovy168_21f0084
 _021F0128:
 	str r0, [sp, #0xc]
 	add r0, r4, #0
@@ -37733,7 +37733,7 @@ _021F0128:
 	ldr r2, [sp, #0x2c]
 	ldr r1, [sp, #0x30]
 	str r0, [r2, r1]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r5, r0, #0
 	ldr r1, [sp, #0x2c]
 	ldr r0, [sp, #0x30]
@@ -37997,7 +37997,7 @@ _021F02F2:
 	bl sub_0204C040
 	add r1, r4, r5
 	str r0, [r1, #0x48]
-	bl sub_021E00E8
+	bl ovy168_21e00e8
 	cmp r0, #3
 	bne _021F03B0
 	cmp r6, #4
@@ -38284,7 +38284,7 @@ _021F05CA:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021F060C
-	bl sub_021E00F8
+	bl ovy168_21e00f8
 	cmp r0, #0
 	bne _021F060C
 	add r0, r5, #0
@@ -38302,7 +38302,7 @@ _021F060C:
 	and r2, r3
 	orr r1, r2
 	str r1, [r0, r4]
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021F0640 ; =ovy168_21f19c0
 	add r2, r6, r4
 	mov r3, #0
@@ -38668,7 +38668,7 @@ ovy168_21f08b4: ; 0x021F08B4
 	str r4, [r1, r3]
 	add r0, r0, r3
 	add r1, r2, #0
-	bl sub_021F0CB8
+	bl ovy168_21f0cb8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021F08D8: .word 0xFFFF00FF
@@ -38693,13 +38693,13 @@ ovy168_21f08dc: ; 0x021F08DC
 	str r0, [sp]
 	add r0, r6, #0
 	mov r1, #0xd
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r1, r5, r4
 	add r1, #0x88
 	str r0, [r1]
 	add r0, r6, #0
 	mov r1, #0xe
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r1, r5, r4
 	add r1, #0x8c
 	str r0, [r1]
@@ -38716,21 +38716,21 @@ ovy168_21f08dc: ; 0x021F08DC
 	add r7, #0xac
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	strb r0, [r7, r4]
 	ldrb r0, [r7, r4]
 	cmp r0, #0x64
 	bhs _021F0998
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #4]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	add r2, r2, #1
 	lsl r1, r7, #0x10
@@ -38741,15 +38741,15 @@ ovy168_21f08dc: ; 0x021F08DC
 	bl sub_0201D5B4
 	add r7, r0, #0
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #8]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	ldr r1, [sp, #0xc]
 	lsl r2, r2, #0x10
@@ -38761,15 +38761,15 @@ ovy168_21f08dc: ; 0x021F08DC
 	b _021F09F2
 _021F0998:
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x10]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	lsl r1, r7, #0x10
 	lsl r2, r2, #0x10
@@ -38779,15 +38779,15 @@ _021F0998:
 	bl sub_0201D5B4
 	add r7, r0, #0
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x14]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	str r0, [sp, #0x18]
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	ldr r1, [sp, #0x18]
 	sub r2, r2, #1
@@ -38803,15 +38803,15 @@ _021F09F2:
 	add r0, #0x9c
 	str r1, [r0]
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x1c]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	lsl r1, r7, #0x10
 	lsl r2, r2, #0x10
@@ -38820,15 +38820,15 @@ _021F09F2:
 	lsr r2, r2, #0x10
 	bl sub_0201D5B4
 	add r0, r6, #0
-	bl sub_021BAC44
+	bl ovy167_21bac44
 	str r0, [sp, #0x20]
 	add r0, r6, #0
 	mov r1, #0x13
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0xf
-	bl sub_021BB1B4
+	bl ovy167_21bb1b4
 	add r2, r0, #0
 	sub r2, r2, #1
 	lsl r1, r7, #0x10
@@ -38853,7 +38853,7 @@ _021F09F2:
 	str r1, [r0, r4]
 	ldr r1, [sp]
 	add r0, r5, r4
-	bl sub_021F0CB8
+	bl ovy168_21f0cb8
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -39164,8 +39164,8 @@ _021F0CAE:
 _021F0CB4: .word 0xFC1FFFFF
 	thumb_func_end ovy168_21f0c28
 
-	thumb_func_start sub_021F0CB8
-sub_021F0CB8: ; 0x021F0CB8
+	thumb_func_start ovy168_21f0cb8
+ovy168_21f0cb8: ; 0x021F0CB8
 	mov r2, #2
 	lsl r2, r2, #0x1e
 	ldr r3, [r0, #0x54]
@@ -39200,7 +39200,7 @@ _021F0CEA:
 	orr r1, r2
 	str r1, [r0, #0x70]
 	bx lr
-	thumb_func_end sub_021F0CB8
+	thumb_func_end ovy168_21f0cb8
 
 	thumb_func_start ovy168_21f0cf4
 ovy168_21f0cf4: ; 0x021F0CF4
@@ -40562,15 +40562,15 @@ _021F172C: .word 0xFFEFFFFF
 _021F1730: .word 0xFFE0001F
 	thumb_func_end ovy168_21f16a8
 
-	thumb_func_start sub_021F1734
-sub_021F1734: ; 0x021F1734
+	thumb_func_start ovy168_21f1734
+ovy168_21f1734: ; 0x021F1734
 	mov r1, #0x46
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
 	lsl r0, r0, #0x1d
 	lsr r0, r0, #0x1f
 	bx lr
-	thumb_func_end sub_021F1734
+	thumb_func_end ovy168_21f1734
 
 	thumb_func_start ovy168_21f1740
 ovy168_21f1740: ; 0x021F1740
@@ -40588,14 +40588,14 @@ ovy168_21f1740: ; 0x021F1740
 	bx lr
 	thumb_func_end ovy168_21f1740
 
-	thumb_func_start sub_021F1758
-sub_021F1758: ; 0x021F1758
+	thumb_func_start ovy168_21f1758
+ovy168_21f1758: ; 0x021F1758
 	ldr r2, _021F1760 ; =0x00000464
 	str r1, [r0, r2]
 	bx lr
 	nop
 _021F1760: .word 0x00000464
-	thumb_func_end sub_021F1758
+	thumb_func_end ovy168_21f1758
 
 	thumb_func_start ovy168_21f1764
 ovy168_21f1764: ; 0x021F1764
@@ -40727,8 +40727,8 @@ _021F1840:
 	.align 2, 0
 	thumb_func_end ovy168_21f17f8
 
-	thumb_func_start sub_021F1844
-sub_021F1844: ; 0x021F1844
+	thumb_func_start ovy168_21f1844
+ovy168_21f1844: ; 0x021F1844
 	add r1, r0, #0
 	mov r2, #8
 	add r1, #0xbc
@@ -40737,10 +40737,10 @@ sub_021F1844: ; 0x021F1844
 	lsl r1, r1, #6
 	str r2, [r0, r1]
 	bx lr
-	thumb_func_end sub_021F1844
+	thumb_func_end ovy168_21f1844
 
-	thumb_func_start sub_021F1854
-sub_021F1854: ; 0x021F1854
+	thumb_func_start ovy168_21f1854
+ovy168_21f1854: ; 0x021F1854
 	mov r2, #0x46
 	lsl r2, r2, #4
 	mov r1, #1
@@ -40749,10 +40749,10 @@ sub_021F1854: ; 0x021F1854
 	orr r1, r3
 	str r1, [r0, r2]
 	bx lr
-	thumb_func_end sub_021F1854
+	thumb_func_end ovy168_21f1854
 
-	thumb_func_start sub_021F1864
-sub_021F1864: ; 0x021F1864
+	thumb_func_start ovy168_21f1864
+ovy168_21f1864: ; 0x021F1864
 	mov r2, #0x84
 	add r3, r1, #0
 	mul r3, r2
@@ -40768,7 +40768,7 @@ sub_021F1864: ; 0x021F1864
 	str r1, [r0, r3]
 _021F187E:
 	bx lr
-	thumb_func_end sub_021F1864
+	thumb_func_end ovy168_21f1864
 
 	thumb_func_start ovy168_21f1880
 ovy168_21f1880: ; 0x021F1880
@@ -40797,7 +40797,7 @@ _021F189A:
 	lsl r0, r0, #0x1c
 	lsr r0, r0, #0x1f
 	bne _021F18D0
-	bl sub_021E021C
+	bl ovy168_21e021c
 	cmp r0, #0
 	beq _021F18D0
 	add r0, r4, #4
@@ -41120,9 +41120,9 @@ _021F1B1C:
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _021F1BDE
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r5, r0, #0
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	mov r3, #0
 	str r3, [sp]
 	mov r1, #8
@@ -41141,13 +41141,13 @@ _021F1B1C:
 	str r0, [r4, #4]
 	pop {r3, r4, r5, r6, r7, pc}
 _021F1B56:
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	bl sub_02027780
 	cmp r0, #0
 	bne _021F1BDE
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r5, r0, #0
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	mov r1, #8
 	str r1, [sp]
 	mov r3, #0
@@ -41166,7 +41166,7 @@ _021F1B56:
 	str r0, [r4, #4]
 	pop {r3, r4, r5, r6, r7, pc}
 _021F1B90:
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	bl sub_02027780
 	cmp r0, #0
 	bne _021F1BDE
@@ -41358,7 +41358,7 @@ _021F1CE0:
 	bl sub_0203A1FC
 	add r5, r0, #0
 	str r4, [r5]
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021F1D2C ; =ovy168_21f1ff4
 	add r2, r5, #0
 	mov r3, #0
@@ -41449,7 +41449,7 @@ ovy168_21f1d5c: ; 0x021F1D5C
 	mov r3, #0xc0
 	bl sub_0204BBA0
 	str r0, [r7, #0xc]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r4, r0, #0
 	ldr r0, [r7, #0xc]
 	mov r1, #0
@@ -41994,7 +41994,7 @@ ovy168_21f2174: ; 0x021F2174
 	add r2, r6, #2
 	bl sub_0204BDE0
 	str r0, [r5, #0x44]
-	bl sub_021EFE1C
+	bl ovy168_21efe1c
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0x74
@@ -42005,7 +42005,7 @@ ovy168_21f2174: ; 0x021F2174
 	add r0, r4, #0
 	bl sub_0204BBA0
 	str r0, [r5, #0x48]
-	bl sub_021E00B8
+	bl ovy168_21e00b8
 	add r6, r0, #0
 	ldr r0, [r5, #0x48]
 	mov r1, #0
@@ -42193,7 +42193,7 @@ _021F2356:
 	mov r2, #0
 	mov r3, #0
 	bl ovy168_21f2418
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021F23B0 ; =ovy168_21f26a0
 	add r2, r5, #0
 	mov r3, #0
@@ -42619,13 +42619,13 @@ ovy168_21f26b8: ; 0x021F26B8
 _021F26D4: .word 0x021F4208
 	thumb_func_end ovy168_21f26b8
 
-	thumb_func_start sub_021F26D8
-sub_021F26D8: ; 0x021F26D8
+	thumb_func_start ovy168_21f26d8
+ovy168_21f26d8: ; 0x021F26D8
 	ldr r3, _021F26DC ; =sub_0203A24C
 	bx r3
 	.align 2, 0
 _021F26DC: .word sub_0203A24C
-	thumb_func_end sub_021F26D8
+	thumb_func_end ovy168_21f26d8
 
 	thumb_func_start ovy168_21f26e0
 ovy168_21f26e0: ; 0x021F26E0
@@ -42735,8 +42735,8 @@ _021F2786:
 _021F27B4: .word ovy168_21f2a64
 	thumb_func_end ovy168_21f2728
 
-	thumb_func_start sub_021F27B8
-sub_021F27B8: ; 0x021F27B8
+	thumb_func_start ovy168_21f27b8
+ovy168_21f27b8: ; 0x021F27B8
 	ldr r0, [r0, #4]
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
@@ -42746,7 +42746,7 @@ sub_021F27B8: ; 0x021F27B8
 _021F27C4:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_021F27B8
+	thumb_func_end ovy168_21f27b8
 
 	thumb_func_start ovy168_21f27c8
 ovy168_21f27c8: ; 0x021F27C8
@@ -42873,8 +42873,8 @@ _021F28CC: .word ovy168_21f2c4c
 _021F28D0: .word ovy168_21f2c14
 	thumb_func_end ovy168_21f27c8
 
-	thumb_func_start sub_021F28D4
-sub_021F28D4: ; 0x021F28D4
+	thumb_func_start ovy168_21f28d4
+ovy168_21f28d4: ; 0x021F28D4
 	ldr r0, [r0, #4]
 	lsl r0, r0, #0x1e
 	lsr r0, r0, #0x1f
@@ -42884,7 +42884,7 @@ sub_021F28D4: ; 0x021F28D4
 _021F28E0:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_021F28D4
+	thumb_func_end ovy168_21f28d4
 
 	thumb_func_start ovy168_21f28e4
 ovy168_21f28e4: ; 0x021F28E4
@@ -43465,7 +43465,7 @@ ovy168_21f2cdc: ; 0x021F2CDC
 	str r0, [r4]
 	add r0, r6, #0
 	bl sub_0204AB0C
-	bl sub_021E00AC
+	bl ovy168_21e00ac
 	ldr r1, _021F2D98 ; =ovy168_21f2f30
 	add r2, r4, #0
 	mov r3, #0
@@ -43610,11 +43610,11 @@ _021F2E96:
 	pop {r4, pc}
 	thumb_func_end ovy168_21f2e84
 
-	thumb_func_start sub_021F2E98
-sub_021F2E98: ; 0x021F2E98
+	thumb_func_start ovy168_21f2e98
+ovy168_21f2e98: ; 0x021F2E98
 	ldr r0, [r0, #0x28]
 	bx lr
-	thumb_func_end sub_021F2E98
+	thumb_func_end ovy168_21f2e98
 
 	thumb_func_start ovy168_21f2e9c
 ovy168_21f2e9c: ; 0x021F2E9C
