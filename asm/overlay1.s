@@ -233,7 +233,7 @@ _0214F6A4:
 _0214F6A8:
 	mov r0, #0xcc
 	str r0, [sp]
-	ldr r3, _0214F78C ; =0x0214F8E0
+	ldr r3, _0214F78C ; =sub_0214F8E0
 	mov r0, #4
 	mov r1, #0x14
 	mov r2, #0
@@ -337,7 +337,7 @@ _0214F77C: .word 0x000000C3
 _0214F780: .word 0x021B78BC
 _0214F784: .word 0x000000C2
 _0214F788: .word 0x021C63A0
-_0214F78C: .word 0x0214F8E0
+_0214F78C: .word sub_0214F8E0
 _0214F790: .word 0x021E7D9C
 _0214F794: .word 0x0000011C
 _0214F798: .word 0x021B52BC
@@ -396,7 +396,7 @@ _0214F7C2:
 	add r0, r6, #0
 	sub r0, #0x59
 	str r0, [sp]
-	ldr r3, _0214F8A8 ; =0x0214F8E0
+	ldr r3, _0214F8A8 ; =sub_0214F8E0
 	mov r0, #4
 	mov r2, #1
 	bl sub_0203A1FC
@@ -408,7 +408,7 @@ _0214F7C2:
 	add r0, r6, #0
 	sub r0, #0x58
 	str r0, [sp]
-	ldr r3, _0214F8A8 ; =0x0214F8E0
+	ldr r3, _0214F8A8 ; =sub_0214F8E0
 	mov r0, #4
 	mov r2, #1
 	bl sub_0203A1FC
@@ -460,7 +460,7 @@ _0214F7C2:
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
-_0214F8A8: .word 0x0214F8E0
+_0214F8A8: .word sub_0214F8E0
 	thumb_func_end ovy1_214f7a0
 
 	thumb_func_start ovy1_214f8ac
@@ -491,8 +491,9 @@ ovy1_214F8D4: ; 0x0214F8D4
 	.align 2, 0
 _0214F8D8: .word ovy1_214f8ac
 	thumb_func_end ovy1_214F8D4
-_0214F8DC:
-	.byte 0x00, 0x00, 0x00, 0x00
-	.byte 0x65, 0x76, 0x65, 0x6E, 0x74, 0x5F, 0x67, 0x74, 0x73, 0x6E, 0x65, 0x67, 0x6F, 0x2E, 0x63, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	; 0x0214F8DC
+
+	.data
+	.balign 4, 0
+	.public sub_0214F8E0
+sub_0214F8E0:
+	.ascii "event_gtsnego.c"
