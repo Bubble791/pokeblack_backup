@@ -146,7 +146,7 @@ Autoload DTCM
 
 Overlay OVY_0
 {
-    After main
+    Address 0x214f500
     Object asm/overlay0.o
 }
 Overlay OVY_1
