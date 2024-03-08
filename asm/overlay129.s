@@ -460,7 +460,7 @@ _021EF04A:
 	strb r1, [r6, r5]
 _021EF05E:
 	ldr r0, [r6]
-	bl sub_021671C4
+	bl ovy12_21671c4
 _021EF064:
 	add r0, r4, #0
 	bl ovy36_21b83b4
@@ -659,7 +659,7 @@ _021EF1DE:
 	add r2, r0, #0
 	ldr r0, [r5]
 	add r1, r4, #0
-	bl sub_02167BCC
+	bl ovy12_2167bcc
 	mov r1, #2
 	ldr r0, [r5]
 	lsl r1, r1, #0xe

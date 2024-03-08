@@ -886,7 +886,7 @@
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public MI_CpuCopy8
-.public sub_02004EB0
+.public OSi_ReferSymbol
 .public OS_InitTick
 .public OS_InitAlarm
 .public RTC_Init
@@ -937,7 +937,7 @@
 .public sub_0215BF14
 .public sub_0215C0AC
 .public sub_0215C150
-.public sub_02157714
+.public ovy11_2157714
 .public sub_0215800C
 .public MI_CpuFill8
 .public sub_0215C22C
@@ -1069,7 +1069,7 @@
 .public sub_0216B24C
 .public sub_0216B1D4
 .public sub_02157F10
-.public sub_02157E2C
+.public ovy11_2157e2c
 .public OS_IsRunOnTwl
 .public OS_GetTick
 .public sub_0208D5C4
@@ -1077,7 +1077,7 @@
 .public ovy11_216b2a4
 .public sub_0216B2CC
 .public sub_0216B1D4
-.public sub_02157714
+.public ovy11_2157714
 .public sub_0215800C
 .public MI_CpuCopy8
 .public OS_IsRunOnTwl
@@ -5044,7 +5044,7 @@
 
 .public sub_02702698
 
-.public sub_02004190
+.public SVC_CpuSet
 .public OS_ReadOwnerOfLockWord
 .public OS_TryLockCartridge
 .public sub_0207A138
@@ -12230,7 +12230,7 @@
 .public sub_020827A0
 .public sub_020827D0
 .public sub_0208287C
-.public sub_02004DF4
+.public MIi_UncompressBackward
 .public MTX_ScaleApply33
 .public GXi_NopClearFifo128_
 .public G2_GetBG2ScrPtr

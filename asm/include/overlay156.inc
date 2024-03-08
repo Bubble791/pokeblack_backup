@@ -10,7 +10,7 @@
 .public sub_02013634
 .public sub_020134CC
 .public sub_0200955C
-.public sub_02153FA8
+.public ovy12_2153fa8
 .public sub_02153EC4
 .public sub_02013640
 .public sub_02017354

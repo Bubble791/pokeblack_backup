@@ -252,7 +252,7 @@
 .public sub_0204F224
 .public sub_02016AD8
 .public sub_0201738C
-.public sub_021666EC
+.public ovy12_21666ec
 .public sub_0201736C
 .public sub_02008BF0
 .public sub_021863D8
@@ -285,7 +285,7 @@
 .public sub_0215CE04
 .public sub_020173AC
 .public sub_0215CE54
-.public sub_0215EE10
+.public ovy12_215ee10
 .public sub_02180E3C
 .public sub_02016ABC
 .public sub_0202D3F0
@@ -1771,7 +1771,7 @@
 .public MI_CpuFill8
 .public ovy12_2166874
 .public sub_0218B128
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_0216763C
 .public sub_02167788
 .public sub_02167670
@@ -1784,7 +1784,7 @@
 .public ovy12_2167060
 .public sub_021672F8
 .public sub_02167078
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_02167018
 .public sub_021670F4
 .public ovy12_2167534
@@ -2338,7 +2338,7 @@
 .public sub_021670FC
 .public sub_02166F4C
 .public sub_0216750C
-.public sub_021671C4
+.public ovy12_21671c4
 .public sub_02167600
 .public sub_0216773C
 .public sub_02166FDC
@@ -2386,7 +2386,7 @@
 .public sub_02167224
 .public sub_0216713C
 .public sub_0215E8EC
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021670F4
 .public sub_02166FE8
 .public sub_02167224
@@ -2410,7 +2410,7 @@
 .public sub_0215E980
 .public sub_0215E8EC
 .public sub_02166FE8
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021670F4
 .public sub_02167224
 .public sub_02006254
@@ -2464,7 +2464,7 @@
 .public sub_02167224
 .public sub_0216713C
 .public sub_0215E8EC
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021670F4
 .public sub_02166FE8
 .public sub_02167224
@@ -2657,7 +2657,7 @@
 .public sub_021674E8
 .public sub_02167078
 .public sub_02166EB0
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_0215E4B0
 .public sub_02166EB0
 .public sub_021674B0
@@ -3065,7 +3065,7 @@
 .public sub_02049404
 .public sub_02166F68
 .public sub_02167FB8
-.public sub_021671C4
+.public ovy12_21671c4
 .public sub_02166F68
 .public sub_021943E8
 .public sub_02166F68
@@ -3214,7 +3214,7 @@
 .public sub_021670F4
 .public sub_0215E980
 .public sub_02167224
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021670F4
 .public sub_02166FE8
 .public sub_02167224
@@ -3237,7 +3237,7 @@
 .public sub_0216713C
 .public sub_0215E980
 .public sub_02166FE8
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021670F4
 .public sub_02167224
 .public sub_02006254
@@ -3375,7 +3375,7 @@
 .public sub_021674E8
 .public sub_02167078
 .public sub_02166EB0
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_021956E8
 .public sub_02166EB0
 .public sub_021674B0
@@ -3386,10 +3386,10 @@
 .public sub_0216711C
 .public sub_02167054
 .public sub_0215ED08
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_02167088
 .public sub_0215ED08
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_02167088
 .public sub_021956E8
 .public sub_0215ED08
@@ -4338,7 +4338,7 @@
 .public sub_021A29EC
 .public sub_021A2BD8
 .public sub_021670FC
-.public sub_0216820C
+.public ovy12_216820c
 .public sub_0219C940
 .public sub_0219C92C
 .public sub_0219C934
@@ -4537,10 +4537,10 @@
 .public sub_0219DDD8
 .public sub_02167088
 .public sub_0215ED08
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_0219DD68
 .public sub_0219DDF0
-.public sub_0216708C
+.public ovy12_216708c
 .public sub_0219DD68
 .public sub_0219DE08
 .public sub_0219E21C
@@ -10031,7 +10031,7 @@
 .public sub_02167308
 .public sub_0216734C
 .public sub_021672F8
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_0216734C
 .public sub_021681B0
 .public sub_0203A1FC
@@ -10102,7 +10102,7 @@
 .public sub_02167308
 .public sub_0219A6A0
 .public sub_0216763C
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_0219A5C4
 .public sub_0218050C
 .public sub_02006254
@@ -10131,7 +10131,7 @@
 .public sub_02167308
 .public sub_0218050C
 .public sub_0216763C
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_0219A5C4
 .public sub_02006254
 .public sub_0219CD54

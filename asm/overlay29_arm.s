@@ -5063,7 +5063,7 @@ sub_02196EB4: ; 0x02196EB4
 	mov r5, r0
 	ldr r0, _02196FE0 ; =0x02005108
 	mov r4, #0
-	bl sub_02004EB0
+	bl OSi_ReferSymbol
 	cmp r5, #0
 	moveq r0, r4
 	ldmeqia sp!, {r4, r5, r6, pc}

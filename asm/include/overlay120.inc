@@ -90,7 +90,7 @@
 .public sub_02186EA0
 .public sub_021862E4
 .public sub_02180498
-.public sub_021B3D24
+.public ovy36_21b3d24
 .public sub_021862F4
 .public sub_021862F0
 .public sub_021862DC

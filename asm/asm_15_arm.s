@@ -8764,7 +8764,7 @@ sub_020584E4: ; 0x020584E4
 	mov r6, r1
 	mov r5, r2
 	mov r4, r3
-	bl sub_02004EB0
+	bl OSi_ReferSymbol
 	mov r1, r7
 	mov r2, r6
 	mov r3, r5
@@ -10286,7 +10286,7 @@ sub_02059870: ; 0x02059870
 	cmp r0, #0
 	moveq r0, #1
 	ldmeqia sp!, {r3, pc}
-	blx sub_02157714
+	blx ovy11_2157714
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, pc}
@@ -15095,7 +15095,7 @@ _0205D72C: .word 0x0218DBE0
 sub_0205D730: ; 0x0205D730
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r0
-	blx sub_02157E2C
+	blx ovy11_2157e2c
 	cmp r0, #0
 	beq _0205D7B0
 	mov r0, r4
@@ -15232,7 +15232,7 @@ sub_0205D8D4: ; 0x0205D8D4
 	arm_func_start sub_0205D8FC
 sub_0205D8FC: ; 0x0205D8FC
 	stmdb sp!, {r3, lr}
-	blx sub_02157714
+	blx ovy11_2157714
 	cmp r0, #0
 	movne r0, #0xb
 	ldmneia sp!, {r3, pc}

@@ -47,7 +47,7 @@
 .public sub_021672F8
 .public sub_02167308
 .public sub_02167078
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_02006254
 
 .public ovy36_21b81bc

@@ -1956,7 +1956,7 @@ ovy117_21efb58: ; 0x021EFB58
 	push {r3, r4, r5, r6, r7, lr}
 	ldr r0, [r0, #4]
 	bl sub_021804D4
-	bl sub_02184590
+	bl ovy36_02184590
 	add r6, r0, #0
 	bl sub_021BA684
 	add r4, r0, #0
@@ -1986,7 +1986,7 @@ ovy117_21efb88: ; 0x021EFB88
 	str r2, [sp, #0x10]
 	add r5, r1, #0
 	bl sub_021804D4
-	bl sub_02184590
+	bl ovy36_02184590
 	add r6, r0, #0
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
@@ -2050,7 +2050,7 @@ _021EFBE6:
 	ldrb r2, [r2, r7]
 	ldrb r3, [r3, r7]
 	lsr r0, r0, #0x18
-	bl sub_021BA624
+	bl ovy207_21ba624
 _021EFC1C:
 	cmp r4, r5
 	bne _021EFC84
@@ -2102,7 +2102,7 @@ _021EFC42:
 	ldrb r2, [r2, r3]
 	ldrb r3, [r4, r3]
 	lsr r0, r0, #0x18
-	bl sub_021BA624
+	bl ovy207_21ba624
 _021EFC84:
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
@@ -2129,7 +2129,7 @@ _021EFC84:
 	ldrb r2, [r2, #1]
 	ldrb r3, [r3, #2]
 	lsr r0, r0, #0x18
-	bl sub_021BA624
+	bl ovy207_21ba624
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

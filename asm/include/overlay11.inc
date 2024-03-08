@@ -206,7 +206,7 @@
 .public sub_0215A6A0
 .public OS_YieldThread
 .public OS_Sleep
-.public sub_02004EB0
+.public OSi_ReferSymbol
 .public OS_GetTick
 .public sub_0208D60C
 .public sub_0208D60C
@@ -404,7 +404,7 @@
 .public sub_02154A60
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_02004EB0
+.public OSi_ReferSymbol
 .public sub_02157980
 .public MI_CpuFill8
 .public sub_02152798
@@ -635,7 +635,7 @@
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_02004EB0
+.public OSi_ReferSymbol
 .public OS_DisableInterrupts
 .public OS_RestoreInterrupts
 .public OS_WakeupThreadDirect

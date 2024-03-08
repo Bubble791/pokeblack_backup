@@ -1196,7 +1196,7 @@
 .public sub_021BDC6C
 .public MI_CpuFill8
 .public ovy12_215309c
-.public sub_021530F8
+.public ovy12_21530f8
 .public sub_02042788
 .public sub_02042BA8
 .public sub_021BDC6C

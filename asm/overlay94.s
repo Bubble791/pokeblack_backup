@@ -1981,7 +1981,7 @@ _021EFCA4:
 	ldr r0, [r4, #0xc]
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02167BCC
+	bl ovy12_2167bcc
 	ldr r4, _021EFCE8 ; =0x0000081C
 	add r0, r4, #0
 	bl sub_020061B8

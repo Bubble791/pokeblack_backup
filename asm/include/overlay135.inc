@@ -39,7 +39,7 @@
 .public sub_021E64F0
 .public sub_02008BA0
 .public sub_021E67E4
-.public sub_02162B38
+.public ovy12_2162b38
 .public sub_02030734
 .public sub_02048658
 .public sub_02048658

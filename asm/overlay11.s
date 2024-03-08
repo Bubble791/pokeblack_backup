@@ -4433,7 +4433,7 @@ ovy11_21525ec: ; 0x021525EC
 	add r5, r0, #0
 	ldr r0, _02152708 ; =0x020050AC
 	ldr r4, _0215270C ; =0x0218BA0C
-	blx sub_02004EB0
+	blx OSi_ReferSymbol
 	ldr r0, [r5, #0x14]
 	mov r2, #0
 	ldr r1, [r5, #0x18]
@@ -12013,7 +12013,7 @@ ovy11_2155e34: ; 0x02155E34
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _02155E68 ; =0x020050C4
-	blx sub_02004EB0
+	blx OSi_ReferSymbol
 	ldr r4, _02155E6C ; =0x0218546C
 	ldr r0, [r4]
 	cmp r0, #0
@@ -21678,7 +21678,7 @@ ovy11_215a5e0: ; 0x0215A5E0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _0215A5FC ; =0x020050F0
-	blx sub_02004EB0
+	blx OSi_ReferSymbol
 	ldr r0, _0215A600 ; =0x0214C22C
 	ldr r0, [r0, #4]
 	add r0, #0xa4

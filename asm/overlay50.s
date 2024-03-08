@@ -1011,7 +1011,7 @@ _021E5FB2:
 	add r2, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02167BCC
+	bl ovy12_2167bcc
 	add r0, r5, #0
 	mov r1, #1
 _021E5FE4:

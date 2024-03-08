@@ -20040,7 +20040,7 @@ _021BC95E:
 	str r6, [sp]
 	ldr r0, [r4, #0x18]
 	add r1, r5, #0
-	bl sub_02170868
+	bl ovy11_2170868
 	ldr r0, [r4, #0x18]
 	add r1, r5, #0
 	ldr r2, _021BCAB0 ; =0x021C0BEC
@@ -20088,7 +20088,7 @@ _021BC9C8:
 	ldr r2, _021BCAA0 ; =0x021C0BC0
 	ldr r3, [r7, #8]
 	add r1, r5, #0
-	bl sub_02170780
+	bl ovy11_2170780
 	ldr r0, [r4, #0x18]
 	add r1, r5, #0
 	ldr r2, _021BCABC ; =0x021C0C18
@@ -20760,7 +20760,7 @@ _021BCF1C:
 	str r0, [sp, #0x30]
 _021BCF20:
 	ldr r0, [sp, #0x30]
-	bl sub_0216EDD0
+	bl ovy11_216edd0
 	cmp r0, #0
 	bne _021BCF30
 	add sp, #0x54

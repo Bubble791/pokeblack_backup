@@ -293,7 +293,7 @@ ovy99_21eeee4: ; 0x021EEEE4
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	bl sub_021804D4
-	bl sub_02184590
+	bl ovy36_02184590
 	mov r7, #2
 	ldr r6, _021EEF24 ; =0x021EFCC0
 	add r5, r0, #0
@@ -313,7 +313,7 @@ _021EEEFA:
 	str r7, [sp, #8]
 	lsr r0, r0, #0x18
 	str r5, [sp, #0xc]
-	bl sub_021BA624
+	bl ovy36_21ba624
 	add r4, r4, #1
 	cmp r4, #0xc
 	blo _021EEEFA

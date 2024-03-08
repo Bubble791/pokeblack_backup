@@ -58543,14 +58543,14 @@ _021B5B4E:
 	add r0, r4, #0
 	add r0, #0xf8
 	ldr r0, [r0]
-	bl sub_0217F834
+	bl ovy170_217f834
 	add r6, r0, #0
 	cmp r6, #4
 	beq _021B5B9C
 	add r0, r4, #0
 	add r0, #0xf8
 	ldr r0, [r0]
-	bl sub_0217F840
+	bl ovy170_217f840
 	add r7, r0, #0
 	ldr r0, [r4]
 	bl sub_0219E3AC

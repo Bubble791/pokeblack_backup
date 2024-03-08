@@ -37,8 +37,9 @@
 .public sub_0208DA4C
 .public ovy36_21b8504
 .public sub_021804D4
-.public sub_02184590
+.public ovy36_02184590
 .public sub_021BA624
+.public ovy36_21ba624
 .public sub_0218105C
 .public ovy36_21b81bc
 .public sub_0203A1D0

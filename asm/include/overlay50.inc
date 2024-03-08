@@ -109,7 +109,7 @@
 .public ovy12_2167a14
 .public sub_021672F8
 .public sub_02167078
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_0216763C
 .public sub_021804B8
 .public ovy12_2167a14

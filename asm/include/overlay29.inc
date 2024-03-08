@@ -241,7 +241,7 @@
 .public OS_RestoreInterrupts
 .public MI_CpuCopy8
 .public sub_02196BA0
-.public sub_02004EB0
+.public OSi_ReferSymbol
 .public MI_CpuFill8
 .public sub_02196680
 .public sub_02196740

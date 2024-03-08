@@ -2565,8 +2565,8 @@
 .public sub_021BAC40
 .public sub_0217F7BC
 .public sub_0217F6B0
-.public sub_0217F834
-.public sub_0217F840
+.public ovy170_217f834
+.public ovy170_217f840
 .public sub_0219E3AC
 .public sub_021BACC0
 .public sub_021BDC3C

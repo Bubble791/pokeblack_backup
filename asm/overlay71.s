@@ -292,7 +292,7 @@ _021E8DE4:
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp]
-	bl sub_02153FA8
+	bl ovy12_2153fa8
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

@@ -1448,13 +1448,13 @@
 .public sub_02170614
 .public sub_02170818
 .public sub_02170614
-.public sub_02170868
+.public ovy11_2170868
 .public sub_02170614
 .public sub_021708B4
 .public sub_02170614
 .public sub_021706B8
 .public sub_02170614
-.public sub_02170780
+.public ovy11_2170780
 .public sub_02170614
 .public sub_02170818
 .public sub_02170614
@@ -1503,7 +1503,7 @@
 .public sub_02170E14
 .public sub_02170DB8
 .public sub_02170E14
-.public sub_0216EDD0
+.public ovy11_216edd0
 .public sub_02170DB8
 .public sub_02170E14
 .public sub_02085F00

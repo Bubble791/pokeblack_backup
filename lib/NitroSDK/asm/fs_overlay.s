@@ -397,7 +397,7 @@ _020711B8:
 	beq _020711CA
 	ldr r0, [r5, #4]
 	add r0, r0, r7
-	blx sub_02004DF4
+	blx MIi_UncompressBackward
 _020711CA:
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #8]

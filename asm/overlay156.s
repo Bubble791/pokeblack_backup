@@ -68,7 +68,7 @@ _021F5A64:
 	ldr r3, [r4, #4]
 	lsl r3, r3, #0x10
 	lsr r3, r3, #0x10
-	bl sub_02153FA8
+	bl ovy12_2153fa8
 	ldr r0, [sp, #0xc]
 	bl sub_02153EC4
 	add r1, r0, #0

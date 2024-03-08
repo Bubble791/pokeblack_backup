@@ -28,7 +28,7 @@ sub_02082624: ; 0x02082624
 	ldr r1, _02082640 ; =0x0214EDC4
 	ldr r2, _02082644 ; =0x05000001
 	add r0, sp, #0
-	bl sub_02004190
+	bl SVC_CpuSet
 	blx OS_GetLockID
 	ldr r1, _02082648 ; =0x0214EDC0
 	strh r0, [r1, #6]

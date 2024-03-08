@@ -15955,7 +15955,7 @@ ovy12_2157e2c: ; 0x02157E2C
 	bl sub_02016AF0
 	bl sub_02180590
 	add r1, r6, #0
-	bl sub_021BD4F4
+	bl ovy36_21bd4f4
 	strh r0, [r4]
 	mov r0, #0
 	pop {r4, r5, r6, pc}
@@ -15981,7 +15981,7 @@ ovy12_2157e5c: ; 0x02157E5C
 	bl ovy36_21bd610
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021BD568
+	bl ovy36_21bd568
 	strh r0, [r4]
 	mov r0, #0
 	pop {r4, r5, r6, pc}
@@ -16008,7 +16008,7 @@ ovy12_2157e98: ; 0x02157E98
 	bl ovy36_21bd610
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_021BD58C
+	bl ovy36_21bd58c
 	strh r0, [r4]
 	mov r0, #0
 	pop {r4, r5, r6, pc}
@@ -19211,7 +19211,7 @@ _02159798:
 	b _0215974A
 _0215979A:
 	ldr r0, [sp, #8]
-	bl sub_021C1C6C
+	bl ovy36_021C1C6C
 	cmp r0, #3
 	bne _021597AA
 	add sp, #0xc
@@ -31141,7 +31141,7 @@ _0215F156:
 	blo _0215F1A4
 _0215F170:
 	add r0, r6, #0
-	bl sub_02180434
+	bl ovy36_2180434
 	ldr r0, [r5]
 	add r0, r0, #1
 	str r0, [r5]

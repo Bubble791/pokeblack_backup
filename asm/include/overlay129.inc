@@ -73,7 +73,7 @@
 .public ovy36_21b8538
 .public ovy36_21b8504
 .public sub_02015C10
-.public sub_021671C4
+.public ovy12_21671c4
 .public ovy36_21b83b4
 .public sub_0218105C
 .public sub_021804C0
@@ -97,7 +97,7 @@
 .public sub_021672F8
 .public sub_02167308
 .public sub_02167078
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_02166FF0
 .public ovy36_0218056c
 .public sub_021804C0

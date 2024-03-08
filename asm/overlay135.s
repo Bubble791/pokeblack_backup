@@ -1436,7 +1436,7 @@ ovy135_21ef6e4: ; 0x021EF6E4
 	str r3, [sp, #0x24]
 	bl sub_021E67E4
 	add r7, r0, #0
-	bl sub_02162B38
+	bl ovy12_2162b38
 	str r0, [sp, #0x28]
 	add r0, r7, #0
 	bl sub_02030734

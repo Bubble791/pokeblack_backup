@@ -689,7 +689,7 @@
 .public sub_0203CB80
 .public ovy12_215309c
 .public sub_0215313C
-.public sub_021530F8
+.public ovy12_21530f8
 .public sub_02153130
 .public sub_02153150
 .public sub_02042AB8

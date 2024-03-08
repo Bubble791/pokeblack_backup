@@ -407,7 +407,7 @@ _021EEFA4:
 	add r2, r0, #0
 	ldr r0, [r4]
 	add r1, r5, #0
-	bl sub_02167BCC
+	bl ovy12_2167bcc
 	ldr r0, _021EEFD4 ; =0x00000682
 	bl sub_02006254
 	add sp, #0x10

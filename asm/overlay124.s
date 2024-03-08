@@ -920,7 +920,7 @@ _021EF36A:
 	str r0, [r4, #0x1c]
 	ldr r0, [r4]
 	bl sub_02180498
-	bl sub_021B3D24
+	bl ovy36_21b3d24
 	cmp r0, #0
 	beq _021EF3A0
 	add r0, r6, #0
@@ -978,7 +978,7 @@ _021EF3E4:
 	bl sub_02186F00
 	ldr r0, [r4]
 	bl sub_02180498
-	bl sub_021B3D24
+	bl ovy36_21b3d24
 	cmp r0, #0
 	beq _021EF414
 	ldr r1, [r4, #0x20]

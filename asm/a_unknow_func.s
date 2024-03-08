@@ -24,25 +24,6 @@ sub_01FF936C: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_01FF936C
 
-    thumb_func_start sub_02004190
-sub_02004190: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02004190
-
-
-    thumb_func_start sub_02004DF4
-sub_02004DF4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02004DF4
-
-    thumb_func_start sub_02004EB0
-sub_02004EB0: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02004EB0
-
     thumb_func_start sub_02087264
 sub_02087264: ; 0x02073FB4
 	bx lr
@@ -60,18 +41,6 @@ sub_02087328: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02087328
-
-    thumb_func_start sub_02157714
-sub_02157714: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02157714
-
-    thumb_func_start sub_02157E2C
-sub_02157E2C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02157E2C
 
     thumb_func_start sub_02157E58
 sub_02157E58: ; 0x02073FB4
@@ -826,12 +795,6 @@ sub_02086080: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02086080
-
-    thumb_func_start sub_021530F8
-sub_021530F8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021530F8
 
     thumb_func_start sub_02153130
 sub_02153130: ; 0x02073FB4
@@ -2837,36 +2800,6 @@ sub_02162490: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_02162490
 
-    thumb_func_start sub_02162864
-sub_02162864: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02162864
-
-    thumb_func_start sub_02162B38
-sub_02162B38: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02162B38
-
-    thumb_func_start sub_0216708C
-sub_0216708C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0216708C
-
-    thumb_func_start sub_021671C4
-sub_021671C4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021671C4
-
-    thumb_func_start sub_02167BCC
-sub_02167BCC: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02167BCC
-
     thumb_func_start sub_0217BE1C
 sub_0217BE1C: ; 0x02073FB4
 	bx lr
@@ -2950,42 +2883,6 @@ sub_02700938: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_02700938
-
-    thumb_func_start sub_0217DD9C
-sub_0217DD9C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0217DD9C
-
-    thumb_func_start sub_0217DDE8
-sub_0217DDE8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0217DDE8
-
-    thumb_func_start sub_02183E40
-sub_02183E40: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02183E40
-
-    thumb_func_start sub_02183EEC
-sub_02183EEC: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02183EEC
-
-    thumb_func_start sub_02183F50
-sub_02183F50: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02183F50
-
-    thumb_func_start sub_02183F84
-sub_02183F84: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02183F84
 
     thumb_func_start sub_02184110
 sub_02184110: ; 0x02073FB4
@@ -3335,18 +3232,6 @@ sub_02189CB0: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_02189CB0
 
-    thumb_func_start sub_02189CD8
-sub_02189CD8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02189CD8
-
-    thumb_func_start sub_02189DE8
-sub_02189DE8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02189DE8
-
     thumb_func_start sub_0219AC64
 sub_0219AC64: ; 0x02073FB4
 	bx lr
@@ -3562,12 +3447,6 @@ sub_021791C0: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021791C0
-
-    thumb_func_start sub_02180434
-sub_02180434: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02180434
 
     thumb_func_start sub_02185288
 sub_02185288: ; 0x02073FB4
@@ -4745,12 +4624,6 @@ sub_0217F834: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0217F834
 
-    thumb_func_start sub_0217F840
-sub_0217F840: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0217F840
-
     thumb_func_start sub_021A2D40
 sub_021A2D40: ; 0x02073FB4
 	bx lr
@@ -5188,36 +5061,6 @@ sub_0219AB90: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_0219AB90
-
-    thumb_func_start sub_021B3D24
-sub_021B3D24: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021B3D24
-
-    thumb_func_start sub_021BD4F4
-sub_021BD4F4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BD4F4
-
-    thumb_func_start sub_021BD568
-sub_021BD568: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BD568
-
-    thumb_func_start sub_021BD58C
-sub_021BD58C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BD58C
-
-    thumb_func_start sub_021C1C6C
-sub_021C1C6C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021C1C6C
 
     thumb_func_start sub_021C1DD4
 sub_021C1DD4: ; 0x02073FB4
@@ -6665,12 +6508,6 @@ sub_02168024: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_02168024
 
-    thumb_func_start sub_0216820C
-sub_0216820C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0216820C
-
     thumb_func_start sub_02168644
 sub_02168644: ; 0x02073FB4
 	bx lr
@@ -7535,18 +7372,6 @@ sub_0215D4C0: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0215D4C0
 
-    thumb_func_start sub_0215EE10
-sub_0215EE10: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0215EE10
-
-    thumb_func_start sub_021666EC
-sub_021666EC: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021666EC
-
     thumb_func_start sub_02166764
 sub_02166764: ; 0x02073FB4
 	bx lr
@@ -8147,24 +7972,6 @@ sub_0216EAE0: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0216EAE0
 
-    thumb_func_start sub_0216EDD0
-sub_0216EDD0: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0216EDD0
-
-    thumb_func_start sub_02170780
-sub_02170780: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02170780
-
-    thumb_func_start sub_02170868
-sub_02170868: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02170868
-
     thumb_func_start sub_021708B4
 sub_021708B4: ; 0x02073FB4
 	bx lr
@@ -8656,40 +8463,4 @@ sub_021C5C88: ; 0x02073FB4
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C88
-
-    thumb_func_start sub_02153FA8
-sub_02153FA8: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02153FA8
-
-    thumb_func_start sub_02184590
-sub_02184590: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_02184590
-
-    thumb_func_start sub_0218578C
-sub_0218578C: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_0218578C
-
-    thumb_func_start sub_021B9494
-sub_021B9494: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021B9494
-
-    thumb_func_start sub_021BA624
-sub_021BA624: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021BA624
-
-    thumb_func_start sub_021C05D4
-sub_021C05D4: ; 0x02073FB4
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021C05D4
 

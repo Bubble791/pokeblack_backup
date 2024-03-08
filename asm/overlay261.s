@@ -7686,7 +7686,7 @@ _0217A61A: ; jump table
 _0217A622:
 	ldr r0, _0217A67C ; =0x00001018
 	ldr r0, [r4, r0]
-	bl sub_021530F8
+	bl ovy12_21530f8
 _0217A62A:
 	ldr r0, [r4]
 	add r0, r0, #1

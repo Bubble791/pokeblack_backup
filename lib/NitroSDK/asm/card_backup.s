@@ -154,7 +154,7 @@ CARDi_RequestStreamCommandCore: ; 0x0206F3E0
 	lsl r0, r0, #8
 	str r0, [sp]
 	ldr r0, _0206F528 ; =_version_NINTENDO_BACKUP
-	blx sub_02004EB0
+	blx OSi_ReferSymbol
 	ldr r0, [sp, #8]
 	cmp r0, #0xb
 	bne _0206F412
@@ -677,7 +677,7 @@ CARDi_BeginBackupCommand: ; 0x0206F7D4
 	ldr r0, _0206F804 ; =_version_NINTENDO_BACKUP
 	add r4, r1, #0
 	add r6, r2, #0
-	blx sub_02004EB0
+	blx OSi_ReferSymbol
 	bl CARD_CheckEnabled
 	bl CARDi_GetAccessLevel
 	and r0, r5

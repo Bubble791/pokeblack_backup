@@ -105,7 +105,7 @@
 .public sub_021863A4
 .public sub_02186F00
 .public sub_02180498
-.public sub_021B3D24
+.public ovy36_21b3d24
 .public sub_021862F0
 .public sub_021862B8
 .public sub_021866E4

@@ -256,7 +256,7 @@
 .public sub_021C0A4C
 .public sub_02166FD0
 .public sub_021672F8
-.public sub_02167BCC
+.public ovy12_2167bcc
 .public sub_020061B8
 .public sub_02006268
 .public sub_020061B8

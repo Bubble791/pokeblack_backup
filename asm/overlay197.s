@@ -16629,7 +16629,7 @@ _021BD612:
 	bl ovy12_215309c
 	sub r6, #8
 	str r0, [r4, r6]
-	bl sub_021530F8
+	bl ovy12_21530f8
 	ldr r0, _021BD690 ; =0x000017A4
 	add sp, #0x7c
 	str r7, [r4, r0]

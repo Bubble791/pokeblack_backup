@@ -12,9 +12,9 @@ make[2]: 'build/heartgold.us/main.lcf' is up to date.
 make build/heartgold.us/main.response
 make[2]: 'build/heartgold.us/main.response' is up to date.
 cd build/heartgold.us && LM_LICENSE_FILE=../..//mnt/d/pokeblack2/pokeblack2//tools/mwccarm/license.dat  /mnt/d/pokeblack2/pokeblack2//tools/mwccarm/dsi/1.6sp1/mwldarm.exe -proc arm946e -sym on -nopic -nopid -interworking -map closure,unused -symtab sort -m _start -msgstyle gcc -Llib -lsyscall -nostdlib -o ../../build/heartgold.us/main.elf main.lcf @main.response lib/asm/crt0.o
-mwldarm.exe: Undefined : "sub_02153FA8"
+mwldarm.exe: Undefined : "ovy12_2153fa8"
 mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
-mwldarm.exe: Undefined : "sub_02184590"
+mwldarm.exe: Undefined : "ovy36_02184590"
 mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o
 mwldarm.exe: Undefined : "sub_0218578C"
 mwldarm.exe: Referenced from "ovy91_21eeeb8" in overlay91.o

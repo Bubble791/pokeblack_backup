@@ -129,13 +129,13 @@
 .public sub_021C09E4
 .public sub_02006254
 .public sub_021804D4
-.public sub_02184590
+.public ovy36_02184590
 .public sub_021BA684
 .public sub_021BA6BC
 .public sub_021804D4
-.public sub_02184590
+.public ovy36_02184590
 .public sub_021BA6BC
-.public sub_021BA624
+.public ovy207_21ba624
 .public sub_021BA6BC
 .public sub_021BA624
 .public sub_021BA6BC
