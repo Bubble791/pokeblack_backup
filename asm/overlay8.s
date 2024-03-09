@@ -2,6 +2,7 @@
 	.include "overlay8.inc"
 	.include "global.inc"
 
+	.public ovy36_21b878c
 	.text
 
 	thumb_func_start ovy8_214f500
@@ -416,7 +417,7 @@ _0214F810:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r4, #8]
 	mov r3, #0
-	bl ovy36_21B878C
+	bl ovy36_21b878c
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02016D68
@@ -576,7 +577,7 @@ _0214F96A:
 	bl sub_0203CE0C
 	ldr r0, [r4, #0x5c]
 	ldr r0, [r0]
-	bl sub_021A6240
+	bl ovy173_21A6240
 	add r0, r4, #0
 	add r0, #0xdc
 	ldr r0, [r0]
@@ -738,7 +739,7 @@ _0214FAAA:
 	blt _0214FAAA
 	b _0214FB58
 _0214FAD4:
-	ldr r1, _0214FB1C ; =0x0214FE88
+	ldr r1, _0214FB1C ; =sub_0214FE88
 	b _0214FB20
 	.align 2, 0
 _0214FAD8: .word 0x0000FFFF
@@ -758,7 +759,7 @@ _0214FB0C: .word 0x021BBB38
 _0214FB10: .word 0x000000A7
 _0214FB14: .word 0x021D7448
 _0214FB18: .word 0x0000048C
-_0214FB1C: .word 0x0214FE88
+_0214FB1C: .word sub_0214FE88
 _0214FB20:
 	add r0, sp, #0x10
 	ldrb r2, [r1]
@@ -904,7 +905,7 @@ _0214FC32:
 	b _0214FCBE
 _0214FC3E:
 	ldr r0, _0214FD00 ; =0x00000246
-	ldr r3, _0214FD04 ; =0x0214FEE0
+	ldr r3, _0214FD04 ; =sub_0214FEE0
 	str r0, [sp]
 	mov r0, #4
 	mov r1, #0x14
@@ -996,7 +997,7 @@ _0214FCF4: .word 0x0215039C
 _0214FCF8: .word 0x000000C2
 _0214FCFC: .word 0x021C63C4
 _0214FD00: .word 0x00000246
-_0214FD04: .word 0x0214FEE0
+_0214FD04: .word sub_0214FEE0
 _0214FD08: .word 0x0000011C
 _0214FD0C: .word 0x021E7D9C
 _0214FD10: .word 0x00000101
@@ -1066,7 +1067,7 @@ _0214FD88:
 	ldr r5, _0214FE48 ; =0x000002AB
 	str r0, [r4, #0x14]
 	ldr r7, _0214FE4C ; =0x00008004
-	ldr r3, _0214FE50 ; =0x0214FEE0
+	ldr r3, _0214FE50 ; =sub_0214FEE0
 	str r5, [sp]
 	add r0, r7, #0
 	mov r1, #0x4c
@@ -1076,7 +1077,7 @@ _0214FD88:
 	str r0, [r4, #0x5c]
 	add r0, r5, #1
 	str r0, [sp]
-	ldr r3, _0214FE50 ; =0x0214FEE0
+	ldr r3, _0214FE50 ; =sub_0214FEE0
 	add r0, r7, #0
 	mov r1, #0x20
 	mov r2, #1
@@ -1144,7 +1145,7 @@ _0214FD88:
 	.align 2, 0
 _0214FE48: .word 0x000002AB
 _0214FE4C: .word 0x00008004
-_0214FE50: .word 0x0214FEE0
+_0214FE50: .word sub_0214FEE0
 	thumb_func_end ovy8_214fd64
 
 	thumb_func_start ovy8_214fe54
@@ -1178,13 +1179,16 @@ ovy8_214FE7C: ; 0x0214FE7C
 	.align 2, 0
 _0214FE84: .word ovy8_214fe54
 	thumb_func_end ovy8_214FE7C
-_0214FE88:
+
+	.rodata
+sub_0214FE88:
 	.byte 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x19, 0x00
 	.byte 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x12, 0x00, 0x07, 0x00, 0x0D, 0x00
 	.byte 0x08, 0x00, 0x0D, 0x00, 0x09, 0x00, 0x0D, 0x00, 0x0A, 0x00, 0x0D, 0x00, 0x0B, 0x00, 0x0D, 0x00
 	.byte 0x0C, 0x00, 0x0D, 0x00, 0x0D, 0x00, 0x0D, 0x00, 0x0E, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x19, 0x00
-	.byte 0x65, 0x76, 0x65, 0x6E, 0x74, 0x5F, 0x77, 0x69, 0x66, 0x69, 0x63, 0x6C, 0x75, 0x62, 0x2E, 0x63
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	; 0x0214FE88
+
+	.public sub_0214FEE0
+sub_0214FEE0:
+	.ascii "event_wificlub.c"

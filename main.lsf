@@ -1012,7 +1012,7 @@ Overlay OVY_172
 }
 Overlay OVY_173
 {
-    After main
+    Address 0x219ce80
     Object asm/overlay173.o
 }
 Overlay OVY_174

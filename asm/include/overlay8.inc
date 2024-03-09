@@ -59,7 +59,7 @@
 .public sub_02005EA0
 .public sub_0203CE0C
 .public sub_0203CE0C
-.public sub_021A6240
+.public ovy173_21A6240
 .public sub_02017C84
 .public sub_0203CDC8
 .public sub_0203CDC8
