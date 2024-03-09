@@ -2,7 +2,18 @@
 	.include "overlay9.inc"
 	.include "global.inc"
 
+	.public ovy36_21b878c
 	.text
+
+	thumb_func_start ovy9_0214F500
+ovy9_0214F500: ; 0x0214F500
+	add r2, r1, #0
+	ldmia r2!, {r1, r2}
+	ldr r3, _0214F508 ; =ovy9_214f50c
+	bx r3
+	.align 2, 0
+_0214F508: .word ovy9_214f50c
+	thumb_func_end ovy9_0214F500
 
 	thumb_func_start ovy9_214f50c
 ovy9_214f50c: ; 0x0214F50C
@@ -126,7 +137,7 @@ _0214F5EA:
 	add r0, r6, #0
 	mov r3, #0
 	str r2, [sp, #8]
-	bl ovy36_21B878C
+	bl ovy36_21b878c
 	b _0214F5A0
 _0214F5FE:
 	add sp, #0xc
@@ -140,6 +151,4 @@ _0214F604:
 _0214F60C: .word 0x000000BF
 _0214F610: .word 0x021B7168
 	thumb_func_end ovy9_214f550
-_0214F614:
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	; 0x0214F614
+
