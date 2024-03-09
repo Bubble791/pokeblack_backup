@@ -2,6 +2,8 @@
 	.include "overlay10.inc"
 	.include "global.inc"
 
+	.public ovy273_21e9818
+
 	.text
 
 	thumb_func_start ovy10_214ff00
@@ -301,7 +303,7 @@ _02150128:
 	str r5, [r0, #0x10]
 	bl sub_0200C1F0
 	ldr r0, [r4, #4]
-	bl ovy273_21E9818
+	bl ovy273_21e9818
 	bl sub_0200C200
 	mov r1, #0xd
 	b _0215000E
@@ -628,8 +630,12 @@ _02150394:
 	.align 2, 0
 _02150398: .word ovy10_215039C
 	thumb_func_end ovy10_215033c
+
+	.rodata
 ovy10_215039C: ; 0x0215039C
-	.byte 0x01, 0xFF, 0x14, 0x02
-	.byte 0x59, 0xFF, 0x14, 0x02, 0x29, 0xFF, 0x14, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	; 0x021503C0
+	.word ovy10_214ff00
+	.word ovy10_214ff58
+	.word ovy10_214ff28
+	.word 0
+	.word 0
+

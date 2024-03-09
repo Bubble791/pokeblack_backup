@@ -8065,10 +8065,10 @@ sub_0219D488: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0219D488
 
-.public ovy9_214f50c
+.public ovy10_214ff00
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
-	bl ovy9_214f50c
+	bl ovy10_214ff00
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C10
