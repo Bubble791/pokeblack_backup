@@ -166,32 +166,32 @@ Overlay OVY_3
 }
 Overlay OVY_4
 {
-    After main
+    Address 0x214f500
     Object asm/overlay4.o
 }
 Overlay OVY_5
 {
-    After main
+    Address 0x214f500
     Object asm/overlay5.o
 }
 Overlay OVY_6
 {
-    After main
+    Address 0x214f500
     Object asm/overlay6.o
 }
 Overlay OVY_7
 {
-    After main
+    Address 0x214f500
     Object asm/overlay7.o
 }
 Overlay OVY_8
 {
-    After main
+    Address 0x214f500
     Object asm/overlay8.o
 }
 Overlay OVY_9
 {
-    After main
+    Address 0x214f500
     Object asm/overlay9.o
 }
 Overlay OVY_10
@@ -202,7 +202,6 @@ Overlay OVY_10
 Overlay OVY_11
 {
     Address 0x21503c0
-    After main
     Object asm/overlay11.o
 }
 Overlay OVY_12
@@ -328,7 +327,7 @@ Overlay OVY_35
 }
 Overlay OVY_36
 {
-    After main
+    Address 0x217f600
     Object asm/overlay36.o
 }
 Overlay OVY_37
@@ -983,17 +982,17 @@ Overlay OVY_166
 }
 Overlay OVY_167
 {
-    After main
+    Address 0x21998c0
     Object asm/overlay167.o
 }
 Overlay OVY_168
 {
-    After main
+    Address 0x21dda60
     Object asm/overlay168.o
 }
 Overlay OVY_169
 {
-    After main
+    Address 0x6898020
     Object asm/overlay169.o
 }
 Overlay OVY_170
