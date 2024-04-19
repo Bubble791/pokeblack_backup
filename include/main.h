@@ -3,4 +3,5 @@
 
 void TwlMain(void);
 
+
 #endif //POKEHEARTGOLD_MAIN_H

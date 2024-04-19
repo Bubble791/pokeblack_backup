@@ -857,7 +857,8 @@ Overlay OVY_141
 }
 Overlay OVY_142
 {
-    After main
+    Address 0x021998C0
+    Object src/bag_view.o
     Object asm/overlay142.o
 }
 Overlay OVY_143

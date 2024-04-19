@@ -2,6 +2,8 @@
 	.include "asm_1.inc"
 	.include "global.inc"
 
+	.public _u32_div_not_0_f
+
 	.text
 	arm_func_start sub_020828A4
 sub_020828A4: ; 0x020828A4
@@ -11389,7 +11391,7 @@ _0208D5E8:
 	orrs r5, r1, r3
 	bne _0208D488
 	mov r1, r2
-	bl sub_0208D870
+	bl _u32_div_not_0_f
 	cmp r4, #0
 	movne r0, r1
 	mov r1, #0
@@ -11562,14 +11564,14 @@ _0208D854:
 	bx lr
 	arm_func_end sub_0208D65C
 
-	arm_func_start sub_0208D868
-sub_0208D868: ; 0x0208D868
+	.public _u32_div_f
+	.type _u32_div_f, @function
+_u32_div_f: ; 0x020F2BA4
 	cmp r1, #0
 	bxeq lr
-	arm_func_end sub_0208D868
-
-	arm_func_start sub_0208D870
-sub_0208D870: ; 0x0208D870
+	.public _u32_div_not_0_f
+	.type _u32_div_not_0_f, @function
+_u32_div_not_0_f: ; 0x020F2BAC
 	cmp r0, r1
 	movlo r1, r0
 	movlo r0, #0
@@ -11590,7 +11592,7 @@ sub_0208D870: ; 0x0208D870
 	adds r0, r0, r0
 	add r2, r2, r2, lsl #1
 	add pc, pc, r2, lsl #2
-	mov r0, r0
+	nop
 	adcs r3, r1, r3, lsl #1
 	sublo r3, r3, r1
 	adcs r0, r0, r0
@@ -11689,7 +11691,7 @@ sub_0208D870: ; 0x0208D870
 	adcs r0, r0, r0
 	mov r1, r3
 	bx lr
-	arm_func_end sub_0208D870
+
 
 	arm_func_start sub_0208DA4C
 sub_0208DA4C: ; 0x0208DA4C
