@@ -13,9 +13,9 @@ extern int sub_0203DAC8(u32*, u32*);
 
 typedef struct
 {
-    u16 item;
+    u16 itemid;
     u16 num;
-} BagItemPtr;
+} ItemTable;
 
 typedef struct
 {
@@ -28,7 +28,7 @@ typedef struct
     /*0x018*/ void* bagSave;
     /*0x01C*/ int unk1C;
     /*0x020*/int unk20;
-    /*0x024*/ BagItemPtr m_itemTable[6];
+    /*0x024*/ ItemTable m_itemTable[6];
     /*0x03C*/ u8 unk3C[0x4C0];
     /*0x4FC*/ void *unk4FC;
     /*0x500*/ int unk500;
@@ -57,9 +57,25 @@ typedef struct
     /*0x6B0*/ int unk6B0;
     /*0x6B4*/ int unk6B4;
     /*0x6B8*/ int unk6B8;
-    /*0x6BC*/ u8 unk6BC[0xE0];
+    /*0x6BC*/ u8 unk6BC[0x70];
+    /*0x72C*/ int unk72C;
+    /*0x730*/ int unk730;
+    /*0x734*/ int unk734;
+    /*0x738*/ int unk738;
+    /*0x73C*/ int unk73C;
+    /*0x740*/ int unk740;
+    /*0x744*/ int unk744;
+    /*0x748*/ u8 unk748[0x54];
     /*0x79C*/ int unk79C;
-    /*0x7A0*/ u8 unk7A0[0x8C];
+    /*0x7A0*/ u8 unk7A0[0x6C];
+    /*0x80C*/ int unk80C;
+    /*0x810*/ int unk810;
+    /*0x814*/ int unk814;
+    /*0x818*/ int unk818;
+    /*0x81C*/ int unk81C;
+    /*0x820*/ int unk820;
+    /*0x824*/ int unk824;
+    /*0x828*/ int unk828;
     /*0x82C*/ int itemType;
     /*0x830*/ int posNow;
     /*0x834*/ int unk834;
@@ -84,8 +100,9 @@ typedef struct
     /*0x8C0*/ int KeyRetypeIntervalRepeated;
     /*0x8C4*/ int KeyRetypeIntervalFirst;
     /*0x8C8*/ int unk8C8;
+    /*0x8CC*/ u8 unk8CC[0x1680];
     /*0x1F4C*/ int unk1F4C;
-    /*0x1F50*/ void *unk1F50;
+    /*0x1F50*/ int unk1F50;
 } BagView; // size of 0x1F54
 
 typedef void (*FieldBagItemUse)(BagView *);
@@ -96,7 +113,7 @@ void ovy142_219a1ec(BagView *m_bagView);
 void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2);
 void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
-BagItemPtr* ovy142_2199928(BagView *m_bagView, u32 pocket);
+ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
 int ovy142_219995c(u32 itemId, int param_2, u16 heapId);
 void sub_021999B8(BagView *m_bagView, int bufId, int msgId);
 void sub_021999C8(BagView *m_bagView, int bufId, int msgId);
@@ -136,9 +153,9 @@ void ovy142_21998f4(BagView *m_bagView)
 }
 
 
-extern BagItemPtr* ovy142_21a0470(int*, u16, u16);
+extern ItemTable* ovy142_21a0470(int*, u16, u16);
 
-BagItemPtr* ovy142_2199928(BagView *m_bagView, u32 pocket)
+ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket)
 {
     if (m_bagView->unk83C != 0)
     {
@@ -162,7 +179,7 @@ int sub_02199978(BagView *m_bagView)
 
 #define NORMAL_ITEM_MAX 0x136
 
-extern int sub_02008488(BagItemPtr*, int);
+extern int sub_02008488(ItemTable*, int);
 extern int ovy142_21a0698(int*, int, BagView *);
 
 int ovy142_2199988(BagView *m_bagView)
@@ -550,7 +567,7 @@ typedef void (*UnknowFunc)(BagView *);
 extern void sub_02035198(int);
 extern int sub_02021C0C(int);
 extern int sub_0203DA2C(void);
-extern void sub_02007FE8(void*, BagItemPtr*, int, int);
+extern void sub_02007FE8(void*, ItemTable*, int, int);
 extern void sub_0204C488(int, int);
 extern int sub_0203DEFC(void);
 extern void ovy142_219c9f8(BagView*, int, UnknowFunc);
@@ -983,7 +1000,7 @@ extern void ovy142_219ff40(void*, int);
 extern void sub_0202D384(u16);
 extern void ovy142_219ac70(BagView*);
 extern void ovy142_219b5d4(BagView*);
-extern void ovy142_219ae30(BagView*);
+void ovy142_219ae30(BagView*);
 extern int sub_0219BE00(BagView*);
 extern int ovy142_219be18(BagView*, int);
 extern void sub_0219F0AC(BagView*);
@@ -1168,10 +1185,10 @@ void ovy142_219a724(BagView *m_bagView)
     u32 dword10; // r0
 
     v2 = sub_02199978(m_bagView);
-    BagItemPtr *v3 = ovy142_2199928(m_bagView, v2);
+    ItemTable *v3 = ovy142_2199928(m_bagView, v2);
     m_bagView->selectItem = 0;
     if (v3)
-        m_bagView->selectItem = v3->item;
+        m_bagView->selectItem = v3->itemid;
     dword10 = m_bagView->unk10;
 
     if (dword10 == 2)
@@ -1487,4 +1504,1223 @@ void ovy142_219ac4c(BagView *m_bagView)
         sub_02006254(0x55C);
         sub_021998C0(m_bagView, ovy142_219abd8);
     }
+}
+
+extern int sub_02026B84(u16);
+void ovy142_219ac70(BagView *m_bagView);
+
+void ovy142_219ac70(BagView *m_bagView)
+{
+    int iVar1;
+
+    iVar1 = sub_02026B84((u16)m_bagView->selectItem);
+    if (iVar1 == 0xFF)
+    {
+        sub_02048838(m_bagView->unk520, 0x3c, m_bagView->unk52C);
+    }
+    else
+    {
+        sub_02048838(m_bagView->unk520, 0x3d, m_bagView->unk52C);
+    }
+    
+    ovy142_219f6a4(m_bagView, 1);
+    sub_021998C0(m_bagView, ovy142_219ac4c);
+}
+
+void ovy142_219acb8(BagView *m_bagView);
+
+void ovy142_219acb8(BagView *m_bagView)
+{
+    if (((sub_0203DEFC() & 3) != 0) || sub_0203DA48())
+    {
+        sub_02045738(3);
+
+        m_bagView->unk838 = 0xFFFF;
+        ovy142_21998f4(m_bagView);
+        m_bagView->unk892 = 1;
+        ovy142_219ed3c(m_bagView);
+        sub_0204C520(m_bagView->unk6B8, 1);
+        ovy142_219fda8(m_bagView, 1);
+        ovy142_219c8d0(m_bagView);
+    }
+}
+
+void ovy142_219ad14(BagView *m_bagView);
+
+void ovy142_219ad14(BagView *m_bagView)
+{
+    if (ovy142_219f7a4(m_bagView))
+    {
+        sub_021998C0(m_bagView, ovy142_219acb8);
+    }
+}
+
+void ovy142_219ad30(BagView *m_bagView);
+extern void sub_0202451C(int, int, int, int, int, int);
+
+void ovy142_219ad30(BagView *m_bagView)
+{
+    int iVar1;
+    int iVar2;
+
+    iVar1 = sub_0202DBE4(m_bagView->unk79C);
+    if (iVar1 != 0)
+    {
+        iVar1 = sub_0202DC00(m_bagView->unk79C);
+        ovy142_219fb60(m_bagView);
+        sub_02045738(3);
+        if (iVar1 == 0)
+        {
+            sub_02006254(0x647);
+            ovy142_219b340(m_bagView, m_bagView->unk814);
+            sub_02048838(m_bagView->unk520, 0x36, m_bagView->unk528);
+            ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, ((int)m_bagView->unk814 > 1), 0);
+            sub_0202451C(m_bagView->messageParam, 1, m_bagView->unk814, 3, 0, 1);
+            sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
+                                    m_bagView->unk528);
+            sub_0219F760(m_bagView);
+            sub_021998C0(m_bagView, ovy142_219ad14);
+        }
+        else
+        {
+            sub_0204C520(m_bagView->unk6B8, 1);
+            ovy142_219fda8(m_bagView, 1);
+            iVar2 = sub_0203D554();
+            ovy142_219bda4(m_bagView, iVar2 == 0);
+            ovy142_219c8d0(m_bagView);
+        }
+    }
+}
+
+void ovy142_219ae10(BagView *m_bagView);
+
+void ovy142_219ae10(BagView *m_bagView)
+{
+    int iVar1;
+
+    iVar1 = ovy142_219f7a4(m_bagView);
+    if (iVar1 != 0)
+    {
+        ovy142_219faac(m_bagView);
+        sub_021998C0(m_bagView, ovy142_219ad30);
+    }
+}
+
+extern void ovy142_219ae90(BagView*);
+extern void ovy142_219b438(BagView*, int);
+
+void ovy142_219ae30(BagView *m_bagView)
+{
+    m_bagView->unk814 = 1;
+    ovy142_219b438(m_bagView, 1);
+    sub_02048838(m_bagView->unk520, 0x35, m_bagView->unk528);
+    ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1, 0);
+    sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
+                    m_bagView->unk528);
+    sub_0219F760(m_bagView);
+    sub_021998C0(m_bagView, ovy142_219ae90);
+}
+
+extern int ovy142_219b490(BagView*);
+extern int ovy142_219cb88(void);
+extern void ovy142_219cba8(BagView*);
+extern void ovy142_219b46c(BagView*);
+
+void ovy142_219ae90(BagView *m_bagView)
+{
+    int iVar2;
+    u32 uVar3;
+
+    iVar2 = ovy142_219f7a4(m_bagView);
+    if ((iVar2 != 0) && (ovy142_219b490(m_bagView) != 1))
+    {
+        iVar2 = ovy142_219cb88();
+        if (iVar2 == -1)
+        {
+            uVar3 = sub_0203DEFC();
+            if ((uVar3 & 1))
+                {
+                iVar2 = 0;
+                sub_0203D564(0);
+            }
+            else
+            {
+                uVar3 = sub_0203DEFC();
+                if ((uVar3 & 2) != 0)
+                {
+                    sub_0203D564(0);
+                    iVar2 = 1;
+                }
+            }
+        }
+
+        if (iVar2 == 0)
+        {
+            sub_02006254(0x54C);
+            ovy142_219b46c(m_bagView);
+            sub_02048838(m_bagView->unk520, 0x37, m_bagView->unk528);
+            ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
+            sub_0202451C(m_bagView->messageParam, 1, m_bagView->unk814, 3, 0, 1);
+            sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
+                            m_bagView->unk528);
+            sub_0219F760(m_bagView);
+            sub_021998C0(m_bagView, ovy142_219ae10);
+        }
+        else if (iVar2 == 1)
+        {
+            sub_02006254(0x551);
+            ovy142_219c9f8(m_bagView, 4, ovy142_219cba8);
+        }
+    }
+}
+
+
+
+void ovy142_219af84(BagView *m_bagView);
+
+void ovy142_219b2a8(BagView*);
+extern void ovy142_219b0a0(BagView*);
+extern void ovy142_219b12c(BagView*);
+extern void ovy142_219fa3c(BagView*);
+
+void ovy142_219af84(BagView *m_bagView)
+{
+    int iVar2;
+    int iVar3;
+    int uVar4;
+
+    sub_0204C520(m_bagView->unk6B8, 0);
+
+    iVar2 = sub_020267F0((u16)m_bagView->selectItem, 0, m_bagView->heapId);
+    iVar3 = sub_020267F0((u16)m_bagView->selectItem, 3, m_bagView->heapId);
+    if ((iVar2 == 0) || (iVar3 != 0))
+    {
+        
+        {
+            ovy142_219fda8(m_bagView, 0);
+            sub_02048838(m_bagView->unk520, 0x4d, m_bagView->unk528);
+            sub_021999B8(m_bagView, 0, m_bagView->selectItem);
+            sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
+            sub_0219F760(m_bagView);
+            ovy142_219ff40(m_bagView, 0);
+            sub_021998C0(m_bagView, ovy142_219b2a8);
+        }
+    }
+    else
+    {
+        m_bagView->unk814 = 1;
+        ovy142_219fa3c(m_bagView);
+        ovy142_219fda8(m_bagView, 0);
+        uVar4 = sub_02199978(m_bagView);
+        ItemTable* iVar2 = (ItemTable*)ovy142_2199928(m_bagView, uVar4);
+        if (iVar2->num == 1)
+        {
+            sub_021998C0(m_bagView, ovy142_219b12c);
+        }
+        else
+        {
+            ovy142_219b438(m_bagView, 2);
+            sub_02048838(m_bagView->unk520, 0x4e, m_bagView->unk528);
+            sub_021999B8(m_bagView, 0, m_bagView->selectItem);
+            sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
+            sub_0219F760(m_bagView);
+            sub_021998C0(m_bagView, ovy142_219b0a0);
+        }
+    }
+}
+
+extern void ovy142_219cbe4(BagView*);
+
+void ovy142_219b0a0(BagView *m_bagView)
+{
+    int iVar1;
+    u32 uVar2;
+
+    iVar1 = ovy142_219f7a4(m_bagView);
+    if ((iVar1 != 0) && (iVar1 = ovy142_219b490(m_bagView), iVar1 != 1))
+    {
+        iVar1 = ovy142_219cb88();
+        if (iVar1 == -1)
+        {
+            uVar2 = sub_0203DEFC();
+            if ((uVar2 & 1) != 0)
+            {
+                iVar1 = 0;
+                sub_0203D564(0);
+            }
+            else
+            {
+                uVar2 = sub_0203DEFC();
+                if ((uVar2 & 2) != 0)
+                {
+                    sub_0203D564(0);
+                    iVar1 = 1;
+                }
+            }
+        }
+        if (iVar1 == 0)
+        {
+            sub_02006254(0x54C);
+            ovy142_219b46c(m_bagView);
+            sub_021998C0(m_bagView, ovy142_219b12c);
+        }
+        else if (iVar1 == 1)
+        {
+            sub_02006254(0x551);
+            ovy142_219c9f8(m_bagView, 4, ovy142_219cbe4);
+        }
+    }
+}
+
+void ovy142_219b1a0(BagView*);
+
+void ovy142_219b12c(BagView *m_bagView)
+{
+    int uVar2;
+
+    ovy142_219faac(m_bagView);
+    uVar2 = ovy142_219995c(m_bagView->selectItem, m_bagView->unk814, m_bagView->heapId);
+    sub_02048838(m_bagView->unk520, 0x4F, m_bagView->unk528);
+    sub_0202451C(m_bagView->messageParam, 0, uVar2, 7, 0, 1);
+    sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
+    sub_0219F760(m_bagView);
+    sub_021998C0(m_bagView, ovy142_219b1a0);
+}
+
+void ovy142_219b2f0(BagView*);
+extern void sub_0200C9C0(int, int);
+extern void ovy142_219f978(BagView*);
+extern int sub_02017974(void*);
+
+void ovy142_219b1a0(BagView *m_bagView)
+{
+    int iVar1;
+    int uVar2;
+    int uVar3;
+    int iVar4;
+
+    iVar1 = ovy142_219f7a4(m_bagView);
+
+    if ((iVar1 != 0) && (sub_0202DBE4(m_bagView->unk79C)))
+    {
+        iVar1 = sub_0202DC00(m_bagView->unk79C);
+        ovy142_219fb60(m_bagView);
+
+        switch (iVar1)
+        {
+        case 0:
+            uVar2 = ovy142_219995c(m_bagView->selectItem, m_bagView->unk814, m_bagView->heapId);
+            ovy142_219b340(m_bagView, m_bagView->unk814);
+            uVar3 = sub_02017974(m_bagView->m_GameData);
+            sub_0200C9C0(uVar3, uVar2);
+            sub_02006254(0x655);
+            ovy142_219f978(m_bagView);
+            sub_02048838(m_bagView->unk520, 0x50, m_bagView->unk528);
+            ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
+
+            sub_0202451C(m_bagView->messageParam, 1, uVar2, 7, 0, 1);
+            sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
+            sub_0219F760(m_bagView);
+            sub_021998C0(m_bagView, ovy142_219b2a8);
+            break;
+        case 1:
+            iVar4 = sub_0203D554();
+            ovy142_219bda4(m_bagView, iVar4 == 0);
+            sub_021998C0(m_bagView, ovy142_219b2f0);
+            break;
+        }
+    }
+}
+
+void ovy142_219b2a8(BagView *m_bagView)
+{
+    int iVar1;
+    u32 uVar2;
+
+    iVar1 = ovy142_219f7a4(m_bagView);
+    if (iVar1 != 0)
+    {
+        uVar2 = sub_0203DEFC();
+        if ((uVar2 & 3) != 0)
+        {
+            ovy142_219bda4(m_bagView, 1);
+            sub_021998C0(m_bagView, ovy142_219b2f0);
+            return;
+        }
+
+        if (sub_0203DA48() != 0)
+        {
+            ovy142_219bda4(m_bagView, 0);
+            sub_021998C0(m_bagView, ovy142_219b2f0);
+        }
+    }
+}
+
+extern void ovy142_219fa6c(BagView*);
+
+void ovy142_219b2f0(BagView *m_bagView)
+{
+    sub_02045738(3);
+    m_bagView->unk838 = 0xFFFF;
+    ovy142_21998f4(m_bagView);
+    m_bagView->unk892 = 1;
+    ovy142_219ed3c(m_bagView);
+    ovy142_219fa6c(m_bagView);
+    sub_0204C520(m_bagView->unk6B8, 1);
+    ovy142_219fda8(m_bagView, 1);
+    ovy142_219c8d0(m_bagView);
+}
+
+extern int sub_02008338(void*, u16);
+extern void sub_0200842C(void*, u16, u16, u16);
+extern int sub_02008538(void*, u16, u16);
+extern void ovy142_21a050c(int*, u16, int);
+extern void ovy142_219b3b0(BagView*);
+
+void ovy142_219b340(BagView *m_bagView, int useNum)
+{
+    u32 uVar1;
+    u32 uVar2;
+    int iVar3;
+    int iVar4;
+
+    uVar2 = sub_02199978(m_bagView);
+    ovy142_2199928(m_bagView, uVar2);
+    iVar3 = sub_02008338(m_bagView->bagSave, m_bagView->selectItem);
+    sub_0200842C(m_bagView->bagSave, m_bagView->selectItem, useNum, m_bagView->heapId);
+    iVar4 = sub_02008538(m_bagView->bagSave, m_bagView->selectItem, m_bagView->heapId);
+    if (iVar4 == 0)
+    {
+        if (iVar3 == 1)
+        {
+            uVar1 = sub_02199978(m_bagView);
+            ovy142_21a050c(&m_bagView->unk8C8, uVar1, 0);
+        }
+        ovy142_219b3b0(m_bagView);
+    }
+}
+
+void ovy142_219b3b0(BagView *m_bagView)
+{
+    int v2;  // r5
+    int v3;  // r1
+    int v4;  // r2
+    int v5;  // r3
+    int v6;  // r5
+    int v8;  // r1
+    int v9;  // r1
+    int v10; // r1
+
+    v2 = sub_02199978(m_bagView);
+    v3 = ovy142_2199988(m_bagView) + 1;
+    v4 = 0;
+    v5 = 0;
+    if (v3 == v2 + 1)
+        v4 = 1;
+    v6 = m_bagView->unk834;
+
+    if (v6 == v3 - 7)
+        v5 = 1;
+
+    if (v3 < 7)
+    {
+        if (v4 == 1)
+        {
+            v8 = m_bagView->posNow - 1;
+            if (v8 <= 0)
+                v8 = 0;
+            m_bagView->posNow = v8;
+        }
+    }
+    else
+    {
+        if (v5)
+        {
+            if (!v4)
+            {
+                ++m_bagView->posNow;
+                v9 = m_bagView->unk834 - 1;
+                if (v9 < -1)
+                    v9 = -1;
+                m_bagView->unk834 = v9;
+            }
+            else
+            {
+                v10 = v6 - 1;
+                if (v10 < -1)
+                    v10 = -1;
+                m_bagView->unk834 = v10;
+            }
+        }
+    }
+}
+
+extern void ovy142_219fb78(void);
+extern void ovy142_219fc14(BagView*, int);
+extern void sub_0204C124(int, int);
+
+void ovy142_219b438(BagView *m_bagView, int param_2)
+{
+    m_bagView->unk80C = param_2;
+    ovy142_219fb78();
+    ovy142_219fc14(m_bagView, m_bagView->unk814);
+    sub_0204C124(m_bagView->unk738, 1);
+    sub_0204C124(m_bagView->unk73C, 1);
+}
+
+void ovy142_219b46c(BagView *m_bagView)
+{
+    sub_02045738(3);
+    sub_0204C124(m_bagView->unk738, 0);
+    sub_0204C124(m_bagView->unk73C, 0);
+}
+
+const u8 sub021a08f8[12] = {0};
+
+extern int sub_0203D9C8(u8*);
+
+int ovy142_219b490(BagView *m_bagView)
+{
+    const u8 *v9;
+    int iVar5;
+    int iVar6;
+    int unaff_r4;
+    int bVar11 = 0;
+    u32 i;
+    u8 *v16;
+    u8 local_24[12];
+
+    iVar5 = m_bagView->unk814;
+
+    ItemTable *iVar3 = ovy142_2199928(m_bagView, sub_02199978(m_bagView));
+    v9 = &sub021a08f8[0];
+    v16 = &local_24[0];
+    i = 12;
+    do
+    {
+        int v13 = *v9++;
+        *v16 = v13;
+        v16++;
+        --i;
+    } while (i);
+
+    iVar6 = sub_0203D9C8(&local_24[0]);
+    if (iVar6 != -1)
+    {
+        m_bagView->unk810 = m_bagView->unk810 + 1;
+        bVar11 = 1;
+    }
+    else
+    {
+        m_bagView->unk810 = 0;
+    }
+
+    if ((m_bagView->unk810 == 1) || (m_bagView->unk810 > 30))
+    {
+        switch (iVar6)
+        {
+        case 0:
+            if (m_bagView->unk810 > 0x78)
+            {
+                m_bagView->unk814 = m_bagView->unk814 + 10;
+            }
+            else
+            {
+                m_bagView->unk814 = m_bagView->unk814 + 1;
+            }
+            unaff_r4 = 0;
+            break;
+        case 1:
+            if (m_bagView->unk810 > 0x78)
+            {
+                m_bagView->unk814 = m_bagView->unk814 - 10;
+            }
+            else
+            {
+                m_bagView->unk814 = m_bagView->unk814 - 1;
+            }
+            unaff_r4 = 1;
+            break;
+        }
+    }
+    if (iVar6 == -1)
+    {
+        if (sub_0203DF44() & 0x40)
+        {
+            m_bagView->unk814 = m_bagView->unk814 + 1;
+            unaff_r4 = 0;
+            bVar11 = TRUE;
+        }
+        else if (sub_0203DF44() & 0x80)
+        {
+            m_bagView->unk814 = m_bagView->unk814 + -1;
+            unaff_r4 = 1;
+            bVar11 = TRUE;
+        }
+        else if (sub_0203DF44() & 0x10)
+        {
+            m_bagView->unk814 = m_bagView->unk814 + 10;
+            unaff_r4 = 0;
+            bVar11 = TRUE;
+        }
+        else if (sub_0203DF44() & 0x20)
+        {
+            m_bagView->unk814 = m_bagView->unk814 - 10;
+            unaff_r4 = 1;
+            bVar11 = TRUE;
+        }
+    }
+
+    if (iVar3->num < m_bagView->unk814)
+    {
+        m_bagView->unk814 = 1;
+    }
+    else if (m_bagView->unk814 < 1)
+    {
+        m_bagView->unk814 = iVar3->num;
+    }
+
+    if (m_bagView->unk814 != iVar5)
+    {
+        int uVar8;
+        int uVar22;
+        sub_02006254(0x548);
+        if (unaff_r4 == 0)
+        {
+            uVar22 = m_bagView->unk738;
+            uVar8 = 0xb;
+        }
+        else
+        {
+            uVar22 = m_bagView->unk73C;
+            uVar8 = 10;
+        }
+        sub_0204C488(uVar22, uVar8);
+        ovy142_219fc14(m_bagView, m_bagView->unk814);
+    }
+    return bVar11;
+}
+
+extern void ovy142_219b6dc(BagView*);
+extern void ovy142_21a0578(int*, int, short);
+
+void ovy142_219b5d4(BagView *m_bagView)
+{
+    int uVar1;
+    int iVar2;
+    int uVar3;
+    int uVar4;
+    ItemTable *iVar5;
+    int bVar6;
+
+    iVar2 = sub_02008338(m_bagView->bagSave, m_bagView->selectItem);
+    uVar3 = sub_020083C8(m_bagView->bagSave, m_bagView->selectItem);
+    uVar4 = sub_02199978(m_bagView);
+    iVar5 = ovy142_2199928(m_bagView, uVar4);
+    bVar6 = iVar5->num != 1;
+    if (iVar2 == 0)
+    {
+        sub_02048838(m_bagView->unk520, 0x95, m_bagView->unk528);
+        ovy142_21999d8(m_bagView, 1, m_bagView->selectItem, bVar6, 0);
+        sub_021999C8(m_bagView, 0, 5);
+        ovy142_21a0578(&m_bagView->unk8C8, m_bagView->selectItem, (short)uVar3);
+    }
+    else
+    {
+        sub_02048838(m_bagView->unk520, 0x96,m_bagView->unk528);
+        ovy142_21999d8(m_bagView, 1, m_bagView->selectItem, bVar6, 0);
+        sub_021999C8(m_bagView, 0, uVar3);
+        uVar1 = sub_02199978(m_bagView);
+        ovy142_21a050c(&m_bagView->unk8C8, uVar1, 1);
+    }
+    sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
+    ovy142_219f6a4(m_bagView, 0);
+    sub_02006254(0x663);
+    ovy142_219ff40(m_bagView, 0);
+    ovy142_219b3b0(m_bagView);
+    sub_021998C0(m_bagView, ovy142_219b6dc);
+}
+
+void ovy142_219b6dc(BagView *m_bagView)
+{
+    u32 uVar1;
+
+    uVar1 = sub_0203DEFC();
+    if ((uVar1 & 3))
+    {
+        ovy142_219bda4(m_bagView, 1);
+    }
+    else if (sub_0203DA48())
+    {
+        ovy142_219bda4(m_bagView, 0);
+    }
+    else
+        return;
+
+    sub_02045738(3);
+    m_bagView->unk838 = 0xffff;
+    ovy142_21998f4(m_bagView);
+    m_bagView->unk892 = 1;
+    ovy142_219ed3c(m_bagView);
+    sub_0219F0AC(m_bagView);
+    sub_0204C520(m_bagView->unk6B8, 1);
+    ovy142_219fda8(m_bagView, 1);
+    ovy142_219ff40(m_bagView, 1);
+    ovy142_219c8d0(m_bagView);
+}
+
+typedef struct
+{
+    int unk0;
+    u64 unk4;
+} UNKNOW_TYPE;
+
+extern int ovy142_219b754(UNKNOW_TYPE *a1, UNKNOW_TYPE *a2);
+
+int ovy142_219b754(UNKNOW_TYPE *a1, UNKNOW_TYPE *a2)
+{
+    u64 v2;
+
+    v2 = a2->unk4;
+    if (a1->unk4 == v2)
+        return 0;
+    if (v2 < a1->unk4)
+        return 1;
+    return -1;
+}
+
+typedef union
+{
+    struct
+    {
+        int pro1;
+        int pro2;
+    } param;
+    u64 raw;
+} ItemSort;
+
+typedef struct
+{
+    ItemTable item;
+    ItemSort ItemClass;
+} ItemSortTable; // size of 12
+
+extern void *sub_0203A1FC(int, int, int, char*, int line);
+extern void sub_02008074(void*, ItemTable*, int, int);
+extern int sub_020084AC(void*, int, int);
+extern void* sub_02026720(int);
+extern void* sub_0202672C(void*, u16, int);
+extern void sub_0203A24C(void*);
+extern int sub_02026820(void*, int);
+extern void sub_0204AB0C(void*);
+void ovy142_219b784(BagView *m_bagView);
+extern MATH_QSort(void*, int, int, int, int);
+
+void ovy142_219b784(BagView *m_bagView)
+{
+    int i;
+    
+    ItemTable* iVar2;
+    ItemSortTable* iVar1;
+    int iVar3;
+    void* uVar4;
+    
+
+    iVar1 = (ItemSortTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xc10);
+    iVar2 = (ItemTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xc11);
+    sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 1);
+    iVar3 = sub_020084AC(m_bagView->bagSave, m_bagView->itemType, 1);
+    uVar4 = sub_02026720(m_bagView->heapId);
+    for (i = 0; i < iVar3; i++)
+    {
+        void* uVar6 = sub_0202672C(uVar4, iVar2[i].itemid, m_bagView->heapId);
+        ItemSortTable* param = &iVar1[i];
+        int itemClass = sub_02026820(uVar6, 0xf);
+        param->ItemClass.raw = ((itemClass << 28)) + (sub_02026820(uVar6, 0x11) << 16) + iVar2[i].itemid;
+
+        param->item = iVar2[i];
+        sub_0203A24C(uVar6);
+    }
+
+    sub_0204AB0C(uVar4);
+    MATH_QSort(iVar1, iVar3, sizeof(ItemSortTable), 0x0219b794, 0);
+    
+    for (i = 0; i < iVar3; ++i)
+    {
+        iVar2[i]= iVar1[i].item;
+    }
+    sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 0);
+    sub_0203A24C(iVar2);
+    sub_0203A24C(iVar1);
+}
+
+const u16 DAT_021a0b08[12] = {0};
+void ovy142_219b8c4(BagView *m_bagView);
+
+void ovy142_219b8c4(BagView *m_bagView)
+{
+    int i;
+    ItemSortTable* iVar1;
+    ItemTable* iVar2;
+    int iVar3;
+ 
+
+    iVar1 = (ItemSortTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xc45);
+    iVar2 = (ItemTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xc46);
+    sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 1);
+    iVar3 = sub_020084AC(m_bagView->bagSave, m_bagView->itemType, 1);
+    for ( i = 0; i < iVar3; i++)
+    {
+        u16 itemId = iVar2[i].itemid;
+        iVar1[i].ItemClass.raw = itemId + (DAT_021a0b08[itemId] << 16);
+        iVar1[i].item = iVar2[i];
+    }
+
+    MATH_QSort(iVar1, iVar3, 12, 0x0219b794, 0);
+    for (i = 0; i < iVar3; i++)
+    {
+        iVar2[i] = iVar1[i].item ;
+    }
+    sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 0);
+    sub_0203A24C(iVar2);
+    sub_0203A24C(iVar1);
+}
+
+void ovy142_219b9c0(BagView *m_bagView);
+extern int sub_02026B40(u16);
+
+void ovy142_219b9c0(BagView *m_bagView)
+{
+    int i;
+    ItemSortTable *iVar1;
+    ItemTable *iVar2;
+    int iVar3;
+
+
+    if (m_bagView->itemType == 2)
+    {
+        iVar1 = (ItemSortTable *)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xC7A);
+        iVar2 = (ItemTable *)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xC7B);
+        sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 1);
+        iVar3 = sub_020084AC(m_bagView->bagSave, m_bagView->itemType, 1);
+        for (i = 0; i < iVar3; i++)
+        {
+            iVar1[i].ItemClass.param.pro1 = sub_02026B40(iVar2[i].itemid);
+            iVar1[i].ItemClass.param.pro2 = 0;
+            iVar1[i].item = iVar2[i];
+        }
+        MATH_QSort(iVar1, iVar3, 12, 0x0219b794, 0);
+        for (i = 0; i < iVar3; i++)
+        {
+            iVar2[i] = iVar1[i].item;
+        }
+        sub_02008074(m_bagView->bagSave, iVar2, m_bagView->itemType, 0);
+        sub_0203A24C(iVar2);
+        sub_0203A24C(iVar1);
+    }
+}
+
+void ovy142_219bac4(BagView *m_bagView, int param_2);
+extern int sub_0200854C(void*, u16);
+
+void ovy142_219bac4(BagView *m_bagView, int param_2)
+{
+    int iVar4;
+    ItemSortTable* iVar2;
+    ItemTable* iVar3;
+    void* uVar5;
+    int i;
+
+
+    iVar2 = (ItemSortTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xCA9);
+    iVar3 = (ItemTable*)sub_0203A1FC(m_bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xCAA);
+    sub_02008074(m_bagView->bagSave, iVar3, m_bagView->itemType, 1);
+    iVar4 = sub_020084AC(m_bagView->bagSave, m_bagView->itemType, 1);
+    uVar5 = sub_02026720(m_bagView->heapId);
+    for (i = 0; i < iVar4; i++)
+    {
+        ItemSortTable* params;
+        void* uVar7;
+        int iVar11;
+        uVar7 = sub_0202672C(uVar5, iVar3[i].itemid, m_bagView->heapId);
+        iVar11 = sub_0200854C(m_bagView->bagSave, iVar3[i].itemid);
+        
+        if (param_2 == 1)
+        {
+            params = &iVar2[i];
+            int itemClass = sub_02026820(uVar7, 0xf); 
+            
+            params->ItemClass.raw = ((u64)((999 - iVar11) << 8) << 32) 
+                + (itemClass << 28) 
+                + ( sub_02026820(uVar7, 0x11) << 16) 
+                + iVar3[i].itemid;
+        }
+        else
+        {
+            params = &iVar2[i];
+            int itemClass = sub_02026820(uVar7, 0xf);
+            params->ItemClass.raw = ((u64)((iVar11) << 8) << 32) 
+                + (itemClass << 28) 
+                + ( sub_02026820(uVar7, 0x11) << 16) 
+                + iVar3[i].itemid;
+        }
+        iVar2[i].item = iVar3[i];
+        sub_0203A24C(uVar7);
+    }
+
+    sub_0204AB0C(uVar5);
+    MATH_QSort(iVar2, iVar4, 0xc, 0x0219b794, 0);
+    for (i = 0; i < iVar4; i++)
+    {
+        iVar3[i] = iVar2[i].item;
+    }
+    sub_02008074(m_bagView->bagSave, iVar3, m_bagView->itemType, 0);
+    sub_0203A24C(iVar3);
+    sub_0203A24C(iVar2);
+}
+
+void ovy142_219bca4(BagView *m_bagView)
+{
+    sub_02006254(0x54C);
+    if (m_bagView->itemType != 5)
+        sub_0204C488(m_bagView->unk744, 2);
+    else
+        sub_0204C488(m_bagView->unk740, 1);
+
+}
+
+void ovy142_219bcd8(BagView *m_bagView, int param_2);
+
+void ovy142_219bcd8(BagView *m_bagView, int param_2)
+{
+    m_bagView->unk1F4C = param_2;
+    switch (param_2)
+    {
+    case 0:
+        ovy142_219b784(m_bagView);
+        break;
+    case 1:
+        ovy142_219b9c0(m_bagView);
+        break;
+    case 2:
+        ovy142_219b8c4(m_bagView);
+        break;
+    case 3:
+        ovy142_219bac4(m_bagView, 1);
+        break;
+    case 4:
+        ovy142_219bac4(m_bagView, 0);
+        break;
+    }
+    m_bagView->unk838 = 0xffff;
+}
+
+void ovy142_219bd2c(BagView *m_bagView, int param_2);
+void sub_0219BD68(BagView *m_bagView, int param_2);
+
+void ovy142_219bd2c(BagView *m_bagView, int param_2)
+{
+    if (m_bagView->unk1F50 != param_2)
+    {
+        sub_0219BD68(m_bagView, param_2);
+        m_bagView->posNow = 0;
+        m_bagView->unk834 = -1;
+        m_bagView->unk838 = 0xFFFF;
+        m_bagView->unk892 = 1;
+        ovy142_219ed3c(m_bagView);
+    }
+}
+
+extern void ovy142_21a063c(int*, u16);
+
+void sub_0219BD68(BagView *m_bagView, int param_2)
+{
+    m_bagView->unk1F50 = param_2;
+    ovy142_21a063c(&m_bagView->unk8C8, param_2);
+}
+
+extern void ovy142_219ff60(BagView*);
+void ovy142_219bd84(BagView *m_bagView);
+
+void ovy142_219bd84(BagView *m_bagView)
+{
+    if (m_bagView->itemType == 5)
+    {
+        sub_0219BD68(m_bagView, 0);
+    }
+    ovy142_219ff60(m_bagView);
+}
+
+void ovy142_219bda4(BagView *m_bagView, int param_2);
+extern ovy142_219fd4c(BagView*, int);
+extern ovy142_219dda0(BagView*, int);
+extern sub_020352B0(int);
+
+void ovy142_219bda4(BagView *m_bagView, int param_2)
+{
+    int iVar1;
+
+    if (m_bagView->unk83C == 1)
+    {
+        param_2 = 1;
+    }
+    if (param_2)
+        sub_0203D564(0);
+    else
+        sub_0203D564(1);
+    iVar1 = ovy142_2199988(m_bagView);
+    if (iVar1 == 0)
+    {
+        param_2 = 0;
+    }
+    if (param_2 == 0)
+    {
+        ovy142_219fd4c(m_bagView, 0);
+    }
+    else
+    {
+        ovy142_219fd4c(m_bagView, 1);
+        sub_020352B0(m_bagView->unk8A4);
+    }
+    ovy142_219dda0(m_bagView, param_2);
+}
+
+int sub_0219BE00(BagView *m_bagView)
+{
+    int iVar1;
+
+    iVar1 = m_bagView->unk10;
+    if (!((iVar1 != 0) && (iVar1 != 1)) || (iVar1 == 3))
+    {
+        return 1;
+    }
+    return 0;
+}
+
+extern int sub_02034AA4(u16);
+extern void sub_02017644(void*, int, int);
+extern int ovy142_219c0e8(BagView*, u16);
+
+int ovy142_219be18(BagView *m_bagView, int param_2)
+{
+    int iVar1;
+    int iVar3;
+
+    param_2 += m_bagView->unk834 + 1;
+    iVar1 = ovy142_2199988(m_bagView);
+    if (iVar1 <= param_2)
+    {
+        return 0;
+    }
+    ItemTable *puVar2 = (ItemTable*)ovy142_2199928(m_bagView, param_2);
+    iVar1 = sub_02034AA4(puVar2->itemid);
+
+    if (iVar1 == 0xff)
+    {
+        return 0;
+    }
+    iVar3 = ovy142_219c0e8(m_bagView, puVar2->itemid);
+
+    if (iVar3 == 1)
+        sub_02017644(m_bagView->m_GameData, iVar1, 0);
+    else
+        sub_02017644(m_bagView->m_GameData, iVar1, 1);
+    sub_02006254(0x646);
+    m_bagView->unk838 = 0xffff;
+    return 1;
+}
+
+int sub_0219BE88(int a1);
+extern int sub_0219FD18(int);
+
+int sub_0219BE88(int a1)
+{
+    return sub_0219FD18(a1);
+}
+
+extern int sub_0201765C(void*, int);
+
+void ovy142_219be90(BagView *m_bagView)
+{
+    int uVar1;
+    int uVar2;
+
+    uVar1 = sub_0219BE88(m_bagView->itemType);
+    uVar2 = sub_0201765C(m_bagView->m_GameData, uVar1);
+    sub_02017644(m_bagView->m_GameData, uVar1, uVar2 ^ 1);
+    sub_02006254(0x646);
+    ovy142_219becc(m_bagView);
+}
+
+void ovy142_219becc(BagView *m_bagView)
+{
+    int sVar1;
+    int uVar2;
+
+    if (m_bagView->unk83C != 1)
+    {
+        uVar2 = sub_0219BE88(m_bagView->itemType);
+        sVar1 = sub_0201765C(m_bagView->m_GameData, uVar2);
+        sub_0204C488(m_bagView->unk72C, (u16)(sVar1 + 6));
+    }
+}
+
+void ovy142_219bf04(BagView *m_bagView, void *param_2, ItemTable *param_3, u8 *param_4);
+
+void ovy142_219bf04(BagView *m_bagView, void *param_2, ItemTable *param_3, u8 *param_4)
+{
+    u8 uVar1;
+    int iVar2;
+
+    iVar2 = sub_02026820(param_2, 6);
+    if (iVar2 != 0)
+    {
+        iVar2 = sub_02026BA0(param_3->itemid);
+        if (iVar2 == 1)
+        {
+            uVar1 = 2;
+        }
+        else if ((param_3->itemid == 450) && (m_bagView->unk1C == 1))
+        {
+            uVar1 = 1;
+        }
+        else
+        {
+            uVar1 = 0;
+        }
+        *param_4 = uVar1;
+    }
+    if ((u16)(param_3->itemid + 0xfd98) <= 1)
+    {
+        *param_4 = 0;
+    }
+
+}
+
+void ovy142_219bf58(BagView *m_bagView, u8 *param_2);
+extern void *sub_02026740(u16, int, int);
+extern int ovy142_219d43c(BagView*, u8);
+
+void ovy142_219bf58(BagView *m_bagView, u8 *param_2)
+{
+    u32 unkv2;
+    ItemTable *psVar3;
+
+
+    unkv2 = sub_02199978(m_bagView);
+    psVar3 = (ItemTable *)ovy142_2199928(m_bagView, unkv2);
+    if ((psVar3 != NULL))
+    {
+        if ((psVar3->itemid != 0))
+        {
+            void *uVar2 = sub_02026740(psVar3->itemid, 0, m_bagView->heapId);
+            u8 cVar1 = sub_02026820(uVar2, 5);
+            ovy142_219bf04(m_bagView, uVar2, psVar3, param_2);
+
+            if (!ovy142_219d43c(m_bagView, cVar1) && (param_2[0] != 2))
+            {
+                param_2[0] = -1;
+            }
+
+            if (sub_02026820(uVar2, 3) == 0)
+            {
+                if (sub_02026C14(psVar3->itemid) == 1)
+                {
+                    param_2[1] = 6;
+                }
+                if (cVar1 != 2)
+                {
+                    param_2[2] = 3;
+                }
+            }
+
+            if (sub_02026820(uVar2, 4))
+            {
+
+                if (ovy142_219c0e8(m_bagView, psVar3->itemid) == 1)
+                {
+                    param_2[2] = 5;
+                }
+                else
+                {
+                    param_2[2] = 4;
+                }
+            }
+            if (m_bagView->itemType != 5)
+            {
+                param_2[3] = 8;
+            }
+            else
+            {
+                param_2[3] = 9;
+            }
+            param_2[4] = 0xa;
+            sub_0203A24C(uVar2);
+        }
+    }
+}
+
+extern int unk_21A098C[];
+
+int sub_219C054(BagView *m_bagView, int a2, int a3, int a4)
+{
+    int *v4;        // r4
+    int *v6;        // r3
+    int v7;         // r2
+    int v8;         // r0
+    int v9;         // r1
+    int v10;        // r6
+    int v11;        // r4
+    int v12;        // r3
+    int v13;        // r2
+    int v14;        // r3
+    char v16[8];    // [sp+0h] [bp-68h] BYREF
+    u32 v17[5];  // [sp+8h] [bp-60h] BYREF
+    u32 v18[19]; // [sp+1Ch] [bp-4Ch] BYREF
+
+    v18[13] = a4;
+    v4 = (int *)&unk_21A098C;
+    v6 = v18;
+    v7 = 6;
+    do
+    {
+        v8 = *v4;
+        v9 = v4[1];
+        v4 += 2;
+        *v6 = v8;
+        v6[1] = v9;
+        v6 += 2;
+        --v7;
+    } while (v7);
+    *v6 = *v4;
+    v16[0] = -1;
+    v16[1] = -1;
+    v16[2] = -1;
+    v16[3] = -1;
+    v16[4] = -1;
+    sub_219BF98(m_bagView, v16);
+    v10 = 0;
+    v11 = 0;
+    do
+    {
+        v12 = (u8)v16[v10];
+        if (v12 != 255)
+        {
+            v13 = v11;
+            m_bagView->unk848[v11]= v12;
+            v17[v13] = v18[(unsigned __int8)v16[v10]];
+        }
+        ++v10;
+    } while (v10 < 5);
+    if (sub_219C0F4(m_bagView))
+    {
+        v14 = 0;
+        while (m_bagView->unk848[v14])
+        {
+            if (++v14 >= 5)
+                return sub_219F0FC(m_bagView, v17, v11);
+        }
+        v17[v14] = 160;
+    }
+    return sub_219F0FC(m_bagView, v17, v11);
 }
