@@ -859,6 +859,8 @@ Overlay OVY_142
 {
     Address 0x021998C0
     Object src/bag_view.o
+    Object asm/overlay142_0.o
+    Object src/bag_menu.o
     Object asm/overlay142.o
 }
 Overlay OVY_143

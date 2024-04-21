@@ -8077,6 +8077,10 @@ sub_0219D488: ; 0x02073FB4
 .public ovy142_219a490
 .public ovy142_219b5d4
 .public ovy142_219b754
+.public ovy142_219c444
+.public ovy142_219c6b4
+.public ovy142_219c740
+.public ovy142_219d0c8
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a354
@@ -8091,6 +8095,10 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a490
 	bl ovy142_219b5d4
 	bl ovy142_219b754
+	bl ovy142_219c444
+	bl ovy142_219c6b4
+	bl ovy142_219c740
+	bl ovy142_219d0c8
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C10

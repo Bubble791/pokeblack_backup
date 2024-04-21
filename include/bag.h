@@ -1,236 +1,305 @@
-#ifndef POKEHEARTGOLD_BAG_H
-#define POKEHEARTGOLD_BAG_H
+#ifndef BAG_H
+#define BAG_H
 
-#include "constants/items.h"
-#include "item.h"
-#include "save.h"
-#include "heap.h"
-#include "bag_view.h"
-#include "bag_cursor.h"
+extern void sub_0203DEB4(int, int);
+extern int sub_020267F0(u16, int, u16);
+extern void sub_020244B4(int , int, int);
+extern void sub_020246F4(int , int, int);
+extern int sub_0203DA84(u32*, u32*);
+extern int sub_0203DA48(void);
+extern int sub_020355B8(int, int, int, int, int);
+extern void sub_02006254(int);
+extern int sub_0203DAC8(u32*, u32*);
 
-/*
- * Return value of Bag_TryRegisterItem
- */
-typedef enum RegisterItemResult {
-    REG_ITEM_FAIL,
-    REG_ITEM_SLOT1,
-    REG_ITEM_SLOT2,
-} RegisterItemResult;
+typedef struct
+{
+    u16 itemid;
+    u16 num;
+} ItemTable;
 
-/*
- * The player's inventory. All items in all pockets,
- * and the two items registered to the touchscreen
- * buttons. This is saved to flash.
- */
-typedef struct Bag {
-    ItemSlot items[NUM_BAG_ITEMS];                // General items
-    ItemSlot keyItems[NUM_BAG_KEY_ITEMS];         // Key items
-    ItemSlot TMsHMs[NUM_BAG_TMS_HMS];             // Move machines
-    ItemSlot mail[NUM_BAG_MAIL];                  // Mail items
-    ItemSlot medicine[NUM_BAG_MEDICINE];          // Healing items
-    ItemSlot berries[NUM_BAG_BERRIES];            // Berries
-    ItemSlot balls[NUM_BAG_BALLS];                // Balls
-    ItemSlot battleItems[NUM_BAG_BATTLE_ITEMS];   // Battle-only items
-    u16 registeredItems[2];                        // IDs of registered key items
-} Bag;
+typedef struct BagViewWork BagView;
 
-/*
- * u32 Save_Bag_sizeof(void)
- *
- * Returns the size of the player's inventory in save memory
- *
- * @returns: The size of Bag
- */
-u32 Save_Bag_sizeof(void);
+typedef void (*FieldBagItemUse)(BagView *);
 
-/*
- * Bag *Save_Bag_New(HeapID heapId)
- *
- * Allocates a new Bag
- *
- * @param heapId:     ID of the heap to alloc from
- *
- * @returns: Pointer to the Bag instance
- */
-Bag *Save_Bag_New(HeapID heapId);
+struct BagViewWork
+{
+    /*0x000*/ void *m_GameData;
+    /*0x004*/ void *unk4;
+    /*0x008*/ void *unk8;
+    /*0x00C*/ int unkC;
+    /*0x010*/ int unk10;
+    /*0x014*/ void *unk14;
+    /*0x018*/ void* bagSave;
+    /*0x01C*/ int unk1C;
+    /*0x020*/int unk20;
+    /*0x024*/ ItemTable m_itemTable[6];
+    /*0x03C*/ u8 unk3C[0x4C0];
+    /*0x4FC*/ FieldBagItemUse unk4FC;
+    /*0x500*/ int unk500;
+    /*0x504*/ int unk504;
+    /*0x508*/ int unk508;
+    /*0x50C*/ int unk50C;
+    /*0x510*/ int unk510;
+    /*0x514*/ int unk514;
+    /*0x518*/ int unk518;
+    /*0x51C*/ int unk51C;
+    /*0x520*/ int unk520;
+    /*0x524*/ int messageParam;
+    /*0x528*/ int unk528;
+    /*0x52C*/ int unk52C;
+    /*0x530*/ int unk530;
+    /*0x534*/ int unk534;
+    /*0x538*/ int unk538;
+    /*0x53C*/ int unk53C;
+    /*0x540*/ int unk540;
+    /*0x544*/ int unk544;
+    /*0x548*/ int unk548;
+    /*0x54C*/ u16 heapId;
+    /*0x54E*/ u16 unk54E;
+    /*0x550*/ u8 unk550[0x154];
+    /*0x6A4*/ int unk6A4;
+    /*0x6A8*/ int unk6A8;
+    /*0x6AC*/ int unk6AC;
+    /*0x6B0*/ int unk6B0;
+    /*0x6B4*/ int unk6B4;
+    /*0x6B8*/ int unk6B8;
+    /*0x6BC*/ u8 unk6BC[0x68];
+    /*0x724*/ int unk724[2];
+    /*0x72C*/ int unk72C;
+    /*0x730*/ int unk730;
+    /*0x734*/ int unk734;
+    /*0x738*/ int unk738;
+    /*0x73C*/ int unk73C;
+    /*0x740*/ int unk740;
+    /*0x744*/ int unk744;
+    /*0x748*/ int unk748;
+    /*0x74C*/ u8 unk74C[0x48];
+    /*0x794*/ int unk794;
+    /*0x798*/ int unk798;
+    /*0x79C*/ int unk79C;
+    /*0x7A0*/ u8 unk7A0[0x60];
+    /*0x800*/ int unk800;
+    /*0x804*/ int unk804;
+    /*0x808*/ int unk808;
+    /*0x80C*/ int unk80C;
+    /*0x810*/ int unk810;
+    /*0x814*/ int unk814;
+    /*0x818*/ int unk818;
+    /*0x81C*/ int unk81C;
+    /*0x820*/ int unk820;
+    /*0x824*/ int unk824;
+    /*0x828*/ int unk828;
+    /*0x82C*/ u32 itemType;
+    /*0x830*/ int posNow;
+    /*0x834*/ int unk834;
+    /*0x838*/ u32 unk838;
+    /*0x83C*/ int unk83C;
+    /*0x840*/ int unk840;
+    /*0x844*/ int unk844;
+    /*0x848*/ int unk848[5];
+    /*0x85C*/ int unk85C[5];
+    /*0x870*/ int unk870[7];
+    /*0x88C*/ u32 unk88C : 16;
+              u32 unk88C_1 : 16;
+    /*0x890*/ u16 unk890;
+    /*0x892*/ u16 unk892;
+    /*0x894*/ int unk894;
+    /*0x898*/ int unk898;
+    /*0x89C*/ int unk89C;
+    /*0x8A0*/ u32 selectItem;
+    /*0x8A4*/ int unk8A4;
+    /*0x8A8*/ int unk8A8;
+    /*0x8AC*/ int unk8AC;
+    /*0x8B0*/ int unk8B0;
+    /*0x8B4*/ int unk8B4;
+    /*0x8B8*/ u16 unk8B8;
+    /*0x8BA*/ u16 unk8BA;
+    /*0x8BC*/ FieldBagItemUse unk8BC;
+    /*0x8C0*/ int KeyRetypeIntervalRepeated;
+    /*0x8C4*/ int KeyRetypeIntervalFirst;
+    /*0x8C8*/ int unk8C8; // 某种结构体
+    /*0x8CC*/ u8 unk8CC[0x1680];
+    /*0x1F4C*/ int unk1F4C;
+    /*0x1F50*/ int unk1F50;
+}; // size of 0x1F54
 
-/*
- * void Save_Bag_Init(Bag *bagData)
- *
- * Initializes an existing Bag instance. This is also
- * called by Save_Bag_New.
- *
- * @param bagData:     The Bag instance
- */
-void Save_Bag_Init(Bag *bagData);
 
-/*
- * void Save_Bag_Copy(const Bag *src, Bag *dst)
- *
- * Copies Bag from src to dst
- *
- * @param src:         Origin Bag
- * @param dst:         Destination Bag
- */
-void Save_Bag_Copy(const Bag *src, Bag *dst);
+typedef union
+{
+    struct
+    {
+        int pro1;
+        int pro2;
+    } param;
+    u64 raw;
+} ItemSort;
 
-/*
- * u16 Bag_GetRegisteredItem1(Bag *bag)
- * u16 Bag_GetRegisteredItem2(Bag *bag)
- *
- * Returns the item ID registered to touch screen button 1 or 2
- *
- * @param bag:         Pointer to Bag
- *
- * @returns: Registered item ID in that slot
- */
-u16 Bag_GetRegisteredItem1(Bag *bag);
-u16 Bag_GetRegisteredItem2(Bag *bag);
+typedef struct
+{
+    ItemTable item;
+    ItemSort ItemClass;
+} ItemSortTable; // size of 12
 
-/*
- * RegisterItemResult Bag_TryRegisterItem(Bag *bag, u16 itemId)
- *
- * Registers the item to the first available quick-access slot.
- * If none available, returns REG_ITEM_FAIL. Otherwise, returns
- * REG_ITEM_SLOT1 or REG_ITEM_SLOT2.
- *
- * @param bag:         Pointer to Bag
- * @param itemId:      Item to attempt registry
- *
- * @returns: Which slot the item was registered to, or 0 if failed
- */
-RegisterItemResult Bag_TryRegisterItem(Bag *bag, u16 itemId);
+void ovy142_219a1ec(BagView *m_bagView);
 
-/*
- * void Bag_UnregisterItem(Bag *bag, u16 itemId)
- *
- * Removes the specified item from the registered items slots.
- * If the item was in slot 1, and slot 2 is not empty, moves
- * slot 2 to slot 1.
- *
- * @param bag:         Pointer to Bag
- * @param itemId:      Item to attempt unregistry
- */
-void Bag_UnregisterItem(Bag *bag, u16 itemId);
+void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2);
+void sub_021998DC(BagView *m_bagView);
+void ovy142_21998f4(BagView *m_bagView);
+ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
+int ovy142_219995c(u32 itemId, int param_2, u16 heapId);
+void sub_021999B8(BagView *m_bagView, int bufId, int msgId);
+void sub_021999C8(BagView *m_bagView, int bufId, int msgId);
+int ovy142_2199988(BagView *m_bagView);
+extern int sub_0203D554(void);
+extern void ovy142_219de0c(BagView*);
+extern void ovy142_219e120(BagView*);
+extern void ovy142_219e924(BagView*);
+extern void ovy142_219becc(BagView*);
 
-/*
- * BOOL Bag_HasSpaceForItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId)
- * BOOL Bag_AddItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId)
- * BOOL Bag_TakeItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId)
- * BOOL Bag_HasItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId)
- *
- * Inventory checkers and modifiers.
- * HasSpaceForItem checks whether there is an empty slot
- *   for the item in its pocket or, if that item already occupies
- *   a slot, if its quantity was incremented as specified, if it
- *   will still be under the maximum.
- * AddItem finds an item slot that would satisfy HasSpaceForItem,
- *   then increments the quantity. If the added item is a TM, HM,
- *   or Berry, it then sorts the pocket.
- * TakeItem finds an item slot containing the indicated item and,
- *   if the stored quantity meets or exceeds the requested amount,
- *   decrements the stored quantity by that amount. If the resulting
- *   stored quantity is 0, moves lower item slots up to fill the
- *   gap.
- * HasItem follows the same logic as TakeItem but, instead of
- *   removing the item, simply returns whether it can or not.
- *
- * @param bag:         Pointer to Bag
- * @param itemId:      ID of item to act upon
- * @param quantity:    Amount to add, remove, or check
- * @param heapId:     Heap to allocate temp buffers from
- *
- * @returns: TRUE if the action succeeded or would succeed,
- *   otherwise FALSE.
- */
-BOOL Bag_HasSpaceForItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId);
-BOOL Bag_AddItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId);
-BOOL Bag_TakeItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId);
-BOOL Bag_HasItem(Bag *bag, u16 itemId, u16 quantity, HeapID heapId);
+#define NORMAL_ITEM_MAX 0x136
 
-/*
- * BOOL Pocket_TakeItem(ItemSlot *slots, u32 count, u16 itemId, u16 quantity)
- *
- * Like BAG_TakeItem, but acts directly on an array of item slots.
- *
- * @param slots:       Pointer to ItemSlot array
- * @param count:       Number of ItemSlot in slots
- * @param itemId:      ID of item to act upon
- * @param quantity:    Amount to add, remove, or check
- *
- * @returns: TRUE if the action succeeded, otherwise FALSE.
- */
-BOOL Pocket_TakeItem(ItemSlot *slots, u32 count, u16 itemId, u16 quantity);
+extern int sub_02008488(ItemTable*, int);
+extern int ovy142_21a0698(int*, int, BagView *);
+extern void sub_020244E0(int, int, int, int, int);
 
-/*
- * BOOL Bag_PocketNotEmpty(Bag *bag, u32 pocket)
- *
- * Checks whether the indicated pocket has any items in it.
- *
- * @param bag:         Pointer to Bag
- * @param pocket:      POCKET_XXX constant
- *
- * @returns: TRUE if there is at least one item in the pocket,
- *   otherwise FALSE.
- */
-BOOL Bag_PocketNotEmpty(Bag *bag, u32 pocket);
+typedef struct
+{
+    s16 itemId;
+    s16 num;
+} UNKNOW_DATA;
 
-/*
- * u16 Bag_GetQuantity(Bag *bag, u16 itemId, HeapID heapId)
- * u16 Pocket_GetQuantity(ItemSlot *slots, u32 count, u16 itemId)
- *
- * Looks up the item in its pocket or the specified ItemSlot
- *   array. If found, returns its quantity. Otherwise,
- *   returns 0.
- *
- * @param bag:         (Bag_*) Pointer to Bag
- * @param slots:       (Pocket_*) Pointer to ItemSlot array
- * @param count:       (Pocket_*) Number of ItemSlot in slots
- * @param itemId:      Item to look up
- * @param heapId:     (Bag_*) Heap to allocate temp buffers from
- *
- * @returns: Quantity of that item in the bag or array.
- */
-u16 Bag_GetQuantity(Bag *bag, u16 itemId, HeapID heapId);
-u16 Pocket_GetQuantity(ItemSlot *slots, u32 count, u16 itemId);
+extern void sub_020088A4(void*, u16);
+extern void sub_02008894(void*, u16, s16, s16);
+extern void sub_0200887C(void*, u16, s16*, s16*);
 
-/*
- * BagView *Bag_CreateView(Bag *bag, const u8 *pockets, HeapID heapId)
- *
- * Creates a BagView with a specified subset of pockets.
- *
- * @param bag:         Pointer to Bag
- * @param pockets:     Char array of POCKET_XXX IDs, terminated
- *                     with POCKET_BAG_VIEW_END
- * @param heapId:     Heap to allocate from
- *
- * @returns: Pointer to newly-allocated BagView
- */
-BagView *Bag_CreateView(Bag *bag, const u8 *pockets, HeapID heapId);
+extern void ovy142_219ed3c(BagView*);
+extern void ovy142_219f8ec(BagView*, u32);
+extern void ovy142_219f06c(BagView*, u32);
+extern void ovy142_219f450(BagView*, u32);
 
-/*
- * ItemSlot *Bag_GetPocketSlotN(Bag *bag, u8 pocket, u32 slot)
- *
- * Gets a pointer to the nth ItemSlot in the given pocket.
- *
- * @param bag:         Pointer to Bag
- * @param pocket:      POCKET_XXX index of the pocket to search
- * @param slot:           Index of slot within pocket
- *
- * @returns: Pointer to the requested ItemSlot, or NULL if
- *   out-of-bounds
- */
-ItemSlot *Bag_GetPocketSlotN(Bag *bag, u8 pocket, u32 slot);
+void ovy142_219c3cc(BagView *m_bagView);
+void ovy142_219c414(BagView *m_bagView);
+extern void sub_020279B4(int, int, int, int, int, int, u16);
+extern int sub_02027ACC(void);
+extern int ovy142_21a00a0(BagView*);
 
-/*
- * Bag *Save_Bag_Get(SaveData *saveData)
- *
- * Gets the pointer to Bag loaded from the save file.
- *
- * @param saveData:    Pointer to SaveData
- *
- * @returns: Pointer to Bag
- */
-Bag *Save_Bag_Get(SaveData *saveData);
+typedef void (*UnknowFunc)(BagView *);
 
-#endif //POKEHEARTGOLD_BAG_H
+extern void sub_02035198(int);
+extern int sub_02021C0C(int);
+extern int sub_0203DA2C(void);
+extern void sub_02007FE8(void*, ItemTable*, int, int);
+extern void sub_0204C488(int, u16);
+extern int sub_0203DEFC(void);
+extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
+
+void ovy142_2199ecc(BagView *m_bagView);
+extern void sub_0203A6A8(int);
+extern void sub_021A046C(int*);
+extern void sub_0202E1DC(int);
+extern void ovy142_219e168(BagView*);
+extern void ovy142_219dd14(BagView*);
+extern void sub_0203A83C(int);
+extern void sub_020487D4(int);
+extern void sub_02048564(int);
+extern void sub_02024274(int);
+extern void ovy142_219f8c4(BagView*);
+extern void sub_02044668(int, int, u16);
+extern void sub_02048210(int);
+
+void ovy142_219a850(BagView *m_bagView);
+extern void sub_020504F0(int);
+extern void sub_0203D564(int);
+extern void ovy142_219be90(BagView*);
+extern void ovy142_219cc84(BagView*);
+extern void ovy142_219d0c8(BagView*);
+extern void ovy142_219c958(BagView*);
+extern void ovy142_219bca4(BagView*);
+extern int ovy142_219d22c(BagView*);
+extern void ovy142_219c8e8(BagView*);
+extern void ovy142_219cac0(BagView*, int, int, FieldBagItemUse);
+
+extern void *sub_0203A1FC(int, int, int, char*, int line);
+extern void sub_02008074(void*, ItemTable*, int, int);
+extern int sub_020084AC(void*, int, int);
+extern void* sub_02026720(int);
+extern void* sub_0202672C(void*, u16, int);
+extern void sub_0203A24C(void*);
+extern int sub_02026820(void*, int);
+extern void sub_0204AB0C(void*);
+void ovy142_219b784(BagView *m_bagView);
+extern MATH_QSort(void*, int, int, int, int);
+
+void ovy142_219bda4(BagView *m_bagView, int param_2);
+extern ovy142_219fd4c(BagView*, int);
+extern ovy142_219dda0(BagView*, int);
+extern sub_020352B0(int);
+
+extern void ovy142_219acb8(BagView*);
+extern void ovy142_219af84(BagView*);
+extern int sub_02026C14(u16);
+extern int sub_02026BA0(u16);
+extern void sub_0219F760(BagView*);
+extern void ovy142_219c014(BagView*);
+extern void ovy142_219f76c(BagView*, int);
+
+void ovy142_219a724(BagView *m_bagView);
+extern int ovy142_219f7a4(BagView*);
+extern void sub_02045738(int);
+extern void sub_0204C520(int, int);
+extern void ovy142_219fda8(BagView*, int);
+
+void ovy142_2199a5c(BagView *m_bagView, int param_2, u32 param_3);
+extern void ovy142_219ff60(BagView*);
+void ovy142_219bd84(BagView *m_bagView);
+
+extern int ovy142_219b490(BagView*);
+extern int ovy142_219cb88(void);
+extern void ovy142_219cba8(BagView*);
+extern void ovy142_219b46c(BagView*);
+
+void ovy142_219b2f0(BagView*);
+extern void sub_0200C9C0(int, int);
+extern void ovy142_219f978(BagView*);
+extern int sub_02017974(void*);
+
+void ovy142_219a4d0(BagView *m_bagView);
+extern int sub_0202DBE4(int);
+extern int sub_0202DC00(int);
+extern int sub_020083C8(void*, u16);
+extern void ovy142_219ff40(void*, int);
+extern void sub_0202D384(u16);
+extern void ovy142_219ac70(BagView*);
+extern void ovy142_219b5d4(BagView*);
+void ovy142_219ae30(BagView*);
+extern int sub_0219BE00(BagView*);
+extern int ovy142_219be18(BagView*, int);
+extern void sub_0219F0AC(BagView*);
+extern void sub_0202DA54(int);
+void ovy142_219bcd8(BagView *m_bagView, int param_2);
+
+void ovy142_219ad30(BagView *m_bagView);
+extern void sub_0202451C(int, int, int, int, int, int);
+
+void ovy142_219a104(BagView *m_bagView);
+extern void *sub_02017934(void*);
+extern void* sub_0200DCF0(void*);
+extern void sub_02048838(int, int, int);
+extern void sub_02024920(int, int, int);
+extern void ovy142_219f6a4(BagView*, int);
+extern int sub_0200DDE0(void*);
+extern void sub_0200DDB0(void*, u8);
+extern void sub_0200DDF0(void*, u16);
+extern void ovy142_219b340(BagView*, int);
+extern void sub_020245A8(int, int, void*);
+void ovy142_219bd2c(BagView *m_bagView, int param_2);
+void sub_0219BD68(BagView *m_bagView, int param_2);
+void ovy142_219D464(BagView* a1);
+
+int ovy142_2199bcc(BagView *m_bagView);
+void ovy142_219bda4(BagView*, int);
+void ovy142_219ecec(BagView*);
+void ovy142_219bf58(BagView *m_bagView, u8 *param_2);
+extern void *sub_02026740(u16, int, int);
+extern int ovy142_219d43c(BagView*, u8);
+#endif //BAG_H
