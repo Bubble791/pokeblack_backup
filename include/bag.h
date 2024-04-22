@@ -21,6 +21,13 @@ typedef struct BagViewWork BagView;
 
 typedef void (*FieldBagItemUse)(BagView *);
 
+typedef struct
+{
+    int unk0;
+    u16 unk4;
+    int unk8;
+} ITEM_TASK;
+
 struct BagViewWork
 {
     /*0x000*/ void *m_GameData;
@@ -56,39 +63,84 @@ struct BagViewWork
     /*0x548*/ int unk548;
     /*0x54C*/ u16 heapId;
     /*0x54E*/ u16 unk54E;
-    /*0x550*/ u8 unk550[0x154];
+    /*0x550*/ int unk550;
+    /*0x554*/ int unk554;
+    /*0x558*/ int unk558;
+    /*0x55C*/ int unk55C;
+    /*0x560*/ int unk560;
+    /*0x564*/ int unk564;
+    /*0x568*/ int unk568;
+    /*0x56C*/ int unk56C;
+    /*0x570*/ int unk570;
+    /*0x574*/ int unk574;
+    /*0x578*/ int unk578;
+    /*0x57C*/ int unk57C;
+    /*0x580*/ int unk580;
+    /*0x584*/ int unk584;
+    /*0x588*/ int unk588;
+    /*0x58C*/ int unk58C;
+    /*0x590*/ int unk590;
+    /*0x594*/ int unk594;
+    /*0x598*/ int unk598;
+    /*0x59C*/ int unk59C;
+    /*0x5A0*/ int unk5A0;
+    /*0x5A4*/ int unk5A4;
+    /*0x5A8*/ int unk5A8;
+    /*0x5AC*/ int unk5AC[17];
+    /*0x5F0*/ int unk5F0;
+    /*0x5F4*/ int unk5F4;
+    /*0x5F8*/ int unk5F8[3];
+    /*0x604*/ int unk604[8];
+    /*0x624*/ int unk624[8];
+    /*0x644*/ int unk644[8];
+    /*0x664*/ int unk664[8];
+    /*0x684*/ int unk684[8];
     /*0x6A4*/ int unk6A4;
     /*0x6A8*/ int unk6A8;
     /*0x6AC*/ int unk6AC;
     /*0x6B0*/ int unk6B0;
     /*0x6B4*/ int unk6B4;
     /*0x6B8*/ int unk6B8;
-    /*0x6BC*/ u8 unk6BC[0x68];
-    /*0x724*/ int unk724[2];
-    /*0x72C*/ int unk72C;
-    /*0x730*/ int unk730;
-    /*0x734*/ int unk734;
-    /*0x738*/ int unk738;
-    /*0x73C*/ int unk73C;
+    /*0x6BC*/ int unk6BC[6];
+    /*0x6D4*/ int unk6D4[3];
+    /*0x6E0*/ int unk6E0[17];
+    /*0x724*/ int unk724[7];
     /*0x740*/ int unk740;
     /*0x744*/ int unk744;
     /*0x748*/ int unk748;
-    /*0x74C*/ u8 unk74C[0x48];
+    /*0x74C*/ int unk74C;
+    /*0x750*/ int unk750;
+    /*0x754*/ int unk754;
+    /*0x758*/ int unk758;
+    /*0x75C*/ int unk75C;
+    /*0x760*/ int unk760;
+    /*0x764*/ int unk764;
+    /*0x768*/ int unk768;
+    /*0x76C*/ int unk76C;
+    /*0x770*/ int unk770;
+    /*0x774*/ int unk774;
+    /*0x778*/ int unk778;
+    /*0x77C*/ int unk77C;
+    /*0x780*/ int unk780;
+    /*0x784*/ int unk784;
+    /*0x788*/ int unk788;
+    /*0x78C*/ int unk78C;
+    /*0x790*/ int unk790;
     /*0x794*/ int unk794;
     /*0x798*/ int unk798;
     /*0x79C*/ int unk79C;
-    /*0x7A0*/ u8 unk7A0[0x60];
+    /*0x7A0*/ ITEM_TASK unk7A0[8];
     /*0x800*/ int unk800;
     /*0x804*/ int unk804;
     /*0x808*/ int unk808;
     /*0x80C*/ int unk80C;
     /*0x810*/ int unk810;
     /*0x814*/ int unk814;
-    /*0x818*/ int unk818;
-    /*0x81C*/ int unk81C;
-    /*0x820*/ int unk820;
-    /*0x824*/ int unk824;
-    /*0x828*/ int unk828;
+    /*0x818*/ u32 unk818;
+    /*0x81C*/ u32 unk81C;
+    /*0x820*/ u32 unk820;
+    /*0x824*/ u32 unk824;
+    /*0x828*/ u32 unk828;
     /*0x82C*/ u32 itemType;
     /*0x830*/ int posNow;
     /*0x834*/ int unk834;
@@ -99,8 +151,7 @@ struct BagViewWork
     /*0x848*/ int unk848[5];
     /*0x85C*/ int unk85C[5];
     /*0x870*/ int unk870[7];
-    /*0x88C*/ u32 unk88C : 16;
-              u32 unk88C_1 : 16;
+    /*0x88C*/ u32 unk88C;
     /*0x890*/ u16 unk890;
     /*0x892*/ u16 unk892;
     /*0x894*/ int unk894;
@@ -204,7 +255,7 @@ extern void sub_020487D4(int);
 extern void sub_02048564(int);
 extern void sub_02024274(int);
 extern void ovy142_219f8c4(BagView*);
-extern void sub_02044668(int, int, u16);
+extern void sub_02044668(int, u16, u16);
 extern void sub_02048210(int);
 
 void ovy142_219a850(BagView *m_bagView);
@@ -231,9 +282,9 @@ void ovy142_219b784(BagView *m_bagView);
 extern MATH_QSort(void*, int, int, int, int);
 
 void ovy142_219bda4(BagView *m_bagView, int param_2);
-extern ovy142_219fd4c(BagView*, int);
-extern ovy142_219dda0(BagView*, int);
-extern sub_020352B0(int);
+extern void ovy142_219fd4c(BagView*, int);
+extern void ovy142_219dda0(BagView*, int);
+extern void sub_020352B0(int);
 
 extern void ovy142_219acb8(BagView*);
 extern void ovy142_219af84(BagView*);
@@ -302,4 +353,40 @@ void ovy142_219ecec(BagView*);
 void ovy142_219bf58(BagView *m_bagView, u8 *param_2);
 extern void *sub_02026740(u16, int, int);
 extern int ovy142_219d43c(BagView*, u8);
+
+void ovy142_219c38c(int a1, BagView *m_bagView);
+extern void ovy142_219dd84(BagView*, int);
+extern int sub_020275F8(int);
+extern void sub_0204B7C8(int);
+int sub_02199978(BagView *m_bagView);
+void ovy142_219e21c(BagView *a1);
+
+extern int sub_020484F4(int);
+extern int sub_0204713C(int, int);
+extern void ovy142_21a00f0(BagView*, int *, int, int, int, int);
+extern int ovy142_21a03ac(u8);
+extern void sub_02048244(int);
+extern int sub_02026B84(u16);
+extern int sub_02026B40(u16);
+extern void sub_020244A4(int, int, int);
+extern void ovy142_219f4b0(BagView*, int);
+extern void sub_020267C0(int ,u16, u16);
+extern void ovy142_219e4dc(BagView*, int);
+extern void ovy142_21a0134(int*);
+
+extern int sub_02034AA4(u16);
+extern void sub_02017644(void*, int, int);
+extern int ovy142_219c0e8(BagView*, int);
+extern void sub_02021D28(u8, int, int, int, int, int);
+
+extern int ovy142_219c0b4(BagView*);
+extern void ovy142_219f0bc(BagView*, u32*, int);
+
+extern u16 sub_02026AE4(u16);
+extern int sub_02021740(u16);
+extern int sub_02021720(u16);
+extern int sub_020216B0(u16, int);
+extern int sub_02021280(u16, int);
+extern int sub_0202174C(u16);
+extern void sub_020470F8(int, int, int, int, int, int);
 #endif //BAG_H

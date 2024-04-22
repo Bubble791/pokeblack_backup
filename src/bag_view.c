@@ -2,6 +2,14 @@
 #include "main.h"
 #include "bag.h"
 
+const u8 data_21A0FD0[5] = {0};
+const u8 data_21A0FD8[5] = {0};
+const u8 data_21a0fcc[] = {0, 0};
+const u8 data_21a0fc8[] = {0, 0};
+const s16 word_21A168C[10][2] = {0};
+const u8 byte_21A1020[10] = {0};
+const u8 data_021a0fee[10][2] = {0};
+const u8 data_021A0FEE[5][2] = {0};
 void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2)
 {
     m_bagView->unk4FC = a2;
@@ -46,8 +54,6 @@ int ovy142_219995c(u32 itemId, int param_2, u16 heapId)
     int price = sub_020267F0((u16)itemId, 0, heapId); // GetItemParam
     return (price / 2) * param_2;
 }
-
-int sub_02199978(BagView *m_bagView);
 
 int sub_02199978(BagView *m_bagView)
 {
@@ -1262,7 +1268,6 @@ void ovy142_219abb8(BagView *m_bagView)
 
 void ovy142_219abd8(BagView *m_bagView);
 extern int sub_020062A8(void);
-extern int sub_02026AE4(u16);
 extern void sub_020244A4(int, int, int);
 
 void ovy142_219abd8(BagView *m_bagView)
@@ -1741,15 +1746,15 @@ void ovy142_219b438(BagView *m_bagView, int param_2)
     m_bagView->unk80C = param_2;
     ovy142_219fb78();
     ovy142_219fc14(m_bagView, m_bagView->unk814);
-    sub_0204C124(m_bagView->unk738, 1);
-    sub_0204C124(m_bagView->unk73C, 1);
+    sub_0204C124(m_bagView->unk724[5], 1);
+    sub_0204C124(m_bagView->unk724[6], 1);
 }
 
 void ovy142_219b46c(BagView *m_bagView)
 {
     sub_02045738(3);
-    sub_0204C124(m_bagView->unk738, 0);
-    sub_0204C124(m_bagView->unk73C, 0);
+    sub_0204C124(m_bagView->unk724[5], 0);
+    sub_0204C124(m_bagView->unk724[6], 0);
 }
 
 const u8 sub021a08f8[12] = {0};
@@ -1864,12 +1869,12 @@ int ovy142_219b490(BagView *m_bagView)
         sub_02006254(0x548);
         if (unaff_r4 == 0)
         {
-            uVar22 = m_bagView->unk738;
+            uVar22 = m_bagView->unk724[5];
             uVar8 = 0xb;
         }
         else
         {
-            uVar22 = m_bagView->unk73C;
+            uVar22 = m_bagView->unk724[6];
             uVar8 = 10;
         }
         sub_0204C488(uVar22, uVar8);
@@ -2234,10 +2239,6 @@ int sub_0219BE00(BagView *m_bagView)
     return 0;
 }
 
-extern int sub_02034AA4(u16);
-extern void sub_02017644(void*, int, int);
-extern int ovy142_219c0e8(BagView*, int);
-
 int ovy142_219be18(BagView *m_bagView, int param_2)
 {
     int iVar1;
@@ -2298,7 +2299,7 @@ void ovy142_219becc(BagView *m_bagView)
     {
         uVar2 = sub_0219BE88(m_bagView->itemType);
         sVar1 = sub_0201765C(m_bagView->m_GameData, uVar2);
-        sub_0204C488(m_bagView->unk72C, (u16)(sVar1 + 6));
+        sub_0204C488(m_bagView->unk724[2], (u16)(sVar1 + 6));
     }
 }
 
@@ -2397,8 +2398,6 @@ void ovy142_219bf58(BagView *m_bagView, u8 *param_2)
 const int unk_21A098C[13] = {0};
 const u8 sub021a08e8[6] = {0};
 
-extern int ovy142_219c0b4(BagView*);
-extern void ovy142_219f0bc(BagView*, u32*, int);
 
 void ovy142_219c014(BagView *m_bagView)
 {
@@ -2646,10 +2645,6 @@ void ovy142_219c100(u32 a1, int a2, BagView *m_bagView)
     }
 }
 
-void ovy142_219c38c(int a1, BagView *m_bagView);
-extern void ovy142_219dd84(BagView*, int);
-extern int sub_020275F8(int);
-extern void sub_0204B7C8(int);
 
 void ovy142_219c38c(int a1, BagView *m_bagView)
 {
