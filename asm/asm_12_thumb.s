@@ -14240,8 +14240,8 @@ sub_0200C9BC: ; 0x0200C9BC
 	bx lr
 	thumb_func_end sub_0200C9BC
 
-	thumb_func_start sub_0200C9C0
-sub_0200C9C0: ; 0x0200C9C0
+	thumb_func_start PlayerSave_AddMoney
+PlayerSave_AddMoney: ; 0x0200C9C0
 	ldr r2, _0200C9E0 ; =0x0098967F
 	cmp r1, r2
 	bls _0200C9CA
@@ -14262,7 +14262,7 @@ _0200C9DA:
 	bx lr
 	nop
 _0200C9E0: .word 0x0098967F
-	thumb_func_end sub_0200C9C0
+	thumb_func_end PlayerSave_AddMoney
 
 	thumb_func_start sub_0200C9E4
 sub_0200C9E4: ; 0x0200C9E4
@@ -17369,7 +17369,7 @@ sub_0200DE68: ; 0x0200DE68
 	add r0, r4, #0
 	bl sub_02009B78
 	add r0, r7, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [sp, #4]
 	add r0, r4, #0
 	bl sub_0200EF7C
@@ -28429,7 +28429,7 @@ _02012818:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, _020128E8 ; =0x000001B7
 	mov r0, #0
 	mov r1, #2
@@ -28462,7 +28462,7 @@ _0201285C:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x66
@@ -32310,7 +32310,7 @@ _020142A4:
 	add r2, r5, #0
 	mov r3, #2
 _020142D0:
-	bl sub_0202451C
+	bl StringSetNumber
 _020142D4:
 	add r0, r6, #0
 	bl GFL_StrBufFree
@@ -37640,7 +37640,7 @@ _020167CA:
 	beq _02016834
 	add r0, r5, #0
 	bl sub_02016AD8
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9A0
 	add r5, r0, #0
 	cmp r5, #0
@@ -39878,8 +39878,8 @@ sub_02017644: ; 0x02017644
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_02017644
 
-	thumb_func_start sub_0201765C
-sub_0201765C: ; 0x0201765C
+	thumb_func_start GameData_IsShortcutRegistered
+GameData_IsShortcutRegistered: ; 0x0201765C
 	push {r4, lr}
 	add r4, r1, #0
 	bl sub_02017938
@@ -39887,7 +39887,7 @@ sub_0201765C: ; 0x0201765C
 	add r1, r4, #0
 	bl sub_0200CB98
 	pop {r4, pc}
-	thumb_func_end sub_0201765C
+	thumb_func_end GameData_IsShortcutRegistered
 
 	thumb_func_start sub_02017670
 sub_02017670: ; 0x02017670
@@ -40280,14 +40280,14 @@ sub_02017968: ; 0x02017968
 _02017970: .word sub_02007448
 	thumb_func_end sub_02017968
 
-	thumb_func_start sub_02017974
-sub_02017974: ; 0x02017974
+	thumb_func_start PlayerSave_GetPlayerSaveOffset
+PlayerSave_GetPlayerSaveOffset: ; 0x02017974
 	ldr r0, [r0]
 	ldr r3, _0201797C ; =sub_0200C838
 	bx r3
 	nop
 _0201797C: .word sub_0200C838
-	thumb_func_end sub_02017974
+	thumb_func_end PlayerSave_GetPlayerSaveOffset
 
 	thumb_func_start sub_02017980
 sub_02017980: ; 0x02017980
@@ -57989,7 +57989,7 @@ _0201F788:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -57998,7 +57998,7 @@ _0201F788:
 	add r0, r6, #0
 	mov r1, #1
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, sp, #0x20
 	ldrh r1, [r1]
 	mov r0, #0x40
@@ -58063,7 +58063,7 @@ _0201F810:
 	str r0, [sp, #4]
 	add r0, r5, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, sp, #0x20
 	ldrh r1, [r1]
 	mov r0, #0x40
@@ -68825,8 +68825,8 @@ sub_02024510: ; 0x02024510
 	pop {r3, pc}
 	thumb_func_end sub_02024510
 
-	thumb_func_start sub_0202451C
-sub_0202451C: ; 0x0202451C
+	thumb_func_start StringSetNumber
+StringSetNumber: ; 0x0202451C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [sp, #0x14]
@@ -68843,7 +68843,7 @@ sub_0202451C: ; 0x0202451C
 	mov r3, #0
 	bl sub_020242F4
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_0202451C
+	thumb_func_end StringSetNumber
 
 	thumb_func_start sub_02024540
 sub_02024540: ; 0x02024540
@@ -106379,7 +106379,7 @@ sub_02034BD8: ; 0x02034BD8
 	bl sub_0200CB58
 	str r0, [r5, #0x20]
 	add r0, r4, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [r5, #0x24]
 	add r0, r4, #0
 	bl sub_0201736C

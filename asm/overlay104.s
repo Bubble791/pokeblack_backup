@@ -995,7 +995,7 @@ ovy104_21ef3c0: ; 0x021EF3C0
 	add r0, r4, #0
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0xc]
 	add r0, r4, #0
 	mov r1, #0
@@ -1007,7 +1007,7 @@ ovy104_21ef3c0: ; 0x021EF3C0
 	add r0, r4, #0
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, _021EF438 ; =0x021F0620
 	add r0, sp, #8
 	ldrh r2, [r1, #4]

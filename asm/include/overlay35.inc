@@ -96,7 +96,7 @@
 .public sub_02017934
 .public sub_020092E4
 .public sub_0202018C
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_02009328
 .public sub_020092F0
 .public sub_020093B0

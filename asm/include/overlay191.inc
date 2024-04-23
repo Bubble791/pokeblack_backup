@@ -268,7 +268,7 @@
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223BC
-.public sub_0202451C
+.public StringSetNumber
 .public sub_020254E0
 .public sub_02025634
 .public sub_02005718

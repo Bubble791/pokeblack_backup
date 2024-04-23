@@ -1868,7 +1868,7 @@ _0219DC4A:
 	lsl r2, r2, #4
 	add r2, r3, r2
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -1881,7 +1881,7 @@ _0219DC4A:
 	lsl r2, r2, #0x18
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -1894,7 +1894,7 @@ _0219DC4A:
 	lsl r2, r2, #0x18
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x28]
 	ldr r1, [sp, #0x1c]
 	add r2, r7, #0
@@ -1937,7 +1937,7 @@ _0219DC4A:
 	lsl r2, r2, #0x18
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -1950,7 +1950,7 @@ _0219DC4A:
 	lsl r2, r2, #0x18
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x28]
 	ldr r1, [sp, #0x1c]
 	add r2, r7, #0
@@ -2314,7 +2314,7 @@ ovy323_219dfac: ; 0x0219DFAC
 	mov r1, #3
 	ldr r0, [r0, #0x28]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	cmp r7, #0
 	blt _0219E110
 	add r0, r7, #0
@@ -2333,7 +2333,7 @@ _0219E112:
 	ldr r0, [r0, #0x28]
 	mov r1, #4
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -2343,7 +2343,7 @@ _0219E112:
 	ldr r0, [r0, #0x28]
 	add r2, r7, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r6, r4]
 	ldr r1, [r5, #0xc]
 	ldr r0, [r0, #0x28]

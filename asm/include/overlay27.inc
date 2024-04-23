@@ -125,8 +125,8 @@
 .public sub_02170A74
 .public sub_0201736C
 .public GFL_CopyVarForText
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_020249D4
@@ -161,14 +161,14 @@
 .public MI_CpuFill8
 .public sub_020241E4
 .public GFL_StrBufCreate
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public sub_020241E4
 .public GFL_StrBufCreate
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree

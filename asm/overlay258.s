@@ -1447,7 +1447,7 @@ ovy258_219a448: ; 0x0219A448
 	str r0, [sp, #4]
 	ldr r0, [r5, #0x48]
 	add r3, r7, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x48]
 	ldr r1, [r5, #0x4c]
 	add r2, r4, #0
@@ -1650,7 +1650,7 @@ _0219A5BC:
 	ldr r0, [r5, #0x48]
 	add r1, r7, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	ldr r0, [sp, #0xc]
 	add r1, #0x42
@@ -1663,7 +1663,7 @@ _0219A5BC:
 	ldr r0, [r5, #0x48]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x48]
 	ldr r1, [r5, #0x4c]
 	ldr r2, [r5, #0x54]
@@ -1749,7 +1749,7 @@ _0219A6B0:
 	ldr r0, [r5, #0x48]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x48]
 	ldr r1, [r5, #0x4c]
 	ldr r2, [sp, #0x14]
@@ -1876,7 +1876,7 @@ ovy258_219a7b0: ; 0x0219A7B0
 	mov r1, #0
 	add r2, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	str r7, [sp, #4]
@@ -1884,7 +1884,7 @@ ovy258_219a7b0: ; 0x0219A7B0
 	mov r1, #1
 	add r2, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x48]
 	ldr r1, [r5, #0x4c]
 	ldr r2, [r5, #0x54]

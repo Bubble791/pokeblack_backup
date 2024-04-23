@@ -702,7 +702,7 @@ _0219D3E2:
 	ldr r2, [sp, #0x18]
 	mov r1, #2
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x14]
 	ldr r1, [r5, #0x1c]
 	ldr r2, [r5, #0x18]

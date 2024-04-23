@@ -3628,7 +3628,7 @@ _0219EC36:
 	sub r2, r3, r2
 _0219EC46:
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -3636,7 +3636,7 @@ _0219EC46:
 	ldr r2, [sp, #0x60]
 	mov r1, #1
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x50]
 	ldr r1, [sp, #0x48]
 	ldr r2, [sp, #0x1c]
@@ -3693,7 +3693,7 @@ _0219ECAA:
 	ldr r2, [sp, #0x44]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x50]
 	ldr r1, [sp, #0x64]
 	ldr r2, [sp, #0x68]
@@ -3800,7 +3800,7 @@ _0219EDA2:
 	ldr r0, [sp, #0x50]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -3809,7 +3809,7 @@ _0219EDA2:
 	ldr r0, [sp, #0x50]
 	mov r1, #1
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -3818,7 +3818,7 @@ _0219EDA2:
 	ldr r0, [sp, #0x50]
 	mov r1, #2
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrb r0, [r4, #2]
 	cmp r0, #4
 	bne _0219EDFC

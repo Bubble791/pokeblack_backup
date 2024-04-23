@@ -278,7 +278,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public ovy36_2187c4c
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public ovy36_2187c4c
 .public GFL_MsgDataFree
@@ -330,10 +330,10 @@
 .public sub_0200AA54
 .public sub_02178420
 .public sub_02178074
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0201736C
 .public sub_0216598C
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0201736C
 .public sub_0216598C
 .public sub_0215516C
@@ -396,7 +396,7 @@
 .public GFL_CopyVarForText
 .public sub_0202472C
 .public sub_0201736C
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_021782D0
 .public sub_0216598C
 .public sub_02155174
@@ -1076,7 +1076,7 @@
 .public sub_02024754
 .public GFL_CopyVarForText
 .public sub_02009D50
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02009D50
 .public sub_020243D0
 .public sub_02009D50

@@ -369,13 +369,13 @@
 .public sub_021A035C
 .public sub_02017354
 .public sub_0201736C
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public ovy12_21659b4
 .public sub_02017BCC
 .public sub_021A035C
 .public sub_02017354
 .public sub_0201736C
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_02017BCC
 .public sub_0216598C
 .public sub_02008268
@@ -574,8 +574,8 @@
 .public sub_0203580C
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public sub_0204898C
 .public sub_0204898C
 .public sub_0202D974

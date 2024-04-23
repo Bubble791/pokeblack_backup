@@ -4409,7 +4409,7 @@ _0219F138:
 	mov r1, #0
 	add r2, r7, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x2a
 	lsl r0, r0, #4
 	sub r0, #0x9c

@@ -4250,7 +4250,7 @@ _0219B964:
 	ldr r0, [r5, #0x18]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	ldr r1, [r5, #0x14]
 	add r2, r6, #0
@@ -4460,7 +4460,7 @@ ovy259_219bb74: ; 0x0219BB74
 	ldr r0, [r0, #0x18]
 	add r2, r5, #0
 	add r3, r4, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy259_219bb74

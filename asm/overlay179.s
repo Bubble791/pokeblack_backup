@@ -1223,7 +1223,7 @@ ovy179_219b6ac: ; 0x0219B6AC
 	ldr r2, [sp, #8]
 	add r0, r6, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
 	bl sub_0204898C
@@ -1367,7 +1367,7 @@ _0219B80E:
 	mov r1, #2
 	add r2, r7, #0
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x28]
 	bl sub_0204898C

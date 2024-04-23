@@ -355,7 +355,7 @@
 .public sub_02008BD4
 .public GFL_StrBufCreate
 .public sub_02008BA0
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4

@@ -3496,7 +3496,7 @@ ovy191_21b6edc: ; 0x021B6EDC
 	str r4, [sp, #4]
 	ldr r4, _021B6EF4 ; =0x00000994
 	ldr r0, [r0, r4]
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0

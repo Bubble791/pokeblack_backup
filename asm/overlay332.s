@@ -8047,7 +8047,7 @@ ovy332_21c2b5c: ; 0x021C2B5C
 	cmp r0, #1
 	bhi _021C2B78
 	ldr r0, [r1, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	mov r1, #1
 	bl sub_0200CA78
 _021C2B78:
@@ -13648,7 +13648,7 @@ _021C56AE:
 	ldr r0, [r4, #0x38]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #0x34]
 	mov r1, #0x78
 	b _021C56FA
@@ -16052,7 +16052,7 @@ _021C6954:
 	ldr r0, [r4, #0x38]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #0x38]
 	add r1, r6, #0
 	add r2, r7, #0
@@ -18902,7 +18902,7 @@ _021C7F02:
 	bl sub_0201D6F8
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9A0
 	cmp r0, #8
 	bls _021C7F3C
@@ -19190,7 +19190,7 @@ _021C8134:
 	cmp r0, #0
 	beq _021C8166
 	ldr r0, [r5, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	ldr r2, [sp, #8]
 	mov r1, #7
 	bl sub_0216598C

@@ -8161,7 +8161,7 @@ _021B70F6:
 	ldr r0, [r5, #0x10]
 	mov r1, #1
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #0
 	bl sub_02008C0C
 	add r2, r0, #0
@@ -8864,7 +8864,7 @@ _021B7662:
 	mov r1, #0
 	add r2, r6, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0xc]
 	ldr r2, [r5, #0x20]
 	mov r1, #0x24

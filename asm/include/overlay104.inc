@@ -75,9 +75,9 @@
 .public sub_021EFCF8
 .public GFL_WordSetSystemCreateDefault
 .public RTC_GetDate
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02024900
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_020241E4
 .public GFL_MsgSysLoadData

@@ -1882,7 +1882,7 @@ ovy319_219dc7c: ; 0x0219DC7C
 	mov r1, #0
 	add r2, r2, #1
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -1891,7 +1891,7 @@ ovy319_219dc7c: ; 0x0219DC7C
 	add r0, r4, #0
 	mov r1, #1
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0

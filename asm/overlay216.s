@@ -3272,7 +3272,7 @@ _021BD11A:
 	mov r1, #0
 	add r2, r7, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x40]
 	mov r1, #1
 	bl sub_0204898C

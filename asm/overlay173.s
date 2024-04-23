@@ -4368,7 +4368,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r2, r5, #0
 	add r0, #0xe0
@@ -4414,7 +4414,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r2, r5, #0
 	add r0, #0xe0
@@ -4482,7 +4482,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r2, r5, #0
 	add r0, #0xe0
@@ -4552,7 +4552,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #4]
 	add r1, r6, #0
 	mov r2, #5
@@ -4566,7 +4566,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #4]
 	add r1, r6, #0
 	mov r2, #6
@@ -4581,7 +4581,7 @@ _0219EF32:
 	ldr r0, [r5, r0]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r2, r5, #0
 	add r0, #0xe0
@@ -4956,7 +4956,7 @@ _0219F43E:
 	ldr r2, [sp, #0x24]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r0, #0xdc
 	ldr r0, [r0]

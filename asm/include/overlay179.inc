@@ -154,7 +154,7 @@
 .public sub_0204713C
 .public sub_0219B46C
 .public sub_0219B468
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
@@ -181,7 +181,7 @@
 .public sub_0219B468
 .public GFL_CopyVarForText
 .public sub_020244E0
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree

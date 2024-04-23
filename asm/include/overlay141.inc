@@ -139,8 +139,8 @@
 .public sub_0202BAEC
 .public sub_0204C140
 .public GFL_StrBufCreate
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public sub_020245E0
 .public sub_02024630
 .public sub_020484F4

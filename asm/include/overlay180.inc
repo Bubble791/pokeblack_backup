@@ -229,9 +229,9 @@
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_02021CFC

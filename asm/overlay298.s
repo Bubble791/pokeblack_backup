@@ -5951,7 +5951,7 @@ _021A26F0:
 	ldr r0, [sp, #0x88]
 	bl sub_0219FD24
 	mov r1, #0x14
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	ldr r0, [sp, #0x44]
 	bl ovy298_21a15b4
@@ -7944,7 +7944,7 @@ _021A36DA:
 	ldr r0, [sp, #0x28]
 	bl sub_0219FD24
 	mov r1, #0x15
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	ldr r0, [sp, #0x10]
 	bl ovy298_21a15b4
@@ -12071,7 +12071,7 @@ _021A5774:
 	add r0, r6, #0
 	bl sub_0219FD24
 	mov r1, #0x15
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	ldr r0, [sp, #4]
 	bl ovy298_21a15b4
@@ -14071,7 +14071,7 @@ _021A6756:
 	ldr r0, [sp, #0x38]
 	bl sub_0219FD24
 	mov r1, #0x16
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	add r0, r5, #0
 	bl ovy298_21a15b4
@@ -16904,7 +16904,7 @@ _021A7E06:
 	ldr r0, [sp, #0x50]
 	bl sub_0219FD24
 	mov r1, #0x17
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	ldr r0, [sp, #0x30]
 	bl ovy298_21a15b4
@@ -18539,7 +18539,7 @@ _021A8A52:
 	ldr r0, [sp, #0x28]
 	add r1, r4, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x28]
 	ldr r2, [sp, #0x18]
 	add r1, r7, #0
@@ -18583,7 +18583,7 @@ _021A8A52:
 	ldr r0, [sp, #0x2c]
 	add r1, r4, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x2c]
 	ldr r2, [sp, #0x14]
 	add r1, r7, #0
@@ -21258,7 +21258,7 @@ _021AA04A:
 	add r0, r7, #0
 	bl sub_0219FD24
 	mov r1, #0x17
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	add r1, r0, #0
 	ldr r0, [sp, #0xc]
 	bl ovy298_21a15b4

@@ -17268,7 +17268,7 @@ _021C0330:
 	mov r1, #1
 	add r2, r6, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r2, r4, #0
 	sub r0, r4, #4
 	add r2, #0x10
@@ -17390,7 +17390,7 @@ ovy194_21c03fc: ; 0x021C03FC
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r2, r4, #0
 	add r0, r4, #4
@@ -17646,7 +17646,7 @@ ovy194_21c05ec: ; 0x021C05EC
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -17655,7 +17655,7 @@ ovy194_21c05ec: ; 0x021C05EC
 	mov r1, #1
 	add r2, r6, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r2, r4, #0
 	add r0, r4, #4
@@ -17755,7 +17755,7 @@ _021C06E4:
 	mov r1, #0
 	ldr r0, [r5, r0]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x20]
 	ldr r2, [sp, #0x1c]

@@ -247,7 +247,7 @@
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_0201CD88
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0201CCC0
@@ -268,14 +268,14 @@
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02008BD4
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02008CEC
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02008CF0
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0202B230

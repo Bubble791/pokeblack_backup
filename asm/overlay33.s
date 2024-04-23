@@ -1962,7 +1962,7 @@ _02177A88:
 	ldrh r2, [r2, #2]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x14]
 	ldr r1, [r5, #0x1c]
 	ldr r2, [r5, #0x18]
@@ -2406,7 +2406,7 @@ _02177E2C:
 	cmp r0, #1
 	bne _02177E66
 	add r0, r7, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [sp, #0xc]
 	add r0, r7, #0
 	bl sub_0201736C
@@ -2422,7 +2422,7 @@ _02177E66:
 	cmp r0, #1
 	bne _02177E8C
 	add r0, r7, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r4, r0, #0
 	add r0, r7, #0
 	bl sub_0201736C
@@ -3062,7 +3062,7 @@ ovy33_21782f4: ; 0x021782F4
 	bl sub_0201736C
 	add r6, r0, #0
 	add r0, r4, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_021782D0
@@ -8222,7 +8222,7 @@ _0217AC2C:
 	add r0, r5, #0
 	mov r1, #8
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #1

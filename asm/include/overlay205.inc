@@ -253,7 +253,7 @@
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_StrBufCreate
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_0204713C

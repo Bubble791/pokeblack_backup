@@ -2189,7 +2189,7 @@ _0219DFBC:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x40
 _0219DFEE:
 	ldrh r1, [r5]
@@ -2225,7 +2225,7 @@ _0219E018:
 	ldrb r2, [r5, r2]
 	ldr r0, [r5, r0]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrh r1, [r5]
 	mov r0, #0x80
 	bl GFL_StrBufCreate
@@ -2253,7 +2253,7 @@ _0219E04A:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -2263,7 +2263,7 @@ _0219E04A:
 	mov r1, #1
 	add r2, r6, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrh r1, [r5]
 	mov r0, #0x80
 	bl GFL_StrBufCreate
@@ -2295,7 +2295,7 @@ _0219E09A:
 	ldr r0, [r5, r0]
 _0219E0C0:
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x80
 	b _0219DFEE
 _0219E0CA:
@@ -2409,7 +2409,7 @@ _0219E186:
 	ldrh r2, [r5, r2]
 	ldr r0, [r5, r0]
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrh r1, [r5]
 	mov r0, #0x80
 	bl GFL_StrBufCreate
@@ -2446,7 +2446,7 @@ _0219E1D8:
 	ldr r0, [r5, r7]
 	add r2, r4, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrh r1, [r5]
 	mov r0, #0x80
 	bl GFL_StrBufCreate
@@ -2712,7 +2712,7 @@ _0219E3B8:
 	ldr r2, [r5, r2]
 	mov r1, #1
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldrh r1, [r5]
 	mov r0, #0x40
 	bl GFL_StrBufCreate
@@ -5166,7 +5166,7 @@ _0219F6BE:
 	mov r1, #2
 	add r2, r7, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	cmp r7, #1
 	bne _0219F6DE
 	str r6, [sp, #0x20]
@@ -5305,7 +5305,7 @@ _0219F7EC:
 	mov r1, #2
 	add r2, r4, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	cmp r4, #1
 	bne _0219F80C
 	str r6, [sp, #0x1c]
@@ -5450,7 +5450,7 @@ _0219F8B6:
 	ldr r0, [r5, r0]
 	mov r1, #2
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x3c]
 	ldrh r1, [r5]
 	add r0, #0xfd
@@ -5522,7 +5522,7 @@ _0219F998:
 	ldr r0, [r5, r0]
 	mov r1, #1
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x44]
 	ldrh r1, [r5]
 	add r0, #0xfd

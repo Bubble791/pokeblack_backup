@@ -119,7 +119,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_0204898C
 .public GFL_StrBufCreate
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_0204898C
 .public sub_02022888

@@ -3,7 +3,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0200CB30
 .public sub_021F3010
 .public sub_021F560C
@@ -19,7 +19,7 @@
 .public sub_0202ECDC
 .public sub_021F66F8
 .public sub_0203CDC8
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_021F3024
 .public sub_0200CB3C
 .public sub_0203AB10

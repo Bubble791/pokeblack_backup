@@ -372,9 +372,9 @@
 .public sub_0204898C
 .public sub_02008DE8
 .public sub_02008CEC
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02008CF0
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -383,7 +383,7 @@
 .public sub_0204898C
 .public sub_0200D184
 .public sub_0200D83C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -391,7 +391,7 @@
 .public sub_0204898C
 .public sub_0200C838
 .public sub_0200C9A0
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C

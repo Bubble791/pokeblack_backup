@@ -147,7 +147,7 @@
 .public sub_02016B20
 .public sub_02153658
 .public sub_0202C9FC
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0215365C
 .public sub_0204C124
 .public GFL_MsgDataLoadStrbuf
@@ -155,7 +155,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_0215365C
 .public sub_0204C124
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_MsgDataLoadStrbuf

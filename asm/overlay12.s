@@ -11254,7 +11254,7 @@ ovy12_21557e4: ; 0x021557E4
 	add r6, r0, #0
 	add r0, r5, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r6, #0
 	bl sub_0200C97C
 	strh r0, [r4]
@@ -11272,7 +11272,7 @@ ovy12_2155810: ; 0x02155810
 	add r0, r5, #0
 	bl sub_02155174
 	add r5, r0, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r4, #0
 	bl sub_0200C990
 	add r0, sp, #4
@@ -11299,7 +11299,7 @@ ovy12_2155850: ; 0x02155850
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9A0
 	strh r0, [r4]
 	mov r0, #0
@@ -11790,7 +11790,7 @@ ovy12_2155c30: ; 0x02155C30
 	bl sub_0201736C
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
@@ -11815,7 +11815,7 @@ ovy12_2155c64: ; 0x02155C64
 	bl sub_0201736C
 	str r0, [sp]
 	add r0, r5, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r5, r0, #0
 	add r0, r4, #0
 	add r1, r6, #0
@@ -11953,7 +11953,7 @@ ovy12_2155d80: ; 0x02155D80
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r6, #0
 	bl sub_0200CA50
 	mov r1, #1
@@ -11974,7 +11974,7 @@ ovy12_2155db4: ; 0x02155DB4
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r4, #0
 	mov r2, #1
 	bl sub_0200CA38
@@ -11995,7 +11995,7 @@ ovy12_2155dd4: ; 0x02155DD4
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r6, #0
 	bl sub_0200CA50
 	cmp r0, #3
@@ -14748,9 +14748,9 @@ ovy12_2157410: ; 0x02157410
 	bl ovy12_2154910
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r5, #0
-	bl sub_0200C9C0
+	bl PlayerSave_AddMoney
 	mov r0, #0
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy12_2157410
@@ -14769,7 +14769,7 @@ ovy12_215743c: ; 0x0215743C
 	bl ovy12_2154910
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r5, #0
 	bl sub_0200C9E4
 	mov r0, #0
@@ -14792,7 +14792,7 @@ ovy12_2157468: ; 0x02157468
 	add r5, r0, #0
 	bl sub_020171F4
 	add r0, r5, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9BC
 	cmp r6, r0
 	bhi _0215749C
@@ -21125,7 +21125,7 @@ sub_0215A660: ; 0x0215A660
 ovy12_215a670: ; 0x0215A670
 	push {r3, lr}
 	ldr r0, [r0, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	mov r1, #0x5a
 	lsl r1, r1, #4
 	bl sub_0200CB08
@@ -23472,7 +23472,7 @@ ovy12_215b7d8: ; 0x0215B7D8
 	strh r1, [r0]
 	ldr r0, [sp, #4]
 	mov r1, #0x1e
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _0215B84E
 	add r0, r4, #0
@@ -35263,7 +35263,7 @@ ovy12_2160f74: ; 0x02160F74
 	bl sub_02017394
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [sp]
 	add r0, r5, #0
 	bl sub_0201736C
@@ -53202,7 +53202,7 @@ ovy12_2169770: ; 0x02169770
 	bl sub_0201736C
 	str r0, [sp, #0x20]
 	ldr r0, [sp]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x28]
 	bl sub_020092F0

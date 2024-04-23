@@ -3753,7 +3753,7 @@ ovy303_21a1978: ; 0x021A1978
 	ldr r4, [r0]
 	mov r6, #0x20
 	add r0, r4, #0
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A19A6
 	add r0, r4, #0
@@ -3787,7 +3787,7 @@ ovy303_21a19c0: ; 0x021A19C0
 	ldr r0, [r4, #0xc]
 	mov r1, #0x20
 	ldr r0, [r0]
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A19E0
 	add r4, #0x10

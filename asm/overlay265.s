@@ -3174,7 +3174,7 @@ ovy265_219b0a4: ; 0x0219B0A4
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r0, r4, #4
 	add r1, #8
@@ -3359,7 +3359,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r4, #0
 	sub r0, #0xb4
@@ -3400,7 +3400,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5]
 	ldr r0, [r0, #8]
 	bl sub_02008CF0
@@ -3414,7 +3414,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r4, #0
 	sub r0, #0xb4

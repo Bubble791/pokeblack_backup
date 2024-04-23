@@ -1683,7 +1683,7 @@ _0219E3E4:
 	add r2, r7, #0
 	mov r3, #3
 	str r0, [sp, #0x2c]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x27
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
@@ -2004,7 +2004,7 @@ _0219E682:
 	mov r1, #0
 	add r2, r4, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x27
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]

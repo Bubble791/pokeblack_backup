@@ -160,7 +160,7 @@ _021B30CA:
 	add r1, r4, #0
 	ldr r0, [r0, #8]
 	add r1, #9
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	lsl r1, r4, #2
 	add r1, r5, r1
 	str r0, [r1, #0x60]
@@ -5451,7 +5451,7 @@ _021B5BC0:
 	add r0, r7, #0
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x7c]
 	mov r1, #3
 	bl sub_0204898C
@@ -7714,7 +7714,7 @@ _021B6DA4:
 	ldr r2, [sp, #0x28]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x41
 	str r0, [sp]
 	mov r0, #1
@@ -7870,7 +7870,7 @@ _021B6E92:
 	add r0, r7, #0
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x41
 	str r0, [sp]
 	mov r0, #1
@@ -7964,7 +7964,7 @@ _021B6FB2:
 	mov r1, #0
 	mov r3, #7
 	str r0, [sp, #0x38]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -8005,7 +8005,7 @@ _021B6FB2:
 	mov r1, #0
 	mov r3, #6
 	str r0, [sp, #0x3c]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x21
 	str r0, [sp]
 	mov r0, #1
@@ -8429,7 +8429,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x3c]
 	str r0, [sp]
@@ -8437,7 +8437,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x38]
 	str r0, [sp]
@@ -8445,7 +8445,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x34]
 	str r0, [sp]
@@ -8453,7 +8453,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #3
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	mov r0, #2
 	str r0, [sp, #4]
@@ -8469,7 +8469,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #5
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x48]
 	str r0, [sp]
@@ -8477,7 +8477,7 @@ _021B7364:
 	add r0, r7, #0
 	mov r1, #6
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x44]
 	str r0, [sp]
@@ -8485,7 +8485,7 @@ _021B7364:
 	mov r1, #7
 	mov r3, #2
 	str r5, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	mov r0, #2
 	str r0, [sp, #4]
@@ -10105,7 +10105,7 @@ _021B808C:
 	ldrb r2, [r2, #6]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0xc]
 	add r1, r6, #0
 	add r2, r7, #0
@@ -11927,7 +11927,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x59
 	str r0, [sp]
 	mov r0, #0x11
@@ -11963,7 +11963,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x79
 	str r0, [sp]
 	mov r0, #0x11
@@ -12003,7 +12003,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x69
 	str r0, [sp]
 	mov r0, #0x11
@@ -12043,7 +12043,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x69
 	str r0, [sp]
 	mov r0, #0x11
@@ -12083,7 +12083,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x69
 	str r0, [sp]
 	mov r0, #0x11
@@ -12123,7 +12123,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x69
 	str r0, [sp]
 	mov r0, #0x11
@@ -12163,7 +12163,7 @@ ovy207_21b8f10: ; 0x021B8F10
 	mov r1, #0
 	mov r3, #3
 	str r6, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x69
 	str r0, [sp]
 	mov r0, #0x11
@@ -12459,7 +12459,7 @@ _021B93EE:
 	mov r3, #3
 	str r0, [sp, #0x18]
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x51
 	str r0, [sp]
 	mov r0, #0x11
@@ -12524,7 +12524,7 @@ _021B9478:
 	add r2, r7, #0
 	mov r3, #3
 	str r0, [sp, #0x1c]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x51
 	str r0, [sp]
 	mov r0, #1
@@ -14811,7 +14811,7 @@ _021BA68A:
 	mov r1, #0
 	mov r3, #3
 	str r0, [sp, #0x20]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x39
 	str r0, [sp]
 	mov r0, #0x11
@@ -14841,7 +14841,7 @@ _021BA68A:
 	mov r1, #0
 	mov r3, #3
 	str r0, [sp, #0x24]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x3d
 	str r0, [sp]
 	mov r0, #0x11

@@ -100,10 +100,10 @@
 .public sub_0200D190
 .public sub_0200D1AC
 .public sub_0219FDE4
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_02017644
 .public sub_02017644
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_0203CE0C
 .public sub_02046D38
 .public sub_02046DC0

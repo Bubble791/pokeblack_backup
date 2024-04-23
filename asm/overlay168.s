@@ -32783,7 +32783,7 @@ _021ED98C:
 	ldr r0, [sp, #0xa0]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	add r2, r6, r5
 	str r0, [sp]
@@ -32792,7 +32792,7 @@ _021ED98C:
 	ldr r0, [sp, #0xa0]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0xa0]
 	ldr r1, [sp, #0x18]
 	ldr r2, [sp, #0x14]
@@ -33592,7 +33592,7 @@ ovy168_21ee118: ; 0x021EE118
 	add r0, r7, #0
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #8]
 	add r0, r7, #0
@@ -33624,7 +33624,7 @@ _021EE19E:
 	add r0, r7, #0
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #8]
 	add r0, r7, #0
@@ -35861,7 +35861,7 @@ ovy168_21ef29c: ; 0x021EF29C
 	ldr r0, [sp, #8]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #8]
 	ldr r2, [sp, #0xc]
 	add r1, r6, #0

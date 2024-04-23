@@ -1079,7 +1079,7 @@ _0219D724:
 	mov r1, #0
 	lsr r2, r2, #0x10
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x14]
 	add r1, r6, #0

@@ -315,10 +315,10 @@
 .public sub_02010CFC
 .public sub_021A11B4
 .public sub_02010CC4
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_02017644
 .public sub_02017644
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_021A2B04
 .public sub_0204C124
 .public sub_0204C124

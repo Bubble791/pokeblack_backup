@@ -2361,7 +2361,7 @@ _0219E12A:
 	mov r1, #1
 	add r2, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x1c]
 	ldr r2, [sp, #0x18]

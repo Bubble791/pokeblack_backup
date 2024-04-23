@@ -12041,7 +12041,7 @@ _021A2B96:
 	mov r1, #0
 	add r2, r2, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	mov r0, #2
@@ -12058,7 +12058,7 @@ _021A2B96:
 	ldr r2, [sp, #0xc]
 	mov r1, #2
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -12066,7 +12066,7 @@ _021A2B96:
 	ldr r2, [sp, #0x10]
 	mov r1, #3
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	ldr r2, [sp, #0x14]
 	add r1, r6, #0
@@ -12212,7 +12212,7 @@ _021A2D2A:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #6
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0

@@ -1485,7 +1485,7 @@ ovy139_219a2ec: ; 0x0219A2EC
 	ldr r2, [sp, #0x50]
 	mov r1, #0
 	mov r3, #8
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x20]
 	ldr r2, [sp, #0x28]
 	add r1, r6, #0
@@ -1515,7 +1515,7 @@ ovy139_219a2ec: ; 0x0219A2EC
 	ldr r2, [sp, #0x54]
 	mov r1, #0
 	mov r3, #8
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x20]
 	ldr r2, [sp, #0x2c]
 	add r1, r6, #0

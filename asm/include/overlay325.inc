@@ -212,10 +212,10 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_0208D65C
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0208D65C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_StrBufFree

@@ -251,7 +251,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_02021C44
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C

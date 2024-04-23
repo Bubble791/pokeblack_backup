@@ -2014,7 +2014,7 @@ _0219DEE2:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r4, [sp]
 	add r0, r7, #0
 	str r4, [sp, #4]
@@ -2023,7 +2023,7 @@ _0219DEE2:
 	mov r1, #1
 	mov r2, #0x20
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #0
 	add r1, r7, #0
 	add r2, r7, #0
@@ -2114,7 +2114,7 @@ _0219DFA8:
 	add r0, #0xc
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r4, #0
 	add r2, r4, #0

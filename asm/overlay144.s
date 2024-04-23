@@ -3964,7 +3964,7 @@ _0219ED52:
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0
@@ -4008,7 +4008,7 @@ _0219EDB2:
 	add r2, r3, r2
 	mov r1, #0
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0
@@ -4050,7 +4050,7 @@ _0219EE16:
 	ldr r2, [sp, #0xc]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0

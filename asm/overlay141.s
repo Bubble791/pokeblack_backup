@@ -1324,7 +1324,7 @@ ovy141_219d8d0: ; 0x0219D8D0
 	ldr r2, [r2, #4]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r2, #0x80
@@ -1337,7 +1337,7 @@ ovy141_219d8d0: ; 0x0219D8D0
 	ldr r2, [r2, #8]
 	mov r1, #1
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r0, #0xf8
 	ldr r0, [r0]

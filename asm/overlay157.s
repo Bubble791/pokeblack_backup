@@ -1003,7 +1003,7 @@ ovy157_21f6144: ; 0x021F6144
 	ldr r2, [sp, #8]
 	mov r1, #2
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	mov r1, #0x3c
 	blx sub_0208D65C
@@ -1013,7 +1013,7 @@ ovy157_21f6144: ; 0x021F6144
 	ldr r0, [r5, #0x38]
 	mov r1, #3
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r7, [sp]
 	str r6, [sp, #4]
 	ldr r2, [r5, #0x4c]
@@ -1022,7 +1022,7 @@ ovy157_21f6144: ; 0x021F6144
 	mov r1, #4
 	lsr r2, r2, #0x12
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	ldr r0, [r5, #0x34]

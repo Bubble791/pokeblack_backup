@@ -31,7 +31,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -46,12 +46,12 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4

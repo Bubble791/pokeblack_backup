@@ -1105,7 +1105,7 @@ _021E615A:
 	add r0, r7, #0
 	add r2, r5, #0
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r6, #0
 	add r1, r5, #0
 	bl sub_0200C9E4

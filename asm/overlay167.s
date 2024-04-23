@@ -6795,7 +6795,7 @@ ovy167_219cb20: ; 0x0219CB20
 	cmp r1, #1
 	bhi _0219CB68
 	ldr r0, [r2, #0x70]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9BC
 	sub r1, r6, #7
 	add r4, r0, #0
@@ -123351,7 +123351,7 @@ _021D5150:
 	ldr r0, [sp, #0xc]
 	ldr r2, [r6, r2]
 	add r1, r4, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	b _021D5248
 _021D5176:
 	add r0, r7, #0
@@ -124227,42 +124227,42 @@ ovy167_21d57e4: ; 0x021D57E4
 	ldr r2, [sp, #8]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0xc]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x10]
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x28]
 	mov r1, #3
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x2c]
 	mov r1, #4
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x30]
 	mov r1, #5
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
@@ -124294,42 +124294,42 @@ ovy167_21d5874: ; 0x021D5874
 	ldr r2, [sp, #8]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0xc]
 	mov r1, #1
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x10]
 	mov r1, #2
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x28]
 	mov r1, #3
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x2c]
 	mov r1, #4
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	str r6, [sp, #4]
 	ldr r0, [r4, #8]
 	ldr r2, [sp, #0x30]
 	mov r1, #5
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0

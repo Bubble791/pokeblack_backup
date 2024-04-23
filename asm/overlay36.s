@@ -73719,7 +73719,7 @@ ovy36_21a206c: ; 0x021A206C
 	cmp r1, r0
 	bne _021A2168
 	ldr r0, [r5, #8]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r6, #0
 	bl sub_0200C97C
 	cmp r0, #0
@@ -85532,7 +85532,7 @@ ovy36_21a7aac: ; 0x021A7AAC
 	ldr r2, [sp, #8]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -85740,7 +85740,7 @@ ovy36_21a7c64: ; 0x021A7C64
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r3, #9
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -85777,7 +85777,7 @@ ovy36_21a7cb4: ; 0x021A7CB4
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r3, #9
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -87192,7 +87192,7 @@ ovy36_21a8850: ; 0x021A8850
 	bl GFL_StrBufCreate
 	add r5, r0, #0
 	ldr r0, [sp, #0x1c]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9BC
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x20]
@@ -87222,7 +87222,7 @@ _021A88DC:
 	ldr r2, [sp, #8]
 	mov r1, #2
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0xc]
 	add r0, r4, #0
 	mov r1, #1
@@ -87284,7 +87284,7 @@ ovy36_21a8944: ; 0x021A8944
 	bl GFL_StrBufCreate
 	add r4, r0, #0
 	ldr r0, [sp, #8]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9BC
 	add r2, r0, #0
 	mov r0, #1
@@ -87293,7 +87293,7 @@ ovy36_21a8944: ; 0x021A8944
 	add r0, r6, #0
 	mov r1, #2
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	add r2, r7, #0
@@ -93647,7 +93647,7 @@ ovy36_21abb70: ; 0x021ABB70
 	bl sub_0218799C
 	str r0, [r4, #0x10]
 	add r0, r6, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [r4, #0x14]
 	mov r0, #0x15
 	strh r0, [r4, #0xc]
@@ -94128,7 +94128,7 @@ _021ABF80: ; jump table
 	.short _021ABFA2 - _021ABF80 - 2 ; case 16
 _021ABFA2:
 	ldr r0, [sp]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200C9A0
 	add r3, r0, #0
 	add r0, r4, #0
@@ -95031,7 +95031,7 @@ _021AC6A8:
 	mov r1, #0
 	sub r2, r7, r2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	lsl r0, r7, #0x10
 	lsr r0, r0, #0x10
 	bl sub_02026AE4
@@ -96282,7 +96282,7 @@ _021AD0CC:
 	mov r1, #0
 	mov r3, #7
 _021AD0FA:
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r5, #0x6e
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
@@ -96363,7 +96363,7 @@ ovy36_21ad168: ; 0x021AD168
 	ldr r0, [r4, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0xe4
 	add r0, #0xd4
 	ldr r0, [r4, r0]
@@ -96513,7 +96513,7 @@ ovy36_21ad294: ; 0x021AD294
 	mov r1, #0
 	add r2, r7, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0xe4
 	add r0, #0xd4
 	ldr r0, [r5, r0]
@@ -96539,7 +96539,7 @@ ovy36_21ad294: ; 0x021AD294
 	mov r1, #0
 	mul r2, r7
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0xe4
 	add r0, #0xd4
 	ldr r0, [r5, r0]
@@ -96761,7 +96761,7 @@ ovy36_21ad4d0: ; 0x021AD4D0
 	ldr r0, [r5, r4]
 	ldr r2, [r2, #0x24]
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r1, #8
 	add r2, r4, #4
@@ -96870,7 +96870,7 @@ _021AD5D4:
 	ldr r2, [r2, #0x24]
 	add r1, r7, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r1, #8
 	add r2, r4, #4
@@ -97269,7 +97269,7 @@ ovy36_21ad8e8: ; 0x021AD8E8
 	ldr r0, [r5, r0]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -97282,7 +97282,7 @@ ovy36_21ad8e8: ; 0x021AD8E8
 	mov r1, #2
 	mul r2, r6
 	mov r3, #7
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r1, r7, #0
 	bl ovy36_21ad864
@@ -97314,7 +97314,7 @@ ovy36_21ad954: ; 0x021AD954
 	mov r1, #0
 	sub r2, r6, r2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r6, #0
 	bl sub_02026AE4
 	add r2, r0, #0
@@ -97332,7 +97332,7 @@ ovy36_21ad954: ; 0x021AD954
 	ldr r2, [sp, #8]
 	mov r1, #2
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r1, r7, #0
 	bl ovy36_21ad864
@@ -97386,7 +97386,7 @@ _021AD9E6:
 	mov r1, #2
 	add r2, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [sp, #8]
 	add r0, r4, #0
 	bl ovy36_21ad864
@@ -99873,7 +99873,7 @@ ovy36_21aee6c: ; 0x021AEE6C
 	bne _021AEED6
 	add r0, r4, #0
 	bl sub_02155174
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r7, r0, #0
 	ldr r0, [sp, #4]
 	mov r1, #5
@@ -99966,7 +99966,7 @@ _021AEF40:
 	blt _021AEF18
 _021AEF4C:
 	ldr r0, [sp, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	ldr r1, [sp]
 	add r2, sp, #8
 	bl sub_0200C9F8
@@ -99997,7 +99997,7 @@ ovy36_21aef60: ; 0x021AEF60
 	bl ovy12_21548e8
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r7, sp, #8
 	ldr r1, [sp, #4]
 	add r2, r7, #0
@@ -102125,7 +102125,7 @@ _021B00BA:
 	ldr r1, [sp, #0x10]
 	ldr r2, [r2, #4]
 	ldr r3, [sp, #0xc]
-	bl sub_0202451C
+	bl StringSetNumber
 	b _021B00E0
 _021B00DA:
 	add r5, r5, #1
@@ -102192,10 +102192,10 @@ _021B0158:
 	cmp r6, r0
 	bne _021B0170
 	ldr r0, [sp, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r4, r7
 	ldr r1, [r1, #4]
-	bl sub_0200C9C0
+	bl PlayerSave_AddMoney
 	b _021B0176
 _021B0170:
 	add r5, r5, #1
@@ -143778,7 +143778,7 @@ _021C3AF6:
 	ldr r2, [sp, #0x24]
 	add r1, r7, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r0, #0xa0
 	ldr r0, [r0]
@@ -146676,7 +146676,7 @@ ovy36_21c516c: ; 0x021C516C
 	mov r1, #0
 	mov r3, #1
 	sub r2, r2, r4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0x28]
 	ldr r2, [r5, #0x24]
@@ -146789,7 +146789,7 @@ ovy36_21c5254: ; 0x021C5254
 	str r1, [sp, #4]
 	ldr r0, [r5, #4]
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0x20]
 	ldr r2, [r5, #0x1c]
@@ -147645,7 +147645,7 @@ _021C58BC:
 	mov r1, #0
 	add r2, r4, #1
 	add r3, r7, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x2c
 	mul r0, r4
 	str r0, [sp, #0x14]
@@ -147671,7 +147671,7 @@ _021C58BC:
 	ldr r0, [r5, #4]
 	add r1, r7, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #4]
 	ldr r1, [sp, #0x10]
 	ldr r2, [sp, #8]
@@ -151572,7 +151572,7 @@ ovy36_21c7698: ; 0x021C7698
 	bl sub_0215516C
 	bl sub_02016AD8
 	add r4, r0, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r6, r0, #0
 	add r0, r4, #0
 	bl sub_0201736C

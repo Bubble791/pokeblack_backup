@@ -617,7 +617,7 @@
 .public sub_02005ED4
 .public sub_021BF5B0
 .public sub_02042BA8
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0200CA78
 .public sub_02005F0C
 .public sub_021BFB18
@@ -957,7 +957,7 @@
 .public sub_0204898C
 .public sub_0201736C
 .public sub_02008BD4
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
@@ -1053,7 +1053,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_02008BD4
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -1203,7 +1203,7 @@
 .public sub_0201736C
 .public sub_02008BD0
 .public sub_0201D6F8
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0200C9A0
 .public sub_0201C2CC
 .public sub_0201C464
@@ -1231,7 +1231,7 @@
 .public sub_0200D190
 .public sub_0201736C
 .public sub_02035CF8
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0216598C
 .public sub_0200D568
 .public sub_0201D620

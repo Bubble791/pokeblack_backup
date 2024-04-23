@@ -307,9 +307,9 @@
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_021EAC18
-.public sub_0202451C
+.public StringSetNumber
 .public sub_021EAD28
-.public sub_0202451C
+.public StringSetNumber
 .public sub_021EAC18
 .public sub_0204713C
 .public sub_02048244

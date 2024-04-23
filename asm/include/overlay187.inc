@@ -189,7 +189,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -213,9 +213,9 @@
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -241,7 +241,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C

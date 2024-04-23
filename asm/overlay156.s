@@ -414,7 +414,7 @@ ovy156_21f5d08: ; 0x021F5D08
 	ldr r0, [r5, #0x2c]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	mov r1, #0x3c
 	blx sub_0208D65C
@@ -425,7 +425,7 @@ ovy156_21f5d08: ; 0x021F5D08
 	ldr r0, [r5, #0x2c]
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x2c]
 	ldr r1, [r5, #0x38]
 	add r2, r6, #0

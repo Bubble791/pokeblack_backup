@@ -7312,7 +7312,7 @@ _021F2230:
 	and r2, r3
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r6, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -7322,7 +7322,7 @@ _021F2230:
 	and r2, r3
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r2, #0x1f
 	str r6, [sp]
 	mov r0, #1
@@ -7331,7 +7331,7 @@ _021F2230:
 	mov r1, #3
 	and r2, r5
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	cmp r7, #0
 	beq _021F22AA
 	ldr r1, _021F23FC ; =0x00000418
@@ -9916,7 +9916,7 @@ _021F378E:
 	str r0, [sp, #4]
 	add r0, r5, #0
 	add r1, r7, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F37AE:
@@ -9932,7 +9932,7 @@ _021F37AE:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F37D0:
@@ -9948,7 +9948,7 @@ _021F37D0:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F37F2:
@@ -10161,7 +10161,7 @@ _021F39BC:
 	add r1, r7, #0
 	sub r2, r4, r2
 	str r3, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F39E0:
@@ -10192,7 +10192,7 @@ _021F3A0E:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F3A24:
@@ -10213,7 +10213,7 @@ _021F3A24:
 	add r2, r2, #1
 	mov r3, #4
 	str r4, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F3A54:
@@ -10229,7 +10229,7 @@ _021F3A54:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F3A76:
@@ -10303,7 +10303,7 @@ _021F3B08:
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #0x110
 	pop {r3, r4, r5, r6, r7, pc}
 _021F3B1E:
@@ -11003,7 +11003,7 @@ _021F4092:
 	mov r1, #0
 	add r2, r2, #1
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	add r2, r4, #0
@@ -11098,7 +11098,7 @@ _021F4130:
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x20]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	add r2, r4, #0

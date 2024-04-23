@@ -227,7 +227,7 @@ void ovy142_219a1ec(BagView *m_bagView);
 void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
 ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
-int ovy142_219995c(u32 itemId, int param_2, u16 heapId);
+int BagView_GetItemPrice(u32 itemId, int param_2, u16 heapId);
 
 
 int ovy142_2199988(BagView *m_bagView);
@@ -339,9 +339,9 @@ extern void ovy142_219cba8(BagView*);
 extern void ovy142_219b46c(BagView*);
 
 void ovy142_219b2f0(BagView*);
-extern void sub_0200C9C0(int, int);
+extern void PlayerSave_AddMoney(int, int);
 extern void ovy142_219f978(BagView*);
-extern int sub_02017974(void*);
+extern int PlayerSave_GetPlayerSaveOffset(void*);
 
 void ovy142_219a4d0(BagView *m_bagView);
 extern int sub_0202DBE4(int);
@@ -359,7 +359,7 @@ extern void sub_0202DA54(int);
 void ovy142_219bcd8(BagView *m_bagView, int param_2);
 
 void ovy142_219ad30(BagView *m_bagView);
-extern void sub_0202451C(int, int, int, int, int, int);
+extern void StringSetNumber(int, int, int, int, int, int);
 
 void ovy142_219a104(BagView *m_bagView);
 extern void *sub_02017934(void*);
@@ -425,7 +425,7 @@ extern void sub_0204C124(int, int);
 
 int sub_0219BE88(int a1);
 extern int sub_0219FD18(int);
-extern int sub_0201765C(void*, int);
+extern int GameData_IsShortcutRegistered(void*, int);
 extern int sub_02005718(void);
 extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
 extern int sub_02008338(void*, u16);

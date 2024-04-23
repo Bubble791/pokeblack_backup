@@ -560,7 +560,7 @@ ovy35_217cd98: ; 0x0217CD98
 	bl sub_0202018C
 	add r5, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	str r0, [sp, #8]
 	add r0, r6, #0
 	bl sub_02009328

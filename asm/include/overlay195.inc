@@ -815,7 +815,7 @@
 .public sub_02048570
 .public GFL_CopyVarForText
 .public sub_02008BD4
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02008C0C
 .public sub_020245E0
 .public GFL_MsgDataLoadStrbuf
@@ -890,7 +890,7 @@
 .public sub_02021CFC
 .public sub_02048244
 .public sub_0204826C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_020480C0

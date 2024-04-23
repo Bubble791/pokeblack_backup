@@ -4562,7 +4562,7 @@ ovy84_21ed1bc: ; 0x021ED1BC
 	ldr r0, [r5, r4]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy84_21ed168
@@ -4603,7 +4603,7 @@ ovy84_21ed208: ; 0x021ED208
 	ldr r2, [r5, r2]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	add r1, r7, #0
 	bl ovy84_21ed168

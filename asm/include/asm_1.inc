@@ -6071,7 +6071,7 @@
 .public sub_0200C990
 .public sub_0200C9A0
 .public sub_0200C9BC
-.public sub_0200C9C0
+.public PlayerSave_AddMoney
 .public sub_0200C9E4
 .public sub_0200C9F8
 .public sub_0200CA18
@@ -7106,7 +7106,7 @@
 .public sub_02017614
 .public sub_0201762C
 .public sub_02017644
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_02017670
 .public sub_02017678
 .public sub_02017750
@@ -7124,7 +7124,7 @@
 .public sub_02017954
 .public sub_0201795C
 .public sub_02017968
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_02017980
 .public sub_0201798C
 .public sub_02017994
@@ -7812,7 +7812,7 @@
 .public sub_020244E0
 .public sub_02024500
 .public sub_02024510
-.public sub_0202451C
+.public StringSetNumber
 .public sub_02024540
 .public sub_02024574
 .public sub_02024598

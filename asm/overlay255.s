@@ -37317,7 +37317,7 @@ ovy255_21ce328: ; 0x021CE328
 	mov r1, #0
 	lsr r2, r2, #0x19
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x14]
 	add r1, r6, #0
 	str r0, [sp]
@@ -37507,7 +37507,7 @@ _021CE4C6:
 	ldr r0, [r0]
 	add r2, r6, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [r5, #0x2c]
 	ldr r0, [sp, #0x14]
 	add r1, r7, #0
@@ -38610,7 +38610,7 @@ ovy255_21cedb4: ; 0x021CEDB4
 	ldr r0, [r0]
 	add r2, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [r5, #0x2c]
 	add r2, r7, #0
 	add r0, r1, #0
@@ -39401,7 +39401,7 @@ _021CF342:
 	add r0, #0x8c
 	ldr r0, [r0]
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #8]
 	add r2, r5, #0
 	ldr r1, [r0, #0x2c]

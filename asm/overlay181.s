@@ -3529,7 +3529,7 @@ _0219EBDC:
 	add r6, r0, #0
 	ldr r0, [r4, #8]
 	ldr r0, [r0, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	cmp r5, #1
 	bne _0219EC38
 	mov r1, #0
@@ -3597,7 +3597,7 @@ _0219EC5E:
 	add r6, r0, #0
 	ldr r0, [r4, #8]
 	ldr r0, [r0, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r7, r0, #0
 	ldr r0, [r4, #0x68]
 	bl ovy181_21a00e0
@@ -6223,7 +6223,7 @@ ovy181_21a0148: ; 0x021A0148
 	mov r4, #1
 	str r4, [sp, #4]
 	ldr r0, [r0, #0x28]
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0
@@ -6238,7 +6238,7 @@ ovy181_21a0160: ; 0x021A0160
 	mov r4, #1
 	str r4, [sp, #4]
 	ldr r0, [r0, #0x28]
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0

@@ -865,7 +865,7 @@ ovy262_21c2bfc: ; 0x021C2BFC
 	ldr r2, [sp, #0x40]
 	mov r1, #0
 	mov r3, #8
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x1c]
 	add r1, r6, #0
@@ -928,7 +928,7 @@ ovy262_21c2bfc: ; 0x021C2BFC
 	ldr r2, [sp, #0xc]
 	mov r1, #0
 	mov r3, #8
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x24]
 	add r1, r6, #0
@@ -2582,7 +2582,7 @@ _021C39E6:
 _021C39FE:
 	mov r3, #5
 _021C3A00:
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r6, #0
@@ -2778,7 +2778,7 @@ _021C3B56:
 	mov r1, #0
 	lsr r2, r2, #0x10
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	lsr r2, r6, #0x10
 	lsl r2, r2, #0x18
 	add r0, r4, #0
@@ -2795,7 +2795,7 @@ _021C3B56:
 	mov r1, #2
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x20]
 	mov r0, #0
 	lsr r2, r2, #0x18
@@ -2812,7 +2812,7 @@ _021C3B56:
 	mov r1, #3
 	lsr r2, r2, #0x10
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x20]
 	add r0, r4, #0
 	lsr r2, r2, #0x10
@@ -2831,7 +2831,7 @@ _021C3B56:
 	mov r1, #5
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
@@ -2864,7 +2864,7 @@ _021C3C26:
 	mov r1, #0
 	mov r3, #4
 _021C3C42:
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
@@ -3111,7 +3111,7 @@ _021C3DFE:
 	mov r1, #0
 	lsr r2, r2, #0x10
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	lsr r2, r6, #0x10
 	lsl r2, r2, #0x18
 	add r0, r4, #0
@@ -3128,7 +3128,7 @@ _021C3DFE:
 	mov r1, #2
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x20]
 	mov r0, #0
 	lsr r2, r2, #0x18
@@ -3145,7 +3145,7 @@ _021C3DFE:
 	mov r1, #3
 	lsr r2, r2, #0x10
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x20]
 	add r0, r4, #0
 	lsr r2, r2, #0x10
@@ -3164,7 +3164,7 @@ _021C3DFE:
 	mov r1, #5
 	lsr r2, r2, #0x18
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
@@ -3197,7 +3197,7 @@ _021C3ECE:
 _021C3EE6:
 	ldrh r2, [r2]
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
@@ -4728,7 +4728,7 @@ _021C4AE0:
 	mov r1, #0
 	mov r3, #5
 _021C4B04:
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x4c]
 	add r1, r5, #0
 	add r2, r6, #0
@@ -5703,7 +5703,7 @@ _021C52DC:
 	ldr r0, [sp, #0x34]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x34]
 	ldr r1, [sp, #0x30]
 	ldr r2, [sp, #0x2c]

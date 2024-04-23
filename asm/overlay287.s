@@ -2042,7 +2042,7 @@ ovy287_21f53f0: ; 0x021F53F0
 	mov r1, #0
 	lsr r2, r2, #0x19
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r4, #0
 	add r0, r4, #4
 	add r1, #8
@@ -2167,7 +2167,7 @@ ovy287_21f548c: ; 0x021F548C
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r6, #0
 	add r0, r6, #4
 	add r1, #8
@@ -2227,7 +2227,7 @@ ovy287_21f548c: ; 0x021F548C
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r1, r6, #0
 	add r0, r6, #4
 	add r1, #8
@@ -2839,7 +2839,7 @@ ovy287_21f5a34: ; 0x021F5A34
 	mov r1, #0
 	lsr r2, r2, #0x19
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #4
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x24]
@@ -2938,7 +2938,7 @@ _021F5B80:
 	mov r2, #0
 _021F5B8E:
 	mov r3, #6
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r6, _021F5C04 ; =0x00001EA4
 	ldr r2, [sp, #0xc]
 	ldr r0, [r5, r6]
@@ -3051,7 +3051,7 @@ ovy287_21f5c10: ; 0x021F5C10
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
@@ -3166,7 +3166,7 @@ ovy287_21f5d10: ; 0x021F5D10
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
@@ -3281,7 +3281,7 @@ ovy287_21f5e10: ; 0x021F5E10
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
@@ -3396,7 +3396,7 @@ ovy287_21f5f10: ; 0x021F5F10
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
@@ -3512,7 +3512,7 @@ ovy287_21f6010: ; 0x021F6010
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
@@ -3671,7 +3671,7 @@ ovy287_21f6110: ; 0x021F6110
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x28]
@@ -3733,7 +3733,7 @@ ovy287_21f6110: ; 0x021F6110
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x34]
@@ -3952,7 +3952,7 @@ _021F6432:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021F64D8 ; =0x00001F70
 	ldr r2, [sp, #0x28]
 	sub r0, #0xcc
@@ -4136,7 +4136,7 @@ _021F65BC:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021F6664 ; =0x00001F70
 	ldr r2, [sp, #0x28]
 	sub r0, #0xcc
@@ -4439,7 +4439,7 @@ ovy287_21f67bc: ; 0x021F67BC
 	ldr r2, [sp, #0xc]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	sub r0, #0xcc
 	ldr r0, [r5, r0]
@@ -4503,7 +4503,7 @@ ovy287_21f67bc: ; 0x021F67BC
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	sub r0, #0xcc
 	ldr r0, [r5, r0]
@@ -4730,7 +4730,7 @@ ovy287_21f6a04: ; 0x021F6A04
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x30]
@@ -4778,7 +4778,7 @@ ovy287_21f6a04: ; 0x021F6A04
 	ldr r0, [r5, r0]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x34]

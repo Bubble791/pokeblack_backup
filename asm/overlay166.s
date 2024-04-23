@@ -153,14 +153,14 @@ _0219CF8E:
 	cmp r7, #0
 	ble _0219CFC2
 	ldr r0, [r5]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r7, #0
-	bl sub_0200C9C0
+	bl PlayerSave_AddMoney
 	b _0219CFD0
 _0219CFC2:
 	bge _0219CFD0
 	ldr r0, [r5]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	neg r1, r7
 	bl sub_0200C9E4
 _0219CFD0:

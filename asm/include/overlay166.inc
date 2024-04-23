@@ -17,9 +17,9 @@
 .public sub_020200AC
 .public sub_02020510
 .public sub_02020648
-.public sub_02017974
-.public sub_0200C9C0
-.public sub_02017974
+.public PlayerSave_GetPlayerSaveOffset
+.public PlayerSave_AddMoney
+.public PlayerSave_GetPlayerSaveOffset
 .public sub_0200C9E4
 .public sub_0201FF08
 .public sub_0201FDF8

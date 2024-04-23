@@ -611,7 +611,7 @@
 .public sub_0201CF44
 .public GFL_WordSetSystemCreateDefault
 .public sub_0201D460
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_0201CF44
 .public sub_0204C488
@@ -620,10 +620,10 @@
 .public sub_021EEC80
 .public GFL_WordSetSystemCreateDefault
 .public sub_0201CCF8
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_0201CCF8
 .public sub_0204C124
@@ -754,7 +754,7 @@
 .public sub_020062A8
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0202437C
 .public sub_020484F4
 .public sub_0204713C
@@ -905,7 +905,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
@@ -933,7 +933,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
@@ -1036,7 +1036,7 @@
 .public sub_0201D460
 .public sub_020480C0
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_02048210
 .public sub_02048210
@@ -1076,8 +1076,8 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_0204898C
 .public sub_0204898C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public sub_020484F4
 .public sub_0204713C
 .public GFL_WordSetFormatStrbuf

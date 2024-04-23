@@ -785,7 +785,7 @@
 .public sub_021A26E0
 .public sub_0204898C
 .public sub_0202437C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_020484F4
@@ -1509,7 +1509,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_0203501C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_020484F4
@@ -1517,7 +1517,7 @@
 .public GFL_StrBufFree
 .public sub_0204898C
 .public GFL_StrBufCreate
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_020484F4
@@ -2365,7 +2365,7 @@
 .public sub_0204826C
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -2376,7 +2376,7 @@
 .public sub_0204713C
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -2405,7 +2405,7 @@
 .public sub_0204826C
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_0204713C
@@ -2645,7 +2645,7 @@
 .public sub_02045B7C
 .public sub_02022410
 .public GFL_MsgDataLoadStrbuf
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020223CC
 .public sub_020484F4

@@ -4159,7 +4159,7 @@ ovy205_21b9338: ; 0x021B9338
 	add r0, r4, #0
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x10]
 	add r0, r4, #0
 	add r1, r6, #0

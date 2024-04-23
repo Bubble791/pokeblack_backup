@@ -1622,7 +1622,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, r4, #0
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x2c]
 	add r0, r4, #0
 	add r1, r7, #0
@@ -1758,7 +1758,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldrb r2, [r2, #0xb]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	str r6, [sp, #4]
@@ -1767,7 +1767,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldrb r2, [r2, #0xc]
 	add r1, r6, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0
 	str r0, [sp]
 	str r6, [sp, #4]
@@ -1776,7 +1776,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldrb r2, [r2, #0xd]
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x34]
 	add r0, r4, #0
 	add r1, r7, #0
@@ -1925,7 +1925,7 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r0, r4, #0
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x24]
 	add r0, r4, #0
 	add r1, r7, #0

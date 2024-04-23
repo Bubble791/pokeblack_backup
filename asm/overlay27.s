@@ -824,7 +824,7 @@ ovy27_2170964: ; 0x02170964
 	ldr r2, [sp, #8]
 	mov r1, #1
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -832,7 +832,7 @@ ovy27_2170964: ; 0x02170964
 	ldr r2, [sp, #0xc]
 	mov r1, #2
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	add r1, r7, #0
 	add r2, r4, #0
@@ -1282,7 +1282,7 @@ ovy27_2170d04: ; 0x02170D04
 	lsr r2, r2, #0x12
 	mov r3, #3
 	str r1, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #8]
 	ldrb r1, [r5, #0x12]
 	ldr r0, [r0, #4]
@@ -1347,7 +1347,7 @@ ovy27_2170d90: ; 0x02170D90
 	lsr r2, r2, #0x12
 	mov r3, #5
 	str r1, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #8]
 	ldrb r1, [r5, #0x13]
 	ldr r0, [r0, #4]

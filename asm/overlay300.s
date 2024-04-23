@@ -1202,7 +1202,7 @@ ovy300_21a05ac: ; 0x021A05AC
 	ldr r0, [r4]
 	mov r1, #0x13
 	ldr r0, [r0]
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A05FA
 	add r0, r4, #0
@@ -1264,7 +1264,7 @@ ovy300_21a0628: ; 0x021A0628
 	ldr r0, [r5]
 	mov r1, #0x13
 	ldr r0, [r0]
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A067E
 	add r0, r5, #0
@@ -4136,7 +4136,7 @@ ovy300_21a1ca4: ; 0x021A1CA4
 	mov r1, #0x13
 	ldr r0, [r0]
 	mov r4, #0x13
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	ldr r0, [r5]
 	bne _021A1CD0
@@ -5949,7 +5949,7 @@ _021A2A8E:
 	ldr r0, [r5]
 	mov r1, #0x13
 	ldr r0, [r0]
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A2AFA
 	add r0, r5, #0

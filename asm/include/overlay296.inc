@@ -82,7 +82,7 @@
 .public sub_02020428
 .public sub_0203A24C
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_0204898C
 .public sub_020484F4
@@ -91,7 +91,7 @@
 .public sub_02020428
 .public sub_0203A24C
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetSystemFree
 .public sub_02021C44
 .public sub_020484F4

@@ -977,7 +977,7 @@ ovy171_21de1e4: ; 0x021DE1E4
 	ldr r0, [r5, #0x18]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	ldr r2, [sp, #0xc]
 	add r1, r6, #0
@@ -1091,7 +1091,7 @@ ovy171_21de270: ; 0x021DE270
 	ldr r0, [r5, #0x18]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	ldr r2, [sp, #0x34]
 	add r1, r6, #0
@@ -1145,7 +1145,7 @@ ovy171_21de270: ; 0x021DE270
 	ldr r0, [r5, #0x18]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x18]
 	ldr r2, [sp, #0x40]
 	add r1, r6, #0

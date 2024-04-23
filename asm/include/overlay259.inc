@@ -350,7 +350,7 @@
 .public sub_0201CCF8
 .public sub_0204898C
 .public sub_0201CCF8
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
@@ -375,7 +375,7 @@
 .public sub_02017544
 .public sub_02018C80
 .public sub_02024700
-.public sub_0202451C
+.public StringSetNumber
 .public sub_020480C0
 .public sub_02024E80
 .public sub_020484F4

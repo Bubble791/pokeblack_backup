@@ -122,7 +122,7 @@
 .public sub_0204898C
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C

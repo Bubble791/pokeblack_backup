@@ -1274,7 +1274,7 @@ ovy85_21eb74c: ; 0x021EB74C
 	mov r1, #0
 	lsr r2, r2, #0x12
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [r5, #0x28]
 	add r0, r5, #0
 	ldrh r1, [r1, #0x10]
@@ -1327,7 +1327,7 @@ ovy85_21eb7f8: ; 0x021EB7F8
 	mov r1, #0
 	mov r3, #3
 	mov r7, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r5, #0
 	mov r1, #5
 	bl ovy85_21eb6f8
@@ -1812,7 +1812,7 @@ ovy85_21ebb28: ; 0x021EBB28
 	mov r1, #0
 	mov r3, #4
 	mov r7, #0
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x41
 	mov r2, #0xe
 	lsl r0, r0, #2

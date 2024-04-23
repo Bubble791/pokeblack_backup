@@ -1774,13 +1774,13 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02022888
-.public sub_0202451C
+.public StringSetNumber
 .public sub_020484F4
 .public sub_0204713C
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02022888
-.public sub_0202451C
+.public StringSetNumber
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02024510
@@ -1853,7 +1853,7 @@
 .public sub_0202B0F4
 .public sub_0204898C
 .public sub_02007B90
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_0204713C
 .public sub_02021D28
@@ -1882,7 +1882,7 @@
 .public sub_02024484
 .public sub_021C27F8
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_0204713C
 .public sub_02021D28

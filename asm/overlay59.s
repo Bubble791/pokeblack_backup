@@ -1638,7 +1638,7 @@ ovy59_21e6630: ; 0x021E6630
 	add r4, r7, #0
 	mul r4, r0
 	add r0, r6, #0
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r1, r4, #0
 	bl sub_0200C9E4
 	add r0, r6, #0
@@ -1658,7 +1658,7 @@ ovy59_21e6630: ; 0x021E6630
 	mov r1, #1
 	add r2, r4, #0
 	mov r3, #6
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0xc]
 	bl sub_021F0F58
 	bl sub_02038470
@@ -2840,7 +2840,7 @@ _021E7090:
 	mov r1, #1
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	ldr r0, [sp, #0x1c]
 	asr r3, r4, #5
@@ -2849,7 +2849,7 @@ _021E7090:
 	mov r1, #2
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r2, #0x1f
 	str r5, [sp]
 	ldr r0, [sp, #0x1c]
@@ -2857,7 +2857,7 @@ _021E7090:
 	and r2, r4
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021E7344 ; =0x000006BC
 	b _021E741A
 _021E70D2:
@@ -2881,7 +2881,7 @@ _021E70E6:
 	mov r1, #1
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	str r5, [sp]
 	ldr r0, [sp, #0x1c]
 	asr r3, r4, #5
@@ -2890,7 +2890,7 @@ _021E70E6:
 	mov r1, #2
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r2, #0x1f
 	str r5, [sp]
 	ldr r0, [sp, #0x1c]
@@ -2898,7 +2898,7 @@ _021E70E6:
 	and r2, r4
 	mov r3, #2
 	str r7, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021E734C ; =0x000006BE
 	b _021E741A
 _021E7128:
@@ -2928,7 +2928,7 @@ _021E714E:
 	mov r1, #1
 	add r2, r5, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -2936,7 +2936,7 @@ _021E714E:
 	mov r1, #2
 	add r2, r4, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #0x1b
 	lsl r0, r0, #6
 	b _021E741A
@@ -2956,7 +2956,7 @@ _021E718E:
 	mov r1, #1
 	mov r3, #3
 	str r1, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021E7358 ; =0x000006C2
 	b _021E741A
 _021E71A0:
@@ -3094,7 +3094,7 @@ _021E729C:
 	ldr r0, [sp, #0x1c]
 	ldr r2, [sp, #0x14]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021E7384 ; =0x000006CE
 	b _021E741A
 _021E72B2:
@@ -3157,7 +3157,7 @@ _021E72FE:
 	mov r1, #2
 	add r2, r7, #0
 	str r3, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, _021E7388 ; =0x000006D1
 	b _021E741A
 _021E7328:
@@ -3240,7 +3240,7 @@ _021E73AA:
 	mov r1, #2
 	mov r3, #1
 	str r5, [sp, #4]
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r4, #0
 	bl GFL_StrBufFree
 	b _021E7406

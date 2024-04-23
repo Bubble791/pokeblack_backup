@@ -1933,8 +1933,8 @@
 .public sub_020244A4
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public ovy168_21ee2f4
 .public sub_020232E8
@@ -1989,11 +1989,11 @@
 .public sub_0204898C
 .public sub_02023370
 .public sub_020232E8
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public sub_020232E8
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public sub_020232E8
@@ -2108,7 +2108,7 @@
 .public sub_0204898C
 .public sub_02023370
 .public sub_020232E8
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public sub_020232E8

@@ -3029,7 +3029,7 @@ _021BB902:
 	ldr r2, [sp, #0x1c]
 	mov r1, #2
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -3038,7 +3038,7 @@ _021BB902:
 	ldr r2, [sp, #0x18]
 	mov r1, #1
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #1
@@ -3047,7 +3047,7 @@ _021BB902:
 	ldr r2, [sp, #0x14]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	add r1, r6, #0
 	add r2, r5, #0
@@ -3092,7 +3092,7 @@ _021BB96A:
 	ldr r2, [sp, #0x40]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	add r1, r6, #0
 	add r2, r5, #0
@@ -4700,7 +4700,7 @@ _021BC5C8:
 	ldr r2, [sp, #0x14]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	ldr r2, [sp, #0x2c]
 	add r1, r4, #0
@@ -4737,7 +4737,7 @@ _021BC618:
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	ldr r2, [sp, #0x30]
 	add r1, r4, #0
@@ -4927,7 +4927,7 @@ _021BC79C:
 	ldr r2, [sp, #0x14]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	ldr r2, [sp, #0x2c]
 	add r1, r4, #0
@@ -4964,7 +4964,7 @@ _021BC7EC:
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x24]
 	ldr r2, [sp, #0x30]
 	add r1, r4, #0
@@ -5169,7 +5169,7 @@ _021BC98C:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x38]
 	add r0, r6, #0
 	add r1, r4, #0
@@ -5206,7 +5206,7 @@ _021BC9DC:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x3c]
 	add r0, r6, #0
 	add r1, r4, #0
@@ -5252,7 +5252,7 @@ _021BCA3C:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x40]
 	add r0, r6, #0
 	add r1, r4, #0
@@ -5287,7 +5287,7 @@ _021BCA88:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x44]
 	add r0, r6, #0
 	add r1, r4, #0
@@ -5420,7 +5420,7 @@ _021BCB66:
 	ldr r2, [sp, #0x24]
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x18]
 	add r1, r4, #0
 	add r2, r7, #0
@@ -6383,7 +6383,7 @@ _021BD324:
 	add r0, r4, #0
 	add r1, r7, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	b _021BD364
 _021BD33E:
 	ldr r0, [r5, #0x14]
@@ -6555,7 +6555,7 @@ _021BD46C:
 	ldr r2, [sp, #0x18]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x1c]
 	add r1, r7, #0
 	add r2, r5, #0
@@ -6686,7 +6686,7 @@ _021BD57E:
 	ldr r2, [sp, #0x18]
 	mov r1, #0
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x1c]
 	add r1, r7, #0
 	add r2, r5, #0
@@ -8149,7 +8149,7 @@ _021BE112:
 	mov r1, #0
 	add r2, r5, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #8]
 	ldr r1, [sp, #0x18]
 	ldr r2, [sp, #0x14]
@@ -13899,7 +13899,7 @@ _021C0D40:
 	add r0, r6, #0
 	mov r1, #2
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0xc]
 	ldr r2, _021C0E9C ; =0x000186A0
@@ -13913,7 +13913,7 @@ _021C0D40:
 	add r0, r6, #0
 	mov r1, #1
 	mov r3, #5
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0xc]
 	ldr r2, _021C0E9C ; =0x000186A0
@@ -13927,7 +13927,7 @@ _021C0D40:
 	add r0, r6, #0
 	mov r1, #0
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [sp, #0x18]
 	add r0, r6, #0
 	add r1, r7, #0

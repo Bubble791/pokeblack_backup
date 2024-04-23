@@ -44,7 +44,7 @@ _021EFE7E:
 	ldr r0, [r4, #0x18]
 	ldr r0, [r0, #0xc]
 	ldr r0, [r0, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	bl sub_0200CB30
 	ldr r1, [r4, #0x18]
 	ldr r1, [r1, #0xc]
@@ -237,7 +237,7 @@ _021F001E:
 	cmp r0, #0
 	bne _021F0056
 	ldr r0, [r1, #4]
-	bl sub_02017974
+	bl PlayerSave_GetPlayerSaveOffset
 	add r6, r0, #0
 	ldr r0, [r4, #4]
 	bl sub_021F3024

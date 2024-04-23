@@ -2358,7 +2358,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	mov r1, #0
 	lsr r2, r2, #0x19
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [r7, #4]
 	str r4, [sp]
 	mov r0, #1
@@ -2368,7 +2368,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	mov r1, #2
 	lsr r2, r2, #0x19
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, [r7, #4]
 	str r4, [sp]
 	mov r0, #1
@@ -2378,7 +2378,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	mov r1, #3
 	lsr r2, r2, #0x16
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [sp, #0x5c]
 	ldr r1, [sp, #0x20]
 	ldr r2, [sp, #0x14]

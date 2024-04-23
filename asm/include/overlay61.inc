@@ -248,5 +248,5 @@
 .public sub_02153EC4
 .public sub_0200C9BC
 .public sub_020103E8
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0200C9E4

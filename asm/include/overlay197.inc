@@ -750,9 +750,9 @@
 .public sub_02048210
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public sub_021BAB80
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_021B88F0
 .public sub_021B88F4
@@ -826,9 +826,9 @@
 .public sub_02046E28
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020229B0
@@ -972,9 +972,9 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_0202451C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_StrBufFree

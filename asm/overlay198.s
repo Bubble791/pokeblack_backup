@@ -1462,7 +1462,7 @@ _021B3B30:
 	ldr r0, [r4, #0x48]
 	ldr r2, [r4, r7]
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	mov r0, #5
 	mov r1, #3
 	add r2, r6, #0
@@ -1610,7 +1610,7 @@ _021B3C72:
 	mov r1, #0
 	add r2, r6, #0
 	mov r3, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r4, #0x44]
 	ldr r2, [r4, #0x50]
 	mov r1, #0x10

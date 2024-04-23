@@ -1248,7 +1248,7 @@ ovy204_21aa534: ; 0x021AA534
 	ldr r0, [r5]
 	mov r1, #1
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, _021AA5AC ; =0x00002710
 	add r0, r4, #0
 	add r1, r6, #0
@@ -1264,7 +1264,7 @@ ovy204_21aa534: ; 0x021AA534
 	ldr r0, [r5]
 	mov r1, #2
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r2, _021AA5AC ; =0x00002710
 	add r0, r4, #0
 	add r1, r6, #0
@@ -1277,7 +1277,7 @@ ovy204_21aa534: ; 0x021AA534
 	ldr r0, [r5]
 	mov r1, #3
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -1346,7 +1346,7 @@ _021AA624:
 	ldr r0, [r5]
 	mov r1, #2
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #5
@@ -1358,7 +1358,7 @@ _021AA624:
 	ldr r0, [r5]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r2, #6
@@ -1371,7 +1371,7 @@ _021AA624:
 	ldr r0, [r5]
 	mov r1, #1
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	add r0, r6, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -1389,7 +1389,7 @@ ovy204_21aa678: ; 0x021AA678
 	ldr r0, [r0]
 	mov r1, #0
 	mov r3, #4
-	bl sub_0202451C
+	bl StringSetNumber
 	add sp, #8
 	pop {r3, pc}
 	.align 2, 0

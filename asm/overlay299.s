@@ -2286,7 +2286,7 @@ ovy299_21a0e7c: ; 0x021A0E7C
 	mov r1, #0x12
 	ldr r0, [r0]
 	mov r4, #0x12
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	ldr r0, [r5]
 	bne _021A0EA8
@@ -2796,7 +2796,7 @@ _021A1260:
 	ldr r2, [sp, #0x10]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r6, [sp]
 	str r7, [sp, #4]
 	str r4, [sp, #8]
@@ -2820,7 +2820,7 @@ _021A1260:
 	ldr r2, [sp, #0xc]
 	mov r1, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r6, [sp]
 	str r7, [sp, #4]
 	add r0, r5, #0
@@ -2867,7 +2867,7 @@ ovy299_21a1300: ; 0x021A1300
 	ldr r0, [r5, #0x58]
 	ldrh r2, [r2, #0xa]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	str r6, [sp]
 	str r7, [sp, #4]
 	add r0, r5, #0
@@ -2920,7 +2920,7 @@ _021A1384:
 	mov r1, #0
 	add r2, r4, #0
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x58]
 	ldr r1, [r5, #0x5c]
 	add r2, r6, #0
@@ -3789,7 +3789,7 @@ _021A1A32:
 _021A1A70:
 	ldr r0, [r1]
 	mov r1, #0x12
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A1A86
 	add r0, r5, #0

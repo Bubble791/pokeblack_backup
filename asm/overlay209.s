@@ -1321,7 +1321,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	lsl r2, r2, #0x10
 	lsr r2, r2, #0x19
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -1332,7 +1332,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	lsl r2, r2, #0xb
 	lsr r2, r2, #0x1b
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -1343,7 +1343,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	lsl r2, r2, #5
 	lsr r2, r2, #0x1a
 	mov r3, #2
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x14]
 	add r0, r4, #0

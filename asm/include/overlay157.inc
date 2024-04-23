@@ -125,10 +125,10 @@
 .public sub_0202437C
 .public ovy27_2170d90
 .public sub_0208D65C
-.public sub_0202451C
+.public StringSetNumber
 .public sub_0208D65C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataLoadStrbuf
 

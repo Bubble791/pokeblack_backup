@@ -1426,7 +1426,7 @@ ovy304_21a06c4: ; 0x021A06C4
 	ldr r4, [r0]
 	mov r6, #0x12
 	add r0, r4, #0
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A06F2
 	add r0, r4, #0
@@ -1460,7 +1460,7 @@ ovy304_21a070c: ; 0x021A070C
 	ldr r0, [r4, #0xc]
 	mov r1, #0x12
 	ldr r0, [r0]
-	bl sub_0201765C
+	bl GameData_IsShortcutRegistered
 	cmp r0, #1
 	bne _021A072C
 	add r4, #0x10

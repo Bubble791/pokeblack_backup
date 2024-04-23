@@ -207,7 +207,7 @@
 .public sub_0219CC1C
 .public sub_0219CC1C
 .public sub_0200D200
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_02017644
 .public sub_02017644
 .public sub_02048080
@@ -249,13 +249,13 @@
 .public sub_0200D6B4
 .public sub_0200D888
 .public sub_0200D6E0
-.public sub_0202451C
-.public sub_0202451C
-.public sub_0202451C
+.public StringSetNumber
+.public StringSetNumber
+.public StringSetNumber
 .public sub_0219CC18
 .public sub_0200D1F8
 .public sub_0204898C
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0219A2A4
@@ -325,7 +325,7 @@
 .public sub_0200D1DC
 .public sub_0200D1F8
 .public sub_021A14B0
-.public sub_0201765C
+.public GameData_IsShortcutRegistered
 .public sub_0204C108
 .public sub_0204BF98
 .public sub_0204B98C

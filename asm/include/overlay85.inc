@@ -49,10 +49,10 @@
 .public sub_02170D04
 .public sub_02022888
 .public sub_021EAC18
-.public sub_0202451C
+.public StringSetNumber
 .public sub_021EAC18
 .public sub_0204713C
-.public sub_0202451C
+.public StringSetNumber
 .public sub_021EAB90
 .public sub_0204C124
 .public sub_0204C124
@@ -81,7 +81,7 @@
 .public sub_021ED824
 .public sub_02015018
 .public sub_021ED864
-.public sub_0202451C
+.public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_MsgDataLoadStrbuf

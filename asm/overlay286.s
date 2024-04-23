@@ -416,7 +416,7 @@ ovy286_21f470c: ; 0x021F470C
 	add r4, #0xc2
 	ldrh r2, [r2, r4]
 	mov r3, #3
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #0x14]
 	ldr r2, [sp, #0x18]
@@ -623,7 +623,7 @@ ovy286_21f48a4: ; 0x021F48A4
 	mov r1, #0
 	mov r3, #2
 	add r2, r2, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #0x14]
 	add r2, r7, #0
@@ -664,7 +664,7 @@ ovy286_21f48a4: ; 0x021F48A4
 	mov r1, #0
 	mov r3, #2
 	add r2, r2, #1
-	bl sub_0202451C
+	bl StringSetNumber
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #0x14]
 	ldr r2, [sp, #0x10]
