@@ -955,7 +955,7 @@ _0219A06A:
 	mov r1, #0
 	mov r2, #1
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0x44]
 	ldr r0, [r5, #0x30]
 	mov r1, #1

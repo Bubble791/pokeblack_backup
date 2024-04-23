@@ -8563,7 +8563,7 @@ ovy167_219d72c: ; 0x0219D72C
 	cmp r0, #1
 	ldr r0, [r5]
 	bhi _0219D766
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	beq _0219D762
 	mov r4, #1
@@ -8571,7 +8571,7 @@ _0219D762:
 	strh r4, [r5, #8]
 	b _0219D776
 _0219D766:
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219D772
 	mov r0, #0xb6
@@ -52455,7 +52455,7 @@ _021B2C40:
 	bl ovy167_21b26a8
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #8]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp]
 	add r2, r5, #6
 	ldr r3, [sp, #0xc]
@@ -122752,7 +122752,7 @@ _021D4CC4:
 	add r4, r0, #0
 	ldr r0, [sp]
 	bl ovy167_219bf68
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021D4CFC
 	mov r7, #1
@@ -125427,7 +125427,7 @@ ovy167_21d6044: ; 0x021D6044
 	add r1, r4, #0
 	add r6, r0, #0
 	mov r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, #0
 	add r1, #0x72
 	strh r0, [r1]

@@ -223,7 +223,7 @@
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D814
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0202D810
 .public sub_0204BBA0
 .public sub_0202D818

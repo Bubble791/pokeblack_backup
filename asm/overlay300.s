@@ -5668,7 +5668,7 @@ _021A287A:
 	mov r3, #0
 	add r4, r0, #0
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x50
 	add r1, #0xc0
 	str r0, [r5, r1]
@@ -5695,7 +5695,7 @@ _021A287A:
 	mov r2, #0
 	mov r3, #1
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x66
 	add r1, #0xae
 	str r0, [r5, r1]
@@ -5713,7 +5713,7 @@ _021A287A:
 	mov r2, #0
 	mov r3, #0
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, #0xd1
 	str r0, [r5, r7]
 	add r0, r4, #0
@@ -5738,7 +5738,7 @@ _021A287A:
 	mov r2, #0
 	mov r3, #0
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x54
 	add r1, #0xc4
 	str r0, [r5, r1]
@@ -5765,7 +5765,7 @@ _021A287A:
 	mov r2, #0
 	mov r3, #1
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x67
 	add r1, #0xb5
 	str r0, [r5, r1]
@@ -5790,7 +5790,7 @@ _021A287A:
 	mov r2, #0
 	mov r3, #0
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, #0xa5
 	str r0, [r5, r7]
 	bl sub_0202D810

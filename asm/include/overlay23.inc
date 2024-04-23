@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_02008BD0
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201FD00
 .public sub_0201C2C8
 .public GFL_HeapAllocate
@@ -33,7 +33,7 @@
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_0204A934
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public GFL_MsgSysLoadData
 .public sub_0216E850
 .public GFL_MsgDataLoadStrbuf
@@ -42,7 +42,7 @@
 .public sub_02029BB0
 .public GFL_HeapFree
 .public sub_0204A934
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public GFL_HeapFree
 .public sub_02016AD8
 .public sub_02017C60
@@ -82,7 +82,7 @@
 .public sub_021E98A8
 .public sub_0200C200
 .public sub_02160488
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_MsgDataFree
@@ -110,7 +110,7 @@
 .public GFL_MsgDataFree
 .public sub_0200C200
 .public GFL_HeapFree
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02017934
 .public sub_020173AC
 .public sub_021804D8

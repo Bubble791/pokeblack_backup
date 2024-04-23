@@ -1956,7 +1956,7 @@ int ovy142_219b754(UNKNOW_TYPE *a1, UNKNOW_TYPE *a2)
     return -1;
 }
 
-void ovy142_219b784(BagView *bagView)
+void BagMenu_SortItemByClass(BagView *bagView)
 {
     int i;
     
@@ -1993,29 +1993,28 @@ void ovy142_219b784(BagView *bagView)
 }
 
 const u16 DAT_021a0b08[12] = {0};
-void ovy142_219b8c4(BagView *bagView);
+void BagMenu_SortItemByName(BagView *bagView);
 
-void ovy142_219b8c4(BagView *bagView)
+void BagMenu_SortItemByName(BagView *bagView)
 {
     int i;
     ItemSortTable* iVar1;
     ItemTable* iVar2;
-    int iVar3;
+    int bagItemCount;
  
-
     iVar1 = (ItemSortTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xc45);
     iVar2 = (ItemTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xc46);
     BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 1);
-    iVar3 = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
-    for ( i = 0; i < iVar3; i++)
+    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+    for ( i = 0; i < bagItemCount; i++)
     {
         u16 itemId = iVar2[i].itemid;
         iVar1[i].ItemClass.raw = itemId + (DAT_021a0b08[itemId] << 16);
         iVar1[i].item = iVar2[i];
     }
 
-    MATH_QSort(iVar1, iVar3, 12, 0x0219b794, 0);
-    for (i = 0; i < iVar3; i++)
+    MATH_QSort(iVar1, bagItemCount, 12, (int)ovy142_219b754, 0);
+    for (i = 0; i < bagItemCount; i++)
     {
         iVar2[i] = iVar1[i].item ;
     }
@@ -2024,31 +2023,30 @@ void ovy142_219b8c4(BagView *bagView)
     GFL_HeapFree(iVar1);
 }
 
-void ovy142_219b9c0(BagView *bagView);
-extern int sub_02026B40(u16);
+void BagMenu_SortItemByIndex(BagView *bagView);
+extern int Item_GetTmHmIndex(u16);
 
-void ovy142_219b9c0(BagView *bagView)
+void BagMenu_SortItemByIndex(BagView *bagView)
 {
     int i;
     ItemSortTable *iVar1;
     ItemTable *iVar2;
-    int iVar3;
-
+    int bagItemCount;
 
     if (bagView->itemType == 2)
     {
         iVar1 = (ItemSortTable *)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xC7A);
         iVar2 = (ItemTable *)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xC7B);
         BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 1);
-        iVar3 = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
-        for (i = 0; i < iVar3; i++)
+        bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+        for (i = 0; i < bagItemCount; i++)
         {
-            iVar1[i].ItemClass.param.pro1 = sub_02026B40(iVar2[i].itemid);
+            iVar1[i].ItemClass.param.pro1 = Item_GetTmHmIndex(iVar2[i].itemid);
             iVar1[i].ItemClass.param.pro2 = 0;
             iVar1[i].item = iVar2[i];
         }
-        MATH_QSort(iVar1, iVar3, 12, 0x0219b794, 0);
-        for (i = 0; i < iVar3; i++)
+        MATH_QSort(iVar1, bagItemCount, 12, (int)ovy142_219b754, 0);
+        for (i = 0; i < bagItemCount; i++)
         {
             iVar2[i] = iVar1[i].item;
         }
@@ -2058,12 +2056,12 @@ void ovy142_219b9c0(BagView *bagView)
     }
 }
 
-void ovy142_219bac4(BagView *bagView, int param_2);
+void BagMenu_SortItemByAmount(BagView *bagView, int param_2);
 extern int sub_0200854C(void*, u16);
 
-void ovy142_219bac4(BagView *bagView, int param_2)
+void BagMenu_SortItemByAmount(BagView *bagView, int sortType)
 {
-    int iVar4;
+    int bagItemCount;
     ItemSortTable* iVar2;
     ItemTable* iVar3;
     void* uVar5;
@@ -2073,9 +2071,9 @@ void ovy142_219bac4(BagView *bagView, int param_2)
     iVar2 = (ItemSortTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xCA9);
     iVar3 = (ItemTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xCAA);
     BagSave_CopyPocketRaw(bagView->bagSave, iVar3, bagView->itemType, 1);
-    iVar4 = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
     uVar5 = Item_ArcHandleCreate(bagView->heapId);
-    for (i = 0; i < iVar4; i++)
+    for (i = 0; i < bagItemCount; i++)
     {
         ItemSortTable* params;
         void* uVar7;
@@ -2083,7 +2081,7 @@ void ovy142_219bac4(BagView *bagView, int param_2)
         uVar7 = Item_ArcHandleReadFile(uVar5, iVar3[i].itemid, bagView->heapId);
         iVar11 = sub_0200854C(bagView->bagSave, iVar3[i].itemid);
         
-        if (param_2 == 1)
+        if (sortType == SORT_LESS_TO_MORE)
         {
             params = &iVar2[i];
             int itemClass = Item_GetParam(uVar7, 0xf); 
@@ -2107,8 +2105,8 @@ void ovy142_219bac4(BagView *bagView, int param_2)
     }
 
     GFL_ArcToolFree(uVar5);
-    MATH_QSort(iVar2, iVar4, 0xc, 0x0219b794, 0);
-    for (i = 0; i < iVar4; i++)
+    MATH_QSort(iVar2, bagItemCount, 0xc, (int)ovy142_219b754, 0);
+    for (i = 0; i < bagItemCount; i++)
     {
         iVar3[i] = iVar2[i].item;
     }
@@ -2127,28 +2125,28 @@ void ovy142_219bca4(BagView *bagView)
 
 }
 
-void ovy142_219bcd8(BagView *bagView, int sortType)
+void BagMenu_TrySortItem(BagView *bagView, int sortType)
 {
     bagView->sortOptionType = sortType;
     switch (sortType)
     {
     case 0:
-        ovy142_219b784(bagView);
+        BagMenu_SortItemByClass(bagView);
         break;
     case 1:
-        ovy142_219b9c0(bagView);
+        BagMenu_SortItemByIndex(bagView);
         break;
     case 2:
-        ovy142_219b8c4(bagView);
+        BagMenu_SortItemByName(bagView);
         break;
     case 3:
-        ovy142_219bac4(bagView, 1);
+        BagMenu_SortItemByAmount(bagView, SORT_LESS_TO_MORE);
         break;
     case 4:
-        ovy142_219bac4(bagView, 0);
+        BagMenu_SortItemByAmount(bagView, SORT_MORE_TO_LESS);
         break;
     }
-    bagView->unk838 = 0xffff;
+    bagView->unk838 = 0xFFFF;
 }
 
 void ovy142_219bd2c(BagView *bagView, int param_2)

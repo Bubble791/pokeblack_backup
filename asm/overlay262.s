@@ -374,7 +374,7 @@ ovy262_21c279c: ; 0x021C279C
 	mov r1, #3
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r3, r5, #0x10
 	str r0, [r4, #8]
 	add r0, r6, #0
@@ -399,7 +399,7 @@ ovy262_21c279c: ; 0x021C279C
 	mov r1, #3
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r3, r5, #0x10
 	str r0, [r4, #0xc]
 	add r0, r6, #0
@@ -3489,7 +3489,7 @@ _021C4108:
 	ldr r0, [sp, #0x28]
 	ldr r3, [r5, r3]
 	add r2, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r6, #2
 	add r2, r5, r1
 	ldr r1, [sp, #0x3c]
@@ -3529,7 +3529,7 @@ _021C4108:
 	lsl r3, r3, #0x15
 	ldr r2, [r5, r2]
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #0x8d
 	lsl r1, r1, #2
 	sub r1, #0x40
@@ -3544,7 +3544,7 @@ _021C4108:
 	ldr r0, [sp, #0x38]
 	ldr r3, [r5, r3]
 	add r2, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x8d
 	lsl r1, r1, #2
 	sub r1, #0x3c
@@ -3882,7 +3882,7 @@ ovy262_21c4420: ; 0x021C4420
 	lsl r3, r3, #0x15
 	lsr r3, r3, #0x10
 	str r0, [sp, #0x10]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r4, #0
 	sub r1, #0x4c
 	str r0, [r5, r1]
@@ -3892,7 +3892,7 @@ ovy262_21c4420: ; 0x021C4420
 	ldr r3, [r5, r4]
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #0
 	sub r1, #0x48
 	str r0, [r5, r1]
@@ -4951,7 +4951,7 @@ ovy262_21c4c8c: ; 0x021C4C8C
 	mov r1, #0
 	add r7, r0, #0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x80
 	strh r0, [r1]
@@ -4961,7 +4961,7 @@ ovy262_21c4c8c: ; 0x021C4C8C
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, #0
 	add r1, #0x82
 	strh r0, [r1]
@@ -5387,7 +5387,7 @@ _021C500A:
 	str r0, [sp]
 	ldr r0, [sp, #0x3c]
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	str r0, [r1, #4]
@@ -5425,7 +5425,7 @@ _021C504C:
 	str r0, [sp, #8]
 	add r0, r4, #0
 	add r3, #0xff
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x24]
 	mov r0, #2
 	bl sub_0202D898
@@ -5449,7 +5449,7 @@ _021C504C:
 	str r0, [sp]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x28]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

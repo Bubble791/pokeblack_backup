@@ -2063,14 +2063,14 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	mov r1, #0
 	mov r2, #2
 	mov r3, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r7, #4]
 	ldr r0, [sp, #0x18]
 	str r6, [sp]
 	mov r1, #1
 	mov r2, #0
 	mov r3, #2
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r7, #8]
 	ldr r0, [sp, #0x1c]
 	mov r1, #0x17
@@ -2087,14 +2087,14 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	mov r1, #0x13
 	mov r2, #0
 	mov r3, #0xc0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r7, #0x10]
 	ldr r0, [sp, #0xc]
 	mov r1, #0x14
 	mov r2, #0
 	mov r3, #0
 	str r6, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r7, #0x14]
 	add r7, sp, #0x18
 _021E9D08:

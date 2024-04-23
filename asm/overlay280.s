@@ -589,7 +589,7 @@ ovy280_21d9b94: ; 0x021D9B94
 	mov r1, #8
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -6190,7 +6190,7 @@ _021DC500:
 	ldr r1, [sp, #0x3c]
 	mov r3, #0x80
 	str r5, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 _021DC514:
 	str r0, [r4, #8]
 	ldr r0, [sp, #0x28]
@@ -6205,7 +6205,7 @@ _021DC514:
 	mov r2, #0
 	mov r3, #0
 	mov r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0xc]
 	ldr r0, [sp, #0x28]
 	bl GFL_ArcToolFree

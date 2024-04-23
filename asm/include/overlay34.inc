@@ -469,7 +469,7 @@
 .public sub_021775CC
 .public sub_021777DC
 .public sub_02008BF4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02170D00
 .public sub_02040440
 .public sub_02042A6C
@@ -485,7 +485,7 @@
 .public sub_0217246C
 .public sub_02042A78
 .public sub_02008BF4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02170D00
 .public sub_02040440
 .public sub_02040440
@@ -592,7 +592,7 @@
 .public GFL_HeapAllocate
 .public sub_02042A78
 .public sub_02008B94
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02042A78
 .public sub_02171ACC
 .public sub_02171B0C
@@ -641,9 +641,9 @@
 .public sub_02171ACC
 .public sub_02171B0C
 .public sub_021775CC
-.public sub_02008BF0
-.public sub_02008BF0
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
+.public MyStatus_GetTrainerGender
+.public MyStatus_GetTrainerGender
 .public sub_02005748
 .public sub_02005748
 .public sub_02005748
@@ -655,7 +655,7 @@
 .public sub_0203CB80
 .public sub_0203CB80
 .public sub_02008B94
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public GFL_StrBufCreate
 .public sub_02048614
 .public sub_0202437C
@@ -809,6 +809,6 @@
 .public sub_0216148C
 .public sub_0216168C
 .public sub_02008BFC
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 
 .public sub_0219A470

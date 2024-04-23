@@ -176,7 +176,7 @@
 .public sub_0219D554
 .public sub_021999B8
 .public sub_0204AA30
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public sub_0204BDE0
 .public GFL_ArcToolFree

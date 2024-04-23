@@ -143,12 +143,12 @@
 .public sub_0204C2B0
 .public sub_0204C124
 .public sub_0202D7E4
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0202D7F8
 .public sub_0202D7FC
 .public sub_0204BDE0
 .public sub_0202D7F4
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204C040
 .public sub_0202D7E8
 .public sub_0204C378
@@ -172,7 +172,7 @@
 .public sub_0204C124
 .public sub_0204C140
 .public sub_0202D7F4
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204C040
 .public sub_0202D7E8
 .public sub_0204C378
@@ -180,7 +180,7 @@
 .public sub_0204C318
 .public sub_0204B28C
 .public sub_0202D7F4
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BAB8
 .public sub_0204BAB8
 .public GFL_HeapFree
@@ -193,7 +193,7 @@
 .public sub_0204B98C
 .public sub_0204C124
 .public sub_0219F9B8
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0219F9BC
 .public sub_0219F9D0
 .public sub_0204BDE0
@@ -205,8 +205,8 @@
 .public sub_0204BCD0
 .public sub_0219F9E8
 .public sub_0219F9B4
-.public sub_0204B81C
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCGRFile
 .public sub_0204C040
 .public sub_0204C040
 .public sub_0204C438

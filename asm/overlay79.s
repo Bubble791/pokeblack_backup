@@ -1701,7 +1701,7 @@ ovy79_21eb494: ; 0x021EB494
 	str r0, [sp]
 	ldr r0, [r5, #0x1c]
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x24]
 	ldrh r0, [r5, #8]
 	add r1, r4, #0
@@ -1716,7 +1716,7 @@ ovy79_21eb494: ; 0x021EB494
 	add r1, #0x13
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x28]
 	ldrh r3, [r5, #8]
 	ldr r0, [r5, #0x1c]
@@ -4065,7 +4065,7 @@ ovy79_21ec6bc: ; 0x021EC6BC
 	ldr r0, [r5, #0x14]
 	add r7, r1, #0
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r1, #1
 	ldr r6, _021EC760 ; =0x0000030A
 	and r0, r1

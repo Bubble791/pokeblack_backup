@@ -536,7 +536,7 @@ ovy323_219d2cc: ; 0x0219D2CC
 	mov r2, #0
 	mov r3, #0
 	add r7, r0, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x18]
 	mov r0, #2
 	str r0, [sp]
@@ -547,7 +547,7 @@ ovy323_219d2cc: ; 0x0219D2CC
 	mov r1, #0
 	mov r2, #0
 	lsl r3, r3, #6
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x1c]
 	add r0, r7, #0
 	mov r1, #0xc
@@ -733,7 +733,7 @@ ovy323_219d43c: ; 0x0219D43C
 	mov r3, #0
 	add r4, r0, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x54]
 	str r7, [sp]
 	mov r0, #1
@@ -743,7 +743,7 @@ ovy323_219d43c: ; 0x0219D43C
 	mov r1, #2
 	mov r2, #0
 	mov r3, #0xa0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x58]
 	add r0, r4, #0
 	mov r1, #0x1b
@@ -887,7 +887,7 @@ ovy323_219d55c: ; 0x0219D55C
 	mov r3, #1
 	add r4, r0, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x70]
 	str r7, [sp]
 	mov r0, #3
@@ -897,7 +897,7 @@ ovy323_219d55c: ; 0x0219D55C
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x74]
 	add r0, r4, #0
 	mov r1, #0x1b
@@ -1707,7 +1707,7 @@ ovy323_219dbbc: ; 0x0219DBBC
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #8]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp, #0x18]
 	mov r0, #0
 	sub r1, r0, #1

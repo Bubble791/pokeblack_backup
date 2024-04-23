@@ -73,7 +73,7 @@
 .public sub_02046D84
 .public sub_0204AA30
 .public sub_0204BBA0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public MI_CpuFill8
@@ -253,7 +253,7 @@
 .public BagSave_GetItemCountByID
 .public sub_02008268
 .public sub_02008B94
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BD0
 .public sub_0200B184
 .public sub_02016AD8

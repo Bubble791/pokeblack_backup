@@ -69,7 +69,7 @@
 .public sub_0204AA30
 .public sub_0204BBA0
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
@@ -305,7 +305,7 @@
 .public sub_02008B94
 .public sub_0201CD1C
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0204898C
@@ -332,12 +332,12 @@
 .public sub_0204BBA0
 .public sub_0204BDE0
 .public sub_02026670
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204BBA0
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuCopy8
 .public MIi_CpuClear16
@@ -725,9 +725,9 @@
 .public sub_0204826C
 .public sub_02044F90
 .public sub_0204AA30
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
@@ -775,9 +775,9 @@
 .public sub_02046F18
 .public BmpWin_FlushChar
 .public sub_021BADEC
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_021BADEC
@@ -939,7 +939,7 @@
 .public sub_0204AA30
 .public sub_0204BBA0
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
@@ -1019,7 +1019,7 @@
 .public sub_02008B94
 .public sub_0201CD1C
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0204898C
@@ -1272,7 +1272,7 @@
 .public sub_02008B94
 .public sub_0201CD1C
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0204898C

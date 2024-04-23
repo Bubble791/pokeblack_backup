@@ -1646,7 +1646,7 @@ ovy311_219db74: ; 0x0219DB74
 	mov r1, #0xa
 	mov r2, #0
 	mov r3, #2
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, r4]
 	add r0, r7, #0
 	mov r1, #0xb

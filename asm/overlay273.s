@@ -1090,7 +1090,7 @@ _021E9B10:
 _021E9B34:
 	ldr r0, [sp, #8]
 	ldr r0, [r0, #0x34]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021E9B44
 	mov r0, #0

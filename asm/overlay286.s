@@ -2046,7 +2046,7 @@ _021F5422:
 	mov r3, #1
 	str r0, [sp]
 	ldr r0, [sp, #0xc]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, _021F5498 ; =0x00000544
 	str r0, [r6, r1]
 	ldr r1, [sp, #4]
@@ -2232,7 +2232,7 @@ ovy286_21f559c: ; 0x021F559C
 	add r6, r0, #0
 	str r1, [sp]
 	mov r1, #0xe
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r4, #0x56
 	lsl r4, r4, #4
 	str r0, [r5, r4]
@@ -2299,7 +2299,7 @@ ovy286_21f5624: ; 0x021F5624
 	mov r1, #0x6a
 	lsl r1, r1, #2
 	mov r7, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r4, _021F56E0 ; =0x00000564
 	mov r1, #0x6a
 	str r0, [r5, r4]
@@ -2316,7 +2316,7 @@ ovy286_21f5624: ; 0x021F5624
 	add r1, r7, #0
 	mov r2, #1
 	add r3, #0xfc
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r4, #0
 	add r1, #0x24
 	str r0, [r5, r1]

@@ -39578,8 +39578,8 @@ _0204B816:
 _0204B818: .word 0x0214193C
 	thumb_func_end sub_0204B7FC
 
-	thumb_func_start sub_0204B81C
-sub_0204B81C: ; 0x0204B81C
+	thumb_func_start Oam_LoadNCGRFile
+Oam_LoadNCGRFile: ; 0x0204B81C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r6, r1, #0
@@ -39660,7 +39660,7 @@ _0204B8B0:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0204B8B8: .word 0x0214193C
-	thumb_func_end sub_0204B81C
+	thumb_func_end Oam_LoadNCGRFile
 
 	thumb_func_start sub_0204B8BC
 sub_0204B8BC: ; 0x0204B8BC
@@ -40050,13 +40050,13 @@ sub_0204BBA0: ; 0x0204BBA0
 	add r4, sp, #0x18
 	ldrh r4, [r4]
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add sp, #0xc
 	pop {r3, r4, pc}
 	thumb_func_end sub_0204BBA0
 
-	thumb_func_start sub_0204BBB8
-sub_0204BBB8: ; 0x0204BBB8
+	thumb_func_start Oam_LoadNCLRFile
+Oam_LoadNCLRFile: ; 0x0204BBB8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r7, r1, #0
@@ -40129,7 +40129,7 @@ _0204BC3C:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0204BC44: .word 0x0214193C
-	thumb_func_end sub_0204BBB8
+	thumb_func_end Oam_LoadNCLRFile
 
 	thumb_func_start sub_0204BC48
 sub_0204BC48: ; 0x0204BC48

@@ -250,7 +250,7 @@
 .public sub_0202111C
 .public sub_02021190
 .public sub_0204AA30
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public MI_CpuFill8

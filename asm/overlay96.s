@@ -1115,7 +1115,7 @@ _021EF56C:
 	add r0, r5, #0
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021EF584
 	mov r0, #0x54
@@ -1525,7 +1525,7 @@ _021EF898:
 	ldr r0, [sp, #8]
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r7, #0x56
 	cmp r0, #0
 	beq _021EF8C6
@@ -1666,7 +1666,7 @@ _021EF9F0:
 	ldr r0, [sp, #8]
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r2, #0x56
 	cmp r0, #0
 	beq _021EFA06

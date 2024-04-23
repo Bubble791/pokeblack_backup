@@ -1738,7 +1738,7 @@ ovy305_219db48: ; 0x0219DB48
 	bl sub_02008BA0
 	ldr r0, [r5]
 	ldr r0, [r0, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [r5, #0x14]
 	add r0, r4, #0
 	add r1, r6, #0

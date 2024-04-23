@@ -1833,7 +1833,7 @@ ovy165_219a894: ; 0x0219A894
 	str r0, [sp, #8]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r6, #0
 	sub r1, #0x24
 	str r0, [r5, r1]
@@ -1843,7 +1843,7 @@ ovy165_219a894: ; 0x0219A894
 	str r0, [sp]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	sub r1, r6, #4
 	str r0, [r5, r1]
 	ldrh r0, [r5]
@@ -1852,7 +1852,7 @@ ovy165_219a894: ; 0x0219A894
 	str r0, [sp]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, r6]
 	ldrh r3, [r5]
 	add r0, r4, #0
@@ -1960,7 +1960,7 @@ ovy165_219a894: ; 0x0219A894
 	str r0, [sp, #8]
 	add r0, r7, #0
 	mov r4, #0xa0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #0xa0
 	add r1, #0xf0
 	str r0, [r5, r1]
@@ -1972,7 +1972,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0xc]
 	add r1, #0xf4
 	str r0, [r5, r1]
@@ -2001,7 +2001,7 @@ ovy165_219a894: ; 0x0219A894
 	str r0, [sp, #8]
 	add r0, r7, #0
 	add r3, #0x80
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #0xa0
 	add r1, #0xe0
 	str r0, [r5, r1]
@@ -2012,7 +2012,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0xc]
 	add r1, #0xe4
 	str r0, [r5, r1]
@@ -2040,7 +2040,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0x60
 	str r0, [sp, #8]
 	add r0, r7, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #0xa0
 	add r1, #0xe4
 	str r0, [r5, r1]
@@ -2051,7 +2051,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0xc]
 	add r1, #0xe8
 	str r0, [r5, r1]
@@ -2079,7 +2079,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0x80
 	str r0, [sp, #8]
 	add r0, r7, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r4, #0xec
 	str r0, [r5, r4]
 	bl sub_0202D8B4
@@ -2089,7 +2089,7 @@ ovy165_219a894: ; 0x0219A894
 	mov r3, #0
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0xc]
 	add r1, #0xf0
 	str r0, [r5, r1]
@@ -8053,7 +8053,7 @@ _0219DB7C:
 	ldrh r0, [r1]
 	cmp r0, #0
 	beq _0219DBB4
-	bl sub_02026B40
+	bl Item_GetTmHmIndex
 	add r1, r0, #0
 	cmp r1, #0xff
 	beq _0219DBAE
@@ -9924,7 +9924,7 @@ _0219EA6A:
 	add r0, r6, #0
 	mov r3, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0x2c]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -14804,7 +14804,7 @@ _021A0FA4:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r6, #0
 	add r1, #0x24
 	str r0, [r5, r1]
@@ -15164,7 +15164,7 @@ ovy165_21a1284: ; 0x021A1284
 	mov r3, #1
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0xc]
 	add r0, r7, #0
 	bl GFL_ArcToolFree

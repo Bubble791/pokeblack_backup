@@ -1082,7 +1082,7 @@ _021E606C:
 	ldr r0, [sp, #0x4c]
 	bl sub_020171F4
 	add r0, #0x20
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021E6080
 	mov r0, #1
@@ -1668,7 +1668,7 @@ sub_021E6474: ; 0x021E6474
 	ldr r0, [sp, #0x4c]
 	bl sub_020171F4
 	add r0, #0x20
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r1, #1
 	cmp r0, #0
 	beq _021E6488
@@ -3194,7 +3194,7 @@ ovy50_21e6fd4: ; 0x021E6FD4
 	bl sub_02008BFC
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r4, #0xea
 	lsl r1, r4, #0x18
 	lsr r1, r1, #0x18

@@ -687,7 +687,7 @@ ovy203_21a7d60: ; 0x021A7D60
 	add r1, r6, #5
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, r4
 	str r0, [r1, #0x14]
 	mov r0, #0
@@ -704,7 +704,7 @@ ovy203_21a7d60: ; 0x021A7D60
 	add r1, r6, #4
 	add r2, r7, #0
 	add r3, #0xfe
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, r4
 	str r0, [r1, #0x18]
 	ldr r0, [sp, #0xc]
@@ -736,7 +736,7 @@ ovy203_21a7dc4: ; 0x021A7DC4
 	add r1, r1, #1
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, r7
 	sub r4, #8
 	str r0, [r1, #0x14]
@@ -863,7 +863,7 @@ _021A7EA0:
 	mov r1, #0xb
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #0
 	sub r1, #0x18
 	str r0, [r5, r1]
@@ -878,7 +878,7 @@ _021A7EA0:
 	ldr r0, [r5, r4]
 	add r2, r7, #0
 	lsl r3, r1, #5
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	sub r4, #0x14
 	str r0, [r5, r4]
 	add sp, #0xc
@@ -952,7 +952,7 @@ ovy203_21a7f44: ; 0x021A7F44
 	ldr r0, [r4, r5]
 	add r2, r7, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	sub r5, #8
 	str r0, [r4, r5]
 	add sp, #0xc

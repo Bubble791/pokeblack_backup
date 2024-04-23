@@ -1073,7 +1073,7 @@ ovy140_219d708: ; 0x0219D708
 	mov r1, #5
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	add r0, r4, #0
 	mov r1, #4
@@ -1086,7 +1086,7 @@ ovy140_219d708: ; 0x0219D708
 	mov r1, #0xc
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x10]
 	add r0, r4, #0
 	mov r1, #0xb

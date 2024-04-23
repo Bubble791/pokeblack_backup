@@ -448,7 +448,7 @@
 .public sub_0204AA30
 .public sub_02016AD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0204B0D4
 .public sub_0204AE3C
 .public sub_0204AFB0

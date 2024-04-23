@@ -943,7 +943,7 @@ ovy266_219d5c4: ; 0x0219D5C4
 	mov r1, #7
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0xc]
 	str r7, [sp]
 	add r0, r5, #0
@@ -2364,7 +2364,7 @@ ovy266_219e074: ; 0x0219E074
 	add r4, r1, #0
 	ldr r0, [r0, #8]
 	ldr r6, [r5, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r2, r0, #0
 	ldrb r0, [r4]
 	cmp r0, #9

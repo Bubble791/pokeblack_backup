@@ -5409,7 +5409,7 @@ _021AA05A:
 	mov r2, #0
 	mov r3, #1
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r2, r5, r1
 	mov r1, #0x21
@@ -5459,7 +5459,7 @@ ovy215_21aa0bc: ; 0x021AA0BC
 	mov r3, #0
 	add r6, r0, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r4, #0x87
 	lsl r4, r4, #2
 	str r0, [r5, r4]
@@ -5492,7 +5492,7 @@ ovy215_21aa0bc: ; 0x021AA0BC
 	mov r2, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #4
 	str r0, [r5, r1]
 	bl sub_0202D810

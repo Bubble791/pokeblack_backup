@@ -1080,7 +1080,7 @@ ovy144_219d720: ; 0x0219D720
 	mov r2, #0
 	mov r3, #0
 	add r7, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5]
 	str r4, [sp]
 	add r0, r7, #0
@@ -1088,7 +1088,7 @@ ovy144_219d720: ; 0x0219D720
 	mov r2, #0
 	mov r3, #0
 	mov r6, #8
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	add r0, r7, #0
 	mov r1, #0xc
@@ -5043,7 +5043,7 @@ ovy144_219f5ac: ; 0x0219F5AC
 	mov r1, #8
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x18]
 	add r0, r7, #0
 	mov r1, #0xc

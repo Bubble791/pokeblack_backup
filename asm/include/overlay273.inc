@@ -35,7 +35,7 @@
 .public MI_CpuFill8
 .public sub_02008B34
 .public sub_02008B34
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008B34
 .public sub_02008B34
 .public sub_020486B8

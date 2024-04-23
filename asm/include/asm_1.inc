@@ -4147,7 +4147,7 @@
 .public sub_02044238
 .public GFL_HeapAllocate
 .public GFL_HeapFree
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BC48
 .public sub_0204BDC0
 .public sub_0204BCD0
@@ -4657,16 +4657,16 @@
 .public sub_0204AA04
 .public sub_0204B2B4
 .public sub_0204AA30
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BA40
 .public GFL_HeapFree
 .public sub_0204AA30
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204AA30
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204AA30
 .public sub_0204BDE0
 .public GFL_ArcToolFree
@@ -4704,8 +4704,8 @@
 .public sub_020484E8
 .public sub_020484EC
 .public sub_0204AA30
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204BCD0
@@ -5575,7 +5575,7 @@
 .public sub_02008BDC
 .public sub_02008BE0
 .public sub_02008BEC
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BF4
 .public sub_02008BF8
 .public sub_02008BFC
@@ -7931,7 +7931,7 @@
 .public sub_02026ABC
 .public sub_02026AE4
 .public sub_02026B18
-.public sub_02026B40
+.public Item_GetTmHmIndex
 .public sub_02026B84
 .public Item_IsMail
 .public sub_02026BC0
@@ -10341,7 +10341,7 @@
 .public sub_0204B794
 .public sub_0204B7C8
 .public sub_0204B7FC
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204B8BC
 .public sub_0204B98C
 .public sub_0204BA40
@@ -10349,7 +10349,7 @@
 .public sub_0204BB58
 .public sub_0204BB80
 .public sub_0204BBA0
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BC48
 .public sub_0204BCD0
 .public sub_0204BD10

@@ -1375,7 +1375,7 @@ ovy135_21ef660: ; 0x021EF660
 	str r0, [sp, #0x24]
 	ldr r0, [sp, #0x28]
 	mov r7, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r6, r0, #0x18
 	ldr r0, [sp, #0x2c]

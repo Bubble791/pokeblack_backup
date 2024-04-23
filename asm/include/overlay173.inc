@@ -77,8 +77,8 @@
 .public sub_0204B0B8
 .public sub_02045350
 .public sub_0204AD88
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -257,7 +257,7 @@
 .public sub_02008BB0
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_020232E8
 .public BmpWin_GetBitmap
 .public sub_02021CFC
@@ -446,7 +446,7 @@
 .public sub_0201FF08
 .public sub_0201D624
 .public sub_02020F40
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204C040
 .public sub_020210C0
 .public sub_0204C378
@@ -781,7 +781,7 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BF4
 .public sub_02008C0C
 .public sub_02008C10
@@ -885,7 +885,7 @@
 .public sub_02024FAC
 .public sub_0219CFAC
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0200A170
 .public sub_021A5424
 .public GFL_ArcToolFree

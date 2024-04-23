@@ -1298,7 +1298,7 @@ ovy70_217da28: ; 0x0217DA28
 	mov r1, #3
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x40]
 	str r6, [sp]
 	add r0, r4, #0
@@ -1319,7 +1319,7 @@ ovy70_217da28: ; 0x0217DA28
 	add r0, r7, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x4c]
 	bl sub_0202D810
 	add r1, r0, #0
@@ -1332,7 +1332,7 @@ ovy70_217da28: ; 0x0217DA28
 	add r0, r7, #0
 	mov r2, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x48]
 	mov r0, #0
 	bl sub_0202D818
@@ -1350,7 +1350,7 @@ ovy70_217da28: ; 0x0217DA28
 	mov r1, #3
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x58]
 	str r6, [sp]
 	add r0, r4, #0

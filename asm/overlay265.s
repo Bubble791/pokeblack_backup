@@ -3513,7 +3513,7 @@ ovy265_219b43c: ; 0x0219B43C
 	mov r3, #0
 	add r6, r0, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r4, _0219B4B0 ; =0x000090D4
 	mov r1, #3
 	str r0, [r5, r4]
@@ -3685,7 +3685,7 @@ ovy265_219b544: ; 0x0219B544
 	mov r3, #1
 	add r4, r0, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, _0219B6B4 ; =0x00009118
 	mov r2, #1
 	sub r1, #0x38
@@ -3710,7 +3710,7 @@ ovy265_219b544: ; 0x0219B544
 	bl GFL_ArcToolFree
 	ldr r0, [r5]
 	ldr r0, [r0, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219B610
 	mov r6, #0

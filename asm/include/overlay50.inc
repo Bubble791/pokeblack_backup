@@ -122,7 +122,7 @@
 .public sub_0217BCB4
 .public sub_0200E418
 .public sub_020171F4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0219A7D0
 .public sub_0200C260
 .public sub_0200C340
@@ -190,7 +190,7 @@
 .public sub_02031954
 .public sub_020324F8
 .public sub_020171F4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0217BE88
 .public sub_0200E11C
 .public sub_021E6F60
@@ -346,4 +346,4 @@
 .public sub_0200BE50
 .public sub_021804D8
 .public sub_02008BFC
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender

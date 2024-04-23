@@ -136,7 +136,7 @@
 .public ovy12_21548e8
 .public sub_02155174
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public ovy12_2154910
 .public ovy12_21548e8
 .public ovy12_21548e8

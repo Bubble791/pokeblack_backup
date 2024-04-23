@@ -91,7 +91,7 @@
 .public sub_02008BD0
 .public sub_02008C0C
 .public sub_02008C10
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BF4
 .public sub_0202B5E8
 .public sub_0200EF90

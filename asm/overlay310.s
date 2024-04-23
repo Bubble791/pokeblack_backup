@@ -2589,7 +2589,7 @@ ovy310_219e200: ; 0x0219E200
 	mov r2, #0
 	mov r3, #1
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0x10
@@ -2641,7 +2641,7 @@ ovy310_219e268: ; 0x0219E268
 	mov r3, #0
 	add r6, r0, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -2652,7 +2652,7 @@ ovy310_219e268: ; 0x0219E268
 	mov r2, #0
 	mov r3, #0xc0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0xe
@@ -7508,7 +7508,7 @@ ovy310_21a075c: ; 0x021A075C
 	mov r2, #0
 	mov r3, #1
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [sp, #4]
 	add r0, r7, #0
 	mov r1, #0x10
@@ -7578,7 +7578,7 @@ ovy310_21a07e8: ; 0x021A07E8
 	mov r3, #0
 	add r6, r0, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -7589,7 +7589,7 @@ ovy310_21a07e8: ; 0x021A07E8
 	mov r2, #0
 	mov r3, #0xc0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0xe
@@ -7612,7 +7612,7 @@ ovy310_21a07e8: ; 0x021A07E8
 	mov r2, #0
 	mov r3, #0x80
 	mov r4, #0x80
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r6, r0, #0
 	ldr r0, [sp, #0x14]
 	bl GFL_ArcToolFree
@@ -14356,7 +14356,7 @@ ovy310_21a3c68: ; 0x021A3C68
 	mov r2, #0
 	mov r3, #1
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0x10
@@ -14416,7 +14416,7 @@ ovy310_21a3ce0: ; 0x021A3CE0
 	mov r3, #0
 	add r6, r0, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -14427,7 +14427,7 @@ ovy310_21a3ce0: ; 0x021A3CE0
 	mov r2, #0
 	mov r3, #0xc0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0xe
@@ -14449,7 +14449,7 @@ ovy310_21a3ce0: ; 0x021A3CE0
 	mov r2, #0
 	mov r3, #0x80
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r4, r0, #0
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -15620,7 +15620,7 @@ ovy310_21a4524: ; 0x021A4524
 	mov r3, #0
 	add r6, r0, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -15631,7 +15631,7 @@ ovy310_21a4524: ; 0x021A4524
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0x15

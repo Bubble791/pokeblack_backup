@@ -92,7 +92,7 @@
 .public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public sub_02008BA0
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0219D760
 .public GFL_StrBufFree
 .public sub_02048210

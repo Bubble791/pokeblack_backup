@@ -84,9 +84,9 @@
 .public sub_0204BE64
 .public sub_0204BF98
 .public sub_0204AA30
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_021F4EF8

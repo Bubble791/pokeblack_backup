@@ -928,7 +928,7 @@ ovy62_21e5f50: ; 0x021E5F50
 	add r0, r6, #0
 	bl sub_02155174
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
 	add r0, r5, #0

@@ -1393,7 +1393,7 @@ ovy33_21775e8: ; 0x021775E8
 	str r0, [r4, #0x18]
 	str r5, [r4, #0x20]
 	ldr r0, [r4, #0x10]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strh r0, [r4, #0x24]
 	ldr r0, [r4, #8]
 	str r0, [r4, #0x48]
@@ -3864,7 +3864,7 @@ ovy33_2178908: ; 0x02178908
 	str r5, [r4, #8]
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _02178946
 	mov r0, #0xb
@@ -8022,7 +8022,7 @@ _0217AA60:
 	cmp r0, #0xf
 	bls _0217AAA0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	beq _0217AA9E
 	mov r0, #0xf
@@ -8084,7 +8084,7 @@ _0217AB00:
 	add r1, r5, #0
 	bl sub_02009E58
 	add r6, r0, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp, #8]
 	ldr r0, [sp, #0xc]
 	add r1, r5, #0
@@ -9328,7 +9328,7 @@ ovy33_217b478: ; 0x0217B478
 	str r0, [r4]
 	ldr r0, [sp, #0xc]
 	str r7, [r4, #0x6c]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strb r0, [r4, #0xa]
 	add r0, r5, #0
 	mov r1, #0x38
@@ -9458,7 +9458,7 @@ _0217B59A:
 	ldr r6, _0217B660 ; =0x0000012F
 	bl sub_020171F4
 	add r0, #0x20
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	beq _0217B5E2
 	sub r6, r6, #3

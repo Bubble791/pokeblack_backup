@@ -181,7 +181,7 @@ ovy174_219cfcc: ; 0x0219CFCC
 	mov r1, #7
 	add r6, r0, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #0
 	add r1, #0x44
 	str r0, [r5, r1]
@@ -193,7 +193,7 @@ ovy174_219cfcc: ; 0x0219CFCC
 	mov r3, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r4, #0
 	add r1, #0x40
 	str r0, [r5, r1]

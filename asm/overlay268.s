@@ -3335,7 +3335,7 @@ _021BBB58:
 	str r0, [sp]
 	ldr r0, [sp, #0x34]
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x50]
 	add r0, sp, #0x48
 	add r1, r6, #0
@@ -8432,7 +8432,7 @@ _021BE362:
 	str r0, [sp]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x1c]
 	ldr r2, [sp, #0xc]
 	strh r0, [r1, #0x18]

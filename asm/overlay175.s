@@ -2463,14 +2463,14 @@ ovy175_219aaec: ; 0x0219AAEC
 	lsl r3, r3, #0x15
 	lsr r3, r3, #0x10
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x30]
 	str r4, [sp]
 	add r0, r6, #0
 	mov r1, #0x28
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x34]
 	add r0, r6, #0
 	mov r1, #0x27

@@ -728,7 +728,7 @@ _021EB3AE:
 	lsr r0, r0, #0x10
 	str r0, [r4, #0x38]
 	add r0, r5, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r1, r4, #0
 	add r1, #0x3c
 	strb r0, [r1]
@@ -1782,7 +1782,7 @@ _021EBCB8:
 	ldr r0, [sp, #4]
 	add r1, r1, r5
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r5, #2
 	ldr r2, [r4, #0xc]
 	add r5, r5, #1

@@ -77,13 +77,13 @@
 .public sub_0204BF1C
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public sub_0204BDE0
 .public sub_0202D814
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0202D810
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0

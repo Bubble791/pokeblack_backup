@@ -98,7 +98,7 @@
 .public sub_0204C040
 .public sub_0204C124
 .public sub_0204AA30
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public MI_CpuFill8
@@ -266,8 +266,8 @@
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public sub_0204AA30
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public MI_CpuFill8

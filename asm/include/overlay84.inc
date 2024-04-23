@@ -58,7 +58,7 @@
 .public sub_0200C924
 .public sub_02008DD0
 .public sub_02008BD0
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BF4
 .public sub_02013BA8
 .public sub_02013B8C
@@ -169,7 +169,7 @@
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public sub_0204BBA0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public sub_0204BE64
 .public sub_0204B98C

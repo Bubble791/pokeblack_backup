@@ -17,7 +17,7 @@ ovy279_21e8be0: ; 0x021E8BE0
 	add r0, r4, #0
 	bl sub_02007FD8
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021E8C0A
 	add r0, r4, #0

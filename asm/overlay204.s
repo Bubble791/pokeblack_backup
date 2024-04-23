@@ -839,7 +839,7 @@ ovy204_21aa188: ; 0x021AA188
 	mov r1, #4
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x70
 	add r1, #0xd4
 	str r0, [r5, r1]
@@ -870,7 +870,7 @@ ovy204_21aa188: ; 0x021AA188
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r6, #0xd8
 	str r0, [r5, r6]
 	bl sub_0202D810

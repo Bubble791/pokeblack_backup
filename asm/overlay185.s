@@ -1298,7 +1298,7 @@ _0219D822:
 	mov r1, #0x13
 	mov r2, #0
 	add r3, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x28]
 	add r0, r6, #0
 	mov r1, #0x24
@@ -1318,7 +1318,7 @@ _0219D822:
 	mov r1, #0x2e
 	mov r2, #0
 	add r3, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x40]
 	add r0, r6, #0
 	mov r1, #0x22
@@ -7761,7 +7761,7 @@ ovy185_21a0924: ; 0x021A0924
 	mov r1, #0xd
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x14]
 	add r0, r6, #0
 	mov r1, #0x23
@@ -7935,7 +7935,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	add r0, r4, #0
 	mov r2, #0
 	lsl r3, r3, #7
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x1c]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -7943,7 +7943,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	add r0, r4, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x20]
 	mov r0, #1
 	bl sub_0202D818

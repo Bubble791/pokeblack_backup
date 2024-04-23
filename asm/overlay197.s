@@ -561,7 +561,7 @@ ovy197_21b58ac: ; 0x021B58AC
 	mov r1, #0x10
 	mov r2, #0
 	mov r3, #2
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	add r0, r6, #0
 	mov r1, #8
@@ -4402,7 +4402,7 @@ _021B770C:
 _021B771C:
 	ldr r0, [sp, #0x18]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r2, r0, #0
 _021B7728:
 	add r0, r5, #0
@@ -4589,7 +4589,7 @@ _021B7868:
 	str r0, [sp]
 	add r0, r5, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x10]
 	str r0, [r1, #0x10]
 	add r0, r5, #0
@@ -4630,7 +4630,7 @@ _021B78DC:
 	str r0, [sp]
 	add r0, r5, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x10]
 	str r0, [r1, #0x10]
 	add r0, r5, #0
@@ -9665,7 +9665,7 @@ _021B9F8E:
 	add r1, r4, #0
 	add r3, r4, #0
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	ldr r1, [sp, #0x24]
 	mov r2, #0x23
 	add r1, #0x50
@@ -9683,7 +9683,7 @@ _021B9F8E:
 	str r0, [sp]
 	add r0, r6, #0
 	add r3, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x24]
 	add r2, r4, #0
 	add r1, #0x48
@@ -10308,7 +10308,7 @@ _021BA48E:
 	ldr r0, [sp, #0x48]
 	mov r2, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	ldr r1, [sp, #0xc]
 	add r4, #0x80
 	add r1, r1, r5
@@ -10348,7 +10348,7 @@ _021BA554:
 	ldr r0, [sp, #0x48]
 	mov r3, #0
 	mov r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r7, r5]
 	ldr r0, [sp, #0x48]
 	bl GFL_ArcToolFree
@@ -13633,7 +13633,7 @@ _021BBE06:
 	add r0, r7, #0
 	mov r1, #0xc
 	mov r2, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #8]
 	add r0, r7, #0
 	bl GFL_ArcToolFree
@@ -14518,7 +14518,7 @@ _021BC5A0:
 _021BC5B0:
 	ldr r0, [sp, #0x44]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r2, r0, #0
 _021BC5BC:
 	add r0, r5, #0
@@ -18118,7 +18118,7 @@ _021BE19A:
 _021BE1AA:
 	ldr r0, [sp, #0x10]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r2, r0, #0
 _021BE1B6:
 	add r0, r5, #0

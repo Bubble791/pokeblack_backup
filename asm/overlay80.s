@@ -30,7 +30,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	ldr r0, [r5, #0x18]
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r6, #0
 	add r1, r0, #0
 	str r6, [sp]

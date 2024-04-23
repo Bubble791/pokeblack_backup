@@ -60,8 +60,8 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204BBA0
-.public sub_0204B81C
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public sub_0204BDE0
 .public sub_0204B37C
@@ -203,7 +203,7 @@
 .public VEC_Distance
 .public sub_021EBB6C
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_020098C8
 .public sub_020098E8
 .public sub_0204BF1C

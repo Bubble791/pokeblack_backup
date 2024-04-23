@@ -62,12 +62,12 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0204AA30
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204C040

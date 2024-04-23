@@ -2986,7 +2986,7 @@ ovy306_219e5f4: ; 0x0219E5F4
 	ldr r0, [r0]
 	str r1, [sp, #0xc]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x10]

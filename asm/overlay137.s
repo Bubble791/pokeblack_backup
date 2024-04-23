@@ -9725,7 +9725,7 @@ _021F35D6:
 	add r4, r0, #0
 	ldr r0, [sp, #0x134]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r6, r0, #0
 	add r2, sp, #0xd4
 	ldr r0, [sp, #0x38]
@@ -9839,7 +9839,7 @@ _021F36D6:
 	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r6, r0, #0
 	ldr r0, [sp, #0x2c]
 	mov r1, #0x58
@@ -9880,7 +9880,7 @@ _021F373C:
 	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r6, r0, #0
 	add r2, sp, #0x8c
 	ldr r0, [sp, #0x2c]

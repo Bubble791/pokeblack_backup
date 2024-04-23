@@ -130,7 +130,7 @@
 .public sub_02016EDC
 .public sub_02016AD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0218105C
 .public sub_02180494
 .public ovy36_0218056c
@@ -182,7 +182,7 @@
 .public sub_0219A664
 .public sub_02016AD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_021B8224
 .public sub_021B8258
 .public sub_021B8224
@@ -206,7 +206,7 @@
 .public sub_02167308
 .public sub_02016AD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_021B8224
 .public sub_021B8224
 .public sub_021862B8

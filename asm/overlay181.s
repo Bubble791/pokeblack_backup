@@ -1469,7 +1469,7 @@ _0219DA7C:
 	mov r3, #0
 	str r0, [sp, #8]
 	add r0, r4, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x70]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -1478,7 +1478,7 @@ _0219DA7C:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x74]
 	mov r0, #2
 	bl sub_0202D818

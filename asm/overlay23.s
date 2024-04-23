@@ -15,7 +15,7 @@ ovy23_216e660: ; 0x0216E660
 	bl sub_02008BD0
 	str r0, [sp, #0x20]
 	ldr r0, [sp, #0x10]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	ldr r0, [sp, #0x18]
 	bl sub_0201FD00
 	str r0, [sp, #0x30]
@@ -286,7 +286,7 @@ ovy23_216e884: ; 0x0216E884
 	bl sub_0204A934
 	add r7, r0, #0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r6, r0, #0
 	mov r0, #0
 	str r0, [r4]
@@ -357,7 +357,7 @@ ovy23_216e920: ; 0x0216E920
 	bl sub_0204A934
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r1, #1
 	str r1, [r5]
 	mov r1, #0
@@ -642,7 +642,7 @@ ovy23_216eba0: ; 0x0216EBA0
 	ldr r0, [r4, #0x34]
 	add r7, r2, #0
 	add r6, r3, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r2, #1
 	cmp r0, #0
 	beq _0216EBB8
@@ -902,7 +902,7 @@ ovy23_216ed58: ; 0x0216ED58
 	ldrb r0, [r0]
 	str r0, [r5, #4]
 	ldr r0, [r4, #0x34]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [r5, #0xc]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

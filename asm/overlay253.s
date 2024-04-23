@@ -614,7 +614,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #7
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x20]
 	add r0, r7, #0
 	mov r1, #8
@@ -634,7 +634,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0xb
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x2c]
 	add r0, r7, #0
 	mov r1, #0xc
@@ -654,7 +654,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0xf
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x38]
 	add r0, r7, #0
 	mov r1, #0x10
@@ -674,7 +674,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0x20
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x44]
 	add r0, r7, #0
 	mov r1, #0x12

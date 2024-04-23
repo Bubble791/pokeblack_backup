@@ -2362,7 +2362,7 @@ ovy294_21a2cc0: ; 0x021A2CC0
 	mov r1, #0xa
 	add r4, r0, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r6, _021A2D54 ; =0x000010AC
 	mov r1, #0xb
 	str r0, [r5, r6]
@@ -2593,7 +2593,7 @@ ovy294_21a2ea0: ; 0x021A2EA0
 	push {r3, lr}
 	ldr r0, [r0, #4]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _021A2EB2
 	mov r0, #1

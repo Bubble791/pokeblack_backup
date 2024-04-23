@@ -1127,7 +1127,7 @@ ovy86_21eb0e4: ; 0x021EB0E4
 	str r0, [sp, #0xc]
 	str r2, [sp, #8]
 	mov r2, #1
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x2c]
 _021EB10A:
 	mov r1, #0
@@ -1161,7 +1161,7 @@ _021EB12A:
 	str r0, [sp]
 	ldr r0, [sp, #0xc]
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r6, #0x30]
 	ldrb r1, [r7, #1]
 	ldrb r2, [r7, #2]
@@ -1365,7 +1365,7 @@ _021EB298:
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x18]
 	mov r6, #1
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x18]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -1374,7 +1374,7 @@ _021EB298:
 	mov r3, #1
 	str r0, [sp]
 	ldr r0, [sp, #0x18]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x1c]
 	mov r0, #0
 	bl sub_0202D818

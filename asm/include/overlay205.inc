@@ -162,13 +162,13 @@
 .public sub_0204AF50
 .public sub_0204B0D4
 .public sub_0204BBA0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public sub_0204BBA0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public sub_0204BBA0
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public sub_02024D00
 .public sub_0204B0B8

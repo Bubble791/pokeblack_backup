@@ -785,7 +785,7 @@ ovy326_219d450: ; 0x0219D450
 	add r2, r7, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #2
 	ldrsh r1, [r4, r1]
 	mov r2, #0
@@ -798,7 +798,7 @@ ovy326_219d450: ; 0x0219D450
 	ldrsh r1, [r4, r1]
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0xa
 	ldrsh r1, [r4, r1]
 	mov r2, #0x18
@@ -857,7 +857,7 @@ ovy326_219d4d0: ; 0x0219D4D0
 	add r0, r4, #0
 	add r2, r6, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #4]
 	ldrh r0, [r5]
 	ldr r1, [sp, #0xc]
@@ -865,7 +865,7 @@ ovy326_219d4d0: ; 0x0219D4D0
 	str r0, [sp]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x10]
@@ -1499,7 +1499,7 @@ ovy326_219da44: ; 0x0219DA44
 	add r5, r0, #0
 	ldr r0, [r5, #0x48]
 	ldr r0, [r0, #0xc]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r1, r5, #0
 	mov r2, #0
 	add r1, #0x94
@@ -8264,7 +8264,7 @@ ovy326_21a0f1c: ; 0x021A0F1C
 	add r2, r7, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #2
 	ldrsh r1, [r4, r1]
 	mov r2, #0
@@ -8277,7 +8277,7 @@ ovy326_21a0f1c: ; 0x021A0F1C
 	ldrsh r1, [r4, r1]
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0xa
 	ldrsh r1, [r4, r1]
 	mov r2, #0x18
@@ -8336,7 +8336,7 @@ ovy326_21a0f9c: ; 0x021A0F9C
 	add r0, r4, #0
 	add r2, r6, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #4]
 	ldrh r0, [r5]
 	ldr r1, [sp, #0xc]
@@ -8344,7 +8344,7 @@ ovy326_21a0f9c: ; 0x021A0F9C
 	str r0, [sp]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x10]

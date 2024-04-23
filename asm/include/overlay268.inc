@@ -302,7 +302,7 @@
 .public sub_0200C124
 .public sub_0200C124
 .public sub_02020F94
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C318
@@ -789,7 +789,7 @@
 .public sub_0204BDE0
 .public MI_CpuFill8
 .public sub_02020F94
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204C040
 .public sub_02021034
 .public sub_0204C378

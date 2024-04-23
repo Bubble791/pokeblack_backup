@@ -50,7 +50,7 @@
 .public sub_02042A78
 .public sub_02008B98
 .public sub_02008BF4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BD0
 .public sub_02008C0C
 .public sub_02008C10
@@ -69,7 +69,7 @@
 .public sub_02170C9C
 .public OS_GetMacAddress
 .public sub_02008BF4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02043E98
 .public MI_CpuCopy8
 .public sub_02043E98

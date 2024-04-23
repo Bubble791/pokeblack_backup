@@ -769,7 +769,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02038F00
 .public sub_02048614
 .public sub_0202437C
@@ -784,14 +784,14 @@
 .public GFL_StrBufFree
 .public sub_0201736C
 .public GFL_StrBufCreate
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_020370EC
 .public sub_02048614
 .public sub_0202437C
 .public GFL_StrBufFree
 .public sub_0201736C
 .public GFL_StrBufCreate
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_020370EC
 .public sub_02048614
 .public sub_0202437C

@@ -20,6 +20,9 @@ enum
     BAG_SORT_INDEX
 };
 
+#define SORT_MORE_TO_LESS   0
+#define SORT_LESS_TO_MORE   1
+
 extern void sub_0203DEB4(int, int);
 extern int Item_GetItemParam(u16, int, u16);
 extern void LoadItemNameToStrbuf(int , int, int);
@@ -134,9 +137,9 @@ struct BagViewWork
     /*0x594*/ int unk594;
     /*0x598*/ int unk598;
     /*0x59C*/ int unk59C;
-    /*0x5A0*/ int unk5A0;
-    /*0x5A4*/ int unk5A4;
-    /*0x5A8*/ int unk5A8;
+    /*0x5A0*/ int bagPocketNCLR;
+    /*0x5A4*/ int bagPocketNCGR;
+    /*0x5A8*/ int bagPocketNCER;
     /*0x5AC*/ int unk5AC[17];
     /*0x5F0*/ int unk5F0;
     /*0x5F4*/ int unk5F4;
@@ -148,7 +151,7 @@ struct BagViewWork
     /*0x684*/ int unk684[8];
     /*0x6A4*/ int buttonManSystem;
     /*0x6A8*/ int taskCallBack;
-    /*0x6AC*/ int unk6AC;
+    /*0x6AC*/ int spriteGroup;
     /*0x6B0*/ int unk6B0;
     /*0x6B4*/ int unk6B4;
     /*0x6B8*/ int unk6B8;
@@ -326,7 +329,7 @@ extern void* Item_ArcHandleReadFile(void*, u16, int);
 extern void GFL_HeapFree(void*);
 extern int Item_GetParam(void*, int);
 extern void GFL_ArcToolFree(void*);
-void ovy142_219b784(BagView *m_bagView);
+void BagMenu_SortItemByClass(BagView *m_bagView);
 extern MATH_QSort(void*, int, int, int, int);
 
 void ovy142_219bda4(BagView *m_bagView, int param_2);
@@ -375,7 +378,7 @@ extern int sub_0219BE00(BagView*);
 extern int ovy142_219be18(BagView*, int);
 extern void sub_0219F0AC(BagView*);
 extern void sub_0202DA54(int);
-void ovy142_219bcd8(BagView *m_bagView, int param_2);
+void BagMenu_TrySortItem(BagView *m_bagView, int param_2);
 
 void ovy142_219ad30(BagView *m_bagView);
 extern void StringSetNumber(int, int, int, int, int, int);
@@ -415,7 +418,7 @@ extern void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
 extern int ovy142_21a03ac(u8);
 extern void BmpWin_FlushChar(int);
 extern int sub_02026B84(u16);
-extern int sub_02026B40(u16);
+extern int Item_GetTmHmIndex(u16);
 extern void sub_020244A4(int, int, int);
 extern void ovy142_219f4b0(BagView*, int);
 extern void sub_020267C0(int ,u16, u16);
@@ -465,8 +468,8 @@ void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_SetRunFunc(BagView *m_bagView, FieldBagItemUse fun);
 
 void ovy142_219d6a0(BagView *bagView, int a2);
-extern int sub_02008BF0(void*);
-extern int sub_0204BBB8(int, int, int, int, int, int, u16); 
+extern int MyStatus_GetTrainerGender(void*);
+extern int Oam_LoadNCLRFile(int, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
 extern void sub_0204B0D4(int, int, int, int, int, u16);
 extern int sub_0204AE3C(int, int, int, int, int, u16);

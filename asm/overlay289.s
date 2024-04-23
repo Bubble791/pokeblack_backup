@@ -1234,7 +1234,7 @@ ovy289_21f4d74: ; 0x021F4D74
 	str r1, [sp, #8]
 	add r1, r6, #0
 	add r4, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x98
 	str r0, [r1]
@@ -1254,7 +1254,7 @@ ovy289_21f4d74: ; 0x021F4D74
 	mov r3, #1
 	str r0, [sp]
 	add r0, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r5, #0x9c
 	str r0, [r5]
 	add r0, r4, #0

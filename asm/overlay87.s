@@ -1050,7 +1050,7 @@ _021EB180:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r1, #0x94
@@ -1102,7 +1102,7 @@ _021EB1B2:
 	str r1, [sp]
 	mov r1, #4
 	str r0, [sp, #0x14]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, #0
 	add r1, #0xac
 	str r0, [r1]
@@ -1118,7 +1118,7 @@ _021EB1B2:
 	ldr r0, [sp, #0x14]
 	mov r3, #0x60
 	mov r6, #0x60
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0xd4
 	str r0, [r1]

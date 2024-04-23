@@ -49,8 +49,8 @@
 .public sub_0204C2B0
 .public sub_0204AA30
 .public sub_0219E344
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0202D7E0
@@ -60,8 +60,8 @@
 .public sub_0202D814
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_02034060
@@ -129,7 +129,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0200FEAC
 .public sub_0219DD5C
 .public GCTX_HIDGetPressedKeys
@@ -403,8 +403,8 @@
 .public sub_0204C2B0
 .public sub_0204AA30
 .public sub_021A2C0C
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0202D7E0
@@ -414,8 +414,8 @@
 .public sub_0202D814
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_021A2C0C

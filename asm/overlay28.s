@@ -934,7 +934,7 @@ _02170A1E:
 	strb r0, [r5, #6]
 	ldr r0, [r6]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
@@ -1201,7 +1201,7 @@ ovy28_2170ca8: ; 0x02170CA8
 	strb r0, [r4, #6]
 	ldr r0, [r5]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	ldrb r1, [r4, #7]
 	mov r2, #1
 	lsl r0, r0, #0x18

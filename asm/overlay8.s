@@ -239,7 +239,7 @@ ovy8_214f690: ; 0x0214F690
 	bl sub_02008B94
 	str r0, [r4, #8]
 	ldr r0, [sp, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strb r0, [r4, #0xc]
 	ldr r1, [r5, #0x5c]
 	lsl r0, r7, #2

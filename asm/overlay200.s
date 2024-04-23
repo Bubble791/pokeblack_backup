@@ -409,7 +409,7 @@ ovy200_21b3288: ; 0x021B3288
 	bl GFL_ArcToolFree
 	ldr r0, [r5, #4]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	and r0, r7
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
@@ -426,7 +426,7 @@ ovy200_21b3288: ; 0x021B3288
 	add r1, r7, #0
 	mov r3, #0
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x48]
 	ldrh r0, [r5]
 	mov r1, #0x10
@@ -434,7 +434,7 @@ ovy200_21b3288: ; 0x021B3288
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x4c]
 	ldrh r3, [r5]
 	add r0, r6, #0
@@ -448,7 +448,7 @@ ovy200_21b3288: ; 0x021B3288
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x50]
 	ldrh r3, [r5]
 	add r0, r6, #0

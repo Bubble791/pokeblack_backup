@@ -2477,7 +2477,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r4, #0x99
 	lsl r4, r4, #4
 	str r0, [r5, r4]
@@ -2490,7 +2490,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	str r0, [sp, #8]
 	add r0, r6, #0
 	mov r3, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	sub r1, r4, #4
 	str r0, [r5, r1]
 	ldrh r3, [r5, #0xc]

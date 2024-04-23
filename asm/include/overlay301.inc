@@ -33,7 +33,7 @@
 .public sub_02044B84
 .public sub_02044528
 .public sub_0204AA30
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0204B0D4
 .public sub_0204B0D4
 .public sub_0204B0D4

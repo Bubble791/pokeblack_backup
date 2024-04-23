@@ -961,7 +961,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [sp]
 	add r0, r4, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r7, #0xdf
 	lsl r7, r7, #2
 	str r0, [r5, r7]
@@ -974,7 +974,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [sp, #8]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	sub r1, r7, #4
 	str r0, [r5, r1]
 	ldrh r3, [r5, #0xc]

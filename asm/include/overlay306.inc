@@ -286,7 +286,7 @@
 .public sub_02045B7C
 .public sub_02044CFC
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02046D78
 .public GXS_SetGraphicsMode
 .public sub_02046D58

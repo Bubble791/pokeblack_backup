@@ -823,7 +823,7 @@ ovy259_2199eb4: ; 0x02199EB4
 	cmp r0, #0
 	bne _02199F1A
 	ldr r0, [r5, #0x24]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #1
 	bne _02199F1A
 	mov r0, #0xd
@@ -1362,7 +1362,7 @@ _0219A298:
 	ldrb r1, [r7, r1]
 	mov r2, #0
 	add r1, r1, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldrb r1, [r4, #2]
 	str r0, [r4, #0x24]
 	add r3, r6, #0
@@ -1759,7 +1759,7 @@ _0219A644:
 	ldr r1, [sp, #0x10]
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x4c]
 	ldr r0, [r4, #0x5c]
 	ldr r1, [sp, #0xc]
@@ -1907,7 +1907,7 @@ ovy259_219a760: ; 0x0219A760
 	str r0, [sp]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r3, r5, #0
 	add r3, #0x70
 	str r0, [r5, #0x64]
@@ -2082,7 +2082,7 @@ ovy259_219a8a4: ; 0x0219A8A4
 	str r0, [r6, #0x28]
 	ldr r0, [sp, #0xc]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0xc]
@@ -4864,7 +4864,7 @@ ovy259_219be60: ; 0x0219BE60
 	bl sub_0204AA30
 	add r4, r0, #0
 	ldr r0, [sp, #0x10]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	beq _0219BE9C
 	mov r6, #0
@@ -6235,7 +6235,7 @@ _0219C950:
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x24]
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x2c]
 	add r2, r4, #0
 	add r1, r4, r1
@@ -7511,7 +7511,7 @@ ovy259_219d364: ; 0x0219D364
 	add r0, r6, #0
 	mov r2, #1
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #4]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -7519,7 +7519,7 @@ ovy259_219d364: ; 0x0219D364
 	add r0, r6, #0
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	mov r0, #2
 	bl sub_0202D818
@@ -7967,7 +7967,7 @@ ovy259_219d6c0: ; 0x0219D6C0
 	mov r1, #0x19
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	add r0, r6, #0
 	mov r1, #0x13
@@ -10060,7 +10060,7 @@ ovy259_219e638: ; 0x0219E638
 	push {r3, lr}
 	ldr r0, [r0]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219E64C
 	mov r0, #1

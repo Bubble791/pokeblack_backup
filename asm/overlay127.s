@@ -6661,7 +6661,7 @@ _021F1E74:
 	ldr r0, [r7, #4]
 	bl sub_02016AD8
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r1, r0, #0
 	lsl r1, r1, #0x1f
 	lsr r2, r1, #0x1d

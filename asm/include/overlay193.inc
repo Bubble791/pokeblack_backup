@@ -19,8 +19,8 @@
 .public sub_0204C124
 .public sub_0204C56C
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204C108
@@ -323,8 +323,8 @@
 .public sub_0204C124
 .public sub_0204C56C
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204C108
@@ -578,8 +578,8 @@
 .public sub_0204C124
 .public sub_0204C56C
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204C108

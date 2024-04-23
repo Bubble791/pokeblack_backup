@@ -674,7 +674,7 @@ _021FBD68:
 	ldr r0, [r4, #0x3c]
 	str r0, [r5, #0x10]
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strb r0, [r5, #0xc]
 	add r0, r5, #0
 	pop {r3, r4, r5, r6, r7, pc}

@@ -3,7 +3,7 @@
 .public sub_02017354
 .public sub_0201736C
 .public sub_02007FD8
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008268
 .public sub_02008268
 .public sub_02017934

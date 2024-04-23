@@ -86,8 +86,8 @@
 .public sub_0202D814
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204AA30
@@ -97,7 +97,7 @@
 .public sub_020211C8
 .public sub_0204BDE0
 .public sub_02020F94
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_02021034
 .public sub_0204AA30
@@ -108,10 +108,10 @@
 .public GFL_ArcToolFree
 .public sub_0204C378
 .public sub_0204AA30
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public sub_0202D7F4
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0202D7F4
@@ -131,8 +131,8 @@
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_021A03C4
-.public sub_0204BBB8
-.public sub_0204B81C
+.public Oam_LoadNCLRFile
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_021A03C4
@@ -288,7 +288,7 @@
 .public GFL_SndSEPlay
 .public sub_0203D564
 .public sub_0203D564
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0219F854
 .public sub_0204898C
 .public GFL_StrBufCreate
@@ -429,7 +429,7 @@
 .public sub_0202DB70
 .public sub_0202DBE4
 .public sub_0202DC00
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0204A934
 .public GFL_HeapFree
 .public sub_0204C178
@@ -442,7 +442,7 @@
 .public sub_0204C140
 .public sub_0204C178
 .public sub_0204C140
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_MsgDataFree

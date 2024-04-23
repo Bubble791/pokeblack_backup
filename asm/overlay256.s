@@ -3213,7 +3213,7 @@ _021BD012:
 	mov r2, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r4, _021BD094 ; =0x00000BE4
 	str r0, [r5, r4]
 	bl sub_0202D810

@@ -962,7 +962,7 @@ ovy191_21b5b00: ; 0x021B5B00
 	add r1, #0xc7
 	strb r0, [r1]
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r1, r6, #0
 	add r1, #0xd4
 	lsl r0, r0, #0x18

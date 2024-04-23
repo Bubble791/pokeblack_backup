@@ -4314,7 +4314,7 @@ ovy288_21f64f4: ; 0x021F64F4
 	add r6, r0, #0
 	str r1, [sp, #8]
 	mov r1, #0x21
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -4338,7 +4338,7 @@ _021F6546:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r1, #0xf8
@@ -4439,7 +4439,7 @@ _021F65FA:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	str r0, [r1, r7]
@@ -4457,7 +4457,7 @@ _021F663C:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r2, r5, r1
 	ldr r1, [sp, #0x10]
@@ -4501,7 +4501,7 @@ ovy288_21f6678: ; 0x021F6678
 	str r1, [sp, #8]
 	ldr r1, _021F66F4 ; =0x000001A5
 	mov r4, #0xe0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0xf0
 	str r0, [r1]
@@ -4524,7 +4524,7 @@ ovy288_21f6678: ; 0x021F6678
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r4, #0x48
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -4564,7 +4564,7 @@ ovy288_21f66f8: ; 0x021F66F8
 	str r1, [sp, #8]
 	mov r1, #0xa
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0xf4
 	str r0, [r1]
@@ -4584,7 +4584,7 @@ ovy288_21f66f8: ; 0x021F66F8
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r4, #0xc8
 	str r0, [r5, r4]
 	add r0, r6, #0

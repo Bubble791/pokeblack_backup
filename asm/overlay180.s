@@ -2466,7 +2466,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r1, [sp, #0x24]
 	mov r3, #2
 	add r5, r0, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r6, #0x14]
 	ldr r1, [sp, #0x28]
 	ldr r2, [sp, #0x2c]

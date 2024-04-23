@@ -169,7 +169,7 @@
 .public sub_02045604
 .public sub_02044C98
 .public sub_0204AA30
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public sub_0204BDE0
 .public GFL_ArcToolFree
@@ -189,7 +189,7 @@
 .public sub_0204C318
 .public sub_0204C318
 .public sub_0204C124
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_021A3524
 .public GFL_CopyVarForText
 .public sub_021A3524

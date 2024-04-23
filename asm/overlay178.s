@@ -739,7 +739,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0x22
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	add r0, r4, #0
 	mov r1, #0x21
@@ -756,14 +756,14 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0xc
 	mov r2, #0
 	mov r3, #0xe0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x1c]
 	str r7, [sp]
 	add r0, r4, #0
 	mov r1, #0xb
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x20]
 	add r0, r4, #0
 	mov r1, #0xa
@@ -783,7 +783,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0x22
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x14]
 	add r0, r4, #0
 	mov r1, #0x21

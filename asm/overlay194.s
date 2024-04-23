@@ -22651,7 +22651,7 @@ ovy194_21c2e6c: ; 0x021C2E6C
 	mov r3, #1
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #0
 	add r1, #0x1c
 	str r0, [r5, r1]
@@ -22666,7 +22666,7 @@ ovy194_21c2e6c: ; 0x021C2E6C
 	mov r3, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, r4]
 	mov r0, #2
 	bl sub_0202D818
@@ -23524,7 +23524,7 @@ _021C3538:
 	mov r3, #1
 	str r0, [sp]
 	ldr r0, [sp, #0x10]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, _021C3610 ; =0x000009CC
 	ldr r2, _021C3608 ; =0x0000087C
 	str r0, [r4, r1]
@@ -25672,7 +25672,7 @@ ovy194_21c4600: ; 0x021C4600
 	str r1, [sp]
 	mov r1, #0x15
 	add r6, r0, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, r4]
 	mov r0, #0
 	str r0, [sp]
@@ -25684,7 +25684,7 @@ ovy194_21c4600: ; 0x021C4600
 	str r0, [sp, #8]
 	add r0, r6, #0
 	mov r3, #0xc0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r4, #0
 	sub r1, #0x14
 	str r0, [r5, r1]
@@ -25750,7 +25750,7 @@ ovy194_21c46a4: ; 0x021C46A4
 	str r1, [sp]
 	mov r1, #0x18
 	add r6, r0, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r4, _021C4750 ; =0x00000894
 	mov r1, #0x12
 	str r0, [r5, r4]
@@ -25763,7 +25763,7 @@ ovy194_21c46a4: ; 0x021C46A4
 	mov r3, #0xc0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r4, #0
 	sub r1, #0x14
 	str r0, [r5, r1]
@@ -25955,7 +25955,7 @@ _021C4842:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r4, _021C496C ; =0x0000089C
 	str r0, [r5, r4]
 	ldr r0, [sp, #0x10]
@@ -25967,7 +25967,7 @@ _021C4842:
 	mov r3, #1
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #4
 	str r0, [r5, r1]
 	add r2, r4, #0
@@ -27122,7 +27122,7 @@ _021C5198:
 	mov r2, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x14]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r7, r4]
 	sub r6, #0x18
 	mov r3, #0x89
@@ -28297,7 +28297,7 @@ _021C5AC8:
 	str r1, [sp, #8]
 	mov r1, #0
 	str r0, [sp, #0xc]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	ldr r1, _021C5BE4 ; =0x000010EC
 	ldr r3, _021C5BE0 ; =0x000005F4
 	str r0, [r5, r1]
@@ -28339,7 +28339,7 @@ _021C5B2A:
 	mov r3, #1
 	str r0, [sp]
 	ldr r0, [sp, #0xc]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x10]
 	add r6, r6, #1
 	str r0, [r7, r1]

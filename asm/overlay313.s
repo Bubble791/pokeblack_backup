@@ -586,7 +586,7 @@ _0219D330:
 	mov r3, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x1c]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r7, #0x1c]
 	bl sub_0202111C
 	add r6, r0, #0
@@ -731,7 +731,7 @@ ovy313_219d434: ; 0x0219D434
 	add r4, r0, #0
 	str r2, [sp, #8]
 	add r2, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x8c
 	str r0, [r1]
@@ -741,7 +741,7 @@ ovy313_219d434: ; 0x0219D434
 	str r0, [sp]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r5, #0
 	add r1, #0x88
 	str r0, [r1]

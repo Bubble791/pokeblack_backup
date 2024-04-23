@@ -20,7 +20,7 @@
 .public sub_02042A6C
 .public sub_02017378
 .public sub_02008B94
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201FD28
 .public sub_02005D20
 .public sub_020067A4

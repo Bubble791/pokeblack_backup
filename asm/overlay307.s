@@ -728,7 +728,7 @@ ovy307_21de1b4: ; 0x021DE1B4
 	str r1, [sp, #8]
 	mov r1, #3
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x30]
 	ldrh r0, [r5]
 	mov r1, #2
@@ -736,7 +736,7 @@ ovy307_21de1b4: ; 0x021DE1B4
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x2c]
 	ldrh r3, [r5]
 	add r0, r6, #0

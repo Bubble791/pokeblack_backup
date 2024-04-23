@@ -676,7 +676,7 @@ ovy176_219b274: ; 0x0219B274
 	mov r1, #0xb
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	add r0, r4, #0
 	mov r1, #0xa

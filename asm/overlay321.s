@@ -939,7 +939,7 @@ ovy321_219d5a8: ; 0x0219D5A8
 	str r0, [sp, #8]
 	add r0, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #2
 	ldrsh r1, [r4, r1]
 	mov r2, #0
@@ -952,7 +952,7 @@ ovy321_219d5a8: ; 0x0219D5A8
 	ldrsh r1, [r4, r1]
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0xa
 	ldrsh r1, [r4, r1]
 	mov r2, #0x18

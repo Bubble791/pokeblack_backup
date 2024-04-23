@@ -174,7 +174,7 @@
 .public sub_0201FF08
 .public sub_0201D624
 .public sub_02020F40
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0202111C
@@ -182,8 +182,8 @@
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0201FF08

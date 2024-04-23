@@ -1220,7 +1220,7 @@ ovy173_219d730: ; 0x0219D730
 	mov r2, #0
 	mov r3, #0
 	mov r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	mov r3, #0x16
 	str r7, [sp]
@@ -1233,7 +1233,7 @@ ovy173_219d730: ; 0x0219D730
 	mov r1, #8
 	mov r2, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	lsl r3, r4, #0x10
 	str r0, [r5, #0xc]
 	add r0, r6, #0
@@ -3495,7 +3495,7 @@ _0219E85C:
 	mov r1, #0xff
 	bl BmpWin_BitmapFill
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219E886
 	mov r0, #5
@@ -5143,7 +5143,7 @@ _0219F5EA:
 	ldr r0, [sp, #0x10]
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0x46
 	lsl r1, r1, #2
 	str r0, [r5, r1]
@@ -10705,7 +10705,7 @@ ovy173_21a208c: ; 0x021A208C
 	mov r2, #2
 	strb r2, [r1, #0x16]
 	add r4, r0, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	ldr r2, [r5, #8]
 	lsl r0, r0, #0x18
 	lsr r3, r0, #0x18
@@ -11733,7 +11733,7 @@ _021A28C0:
 	add r0, #0xc4
 	ldr r0, [r0]
 	bl sub_0201736C
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r4, #0x10
 	cmp r0, #0
 	beq _021A28E4

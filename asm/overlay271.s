@@ -6108,7 +6108,7 @@ _021F2CB4:
 	mov r2, #0
 	mov r3, #1
 _021F2CCA:
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #0x15
@@ -6142,7 +6142,7 @@ _021F2CF8:
 	mov r2, #0
 	mov r3, #1
 _021F2D0E:
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #9
@@ -6172,7 +6172,7 @@ _021F2D34:
 	mov r2, #0
 	mov r3, #1
 _021F2D4A:
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #0x3d
@@ -6189,7 +6189,7 @@ _021F2D58:
 	mov r3, #1
 	add r7, r0, #0
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #7
@@ -6207,7 +6207,7 @@ _021F2D7C:
 	mov r2, #0
 	mov r3, #1
 _021F2D92:
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #0x55
@@ -6238,14 +6238,14 @@ _021F2DB8:
 	mov r1, #0x13
 	mov r2, #1
 	mov r3, #0x80
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r4, #8]
 	add r0, r6, #0
 	mov r1, #0xf
 	mov r2, #0
 	mov r3, #1
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r6, #0
 	mov r1, #0x10
@@ -6269,14 +6269,14 @@ _021F2DFA:
 	mov r1, #0x33
 	mov r2, #1
 	mov r3, #0xa0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r4, #8]
 	add r0, r6, #0
 	mov r1, #0x32
 	mov r2, #0
 	mov r3, #1
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r6, #0
 	mov r1, #0x30
@@ -6306,7 +6306,7 @@ _021F2E4A:
 	mov r2, #0
 	mov r3, #1
 _021F2E60:
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 	add r0, r7, #0
 	mov r1, #0x34
@@ -6330,7 +6330,7 @@ _021F2E6E:
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #4]
 _021F2E98:
 	add r0, r7, #0
@@ -6446,7 +6446,7 @@ ovy271_21f2f34: ; 0x021F2F34
 	add r2, r7, #0
 	mov r3, #0
 	str r4, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	lsl r1, r7, #2
 	str r0, [r5, r1]
 	cmp r7, #0
@@ -8883,7 +8883,7 @@ _021F422C:
 	add r0, r7, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0x30]
 	add r0, r7, #0
 	bl GFL_ArcToolFree
@@ -8976,7 +8976,7 @@ _021F435C:
 	add r1, r7, #0
 	mov r2, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r4, #0x38]
 	ldr r0, [sp, #0x6c]
 	ldr r1, [sp, #0x20]
@@ -8989,7 +8989,7 @@ _021F435C:
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0x3c]
 	ldr r0, [sp, #0x6c]
 	b _021F4404
@@ -9017,7 +9017,7 @@ _021F43AA:
 	str r5, [sp, #8]
 	mov r1, #0
 	lsl r3, r3, #4
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r4, #0x38]
 	add r0, r7, #0
 	mov r1, #0x41
@@ -9031,7 +9031,7 @@ _021F43AA:
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r4, #0x3c]
 	add r0, r7, #0
 _021F4404:

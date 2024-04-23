@@ -6226,7 +6226,7 @@ ovy34_2179a9c: ; 0x02179A9C
 	bl sub_02008BF4
 	add r7, r0, #0
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r3, r0, #0
 	ldr r0, _02179AC8 ; =0x00002844
 	lsl r3, r3, #0x18
@@ -6384,7 +6384,7 @@ _02179BDC:
 	str r0, [sp, #0x18]
 	ldr r0, [sp, #0x14]
 	add r0, r0, r5
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r3, r0, #0
 	ldr r1, [sp, #0x1c]
 	lsl r3, r3, #0x18
@@ -7634,7 +7634,7 @@ _0217A5B0:
 	str r0, [r5, #0x7c]
 	ldr r0, [sp, #0x20]
 	add r0, r7, r0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r5, #0x80
 	strb r0, [r5]
 _0217A5DE:
@@ -8233,7 +8233,7 @@ ovy34_217aa7c: ; 0x0217AA7C
 	push {r3, lr}
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r1, r0, #1
 	ldr r0, _0217AA90 ; =0x0217C204
 	ldrh r0, [r0, r1]
@@ -8365,7 +8365,7 @@ ovy34_217ab30: ; 0x0217AB30
 	push {r3, lr}
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r1, r0, #1
 	ldr r0, _0217AB44 ; =0x0217C210
 	ldrh r0, [r0, r1]
@@ -8379,7 +8379,7 @@ ovy34_217ab48: ; 0x0217AB48
 	push {r3, lr}
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r1, r0, #1
 	ldr r0, _0217AB5C ; =0x0217C20C
 	ldrh r0, [r0, r1]
@@ -8734,7 +8734,7 @@ _0217AD54:
 	str r0, [sp, #8]
 	ldr r0, [sp, #0xc]
 	mov r5, #2
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
 _0217AD68:
@@ -11097,7 +11097,7 @@ ovy34_217be98: ; 0x0217BE98
 	bl sub_02008BFC
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r4, #0xea
 	lsl r1, r4, #0x18
 	lsr r1, r1, #0x18

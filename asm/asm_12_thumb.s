@@ -4525,11 +4525,11 @@ sub_02008BEC: ; 0x02008BEC
 	bx lr
 	thumb_func_end sub_02008BEC
 
-	thumb_func_start sub_02008BF0
-sub_02008BF0: ; 0x02008BF0
+	thumb_func_start MyStatus_GetTrainerGender
+MyStatus_GetTrainerGender: ; 0x02008BF0
 	ldrb r0, [r0, #0x1d]
 	bx lr
-	thumb_func_end sub_02008BF0
+	thumb_func_end MyStatus_GetTrainerGender
 
 	thumb_func_start sub_02008BF4
 sub_02008BF4: ; 0x02008BF4
@@ -6357,7 +6357,7 @@ sub_020096F8: ; 0x020096F8
 	mov r2, #0x10
 	blx MI_CpuCopy8
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strb r0, [r5, #4]
 	add r0, r4, #0
 	bl sub_02008BD0
@@ -8500,7 +8500,7 @@ sub_0200A438: ; 0x0200A438
 	bl sub_02008BD0
 	add r7, r0, #0
 	add r0, r5, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp, #4]
 	add r0, r5, #0
 	bl sub_02008B94
@@ -17397,7 +17397,7 @@ sub_0200DE68: ; 0x0200DE68
 	bl sub_02008BD0
 	str r0, [r5, #0x10]
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	strb r0, [r5, #0x14]
 	ldr r0, [sp, #0x14]
 	mov r1, #0x7e
@@ -26695,7 +26695,7 @@ sub_02011A64: ; 0x02011A64
 	bl GFL_StrBufFree
 _02011A8C:
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r3, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
@@ -34490,7 +34490,7 @@ sub_020150DC: ; 0x020150DC
 	add r1, sp, #0
 	strh r0, [r1, #0x22]
 	add r0, r5, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
@@ -53108,7 +53108,7 @@ sub_0201D4B8: ; 0x0201D4B8
 	bl sub_0201CD88
 	str r0, [sp, #4]
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	str r0, [sp, #8]
 	add r0, r5, #0
 	mov r1, #0x9a
@@ -74198,8 +74198,8 @@ _02026B2C:
 _02026B3C: .word 0x02090C84
 	thumb_func_end sub_02026B18
 
-	thumb_func_start sub_02026B40
-sub_02026B40: ; 0x02026B40
+	thumb_func_start Item_GetTmHmIndex
+Item_GetTmHmIndex: ; 0x02026B40
 	push {r4, lr}
 	add r4, r0, #0
 	bl sub_02026A94
@@ -74235,7 +74235,7 @@ _02026B70:
 	.align 2, 0
 _02026B7C: .word 0x0000026A
 _02026B80: .word 0x00000145
-	thumb_func_end sub_02026B40
+	thumb_func_end Item_GetTmHmIndex
 
 	thumb_func_start sub_02026B84
 sub_02026B84: ; 0x02026B84
@@ -83503,7 +83503,7 @@ sub_0202AD28: ; 0x0202AD28
 	add r0, r5, #0
 	add r2, r6, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -86099,7 +86099,7 @@ _0202BEE0:
 	ldr r1, [r5, #4]
 	bl sub_02008BA0
 	ldr r0, [sp, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
@@ -86113,7 +86113,7 @@ _0202BEE0:
 	add r0, r7, #0
 	bl sub_02008BA0
 	add r0, r7, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
@@ -87827,7 +87827,7 @@ _0202CBA6:
 	orr r0, r1
 	str r0, [r5, #0xc]
 	add r0, r7, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	lsl r0, r0, #0x1f
@@ -104564,7 +104564,7 @@ sub_02033E34: ; 0x02033E34
 	str r0, [sp, #8]
 	ldrh r3, [r3, #0x10]
 	add r0, r5, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end sub_02033E34
@@ -104595,7 +104595,7 @@ sub_02033E78: ; 0x02033E78
 	mov r2, #1
 	str r0, [sp]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r7, r0, #0
 	ldr r0, _02033EF0 ; =0x00000147
 	cmp r5, r0
@@ -104836,7 +104836,7 @@ sub_02034074: ; 0x02034074
 	add r3, r6, #0
 	str r0, [sp, #8]
 	add r0, r5, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end sub_02034074
@@ -104856,7 +104856,7 @@ sub_020340A4: ; 0x020340A4
 	mov r2, #1
 	add r3, r6, #0
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end sub_020340A4
@@ -105580,14 +105580,14 @@ sub_020345C4: ; 0x020345C4
 	mov r1, #1
 	lsr r3, r3, #0x10
 	add r6, r0, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #8]
 	str r4, [sp]
 	ldr r1, [sp, #0x14]
 	ldr r3, [r5, #4]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0xc]
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x10]
@@ -108627,7 +108627,7 @@ sub_02035C8C: ; 0x02035C8C
 	bl sub_02008BD0
 	add r7, r0, #0
 	add r0, r6, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r6, r0, #0
 	add r0, r5, #0
 	mov r1, #0x8d
@@ -109683,7 +109683,7 @@ sub_02036468: ; 0x02036468
 	bl sub_02008C10
 	strb r0, [r5, #0xf]
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r1, r5, #0
 	add r1, #0x22
 	lsl r0, r0, #0x18

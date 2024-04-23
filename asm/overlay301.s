@@ -297,7 +297,7 @@ ovy301_219fdf4: ; 0x0219FDF4
 	add r5, r0, #0
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219FE54
 	mov r4, #0

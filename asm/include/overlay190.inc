@@ -246,8 +246,8 @@
 .public sub_0204AFB0
 .public sub_0204AFB0
 .public sub_0204AFB0
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204C040

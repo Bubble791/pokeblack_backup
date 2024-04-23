@@ -264,7 +264,7 @@
 .public sub_02016D68
 .public sub_021EF9C4
 .public sub_02008BFC
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_020487FC
 .public sub_0204898C
 .public GFL_MsgDataFree
@@ -531,7 +531,7 @@
 .public sub_02008B94
 .public sub_0201CD1C
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0204898C
@@ -872,7 +872,7 @@
 .public OS_GetOwnerInfoEx
 .public sub_02155174
 .public sub_020171F4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02155174
 .public PlayerSave_GetPlayerSaveOffset
 .public sub_0200C97C
@@ -1150,7 +1150,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0201CCF8
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201CCF8
 .public sub_02155184
 .public sub_0215516C
@@ -2339,7 +2339,7 @@
 .public MI_CpuFill8
 .public sub_02016AD8
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02044238
 .public sub_02034F6C
 .public sub_02016AD8
@@ -3095,7 +3095,7 @@
 .public sub_02042D0C
 .public sub_0201736C
 .public sub_0217BD60
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_0217BD84
@@ -3306,7 +3306,7 @@
 .public sub_02016EDC
 .public sub_02016AF0
 .public sub_0201736C
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02017934
 .public sub_0200F1B8
 .public sub_02016EDC
@@ -4608,7 +4608,7 @@
 .public sub_02008B94
 .public MIi_CpuCopy16
 .public sub_020486F4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02008BD0
 .public sub_0200C9BC
 .public sub_0200C97C

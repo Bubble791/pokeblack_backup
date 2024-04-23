@@ -747,7 +747,7 @@ ovy177_219b2fc: ; 0x0219B2FC
 	mov r1, #0xb
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r6, #8]
 	add r0, r5, #0
 	mov r1, #0xa

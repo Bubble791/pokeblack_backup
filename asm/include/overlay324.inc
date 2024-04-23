@@ -3,7 +3,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0203CE0C
 .public GCTX_HIDGetPressedKeys
 .public sub_02044C98
@@ -147,7 +147,7 @@
 .public sub_02024BE4
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_02011040
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
@@ -268,9 +268,9 @@
 .public sub_020485BC
 .public sub_0204AA30
 .public sub_0204BF1C
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BDE0
-.public sub_0204BBB8
+.public Oam_LoadNCLRFile
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C124

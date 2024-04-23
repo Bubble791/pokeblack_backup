@@ -4662,7 +4662,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x70]
 	mov r3, #5
 	str r4, [sp]
@@ -4676,7 +4676,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp, #8]
 	add r0, r6, #0
 	lsl r3, r3, #6
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r3, r5, #0
 	add r3, #0xf4
 	str r0, [r5, #0x24]
@@ -4696,7 +4696,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp]
 	add r0, r6, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x28]
 	str r4, [sp]
 	add r0, r5, #0
@@ -4709,7 +4709,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp, #8]
 	add r0, r6, #0
 	add r3, #0xfe
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r3, r5, #0
 	add r3, #0xf4
 	str r0, [r5, #0x18]
@@ -4727,7 +4727,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp]
 	add r0, r6, #0
 	add r3, r4, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x2c]
 	str r4, [sp]
 	add r0, r5, #0
@@ -4739,7 +4739,7 @@ ovy195_21b5510: ; 0x021B5510
 	str r0, [sp, #8]
 	add r0, r6, #0
 	add r3, r4, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r3, r5, #0
 	add r3, #0xf4
 	str r0, [r5, #0x1c]
@@ -4805,7 +4805,7 @@ _021B5744:
 	str r0, [sp]
 	add r0, r7, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r3, r5, #0
 	str r0, [r6, #0x30]
 	add r3, #0xf4
@@ -4832,7 +4832,7 @@ _021B5744:
 	str r0, [sp, #8]
 	add r0, r7, #0
 	mov r3, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #0x20]
 	add r0, r7, #0
 	bl GFL_ArcToolFree

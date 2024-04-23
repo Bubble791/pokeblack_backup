@@ -317,8 +317,8 @@
 .public sub_02008B0C
 .public sub_02008B34
 .public sub_02008BFC
-.public sub_02008BF0
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
+.public MyStatus_GetTrainerGender
 .public sub_02008BB0
 .public sub_02029BB0
 .public sub_02029BB0
@@ -2250,7 +2250,7 @@
 .public ovy168_21df2c8
 .public sub_0219BF68
 .public sub_021D5FE4
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_021D5FC0
 .public ovy168_21df2c8
 .public ovy168_21df2c8
@@ -6377,7 +6377,7 @@
 .public GFL_MsgSysLoadData
 .public ovy167_0219E39C
 .public sub_0219BF68
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_0219C9B0
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
@@ -6549,7 +6549,7 @@
 .public sub_021D6C04
 .public sub_021D6C14
 .public sub_0204AA30
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public ovy168_21e00b8
 .public sub_02026F7C

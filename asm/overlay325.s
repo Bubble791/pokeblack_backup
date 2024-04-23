@@ -734,7 +734,7 @@ ovy325_219d400: ; 0x0219D400
 	str r0, [sp, #8]
 	add r0, r4, #0
 	mov r3, #0x80
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #4]
 	ldrh r0, [r5]
 	ldr r1, [sp, #0xc]
@@ -742,7 +742,7 @@ ovy325_219d400: ; 0x0219D400
 	str r0, [sp]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x10]
@@ -803,7 +803,7 @@ _0219D4CC:
 	add r3, r7, #0
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r4, r4, #1
@@ -908,7 +908,7 @@ ovy325_219d58c: ; 0x0219D58C
 	add r2, r7, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #2
 	ldrsh r1, [r4, r1]
 	mov r2, #0
@@ -921,7 +921,7 @@ ovy325_219d58c: ; 0x0219D58C
 	ldrsh r1, [r4, r1]
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0xa
 	ldrsh r1, [r4, r1]
 	mov r2, #0x18
@@ -2814,7 +2814,7 @@ _0219E44C:
 	add r0, #0xc4
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	cmp r0, #0
 	bne _0219E49E
 	add r4, #0xb1

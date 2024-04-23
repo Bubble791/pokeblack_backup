@@ -2766,7 +2766,7 @@ _0219EC38:
 	mov r3, #0x40
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x10]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0xc8
 	str r0, [r1]
@@ -2838,7 +2838,7 @@ _0219ECF4:
 	mov r2, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x10]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -3231,7 +3231,7 @@ _0219EFEC:
 	mov r2, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x14]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, r7
 	add r1, #0xb8
 	str r0, [r1]
@@ -3389,7 +3389,7 @@ _0219F11C:
 	mov r2, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x28]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	add r1, r4, r6
 	add r1, #0xb8
 	str r0, [r1]
@@ -3648,7 +3648,7 @@ _0219F310:
 	str r0, [sp, #8]
 	add r0, r6, #0
 	mov r5, #0xa0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #0xa0
 	add r1, #0xdc
 	str r0, [r4, r1]
@@ -3755,7 +3755,7 @@ _0219F3D2:
 	add r3, r6, #0
 	str r0, [sp]
 	ldr r0, [sp, #0x18]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x1c]
 	b _0219F430
 _0219F410:
@@ -3772,7 +3772,7 @@ _0219F410:
 	ldr r0, [r5, r1]
 	ldr r1, [sp, #0x14]
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	ldr r1, [sp, #0x20]
 _0219F430:
 	mov r3, #0x6d

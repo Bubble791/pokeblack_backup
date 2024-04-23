@@ -73,7 +73,7 @@
 .public sub_020200AC
 .public sub_0201F63C
 .public sub_02008B94
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public sub_021FCB40
 .public GFL_HeapFree
 .public GFL_HeapFree

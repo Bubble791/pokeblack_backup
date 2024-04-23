@@ -184,7 +184,7 @@ _021999FC:
 	ldr r2, [r4]
 	lsl r3, r3, #0x15
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 _02199A14:
 	str r0, [r5, #4]
 	str r6, [sp]
@@ -192,7 +192,7 @@ _02199A14:
 	ldr r2, [sp, #0xc]
 	ldr r3, [r4]
 	add r0, r7, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5]
 	ldr r1, [r4, #0x14]
 	ldr r2, [r4, #0x18]
@@ -801,7 +801,7 @@ _02199E5E:
 	add r0, r6, #0
 	lsl r3, r3, #0x15
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -809,7 +809,7 @@ _02199E5E:
 	str r4, [sp]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	ldr r0, [sp, #0x48]
 	bl sub_0202D818

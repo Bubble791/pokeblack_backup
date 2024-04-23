@@ -75,7 +75,7 @@
 .public sub_0204B6A8
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_0204B81C
+.public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public sub_0204BDE0
 .public sub_0204C040
@@ -156,7 +156,7 @@
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_02046CFC
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendBrightness_

@@ -1243,7 +1243,7 @@ ovy328_219d808: ; 0x0219D808
 	add r2, r7, #0
 	str r0, [sp, #8]
 	add r0, r6, #0
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	mov r1, #2
 	ldrsh r1, [r4, r1]
 	mov r2, #0
@@ -1256,7 +1256,7 @@ ovy328_219d808: ; 0x0219D808
 	ldrsh r1, [r4, r1]
 	str r0, [sp]
 	add r0, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	mov r1, #0xa
 	ldrsh r1, [r4, r1]
 	mov r2, #0x18
@@ -1314,7 +1314,7 @@ ovy328_219d888: ; 0x0219D888
 	str r0, [sp, #8]
 	add r0, r4, #0
 	add r3, #0xfc
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5, #4]
 	ldrh r0, [r5]
 	ldr r1, [sp, #0xc]
@@ -1322,7 +1322,7 @@ ovy328_219d888: ; 0x0219D888
 	str r0, [sp]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x10]

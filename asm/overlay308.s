@@ -869,7 +869,7 @@ ovy308_21a000c: ; 0x021A000C
 	str r0, [sp, #8]
 	add r0, r7, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	str r0, [r5]
 	ldrh r0, [r6]
 	ldrh r1, [r4, #6]
@@ -877,7 +877,7 @@ ovy308_21a000c: ; 0x021A000C
 	str r0, [sp]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #4]
 	ldrh r1, [r4, #8]
 	ldrh r3, [r6]

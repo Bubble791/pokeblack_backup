@@ -601,7 +601,7 @@ _0217CDAE:
 	bl sub_02008BF4
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	add r3, r0, #0
 	lsl r3, r3, #0x18
 	ldr r1, [sp]

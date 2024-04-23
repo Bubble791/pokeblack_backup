@@ -2678,21 +2678,21 @@ ovy258_219aea0: ; 0x0219AEA0
 	add r0, r6, #0
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x70]
 	ldr r0, [sp, #0xc]
 	str r4, [sp]
 	mov r1, #0x11
 	mov r2, #0
 	mov r3, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x74]
 	ldr r0, [sp, #0xc]
 	mov r1, #0x1a
 	mov r2, #0
 	mov r3, #1
 	str r4, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x78]
 	mov r4, #4
 	mov r7, #0x4f
@@ -2704,7 +2704,7 @@ _0219AEEE:
 	mov r2, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r4, r4, #1
@@ -2717,7 +2717,7 @@ _0219AEEE:
 	mov r2, #0
 	mov r3, #1
 	mov r4, #1
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #0x7c]
 	bl sub_0202D810
 	add r1, r0, #0
@@ -2729,7 +2729,7 @@ _0219AEEE:
 	mov r2, #1
 	mov r3, #0
 	str r7, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x94
 	str r0, [r1]
@@ -2741,7 +2741,7 @@ _0219AEEE:
 	mov r2, #1
 	mov r3, #0x80
 	str r7, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x98
 	str r0, [r1]
@@ -2755,7 +2755,7 @@ _0219AEEE:
 	mov r2, #1
 	mov r3, #0xc0
 	str r7, [sp, #8]
-	bl sub_0204BBB8
+	bl Oam_LoadNCLRFile
 	add r1, r5, #0
 	add r1, #0x9c
 	str r0, [r1]

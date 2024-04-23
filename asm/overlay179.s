@@ -679,7 +679,7 @@ ovy179_219b248: ; 0x0219B248
 	mov r1, #0xb
 	mov r2, #0
 	mov r3, #0
-	bl sub_0204B81C
+	bl Oam_LoadNCGRFile
 	str r0, [r5, #8]
 	add r0, r4, #0
 	mov r1, #0xa
@@ -2526,7 +2526,7 @@ _0219C0CA:
 	bl sub_02008B94
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x20]
-	bl sub_02008BF0
+	bl MyStatus_GetTrainerGender
 	mov r7, #1
 	cmp r0, #0
 	beq _0219C0EC

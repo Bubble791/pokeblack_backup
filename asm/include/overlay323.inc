@@ -51,8 +51,8 @@
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public MI_CpuFill8
@@ -65,8 +65,8 @@
 .public sub_0202D974
 .public GFL_StrBufFree
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204BCD0
@@ -80,8 +80,8 @@
 .public sub_0204C124
 .public sub_0204C108
 .public sub_0204AA30
-.public sub_0204B81C
-.public sub_0204BBB8
+.public Oam_LoadNCGRFile
+.public Oam_LoadNCLRFile
 .public sub_0204BDE0
 .public GFL_ArcToolFree
 .public sub_0204BCD0
@@ -162,7 +162,7 @@
 .public sub_02021C7C
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
-.public sub_02008BF0
+.public MyStatus_GetTrainerGender
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
