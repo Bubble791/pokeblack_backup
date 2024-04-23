@@ -17167,7 +17167,7 @@ ovy173_21a5438: ; 0x021A5438
 	ldr r1, _021A549C ; =ovy173_21a567c
 	add r2, r5, #0
 	add r3, r6, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	add r1, r4, #0
 	add r1, #0x18
 	str r0, [r5, r1]

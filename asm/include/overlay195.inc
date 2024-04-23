@@ -759,12 +759,12 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_021B6CD8
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_020232E8
 .public sub_020232E8
 .public sub_020232E8
 .public sub_021B6CD8
-.public sub_0205044C
+.public ButtonSystem_Create
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
 .public sub_02022888
@@ -877,7 +877,7 @@
 .public sub_0203D554
 .public sub_0202E41C
 .public GFL_StrBufFree
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_0202E34C
 .public sub_02045B7C
 .public sub_0202E438

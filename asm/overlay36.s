@@ -29789,7 +29789,7 @@ ovy36_218d7a8: ; 0x0218D7A8
 	ldr r0, _0218D810 ; =0x021CAB98
 	ldr r1, _0218D814 ; =ovy36_218d554
 	add r2, r5, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #0x24]
 	ldr r0, _0218D818 ; =ovy36_218da38
 	ldr r1, _0218D81C ; =ovy36_218db14
@@ -30213,7 +30213,7 @@ ovy36_218db28: ; 0x0218DB28
 	ldr r0, _0218DB80 ; =0x021CAB40
 	ldr r1, _0218DB84 ; =ovy36_218d554
 	add r2, r5, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #0x24]
 	ldr r0, _0218DB88 ; =ovy36_218dcc0
 	ldr r1, _0218DB8C ; =0x0218E0BD
@@ -30449,7 +30449,7 @@ ovy36_218dd30: ; 0x0218DD30
 	ldr r0, _0218DD8C ; =0x021CAB80
 	ldr r1, _0218DD90 ; =ovy36_218d554
 	add r2, r5, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #0x24]
 	ldr r0, _0218DD94 ; =ovy36_218e010
 	ldr r1, _0218DD98 ; =0x0218E0BD
@@ -30636,7 +30636,7 @@ ovy36_218ded0: ; 0x0218DED0
 	ldr r0, _0218DF28 ; =0x021CAB50
 	ldr r1, _0218DF2C ; =ovy36_218d554
 	add r2, r5, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #0x24]
 	ldr r0, _0218DF30 ; =ovy36_218de5c
 	ldr r1, _0218DF34 ; =0x0218DE51

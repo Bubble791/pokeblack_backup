@@ -1033,7 +1033,7 @@ ovy198_21b37a4: ; 0x021B37A4
 	ldr r0, _021B3800 ; =0x021B4468
 	ldr r1, _021B3804 ; =ovy198_21b3370
 	add r2, r4, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r4, #0x40]
 	ldr r0, _021B3808 ; =ovy198_21b3990
 	str r0, [r4, #4]

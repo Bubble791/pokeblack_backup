@@ -8493,7 +8493,7 @@ _021A0EE4:
 	ldr r1, _021A0F68 ; =0x021A0E59
 	add r2, r5, #0
 	mov r3, #0x29
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #0x44]
 	add r0, r5, #0
 	add r0, #0x69

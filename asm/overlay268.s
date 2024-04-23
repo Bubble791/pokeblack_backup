@@ -13188,7 +13188,7 @@ _021C0834:
 	add r3, r2, #0
 	ldrh r3, [r3, r5]
 	ldr r1, _021C0864 ; =ovy268_21c0868
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	ldr r1, [sp, #0x14]
 	sub r4, #0x64
 	str r0, [r1, r4]

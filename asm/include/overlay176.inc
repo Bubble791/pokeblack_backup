@@ -216,7 +216,7 @@
 .public sub_0219A9A4
 .public sub_0219B0A4
 .public MI_CpuFill8
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C

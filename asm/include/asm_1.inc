@@ -10728,7 +10728,7 @@
 .public sub_020503BC
 .public sub_020503F0
 .public sub_020503F4
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_020504D0
 .public sub_020504DC
 .public sub_020504F0

@@ -989,7 +989,7 @@ ovy199_21b3748: ; 0x021B3748
 	ldr r0, _021B3794 ; =0x021B95C0
 	ldr r1, _021B3798 ; =ovy199_21b34b8
 	add r2, r4, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r4, #0x20]
 	ldr r0, _021B379C ; =ovy199_21b38ec
 	ldr r1, _021B37A0 ; =ovy199_21b39e4

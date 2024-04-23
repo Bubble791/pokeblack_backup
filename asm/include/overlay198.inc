@@ -99,7 +99,7 @@
 .public sub_0204AB0C
 .public sub_02024D20
 .public sub_0204B0B8
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_021B2F84
 .public sub_020232D8
 .public sub_02045264

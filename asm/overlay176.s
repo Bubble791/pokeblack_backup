@@ -1912,7 +1912,7 @@ _0219BC8C:
 	ldr r1, _0219BDB0 ; =0x0219BF55
 	add r0, #0x14
 	add r2, r5, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5]
 	mov r0, #0
 	str r0, [sp, #0x14]

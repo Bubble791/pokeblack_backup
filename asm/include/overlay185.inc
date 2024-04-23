@@ -613,7 +613,7 @@
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A58C
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_021A2DD8
 .public sub_02029E50
 .public sub_02029EA8

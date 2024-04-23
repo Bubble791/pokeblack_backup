@@ -1135,7 +1135,7 @@
 .public sub_0204C488
 .public sub_021BFCBC
 .public sub_0204C488
-.public sub_0205044C
+.public ButtonSystem_Create
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0203DAC8

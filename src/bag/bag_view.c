@@ -2701,7 +2701,7 @@ extern int GFL_WordSetSystemCreateDefault(u16);
 extern int sub_020219A8(int, u16);
 extern int sub_0202E7A4(int ,int ,int, u16);
 extern int GFL_FontCreate(int ,int, int, int, u16);
-extern int sub_0205044C(int, void*, void*, u16);
+extern int ButtonSystem_Create(int template, void* data1, void* data2, u16 heap);
 extern int sub_020056FC(void*, void*, int);
 extern void sub_02042BA8(int, u16);
 extern int sub_0202E168(int, int, int, int, u16);
@@ -2792,7 +2792,7 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
     ovy142_219efc0(v6);
     sub_021998DC(v6);
     ovy142_219e6f8(v6);
-    v6->buttonManSystem = sub_0205044C(0x21A0A18, ovy142_219c100, (void*)v6, v6->heapId);
+    v6->buttonManSystem = ButtonSystem_Create(0x21A0A18, ovy142_219c100, (void*)v6, v6->heapId);
     ovy142_219c900(v6);
     ovy142_219cc24(v6);
     v6->unk6A8 = sub_020056FC(ovy142_219c38c, v6, 0);

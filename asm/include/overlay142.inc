@@ -392,7 +392,7 @@
 .public sub_0202E7A4
 .public GFL_FontCreate
 .public sub_021998DC
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_020056FC
 .public sub_0203A78C
 .public sub_0202E168

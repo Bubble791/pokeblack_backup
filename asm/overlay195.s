@@ -7698,7 +7698,7 @@ ovy195_21b6d14: ; 0x021B6D14
 	ldr r0, _021B6D6C ; =0x021B7AC0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #8]
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -7781,7 +7781,7 @@ ovy195_21b6d70: ; 0x021B6D70
 	ldr r0, _021B6E2C ; =0x021B7ACC
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #8]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -8750,7 +8750,7 @@ _021B75B0:
 	ldr r0, _021B75DC ; =0x021B7AB8
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	str r0, [r5, #8]
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}

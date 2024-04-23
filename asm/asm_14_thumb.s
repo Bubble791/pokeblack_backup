@@ -50601,8 +50601,8 @@ _02050446:
 	.align 2, 0
 	thumb_func_end sub_020503F4
 
-	thumb_func_start sub_0205044C
-sub_0205044C: ; 0x0205044C
+	thumb_func_start ButtonSystem_Create
+ButtonSystem_Create: ; 0x0205044C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r7, r0, #0
@@ -50670,7 +50670,7 @@ _020504C6:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020504CC: .word 0x0209B034
-	thumb_func_end sub_0205044C
+	thumb_func_end ButtonSystem_Create
 
 	thumb_func_start sub_020504D0
 sub_020504D0: ; 0x020504D0

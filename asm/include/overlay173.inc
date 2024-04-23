@@ -1255,7 +1255,7 @@
 .public MI_CpuFill8
 .public sub_02046D84
 .public sub_02046D84
-.public sub_0205044C
+.public ButtonSystem_Create
 .public GFL_WordSetSystemCreateDefault
 .public sub_021A5A6C
 .public sub_021A5424

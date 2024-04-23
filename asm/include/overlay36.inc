@@ -2084,7 +2084,7 @@
 .public sub_0204AFB0
 .public sub_0204AB0C
 .public sub_02044C98
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_0218D0EC
 .public sub_020232D8
 .public sub_02045264
@@ -2136,7 +2136,7 @@
 .public sub_0218D0EC
 .public GFL_FadeScreenIsFinished
 .public sub_020504F0
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_0218D0EC
 .public sub_0200C260
 .public sub_0200C340
@@ -2155,7 +2155,7 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0218D0EC
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_0218D0EC
 .public sub_0218D0EC
 .public sub_0218D0EC
@@ -2169,7 +2169,7 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0218D0EC
-.public sub_0205044C
+.public ButtonSystem_Create
 .public sub_0218D0EC
 .public sub_0218D0EC
 .public sub_0200C260

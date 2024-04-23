@@ -2004,7 +2004,7 @@ _021B82F8:
 	ldr r1, _021B8320 ; =ovy205_21b834c
 	ldr r2, [sp, #0x14]
 	mov r3, #0x32
-	bl sub_0205044C
+	bl ButtonSystem_Create
 	ldr r1, [sp, #0x14]
 	sub r4, #0x64
 	str r0, [r1, r4]
