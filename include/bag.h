@@ -13,6 +13,14 @@ extern int sub_0203DAC8(u32*, u32*);
 
 typedef struct
 {
+    int *unk0;
+    u8 unk4;
+    u8 unk5;
+    u16 unk6;
+}WinDow;
+
+typedef struct
+{
     u16 itemid;
     u16 num;
 } ItemTable;
@@ -318,7 +326,7 @@ void ovy142_219a4d0(BagView *m_bagView);
 extern int sub_0202DBE4(int);
 extern int sub_0202DC00(int);
 extern int sub_020083C8(void*, u16);
-extern void ovy142_219ff40(void*, int);
+extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
 extern void ovy142_219ac70(BagView*);
 extern void ovy142_219b5d4(BagView*);
@@ -363,7 +371,7 @@ void ovy142_219e21c(BagView *a1);
 
 extern int sub_020484F4(int);
 extern int sub_0204713C(int, int);
-extern void ovy142_21a00f0(BagView*, int *, int, int, int, int);
+extern void ovy142_21a00f0(BagView *a1, WinDow *a2, int a3, u16 a4, u16 a5, u16 a6);
 extern int ovy142_21a03ac(u8);
 extern void sub_02048244(int);
 extern int sub_02026B84(u16);
@@ -389,4 +397,14 @@ extern int sub_020216B0(u16, int);
 extern int sub_02021280(u16, int);
 extern int sub_0202174C(u16);
 extern void sub_020470F8(int, int, int, int, int, int);
+
+extern void ovy142_219fb78(BagView*);
+extern void ovy142_219fc14(BagView*, int);
+extern void sub_0204C124(int, int);
+
+int sub_0219BE88(int a1);
+extern int sub_0219FD18(int);
+extern int sub_0201765C(void*, int);
+extern int sub_02005718(void);
+
 #endif //BAG_H

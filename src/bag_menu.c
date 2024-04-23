@@ -2511,3 +2511,327 @@ void ovy142_219fa6c(BagView *a1)
     sub_020484B4(a1->unk77C);
     ovy142_219f8ec(a1, a1->itemType);
 }
+
+void ovy142_219faac(BagView *a1);
+
+void ovy142_219faac(BagView *a1)
+{
+    TaskMenu task;
+    
+    task.heapId = a1->heapId;
+    task.unk4 = 2;
+    task.unk8 = a1->unk7A0;
+    task.unkC = 1;
+    task.unk10 = 32;
+    task.unk14 = 12;
+    task.unk18 = 8;
+    task.unk1C = 3;
+
+    a1->unk7A0[0].unk0 = sub_02048530(100, a1->heapId);
+    sub_02048838(a1->unk520, 132, a1->unk7A0[0].unk0);
+    a1->unk7A0[0].unk4 = 14816;
+    a1->unk7A0[0].unk8 = 0;
+
+    a1->unk7A0[1].unk0 = sub_02048530(100, a1->heapId);
+    sub_02048838(a1->unk520, 133, a1->unk7A0[1].unk0);
+    a1->unk7A0[1].unk4 = 14816;
+    a1->unk7A0[1].unk8 = 0;
+    a1->unk79C = sub_0202D974(&task, a1->unk800);
+    sub_02048564(a1->unk7A0[0].unk0);
+    sub_02048564(a1->unk7A0[1].unk0);
+    ovy142_219ff40(a1, 0);
+    ovy142_219fda8(a1, 0);
+}
+
+void ovy142_219fb60(BagView *a1);
+void ovy142_219fb78(BagView *a1);
+
+void ovy142_219fb60(BagView *a1)
+{
+    sub_0202DA54(a1->unk79C);
+    a1->unk79C = 0;
+}
+
+extern void sub_02045B7C(int);
+extern void sub_020454AC(int, int, int, int, int, int);
+extern int sub_02060338(int, int*);
+extern void *sub_0204B600(int ,int, int, u16);
+
+asm void ovy142_219fb78(BagView *a1)
+{
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x14
+	ldr r6, =0x0000054C
+	add r5, r0, #0
+	ldrh r1, [r5, r6]
+	mov r0, #0x57
+	bl sub_0204AA30
+	ldrh r3, [r5, r6]
+	mov r1, #0x23
+	mov r2, #0
+	str r0, [sp, #0xc]
+	mov r4, #0
+	bl sub_0204B600
+	add r1, sp, #0x10
+	str r0, [sp, #8]
+	bl sub_02060338
+	cmp r0, #0
+	beq _0219FBFC
+	ldr r3, [sp, #0x10]
+	ldrh r0, [r3]
+	add r2, r3, #0
+	add r2, #0xc
+	lsr r1, r0, #3
+	ldrh r0, [r3, #2]
+	add r3, r1, #0
+	lsr r0, r0, #3
+	mul r3, r0
+	cmp r3, #0
+	ble _0219FBD8
+	mov r7, #3
+	lsl r7, r7, #0xc
+_0219FBBC:
+	ldr r6, =0x00000828
+	lsl r1, r4, #1
+	ldr r6, [r5, r6]
+	ldrh r0, [r2, r1]
+	lsl r6, r6, #0x10
+	lsr r6, r6, #0x10
+	orr r6, r7
+	lsl r6, r6, #0x10
+	lsr r6, r6, #0x10
+	add r0, r0, r6
+	add r4, r4, #1
+	strh r0, [r2, r1]
+	cmp r4, r3
+	blt _0219FBBC
+_0219FBD8:
+	ldr r1, [sp, #0x10]
+	mov r2, #0x10
+	ldrh r0, [r1]
+	mov r3, #0xc
+	lsl r0, r0, #0x15
+	lsr r0, r0, #0x18
+	str r0, [sp]
+	ldrh r0, [r1, #2]
+	add r1, #0xc
+	lsl r0, r0, #0x15
+	lsr r0, r0, #0x18
+	str r0, [sp, #4]
+	mov r0, #3
+	bl sub_020454AC
+	mov r0, #3
+	bl sub_02045B7C
+_0219FBFC:
+	ldr r0, [sp, #8]
+	bl sub_0203A24C
+	ldr r0, [sp, #0xc]
+	bl sub_0204AB0C
+	add sp, #0x14
+	pop {r4, r5, r6, r7, pc}
+}
+
+void ovy142_219fc14(BagView *a1, int a2)
+{
+    sub_0204713C(sub_020484F4(a1->unk774), 5);
+    sub_02048838(a1->unk520, 131, a1->unk528);
+    sub_0202451C(a1->messageParam, 0, a2, 3, 0, 1);
+    sub_02024920(a1->messageParam, a1->unk52C, a1->unk528);
+    ovy142_21a00f0(a1, &a1->unk774, a1->unk52C, 0, 0, 0x3DC5);
+    ovy142_21a0134(&a1->unk774);
+
+    if (a1->unk80C == 2)
+    {
+        int *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
+        int v7 = ovy142_219995c(a1->selectItem, a1->unk814, a1->heapId);
+        sub_0204713C(sub_020484F4(a1->unk78C), 5);
+        sub_02048838(a1->unk520, 84, a1->unk528);
+        sub_0202451C(a1->messageParam, 0, v7, 7, 0, 1);
+        sub_02024920(a1->messageParam, a1->unk52C, a1->unk528);
+        ovy142_21a00f0(a1, v8, a1->unk52C, 0, 0, 0x3DC5);
+        ovy142_21a0134(v8);
+    }
+}
+
+int sub_0219FD18(int a1)
+{
+    switch (a1)
+    {
+        case 0:
+            return 12;
+        case 3:
+            return 0xf;
+        case 1:
+            return 0xd;
+        case 2:
+            return 0xe;
+        case 4:
+            return 0x10;
+        case 5:
+            return 0x11;
+    }
+    return a1;
+}
+
+void ovy142_219fd4c(BagView *a1, int a2)
+{
+    u32 i;
+    s16 v8[2];
+    s16 v6[2];
+
+    sub_0204C178(a1->unk6B4, v8, 0);
+    for (i = 0; i < 8; i++)
+    {
+        sub_0204C178(a1->unk644[i], v6, 0);
+        if (v6[1] == v8[1])
+            break;
+    }
+
+    sub_0204C378(a1->unk644[i], (u8)a2, 0);
+}
+
+extern int sub_02026FE4(int, int, int, int, int, int, int, int);
+extern int sub_0204C138(int);
+
+void ovy142_219fda8(BagView *a1, int a2)
+{
+    int v5;     // r0
+    int v6;     // r7
+    int v7;     // r0
+    int v8;     // r0
+    int v9;     // r0
+    int v12;    // r0
+    int v13;    // r0
+    int v14;    // r0
+
+    if (a1->unk8AC != a2)
+    {
+        a1->unk8AC = a2;
+        v5 = sub_0219FD18(a1->itemType);
+        v6 = sub_0201765C(a1->m_GameData, v5);
+        if (a2 == 1)
+        {
+            v7 = sub_02005718();
+            v8 = sub_02026FE4(a1->unk8A8, 4, 18383, 0, 0, 0, 0, v7);
+            v9 = sub_02005718();
+            sub_02026FE4(a1->unk8A8, 1, 1, 0, 0, 0, 0, v9);
+            G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, 0);
+            ovy142_219ff60(a1);
+            sub_0204C488(a1->unk724[0], 4);
+            sub_0204C488(a1->unk724[1], 5);
+            sub_0204C488(a1->unk724[3], 0);
+            if (v6 == 1)
+                sub_0204C488(a1->unk724[2], 7);
+            else
+                sub_0204C488(a1->unk724[2], 6);
+            ovy142_219ff40(a1, 1);
+        }
+        else
+        {
+            sub_02026F7C(a1->unk8A8, 2, 0, 512);
+            v12 = sub_02005718();
+            v13 = sub_02026FE4(a1->unk8A8, 4, 18383, 0, 8, 8, 0, v12);
+            v14 = sub_02005718();
+            sub_02026FE4(a1->unk8A8, 1, 1, 0, 8, 8, 0, v14);
+
+            if (a1->unk10 == 4 && !sub_0204C138(a1->unk724[0]))
+                G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 2, -8);
+            else
+                G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, -8);
+            
+            sub_0204C488(a1->unk744, 4);
+            sub_0204C488(a1->unk740, 2);
+            sub_0204C488(a1->unk724[0], 18);
+            sub_0204C488(a1->unk724[1], 19);
+            sub_0204C488(a1->unk724[3], 14);
+            if (v6 == 1)
+                sub_0204C488(a1->unk724[2], 22);
+            else
+                sub_0204C488(a1->unk724[2], 21);
+        }
+    }
+
+}
+
+void ovy142_219ff40(BagView *a1, int a2)
+{
+    if (a2 == 1)
+        sub_0204C488(a1->unk724[4], 1);
+    else
+        sub_0204C488(a1->unk724[4], 15);
+}
+
+void ovy142_219ff60(BagView *a1)
+{
+    if (a1->itemType != 5)
+    {
+        sub_0204C124(a1->unk744, 1);
+        sub_0204C124(a1->unk740, 0);
+        if (ovy142_2199988(a1) <= 1)
+            return sub_0204C488(a1->unk744, 4);
+        else
+            return sub_0204C488(a1->unk744, 0);
+    }
+    else
+    {
+        sub_0204C124(a1->unk740, 1);
+        sub_0204C124(a1->unk744, 0);
+        if (ovy142_219d22c(a1) > 2)
+            return sub_0204C488(a1->unk740, 0);
+        else
+            return sub_0204C488(a1->unk740, 2);    
+    }
+    
+}
+
+void ovy142_219ffe8(BagView *a1, int a2);
+
+void ovy142_219ffe8(BagView *a1, int a2)
+{
+    int v4; // r0
+    int v5; // r6
+
+    v4 = sub_0219FD18(a1->itemType);
+    v5 = sub_0201765C(a1->m_GameData, v4);
+    if (a2 == 1)
+    {
+        ovy142_219ff60(a1);
+        sub_0204C488(a1->unk724[0], 4);
+        sub_0204C488(a1->unk724[1], 5);
+        sub_0204C488(a1->unk724[3], 0);
+        if (v5 == 1)
+            return sub_0204C488(a1->unk724[2], 7);
+        else
+            return sub_0204C488(a1->unk724[2], 6);
+    }
+    else
+    {
+        sub_0204C488(a1->unk744, 4);
+        sub_0204C488(a1->unk740, 2);
+        sub_0204C488(a1->unk724[0], 18);
+        sub_0204C488(a1->unk724[1], 19);
+        sub_0204C488(a1->unk724[3], 14);
+        if (v5 == 1)
+            return sub_0204C488(a1->unk724[2], 22);
+        else
+            return sub_0204C488(a1->unk724[2], 21);
+    }
+}
+
+extern s16 word_21A168C[][2];
+
+int ovy142_21a00a0(BagView *a1)
+{
+    s16 v8[2];   // [sp+0h] [bp-18h] BYREF
+    u32 i; // r4
+
+    for (i = 0; i < 6; ++i)
+    {
+        sub_0204C178(a1->unk6BC[i], v8, 0xFFFF);
+        if (v8[0] == word_21A168C[i][0])
+            return 0;
+        v8[0] += 4;
+        sub_0204C140(a1->unk6BC[i], v8, 0xFFFF);
+    }
+    return 1;
+}

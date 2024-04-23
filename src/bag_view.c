@@ -10,6 +10,7 @@ const s16 word_21A168C[10][2] = {0};
 const u8 byte_21A1020[10] = {0};
 const u8 data_021a0fee[10][2] = {0};
 const u8 data_021A0FEE[5][2] = {0};
+
 void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2)
 {
     m_bagView->unk4FC = a2;
@@ -1737,14 +1738,11 @@ void ovy142_219b3b0(BagView *m_bagView)
     }
 }
 
-extern void ovy142_219fb78(void);
-extern void ovy142_219fc14(BagView*, int);
-extern void sub_0204C124(int, int);
 
 void ovy142_219b438(BagView *m_bagView, int param_2)
 {
     m_bagView->unk80C = param_2;
-    ovy142_219fb78();
+    ovy142_219fb78(m_bagView);
     ovy142_219fc14(m_bagView, m_bagView->unk814);
     sub_0204C124(m_bagView->unk724[5], 1);
     sub_0204C124(m_bagView->unk724[6], 1);
@@ -2268,15 +2266,10 @@ int ovy142_219be18(BagView *m_bagView, int param_2)
     return 1;
 }
 
-int sub_0219BE88(int a1);
-extern int sub_0219FD18(int);
-
 int sub_0219BE88(int a1)
 {
     return sub_0219FD18(a1);
 }
-
-extern int sub_0201765C(void*, int);
 
 void ovy142_219be90(BagView *m_bagView)
 {
