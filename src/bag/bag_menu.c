@@ -125,20 +125,16 @@ void ovy142_219c8e8(BagView *bagView);
 
 void ovy142_219c8d0(BagView *bagView)
 {
-    sub_021998C0(bagView, ovy142_219a850);
+    BagMenu_SetRunFunc(bagView, ovy142_219a850);
     sub_0203DEB4(3, 6);
 }
 
 void ovy142_219c8e8(BagView *bagView)
 {
-    sub_021998C0(bagView, ovy142_2199ecc);
+    BagMenu_SetRunFunc(bagView, ovy142_2199ecc);
     sub_0203DEB4(3, 6);
 }
 
-void ovy142_219c900(BagView *bagView);
-extern int sub_02035024(int, int, int, u16);
-extern void *sub_0204AA30(int, u16);
-extern void sub_02035104(int, void*, int, int, int);
 
 void ovy142_219c900(BagView *bagView)
 {
@@ -187,7 +183,7 @@ void ovy142_219c958(BagView *bagView)
         ovy142_219fd4c(bagView, 1);
         sub_020352B0(bagView->unk8A4);
         sub_02035198(bagView->unk8A4);
-        sub_021998C0(bagView, ovy142_219a724);
+        BagMenu_SetRunFunc(bagView, ovy142_219a724);
         break;
     default:
         break;
@@ -226,7 +222,7 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
     sub_0204C488(a1->unk724[a1->unk8B8], v3);
     sub_0204C520(a1->unk724[a1->unk8B8], 1);
     a1->unk8BC = a3;
-    sub_021998C0(a1, ovy142_219ca90);
+    BagMenu_SetRunFunc(a1, ovy142_219ca90);
 }
 
 extern int sub_0204C560(int);
@@ -237,7 +233,7 @@ void ovy142_219ca90(BagView *bagView)
     if (!sub_0204C560(bagView->unk724[bagView->unk8B8]))
     {
         bagView->unk8B8 = 0;
-        sub_021998C0(bagView, bagView->unk8BC);
+        BagMenu_SetRunFunc(bagView, bagView->unk8BC);
     }
 }
 
@@ -268,7 +264,7 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
     sub_0204C488(bagView->unk724[bagView->unk8B8], v4);
     sub_0204C520(bagView->unk724[bagView->unk8B8], 1);
     bagView->unk8BC = a4;
-    sub_021998C0(bagView, ovy142_219cb64);
+    BagMenu_SetRunFunc(bagView, ovy142_219cb64);
 }
 
 void ovy142_219cb64(BagView *bagView)
@@ -276,7 +272,7 @@ void ovy142_219cb64(BagView *bagView)
     if (!bagView->unk8BA)
     {
         bagView->unk8B8 = 0;
-        sub_021998C0(bagView, bagView->unk8BC);
+        BagMenu_SetRunFunc(bagView, bagView->unk8BC);
     }
     else
     {
@@ -315,13 +311,8 @@ void ovy142_219cbe4(BagView *bagView)
     sub_0204C520(bagView->unk6B8, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
-    sub_021998C0(bagView, ovy142_219b2f0);
+    BagMenu_SetRunFunc(bagView, ovy142_219b2f0);
 }
-
-extern int sub_02026DC0(u16);
-extern void sub_02026E04(int, int, int, u16);
-extern void sub_02026F7C(int, int, int, int);
-void ovy142_219cc24(BagView *bagView);
 
 void ovy142_219cc24(BagView *bagView)
 {
@@ -358,7 +349,7 @@ void ovy142_219cc84(BagView *bagView)
         ovy142_219f6a4(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219cce0(bagView);
-        sub_021998C0(bagView, ovy142_219cd98);
+        BagMenu_SetRunFunc(bagView, ovy142_219cd98);
     }
 }
 
@@ -434,34 +425,34 @@ void ovy142_219cd98(BagView* bagView)
             case 0:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 0);
-                sub_021998C0(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             case 1:
                 GFL_SndSEPlay(0x663);
                 r5 = 1;
                 ovy142_219bcd8(bagView, 1);
-                sub_021998C0(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
                 break;
             
             case 2:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 2);
-                sub_021998C0(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             
             case 3:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 3);
-                sub_021998C0(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             
             case 4:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 4);
-                sub_021998C0(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             case 5:
@@ -524,7 +515,7 @@ void ovy142_219cea8(BagView* bagView)
     }
     
     ovy142_219f6a4(bagView, 0);
-    sub_021998C0(bagView, ovy142_219d3d8);
+    BagMenu_SetRunFunc(bagView, ovy142_219d3d8);
 }
 
 void ovy142_219cf28(BagView* bagView);
@@ -578,7 +569,7 @@ void ovy142_219cf28(BagView* bagView)
 
     }
     ovy142_219f6a4(bagView, 0);
-    sub_021998C0(bagView, ovy142_219d3d8);
+    BagMenu_SetRunFunc(bagView, ovy142_219d3d8);
 }
 
 extern void ovy142_219d2bc(BagView*);
@@ -594,7 +585,7 @@ void ovy142_219d0c8(BagView* bagView)
         ovy142_219f6a4(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219d120(bagView);
-        sub_021998C0(bagView, ovy142_219d2bc);
+        BagMenu_SetRunFunc(bagView, ovy142_219d2bc);
     }
 }
 
@@ -689,37 +680,37 @@ void ovy142_219d2bc(BagView *bagView)
                 case 5:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 0);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 0:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 1);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 1:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 2);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 2:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 3);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 3:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 4);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 4:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 5);
-                    sub_021998C0(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 6:
@@ -884,7 +875,6 @@ void ovy142_219d4c0(void)
     sub_02045738(6);
 }
 
-void ovy142_219d664(void);
 
 void ovy142_219d664(void)
 {
@@ -896,14 +886,6 @@ void ovy142_219d664(void)
     sub_02044C98(5, 1);
     sub_02044C98(6, 1);
 }
-
-void ovy142_219d6a0(BagView *bagView, int a2);
-extern int sub_02008BF0(void*);
-extern int sub_0204BBB8(int, int, int, int, int, int, u16); 
-void ovy142_219d7a8(BagView *a1, int a2, int a3, int a4);
-extern void sub_0204B0D4(int, int, int, int, int, u16);
-extern int sub_0204AE3C(int, int, int, int, int, u16);
-extern void sub_0204AFB0(int, int, int, int, int, int, int, u16);
 
 void ovy142_219d6a0(BagView *bagView, int a2)
 {
@@ -979,7 +961,7 @@ typedef struct
 
 extern int sub_02048080(u16);
 extern void sub_020232D0(int);
-extern void sub_020444A4(u16, int, int);
+extern void sub_020444A4(u16);
 extern void sub_02046C40(int*);
 extern void sub_0204B6A8(int*, int*, u16);
 extern void sub_02044710(int*);
@@ -1007,7 +989,7 @@ extern void sub_0204C5C8(int, int);
 extern int sub_0202D7E8(u8);
 extern int sub_02022888(int, int, int);
 
-void ovy142_219d7a8(BagView *a1, int a2, int a3, int a4)
+void ovy142_219d7a8(BagView *a1)
 {
     int v43[4];
     OAM_TEMP newtemp[3];
@@ -1026,7 +1008,7 @@ void ovy142_219d7a8(BagView *a1, int a2, int a3, int a4)
 
     int v33;
     *(u16*)(0x4000050) = 0;
-    sub_020444A4(a1->heapId, a2, a3);
+    sub_020444A4(a1->heapId);
     sub_020232D0(sub_02048080(a1->heapId));
     sub_02046C40(unk_21A16A4);
     sub_0204B6A8(unk_21A103C, unk_21A16A4, a1->heapId);
@@ -1372,9 +1354,7 @@ void ovy142_219e21c(BagView *a1)
     
     ovy142_21a00f0(a1, &(a1->unk794), a1->unk528, 0, 4, 0x3DC0);
 }
-void ovy142_219e284(BagView *a1);
-extern int sub_020480C0(int, int, int, int, int, int, int);
-extern void sub_0204826C(int);
+
 
 void ovy142_219e284(BagView *a1)
 {
@@ -1478,8 +1458,6 @@ void ovy142_219e5a8(BagView *a1)
         sub_0202DB70();
 }
 
-void ovy142_219e5c4(BagView *a1);
-extern int sub_02046E28(int, int, int, u16);
 
 void ovy142_219e5c4(BagView *a1)
 {
@@ -1503,7 +1481,7 @@ void ovy142_219e5c4(BagView *a1)
     sub_0204AB0C((void*)v3);
 }
 
-void ovy142_219e6f8(BagView *a1);
+
 void ovy142_219e6f8(BagView *a1)
 {
     OAM_TEMP temp[3];
@@ -2080,7 +2058,7 @@ void ovy142_219ed8c(BagView *a1)
 extern s16 word_21A168C[][2];
 extern u8 byte_21A1020[];
 extern u8 data_021a0fee[][2];
-void ovy142_219efc0(BagView *a1);
+
 
 void ovy142_219efc0(BagView *a1)
 {
@@ -2379,14 +2357,6 @@ void ovy142_219f76c(BagView *a1, int a2)
     BagMenu_LoadItemNameToStrbuf(a1, 0, a2);
     GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
 }
-
-extern int sub_020223B4(void);
-extern int sub_0202E8D8(int, int, int);
-extern void sub_020223CC(int);
-extern void sub_020223BC(int);
-extern int sub_0203DF20(void);
-extern void sub_020223E0(int, int);
-void ovy142_219f84c(BagView *a1);
 
 int ovy142_219f7a4(BagView *a1)
 {
@@ -3040,10 +3010,6 @@ int ovy142_21A03D4(int *a1, int *a2)
     return -1;
 }
 
-void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4);
-
-extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
-
 void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4)
 {
     int i;  // r6
@@ -3270,7 +3236,7 @@ extern void sub_0200891C(int, u8*);
 extern ItemTable* sub_0200896C(u32, int, int*);
 extern int sub_02008308(u32);
 
-int ovy142_21a0698(ITEM_UNKNOW_DATA *a1, int a2, BagView *a3)
+int ovy142_21a0698(ITEM_UNKNOW_DATA *a1, int a2)
 {
     ItemTable *v7;           // r7
     u32 j;   // r6

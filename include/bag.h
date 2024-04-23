@@ -224,7 +224,6 @@ typedef struct
 
 void ovy142_219a1ec(BagView *m_bagView);
 
-void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2);
 void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
 ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
@@ -240,7 +239,7 @@ extern void ovy142_219becc(BagView*);
 
 #define NORMAL_ITEM_MAX 0x136
 
-extern int ovy142_21a0698(ITEM_UNKNOW_DATA*, int, BagView *);
+extern int ovy142_21a0698(ITEM_UNKNOW_DATA*, int);
 extern void sub_020244E0(int, int, int, int, int);
 
 typedef struct
@@ -438,9 +437,48 @@ extern void ovy142_219b3b0(BagView*);
 extern void ovy142_219b6dc(BagView*);
 extern void ovy142_21a0578(ITEM_UNKNOW_DATA*, int, short);
 
+void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4);
+
+extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
+
 void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
+void BagMenu_SetRunFunc(BagView *m_bagView, FieldBagItemUse fun);
 
+void ovy142_219d6a0(BagView *bagView, int a2);
+extern int sub_02008BF0(void*);
+extern int sub_0204BBB8(int, int, int, int, int, int, u16); 
+void ovy142_219d7a8(BagView *a1);
+extern void sub_0204B0D4(int, int, int, int, int, u16);
+extern int sub_0204AE3C(int, int, int, int, int, u16);
+extern void sub_0204AFB0(int, int, int, int, int, int, int, u16);
+void ovy142_219e284(BagView *a1);
+extern int sub_020480C0(int, int, int, int, int, int, int);
+extern void sub_0204826C(int);
+
+void ovy142_219e5c4(BagView *a1);
+extern int sub_02046E28(int, int, int, u16);
+void ovy142_219efc0(BagView *a1);
+void ovy142_219e6f8(BagView *a1);
+
+void ovy142_219c900(BagView *bagView);
+extern int sub_02035024(int, int, int, u16);
+extern void *sub_0204AA30(int, u16);
+extern void sub_02035104(int, void*, int, int, int);
+
+extern int sub_02026DC0(u16);
+extern void sub_02026E04(int, int, int, u16);
+extern void sub_02026F7C(int, int, int, int);
+void ovy142_219cc24(BagView *bagView);
+
+extern int sub_020223B4(void);
+extern int sub_0202E8D8(int, int, int);
+extern void sub_020223CC(int);
+extern void sub_020223BC(int);
+extern int sub_0203DF20(void);
+extern void sub_020223E0(int, int);
+void ovy142_219f84c(BagView *a1);
+void ovy142_219d664(void);
 
 extern int BagSave_GetUniqueItemCount(ItemTable* bagView, int maxItem);
 extern int BagSave_GetExistingItemPocket(void* bagSave, u16 item);

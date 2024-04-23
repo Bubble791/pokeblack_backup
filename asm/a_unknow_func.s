@@ -8084,6 +8084,7 @@ sub_0219D488: ; 0x02073FB4
 .public ovy142_219efc0
 .public ovy142_21A03D4
 .public ovy142_21a03f0
+.public ovy142_219c444
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a354
@@ -8105,6 +8106,7 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219efc0
 	bl ovy142_21A03D4
 	bl ovy142_21a03f0
+	bl ovy142_219c444
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C10
@@ -8114,7 +8116,12 @@ sub_0208D868:
 	bx lr
 	arm_func_end sub_0208D868
 
-	arm_func_start sub_021999C8
+	thumb_func_start sub_021999C8
 sub_021999C8:
 	bx lr
 	thumb_func_end sub_021999C8
+
+	thumb_func_start sub_021998C0
+sub_021998C0:
+	bx lr
+	thumb_func_end sub_021998C0
