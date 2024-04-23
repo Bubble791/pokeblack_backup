@@ -12,13 +12,13 @@ ovy266_219ce80: ; 0x0219CE80
 	ldr r2, _0219CEB0 ; =0x00125000
 	mov r0, #1
 	mov r1, #0x8e
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r6, #0xa6
 	lsl r6, r6, #2
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x8e
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
@@ -1108,25 +1108,25 @@ ovy266_219d734: ; 0x0219D734
 	mov r1, #2
 	mov r3, #0x8e
 	mov r4, #0x8e
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x14]
 	mov r0, #0x80
 	mov r1, #0x8e
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x18]
 	str r4, [sp]
 	mov r0, #0x17
 	mov r1, #0
 	mov r2, #1
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0xc]
 	mov r0, #0x17
 	mov r1, #2
 	mov r2, #1
 	mov r3, #0
 	str r4, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x10]
 	pop {r3, r4, r5, pc}
 	.align 2, 0

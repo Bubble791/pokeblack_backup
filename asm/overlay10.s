@@ -14,11 +14,11 @@ ovy10_214ff00: ; 0x0214FF00
 	mov r0, #1
 	mov r1, #0x76
 	lsl r2, r2, #0xe
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x1c
 	mov r2, #0x76
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r0, #0x76
 	bl sub_0203A970

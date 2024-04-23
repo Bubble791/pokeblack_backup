@@ -68,7 +68,7 @@
 .public sub_020484F4
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020267C0
 .public sub_020484F4
 .public sub_02021C7C
@@ -322,10 +322,10 @@
 .public sub_02024D00
 .public sub_02026F7C
 .public sub_02026EE8
-.public sub_0204875C
-.public sub_020241D4
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
 .public sub_02021998
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
 .public sub_02021A18

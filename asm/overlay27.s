@@ -687,7 +687,7 @@ ovy27_21708bc: ; 0x021708BC
 	mov r0, #0
 	mov r1, #3
 	mov r2, #0x33
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #0x18]
 	pop {r4, pc}
 	thumb_func_end ovy27_21708bc
@@ -767,7 +767,7 @@ ovy27_2170944: ; 0x02170944
 	push {r4, lr}
 	add r4, r0, #0
 	ldrh r0, [r4]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r4, #0x1c]
 	pop {r4, pc}
 	.align 2, 0
@@ -793,11 +793,11 @@ ovy27_2170964: ; 0x02170964
 	lsl r6, r6, #8
 	ldrh r1, [r5]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	ldrh r1, [r5]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	add r0, r5, #0
 	bl ovy27_2170a38
@@ -976,7 +976,7 @@ ovy27_2170ac4: ; 0x02170AC4
 	mov r1, #2
 	mov r2, #0x24
 	add r3, r6, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #4]
 	add r0, r4, #0
 	add sp, #4
@@ -1260,7 +1260,7 @@ ovy27_2170d04: ; 0x02170D04
 	add r7, r0, #0
 	mov r0, #0x25
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	ldr r0, [r5]
 	ldrb r6, [r5, #0x14]
@@ -1325,7 +1325,7 @@ ovy27_2170d90: ; 0x02170D90
 	add r7, r0, #0
 	mov r0, #0xa1
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	ldr r0, [r5]
 	ldrb r6, [r5, #0x14]

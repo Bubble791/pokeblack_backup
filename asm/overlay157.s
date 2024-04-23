@@ -229,7 +229,7 @@ ovy157_21f5b4c: ; 0x021F5B4C
 	mov r0, #0
 	mov r1, #3
 	lsl r2, r2, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x34]
 	ldrh r2, [r5, #2]
 	mov r0, #6
@@ -238,13 +238,13 @@ ovy157_21f5b4c: ; 0x021F5B4C
 	str r0, [r5, #0x38]
 	ldrh r1, [r5, #2]
 	mov r0, #0xa1
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0x94
 	str r0, [r1]
 	ldrh r1, [r5, #2]
 	mov r0, #0xa1
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0x98
 	str r0, [r1]

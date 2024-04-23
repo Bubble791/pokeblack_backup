@@ -696,7 +696,7 @@ _021B3484:
 	mov r1, #2
 	mov r2, #0x65
 	mov r3, #0x1f
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r7, r0, #0
 	mov r1, #0x19
 	bl sub_0204898C
@@ -3368,7 +3368,7 @@ ovy195_21b4afc: ; 0x021B4AFC
 	mov r1, #0x1f
 	lsl r2, r2, #0xe
 	mov r6, #0x1f
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r0, _021B4BF4 ; =0x04000050
 	mov r7, #0
 	strh r7, [r0]
@@ -3384,7 +3384,7 @@ ovy195_21b4afc: ; 0x021B4AFC
 	add r0, r4, #0
 	lsl r1, r1, #6
 	mov r2, #0x1f
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r2, #0xd
 	add r4, r0, #0
 	mov r1, #0
@@ -6919,19 +6919,19 @@ ovy195_21b66cc: ; 0x021B66CC
 	ldrh r1, [r1]
 	mov r0, #0xf0
 	mov r4, #0xf0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	str r0, [r5, #0x1c]
 	add r1, #0xc8
 	ldrh r1, [r1]
 	mov r0, #0xf0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	str r0, [r5, #0x18]
 	add r1, #0xc8
 	ldrh r1, [r1]
 	mov r0, #0xf0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x20]
 	add r0, r5, #0
 	add r0, #0xc8
@@ -6941,7 +6941,7 @@ ovy195_21b66cc: ; 0x021B66CC
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r3, r5, #0
 	str r0, [r5, #0x14]
 	add r3, #0xc8
@@ -6950,7 +6950,7 @@ ovy195_21b66cc: ; 0x021B66CC
 	mov r0, #0
 	mov r1, #2
 	lsr r2, r2, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r2, r5, #0
 	str r0, [r5, #0xc]
 	add r2, #0xc8
@@ -7430,7 +7430,7 @@ _021B6B3E:
 	add r1, #0xc8
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0xa8
@@ -7446,7 +7446,7 @@ _021B6B3E:
 	strh r5, [r0]
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0xb4
@@ -7847,7 +7847,7 @@ ovy195_21b6e74: ; 0x021B6E74
 	add r1, #0xc8
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #0xa8
@@ -8439,7 +8439,7 @@ _021B7336:
 	add r1, #0xc8
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #0xa8
@@ -8459,7 +8459,7 @@ _021B7336:
 	add r0, #0xb0
 	str r6, [r0]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #0xb4
@@ -8691,7 +8691,7 @@ ovy195_21b7538: ; 0x021B7538
 	ldrh r1, [r1]
 	mov r0, #0x64
 	add r6, r2, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #0xa8

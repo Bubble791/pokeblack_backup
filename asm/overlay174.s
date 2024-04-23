@@ -1671,7 +1671,7 @@ ovy174_219dc1c: ; 0x0219DC1C
 	mov r0, #3
 	strb r0, [r2, #0x13]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r6, #0
 	str r2, [r5, r4]
@@ -1684,7 +1684,7 @@ ovy174_219dc1c: ; 0x0219DC1C
 	strh r7, [r5, r0]
 	ldrh r1, [r5, r6]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0xc
@@ -1766,7 +1766,7 @@ ovy174_219dcdc: ; 0x0219DCDC
 	str r0, [sp, #8]
 	mov r0, #0x64
 	add r1, r2, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r6, #0
 	str r2, [r4, r5]
@@ -1783,7 +1783,7 @@ ovy174_219dcdc: ; 0x0219DCDC
 	str r0, [r4, r1]
 	ldrh r1, [r4, r6]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #0xc
@@ -1822,7 +1822,7 @@ _0219DD84:
 	str r0, [sp, #8]
 	mov r0, #0x64
 	add r1, r2, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	str r2, [r4, r5]
 	add r6, #0x10
@@ -2363,13 +2363,13 @@ ovy174_219e1cc: ; 0x0219E1CC
 	bl ovy174_219da74
 	ldrh r1, [r5, r4]
 	mov r0, #0xc8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	add r1, #0x20
 	str r0, [r5, r1]
 	ldrh r1, [r5, r4]
 	mov r0, #0xc8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	add r1, #0x1c
 	str r0, [r5, r1]
@@ -2380,7 +2380,7 @@ ovy174_219e1cc: ; 0x0219E1CC
 	mov r0, #0x17
 	mov r3, #0
 	mov r7, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r4, #0
 	add r1, #0x18
 	str r0, [r5, r1]
@@ -2388,7 +2388,7 @@ ovy174_219e1cc: ; 0x0219E1CC
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x3e
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	add r1, #0x10
 	str r0, [r5, r1]
@@ -3855,11 +3855,11 @@ ovy174_219ee60: ; 0x0219EE60
 	mov r1, #0x1f
 	lsl r2, r2, #0x11
 	mov r6, #0x1f
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r1, _0219EED8 ; =0x000011B4
 	add r0, r4, #0
 	mov r2, #0x1f
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	ldr r2, _0219EED8 ; =0x000011B4
 	mov r1, #0
 	add r4, r0, #0

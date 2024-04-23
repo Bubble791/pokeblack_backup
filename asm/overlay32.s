@@ -337,13 +337,13 @@ _02199B3E:
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r4, r0, #0
 	ldr r2, _02199BD8 ; =0x000001B7
 	mov r0, #0
 	mov r1, #2
 	mov r3, #1
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	ldr r1, [sp, #8]
 	add r7, r0, #0
 	bl sub_0204898C

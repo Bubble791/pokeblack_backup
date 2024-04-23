@@ -1387,7 +1387,7 @@ ovy121_21ef998: ; 0x021EF998
 	mov r0, #0
 	mov r1, #3
 	mov r2, #0xd1
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #8]
 	ldr r0, [sp, #4]
 	mov r1, #0xf

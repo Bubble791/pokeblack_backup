@@ -13,11 +13,11 @@ ovy301_219fbc0: ; 0x0219FBC0
 	mov r0, #1
 	mov r1, #0x7e
 	lsl r2, r2, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x10
 	mov r2, #0x7e
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0

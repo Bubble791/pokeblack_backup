@@ -620,7 +620,7 @@ ovy62_21e5cbc: ; 0x021E5CBC
 	mov r0, #0
 	mov r1, #2
 	add r3, r7, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r7, r0, #0
 	beq _021E5D14
 	add r1, r4, #0

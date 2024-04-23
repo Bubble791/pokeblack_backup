@@ -28,7 +28,7 @@ ovy213_21bb728: ; 0x021BB728
 	add r5, r2, #0
 	add r1, r6, #0
 	mov r2, #4
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0

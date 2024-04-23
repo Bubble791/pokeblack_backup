@@ -13,7 +13,7 @@ ovy28_2170340: ; 0x02170340
 	mov r0, #4
 	mov r1, #0x41
 	lsl r2, r2, #8
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r0, #0x89
 	str r0, [sp]
 	ldr r1, _0217038C ; =0x00003638

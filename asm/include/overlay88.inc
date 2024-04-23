@@ -7,9 +7,9 @@
 .public sub_0203A24C
 .public sub_021984DC
 .public sub_02021A3C
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020232D8
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_02021998
 .public sub_02042BA8
 .public sub_02198884

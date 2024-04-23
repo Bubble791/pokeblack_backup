@@ -13,12 +13,12 @@ ovy272_21f7f80: ; 0x021F7F80
 	mov r0, #1
 	mov r1, #0x59
 	lsl r2, r2, #0xc
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r6, _021F7FCC ; =0x000017F4
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x59
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0

@@ -983,8 +983,8 @@ _0203A158:
 	.align 2, 0
 	thumb_func_end sub_0203A130
 
-	thumb_func_start sub_0203A15C
-sub_0203A15C: ; 0x0203A15C
+	thumb_func_start GFL_HeapCreateChild
+GFL_HeapCreateChild: ; 0x0203A15C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -997,7 +997,7 @@ sub_0203A15C: ; 0x0203A15C
 	bl sub_0203A194
 _0203A176:
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_0203A15C
+	thumb_func_end GFL_HeapCreateChild
 
 	thumb_func_start sub_0203A178
 sub_0203A178: ; 0x0203A178
@@ -2441,8 +2441,8 @@ sub_0203AAE4: ; 0x0203AAE4
 _0203AAE8: .word sub_0203A24C
 	thumb_func_end sub_0203AAE4
 
-	thumb_func_start sub_0203AAEC
-sub_0203AAEC: ; 0x0203AAEC
+	thumb_func_start GFL_ProcInitSubsystem
+GFL_ProcInitSubsystem: ; 0x0203AAEC
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, r0, #0
@@ -2458,7 +2458,7 @@ sub_0203AAEC: ; 0x0203AAEC
 	nop
 _0203AB08: .word 0x00000186
 _0203AB0C: .word 0x0209A874
-	thumb_func_end sub_0203AAEC
+	thumb_func_end GFL_ProcInitSubsystem
 
 	thumb_func_start sub_0203AB10
 sub_0203AB10: ; 0x0203AB10
@@ -19315,7 +19315,7 @@ _020425BC:
 	strh r4, [r0]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 _020425D4:
 	mov r0, #0
 	mov r1, #0
@@ -19349,7 +19349,7 @@ _02042606:
 	ldrh r1, [r1]
 	mov r2, #0x1e
 	lsl r2, r2, #0xa
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r0, #0x6a
 	str r0, [sp]
 	add r0, r4, #0
@@ -19461,7 +19461,7 @@ _020426E4:
 	mov r2, #0x1b
 	lsl r2, r2, #8
 _020426EE:
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	b _0204270A
 _020426F4:
 	add r0, r4, #0
@@ -32564,8 +32564,8 @@ _02048528:
 _0204852C: .word 0xB6F8D2EC
 	thumb_func_end sub_02048518
 
-	thumb_func_start sub_02048530
-sub_02048530: ; 0x02048530
+	thumb_func_start GFL_StrBufCreate
+GFL_StrBufCreate: ; 0x02048530
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	mov r0, #0x64
@@ -32589,7 +32589,7 @@ sub_02048530: ; 0x02048530
 _02048558: .word 0x0209AED0
 _0204855C: .word 0xB6F8D2EC
 _02048560: .word 0x0209AECC
-	thumb_func_end sub_02048530
+	thumb_func_end GFL_StrBufCreate
 
 	thumb_func_start GFL_StrBufFree
 GFL_StrBufFree: ; 0x02048564
@@ -32641,7 +32641,7 @@ sub_020485A4: ; 0x020485A4
 	add r4, r0, #0
 	ldrh r0, [r4, #2]
 	add r0, r0, #1
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	add r5, r0, #0
 	bl sub_02048580
@@ -32909,8 +32909,8 @@ _02048754:
 _02048758: .word 0x0209AECC
 	thumb_func_end sub_02048734
 
-	thumb_func_start sub_0204875C
-sub_0204875C: ; 0x0204875C
+	thumb_func_start GFL_MsgSysLoadData
+GFL_MsgSysLoadData: ; 0x0204875C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r6, r0, #0
@@ -32965,7 +32965,7 @@ _020487C8:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _020487D0: .word 0x0209AEDC
-	thumb_func_end sub_0204875C
+	thumb_func_end GFL_MsgSysLoadData
 
 	thumb_func_start GFL_MsgDataFree
 GFL_MsgDataFree: ; 0x020487D4
@@ -33229,7 +33229,7 @@ _020489C8:
 _020489D0:
 	ldrh r0, [r0, #4]
 	ldrh r1, [r5, #0x18]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0

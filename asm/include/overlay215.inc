@@ -21,8 +21,8 @@
 .public sub_0201CD1C
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
 .public sub_0203A970
 .public sub_0203A978
@@ -53,7 +53,7 @@
 .public sub_0203A1FC
 .public MIi_CpuClearFast
 .public sub_02009730
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02009734
 .public sub_02048614
 .public sub_02009750
@@ -69,11 +69,11 @@
 .public sub_02009754
 .public sub_02029D74
 .public sub_02029BE4
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
 .public sub_02017BCC
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_0203A78C
 .public sub_020444A4
 .public sub_02044528
@@ -207,8 +207,8 @@
 .public sub_0204B7C8
 .public sub_02045A5C
 .public sub_02027880
-.public sub_0204875C
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_StrBufCreate
 .public sub_0202E168
 .public sub_02027880
 .public sub_0202778C
@@ -332,8 +332,8 @@
 .public sub_02042BA8
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
 .public sub_02009790
 .public sub_0203A970
@@ -408,9 +408,9 @@
 .public sub_0203368C
 .public MI_CpuCopy8
 .public sub_02033254
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
@@ -450,7 +450,7 @@
 .public sub_02021A18
 .public sub_0204BF98
 .public sub_02048080
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_0203A78C
 .public sub_02021998
 .public sub_020480C0
@@ -498,7 +498,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02009734
 .public sub_02009734
 .public sub_02048614
@@ -604,7 +604,7 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046DF8
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_0203A1FC
 .public MIi_CpuClearFast
 .public sub_021A8DF0

@@ -404,14 +404,14 @@ ovy82_21eab90: ; 0x021EAB90
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	mov r2, #0x19
 	str r0, [r5, #0x44]
 	mov r0, #0
 	mov r1, #2
 	lsl r2, r2, #4
 	mov r3, #0x15
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x48]
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy82_21eab90
@@ -1322,7 +1322,7 @@ _021EB2C2:
 	str r1, [r0, r5]
 	mov r0, #8
 	mov r1, #0x15
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r7, #0
 	add r5, r0, #0
 	bl sub_02048614

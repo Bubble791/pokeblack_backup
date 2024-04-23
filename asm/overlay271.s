@@ -15,11 +15,11 @@ ovy271_21efe40: ; 0x021EFE40
 	mov r1, #0x5a
 	lsl r2, r2, #0x10
 	mov r6, #1
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x1c
 	mov r2, #0x5a
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x1c
@@ -5237,7 +5237,7 @@ _021F25DA:
 	orr r0, r2
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	ldr r2, [r5]
 	mov r1, #1
 	str r1, [sp]
@@ -5259,7 +5259,7 @@ _021F25DA:
 	bl sub_020485F8
 	ldr r1, [sp, #8]
 	add r0, r0, #7
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
 	add r1, r5, #0
@@ -5337,7 +5337,7 @@ _021F26C0:
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r4, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -5345,7 +5345,7 @@ _021F26C0:
 	mov r1, #2
 	mov r2, #8
 	add r3, r5, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	add r1, #0xec
 	str r0, [r1]
@@ -7163,7 +7163,7 @@ ovy271_21f34a0: ; 0x021F34A0
 	strh r5, [r4, #0x16]
 	ldrh r1, [r6, #0xc]
 	mov r0, #0xff
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x10]
 	ldrb r0, [r6]
 	add r1, r7, #0
@@ -8662,7 +8662,7 @@ _021F40AA: ; jump table
 _021F40B8:
 	mov r0, #0x80
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [sp, #0x10]
 	add r1, r5, #0
@@ -8699,7 +8699,7 @@ _021F4108:
 	str r0, [sp, #0x48]
 	mov r0, #0x80
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r6, #4]
@@ -8720,7 +8720,7 @@ _021F413A:
 	str r0, [sp, #0x4c]
 	mov r0, #0x80
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r6, #4]
@@ -8754,7 +8754,7 @@ _021F4180:
 	str r0, [sp, #0x54]
 	mov r0, #0x80
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r6, #4]
@@ -14608,7 +14608,7 @@ _021F6E7C:
 	str r0, [r5, #0x64]
 	ldrh r1, [r5, #0x24]
 	mov r0, #0xb
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	add r0, r5, #0
 	add r0, #0x8c

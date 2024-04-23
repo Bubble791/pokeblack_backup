@@ -25715,7 +25715,7 @@ ovy168_21ea210: ; 0x021EA210
 	ldrh r1, [r5, r6]
 	mov r0, #0xa
 	str r2, [sp, #8]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	ldrh r3, [r5, r6]
 	mov r0, #8
@@ -25971,7 +25971,7 @@ _021EA40E:
 	mov r1, #2
 	mov r2, #0x15
 	mov r6, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x5c]
 	add r0, r7, #0
 	str r4, [r5, #0x70]
@@ -32492,7 +32492,7 @@ ovy168_21ed81c: ; 0x021ED81C
 	lsl r1, r1, #2
 	ldrh r1, [r4, r1]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x20]
 	ldr r0, [r4, #0x5c]
 	mov r1, #0
@@ -32506,13 +32506,13 @@ ovy168_21ed81c: ; 0x021ED81C
 	mov r0, #0xb1
 	lsl r0, r0, #2
 	ldrh r0, [r4, r0]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	mov r1, #0xb1
 	lsl r1, r1, #2
 	str r0, [sp, #0xa0]
 	ldrh r1, [r4, r1]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x18]
 	ldr r0, [r4, #0x5c]
 	mov r1, #2
@@ -33006,7 +33006,7 @@ _021EDC7A:
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [sp, #0x24]
 	ldrh r0, [r4, r0]
@@ -33016,7 +33016,7 @@ _021EDC7A:
 	orr r0, r1
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #0x1c]
 	mov r0, #1
 	mov r1, #2
@@ -33564,11 +33564,11 @@ ovy168_21ee118: ; 0x021EE118
 	lsl r4, r4, #2
 	ldrh r0, [r5, r4]
 	add r6, r1, #0
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r7, r0, #0
 	ldrh r1, [r5, r4]
 	mov r0, #8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x5c]
 	mov r1, #6
@@ -34862,7 +34862,7 @@ ovy168_21eeafc: ; 0x021EEAFC
 	bl sub_0204C488
 	ldrh r1, [r6, r7]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x18]
 	ldr r0, [r6, #0x5c]
 	mov r1, #0
@@ -34870,7 +34870,7 @@ ovy168_21eeafc: ; 0x021EEAFC
 	bl sub_0204898C
 	str r0, [sp, #0x14]
 	ldrh r0, [r6, r7]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #0x10]
 	ldrh r3, [r6, r7]
 	mov r0, #0xe
@@ -35832,11 +35832,11 @@ ovy168_21ef29c: ; 0x021EF29C
 	mov r4, #0xb1
 	lsl r4, r4, #2
 	ldrh r0, [r5, r4]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #8]
 	ldrh r1, [r5, r4]
 	mov r0, #6
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r5, #0x5c]
 	mov r1, #8
@@ -39518,7 +39518,7 @@ ovy168_21f0ef8: ; 0x021F0EF8
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	ldr r3, _021F1068 ; =0x00000468
 	add r6, r0, #0
 	ldrh r3, [r4, r3]
@@ -40067,7 +40067,7 @@ ovy168_21f1348: ; 0x021F1348
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	ldrh r3, [r6, r4]
 	str r0, [sp, #4]
 	mov r0, #3

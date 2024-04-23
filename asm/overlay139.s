@@ -1433,14 +1433,14 @@ ovy139_219a2ec: ; 0x0219A2EC
 	ldr r2, _0219A40C ; =0x0000010A
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0x1c]
 	ldrh r0, [r7, #0x10]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #0x20]
 	ldrh r1, [r7, #0x10]
 	mov r0, #0xa
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [sp, #0x1c]
 	mov r1, #0
@@ -1609,7 +1609,7 @@ _0219A46C:
 _0219A47A:
 	ldr r1, [sp, #4]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4]
 	add r0, r4, #0
 	add sp, #0xc

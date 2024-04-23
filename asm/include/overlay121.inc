@@ -88,7 +88,7 @@
 .public sub_02167288
 .public sub_02005748
 .public sub_0208D868
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_021EFAD0
 .public GFL_MsgDataFree
 .public sub_02005748

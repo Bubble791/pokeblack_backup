@@ -15,11 +15,11 @@ ovy317_219ce80: ; 0x0219CE80
 	mov r1, #0x88
 	lsl r2, r2, #0x10
 	mov r6, #0x88
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x18
 	mov r2, #0x88
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r7, r0, #0
 	mov r1, #0
 	mov r2, #0x18
@@ -37,7 +37,7 @@ ovy317_219ce80: ; 0x0219CE80
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r7, #0xc]
 	ldrh r0, [r7]
 	bl sub_02021998

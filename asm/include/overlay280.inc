@@ -2,13 +2,13 @@
 #pragma once
 .public sub_0203CE0C
 .public sub_0200C84C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020219A8
-.public sub_0204875C
-.public sub_020241D4
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
 .public sub_021DD394
 .public sub_0202AE5C
 .public sub_021DD394
@@ -108,7 +108,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021D9CF4
 .public sub_020485F8
 .public sub_020486F4
@@ -165,7 +165,7 @@
 .public MI_CpuFill8
 .public sub_021DD53C
 .public sub_021DD53C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021DD548
 .public sub_021DD544
 .public sub_020486F4
@@ -278,7 +278,7 @@
 .public sub_0203D564
 .public GFL_SndSEPlay
 .public MI_CpuFill8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020480C0
 .public sub_02024E80
 .public sub_020484F4
@@ -319,7 +319,7 @@
 .public sub_020223CC
 .public GFL_TCBExMgrFree
 .public MI_CpuFill8
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_02165B0C
 .public sub_02024464
 .public sub_020485A4
@@ -395,7 +395,7 @@
 .public sub_0204C4D4
 .public sub_021D9CF4
 .public sub_0204C56C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0200C93C
 .public sub_02048614
 .public sub_0200C954
@@ -417,7 +417,7 @@
 .public sub_021DA8D0
 .public sub_02048580
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0200C93C
 .public sub_0200C954
 .public sub_0201150C

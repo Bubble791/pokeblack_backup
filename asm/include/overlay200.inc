@@ -79,9 +79,9 @@
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020232E8
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204B0B8
 .public sub_02024D00
 .public sub_02024C8C
@@ -143,8 +143,8 @@
 .public sub_0204C488
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public sub_0203A1FC
 .public sub_02008B0C
 .public sub_0203DF20

@@ -1,13 +1,13 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_0219FC54
 .public sub_0203A1D0
 .public sub_020056FC
-.public sub_0203AAEC
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0204875C
-.public sub_020241D4
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public sub_0203AB10
@@ -177,7 +177,7 @@
 .public sub_021A11B4
 .public sub_02018C80
 .public sub_02024700
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public sub_02010DB8
@@ -220,7 +220,7 @@
 .public sub_021A11B4
 .public sub_02018C80
 .public sub_02024700
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
@@ -230,7 +230,7 @@
 .public sub_021A11B4
 .public sub_02018C80
 .public sub_02024700
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
@@ -412,7 +412,7 @@
 .public sub_0204713C
 .public sub_02048244
 .public sub_02045B7C
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_0202E678
 .public sub_0203A78C
 .public sub_0202E7A4

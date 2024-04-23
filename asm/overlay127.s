@@ -6574,14 +6574,14 @@ ovy127_21f1e0c: ; 0x021F1E0C
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x1c]
 	bl sub_020232D8
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x34
 	add r3, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x20]
 	add r0, r4, #0
 	bl sub_02021998

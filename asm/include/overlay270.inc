@@ -3,7 +3,7 @@
 .public sub_0203CE0C
 .public sub_0203CE0C
 .public sub_021F0948
-.public sub_0203AAEC
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_021F0948
 .public sub_02021998

@@ -1533,7 +1533,7 @@
 .public sub_0204C56C
 .public sub_0204C124
 .public sub_0204C56C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02046E28
 .public ovy167_21d4ec0
 .public sub_02022888
@@ -1547,7 +1547,7 @@
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A58C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0203A1FC
 .public sub_0203A614
 .public GFL_MsgDataFree
@@ -1910,11 +1910,11 @@
 .public G2x_SetBlendBrightness_
 .public sub_02022888
 .public FX_ModS32
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0204898C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0204BFD4
 .public sub_02021280
@@ -1951,8 +1951,8 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_02023370
-.public sub_02048530
-.public sub_020241D4
+.public GFL_StrBufCreate
+.public GFL_WordSetSystemCreateDefault
 .public sub_020232E8
 .public sub_0204898C
 .public sub_02024464
@@ -1984,8 +1984,8 @@
 .public sub_020270F0
 .public sub_020270F0
 .public sub_020270F0
-.public sub_020241D4
-.public sub_02048530
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_02023370
 .public sub_020232E8
@@ -2066,9 +2066,9 @@
 .public sub_0204C140
 .public sub_0204C520
 .public sub_0204C488
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_02046E28
 .public sub_0204713C
 .public sub_02023370
@@ -2103,8 +2103,8 @@
 .public sub_02026FE4
 .public sub_02027780
 .public sub_0203A6D0
-.public sub_020241D4
-.public sub_02048530
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_02023370
 .public sub_020232E8
@@ -2340,7 +2340,7 @@
 .public sub_0208D868
 .public sub_0208D65C
 .public sub_0208D65C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02046E28
 .public sub_0204713C
 .public sub_0201CCF8
@@ -2382,7 +2382,7 @@
 .public sub_0208D65C
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02046E28
 .public sub_0204713C
 .public sub_02024A14

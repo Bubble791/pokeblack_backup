@@ -14,13 +14,13 @@ ovy205_21b7380: ; 0x021B7380
 	mov r1, #0x32
 	lsl r2, r0, #0x12
 	mov r7, #0x32
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r6, #0xd3
 	lsl r6, r6, #2
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x32
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
@@ -97,7 +97,7 @@ _021B73F6:
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r5, #0
 	add r1, #0xbc
 	str r0, [r4, r1]
@@ -1743,7 +1743,7 @@ ovy205_21b8108: ; 0x021B8108
 	add r6, r0, #0
 	mov r0, #0x64
 	mov r1, #0x32
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	mov r0, #0x7e
 	lsl r0, r0, #2
@@ -3998,7 +3998,7 @@ ovy205_21b9214: ; 0x021B9214
 	mov r2, #0x1c
 	mov r3, #0x32
 	mov r7, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r6, #3
 	str r0, [sp, #8]
 	bl sub_0204898C
@@ -4136,20 +4136,20 @@ ovy205_21b9338: ; 0x021B9338
 	add r6, r1, #0
 	add r7, r2, #0
 	str r3, [sp, #8]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r4, r0, #0
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x1c
 	mov r3, #0x32
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r6, #0
 	str r0, [sp, #0xc]
 	bl sub_0204898C
 	str r0, [sp, #0x10]
 	mov r0, #0x58
 	mov r1, #0x32
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	mov r0, #2
 	str r0, [sp]

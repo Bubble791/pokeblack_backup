@@ -536,7 +536,7 @@ ovy200_21b3400: ; 0x021B3400
 	mov r0, #0x17
 	mov r3, #0
 	mov r4, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x28]
 	mov r0, #0xf
 	mov r1, #2
@@ -547,7 +547,7 @@ ovy200_21b3400: ; 0x021B3400
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x18
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x2c]
 	mov r0, #0x20
 	str r0, [sp]
@@ -924,11 +924,11 @@ ovy200_21b3760: ; 0x021B3760
 	mov r1, #0x8a
 	lsl r2, r2, #0x10
 	mov r7, #1
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x64
 	mov r2, #0x8a
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	cmp r5, #0
 	bne _021B37B6

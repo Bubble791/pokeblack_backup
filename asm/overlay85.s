@@ -3832,7 +3832,7 @@ ovy85_21ecadc: ; 0x021ECADC
 	add r0, r5, #0
 	add r0, #0xd0
 	ldrh r0, [r0]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r4, #0xfd
 	str r0, [r5, r4]
 	add r3, r5, #0
@@ -3842,7 +3842,7 @@ ovy85_21ecadc: ; 0x021ECADC
 	mov r1, #2
 	mov r4, #0x28
 	mov r2, #0x28
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r4, #0xdc
 	str r0, [r5, r4]
 	add r1, r5, #0
@@ -3850,7 +3850,7 @@ ovy85_21ecadc: ; 0x021ECADC
 	ldrh r1, [r1]
 	mov r0, #0xd9
 	mov r4, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xd9
 	add r1, #0x2f
 	str r0, [r5, r1]
@@ -3858,7 +3858,7 @@ ovy85_21ecadc: ; 0x021ECADC
 	add r1, #0xd0
 	ldrh r1, [r1]
 	mov r0, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xd9
 	add r1, #0x33
 	str r0, [r5, r1]
@@ -3866,7 +3866,7 @@ ovy85_21ecadc: ; 0x021ECADC
 	add r1, #0xd0
 	ldrh r1, [r1]
 	mov r0, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, #0x37
 	str r0, [r5, r4]
 	pop {r4, r5, r6, pc}
@@ -5098,7 +5098,7 @@ ovy85_21ed44c: ; 0x021ED44C
 	add r1, #0xd0
 	ldrh r1, [r1]
 	mov r0, #8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x54]
 	ldrsh r0, [r4, r7]
 	add r1, r4, #0
@@ -5121,7 +5121,7 @@ ovy85_21ed44c: ; 0x021ED44C
 	add r1, #0xd0
 	ldrh r1, [r1]
 	mov r0, #0x29
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x58]
 	ldrsh r0, [r4, r7]
 	add r1, r4, #0
@@ -5143,7 +5143,7 @@ ovy85_21ed44c: ; 0x021ED44C
 	add r5, #0xd0
 	ldrh r1, [r5]
 	mov r0, #0x18
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x5c]
 	ldr r0, [r4, #0xc]
 	mov r1, #0
@@ -5528,7 +5528,7 @@ ovy85_21ed868: ; 0x021ED868
 	lsl r1, r1, #0x10
 	mov r0, #0xb
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	beq _021ED946
 	add r0, r4, #0

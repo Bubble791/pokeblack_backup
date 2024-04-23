@@ -489,22 +489,22 @@ _021EAC3A:
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x4c]
 	add r2, r6, #0
 	ldrh r3, [r5, r6]
 	mov r0, #0
 	mov r1, #2
 	add r2, #0x33
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r7, r0, #0
 	ldrh r0, [r5, r6]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r4, r0, #0
 	mov r0, #2
 	ldrh r1, [r5, r6]
 	add r0, #0xfe
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r5]
 	bl sub_02016AD8
@@ -675,7 +675,7 @@ _021EAE22:
 	str r0, [sp, #0x48]
 	ldrh r1, [r5, r1]
 	mov r0, #0x40
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x4c]
 	ldr r0, [sp, #0x48]
 	mov r1, #0

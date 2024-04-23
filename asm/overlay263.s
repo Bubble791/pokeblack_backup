@@ -13,13 +13,13 @@ ovy263_21c2560: ; 0x021C2560
 	mov r0, #1
 	mov r1, #0x58
 	lsl r2, r2, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r6, #0x58
 	add r6, #0xb4
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x58
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
@@ -533,11 +533,11 @@ ovy263_21c2958: ; 0x021C2958
 	mov r1, #0x58
 	lsl r2, r0, #0x10
 	mov r7, #0x58
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #4
 	mov r2, #0x58
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #4
 	add r4, r0, #0

@@ -16,11 +16,11 @@ ovy332_21beee0: ; 0x021BEEE0
 	lsl r2, r2, #0x10
 	mov r6, #1
 	mov r7, #0x9b
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r1, _021BEF94 ; =0x00000418
 	add r0, r4, #0
 	mov r2, #0x9b
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	ldr r2, _021BEF94 ; =0x00000418
 	mov r1, #0
 	add r4, r0, #0
@@ -488,7 +488,7 @@ _021BF28E:
 	mov r1, #3
 	mov r2, #0xd0
 	mov r3, #0x9b
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	mov r1, #0x16
 	add r7, r0, #0
 	bl sub_0204898C
@@ -1446,7 +1446,7 @@ _021BF97E:
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x2c]
 	add r0, r4, #0
 	bl sub_02021998
@@ -1456,14 +1456,14 @@ _021BF97E:
 	mov r2, #0x43
 	add r3, r4, #0
 	mov r7, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x34]
 	add r0, r4, #0
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r5, #0x38]
 	mov r0, #0x80
 	add r1, r4, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r6, #0x9f
 	lsl r6, r6, #2
 	str r0, [r5, r6]
@@ -2970,7 +2970,7 @@ ovy332_21c054c: ; 0x021C054C
 	lsl r0, r0, #8
 	add r1, r5, #0
 	strh r5, [r4, #0x1e]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, sp, #0x28
 	str r0, [r4, #0x18]
 	ldrh r0, [r1]
@@ -4981,7 +4981,7 @@ ovy332_21c13d8: ; 0x021C13D8
 	str r0, [r4, #0x20]
 	mov r0, #0x80
 	add r1, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x18]
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
@@ -5515,7 +5515,7 @@ ovy332_21c180c: ; 0x021C180C
 	add r4, r0, #0
 	ldr r1, [sp, #0xc]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	add r1, #0xb4
 	str r0, [r1]
@@ -6239,7 +6239,7 @@ ovy332_21c1d9c: ; 0x021C1D9C
 	bl sub_020485F8
 	lsl r0, r0, #1
 	add r1, r4, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r0, r6, #0
 	add r1, r4, #0
@@ -12541,7 +12541,7 @@ ovy332_21c4dc4: ; 0x021C4DC4
 	str r0, [r5, #0x1c]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x2c]
 	add r0, r6, #0
 	mov r1, #8
@@ -13623,7 +13623,7 @@ _021C5698:
 _021C56AE:
 	mov r0, #0x80
 	mov r1, #0x9b
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xa5
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -15737,7 +15737,7 @@ _021C66CC:
 	str r0, [r6, #0x2c]
 	mov r0, #0xb
 	mov r1, #0x9b
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r6, #0x20]
 	mov r0, #0xa7
 	lsl r0, r0, #2
@@ -15779,7 +15779,7 @@ _021C673C:
 	bne _021C6752
 	mov r0, #0xb
 	mov r1, #0x9b
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	sub r6, #0xc
 	str r0, [r4, r6]
 _021C6752:
@@ -16040,7 +16040,7 @@ _021C6954:
 	add r7, r0, #0
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [sp, #0x10]
 	bl sub_02008BD4

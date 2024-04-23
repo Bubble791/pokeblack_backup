@@ -28,10 +28,10 @@
 .public sub_02180490
 .public sub_021804B8
 .public sub_0201361C
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public ovy12_216740c
 .public GFL_StrBufFree
 .public GFL_StrBufFree

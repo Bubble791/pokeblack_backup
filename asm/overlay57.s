@@ -578,7 +578,7 @@ _021E7A66:
 	add r7, r0, #0
 	ldr r1, [sp, #0x14]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x18]
 	ldr r1, [sp, #0x18]
 	add r0, r6, #0
@@ -615,7 +615,7 @@ _021E7AC2:
 	add r7, r0, #0
 	ldr r1, [sp, #0x14]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r0, r6, #0
 	add r1, r4, #0

@@ -3818,25 +3818,25 @@ ovy173_219eb0c: ; 0x0219EB0C
 	add r5, r0, #0
 	add r0, r4, #0
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0xf4
 	str r0, [r1]
 	add r0, r4, #0
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0xfc
 	str r0, [r1]
 	add r0, r4, #0
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0xf0
 	str r0, [r1]
 	mov r0, #0xb4
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0xf8
 	str r0, [r1]
@@ -4878,11 +4878,11 @@ _0219F3DA:
 	bl sub_02024E80
 	mov r0, #0x40
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x1c]
 	mov r0, #0x40
 	mov r1, #0x21
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	mov r0, #0x1a
 	lsl r0, r0, #4
@@ -9670,7 +9670,7 @@ _021A183A:
 	bl sub_0204AA30
 	add r4, r0, #0
 	mov r0, #0x21
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r1, r5, #0
 	mov r6, #0x1a
 	add r1, #0xdc
@@ -9680,7 +9680,7 @@ _021A183A:
 	mov r1, #2
 	add r2, r6, #0
 	mov r3, #0x21
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	add r1, #0xe0
 	str r0, [r1]
@@ -9689,7 +9689,7 @@ _021A183A:
 	mov r1, #2
 	add r2, r6, #0
 	mov r3, #0x21
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	add r1, #0xe4
 	str r0, [r1]
@@ -9698,7 +9698,7 @@ _021A183A:
 	mov r2, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r5, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -9707,7 +9707,7 @@ _021A183A:
 	mov r2, #0
 	mov r3, #0
 	str r7, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r5, #0
 	add r1, #0xec
 	str r0, [r1]
@@ -17173,7 +17173,7 @@ ovy173_21a5438: ; 0x021A5438
 	str r0, [r5, r1]
 	lsl r0, r6, #0x10
 	lsr r0, r0, #0x10
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r5, r4]
 	add r0, r5, #0
 	add r1, r7, #0
@@ -18546,12 +18546,12 @@ ovy173_21a5ed0: ; 0x021A5ED0
 	ldr r1, _021A5FE0 ; =0x00008021
 	mov r0, #1
 	lsl r2, r2, #0xe
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r6, _021A5FE4 ; =0x00001364
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x21
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r6, #0

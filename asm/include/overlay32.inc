@@ -38,8 +38,8 @@
 .public MIi_CpuClear16
 .public G2_GetBG1CharPtr
 .public sub_02046EA8
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_02021D28
 .public GFL_StrBufFree

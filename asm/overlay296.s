@@ -1482,7 +1482,7 @@ ovy296_219e260: ; 0x0219E260
 	beq _0219E28E
 	mov r0, #0x80
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	ldr r0, [sp, #0x3c]
 	ldr r2, [sp, #0x28]
@@ -1674,7 +1674,7 @@ _0219E3E4:
 	cmp r7, r6
 	beq _0219E434
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	mov r1, #2
 	str r1, [sp]
 	mov r1, #1
@@ -1987,7 +1987,7 @@ _0219E662:
 	cmp r4, r1
 	beq _0219E6C0
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #0x1c]
 	cmp r6, #0
 	bne _0219E67C
@@ -4329,7 +4329,7 @@ _0219F840:
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	lsl r1, r5, #2
 	add r2, r4, r1
 	ldr r1, [sp]
@@ -4349,7 +4349,7 @@ _0219F866:
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	lsl r1, r5, #2
 	add r2, r4, r1
 	ldr r1, [sp, #0xc]
@@ -4369,7 +4369,7 @@ _0219F88C:
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	lsl r1, r5, #2
 	add r2, r4, r1
 	ldr r1, [sp, #0x18]
@@ -4380,7 +4380,7 @@ _0219F8A2:
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	lsl r1, r5, #2
 	add r2, r4, r1
 	ldr r1, [sp, #0x1c]

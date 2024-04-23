@@ -15,13 +15,13 @@ ovy141_219ce80: ; 0x0219CE80
 	mov r1, #0x80
 	lsl r2, r2, #0xa
 	mov r7, #1
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r5, #0x80
 	add r5, #0xe8
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0x80
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r0, #0
 	add r1, r4, #0
@@ -160,7 +160,7 @@ ovy141_219cfb4: ; 0x0219CFB4
 	mov r1, #2
 	mov r2, #0x44
 	mov r3, #0x80
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	add r1, #0xf4
 	str r0, [r1]
@@ -187,7 +187,7 @@ _0219CFEC:
 	mov r0, #0x40
 	mov r1, #0x80
 	mov r4, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r5, #0
 	add r1, #0xfc
 	str r0, [r1]
@@ -898,7 +898,7 @@ ovy141_219d5e8: ; 0x0219D5E8
 	mov r2, #0
 	mov r3, #0
 	mov r5, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r4, #0xc]
 	mov r0, #0x80
 	bl sub_02021998
@@ -1309,7 +1309,7 @@ ovy141_219d8d0: ; 0x0219D8D0
 	add r0, #0x18
 	str r0, [sp, #0x1c]
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x18]
 	mov r0, #0
 	str r0, [sp]
@@ -1850,7 +1850,7 @@ ovy141_219dd5c: ; 0x0219DD5C
 	mov r0, #0x10
 	mov r1, #0x80
 	mov r4, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	mov r0, #0x80
 	mov r1, #0x80

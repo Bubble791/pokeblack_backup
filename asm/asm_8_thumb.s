@@ -53,7 +53,7 @@ _0200550A:
 	mov r1, #7
 	lsl r2, r2, #0xc
 	mov r4, #1
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	bne _02005542
@@ -69,7 +69,7 @@ _02005542:
 	add r0, r4, #0
 	mov r1, #9
 	lsl r2, r2, #8
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 _0200554E:
 	mov r0, #0
 	mov r4, #0

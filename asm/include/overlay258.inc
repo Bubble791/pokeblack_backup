@@ -1,9 +1,9 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_0203A78C
 .public sub_02042BA8
 .public sub_0204B794
@@ -94,9 +94,9 @@
 .public sub_0202E818
 .public sub_02048210
 .public sub_020480A8
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0204898C
 .public GFL_MsgDataFree
@@ -160,7 +160,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
 .public sub_02024464
 .public GFL_WordSetFormatStrbuf
@@ -168,7 +168,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0201D624
 .public sub_0201CD88
 .public sub_0204C124
@@ -244,7 +244,7 @@
 .public sub_02045B7C
 .public sub_02045B7C
 .public sub_02024F60
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_02024FBC
 .public sub_02024FBC
 .public GFL_MsgDataFree
@@ -260,7 +260,7 @@
 .public sub_02021280
 .public sub_0202174C
 .public GFL_MsgDataLoadStrbuf
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
 .public sub_0204C124

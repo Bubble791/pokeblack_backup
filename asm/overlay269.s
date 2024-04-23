@@ -18,7 +18,7 @@ ovy269_21ef1e0: ; 0x021EF1E0
 	add r2, r0, #0
 	add r0, r4, #0
 	mov r1, #0x34
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #0x34
 	add r4, r0, #0

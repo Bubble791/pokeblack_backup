@@ -804,7 +804,7 @@ ovy199_21b35c4: ; 0x021B35C4
 	lsl r4, r4, #2
 	ldrh r1, [r5, #0xc]
 	add r0, r4, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x38]
 	ldrh r0, [r5, #0xc]
 	mov r1, #0
@@ -813,20 +813,20 @@ ovy199_21b35c4: ; 0x021B35C4
 	mov r0, #0x17
 	mov r3, #0
 	mov r6, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x30]
 	ldrh r3, [r5, #0xc]
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x2c
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r4, #0x8b
 	str r0, [r5, #0x24]
 	ldrh r3, [r5, #0xc]
 	mov r0, #0
 	mov r1, #2
 	add r2, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x28]
 	ldrh r1, [r5, #0xc]
 	mov r0, #0x1d
@@ -1439,7 +1439,7 @@ ovy199_21b3ae8: ; 0x021B3AE8
 	mov r2, #3
 	strb r2, [r0, #0x13]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	str r2, [r5, r4]
 	ldr r0, [r5, #0x24]
@@ -1450,7 +1450,7 @@ ovy199_21b3ae8: ; 0x021B3AE8
 	strh r6, [r5, r0]
 	ldrh r1, [r5, #0xc]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0xc
@@ -1858,13 +1858,13 @@ ovy199_21b3e6c: ; 0x021B3E6C
 	mov r0, #1
 	mov r1, #0x1f
 	lsl r2, r2, #0xe
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r7, #0xad
 	lsl r7, r7, #2
 	add r0, r4, #0
 	add r1, r7, #0
 	mov r2, #0x1f
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r7, #0
 	add r5, r0, #0
@@ -2305,7 +2305,7 @@ ovy199_21b4238: ; 0x021B4238
 	add r0, r4, #0
 	add r0, #0xb0
 	ldrh r0, [r0]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r4, #0x24]
 	add r0, r4, #0
 	add r0, #0xb0
@@ -2335,13 +2335,13 @@ ovy199_21b4238: ; 0x021B4238
 	add r6, #0xdc
 	ldrh r1, [r1]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	str r0, [r4, #0x2c]
 	add r1, #0xb0
 	ldrh r1, [r1]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x30]
 	add r0, r4, #0
 	add r0, #0xb0
@@ -2351,7 +2351,7 @@ ovy199_21b4238: ; 0x021B4238
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r3, r4, #0
 	str r0, [r4, #0x28]
 	add r3, #0xb0
@@ -2360,7 +2360,7 @@ ovy199_21b4238: ; 0x021B4238
 	mov r0, #0
 	mov r1, #2
 	lsr r2, r2, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r3, r4, #0
 	str r0, [r4, #0x20]
 	add r3, #0xb0
@@ -2782,7 +2782,7 @@ _021B4622:
 	add r1, #0xb0
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0x8c
@@ -2798,7 +2798,7 @@ _021B4622:
 	strh r5, [r0]
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0x98
@@ -9880,11 +9880,11 @@ ovy199_21b7f34: ; 0x021B7F34
 	mov r1, #0x62
 	lsl r2, r2, #0xe
 	mov r6, #0x62
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0xb0
 	mov r2, #0x62
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #0xb0
 	add r4, r0, #0
@@ -10286,13 +10286,13 @@ ovy199_21b824c: ; 0x021B824C
 	add r6, #0xdc
 	ldrh r1, [r1]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	str r0, [r4, #0x2c]
 	add r1, #0xb0
 	ldrh r1, [r1]
 	add r0, r6, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x30]
 	add r0, r4, #0
 	add r0, #0xb0
@@ -10302,7 +10302,7 @@ ovy199_21b824c: ; 0x021B824C
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r3, r4, #0
 	str r0, [r4, #0x28]
 	add r3, #0xb0
@@ -10311,12 +10311,12 @@ ovy199_21b824c: ; 0x021B824C
 	mov r0, #0
 	mov r1, #2
 	lsr r2, r2, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #0x20]
 	add r0, r4, #0
 	add r0, #0xb0
 	ldrh r0, [r0]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r4, #0x24]
 	add r0, r4, #0
 	add r0, #0xb0
@@ -10729,7 +10729,7 @@ _021B8626:
 	add r1, #0xb0
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0x94
@@ -10745,7 +10745,7 @@ _021B8626:
 	strh r5, [r0]
 	ldrh r1, [r1]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0xa0
@@ -12410,7 +12410,7 @@ ovy199_21b93f0: ; 0x021B93F0
 	ldrh r2, [r5, #8]
 	add r0, r4, #0
 	mov r1, #0x74
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #0x74
 	add r4, r0, #0

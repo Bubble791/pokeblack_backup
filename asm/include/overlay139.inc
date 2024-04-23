@@ -84,9 +84,9 @@
 .public sub_0204C488
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_02022888
 .public GFL_StrBufFree
@@ -105,7 +105,7 @@
 .public sub_02022888
 .public sub_0203A1FC
 .public MI_CpuFill8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public sub_0203A24C
 .public sub_020485F8

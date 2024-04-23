@@ -50,7 +50,7 @@ ovy182_21a4974: ; 0x021A4974
 	ldr r2, _021A4990 ; =0x00040100
 	mov r0, #1
 	mov r1, #0xf
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r0, #1
 	bl sub_020116C0
 	ldr r0, _021A4994 ; =0x000000B5

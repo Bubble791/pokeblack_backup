@@ -75,8 +75,8 @@
 .public sub_0203A24C
 .public sub_02048658
 .public sub_021C98C0
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0201FD00
@@ -101,10 +101,10 @@
 .public sub_0208D60C
 .public sub_0208D60C
 .public sub_0208D60C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
 .public sub_0204AA30
@@ -113,7 +113,7 @@
 .public sub_0204ABA4
 .public sub_0204AB0C
 .public sub_021E647C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
 .public sub_021E647C
@@ -137,9 +137,9 @@
 .public sub_021E647C
 .public sub_021C98A4
 .public sub_0203A1FC
-.public sub_02048530
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -195,8 +195,8 @@
 .public sub_02162490
 .public sub_021621D4
 .public sub_0203A24C
-.public sub_02048530
-.public sub_0204875C
+.public GFL_StrBufCreate
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
 .public sub_0201FF08

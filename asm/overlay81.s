@@ -173,7 +173,7 @@ _021EA970:
 	mov r3, #0
 	str r0, [sp]
 	mov r0, #0x17
-	bl sub_02022D58
+	bl GFL_FontCreate
 	ldr r1, [sp, #4]
 	str r0, [r1, #0x1c]
 	add sp, #8
@@ -377,7 +377,7 @@ ovy81_21eab1c: ; 0x021EAB1C
 	beq _021EAB8E
 	ldrh r1, [r5, #8]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r4]
 	bl sub_021E5CA4
@@ -395,7 +395,7 @@ ovy81_21eab1c: ; 0x021EAB1C
 	bl GFL_StrBufFree
 	ldrh r1, [r5, #8]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r4]
 	bl sub_021E5CAC

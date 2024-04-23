@@ -840,14 +840,14 @@ ovy262_21c2bfc: ; 0x021C2BFC
 	ldr r2, _021C2D40 ; =0x0000010A
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0x14]
 	ldrh r0, [r6, #4]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [sp, #0x18]
 	ldrh r1, [r6, #4]
 	mov r0, #0x20
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r5]
 	bl sub_020484D8
@@ -2417,11 +2417,11 @@ _021C38CA:
 	add r4, sp, #0x48
 	ldrh r1, [r4, #0x14]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldrh r1, [r4, #0x14]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	mov r0, #0
 	str r0, [sp, #0x2c]
@@ -2709,11 +2709,11 @@ _021C3AF6:
 _021C3B00:
 	ldr r1, [sp, #0x58]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r1, [sp, #0x58]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	mov r0, #0
 	str r0, [sp, #0x28]
@@ -3040,11 +3040,11 @@ _021C3D9A:
 _021C3DA4:
 	ldr r1, [sp, #0x54]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r1, [sp, #0x54]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	mov r0, #0
 	str r0, [sp, #0x28]
@@ -4630,11 +4630,11 @@ _021C4A42:
 	add r5, sp, #0x48
 	ldrh r1, [r5, #0xc]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldrh r1, [r5, #0xc]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	mov r0, #0
 	str r0, [sp, #0x28]
@@ -5556,13 +5556,13 @@ _021C51A8:
 	ldr r0, [sp, #0x14]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	ldr r1, [sp, #0x14]
 	str r0, [sp, #0x34]
 	lsl r1, r1, #0x10
 	mov r0, #0x80
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x30]
 	ldr r0, [sp, #0x84]
 	mov r1, #0x63
@@ -6196,7 +6196,7 @@ ovy262_21c568c: ; 0x021C568C
 	strh r5, [r4, #0x1e]
 	lsl r0, r0, #8
 	add r1, r5, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x18]
 	mov r0, #4
 	str r0, [sp]

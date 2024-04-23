@@ -70,7 +70,7 @@
 .public sub_02048210
 .public sub_0203A24C
 .public sub_020484F4
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_02022888
@@ -81,7 +81,7 @@
 .public GFL_StrBufFree
 .public sub_02020428
 .public sub_0203A24C
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_0202451C
 .public GFL_WordSetSystemFree
 .public sub_0204898C
@@ -90,7 +90,7 @@
 .public GFL_StrBufFree
 .public sub_02020428
 .public sub_0203A24C
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_0202451C
 .public GFL_WordSetSystemFree
 .public sub_02021C44
@@ -226,10 +226,10 @@
 .public sub_0219F9E4
 .public sub_0204AA30
 .public sub_0204AA30
-.public sub_0204875C
-.public sub_0204875C
-.public sub_0204875C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
 .public sub_02020274
 .public sub_0204898C
 .public GFL_StrBufFree

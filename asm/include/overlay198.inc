@@ -77,12 +77,12 @@
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C318
-.public sub_02048530
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public sub_020480C0
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
@@ -164,7 +164,7 @@
 .public sub_02045B7C
 .public GFL_FadeScreenIsFinished
 .public sub_020504F0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
 .public GFL_StrBufFree
 .public sub_02016B20
@@ -183,7 +183,7 @@
 .public sub_02017238
 .public sub_02012E54
 .public sub_020428A8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02035014
 .public sub_02048658
 .public sub_0204C138
@@ -218,8 +218,8 @@
 .public sub_0204C488
 .public sub_02043E98
 .public MI_CpuCopy8
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02046DF8
 .public GX_DispOn

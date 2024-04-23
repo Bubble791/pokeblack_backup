@@ -21,12 +21,12 @@
 .public sub_0203A24C
 .public GXx_SetMasterBrightness_
 .public sub_0203A78C
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020219A8
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_0204A934
-.public sub_0204875C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
 .public sub_021F61A0
 .public sub_021F6160
 .public sub_0203D554
@@ -114,7 +114,7 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0201FF08
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_020243D0
 .public GFL_WordSetFormatStrbuf
@@ -171,7 +171,7 @@
 .public sub_02021C7C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02024A14
 .public GFL_StrBufFree
 .public sub_020484F4

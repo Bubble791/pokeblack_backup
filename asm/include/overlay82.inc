@@ -35,8 +35,8 @@
 .public sub_021710BC
 .public sub_0204BF1C
 .public sub_02021998
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02021C44
@@ -113,7 +113,7 @@
 .public sub_020484F4
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048614
 .public sub_020484F4
 .public sub_02021C7C

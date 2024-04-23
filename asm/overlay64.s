@@ -324,7 +324,7 @@ _021E5A6E:
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x30
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r6, r0, #0
 	ldr r0, [r5, #0xc]
 	bl ovy64_21e5ab4

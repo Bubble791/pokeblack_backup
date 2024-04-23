@@ -6159,7 +6159,7 @@ _0219CC20:
 	add r0, r5, #0
 	bl ovy208_219cc80
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	ldr r2, [r5, #4]
 	add r4, r0, #0
 	ldr r2, [r2, #4]
@@ -7039,14 +7039,14 @@ ovy208_219d308: ; 0x0219D308
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	ldr r5, _0219D38C ; =0x000018E4
 	mov r1, #2
 	str r0, [r4, r5]
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r2, #0x23
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	sub r1, #0xc
 	str r0, [r4, r1]
@@ -7054,7 +7054,7 @@ ovy208_219d308: ; 0x0219D308
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x5d
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	sub r1, #8
 	str r0, [r4, r1]
@@ -7062,7 +7062,7 @@ ovy208_219d308: ; 0x0219D308
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x60
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	sub r1, r5, #4
 	str r0, [r4, r1]
 	mov r0, #0x20
@@ -7142,7 +7142,7 @@ ovy208_219d3c8: ; 0x0219D3C8
 	beq _0219D412
 	ldrh r1, [r4]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	add r0, r7, #0
 	add r1, r5, #0
@@ -7186,7 +7186,7 @@ ovy208_219d450: ; 0x0219D450
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	ldr r2, [r5, #4]
 	add r4, r0, #0
 	ldr r2, [r2, #4]
@@ -7221,7 +7221,7 @@ ovy208_219d47c: ; 0x0219D47C
 	bl sub_021EF17C
 	str r0, [sp, #8]
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r7, r0, #0
 	add r0, r4, #0
 	ldrh r1, [r6]
@@ -7321,7 +7321,7 @@ _0219D560:
 	mov r4, #0x16
 _0219D562:
 	ldrh r0, [r5]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r6, r0, #0
 	ldr r0, _0219D5A4 ; =0x000018E0
 	add r1, r4, #0

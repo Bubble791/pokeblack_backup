@@ -1612,7 +1612,7 @@ _021E6590:
 _021E659A:
 	ldrh r1, [r4, #4]
 	mov r0, #0x40
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r5, #0x29
 	add r7, sp, #8
 	lsl r5, r5, #4
@@ -1983,20 +1983,20 @@ ovy60_21e688c: ; 0x021E688C
 	mov r1, #2
 	mov r2, #0x40
 	mov r7, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	ldr r2, _021E6A24 ; =0x00000261
 	str r0, [sp, #0x10]
 	ldrh r3, [r5, #4]
 	mov r0, #0
 	mov r1, #3
 	str r2, [sp, #0x1c]
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0xc]
 	ldrh r3, [r5, #4]
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x3f
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x1c]
@@ -2325,17 +2325,17 @@ _021E6AF4:
 	bl sub_020385A8
 	ldrh r1, [r5, #4]
 	mov r0, #8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, sp, #0x60
 	add r7, r0, #0
 	bl sub_02048614
 	ldrh r1, [r5, #4]
 	mov r0, #0x40
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x28]
 	ldrh r1, [r5, #4]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [sp, #0x2c]
 	mov r0, #0
 	str r0, [sp]
@@ -2743,7 +2743,7 @@ _021E6E7C:
 	bl sub_020385A8
 	ldrh r1, [r5, #4]
 	mov r0, #8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, sp, #0x4c
 	add r6, r0, #0
 	bl sub_02048614
@@ -3031,7 +3031,7 @@ ovy60_21e7128: ; 0x021E7128
 	mov r0, #0
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	sub r1, #0x46
 	str r0, [r5, r1]
@@ -3044,7 +3044,7 @@ ovy60_21e7128: ; 0x021E7128
 	str r0, [r5, r1]
 	ldrh r1, [r5, #4]
 	mov r0, #0xc8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r4, #0
 	sub r1, #0x3a
 	str r0, [r5, r1]
@@ -3848,7 +3848,7 @@ ovy60_21e77d4: ; 0x021E77D4
 	add r7, r0, #0
 	ldrh r1, [r5, #4]
 	mov r0, #0xa
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r5, #0xc]
 	bl sub_0200C9BC
@@ -3915,7 +3915,7 @@ ovy60_21e786c: ; 0x021E786C
 	add r7, r0, #0
 	ldrh r1, [r5, #4]
 	mov r0, #0x14
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0x18
@@ -4884,7 +4884,7 @@ ovy60_21e8040: ; 0x021E8040
 	ldrh r1, [r5, #4]
 	mov r0, #0x80
 	mov r7, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r4, #0xaa
 	lsl r4, r4, #2
 	str r0, [sp, #0x1c]
@@ -4906,7 +4906,7 @@ ovy60_21e8040: ; 0x021E8040
 	lsl r3, r3, #0x10
 	sub r2, #0x47
 	lsr r3, r3, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0x24]
 	add r0, r4, #0
 	sub r0, #0x8c
@@ -5041,7 +5041,7 @@ ovy60_21e8190: ; 0x021E8190
 	str r0, [sp, #0x10]
 	ldrh r1, [r5, #4]
 	mov r0, #0x40
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r6, #0xaa
 	lsl r6, r6, #2
 	str r0, [sp, #0x18]

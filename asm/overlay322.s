@@ -18,11 +18,11 @@ ovy322_219ce80: ; 0x0219CE80
 	lsl r2, r2, #0xe
 	mov r7, #1
 	mov r6, #0x9f
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r1, _0219CF5C ; =0x0000054C
 	add r0, r4, #0
 	mov r2, #0x9f
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	ldr r2, _0219CF5C ; =0x0000054C
 	add r4, r0, #0
 	mov r1, #0
@@ -43,7 +43,7 @@ ovy322_219ce80: ; 0x0219CE80
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r4, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -53,7 +53,7 @@ ovy322_219ce80: ; 0x0219CE80
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r4, #0
 	add r1, #0xec
 	str r0, [r1]
@@ -390,7 +390,7 @@ _0219D16C:
 	add r0, r6, #0
 	mov r1, #2
 	add r2, #0xfe
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	sub r1, #0xa4
 	str r0, [r5, r1]
@@ -401,7 +401,7 @@ _0219D16C:
 	add r0, r6, #0
 	mov r1, #2
 	add r2, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	add r1, #0x7d
 	str r0, [r5, r1]
@@ -410,7 +410,7 @@ _0219D16C:
 	mov r1, #2
 	mov r2, #0xb4
 	mov r7, #0xb4
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r4, #0
 	add r1, #0x81
 	str r0, [r5, r1]
@@ -3922,7 +3922,7 @@ _0219ED90:
 	ldrh r1, [r5]
 	add r6, r0, #0
 	mov r0, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r6, #0
 	add r4, r0, #0
 	bl sub_02024BE4
@@ -4294,7 +4294,7 @@ _0219F06A:
 	bl sub_0201FF08
 	ldrh r1, [r5]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	sub r0, r4, #4
 	ldr r1, [r5, r0]
@@ -4886,7 +4886,7 @@ ovy322_219f51c: ; 0x0219F51C
 	add r5, r0, #0
 	ldrh r1, [r5]
 	mov r0, #0x40
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r4, #0xa1
 	mov r1, #1
 	lsl r4, r4, #2
@@ -6095,7 +6095,7 @@ ovy322_219fdd8: ; 0x0219FDD8
 	add r7, r0, #0
 	ldrh r1, [r5]
 	mov r0, #0x80
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0x70
@@ -6203,7 +6203,7 @@ _0219FF1C:
 	add r5, r6, r0
 	ldrh r1, [r6]
 	mov r0, #0x64
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r2, r0, #0
 	mov r0, #0x8b
 	lsl r0, r0, #2
@@ -6633,7 +6633,7 @@ _021A0234:
 	ldrh r3, [r5]
 	mov r0, #0
 	mov r1, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	mov r1, #0x7e
 	lsl r1, r1, #2
 	str r0, [r5, r1]

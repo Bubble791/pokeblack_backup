@@ -17,11 +17,11 @@ ovy293_21a1b20: ; 0x021A1B20
 	lsl r2, r2, #0x10
 	mov r7, #1
 	mov r6, #0x6c
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x2c
 	mov r2, #0x6c
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x2c
@@ -37,7 +37,7 @@ ovy293_21a1b20: ; 0x021A1B20
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x55
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #0x14]
 	ldrh r0, [r4]
 	bl sub_02021998
@@ -3458,7 +3458,7 @@ _021A3556:
 	mov r1, #2
 	lsr r2, r2, #0x10
 	mov r7, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	ldr r1, [r5, #0x14]
 	add r6, r0, #0
 	bl sub_0204898C
@@ -4201,7 +4201,7 @@ ovy293_21a3b10: ; 0x021A3B10
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r4, #0x24]
 	ldrh r1, [r4]
 	mov r0, #0x9f

@@ -2,11 +2,11 @@
 #pragma once
 .public sub_0204E0E0
 .public sub_0203CE0C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_02021998
 .public sub_0219D708
 .public sub_021998C0
@@ -90,7 +90,7 @@
 .public sub_0204C4B8
 .public sub_0219D730
 .public sub_020480C0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02008BA0
 .public sub_02008BF0
 .public sub_0219D760

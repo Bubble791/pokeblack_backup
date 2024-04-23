@@ -1,14 +1,14 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0203CE0C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_02021998
 .public sub_0202E168
 .public sub_0202E168
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0203A78C
 .public sub_02016AD8
 .public sub_02017934
@@ -88,8 +88,8 @@
 .public sub_020480A8
 .public sub_02044528
 .public MI_CpuFill8
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_02022888
 .public sub_020480C0
@@ -162,7 +162,7 @@
 .public sub_0203D564
 .public sub_0203D564
 .public MI_CpuFill8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0202E678
 .public sub_020484F8
 .public sub_02024E80
@@ -287,7 +287,7 @@
 .public sub_02044C98
 .public G2x_SetBlendBrightness_
 .public sub_02044C98
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public G2x_SetBlendBrightness_
 .public sub_02044C98

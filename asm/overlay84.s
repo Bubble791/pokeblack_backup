@@ -885,7 +885,7 @@ ovy84_21eb4b4: ; 0x021EB4B4
 	mov r0, #1
 	mov r1, #2
 	mov r2, #0xb
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r4, #0xd4
 	str r0, [r5, r4]
 	add r1, r5, #0
@@ -893,7 +893,7 @@ ovy84_21eb4b4: ; 0x021EB4B4
 	ldrh r1, [r1]
 	mov r0, #0xd9
 	mov r4, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xd9
 	add r1, #0x3f
 	str r0, [r5, r1]
@@ -901,7 +901,7 @@ ovy84_21eb4b4: ; 0x021EB4B4
 	add r1, #0xe4
 	ldrh r1, [r1]
 	mov r0, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xd9
 	add r1, #0x43
 	str r0, [r5, r1]
@@ -909,7 +909,7 @@ ovy84_21eb4b4: ; 0x021EB4B4
 	add r1, #0xe4
 	ldrh r1, [r1]
 	mov r0, #0xd9
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, #0x47
 	str r0, [r5, r4]
 	pop {r4, r5, r6, pc}
@@ -2310,12 +2310,12 @@ _021EC018:
 	add r1, #0xe4
 	ldrh r1, [r1]
 	mov r0, #0xb
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x44]
 	add r5, #0xe4
 	ldrh r1, [r5]
 	mov r0, #8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x48]
 	ldr r0, [r4, #0x34]
 	mov r1, #0

@@ -38,15 +38,15 @@ ovy330_219ceb0: ; 0x0219CEB0
 	mov r1, #0x8b
 	lsl r2, r2, #0xc
 	mov r5, #0x8b
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x38
 	mov r2, #0x8b
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r0, #0x20
 	mov r1, #0x8b
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #4]
 	mov r0, #0
 	str r0, [r4]
@@ -173,7 +173,7 @@ _0219CF7C:
 	mov r0, #0
 	mov r1, #2
 	mov r3, #0x8b
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0x14]
 	ldr r0, [r5]
 	bl sub_02017394
@@ -320,7 +320,7 @@ _0219D0FE:
 	bne _0219D150
 	ldrh r1, [r4, #0x30]
 	mov r0, #0x20
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [r4]
 	ldr r1, [r4, #4]

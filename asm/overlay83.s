@@ -84,7 +84,7 @@ ovy83_21ea8ac: ; 0x021EA8AC
 	mov r2, #0xc
 	add r3, r6, #0
 	mov r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #8]
 _021EA8EE:
 	ldr r0, [r5, #8]

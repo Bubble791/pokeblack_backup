@@ -2569,7 +2569,7 @@ _021E6E02:
 	lsl r1, r4, #0x10
 	mov r0, #8
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	add r0, r6, #0
 	mov r1, #2
@@ -2597,7 +2597,7 @@ _021E6E02:
 	lsl r1, r4, #0x10
 	mov r0, #9
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r5, r0, #0
 	add r0, r6, #0
 	mov r1, #0x58
@@ -2620,7 +2620,7 @@ _021E6E02:
 	lsl r1, r4, #0x10
 	mov r0, #9
 	lsr r1, r1, #0x10
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r0, r6, #0
 	mov r1, #0x59
@@ -2709,7 +2709,7 @@ ovy59_21e6f14: ; 0x021E6F14
 	mov r0, #0
 	mov r1, #3
 	lsr r3, r3, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r5, r0, #0
 	ldr r1, [sp, #8]
 	add r0, r6, #0
@@ -3199,7 +3199,7 @@ _021E7394:
 	mov r1, #3
 	lsr r3, r3, #0x10
 	mov r7, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x10]
 	mov r5, #0
@@ -4330,7 +4330,7 @@ ovy59_21e7c70: ; 0x021E7C70
 	lsr r7, r0, #0x10
 	mov r0, #8
 	mov r1, #4
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, sp, #0x20
 	str r0, [r4, #0x20]
 	bl sub_02048614

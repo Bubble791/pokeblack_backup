@@ -4,8 +4,8 @@
 .public sub_02017934
 .public sub_0200FB40
 .public sub_0200FAC8
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02035024
 .public sub_0204AA30
@@ -32,11 +32,11 @@
 .public sub_0203CDC8
 .public sub_02017934
 .public sub_0200FB40
-.public sub_02022D58
-.public sub_0204875C
-.public sub_0204875C
-.public sub_0204875C
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
 .public sub_021A0760
 .public GFL_MsgDataFree
 .public GFL_MsgDataFree
@@ -361,7 +361,7 @@
 .public sub_0219E118
 .public sub_02045B7C
 .public sub_0219EF78
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_0200FA4C
 .public sub_0204C4A8
 .public sub_0204C488
@@ -379,7 +379,7 @@
 .public sub_0200FAC8
 .public sub_0200FAC8
 .public sub_0200FA90
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0202451C
 .public sub_0202451C
@@ -388,7 +388,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf
@@ -401,7 +401,7 @@
 .public sub_020484F4
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C

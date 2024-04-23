@@ -14,13 +14,13 @@ ovy253_217c940: ; 0x0217C940
 	lsl r2, r2, #0x10
 	mov r7, #1
 	mov r6, #0x49
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r5, #0x15
 	lsl r5, r5, #4
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0x49
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
@@ -787,7 +787,7 @@ ovy253_217cf2c: ; 0x0217CF2C
 	mov r2, #0
 	mov r3, #0
 	mov r4, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r6, #0x10]
 	lsl r0, r5, #0x10
 	ldr r7, _0217CFA4 ; =0x0217D744
@@ -963,7 +963,7 @@ ovy253_217d09c: ; 0x0217D09C
 	mov r2, #0x55
 	lsr r3, r3, #0x10
 	mov r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0xc]
 _0217D0B6:
 	mov r0, #0xc

@@ -18,7 +18,7 @@
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204ADA8
@@ -36,11 +36,11 @@
 .public sub_02022DA8
 .public sub_02016AD8
 .public sub_020179F0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021E5CA4
 .public sub_021E5D44
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021E5CAC
 .public sub_021E6488
 .public GFL_StrBufFree

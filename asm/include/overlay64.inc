@@ -45,7 +45,7 @@
 .public sub_02016D68
 .public sub_02165AE8
 .public sub_02165B0C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_02024B68
 .public GFL_StrBufFree

@@ -68,8 +68,8 @@
 .public sub_02040440
 .public sub_0203FFC4
 .public sub_0203FFC4
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0203A1FC
 .public MI_CpuFill8
@@ -138,7 +138,7 @@
 .public MI_CpuFill8
 .public sub_0202E168
 .public sub_0204588C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public MI_CpuFill8
 .public sub_0204898C
 .public sub_0202E1F0
@@ -157,7 +157,7 @@
 .public sub_0202E4AC
 .public sub_0202E41C
 .public sub_0202E34C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public MI_CpuFill8
 .public sub_0204898C
 .public sub_0202E1F0

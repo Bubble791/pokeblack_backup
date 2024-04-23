@@ -25,12 +25,12 @@ _0219CE9A:
 	mov r0, #1
 	mov r1, #0x74
 	lsl r2, r2, #0x13
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r5, _0219CF94 ; =0x000049D8
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0x74
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
@@ -61,7 +61,7 @@ _0219CE9A:
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	add r1, r5, #0
 	sub r1, #0x20
 	str r0, [r4, r1]
@@ -69,7 +69,7 @@ _0219CE9A:
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x55
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	sub r1, #0x18
 	str r0, [r4, r1]
@@ -1730,7 +1730,7 @@ ovy305_219db48: ; 0x0219DB48
 	bl ovy305_219d7c4
 	mov r0, #0x10
 	mov r1, #0x74
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r0, #0
 	ldr r0, [r5]
 	str r1, [r5, #0x18]

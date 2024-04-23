@@ -883,7 +883,7 @@ ovy286_21f4b34: ; 0x021F4B34
 	ldr r1, [r5]
 	mov r0, #0x82
 	ldrh r1, [r1, #0xc]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	ldr r1, _021F4B9C ; =0x00000533
 	mov r4, #0x90
 	ldrb r1, [r5, r1]
@@ -4936,11 +4936,11 @@ ovy286_21f6ae4: ; 0x021F6AE4
 	mov r1, #2
 	mov r2, #1
 	mov r4, #1
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0xc]
 	ldr r0, [r5]
 	ldrh r0, [r0, #0xc]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r5, #0x10]
 	ldr r0, [r5]
 	ldrh r0, [r0, #0xc]
@@ -4949,7 +4949,7 @@ ovy286_21f6ae4: ; 0x021F6AE4
 	ldr r1, [r5]
 	lsl r0, r4, #9
 	ldrh r1, [r1, #0xc]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x14]
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy286_21f6ae4

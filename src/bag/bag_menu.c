@@ -75,7 +75,7 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
 
     if (GFL_FadeScreenIsFinished() != 1)
         return 0;
-    if (!sub_02021C0C(wk->unk510))
+    if (!sub_02021C0C(wk->printSystem))
         return 0;
     GFL_TCBRemove(wk->unk6A8);
     sub_021A046C(&wk->unk8C8);
@@ -89,11 +89,11 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
     ovy142_219e168(wk);
     ovy142_219dd14(wk);
     GFL_TCBExMgrFree(wk->unk748);
-    GFL_MsgDataFree(wk->unk520);
-    GFL_StrBufFree(wk->unk528);
-    GFL_StrBufFree(wk->unk52C);
-    GFL_StrBufFree(wk->unk530);
-    GFL_WordSetSystemFree(wk->messageParam);
+    GFL_MsgDataFree(wk->msgData);
+    GFL_StrBufFree(wk->stringBuff1);
+    GFL_StrBufFree(wk->stringBuff2);
+    GFL_StrBufFree(wk->stringBuff3);
+    GFL_WordSetSystemFree(wk->wordSetSystem);
     ovy142_219f8c4(wk);
     if (wk->unk500)
     {
@@ -101,13 +101,13 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
         sub_02048210(wk->unk500);
     }
     sub_02045264(3, 1, 0);
-    sub_02022DA8(wk->unk534);
+    sub_02022DA8(wk->font);
     sub_0202E818(wk->unk51C);
-    sub_02021C44(wk->unk510);
-    sub_02021A18(wk->unk510);
+    sub_02021C44(wk->printSystem);
+    sub_02021A18(wk->printSystem);
     ovy142_219cc60(wk);
     sub_0219C948(wk);
-    sub_020504DC(wk->unk6A4);
+    sub_020504DC(wk->buttonManSystem);
     sub_020480A8();
     sub_02044528();
     a3->unk44 = wk->unk898;
@@ -345,7 +345,7 @@ void ovy142_219cc84(BagView *bagView)
     {
         sub_0204C488(bagView->unk744, 0);
         sub_0204C520(bagView->unk6B8, 0);
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 151, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 151, bagView->stringBuff2);
         ovy142_219f6a4(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219cce0(bagView);
@@ -489,27 +489,27 @@ void ovy142_219cea8(BagView* bagView)
     switch (bagView->unk1F4C)
     {
     case 0:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x8C, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x8C, bagView->stringBuff2);
         break;
 
     case 1:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x9E, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x9E, bagView->stringBuff2);
         break;
 
     case 2:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x8d, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x8d, bagView->stringBuff2);
         break;
 
     case 3:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x8E, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x8E, bagView->stringBuff2);
         break;
 
     case 4:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x8f, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x8f, bagView->stringBuff2);
         break;
     
     default:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x97, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x97, bagView->stringBuff2);
         break;
 
     }
@@ -524,47 +524,47 @@ void ovy142_219cf28(BagView* bagView)
     switch (bagView->unk1F50)
     {
     case 0:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x9D, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x9D, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 1:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x94, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 0);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 2:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x94, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 1);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
     
     case 3:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x94, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 2);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 4:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x94, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 3);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
     
     case 5:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x94, bagView->unk528);
-        sub_0202451C(bagView->messageParam, 1, ovy142_2199988(bagView), 3, 0, 1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
+        sub_0202451C(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 4);
-        GFL_WordSetFormatStrbuf(bagView->messageParam, bagView->unk52C, bagView->unk528);
+        GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
     default:
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 0x97, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x97, bagView->stringBuff2);
         break;
 
     }
@@ -581,7 +581,7 @@ void ovy142_219d0c8(BagView* bagView)
     {
         sub_0204C488(bagView->unk740, 2);
         sub_0204C520(bagView->unk6B8, 0);
-        GFL_MsgDataLoadStrbuf(bagView->unk520, 147, bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 147, bagView->stringBuff2);
         ovy142_219f6a4(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219d120(bagView);
@@ -1229,16 +1229,16 @@ void ovy142_219de0c(BagView *a1)
     v15 = BagSave_GetExistingItemPocket(a1->bagSave, v6->itemid);
     if (!v16)
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 134, a1->unk528);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 134, a1->stringBuff1);
         BagMenu_LoadItemNameToStrbuf(a1, 0, v6->itemid);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        ovy142_21a00f0(a1, &a1->unk754, a1->unk52C, 0, 4, 15808);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        ovy142_21a00f0(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
         if (ovy142_21a03ac((u8)v15))
         {
-            GFL_MsgDataLoadStrbuf(a1->unk520, 131, a1->unk528);
-            sub_0202451C(a1->messageParam, 0, v6->num, 3, 0, 1);
-            GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-            ovy142_21a00f0(a1, &a1->unk75C, a1->unk52C, 0, 4, 15808);
+            GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
+            sub_0202451C(a1->wordSetSystem, 0, v6->num, 3, 0, 1);
+            GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+            ovy142_21a00f0(a1, &a1->unk75C, a1->stringBuff2, 0, 4, 15808);
         }
         else
         {
@@ -1251,18 +1251,18 @@ void ovy142_219de0c(BagView *a1)
         v12 = sub_02026B84(v6->itemid);
         if (v12 == 255)
         {
-            GFL_MsgDataLoadStrbuf(a1->unk520, 69, a1->unk528);
+            GFL_MsgDataLoadStrbuf(a1->msgData, 69, a1->stringBuff1);
             v13 = sub_02026B40(v6->itemid);
-            sub_0202451C(a1->messageParam, 0, v13 + 1, 2, 2, 1);
+            sub_0202451C(a1->wordSetSystem, 0, v13 + 1, 2, 2, 1);
         }
         else
         {
-            GFL_MsgDataLoadStrbuf(a1->unk520, 71, a1->unk528);
-            sub_0202451C(a1->messageParam, 0, v12 + 1, 2, 2, 1);
+            GFL_MsgDataLoadStrbuf(a1->msgData, 71, a1->stringBuff1);
+            sub_0202451C(a1->wordSetSystem, 0, v12 + 1, 2, 2, 1);
         }
-        sub_020244A4(a1->messageParam, 1, v16);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        ovy142_21a00f0(a1, &a1->unk754, a1->unk52C, 0, 4, 15808);
+        sub_020244A4(a1->wordSetSystem, 1, v16);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        ovy142_21a00f0(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
         ovy142_219f4b0(a1, v16);
         sub_02048244(a1->unk75C);
     }
@@ -1270,19 +1270,19 @@ void ovy142_219de0c(BagView *a1)
     if (a1->itemType == 5)
     {
         BagMenu_LoadBagPocketNameToStrbuf(a1, 0, v15);
-        GFL_MsgDataLoadStrbuf(a1->unk520, 139, a1->unk528);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        v14 = 0x60 - sub_02022888(a1->unk52C, a1->unk534, 0);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        v14 = 0x60 - sub_02022888(a1->stringBuff2, a1->font, 0);
         u16 width = v14 / 2; 
-        ovy142_21a00f0(a1, &a1->unk76C, a1->unk52C, width, 0, 15808);
+        ovy142_21a00f0(a1, &a1->unk76C, a1->stringBuff2, width, 0, 15808);
     }
     else
     {
         sub_020484B4(a1->unk76C);
         sub_02048244(a1->unk76C);
     }
-    sub_020267C0(a1->unk528, v6->itemid, a1->heapId);
-    ovy142_21a00f0(a1, &a1->unk764, a1->unk528, 0, 4, 15808);
+    sub_020267C0(a1->stringBuff1, v6->itemid, a1->heapId);
+    ovy142_21a00f0(a1, &a1->unk764, a1->stringBuff1, 0, 4, 15808);
     ovy142_21a0134(&a1->unk76C);
     ovy142_21a0134(&a1->unk754);
     ovy142_21a0134(&a1->unk75C);
@@ -1345,14 +1345,14 @@ void ovy142_219e21c(BagView *a1)
     sub_0204713C(v2, 0);
     if (ovy142_219d22c(a1) > 2 && a1->itemType == 5)
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 159, a1->unk528);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 159, a1->stringBuff1);
     }
     else
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 135, a1->unk528);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 135, a1->stringBuff1);
     }
     
-    ovy142_21a00f0(a1, &(a1->unk794), a1->unk528, 0, 4, 0x3DC0);
+    ovy142_21a00f0(a1, &(a1->unk794), a1->stringBuff1, 0, 4, 0x3DC0);
 }
 
 
@@ -1380,16 +1380,16 @@ void ovy142_219e284(BagView *a1)
     v2 = sub_0204AA30(25, a1->heapId);
     a1->unk558 = sub_0204BDE0((int)v2, 1, 0, a1->heapId);
     sub_0204AB0C(v2);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 102, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->unk528, 8, 4, 0x3DC0u);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 93, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->unk528, 8, 24, 0x3DC0u);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 91, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->unk528, 112, 4, 0x3DC0u);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 92, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->unk528, 112, 24, 0x3DC0u);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 90, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->unk528, 208, 4, 0x3DC0u);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0u);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 93, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 24, 0x3DC0u);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 91, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 112, 4, 0x3DC0u);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 92, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 112, 24, 0x3DC0u);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 90, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 208, 4, 0x3DC0u);
     result = sub_0203D554();
     if (!result)
         ovy142_219de0c(a1);
@@ -2117,7 +2117,7 @@ typedef struct
     u8 unk1C;
 }TaskMenu;
 
-extern int sub_02048530(int, u16);
+extern int GFL_StrBufCreate(int, u16);
 extern int sub_0202D974(TaskMenu*, int);
 
 void ovy142_219f0bc(BagView *a1, u32 *a2, int a3)
@@ -2138,8 +2138,8 @@ void ovy142_219f0bc(BagView *a1, u32 *a2, int a3)
     
     for (i = 0 ; i < a3; i++)
     {
-        a1->unk7A0[i].unk0 = sub_02048530(100, a1->heapId);
-        GFL_MsgDataLoadStrbuf(a1->unk520, a2[i], a1->unk7A0[i].unk0);
+        a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
+        GFL_MsgDataLoadStrbuf(a1->msgData, a2[i], a1->unk7A0[i].unk0);
         a1->unk7A0[i].unk4 = 0x39E0;
         a1->unk7A0[i].unk8 = 0;
     }
@@ -2169,8 +2169,8 @@ void ovy142_219f1a0(BagView *a1, u32 *a2, int a3)
     
     for (i = 0 ; i < a3; i++)
     {
-        a1->unk7A0[i].unk0 = sub_02048530(100, a1->heapId);
-        GFL_MsgDataLoadStrbuf(a1->unk520, a2[i], a1->unk7A0[i].unk0);
+        a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
+        GFL_MsgDataLoadStrbuf(a1->msgData, a2[i], a1->unk7A0[i].unk0);
         a1->unk7A0[i].unk4 = 0x39E0;
         a1->unk7A0[i].unk8 = 0;
     }
@@ -2203,8 +2203,8 @@ void ovy142_219f284(BagView *a1, u8 a2)
             v4 = a1->unk870[i];
             if (v4 == 5)
             {
-                a1->unk7A0[i].unk0 =sub_02048530(100, a1->heapId);
-                GFL_MsgDataLoadStrbuf(a1->unk520, 144, a1->unk7A0[i].unk0);
+                a1->unk7A0[i].unk0 =GFL_StrBufCreate(100, a1->heapId);
+                GFL_MsgDataLoadStrbuf(a1->msgData, 144, a1->unk7A0[i].unk0);
                 a1->unk7A0[i].unk4 = 14816;
                 a1->unk7A0[i].unk8 = 0;
             }
@@ -2212,17 +2212,17 @@ void ovy142_219f284(BagView *a1, u8 a2)
             {
                 if (v4 == 6)
                 {
-                    a1->unk7A0[i].unk0 =sub_02048530(100, a1->heapId);
-                    GFL_MsgDataLoadStrbuf(a1->unk520, 8, a1->unk7A0[i].unk0);
+                    a1->unk7A0[i].unk0 =GFL_StrBufCreate(100, a1->heapId);
+                    GFL_MsgDataLoadStrbuf(a1->msgData, 8, a1->unk7A0[i].unk0);
                     a1->unk7A0[i].unk4 = 14816;
                     a1->unk7A0[i].unk8 = 1;
                 }
                 else
                 {
-                    a1->unk7A0[i].unk0 =sub_02048530(100, a1->heapId);
-                    GFL_MsgDataLoadStrbuf(a1->unk520, 139, a1->unk528);
-                    LoadBagPocketNameToStrbuf(a1->messageParam, 0, v4);
-                    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk7A0[i].unk0, a1->unk528);
+                    a1->unk7A0[i].unk0 =GFL_StrBufCreate(100, a1->heapId);
+                    GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
+                    LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, v4);
+                    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->unk7A0[i].unk0, a1->stringBuff1);
                     a1->unk7A0[i].unk4 = 14816;
                     a1->unk7A0[i].unk8 = 0;
                 }
@@ -2278,34 +2278,34 @@ void ovy142_219f4b0(BagView *a1, int a2)
     sub_020470F8(v7, 232, 0, 24, 24, 0);
     if (v10 <= 1)
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 23, a1->unk528);
-        ovy142_21a00f0(a1, bgs, a1->unk528, 176, 4, 0x3DC0);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 23, a1->stringBuff1);
+        ovy142_21a00f0(a1, bgs, a1->stringBuff1, 176, 4, 0x3DC0);
     }
     else
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 95, a1->unk528);
-        sub_0202451C(a1->messageParam, 0, v10, 3, 0, 1);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        ovy142_21a00f0(a1, bgs, a1->unk52C, 176, 4, 0x3DC0);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 95, a1->stringBuff1);
+        sub_0202451C(a1->wordSetSystem, 0, v10, 3, 0, 1);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        ovy142_21a00f0(a1, bgs, a1->stringBuff2, 176, 4, 0x3DC0);
     }
     
     if (!v9 || sub_0202174C(a2) == 1)
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 23, a1->unk528);
-        ovy142_21a00f0(a1, bgs, a1->unk528, 176, 24, 0x3DC0);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 23, a1->stringBuff1);
+        ovy142_21a00f0(a1, bgs, a1->stringBuff1, 176, 24, 0x3DC0);
     }
     else
     {
-        GFL_MsgDataLoadStrbuf(a1->unk520, 95, a1->unk528);
-        sub_0202451C(a1->messageParam, 0, v9, 3, 0, 1);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        ovy142_21a00f0(a1, bgs, a1->unk52C, 176, 24, 0x3DC0);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 95, a1->stringBuff1);
+        sub_0202451C(a1->wordSetSystem, 0, v9, 3, 0, 1);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        ovy142_21a00f0(a1, bgs, a1->stringBuff2, 176, 24, 0x3DC0);
     }
     
-    GFL_MsgDataLoadStrbuf(a1->unk520, 94, a1->unk528);
-    sub_0202451C(a1->messageParam, 0, v12, 2, 0, 1);
-    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-    ovy142_21a00f0(a1, bgs, a1->unk52C, 232, 4, 0x3DC0);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 94, a1->stringBuff1);
+    sub_0202451C(a1->wordSetSystem, 0, v12, 2, 0, 1);
+    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+    ovy142_21a00f0(a1, bgs, a1->stringBuff2, 232, 4, 0x3DC0);
     ovy142_21a0134(bgs);
 }
 
@@ -2330,8 +2330,8 @@ void ovy142_219f6a4(BagView *a1, int a2)
             a1->unk500,
             0,
             0,
-            a1->unk52C,
-            a1->unk534,
+            a1->stringBuff2,
+            a1->font,
             v6,
             a1->unk748,
             2,
@@ -2340,7 +2340,7 @@ void ovy142_219f6a4(BagView *a1, int a2)
     }
     else
     {
-        ovy142_21a00f0(a1, &a1->unk500, a1->unk52C, 0, 0, 0x44Fu);
+        ovy142_21a00f0(a1, &a1->unk500, a1->stringBuff2, 0, 0, 0x44Fu);
     }
     sub_02024E80(a1->unk500, 1, a1->unk88C, 13);
     ovy142_21a0134(&a1->unk500);
@@ -2353,9 +2353,9 @@ void sub_0219F760(BagView *a1)
 
 void ovy142_219f76c(BagView *a1, int a2)
 {
-    GFL_MsgDataLoadStrbuf(a1->unk520, 43, a1->unk528);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 43, a1->stringBuff1);
     BagMenu_LoadItemNameToStrbuf(a1, 0, a2);
-    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
+    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
 }
 
 int ovy142_219f7a4(BagView *a1)
@@ -2427,12 +2427,12 @@ void ovy142_219f8ec(BagView *a1, u32 a2)
 
     v4 = sub_020484F4(a1->unk508);
     sub_0204713C(v4, 0);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 139, a1->unk528);
-    LoadBagPocketNameToStrbuf(a1->messageParam, 0, a2);
-    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-    v5 = 0x60 - sub_02022888(a1->unk52C, a1->unk534, 0);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
+    LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, a2);
+    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+    v5 = 0x60 - sub_02022888(a1->stringBuff2, a1->font, 0);
     u16 width = (v5 / 2); 
-    ovy142_21a00f0(a1, &a1->unk508, a1->unk52C, width, 4, 0x3C40);
+    ovy142_21a00f0(a1, &a1->unk508, a1->stringBuff2, width, 4, 0x3C40);
     ovy142_21a0134(&a1->unk508);
 }
 
@@ -2450,16 +2450,16 @@ void ovy142_219f978(BagView *a1)
     sub_0204713C(v2, 0);
     v3 = sub_020484F4(a1->unk77C);
     sub_0204713C(v3, 0);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 81, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk77C, a1->unk528, 0, 4, 0x3C40);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 81, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk77C, a1->stringBuff1, 0, 4, 0x3C40);
     ovy142_21a0134(&a1->unk77C);
 
-    GFL_MsgDataLoadStrbuf(a1->unk520, 82, a1->unk528);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 82, a1->stringBuff1);
     v4 = sub_02017974(a1->m_GameData);
     v5 = sub_0200C9BC(v4);
-    sub_0202451C(a1->messageParam, 0, v5, 7, 1, 1);
-    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk784, a1->unk52C, 0, 4, 0x3C40);
+    sub_0202451C(a1->wordSetSystem, 0, v5, 7, 1, 1);
+    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk784, a1->stringBuff2, 0, 4, 0x3C40);
     ovy142_21a0134(&a1->unk784);
 }
 
@@ -2497,13 +2497,13 @@ void ovy142_219faac(BagView *a1)
     task.unk18 = 8;
     task.unk1C = 3;
 
-    a1->unk7A0[0].unk0 = sub_02048530(100, a1->heapId);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 132, a1->unk7A0[0].unk0);
+    a1->unk7A0[0].unk0 = GFL_StrBufCreate(100, a1->heapId);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 132, a1->unk7A0[0].unk0);
     a1->unk7A0[0].unk4 = 14816;
     a1->unk7A0[0].unk8 = 0;
 
-    a1->unk7A0[1].unk0 = sub_02048530(100, a1->heapId);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 133, a1->unk7A0[1].unk0);
+    a1->unk7A0[1].unk0 = GFL_StrBufCreate(100, a1->heapId);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 133, a1->unk7A0[1].unk0);
     a1->unk7A0[1].unk4 = 14816;
     a1->unk7A0[1].unk8 = 0;
     a1->unk79C = sub_0202D974(&task, a1->unk800);
@@ -2604,10 +2604,10 @@ _0219FBFC:
 void ovy142_219fc14(BagView *a1, int a2)
 {
     sub_0204713C(sub_020484F4(a1->unk774), 5);
-    GFL_MsgDataLoadStrbuf(a1->unk520, 131, a1->unk528);
-    sub_0202451C(a1->messageParam, 0, a2, 3, 0, 1);
-    GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-    ovy142_21a00f0(a1, &a1->unk774, a1->unk52C, 0, 0, 0x3DC5);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
+    sub_0202451C(a1->wordSetSystem, 0, a2, 3, 0, 1);
+    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+    ovy142_21a00f0(a1, &a1->unk774, a1->stringBuff2, 0, 0, 0x3DC5);
     ovy142_21a0134(&a1->unk774);
 
     if (a1->unk80C == 2)
@@ -2615,10 +2615,10 @@ void ovy142_219fc14(BagView *a1, int a2)
         int *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
         int v7 = ovy142_219995c(a1->selectItem, a1->unk814, a1->heapId);
         sub_0204713C(sub_020484F4(a1->unk78C), 5);
-        GFL_MsgDataLoadStrbuf(a1->unk520, 84, a1->unk528);
-        sub_0202451C(a1->messageParam, 0, v7, 7, 0, 1);
-        GFL_WordSetFormatStrbuf(a1->messageParam, a1->unk52C, a1->unk528);
-        ovy142_21a00f0(a1, v8, a1->unk52C, 0, 0, 0x3DC5);
+        GFL_MsgDataLoadStrbuf(a1->msgData, 84, a1->stringBuff1);
+        sub_0202451C(a1->wordSetSystem, 0, v7, 7, 0, 1);
+        GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+        ovy142_21a00f0(a1, v8, a1->stringBuff2, 0, 0, 0x3DC5);
         ovy142_21a0134(v8);
     }
 }
@@ -2813,9 +2813,9 @@ void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
     int v12;
     int v4 = a4;
     WinDowData *win = (WinDowData *)a2;
-    v12 = a1->unk510;
+    v12 = a1->printSystem;
 
-    sub_02021C7C(v12, sub_020484F4(win->bit), (s16)v4, a5, a3, a1->unk534, a6);
+    sub_02021C7C(v12, sub_020484F4(win->bit), (s16)v4, a5, a3, a1->font, a6);
     win->flag = 1;
 }
 
@@ -2859,8 +2859,8 @@ void ovy142_21a014c(BagView *a1)
     int v25;    // r4
     int v26;    // r0
 
-    sub_02021A3C(a1->unk510);
-    v2 = a1->unk510;
+    sub_02021A3C(a1->printSystem);
+    v2 = a1->printSystem;
     if (a1->unk750)
     {
         v3 = sub_020484F4(a1->unk74C);
@@ -2870,7 +2870,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk750 = 0;
         }
     }
-    v4 = a1->unk510;
+    v4 = a1->printSystem;
     if (a1->unk770)
     {
         v5 = sub_020484F4(a1->unk76C);
@@ -2880,7 +2880,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk770 = 0;
         }
     }
-    v6 = a1->unk510;
+    v6 = a1->printSystem;
     if (a1->unk758)
     {
         v7 = sub_020484F4(a1->unk754);
@@ -2890,7 +2890,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk758 = 0;
         }
     }
-    v8 = a1->unk510;
+    v8 = a1->printSystem;
     if (a1->unk760)
     {
         v9 = sub_020484F4(a1->unk75C);
@@ -2900,7 +2900,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk760 = 0;
         }
     }
-    v10 = a1->unk510;
+    v10 = a1->printSystem;
     if (a1->unk768)
     {
         v11 = sub_020484F4(a1->unk764);
@@ -2910,7 +2910,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk768 = 0;
         }
     }
-    v12 = a1->unk510;
+    v12 = a1->printSystem;
     if (a1->unk778)
     {
         v13 = sub_020484F4(a1->unk774);
@@ -2920,7 +2920,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk778 = 0;
         }
     }
-    v14 = a1->unk510;
+    v14 = a1->printSystem;
     if (a1->unk780)
     {
         v15 = sub_020484F4(a1->unk77C);
@@ -2930,7 +2930,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk780 = 0;
         }
     }
-    v16 = a1->unk510;
+    v16 = a1->printSystem;
     if (a1->unk788)
     {
         v17 = sub_020484F4(a1->unk784);
@@ -2940,7 +2940,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk788 = 0;
         }
     }
-    v18 = a1->unk510;
+    v18 = a1->printSystem;
     if (a1->unk790)
     {
         v19 = sub_020484F4(a1->unk78C);
@@ -2950,7 +2950,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk790 = 0;
         }
     }
-    v20 = a1->unk510;
+    v20 = a1->printSystem;
     if (a1->unk798)
     {
         v21 = sub_020484F4(a1->unk794);
@@ -2960,7 +2960,7 @@ void ovy142_21a014c(BagView *a1)
             a1->unk798 = 0;
         }
     }
-    v22 = a1->unk510;
+    v22 = a1->printSystem;
     if (a1->unk504)
     {
         v23 = sub_020484F4(a1->unk500);
@@ -2971,7 +2971,7 @@ void ovy142_21a014c(BagView *a1)
         }
     }
 
-    v25 = a1->unk510;
+    v25 = a1->printSystem;
     if (a1->unk50C)
     {
         v26 = sub_020484F4(a1->unk508);

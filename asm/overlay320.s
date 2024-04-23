@@ -17,12 +17,12 @@ ovy320_219ce80: ; 0x0219CE80
 	mov r1, #0x9d
 	lsl r2, r2, #0x10
 	mov r5, #0x9d
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r1, #0xfb
 	add r0, r4, #0
 	lsl r1, r1, #2
 	mov r2, #0x9d
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r2, #0xfb
 	add r4, r0, #0
 	mov r1, #0
@@ -43,14 +43,14 @@ ovy320_219ce80: ; 0x0219CE80
 	str r0, [sp]
 	mov r0, #0x17
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r4, #0x70]
 	add r5, #0xf9
 	ldrh r3, [r4]
 	mov r0, #0
 	mov r1, #2
 	add r2, r5, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #0x78]
 	str r7, [r4, #0x7c]
 	ldrh r0, [r4]
@@ -451,7 +451,7 @@ ovy320_219d218: ; 0x0219D218
 	ldrh r1, [r5]
 	mov r0, #0xc8
 	mov r4, #0xc8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #0xc8
 	add r1, #0x54
 	str r0, [r5, r1]
@@ -2358,7 +2358,7 @@ _0219E0E6:
 	bl GFL_StrBufFree
 	ldrh r1, [r5]
 	mov r0, #0xc8
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, r6]
 _0219E0FE:
 	ldr r0, [r5, #0x78]

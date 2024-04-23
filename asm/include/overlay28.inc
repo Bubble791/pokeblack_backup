@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_0203A1FC
 .public sub_0200B50C
 .public sub_0203A24C

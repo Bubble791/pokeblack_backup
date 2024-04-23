@@ -3,8 +3,8 @@
 .public sub_0203A1FC
 .public MTX_Identity33_
 .public sub_0204E060
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0204E038
 .public sub_0204E044
@@ -314,7 +314,7 @@
 .public sub_02044F90
 .public sub_0204B0B8
 .public sub_0204B0B8
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0203A78C
 .public sub_020232E8
 .public sub_020480C0
@@ -367,9 +367,9 @@
 .public sub_02045B7C
 .public sub_020223CC
 .public GFL_StrBufFree
-.public sub_020241D4
+.public GFL_WordSetSystemCreateDefault
 .public sub_0204898C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020243D0
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
@@ -423,7 +423,7 @@
 .public sub_0219EBDC
 .public sub_0219EDF0
 .public MI_CpuCopy8
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_02021998
 .public sub_02044BD8
 .public sub_02044BD8

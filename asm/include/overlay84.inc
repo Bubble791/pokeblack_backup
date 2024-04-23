@@ -85,10 +85,10 @@
 .public sub_0218799C
 .public sub_020232D8
 .public sub_020241E4
-.public sub_0204875C
-.public sub_02048530
-.public sub_02048530
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -190,8 +190,8 @@
 .public sub_0204C124
 .public sub_02046E28
 .public sub_021EAB50
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public sub_0204713C
 .public sub_0202B0F4
 .public sub_0202B098

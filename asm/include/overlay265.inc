@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02038BC8
 .public sub_0203AB10
@@ -49,11 +49,11 @@
 .public sub_0204AB0C
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_0204875C
-.public sub_02022D58
-.public sub_02022D58
-.public sub_020241D4
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_FontCreate
+.public GFL_FontCreate
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public sub_02022DA8

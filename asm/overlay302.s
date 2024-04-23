@@ -13,11 +13,11 @@ ovy302_21acee0: ; 0x021ACEE0
 	mov r0, #1
 	mov r1, #0x69
 	lsl r2, r6, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r5, #0
 	mov r1, #0x3c
 	mov r2, #0x69
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r5, r0, #0
 	mov r1, #0
 	mov r2, #0x3c

@@ -29,13 +29,13 @@ _021FB8A0:
 	add r0, r4, #0
 	mov r1, #0x56
 	lsl r2, r2, #0xe
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r7, #0x8b
 	lsl r7, r7, #4
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, #0x56
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r7, #0
@@ -2470,11 +2470,11 @@ ovy290_21fcb4c: ; 0x021FCB4C
 	mov r0, #1
 	mov r1, #0x58
 	add r2, #0xf8
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x10
 	mov r2, #0x58
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r6, #0
 	mov r1, #0
 	mov r2, #0x10

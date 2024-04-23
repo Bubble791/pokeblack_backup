@@ -62,10 +62,10 @@
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02022D58
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_02016AD8
 .public sub_02017934
 .public sub_0204898C
@@ -101,7 +101,7 @@
 .public sub_02017934
 .public sub_02010044
 .public sub_0201006C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02038F00
 .public sub_02048614
 .public sub_0202437C

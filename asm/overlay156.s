@@ -189,18 +189,18 @@ ovy156_21f5b28: ; 0x021F5B28
 	ldr r2, _021F5B98 ; =0x0000019E
 	mov r0, #0
 	mov r1, #3
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r4, #0x28]
 	ldrh r0, [r4, #2]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r4, #0x2c]
 	ldrh r1, [r4, #2]
 	mov r0, #0x81
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x34]
 	ldrh r1, [r4, #2]
 	mov r0, #0x81
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r4, #0x38]
 	ldr r0, [r4, #0x1c]
 	bl ovy12_216740c

@@ -122,7 +122,7 @@
 .public sub_02025A38
 .public sub_0204826C
 .public sub_02045B7C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020370EC
 .public sub_02048614
 .public sub_020370EC
@@ -153,9 +153,9 @@
 .public sub_02048244
 .public sub_0203A7F4
 .public sub_0203A7F4
-.public sub_0204875C
-.public sub_0204875C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
+.public GFL_MsgSysLoadData
 .public sub_020397F8
 .public sub_02024F60
 .public sub_020397D4
@@ -190,10 +190,10 @@
 .public sub_0204898C
 .public sub_020385A8
 .public sub_020385A8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048614
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public sub_0202451C
 .public sub_0202437C
 .public GFL_WordSetFormatStrbuf
@@ -224,7 +224,7 @@
 .public sub_020385A8
 .public sub_020385A8
 .public sub_020385A8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048614
 .public sub_0202451C
 .public sub_0202437C
@@ -248,9 +248,9 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_020241E4
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0203A78C
 .public GFL_TCBExMgrFree
 .public GFL_WordSetSystemFree
@@ -347,7 +347,7 @@
 .public sub_02021A18
 .public sub_02048210
 .public sub_0204898C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0200C9BC
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf
@@ -361,7 +361,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02024E80
 .public sub_02008538
 .public sub_0202451C
@@ -459,10 +459,10 @@
 .public sub_02025B04
 .public sub_0204C140
 .public sub_02038470
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02039798
 .public sub_020397CC
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_020370EC
 .public sub_020370EC
@@ -482,7 +482,7 @@
 .public sub_021F1980
 .public sub_02038470
 .public sub_020363E0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021F4930
 .public sub_0204898C
 .public sub_020370EC

@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0203A1FC
 .public sub_02016EE8
@@ -36,7 +36,7 @@
 .public sub_021C139C
 .public sub_021C13A8
 .public sub_021BFB18
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
@@ -107,11 +107,11 @@
 .public sub_02007468
 .public sub_020104A4
 .public sub_0201046C
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_02021998
-.public sub_0204875C
-.public sub_020241D4
-.public sub_02048530
+.public GFL_MsgSysLoadData
+.public GFL_WordSetSystemCreateDefault
+.public GFL_StrBufCreate
 .public sub_021C53DC
 .public sub_021BFB8C
 .public sub_02005AF4
@@ -230,7 +230,7 @@
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_02021998
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -364,7 +364,7 @@
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_02021998
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02046E28
 .public MI_CpuFill8
 .public sub_0202AEC4
@@ -429,7 +429,7 @@
 .public sub_0208D60C
 .public VEC_MultAdd
 .public sub_0203A1FC
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0219AF1C
 .public sub_0219CCC8
 .public sub_0204AA30
@@ -484,7 +484,7 @@
 .public sub_0205FA10
 .public sub_0204898C
 .public sub_020485F8
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0203A1FC
@@ -875,7 +875,7 @@
 .public MI_CpuFill8
 .public sub_021BF854
 .public sub_0202AE5C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021BF84C
 .public sub_021C152C
 .public sub_0202B098
@@ -953,7 +953,7 @@
 .public sub_02007468
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0204898C
 .public sub_0201736C
 .public sub_02008BD4
@@ -1029,10 +1029,10 @@
 .public sub_0203A24C
 .public sub_021BF5B0
 .public sub_0203A1FC
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_0203A938
 .public GFL_StrBufFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048580
 .public GFL_StrBufFree
 .public sub_0203A24C
@@ -1051,7 +1051,7 @@
 .public sub_02007468
 .public sub_0201736C
 .public sub_0204898C
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02008BD4
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf

@@ -25,10 +25,10 @@
 .public sub_02016B08
 .public sub_02170AC4
 .public sub_0201361C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_020241E4
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public ovy12_216740c
 .public GFL_StrBufFree
 .public GFL_StrBufFree

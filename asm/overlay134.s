@@ -2592,7 +2592,7 @@ _021EFFF4:
 	bl sub_0201D5E0
 	ldr r1, [sp, #0x10]
 	mov r0, #0xb
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r4, r0, #0
 	add r1, r6, #2
 	mov r2, #0xb
@@ -3109,13 +3109,13 @@ _021F04FC:
 	lsl r7, r7, #4
 	ldrh r1, [r5]
 	add r0, r7, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r6, #0
 	add r1, #0x14
 	str r0, [r5, r1]
 	ldrh r1, [r5]
 	add r0, r7, #0
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r6, #0
 	add r1, #0x18
 	str r0, [r5, r1]
@@ -3510,7 +3510,7 @@ _021F07FE:
 	mov r0, #0
 	mov r1, #2
 	add r3, r6, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	lsl r3, r4, #2
 	ldr r2, _021F0830 ; =0x021F0CCC
 	lsl r4, r5, #1
@@ -3702,7 +3702,7 @@ _021F0968:
 	mov r0, #0
 	mov r1, #2
 	lsl r2, r2, #2
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	sub r1, r5, #1
 	lsl r1, r1, #3
 	add r1, r4, r1

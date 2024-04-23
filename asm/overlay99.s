@@ -25,7 +25,7 @@ ovy99_21eec80: ; 0x021EEC80
 	mov r0, #0x15
 	mov r1, #0x9c
 	lsl r2, r2, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r0, #1
 	str r0, [r4, #0x64]
 	mov r0, #0x15
@@ -1939,7 +1939,7 @@ ovy99_21efb8c: ; 0x021EFB8C
 	ldrh r1, [r4, #2]
 	mov r0, #0x15
 	lsl r2, r2, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	str r5, [r4, #0x64]
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy99_21efb8c

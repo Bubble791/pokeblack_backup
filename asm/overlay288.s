@@ -359,7 +359,7 @@ ovy288_21f46c8: ; 0x021F46C8
 	mov r3, #0
 	str r0, [sp]
 	mov r0, #0x17
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0xc]
 	ldr r1, [r5]
 	lsl r0, r4, #9
@@ -368,7 +368,7 @@ ovy288_21f46c8: ; 0x021F46C8
 	str r0, [r5, #0x10]
 	ldr r0, [r5]
 	ldrh r0, [r0, #4]
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	add r1, r5, #0
 	add r1, #0x8c
 	str r0, [r1]
@@ -386,7 +386,7 @@ ovy288_21f46c8: ; 0x021F46C8
 	mov r0, #0
 	mov r1, #2
 	add r2, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	add r1, #0x84
 	str r0, [r1]
@@ -402,7 +402,7 @@ ovy288_21f46c8: ; 0x021F46C8
 	mov r0, #0
 	mov r1, #2
 	lsr r2, r2, #0x10
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r1, r5, #0
 	add r1, #0x88
 	str r0, [r1]
@@ -2778,7 +2778,7 @@ _021F5960:
 	ldr r1, [r5]
 	mov r0, #0x80
 	ldrh r1, [r1, #4]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r1, [r5, r4]
 	mov r0, #0x3c
@@ -4108,7 +4108,7 @@ ovy288_21f6390: ; 0x021F6390
 	ldrh r1, [r1, #4]
 	add r7, r2, #0
 	str r3, [sp, #0x14]
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	mov r1, #1
 	str r1, [sp]
 	ldr r1, [sp, #0x30]

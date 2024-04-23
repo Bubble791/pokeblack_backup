@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public sub_0203CE0C
 .public sub_0203CE0C
 .public sub_0203A1FC
@@ -104,12 +104,12 @@
 .public sub_0204713C
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02022D58
-.public sub_02022D58
+.public GFL_FontCreate
+.public GFL_FontCreate
 .public sub_0204B0B8
-.public sub_02048530
-.public sub_020241D4
-.public sub_0204875C
+.public GFL_StrBufCreate
+.public GFL_WordSetSystemCreateDefault
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_0202451C
 .public sub_0202451C
@@ -121,7 +121,7 @@
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048614
 .public sub_020484F4
 .public sub_02021D28
@@ -208,8 +208,8 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_02044F90
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_02024D00
 .public sub_0204B0B8
 .public sub_020232D8
@@ -723,7 +723,7 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_02044F90
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020487FC
 .public sub_0204B0B8
 .public sub_0203A78C

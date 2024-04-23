@@ -5,7 +5,7 @@
 .public OS_IsRunOnTwl
 .public sub_0203A24C
 .public OS_RestoreInterrupts
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_020116C0
 .public sub_0203CE0C
 .public OS_ResetSystem

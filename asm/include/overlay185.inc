@@ -109,7 +109,7 @@
 .public sub_0204476C
 .public sub_02045738
 .public sub_02044C98
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_020219A8
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
@@ -181,7 +181,7 @@
 .public sub_0204AFD8
 .public sub_020484F4
 .public sub_0204713C
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C7C
@@ -199,9 +199,9 @@
 .public sub_021A2FBC
 .public sub_021A3004
 .public sub_0203A1FC
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0219A438
-.public sub_02048530
+.public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public sub_0219A490
 .public GFL_MsgDataFree
@@ -230,7 +230,7 @@
 .public G2x_SetBlendBrightness_
 .public sub_02044F90
 .public sub_0219E524
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0208D65C
 .public sub_0219D27C
 .public sub_0204898C
@@ -248,7 +248,7 @@
 .public GFL_MsgDataFree
 .public sub_0219E524
 .public sub_020480C0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020484F4
 .public sub_0204713C
 .public sub_0219EAD4
@@ -298,7 +298,7 @@
 .public sub_0204AB0C
 .public sub_02045B7C
 .public sub_0219E524
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021A30B4
 .public sub_020484F4
 .public sub_0204713C
@@ -313,7 +313,7 @@
 .public sub_02044E74
 .public sub_0219E52C
 .public sub_0219E524
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020484F4
 .public sub_0204713C
 .public sub_021A30F4
@@ -344,8 +344,8 @@
 .public sub_0204C488
 .public sub_0203A1FC
 .public sub_021A2FB4
-.public sub_02048530
-.public sub_0204875C
+.public GFL_StrBufCreate
+.public GFL_MsgSysLoadData
 .public sub_02026528
 .public sub_020330C8
 .public sub_02033120
@@ -475,7 +475,7 @@
 .public GFL_TCBRemove
 .public sub_0203A1FC
 .public sub_021A2FB4
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0219E524
 .public sub_0219E52C
 .public sub_0202E168
@@ -591,8 +591,8 @@
 .public sub_0204C378
 .public MI_CpuCopy8
 .public sub_0203CE0C
-.public sub_0203A15C
-.public sub_0203A15C
+.public GFL_HeapCreateChild
+.public GFL_HeapCreateChild
 .public sub_0219D554
 .public sub_0219E4C8
 .public sub_0219D554
@@ -606,7 +606,7 @@
 .public sub_0203A1D0
 .public sub_0203A1D0
 .public sub_0203CDC8
-.public sub_0203AAEC
+.public GFL_ProcInitSubsystem
 .public sub_02029A68
 .public sub_02029B40
 .public sub_02029A8C
@@ -826,7 +826,7 @@
 .public sub_0219EAAC
 .public sub_021A26A4
 .public sub_0203A1FC
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_020480C0
 .public sub_020480C0
 .public sub_021A2FB4
@@ -918,12 +918,12 @@
 .public sub_0203CE0C
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0202A2AC
-.public sub_02022D58
-.public sub_0204875C
+.public GFL_FontCreate
+.public GFL_MsgSysLoadData
 .public sub_02021998
 .public sub_0203A970
 .public sub_0203A980

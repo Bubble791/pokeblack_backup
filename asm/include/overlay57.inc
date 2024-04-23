@@ -103,7 +103,7 @@
 .public sub_021E5D28
 .public sub_021E5E2C
 .public sub_02153ECC
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021F0754
 .public sub_02048570
 .public sub_02024BE4
@@ -114,7 +114,7 @@
 .public sub_02153ECC
 .public sub_02008BA0
 .public sub_02153ECC
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_021F0754
 .public sub_02048570
 .public sub_02024BE4

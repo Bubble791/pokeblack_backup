@@ -1167,12 +1167,12 @@ ovy175_219a0f8: ; 0x0219A0F8
 	add r6, r2, #0
 	mov r1, #0x3a
 	lsl r2, r0, #0xf
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	add r0, r4, #0
 	mov r1, #0x40
 	mov r2, #0x3a
 	mov r4, #0x40
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	mov r2, #0x40
 	add r5, r0, #0
@@ -2246,7 +2246,7 @@ _0219A8E8:
 	mov r1, #2
 	mov r2, #0x3a
 	add r3, r5, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r7, sp, #0x18
 	add r6, r0, #0
 	add r0, r7, #0
@@ -2395,7 +2395,7 @@ ovy175_219aa68: ; 0x0219AA68
 	mov r0, #0
 	mov r1, #2
 	mov r2, #0x3a
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	add r4, sp, #8
 	add r7, r0, #0
 	add r0, r4, #0

@@ -8,15 +8,15 @@
 .public sub_0203CB80
 .public sub_0203CE0C
 .public sub_0203CE0C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_021C2560
 .public sub_021C2668
 .public sub_021C279C
-.public sub_02022D58
+.public GFL_FontCreate
 .public sub_02021998
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_020241E4
 .public sub_021C568C
 .public sub_021C5C10
@@ -121,7 +121,7 @@
 .public sub_0201FCF8
 .public MI_CpuCopy8
 .public sub_020486F4
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_020486B8
 .public GFL_StrBufFree
@@ -142,7 +142,7 @@
 .public sub_021C5C88
 .public sub_02044C98
 .public sub_021B52CC
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_021520AC
 .public sub_021521DC
 .public sub_02152158
@@ -161,7 +161,7 @@
 .public sub_021C4F30
 .public sub_021C5C74
 .public sub_021C5C74
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_021520AC
 .public sub_021521DC
 .public sub_021C5888
@@ -250,7 +250,7 @@
 .public sub_0201FCF8
 .public MI_CpuCopy8
 .public sub_020486F4
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_020486B8
 .public GFL_StrBufFree
@@ -399,8 +399,8 @@
 .public sub_02160170
 .public sub_0203CE0C
 .public sub_0203CE0C
-.public sub_0203A15C
-.public sub_0203AAEC
+.public GFL_HeapCreateChild
+.public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02017934
 .public sub_0200BA78
@@ -408,10 +408,10 @@
 .public sub_021C2560
 .public sub_021C2668
 .public sub_021C279C
-.public sub_02022D58
-.public sub_02022D58
+.public GFL_FontCreate
+.public GFL_FontCreate
 .public sub_02021998
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_020241E4
 .public sub_021C568C
 .public sub_021C5C10
@@ -642,7 +642,7 @@
 .public sub_0201FCF8
 .public MI_CpuCopy8
 .public sub_020486F4
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_020486B8
 .public GFL_StrBufFree
@@ -670,7 +670,7 @@
 .public sub_021C5C88
 .public sub_02044C98
 .public sub_021B8760
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_021520AC
 .public sub_021521DC
 .public sub_02152158
@@ -696,7 +696,7 @@
 .public sub_021C4F30
 .public sub_021C5C74
 .public sub_021C5C74
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_021520AC
 .public sub_021521DC
 .public sub_021C5888
@@ -1117,7 +1117,7 @@
 .public sub_02040440
 .public sub_02042A6C
 .public sub_020373EC
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_MsgDataFree
 .public sub_020486F0
@@ -1332,7 +1332,7 @@
 .public sub_0216BEA4
 .public GFL_StrBufFree
 .public sub_0216BED4
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public GFL_MsgDataFree
 .public sub_02008B84

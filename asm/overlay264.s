@@ -13,12 +13,12 @@ ovy264_21998c0: ; 0x021998C0
 	mov r0, #1
 	mov r1, #0x7f
 	lsl r2, r2, #0x13
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	ldr r7, _021998F4 ; =0x0000605C
 	add r0, r4, #0
 	add r1, r7, #0
 	mov r2, #0x7f
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r7, #0
 	add r4, r0, #0

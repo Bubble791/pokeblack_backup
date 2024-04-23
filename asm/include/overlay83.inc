@@ -7,7 +7,7 @@
 .public sub_02021A34
 .public sub_0203A1FC
 .public sub_0202E168
-.public sub_0204875C
+.public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_0202E34C
 .public GFL_StrBufFree

@@ -14,13 +14,13 @@ ovy177_219ad20: ; 0x0219AD20
 	mov r0, #1
 	mov r1, #0x37
 	lsl r2, r2, #0xc
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r6, #0xb1
 	lsl r6, r6, #4
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0x37
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r5, r0, #0
@@ -1282,7 +1282,7 @@ ovy177_219b73c: ; 0x0219B73C
 	add r2, r7, #0
 	add r3, r7, #0
 	str r4, [sp]
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5]
 _0219B766:
 	add r0, r4, #0
@@ -1292,10 +1292,10 @@ _0219B766:
 	mov r1, #2
 	mov r2, #0x38
 	add r3, r4, #0
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #4]
 	add r0, r4, #0
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r5, #0xc]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1381,7 +1381,7 @@ ovy177_219b7cc: ; 0x0219B7CC
 	str r0, [r5]
 	ldrh r1, [r4, #0xc]
 	mov r0, #0xff
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0xc]
 	ldr r0, [r5]
 	str r0, [r5, #4]
@@ -1429,7 +1429,7 @@ ovy177_219b834: ; 0x0219B834
 	str r0, [r5]
 	ldrh r1, [r4, #0x14]
 	mov r0, #0xff
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0xc]
 	ldr r0, [r5]
 	mov r1, #0

@@ -5,7 +5,7 @@
 .public sub_0201793C
 .public sub_021804C0
 .public ovy36_2180ff0
-.public sub_0203A15C
+.public GFL_HeapCreateChild
 .public sub_0200BAC4
 .public ovy36_0218056c
 .public sub_02017394
@@ -162,4 +162,4 @@
 .public sub_0203A1D0
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_0203A15C
+.public GFL_HeapCreateChild

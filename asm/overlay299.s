@@ -13,13 +13,13 @@ ovy299_219fbc0: ; 0x0219FBC0
 	mov r0, #1
 	mov r1, #0x6b
 	lsl r2, r2, #0x10
-	bl sub_0203A15C
+	bl GFL_HeapCreateChild
 	mov r6, #0xc7
 	lsl r6, r6, #4
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0x6b
-	bl sub_0203AAEC
+	bl GFL_ProcInitSubsystem
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
@@ -690,24 +690,24 @@ ovy299_21a01a0: ; 0x021A01A0
 	mov r1, #2
 	mov r3, #0x6b
 	mov r4, #0x6b
-	bl sub_0204875C
+	bl GFL_MsgSysLoadData
 	str r0, [r5, #0x54]
 	str r4, [sp]
 	mov r0, #0x17
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_02022D58
+	bl GFL_FontCreate
 	str r0, [r5, #0x50]
 	mov r0, #0x6b
-	bl sub_020241D4
+	bl GFL_WordSetSystemCreateDefault
 	str r0, [r5, #0x58]
 	mov r0, #0x6b
 	bl sub_02021998
 	str r0, [r5, #0x60]
 	mov r0, #0x80
 	mov r1, #0x6b
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	str r0, [r5, #0x5c]
 	pop {r3, r4, r5, pc}
 	.align 2, 0

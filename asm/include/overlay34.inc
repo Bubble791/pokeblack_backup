@@ -656,7 +656,7 @@
 .public sub_0203CB80
 .public sub_02008B94
 .public sub_02008BF0
-.public sub_02048530
+.public GFL_StrBufCreate
 .public sub_02048614
 .public sub_0202437C
 .public GFL_StrBufFree
@@ -676,8 +676,8 @@
 .public sub_0203CB80
 .public sub_02180490
 .public sub_021879A0
-.public sub_02048530
-.public sub_02048530
+.public GFL_StrBufCreate
+.public GFL_StrBufCreate
 .public sub_02188A54
 .public sub_02188AE8
 .public sub_02188B08

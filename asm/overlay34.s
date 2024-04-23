@@ -8740,7 +8740,7 @@ _0217AD54:
 _0217AD68:
 	mov r0, #0x20
 	mov r1, #0x41
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	ldr r1, [sp, #8]
 	str r0, [sp, #0x10]
 	bl sub_02048614
@@ -8991,13 +8991,13 @@ _0217AF3A:
 	str r0, [r5, r7]
 	add r0, r4, #0
 	mov r1, #0x41
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r7, #0
 	add r1, #0x18
 	str r0, [r5, r1]
 	add r0, r4, #0
 	mov r1, #0x41
-	bl sub_02048530
+	bl GFL_StrBufCreate
 	add r1, r7, #0
 	add r1, #0x1c
 	str r0, [r5, r1]
