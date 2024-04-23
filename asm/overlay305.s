@@ -1811,10 +1811,10 @@ ovy305_219dc10: ; 0x0219DC10
 	add r5, r0, #0
 	ldr r0, [r5, #0x1c]
 	add r4, r1, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	mov r6, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	bne _0219DC32
@@ -1828,7 +1828,7 @@ _0219DC36:
 	add r2, r6, #0
 	bl sub_020232E8
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r4, [sp]
 	ldr r3, [r5, #0x18]
 	mov r1, #1

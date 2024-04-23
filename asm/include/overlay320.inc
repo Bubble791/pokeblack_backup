@@ -52,7 +52,7 @@
 .public sub_0219EB6C
 .public GFL_StrBufCreate
 .public sub_0204A934
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02048570
 .public sub_02024BE4
 .public sub_02021D28
@@ -69,7 +69,7 @@
 .public sub_0202E7A4
 .public sub_0203A24C
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public GFL_SndSEPlay
@@ -177,8 +177,8 @@
 .public GFL_StrBufFree
 .public sub_0202E8D8
 .public sub_0202E68C
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204C488
 .public sub_0204C124

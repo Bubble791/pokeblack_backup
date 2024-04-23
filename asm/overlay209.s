@@ -1262,13 +1262,13 @@ ovy209_21bab9c: ; 0x021BAB9C
 	bl sub_020480C0
 	str r0, [r5, #0x58]
 	ldr r0, [r5, #0x54]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x58]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldrh r0, [r5]
 	mov r1, #3
 	mov r2, #0
@@ -1349,7 +1349,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	add r0, r4, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x54]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r1, [r5, #0x5c]
 	ldr r3, [sp, #0xc]
 	str r1, [sp]
@@ -1376,7 +1376,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	add r4, r0, #0
 	bl sub_02048614
 	ldr r0, [r5, #0x58]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r1, [r5, #0x60]
 	mov r2, #0
 	str r1, [sp]
@@ -2032,9 +2032,9 @@ _021BB252:
 	str r0, [r5, #0x2c]
 _021BB260:
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x28]
 	add r1, r4, #0
 	bl sub_0204898C
@@ -2079,15 +2079,15 @@ ovy209_21bb2ac: ; 0x021BB2AC
 	str r0, [r5, #0x2c]
 _021BB2C2:
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x28]
 	add r1, r4, #0
 	bl sub_0204898C
 	str r0, [r5, #0x2c]
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x2c]
 	mov r2, #0
@@ -11286,10 +11286,10 @@ _021BF93C:
 	add r0, r5, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	mov r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, #0
 	add r0, #0xdc
 	ldr r0, [r0]
@@ -11331,7 +11331,7 @@ _021BF99C:
 	add r0, r5, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0xe0
@@ -11389,9 +11389,9 @@ _021BFA0E:
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r4, #0xd0
 	ldr r0, [r4]
 	bl sub_02048244

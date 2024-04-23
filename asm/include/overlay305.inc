@@ -97,10 +97,10 @@
 .public GFL_StrBufFree
 .public sub_02048210
 .public sub_0219D760
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020232E8
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_02048244
 .public sub_0204826C

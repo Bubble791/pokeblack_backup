@@ -1537,7 +1537,7 @@
 .public sub_02046E28
 .public ovy167_21d4ec0
 .public sub_02022888
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02021D28
 .public sub_02046EF4
 .public sub_0204BAB8
@@ -1568,11 +1568,11 @@
 .public sub_0204BF1C
 .public sub_0204BF1C
 .public sub_020480C0
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_02048244
 .public sub_0204826C
@@ -2007,9 +2007,9 @@
 .public ovy168_21e00b8
 .public sub_02026FD0
 .public sub_02026E64
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02048244
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_02045604
 .public sub_020270F0
@@ -2070,7 +2070,7 @@
 .public sub_0204898C
 .public GFL_WordSetSystemCreateDefault
 .public sub_02046E28
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02023370
 .public sub_020232E8
 .public sub_020244A4
@@ -2342,7 +2342,7 @@
 .public sub_0208D65C
 .public GFL_StrBufCreate
 .public sub_02046E28
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_0201CCF8
 .public sub_02023370
 .public sub_020232E8
@@ -2384,7 +2384,7 @@
 .public MIi_CpuCopy16
 .public GFL_StrBufCreate
 .public sub_02046E28
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02024A14
 .public sub_02023370
 .public sub_020232E8

@@ -2045,7 +2045,7 @@ _02177B6A:
 	ldr r0, [r0, #0xc]
 	bl ovy36_2187c9c
 	add r6, r0, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #4]
 	mov r2, #0xf
@@ -4842,9 +4842,9 @@ ovy33_2179140: ; 0x02179140
 	mov r2, #3
 	bl sub_020480C0
 	str r0, [r5, #0x30]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0x11
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x30]
 	bl sub_02048244
 	ldr r0, [r5, #0x30]

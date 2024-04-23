@@ -317,7 +317,7 @@ ovy81_21eaaa0: ; 0x021EAAA0
 	lsl r4, r4, #3
 	lsr r7, r0, #1
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r1, [r6, #0x1c]
 	ldr r2, [sp, #0xc]
 	str r1, [sp]

@@ -1133,9 +1133,9 @@ ovy307_21de468: ; 0x021DE468
 	mov r3, #1
 	bl sub_020480C0
 	str r0, [r5, #0x5c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x5c]
 	bl sub_02048244
 	mov r0, #4
@@ -1148,9 +1148,9 @@ ovy307_21de468: ; 0x021DE468
 	mov r3, #0x1e
 	bl sub_020480C0
 	str r0, [r5, #0x58]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x58]
 	bl sub_02048244
 	ldrh r3, [r5]
@@ -1261,9 +1261,9 @@ ovy307_21de59c: ; 0x021DE59C
 	add r5, r0, #0
 	ldr r0, [r4, #0x58]
 	add r6, r2, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x50]
 	cmp r0, #0
 	beq _021DE5BC

@@ -1587,7 +1587,7 @@ ovy84_21ebb18: ; 0x021EBB18
 	ldrb r3, [r4, #8]
 	bl sub_020480C0
 	str r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r4, [r5]
 	str r0, [r5, #4]
 	mov r0, #0
@@ -2319,7 +2319,7 @@ _021EC018:
 	str r0, [r4, #0x48]
 	ldr r0, [r4, #0x34]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x30]
 	bl sub_0202B0F4
 	ldr r0, [r4, #0x30]
@@ -4637,7 +4637,7 @@ ovy84_21ed260: ; 0x021ED260
 	lsl r5, r5, #4
 	ldr r0, [r4, r5]
 	mov r1, #0x40
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
 	bl sub_02048244
@@ -4867,7 +4867,7 @@ ovy84_21ed3f4: ; 0x021ED3F4
 	bl sub_021ED3C4
 	ldr r0, [r5, #0x34]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x30]
 	bl sub_0202B0F4
 	ldr r0, [r5, #0x48]
@@ -7590,7 +7590,7 @@ ovy84_21ee8b4: ; 0x021EE8B4
 	mov r1, #0
 	add r7, r2, #0
 	add r6, r3, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, #0
 	add r0, #0x89
 	ldrb r0, [r0]

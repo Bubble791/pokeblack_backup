@@ -186,12 +186,12 @@
 .public sub_020275F8
 .public sub_0204B0B8
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -231,8 +231,8 @@
 .public sub_0203DA48
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -240,8 +240,8 @@
 .public sub_020223CC
 .public GFL_StrBufFree
 .public sub_02024E80
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -291,7 +291,7 @@
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0201FD6C
-.public sub_0200842C
+.public BagSave_SubItem
 .public sub_0203A24C
 .public sub_0200D190
 .public sub_0200D72C

@@ -723,12 +723,12 @@
 .public sub_02022DA8
 .public sub_0204898C
 .public sub_02021C44
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public GFL_StrBufCreate
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_WordSetSystemCreateDefault

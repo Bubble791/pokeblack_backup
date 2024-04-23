@@ -310,8 +310,8 @@
 .public sub_02024D20
 .public sub_0204B0B8
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020223CC
 .public GFL_StrBufFree
 .public sub_020232D8

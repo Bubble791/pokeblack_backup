@@ -6458,7 +6458,7 @@ ovy167_219c8fc: ; 0x0219C8FC
 	ldr r0, [r0, #0x78]
 	add r1, r2, #0
 	mov r2, #1
-	bl sub_0200842C
+	bl BagSave_SubItem
 _0219C922:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -114303,7 +114303,7 @@ ovy167_21d0cd4: ; 0x021D0CD4
 	mov r3, #0x1e
 	bl sub_020480C0
 	str r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r0, [r5, #4]
 	ldr r0, [r5]
 	bl sub_0204826C
@@ -114327,7 +114327,7 @@ _021D0DFE:
 	lsl r1, r1, #0x18
 	ldr r0, [r5, #4]
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5]
 	bl sub_02048244
 	ldr r4, _021D0F18 ; =0x000001EB
@@ -114348,7 +114348,7 @@ _021D0DFE:
 	mov r3, #0xa
 	bl sub_020480C0
 	str r0, [r5, #8]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	sub r0, #0x97
@@ -118358,7 +118358,7 @@ ovy167_21d2dbc: ; 0x021D2DBC
 	lsl r1, r5, #0x18
 	ldr r0, [r4, #4]
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	lsl r2, r5, #0x18
 	mov r0, #1
 	mov r1, #9
@@ -118409,7 +118409,7 @@ ovy167_21d2e20: ; 0x021D2E20
 	lsl r1, r7, #0x18
 	ldr r0, [r5, #4]
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	lsl r2, r7, #0x18
 	mov r0, #1
 	mov r1, #9
@@ -119679,10 +119679,10 @@ ovy167_21d3748: ; 0x021D3748
 	cmp r1, #0
 	bne _021D3772
 	ldr r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	lsl r1, r4, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5]
 	bl sub_02048244
 _021D3772:
@@ -121126,7 +121126,7 @@ ovy167_21d41d0: ; 0x021D41D0
 	add r4, r0, #0
 	ldr r0, [r4, #4]
 	mov r1, #0xc
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4]
 	bl sub_02048244
 	mov r2, #0
@@ -121412,7 +121412,7 @@ _021D43A0:
 	bl sub_02048358
 	ldr r0, [r4, #0xc]
 	mov r1, #0xc
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #8]
 	bl sub_020484D4
 	bl sub_02044F90
@@ -121522,7 +121522,7 @@ _021D4460:
 	bl ovy167_21d5874
 	ldr r0, [r4, #0xc]
 	mov r1, #0xc
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x24]
 	mov r1, #0
 	str r0, [sp]
@@ -121658,7 +121658,7 @@ ovy167_21d4590: ; 0x021D4590
 	lsl r1, r1, #0x18
 	ldr r0, [r4, #4]
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4]
 	bl sub_02048244
 	pop {r4, pc}

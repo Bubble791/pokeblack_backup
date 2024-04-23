@@ -53,11 +53,11 @@
 .public GFL_TCBExMgrCreate
 .public sub_020480C0
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_02048244
 .public sub_0204826C
@@ -83,8 +83,8 @@
 .public sub_0202284C
 .public sub_0219A2A4
 .public sub_02017BCC
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf

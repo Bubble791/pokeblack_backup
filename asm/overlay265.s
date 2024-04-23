@@ -3034,7 +3034,7 @@ ovy265_219afd8: ; 0x0219AFD8
 	add r0, #0x34
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	sub r0, #0xb8
 	ldr r0, [r5, r0]
@@ -3104,7 +3104,7 @@ ovy265_219b0a4: ; 0x0219B0A4
 	ldr r0, [r5, r4]
 	mov r1, #0
 	mov r6, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r4, _0219B1B4 ; =0x00009038
 	mov r1, #1
 	ldr r0, [r5, r4]
@@ -3250,7 +3250,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	add r0, #0x44
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	sub r0, #0xb8
 	ldr r0, [r5, r0]
@@ -3304,7 +3304,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	add r0, #0x4c
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	sub r0, #0xb8
 	ldr r0, [r5, r0]

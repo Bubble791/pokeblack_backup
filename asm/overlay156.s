@@ -87,7 +87,7 @@ _021F5A64:
 	ldr r1, _021F5AC0 ; =0x0000023F
 	ldr r3, _021F5AB8 ; =0x00008015
 	add r2, r4, #0
-	bl sub_0200842C
+	bl BagSave_SubItem
 	add r0, r5, #0
 	bl sub_0215FCD0
 	b _021F5AAC

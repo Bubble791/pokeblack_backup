@@ -16326,10 +16326,10 @@ ovy310_21a4990: ; 0x021A4990
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0x18]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrb r1, [r5, #0xa]
 	add r7, r0, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0xc]
 	cmp r0, #0
 	beq _021A49D4

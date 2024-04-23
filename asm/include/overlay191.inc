@@ -197,8 +197,8 @@
 .public sub_021B5F44
 .public sub_020480C0
 .public sub_02024E80
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_0204826C
 .public sub_02048244
 .public sub_02045B7C
@@ -256,8 +256,8 @@
 .public sub_020223CC
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020232E8
 .public sub_02017BCC
 .public sub_02022268

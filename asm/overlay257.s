@@ -7722,9 +7722,9 @@ _0219CEFA:
 	bl sub_020480C0
 	str r0, [r4, #0x7c]
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x2c]
 	bl sub_0204826C
 	ldr r0, [r4, #0x2c]
@@ -8538,9 +8538,9 @@ _0219D7C8:
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
@@ -9042,7 +9042,7 @@ _0219DC06:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x7c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -9079,7 +9079,7 @@ _0219DC62:
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -9118,7 +9118,7 @@ _0219DCBC:
 	add r0, r4, #0
 	add r0, #0xb8
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -9212,9 +9212,9 @@ _0219DD7A:
 	add r0, #0x8c
 	str r1, [r0]
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x2c]
 	bl sub_02048244
 	b _0219DDFE
@@ -9915,9 +9915,9 @@ _0219E334:
 	mov r0, #4
 	str r0, [r4, #4]
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r5, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x2c]
 	bl sub_02048244
 	add sp, #0xc
@@ -10308,15 +10308,15 @@ ovy257_219e634: ; 0x0219E634
 	str r0, [sp, #0x10]
 	bl sub_02021C44
 	ldr r0, [r5, #0x7c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
 	bl sub_0204898C
 	add r4, r0, #0
 	ldr r0, [r5, #0x7c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r4, [sp]
 	mov r0, #0x11
@@ -10374,9 +10374,9 @@ ovy257_219e6b4: ; 0x0219E6B4
 	add r0, r5, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r2, r5, #0
 	add r2, #0xc4
 	ldr r1, [sp, #0xc]
@@ -10420,7 +10420,7 @@ ovy257_219e6b4: ; 0x0219E6B4
 	add r0, r5, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0xc8
@@ -10473,9 +10473,9 @@ ovy257_219e790: ; 0x0219E790
 	add r0, r5, #0
 	add r0, #0xb8
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0xc]
 	bl sub_0204898C
@@ -10522,7 +10522,7 @@ _0219E806:
 	add r0, r5, #0
 	add r0, #0xb8
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0xc8
@@ -10783,9 +10783,9 @@ _0219EA4A:
 	bne _0219EA80
 _0219EA6C:
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x2c]
 	bl sub_02048244
 	b _0219EA90
@@ -10823,9 +10823,9 @@ ovy257_219eaa4: ; 0x0219EAA4
 	add r0, #0x31
 	strb r2, [r0]
 	ldr r0, [r1, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	pop {r3, pc}
 	thumb_func_end ovy257_219eaa4
 
@@ -10847,7 +10847,7 @@ ovy257_219eac4: ; 0x0219EAC4
 	blx sub_0208D65C
 	add r6, r0, #0
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	bl sub_02046EF4
 	mov ip, r0
 	mov r0, #0
@@ -11103,16 +11103,16 @@ ovy257_219eca8: ; 0x0219ECA8
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	mov r6, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	add r0, #0xb8
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
@@ -11126,9 +11126,9 @@ ovy257_219eca8: ; 0x0219ECA8
 	mov r0, #4
 	bl sub_02044F90
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x2c]
 	bl sub_0204826C
 	add r0, r4, #0
@@ -12527,15 +12527,15 @@ _0219F654:
 	mov r3, #0x1c
 	bl sub_020480C0
 	str r0, [r4, #0x4c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r6, #0
 	mov r1, #0xb
 	bl sub_0204898C
 	add r6, r0, #0
 	ldr r0, [r4, #0x4c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0xbc]
 	str r6, [sp]
@@ -13038,7 +13038,7 @@ _0219FC28:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -13095,7 +13095,7 @@ _0219FCA4:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x4c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -13120,7 +13120,7 @@ _0219FCDA:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x50]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -14304,9 +14304,9 @@ _021A068C:
 	mov r3, #0x1c
 	bl sub_020480C0
 	str r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x48]
 	bl sub_02048244
 	add r0, r7, #0
@@ -14314,7 +14314,7 @@ _021A068C:
 	bl sub_0204898C
 	str r0, [sp, #0x14]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x14]
 	mov r2, #0x40
@@ -14333,7 +14333,7 @@ _021A068C:
 	bl sub_0204898C
 	str r0, [sp, #0x18]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x18]
 	mov r2, #0x40
@@ -14352,7 +14352,7 @@ _021A068C:
 	bl sub_0204898C
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
 	mov r2, #0x40
@@ -14371,7 +14371,7 @@ _021A068C:
 	bl sub_0204898C
 	str r0, [sp, #0x20]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x20]
 	mov r2, #0x40
@@ -14390,7 +14390,7 @@ _021A068C:
 	bl sub_0204898C
 	add r7, r0, #0
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0x11
@@ -14414,9 +14414,9 @@ _021A0792:
 	mov r3, #0x1c
 	bl sub_020480C0
 	str r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x48]
 	bl sub_02048244
 	add r0, r7, #0
@@ -14424,7 +14424,7 @@ _021A0792:
 	bl sub_0204898C
 	str r0, [sp, #0x24]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x24]
 	mov r2, #8
@@ -14443,7 +14443,7 @@ _021A0792:
 	bl sub_0204898C
 	str r0, [sp, #0x28]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x28]
 	mov r2, #8
@@ -14462,7 +14462,7 @@ _021A0792:
 	bl sub_0204898C
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x2c]
 	mov r2, #8
@@ -14481,7 +14481,7 @@ _021A0792:
 	bl sub_0204898C
 	str r0, [sp, #0x30]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x30]
 	mov r2, #0x50
@@ -14500,7 +14500,7 @@ _021A0792:
 	bl sub_0204898C
 	str r0, [sp, #0x34]
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x34]
 	mov r2, #0x50
@@ -14519,7 +14519,7 @@ _021A0792:
 	bl sub_0204898C
 	add r7, r0, #0
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r7, [sp]
 	mov r0, #0x11
@@ -14622,15 +14622,15 @@ _021A0958:
 	add r0, r6, #0
 	bl sub_02021C44
 	ldr r0, [r5, #0x50]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0xc]
 	bl sub_0204898C
 	add r4, r0, #0
 	ldr r0, [r5, #0x50]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r4, [sp]
 	mov r0, #0x11
@@ -15954,7 +15954,7 @@ _021A148A:
 	bl sub_021AAA8C
 	add r7, r0, #0
 	ldr r0, [r5, #0x54]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
@@ -16120,7 +16120,7 @@ _021A15DA:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -16142,7 +16142,7 @@ _021A1610:
 	bl sub_021AAA8C
 	add r5, r0, #0
 	ldr r0, [r4, #0x30]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02021C1C
@@ -17137,9 +17137,9 @@ _021A1D6A:
 	bl GFL_WordSetSystemCreateDefault
 	add r6, r0, #0
 	ldr r0, [r5, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r1, [sp, #0x10]
 	mov r0, #0x20
 	bl GFL_StrBufCreate
@@ -17159,7 +17159,7 @@ _021A1DCA:
 	mov r2, #8
 	bl sub_02048658
 	ldr r0, [r5, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
 	mov r2, #6
@@ -17213,7 +17213,7 @@ _021A1E34:
 	ldr r0, [sp, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x18]
 	mov r2, #0x50
@@ -17262,7 +17262,7 @@ _021A1E34:
 	ldr r0, [sp, #0x28]
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x2c]
 	mov r2, #0x90
@@ -17660,15 +17660,15 @@ ovy257_21a21d4: ; 0x021A21D4
 	bl sub_021AAA8C
 	str r0, [sp, #0x10]
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
 	bl sub_0204898C
 	add r4, r0, #0
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r4, [sp]
 	mov r0, #0x11
@@ -17710,15 +17710,15 @@ ovy257_21a2244: ; 0x021A2244
 	bl sub_021AAA8C
 	str r0, [sp, #0x10]
 	ldr r0, [r4, #0x30]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0xc]
 	add r1, r6, #0
 	bl sub_0204898C
 	add r6, r0, #0
 	ldr r0, [r4, #0x30]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r6, [sp]
 	mov r0, #0x11
@@ -18178,7 +18178,7 @@ _021A2602:
 	add r7, r0, #0
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
@@ -18204,7 +18204,7 @@ _021A2642:
 	add r7, r0, #0
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
@@ -18230,7 +18230,7 @@ _021A2680:
 	add r7, r0, #0
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
@@ -19600,9 +19600,9 @@ _021A3082:
 	mov r6, #0x12
 	lsl r6, r6, #6
 	ldr r0, [r4, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r7, [r4, r6]
 	add r0, r7, #0
 	bl sub_020484B4
@@ -19617,9 +19617,9 @@ _021A3082:
 	add r0, r6, #0
 	add r0, #8
 	ldr r0, [r4, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r6, #8
 	ldr r6, [r4, r6]
 	add r0, r6, #0
@@ -20016,9 +20016,9 @@ _021A3420:
 	bl sub_02024EEC
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	sub r0, r5, #4
 	ldr r5, [r4, r0]
 	add r0, r5, #0
@@ -20584,9 +20584,9 @@ _021A3892:
 	add r1, r6, #0
 	sub r1, #0x30
 	str r0, [r5, r1]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #4
 	str r0, [sp]
 	mov r0, #0xf
@@ -20601,9 +20601,9 @@ _021A3892:
 	add r1, r6, #0
 	sub r1, #0x2c
 	str r0, [r5, r1]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	str r7, [sp]
 	mov r0, #0xf
 	str r0, [sp, #4]
@@ -20617,9 +20617,9 @@ _021A3892:
 	add r1, r6, #0
 	sub r1, #0x24
 	str r0, [r5, r1]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	str r7, [sp]
 	mov r0, #0xf
 	str r0, [sp, #4]
@@ -20633,9 +20633,9 @@ _021A3892:
 	add r1, r6, #0
 	add r1, #0x20
 	str r0, [r5, r1]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r1, r4, #0
 	add r6, #0x64
 _021A395A:
@@ -21016,7 +21016,7 @@ _021A3C4A:
 	lsl r4, r4, #6
 	str r0, [sp, #0x44]
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r2, [sp, #0x44]
 	add r1, r0, #0
 	str r7, [sp]
@@ -21053,9 +21053,9 @@ _021A3C4A:
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x14]
 	mov r1, #0x3b
 	bl sub_0204898C
@@ -21086,7 +21086,7 @@ _021A3C4A:
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r7, [sp]
 	ldr r0, [sp, #0x1c]
@@ -21740,7 +21740,7 @@ _021A4266:
 	lsl r4, r4, #6
 	str r0, [sp, #0x70]
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r2, [sp, #0x70]
 	add r1, r0, #0
 	str r7, [sp]
@@ -21770,9 +21770,9 @@ _021A4266:
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x18]
 	mov r1, #0x3c
 	bl sub_0204898C
@@ -21780,7 +21780,7 @@ _021A4266:
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r7, [sp]
 	ldr r0, [sp, #0x20]
@@ -25662,9 +25662,9 @@ ovy257_21a62cc: ; 0x021A62CC
 	bl sub_02021C44
 	ldr r6, _021A63AC ; =0x000004CC
 	ldr r0, [r5, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0xc]
 	bl sub_0204898C
@@ -25694,7 +25694,7 @@ ovy257_21a62cc: ; 0x021A62CC
 	ldr r0, [sp, #0x1c]
 	bl GFL_StrBufFree
 	ldr r0, [r5, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x10]
 	str r4, [sp]
@@ -25735,7 +25735,7 @@ ovy257_21a63b0: ; 0x021A63B0
 	ldr r4, _021A6420 ; =0x0000047C
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r7, r0, #0
 	sub r0, r4, #6
 	ldrh r1, [r5, r0]
@@ -26717,9 +26717,9 @@ _021A6A80:
 	mov r3, #0xe
 	bl sub_020480C0
 	str r0, [r4, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r1, [sp, #0x18]
 	lsl r2, r6, #0x18
 	add r1, r1, #4
@@ -26735,9 +26735,9 @@ _021A6A80:
 	mov r3, #6
 	bl sub_020480C0
 	str r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0xc]
 	bl sub_021AAA7C
 	str r0, [r4, #0x1c]
@@ -26965,7 +26965,7 @@ ovy257_21a6cfc: ; 0x021A6CFC
 	ldr r1, [r5, #0x38]
 	bl sub_02008BA0
 	ldr r0, [r5, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x38]
 	mov r2, #0
@@ -27004,7 +27004,7 @@ ovy257_21a6cfc: ; 0x021A6CFC
 	ldr r2, [r5, #0x3c]
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x40]
 	mov r2, #0
@@ -27070,9 +27070,9 @@ _021A6E02:
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x10]
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldrh r0, [r4, #4]
 	bl GFL_WordSetSystemCreateDefault
 	add r6, r0, #0
@@ -27094,7 +27094,7 @@ _021A6E02:
 	add r0, r6, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x40]
 	mov r2, #0
@@ -27452,11 +27452,11 @@ ovy257_21a7074: ; 0x021A7074
 	lsl r0, r0, #0x18
 	lsr r6, r0, #0x18
 	ldr r0, [r5, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x38]
 	mov r2, #0
@@ -27495,11 +27495,11 @@ ovy257_21a7074: ; 0x021A7074
 	ldr r2, [r5, #0x3c]
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x40]
 	mov r2, #0
@@ -27535,7 +27535,7 @@ ovy257_21a71cc: ; 0x021A71CC
 	cmp r0, #1
 	bne _021A7204
 	ldr r0, [r4, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x24]
 	bl sub_02021C1C
@@ -27556,7 +27556,7 @@ _021A7204:
 	cmp r0, #1
 	bne _021A7238
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x24]
 	bl sub_02021C1C
@@ -27926,11 +27926,11 @@ _021A748C:
 	mov r3, #0xe
 	bl sub_020480C0
 	str r0, [r6, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r6, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r4, [sp]
 	mov r0, #0x11
@@ -27972,7 +27972,7 @@ ovy257_21a7558: ; 0x021A7558
 	cmp r0, #1
 	bne _021A7596
 	ldr r0, [r4, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x24]
 	bl sub_02021C1C
@@ -27993,7 +27993,7 @@ _021A7596:
 	cmp r0, #1
 	bne _021A75CA
 	ldr r0, [r4, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x24]
 	bl sub_02021C1C
@@ -30202,11 +30202,11 @@ ovy257_21a865c: ; 0x021A865C
 	mov r1, #0
 	str r0, [r5, #8]
 	strb r1, [r5, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrh r1, [r5, #0x24]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r4, [r5, #0x14]
 	add r0, r4, #0
 	bl sub_02048244
@@ -30247,7 +30247,7 @@ ovy257_21a8710: ; 0x021A8710
 	cmp r0, #0
 	beq _021A8738
 	ldr r0, [r5, #8]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r4, #0
 	bl sub_02021C1C
@@ -30322,11 +30322,11 @@ ovy257_21a8788: ; 0x021A8788
 	bl sub_020223CC
 _021A87A6:
 	ldr r0, [r4, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrh r1, [r4, #0x24]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x14]
 	bl sub_02048244
 	bl sub_02017BCC
@@ -30395,11 +30395,11 @@ ovy257_21a880c: ; 0x021A880C
 	bl sub_020223CC
 _021A8848:
 	ldr r0, [r4, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrh r1, [r4, #0x24]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x14]
 	bl sub_02048244
 	bl sub_02017BCC
@@ -32811,9 +32811,9 @@ _021A9AB8:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, r7]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r6, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, #1
 	lsl r0, r0, #0x18
 	lsr r5, r0, #0x18
@@ -32923,9 +32923,9 @@ _021A9BA8:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -34459,7 +34459,7 @@ _021AA89E:
 	add r7, r5, r0
 	ldr r0, [sp, #0x24]
 	ldr r0, [r7, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x20]
 	ldr r0, [r5, r0]
@@ -34533,7 +34533,7 @@ ovy257_21aa920: ; 0x021AA920
 	add r0, r1, r0
 	asr r6, r0, #1
 	ldr r0, [sp, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r2, r6, #1
 	lsl r2, r2, #0x10
 	str r7, [sp]
@@ -34550,7 +34550,7 @@ ovy257_21aa920: ; 0x021AA920
 	mov r3, #1
 	bl sub_02021C7C
 	ldr r0, [sp, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	sub r2, r6, #1
 	lsl r2, r2, #0x10
 	str r7, [sp]
@@ -34567,7 +34567,7 @@ ovy257_21aa920: ; 0x021AA920
 	mov r3, #1
 	bl sub_02021C7C
 	ldr r0, [sp, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	lsl r2, r6, #0x10
 	str r7, [sp]
 	add r1, r0, #0
@@ -34583,7 +34583,7 @@ ovy257_21aa920: ; 0x021AA920
 	mov r3, #2
 	bl sub_02021C7C
 	ldr r0, [sp, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	lsl r2, r6, #0x10
 	str r7, [sp]
 	add r1, r0, #0
@@ -34599,7 +34599,7 @@ ovy257_21aa920: ; 0x021AA920
 	mov r3, #0
 	bl sub_02021C7C
 	ldr r0, [sp, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	lsl r2, r6, #0x10
 	str r7, [sp]
 	add r1, r0, #0
@@ -35199,9 +35199,9 @@ _021AAD1E:
 	lsl r0, r4, #2
 	add r6, r5, r0
 	ldr r0, [r6, r7]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #8]
 	cmp r0, #3
 	beq _021AAD3C
@@ -35228,9 +35228,9 @@ _021AAD52:
 	lsl r0, r4, #2
 	add r5, r6, r0
 	ldr r0, [r5, r7]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r7]
 	bl sub_02048244
 	add r0, r4, #1

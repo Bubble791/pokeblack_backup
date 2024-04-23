@@ -997,7 +997,7 @@ ovy289_21f4bc4: ; 0x021F4BC4
 	str r0, [sp, #0xc]
 	add r0, r4, r5
 	ldr r0, [r0, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x28]
 	ldr r2, [sp, #0x10]
@@ -1062,7 +1062,7 @@ _021F4C50:
 	cmp r0, #0
 	beq _021F4C78
 	ldr r0, [r5, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C

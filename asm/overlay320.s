@@ -553,7 +553,7 @@ _0219D2F0:
 	add r0, #0xbc
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #0x47
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
@@ -687,7 +687,7 @@ _0219D400:
 	add r0, r5, #0
 	add r0, #0xfc
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -2588,9 +2588,9 @@ ovy320_219e2b0: ; 0x0219E2B0
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
 	bl sub_02048244
 	pop {r3, r4, r5, pc}

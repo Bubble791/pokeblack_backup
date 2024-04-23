@@ -8140,7 +8140,7 @@ _021BE112:
 	bl sub_02046E28
 	mov r1, #0
 	add r7, r0, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1

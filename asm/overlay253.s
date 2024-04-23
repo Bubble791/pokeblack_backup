@@ -984,10 +984,10 @@ _0217D0B6:
 	ldrb r1, [r6, #1]
 	bl sub_02048124
 	str r0, [r5, r7]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	str r0, [sp, #0xc]
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r7]
 	bl sub_020484B4
 	ldr r0, [r5, #0xc]
@@ -1034,9 +1034,9 @@ ovy253_217d140: ; 0x0217D140
 _0217D148:
 	lsl r6, r4, #2
 	ldr r0, [r5, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r6]
 	bl sub_020484B4
 	ldr r0, [r5, r6]

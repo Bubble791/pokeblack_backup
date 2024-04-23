@@ -222,7 +222,7 @@ _021EAA2E:
 	cmp r0, #0
 	beq _021EAA68
 	ldr r0, [r1, #0x64]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -1009,7 +1009,7 @@ _021EB044:
 	cmp r0, #0
 	beq _021EB088
 	ldr r0, [r6, #0x64]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #4]
 	bl sub_02021C1C
@@ -1202,9 +1202,9 @@ _021EB1D0:
 	add r0, #0x4c
 	str r0, [sp, #0x1c]
 	ldr r0, [r0, r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x1c]
 	ldr r0, [r0, r5]
 	bl sub_02048244
@@ -1295,7 +1295,7 @@ _021EB25E:
 	str r0, [sp, #0x10]
 	add r0, r4, r6
 	ldr r0, [r0, #0x64]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x14]
 	mov r2, #0
@@ -1328,7 +1328,7 @@ _021EB2C2:
 	bl sub_02048614
 	ldr r0, [sp, #0xc]
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r5, [sp]
 	add r1, r0, #0
 	ldr r0, [r4, #0x44]
@@ -1356,7 +1356,7 @@ _021EB30C:
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r5, [sp]
 	add r1, r0, #0
 	ldr r0, [r4, #0x44]
@@ -1484,10 +1484,10 @@ _021EB400:
 	add r4, r5, #0
 	ldr r0, [r0, #0x4c]
 	add r4, #0x4c
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r5, r0, #0
 	ldr r0, [r4, r7]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_02046F18

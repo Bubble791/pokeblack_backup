@@ -757,7 +757,7 @@
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public sub_02046E28
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02048614

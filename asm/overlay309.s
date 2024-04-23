@@ -607,7 +607,7 @@ _0219D336:
 	ldrb r1, [r1]
 	cmp r1, #0
 	beq _0219D374
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
@@ -4225,9 +4225,9 @@ ovy309_219ef78: ; 0x0219EF78
 	add r0, r5, r4
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, r4
 	mov r1, #1
 	add r0, #0xa0
@@ -5653,9 +5653,9 @@ ovy309_219faa8: ; 0x0219FAA8
 	bl sub_020484D4
 	bl sub_02044F90
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
 	bl sub_02048244
 	ldr r0, [sp, #0x10]
@@ -5717,7 +5717,7 @@ _0219FB54:
 	lsl r1, r4, #0x10
 	ldrh r2, [r5]
 	lsr r1, r1, #0x10
-	bl sub_02008538
+	bl BagSave_GetItemCountByID
 	sub r0, r6, r0
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy309_219fb48
@@ -5731,7 +5731,7 @@ ovy309_219fb78: ; 0x0219FB78
 	mov r5, #0x51
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0x58
@@ -5745,7 +5745,7 @@ _0219FBA0:
 	mov r5, #0x51
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0x58

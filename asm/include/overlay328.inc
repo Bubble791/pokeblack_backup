@@ -38,7 +38,7 @@
 .public sub_0219E450
 .public sub_0203D554
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public sub_0204AA30
@@ -117,7 +117,7 @@
 .public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B098
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02021D28
 .public sub_0202B0F4
 .public sub_0219D590
@@ -134,8 +134,8 @@
 .public sub_0204AB0C
 .public sub_0219A2A4
 .public sub_02048210
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public GFL_SndSEPlay
 .public sub_0203D564
 .public GCTX_HIDGetPressedKeys

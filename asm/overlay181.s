@@ -1626,11 +1626,11 @@ _0219DBAC:
 	bl sub_0204898C
 	add r6, r0, #0
 	add r0, r4, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #7
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r4, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x68]
 	bl sub_021A034C
@@ -5791,7 +5791,7 @@ _0219FDF2:
 	ldr r4, [r5, #0x34]
 	cmp r1, #0
 	beq _0219FE28
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r4, #0
 	bl sub_02021C1C
@@ -5808,7 +5808,7 @@ _0219FE28:
 	cmp r0, #1
 	bne _0219FE64
 	ldr r0, [r5, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r5, #0x34]
 	bl sub_02021C1C
@@ -5948,9 +5948,9 @@ _0219FF28:
 	str r5, [r4, #4]
 _0219FF2A:
 	ldr r0, [r4, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x10]
 	bl sub_02048244
 	ldr r0, [r4, #0x10]
@@ -5992,9 +5992,9 @@ _0219FF72:
 	str r7, [r5, #0x24]
 _0219FF84:
 	ldr r0, [r5, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x20]
 	add r1, r6, #0
 	bl sub_0204898C
@@ -6095,9 +6095,9 @@ _021A004C:
 	str r0, [r4, #0x24]
 _021A005A:
 	ldr r0, [r4, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x20]
 	add r1, r5, #0
 	bl sub_0204898C
@@ -6118,7 +6118,7 @@ _021A005A:
 	str r5, [r4, #0x24]
 _021A0092:
 	ldr r0, [r4, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r4, #0x24]
 	mov r2, #0
@@ -6158,9 +6158,9 @@ ovy181_21a00e0: ; 0x021A00E0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #4]
 	cmp r0, #8
 	bne _021A0106
@@ -6443,10 +6443,10 @@ _021A02C4:
 	str r7, [r5, #0x24]
 _021A02D6:
 	ldr r0, [r5, #0x10]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
 	mov r7, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r6, #0
 	mov r1, #0x16
 	bl sub_0204898C

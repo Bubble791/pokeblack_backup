@@ -51,7 +51,7 @@
 .public sub_021EAC18
 .public StringSetNumber
 .public sub_021EAC18
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public StringSetNumber
 .public sub_021EAB90
 .public sub_0204C124
@@ -67,7 +67,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0203A870
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_02048570
 .public sub_0204BA40
 .public sub_02026E64
@@ -291,7 +291,7 @@
 .public sub_0204BECC
 .public sub_0204BF98
 .public sub_020480C0
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -315,7 +315,7 @@
 .public sub_0204C108
 .public sub_02046E28
 .public sub_021EAB50
-.public sub_0204713C
+.public BmpWin_BitmapFill
 .public sub_0202B0F4
 .public sub_0202B098
 .public MI_CpuFill8

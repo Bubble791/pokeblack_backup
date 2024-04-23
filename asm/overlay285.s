@@ -223,7 +223,7 @@ _021F43E4:
 	cmp r0, #0
 	beq _021F440A
 	ldr r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp]
 	bl sub_02021C1C

@@ -2,7 +2,7 @@
 #pragma once
 .public sub_02017934
 .public sub_02017354
-.public sub_02008538
+.public BagSave_GetItemCountByID
 .public sub_0200C62C
 .public sub_0200C678
 .public sub_02013574

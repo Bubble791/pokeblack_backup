@@ -1534,7 +1534,7 @@ _0219DA64:
 	cmp r0, #0
 	beq _0219DA92
 	ldr r0, [r5, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -1571,7 +1571,7 @@ ovy321_219da9c: ; 0x0219DA9C
 	str r0, [sp, #0xc]
 	add r0, r4, r5
 	ldr r0, [r0, #0x48]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x28]
 	ldr r2, [sp, #0x10]

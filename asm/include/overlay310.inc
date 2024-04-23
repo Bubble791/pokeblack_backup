@@ -1438,8 +1438,8 @@
 .public sub_0203A24C
 .public sub_0204898C
 .public sub_0203A24C
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02021D28
 .public sub_02048244
 .public sub_0204826C

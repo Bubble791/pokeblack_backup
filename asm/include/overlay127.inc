@@ -456,13 +456,13 @@
 .public sub_0204B0B8
 .public sub_02024D20
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_0202E168
 .public sub_0204898C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_02024EE0
 .public sub_02048244

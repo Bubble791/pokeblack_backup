@@ -1217,14 +1217,14 @@ void ovy142_219de0c(BagView *a1)
         return;
     }
     ovy142_219dda0(a1, 1);
-    v8 = sub_020484F4(a1->unk76C);
-    sub_0204713C(v8, 0);
-    v9 = sub_020484F4(a1->unk754);
-    sub_0204713C(v9, 0);
-    v10 = sub_020484F4(a1->unk75C);
-    sub_0204713C(v10, 0);
-    v11 = sub_020484F4(a1->unk764);
-    sub_0204713C(v11, 0);
+    v8 = BmpWin_GetBitmap(a1->unk76C);
+    BmpWin_BitmapFill(v8, 0);
+    v9 = BmpWin_GetBitmap(a1->unk754);
+    BmpWin_BitmapFill(v9, 0);
+    v10 = BmpWin_GetBitmap(a1->unk75C);
+    BmpWin_BitmapFill(v10, 0);
+    v11 = BmpWin_GetBitmap(a1->unk764);
+    BmpWin_BitmapFill(v11, 0);
     v16 = sub_02026AE4(v6->itemid);
     v15 = BagSave_GetExistingItemPocket(a1->bagSave, v6->itemid);
     if (!v16)
@@ -1341,8 +1341,8 @@ void ovy142_219e21c(BagView *a1)
 {
     int v2; // r0
 
-    v2 = sub_020484F4(a1->unk794);
-    sub_0204713C(v2, 0);
+    v2 = BmpWin_GetBitmap(a1->unk794);
+    BmpWin_BitmapFill(v2, 0);
     if (ovy142_219d22c(a1) > 2 && a1->itemType == 5)
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 159, a1->stringBuff1);
@@ -1735,7 +1735,7 @@ _0219EA42:
 	ldr r0, [sp, #0x2c]
 	mov r1, #0xd
 	ldr r0, [r4, r0]
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x28]
 	ldr r2, [sp, #0x24]
 	ldr r0, [r5, r0]
@@ -2272,9 +2272,9 @@ void ovy142_219f4b0(BagView *a1, int a2)
     v12 = sub_020216B0(a2, 0);
     v10 = sub_02021280(a2, 3);
     v9 = sub_02021280(a2, 4);
-    v6 = sub_020484F4(a1->unk74C);
+    v6 = BmpWin_GetBitmap(a1->unk74C);
     sub_020470F8(v6, 176, 0, 32, 40, 0);
-    v7 = sub_020484F4(a1->unk74C);
+    v7 = BmpWin_GetBitmap(a1->unk74C);
     sub_020470F8(v7, 232, 0, 24, 24, 0);
     if (v10 <= 1)
     {
@@ -2320,8 +2320,8 @@ void ovy142_219f6a4(BagView *a1, int a2)
 
     if (!a1->unk500)
         a1->unk500 = sub_020480C0(3, 1, 1, 0x1e, 4, 12, 1);
-    v4 = sub_020484F4(a1->unk500);
-    sub_0204713C(v4, 15);
+    v4 = BmpWin_GetBitmap(a1->unk500);
+    BmpWin_BitmapFill(v4, 15);
     sub_02048244(a1->unk500);
     if (a2 == 1)
     {
@@ -2425,8 +2425,8 @@ void ovy142_219f8ec(BagView *a1, u32 a2)
     int v4; // r0
     u32 v5; // r0
 
-    v4 = sub_020484F4(a1->unk508);
-    sub_0204713C(v4, 0);
+    v4 = BmpWin_GetBitmap(a1->unk508);
+    BmpWin_BitmapFill(v4, 0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
     LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, a2);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
@@ -2446,10 +2446,10 @@ void ovy142_219f978(BagView *a1)
     int v4; // r0
     int v5; // r0
 
-    v2 = sub_020484F4(a1->unk784);
-    sub_0204713C(v2, 0);
-    v3 = sub_020484F4(a1->unk77C);
-    sub_0204713C(v3, 0);
+    v2 = BmpWin_GetBitmap(a1->unk784);
+    BmpWin_BitmapFill(v2, 0);
+    v3 = BmpWin_GetBitmap(a1->unk77C);
+    BmpWin_BitmapFill(v3, 0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 81, a1->stringBuff1);
     ovy142_21a00f0(a1, &a1->unk77C, a1->stringBuff1, 0, 4, 0x3C40);
     ovy142_21a0134(&a1->unk77C);
@@ -2603,7 +2603,7 @@ _0219FBFC:
 
 void ovy142_219fc14(BagView *a1, int a2)
 {
-    sub_0204713C(sub_020484F4(a1->unk774), 5);
+    BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk774), 5);
     GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
     StringSetNumber(a1->wordSetSystem, 0, a2, 3, 0, 1);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
@@ -2614,7 +2614,7 @@ void ovy142_219fc14(BagView *a1, int a2)
     {
         int *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
         int v7 = BagView_GetItemPrice(a1->selectItem, a1->unk814, a1->heapId);
-        sub_0204713C(sub_020484F4(a1->unk78C), 5);
+        BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk78C), 5);
         GFL_MsgDataLoadStrbuf(a1->msgData, 84, a1->stringBuff1);
         StringSetNumber(a1->wordSetSystem, 0, v7, 7, 0, 1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
@@ -2815,7 +2815,7 @@ void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
     WinDowData *win = (WinDowData *)a2;
     v12 = a1->printSystem;
 
-    sub_02021C7C(v12, sub_020484F4(win->bit), (s16)v4, a5, a3, a1->font, a6);
+    sub_02021C7C(v12, BmpWin_GetBitmap(win->bit), (s16)v4, a5, a3, a1->font, a6);
     win->flag = 1;
 }
 
@@ -2863,7 +2863,7 @@ void ovy142_21a014c(BagView *a1)
     v2 = a1->printSystem;
     if (a1->unk750)
     {
-        v3 = sub_020484F4(a1->unk74C);
+        v3 = BmpWin_GetBitmap(a1->unk74C);
         if (!sub_02021C1C(v2, v3))
         {
             sub_02048244(a1->unk74C);
@@ -2873,7 +2873,7 @@ void ovy142_21a014c(BagView *a1)
     v4 = a1->printSystem;
     if (a1->unk770)
     {
-        v5 = sub_020484F4(a1->unk76C);
+        v5 = BmpWin_GetBitmap(a1->unk76C);
         if (!sub_02021C1C(v4, v5))
         {
             sub_02048244(a1->unk76C);
@@ -2883,7 +2883,7 @@ void ovy142_21a014c(BagView *a1)
     v6 = a1->printSystem;
     if (a1->unk758)
     {
-        v7 = sub_020484F4(a1->unk754);
+        v7 = BmpWin_GetBitmap(a1->unk754);
         if (!sub_02021C1C(v6, v7))
         {
             sub_02048244(a1->unk754);
@@ -2893,7 +2893,7 @@ void ovy142_21a014c(BagView *a1)
     v8 = a1->printSystem;
     if (a1->unk760)
     {
-        v9 = sub_020484F4(a1->unk75C);
+        v9 = BmpWin_GetBitmap(a1->unk75C);
         if (!sub_02021C1C(v8, v9))
         {
             sub_02048244(a1->unk75C);
@@ -2903,7 +2903,7 @@ void ovy142_21a014c(BagView *a1)
     v10 = a1->printSystem;
     if (a1->unk768)
     {
-        v11 = sub_020484F4(a1->unk764);
+        v11 = BmpWin_GetBitmap(a1->unk764);
         if (!sub_02021C1C(v10, v11))
         {
             sub_02048244(a1->unk764);
@@ -2913,7 +2913,7 @@ void ovy142_21a014c(BagView *a1)
     v12 = a1->printSystem;
     if (a1->unk778)
     {
-        v13 = sub_020484F4(a1->unk774);
+        v13 = BmpWin_GetBitmap(a1->unk774);
         if (!sub_02021C1C(v12, v13))
         {
             sub_02048244(a1->unk774);
@@ -2923,7 +2923,7 @@ void ovy142_21a014c(BagView *a1)
     v14 = a1->printSystem;
     if (a1->unk780)
     {
-        v15 = sub_020484F4(a1->unk77C);
+        v15 = BmpWin_GetBitmap(a1->unk77C);
         if (!sub_02021C1C(v14, v15))
         {
             sub_02048244(a1->unk77C);
@@ -2933,7 +2933,7 @@ void ovy142_21a014c(BagView *a1)
     v16 = a1->printSystem;
     if (a1->unk788)
     {
-        v17 = sub_020484F4(a1->unk784);
+        v17 = BmpWin_GetBitmap(a1->unk784);
         if (!sub_02021C1C(v16, v17))
         {
             sub_02048244(a1->unk784);
@@ -2943,7 +2943,7 @@ void ovy142_21a014c(BagView *a1)
     v18 = a1->printSystem;
     if (a1->unk790)
     {
-        v19 = sub_020484F4(a1->unk78C);
+        v19 = BmpWin_GetBitmap(a1->unk78C);
         if (!sub_02021C1C(v18, v19))
         {
             sub_02048244(a1->unk78C);
@@ -2953,7 +2953,7 @@ void ovy142_21a014c(BagView *a1)
     v20 = a1->printSystem;
     if (a1->unk798)
     {
-        v21 = sub_020484F4(a1->unk794);
+        v21 = BmpWin_GetBitmap(a1->unk794);
         if (!sub_02021C1C(v20, v21))
         {
             sub_02048244(a1->unk794);
@@ -2963,7 +2963,7 @@ void ovy142_21a014c(BagView *a1)
     v22 = a1->printSystem;
     if (a1->unk504)
     {
-        v23 = sub_020484F4(a1->unk500);
+        v23 = BmpWin_GetBitmap(a1->unk500);
         if (!sub_02021C1C(v22, v23))
         {
             sub_02048244(a1->unk500);
@@ -2974,7 +2974,7 @@ void ovy142_21a014c(BagView *a1)
     v25 = a1->printSystem;
     if (a1->unk50C)
     {
-        v26 = sub_020484F4(a1->unk508);
+        v26 = BmpWin_GetBitmap(a1->unk508);
         result = sub_02021C1C(v25, v26);
         if (!result)
         {
@@ -3022,7 +3022,7 @@ void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4)
     MI_CpuFill8(&a1->unkC, 0, 8 * 639);
     for (i = 0; i <= 638; ++i)
     {
-        if (sub_02008338((void*)a1->unk4, (u16)i))
+        if (BagSave_IsItemInFreeSpace((void*)a1->unk4, (u16)i))
         {
             v7 = BagSave_GetExistingItemPocket((void*)a1->unk4, i);
             if (v7 != 6)
@@ -3076,7 +3076,7 @@ ItemTable *ovy142_21a0470(ITEM_UNKNOW_DATA *a1, u16 a2, u16 a3)
             {
                 return &a1->unk0;
             }
-            if (!sub_02008338((void*)a1->unk4, v12->itemid))
+            if (!BagSave_IsItemInFreeSpace((void*)a1->unk4, v12->itemid))
             {
                 if (v5 == a3)
                     break;

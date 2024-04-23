@@ -289,7 +289,7 @@
 .public sub_02189CB0
 .public sub_02187C70
 .public ovy36_2187c9c
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public ovy36_2189de8
 .public sub_02048244
 .public GCTX_HIDGetPressedKeys
@@ -666,8 +666,8 @@
 .public sub_02024C8C
 .public sub_0204B0F0
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_02024E80

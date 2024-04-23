@@ -49,8 +49,8 @@
 .public GFL_StrBufCreate
 .public sub_020480C0
 .public sub_02024E80
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -67,8 +67,8 @@
 .public MI_CpuFill8
 .public GFL_MsgDataLoadStrbuf
 .public sub_020223CC
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_02017BCC
 .public sub_02022268

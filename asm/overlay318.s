@@ -396,11 +396,11 @@ ovy318_219d16c: ; 0x0219D16C
 	mov r1, #0
 	str r0, [r5, #8]
 	strb r1, [r5, #0xc]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrh r1, [r5, #0x20]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r4, [r5, #0x14]
 	add r0, r4, #0
 	bl sub_02048244
@@ -490,11 +490,11 @@ ovy318_219d264: ; 0x0219D264
 	bl sub_020223CC
 _0219D282:
 	ldr r0, [r4, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrh r1, [r4, #0x20]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x14]
 	bl sub_02048244
 	bl sub_02017BCC

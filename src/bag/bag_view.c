@@ -580,7 +580,7 @@ void ovy142_219a104(BagView *bagView)
             uVar1 = Item_GetItemParam(items, ITEM_DATA_USE_PARAM, heap);
             sub_0200DDB0(uVar3, uVar1);
             sub_0200DDF0(uVar3, (u16)bagView->selectItem);
-            ovy142_219b340(bagView, 1);
+            BagView_DeletItem(bagView, 1);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3f, bagView->stringBuff1);
             GFL_CopyVarForText(bagView->wordSetSystem, 0, bagView->unk8);
             BagMenu_LoadItemNameToStrbuf(bagView, 1, bagView->selectItem);
@@ -667,7 +667,7 @@ int ovy142_219a314(BagView * bagView, int param_2, int param_3, int param_4)
     {
         if (param_4 != 0)
         {
-            ovy142_219b340(bagView, 1);
+            BagView_DeletItem(bagView, 1);
         }
         bagView->unk898 = param_3;
         BagMenu_SetRunFunc(bagView, 0);
@@ -1361,7 +1361,7 @@ void ovy142_219ad30(BagView *bagView)
         if (iVar1 == 0)
         {
             GFL_SndSEPlay(0x647);
-            ovy142_219b340(bagView, bagView->unk814);
+            BagView_DeletItem(bagView, bagView->unk814);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x36, bagView->stringBuff1);
             ovy142_21999d8(bagView, 0, bagView->selectItem, ((int)bagView->unk814 > 1), 0);
             StringSetNumber(bagView->wordSetSystem, 1, bagView->unk814, 3, 0, 1);
@@ -1572,7 +1572,7 @@ void ovy142_219b12c(BagView *bagView)
 void ovy142_219b1a0(BagView *bagView)
 {
     int iVar1;
-    int uVar2;
+    int price;
     int uVar3;
     int iVar4;
 
@@ -1586,16 +1586,16 @@ void ovy142_219b1a0(BagView *bagView)
         switch (iVar1)
         {
         case 0:
-            uVar2 = BagView_GetItemPrice(bagView->selectItem, bagView->unk814, bagView->heapId);
-            ovy142_219b340(bagView, bagView->unk814);
+            price = BagView_GetItemPrice(bagView->selectItem, bagView->unk814, bagView->heapId);
+            BagView_DeletItem(bagView, bagView->unk814);
             uVar3 = PlayerSave_GetPlayerSaveOffset(bagView->m_GameData);
-            PlayerSave_AddMoney(uVar3, uVar2);
+            PlayerSave_AddMoney(uVar3, price);
             GFL_SndSEPlay(0x655);
             ovy142_219f978(bagView);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x50, bagView->stringBuff1);
             ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->unk814, 0);
 
-            StringSetNumber(bagView->wordSetSystem, 1, uVar2, 7, 0, 1);
+            StringSetNumber(bagView->wordSetSystem, 1, price, 7, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
             sub_0219F760(bagView);
             BagMenu_SetRunFunc(bagView, ovy142_219b2a8);
@@ -1648,21 +1648,22 @@ void ovy142_219b2f0(BagView *bagView)
     ovy142_219c8d0(bagView);
 }
 
-void ovy142_219b340(BagView *bagView, int useNum)
+void BagView_DeletItem(BagView *bagView, int delNum)
 {
     u32 uVar1;
     u32 uVar2;
-    int iVar3;
-    int iVar4;
+    int inFreeSpace;
+    int count;
 
     uVar2 = sub_02199978(bagView);
     ovy142_2199928(bagView, uVar2);
-    iVar3 = sub_02008338(bagView->bagSave, bagView->selectItem);
-    sub_0200842C(bagView->bagSave, bagView->selectItem, useNum, bagView->heapId);
-    iVar4 = sub_02008538(bagView->bagSave, bagView->selectItem, bagView->heapId);
-    if (iVar4 == 0)
+    inFreeSpace = BagSave_IsItemInFreeSpace(bagView->bagSave, bagView->selectItem);
+    BagSave_SubItem(bagView->bagSave, bagView->selectItem, delNum, bagView->heapId);
+    count = BagSave_GetItemCountByID(bagView->bagSave, bagView->selectItem, bagView->heapId);
+    
+    if (count == 0)
     {
-        if (iVar3 == 1)
+        if (inFreeSpace == 1)
         {
             uVar1 = sub_02199978(bagView);
             ovy142_21a050c(&bagView->unk8C8, uVar1, 0);
@@ -1878,7 +1879,7 @@ void ovy142_219b5d4(BagView *bagView)
     ItemTable *iVar5;
     int bVar6;
 
-    iVar2 = sub_02008338(bagView->bagSave, bagView->selectItem);
+    iVar2 = BagSave_IsItemInFreeSpace(bagView->bagSave, bagView->selectItem);
     uVar3 = BagSave_GetExistingItemPocket(bagView->bagSave, bagView->selectItem);
     uVar4 = sub_02199978(bagView);
     iVar5 = ovy142_2199928(bagView, uVar4);

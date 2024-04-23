@@ -14,7 +14,7 @@
 .public sub_02153EC4
 .public sub_02013640
 .public sub_02017354
-.public sub_0200842C
+.public BagSave_SubItem
 .public sub_0215FCD0
 .public sub_02160340
 .public sub_0201362C

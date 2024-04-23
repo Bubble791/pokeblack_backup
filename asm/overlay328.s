@@ -881,7 +881,7 @@ _0219D558:
 	cmp r0, #0
 	beq _0219D586
 	ldr r0, [r5, #0x4c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -1709,7 +1709,7 @@ ovy328_219dbcc: ; 0x0219DBCC
 	str r0, [sp, #0x10]
 	ldr r0, [r0, r4]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x3c]
 	ldr r3, [sp, #8]
 	str r0, [sp]
@@ -1902,10 +1902,10 @@ ovy328_219dd54: ; 0x0219DD54
 	add r0, r5, r4
 	ldr r0, [r0, #0x4c]
 	add r6, r2, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	lsl r1, r6, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, r4
 	mov r1, #1
 	add r0, #0x50

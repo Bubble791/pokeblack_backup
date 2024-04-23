@@ -14,6 +14,6 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244

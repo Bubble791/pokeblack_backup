@@ -210,8 +210,8 @@
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -236,8 +236,8 @@
 .public sub_0203A7F4
 .public sub_02021A3C
 .public sub_02017BCC
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
@@ -275,8 +275,8 @@
 .public sub_02026520
 .public sub_02026520
 .public sub_02024EEC
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_02025A10
 .public sub_02024FAC

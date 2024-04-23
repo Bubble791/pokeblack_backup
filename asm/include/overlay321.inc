@@ -124,10 +124,10 @@
 .public sub_0204AB0C
 .public sub_02048210
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_02022888
 .public sub_02022888

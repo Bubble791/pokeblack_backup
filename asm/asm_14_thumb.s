@@ -7055,7 +7055,7 @@ sub_0203CBB0: ; 0x0203CBB0
 	strb r1, [r2, #0xa]
 	mov r1, #2
 	strb r6, [r2, #0xb]
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0203CC80: .word 0x04000208
@@ -29756,8 +29756,8 @@ _02047132:
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_020470F8
 
-	thumb_func_start sub_0204713C
-sub_0204713C: ; 0x0204713C
+	thumb_func_start BmpWin_BitmapFill
+BmpWin_BitmapFill: ; 0x0204713C
 	push {r4, lr}
 	add r2, r0, #0
 	ldrh r3, [r2, #8]
@@ -29780,7 +29780,7 @@ _02047152:
 	blx MI_CpuFill8
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_0204713C
+	thumb_func_end BmpWin_BitmapFill
 
 	thumb_func_start sub_02047168
 sub_02047168: ; 0x02047168
@@ -32502,11 +32502,11 @@ sub_020484F0: ; 0x020484F0
 	bx lr
 	thumb_func_end sub_020484F0
 
-	thumb_func_start sub_020484F4
-sub_020484F4: ; 0x020484F4
+	thumb_func_start BmpWin_GetBitmap
+BmpWin_GetBitmap: ; 0x020484F4
 	ldr r0, [r0, #0xc]
 	bx lr
-	thumb_func_end sub_020484F4
+	thumb_func_end BmpWin_GetBitmap
 
 	thumb_func_start sub_020484F8
 sub_020484F8: ; 0x020484F8

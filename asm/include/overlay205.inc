@@ -255,9 +255,9 @@
 .public GFL_StrBufCreate
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
-.public sub_0204713C
-.public sub_020484F4
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
+.public BmpWin_GetBitmap
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_StrBufFree

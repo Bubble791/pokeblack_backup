@@ -7135,9 +7135,9 @@ ovy208_219d3c8: ; 0x0219D3C8
 	bl sub_02021C44
 	add r5, #0x14
 	ldr r0, [r4, r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	cmp r7, #0
 	beq _0219D412
 	ldrh r1, [r4]
@@ -7154,7 +7154,7 @@ ovy208_219d3c8: ; 0x0219D3C8
 _0219D412:
 	ldr r5, _0219D44C ; =0x000018EC
 	ldr r0, [r4, r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r5, #0
 	str r6, [sp]

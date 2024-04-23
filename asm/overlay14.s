@@ -22,7 +22,7 @@ ovy14_216e660: ; 0x0216E660
 	add r2, sp, #0x20
 	ldrh r2, [r2]
 	ldr r1, _0216E738 ; =0x0000023F
-	bl sub_02008538
+	bl BagSave_GetItemCountByID
 	strh r0, [r5, #0x16]
 	add r0, r7, #0
 	bl sub_0200C62C

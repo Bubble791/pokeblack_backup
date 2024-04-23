@@ -4165,11 +4165,11 @@ ovy205_21b9338: ; 0x021B9338
 	add r1, r6, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	mov r2, #0
 	add r3, r6, #0

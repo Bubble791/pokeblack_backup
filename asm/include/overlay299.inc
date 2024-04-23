@@ -215,7 +215,7 @@
 .public sub_02048210
 .public sub_020480A8
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public sub_0204898C
@@ -232,7 +232,7 @@
 .public sub_020484E4
 .public sub_020484E8
 .public sub_020484EC
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02046EF4
 .public sub_0204AA30
 .public sub_0204B32C

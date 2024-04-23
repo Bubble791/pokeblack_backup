@@ -2386,7 +2386,7 @@ _021A0F38:
 	cmp r0, #0
 	beq _021A0F66
 	ldr r0, [r5, #0x20]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -2517,7 +2517,7 @@ ovy299_21a1024: ; 0x021A1024
 	bl sub_020484EC
 	str r0, [sp, #8]
 	ldr r0, [r4, r6]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	bl sub_02046EF4
 	str r0, [sp, #0x14]
 	mov r0, #0x9d

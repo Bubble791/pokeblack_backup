@@ -99,8 +99,8 @@
 .public sub_0204AF18
 .public GFL_MsgSysLoadData
 .public sub_02048124
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020484B4
 .public sub_0204898C
 .public sub_02021D28
@@ -109,8 +109,8 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020484B4
 .public sub_02048210
 .public GFL_MsgDataFree

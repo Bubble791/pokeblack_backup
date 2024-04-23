@@ -297,9 +297,9 @@ ovy204_21a9d8c: ; 0x021A9D8C
 	ldrb r3, [r4, #4]
 	bl sub_020480C0
 	str r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldrb r1, [r4, #0x14]
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5]
 	bl sub_02048244
 	add r0, r6, #0
@@ -1180,10 +1180,10 @@ ovy204_21aa4c0: ; 0x021AA4C0
 	add r5, r0, #0
 	ldr r0, [r4]
 	add r6, r2, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	mov r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4]
 	bl sub_02048244
 	ldr r0, [r5, #4]
@@ -2508,9 +2508,9 @@ _021AAF56:
 	bl GFL_StrBufCreate
 	add r7, r0, #0
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r4, #4]
 	ldr r1, [sp, #0x18]
 	add r2, r7, #0
@@ -4707,9 +4707,9 @@ _021AC07A:
 	mov r0, #0x42
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #0x80
 	add r1, r7, #0
 	mov r6, #0x80
@@ -4822,9 +4822,9 @@ ovy204_21ac168: ; 0x021AC168
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
 	bl sub_02048244
 	pop {r3, r4, r5, pc}
@@ -5039,11 +5039,11 @@ ovy204_21ac2e8: ; 0x021AC2E8
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #8]
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
 	str r1, [sp, #0x18]
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r0, r5, #0
 	add r1, r7, #0
 	bl ovy204_21ac434
@@ -7074,9 +7074,9 @@ _021AD324:
 	mov r0, #0x4a
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add r5, r5, #1
 	cmp r5, #0xa
 	blo _021AD324
@@ -7875,9 +7875,9 @@ ovy204_21ad914: ; 0x021AD914
 _021AD924:
 	ldr r0, [r5, #0xc]
 	ldr r0, [r0]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0xc]
 	ldr r6, [r0]
 	add r0, r6, #0
@@ -8641,7 +8641,7 @@ _021ADE62:
 	cmp r0, #0
 	beq _021ADE90
 	ldr r0, [r5]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C

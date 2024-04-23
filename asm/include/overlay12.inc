@@ -3500,8 +3500,8 @@
 .public sub_02024D00
 .public sub_0204B0B8
 .public GFL_MsgDataLoadStrbuf
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02024E80
 .public sub_0218799C
 .public sub_02017BCC
@@ -3523,12 +3523,12 @@
 .public sub_0202E8D8
 .public sub_0203A7F4
 .public sub_0202E8D8
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02024E80
 .public sub_0204898C
 .public sub_0218799C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C54
 .public GFL_StrBufFree
 .public sub_02048244
@@ -3536,7 +3536,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public PrintSystem_IsTextPrintActiveEnd
@@ -3790,7 +3790,7 @@
 .public sub_0219CE80
 .public sub_02016E38
 .public sub_02017354
-.public sub_0200842C
+.public BagSave_SubItem
 .public sub_0219CEA8
 .public sub_0203CDC8
 .public sub_0202FE84

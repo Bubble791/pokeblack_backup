@@ -30,7 +30,7 @@
 .public sub_0203A24C
 .public sub_0219B294
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public sub_0204AA30
@@ -152,7 +152,7 @@
 .public sub_0219CC18
 .public sub_0219CC1C
 .public sub_0204898C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
@@ -161,7 +161,7 @@
 .public GFL_StrBufCreate
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -259,7 +259,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public sub_0204826C
@@ -380,14 +380,14 @@
 .public sub_02048210
 .public GFL_StrBufFree
 .public sub_020223CC
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020480C0
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_020484B4
 .public sub_02048210
 .public sub_02045738
@@ -458,8 +458,8 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public sub_02048244
 .public sub_0204898C
 .public GFL_StrBufFree
@@ -512,7 +512,7 @@
 .public sub_0202437C
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_StrBufFree

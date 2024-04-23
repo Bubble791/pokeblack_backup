@@ -702,9 +702,9 @@ _021DDFCE:
 	lsl r0, r4, #3
 	add r6, r5, r0
 	ldr r0, [r6, #0x20]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	lsl r0, r4, #2
 	add r0, r5, r0
 	add r0, #0xf8
@@ -769,7 +769,7 @@ _021DE044:
 	cmp r0, #0
 	beq _021DE072
 	ldr r0, [r5, #0x20]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r6, #0
 	bl sub_02021C1C
@@ -823,7 +823,7 @@ ovy171_21de07c: ; 0x021DE07C
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #0x1c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x20]
 	mov r2, #0x20
@@ -883,7 +883,7 @@ ovy171_21de07c: ; 0x021DE07C
 	ldr r0, [sp, #0x1c]
 	ldr r5, [r5, #0x1c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r6, [sp]
 	ldr r0, _021DE1DC ; =0x00002960
@@ -924,7 +924,7 @@ _021DE17A:
 	ldr r0, [sp, #0x1c]
 	ldr r5, [r5, #0x1c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	str r6, [sp]
 	ldr r0, _021DE1E0 ; =0x000031A0
@@ -986,7 +986,7 @@ ovy171_21de1e4: ; 0x021DE1E4
 	add r0, r5, r4
 	ldr r7, [r5, #0x1c]
 	ldr r0, [r0, #0x20]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r6, [sp]
 	add r1, r0, #0
 	ldr r0, [r5, #0x10]
@@ -1046,7 +1046,7 @@ ovy171_21de270: ; 0x021DE270
 	add r0, #0x20
 	str r0, [sp, #0x2c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x28]
 	add r2, r7, #0
@@ -1110,7 +1110,7 @@ ovy171_21de270: ; 0x021DE270
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [sp, #0x10]
 	str r6, [sp]
@@ -1154,7 +1154,7 @@ ovy171_21de270: ; 0x021DE270
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r0, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r6, [sp]
 	add r1, r0, #0
 	ldr r0, [r5, #0x10]
@@ -1190,7 +1190,7 @@ ovy171_21de3e8: ; 0x021DE3E8
 	add r5, #0x20
 	lsl r4, r1, #3
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r6, #1
 	str r6, [sp]
 	str r6, [sp, #4]
@@ -1199,7 +1199,7 @@ ovy171_21de3e8: ; 0x021DE3E8
 	mov r3, #0x30
 	bl sub_020470F8
 	ldr r0, [r5, r4]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r6, [sp]
 	mov r1, #2
 	str r1, [sp, #4]

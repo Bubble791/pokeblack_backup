@@ -18,7 +18,7 @@
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_02021A3C
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_02048244
 .public sub_02016AD8
@@ -60,8 +60,8 @@
 .public sub_0204AB0C
 .public sub_02021998
 .public sub_020480C0
-.public sub_020484F4
-.public sub_0204713C
+.public BmpWin_GetBitmap
+.public BmpWin_BitmapFill
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
@@ -72,7 +72,7 @@
 .public sub_0201736C
 .public GFL_CopyVarForText
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -81,7 +81,7 @@
 .public StringSetNumber
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -89,7 +89,7 @@
 .public StringSetNumber
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -109,7 +109,7 @@
 .public sub_02018C80
 .public sub_02024700
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -117,7 +117,7 @@
 .public sub_0200C9A0
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_02016AD8
@@ -128,7 +128,7 @@
 .public sub_0200D83C
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -138,7 +138,7 @@
 .public sub_02008CF0
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0200746C
@@ -156,7 +156,7 @@
 .public sub_02008D88
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484F4
+.public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_02048244

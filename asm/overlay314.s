@@ -504,9 +504,9 @@ _0219D28C:
 	ldrb r3, [r3, #3]
 	bl sub_020480C0
 	str r0, [r6, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r6, #0x1c]
 	bl sub_02048244
 	add r0, r4, #1
@@ -534,7 +534,7 @@ _0219D28C:
 	add r2, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x24]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r4, [sp]
 	add r1, r0, #0
 	ldr r0, [r5, #0xc]
@@ -558,7 +558,7 @@ _0219D28C:
 	bl sub_0204898C
 	add r6, r0, #0
 	ldr r0, [r5, #0x28]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r6, [sp]
 	add r1, r0, #0
 	ldr r0, [r5, #0xc]
@@ -577,7 +577,7 @@ _0219D28C:
 	bl sub_0204898C
 	add r6, r0, #0
 	ldr r0, [r5, #0x2c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	str r6, [sp]
 	add r1, r0, #0
 	ldr r0, [r5, #0xc]
@@ -654,7 +654,7 @@ _0219D3EE:
 	cmp r0, #0
 	bne _0219D426
 	ldr r0, [r5, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	ldr r0, [r7, #0x10]
 	bl sub_02021C1C
@@ -731,10 +731,10 @@ ovy314_219d454: ; 0x0219D454
 	add r0, r7, #0
 	bl sub_0203A24C
 	ldr r0, [r6, #0x20]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #3
 	mov r7, #3
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r6, #0x20]
 	bl sub_02048244
 	add r4, #0x11

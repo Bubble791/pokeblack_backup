@@ -3576,9 +3576,9 @@ ovy293_21a360c: ; 0x021A360C
 	mov r0, #1
 	bl sub_020480C0
 	str r0, [r4, #0x1c]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy293_21a360c

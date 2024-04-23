@@ -594,9 +594,9 @@ ovy311_219d244: ; 0x0219D244
 	bl sub_020480C0
 	str r0, [r4, #0x28]
 	add r5, r0, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #1
 	mov r1, #2
 	mov r2, #0xf
@@ -606,7 +606,7 @@ ovy311_219d244: ; 0x0219D244
 	mov r1, #0xe9
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r1, [r4, #0xc]
 	mov r2, #0
 	str r1, [sp]
@@ -756,9 +756,9 @@ ovy311_219d458: ; 0x0219D458
 	ldr r4, [r5, #0x24]
 	add r6, r0, #0
 	add r0, r4, #0
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0xf
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r0, #1
 	mov r1, #2
 	mov r2, #0xf

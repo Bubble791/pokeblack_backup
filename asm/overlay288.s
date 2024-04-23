@@ -4038,7 +4038,7 @@ _021F62F8:
 	str r0, [sp, #0x14]
 	add r0, r5, r6
 	ldr r0, [r0, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r2, [sp, #0x18]
 	ldr r3, [sp, #0xc]
 	sub r2, r7, r2
@@ -4072,7 +4072,7 @@ _021F6348:
 	str r0, [sp, #0x10]
 	add r0, r5, r6
 	ldr r0, [r0, #0x14]
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	ldr r2, [sp, #0x1c]
 	ldr r3, [sp, #0xc]
 	sub r2, r7, r2
@@ -4149,9 +4149,9 @@ _021F63E8:
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	beq _021F640A
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r7, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x14]
 	bl sub_020484B4
 	ldr r0, [r5, #0x14]
@@ -4174,9 +4174,9 @@ ovy288_21f6414: ; 0x021F6414
 	ldr r0, [r0, #0x14]
 	cmp r0, #0
 	beq _021F6432
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	mov r1, #0
-	bl sub_0204713C
+	bl BmpWin_BitmapFill
 	mov r1, #1
 	add r0, r5, r4
 	strb r1, [r0, #0x18]
@@ -4205,7 +4205,7 @@ _021F6448:
 	ldr r7, [r5, #0x10]
 	cmp r1, #0
 	beq _021F6474
-	bl sub_020484F4
+	bl BmpWin_GetBitmap
 	add r1, r0, #0
 	add r0, r7, #0
 	bl sub_02021C1C
