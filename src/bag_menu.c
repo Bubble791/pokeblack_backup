@@ -363,7 +363,7 @@ void ovy142_219cc84(BagView *bagView)
 }
 
 const u32 data_021A0934[6] = {0};
-const u8 data021A08E0[5] = {0xFF};
+extern const u8 data021A08E0[5];
 
 extern void sub_0219CD58(BagView*, u8*);
 extern void ovy142_219f1a0(BagView*, u32*, int);
@@ -633,7 +633,7 @@ void ovy142_219d120(BagView* bagView)
     ovy142_219f284(bagView, (u8)v7);
 }
 
-extern int ovy142_21a0610(int*, int);
+extern int ovy142_21a0610(ITEM_UNKNOW_DATA*, int);
 
 void ovy142_219d188(BagView *bagView, u8 *a2)
 {
@@ -2834,4 +2834,498 @@ int ovy142_21a00a0(BagView *a1)
         sub_0204C140(a1->unk6BC[i], v8, 0xFFFF);
     }
     return 1;
+}
+
+extern void sub_02021C7C(int, int, s16, s16, int, int, u16);
+
+void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
+{
+    int v12;
+    int v4 = a4;
+    WinDowData *win = (WinDowData *)a2;
+    v12 = a1->unk510;
+
+    sub_02021C7C(v12, sub_020484F4(win->bit), (s16)v4, a5, a3, a1->unk534, a6);
+    win->flag = 1;
+}
+
+void ovy142_21a0134(int *a1)
+{
+    int v2; // r0
+    WinDowData *win = (WinDowData *)a1;
+    sub_0204826C(win->bit);
+    v2 = sub_020484D4(win->bit);
+    sub_02045B7C(v2);
+}
+
+extern void sub_02021A3C(int);
+extern int sub_02021C1C(int, int);
+
+void ovy142_21a014c(BagView *a1)
+{
+    int v2;     // r4
+    int v3;     // r0
+    int v4;     // r4
+    int v5;     // r0
+    int v6;     // r4
+    int v7;     // r0
+    int v8;     // r4
+    int v9;     // r0
+    int v10;    // r4
+    int v11;    // r0
+    int v12;    // r4
+    int v13;    // r0
+    int v14;    // r4
+    int v15;    // r0
+    int v16;    // r4
+    int v17;    // r0
+    int v18;    // r4
+    int v19;    // r0
+    int v20;    // r4
+    int v21;    // r0
+    int v22;    // r6
+    int v23;    // r0
+    int result; // r0
+    int v25;    // r4
+    int v26;    // r0
+
+    sub_02021A3C(a1->unk510);
+    v2 = a1->unk510;
+    if (a1->unk750)
+    {
+        v3 = sub_020484F4(a1->unk74C);
+        if (!sub_02021C1C(v2, v3))
+        {
+            sub_02048244(a1->unk74C);
+            a1->unk750 = 0;
+        }
+    }
+    v4 = a1->unk510;
+    if (a1->unk770)
+    {
+        v5 = sub_020484F4(a1->unk76C);
+        if (!sub_02021C1C(v4, v5))
+        {
+            sub_02048244(a1->unk76C);
+            a1->unk770 = 0;
+        }
+    }
+    v6 = a1->unk510;
+    if (a1->unk758)
+    {
+        v7 = sub_020484F4(a1->unk754);
+        if (!sub_02021C1C(v6, v7))
+        {
+            sub_02048244(a1->unk754);
+            a1->unk758 = 0;
+        }
+    }
+    v8 = a1->unk510;
+    if (a1->unk760)
+    {
+        v9 = sub_020484F4(a1->unk75C);
+        if (!sub_02021C1C(v8, v9))
+        {
+            sub_02048244(a1->unk75C);
+            a1->unk760 = 0;
+        }
+    }
+    v10 = a1->unk510;
+    if (a1->unk768)
+    {
+        v11 = sub_020484F4(a1->unk764);
+        if (!sub_02021C1C(v10, v11))
+        {
+            sub_02048244(a1->unk764);
+            a1->unk768 = 0;
+        }
+    }
+    v12 = a1->unk510;
+    if (a1->unk778)
+    {
+        v13 = sub_020484F4(a1->unk774);
+        if (!sub_02021C1C(v12, v13))
+        {
+            sub_02048244(a1->unk774);
+            a1->unk778 = 0;
+        }
+    }
+    v14 = a1->unk510;
+    if (a1->unk780)
+    {
+        v15 = sub_020484F4(a1->unk77C);
+        if (!sub_02021C1C(v14, v15))
+        {
+            sub_02048244(a1->unk77C);
+            a1->unk780 = 0;
+        }
+    }
+    v16 = a1->unk510;
+    if (a1->unk788)
+    {
+        v17 = sub_020484F4(a1->unk784);
+        if (!sub_02021C1C(v16, v17))
+        {
+            sub_02048244(a1->unk784);
+            a1->unk788 = 0;
+        }
+    }
+    v18 = a1->unk510;
+    if (a1->unk790)
+    {
+        v19 = sub_020484F4(a1->unk78C);
+        if (!sub_02021C1C(v18, v19))
+        {
+            sub_02048244(a1->unk78C);
+            a1->unk790 = 0;
+        }
+    }
+    v20 = a1->unk510;
+    if (a1->unk798)
+    {
+        v21 = sub_020484F4(a1->unk794);
+        if (!sub_02021C1C(v20, v21))
+        {
+            sub_02048244(a1->unk794);
+            a1->unk798 = 0;
+        }
+    }
+    v22 = a1->unk510;
+    if (a1->unk504)
+    {
+        v23 = sub_020484F4(a1->unk500);
+        if (!sub_02021C1C(v22, v23))
+        {
+            sub_02048244(a1->unk500);
+            a1->unk504 = 0;
+        }
+    }
+
+    v25 = a1->unk510;
+    if (a1->unk50C)
+    {
+        v26 = sub_020484F4(a1->unk508);
+        result = sub_02021C1C(v25, v26);
+        if (!result)
+        {
+            sub_02048244(a1->unk508);
+            a1->unk50C = 0;
+        }
+    }
+}
+
+extern u32 data_21A1028[6];
+
+int ovy142_21a03ac(u8 a1)
+{
+    u32 v2[6]; // [sp+0h] [bp-20h]
+
+    v2 = data_21A1028;
+    return v2[a1];
+}
+
+int ovy142_21A03D4(int *a1, int *a2);
+
+int ovy142_21A03D4(int *a1, int *a2)
+{
+    u32 v2; // r1
+    u32 v3; // r0
+
+    v2 = a2[2];
+    v3 = a1[2];
+    if (v3 == v2)
+        return 0;
+    if (v3 > v2)
+        return 1;
+    return -1;
+}
+
+void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4);
+
+extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
+
+void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4)
+{
+    int i;  // r6
+    int v5; // r4
+    int v7; // r0
+
+    a1->unk4 = a2;
+    v5 = 0;
+    a1->unk8 = a4;
+    MI_CpuFill8(&a1->unkC, 0, 8 * 639);
+    for (i = 0; i <= 638; ++i)
+    {
+        if (sub_02008338((void*)a1->unk4, (u16)i))
+        {
+            v7 = sub_020083C8((void*)a1->unk4, i);
+            if (v7 != 6)
+            {
+                a1->unkC[v5].unk0.ItemData.itemid = i;
+                a1->unkC[v5].unk0.ItemData.num = v7;
+                a1->unkC[v5].unk4 = 1;
+                ++v5;
+            }
+            else
+            {
+                a1->unkC[v5].unk0.ItemData.itemid = 0;
+                a1->unkC[v5].unk0.ItemData.num = 6;
+                a1->unkC[v5].unk4 = 0;
+            }
+        }
+        else
+        {
+            a1->unkC[v5].unk0.ItemData.itemid = 0;
+            a1->unkC[v5].unk0.ItemData.num = 6;
+            a1->unkC[v5].unk4 = 0;
+        }
+    }
+    a1->unk0.itemid = 0;
+    a1->unk0.num = 0;
+    ovy142_21a063c(a1, (u16)a3);
+}
+
+void sub_021A046C(ITEM_UNKNOW_DATA* a1)
+{}
+
+extern ItemTable* sub_02008730(u32, u16, u16);
+extern ItemTable* sub_02008798(u32, u16, u16);
+
+ItemTable *ovy142_21a0470(ITEM_UNKNOW_DATA *a1, u16 a2, u16 a3)
+{
+    int v5;                // r4
+
+    int v8;                // r12
+
+
+    ItemTable *v12; // [sp+4h] [bp-1Ch]
+
+    v5 = 0;
+    if (a2 != 5)
+    {
+        for (int i = 0; i <= 638; i++)
+        {
+            v12 = (ItemTable *)sub_02008730(a1->unk4, a2, (u16)i);
+            if (!v12)
+            {
+                return &a1->unk0;
+            }
+            if (!sub_02008338((void*)a1->unk4, v12->itemid))
+            {
+                if (v5 == a3)
+                    break;
+                ++v5;
+            }
+        }
+    }
+    else
+    {   
+        v8 = 0;
+        SomeData *v10;
+        for (int i = 0; i <= 638; i++)
+        {
+            v10 = &a1->unkC[i];
+            if (v10->unk4 == 1 && v10->unk0.ItemData.itemid)
+            {
+                if (v5 == a3)
+                {
+                    v8 = 1;
+                    break;
+                }
+                ++v5;
+            }
+        }
+        
+        if (!v8)
+            v12 = &a1->unk0;
+
+        else
+        {
+            v12 = sub_02008798(a1->unk4, v10->unk0.ItemData.num, v10->unk0.ItemData.itemid);
+            if (!v12)
+                v12 = &a1->unk0;
+        }
+
+    }
+    return v12;
+}
+
+extern void sub_020083C0(int, u16, int);
+extern void sub_020085E0(int, u16);
+void ovy142_21a05b4(ITEM_UNKNOW_DATA*);
+
+void ovy142_21a050c(ITEM_UNKNOW_DATA *a1, u16 a2, int a3)
+{
+    int v5;               // r0
+    SomeData *v7;
+    int save = a1->unk4;
+    v5 = 0;
+
+    for (int i = 0; i <= 638; i++)
+    {
+        v7 = &a1->unkC[i];
+        if (v7->unk4 == 1 && v7->unk0.ItemData.itemid)
+        {
+            if (v5 == a2)
+            {
+                if (a3 == 1)
+                    sub_020083C0(a1->unk4, v7->unk0.ItemData.itemid, 0);
+                sub_020085E0(a1->unk4, a1->unkC[i].unk0.ItemData.itemid);
+                a1->unkC[i].unk0.ItemData.itemid = 0;
+                a1->unkC[i].unk0.ItemData.num = 6;
+                a1->unkC[i].unk4 = 0;
+                break;
+            }
+            ++v5;
+        }
+    }
+    
+    ovy142_21a05b4(a1);
+}
+
+void ovy142_21a0578(ITEM_UNKNOW_DATA *a1, int a2, short a3)
+{
+    for (int i = 0; i <= 614; i++)
+    {
+        if (!a1->unkC[i].unk0.ItemData.itemid)
+        {
+            sub_020083C0(a1->unk4, a2, 1);
+            a1->unkC[i].unk0.ItemData.itemid = a2;
+            a1->unkC[i].unk0.ItemData.num = a3;
+            a1->unkC[i].unk4 = 1;
+            break;
+        }
+    }
+}
+
+void ovy142_21a05b4(ITEM_UNKNOW_DATA *a1)
+{
+    volatile u32 datas;
+    volatile u32 datas2;
+    for (int i = 0; i <= 613; ++i)
+    {
+        for (int j = i + 1; j <= 614; j++)
+        {
+            if (!a1->unkC[i].unk0.ItemData.itemid)
+            {
+                int v7 = a1->unkC[i].unk0.raw;
+                int v3 = a1->unkC[i].unk4;
+                int v8 = a1->unkC[j].unk0.raw;
+                int v4 = a1->unkC[j].unk4;
+                
+                a1->unkC[i].unk0.raw = v8;
+                datas2 = v7;
+                
+                a1->unkC[i].unk4 = v4;
+                a1->unkC[j].unk0.raw = v7;
+                datas = v3;
+                a1->unkC[j].unk4 = v3;
+
+            }
+        }
+    }
+
+}
+
+int ovy142_21a0610(ITEM_UNKNOW_DATA *a1, int a2)
+{
+    int i;  // r2
+    int v2; // r3
+    
+    v2 = 0;
+    for (i = 0; i <= 638; ++i)
+    {
+        if (a2 == a1->unkC[i].unk0.ItemData.num && a1->unkC[i].unk0.ItemData.itemid)
+            ++v2;
+    }
+    return v2;
+}
+
+extern int data_21A1120[6];
+
+extern void ovy142_21a071c(ITEM_UNKNOW_DATA*, u16);
+
+void ovy142_21a063c(ITEM_UNKNOW_DATA *a1, u16 a2)
+{
+    int v6[6];
+    
+    v6 = data_21A1120;
+    for (int i = 0; i <= 614; i++)
+    {
+        
+        if (!a2)
+            a1->unkC[i].unk4 = 1;
+        else
+        {
+            if (a1->unkC[i].unk0.ItemData.num == v6[a2])
+                a1->unkC[i].unk4 = 1;
+            else
+                a1->unkC[i].unk4 = 0;
+        }
+    }
+    ovy142_21a071c(a1, a2);
+}
+
+extern void sub_0200891C(int, u8*);
+extern ItemTable* sub_0200896C(u32, int, int*);
+extern int sub_02008308(u32);
+
+int ovy142_21a0698(ITEM_UNKNOW_DATA *a1, int a2, BagView *a3)
+{
+    ItemTable *v7;           // r7
+    u32 j;   // r6
+    u32 i;   // r1
+    int v6 = 0;           // r4
+    int v12;
+    sub_0200891C(a1->unk4, a1->unk1CCC);
+    if (a2 != 5)
+    {
+        v7 = sub_0200896C(a1->unk4, a2, &v12);
+        for (j = 0; j < v12; ++j)
+        {
+            u16 itemids = v7[j].itemid;
+            if (itemids)
+            {
+                if (a1->unk1CCC[itemids])
+                    if(!sub_02008308(a1->unk4))
+                        ++v6;
+            }
+        }
+    }
+    else
+    {
+        for (i = 0; i <= 0x27E; ++i)
+        {
+            if (a1->unkC[i].unk0.ItemData.itemid)
+            {   
+                if(a1->unk1CCC[i] && a1->unkC[i].unk4 == 1)
+                {
+                    ++v6;
+                }
+            }
+        }
+    }
+    
+    return v6;
+}
+
+extern void ovy142_21a0748(ITEM_UNKNOW_DATA*);
+extern void ovy142_21a07f4(ITEM_UNKNOW_DATA*);
+
+void ovy142_21a071c(ITEM_UNKNOW_DATA* a1, u16 a2)
+{
+    switch (a2)
+    {
+    case 0:
+        ovy142_21a0748(a1);
+        return;
+    
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        ovy142_21a07f4(a1);
+        return;
+    }
 }

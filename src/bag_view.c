@@ -10,6 +10,8 @@ const s16 word_21A168C[10][2] = {0};
 const u8 byte_21A1020[10] = {0};
 const u8 data_021a0fee[10][2] = {0};
 const u8 data_021A0FEE[5][2] = {0};
+const u32 data_21A1028[6] = {0};
+const data_21A1120[6] = {0};
 
 void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2)
 {
@@ -37,9 +39,6 @@ void ovy142_21998f4(BagView *m_bagView)
     ovy142_219becc(m_bagView);
     m_bagView->unk892 = 1;
 }
-
-
-extern ItemTable* ovy142_21a0470(int*, u16, u16);
 
 ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket)
 {
@@ -1654,12 +1653,6 @@ void ovy142_219b2f0(BagView *m_bagView)
     ovy142_219c8d0(m_bagView);
 }
 
-extern int sub_02008338(void*, u16);
-extern void sub_0200842C(void*, u16, u16, u16);
-extern int sub_02008538(void*, u16, u16);
-extern void ovy142_21a050c(int*, u16, int);
-extern void ovy142_219b3b0(BagView*);
-
 void ovy142_219b340(BagView *m_bagView, int useNum)
 {
     u32 uVar1;
@@ -1880,9 +1873,6 @@ int ovy142_219b490(BagView *m_bagView)
     }
     return bVar11;
 }
-
-extern void ovy142_219b6dc(BagView*);
-extern void ovy142_21a0578(int*, int, short);
 
 void ovy142_219b5d4(BagView *m_bagView)
 {
@@ -2179,7 +2169,7 @@ void ovy142_219bd2c(BagView *m_bagView, int param_2)
     }
 }
 
-extern void ovy142_21a063c(int*, u16);
+extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
 
 void sub_0219BD68(BagView *m_bagView, int param_2)
 {
@@ -2389,7 +2379,7 @@ void ovy142_219bf58(BagView *m_bagView, u8 *param_2)
 }
 
 const int unk_21A098C[13] = {0};
-const u8 sub021a08e8[6] = {0};
+extern const u8 data021A08E8[5];
 
 
 void ovy142_219c014(BagView *m_bagView)
@@ -2411,11 +2401,11 @@ void ovy142_219c014(BagView *m_bagView)
         --v7;
     } while (v7);
 
-    v16[0] = sub021a08e8[0];
-    v16[1] = sub021a08e8[1];
-    v16[2] = sub021a08e8[2];
-    v16[3] = sub021a08e8[3];
-    v16[4] = sub021a08e8[4];
+    v16[0] = data021A08E8[0];
+    v16[1] = data021A08E8[1];
+    v16[2] = data021A08E8[2];
+    v16[3] = data021A08E8[3];
+    v16[4] = data021A08E8[4];
     ovy142_219bf58(m_bagView, v16);
     v10 = 0;
     v11 = 0;

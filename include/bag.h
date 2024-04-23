@@ -13,11 +13,9 @@ extern int sub_0203DAC8(u32*, u32*);
 
 typedef struct
 {
-    int *unk0;
-    u8 unk4;
-    u8 unk5;
-    u16 unk6;
-}WinDow;
+    int bit;
+    u8 flag;
+} WinDowData;
 
 typedef struct
 {
@@ -36,6 +34,32 @@ typedef struct
     int unk8;
 } ITEM_TASK;
 
+typedef union
+{
+    u32 raw;
+    struct
+    {
+        u16 itemid;
+        u16 num;
+    }ItemData;
+} BagTable;
+
+typedef struct
+{
+    BagTable unk0;
+    u32 unk4;
+}SomeData;
+
+typedef struct
+{
+    ItemTable unk0;
+    u32 unk4;
+    u16 unk8;
+    u16 unkA;
+    SomeData unkC[639];
+    u8 unk1CCC[0x280];
+}ITEM_UNKNOW_DATA;
+
 struct BagViewWork
 {
     /*0x000*/ void *m_GameData;
@@ -51,9 +75,9 @@ struct BagViewWork
     /*0x03C*/ u8 unk3C[0x4C0];
     /*0x4FC*/ FieldBagItemUse unk4FC;
     /*0x500*/ int unk500;
-    /*0x504*/ int unk504;
+    /*0x504*/ u8 unk504;
     /*0x508*/ int unk508;
-    /*0x50C*/ int unk50C;
+    /*0x50C*/ u8 unk50C;
     /*0x510*/ int unk510;
     /*0x514*/ int unk514;
     /*0x518*/ int unk518;
@@ -117,25 +141,25 @@ struct BagViewWork
     /*0x744*/ int unk744;
     /*0x748*/ int unk748;
     /*0x74C*/ int unk74C;
-    /*0x750*/ int unk750;
+    /*0x750*/ u8 unk750;
     /*0x754*/ int unk754;
-    /*0x758*/ int unk758;
+    /*0x758*/ u8 unk758;
     /*0x75C*/ int unk75C;
-    /*0x760*/ int unk760;
+    /*0x760*/ u8 unk760;
     /*0x764*/ int unk764;
-    /*0x768*/ int unk768;
+    /*0x768*/ u8 unk768;
     /*0x76C*/ int unk76C;
-    /*0x770*/ int unk770;
+    /*0x770*/ u8 unk770;
     /*0x774*/ int unk774;
-    /*0x778*/ int unk778;
+    /*0x778*/ u8 unk778;
     /*0x77C*/ int unk77C;
-    /*0x780*/ int unk780;
+    /*0x780*/ u8 unk780;
     /*0x784*/ int unk784;
-    /*0x788*/ int unk788;
+    /*0x788*/ u8 unk788;
     /*0x78C*/ int unk78C;
-    /*0x790*/ int unk790;
+    /*0x790*/ u8 unk790;
     /*0x794*/ int unk794;
-    /*0x798*/ int unk798;
+    /*0x798*/ u8 unk798;
     /*0x79C*/ int unk79C;
     /*0x7A0*/ ITEM_TASK unk7A0[8];
     /*0x800*/ int unk800;
@@ -176,8 +200,7 @@ struct BagViewWork
     /*0x8BC*/ FieldBagItemUse unk8BC;
     /*0x8C0*/ int KeyRetypeIntervalRepeated;
     /*0x8C4*/ int KeyRetypeIntervalFirst;
-    /*0x8C8*/ int unk8C8; // 某种结构体
-    /*0x8CC*/ u8 unk8CC[0x1680];
+    /*0x8C8*/ ITEM_UNKNOW_DATA unk8C8; // 某种结构体
     /*0x1F4C*/ int unk1F4C;
     /*0x1F50*/ int unk1F50;
 }; // size of 0x1F54
@@ -218,7 +241,7 @@ extern void ovy142_219becc(BagView*);
 #define NORMAL_ITEM_MAX 0x136
 
 extern int sub_02008488(ItemTable*, int);
-extern int ovy142_21a0698(int*, int, BagView *);
+extern int ovy142_21a0698(ITEM_UNKNOW_DATA*, int, BagView *);
 extern void sub_020244E0(int, int, int, int, int);
 
 typedef struct
@@ -254,7 +277,7 @@ extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 
 void ovy142_2199ecc(BagView *m_bagView);
 extern void sub_0203A6A8(int);
-extern void sub_021A046C(int*);
+extern void sub_021A046C(ITEM_UNKNOW_DATA*);
 extern void sub_0202E1DC(int);
 extern void ovy142_219e168(BagView*);
 extern void ovy142_219dd14(BagView*);
@@ -371,7 +394,7 @@ void ovy142_219e21c(BagView *a1);
 
 extern int sub_020484F4(int);
 extern int sub_0204713C(int, int);
-extern void ovy142_21a00f0(BagView *a1, WinDow *a2, int a3, u16 a4, u16 a5, u16 a6);
+extern void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6);
 extern int ovy142_21a03ac(u8);
 extern void sub_02048244(int);
 extern int sub_02026B84(u16);
@@ -406,5 +429,14 @@ int sub_0219BE88(int a1);
 extern int sub_0219FD18(int);
 extern int sub_0201765C(void*, int);
 extern int sub_02005718(void);
+extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
+extern int sub_02008338(void*, u16);
+extern void sub_0200842C(void*, u16, u16, u16);
+extern int sub_02008538(void*, u16, u16);
+extern void ovy142_21a050c(ITEM_UNKNOW_DATA*, u16, int);
+extern void ovy142_219b3b0(BagView*);
+
+extern void ovy142_219b6dc(BagView*);
+extern void ovy142_21a0578(ITEM_UNKNOW_DATA*, int, short);
 
 #endif //BAG_H
