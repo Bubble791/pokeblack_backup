@@ -1658,7 +1658,7 @@ _021BAF24:
 	cmp r0, #1
 	bne _021BAF56
 	ldr r0, [r4, #0x38]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021BAF56
 	mov r0, #0
@@ -11241,7 +11241,7 @@ _021BF8D4:
 	add r0, r4, #0
 	add r0, #0xe8
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021BF906
 	add r0, r4, #0

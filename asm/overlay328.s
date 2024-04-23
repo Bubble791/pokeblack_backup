@@ -187,7 +187,7 @@ _0219CFF6:
 	cmp r1, r0
 	bne _0219D036
 	ldr r0, [r5, #0x40]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219D036
 	b _0219CFEE

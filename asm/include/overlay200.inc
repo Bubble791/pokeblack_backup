@@ -13,7 +13,7 @@
 .public sub_0202E37C
 .public sub_0202E37C
 .public sub_0202E37C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0202E438
 .public sub_0202E438
 .public sub_02048244

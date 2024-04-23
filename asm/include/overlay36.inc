@@ -4860,7 +4860,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
 .public GFL_FadeScreenIsFinished
 .public sub_0204C560
@@ -7445,7 +7445,7 @@
 .public sub_0208D868
 .public sub_02008848
 .public sub_02008848
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4

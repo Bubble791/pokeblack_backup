@@ -2682,7 +2682,7 @@ ovy173_219e1cc: ; 0x0219E1CC
 	mov r5, #0x6e
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E1E8
 	ldr r0, [r4, r5]
@@ -2767,7 +2767,7 @@ ovy173_219e258: ; 0x0219E258
 	add r0, r4, #0
 	add r0, #0x28
 	ldr r0, [r5, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E290
 	add r4, #0x28
@@ -3196,7 +3196,7 @@ _0219E56A:
 	add r0, r4, #0
 	add r0, #0x10
 	ldr r0, [r5, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E622
 	add r6, r4, #0
@@ -3206,7 +3206,7 @@ _0219E612:
 	ldr r0, [r5, r6]
 	bl sub_02021A3C
 	ldr r0, [r5, r4]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219E612
 _0219E622:
@@ -3411,7 +3411,7 @@ _0219E738:
 	add r0, r5, #0
 	add r0, #0x10
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E7DE
 	add r6, r5, #0
@@ -3421,7 +3421,7 @@ _0219E7CE:
 	ldr r0, [r4, r6]
 	bl sub_02021A3C
 	ldr r0, [r4, r5]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219E7CE
 _0219E7DE:

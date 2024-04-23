@@ -8485,7 +8485,7 @@ ovy287_21f8988: ; 0x021F8988
 	add r4, r0, #0
 	ldr r0, _021F89C0 ; =0x00001EAC
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021F89B8
 	mov r0, #6
@@ -10306,7 +10306,7 @@ ovy287_21f9758: ; 0x021F9758
 	bne _021F97FC
 	ldr r6, _021F9814 ; =0x00001EAC
 	ldr r0, [r4, r6]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021F9788
 	ldr r0, [r4]
@@ -11369,7 +11369,7 @@ ovy287_21f9fc0: ; 0x021F9FC0
 _021F9FD6:
 	ldr r0, _021FA080 ; =0x00001EAC
 	ldr r0, [r5, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021FA078
 	add r0, r5, #0
@@ -11397,7 +11397,7 @@ _021F9FD6:
 _021FA014:
 	ldr r0, _021FA080 ; =0x00001EAC
 	ldr r0, [r5, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021FA078
 	add r0, r5, #0

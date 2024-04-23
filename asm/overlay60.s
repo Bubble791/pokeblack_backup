@@ -1013,7 +1013,7 @@ ovy60_21e60ac: ; 0x021E60AC
 	add r5, #8
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021E60C4
 	mov r0, #0

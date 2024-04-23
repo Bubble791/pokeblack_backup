@@ -3395,7 +3395,7 @@ ovy286_21f5ee4: ; 0x021F5EE4
 	sub sp, #0xc
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021F5F12
 	mov r0, #6
@@ -3957,7 +3957,7 @@ ovy286_21f6320: ; 0x021F6320
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #0x18]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021F634A
 	add r0, r5, #0
@@ -4292,7 +4292,7 @@ ovy286_21f65c0: ; 0x021F65C0
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021F65DE
 	ldr r5, _021F65E4 ; =0x00000532
@@ -4463,7 +4463,7 @@ ovy286_21f66fc: ; 0x021F66FC
 	cmp r0, #1
 	bne _021F6794
 	ldr r0, [r4, #0x18]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021F672A
 	ldr r0, [r4]

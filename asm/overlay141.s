@@ -1082,7 +1082,7 @@ ovy141_219d754: ; 0x0219D754
 	add r5, r0, #0
 	add r0, #0xe8
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219D768
 	mov r0, #1

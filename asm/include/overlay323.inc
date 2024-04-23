@@ -257,7 +257,7 @@
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219CFB4
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02199C58
 .public GFL_SndSEPlay
 .public sub_020352C0

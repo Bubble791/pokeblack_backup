@@ -14315,7 +14315,7 @@ ovy185_21a3b0c: ; 0x021A3B0C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x5c]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021A3B2A
 	add r4, #0x8c

@@ -19796,7 +19796,7 @@ ovy194_21c1820: ; 0x021C1820
 	ldr r0, [r5, r7]
 	add r4, r1, #0
 	add r6, r2, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021C183C
 	ldr r0, [r5, r7]

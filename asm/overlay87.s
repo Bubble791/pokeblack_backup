@@ -88,7 +88,7 @@ ovy87_21ea8fc: ; 0x021EA8FC
 	tst r0, r1
 	bne _021EA952
 	ldr r0, [r5, #8]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021EA952
 	ldr r0, [r5]
@@ -133,7 +133,7 @@ ovy87_21ea954: ; 0x021EA954
 	tst r0, r1
 	bne _021EA9AA
 	ldr r0, [r6, #8]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021EA9AA
 	mov r0, #4

@@ -427,7 +427,7 @@ void ovy142_2199ecc(BagView *bagView)
 
     sub_02035198(bagView->unk8A4);
 
-    if (PrintSystem_IsTextPrintActive(bagView->printSystem) != 0)
+    if (PrintSystem_IsTextPrintActiveEnd(bagView->printSystem))
     {
         uVar2 = sub_02199978(bagView);
 
@@ -1044,7 +1044,7 @@ void ovy142_219a850(BagView *bagView)
     int v5;     // r5
     int v6;     // r5
 
-    if (PrintSystem_IsTextPrintActive(bagView->printSystem))
+    if (PrintSystem_IsTextPrintActiveEnd(bagView->printSystem))
     {
         if (!sub_0203DA2C())
             bagView->unk8B0 = 0;
@@ -2649,7 +2649,7 @@ void ovy142_219c38c(int a1, BagView *bagView)
 
 void ovy142_219c3cc(BagView *bagView)
 {
-    if (PrintSystem_IsTextPrintActive(bagView->printSystem))
+    if (PrintSystem_IsTextPrintActiveEnd(bagView->printSystem))
     {
         GFL_FadeScreenSet(0, 1, 1, 0, 6, 1, bagView->heapId);
         GFL_SndSEPlay(1950);

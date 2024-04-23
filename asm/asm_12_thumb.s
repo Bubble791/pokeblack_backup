@@ -63151,8 +63151,8 @@ _02021C04: .word 0xFF0FFFFF
 _02021C08: .word 0x0000FFFF
 	thumb_func_end sub_02021A3C
 
-	thumb_func_start PrintSystem_IsTextPrintActive
-PrintSystem_IsTextPrintActive: ; 0x02021C0C
+	thumb_func_start PrintSystem_IsTextPrintActiveEnd
+PrintSystem_IsTextPrintActiveEnd: ; 0x02021C0C
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
 	bne _02021C16
@@ -63162,7 +63162,7 @@ _02021C16:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end PrintSystem_IsTextPrintActive
+	thumb_func_end PrintSystem_IsTextPrintActiveEnd
 
 	thumb_func_start sub_02021C1C
 sub_02021C1C: ; 0x02021C1C

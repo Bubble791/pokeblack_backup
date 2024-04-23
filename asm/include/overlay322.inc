@@ -10,7 +10,7 @@
 .public sub_020241E4
 .public sub_0202E168
 .public GFL_FadeScreenSet
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0202E1DC
 .public GFL_WordSetSystemFree
 .public sub_02021A18
@@ -242,12 +242,12 @@
 .public sub_02044CFC
 .public sub_0204898C
 .public GFL_StrBufFree
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046D84
 .public sub_0219B294
 .public sub_02046D84
 .public sub_02046D84
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219CD14
 .public sub_020352C0
 .public sub_0219CD14
@@ -266,7 +266,7 @@
 .public sub_0219CAD8
 .public sub_0219FEC0
 .public sub_0219F4B8
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219F5F4
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
@@ -278,7 +278,7 @@
 .public GFL_StrBufFree
 .public sub_0219F4CC
 .public sub_0219F4CC
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219F5F4
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
@@ -297,7 +297,7 @@
 .public GFL_StrBufFree
 .public sub_0219F4CC
 .public sub_0219F4CC
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219F5F4
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys

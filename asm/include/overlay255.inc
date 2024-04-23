@@ -518,7 +518,7 @@
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_02026BA0
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203CE0C
 .public sub_02046D38
 .public sub_02046DC0
@@ -562,7 +562,7 @@
 .public sub_021BF234
 .public sub_021BF234
 .public sub_021BF234
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203A24C
 .public sub_021CEFA4
 .public sub_0203A24C
@@ -2393,7 +2393,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021D3EF8
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished

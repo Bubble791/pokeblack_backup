@@ -630,7 +630,7 @@
 .public sub_0202DA54
 .public sub_0202DA54
 .public sub_0203A978
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021AAEFC
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

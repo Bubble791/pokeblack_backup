@@ -1755,7 +1755,7 @@
 .public GFL_StrBufFree
 .public sub_0204C124
 .public sub_02199D18
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02021C44
 .public sub_0204C124
 .public sub_02199D18

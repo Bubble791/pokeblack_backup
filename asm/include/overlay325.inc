@@ -171,7 +171,7 @@
 .public sub_02044CFC
 .public sub_0204898C
 .public GFL_StrBufFree
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219B294
 .public sub_02044C98
 .public sub_02044C98
@@ -180,9 +180,9 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219E7B0
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219E7C4
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay

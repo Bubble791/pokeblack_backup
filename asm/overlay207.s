@@ -1945,7 +1945,7 @@ ovy207_21b3fe0: ; 0x021B3FE0
 	add r0, r4, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021B4008
 	add r0, r4, #0
@@ -3382,7 +3382,7 @@ _021B4B74:
 	add r0, r4, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021B4B90
 	mov r0, #0x97
@@ -8800,7 +8800,7 @@ ovy207_21b7690: ; 0x021B7690
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021B76CC
 	add r0, r5, #0
@@ -10873,7 +10873,7 @@ _021B86D6:
 	add r0, r7, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021B872A
 	add r1, r5, #0

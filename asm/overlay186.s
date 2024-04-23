@@ -8946,7 +8946,7 @@ ovy186_21abc94: ; 0x021ABC94
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021ABCA6
 	mov r0, #1
@@ -9427,7 +9427,7 @@ _021AC026: ; jump table
 	.short _021AC21E - _021AC026 - 2 ; case 19
 _021AC04E:
 	ldr r0, [r4, #0x14]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021AC0EE
 	mov r0, #0xbe
@@ -9490,7 +9490,7 @@ _021AC0CC:
 	pop {r3, r4, r5, r6, r7, pc}
 _021AC0D6:
 	ldr r0, [r4, #0x14]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021AC0EE
 	mov r0, #0x73

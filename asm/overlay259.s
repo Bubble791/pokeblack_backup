@@ -1082,7 +1082,7 @@ _0219A0F8:
 	ldr r1, [r4, #0x18]
 	cmp r1, #1
 	bne _0219A118
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219A118
 	ldr r0, [r4, #0x1c]

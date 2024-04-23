@@ -69,7 +69,7 @@ ovy321_219cf00: ; 0x0219CF00
 	add r5, r3, #0
 	add r4, r0, #0
 	ldr r0, [r5, #0x44]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219CF14
 	mov r0, #0

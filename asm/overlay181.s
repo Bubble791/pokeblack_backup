@@ -6513,10 +6513,10 @@ sub_021A034C: ; 0x021A034C
 	thumb_func_start sub_021A0350
 sub_021A0350: ; 0x021A0350
 	ldr r0, [r0, #0x34]
-	ldr r3, _021A0358 ; =PrintSystem_IsTextPrintActive
+	ldr r3, _021A0358 ; =PrintSystem_IsTextPrintActiveEnd
 	bx r3
 	nop
-_021A0358: .word PrintSystem_IsTextPrintActive
+_021A0358: .word PrintSystem_IsTextPrintActiveEnd
 	thumb_func_end sub_021A0350
 
 	thumb_func_start sub_021A035C

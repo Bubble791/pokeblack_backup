@@ -18,7 +18,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219E33C
@@ -244,7 +244,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0203A7F4
@@ -266,7 +266,7 @@
 .public sub_020484D4
 .public sub_02044F90
 .public sub_02044CFC
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203D564
 .public sub_0203D564
 .public GFL_SndSEPlay
@@ -288,10 +288,10 @@
 .public GFL_SndSEPlay
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02044CFC
 .public sub_021A1C0C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -315,7 +315,7 @@
 .public sub_0219CCB0
 .public sub_02044C98
 .public sub_0203D554
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203D554
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
@@ -328,11 +328,11 @@
 .public sub_0219B294
 .public sub_02044C98
 .public sub_0203D554
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021A287C
 .public sub_02045708
 .public sub_02044CFC
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203D564
 .public sub_0203D564
 .public GFL_SndSEPlay
@@ -352,10 +352,10 @@
 .public sub_0203D564
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public PrintSystem_IsTextPrintActive
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021A287C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
 .public sub_0202E168
 .public sub_0204AA30

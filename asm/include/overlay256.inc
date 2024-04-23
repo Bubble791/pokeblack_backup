@@ -94,10 +94,10 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_0203CDC8
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenIsFinished
 .public sub_021BCF4C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -106,7 +106,7 @@
 .public GFL_SndSEPlay
 .public sub_02046CFC
 .public GFL_SndSEPlay
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

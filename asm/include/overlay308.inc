@@ -18,7 +18,7 @@
 .public sub_02021A3C
 .public sub_021A054C
 .public sub_021A08E8
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_021A0004
@@ -317,7 +317,7 @@
 .public sub_02199D08
 .public sub_02013B44
 .public sub_02199C08
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02199C68
 .public sub_0204C124
 .public sub_0204C124

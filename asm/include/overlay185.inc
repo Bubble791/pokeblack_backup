@@ -934,7 +934,7 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203CDC8
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_020342F4
 .public sub_0203A978
 .public sub_0202A234

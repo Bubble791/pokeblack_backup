@@ -366,7 +366,7 @@
 .public sub_0203DA0C
 .public sub_0203D564
 .public GFL_SndSEPlay
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204BEDC
 .public sub_0208D65C
 .public sub_02045E1C
@@ -374,7 +374,7 @@
 .public sub_0204BEDC
 .public sub_0208D65C
 .public sub_0208D65C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02017238
@@ -529,7 +529,7 @@
 .public sub_02045B7C
 .public sub_02045604
 .public sub_02045B7C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02045E1C
 .public sub_02045E1C
 .public GFL_SndSEPlay
@@ -549,7 +549,7 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public sub_0203DA0C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203D564
 .public sub_021AD5D0
 .public GFL_SndSEPlay

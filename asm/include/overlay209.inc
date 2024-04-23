@@ -167,7 +167,7 @@
 .public sub_020223B4
 .public sub_020223CC
 .public sub_02021A3C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02035660
 .public sub_02048244
 .public sub_0203A7F4
@@ -732,7 +732,7 @@
 .public sub_020223B4
 .public sub_020223CC
 .public sub_02021A3C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02048244
 .public sub_020223CC
 .public GFL_StrBufFree

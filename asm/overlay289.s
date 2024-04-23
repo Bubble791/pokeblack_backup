@@ -121,7 +121,7 @@ ovy289_21f451c: ; 0x021F451C
 	add r4, r1, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0xc]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021F4540
 	ldr r0, [r4]

@@ -7707,7 +7707,7 @@
 .public sub_02021A20
 .public sub_02021A34
 .public sub_02021A3C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02021C1C
 .public sub_02021C44
 .public sub_02021C54

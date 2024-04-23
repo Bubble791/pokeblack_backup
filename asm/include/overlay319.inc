@@ -225,7 +225,7 @@
 .public GFL_TCBRemove
 .public sub_02045E1C
 .public sub_0203A24C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0202E37C
 .public sub_0219DA6C
 .public sub_0219DA68

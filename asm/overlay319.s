@@ -2348,7 +2348,7 @@ ovy319_219e074: ; 0x0219E074
 	ldr r0, [r5, #4]
 	mov r6, #0
 	ldr r0, [r0, #0x14]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E08A
 	add r0, r6, #0

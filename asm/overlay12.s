@@ -41673,7 +41673,7 @@ ovy12_2164110: ; 0x02164110
 _02164144:
 	ldr r0, [r5, #0x1c]
 	ldr r0, [r0, #0x14]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy12_2164110

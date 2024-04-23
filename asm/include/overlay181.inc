@@ -880,4 +880,4 @@
 .public MI_CpuCopy8
 
 .public sub_02042788
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd

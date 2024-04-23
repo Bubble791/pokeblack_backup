@@ -5,13 +5,13 @@
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0203A24C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02016AD8
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0204C124
 .public sub_0201FDF8
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98

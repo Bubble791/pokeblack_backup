@@ -142,7 +142,7 @@ _021B3088:
 	cmp r0, #1
 	bne _021B310E
 	ldr r0, [r4, #0x30]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021B310E
 	ldr r0, [r4, #0x3c]

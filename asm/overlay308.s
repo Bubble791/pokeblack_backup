@@ -226,7 +226,7 @@ _0219FB24:
 	mov r0, #0x4b
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219FB3A
 	mov r0, #0
@@ -3620,7 +3620,7 @@ _021A15CE:
 	ldr r0, [r4, #0x10]
 	lsl r5, r5, #2
 	ldr r0, [r0, r5]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021A16AA
 	ldrb r0, [r4]

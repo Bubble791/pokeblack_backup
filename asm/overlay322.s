@@ -114,7 +114,7 @@ ovy322_219cf60: ; 0x0219CF60
 	add r0, r5, #0
 	add r0, #0xf0
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219CF78
 	mov r0, #0
@@ -2822,7 +2822,7 @@ ovy322_219e4e8: ; 0x0219E4E8
 	add r0, r5, #0
 	add r0, #0xf0
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219E51A
 	add r1, r4, #0
@@ -3187,7 +3187,7 @@ _0219E7B2:
 _0219E7CA:
 	add r0, #0xf0
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	beq _0219E7D8
 _0219E7D6:
@@ -3365,7 +3365,7 @@ ovy322_219e940: ; 0x0219E940
 	ldr r0, [r0]
 	mov r4, #0
 	mov r6, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219EA48
 	add r0, r5, #0
@@ -3754,7 +3754,7 @@ ovy322_219ec3c: ; 0x0219EC3C
 	add r0, #0xf0
 	ldr r0, [r0]
 	mov r4, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219ED1E
 	mov r1, #0x26
@@ -4164,7 +4164,7 @@ ovy322_219ef6c: ; 0x0219EF6C
 	add r0, #0xf0
 	ldr r0, [r0]
 	mov r4, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0219F04E
 	mov r1, #0x26

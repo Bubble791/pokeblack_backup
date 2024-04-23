@@ -35,7 +35,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219D2C4

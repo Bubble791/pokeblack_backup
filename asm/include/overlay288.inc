@@ -6,7 +6,7 @@
 .public sub_021E00B8
 .public sub_0201FDF8
 .public sub_0203A7F4
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02021C44
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0
@@ -64,7 +64,7 @@
 .public sub_02026FE4
 .public sub_021F6D38
 .public sub_021F6D38
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44
@@ -76,7 +76,7 @@
 .public sub_0204898C
 .public GFL_StrBufFree
 .public sub_021F6D38
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44
@@ -100,7 +100,7 @@
 .public sub_0204898C
 .public GFL_StrBufFree
 .public sub_021F6D38
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44

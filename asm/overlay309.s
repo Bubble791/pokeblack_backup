@@ -322,7 +322,7 @@ _0219D122:
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219D186
 	b _0219D11A

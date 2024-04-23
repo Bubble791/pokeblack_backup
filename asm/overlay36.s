@@ -17458,10 +17458,10 @@ _02187988: .word sub_02021C44
 	thumb_func_start sub_0218798C
 sub_0218798C: ; 0x0218798C
 	ldr r0, [r0, #0xc]
-	ldr r3, _02187994 ; =PrintSystem_IsTextPrintActive
+	ldr r3, _02187994 ; =PrintSystem_IsTextPrintActiveEnd
 	bx r3
 	nop
-_02187994: .word PrintSystem_IsTextPrintActive
+_02187994: .word PrintSystem_IsTextPrintActiveEnd
 	thumb_func_end sub_0218798C
 _02187998:
 	.byte 0xC0, 0x68, 0x70, 0x47
@@ -68989,7 +68989,7 @@ _0219FC8A:
 	mov r0, #0x4b
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219FD34
 	ldrh r1, [r4, #2]
@@ -94452,7 +94452,7 @@ ovy36_21ac218: ; 0x021AC218
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021AC2BC
 	add r0, r4, #0

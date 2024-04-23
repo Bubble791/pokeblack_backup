@@ -729,7 +729,7 @@
 .public sub_02188B70
 .public sub_02180490
 .public sub_02187998
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02188AB0
 .public sub_0201F950
 .public sub_021804F0

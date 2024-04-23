@@ -224,7 +224,7 @@
 .public sub_0203DA48
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046DC0
 .public sub_020223CC
 .public GFL_StrBufFree
@@ -282,7 +282,7 @@
 .public sub_0203D564
 .public GFL_SndSEPlay
 .public sub_0219A7A0
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046DC0
 .public sub_0219B694
 .public sub_0203AB10
@@ -385,7 +385,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C
@@ -517,7 +517,7 @@
 .public sub_0219A530
 .public sub_0202472C
 .public sub_0202472C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046DC0
 .public GFL_TCBRemove
 .public sub_020223CC
@@ -672,8 +672,8 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C
@@ -796,7 +796,7 @@
 .public sub_020120C8
 .public sub_0202BE00
 .public sub_02016BB4
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046DC0
 .public GFL_TCBRemove
 .public sub_020223CC
@@ -1009,8 +1009,8 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C

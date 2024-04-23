@@ -70,7 +70,7 @@
 .public sub_0200C9E4
 .public sub_0200955C
 .public sub_020095A0
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4

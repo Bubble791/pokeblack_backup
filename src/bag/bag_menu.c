@@ -75,7 +75,7 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
 
     if (GFL_FadeScreenIsFinished() != 1)
         return 0;
-    if (!PrintSystem_IsTextPrintActive(wk->printSystem))
+    if (!PrintSystem_IsTextPrintActiveEnd(wk->printSystem))
         return 0;
     GFL_TCBRemove(wk->taskCallBack);
     sub_021A046C(&wk->unk8C8);

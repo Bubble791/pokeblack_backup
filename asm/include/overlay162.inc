@@ -206,7 +206,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0200CA74
 .public sub_0200CA78
 .public sub_02046CFC
@@ -238,7 +238,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GCTX_HIDGetPressedKeys
@@ -255,7 +255,7 @@
 .public sub_020352B0
 .public sub_02046CFC
 .public sub_020352E0
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0219F5FC

@@ -5,7 +5,7 @@
 .public sub_0203A614
 .public sub_021E00B8
 .public sub_0203A7F4
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02021C44
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0

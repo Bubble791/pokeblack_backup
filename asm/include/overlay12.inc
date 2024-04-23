@@ -3539,7 +3539,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_0204898C

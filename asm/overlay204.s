@@ -4140,7 +4140,7 @@ ovy204_21abc24: ; 0x021ABC24
 	ldr r0, [r4, #0x34]
 	str r1, [sp, #8]
 	add r7, r3, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021ABC40
 	add sp, #0x10
@@ -4272,7 +4272,7 @@ ovy204_21abd38: ; 0x021ABD38
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r1, #0x34]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021ABD66
 	mov r0, #2
@@ -6251,7 +6251,7 @@ _021ACC9C:
 	b _021ACC7E
 _021ACCA8:
 	ldr r0, [r7, #0x34]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _021ACD98
 	mov r0, #2
@@ -6571,7 +6571,7 @@ ovy204_21acf28: ; 0x021ACF28
 	str r0, [sp]
 	ldr r0, [r4, #0x34]
 	add r5, r1, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021ACF42
 	mov r0, #2

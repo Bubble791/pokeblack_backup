@@ -7,7 +7,7 @@
 .public GFL_FontCreate
 .public sub_02021998
 .public GFL_FadeScreenSet
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02021A18
 .public sub_02022DA8
 .public sub_0203AB10

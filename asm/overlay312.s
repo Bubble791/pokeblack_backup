@@ -381,7 +381,7 @@ _0217CC34:
 _0217CC52:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0217CCDC
 	sub r6, #0x34
@@ -487,7 +487,7 @@ _0217CD0C:
 _0217CD1E:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0217CD3C
 	sub r6, #0x34
@@ -565,7 +565,7 @@ _0217CDA6:
 _0217CDB8:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _0217CEB0
 	sub r6, #0x34
@@ -759,7 +759,7 @@ _0217CF68:
 	str r0, [sp, #0xc]
 	ldr r0, _0217D188 ; =0x0000C080
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0217CF7C
 	b _0217D0FA

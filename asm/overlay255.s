@@ -14800,7 +14800,7 @@ ovy255_21c28a8: ; 0x021C28A8
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021C28C4
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021C28DE
 _021C28C4:
@@ -15341,7 +15341,7 @@ ovy255_21c2d44: ; 0x021C2D44
 	ldr r0, [r4, #0x2c]
 	add r0, #0x94
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021C2D5A
 	mov r0, #0xc
@@ -49170,7 +49170,7 @@ _021D3D22:
 	b _021D3D8E
 _021D3D36:
 	ldr r0, [r4, #0x18]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021D3D8E
 	mov r6, #0x7f

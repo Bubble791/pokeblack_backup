@@ -81,7 +81,7 @@
 .public sub_0219D9CC
 .public sub_0219D9CC
 .public sub_0219D888
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4

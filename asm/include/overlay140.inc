@@ -312,7 +312,7 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0219EA44
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0219DF3C
 .public sub_0219E010
 .public sub_0219DF3C

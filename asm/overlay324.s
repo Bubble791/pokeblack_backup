@@ -2646,7 +2646,7 @@ _0219E3C4:
 	mov r0, #0x73
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219E3D6
 	mov r0, #4

@@ -1751,7 +1751,7 @@ _0219DCF4:
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219DD4C
 	add r0, r5, #0
@@ -2279,7 +2279,7 @@ _0219E11C:
 _0219E124:
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219E19C
 	b _0219E11C
@@ -2471,7 +2471,7 @@ _0219E2B0:
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _0219E300
 	b _0219E2A8

@@ -5984,7 +5984,7 @@ ovy215_21aa51c: ; 0x021AA51C
 	ldr r1, [r4, #8]
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _021AA534
 	mov r0, #9

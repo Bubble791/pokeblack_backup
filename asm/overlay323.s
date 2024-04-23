@@ -2548,7 +2548,7 @@ ovy323_219e2d4: ; 0x0219E2D4
 	ldr r0, [r5, #0x2c]
 	mov r4, #0
 	mvn r4, r4
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219E2EA
 	mov r0, #0

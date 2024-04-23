@@ -174,7 +174,7 @@ ovy171_21ddbb4: ; 0x021DDBB4
 	b _021DDCBC
 _021DDBCC:
 	ldr r0, [r5, #0x1c]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	beq _021DDCBC
 	ldr r0, [r5]

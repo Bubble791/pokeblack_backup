@@ -61,7 +61,7 @@
 .public sub_0219A414
 .public sub_0203A24C
 .public sub_0219B850
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_02048244
 .public sub_02005748
 .public sub_0204C540

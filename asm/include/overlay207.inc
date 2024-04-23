@@ -197,7 +197,7 @@
 .public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_0203DA0C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0203DF44
 .public sub_0204C488
 .public sub_0204C488
@@ -311,7 +311,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_021B804C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
@@ -795,7 +795,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public sub_0203A24C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204B32C
 .public sub_0204B32C
 .public sub_0204B32C
@@ -928,7 +928,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021BA8E8
 .public sub_0204C124
 .public sub_021BA63C

@@ -266,7 +266,7 @@ extern int ovy142_21a00a0(BagView*);
 typedef void (*UnknowFunc)(BagView *);
 
 extern void sub_02035198(int);
-extern int PrintSystem_IsTextPrintActive(int);
+extern int PrintSystem_IsTextPrintActiveEnd(int);
 extern int sub_0203DA2C(void);
 extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
 extern void sub_0204C488(int, u16);

@@ -253,7 +253,7 @@
 .public G2x_SetBlendAlpha_
 .public GCTX_HIDGetPressedKeys
 .public G2x_SetBlendAlpha_
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree

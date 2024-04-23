@@ -128,7 +128,7 @@
 .public sub_02021C1C
 .public sub_02048244
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0202B6AC
 .public sub_0204C560
 .public GFL_FadeScreenSet

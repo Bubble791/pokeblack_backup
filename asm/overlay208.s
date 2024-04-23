@@ -768,7 +768,7 @@ _02199F32:
 	add r0, r5, #0
 	add r0, #0x1c
 	ldr r0, [r4, r0]
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #1
 	bne _02199F8E
 	mov r0, #0

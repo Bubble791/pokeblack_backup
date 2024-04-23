@@ -3749,7 +3749,7 @@ ovy140_219eac8: ; 0x0219EAC8
 	add r7, r0, #0
 	ldr r0, [r4, r6]
 	add r5, r1, #0
-	bl PrintSystem_IsTextPrintActive
+	bl PrintSystem_IsTextPrintActiveEnd
 	cmp r0, #0
 	bne _0219EAE2
 	b _0219ED0C

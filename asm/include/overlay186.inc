@@ -554,7 +554,7 @@
 .public sub_02021C1C
 .public sub_02048244
 .public GFL_FadeScreenIsFinished
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_0204C560
 .public sub_0204C560
 .public sub_0204C560
@@ -590,11 +590,11 @@
 .public GFL_SndSEPlay
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021ACA38
 .public sub_021ACA9C
 .public sub_021AC9E4
-.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActiveEnd
 .public sub_021ACA38
 .public sub_021ACA9C
 .public sub_021ACC10
