@@ -246,7 +246,7 @@
 .public sub_02046EDC
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02024E80
 .public sub_0204826C
 .public GFL_WordSetSystemCreateDefault
@@ -263,5 +263,5 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02044F90

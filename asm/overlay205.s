@@ -4109,7 +4109,7 @@ ovy205_21b92e4: ; 0x021B92E4
 	lsr r1, r1, #0x18
 	lsr r2, r2, #0x18
 	lsr r3, r3, #0x18
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5]
 	mov r1, #2
 	mov r2, #1
@@ -4184,7 +4184,7 @@ ovy205_21b9338: ; 0x021B9338
 	add r0, r4, #0
 	bl GFL_WordSetSystemFree
 	add r0, r5, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #4
 	bl sub_02044F90
 	add sp, #0x14

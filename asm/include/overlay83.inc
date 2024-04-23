@@ -36,7 +36,7 @@
 .public MI_CpuFill8
 .public BmpWin_BitmapFill
 .public sub_02021D28
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -47,7 +47,7 @@
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C

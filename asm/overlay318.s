@@ -386,7 +386,7 @@ ovy318_219d16c: ; 0x0219D16C
 	mov r1, #1
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x14]
 	mov r1, #2
 	mov r2, #1
@@ -403,7 +403,7 @@ ovy318_219d16c: ; 0x0219D16C
 	bl BmpWin_BitmapFill
 	ldr r4, [r5, #0x14]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -496,7 +496,7 @@ _0219D282:
 	lsr r1, r1, #0x18
 	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x14]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	bl sub_02017BCC
 	ldr r1, [r4, #4]
 	mov r2, #0

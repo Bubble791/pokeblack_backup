@@ -20,7 +20,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02016AD8
 .public sub_02017934
 .public sub_020074B8
@@ -59,7 +59,7 @@
 .public sub_0204AF50
 .public sub_0204AB0C
 .public sub_02021998
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public GFL_FontCreate
@@ -159,7 +159,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree

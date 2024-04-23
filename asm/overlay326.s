@@ -505,7 +505,7 @@ _0219D244:
 	cmp r0, #0
 	bne _0219D272
 	ldr r0, [r5, #0x5c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r5, #0x60
 	mov r0, #0
 	strb r0, [r5]
@@ -1173,7 +1173,7 @@ _0219D77E:
 	mov r1, #1
 	str r1, [sp, #8]
 	ldrb r1, [r5, #1]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x5c]
 	bl sub_0204826C
 	ldr r0, [r6, #0x5c]
@@ -3445,7 +3445,7 @@ _0219E8D0:
 	cmp r0, #0
 	bne _0219E904
 	ldr r0, [r4, #0x70]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r1, r4, #0
 	add r1, #0x74
 	mov r0, #0
@@ -7856,7 +7856,7 @@ _021A0C0E:
 	mov r1, #1
 	str r1, [sp, #8]
 	ldrb r1, [r5, #1]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x70]
 	bl sub_0204826C
 	ldr r0, [r7, #0x70]
@@ -8031,7 +8031,7 @@ _021A0D60:
 	ldrb r1, [r5, #1]
 	ldrb r2, [r5, #2]
 	ldrb r3, [r5, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x70]
 	bl sub_0204826C
 	ldr r0, [r6, #0x70]
@@ -8865,7 +8865,7 @@ ovy326_21a1388: ; 0x021A1388
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r7]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	bne _021A14C0

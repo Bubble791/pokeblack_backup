@@ -598,7 +598,7 @@ _02199DA8:
 	mov r2, #0x13
 	mov r3, #0x1e
 	str r6, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add r1, r5, #0
 	add r1, #0x24
 	sub r5, #0x88
@@ -776,7 +776,7 @@ _02199F32:
 	add r5, #0x20
 	ldr r5, [r4, r5]
 	add r0, r5, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	bl sub_0204826C
 	add r0, r5, #0

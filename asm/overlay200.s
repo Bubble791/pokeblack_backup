@@ -158,9 +158,9 @@ _021B3088:
 	bne _021B310E
 _021B30B8:
 	ldr r0, [r4, #0x20]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x24]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	ldrb r1, [r4, #0x18]
 	str r0, [r4, #0x1c]
@@ -598,7 +598,7 @@ ovy200_21b3400: ; 0x021B3400
 	mov r1, #2
 	mov r2, #4
 	mov r3, #0x1c
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x24]
 	mov r0, #0xc
 	str r0, [sp]
@@ -608,14 +608,14 @@ ovy200_21b3400: ; 0x021B3400
 	mov r1, #2
 	mov r2, #9
 	mov r3, #0x1c
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x20]
 	ldr r0, [r5, #0x24]
 	bl BmpWin_GetBitmap
 	mov r1, #1
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x24]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x24]
 	bl sub_0204826C
 	ldr r0, [r5, #0x24]
@@ -628,7 +628,7 @@ ovy200_21b3400: ; 0x021B3400
 	mov r1, #0
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x20]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x20]
 	bl sub_0204826C
 	mov r0, #5

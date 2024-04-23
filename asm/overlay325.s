@@ -1475,7 +1475,7 @@ _0219DA18:
 	ldrb r1, [r5, #1]
 	ldrb r2, [r5, #2]
 	ldrb r3, [r5, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	add r2, r6, r1
 	mov r1, #0x4e
@@ -1491,7 +1491,7 @@ _0219DA44:
 	ldrb r1, [r5, #1]
 	ldrb r2, [r5, #2]
 	ldrb r3, [r5, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	add r1, r6, r1
 	add r1, #0xd0
@@ -1654,7 +1654,7 @@ _0219DB60:
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r1, r4, #0
 	add r1, #0xd4
 	mov r0, #0
@@ -1718,7 +1718,7 @@ _0219DBEE:
 	bne _0219DC24
 	ldr r0, [sp, #0x20]
 	ldr r0, [r4, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x1c]
 	mov r1, #0
 	strb r1, [r4, r0]

@@ -1694,7 +1694,7 @@ _0219DB2C:
 	lsr r2, r2, #0x18
 	mov r3, #0xa
 	str r0, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end ovy305_219dae0
@@ -1836,7 +1836,7 @@ _0219DC36:
 	bl sub_02021CFC
 	ldr r4, [r5, #0x1c]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0

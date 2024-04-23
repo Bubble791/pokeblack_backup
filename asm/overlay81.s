@@ -285,7 +285,7 @@ _021EAA70:
 	str r1, [sp, #4]
 	ldrb r1, [r5, #1]
 	str r7, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	add r1, r6, r1
 	add r4, r4, #1
@@ -338,7 +338,7 @@ ovy81_21eaaa0: ; 0x021EAAA0
 	bl sub_020484D4
 	bl sub_02044F90
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy81_21eaaa0

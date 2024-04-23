@@ -17,7 +17,7 @@ ovy286_21f4440: ; 0x021F4440
 	mov r2, #0x13
 	mov r3, #0x1e
 	str r1, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x24]
 	ldr r1, _021F446C ; =0x00000532
 	add r0, r4, #0
@@ -47,7 +47,7 @@ _021F447C:
 	str r0, [sp, #4]
 	ldrb r0, [r4]
 	str r7, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r5, #3
 	add r1, r6, r1
 	add r5, r5, #1
@@ -252,7 +252,7 @@ _021F4572:
 	b _021F462A
 _021F4624:
 	ldr r0, [r5, #0x48]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021F462A:
 	ldr r1, _021F4634 ; =0x021F6D59
 	ldr r0, _021F4638 ; =0x0000059C
@@ -353,7 +353,7 @@ ovy286_21f463c: ; 0x021F463C
 	pop {r4, r5, r6, r7, pc}
 _021F46FA:
 	ldr r0, [sp, #0x10]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -450,7 +450,7 @@ ovy286_21f470c: ; 0x021F470C
 	pop {r4, r5, r6, r7, pc}
 _021F47C6:
 	ldr r0, [sp, #0x10]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -790,7 +790,7 @@ _021F4A74:
 	pop {r3, r4, r5, pc}
 _021F4A88:
 	ldr r0, [r4, r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021F4A8E:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -1040,7 +1040,7 @@ ovy286_21f4c48: ; 0x021F4C48
 	str r0, [r4, #0x1c]
 	ldr r4, [r4, #0x24]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0

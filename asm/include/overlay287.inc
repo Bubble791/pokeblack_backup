@@ -11,9 +11,9 @@
 .public sub_021FA40C
 .public sub_021FA40C
 .public sub_02026E64
-.public sub_020480C0
-.public sub_020480C0
-.public sub_020480C0
+.public BmpWin_CreateDynamic
+.public BmpWin_CreateDynamic
+.public BmpWin_CreateDynamic
 .public sub_02048210
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -378,11 +378,11 @@
 .public sub_020470F8
 .public sub_021FA40C
 .public sub_021FA40C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -404,7 +404,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_021FA40C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_021FA40C
 .public sub_021FA40C
 .public sub_02021280
@@ -422,7 +422,7 @@
 .public sub_020232E8
 .public sub_02017BCC
 .public sub_02022268
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C

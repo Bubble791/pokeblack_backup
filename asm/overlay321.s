@@ -1464,7 +1464,7 @@ _0219D9D2:
 	mov r1, #1
 	str r1, [sp, #8]
 	ldrb r1, [r5, #1]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x48]
 	bl sub_0204826C
 	ldr r0, [r6, #0x48]
@@ -1541,7 +1541,7 @@ _0219DA64:
 	cmp r0, #0
 	bne _0219DA92
 	ldr r0, [r5, #0x48]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r5, #0x4c
 	mov r0, #0
 	strb r0, [r5]

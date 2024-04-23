@@ -336,7 +336,7 @@ void ovy142_219cc60(BagView *bagView)
 void ovy142_219cc84(BagView *bagView);
 extern void ovy142_219cd98(BagView*);
 extern void GFL_MsgDataLoadStrbuf(int, int, int);
-extern void ovy142_219f6a4(BagView*, int);
+extern void BagMenu_PrintBagMessage(BagView*, int);
 extern void ovy142_219cce0(BagView*);
 
 void ovy142_219cc84(BagView *bagView)
@@ -346,7 +346,7 @@ void ovy142_219cc84(BagView *bagView)
         sub_0204C488(bagView->unk744, 0);
         sub_0204C520(bagView->unk6B8, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 151, bagView->stringBuff2);
-        ovy142_219f6a4(bagView, 0);
+        BagMenu_PrintBagMessage(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219cce0(bagView);
         BagMenu_SetRunFunc(bagView, ovy142_219cd98);
@@ -407,7 +407,7 @@ void sub_0219CD58(BagView* bagView, u8* a2)
     a2[4] = 5;
 }
 
-extern void ovy142_219cea8(BagView*);
+extern void BagMenu_PrintItemSortEnd(BagView*);
 
 void ovy142_219cd98(BagView* bagView)
 {
@@ -425,34 +425,34 @@ void ovy142_219cd98(BagView* bagView)
             case 0:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 0);
-                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, BagMenu_PrintItemSortEnd);
                 r5 = 1;
                 break;
             case 1:
                 GFL_SndSEPlay(0x663);
                 r5 = 1;
                 ovy142_219bcd8(bagView, 1);
-                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, BagMenu_PrintItemSortEnd);
                 break;
             
             case 2:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 2);
-                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, BagMenu_PrintItemSortEnd);
                 r5 = 1;
                 break;
             
             case 3:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 3);
-                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, BagMenu_PrintItemSortEnd);
                 r5 = 1;
                 break;
             
             case 4:
                 GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 4);
-                BagMenu_SetRunFunc(bagView, ovy142_219cea8);
+                BagMenu_SetRunFunc(bagView, BagMenu_PrintItemSortEnd);
                 r5 = 1;
                 break;
             case 5:
@@ -484,7 +484,7 @@ void ovy142_219cd98(BagView* bagView)
 
 extern void ovy142_219d3d8(BagView*);
 
-void ovy142_219cea8(BagView* bagView)
+void BagMenu_PrintItemSortEnd(BagView* bagView)
 {
     switch (bagView->unk1F4C)
     {
@@ -514,12 +514,12 @@ void ovy142_219cea8(BagView* bagView)
 
     }
     
-    ovy142_219f6a4(bagView, 0);
+    BagMenu_PrintBagMessage(bagView, 0);
     BagMenu_SetRunFunc(bagView, ovy142_219d3d8);
 }
 
-void ovy142_219cf28(BagView* bagView);
-void ovy142_219cf28(BagView* bagView)
+void BagMenu_PrintSeachItemEnd(BagView* bagView);
+void BagMenu_PrintSeachItemEnd(BagView* bagView)
 {
     switch (bagView->unk1F50)
     {
@@ -568,7 +568,7 @@ void ovy142_219cf28(BagView* bagView)
         break;
 
     }
-    ovy142_219f6a4(bagView, 0);
+    BagMenu_PrintBagMessage(bagView, 0);
     BagMenu_SetRunFunc(bagView, ovy142_219d3d8);
 }
 
@@ -582,7 +582,7 @@ void ovy142_219d0c8(BagView* bagView)
         sub_0204C488(bagView->unk740, 2);
         sub_0204C520(bagView->unk6B8, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 147, bagView->stringBuff2);
-        ovy142_219f6a4(bagView, 0);
+        BagMenu_PrintBagMessage(bagView, 0);
         ovy142_219fda8(bagView, 0);
         ovy142_219d120(bagView);
         BagMenu_SetRunFunc(bagView, ovy142_219d2bc);
@@ -680,37 +680,37 @@ void ovy142_219d2bc(BagView *bagView)
                 case 5:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 0);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 0:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 1);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 1:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 2);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 2:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 3);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 3:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 4);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 4:
                     GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 5);
-                    BagMenu_SetRunFunc(bagView, ovy142_219cf28);
+                    BagMenu_SetRunFunc(bagView, BagMenu_PrintSeachItemEnd);
                     r5 = 1;
                     break;
                 case 6:
@@ -1158,7 +1158,6 @@ void ovy142_219dd84(BagView *a1, int a2)
 
 void ovy142_219dda0(BagView *a1, int a2)
 {
-
     int v5;               // r0
     int v6;               // r0
     ItemTable *v7; // r0
@@ -1242,7 +1241,7 @@ void ovy142_219de0c(BagView *a1)
         }
         else
         {
-            sub_02048244(a1->unk75C);
+            BmpWin_FlushChar(a1->unk75C);
         }
         sub_020484B4(a1->unk74C);
     }
@@ -1264,7 +1263,7 @@ void ovy142_219de0c(BagView *a1)
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
         ovy142_21a00f0(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
         ovy142_219f4b0(a1, v16);
-        sub_02048244(a1->unk75C);
+        BmpWin_FlushChar(a1->unk75C);
     }
     
     if (a1->itemType == 5)
@@ -1279,7 +1278,7 @@ void ovy142_219de0c(BagView *a1)
     else
     {
         sub_020484B4(a1->unk76C);
-        sub_02048244(a1->unk76C);
+        BmpWin_FlushChar(a1->unk76C);
     }
     sub_020267C0(a1->stringBuff1, v6->itemid, a1->heapId);
     ovy142_21a00f0(a1, &a1->unk764, a1->stringBuff1, 0, 4, 15808);
@@ -1362,16 +1361,16 @@ void ovy142_219e284(BagView *a1)
 
     int result; // r0
 
-    a1->unk794 = sub_020480C0(3, 18, 9, 12, 3, 3, 1);
+    a1->unk794 = BmpWin_CreateDynamic(3, 18, 9, 12, 3, 3, 1);
     ovy142_219e21c(a1);
     sub_020484B4(a1->unk794);
-    a1->unk774 = sub_020480C0(3, 17, 13, 11, 2, 3, 1);
-    a1->unk78C = sub_020480C0(3, 17, 15, 11, 2, 3, 1);
-    a1->unk74C = sub_020480C0(6, 0, 19, 32, 5, 0, 1);
-    a1->unk754 = sub_020480C0(6, 7, 5, 18, 3, 0, 1);
-    a1->unk75C = sub_020480C0(6, 20, 8, 6, 3, 0, 1);
-    a1->unk764 = sub_020480C0(6, 2, 12, 29, 7, 0, 1);
-    a1->unk76C = sub_020480C0(6, 10, 1, 12, 2, 0, 1);
+    a1->unk774 = BmpWin_CreateDynamic(3, 17, 13, 11, 2, 3, 1);
+    a1->unk78C = BmpWin_CreateDynamic(3, 17, 15, 11, 2, 3, 1);
+    a1->unk74C = BmpWin_CreateDynamic(6, 0, 19, 32, 5, 0, 1);
+    a1->unk754 = BmpWin_CreateDynamic(6, 7, 5, 18, 3, 0, 1);
+    a1->unk75C = BmpWin_CreateDynamic(6, 20, 8, 6, 3, 0, 1);
+    a1->unk764 = BmpWin_CreateDynamic(6, 2, 12, 29, 7, 0, 1);
+    a1->unk76C = BmpWin_CreateDynamic(6, 10, 1, 12, 2, 0, 1);
     sub_0204826C(a1->unk76C);
     sub_0204826C(a1->unk754);
     sub_0204826C(a1->unk75C);
@@ -2313,16 +2312,16 @@ extern int sub_02017BCC(void);
 extern int sub_02022268(int, int, int, int, int, int, int, int, u16, int);
 extern void sub_02024E80(int, int, u16, int);
 
-void ovy142_219f6a4(BagView *a1, int a2)
+void BagMenu_PrintBagMessage(BagView *a1, int a2)
 {
     int v4; // r0
     int v6; // r0
 
     if (!a1->unk500)
-        a1->unk500 = sub_020480C0(3, 1, 1, 0x1e, 4, 12, 1);
+        a1->unk500 = BmpWin_CreateDynamic(3, 1, 1, 0x1e, 4, 12, 1);
     v4 = BmpWin_GetBitmap(a1->unk500);
     BmpWin_BitmapFill(v4, 15);
-    sub_02048244(a1->unk500);
+    BmpWin_FlushChar(a1->unk500);
     if (a2 == 1)
     {
         v6 = sub_02017BCC();
@@ -2348,7 +2347,7 @@ void ovy142_219f6a4(BagView *a1, int a2)
 
 void sub_0219F760(BagView *a1)
 {
-    ovy142_219f6a4(a1, 0);
+    BagMenu_PrintBagMessage(a1, 0);
 }
 
 void ovy142_219f76c(BagView *a1, int a2)
@@ -2406,9 +2405,9 @@ int ovy142_219f7a4(BagView *a1)
 
 void ovy142_219f84c(BagView *a1)
 {
-    a1->unk508 = sub_020480C0(2, 3, 21, 12, 3, 12, 1);
-    a1->unk77C = sub_020480C0(2, 1, 21, 8, 3, 12, 1);
-    a1->unk784 = sub_020480C0(2, 9, 21, 9, 3, 12, 1);
+    a1->unk508 = BmpWin_CreateDynamic(2, 3, 21, 12, 3, 12, 1);
+    a1->unk77C = BmpWin_CreateDynamic(2, 1, 21, 8, 3, 12, 1);
+    a1->unk784 = BmpWin_CreateDynamic(2, 9, 21, 9, 3, 12, 1);
     ovy142_219f8ec(a1, a1->itemType);
     ovy142_219f06c(a1, a1->itemType);
 }
@@ -2866,7 +2865,7 @@ void ovy142_21a014c(BagView *a1)
         v3 = BmpWin_GetBitmap(a1->unk74C);
         if (!sub_02021C1C(v2, v3))
         {
-            sub_02048244(a1->unk74C);
+            BmpWin_FlushChar(a1->unk74C);
             a1->unk750 = 0;
         }
     }
@@ -2876,7 +2875,7 @@ void ovy142_21a014c(BagView *a1)
         v5 = BmpWin_GetBitmap(a1->unk76C);
         if (!sub_02021C1C(v4, v5))
         {
-            sub_02048244(a1->unk76C);
+            BmpWin_FlushChar(a1->unk76C);
             a1->unk770 = 0;
         }
     }
@@ -2886,7 +2885,7 @@ void ovy142_21a014c(BagView *a1)
         v7 = BmpWin_GetBitmap(a1->unk754);
         if (!sub_02021C1C(v6, v7))
         {
-            sub_02048244(a1->unk754);
+            BmpWin_FlushChar(a1->unk754);
             a1->unk758 = 0;
         }
     }
@@ -2896,7 +2895,7 @@ void ovy142_21a014c(BagView *a1)
         v9 = BmpWin_GetBitmap(a1->unk75C);
         if (!sub_02021C1C(v8, v9))
         {
-            sub_02048244(a1->unk75C);
+            BmpWin_FlushChar(a1->unk75C);
             a1->unk760 = 0;
         }
     }
@@ -2906,7 +2905,7 @@ void ovy142_21a014c(BagView *a1)
         v11 = BmpWin_GetBitmap(a1->unk764);
         if (!sub_02021C1C(v10, v11))
         {
-            sub_02048244(a1->unk764);
+            BmpWin_FlushChar(a1->unk764);
             a1->unk768 = 0;
         }
     }
@@ -2916,7 +2915,7 @@ void ovy142_21a014c(BagView *a1)
         v13 = BmpWin_GetBitmap(a1->unk774);
         if (!sub_02021C1C(v12, v13))
         {
-            sub_02048244(a1->unk774);
+            BmpWin_FlushChar(a1->unk774);
             a1->unk778 = 0;
         }
     }
@@ -2926,7 +2925,7 @@ void ovy142_21a014c(BagView *a1)
         v15 = BmpWin_GetBitmap(a1->unk77C);
         if (!sub_02021C1C(v14, v15))
         {
-            sub_02048244(a1->unk77C);
+            BmpWin_FlushChar(a1->unk77C);
             a1->unk780 = 0;
         }
     }
@@ -2936,7 +2935,7 @@ void ovy142_21a014c(BagView *a1)
         v17 = BmpWin_GetBitmap(a1->unk784);
         if (!sub_02021C1C(v16, v17))
         {
-            sub_02048244(a1->unk784);
+            BmpWin_FlushChar(a1->unk784);
             a1->unk788 = 0;
         }
     }
@@ -2946,7 +2945,7 @@ void ovy142_21a014c(BagView *a1)
         v19 = BmpWin_GetBitmap(a1->unk78C);
         if (!sub_02021C1C(v18, v19))
         {
-            sub_02048244(a1->unk78C);
+            BmpWin_FlushChar(a1->unk78C);
             a1->unk790 = 0;
         }
     }
@@ -2956,7 +2955,7 @@ void ovy142_21a014c(BagView *a1)
         v21 = BmpWin_GetBitmap(a1->unk794);
         if (!sub_02021C1C(v20, v21))
         {
-            sub_02048244(a1->unk794);
+            BmpWin_FlushChar(a1->unk794);
             a1->unk798 = 0;
         }
     }
@@ -2966,7 +2965,7 @@ void ovy142_21a014c(BagView *a1)
         v23 = BmpWin_GetBitmap(a1->unk500);
         if (!sub_02021C1C(v22, v23))
         {
-            sub_02048244(a1->unk500);
+            BmpWin_FlushChar(a1->unk500);
             a1->unk504 = 0;
         }
     }
@@ -2978,7 +2977,7 @@ void ovy142_21a014c(BagView *a1)
         result = sub_02021C1C(v25, v26);
         if (!result)
         {
-            sub_02048244(a1->unk508);
+            BmpWin_FlushChar(a1->unk508);
             a1->unk50C = 0;
         }
     }

@@ -61,7 +61,7 @@
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045764
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02024E80
 .public sub_0219D888
 .public sub_02044BD8
@@ -82,7 +82,7 @@
 .public sub_0219D9CC
 .public sub_0219D888
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C

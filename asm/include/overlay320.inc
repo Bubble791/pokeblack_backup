@@ -71,7 +71,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0219DDEC
@@ -91,7 +91,7 @@
 .public sub_0219DDEC
 .public sub_0219EACC
 .public GFL_SndSEPlay
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0219A2A4
 .public sub_0204826C
 .public sub_020484D4
@@ -169,7 +169,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_02017BCC
 .public sub_02022268
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -179,7 +179,7 @@
 .public sub_0202E68C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204C488
 .public sub_0204C124
 .public sub_0204C520

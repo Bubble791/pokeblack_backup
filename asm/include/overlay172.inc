@@ -110,7 +110,7 @@
 .public sub_0204AE00
 .public sub_021E00B8
 .public sub_02026E94
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_02048358
 .public sub_02044F90
@@ -164,9 +164,9 @@
 .public sub_02021CFC
 .public sub_0204826C
 .public sub_02044F90
-.public sub_02048244
+.public BmpWin_FlushChar
 .public G2x_SetBlendAlpha_
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public G2x_SetBlendAlpha_

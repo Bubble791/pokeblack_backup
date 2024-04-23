@@ -279,7 +279,7 @@
 .public sub_02045E74
 .public MI_CpuFill8
 .public GFL_WordSetSystemCreateDefault
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public sub_02048210
@@ -345,7 +345,7 @@
 .public sub_02021CFC
 .public GFL_MsgDataLoadStrbuf
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -353,7 +353,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public MI_CpuFill8
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public sub_02048210
@@ -363,7 +363,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -372,7 +372,7 @@
 .public sub_02048580
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C

@@ -16,4 +16,4 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar

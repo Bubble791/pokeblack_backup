@@ -1028,7 +1028,7 @@ _021E60C4:
 	sub r0, #0x3c
 	ldr r6, [r5, r0]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0
@@ -1477,7 +1477,7 @@ _021E6456:
 	add r0, r6, #0
 	sub r0, #8
 	ldr r0, [r4, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r1, #0
 	sub r0, r6, #4
 	strb r1, [r4, r0]
@@ -1734,7 +1734,7 @@ _021E666E:
 	add r0, r6, #0
 	sub r0, #8
 	ldr r0, [r4, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r1, #0
 	sub r0, r6, #4
 	strb r1, [r4, r0]
@@ -1954,7 +1954,7 @@ _021E6834:
 	add r0, r6, #0
 	sub r0, #8
 	ldr r0, [r4, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r1, #0
 	sub r0, r6, #4
 	strb r1, [r4, r0]
@@ -3733,7 +3733,7 @@ _021E76DA:
 	lsl r0, r0, #0x18
 	ldrb r3, [r3, #6]
 	lsr r0, r0, #0x18
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	mov r1, #0x7e
 	add r2, r5, r6
 	lsl r1, r1, #2
@@ -3759,7 +3759,7 @@ _021E76DA:
 	sub r0, r4, #4
 	ldr r4, [r5, r0]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -3799,7 +3799,7 @@ ovy60_21e7750: ; 0x021E7750
 	sub r4, #0x24
 	ldr r4, [r5, r4]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -3885,7 +3885,7 @@ ovy60_21e77d4: ; 0x021E77D4
 	sub r4, #0x20
 	ldr r4, [r5, r4]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -3962,7 +3962,7 @@ ovy60_21e786c: ; 0x021E786C
 	sub r4, #0x18
 	ldr r4, [r5, r4]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -4009,7 +4009,7 @@ _021E7952:
 	lsl r0, r0, #2
 	ldr r4, [r5, r0]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -4397,7 +4397,7 @@ _021E7C5C:
 	sub r1, #0x38
 	ldr r4, [r5, r1]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -4471,7 +4471,7 @@ ovy60_21e7c94: ; 0x021E7C94
 	str r0, [r4, r1]
 	ldr r4, [r4, r6]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -4565,7 +4565,7 @@ _021E7DCC:
 	sub r1, #0x38
 	ldr r4, [r5, r1]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0

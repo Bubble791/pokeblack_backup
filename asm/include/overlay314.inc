@@ -60,10 +60,10 @@
 .public sub_0201736C
 .public sub_0204B0F0
 .public GFL_MsgSysLoadData
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public GFL_WordSetSystemCreateDefault
 .public sub_0204898C
 .public GFL_StrBufCreate
@@ -82,7 +82,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -90,7 +90,7 @@
 .public GFL_MsgDataFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -99,7 +99,7 @@
 .public sub_0203A24C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0203A1FC
 .public sub_020484F0
 .public sub_020454AC

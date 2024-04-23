@@ -120,15 +120,15 @@
 .public sub_0208D65C
 .public sub_021BD494
 .public sub_02048080
-.public sub_020480C0
-.public sub_020480C0
+.public BmpWin_CreateDynamic
+.public BmpWin_CreateDynamic
 .public sub_02048210
 .public sub_02048210
 .public sub_020480A8
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -205,7 +205,7 @@
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0204B758

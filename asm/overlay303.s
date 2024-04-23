@@ -4223,7 +4223,7 @@ ovy303_21a1d08: ; 0x021A1D08
 	mov r2, #0xf
 	bl sub_0202E870
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021A1D68:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -4514,7 +4514,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	mov r2, #0
 	mov r3, #0x20
 	str r6, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add r1, r4, #4
 	str r0, [r5, r1]
 	bl sub_0204826C
@@ -4525,7 +4525,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	bl BmpWin_BitmapFill
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	bl sub_02045B7C
 	add r0, r4, #4
@@ -4545,7 +4545,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	mov r2, #0
 	mov r3, #0x20
 	str r6, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add r1, r4, #0
 	add r1, #8
 	str r0, [r5, r1]
@@ -4559,7 +4559,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #4
 	bl sub_02045B7C
 	add r0, r4, #0
@@ -5692,7 +5692,7 @@ _021A29C2:
 	bne _021A29F4
 	ldr r0, [sp, #0x10]
 	ldr r0, [r5, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #0xc]
 	mov r1, #0
 	strb r1, [r5, r0]
@@ -5809,7 +5809,7 @@ ovy303_21a2a9c: ; 0x021A2A9C
 	add r1, r5, #0
 	bl sub_020470F8
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #8
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -6292,7 +6292,7 @@ ovy303_21a2e54: ; 0x021A2E54
 	mov r0, #1
 	mov r1, #2
 	mov r3, #0x1c
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	mov r4, #0x16
 	lsl r4, r4, #6
 	str r0, [r5, r4]
@@ -6303,7 +6303,7 @@ ovy303_21a2e54: ; 0x021A2E54
 	mov r6, #0
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #1
 	bl sub_02045B7C
 	add r0, r4, #0
@@ -6375,7 +6375,7 @@ ovy303_21a2ea8: ; 0x021A2EA8
 	mov r0, #1
 	bl sub_02045B7C
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

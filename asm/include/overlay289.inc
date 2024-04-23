@@ -63,7 +63,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204AB0C
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -75,7 +75,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204BF1C
 .public sub_0204C378
 .public sub_0204C108

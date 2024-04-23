@@ -696,7 +696,7 @@ _0219D400:
 	add r0, r5, #0
 	add r0, #0xfc
 	ldr r0, [r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #1
 	mov r1, #0
 	lsl r0, r0, #8
@@ -1232,7 +1232,7 @@ _0219D858:
 	str r1, [sp, #4]
 	ldrb r1, [r5, #1]
 	str r7, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	add r1, r6, r1
 	add r1, #0xfc
@@ -2396,7 +2396,7 @@ _0219E0FE:
 	str r0, [r5, r6]
 	ldr r5, [r5, r7]
 	add r0, r5, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	bl sub_0204826C
 	add r0, r5, #0
@@ -2592,7 +2592,7 @@ ovy320_219e2b0: ; 0x0219E2B0
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy320_219e2b0
 

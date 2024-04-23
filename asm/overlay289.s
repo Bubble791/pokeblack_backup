@@ -940,7 +940,7 @@ _021F4B62:
 	ldrb r1, [r5, #1]
 	ldrb r2, [r5, #2]
 	ldrb r3, [r5, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x10]
 	bl sub_0204826C
 	ldr r0, [r6, #0x10]
@@ -1069,7 +1069,7 @@ _021F4C50:
 	cmp r0, #0
 	bne _021F4C78
 	ldr r0, [r5, #0x10]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r5, #0x14]
 _021F4C78:

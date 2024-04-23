@@ -230,7 +230,7 @@ _021F43E4:
 	cmp r0, #0
 	bne _021F440A
 	ldr r0, [r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r5, #4]
 _021F440A:

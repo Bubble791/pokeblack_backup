@@ -228,7 +228,7 @@ _021B3124:
 	lsr r1, r1, #0x18
 	lsr r2, r2, #0x18
 	lsr r3, r3, #0x18
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x10]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -284,7 +284,7 @@ _021B31A8:
 	asr r1, r1, #0x10
 	bl sub_02021D28
 	ldr r0, [r6, #0x10]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r6, #0x10]
 	bl sub_0204826C
 	ldr r0, [sp, #0xc]
@@ -351,7 +351,7 @@ _021B322A:
 	lsr r1, r1, #0x18
 	lsr r2, r2, #0x18
 	lsr r3, r3, #0x18
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, r4]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -397,7 +397,7 @@ _021B3298:
 	asr r1, r1, #0x10
 	bl sub_02021D28
 	ldr r0, [r6, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r6, r4]
 	bl sub_0204826C
 	mov r0, #7
@@ -861,7 +861,7 @@ ovy198_21b3618: ; 0x021B3618
 	mov r1, #0x10
 	mov r2, #0xa
 	mov r3, #0xa
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x3c]
 	ldrh r0, [r5, #0xc]
 	mov r1, #0
@@ -1337,7 +1337,7 @@ _021B3A32:
 	lsr r1, r1, #0x18
 	lsr r2, r2, #0x18
 	lsr r3, r3, #0x18
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, r5]
 _021B3A6A:
 	ldr r0, [r4, r5]
@@ -1372,7 +1372,7 @@ _021B3A9A:
 	mov r1, #0
 	bl sub_02021D28
 	ldr r0, [r4, r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r4, r5]
 	bl sub_0204826C
 _021B3ABE:
@@ -1875,7 +1875,7 @@ ovy198_21b3e50: ; 0x021B3E50
 	mov r1, #0
 	bl sub_02021D28
 	ldr r0, [r5, #0x3c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x3c]
 	bl sub_0204826C
 	add r4, #0x50
@@ -1935,7 +1935,7 @@ _021B3F44:
 	mov r1, #0
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x3c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	bl ovy198_21b3e1c
 	add r0, r4, #0

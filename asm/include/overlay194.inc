@@ -786,7 +786,7 @@
 .public sub_0204B0B8
 .public sub_02048210
 .public sub_02048210
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
@@ -794,9 +794,9 @@
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
 .public GFL_CopyVarForText
@@ -807,17 +807,17 @@
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_021B7808
 .public sub_02048210
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_020484B4
@@ -1506,7 +1506,7 @@
 .public sub_021999C8
 .public sub_02199A5C
 .public sub_0204B0B8
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020232E8
@@ -1516,7 +1516,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_02024E80
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_0203580C
@@ -1642,7 +1642,7 @@
 .public sub_0201CCF8
 .public sub_0204B0B8
 .public sub_02048210
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_020232E8
 .public BmpWin_GetBitmap
 .public sub_021B783C
@@ -1651,7 +1651,7 @@
 .public sub_020232E8
 .public BmpWin_GetBitmap
 .public sub_0204C468
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_020484B4
@@ -1665,7 +1665,7 @@
 .public GFL_VBlankTCBAdd
 .public sub_02199D18
 .public sub_02048210
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_020232E8
 .public sub_0201CCF8
 .public BmpWin_GetBitmap
@@ -1678,7 +1678,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_0204826C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02045B7C
 .public sub_02048210
 .public sub_0201CCF8
@@ -1691,7 +1691,7 @@
 .public sub_0201AD8C
 .public sub_0201AD7C
 .public sub_020232E8
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_GetBitmap
 .public BmpWin_GetBitmap
@@ -1702,7 +1702,7 @@
 .public sub_02021CFC
 .public sub_0204C124
 .public sub_0204826C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -1712,7 +1712,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02048210
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
@@ -1729,8 +1729,8 @@
 .public sub_0201CCF8
 .public sub_02048210
 .public sub_02048210
-.public sub_020480C0
-.public sub_020480C0
+.public BmpWin_CreateDynamic
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
@@ -1742,8 +1742,8 @@
 .public sub_021B783C
 .public BmpWin_GetBitmap
 .public sub_020232E8
-.public sub_02048244
-.public sub_02048244
+.public BmpWin_FlushChar
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_0204826C
 .public sub_02045B7C
@@ -2006,7 +2006,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_0204B0B8
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_MsgDataLoadStrbuf
 .public sub_02007B24
 .public sub_020232E8
@@ -2014,7 +2014,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02048500
 .public sub_02048210
 .public sub_0204694C
@@ -2212,12 +2212,12 @@
 .public sub_02044CFC
 .public sub_0204AB0C
 .public sub_020232E8
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_0204826C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02045B7C
 .public sub_02044C98
 .public sub_02044C98

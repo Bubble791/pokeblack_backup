@@ -231,7 +231,7 @@ _021EAA2E:
 	lsl r0, r4, #3
 	add r6, r5, r0
 	ldr r0, [r6, #0x64]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r6, #0x68
 	strb r7, [r6]
 _021EAA68:
@@ -679,7 +679,7 @@ _021EADDA:
 	mov r1, #1
 	lsr r2, r2, #0x18
 	mov r3, #0x1d
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	str r0, [r6, #0x4c]
 	add r1, r5, r1
@@ -1019,7 +1019,7 @@ _021EB044:
 	add r0, r5, r0
 	str r0, [sp]
 	ldr r0, [r0, #0x64]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp]
 	mov r1, #0
 	add r0, #0x68
@@ -1207,7 +1207,7 @@ _021EB1D0:
 	bl BmpWin_BitmapFill
 	ldr r0, [sp, #0x1c]
 	ldr r0, [r0, r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021EB1F0:
 	add r0, r7, #0
 	add r0, #0x21
@@ -1492,7 +1492,7 @@ _021EB400:
 	add r0, r5, #0
 	bl sub_02046F18
 	ldr r0, [r4, r7]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, r6, r7, pc}
 _021EB432:
 	ldr r1, [sp, #0x18]

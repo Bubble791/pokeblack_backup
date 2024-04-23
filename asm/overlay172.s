@@ -969,7 +969,7 @@ ovy172_2199f94: ; 0x02199F94
 	mov r1, #1
 	mov r2, #0x13
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x1c]
 	bl sub_0204826C
 	lsl r1, r5, #0x10
@@ -1409,7 +1409,7 @@ _0219A3B0:
 	add r0, r7, #0
 	bl sub_02044F90
 	ldr r0, [r5, #0x1c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _0219A3D6:
 	add r0, r5, #0
 	add r0, #0x38
@@ -1502,7 +1502,7 @@ ovy172_219a458: ; 0x0219A458
 	mov r1, #0xc
 	bl BmpWin_BitmapFill
 	ldr r0, [r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _0219A47E:
 	mov r0, #0
 	str r0, [r4, #4]

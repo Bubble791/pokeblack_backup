@@ -5388,7 +5388,7 @@ _021A9F90:
 	str r1, [sp, #8]
 	ldrb r1, [r3, #1]
 	ldrb r3, [r3, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #4]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -5658,7 +5658,7 @@ _021AA1A4:
 	ldr r0, [r5, #8]
 	bl sub_0204826C
 	ldr r0, [r5, #8]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #7
 	bl sub_02045B7C
 _021AA204:
@@ -5721,7 +5721,7 @@ ovy186_21aa210: ; 0x021AA210
 	ldr r0, [r5, #0xc]
 	bl sub_0204826C
 	ldr r0, [r5, #0xc]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #7
 	bl sub_02045B7C
 _021AA292:
@@ -5741,7 +5741,7 @@ ovy186_21aa298: ; 0x021AA298
 	ldr r0, [r5, #0x18]
 	bl sub_0204826C
 	ldr r0, [r5, #0x18]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	b _021AA2D0
 _021AA2B2:
 	ldr r7, _021AA2E4 ; =0x021ACFF4
@@ -5754,7 +5754,7 @@ _021AA2B6:
 	ldr r0, [r5, r6]
 	bl sub_0204826C
 	ldr r0, [r5, r6]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021AA2CA:
 	add r4, r4, #1
 	cmp r4, #5
@@ -6695,7 +6695,7 @@ _021AAA10:
 	cmp r0, #0
 	beq _021AAA4C
 	add r0, r7, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r7, #0
 	bl sub_0204826C
 	add r0, r7, #0
@@ -8801,7 +8801,7 @@ ovy186_21abb7c: ; 0x021ABB7C
 	mov r0, #4
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #8]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -8842,7 +8842,7 @@ ovy186_21abbdc: ; 0x021ABBDC
 	push {r4, lr}
 	ldr r4, [r0, #8]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -8903,7 +8903,7 @@ ovy186_21abc34: ; 0x021ABC34
 	cmp r0, #0
 	bne _021ABC62
 	ldr r0, [r5, #0xc]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r5, #0x10]
 _021ABC62:

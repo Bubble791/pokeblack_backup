@@ -1585,7 +1585,7 @@ ovy84_21ebb18: ; 0x021EBB18
 	ldrb r1, [r4]
 	ldrb r2, [r4, #4]
 	ldrb r3, [r4, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5]
 	bl BmpWin_GetBitmap
 	ldr r4, [r5]
@@ -1594,7 +1594,7 @@ ovy84_21ebb18: ; 0x021EBB18
 	strb r0, [r5, #0x18]
 	add r0, r4, #0
 	str r4, [r5, #0x14]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -4640,7 +4640,7 @@ ovy84_21ed260: ; 0x021ED260
 	bl BmpWin_BitmapFill
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy84_21ed260

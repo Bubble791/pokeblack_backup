@@ -195,12 +195,12 @@
 .public sub_02042540
 .public sub_021B5F18
 .public sub_021B5F44
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0204826C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02045B7C
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
@@ -262,7 +262,7 @@
 .public sub_02017BCC
 .public sub_02022268
 .public sub_02024E80
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_020223B4
 .public sub_020223CC
 .public GCTX_HIDGetPressedKeys

@@ -291,7 +291,7 @@
 .public ovy36_2187c9c
 .public BmpWin_GetBitmap
 .public ovy36_2189de8
-.public sub_02048244
+.public BmpWin_FlushChar
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public ovy36_2189cd8
@@ -665,10 +665,10 @@
 .public sub_0204C140
 .public sub_02024C8C
 .public sub_0204B0F0
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02024E80
 .public sub_02024EEC

@@ -39,7 +39,7 @@
 	.public ovy142_219e21c
 	.public ovy142_219d22c
 	.public ovy142_219f06c
-	.public ovy142_219f6a4
+	.public BagMenu_PrintBagMessage
 	.public ovy142_219f8ec
 	.public ovy142_219fa6c
 	.text

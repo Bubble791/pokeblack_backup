@@ -487,7 +487,7 @@ _021EABAC:
 	bl sub_02021D28
 	ldr r4, [r5]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -589,7 +589,7 @@ ovy83_21eac70: ; 0x021EAC70
 	cmp r0, #0
 	bne _021EAC9E
 	ldr r0, [r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r4, #4]
 _021EAC9E:

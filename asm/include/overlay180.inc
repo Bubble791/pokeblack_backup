@@ -124,7 +124,7 @@
 .public sub_0204AB0C
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0204898C
@@ -132,7 +132,7 @@
 .public GFL_StrBufFree
 .public sub_02022DA8
 .public GFL_MsgDataFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02044F90
 .public sub_02048210
@@ -177,8 +177,8 @@
 .public sub_0204AB0C
 .public sub_0219C548
 .public sub_0219C548
-.public sub_020480C0
-.public sub_020480C0
+.public BmpWin_CreateDynamic
+.public BmpWin_CreateDynamic
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
@@ -209,7 +209,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02044F90
 .public sub_02044F90

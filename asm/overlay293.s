@@ -3487,7 +3487,7 @@ _021A3556:
 	ldr r4, [r5, #0x1c]
 	str r0, [r5, #0x20]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -3574,7 +3574,7 @@ ovy293_21a360c: ; 0x021A360C
 	ldrb r2, [r3, #8]
 	ldrb r3, [r3, #0xc]
 	mov r0, #1
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x1c]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf

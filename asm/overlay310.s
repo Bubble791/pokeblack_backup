@@ -16268,7 +16268,7 @@ ovy310_21a490c: ; 0x021A490C
 	mov r0, #0
 	str r0, [sp, #8]
 	ldrb r0, [r5]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x18]
 	mov r0, #1
 	str r0, [r4, #0x1c]
@@ -16358,7 +16358,7 @@ _021A49D6:
 	beq _021A4A0C
 	ldr r4, [r5, #0x18]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -16381,7 +16381,7 @@ ovy310_21a4a10: ; 0x021A4A10
 	beq _021A4A30
 	ldr r6, [r5, #0x18]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	b _021A4A40

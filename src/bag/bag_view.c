@@ -587,14 +587,14 @@ void ovy142_219a104(BagView *bagView)
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem,
                                     bagView->stringBuff2,
                                     bagView->stringBuff1);
-            ovy142_219f6a4(bagView, 1);
+            BagMenu_PrintBagMessage(bagView, 1);
             GFL_SndSEPlay(0x7cc);
         }
         else
         {
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x40, bagView->stringBuff1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
-            ovy142_219f6a4(bagView, 1);
+            BagMenu_PrintBagMessage(bagView, 1);
         }
         
         BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
@@ -635,14 +635,14 @@ void ovy142_219a250(BagView *bagView)
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x38, bagView->stringBuff1);
         GFL_CopyVarForText(bagView->wordSetSystem, 0, bagView->unk8);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
-        ovy142_219f6a4(bagView, 1);
+        BagMenu_PrintBagMessage(bagView, 1);
         BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
     }
 }
 
 void ovy142_219a2ac(BagView *bagView)
 {
-    ovy142_219f6a4(bagView, 1);
+    BagMenu_PrintBagMessage(bagView, 1);
     BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
 }
 
@@ -1081,7 +1081,7 @@ void ovy142_219a850(BagView *bagView)
                     else
                     {
                         ovy142_219bda4(bagView, 1);
-                        if ((v3 & 0xCD) != 0)
+                        if ((v3 & (KEY_A | KEY_SELECT | KEY_START | KEY_UP | KEY_DOWN)) != 0)
                             return;
                     }
                 }
@@ -1279,7 +1279,7 @@ void ovy142_219abd8(BagView *bagView)
         int uVar3 = sub_02026AE4((u16)bagView->selectItem);
         sub_020244A4(bagView->wordSetSystem, 0, uVar3);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
-        ovy142_219f6a4(bagView, 1);
+        BagMenu_PrintBagMessage(bagView, 1);
         BagMenu_SetRunFunc(bagView, ovy142_219abb8);
     }
 }
@@ -1315,7 +1315,7 @@ void ovy142_219ac70(BagView *bagView)
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3d, bagView->stringBuff2);
     }
     
-    ovy142_219f6a4(bagView, 1);
+    BagMenu_PrintBagMessage(bagView, 1);
     BagMenu_SetRunFunc(bagView, ovy142_219ac4c);
 }
 
@@ -1660,7 +1660,7 @@ void BagView_DeletItem(BagView *bagView, int delNum)
     inFreeSpace = BagSave_IsItemInFreeSpace(bagView->bagSave, bagView->selectItem);
     BagSave_SubItem(bagView->bagSave, bagView->selectItem, delNum, bagView->heapId);
     count = BagSave_GetItemCountByID(bagView->bagSave, bagView->selectItem, bagView->heapId);
-    
+
     if (count == 0)
     {
         if (inFreeSpace == 1)
@@ -1900,7 +1900,7 @@ void ovy142_219b5d4(BagView *bagView)
         ovy142_21a050c(&bagView->unk8C8, uVar1, 1);
     }
     GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
-    ovy142_219f6a4(bagView, 0);
+    BagMenu_PrintBagMessage(bagView, 0);
     GFL_SndSEPlay(0x663);
     ovy142_219ff40(bagView, 0);
     ovy142_219b3b0(bagView);

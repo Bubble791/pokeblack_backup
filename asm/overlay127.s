@@ -6732,13 +6732,13 @@ ovy127_21f1f58: ; 0x021F1F58
 	mov r0, #5
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x18]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r4, #0x18]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x18]
 	bl sub_0204826C
 	add sp, #0xc
@@ -6787,7 +6787,7 @@ ovy127_21f1fcc: ; 0x021F1FCC
 	mov r3, #2
 	bl sub_02024EE0
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	add sp, #4

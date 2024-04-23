@@ -4466,7 +4466,7 @@ ovy85_21ed098: ; 0x021ED098
 	ldrb r1, [r4]
 	ldrb r2, [r4, #4]
 	ldrb r3, [r4, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5]
 	bl BmpWin_GetBitmap
 	ldr r4, [r5]
@@ -4475,7 +4475,7 @@ ovy85_21ed098: ; 0x021ED098
 	strb r0, [r5, #0x18]
 	add r0, r4, #0
 	str r4, [r5, #0x14]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0

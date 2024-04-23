@@ -31922,8 +31922,8 @@ _020480BA:
 _020480BC: .word 0x02141918
 	thumb_func_end sub_020480A8
 
-	thumb_func_start sub_020480C0
-sub_020480C0: ; 0x020480C0
+	thumb_func_start BmpWin_CreateDynamic
+BmpWin_CreateDynamic: ; 0x020480C0
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x14
 	add r6, r0, #0
@@ -31974,7 +31974,7 @@ _0204811C:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end sub_020480C0
+	thumb_func_end BmpWin_CreateDynamic
 
 	thumb_func_start sub_02048124
 sub_02048124: ; 0x02048124
@@ -32127,8 +32127,8 @@ _0204822C:
 	pop {r4, pc}
 	thumb_func_end sub_02048210
 
-	thumb_func_start sub_02048244
-sub_02048244: ; 0x02048244
+	thumb_func_start BmpWin_FlushChar
+BmpWin_FlushChar: ; 0x02048244
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldrb r0, [r5, #2]
@@ -32146,7 +32146,7 @@ sub_02048244: ; 0x02048244
 	add r2, r4, #0
 	bl sub_02045080
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_02048244
+	thumb_func_end BmpWin_FlushChar
 
 	thumb_func_start sub_0204826C
 sub_0204826C: ; 0x0204826C

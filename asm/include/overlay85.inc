@@ -290,9 +290,9 @@
 .public sub_0202AEAC
 .public sub_0204BECC
 .public sub_0204BF98
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90

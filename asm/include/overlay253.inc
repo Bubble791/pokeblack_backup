@@ -105,7 +105,7 @@
 .public sub_0204898C
 .public sub_02021D28
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90

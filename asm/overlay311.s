@@ -580,7 +580,7 @@ ovy311_219d244: ; 0x0219D244
 	mov r1, #1
 	mov r2, #0x13
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x24]
 	mov r0, #2
 	str r0, [sp]
@@ -591,7 +591,7 @@ ovy311_219d244: ; 0x0219D244
 	mov r1, #1
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x28]
 	add r5, r0, #0
 	bl BmpWin_GetBitmap
@@ -614,7 +614,7 @@ ovy311_219d244: ; 0x0219D244
 	mov r1, #4
 	bl sub_02021CFC
 	add r0, r5, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	bl sub_0204826C
 	add r0, r5, #0
@@ -794,7 +794,7 @@ ovy311_219d458: ; 0x0219D458
 	mov r3, #0xf
 	bl sub_02024E80
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0

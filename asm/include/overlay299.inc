@@ -211,13 +211,13 @@
 .public sub_02017644
 .public sub_02017644
 .public sub_02048080
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02048210
 .public sub_020480A8
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204898C
 .public sub_0219A2A4
 .public GFL_StrBufFree

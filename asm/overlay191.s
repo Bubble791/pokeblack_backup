@@ -2823,7 +2823,7 @@ ovy191_21b6930: ; 0x021B6930
 	mov r2, #0x13
 	mov r3, #0x1e
 	str r7, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	ldr r4, _021B6A14 ; =0x0000097C
 	mov r1, #1
 	add r2, r4, #0
@@ -2841,7 +2841,7 @@ ovy191_21b6930: ; 0x021B6930
 	ldr r0, [r5, r4]
 	bl sub_0204826C
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #1
 	bl sub_02045B7C
 	ldr r2, _021B6A18 ; =0x0000019D
@@ -3439,7 +3439,7 @@ _021B6DEC:
 	bl sub_02024E80
 	sub r4, #0x14
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

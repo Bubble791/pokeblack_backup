@@ -209,14 +209,14 @@
 .public GFL_FontCreate
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0202E7A4
 .public sub_02035734
 .public sub_0202E818
@@ -243,7 +243,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_02022268
 .public sub_02024E80
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -267,7 +267,7 @@
 .public sub_021A333C
 .public sub_020256F0
 .public sub_02026510
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -277,7 +277,7 @@
 .public sub_02024EEC
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02025A10
 .public sub_02024FAC
 .public MI_CpuFill8

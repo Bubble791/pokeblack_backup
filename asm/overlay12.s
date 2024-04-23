@@ -41388,7 +41388,7 @@ ovy12_2163ee0: ; 0x02163EE0
 	mov r2, #1
 	mov r3, #0x1e
 	mov r4, #6
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	ldr r1, [r5, #0x1c]
 	mov r2, #0xd
 	str r0, [r1, #8]
@@ -41479,7 +41479,7 @@ ovy12_2163f50: ; 0x02163F50
 	ldr r0, [r5, #0x1c]
 	ldr r4, [r0, #8]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -41636,7 +41636,7 @@ ovy12_2164090: ; 0x02164090
 	ldr r0, [r5, #0x1c]
 	ldr r4, [r0, #8]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -41667,7 +41667,7 @@ ovy12_2164110: ; 0x02164110
 	cmp r0, #0
 	bne _02164144
 	ldr r0, [r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r4, #4]
 _02164144:

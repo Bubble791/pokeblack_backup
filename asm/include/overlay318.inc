@@ -47,11 +47,11 @@
 .public sub_02024D00
 .public MI_CpuFill8
 .public GFL_StrBufCreate
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -69,7 +69,7 @@
 .public sub_020223CC
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02017BCC
 .public sub_02022268
 .public sub_0204826C

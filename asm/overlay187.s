@@ -448,7 +448,7 @@ _021E8F4E:
 	cmp r0, #0
 	bne _021E8FE0
 	ldr r0, [r4, #0x44]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #3
 	bl sub_021E9710
 	lsl r0, r0, #0x18
@@ -530,7 +530,7 @@ _021E8FE0:
 	cmp r0, #0
 	bne _021E9014
 	ldr r0, [r4, #0x48]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	add r0, #0x4c
 	strb r7, [r0]
@@ -986,7 +986,7 @@ _021E9384:
 	cmp r0, #0
 	bne _021E93A6
 	ldr r0, [r4, #0x44]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #3
 	bl sub_021E9710
 	lsl r0, r0, #0x18
@@ -1487,7 +1487,7 @@ ovy187_21e9780: ; 0x021E9780
 	mov r2, #0
 	mov r3, #0x20
 	mov r4, #0
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x44]
 	bl sub_0204826C
 	ldr r0, [r5, #0x44]

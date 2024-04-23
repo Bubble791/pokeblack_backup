@@ -2096,7 +2096,7 @@ ovy256_21bc714: ; 0x021BC714
 	mov r2, #0
 	mov r3, #0x1e
 	str r6, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	ldr r4, _021BC758 ; =0x00000B48
 	mov r1, #4
 	str r0, [r5, r4]
@@ -2107,7 +2107,7 @@ ovy256_21bc714: ; 0x021BC714
 	mov r2, #7
 	mov r3, #0x18
 	str r6, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add r4, #8
 	str r0, [r5, r4]
 	add sp, #0xc
@@ -2176,7 +2176,7 @@ _021BC7AA:
 	bne _021BC7DE
 	ldr r0, [sp, #0xc]
 	ldr r0, [r5, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #8]
 	mov r1, #0
 	strb r1, [r5, r0]
@@ -2977,7 +2977,7 @@ ovy256_21bce5c: ; 0x021BCE5C
 	mov r1, #0
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy256_21bce5c
 

@@ -14,7 +14,7 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public GFL_SndSEPlay
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -22,12 +22,12 @@
 .public sub_02035660
 .public sub_02017850
 .public sub_0203580C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
 .public GFL_SndSEPlay
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -50,7 +50,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
 .public sub_02024D00
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_TCBExMgrCreate
 .public GFL_StrBufCreate
 .public sub_0203A850
@@ -117,8 +117,8 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
-.public sub_020480C0
-.public sub_02048244
+.public BmpWin_CreateDynamic
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -161,6 +161,6 @@
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_020484D4
 .public sub_02045B7C

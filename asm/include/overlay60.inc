@@ -71,7 +71,7 @@
 .public sub_0200955C
 .public sub_020095A0
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -107,7 +107,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0203A7F4
 .public sub_0203A7F4
 .public sub_0204826C
@@ -131,7 +131,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0203A7F4
 .public sub_0203A7F4
 .public sub_0204826C
@@ -150,7 +150,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0203A7F4
 .public sub_0203A7F4
 .public GFL_MsgSysLoadData
@@ -329,9 +329,9 @@
 .public sub_0204BCD0
 .public sub_0204AB0C
 .public sub_0204BF98
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02021998
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -339,7 +339,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -354,7 +354,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02021D28
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -369,7 +369,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02021D28
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -378,7 +378,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02021D28
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -412,7 +412,7 @@
 .public sub_02022294
 .public sub_0202E818
 .public sub_0202E7A4
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -424,7 +424,7 @@
 .public GFL_StrBufFree
 .public sub_02017BCC
 .public sub_02022294
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -438,7 +438,7 @@
 .public sub_02022294
 .public sub_0202E818
 .public sub_0202E7A4
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90

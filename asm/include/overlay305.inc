@@ -89,7 +89,7 @@
 .public sub_0219D790
 .public sub_0204C4B8
 .public sub_0219D730
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public sub_02008BA0
 .public sub_02008BF0
@@ -102,7 +102,7 @@
 .public sub_020232E8
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C

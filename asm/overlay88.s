@@ -351,7 +351,7 @@ ovy88_21eab04: ; 0x021EAB04
 	mov r1, #1
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x18]
 	mov r0, #0xa
 	str r0, [sp]
@@ -361,7 +361,7 @@ ovy88_21eab04: ; 0x021EAB04
 	mov r1, #1
 	mov r2, #0xd
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x1c]
 	ldr r0, [r5, #0x18]
 	mov r1, #4
@@ -371,7 +371,7 @@ ovy88_21eab04: ; 0x021EAB04
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x18]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x18]
 	bl sub_0204826C
 	ldr r0, [r5, #0x1c]
@@ -379,7 +379,7 @@ ovy88_21eab04: ; 0x021EAB04
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x1c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x1c]
 	bl sub_0204826C
 	add r0, r4, #0
@@ -451,7 +451,7 @@ ovy88_21eabf0: ; 0x021EABF0
 	mov r3, #2
 	bl sub_02024EE0
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	add sp, #4
@@ -496,7 +496,7 @@ ovy88_21eac34: ; 0x021EAC34
 	mov r3, #2
 	bl sub_02024EE0
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r7, #0
 	bl GFL_StrBufFree
 	pop {r3, r4, r5, r6, r7, pc}
@@ -858,7 +858,7 @@ _021EAF34:
 	mov r1, #6
 	bl sub_02048500
 	ldr r0, [r4, #0x1c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x1c]
 	bl sub_0204826C
 	ldr r1, [r4, #0x1c]

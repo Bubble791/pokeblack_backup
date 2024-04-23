@@ -24,14 +24,14 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204AB0C
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02022888
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02048210
 .public sub_02022DA8
 .public sub_02016AD8

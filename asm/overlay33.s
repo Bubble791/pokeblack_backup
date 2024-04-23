@@ -2052,7 +2052,7 @@ _02177B6A:
 	ldr r0, [r0, #0x10]
 	bl ovy36_2189de8
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
@@ -4840,13 +4840,13 @@ ovy33_2179140: ; 0x02179140
 	mov r0, #1
 	mov r1, #0xa
 	mov r2, #3
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x30]
 	bl BmpWin_GetBitmap
 	mov r1, #0x11
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, #0x30]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x30]
 	bl sub_0204826C
 	ldr r0, [r5, #0x30]

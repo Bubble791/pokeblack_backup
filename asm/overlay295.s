@@ -142,7 +142,7 @@ _0219CF7E:
 	bl ovy295_219d2c4
 	ldr r6, [r4, #0x1c]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0
@@ -244,7 +244,7 @@ _0219D03E:
 	bl ovy295_219d2c4
 	ldr r6, [r4, #0x1c]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0
@@ -265,7 +265,7 @@ _0219D084:
 	bl ovy295_219d2c4
 	ldr r6, [r4, #0x1c]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0
@@ -425,7 +425,7 @@ ovy295_219d154: ; 0x0219D154
 	mov r1, #2
 	mov r2, #0x12
 	mov r3, #0x1b
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x1c]
 	ldrh r0, [r5]
 	mov r2, #0xa
@@ -821,7 +821,7 @@ _0219D4C4:
 	mov r1, #2
 	mov r2, #7
 	mov r3, #0x1b
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x14]
 	ldr r0, [r4, #4]
 	cmp r0, #0
@@ -838,7 +838,7 @@ _0219D538:
 	bl ovy295_219d66c
 	ldr r6, [r4, #0x14]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0
@@ -1029,7 +1029,7 @@ ovy295_219d66c: ; 0x0219D66C
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x14]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x14]
 	bl sub_020484D4
 	bl sub_02045B7C

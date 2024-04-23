@@ -616,7 +616,7 @@ _0219D336:
 	add r0, r5, r4
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r1, r5, r4
 	add r1, #0xa0
 	mov r0, #0
@@ -4138,7 +4138,7 @@ _0219EEBA:
 	ldrb r1, [r5, #1]
 	ldrb r2, [r5, #2]
 	ldrb r3, [r5, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	add r1, r6, r4
 	add r1, #0x9c
 	str r0, [r1]
@@ -5657,7 +5657,7 @@ ovy309_219faa8: ; 0x0219FAA8
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	bne _0219FB34
@@ -5739,7 +5739,7 @@ ovy309_219fb78: ; 0x0219FB78
 	mov r2, #0xf
 	bl sub_0202E870
 	ldr r0, [r4, r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 _0219FBA0:
 	mov r5, #0x51
@@ -5753,7 +5753,7 @@ _0219FBA0:
 	mov r2, #0xf
 	bl sub_0202E82C
 	ldr r0, [r4, r5]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy309_219fb78
 

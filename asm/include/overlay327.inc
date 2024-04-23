@@ -77,10 +77,10 @@
 .public MI_CpuFill8
 .public sub_02021998
 .public GFL_StrBufCreate
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_TCBExMgrCreate
 .public sub_020223CC
@@ -95,10 +95,10 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0202E8D8
 .public sub_0202E68C
 .public sub_0203A7F4

@@ -3496,7 +3496,7 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public sub_0203A24C
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_02024D00
 .public sub_0204B0B8
 .public GFL_MsgDataLoadStrbuf
@@ -3506,7 +3506,7 @@
 .public sub_0218799C
 .public sub_02017BCC
 .public sub_02022268
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -3531,14 +3531,14 @@
 .public BmpWin_GetBitmap
 .public sub_02021C54
 .public GFL_StrBufFree
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_MsgSysLoadData
 .public sub_0204898C

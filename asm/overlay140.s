@@ -645,7 +645,7 @@ _0219D284:
 	mov r1, #1
 	mov r2, #0x13
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x44]
 	mov r0, #4
 	str r0, [sp]
@@ -657,7 +657,7 @@ _0219D284:
 	mov r1, #1
 	mov r2, #1
 	mov r3, #0x1e
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x48]
 	mov r0, #3
 	str r0, [sp]
@@ -669,7 +669,7 @@ _0219D284:
 	add r1, r5, #0
 	add r2, r5, #0
 	mov r3, #0x10
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x40]
 	add r0, r7, #0
 	bl ovy140_219d4e4
@@ -829,7 +829,7 @@ _0219D526:
 	str r0, [sp, #8]
 	ldrb r1, [r7, #4]
 	ldrb r2, [r7, #5]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	ldr r1, [sp, #0x18]
 	str r0, [r6, r1]
 	bl BmpWin_GetBitmap
@@ -848,7 +848,7 @@ _0219D526:
 	ldr r0, [sp, #0x18]
 	ldr r5, [r6, r0]
 	add r0, r5, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	bl sub_0204826C
 	add r0, r5, #0
@@ -895,7 +895,7 @@ _0219D526:
 	bl sub_02021D28
 	ldr r4, [r6, #0x40]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -1564,7 +1564,7 @@ ovy140_219daa4: ; 0x0219DAA4
 	bl BmpWin_BitmapFill
 	ldr r4, [r5, #0x10]
 	add r0, r4, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r4, #0
 	bl sub_0204826C
 	add r0, r4, #0
@@ -1713,7 +1713,7 @@ _0219DC12:
 	cmp r0, #0
 	bne _0219DC3E
 	ldr r0, [r5, #0x1c]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r5, #0
 	mov r1, #0
 	add r0, #0x20

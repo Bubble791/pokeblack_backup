@@ -38,7 +38,7 @@
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_02042BA8
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_021E9710
 .public sub_02045B7C
 .public sub_0204E060
@@ -51,7 +51,7 @@
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204B794
 .public sub_0203A24C
 .public GCTX_HIDGetPressedKeys
@@ -100,7 +100,7 @@
 .public sub_021E9710
 .public sub_0204AF50
 .public sub_0204AB0C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_021E9710
 .public sub_02045B7C
 .public sub_021E93BC
@@ -167,7 +167,7 @@
 .public sub_02044528
 .public sub_02048080
 .public sub_021E9710
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_02048210
 .public sub_020480A8

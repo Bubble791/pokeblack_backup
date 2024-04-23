@@ -4185,7 +4185,7 @@ _021A1CFA:
 	ldrb r1, [r3, #1]
 	ldrb r3, [r3, #3]
 	str r7, [sp, #8]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	lsl r1, r4, #3
 	add r2, r5, r1
 	mov r1, #0x53
@@ -4271,7 +4271,7 @@ _021A1D8C:
 	bne _021A1DC2
 	ldr r0, [sp, #0xc]
 	ldr r0, [r5, r0]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	ldr r0, [sp, #8]
 	mov r1, #0
 	strb r1, [r5, r0]
@@ -4760,7 +4760,7 @@ ovy300_21a21a0: ; 0x021A21A0
 	mov r1, #0
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy300_21a21a0
 
@@ -5308,10 +5308,10 @@ _021A2628: .word 0x000039E0
 	thumb_func_start sub_021A262C
 sub_021A262C: ; 0x021A262C
 	ldr r0, [r1]
-	ldr r3, _021A2634 ; =sub_02048244
+	ldr r3, _021A2634 ; =BmpWin_FlushChar
 	bx r3
 	nop
-_021A2634: .word sub_02048244
+_021A2634: .word BmpWin_FlushChar
 	thumb_func_end sub_021A262C
 
 	thumb_func_start ovy300_21a2638

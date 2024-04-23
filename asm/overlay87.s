@@ -181,7 +181,7 @@ _021EA9B2:
 	cmp r0, #0
 	bne _021EA9DA
 	ldr r0, [r4, #0xc]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	mov r0, #0
 	strb r0, [r4, #0x10]
 _021EA9DA:
@@ -473,7 +473,7 @@ _021EAC3A:
 	str r1, [sp, #8]
 	ldrb r1, [r3, #1]
 	ldrb r3, [r3, #3]
-	bl sub_020480C0
+	bl BmpWin_CreateDynamic
 	str r0, [r6, #0xc]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -978,7 +978,7 @@ _021EAFA4:
 	b _021EB10A
 _021EB104:
 	ldr r0, [r5, #0x44]
-	bl sub_02048244
+	bl BmpWin_FlushChar
 _021EB10A:
 	add r0, r6, #0
 	bl GFL_StrBufFree

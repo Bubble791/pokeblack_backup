@@ -1009,7 +1009,7 @@ _0217D0B6:
 	bl GFL_StrBufFree
 	ldr r6, [r5, r7]
 	add r0, r6, #0
-	bl sub_02048244
+	bl BmpWin_FlushChar
 	add r0, r6, #0
 	bl sub_0204826C
 	add r0, r6, #0

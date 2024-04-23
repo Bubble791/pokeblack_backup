@@ -382,10 +382,10 @@
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public GFL_StrBufCreate
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
@@ -407,7 +407,7 @@
 .public sub_02021C7C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_02046EF8
 .public sub_02046EFC
 .public sub_02022888
@@ -417,7 +417,7 @@
 .public sub_0208D65C
 .public sub_0203CB80
 .public sub_0203CB80
-.public sub_020480C0
+.public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
@@ -456,7 +456,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
-.public sub_02048244
+.public BmpWin_FlushChar
 .public sub_0203D9C8
 .public sub_0203DA84
 .public sub_02046EF4
