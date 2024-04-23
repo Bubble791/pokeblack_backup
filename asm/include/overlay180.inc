@@ -291,7 +291,7 @@
 .public sub_0203A24C
 .public sub_0203DAC8
 .public sub_0203DA84
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
 .public sub_0203DA2C
 .public sub_0203DF20

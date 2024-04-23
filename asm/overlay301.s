@@ -624,7 +624,7 @@ _021A00B2:
 	mov r0, #5
 	pop {r4, r5, r6, pc}
 _021A00C8:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #1
 	tst r0, r4
 	beq _021A00DC
@@ -633,7 +633,7 @@ _021A00C8:
 	mov r0, #5
 	pop {r4, r5, r6, pc}
 _021A00DC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #2
 	tst r0, r6
 	beq _021A00FC
@@ -647,7 +647,7 @@ _021A00DC:
 	mov r0, #3
 	pop {r4, r5, r6, pc}
 _021A00FC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r6, #9
 	tst r0, r1
 	beq _021A011A

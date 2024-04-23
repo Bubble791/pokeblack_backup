@@ -68,8 +68,8 @@
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -80,8 +80,8 @@
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -104,8 +104,8 @@
 .public sub_021F64E0
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

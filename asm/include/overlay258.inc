@@ -122,7 +122,7 @@
 .public sub_0203DF20
 .public sub_020223E0
 .public sub_020223CC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223BC
 .public GFL_SndSEPlay

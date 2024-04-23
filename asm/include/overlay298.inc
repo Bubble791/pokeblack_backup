@@ -204,7 +204,7 @@
 .public sub_0204C138
 .public sub_0203DAC8
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203D564
 .public sub_0204C560
@@ -252,7 +252,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public sub_021A1D3C
 .public sub_021A1D88
@@ -281,7 +281,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public sub_0203A1FC
 .public sub_02044CFC
@@ -410,7 +410,7 @@
 .public sub_0203D564
 .public sub_0219FD34
 .public sub_0203DF44
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0204C138
 .public sub_0208D65C
 .public sub_0204C138
@@ -767,7 +767,7 @@
 .public sub_0219FD24
 .public sub_0200D190
 .public sub_0200D1C0
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public GFL_SndSEPlay
 .public sub_0203DF44
@@ -777,7 +777,7 @@
 .public GFL_SndSEPlay
 .public sub_0203D564
 .public GFL_SndSEPlay
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public GFL_SndSEPlay
 .public sub_0203DF44
@@ -791,7 +791,7 @@
 .public sub_0203DAC8
 .public sub_0203D564
 .public sub_0204C124
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203D554
 .public sub_0204C178
@@ -1174,7 +1174,7 @@
 .public sub_020066C0
 .public sub_02006648
 .public sub_0204C124
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203DAC8
 .public sub_0203D564
@@ -1547,7 +1547,7 @@
 .public sub_021A9048
 .public sub_0204C124
 .public sub_0219FD34
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DAC8
 .public GFL_SndSEPlay
 .public sub_0203D564
@@ -1610,7 +1610,7 @@
 .public sub_0204BE64
 .public sub_0219FD34
 .public sub_0204C138
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public sub_0203DAC8
 .public sub_0204C138

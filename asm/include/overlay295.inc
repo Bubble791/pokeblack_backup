@@ -7,7 +7,7 @@
 .public sub_0201736C
 .public sub_02017934
 .public sub_0200746C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02015878
 .public GXS_LoadBGPltt
 .public GXS_LoadBGPltt
@@ -110,7 +110,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MIi_CpuClear32
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GX_SetBankForLCDC
 .public MIi_CpuClearFast
 .public GX_DisableBankForLCDC

@@ -346,7 +346,7 @@ ovy264_2199b40: ; 0x02199B40
 	ldrb r0, [r0, #2]
 	cmp r0, #0
 	beq _02199B6E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xb
 	tst r0, r1
 	beq _02199B6E

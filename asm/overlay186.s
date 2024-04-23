@@ -2527,7 +2527,7 @@ _021A8A24: .word 0x00003064
 ovy186_21a8a28: ; 0x021A8A28
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r7, #2
 	add r1, r0, #0
 	tst r1, r7
@@ -9314,7 +9314,7 @@ ovy186_21abf24: ; 0x021ABF24
 _021ABF6C:
 	cmp r6, #0
 	bne _021ABFE4
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #2
 	tst r0, r6
 	beq _021ABF92
@@ -9330,7 +9330,7 @@ _021ABF6C:
 	mov r4, #0x13
 	b _021ABFE4
 _021ABF92:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r6, #9
 	tst r0, r1
 	beq _021ABFB2
@@ -9345,7 +9345,7 @@ _021ABF92:
 	mov r4, #0x12
 	b _021ABFE4
 _021ABFB2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r6, #0xa
 	tst r0, r1
 	beq _021ABFCC
@@ -9358,7 +9358,7 @@ _021ABFB2:
 	mov r4, #0x11
 	b _021ABFE4
 _021ABFCC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021ABFE4

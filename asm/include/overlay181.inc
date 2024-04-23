@@ -271,7 +271,7 @@
 .public sub_0219F4C0
 .public sub_0219F4C0
 .public sub_0203DA0C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0204C488
 .public sub_0204C520
 .public GFL_SndSEPlay

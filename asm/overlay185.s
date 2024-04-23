@@ -8383,7 +8383,7 @@ _021A0E10: .word ovy185_21a1174
 ovy185_21a0e14: ; 0x021A0E14
 	push {r3, r4, r5, lr}
 	add r4, r3, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	strh r0, [r4, #0x34]
 	bl sub_0203DF20
 	strh r0, [r4, #0x36]
@@ -11173,7 +11173,7 @@ ovy185_21a23bc: ; 0x021A23BC
 	bne _021A23EC
 	cmp r0, #0
 	bne _021A23F8
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	bne _021A23F8
@@ -12035,7 +12035,7 @@ ovy185_21a2aa4: ; 0x021A2AA4
 	ldr r0, [r5, #0x70]
 	cmp r0, #0
 	bne _021A2ACA
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	bne _021A2ACA
@@ -16029,7 +16029,7 @@ ovy185_21a47f4: ; 0x021A47F4
 	lsr r0, r0, #0x1f
 	bne _021A486E
 	add r7, r6, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	bic r0, r1
 	beq _021A4814
@@ -16096,7 +16096,7 @@ _021A486E:
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
 	bne _021A4960
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021A4896

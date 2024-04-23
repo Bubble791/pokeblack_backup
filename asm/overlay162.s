@@ -103,7 +103,7 @@ ovy162_219cf44: ; 0x0219CF44
 	push {r4, lr}
 	sub sp, #0x10
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xb
 	tst r0, r1
 	beq _0219CF90
@@ -133,7 +133,7 @@ ovy162_219cf44: ; 0x0219CF44
 	str r0, [r4]
 	pop {r4, pc}
 _0219CF90:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #9
 	tst r0, r1
 	beq _0219CFFE
@@ -1796,7 +1796,7 @@ ovy162_219dd50: ; 0x0219DD50
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
 	bl sub_02035198
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #1
 	tst r0, r6
 	beq _0219DE54
@@ -1916,7 +1916,7 @@ _0219DE46:
 	bl ovy162_219ffd4
 	pop {r4, r5, r6, pc}
 _0219DE54:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219DE74
@@ -2169,7 +2169,7 @@ _0219E04E:
 	bne _0219E0A4
 	b _0219E072
 _0219E058:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219E0A4
@@ -2284,7 +2284,7 @@ _0219E124:
 	bne _0219E19C
 	b _0219E11C
 _0219E132:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #1
 	tst r0, r6
 	beq _0219E15C
@@ -2302,7 +2302,7 @@ _0219E132:
 	bl ovy162_219ffa8
 	pop {r3, r4, r5, r6, r7, pc}
 _0219E15C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r7, #2
 	tst r0, r7
 	beq _0219E19C
@@ -2476,7 +2476,7 @@ _0219E2B0:
 	bne _0219E300
 	b _0219E2A8
 _0219E2C0:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r7, #3
 	tst r0, r7
 	beq _0219E300
@@ -2640,7 +2640,7 @@ _0219E40E:
 	bl ovy162_219feac
 	cmp r0, #0
 	bne _0219E44A
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219E44A
@@ -5910,7 +5910,7 @@ _0219FF02:
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _0219FF42
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219FF42
@@ -7147,11 +7147,11 @@ ovy162_21a0908: ; 0x021A0908
 	push {r4, r5, lr}
 	sub sp, #0xc
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x40
 	tst r0, r1
 	bne _021A0922
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x80
 	tst r0, r1
 	beq _021A093C
@@ -7170,7 +7170,7 @@ _021A092E:
 	ldr r0, _021A0994 ; =0x00000548
 	bl GFL_SndSEPlay
 _021A093C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #1
 	tst r0, r4
 	beq _021A095A
@@ -7491,7 +7491,7 @@ _021A0BB8:
 	mov r0, #4
 	strh r0, [r4]
 _021A0BC6:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xb
 	tst r0, r1
 	beq _021A0BEC
@@ -8297,7 +8297,7 @@ _021A121A:
 	ldr r0, [r4, #0x28]
 	cmp r0, #0
 	bne _021A1246
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021A1246

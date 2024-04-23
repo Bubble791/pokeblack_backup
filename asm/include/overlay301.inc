@@ -81,12 +81,12 @@
 .public GFL_FadeScreenIsFinished
 .public sub_0203DA2C
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_021AD7A8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_021AD7A8
 .public GFL_SndSEPlay

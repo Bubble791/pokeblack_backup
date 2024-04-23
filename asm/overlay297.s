@@ -210,7 +210,7 @@ _021F4418:
 	add r6, r5, #0
 	bl sub_0203DA48
 	add r7, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F4432
@@ -1073,7 +1073,7 @@ _021F4AE6:
 	b _021F4C3E
 _021F4AF0:
 	add r6, r5, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F4B06
@@ -1203,7 +1203,7 @@ _021F4BFE:
 	b _021F4AE6
 _021F4C04:
 	add r6, r5, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F4C1A

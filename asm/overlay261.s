@@ -2481,7 +2481,7 @@ _02177DB6:
 	str r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}
 _02177DCE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _02177E4C
@@ -3787,7 +3787,7 @@ _0217881C:
 _0217881E:
 	str r0, [r5]
 _02178820:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _02178890
@@ -5779,7 +5779,7 @@ _02179788:
 	str r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}
 _02179798:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #3
 	tst r0, r5
 	beq _02179854
@@ -6062,7 +6062,7 @@ _021799C8:
 	str r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}
 _021799D8:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #3
 	tst r0, r5
 	beq _02179A94
@@ -6331,7 +6331,7 @@ _02179BEE:
 	str r0, [r4]
 	pop {r4, r5, r6, pc}
 _02179BFE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #3
 	tst r0, r5
 	beq _02179C84
@@ -6442,7 +6442,7 @@ _02179CCE:
 	str r0, [r4]
 	pop {r4, r5, r6, pc}
 _02179CDE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #3
 	tst r0, r5
 	beq _02179D64
@@ -6553,7 +6553,7 @@ _02179DAE:
 	str r0, [r4]
 	pop {r4, r5, r6, pc}
 _02179DBE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #3
 	tst r0, r5
 	beq _02179E44

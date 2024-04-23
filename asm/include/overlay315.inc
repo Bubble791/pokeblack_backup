@@ -44,7 +44,7 @@
 .public sub_02005F0C
 .public sub_02005E54
 .public sub_02005E68
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203DAC8
 .public sub_0203D564

@@ -11526,7 +11526,7 @@ _0219ED34:
 	bl ovy167_219c980
 	cmp r0, #0
 	bne _0219ED54
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219ED52
@@ -63311,7 +63311,7 @@ _021B7FA8:
 	ldr r0, [r7, #8]
 	add r0, r0, #1
 	str r0, [r7, #8]
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7FC8
@@ -63338,7 +63338,7 @@ _021B7FE2:
 	bl ovy167_21d0988
 	cmp r0, #0
 	beq _021B8062
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7FFE
@@ -63355,7 +63355,7 @@ _021B8008:
 	bl ovy167_21d09a8
 	cmp r0, #0
 	beq _021B8062
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B8024
@@ -118638,7 +118638,7 @@ _021D2FEE:
 	strb r1, [r4, r0]
 	b _021D3086
 _021D2FF2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021D3004

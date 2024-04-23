@@ -1488,7 +1488,7 @@ _021EB3D4:
 _021EB402:
 	cmp r5, #0
 	bne _021EB41A
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	lsl r1, r1, #0xa
 	tst r0, r1

@@ -2267,7 +2267,7 @@ _0219E1A4:
 	ldr r0, _0219E370 ; =0x021A4040
 	bl sub_0203DA0C
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #2
 	beq _0219E1CC
 	cmp r5, #0

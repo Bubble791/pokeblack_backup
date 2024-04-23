@@ -910,26 +910,26 @@ _021E5FE2:
 	mov r4, #0
 	cmp r0, #0
 	beq _021E6008
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	bne _021E6006
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021E6028
 _021E6006:
 	b _021E6026
 _021E6008:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	bne _021E6026
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	bne _021E6026
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xf0
 	tst r0, r1
 	beq _021E6028

@@ -613,7 +613,7 @@ _02170828:
 	bne _0217085C
 	b _02170820
 _02170834:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xf3
 	tst r0, r1
 	beq _0217085C

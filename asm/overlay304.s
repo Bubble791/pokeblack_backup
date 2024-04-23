@@ -711,7 +711,7 @@ ovy304_21a0138: ; 0x021A0138
 	push {r4, r5, r6, lr}
 	sub sp, #8
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r6, r0, #0
 	ldr r0, _021A03C4 ; =0x021A1E0C
 	bl sub_0203DA0C

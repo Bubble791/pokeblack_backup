@@ -96,8 +96,8 @@
 .public sub_02045B7C
 .public sub_020223B4
 .public sub_020223CC
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223BC
 .public GFL_SndSEPlay
@@ -140,8 +140,8 @@
 .public G2x_SetBlendAlpha_
 .public sub_02005680
 .public sub_02042BA8
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_0219B2E0
 .public sub_0219CC28
 .public sub_0219CC34

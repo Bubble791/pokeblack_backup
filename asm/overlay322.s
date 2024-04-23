@@ -3406,7 +3406,7 @@ _0219E984:
 _0219E99A:
 	cmp r6, #0
 	bne _0219E9AA
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219E9AA
@@ -3778,21 +3778,21 @@ _0219EC6A:
 _0219EC70:
 	cmp r4, #0
 	bne _0219EC9C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _0219EC82
 	mov r4, #1
 	b _0219EC9C
 _0219EC82:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _0219EC90
 	mov r4, #2
 	b _0219EC9C
 _0219EC90:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219EC9C
@@ -4188,21 +4188,21 @@ _0219EF9A:
 _0219EFA0:
 	cmp r4, #0
 	bne _0219EFCC
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _0219EFB2
 	mov r4, #1
 	b _0219EFCC
 _0219EFB2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _0219EFC0
 	mov r4, #2
 	b _0219EFCC
 _0219EFC0:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219EFCC

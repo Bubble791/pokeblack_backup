@@ -2631,8 +2631,8 @@ _02007FE0: .word 0x000009EC
 _02007FE4: .word MI_CpuFill8
 	thumb_func_end sub_02007FD8
 
-	thumb_func_start sub_02007FE8
-sub_02007FE8: ; 0x02007FE8
+	thumb_func_start BagSave_CopyPocket
+BagSave_CopyPocket: ; 0x02007FE8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r1, #0
@@ -2703,7 +2703,7 @@ _02008068:
 _02008070:
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end sub_02007FE8
+	thumb_func_end BagSave_CopyPocket
 
 	thumb_func_start sub_02008074
 sub_02008074: ; 0x02008074
@@ -70548,7 +70548,7 @@ _02025136:
 sub_02025144: ; 0x02025144
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r2, r5, #0
 	mov r1, #0
 	add r2, #0x2f
@@ -71522,7 +71522,7 @@ _020258A0: .word 0x0209A454
 sub_020258A4: ; 0x020258A4
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	bl sub_0203DF44
 	add r1, r5, #0
@@ -84889,7 +84889,7 @@ _0202B6BE:
 	bl sub_0202B948
 	pop {r3, r4, r5, pc}
 _0202B6D2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x40
 	tst r0, r1
 	beq _0202B6EC
@@ -84902,7 +84902,7 @@ _0202B6E4:
 	add r2, r0, #0
 	b _0202B72A
 _0202B6EC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x80
 	tst r0, r1
 	beq _0202B700
@@ -84912,7 +84912,7 @@ _0202B6EC:
 	mov r2, #1
 	b _0202B6E4
 _0202B700:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _0202B714
@@ -84922,7 +84922,7 @@ _0202B700:
 	mov r2, #2
 	b _0202B6E4
 _0202B714:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _0202B728
@@ -84941,7 +84941,7 @@ _0202B72A:
 	bl sub_0202B990
 	pop {r3, r4, r5, pc}
 _0202B738:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _0202B74C
@@ -84950,7 +84950,7 @@ _0202B738:
 	ldrb r0, [r5, #0xd]
 	pop {r3, r4, r5, pc}
 _0202B74C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0202B762
@@ -85038,7 +85038,7 @@ _0202B7E6:
 	bl sub_0202B990
 	pop {r3, r4, r5, pc}
 _0202B7F4:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _0202B808
@@ -85047,7 +85047,7 @@ _0202B7F4:
 	ldrb r0, [r5, #0xd]
 	pop {r3, r4, r5, pc}
 _0202B808:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0202B81E
@@ -85232,7 +85232,7 @@ sub_0202B948: ; 0x0202B948
 	ldr r0, [r4, #8]
 	cmp r0, #1
 	bne _0202B964
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xf3
 	tst r0, r1
 	beq _0202B98A
@@ -85240,7 +85240,7 @@ sub_0202B948: ; 0x0202B948
 	bl sub_0202B924
 	pop {r3, r4, r5, pc}
 _0202B964:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xf1
 	tst r0, r1
 	beq _0202B976
@@ -85248,7 +85248,7 @@ _0202B964:
 	bl sub_0202B924
 	pop {r3, r4, r5, pc}
 _0202B976:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r5, #2
 	tst r0, r5
 	beq _0202B98A
@@ -90694,7 +90694,7 @@ _0202DF3E:
 sub_0202DF40: ; 0x0202DF40
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r6, r0, #0
 	bl sub_0203DF44
 	add r7, r0, #0
@@ -91738,7 +91738,7 @@ _0202E706:
 	mov r0, #2
 	tst r0, r5
 	beq _0202E71E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0202E71E
@@ -92011,7 +92011,7 @@ _0202E8FE:
 	lsl r1, r1, #0x1f
 	lsr r1, r1, #0x1f
 	beq _0202E910
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	and r0, r1
 _0202E910:
@@ -92070,7 +92070,7 @@ sub_0202E96C: ; 0x0202E96C
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
 	beq _0202E986
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	add r4, r0, #0
 	and r4, r1

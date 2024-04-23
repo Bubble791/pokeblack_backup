@@ -422,7 +422,6 @@ void ovy142_2199eb8(BagView *bagView)
 
 void ovy142_2199ecc(BagView *bagView)
 {
-    int iVar1;
     int uVar2;
     int uVar3;
 
@@ -449,7 +448,7 @@ void ovy142_2199ecc(BagView *bagView)
             {
                 GFL_SndSEPlay(0x54c);
                 bagView->unk8B4 = 0;
-                sub_02007FE8(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
+                BagSave_CopyPocket(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
                 sub_0204C488(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
                 bagView->unk83C = 0;
@@ -460,10 +459,10 @@ void ovy142_2199ecc(BagView *bagView)
         }
         if (bagView->unk8B0 != 1)
         {
-            if ((sub_0203DEFC() & (1 | 4)) != 0)
+            if ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_SELECT)) != 0)
             {
                 GFL_SndSEPlay(0x54C);
-                sub_02007FE8(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
+                BagSave_CopyPocket(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
                 sub_0204C488(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
                 bagView->unk83C = 0;
@@ -472,7 +471,7 @@ void ovy142_2199ecc(BagView *bagView)
                 return;
             }
 
-            if ((sub_0203DEFC() & 2) != 0)
+            if ((GCTX_HIDGetPressedKeys() & KEY_B) != 0)
             {
                 GFL_SndSEPlay(0x551);
                 sub_0204C488(bagView->unk6B4, 1);
@@ -610,8 +609,8 @@ void ovy142_219a1ec(BagView *bagView)
     iVar1 = ovy142_219f7a4(bagView);
     if (iVar1 != 0)
     {
-        uVar2 = sub_0203DEFC();
-        if (((uVar2 & 1 | uVar2 & 2) != 0) || sub_0203DA48())
+        uVar2 = GCTX_HIDGetPressedKeys();
+        if (((uVar2 & KEY_A | uVar2 & KEY_B) != 0) || sub_0203DA48())
         {
             sub_02045738(3);
             bagView->unk838 = 0xFFFF;
@@ -1065,13 +1064,13 @@ void ovy142_219a850(BagView *bagView)
             {
                 if (sub_0203D554() == 1)
                 {
-                    v2 = sub_0203DEFC();
+                    v2 = GCTX_HIDGetPressedKeys();
                     v3 = v2;
                     if (!v2)
                         return;
                     if (ovy142_2199988(bagView))
                     {
-                        if ((v3 & 0xC0A) == 0)
+                        if ((v3 & (KEY_B | KEY_START | KEY_X | KEY_Y)) == 0)
                         {
                             GFL_SndSEPlay(1352);
                             ovy142_219de0c(bagView);
@@ -1086,7 +1085,7 @@ void ovy142_219a850(BagView *bagView)
                             return;
                     }
                 }
-                if ((sub_0203DEFC() & 2) != 0)
+                if ((GCTX_HIDGetPressedKeys() & KEY_B) != 0)
                 {
                     bagView->unk898 = 1;
                     bagView->selectItem = 0;
@@ -1094,7 +1093,7 @@ void ovy142_219a850(BagView *bagView)
                     ovy142_219c9f8(bagView, 4, 0);
                     return;
                 }
-                if ((sub_0203DEFC() & 0x400) != 0)
+                if ((GCTX_HIDGetPressedKeys() & KEY_X) != 0)
                 {
                     if (bagView->unk10 != 2)
                     {
@@ -1106,7 +1105,7 @@ void ovy142_219a850(BagView *bagView)
                     }
                     return;
                 }
-                if ((sub_0203DEFC() & 0x800) != 0)
+                if ((GCTX_HIDGetPressedKeys() & KEY_Y) != 0)
                 {
                     if (sub_0219BE00(bagView) == 1)
                     {
@@ -1122,7 +1121,7 @@ void ovy142_219a850(BagView *bagView)
                     }
                     return;
                 }
-                if ((sub_0203DEFC() & 8) != 0)
+                if ((GCTX_HIDGetPressedKeys() & KEY_START) != 0)
                 {
                     if (bagView->itemType != 5)
                     {
@@ -1148,7 +1147,7 @@ void ovy142_219a850(BagView *bagView)
                         return;
                     }
                 }
-                if ((sub_0203DEFC() & 1) != 0)
+                if ((GCTX_HIDGetPressedKeys() & KEY_A) != 0)
                 {
                     if (ovy142_2199988(bagView) > 0)
                     {
@@ -1158,12 +1157,12 @@ void ovy142_219a850(BagView *bagView)
                 }
                 else
                 {
-                    if ((sub_0203DEFC() & 4) != 0)
+                    if ((GCTX_HIDGetPressedKeys() & KEY_SELECT) != 0)
                     {
                         if (bagView->itemType != 5 && ovy142_2199988(bagView) > 1)
                         {
                             MI_CpuFill8(bagView->m_itemTable, 0, 0x4D8);
-                            sub_02007FE8(bagView->bagSave, bagView->m_itemTable, bagView->itemType, 1);
+                            BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemType, 1);
                             sub_0204C488(bagView->unk6B4, 2);
                             ovy142_219ffe8(bagView, 0);
                             bagView->unk83C = 1;
@@ -1274,7 +1273,7 @@ void ovy142_219abd8(BagView *bagView)
     int iVar1;
 
     iVar1 = sub_020062A8();
-    if ((iVar1 != 1) && ((sub_0203DEFC() & (1 | 2)) || (sub_0203DA48() != 0)))
+    if ((iVar1 != 1) && ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_B)) || (sub_0203DA48() != 0)))
     {
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3e, bagView->stringBuff1);
         int uVar3 = sub_02026AE4((u16)bagView->selectItem);
@@ -1324,7 +1323,7 @@ void ovy142_219acb8(BagView *bagView);
 
 void ovy142_219acb8(BagView *bagView)
 {
-    if (((sub_0203DEFC() & 3) != 0) || sub_0203DA48())
+    if (((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_B)) != 0) || sub_0203DA48())
     {
         sub_02045738(3);
 
@@ -1423,16 +1422,16 @@ void ovy142_219ae90(BagView *bagView)
         iVar2 = ovy142_219cb88();
         if (iVar2 == -1)
         {
-            uVar3 = sub_0203DEFC();
-            if ((uVar3 & 1))
+            uVar3 = GCTX_HIDGetPressedKeys();
+            if ((uVar3 & KEY_A))
                 {
                 iVar2 = 0;
                 sub_0203D564(0);
             }
             else
             {
-                uVar3 = sub_0203DEFC();
-                if ((uVar3 & 2) != 0)
+                uVar3 = GCTX_HIDGetPressedKeys();
+                if ((uVar3 & KEY_B) != 0)
                 {
                     sub_0203D564(0);
                     iVar2 = 1;
@@ -1527,16 +1526,16 @@ void ovy142_219b0a0(BagView *bagView)
         iVar1 = ovy142_219cb88();
         if (iVar1 == -1)
         {
-            uVar2 = sub_0203DEFC();
-            if ((uVar2 & 1) != 0)
+            uVar2 = GCTX_HIDGetPressedKeys();
+            if ((uVar2 & KEY_A) != 0)
             {
                 iVar1 = 0;
                 sub_0203D564(0);
             }
             else
             {
-                uVar2 = sub_0203DEFC();
-                if ((uVar2 & 2) != 0)
+                uVar2 = GCTX_HIDGetPressedKeys();
+                if ((uVar2 & KEY_B) != 0)
                 {
                     sub_0203D564(0);
                     iVar1 = 1;
@@ -1620,8 +1619,8 @@ void ovy142_219b2a8(BagView *bagView)
     iVar1 = ovy142_219f7a4(bagView);
     if (iVar1 != 0)
     {
-        uVar2 = sub_0203DEFC();
-        if ((uVar2 & 3) != 0)
+        uVar2 = GCTX_HIDGetPressedKeys();
+        if ((uVar2 & (KEY_B | KEY_A)) != 0)
         {
             ovy142_219bda4(bagView, 1);
             BagMenu_SetRunFunc(bagView, ovy142_219b2f0);
@@ -1913,8 +1912,8 @@ void ovy142_219b6dc(BagView *bagView)
 {
     u32 uVar1;
 
-    uVar1 = sub_0203DEFC();
-    if ((uVar1 & 3))
+    uVar1 = GCTX_HIDGetPressedKeys();
+    if ((uVar1 & (KEY_A | KEY_B)))
     {
         ovy142_219bda4(bagView, 1);
     }

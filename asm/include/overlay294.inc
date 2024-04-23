@@ -121,7 +121,7 @@
 .public sub_020061B8
 .public sub_02006268
 .public sub_0203DA48
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_021A329C
 .public sub_021A3754
 .public sub_0208D65C
@@ -141,13 +141,13 @@
 .public G2x_SetBlendAlpha_
 .public sub_021A3AB8
 .public sub_021A3ABC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_021A3ABC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_021A3ABC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_02008BEC
 .public sub_02008BEC
@@ -251,8 +251,8 @@
 .public sub_0202E8D8
 .public sub_020223B4
 .public sub_020223CC
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223BC
 .public GFL_SndSEPlay

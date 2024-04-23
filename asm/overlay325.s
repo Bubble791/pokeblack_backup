@@ -2578,7 +2578,7 @@ _0219E28E:
 _0219E2A6:
 	cmp r6, #0
 	bne _0219E2B6
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219E2B6
@@ -2623,7 +2623,7 @@ _0219E2F8:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	bne _0219E31A
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	bne _0219E30E
 	cmp r7, #2

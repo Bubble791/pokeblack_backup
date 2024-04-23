@@ -1365,7 +1365,7 @@ ovy323_219d910: ; 0x0219D910
 	ldr r0, [r0]
 	cmp r0, #1
 	bne _0219D932
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _0219D932
 	add r0, r4, #0
@@ -1376,7 +1376,7 @@ ovy323_219d910: ; 0x0219D910
 	strh r1, [r4]
 	b _0219D9B2
 _0219D932:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x40
 	tst r0, r1
 	beq _0219D96C
@@ -1404,7 +1404,7 @@ _0219D966:
 	strh r0, [r4]
 	b _0219D9B2
 _0219D96C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x80
 	tst r0, r1
 	beq _0219D9A2
@@ -1429,7 +1429,7 @@ _0219D96C:
 	add r0, r0, #1
 	b _0219D966
 _0219D9A2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _0219D9B2

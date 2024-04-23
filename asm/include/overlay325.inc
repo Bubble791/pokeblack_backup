@@ -184,10 +184,10 @@
 .public sub_0219E7B0
 .public PrintSystem_IsTextPrintActive
 .public sub_0219E7C4
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D554
 .public sub_0219CC90
 .public sub_0219E944

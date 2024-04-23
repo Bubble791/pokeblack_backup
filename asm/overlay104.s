@@ -2909,7 +2909,7 @@ _021F0256:
 	beq _021F02EA
 	b _021F01BE
 _021F0260:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r1, r0
 	bne _021F027C

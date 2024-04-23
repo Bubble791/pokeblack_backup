@@ -2807,10 +2807,10 @@ ovy319_219e3d0: ; 0x0219E3D0
 	bl sub_0202E41C
 	b _0219E45C
 _0219E420:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _0219E45C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	bne _0219E45C
@@ -2837,7 +2837,7 @@ _0219E45C:
 	beq _0219E466
 	b _0219E6E8
 _0219E466:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #1
 	tst r0, r4
 	beq _0219E48E
@@ -4182,10 +4182,10 @@ ovy319_219ee50: ; 0x0219EE50
 	bl sub_0202E41C
 	b _0219EEB6
 _0219EE84:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _0219EEB6
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r1, _0219EFE8 ; =0x00000402
 	tst r0, r1
 	bne _0219EEB6
@@ -4206,7 +4206,7 @@ _0219EEB6:
 	bl sub_0203D554
 	cmp r0, #0
 	bne _0219EFA8
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #1
 	tst r0, r4
 	beq _0219EEE2

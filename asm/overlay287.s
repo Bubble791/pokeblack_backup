@@ -10160,7 +10160,7 @@ _021F9632:
 	bl sub_0203DA48
 	cmp r0, #1
 	beq _021F964C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F9674
@@ -10202,7 +10202,7 @@ ovy287_21f9684: ; 0x021F9684
 	mov r0, #0x1f
 	pop {r4, r5, r6, pc}
 _021F9694:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021F96A6

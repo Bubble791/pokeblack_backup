@@ -260,13 +260,13 @@
 .public sub_0203DA0C
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA0C
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DAC8
 .public sub_021BD494
 .public sub_0208D65C

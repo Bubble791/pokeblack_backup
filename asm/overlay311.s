@@ -827,10 +827,10 @@ ovy311_219d4e0: ; 0x0219D4E0
 	mov r0, #1
 	pop {r4, pc}
 _0219D508:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #1
 	beq _0219D520
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #2
 	beq _0219D520
 	bl sub_0203DA48
@@ -1309,14 +1309,14 @@ ovy311_219d8bc: ; 0x0219D8BC
 	mov r5, #0
 	lsl r0, r0, #2
 	str r5, [r4, r0]
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r7, #2
 	lsl r7, r7, #8
 	tst r0, r7
 	beq _0219D8D8
 	b _0219D8E2
 _0219D8D8:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsr r1, r7, #1
 	tst r0, r1
 	beq _0219D8E4

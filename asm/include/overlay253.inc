@@ -166,7 +166,7 @@
 .public GFL_TCBRemove
 .public GFL_TCBRemove
 .public sub_0217D61C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 
 .public sub_02046C40
 .public sub_0204B758

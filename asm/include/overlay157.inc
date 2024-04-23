@@ -43,7 +43,7 @@
 .public sub_02188538
 .public sub_02016D68
 .public sub_021885BC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02188504
 .public sub_02017934
 .public sub_02010DEC
@@ -101,7 +101,7 @@
 .public sub_02187CA0
 .public sub_02187D38
 .public sub_021F6260
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02187D38
 .public sub_02187D10
 .public sub_02016D68

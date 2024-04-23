@@ -739,9 +739,9 @@
 .public sub_0202F9B0
 .public sub_02155184
 .public sub_0215516C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02015A88
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02015A88
 .public sub_02155174
 .public sub_02155184
@@ -840,7 +840,7 @@
 .public GFL_MsgDataFree
 .public GFL_StrBufFree
 .public sub_02187EC8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0202651C
 .public sub_02025AF4
 .public sub_021540D0
@@ -3158,7 +3158,7 @@
 .public sub_021672F8
 .public sub_02188798
 .public sub_02188884
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_021887D4
 .public sub_021887F4
 .public GFL_StrBufFree
@@ -3480,8 +3480,8 @@
 .public GFL_WordSetSystemFree
 .public sub_0203580C
 .public sub_020062C4
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_02180508
 .public sub_0219846C
 .public sub_02180508
@@ -3515,7 +3515,7 @@
 .public sub_0203DF20
 .public sub_020223E0
 .public sub_0203DA48
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_020223BC
 .public sub_020223CC
@@ -3988,7 +3988,7 @@
 .public sub_0217C094
 .public sub_02188884
 .public sub_021889C8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_021887D4
 .public sub_021887F4
@@ -4056,7 +4056,7 @@
 .public sub_02016EDC
 .public sub_0217C110
 .public sub_02188884
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_021887D4
 .public sub_021887F4
 .public GFL_StrBufFree

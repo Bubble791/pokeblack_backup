@@ -53,7 +53,7 @@
 .public sub_02044CFC
 .public sub_0219E934
 .public sub_0219F624
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0204898C
 .public GFL_StrBufFree
@@ -69,11 +69,11 @@
 .public sub_02014A4C
 .public sub_02017934
 .public sub_02010DEC
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0219E934
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0204898C
 .public GFL_StrBufFree

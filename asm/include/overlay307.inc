@@ -10,7 +10,7 @@
 .public sub_021DE2D0
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203A978
 .public sub_0204E060
 .public sub_0204E0E0
@@ -166,7 +166,7 @@
 .public sub_0203DF20
 .public sub_0203DA2C
 .public sub_020223E0
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223BC
 .public sub_02044564

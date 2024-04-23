@@ -327,7 +327,7 @@ _0219D146:
 	b _0219D106
 _0219D14A:
 	mov r6, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219D160

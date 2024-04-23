@@ -5,7 +5,7 @@
 .public MI_CpuFill8
 .public sub_02008BF0
 .public sub_0203CE0C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02044C98
 .public sub_0219E3DC
 .public sub_0219D0AC
@@ -251,7 +251,7 @@
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public G2x_SetBlendAlpha_
 .public PrintSystem_IsTextPrintActive
 .public sub_0204898C

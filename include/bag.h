@@ -268,9 +268,9 @@ typedef void (*UnknowFunc)(BagView *);
 extern void sub_02035198(int);
 extern int PrintSystem_IsTextPrintActive(int);
 extern int sub_0203DA2C(void);
-extern void sub_02007FE8(void*, ItemTable*, int, int);
+extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
 extern void sub_0204C488(int, u16);
-extern int sub_0203DEFC(void);
+extern int GCTX_HIDGetPressedKeys(void);
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 
 void ovy142_2199ecc(BagView *m_bagView);

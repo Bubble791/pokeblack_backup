@@ -292,7 +292,7 @@
 .public sub_020484F4
 .public ovy36_2189de8
 .public sub_02048244
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public ovy36_2189cd8
 .public sub_0203A24C
@@ -731,7 +731,7 @@
 .public sub_02038BC8
 .public sub_021686B8
 .public sub_02016D50
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0218050C
 .public sub_021670F4
 .public sub_021B3F14
@@ -1117,12 +1117,12 @@
 .public sub_0200EE20
 .public ovy12_2152990
 .public ovy12_2152b64
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy12_2152bec
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy12_2152bec
 .public sub_02152BB4
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy12_2152bec
 .public ovy12_2152bd4
 .public sub_02016AD8

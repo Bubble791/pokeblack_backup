@@ -886,7 +886,7 @@ _0219D536:
 ovy310_219d544: ; 0x0219D544
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x2c
@@ -1090,7 +1090,7 @@ _0219D730: .word 0x00000557
 ovy310_219d734: ; 0x0219D734
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x2c
@@ -3221,7 +3221,7 @@ ovy310_219e6f0: ; 0x0219E6F0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x64
@@ -3382,7 +3382,7 @@ ovy310_219e860: ; 0x0219E860
 	add r5, r0, #0
 	bl sub_0203DF20
 	add r7, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r6, r0, #0
 	add r0, r5, #0
 	add r0, #0x64
@@ -3738,7 +3738,7 @@ _0219EB98:
 ovy310_219eba4: ; 0x0219EBA4
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x58
@@ -3828,7 +3828,7 @@ _0219EC68: .word 0x00000551
 ovy310_219ec6c: ; 0x0219EC6C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x58
@@ -8884,7 +8884,7 @@ ovy310_21a1208: ; 0x021A1208
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	bl sub_0203DF20
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r7, _021A13A8 ; =0x000002FE
 	add r6, r0, #0
 	add r0, r5, r7
@@ -9266,7 +9266,7 @@ ovy310_21a1584: ; 0x021A1584
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	bl sub_0203DF20
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r7, _021A1894 ; =0x000002FE
 	add r6, r0, #0
 	add r0, r5, r7

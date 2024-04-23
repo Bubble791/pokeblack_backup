@@ -1008,14 +1008,14 @@ _021F4C0C:
 	mov r6, #2
 	b _021F4C34
 _021F4C1A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021F4C28
 	mov r6, #3
 	b _021F4C34
 _021F4C28:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021F4C34
@@ -1500,14 +1500,14 @@ _021F4FB4:
 	mov r4, #2
 	b _021F4FDC
 _021F4FC2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021F4FD0
 	mov r4, #3
 	b _021F4FDC
 _021F4FD0:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021F4FDC
@@ -2404,14 +2404,14 @@ _021F569C:
 	mov r4, #2
 	b _021F56C4
 _021F56AA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021F56B8
 	mov r4, #3
 	b _021F56C4
 _021F56B8:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021F56C4

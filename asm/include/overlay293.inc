@@ -33,7 +33,7 @@
 .public sub_0204E038
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203A1FC
 .public sub_0203A24C
 .public sub_02005CE4

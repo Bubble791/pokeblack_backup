@@ -353,7 +353,7 @@
 .public sub_020484D4
 .public sub_02044F90
 .public sub_020223B4
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_020223BC
 .public sub_020223CC
 .public sub_0203FFC4

@@ -9743,13 +9743,13 @@ _0203DEF8:
 	pop {r4, pc}
 	thumb_func_end sub_0203DEE4
 
-	thumb_func_start sub_0203DEFC
-sub_0203DEFC: ; 0x0203DEFC
+	thumb_func_start GCTX_HIDGetPressedKeys
+GCTX_HIDGetPressedKeys: ; 0x0203DEFC
 	push {r3, lr}
 	bl sub_0203D2D8
 	bl sub_0203DEE4
 	pop {r3, pc}
-	thumb_func_end sub_0203DEFC
+	thumb_func_end GCTX_HIDGetPressedKeys
 
 	thumb_func_start sub_0203DF08
 sub_0203DF08: ; 0x0203DF08

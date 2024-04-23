@@ -186,7 +186,7 @@
 .public sub_02045B7C
 .public GFL_StrBufFree
 .public sub_0203DA0C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0204C488
 .public GFL_SndSEPlay

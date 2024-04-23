@@ -1142,7 +1142,7 @@ _0219A134:
 	ldr r0, [r5, #0x30]
 	cmp r0, #0
 	beq _0219A14C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r1, [r5, #0x30]
 	tst r0, r1
 	beq _0219A14C
@@ -2428,7 +2428,7 @@ ovy139_219ab40: ; 0x0219AB40
 	add r4, r0, #0
 	mov r0, #0
 	str r0, [sp, #8]
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r7, r0, #0
 	add r0, sp, #0x14
 	add r1, sp, #0x10
@@ -6834,7 +6834,7 @@ _0219CBF4:
 ovy139_219cbf8: ; 0x0219CBF8
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, #0x9c
 	ldr r1, [r4]
 	and r0, r1

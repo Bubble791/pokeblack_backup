@@ -1270,7 +1270,7 @@ ovy294_21a2514: ; 0x021A2514
 	bl sub_0203DA48
 	cmp r0, #0
 	bne _021A2526
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021A252A
 _021A2526:
@@ -1929,7 +1929,7 @@ _021A298E:
 	bl sub_021A3ABC
 	b _021A29DC
 _021A2998:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _021A29BA
@@ -1944,7 +1944,7 @@ _021A2998:
 	mov r0, #1
 	b _021A29DA
 _021A29BA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _021A29E0
@@ -1963,7 +1963,7 @@ _021A29DC:
 	mov r0, #4
 	b _021A2A36
 _021A29E0:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021A2A38
@@ -3155,10 +3155,10 @@ ovy294_21a32bc: ; 0x021A32BC
 	mov r0, #1
 	pop {r4, pc}
 _021A32EE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #1
 	beq _021A3306
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #2
 	beq _021A3306
 	bl sub_0203DA48

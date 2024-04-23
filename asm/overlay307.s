@@ -87,7 +87,7 @@ ovy307_21ddc64: ; 0x021DDC64
 	push {r3, r4, r5, r6, r7, lr}
 	add r4, r3, #0
 	add r5, r2, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r0, r4, #0
 	add r0, #0x88
 	ldr r0, [r0]
@@ -1348,7 +1348,7 @@ _021DE65C:
 	bl sub_020223E0
 	b _021DE682
 _021DE666:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021DE678

@@ -70,7 +70,7 @@
 .public sub_0204C138
 .public sub_0203DAC8
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0204C560
 .public sub_0204C488
@@ -197,7 +197,7 @@
 .public sub_02045B7C
 .public sub_0204C124
 .public sub_0204C520
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DAC8
 .public GFL_SndSEPlay
 .public sub_0203D564
@@ -346,7 +346,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
 
 .public sub_0204C438

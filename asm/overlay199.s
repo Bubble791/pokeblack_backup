@@ -5759,7 +5759,7 @@ ovy199_21b5d64: ; 0x021B5D64
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _021B5DD0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B5D82
@@ -5896,7 +5896,7 @@ ovy199_21b5e88: ; 0x021B5E88
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B5EB2
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B5EA8
@@ -5990,7 +5990,7 @@ ovy199_21b5f30: ; 0x021B5F30
 	mov r0, #6
 	bl sub_02005E68
 _021B5F5A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B5F6C
@@ -6017,7 +6017,7 @@ ovy199_21b5f80: ; 0x021B5F80
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B5FEC
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B5FA0
@@ -8045,7 +8045,7 @@ ovy199_21b7004: ; 0x021B7004
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B7030
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7024
@@ -8094,7 +8094,7 @@ ovy199_21b7064: ; 0x021B7064
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B708E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7084
@@ -8300,7 +8300,7 @@ _021B7218: .word 0x000006BD
 ovy199_21b721c: ; 0x021B721C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7232
@@ -8333,7 +8333,7 @@ _021B725C: .word 0x000006D2
 ovy199_21b7260: ; 0x021B7260
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7276
@@ -8492,7 +8492,7 @@ ovy199_21b737c: ; 0x021B737C
 	bl sub_021B5CD4
 	pop {r3, r4, r5, pc}
 _021B73CC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	bne _021B73DC
 	bl sub_0203DA48
@@ -8519,7 +8519,7 @@ ovy199_21b73f4: ; 0x021B73F4
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B741E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7414
@@ -8568,7 +8568,7 @@ ovy199_21b7454: ; 0x021B7454
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B747E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B7474
@@ -8830,7 +8830,7 @@ ovy199_21b765c: ; 0x021B765C
 	bl sub_021B5CD4
 	pop {r4, pc}
 _021B7698:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B76AA
@@ -8858,7 +8858,7 @@ ovy199_21b76c4: ; 0x021B76C4
 	bl ovy199_21b4568
 	cmp r0, #0
 	beq _021B76FE
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B76E4
@@ -9048,7 +9048,7 @@ _021B783C:
 	add sp, #0x20
 	pop {r4, r5, r6, pc}
 _021B7868:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B787A
@@ -9087,7 +9087,7 @@ _021B78B6:
 	ldr r0, [r4, #0x64]
 	add r0, r0, #1
 	str r0, [r4, #0x64]
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021B78CE
@@ -10641,7 +10641,7 @@ ovy199_21b8570: ; 0x021B8570
 	str r0, [r4]
 	b _021B85AA
 _021B859A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #1
 	bne _021B85AA
 	add r4, #0x80
@@ -11905,7 +11905,7 @@ ovy199_21b9008: ; 0x021B9008
 	bl ovy199_21b8570
 	cmp r0, #0
 	beq _021B9028
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021B9028
 	ldr r1, _021B902C ; =ovy199_21b8fcc
@@ -11988,7 +11988,7 @@ _021B90AC: .word 0x00000112
 ovy199_21b90b0: ; 0x021B90B0
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021B90D8
 	ldr r0, [r4, #0x10]
@@ -12012,7 +12012,7 @@ _021B90E0: .word 0x0000011A
 ovy199_21b90e4: ; 0x021B90E4
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021B910C
 	ldr r1, [r4, #0x28]
@@ -12058,7 +12058,7 @@ _021B913C: .word ovy199_21b90e4
 ovy199_21b9140: ; 0x021B9140
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021B9158
@@ -12323,7 +12323,7 @@ ovy199_21b9318: ; 0x021B9318
 	bl sub_021B8FAC
 	pop {r3, r4, r5, pc}
 _021B9360:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021B9374
 	mov r2, #0x7f
@@ -12345,7 +12345,7 @@ ovy199_21b9380: ; 0x021B9380
 	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	beq _021B93A6
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021B93A6
 	ldr r0, [r4, #0x10]

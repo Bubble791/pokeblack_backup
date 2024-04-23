@@ -375,7 +375,7 @@ _021E33C0:
 	mov r0, #0
 	b _021E32E4
 _021E33E6:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #0x41
 	lsl r6, r6, #2
 	add r7, r0, #0
@@ -2642,7 +2642,7 @@ _021E457E:
 	bl sub_0203D564
 	b _021E45B4
 _021E4584:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021E4596
@@ -2654,7 +2654,7 @@ _021E4596:
 	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x64]
 	bl sub_020223BC
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021E45B0
@@ -2674,7 +2674,7 @@ _021E45B8: .word 0x00000547
 	thumb_func_start ovy284_21e45bc
 ovy284_21e45bc: ; 0x021E45BC
 	push {r3, lr}
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021E45D0
@@ -2682,7 +2682,7 @@ ovy284_21e45bc: ; 0x021E45BC
 	cmp r0, #0
 	beq _021E45E8
 _021E45D0:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021E45DE

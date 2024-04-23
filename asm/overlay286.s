@@ -4357,7 +4357,7 @@ _021F6630:
 	bl sub_0203DA48
 	cmp r0, #1
 	beq _021F6648
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F666A
@@ -4394,7 +4394,7 @@ ovy286_21f6674: ; 0x021F6674
 	mov r0, #0x12
 	pop {r4, pc}
 _021F6684:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021F6696

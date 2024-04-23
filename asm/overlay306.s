@@ -295,7 +295,7 @@ ovy306_219d114: ; 0x0219D114
 	add r4, r3, #0
 	bl sub_02017934
 	add r7, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r0, [sp, #0x14]
 	ldr r0, [r0]
 	cmp r0, #0x12
@@ -1530,7 +1530,7 @@ _0219DAB6:
 	bl sub_0203D564
 	b _0219DB2A
 _0219DABC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219DACE
@@ -1542,7 +1542,7 @@ _0219DACE:
 	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x5c]
 	bl sub_020223BC
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219DAE8
@@ -1561,7 +1561,7 @@ _0219DAF6:
 	ldr r0, [r4, #0x60]
 	cmp r0, #0
 	beq _0219DB28
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219DB0E
@@ -1569,7 +1569,7 @@ _0219DAF6:
 	cmp r0, #0
 	beq _0219DB2A
 _0219DB0E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219DB1C

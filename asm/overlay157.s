@@ -353,7 +353,7 @@ _021F5C9E:
 	mov r0, #0
 	pop {r4, pc}
 _021F5CA2:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0xf3
 	tst r0, r1
 	bne _021F5CB0
@@ -774,7 +774,7 @@ _021F5FE2:
 	bl sub_021F6260
 	b _021F5FDA
 _021F6004:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F6028

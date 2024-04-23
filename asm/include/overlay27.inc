@@ -106,7 +106,7 @@
 .public sub_02165428
 .public sub_02165320
 .public sub_02187C70
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_02016AF0

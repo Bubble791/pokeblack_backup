@@ -4125,7 +4125,7 @@ ovy70_217f090: ; 0x0217F090
 	bl sub_020223B4
 	cmp r0, #1
 	bne _0217F0B6
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _0217F0B2

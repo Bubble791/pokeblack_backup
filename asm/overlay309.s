@@ -724,7 +724,7 @@ ovy309_219d430: ; 0x0219D430
 	bne _0219D440
 	b _0219D44A
 _0219D440:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219D44C
@@ -1488,7 +1488,7 @@ _0219DA12:
 	mov r1, #1
 	bl ovy309_219fb78
 _0219DA1E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219DAE6
@@ -1571,7 +1571,7 @@ _0219DAB6:
 	mov r1, #1
 	bl ovy309_219fb78
 _0219DAC4:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219DAE6
@@ -1603,7 +1603,7 @@ _0219DB00: .word 0x00000547
 ovy309_219db04: ; 0x0219DB04
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219DB2C

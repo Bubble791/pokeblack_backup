@@ -1690,7 +1690,7 @@ ovy253_217d62c: ; 0x0217D62C
 	bl sub_0217D61C
 	cmp r0, #0
 	beq _0217D640
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0217D644

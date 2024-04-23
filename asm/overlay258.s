@@ -1122,7 +1122,7 @@ _0219A1EE:
 _0219A1FE:
 	cmp r4, #1
 	bne _0219A220
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219A214

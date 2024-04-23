@@ -2166,7 +2166,7 @@ ovy145_219e05c: ; 0x0219E05C
 	bl sub_0202E68C
 	cmp r0, #1
 	bne _0219E0D2
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219E0A6
@@ -2486,7 +2486,7 @@ ovy145_219e324: ; 0x0219E324
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x2c
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r7, r0, #0
 	bl sub_0203DF44
 	bl sub_0203DF20
@@ -4164,7 +4164,7 @@ ovy145_219f07c: ; 0x0219F07C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x60
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	bl sub_0203DF44
 	add r7, r0, #0

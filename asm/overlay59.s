@@ -3848,7 +3848,7 @@ _021E78E8:
 	bl sub_02045B7C
 	b _021E78AC
 _021E7902:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021E7916
@@ -3857,7 +3857,7 @@ _021E7902:
 	mov r0, #4
 	b _021E78B0
 _021E7916:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _021E793C
@@ -3875,7 +3875,7 @@ _021E7938:
 	mov r0, #1
 	b _021E78B0
 _021E793C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _021E7994

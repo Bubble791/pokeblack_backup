@@ -3469,7 +3469,7 @@ _021B6EA0:
 _021B6EB6:
 	cmp r0, #1
 	bne _021B6ED2
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #1
 	beq _021B6ECA
 	bl sub_0203DA48

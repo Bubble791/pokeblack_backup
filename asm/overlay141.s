@@ -1599,7 +1599,7 @@ ovy141_219db84: ; 0x0219DB84
 	ldr r0, _0219DBA8 ; =0x0219DED8
 	bl sub_0203DA0C
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219DB9C

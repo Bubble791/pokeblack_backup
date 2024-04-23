@@ -23,7 +23,7 @@
 .public sub_0204B37C
 .public MIi_CpuCopy32
 .public sub_0203A24C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02005FA8
 .public sub_02005EA0
 .public sub_02046D38

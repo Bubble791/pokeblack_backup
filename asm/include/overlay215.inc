@@ -115,21 +115,21 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public sub_0203DA2C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public GFL_SndSEPlay
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0202E430
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_0208D65C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0202E41C
 .public sub_0202E41C
@@ -157,7 +157,7 @@
 .public sub_0202E4AC
 .public sub_0202E41C
 .public sub_020223B4
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020223CC
 .public sub_02024EEC
@@ -621,7 +621,7 @@
 .public sub_020223B4
 .public sub_020223CC
 .public sub_0203DA48
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_020223CC
 .public GFL_SndSEPlay
 .public sub_0202DB70
@@ -719,8 +719,8 @@
 .public sub_021A9F88
 .public sub_021A9F88
 .public sub_0203DA0C
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 
 .public sub_02046C40
 .public sub_02033120

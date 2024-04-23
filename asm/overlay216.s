@@ -3637,7 +3637,7 @@ _021BD410:
 _021BD42E:
 	cmp r0, #1
 	bne _021BD446
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021BD45E
@@ -3960,10 +3960,10 @@ _021BD694: .word 0x00004804
 
 	thumb_func_start sub_021BD698
 sub_021BD698: ; 0x021BD698
-	ldr r3, _021BD69C ; =sub_0203DEFC
+	ldr r3, _021BD69C ; =GCTX_HIDGetPressedKeys
 	bx r3
 	.align 2, 0
-_021BD69C: .word sub_0203DEFC
+_021BD69C: .word GCTX_HIDGetPressedKeys
 	thumb_func_end sub_021BD698
 
 	thumb_func_start ovy216_21bd6a0

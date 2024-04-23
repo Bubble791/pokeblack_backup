@@ -304,7 +304,7 @@ ovy266_219d0c4: ; 0x0219D0C4
 	ldr r0, [r0]
 	cmp r0, #1
 	bne _0219D0E8
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #8
 	tst r0, r1
 	beq _0219D0E8

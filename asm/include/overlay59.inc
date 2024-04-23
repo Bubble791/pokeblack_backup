@@ -629,12 +629,12 @@
 .public ovy36_2187c9c
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0208D65C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_02187C7C
 .public ovy36_2187c9c

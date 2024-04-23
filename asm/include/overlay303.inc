@@ -43,7 +43,7 @@
 .public sub_0219FCF8
 .public sub_0219FCF8
 .public sub_0203DF44
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_021A11B4
 .public sub_0219FCF8
 .public sub_0219FCF8
@@ -75,7 +75,7 @@
 .public sub_0219FCF8
 .public sub_0219FCF8
 .public sub_0219FCF8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
 .public sub_0219FCF8
 .public sub_0219FCF8
@@ -189,7 +189,7 @@
 .public sub_02005FA8
 .public sub_021A2F78
 .public sub_021A2F88
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_021A11B4
 .public sub_02005F0C

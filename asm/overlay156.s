@@ -372,7 +372,7 @@ _021F5CBA:
 	bl ovy156_21f5d70
 	b _021F5CA0
 _021F5CDC:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021F5D00

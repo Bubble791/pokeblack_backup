@@ -1611,7 +1611,7 @@ _021BAEC4:
 	beq _021BAF0C
 	b _021BAF08
 _021BAECE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	bne _021BAEE2

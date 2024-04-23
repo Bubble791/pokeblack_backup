@@ -678,7 +678,7 @@ _021F4980:
 	mov r4, #2
 	b _021F499A
 _021F498E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021F499A

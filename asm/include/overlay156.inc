@@ -57,7 +57,7 @@
 .public sub_02188504
 .public sub_02187CA0
 .public sub_02187D38
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02187D38
 .public sub_02187D10
 .public sub_0202472C

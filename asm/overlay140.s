@@ -1363,7 +1363,7 @@ _0219D98C:
 _0219D98E:
 	str r0, [r5, #0x1c]
 _0219D990:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	bl sub_0203DF20
 	add r6, r0, #0

@@ -60,11 +60,11 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public sub_020223E0
-.public sub_0203DEFC
-.public sub_0203DEFC
-.public sub_0203DEFC
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public sub_020223BC
 .public GFL_SndSEPlay
 .public sub_0200C9E4

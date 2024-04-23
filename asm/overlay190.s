@@ -8,7 +8,7 @@
 ovy190_21b2f80: ; 0x021B2F80
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021B2F92

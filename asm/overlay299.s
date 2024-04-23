@@ -5145,7 +5145,7 @@ _021A24FE:
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 _021A2508:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #2
 	tst r0, r6
 	beq _021A251C
@@ -5154,7 +5154,7 @@ _021A2508:
 	mov r0, #0xc
 	pop {r4, r5, r6, pc}
 _021A251C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r6, #9
 	tst r0, r1
 	beq _021A2530
@@ -5163,7 +5163,7 @@ _021A251C:
 	mov r0, #0xb
 	pop {r4, r5, r6, pc}
 _021A2530:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #8
 	tst r0, r6
 	beq _021A2550
@@ -5177,7 +5177,7 @@ _021A2530:
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 _021A2550:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #4
 	tst r0, r6
 	beq _021A2580
@@ -5201,7 +5201,7 @@ _021A2576:
 	mov r0, #9
 	pop {r4, r5, r6, pc}
 _021A2580:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r6, #9
 	tst r0, r1
 	beq _021A25BA

@@ -176,7 +176,7 @@
 .public sub_0219AA2C
 .public sub_0219B424
 .public sub_0201AD28
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_02005EA0
 .public GFL_FadeScreenSet

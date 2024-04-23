@@ -51,7 +51,7 @@ ovy295_219ced4: ; 0x0219CED4
 	add r5, r1, #0
 	add r6, r2, #0
 	add r4, r3, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r0, [r5]
 	cmp r0, #0xd
 	bls _0219CEEA
@@ -761,7 +761,7 @@ ovy295_219d498: ; 0x0219D498
 	sub sp, #0xc
 	add r5, r1, #0
 	add r4, r3, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r1, [r5]
 	cmp r1, #5
 	bls _0219D4AC

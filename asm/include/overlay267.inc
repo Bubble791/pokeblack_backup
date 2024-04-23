@@ -21,7 +21,7 @@
 .public sub_0204E0E0
 .public sub_0204E0E0
 .public sub_0204E0E0
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0204E0E0
 .public sub_02021A3C
 .public sub_0204AA30

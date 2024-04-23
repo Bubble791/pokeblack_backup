@@ -32,7 +32,7 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0204E0E0
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203DAC8
 .public sub_0203D564

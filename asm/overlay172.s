@@ -758,7 +758,7 @@ _02199E9C:
 	str r0, [r4, #0x64]
 	b _02199DB0
 _02199EAA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _02199EC4
@@ -1242,7 +1242,7 @@ _0219A29A:
 	mov r0, #1
 	pop {r4, pc}
 _0219A29E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219A2B0

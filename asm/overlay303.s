@@ -618,7 +618,7 @@ ovy303_21a0080: ; 0x021A0080
 	add r5, r0, #0
 	bl sub_0203DF44
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r6, r0, #0
 	add r0, r5, #0
 	bl sub_021A11B4
@@ -966,7 +966,7 @@ _021A0354: .word 0x00000884
 ovy303_21a0358: ; 0x021A0358
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r4, r0, #0
 	bl sub_0203DF44
 	ldr r1, _021A0414 ; =0x00000874
@@ -2239,7 +2239,7 @@ _021A0D6C:
 	str r0, [r4, #8]
 	pop {r3, r4, r5, r6, r7, pc}
 _021A0D92:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021A0DA6

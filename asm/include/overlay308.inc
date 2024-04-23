@@ -180,7 +180,7 @@
 .public sub_02013B44
 .public sub_02042BA8
 .public sub_02199C30
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_02016BEC
 .public sub_021A14E8
 .public sub_021A14E8
@@ -304,7 +304,7 @@
 .public MI_CpuFill8
 .public sub_02199C68
 .public sub_0203DA48
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203A870
 .public sub_0203A888
 .public sub_0203A910

@@ -3129,7 +3129,7 @@ _0219C5E0:
 _0219C5E4:
 	str r0, [r5, #0x24]
 _0219C5E6:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #0xc0
 	tst r0, r4
 	beq _0219C5F8

@@ -283,7 +283,7 @@
 .public ovy168_21e0d4c
 .public sub_0203A6D0
 .public sub_0203A24C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public ovy167_219dac4
 .public sub_02043F2C
@@ -1646,13 +1646,13 @@
 .public sub_0203DA0C
 .public sub_0203DF44
 .public sub_02027780
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy168_21dfb40
 .public sub_0203DA0C
 .public sub_0203DF20
 .public ovy168_21f2e98
 .public sub_02027780
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy168_21dfb40
 .public sub_020270F0
 .public sub_020270F0
@@ -2087,7 +2087,7 @@
 .public GFL_WordSetSystemFree
 .public sub_02046EDC
 .public sub_0204C108
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
 .public sub_0204BFD4
 .public sub_0204BFD4
@@ -2171,7 +2171,7 @@
 .public sub_0203A24C
 .public GFL_TCBRemove
 .public sub_0203A24C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public ovy168_21e00e8
 .public GFL_SndSEPlay
 .public sub_02006280

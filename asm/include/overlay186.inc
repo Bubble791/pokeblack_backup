@@ -163,7 +163,7 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public sub_0203DA2C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_0203D564
 .public GFL_SndSEPlay
@@ -584,12 +584,12 @@
 .public sub_0203D9C8
 .public sub_0203DA84
 .public sub_021AC834
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public sub_0203DEFC
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
+.public GCTX_HIDGetPressedKeys
 .public PrintSystem_IsTextPrintActive
 .public sub_021ACA38
 .public sub_021ACA9C

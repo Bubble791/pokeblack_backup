@@ -313,7 +313,7 @@ _021A1DA4:
 	ldr r0, [r0, #0x14]
 	cmp r0, #0
 	beq _021A1DBA
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r1, _021A1DC0 ; =0x00000CF3
 	tst r0, r1
 	beq _021A1DBA

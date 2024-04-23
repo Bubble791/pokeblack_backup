@@ -575,7 +575,7 @@ ovy187_21e9034: ; 0x021E9034
 ovy187_21e9054: ; 0x021E9054
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r1, [r4, #0x70]
 	ldr r1, [r1, #0x10]
 	cmp r1, #2

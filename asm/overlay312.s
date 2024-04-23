@@ -217,7 +217,7 @@ ovy312_217caf4: ; 0x0217CAF4
 	add r4, r0, #0
 	add r5, r1, #0
 	mov r7, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	ldr r6, _0217CE08 ; =0x0000C354
 	str r0, [r4, r6]
 	bl sub_0203DF20

@@ -589,7 +589,7 @@
 .public sub_02169FB0
 .public sub_02169E18
 .public sub_0205FA10
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0217F4A8
 .public sub_0217F4B0
 .public sub_02016CB4

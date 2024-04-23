@@ -217,7 +217,7 @@
 .public sub_021C09E4
 .public sub_021C09E4
 .public sub_021C0A4C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_021C0B34
 .public sub_021C0C8C
 .public sub_021C0C50

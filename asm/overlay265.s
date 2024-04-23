@@ -2144,7 +2144,7 @@ _0219A980:
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	bne _0219A9B8
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _0219A9A2

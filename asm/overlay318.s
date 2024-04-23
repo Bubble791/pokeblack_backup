@@ -173,7 +173,7 @@ ovy318_219cff0: ; 0x0219CFF0
 	add r7, r2, #0
 	add r5, r3, #0
 	mov r6, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _0219D010

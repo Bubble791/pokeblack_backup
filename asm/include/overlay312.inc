@@ -22,7 +22,7 @@
 .public sub_0202E430
 .public sub_0202E37C
 .public sub_0202E37C
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
 .public sub_0203D9C8
 .public sub_0203DA84

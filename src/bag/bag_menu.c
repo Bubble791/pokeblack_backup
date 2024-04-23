@@ -744,7 +744,7 @@ void ovy142_219d3d8(BagView *bagView)
 {
     int result; // r0
 
-    if ((sub_0203DEFC() & 3) != 0)
+    if ((GCTX_HIDGetPressedKeys() & (KEY_B | KEY_A)) != 0)
     {
         ovy142_219bda4(bagView, 1);
     }
@@ -2382,7 +2382,7 @@ int ovy142_219f7a4(BagView *a1)
             {
                 if (!a1->unk518 )
                 {
-                    if ((sub_0203DEFC() & 3) != 0 || sub_0203DA48())
+                    if ((GCTX_HIDGetPressedKeys() & (KEY_B | KEY_A)) != 0 || sub_0203DA48())
                     {
                         GFL_SndSEPlay(1351);
                         sub_020223BC(a1->unk514);

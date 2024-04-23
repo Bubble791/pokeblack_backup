@@ -388,7 +388,7 @@
 .public sub_0201FDF8
 .public sub_0219D410
 .public sub_0219D480
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_021C5888
 .public sub_021C5A1C
@@ -912,7 +912,7 @@
 .public sub_0201D620
 .public sub_0201C2C4
 .public sub_02043E98
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public sub_021C5888
 .public sub_021C5A1C

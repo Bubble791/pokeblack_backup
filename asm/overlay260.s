@@ -5105,7 +5105,7 @@ _021B56DA: ; jump table
 _021B56EA:
 	cmp r1, #0
 	beq _021B5708
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021B5708
@@ -11810,7 +11810,7 @@ _021B8B46: ; jump table
 _021B8B56:
 	cmp r1, #0
 	beq _021B8C2C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021B8C2C

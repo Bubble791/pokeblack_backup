@@ -7715,7 +7715,7 @@ ovy300_21a38e8: ; 0x021A38E8
 	mvn r1, r1
 	cmp r6, r1
 	bne _021A39B8
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r7, #1
 	lsl r7, r7, #0xa
 	tst r0, r7
@@ -7725,7 +7725,7 @@ ovy300_21a38e8: ; 0x021A38E8
 	mov r0, #8
 	pop {r3, r4, r5, r6, r7, pc}
 _021A3916:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r7, #1
 	tst r0, r1
 	beq _021A393A
@@ -7741,7 +7741,7 @@ _021A3930:
 	mov r0, #7
 	pop {r3, r4, r5, r6, r7, pc}
 _021A393A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #8
 	tst r0, r1
 	beq _021A3966
@@ -7760,7 +7760,7 @@ _021A3954:
 	mov r0, #5
 	pop {r3, r4, r5, r6, r7, pc}
 _021A3966:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #4
 	tst r0, r1
 	beq _021A3992
@@ -7779,7 +7779,7 @@ _021A3980:
 	mov r0, #6
 	pop {r3, r4, r5, r6, r7, pc}
 _021A3992:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #0
 	beq _021A39B6
 	bl sub_0203D554
@@ -7829,7 +7829,7 @@ ovy300_21a39ec: ; 0x021A39EC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r1, r0
 	beq _021A3A02
@@ -7930,7 +7930,7 @@ _021A3A90:
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 _021A3AAA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021A3AC2
@@ -7963,7 +7963,7 @@ ovy300_21a3acc: ; 0x021A3ACC
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 _021A3AEA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021A3AFE
@@ -7972,7 +7972,7 @@ _021A3AEA:
 	mov r0, #8
 	pop {r4, r5, r6, pc}
 _021A3AFE:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #8
 	tst r0, r6
 	beq _021A3B12
@@ -7981,7 +7981,7 @@ _021A3AFE:
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 _021A3B12:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #4
 	tst r0, r1
 	beq _021A3B38
@@ -8020,7 +8020,7 @@ ovy300_21a3b40: ; 0x021A3B40
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 _021A3B5E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021A3B72
@@ -8029,7 +8029,7 @@ _021A3B5E:
 	mov r0, #8
 	pop {r4, r5, r6, pc}
 _021A3B72:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r6, #8
 	tst r0, r6
 	beq _021A3B86
@@ -8038,7 +8038,7 @@ _021A3B72:
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 _021A3B86:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #4
 	tst r0, r1
 	beq _021A3BAC

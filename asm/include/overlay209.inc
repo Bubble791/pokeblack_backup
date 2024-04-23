@@ -158,7 +158,7 @@
 .public sub_0202DA54
 .public sub_021EF99C
 .public sub_020120C8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA0C
 .public GFL_SndSEPlay
 .public sub_0204C488

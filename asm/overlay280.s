@@ -4929,7 +4929,7 @@ _021DBB1C:
 	str r0, [sp, #4]
 	b _021DBB16
 _021DBB2C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #8
 	tst r0, r1
 	beq _021DBB54
@@ -5018,7 +5018,7 @@ ovy280_21dbbe0: ; 0x021DBBE0
 	add r5, r0, #0
 	add r4, r1, #0
 	mov r6, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #1
 	bne _021DBC06
 	add r0, r5, #0
@@ -5032,7 +5032,7 @@ ovy280_21dbbe0: ; 0x021DBBE0
 	str r0, [r4, #0xc]
 	str r6, [r4, #4]
 _021DBC06:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #2
 	bne _021DBC20
 	add r2, r4, #0
@@ -5044,7 +5044,7 @@ _021DBC06:
 	str r6, [r4]
 	mov r6, #1
 _021DBC20:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	cmp r0, #4
 	bne _021DBC58
 	mov r0, #1
@@ -5072,7 +5072,7 @@ _021DBC3A:
 	str r1, [r4, #8]
 	str r0, [r4, #0xc]
 _021DBC58:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	lsl r1, r1, #8
 	cmp r0, r1
@@ -5316,7 +5316,7 @@ ovy280_21dbe14: ; 0x021DBE14
 	mov r5, #0
 	cmp r0, #0
 	bne _021DBE6C
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x40
 	tst r0, r1
 	beq _021DBE38
@@ -5325,7 +5325,7 @@ ovy280_21dbe14: ; 0x021DBE14
 	str r1, [sp, #0x10]
 	b _021DBE6A
 _021DBE38:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x80
 	tst r0, r1
 	beq _021DBE4A
@@ -5334,7 +5334,7 @@ _021DBE38:
 	str r5, [sp, #0x10]
 	b _021DBE6C
 _021DBE4A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x20
 	tst r0, r1
 	beq _021DBE5A
@@ -5342,7 +5342,7 @@ _021DBE4A:
 	str r1, [sp, #0xc]
 	b _021DBE68
 _021DBE5A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #0x10
 	tst r0, r1
 	beq _021DBE6C
@@ -5449,7 +5449,7 @@ ovy280_21dbf20: ; 0x021DBF20
 	mov r6, #0
 	cmp r0, #0
 	bne _021DBFD2
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021DBF52
@@ -5464,7 +5464,7 @@ ovy280_21dbf20: ; 0x021DBF20
 	str r0, [r4, #0xc]
 	str r1, [r4, #4]
 _021DBF52:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #4
 	tst r0, r1
 	beq _021DBF8A
@@ -7425,7 +7425,7 @@ _021DCE02:
 	str r0, [r5]
 	pop {r3, r4, r5, pc}
 _021DCE08:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	bne _021DCE1A
@@ -7435,7 +7435,7 @@ _021DCE08:
 _021DCE1A:
 	ldr r0, [r4]
 	bl sub_020223BC
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #3
 	tst r0, r1
 	beq _021DCE32
@@ -7493,7 +7493,7 @@ ovy280_21dce58: ; 0x021DCE58
 	bl sub_021DC7C0
 	cmp r0, #0
 	bne _021DCE9A
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	bic r0, r1
 	beq _021DCED8

@@ -58,7 +58,7 @@ ovy324_219cee0: ; 0x0219CEE0
 	ldr r0, [r0, #0x1c]
 	cmp r0, #0
 	bne _0219CF06
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _0219CF06
@@ -2565,7 +2565,7 @@ _0219E2EC:
 	str r0, [r4, r5]
 	pop {r3, r4, r5, r6, r7, pc}
 _0219E32A:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	bne _0219E346

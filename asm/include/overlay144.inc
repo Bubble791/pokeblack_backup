@@ -103,7 +103,7 @@
 .public sub_0204C178
 .public sub_0203DAC8
 .public sub_0203D564
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0204C560
 .public sub_0219EA18
@@ -163,7 +163,7 @@
 .public sub_02050784
 .public VEC_Normalize
 .public sub_0204C140
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203DAC8
 .public sub_0203D564

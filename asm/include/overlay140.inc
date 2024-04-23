@@ -153,7 +153,7 @@
 .public sub_0204B794
 .public sub_0203DAC8
 .public sub_0203DA84
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
 .public sub_0203D554
 .public sub_0203D564

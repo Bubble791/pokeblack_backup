@@ -54,7 +54,7 @@
 .public sub_021F4C80
 .public sub_0203DF44
 .public sub_0203DF44
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

@@ -85,7 +85,7 @@
 .public sub_021DF540
 .public sub_02005DF4
 .public sub_021DF7E8
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_0204E060
 .public sub_0204E0E0
@@ -149,7 +149,7 @@
 .public GFL_StrBufFree
 .public sub_020223A4
 .public sub_020223B4
-.public sub_0203DEFC
+.public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public sub_020232D8
 .public sub_020223CC

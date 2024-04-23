@@ -4173,21 +4173,21 @@ _021BD774:
 	mov r0, #1
 	pop {r4, pc}
 _021BD782:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _021BD790
 	mov r0, #4
 	pop {r4, pc}
 _021BD790:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #2
 	tst r0, r4
 	beq _021BD79E
 	mov r0, #3
 	pop {r4, pc}
 _021BD79E:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	lsl r1, r4, #9
 	tst r0, r1
 	bne _021BD7AA
@@ -4227,7 +4227,7 @@ _021BD7DC:
 	mov r0, #1
 	pop {r4, pc}
 _021BD7EA:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #2
 	tst r0, r1
 	beq _021BD7F8

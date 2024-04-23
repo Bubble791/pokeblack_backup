@@ -4670,7 +4670,7 @@ _0217EE92:
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 _0217EE9C:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #1
 	tst r0, r1
 	beq _0217EEB6

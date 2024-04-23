@@ -1890,7 +1890,7 @@ ovy308_21a083c: ; 0x021A083C
 	ldr r0, [r5, r0]
 	bl sub_02199C30
 	add r4, r0, #0
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	add r6, r0, #0
 	ldr r0, [r5, #0x14]
 	ldr r0, [r0]
@@ -3312,7 +3312,7 @@ ovy308_21a1388: ; 0x021A1388
 	bl sub_0203DA48
 	cmp r0, #0
 	bne _021A139E
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r2, #1
 	tst r0, r2
 	beq _021A13A4

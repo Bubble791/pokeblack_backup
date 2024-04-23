@@ -1230,7 +1230,7 @@ _0219D85A:
 	bl sub_0203D564
 	b _0219D8A6
 _0219D894:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r1, #4
 	tst r0, r1
 	beq _0219D8A6
@@ -1690,7 +1690,7 @@ _0219DC36:
 	mov r2, #0
 	bl sub_0204C140
 _0219DC44:
-	bl sub_0203DEFC
+	bl GCTX_HIDGetPressedKeys
 	mov r4, #1
 	tst r0, r4
 	beq _0219DC56
