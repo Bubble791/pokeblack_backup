@@ -1183,7 +1183,7 @@ ovy85_21eb6f8: ; 0x021EB6F8
 	add r2, r5, #4
 	ldr r0, [r4, r5]
 	ldr r2, [r4, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r5, #0
 	sub r0, r5, #4
 	add r1, #8
@@ -1821,7 +1821,7 @@ ovy85_21ebb28: ; 0x021EBB28
 	ldr r2, [r6, r2]
 	mov r1, #0xe
 	mov r5, #0xe
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0xe
 	mov r2, #0xe
 	add r0, #0xf2
@@ -1847,7 +1847,7 @@ ovy85_21ebb28: ; 0x021EBB28
 	ldr r0, [r6, r0]
 	ldr r2, [r6, r2]
 	str r1, [sp, #0x10]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	add r0, #0xf2
 	add r5, #0xfa

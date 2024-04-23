@@ -2314,7 +2314,7 @@ _021EFEA0:
 	ldr r0, [r5, #0x10]
 	ldr r2, [r5, #0x1c]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x14]
 	mov r1, #0
 	add r2, r7, #0
@@ -3522,7 +3522,7 @@ _021F07FE:
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3710,7 +3710,7 @@ _021F0968:
 	add r7, r0, #0
 	lsr r1, r1, #0x10
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_020487D4
 _021F098E:

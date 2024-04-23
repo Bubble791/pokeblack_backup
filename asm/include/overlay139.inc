@@ -111,7 +111,7 @@
 .public sub_020485F8
 .public MIi_CpuClear32
 .public sub_020489E8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020485F8
 .public sub_020485F8
 .public sub_020485F8

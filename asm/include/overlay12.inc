@@ -824,10 +824,10 @@
 .public sub_0204875C
 .public sub_02187F04
 .public sub_02025060
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020485A4
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_02187F48
 .public sub_02187FB0
@@ -1221,7 +1221,7 @@
 .public sub_0201C864
 .public sub_0201CD1C
 .public sub_0201DA94
-.public sub_020267F0
+.public Item_GetItemParam
 .public sub_02026C60
 .public sub_0201CD1C
 .public sub_020171F4
@@ -3151,7 +3151,7 @@
 .public sub_02016EDC
 .public sub_02048530
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_02029C80
 .public sub_0201738C
@@ -3499,7 +3499,7 @@
 .public sub_020480C0
 .public sub_02024D00
 .public sub_0204B0B8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02024E80
@@ -4000,7 +4000,7 @@
 .public sub_02016EDC
 .public sub_02048530
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_02029C80
 .public sub_0201738C

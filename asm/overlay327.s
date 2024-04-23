@@ -965,7 +965,7 @@ ovy327_21b64bc: ; 0x021B64BC
 	add r1, r2, #0
 	ldr r2, [r5, #0x18]
 	add r4, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy327_21b64dc

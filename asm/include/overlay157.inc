@@ -120,7 +120,7 @@
 .public sub_02024920
 .public sub_02187D28
 .public sub_02014DCC
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02170D04
 .public sub_0202437C
 .public ovy27_2170d90
@@ -129,7 +129,7 @@
 .public sub_0208D65C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02048838
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
+.public GFL_MsgDataLoadStrbuf
 
 .public sub_021B870C

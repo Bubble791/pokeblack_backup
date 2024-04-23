@@ -1097,7 +1097,7 @@ _0217D7FC:
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x2c]
 	mov r1, #7
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, _0217D8DC ; =0x0000031D
 	mov r1, #0xf
 	str r0, [sp]
@@ -4022,7 +4022,7 @@ ovy70_217efa4: ; 0x0217EFA4
 	ldr r0, [r5, #0x14]
 	ldr r1, [sp, #0x18]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #0x30]
 	add r2, r7, #0

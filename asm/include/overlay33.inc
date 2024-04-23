@@ -275,9 +275,9 @@
 .public sub_020487D4
 .public sub_0203A24C
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public ovy36_2187c4c
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202451C
 .public sub_02024920
 .public ovy36_2187c4c
@@ -384,8 +384,8 @@
 .public sub_02155174
 .public sub_0201736C
 .public sub_020245A8
-.public sub_020244B4
-.public sub_020244B4
+.public LoadItemNameToStrbuf
+.public LoadItemNameToStrbuf
 .public sub_02017934
 .public sub_0200C62C
 .public sub_0200C6A0

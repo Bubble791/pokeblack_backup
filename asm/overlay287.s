@@ -2459,7 +2459,7 @@ _021F5776:
 	add r0, r0, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	ldr r0, _021F57F4 ; =0x00001EA0
 	add r1, r6, #0
 	add r0, r0, #4
@@ -5850,7 +5850,7 @@ _021F742C:
 	mov r1, #0x28
 	ldrh r0, [r2, #0x24]
 	ldrh r2, [r2, #0x10]
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0
 	bne _021F744A
 	add r0, r5, #0
@@ -8683,7 +8683,7 @@ ovy287_21f8af0: ; 0x021F8AF0
 	ldr r0, [r5, r2]
 	add r2, #8
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl ovy287_21f7464
 	ldr r0, [r5]
@@ -8727,13 +8727,13 @@ _021F8B74:
 	ldrh r0, [r4, #0x24]
 	ldrh r2, [r4, #0x10]
 	mov r1, #0x27
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0
 	beq _021F8B9A
 	ldrh r0, [r4, #0x24]
 	ldrh r2, [r4, #0x10]
 	mov r1, #0x28
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0
 	bne _021F8B9A
 	ldr r0, _021F8BB4 ; =0x0000217C

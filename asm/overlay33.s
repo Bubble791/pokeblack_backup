@@ -1939,7 +1939,7 @@ _02177A88:
 	ldrh r1, [r1, r7]
 	ldr r0, [sp, #8]
 	ldr r2, [r5, #0x18]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0xe
 	add r6, r4, #0
 	mul r6, r0
@@ -1952,7 +1952,7 @@ _02177A88:
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0x18]
 	mov r1, #5
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -2964,7 +2964,7 @@ ovy33_2178230: ; 0x02178230
 	add r0, r4, #0
 	mov r1, #1
 	add r2, r5, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	mov r0, #7
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -2978,7 +2978,7 @@ ovy33_2178260: ; 0x02178260
 	mov r1, #0
 	lsl r2, r2, #0x10
 	lsr r2, r2, #0x10
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	mov r0, #8
 	pop {r3, pc}
 	thumb_func_end ovy33_2178260

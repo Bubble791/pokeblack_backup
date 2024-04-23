@@ -836,7 +836,7 @@ ovy27_2170964: ; 0x02170964
 	ldr r0, [r5, #0x18]
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x1c]
 	add r1, r6, #0
 	add r2, r4, #0
@@ -1287,7 +1287,7 @@ ovy27_2170d04: ; 0x02170D04
 	ldrb r1, [r5, #0x12]
 	ldr r0, [r0, #4]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, [sp, #0xc]
 	add r0, r7, #0
 	add r2, r4, #0
@@ -1352,7 +1352,7 @@ ovy27_2170d90: ; 0x02170D90
 	ldrb r1, [r5, #0x13]
 	ldr r0, [r0, #4]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, [sp, #0xc]
 	add r0, r7, #0
 	add r2, r4, #0
@@ -1386,7 +1386,7 @@ _02170E28:
 _02170E36:
 	add r1, r2, #0
 	ldr r2, [sp, #8]
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	pop {r3, pc}
 	thumb_func_end ovy27_2170e1c
 _02170E40:

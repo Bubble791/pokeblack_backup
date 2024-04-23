@@ -950,7 +950,7 @@ ovy157_21f6144: ; 0x021F6144
 	ldr r0, [r5, #0x34]
 	ldr r2, [r2]
 	mov r1, #8
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r5, #0
 	add r1, #0x98
 	add r2, r5, #0
@@ -1035,7 +1035,7 @@ _021F6212:
 	add r2, r5, #0
 	add r2, #0x94
 	ldr r2, [r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r5, #0
 	add r1, #0x94
 	ldr r1, [r1]
@@ -1053,7 +1053,7 @@ _021F6212:
 	ldr r0, [r5, #0x34]
 	ldr r2, [r2]
 	add r1, #0xd
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	add r5, #0x94
 	ldr r1, [r5]

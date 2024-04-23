@@ -4508,7 +4508,7 @@ ovy84_21ed168: ; 0x021ED168
 	add r2, r5, #4
 	ldr r0, [r4, r5]
 	ldr r2, [r4, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r5, #0
 	sub r0, r5, #4
 	add r1, #8

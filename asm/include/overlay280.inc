@@ -297,7 +297,7 @@
 .public sub_02021C1C
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021C54
 .public sub_0201C2CC

@@ -401,7 +401,7 @@
 .public sub_02025A10
 .public sub_020088FC
 .public sub_020244E0
-.public sub_020246F4
+.public LoadBagPocketNameToStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02024E80
@@ -442,7 +442,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_0202437C
 .public sub_0202451C
 .public sub_0202451C

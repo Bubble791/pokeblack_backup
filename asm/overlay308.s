@@ -2265,7 +2265,7 @@ ovy308_21a0ae0: ; 0x021A0AE0
 	add r2, #0xc
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	add r1, r4, #0
 	add r0, #8
@@ -2330,7 +2330,7 @@ _021A0B5A:
 	add r2, #0xc
 	ldr r1, [sp, #0x18]
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x18]
 	mov r4, #0
 	lsr r2, r0, #0x1f
@@ -2394,7 +2394,7 @@ _021A0B98:
 	ldr r0, [r5, r7]
 	ldr r2, [r5, r2]
 	mov r1, #7
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	add r0, #0x2c
 	add r0, r5, r0
@@ -2439,7 +2439,7 @@ _021A0C06:
 	ldr r0, [r5, r7]
 	ldr r2, [r5, r2]
 	mov r1, #9
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	add r0, #0x2c
 	add r0, r5, r0

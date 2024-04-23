@@ -65,7 +65,7 @@
 .public sub_0202E818
 .public sub_0203A83C
 .public MI_CpuFill8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020223CC
 .public sub_020484F4
 .public sub_0204713C

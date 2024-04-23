@@ -69,8 +69,8 @@
 .public sub_02187D28
 .public sub_02017934
 .public sub_0200C62C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02187D28
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02013574
 .public sub_02013580

@@ -126,7 +126,7 @@
 .public sub_02024920
 .public sub_02048564
 .public sub_0204898C
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_02024920
 .public sub_02048564
 .public sub_0204898C

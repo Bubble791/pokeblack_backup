@@ -437,7 +437,7 @@
 .public sub_0204C560
 .public sub_0204C560
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202D974
 .public sub_02048564
 .public sub_0202DA54
@@ -535,13 +535,13 @@
 .public sub_02048564
 .public sub_0204898C
 .public sub_020243D0
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_020244A4
 .public sub_02024920
 .public sub_02048564
 .public sub_0204898C
 .public sub_020243D0
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_020244A4
 .public sub_02024920
 .public sub_02048564

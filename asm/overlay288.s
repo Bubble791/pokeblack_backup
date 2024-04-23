@@ -2932,7 +2932,7 @@ _021F5A2E:
 	ldr r0, [r0]
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r0, r5, #0
 	add r0, #0x8c
 	ldr r0, [r0]

@@ -1189,7 +1189,7 @@ ovy204_21aa4c0: ; 0x021AA4C0
 	ldr r0, [r5, #4]
 	ldr r2, [r5, #0x18]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5]
 	ldr r1, [r5, #0x14]
 	ldr r2, [r5, #0x18]
@@ -2065,7 +2065,7 @@ _021AABB2:
 	ldr r0, [r5, #4]
 	add r1, r4, #1
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5]
 	add r1, r6, #0
 	add r2, r7, #0
@@ -2514,7 +2514,7 @@ _021AAF56:
 	ldr r0, [r4, #4]
 	ldr r1, [sp, #0x18]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r4]
 	ldr r1, [r5, #0x2c]
 	add r2, r7, #0
@@ -4718,7 +4718,7 @@ _021AC07A:
 	ldr r0, [r4, #4]
 	ldr r1, [sp, #0x18]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r1, #0x80
 	add r1, #0x90
 	ldr r0, [r4]
@@ -5917,7 +5917,7 @@ ovy204_21ac96c: ; 0x021AC96C
 	mov r1, #0x35
 	ldr r0, [r0, #4]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r6, #0
 	ldr r0, [sp, #0x1c]
 	str r4, [sp]
@@ -6024,7 +6024,7 @@ _021ACAD6:
 	mov r1, #0x36
 	ldr r0, [r0, #4]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x1c]
 	str r4, [sp]
 	add r6, #0xfc
@@ -7955,7 +7955,7 @@ ovy204_21ad9ac: ; 0x021AD9AC
 	ldr r0, [r4, #4]
 	ldr r2, [r4, #0x20]
 	add r1, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r4]
 	ldr r1, [r4, #0x1c]
 	ldr r2, [r4, #0x20]

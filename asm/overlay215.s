@@ -1449,7 +1449,7 @@ ovy215_21a80ac: ; 0x021A80AC
 	ldr r0, [r5, #0x20]
 	ldr r2, [r5, #0x34]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x24]
 	mov r2, #0
 	str r0, [sp]
@@ -4866,7 +4866,7 @@ _021A9C42:
 _021A9C4C:
 	add r2, #8
 	ldr r2, [r3, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 _021A9C54:
 	add r0, r4, #0
 	bl ovy215_21a9b18

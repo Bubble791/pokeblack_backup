@@ -1630,7 +1630,7 @@ ovy140_219db6c: ; 0x0219DB6C
 	ldr r2, [r5, #0x14]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #8]
 	cmp r0, #0
 	beq _0219DBA0

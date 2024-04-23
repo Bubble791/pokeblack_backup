@@ -483,7 +483,7 @@ ovy318_219d264: ; 0x0219D264
 	ldr r0, [r4]
 	ldr r2, [r4, #0x1c]
 	add r6, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5]
 	cmp r0, #0
 	beq _0219D282

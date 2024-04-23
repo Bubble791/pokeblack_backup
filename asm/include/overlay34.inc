@@ -686,7 +686,7 @@
 .public sub_02048564
 .public sub_021879B8
 .public sub_0203CB80
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_02188BA4
 .public sub_02188BDC

@@ -4293,7 +4293,7 @@ _0219BA58:
 	ldr r0, [r5, #0x38]
 	ldr r2, [r5, #0x14]
 	mov r1, #7
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020484F4
 	add r1, r0, #0
@@ -4314,7 +4314,7 @@ _0219BA86:
 	ldr r0, [r5, #0x38]
 	ldr r2, [r5, #0x14]
 	mov r1, #8
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020484F4
 	add r1, r0, #0
@@ -4547,7 +4547,7 @@ _0219BC26:
 	ldr r2, [r5, #0x14]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x18]
 	cmp r0, #0
 	beq _0219BC5C

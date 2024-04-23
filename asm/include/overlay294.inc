@@ -239,7 +239,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_020232E8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_02022268
 .public sub_02024E80
@@ -261,7 +261,7 @@
 .public sub_020223E0
 .public MI_CpuFill8
 .public sub_02024F60
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024FDC
 .public MI_CpuFill8
 .public sub_021A333C

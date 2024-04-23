@@ -3032,7 +3032,7 @@ _02008292:
 	bl sub_020085E0
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
-	bl sub_02008488
+	bl BagSave_GetUniqueItemCount
 	add r1, r0, #0
 	ldr r0, [sp, #4]
 	bl sub_0200859C
@@ -3127,7 +3127,7 @@ sub_02008338: ; 0x02008338
 	beq _0200835A
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_020083C8
+	bl BagSave_GetExistingItemPocket
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	cmp r0, #6
@@ -3170,7 +3170,7 @@ sub_02008360: ; 0x02008360
 	str r0, [r2, r1]
 	pop {r3, r4, r5, r6, r7, pc}
 _02008396:
-	bl sub_020083C8
+	bl BagSave_GetExistingItemPocket
 	cmp r0, #6
 	beq _020083BA
 	lsr r2, r6, #0x1f
@@ -3201,8 +3201,8 @@ sub_020083C0: ; 0x020083C0
 _020083C4: .word sub_02008360
 	thumb_func_end sub_020083C0
 
-	thumb_func_start sub_020083C8
-sub_020083C8: ; 0x020083C8
+	thumb_func_start BagSave_GetExistingItemPocket
+BagSave_GetExistingItemPocket: ; 0x020083C8
 	push {r4, r5, r6, lr}
 	add r6, r1, #0
 	add r5, r0, #0
@@ -3220,7 +3220,7 @@ _020083E6:
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end sub_020083C8
+	thumb_func_end BagSave_GetExistingItemPocket
 
 	thumb_func_start sub_020083EC
 sub_020083EC: ; 0x020083EC
@@ -3314,8 +3314,8 @@ _02008482:
 	.align 2, 0
 	thumb_func_end sub_02008474
 
-	thumb_func_start sub_02008488
-sub_02008488: ; 0x02008488
+	thumb_func_start BagSave_GetUniqueItemCount
+BagSave_GetUniqueItemCount: ; 0x02008488
 	push {r3, r4}
 	mov r3, #0
 	cmp r0, #0
@@ -3337,7 +3337,7 @@ _020084A6:
 	add r0, r3, #0
 	pop {r3, r4}
 	bx lr
-	thumb_func_end sub_02008488
+	thumb_func_end BagSave_GetUniqueItemCount
 
 	thumb_func_start sub_020084AC
 sub_020084AC: ; 0x020084AC
@@ -3442,7 +3442,7 @@ sub_0200854C: ; 0x0200854C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
-	bl sub_020083C8
+	bl BagSave_GetExistingItemPocket
 	add r1, r0, #0
 	cmp r1, #6
 	beq _02008574
@@ -3532,7 +3532,7 @@ sub_020085E0: ; 0x020085E0
 	sub sp, #0xc
 	add r6, r0, #0
 	add r5, r1, #0
-	bl sub_020083C8
+	bl BagSave_GetExistingItemPocket
 	add r4, r0, #0
 	cmp r4, #6
 	beq _02008652
@@ -11094,7 +11094,7 @@ sub_0200B534: ; 0x0200B534
 	ldrb r1, [r5]
 	add r6, r0, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 	pop {r4, r5, r6, pc}
@@ -32211,7 +32211,7 @@ _020141F0:
 	add r2, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	b _020142D4
 _02014202:
 	add r0, r5, #0
@@ -54972,7 +54972,7 @@ _0201E25A:
 	ldr r1, _0201E3A4 ; =0x0000028B
 	ldr r0, [r0]
 	ldr r2, [sp, #4]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	b _0201E390
 _0201E270:
 	ldr r0, [sp, #4]
@@ -58007,7 +58007,7 @@ _0201F788:
 	ldr r0, [r7]
 	ldr r2, [sp, #8]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [sp, #8]
 	add r0, r6, #0
 	add r1, r5, #0
@@ -58072,7 +58072,7 @@ _0201F810:
 	ldr r0, [r7]
 	ldr r2, [sp, #8]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [sp, #8]
 	add r0, r5, #0
 	add r1, r6, #0
@@ -60333,7 +60333,7 @@ _020207B2:
 	ldr r0, [sp, #0x24]
 	ldr r2, [sp, #0x68]
 	mov r1, #1
-	bl sub_020267F0
+	bl Item_GetItemParam
 	lsl r0, r0, #0x18
 	lsr r1, r0, #0x18
 	ldr r0, [sp, #0x28]
@@ -60753,7 +60753,7 @@ _02020B08:
 	ldr r2, [sp, #0x68]
 	lsr r0, r0, #0x10
 	mov r1, #1
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0x40
 	beq _02020B68
 	add r0, r7, #0
@@ -60982,7 +60982,7 @@ _02020C9C:
 	add r0, r6, #0
 	lsr r1, r1, #0x10
 	add r2, r5, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	strb r0, [r7, r4]
 	add r4, r4, #1
 	cmp r4, #3
@@ -61079,7 +61079,7 @@ sub_02020D28: ; 0x02020D28
 	lsr r0, r0, #0x10
 	mov r1, #1
 	add r2, r4, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #4]
@@ -68565,7 +68565,7 @@ sub_02024340: ; 0x02024340
 	beq _02024378
 	ldr r2, [r5, #0xc]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r5, #0xc]
 	add r0, r5, #0
 	add r1, r4, #0
@@ -68632,7 +68632,7 @@ sub_020243D0: ; 0x020243D0
 	add r1, r2, #0
 	ldr r0, [r0]
 	ldr r2, [r5, #0xc]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r5, #0xc]
 	add r0, r5, #0
 	add r1, r4, #0
@@ -68755,14 +68755,14 @@ sub_020244A4: ; 0x020244A4
 _020244B0: .word 0x00000193
 	thumb_func_end sub_020244A4
 
-	thumb_func_start sub_020244B4
-sub_020244B4: ; 0x020244B4
+	thumb_func_start LoadItemNameToStrbuf
+LoadItemNameToStrbuf: ; 0x020244B4
 	push {r3, lr}
 	add r3, r2, #0
 	mov r2, #0x40
 	bl sub_02024340
 	pop {r3, pc}
-	thumb_func_end sub_020244B4
+	thumb_func_end LoadItemNameToStrbuf
 
 	thumb_func_start sub_020244C0
 sub_020244C0: ; 0x020244C0
@@ -68800,7 +68800,7 @@ _020244EC:
 	bl sub_020244C0
 	pop {r3, pc}
 _020244F8:
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end sub_020244E0
@@ -68958,7 +68958,7 @@ sub_020245E0: ; 0x020245E0
 	ldr r2, [r5, #0xc]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r5, #0xc]
 	add r0, r5, #0
 	add r1, r6, #0
@@ -69006,7 +69006,7 @@ sub_02024630: ; 0x02024630
 	ldr r2, [r5, #0xc]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r5, #0xc]
 	add r0, r5, #0
 	add r1, r7, #0
@@ -69088,14 +69088,14 @@ sub_020246E4: ; 0x020246E4
 	.align 2, 0
 	thumb_func_end sub_020246E4
 
-	thumb_func_start sub_020246F4
-sub_020246F4: ; 0x020246F4
+	thumb_func_start LoadBagPocketNameToStrbuf
+LoadBagPocketNameToStrbuf: ; 0x020246F4
 	push {r3, lr}
 	add r3, r2, #0
 	mov r2, #0x41
 	bl sub_02024340
 	pop {r3, pc}
-	thumb_func_end sub_020246F4
+	thumb_func_end LoadBagPocketNameToStrbuf
 
 	thumb_func_start sub_02024700
 sub_02024700: ; 0x02024700
@@ -69216,7 +69216,7 @@ sub_0202479C: ; 0x0202479C
 	ldr r2, [r5, #0xc]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r5, #0xc]
 	add r0, r5, #0
 	add r1, r7, #0
@@ -73639,7 +73639,7 @@ _020267A0:
 	add r6, r0, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 	pop {r4, r5, r6, pc}
@@ -73665,7 +73665,7 @@ _020267D0:
 	add r6, r0, #0
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 	pop {r4, r5, r6, pc}
@@ -73673,8 +73673,8 @@ _020267D0:
 _020267EC: .word 0x0000027E
 	thumb_func_end sub_020267C0
 
-	thumb_func_start sub_020267F0
-sub_020267F0: ; 0x020267F0
+	thumb_func_start Item_GetItemParam
+Item_GetItemParam: ; 0x020267F0
 	push {r3, r4, r5, lr}
 	ldr r3, _0202681C ; =0x00007FFF
 	add r4, r2, #0
@@ -73696,7 +73696,7 @@ sub_020267F0: ; 0x020267F0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _0202681C: .word 0x00007FFF
-	thumb_func_end sub_020267F0
+	thumb_func_end Item_GetItemParam
 
 	thumb_func_start sub_02026820
 sub_02026820: ; 0x02026820
@@ -81841,7 +81841,7 @@ sub_0202A134: ; 0x0202A134
 	add r0, r5, r0
 	ldr r0, [r0, #4]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -81871,7 +81871,7 @@ sub_0202A15C: ; 0x0202A15C
 	ldr r1, [sp]
 	add r4, r0, #0
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 	add sp, #8
@@ -96271,7 +96271,7 @@ _02030642:
 	ldr r0, [sp, #0xc]
 	ldr r2, [sp, #4]
 	lsr r1, r1, #2
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	b _0203067A
 _0203066E:
 	ldrh r0, [r4]
@@ -96323,7 +96323,7 @@ _020306BE:
 	ldr r2, [sp, #4]
 	add r0, r4, #0
 	sub r1, r5, r1
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 _020306D6:
@@ -96579,7 +96579,7 @@ _02030874:
 	ldr r2, [r4, #0x14]
 	add r7, r0, #0
 	add r1, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_020487D4
 _02030892:

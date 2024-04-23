@@ -1524,7 +1524,7 @@ ovy177_219b8f8: ; 0x0219B8F8
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #8]
 	ldr r2, [r4, #0xc]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_02021C44
 	ldr r0, [r4, #4]
@@ -1572,7 +1572,7 @@ ovy177_219b964: ; 0x0219B964
 	ldr r0, [sp, #0xc]
 	ldr r2, [r5, #0xc]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5]
 	bl sub_020484D8
 	lsl r0, r0, #0x12

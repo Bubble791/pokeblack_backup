@@ -547,7 +547,7 @@ ovy295_219d2c4: ; 0x0219D2C4
 	ldr r0, [r5, #0x14]
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
 	mov r1, #0
@@ -1003,7 +1003,7 @@ ovy295_219d66c: ; 0x0219D66C
 	ldr r0, [r5, #0xc]
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x10]
 	ldr r2, [r5, #8]
 	mov r1, #1

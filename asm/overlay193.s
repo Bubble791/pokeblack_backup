@@ -762,7 +762,7 @@ _021B35A6:
 _021B35AE:
 	add r2, #0x1c
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021B7808
 	add r1, r0, #0
@@ -4755,7 +4755,7 @@ _021B5862:
 _021B586A:
 	add r2, #0x1c
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021B7808
 	add r1, r0, #0

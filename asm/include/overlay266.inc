@@ -133,7 +133,7 @@
 .public sub_020484F4
 .public sub_02046EF4
 .public sub_0219D9A0
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02022888
 .public sub_02022888
 .public sub_02021D28

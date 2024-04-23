@@ -17584,7 +17584,7 @@ ovy36_2187a40: ; 0x02187A40
 	ldr r0, [r5, #0x10]
 	ldr r2, [r5, #0x18]
 	add r1, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x1c]
 	ldr r7, [r5, #0xc]
 	bl sub_020484F4
@@ -18843,7 +18843,7 @@ _02188382:
 	ldr r0, [r5, #0xc]
 	ldr r2, [r5, #0x10]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x16
 	ldr r1, [r5, #0x14]
 	lsl r0, r0, #4
@@ -19074,7 +19074,7 @@ _0218854E:
 	ldr r0, [r5, #0xc]
 	ldr r2, [r5, #0x10]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x16
 	ldr r1, [r5, #0x14]
 	lsl r0, r0, #4
@@ -20154,7 +20154,7 @@ ovy36_2188d6c: ; 0x02188D6C
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x1c]
 	str r2, [r6]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, sp, #0x38
 	ldrb r1, [r0]
 	add r3, r7, #3
@@ -29357,7 +29357,7 @@ _0218D42A:
 	ldr r0, [r5, #0x28]
 	ldr r1, [r1, r6]
 	ldr r2, [r5, #0x38]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	beq _0218D49A
@@ -30110,7 +30110,7 @@ _0218DA7C:
 	ldr r0, [r4, #0x28]
 	ldr r2, [r4, #0x38]
 	mov r1, #0x2c
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	add r1, r6, #0
 	bl ovy36_218e710
@@ -31556,7 +31556,7 @@ ovy36_218e600: ; 0x0218E600
 	str r2, [r5, r4]
 	ldr r0, [r5, #0x28]
 	mov r1, #0x1a
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r6, _0218E698 ; =0x000039E3
 	add r0, r4, #4
 	strh r6, [r5, r0]
@@ -31569,7 +31569,7 @@ ovy36_218e600: ; 0x0218E600
 	str r2, [r5, r0]
 	ldr r0, [r5, #0x28]
 	mov r1, #0x1b
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	add r0, #0x10
 	strh r6, [r5, r0]
@@ -31759,7 +31759,7 @@ ovy36_218e7cc: ; 0x0218E7CC
 	ldr r0, [r4, #0x28]
 	ldr r2, [r4, #0x38]
 	mov r1, #0x19
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy36_218e710
@@ -31891,7 +31891,7 @@ ovy36_218e8cc: ; 0x0218E8CC
 	beq _0218E910
 	ldr r2, [r4, #0x38]
 	mov r1, #0x2d
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy36_218e710
@@ -31902,7 +31902,7 @@ ovy36_218e8cc: ; 0x0218E8CC
 _0218E910:
 	ldr r2, [r4, #0x38]
 	mov r1, #0x1c
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy36_218e710
@@ -85008,7 +85008,7 @@ ovy36_21a7650: ; 0x021A7650
 	add r0, r7, #0
 	mov r1, #5
 	add r2, r6, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	strh r0, [r4]
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -85034,7 +85034,7 @@ ovy36_21a7684: ; 0x021A7684
 	add r0, r7, #0
 	mov r1, #0xf
 	add r2, r6, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	strh r0, [r4]
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -85228,7 +85228,7 @@ _021A7848:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 _021A7852:
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -85364,7 +85364,7 @@ ovy36_21a793c: ; 0x021A793C
 	add r2, r0, #0
 	add r0, r7, #0
 	add r1, r6, #0
-	bl sub_020246F4
+	bl LoadBagPocketNameToStrbuf
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy36_21a793c
@@ -87226,7 +87226,7 @@ _021A88DC:
 	ldr r2, [sp, #0xc]
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x10]
 	ldr r2, [sp, #0xc]
 	add r1, r5, #0
@@ -87297,7 +87297,7 @@ ovy36_21a8944: ; 0x021A8944
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r7, #0
@@ -89134,7 +89134,7 @@ ovy36_21a9830: ; 0x021A9830
 	ldr r0, [sp, #8]
 	ldr r1, [sp]
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	b _021A9892
 _021A986E:
 	add r0, r6, #0
@@ -89148,7 +89148,7 @@ _021A986E:
 	ldr r1, [sp]
 	add r4, r0, #0
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 _021A9892:
@@ -95167,7 +95167,7 @@ _021AC7B6:
 	ldrh r2, [r5, #4]
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	bl sub_020136C0
 	str r0, [r7, #0x24]
 	ldr r0, [sp, #0x14]
@@ -97031,7 +97031,7 @@ ovy36_21ad6e4: ; 0x021AD6E4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x24]
 	mov r1, #1
-	bl sub_020246F4
+	bl LoadBagPocketNameToStrbuf
 	mov r0, #0xe4
 	add r0, #0xcc
 	ldr r0, [r5, r0]
@@ -98890,7 +98890,7 @@ _021AE692:
 	add r0, r5, #0
 	mov r1, #2
 	add r2, r7, #0
-	bl sub_020267F0
+	bl Item_GetItemParam
 	lsl r0, r0, #0x18
 	lsr r1, r0, #0x18
 	add r0, r4, #0
@@ -113481,7 +113481,7 @@ _021B56AC:
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x1c]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 _021B56B6:
 	ldr r0, [r5, #4]
 	bl sub_020173AC
@@ -135585,7 +135585,7 @@ _021BFE0A:
 	ldrh r1, [r4, #0x10]
 	ldr r0, [r0]
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, [r4, #8]
 	ldr r0, [r1, #0x1c]
 	cmp r0, #1
@@ -143768,7 +143768,7 @@ _021C3AF6:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x18]
 	mov r1, #4
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -147618,11 +147618,11 @@ _021C585C:
 	ldr r0, [r5, #8]
 	ldr r2, [sp, #0xc]
 	mov r1, #0x1a
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #8]
 	ldr r2, [sp, #8]
 	mov r1, #0x1b
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x51
 	lsl r0, r0, #2
 	str r0, [sp, #0x1c]
@@ -151642,7 +151642,7 @@ ovy36_21c76d8: ; 0x021C76D8
 	add r0, r6, #0
 	mov r1, #3
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020484F4
 	add r7, r0, #0
@@ -155952,7 +155952,7 @@ ovy36_21c98c0: ; 0x021C98C0
 	beq _021C98EC
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 _021C98EC:

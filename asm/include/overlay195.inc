@@ -701,7 +701,7 @@
 .public sub_02048210
 .public sub_020480A8
 .public sub_0203A24C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -712,7 +712,7 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_02045B7C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -732,9 +732,9 @@
 .public sub_02045B7C
 .public sub_02048210
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202D974
 .public sub_02048564
 .public sub_02048564
@@ -743,14 +743,14 @@
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021CFC
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021CFC
 .public sub_02048244
@@ -766,11 +766,11 @@
 .public sub_021B6CD8
 .public sub_0205044C
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02022888
 .public sub_0202E210
 .public sub_02048564
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -791,7 +791,7 @@
 .public sub_02008C10
 .public sub_020245E0
 .public sub_02024630
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020480C0
 .public sub_020484F4
@@ -818,7 +818,7 @@
 .public sub_0202451C
 .public sub_02008C0C
 .public sub_020245E0
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020232E8
 .public sub_020484F4
@@ -841,9 +841,9 @@
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202D974
 .public sub_02048564
 .public sub_02048564
@@ -861,7 +861,7 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_02045B7C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -872,7 +872,7 @@
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202E210
 .public sub_0203D554
 .public sub_0202E41C
@@ -881,7 +881,7 @@
 .public sub_0202E34C
 .public sub_02045B7C
 .public sub_0202E438
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
@@ -891,7 +891,7 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_0202451C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020480C0
 .public sub_020484F4
@@ -902,7 +902,7 @@
 .public sub_02048244
 .public sub_0204826C
 .public sub_020245A8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020480C0
 .public sub_020484F4

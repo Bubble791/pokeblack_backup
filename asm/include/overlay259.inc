@@ -357,10 +357,10 @@
 .public sub_02048564
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_020484D4
@@ -387,7 +387,7 @@
 .public sub_020223CC
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0204898C
 .public sub_02024920
 .public sub_02048564

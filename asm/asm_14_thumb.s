@@ -33020,8 +33020,8 @@ sub_020487FC: ; 0x020487FC
 _02048834: .word 0x0209AEDC
 	thumb_func_end sub_020487FC
 
-	thumb_func_start sub_02048838
-sub_02048838: ; 0x02048838
+	thumb_func_start GFL_MsgDataLoadStrbuf
+GFL_MsgDataLoadStrbuf: ; 0x02048838
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -33126,7 +33126,7 @@ _02048902:
 	nop
 _02048910: .word 0x0209AEDC
 _02048914: .word 0x00007FFF
-	thumb_func_end sub_02048838
+	thumb_func_end GFL_MsgDataLoadStrbuf
 
 	thumb_func_start sub_02048918
 sub_02048918: ; 0x02048918
@@ -33234,7 +33234,7 @@ _020489D0:
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0204898C

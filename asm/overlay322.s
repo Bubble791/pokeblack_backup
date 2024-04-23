@@ -4454,7 +4454,7 @@ _0219F138:
 	ldr r0, [r5, r0]
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	mov r0, #0x2a
 	lsl r0, r0, #4
 	sub r0, #0x9c
@@ -6215,7 +6215,7 @@ _0219FF1C:
 	mov r1, #2
 	ldrsh r1, [r3, r1]
 	ldr r0, [r6, r0]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, _0219FF90 ; =0x000039E0
 	cmp r4, #2
 	strh r0, [r5, r7]

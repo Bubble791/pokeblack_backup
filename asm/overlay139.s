@@ -1672,7 +1672,7 @@ _0219A4E8:
 	ldr r0, [sp, #8]
 	ldr r2, [r7]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	bl sub_020485F8
 	add r2, r0, #0

@@ -130,7 +130,7 @@
 .public sub_02048530
 .public sub_02048530
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020241D4
 .public sub_0201FF08
 .public sub_020243F4
@@ -264,7 +264,7 @@
 .public sub_0204898C
 .public sub_0202284C
 .public sub_02048564
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020485BC
 .public sub_0204AA30
 .public sub_0204BF1C

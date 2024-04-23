@@ -5771,7 +5771,7 @@ _021DC1AA:
 	ldr r0, [r4]
 	ldr r2, [r4, #0x1c]
 	add r1, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r4, #8]
 	ldr r5, [r4, #0x10]
 	bl sub_020484F4

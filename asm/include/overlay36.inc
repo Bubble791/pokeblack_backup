@@ -1252,7 +1252,7 @@
 .public sub_0204875C
 .public sub_02048530
 .public sub_02048564
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021C54
 .public sub_020484F4
@@ -1310,7 +1310,7 @@
 .public sub_02048564
 .public sub_02189D10
 .public sub_0203A24C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0203DEFC
 .public sub_0203DF20
 .public sub_02189D20
@@ -1326,7 +1326,7 @@
 .public sub_02048564
 .public sub_02189D10
 .public sub_0203A24C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0203DEFC
 .public sub_0203DF20
 .public sub_02189D20
@@ -1404,7 +1404,7 @@
 .public sub_020229B0
 .public sub_0203A1FC
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0203A1FC
 .public sub_020485F8
 .public sub_02048530
@@ -2044,7 +2044,7 @@
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02022888
 .public sub_020229B0
 .public sub_020484F4
@@ -2127,7 +2127,7 @@
 .public sub_0218D0EC
 .public sub_0201735C
 .public sub_0201FDFC
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02006254
 .public sub_0218D0EC
 .public sub_02006254
@@ -2215,9 +2215,9 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202D974
 .public sub_0202DED4
 .public sub_02048564
@@ -2243,7 +2243,7 @@
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_02045790
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0218D0EC
 .public sub_02017850
 .public sub_02024EEC
@@ -2259,8 +2259,8 @@
 .public sub_0202DC00
 .public sub_02017934
 .public sub_0200746C
-.public sub_02048838
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
+.public GFL_MsgDataLoadStrbuf
 .public sub_02045738
 .public sub_0218D0EC
 .public sub_0202DA54
@@ -6173,11 +6173,11 @@
 .public sub_0215515C
 .public ovy12_2154910
 .public ovy12_21548e8
-.public sub_020267F0
+.public Item_GetItemParam
 .public sub_0215515C
 .public ovy12_2154910
 .public ovy12_21548e8
-.public sub_020267F0
+.public Item_GetItemParam
 .public sub_02155174
 .public sub_02017354
 .public sub_0215515C
@@ -6208,7 +6208,7 @@
 .public ovy12_2154910
 .public sub_020244D0
 .public sub_020244C0
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_02155184
 .public sub_02153EC4
 .public ovy12_2154910
@@ -6232,7 +6232,7 @@
 .public sub_02155174
 .public sub_02017354
 .public sub_020088FC
-.public sub_020246F4
+.public LoadBagPocketNameToStrbuf
 .public sub_02155184
 .public sub_02155174
 .public sub_02153EC4
@@ -6559,7 +6559,7 @@
 .public sub_0200C9BC
 .public sub_0218058C
 .public sub_0202451C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_02048564
 .public sub_020487D4
@@ -6577,7 +6577,7 @@
 .public sub_02017974
 .public sub_0200C9BC
 .public sub_0202451C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_02187C7C
 .public sub_02048564
@@ -6799,10 +6799,10 @@
 .public sub_0215519C
 .public sub_02153EC4
 .public sub_02153ECC
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0215515C
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_02024920
 .public sub_02155184
@@ -7507,7 +7507,7 @@
 .public sub_0204A934
 .public sub_02026A94
 .public sub_02024F60
-.public sub_020267F0
+.public Item_GetItemParam
 .public sub_020136C0
 .public sub_02024FBC
 .public sub_0203A24C
@@ -7711,7 +7711,7 @@
 .public sub_0204713C
 .public sub_02024E80
 .public sub_020244E0
-.public sub_020246F4
+.public LoadBagPocketNameToStrbuf
 .public sub_0204898C
 .public sub_02024920
 .public sub_02048564
@@ -7962,7 +7962,7 @@
 .public sub_0200DDF4
 .public ovy12_21548e8
 .public sub_0200DDE0
-.public sub_020267F0
+.public Item_GetItemParam
 .public sub_0200DDB0
 .public sub_0200842C
 .public sub_0202D384
@@ -9196,7 +9196,7 @@
 .public sub_0201006C
 .public sub_02038F00
 .public sub_02048614
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020173AC
 .public sub_020485F8
 .public sub_021B5AA8
@@ -10950,7 +10950,7 @@
 .public sub_021659EC
 .public sub_02016D68
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024B68
 .public sub_0202437C
 .public sub_02048564
@@ -11697,7 +11697,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202451C
 .public sub_02024920
 .public sub_02048564
@@ -11861,8 +11861,8 @@
 .public sub_02048530
 .public sub_02048530
 .public sub_02048530
-.public sub_02048838
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
+.public GFL_MsgDataLoadStrbuf
 .public sub_0202451C
 .public sub_020245A8
 .public sub_02008BD4
@@ -12203,7 +12203,7 @@
 .public sub_0204826C
 .public sub_02024E80
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_0218799C
 .public sub_02021CFC
@@ -12666,7 +12666,7 @@
 .public sub_0203A6A8
 .public sub_021C98A4
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_02155184
 .public sub_0215516C

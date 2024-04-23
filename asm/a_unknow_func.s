@@ -8113,3 +8113,8 @@ sub_021C5C10: ; 0x02073FB4
 sub_0208D868:
 	bx lr
 	arm_func_end sub_0208D868
+
+	arm_func_start sub_021999C8
+sub_021999C8:
+	bx lr
+	thumb_func_end sub_021999C8

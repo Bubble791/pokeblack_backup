@@ -5521,7 +5521,7 @@ _021B5C3E:
 	add r2, r0, #0
 	add r0, r7, #0
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	ldr r0, [r5, #0x7c]
 	mov r1, #5
 	bl sub_0204898C

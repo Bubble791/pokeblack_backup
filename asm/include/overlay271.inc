@@ -395,7 +395,7 @@
 .public sub_0203A24C
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_020484F4
 .public sub_02021C7C
@@ -915,7 +915,7 @@
 .public sub_0203CB80
 .public sub_02024F60
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024FDC
 .public sub_02048564
 .public sub_02024FAC

@@ -860,8 +860,8 @@
 .public sub_02026820
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_020267F0
-.public sub_020267F0
+.public Item_GetItemParam
+.public Item_GetItemParam
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201CCF8
@@ -1387,7 +1387,7 @@
 .public sub_02020C8C
 
 .public sub_02008538
-.public sub_020244B4
+.public LoadItemNameToStrbuf
 .public sub_020244C0
 .public sub_020244A4
 .public sub_020246E4

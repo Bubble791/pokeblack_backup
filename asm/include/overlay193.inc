@@ -85,7 +85,7 @@
 .public sub_021BE95C
 .public sub_021B7BE4
 .public sub_02042BA8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_021B7808
 .public sub_021B7D04
 .public sub_02024464
@@ -644,7 +644,7 @@
 .public sub_021BE95C
 .public sub_021B7BE4
 .public sub_02042BA8
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_021B7808
 .public sub_021B7D04
 .public sub_02024464

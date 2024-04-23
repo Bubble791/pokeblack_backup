@@ -456,7 +456,7 @@ ovy156_21f5d70: ; 0x021F5D70
 	ldr r0, [r0, #0x28]
 	ldr r2, [r2, #0x34]
 	mov r1, #5
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	ldr r3, [sp, #4]
 	ldr r0, [r0, #0x18]
@@ -470,7 +470,7 @@ ovy156_21f5d70: ; 0x021F5D70
 	ldr r0, [r0, #0x28]
 	ldr r2, [r2, #0x34]
 	mov r1, #7
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0
 	str r0, [sp, #0xc]
 	add r7, sp, #0x14

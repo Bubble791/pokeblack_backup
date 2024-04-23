@@ -1714,7 +1714,7 @@ ovy266_219db98: ; 0x0219DB98
 	ldr r1, [r4]
 	ldr r2, [r5, #0x18]
 	add r7, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldrh r0, [r4, #0xa]
 	cmp r0, #0
 	bne _0219DBC0

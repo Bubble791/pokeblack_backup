@@ -148,7 +148,7 @@
 .public sub_0219B5A0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_02021C54
 .public sub_0219B5A8
@@ -156,7 +156,7 @@
 .public sub_0219B5A0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484D8
 .public sub_020484DC
 .public sub_02022888

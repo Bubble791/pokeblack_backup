@@ -1,6 +1,7 @@
 #include "global.h"
 #include "main.h"
 #include "bag.h"
+#include "item_param.h"
 
 const u8 data_21A0FD0[5] = {0};
 const u8 data_21A0FD8[5] = {0};
@@ -51,7 +52,7 @@ ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket)
 
 int ovy142_219995c(u32 itemId, int param_2, u16 heapId)
 {
-    int price = sub_020267F0(itemId, 0, heapId); // GetItemParam
+    int price = Item_GetItemParam(itemId, ITEM_DATA_PRICE, heapId); // GetItemParam
     return (price / 2) * param_2;
 }
 
@@ -64,19 +65,19 @@ int ovy142_2199988(BagView *m_bagView)
 {
     if (m_bagView->unk83C != 0)
     {
-        return sub_02008488(&m_bagView->m_itemTable[0], NORMAL_ITEM_MAX);
+        return BagSave_GetUniqueItemCount(&m_bagView->m_itemTable[0], NORMAL_ITEM_MAX);
     }
     return ovy142_21a0698(&m_bagView->unk8C8, m_bagView->itemType, m_bagView);
 }
 
-void sub_021999B8(BagView *m_bagView, int bufId, int msgId)
+void BagMenu_LoadItemNameToStrbuf(BagView *m_bagView, int bufId, int msgId)
 {
-    sub_020244B4(m_bagView->messageParam, bufId, msgId);
+    LoadItemNameToStrbuf(m_bagView->messageParam, bufId, msgId);
 }
 
-void sub_021999C8(BagView *m_bagView, int bufId, int msgId)
+void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId)
 {
-    sub_020246F4(m_bagView->messageParam, bufId, msgId);
+    LoadBagPocketNameToStrbuf(bagView->messageParam, bufId, msgId);
 }
 
 void ovy142_21999d8(BagView *m_bagView, int bufId, int msgId, int name1, int name2);
@@ -124,13 +125,13 @@ void ovy142_2199a20(BagView *m_bagView, int param_2, int param_3)
 
 void ovy142_2199a5c(BagView *m_bagView, int param_2, u32 param_3)
 {
-    UNKNOW_DATA local_18;
+    PosTable local_18;
 
     sub_020088A4(m_bagView->unk14, param_2);
     sub_02008894(m_bagView->unk14, param_2, m_bagView->posNow, (m_bagView->unk834 + 1));
-    sub_0200887C(m_bagView->unk14, param_3, &local_18.num, &local_18.itemId);
-    m_bagView->posNow = local_18.num;
-    m_bagView->unk834 = local_18.itemId - 1;
+    sub_0200887C(m_bagView->unk14, param_3, &local_18.y, &local_18.x);
+    m_bagView->posNow = local_18.y;
+    m_bagView->unk834 = local_18.x - 1;
     ovy142_219ed3c(m_bagView);
     ovy142_219f8ec(m_bagView, param_3);
     ovy142_219f06c(m_bagView, param_3);
@@ -578,13 +579,13 @@ void ovy142_219a104(BagView *m_bagView)
             u32 heap = m_bagView->heapId;
             u8 uVar1;
             
-            uVar1 = sub_020267F0(items, 2, heap);
+            uVar1 = Item_GetItemParam(items, ITEM_DATA_USE_PARAM, heap);
             sub_0200DDB0(uVar3, uVar1);
             sub_0200DDF0(uVar3, (u16)m_bagView->selectItem);
             ovy142_219b340(m_bagView, 1);
-            sub_02048838(m_bagView->unk520, 0x3f, m_bagView->unk528);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x3f, m_bagView->unk528);
             sub_020245A8(m_bagView->messageParam, 0, m_bagView->unk8);
-            sub_021999B8(m_bagView, 1, m_bagView->selectItem);
+            BagMenu_LoadItemNameToStrbuf(m_bagView, 1, m_bagView->selectItem);
             sub_02024920(m_bagView->messageParam,
                                     m_bagView->unk52C,
                                     m_bagView->unk528);
@@ -593,7 +594,7 @@ void ovy142_219a104(BagView *m_bagView)
         }
         else
         {
-            sub_02048838(m_bagView->unk520, 0x40, m_bagView->unk528);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x40, m_bagView->unk528);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
             ovy142_219f6a4(m_bagView, 1);
         }
@@ -633,7 +634,7 @@ void ovy142_219a250(BagView *m_bagView)
 {
     if (m_bagView->selectItem - 616 <= 1) // 光之石 暗之石
     {
-        sub_02048838(m_bagView->unk520, 0x38, m_bagView->unk528);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x38, m_bagView->unk528);
         sub_020245A8(m_bagView->messageParam, 0, m_bagView->unk8);
         sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
         ovy142_219f6a4(m_bagView, 1);
@@ -649,9 +650,9 @@ void ovy142_219a2ac(BagView *m_bagView)
 
 void ovy142_219a2c4(BagView *m_bagView, int param_2)
 {
-    sub_02048838(m_bagView->unk520, param_2, m_bagView->unk528);
+    GFL_MsgDataLoadStrbuf(m_bagView->unk520, param_2, m_bagView->unk528);
     sub_020245A8(m_bagView->messageParam, 0, m_bagView->unk8);
-    sub_020244B4(m_bagView->messageParam, 1, m_bagView->selectItem);
+    LoadItemNameToStrbuf(m_bagView->messageParam, 1, m_bagView->selectItem);
     sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
     sub_021998C0(m_bagView, ovy142_219a2ac);
 }
@@ -837,7 +838,7 @@ void ovy142_219a4d0(BagView *m_bagView)
             switch (m_bagView->unk89C)
             {
             case 0:
-                int type = sub_020083C8(m_bagView->bagSave, (u16)m_bagView->selectItem);
+                int type = BagSave_GetExistingItemPocket(m_bagView->bagSave, m_bagView->selectItem);
                 ovy142_219ff40(m_bagView, 0);
                 if (type != 5)
                 {
@@ -849,7 +850,7 @@ void ovy142_219a4d0(BagView *m_bagView)
                 else
                 {
 
-                    int fieldPocket = sub_020267F0((u16)m_bagView->selectItem, 3, m_bagView->heapId);
+                    int fieldPocket = Item_GetItemParam((u16)m_bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, m_bagView->heapId);
                     if (fieldPocket == 0)
                     {
                         sub_0202D384((u16)m_bagView->selectItem);
@@ -863,7 +864,7 @@ void ovy142_219a4d0(BagView *m_bagView)
                 }
                 else
                 {
-                    int isEvoStone = sub_020267F0(m_bagView->selectItem, 0x1d, m_bagView->heapId);
+                    int isEvoStone = Item_GetItemParam(m_bagView->selectItem, ITEM_DATA_IS_EVOSTONE, m_bagView->heapId);
 
                     if (isEvoStone == 1)
                     {
@@ -873,12 +874,11 @@ void ovy142_219a4d0(BagView *m_bagView)
                     else
                     {
                         int iVar5;
-                        int index = ovy142_219a4a0((u16)m_bagView->selectItem);
+                        int index = ovy142_219a4a0(m_bagView->selectItem);
                         if (index >= 0)
                         {
-                            index = ovy142_219a4a0((u16)m_bagView->selectItem);
+                            index = ovy142_219a4a0(m_bagView->selectItem);
                             gItemFuncTable[index].func(m_bagView);
-
                             break;
                         }
                         iVar5 = ovy142_219a0dc((u16)m_bagView->selectItem);
@@ -911,7 +911,7 @@ void ovy142_219a4d0(BagView *m_bagView)
                     sub_021998C0(m_bagView, 0);
                     break;
                 }
-                sub_02048838(m_bagView->unk520, 0x39, m_bagView->unk528);
+                GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x39, m_bagView->unk528);
                 sub_020245A8(m_bagView->messageParam, 0, m_bagView->unk8);
                 sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
                 sub_021998C0(m_bagView, ovy142_219a2ac);
@@ -1000,7 +1000,7 @@ void ovy142_219a724(BagView *m_bagView)
 
     if (dword10 == 2)
     {
-        if (!sub_020267F0((u16)m_bagView->selectItem, 3, m_bagView->heapId) 
+        if (!Item_GetItemParam((u16)m_bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, m_bagView->heapId) 
         && sub_02026C14((u16)m_bagView->selectItem) == 1)
         {
             if (sub_02026BA0((u16)m_bagView->selectItem))
@@ -1011,8 +1011,8 @@ void ovy142_219a724(BagView *m_bagView)
         }
         else
         {
-            sub_02048838(m_bagView->unk520, 47, m_bagView->unk528);
-            sub_021999B8(m_bagView, 0, m_bagView->selectItem);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 47, m_bagView->unk528);
+            BagMenu_LoadItemNameToStrbuf(m_bagView, 0, m_bagView->selectItem);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
             sub_0219F760(m_bagView);
             ovy142_219fda8(m_bagView, 0);
@@ -1277,7 +1277,7 @@ void ovy142_219abd8(BagView *m_bagView)
     iVar1 = sub_020062A8();
     if ((iVar1 != 1) && ((sub_0203DEFC() & (1 | 2)) || (sub_0203DA48() != 0)))
     {
-        sub_02048838(m_bagView->unk520, 0x3e, m_bagView->unk528);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x3e, m_bagView->unk528);
         int uVar3 = sub_02026AE4((u16)m_bagView->selectItem);
         sub_020244A4(m_bagView->messageParam, 0, uVar3);
         sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
@@ -1310,11 +1310,11 @@ void ovy142_219ac70(BagView *m_bagView)
     iVar1 = sub_02026B84((u16)m_bagView->selectItem);
     if (iVar1 == 0xFF)
     {
-        sub_02048838(m_bagView->unk520, 0x3c, m_bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x3c, m_bagView->unk52C);
     }
     else
     {
-        sub_02048838(m_bagView->unk520, 0x3d, m_bagView->unk52C);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x3d, m_bagView->unk52C);
     }
     
     ovy142_219f6a4(m_bagView, 1);
@@ -1364,7 +1364,7 @@ void ovy142_219ad30(BagView *m_bagView)
         {
             sub_02006254(0x647);
             ovy142_219b340(m_bagView, m_bagView->unk814);
-            sub_02048838(m_bagView->unk520, 0x36, m_bagView->unk528);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x36, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, ((int)m_bagView->unk814 > 1), 0);
             sub_0202451C(m_bagView->messageParam, 1, m_bagView->unk814, 3, 0, 1);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
@@ -1404,7 +1404,7 @@ void ovy142_219ae30(BagView *m_bagView)
 {
     m_bagView->unk814 = 1;
     ovy142_219b438(m_bagView, 1);
-    sub_02048838(m_bagView->unk520, 0x35, m_bagView->unk528);
+    GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x35, m_bagView->unk528);
     ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1, 0);
     sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
                     m_bagView->unk528);
@@ -1445,7 +1445,7 @@ void ovy142_219ae90(BagView *m_bagView)
         {
             sub_02006254(0x54C);
             ovy142_219b46c(m_bagView);
-            sub_02048838(m_bagView->unk520, 0x37, m_bagView->unk528);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x37, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
             sub_0202451C(m_bagView->messageParam, 1, m_bagView->unk814, 3, 0, 1);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C,
@@ -1472,21 +1472,20 @@ extern void ovy142_219fa3c(BagView*);
 
 void ovy142_219af84(BagView *m_bagView)
 {
-    int iVar2;
-    int iVar3;
+    int price;
+    int isImportItem;
     int uVar4;
 
     sub_0204C520(m_bagView->unk6B8, 0);
 
-    iVar2 = sub_020267F0((u16)m_bagView->selectItem, 0, m_bagView->heapId);
-    iVar3 = sub_020267F0((u16)m_bagView->selectItem, 3, m_bagView->heapId);
-    if ((iVar2 == 0) || (iVar3 != 0))
+    price = Item_GetItemParam(m_bagView->selectItem, ITEM_DATA_PRICE, m_bagView->heapId);
+    isImportItem = Item_GetItemParam(m_bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, m_bagView->heapId);
+    if ((price == 0) || (isImportItem != 0))
     {
-        
         {
             ovy142_219fda8(m_bagView, 0);
-            sub_02048838(m_bagView->unk520, 0x4d, m_bagView->unk528);
-            sub_021999B8(m_bagView, 0, m_bagView->selectItem);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x4d, m_bagView->unk528);
+            BagMenu_LoadItemNameToStrbuf(m_bagView, 0, m_bagView->selectItem);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
             sub_0219F760(m_bagView);
             ovy142_219ff40(m_bagView, 0);
@@ -1507,8 +1506,8 @@ void ovy142_219af84(BagView *m_bagView)
         else
         {
             ovy142_219b438(m_bagView, 2);
-            sub_02048838(m_bagView->unk520, 0x4e, m_bagView->unk528);
-            sub_021999B8(m_bagView, 0, m_bagView->selectItem);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x4e, m_bagView->unk528);
+            BagMenu_LoadItemNameToStrbuf(m_bagView, 0, m_bagView->selectItem);
             sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
             sub_0219F760(m_bagView);
             sub_021998C0(m_bagView, ovy142_219b0a0);
@@ -1567,7 +1566,7 @@ void ovy142_219b12c(BagView *m_bagView)
 
     ovy142_219faac(m_bagView);
     uVar2 = ovy142_219995c(m_bagView->selectItem, m_bagView->unk814, m_bagView->heapId);
-    sub_02048838(m_bagView->unk520, 0x4F, m_bagView->unk528);
+    GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x4F, m_bagView->unk528);
     sub_0202451C(m_bagView->messageParam, 0, uVar2, 7, 0, 1);
     sub_02024920(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
     sub_0219F760(m_bagView);
@@ -1597,7 +1596,7 @@ void ovy142_219b1a0(BagView *m_bagView)
             sub_0200C9C0(uVar3, uVar2);
             sub_02006254(0x655);
             ovy142_219f978(m_bagView);
-            sub_02048838(m_bagView->unk520, 0x50, m_bagView->unk528);
+            GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x50, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
 
             sub_0202451C(m_bagView->messageParam, 1, uVar2, 7, 0, 1);
@@ -1884,22 +1883,22 @@ void ovy142_219b5d4(BagView *m_bagView)
     int bVar6;
 
     iVar2 = sub_02008338(m_bagView->bagSave, m_bagView->selectItem);
-    uVar3 = sub_020083C8(m_bagView->bagSave, m_bagView->selectItem);
+    uVar3 = BagSave_GetExistingItemPocket(m_bagView->bagSave, m_bagView->selectItem);
     uVar4 = sub_02199978(m_bagView);
     iVar5 = ovy142_2199928(m_bagView, uVar4);
     bVar6 = iVar5->num != 1;
     if (iVar2 == 0)
     {
-        sub_02048838(m_bagView->unk520, 0x95, m_bagView->unk528);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x95, m_bagView->unk528);
         ovy142_21999d8(m_bagView, 1, m_bagView->selectItem, bVar6, 0);
-        sub_021999C8(m_bagView, 0, 5);
+        BagMenu_LoadBagPocketNameToStrbuf(m_bagView, 0, 5);
         ovy142_21a0578(&m_bagView->unk8C8, m_bagView->selectItem, (short)uVar3);
     }
     else
     {
-        sub_02048838(m_bagView->unk520, 0x96,m_bagView->unk528);
+        GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x96,m_bagView->unk528);
         ovy142_21999d8(m_bagView, 1, m_bagView->selectItem, bVar6, 0);
-        sub_021999C8(m_bagView, 0, uVar3);
+        BagMenu_LoadBagPocketNameToStrbuf(m_bagView, 0, uVar3);
         uVar1 = sub_02199978(m_bagView);
         ovy142_21a050c(&m_bagView->unk8C8, uVar1, 1);
     }

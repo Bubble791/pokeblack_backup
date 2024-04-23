@@ -1557,7 +1557,7 @@ ovy55_21e6388: ; 0x021E6388
 	beq _021E63AC
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 _021E63AC:
@@ -1580,7 +1580,7 @@ ovy55_21e63b4: ; 0x021E63B4
 	beq _021E63D8
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 _021E63D8:
@@ -1672,7 +1672,7 @@ ovy55_21e6488: ; 0x021E6488
 	beq _021E64B4
 	add r1, r4, #0
 	add r2, r5, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 _021E64B4:
@@ -3422,7 +3422,7 @@ ovy55_21e713c: ; 0x021E713C
 	beq _021E7192
 	mov r1, #0x12
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 _021E7192:

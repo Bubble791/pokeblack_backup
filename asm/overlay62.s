@@ -625,7 +625,7 @@ ovy62_21e5cbc: ; 0x021E5CBC
 	beq _021E5D14
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_020487D4
 _021E5D14:

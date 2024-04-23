@@ -254,7 +254,7 @@
 .public sub_02044668
 .public sub_0203A6A8
 .public sub_020223CC
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02024920
 .public sub_020484F4
 .public sub_0204713C

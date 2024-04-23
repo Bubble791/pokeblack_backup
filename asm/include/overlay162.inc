@@ -92,7 +92,7 @@
 .public sub_02021998
 .public sub_0204875C
 .public sub_02048530
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02022888
 .public sub_02021C7C
 .public sub_02044C98
@@ -621,7 +621,7 @@
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045E1C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02024E80
@@ -903,7 +903,7 @@
 .public sub_020480A8
 .public sub_02045A5C
 .public sub_020056FC
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02024E80

@@ -746,7 +746,7 @@ ovy162_219d340: ; 0x0219D340
 	ldr r0, [r5, #0x20]
 	str r2, [r5, #0x24]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x24]
 	ldr r1, [r5, #0x14]
 	add r2, r7, #0
@@ -5791,7 +5791,7 @@ ovy162_219fe0c: ; 0x0219FE0C
 	add r2, #0x80
 	ldr r0, [r4, #0x78]
 	ldr r2, [r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	add r0, #0xe4
 	ldr r0, [r0]
@@ -8226,7 +8226,7 @@ ovy162_21a117c: ; 0x021A117C
 	add r5, r0, #0
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0x10]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0x1c]
 	bl sub_020484F4
 	mov r1, #0xf

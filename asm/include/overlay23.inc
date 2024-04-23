@@ -36,7 +36,7 @@
 .public sub_02008BF0
 .public sub_0204875C
 .public sub_0216E850
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_02029BB0
 .public sub_02029BB0
@@ -106,7 +106,7 @@
 .public sub_020107F0
 .public sub_0201CCF8
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_0200C200
 .public sub_0203A24C

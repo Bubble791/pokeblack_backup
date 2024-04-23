@@ -322,7 +322,7 @@ _0216E8D2:
 	ldr r0, [sp, #4]
 	add r1, r2, r1
 	ldr r2, [r4, #0x14]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	bl sub_020487D4
 	add r0, r4, #0
@@ -890,7 +890,7 @@ ovy23_216ed58: ; 0x0216ED58
 	ldr r1, [sp, #8]
 	add r7, r0, #0
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_020487D4
 	str r6, [r5, #8]

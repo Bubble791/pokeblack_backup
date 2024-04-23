@@ -1899,7 +1899,7 @@ ovy194_21b84b0: ; 0x021B84B0
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #6
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -2323,7 +2323,7 @@ ovy194_21b8838: ; 0x021B8838
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r2]
 	mov r1, #0x11
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r4, #0
 	add r6, r6, #4
 _021B8852:
@@ -2519,7 +2519,7 @@ _021B89C8:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x8e
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -2550,7 +2550,7 @@ _021B8A1C:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r0, _021B8A48 ; =0x000011E0
@@ -2641,7 +2641,7 @@ ovy194_21b8ac0: ; 0x021B8AC0
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r4]
 	mov r1, #6
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -2932,7 +2932,7 @@ _021B8D24:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x8f
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	mov r1, #1
 	add r2, r7, #0
@@ -3043,7 +3043,7 @@ ovy194_21b8e2c: ; 0x021B8E2C
 	ldr r0, [r5, r2]
 	add r2, #0x18
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r4, #0
 	add r0, r5, #0
 	mov r2, #0
@@ -3938,7 +3938,7 @@ _021B95B6:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r0, _021B95E0 ; =0x000011E0
@@ -4038,7 +4038,7 @@ _021B9692:
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r2]
 	mov r1, #0x87
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -4435,7 +4435,7 @@ _021B99D4:
 	ldr r2, [r5, r2]
 	mov r1, #6
 	mov r4, #6
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	mov r1, #1
 	mov r2, #0
@@ -4578,7 +4578,7 @@ ovy194_21b9b00: ; 0x021B9B00
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x61
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r1, _021B9B78 ; =ovy194_21b9c44
@@ -4603,7 +4603,7 @@ _021B9B32:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #6
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -4746,7 +4746,7 @@ _021B9C74:
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x32
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -4830,7 +4830,7 @@ ovy194_21b9d0c: ; 0x021B9D0C
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -5011,7 +5011,7 @@ ovy194_21b9eb8: ; 0x021B9EB8
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x8d
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	ldr r0, _021B9EE4 ; =0x00001074
@@ -5257,7 +5257,7 @@ _021BA0BE:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r6]
 	mov r1, #0x34
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x1d
 	str r0, [sp]
 	mov r0, #4
@@ -5334,7 +5334,7 @@ ovy194_21ba170: ; 0x021BA170
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x33
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x1d
 	str r0, [sp]
 	mov r0, #4
@@ -6834,7 +6834,7 @@ _021BAD54:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x8f
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	mov r1, #1
 	add r2, r7, #0
@@ -9681,7 +9681,7 @@ _021BC482:
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
 	mov r1, #0x86
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020484F4
 	add r1, r4, #0
@@ -9700,7 +9700,7 @@ _021BC482:
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
 	add r1, #0x7c
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020484F4
 	add r1, r4, #0
@@ -9818,7 +9818,7 @@ _021BC5D6:
 	ldr r0, [r0]
 	ldr r2, [r5, r2]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x2c]
 	ldr r2, [sp, #0x10]
 	ldr r0, [r5, r0]
@@ -9868,7 +9868,7 @@ _021BC5D6:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	add r1, #0x77
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0xc]
 	bl sub_020484F4
 	ldr r1, [sp, #0x3c]
@@ -9970,7 +9970,7 @@ _021BC6F6:
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r2]
 	str r1, [sp, #0xc]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x10]
 	bl sub_020484F4
 	add r1, r6, #0
@@ -10236,7 +10236,7 @@ _021BC96E:
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -10361,7 +10361,7 @@ _021BCA60:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r0, _021BCA8C ; =0x000011E0
@@ -10562,7 +10562,7 @@ ovy194_21bcbf4: ; 0x021BCBF4
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -10593,7 +10593,7 @@ ovy194_21bcc38: ; 0x021BCC38
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -10742,7 +10742,7 @@ _021BCD66:
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r2]
 	mov r1, #0x93
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r6, r6, #4
 _021BCD9A:
 	add r0, r5, #0
@@ -10825,7 +10825,7 @@ _021BCE3A:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r0, _021BCE80 ; =0x000011E0
@@ -10899,7 +10899,7 @@ ovy194_21bced4: ; 0x021BCED4
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -11854,7 +11854,7 @@ ovy194_21bd6f8: ; 0x021BD6F8
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -11962,7 +11962,7 @@ ovy194_21bd7cc: ; 0x021BD7CC
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x95
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r0, [r5, r4]
@@ -12126,7 +12126,7 @@ ovy194_21bd948: ; 0x021BD948
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x92
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	ldr r0, _021BD974 ; =0x000011F1
@@ -12466,7 +12466,7 @@ _021BDC0E:
 	ldr r0, [r4, r2]
 	add r2, #0x18
 	ldr r2, [r4, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	ldr r0, _021BDC44 ; =0x000011F1
@@ -13008,7 +13008,7 @@ _021BE094:
 	add r2, #0x18
 	ldr r1, [sp]
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r1, _021BE0D4 ; =0x000011E0
@@ -13145,7 +13145,7 @@ ovy194_21be1ac: ; 0x021BE1AC
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -13251,7 +13251,7 @@ ovy194_21be274: ; 0x021BE274
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x8a
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	ldr r1, _021BE2B4 ; =ovy194_21be238
@@ -13273,7 +13273,7 @@ ovy194_21be2b8: ; 0x021BE2B8
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x89
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	add r0, r4, #0
@@ -13369,7 +13369,7 @@ ovy194_21be380: ; 0x021BE380
 	add r2, #0x18
 	ldr r2, [r4, r2]
 	mov r1, #0x88
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_021BFE28
 	mov r0, #0x27
@@ -14527,7 +14527,7 @@ _021BEC3C:
 _021BEC44:
 	add r2, #0x1c
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021B7808
 	cmp r0, #0
@@ -14646,7 +14646,7 @@ _021BED46:
 	add r2, r4, #0
 	sub r2, #0xf8
 	ldr r2, [r5, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r4, #0
 	sub r1, #0xfc
 	sub r4, #0xf8
@@ -15919,7 +15919,7 @@ _021BF7D2:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x6b
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	ldr r1, _021BF85C ; =ovy194_21bf75c
@@ -16015,7 +16015,7 @@ _021BF8F6:
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x32
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	bl sub_021BFE28
 	add r0, r5, #0
@@ -16047,7 +16047,7 @@ ovy194_21bf938: ; 0x021BF938
 	add r2, #0x18
 	ldr r2, [r5, r2]
 	mov r1, #0x32
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r4, _021BF9A0 ; =0x000005F4
 	mov r0, #6
 	ldrh r3, [r5, r4]
@@ -17062,7 +17062,7 @@ _021C018A:
 	ldr r0, [r5, r0]
 	ldr r1, [r1, r7]
 	ldr r2, [r4, r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, _021C0210 ; =0x000039E3
 	ldr r0, [sp, #0xc]
 	strh r1, [r4, r0]
@@ -17157,7 +17157,7 @@ ovy194_21c0234: ; 0x021C0234
 	ldr r0, [r4, r0]
 	ldr r2, [r4, r2]
 	mov r1, #0x1c
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x72
 	lsl r0, r0, #4
 	add r0, r0, #4
@@ -17175,7 +17175,7 @@ _021C0274:
 	ldr r0, [r4, r0]
 	ldr r2, [r4, r2]
 	mov r1, #0x1d
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0x72
 	lsl r0, r0, #4
 	add r0, r0, #4
@@ -17200,7 +17200,7 @@ _021C02AC:
 	add r2, #0x10
 	ldr r2, [r4, r2]
 	mov r1, #0x6a
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 _021C02BC:
 	ldr r3, _021C02DC ; =0x00000728
 	lsl r1, r6, #0x10
@@ -17257,7 +17257,7 @@ _021C0318:
 	add r2, #0x10
 	ldr r2, [r5, r2]
 	mov r1, #0xa3
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	b _021C0364
 _021C0330:
 	mov r0, #1
@@ -17275,7 +17275,7 @@ _021C0330:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x1b
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r4, #0
 	ldr r0, [r5, r4]
 	add r1, #0xc
@@ -17326,7 +17326,7 @@ ovy194_21c0398: ; 0x021C0398
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
 	mov r1, #0x1c
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #4]
@@ -17377,7 +17377,7 @@ ovy194_21c03fc: ; 0x021C03FC
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
 	mov r1, #0x12
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #8]
 	mov r1, #0x9e
 	mov r2, #0
@@ -17482,7 +17482,7 @@ _021C04DC:
 	ldr r0, [r5, r7]
 	ldr r2, [r5, r2]
 	add r1, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	add r0, #8
 	ldr r0, [r5, r0]
@@ -17536,7 +17536,7 @@ _021C0544:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	add r1, #0x1e
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	bl sub_020484F4
 	ldr r1, [r5, r7]
@@ -17572,7 +17572,7 @@ ovy194_21c057c: ; 0x021C057C
 	ldr r2, [r5, r2]
 	mov r1, #0x2b
 	add r7, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	mov r1, #6
 	mov r2, #0
@@ -17582,7 +17582,7 @@ ovy194_21c057c: ; 0x021C057C
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r1, r4, #0
 	add r2, r4, #0
 	add r0, r4, #4
@@ -17627,7 +17627,7 @@ ovy194_21c05ec: ; 0x021C05EC
 	ldr r2, [r5, r2]
 	mov r1, #0x27
 	str r3, [sp, #0xc]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	mov r1, #0xa0
 	mov r2, #0
@@ -17740,7 +17740,7 @@ _021C06E4:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x28
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, [sp, #0x14]
 	lsl r2, r4, #2
 	ldr r1, [r1, r2]
@@ -17799,7 +17799,7 @@ ovy194_21c0750: ; 0x021C0750
 	ldr r2, [r5, r2]
 	mov r1, #0x2c
 	add r7, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	bl sub_020484F4
 	add r1, r4, #0
@@ -17874,7 +17874,7 @@ _021C07E2:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x2d
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x24]
 	mov r1, #0
 	ldr r0, [r5, r0]
@@ -17932,7 +17932,7 @@ ovy194_21c0848: ; 0x021C0848
 	add r1, r0, #0
 	ldr r2, [r4, r2]
 	add r0, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #8]
 	bl sub_020484F4
 	mov r1, #0x73
@@ -17972,7 +17972,7 @@ ovy194_21c08ac: ; 0x021C08AC
 	ldr r2, [r5, r2]
 	mov r1, #0x2a
 	add r7, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
 	mov r1, #0xa
 	mov r2, #0
@@ -18544,7 +18544,7 @@ _021C0D5C:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x24
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, r4]
 	bl sub_020484F4
 	add r1, r4, #0
@@ -18570,7 +18570,7 @@ _021C0D5C:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x25
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, r4]
 	bl sub_020484F4
 	add r1, r4, #0
@@ -18957,7 +18957,7 @@ _021C1110:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	add r1, #0x24
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, _021C1230 ; =0x000006B4
 	ldr r0, [r5, r0]
 	bl sub_020484F4
@@ -19216,7 +19216,7 @@ _021C134C:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x81
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x28]
 	lsl r3, r4, #2
 	add r2, sp, #0x34
@@ -19733,7 +19733,7 @@ ovy194_21c1788: ; 0x021C1788
 	str r2, [r5, r0]
 	ldr r0, [r5, r4]
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	ldr r1, _021C1818 ; =0x000039E3
 	sub r0, #0xcc
@@ -23218,7 +23218,7 @@ _021C32EE:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	mov r1, #0x10
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	b _021C3316
 _021C3308:
 	ldr r0, _021C3370 ; =0x00000828
@@ -26283,7 +26283,7 @@ _021C4AFC:
 	ldr r0, [r5, r0]
 	ldr r2, [r5, r2]
 	add r1, #0x35
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r6, r7]
 	bl sub_020484F4
 	ldr r1, [sp, #0x14]

@@ -37703,7 +37703,7 @@ ovy255_21ce670: ; 0x021CE670
 	add r0, #0x8c
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -38932,7 +38932,7 @@ ovy255_21cf044: ; 0x021CF044
 	add r4, r2, #0
 	mov r1, #0
 	add r2, r3, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r0, r5, #0
 	mov r1, #0x15
 	add r2, r4, #0
@@ -38972,7 +38972,7 @@ ovy255_21cf080: ; 0x021CF080
 	add r4, r2, #0
 	mov r1, #0
 	add r2, r3, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r0, r5, #0
 	mov r1, #0xe
 	add r2, r4, #0
@@ -39004,7 +39004,7 @@ ovy255_21cf0b0: ; 0x021CF0B0
 	add r0, #0x8c
 	ldr r0, [r0]
 	mov r2, #0x70
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r0, r5, #0
 	mov r1, #0x2d
 	add r2, r6, #0
@@ -39027,7 +39027,7 @@ _021CF0EE:
 	add r0, #0x8c
 	ldr r0, [r0]
 	add r2, r4, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	add r0, r5, #0
 	mov r1, #0xf
 	add r2, r6, #0
@@ -39232,7 +39232,7 @@ _021CF234:
 	ldrh r2, [r2, r3]
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	b _021CF25E
 _021CF248:
 	mov r4, #0x18

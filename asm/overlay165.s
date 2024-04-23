@@ -11985,10 +11985,10 @@ sub_0219FA08: ; 0x0219FA08
 	ldr r0, [r1, #0x2c]
 	add r1, r2, #0
 	add r2, r3, #0
-	ldr r3, _0219FA14 ; =sub_020244B4
+	ldr r3, _0219FA14 ; =LoadItemNameToStrbuf
 	bx r3
 	nop
-_0219FA14: .word sub_020244B4
+_0219FA14: .word LoadItemNameToStrbuf
 	thumb_func_end sub_0219FA08
 
 	thumb_func_start sub_0219FA18
@@ -13083,7 +13083,7 @@ _021A021A:
 	ldrh r2, [r5]
 	add r0, r4, #0
 	mov r1, #0x27
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0
 	beq _021A022C
 	mov r0, #1
@@ -13100,7 +13100,7 @@ ovy165_21a0230: ; 0x021A0230
 	ldrh r2, [r2]
 	add r0, r1, #0
 	mov r1, #0x1b
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #0
 	beq _021A0246
 	mov r0, #1

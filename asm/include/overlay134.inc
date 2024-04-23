@@ -184,7 +184,7 @@
 .public sub_021EFDBC
 .public sub_021EFDBC
 .public sub_0201FF08
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020243F4
 .public sub_02024920
 .public ovy36_2187c4c
@@ -300,7 +300,7 @@
 .public sub_021E6440
 .public sub_021E5E28
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4
 .public sub_021E5E34
 .public sub_021E5E20
@@ -308,5 +308,5 @@
 .public sub_021E5E20
 .public sub_02048658
 .public sub_0204875C
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_020487D4

@@ -2341,15 +2341,15 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r0, [sp, #0x54]
 	ldr r2, [sp, #0x14]
 	mov r1, #5
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x54]
 	ldr r2, [sp, #0x18]
 	mov r1, #7
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x54]
 	ldr r2, [sp, #0x1c]
 	mov r1, #8
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r2, [r7, #4]
 	str r4, [sp]
 	mov r0, #1
@@ -3849,7 +3849,7 @@ ovy180_219cb3c: ; 0x0219CB3C
 	ldr r2, [r5, #0x18]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	add r1, r4, #0
 	add r2, sp, #0xc

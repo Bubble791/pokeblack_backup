@@ -2,9 +2,9 @@
 #define BAG_H
 
 extern void sub_0203DEB4(int, int);
-extern int sub_020267F0(u16, int, u16);
-extern void sub_020244B4(int , int, int);
-extern void sub_020246F4(int , int, int);
+extern int Item_GetItemParam(u16, int, u16);
+extern void LoadItemNameToStrbuf(int , int, int);
+extern void LoadBagPocketNameToStrbuf(int , int, int);
 extern int sub_0203DA84(u32*, u32*);
 extern int sub_0203DA48(void);
 extern int sub_020355B8(int, int, int, int, int);
@@ -229,8 +229,8 @@ void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
 ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
 int ovy142_219995c(u32 itemId, int param_2, u16 heapId);
-void sub_021999B8(BagView *m_bagView, int bufId, int msgId);
-void sub_021999C8(BagView *m_bagView, int bufId, int msgId);
+
+
 int ovy142_2199988(BagView *m_bagView);
 extern int sub_0203D554(void);
 extern void ovy142_219de0c(BagView*);
@@ -240,15 +240,14 @@ extern void ovy142_219becc(BagView*);
 
 #define NORMAL_ITEM_MAX 0x136
 
-extern int sub_02008488(ItemTable*, int);
 extern int ovy142_21a0698(ITEM_UNKNOW_DATA*, int, BagView *);
 extern void sub_020244E0(int, int, int, int, int);
 
 typedef struct
 {
-    s16 itemId;
-    s16 num;
-} UNKNOW_DATA;
+    s16 x;
+    s16 y;
+} PosTable;
 
 extern void sub_020088A4(void*, u16);
 extern void sub_02008894(void*, u16, s16, s16);
@@ -348,7 +347,7 @@ extern int sub_02017974(void*);
 void ovy142_219a4d0(BagView *m_bagView);
 extern int sub_0202DBE4(int);
 extern int sub_0202DC00(int);
-extern int sub_020083C8(void*, u16);
+
 extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
 extern void ovy142_219ac70(BagView*);
@@ -366,7 +365,7 @@ extern void sub_0202451C(int, int, int, int, int, int);
 void ovy142_219a104(BagView *m_bagView);
 extern void *sub_02017934(void*);
 extern void* sub_0200DCF0(void*);
-extern void sub_02048838(int, int, int);
+extern void GFL_MsgDataLoadStrbuf(int, int, int);
 extern void sub_02024920(int, int, int);
 extern void ovy142_219f6a4(BagView*, int);
 extern int sub_0200DDE0(void*);
@@ -439,4 +438,10 @@ extern void ovy142_219b3b0(BagView*);
 extern void ovy142_219b6dc(BagView*);
 extern void ovy142_21a0578(ITEM_UNKNOW_DATA*, int, short);
 
+void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId);
+void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
+
+
+extern int BagSave_GetUniqueItemCount(ItemTable* bagView, int maxItem);
+extern int BagSave_GetExistingItemPocket(void* bagSave, u16 item);
 #endif //BAG_H

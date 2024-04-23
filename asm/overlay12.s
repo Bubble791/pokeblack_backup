@@ -10676,7 +10676,7 @@ ovy12_2155380: ; 0x02155380
 	ldr r0, [r4, #0x14]
 	ldr r1, [sp, #4]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r4, #0xc]
 	add r1, r6, #0
 	add r2, r7, #0
@@ -10692,7 +10692,7 @@ _021553CC:
 	ldr r0, [r4, #0x14]
 	ldr r1, [sp]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r4, #0xc]
 	add r1, r6, #0
 	add r2, r7, #0
@@ -14637,7 +14637,7 @@ _0215732E:
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	mov r1, #0xf
-	bl sub_020267F0
+	bl Item_GetItemParam
 	cmp r0, #4
 	bne _02157354
 	ldr r0, [r5, #0x20]
@@ -37285,7 +37285,7 @@ ovy12_2161e6c: ; 0x02161E6C
 	ldrh r1, [r5, #0x1a]
 	ldr r2, [r4, #0x14]
 	add r6, r0, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
 	bl sub_020487D4
 	b _02161EE4
@@ -41428,7 +41428,7 @@ ovy12_2163f38: ; 0x02163F38
 	ldr r2, [r4, #0x1c]
 	ldr r0, [r2, #4]
 	ldr r2, [r2, #0x18]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl ovy12_2163f50
 	pop {r4, pc}
@@ -45770,7 +45770,7 @@ ovy12_2166118: ; 0x02166118
 _0216619A:
 	ldr r0, [sp, #0xc]
 	ldr r2, [r4, #0x18]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0xc]
 	bl sub_020487D4
 	b _021661B4

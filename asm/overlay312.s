@@ -2261,7 +2261,7 @@ _0217DB74:
 	sub r0, #0x40
 	ldr r0, [r5, r0]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	bl sub_02017BCC
 	add r1, r4, #0
 	sub r1, #0x44
@@ -2792,7 +2792,7 @@ ovy312_217df84: ; 0x0217DF84
 	ldr r0, [r5, r0]
 	mov r1, #0xe
 	add r2, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	add r0, #0x68
 	ldr r0, [r5, r0]
@@ -3106,7 +3106,7 @@ ovy312_217e234: ; 0x0217E234
 	ldr r0, [r5, r0]
 	mov r1, #0xf
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -4152,7 +4152,7 @@ ovy312_217ea6c: ; 0x0217EA6C
 	ldr r2, [sp, #4]
 	add r7, r0, #0
 	add r1, r6, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
 	bl sub_020487D4
 	cmp r4, #0
@@ -4177,7 +4177,7 @@ _0217EAAC:
 	ldr r1, [sp]
 	ldr r2, [sp, #8]
 	add r4, r0, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
 	bl sub_020487D4
 	add r0, r5, #0

@@ -3192,7 +3192,7 @@ ovy332_21c073c: ; 0x021C073C
 	add r1, r2, #0
 	ldr r2, [r5, #0x18]
 	add r4, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy332_21c077c
@@ -5061,7 +5061,7 @@ ovy332_21c1490: ; 0x021C1490
 	ldr r2, [r5, #0x18]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r1, r5, #0
 	str r4, [sp]
 	add r0, sp, #0xc
@@ -5772,7 +5772,7 @@ ovy332_21c1a04: ; 0x021C1A04
 	ldr r0, [r5, #4]
 	ldr r1, [r1, #0x14]
 	ldr r2, [r2]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r6]
 	bl sub_020484F4
 	add r1, r0, #0

@@ -7234,7 +7234,7 @@ ovy271_21f3550: ; 0x021F3550
 	ldr r2, [r5, #0x10]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	bl sub_020484F4
 	add r2, r0, #0
@@ -14625,7 +14625,7 @@ _021F6EA0:
 	ldrh r1, [r1, r6]
 	ldr r0, [r0]
 	add r2, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	add r2, r5, #0
 	add r2, #0x88
 	ldr r2, [r2]

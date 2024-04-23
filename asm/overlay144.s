@@ -3797,7 +3797,7 @@ _0219EBFA:
 	add r1, r0, #0
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 _0219EC0A:
 	ldr r0, [r5, #4]
 	bl sub_020484D8
@@ -3828,7 +3828,7 @@ _0219EC0A:
 	beq _0219EC60
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x1c
 	str r0, [sp]
@@ -3857,7 +3857,7 @@ _0219EC72:
 	beq _0219EC9C
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x10
 	str r0, [sp]
@@ -3876,7 +3876,7 @@ _0219EC9C:
 	beq _0219ECC6
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x10
 	str r0, [sp]
@@ -3895,7 +3895,7 @@ _0219ECC6:
 	beq _0219ECF0
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x10
 	str r0, [sp]
@@ -3956,7 +3956,7 @@ _0219ED52:
 	beq _0219EDB2
 	ldr r0, [r5, #0x18]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -3998,7 +3998,7 @@ _0219EDB2:
 	beq _0219EE16
 	ldr r0, [r5, #0x18]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -4042,7 +4042,7 @@ _0219EE16:
 	beq _0219EE74
 	ldr r0, [r5, #0x18]
 	add r2, r4, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -4087,7 +4087,7 @@ _0219EE7C:
 	beq _0219EEA6
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x88
 	str r0, [sp]
@@ -4106,7 +4106,7 @@ _0219EEA6:
 	beq _0219EED0
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x88
 	str r0, [sp]
@@ -4125,7 +4125,7 @@ _0219EED0:
 	beq _0219EEFA
 	ldr r0, [r5, #0x18]
 	ldr r2, [r5, #8]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #0x88
 	str r0, [sp]
@@ -4225,7 +4225,7 @@ ovy144_219ef94: ; 0x0219EF94
 	ldr r0, [r5, #0xc]
 	ldr r2, [r5, #4]
 	add r1, r7, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5]
 	bl sub_020484F4
 	ldr r1, [r5, #8]

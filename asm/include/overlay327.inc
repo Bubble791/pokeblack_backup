@@ -102,7 +102,7 @@
 .public sub_0202E8D8
 .public sub_0202E68C
 .public sub_0203A7F4
-.public sub_02048838
+.public GFL_MsgDataLoadStrbuf
 .public sub_02021C44
 .public sub_020484F4
 .public sub_0204713C

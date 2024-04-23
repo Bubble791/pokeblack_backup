@@ -4309,7 +4309,7 @@ _021E7B9E:
 	ldr r0, [r5, r6]
 	ldr r2, [sp, #4]
 	mov r1, #1
-	bl sub_020246F4
+	bl LoadBagPocketNameToStrbuf
 	add r0, r5, #0
 	add r1, r7, #0
 	bl ovy60_21e7bc8
@@ -4600,7 +4600,7 @@ ovy60_21e7e00: ; 0x021E7E00
 	ldrh r2, [r4, #4]
 	ldr r0, [r5, r6]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	b _021E7E48
 _021E7E32:
 	mov r0, #1

@@ -8629,7 +8629,7 @@ _021A11FA:
 	ldrsh r1, [r1, r2]
 	ldr r0, [r5, #0x68]
 	add r2, r3, #0
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r1, _021A1270 ; =0x000039E0
 	ldr r0, [sp, #4]
 	cmp r4, #2
@@ -10194,7 +10194,7 @@ _021A1DF4:
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	b _021A1E32
 _021A1E16:
 	ldr r3, [sp, #0x30]
@@ -10272,7 +10272,7 @@ _021A1E9C:
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244B4
+	bl LoadItemNameToStrbuf
 	b _021A1EDE
 _021A1EC0:
 	ldr r3, [sp, #0x24]

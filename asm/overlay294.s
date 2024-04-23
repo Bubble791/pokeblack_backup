@@ -3057,7 +3057,7 @@ ovy294_21a3204: ; 0x021A3204
 	ldr r0, [r5, #0xc]
 	ldr r1, [sp, #0x18]
 	ldr r2, [r5, #0x3c]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0x40]
 	ldr r2, [r5, #0x3c]
@@ -3239,7 +3239,7 @@ _021A3384:
 	ldr r0, [r5, #0xc]
 	ldr r1, [r7, r6]
 	ldr r2, [r5, #0x3c]
-	bl sub_02048838
+	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0xc]
 	ldr r0, [r0, #4]
