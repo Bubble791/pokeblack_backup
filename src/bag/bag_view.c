@@ -51,7 +51,7 @@ ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket)
 
 int ovy142_219995c(u32 itemId, int param_2, u16 heapId)
 {
-    int price = sub_020267F0((u16)itemId, 0, heapId); // GetItemParam
+    int price = sub_020267F0(itemId, 0, heapId); // GetItemParam
     return (price / 2) * param_2;
 }
 

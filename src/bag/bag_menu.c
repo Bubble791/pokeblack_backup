@@ -598,7 +598,7 @@ void ovy142_219d0c8(BagView* bagView)
     }
 }
 
-const u8 data_021A08F0[7] = {0};
+extern const u8 data_021A08F0[7];
 void ovy142_219d120(BagView* bagView);
 extern void ovy142_219d188(BagView*, u8*);
 extern void sub_020484B4(int);
