@@ -80,7 +80,7 @@ ovy309_219ce80: ; 0x0219CE80
 	mov r2, #0x20
 	mov r3, #0x20
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	sub r1, #0x9c
 	str r0, [r4, r1]
@@ -322,7 +322,7 @@ _0219D122:
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219D186
 	b _0219D11A
@@ -3542,7 +3542,7 @@ ovy309_219e9dc: ; 0x0219E9DC
 	ldr r0, _0219EA80 ; =ovy309_219eb18
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

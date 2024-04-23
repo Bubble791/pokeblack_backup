@@ -2139,7 +2139,7 @@
 .public sub_02046D84
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204BF98
 .public sub_0204B758
@@ -2555,7 +2555,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_021A97D0
 .public sub_0219A084
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02042788
 .public sub_02042BA8
 .public sub_02021A3C
@@ -2629,7 +2629,7 @@
 .public sub_02021C1C
 .public sub_02048244
 .public MI_CpuFill8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020223CC
 .public GFL_TCBExMgrFree
 .public MI_CpuFill8
@@ -2828,7 +2828,7 @@
 .public sub_0204B758
 .public MI_CpuFill8
 .public sub_0202E168
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020352E8
 .public sub_02042BA8
 .public sub_0219BB1C
@@ -2845,7 +2845,7 @@
 .public sub_0204713C
 .public sub_02005DF4
 .public sub_021AAA54
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020480C0
 .public sub_020480C0
 .public sub_020480C0
@@ -2999,7 +2999,7 @@
 .public sub_020232D8
 .public sub_02024D00
 .public sub_02024D00
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0203580C
 .public sub_0203A850
 .public GFL_TCBExMgrFree

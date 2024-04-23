@@ -297,7 +297,7 @@ _021A1DA0:
 	ldr r0, _021A1DD0 ; =ovy294_21a1e68
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x10]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -2872,7 +2872,7 @@ ovy294_21a3068: ; 0x021A3068
 	mov r2, #2
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0x18]
 	mov r0, #0x20
 	str r0, [sp]

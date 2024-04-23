@@ -572,12 +572,12 @@
 .public sub_021FAC7C
 .public sub_0203A7F4
 .public GXx_SetMasterBrightness_
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_021F4260
 .public sub_021F42FC
 .public sub_021FA40C
 .public sub_02026FE4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_02027780
@@ -620,7 +620,7 @@
 .public sub_021FA234
 .public sub_02026FE4
 .public sub_02027780
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02021C44
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0
@@ -716,8 +716,8 @@
 .public sub_02033724
 .public sub_02045604
 .public sub_02045B7C
-.public sub_02021C0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActive
 .public sub_02045790
 .public sub_02045790
 .public sub_021FA304

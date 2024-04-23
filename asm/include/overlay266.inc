@@ -95,7 +95,7 @@
 .public sub_0203A24C
 .public sub_02045A5C
 .public sub_0204B7C8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
 .public GFL_FontCreate

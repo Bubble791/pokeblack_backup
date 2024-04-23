@@ -70,7 +70,7 @@
 .public sub_0200C9E4
 .public sub_0200955C
 .public sub_020095A0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -251,7 +251,7 @@
 .public GFL_MsgSysLoadData
 .public sub_020241E4
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_TCBExMgrFree
 .public GFL_WordSetSystemFree
 .public sub_0202E818

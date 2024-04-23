@@ -5,7 +5,7 @@
 .public sub_0219FC9C
 .public sub_0219FCD4
 .public sub_0203A1D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02005680
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8

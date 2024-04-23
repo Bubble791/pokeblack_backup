@@ -676,7 +676,7 @@
 .public sub_02040C20
 .public sub_02042E94
 .public sub_02042E9C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02046D38
 .public sub_021B7BE4
 .public sub_02042BA8
@@ -1537,7 +1537,7 @@
 .public GFL_StrBufCreate
 .public sub_02021998
 .public sub_020232E8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_0202E168
 .public sub_020056C8
@@ -1662,7 +1662,7 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public G2x_SetBlendBrightness_
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02199D18
 .public sub_02048210
 .public sub_020480C0
@@ -1755,7 +1755,7 @@
 .public GFL_StrBufFree
 .public sub_0204C124
 .public sub_02199D18
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02021C44
 .public sub_0204C124
 .public sub_02199D18

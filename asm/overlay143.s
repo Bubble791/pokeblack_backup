@@ -117,7 +117,7 @@ ovy143_21998c0: ; 0x021998C0
 	add r1, r5, #0
 	mov r2, #0xa
 	mov r6, #0xa
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r4, #0xfc
 	str r0, [r5, r4]
 	mov r0, #0
@@ -774,7 +774,7 @@ ovy143_2199ef4: ; 0x02199EF4
 	mov r2, #4
 	mov r3, #0x20
 	mov r5, #0x61
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0x18]
 	str r5, [sp]
 	mov r0, #0x17
@@ -2518,7 +2518,7 @@ ovy143_219abd4: ; 0x0219ABD4
 	ldr r0, [r2, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219ABEA
 	mov r0, #0
@@ -3244,7 +3244,7 @@ ovy143_219b150: ; 0x0219B150
 	ldr r0, [r2, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219B166
 	mov r0, #0
@@ -4054,7 +4054,7 @@ ovy143_219b808: ; 0x0219B808
 	ldr r0, [r2, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219B81E
 	mov r0, #0
@@ -4544,7 +4544,7 @@ _0219BB9A:
 	ldr r0, _0219BD10 ; =ovy143_219cfe4
 	add r1, r5, #0
 	mov r2, #3
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5]
 	ldr r2, [r4, #4]
 	add r0, r4, #0
@@ -5329,7 +5329,7 @@ ovy143_219c2a4: ; 0x0219C2A4
 	ldr r0, [r5, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219C2BC
 	mov r0, #0
@@ -7725,7 +7725,7 @@ _0219D482:
 	blt _0219D44C
 	ldr r0, [r6, #4]
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219D49E
 	add sp, #0xc
@@ -7787,7 +7787,7 @@ ovy143_219d4f8: ; 0x0219D4F8
 	ldr r0, [r2, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219D50E
 	mov r0, #0
@@ -8369,7 +8369,7 @@ _0219D912:
 	ldr r0, _0219DAA4 ; =ovy143_219ed84
 	add r1, r5, #0
 	mov r2, #3
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5]
 	ldr r2, [r4, #4]
 	add r0, r4, #0
@@ -9052,7 +9052,7 @@ ovy143_219df48: ; 0x0219DF48
 	ldr r0, [r5, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219DF60
 	mov r0, #0
@@ -12243,7 +12243,7 @@ _0219F74A:
 	blt _0219F718
 	ldr r0, [r7, #4]
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219F762
 	add sp, #8
@@ -12296,7 +12296,7 @@ ovy143_219f7a8: ; 0x0219F7A8
 	ldr r0, [r2, #4]
 	add r4, r3, #0
 	ldr r0, [r0, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219F7BE
 	mov r0, #0

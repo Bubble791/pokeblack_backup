@@ -59,7 +59,7 @@
 .public sub_020232D0
 .public sub_02048D28
 .public sub_020173AC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A58C
@@ -1225,11 +1225,11 @@
 .public sub_0203A1FC
 .public GFL_FontCreate
 .public sub_02021998
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0218A72C
 .public sub_0204B4E4
 .public sub_020602A8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A24C
 .public GFL_TCBExMgrFree
 .public sub_02045264
@@ -1242,7 +1242,7 @@
 .public sub_02045264
 .public sub_02044B84
 .public sub_02044B84
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02021A3C
 .public sub_020484F4
 .public sub_02021C1C
@@ -1809,7 +1809,7 @@
 .public sub_021804B8
 .public ovy12_2167450
 .public sub_0203A1FC
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0218B5E0
 .public sub_0203A7F4
 .public sub_02067B9C
@@ -2277,10 +2277,10 @@
 .public sub_02046DC0
 .public sub_0204B6A8
 .public sub_0204BF1C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_0202E168
@@ -3883,7 +3883,7 @@
 .public sub_0204C018
 .public sub_0204BFF0
 .public sub_0204C004
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204BECC
 .public sub_0204BF98
@@ -4829,7 +4829,7 @@
 .public sub_0201736C
 .public sub_02180490
 .public sub_0203D554
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02021998
 .public sub_0204AA30
 .public sub_0204AB0C
@@ -4860,7 +4860,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public GFL_FadeScreenIsFinished
 .public sub_0204C560
@@ -5650,7 +5650,7 @@
 .public sub_021A3730
 .public sub_02049384
 .public sub_020495A0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02049384
 .public sub_02049404
 .public sub_02049534
@@ -7445,7 +7445,7 @@
 .public sub_0208D868
 .public sub_02008848
 .public sub_02008848
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -7527,7 +7527,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0204898C
 .public GFL_TCBExMgrFree
 .public GFL_WordSetSystemFree
@@ -9259,7 +9259,7 @@
 .public sub_02016AF0
 .public sub_02016B08
 .public sub_0201458C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0204AB0C
 .public sub_0203A850
 .public GFL_TCBExMgrFree
@@ -10234,7 +10234,7 @@
 .public sub_021804A0
 .public sub_021975D4
 .public sub_0218049C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A2A8
 .public sub_02180490
 .public sub_0218055C
@@ -10276,7 +10276,7 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public GX_SetBankForLCDC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204588C
 .public sub_02046E10
@@ -10418,7 +10418,7 @@
 .public GFL_TCBRemove
 .public sub_0203A1FC
 .public MI_CpuFill8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
@@ -10784,7 +10784,7 @@
 .public sub_02044B84
 .public sub_0203A24C
 .public GFL_SndSEPlay
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_021BF5D4
 .public sub_0204C124
@@ -12063,7 +12063,7 @@
 .public sub_0203A1FC
 .public sub_0203A24C
 .public sub_02045708
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204AA30
 .public sub_021804BC

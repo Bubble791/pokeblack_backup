@@ -37438,7 +37438,7 @@ sub_02016678: ; 0x02016678
 	ldr r0, _02016698 ; =sub_0201666C
 	mov r1, #0
 	mov r2, #0x7f
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r0, _0201669C ; =0x021410F4
 	ldr r1, [r0, #4]
 	add r1, r1, #1
@@ -45282,7 +45282,7 @@ sub_020199E8: ; 0x020199E8
 	ldr r0, _02019A84 ; =sub_0201B75C
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -48405,7 +48405,7 @@ _0201B0E2:
 	ldr r0, _0201B124 ; =sub_0201B7F8
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	b _0201B0DE
 _0201B0EE:
 	ldr r0, [r4, #4]
@@ -48559,7 +48559,7 @@ _0201B220:
 	ldr r0, _0201B248 ; =sub_0201B7F8
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 _0201B22A:
 	mov r1, #5
 	str r0, [r5, #8]
@@ -48921,7 +48921,7 @@ _0201B4E4:
 	ldr r0, _0201B508 ; =sub_0201B75C
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4]
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
@@ -49203,7 +49203,7 @@ _0201B734:
 	ldr r0, _0201B758 ; =sub_0201B75C
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4]
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
@@ -49560,7 +49560,7 @@ _0201B9F0:
 	ldr r0, _0201BA6C ; =sub_0201B7F8
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 _0201B9FA:
 	str r0, [r5, #4]
 	mov r0, #0x4d
@@ -63151,8 +63151,8 @@ _02021C04: .word 0xFF0FFFFF
 _02021C08: .word 0x0000FFFF
 	thumb_func_end sub_02021A3C
 
-	thumb_func_start sub_02021C0C
-sub_02021C0C: ; 0x02021C0C
+	thumb_func_start PrintSystem_IsTextPrintActive
+PrintSystem_IsTextPrintActive: ; 0x02021C0C
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
 	bne _02021C16
@@ -63162,7 +63162,7 @@ _02021C16:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02021C0C
+	thumb_func_end PrintSystem_IsTextPrintActive
 
 	thumb_func_start sub_02021C1C
 sub_02021C1C: ; 0x02021C1C
@@ -76917,7 +76917,7 @@ sub_02027E40: ; 0x02027E40
 	ldr r0, _02027E8C ; =sub_02027ED8
 	lsl r2, r2, #6
 	str r7, [r1, #0xc]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02027E80: .word 0x000003E7
@@ -76952,7 +76952,7 @@ sub_02027E90: ; 0x02027E90
 	ldr r0, _02027ED4 ; =sub_02027EF8
 	add r2, r6, #0
 	str r4, [r1, #4]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -77071,7 +77071,7 @@ _02027F7A:
 	mov r2, #1
 	ldr r0, _02027F90 ; =sub_02027F50
 	lsl r2, r2, #0xa
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 _02027F8A:
 	pop {r3, pc}
 	.align 2, 0
@@ -77580,7 +77580,7 @@ _02028314:
 	add r0, r0, #1
 	str r0, [r5, #0xc]
 	ldr r0, _02028364 ; =sub_020283E8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x20]
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -78245,12 +78245,12 @@ sub_02028818: ; 0x02028818
 	add r1, r0, #0
 	ldr r0, _02028824 ; =sub_02028858
 	ldr r2, _02028828 ; =0x000003FF
-	ldr r3, _0202882C ; =sub_020056FC
+	ldr r3, _0202882C ; =GFL_VBlankTCBAdd
 	bx r3
 	nop
 _02028824: .word sub_02028858
 _02028828: .word 0x000003FF
-_0202882C: .word sub_020056FC
+_0202882C: .word GFL_VBlankTCBAdd
 	thumb_func_end sub_02028818
 
 	thumb_func_start sub_02028830
@@ -79337,7 +79337,7 @@ sub_02028FB0: ; 0x02028FB0
 	ldr r0, _02029084 ; =sub_020286BC
 	add r1, r5, #0
 	str r2, [sp, #0x24]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r0, r5, #0
 	mov r1, #0
 	bl sub_020286AC
@@ -79415,7 +79415,7 @@ sub_0202908C: ; 0x0202908C
 	ldr r0, _020290D4 ; =sub_020286BC
 	ldr r2, _020290D8 ; =0x000003FF
 	add r1, r4, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	b _020290D0
 _020290C2:
 	ldr r0, [r4, #0x34]
@@ -80175,7 +80175,7 @@ sub_02029620: ; 0x02029620
 	ldr r0, _02029638 ; =sub_020296B8
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r4, pc}
 	nop
 _02029638: .word sub_020296B8
@@ -80197,7 +80197,7 @@ sub_0202963C: ; 0x0202963C
 	add r1, r4, #0
 	mov r2, #1
 	str r5, [r4, #0xc]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r4, r5, r6, pc}
 	nop
 _02029660: .word sub_020296CC
@@ -80216,7 +80216,7 @@ sub_02029664: ; 0x02029664
 	add r1, r5, #0
 	mov r2, #1
 	str r3, [r5, #8]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _02029680: .word sub_020296E8
@@ -80244,7 +80244,7 @@ sub_02029684: ; 0x02029684
 	ldr r0, _020296B4 ; =sub_02029700
 	mov r2, #1
 	str r5, [r1, #0xc]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _020296B4: .word sub_02029700
@@ -82169,7 +82169,7 @@ sub_0202A344: ; 0x0202A344
 	ldr r0, _0202A3DC ; =sub_0202A720
 	ldr r1, [r4]
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, [r4]
 	str r0, [r1, #0x24]
 	ldr r1, [r4]

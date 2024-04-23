@@ -1929,8 +1929,8 @@ _0203A78A:
 	pop {r4, r5, r6, pc}
 	thumb_func_end sub_0203A75C
 
-	thumb_func_start sub_0203A78C
-sub_0203A78C: ; 0x0203A78C
+	thumb_func_start GFL_TCBExMgrCreate
+GFL_TCBExMgrCreate: ; 0x0203A78C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r7, r1, #0
@@ -1978,7 +1978,7 @@ sub_0203A78C: ; 0x0203A78C
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0203A7F0: .word 0x0209A86C
-	thumb_func_end sub_0203A78C
+	thumb_func_end GFL_TCBExMgrCreate
 
 	thumb_func_start sub_0203A7F4
 sub_0203A7F4: ; 0x0203A7F4

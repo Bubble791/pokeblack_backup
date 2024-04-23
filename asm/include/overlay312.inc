@@ -11,7 +11,7 @@
 .public sub_02009C38
 .public sub_020241E4
 .public sub_02046DF8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_02042BA8
@@ -37,16 +37,16 @@
 .public sub_02044C98
 .public sub_02044C98
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_020258A4
 .public sub_020254E0
 .public sub_02025634
 .public sub_0202B510
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_020258A4
 .public sub_0202B5A4
 .public sub_0202B4B8
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_020258A4
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -57,7 +57,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02048244
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public sub_020484F4
 .public sub_0204713C

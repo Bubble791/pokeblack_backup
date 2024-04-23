@@ -16,7 +16,7 @@
 .public sub_02026E04
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02042BA8
 .public sub_0204B794
 .public GFL_TCBRemove

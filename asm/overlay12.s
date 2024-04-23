@@ -41028,7 +41028,7 @@ _02163B8C:
 	ldrh r0, [r4, #0x10]
 	mov r3, #4
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	ldr r1, [r4, #0x1c]
 	mov r2, #1
 	str r0, [r1]
@@ -41673,7 +41673,7 @@ ovy12_2164110: ; 0x02164110
 _02164144:
 	ldr r0, [r5, #0x1c]
 	ldr r0, [r0, #0x14]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy12_2164110
@@ -51967,7 +51967,7 @@ _02168E28:
 	ldr r0, _02168E90 ; =0x0201666D
 	mov r1, #0
 	mov r2, #0x7f
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r0, _02168E94 ; =0x021410F8
 	ldr r1, [r0]
 	add r1, r1, #1

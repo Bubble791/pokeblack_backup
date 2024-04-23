@@ -41,7 +41,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -82,7 +82,7 @@
 .public sub_0204713C
 .public sub_02048244
 .public sub_0204826C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020223CC
 .public sub_0203580C
 .public sub_0202E818
@@ -207,7 +207,7 @@
 .public sub_0203A24C
 .public sub_0202780C
 .public DC_FlushRange
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C
 .public sub_02044564

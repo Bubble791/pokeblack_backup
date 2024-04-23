@@ -53,8 +53,8 @@
 .public sub_02048080
 .public sub_02048D28
 .public sub_020232D0
-.public sub_0203A78C
-.public sub_020056FC
+.public GFL_TCBExMgrCreate
+.public GFL_VBlankTCBAdd
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046DF8
@@ -206,7 +206,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0200CA74
 .public sub_0200CA78
 .public sub_02046CFC
@@ -238,7 +238,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203DEFC
 .public GFL_SndSEPlay
 .public sub_0203DEFC
@@ -255,7 +255,7 @@
 .public sub_020352B0
 .public sub_02046CFC
 .public sub_020352E0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203DEFC
 .public GFL_SndSEPlay
 .public sub_0219F5FC
@@ -274,7 +274,7 @@
 .public sub_02046D84
 .public sub_02045A5C
 .public sub_0204B7C8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_020444A4
@@ -318,7 +318,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_0202E818
 .public GFL_TCBExMgrFree
@@ -887,7 +887,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_0202E818
 .public GFL_TCBExMgrFree
@@ -902,7 +902,7 @@
 .public sub_02048210
 .public sub_020480A8
 .public sub_02045A5C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_MsgDataLoadStrbuf
 .public sub_020484F4
 .public sub_0204713C

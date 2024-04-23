@@ -56,7 +56,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -190,7 +190,7 @@
 .public sub_0203A888
 .public sub_0203A910
 .public GX_GetBankForLCDC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GX_SetGraphicsMode
 .public GX_SetBankForLCDC
 .public MIi_CpuClearFast
@@ -358,7 +358,7 @@
 .public sub_0203A7F4
 .public sub_0203A24C
 .public sub_0203A7F4
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_FontCreate
 .public sub_0204AA30
 .public sub_02017BCC

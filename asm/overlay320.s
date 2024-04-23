@@ -61,7 +61,7 @@ ovy320_219ce80: ; 0x0219CE80
 	mov r3, #0x20
 	add r1, r0, #0
 	mov r5, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	mov r1, #0x20
 	add r1, #0xf8
 	str r0, [r4, r1]
@@ -172,7 +172,7 @@ _0219CFD6:
 	cmp r1, r0
 	bne _0219D016
 	ldr r0, [r4, #0x74]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219D016
 	b _0219CFCE
@@ -3834,7 +3834,7 @@ ovy320_219eb70: ; 0x0219EB70
 	ldr r0, _0219EC0C ; =ovy320_219ec8c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

@@ -60,7 +60,7 @@ ovy299_219fc14: ; 0x0219FC14
 	ldr r0, _0219FC28 ; =ovy299_219fc38
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	nop

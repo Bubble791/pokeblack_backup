@@ -2185,7 +2185,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	ldr r0, _021B4244 ; =0x021B40A9
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	sub r1, #0x98
 	str r0, [r4, r1]
@@ -2202,7 +2202,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	mov r2, #1
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	sub r1, #0x8c
 	str r0, [r4, r1]

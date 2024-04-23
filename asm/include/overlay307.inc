@@ -62,7 +62,7 @@
 .public sub_02044C98
 .public GFL_FontCreate
 .public sub_02021998
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044BD8
@@ -133,7 +133,7 @@
 .public sub_02048244
 .public sub_02024D20
 .public GFL_MsgSysLoadData
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020232E8
 .public sub_02045B7C
 .public sub_02044C98
@@ -187,7 +187,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -227,7 +227,7 @@
 .public MTX_Identity33_
 .public sub_0203A1FC
 .public sub_0201CCF8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_021DF328
 .public sub_021DEEF0
 .public GFL_TCBRemove

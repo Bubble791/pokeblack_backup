@@ -74,7 +74,7 @@ ovy303_219fc38: ; 0x0219FC38
 	ldr r0, _0219FC50 ; =0x0219FC65
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x87
 	lsl r1, r1, #4
 	str r0, [r4, r1]
@@ -4592,7 +4592,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	mov r1, #0xa5
 	mov r2, #1
 	mov r3, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r4, #0
 	add r1, #0x18
 	str r0, [r5, r1]

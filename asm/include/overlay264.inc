@@ -15,7 +15,7 @@
 .public sub_0203A24C
 .public sub_02046CFC
 .public sub_02046CFC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet

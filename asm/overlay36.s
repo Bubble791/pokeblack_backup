@@ -325,7 +325,7 @@ ovy36_217f85c: ; 0x0217F85C
 	ldr r0, _0217F958 ; =ovy36_2180954
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	add r1, #0xbc
 	str r0, [r1]
@@ -17106,7 +17106,7 @@ ovy36_21876d0: ; 0x021876D0
 	mov r2, #1
 	mov r3, #4
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	mov r1, #0xff
 	add r1, #0x65
 	str r0, [r5, r1]
@@ -17159,7 +17159,7 @@ ovy36_218776c: ; 0x0218776C
 	ldr r0, _02187790 ; =ovy36_218a3e0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, r4]
 _0218778E:
 	pop {r4, r5, r6, pc}
@@ -17327,7 +17327,7 @@ _0218789A:
 	ldr r0, _021878B8 ; =ovy36_218a3e0
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, r5]
 _021878B6:
 	pop {r3, r4, r5, pc}
@@ -17458,10 +17458,10 @@ _02187988: .word sub_02021C44
 	thumb_func_start sub_0218798C
 sub_0218798C: ; 0x0218798C
 	ldr r0, [r0, #0xc]
-	ldr r3, _02187994 ; =sub_02021C0C
+	ldr r3, _02187994 ; =PrintSystem_IsTextPrintActive
 	bx r3
 	nop
-_02187994: .word sub_02021C0C
+_02187994: .word PrintSystem_IsTextPrintActive
 	thumb_func_end sub_0218798C
 _02187998:
 	.byte 0xC0, 0x68, 0x70, 0x47
@@ -24847,7 +24847,7 @@ ovy36_218b1f8: ; 0x0218B1F8
 	mov r2, #0x20
 	mov r3, #0x20
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	sub r5, #0x38
 	add r4, r6, #0
 	str r0, [r6, r5]
@@ -32023,7 +32023,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	ldr r0, _0218EB60 ; =0x0218E9A1
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	sub r1, #0xa0
 	str r0, [r4, r1]
@@ -32057,7 +32057,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	mov r2, #2
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	sub r1, #0x50
 	str r0, [r4, r1]
@@ -54218,7 +54218,7 @@ _0219908A:
 	ldr r0, _021990D4 ; =ovy36_2199248
 	add r1, r4, #0
 	mov r2, #0x40
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x2c]
 	add r0, r4, #0
 	add sp, #0x24
@@ -68752,7 +68752,7 @@ ovy36_219fa10: ; 0x0219FA10
 	ldr r0, _0219FB50 ; =ovy36_21a040c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r6, #0
 	sub r1, #0x13
 	str r0, [r4, r1]
@@ -68989,7 +68989,7 @@ _0219FC8A:
 	mov r0, #0x4b
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219FD34
 	ldrh r1, [r4, #2]
@@ -80855,7 +80855,7 @@ ovy36_21a563c: ; 0x021A563C
 	add r1, r6, #0
 	mov r2, #0
 	mov r4, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r6, #0x18]
 _021A5662:
 	ldr r1, _021A5680 ; =0x021D50DC
@@ -94452,7 +94452,7 @@ ovy36_21ac218: ; 0x021AC218
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021AC2BC
 	add r0, r4, #0
@@ -95502,7 +95502,7 @@ ovy36_21aca14: ; 0x021ACA14
 	mov r2, #0x20
 	mov r3, #0x20
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	sub r4, #0x89
 	str r0, [r5, r4]
 	mov r0, #0xc8
@@ -114264,7 +114264,7 @@ ovy36_21b5b7c: ; 0x021B5B7C
 	mov r2, #0x10
 	mov r3, #0x80
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r4, #0
 	add r1, #0xe4
 	str r0, [r1]
@@ -127134,7 +127134,7 @@ _021BBD30:
 	str r2, [r4, r1]
 	ldr r0, _021BBDE0 ; =ovy36_21bd074
 	add r1, r4, r1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	b _021BBAA4
 _021BBD4C:
 	mov r0, #5
@@ -128000,7 +128000,7 @@ ovy36_21bc3b8: ; 0x021BC3B8
 	ldr r0, _021BC3D4 ; =ovy36_21bc3d8
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r4, pc}
 	.align 2, 0
 _021BC3D4: .word ovy36_21bc3d8
@@ -129712,7 +129712,7 @@ ovy36_21bd0b0: ; 0x021BD0B0
 	ldr r0, _021BD0EC ; =ovy36_21bd0f0
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x18]
 	add r0, r4, #0
 	add sp, #4
@@ -133889,7 +133889,7 @@ _021BF0B6:
 	str r2, [r0]
 	ldr r0, _021BF194 ; =ovy36_21bf824
 	add r1, r4, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r4, #0
 	add r1, #0x84
 	str r0, [r1]
@@ -150372,7 +150372,7 @@ ovy36_21c6d14: ; 0x021C6D14
 	ldr r0, _021C6D38 ; =ovy36_21c6fec
 	add r1, r4, #0
 	mov r2, #0x80
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	pop {r4, pc}
 	nop

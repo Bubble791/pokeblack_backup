@@ -109019,7 +109019,7 @@ ovy167_21ce760: ; 0x021CE760
 	add r1, r5, #0
 	mov r2, #0x40
 	mov r3, #0x80
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r6, #0
 	add r1, #0x89
 	str r0, [r4, r1]

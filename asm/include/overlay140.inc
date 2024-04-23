@@ -9,7 +9,7 @@
 .public sub_0202E168
 .public sub_0202E168
 .public GFL_MsgSysLoadData
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02016AD8
 .public sub_02017934
 .public sub_02008DDC
@@ -43,7 +43,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_020232E8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -312,7 +312,7 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0219EA44
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0219DF3C
 .public sub_0219E010
 .public sub_0219DF3C

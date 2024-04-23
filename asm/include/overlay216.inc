@@ -67,8 +67,8 @@
 .public GFL_FontCreate
 .public sub_021BC058
 .public GFL_FadeScreenSet
-.public sub_020056FC
-.public sub_0203A78C
+.public GFL_VBlankTCBAdd
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_02042BA8
 .public sub_0204AB0C
@@ -423,7 +423,7 @@
 .public MI_CpuFill8
 .public sub_0201735C
 .public sub_0204AA30
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02049D24
 .public sub_0203FFC4
 .public sub_0203A584

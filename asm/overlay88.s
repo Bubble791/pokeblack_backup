@@ -386,7 +386,7 @@ ovy88_21eab04: ; 0x021EAB04
 	add r1, r4, #0
 	mov r2, #1
 	mov r3, #4
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x20]
 	mov r0, #0xf
 	mov r1, #1

@@ -232,9 +232,9 @@
 .public sub_02046DC0
 .public sub_0204B6A8
 .public sub_0204BF1C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020241E4
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_0202E168
 .public G2x_SetBlendAlpha_

@@ -2049,7 +2049,7 @@ ovy325_219de88: ; 0x0219DE88
 	add r0, r5, #0
 	add r0, #0xcc
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219DEBA
 	add r1, r4, #0
@@ -2480,7 +2480,7 @@ _0219E1EC:
 	add r0, r5, #0
 	add r0, #0xcc
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219E226
 	add r0, r4, #0
@@ -2531,7 +2531,7 @@ ovy325_219e240: ; 0x0219E240
 	mov r4, #0
 	mov r6, #0
 	mov r7, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219E258
 	b _0219E3C4
@@ -4498,7 +4498,7 @@ ovy325_219f098: ; 0x0219F098
 	ldr r0, _0219F134 ; =ovy325_219f1b4
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

@@ -392,7 +392,7 @@ ovy176_219b020: ; 0x0219B020
 	ldr r0, _0219B08C ; =0x0219B0BD
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r5, #0x90
 	str r0, [r5]
 	pop {r4, r5, r6, pc}
@@ -582,7 +582,7 @@ _0219B0E6:
 	ldr r0, _0219B21C ; =0x0219B26D
 	ldr r1, [sp, #0xc]
 	add r2, r5, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, [sp, #0xc]
 	str r0, [r1, #4]
 	add sp, #0x10

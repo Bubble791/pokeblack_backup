@@ -18,7 +18,7 @@
 .public sub_02046CFC
 .public sub_021DEAE0
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203346C
 .public sub_0203346C
 .public sub_0203346C
@@ -60,7 +60,7 @@
 .public sub_02022DA8
 .public GFL_WordSetSystemFree
 .public sub_02021A18
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02045A5C
 .public sub_0204B7C8
 .public sub_0201FDF8

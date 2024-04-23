@@ -29,7 +29,7 @@
 .public sub_02046C40
 .public sub_02046C40
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -202,7 +202,7 @@
 .public sub_0203A1FC
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0204B0B8
 .public sub_02024D00
 .public sub_02024D00

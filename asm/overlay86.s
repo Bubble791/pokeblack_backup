@@ -212,7 +212,7 @@ ovy86_21ea990: ; 0x021EA990
 	ldr r0, _021EAA98 ; =ovy86_21eaf64
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r4, #0
 	add r1, #0xa0
 	str r0, [r1]

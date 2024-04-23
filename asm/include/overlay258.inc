@@ -4,7 +4,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public GFL_FontCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02042BA8
 .public sub_0204B794
 .public sub_0203A7F4
@@ -31,7 +31,7 @@
 .public sub_02199C80
 .public GFL_FadeScreenSet
 .public sub_02046DF8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0204AB0C
 .public sub_0219B454
 .public sub_0219A98C

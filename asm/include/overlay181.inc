@@ -3,7 +3,7 @@
 .public sub_02017934
 .public sub_0200C838
 .public sub_0200C8F8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020056B0
 .public sub_020056B0
 .public sub_02005DF4
@@ -497,7 +497,7 @@
 .public sub_02024D00
 .public sub_0204B0B8
 .public sub_020232D8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_0202E168
 .public sub_0202E7A4
@@ -880,4 +880,4 @@
 .public MI_CpuCopy8
 
 .public sub_02042788
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive

@@ -1162,7 +1162,7 @@ ovy187_21e94a8: ; 0x021E94A8
 	ldr r0, _021E9500 ; =0x021E9F05
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	.align 2, 0

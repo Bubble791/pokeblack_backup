@@ -187,7 +187,7 @@ _0219CFF6:
 	cmp r1, r0
 	bne _0219D036
 	ldr r0, [r5, #0x40]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219D036
 	b _0219CFEE
@@ -3564,7 +3564,7 @@ ovy328_219e9d8: ; 0x0219E9D8
 	ldr r0, _0219EA74 ; =ovy328_219eaf4
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

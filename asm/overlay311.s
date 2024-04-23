@@ -569,7 +569,7 @@ ovy311_219d244: ; 0x0219D244
 	add r1, r5, #0
 	mov r2, #1
 	mov r3, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #4]
 	mov r0, #4
 	str r0, [sp]
@@ -2446,7 +2446,7 @@ ovy311_219e12c: ; 0x0219E12C
 	ldr r0, _0219E1D0 ; =ovy311_219e250
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

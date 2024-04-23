@@ -756,7 +756,7 @@ _021BA728:
 	add r1, r6, #0
 	mov r2, #0
 	mov r4, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r6, #8]
 	str r4, [r6, #0x10]
 	mov r0, #9
@@ -10717,7 +10717,7 @@ _021BF56C:
 	ldr r0, _021BF5C0 ; =0x021BF6B5
 	add r1, r5, #0
 	mov r2, #0x10
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	sub r4, #0x38
 	str r0, [r5, r4]
 	add r0, r5, #0

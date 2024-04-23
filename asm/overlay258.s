@@ -38,7 +38,7 @@ ovy258_21998c0: ; 0x021998C0
 	mov r1, #0x4f
 	mov r2, #0x20
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0x64]
 	add r0, r4, #0
 	bl ovy258_2199b6c
@@ -403,7 +403,7 @@ ovy258_2199b6c: ; 0x02199B6C
 	ldr r0, _02199C1C ; =ovy258_2199c58
 	add r1, r5, #0
 	mov r2, #0x10
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x68]
 	add r0, r4, #0
 	bl sub_0204AB0C

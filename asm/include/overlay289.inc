@@ -5,7 +5,7 @@
 .public sub_0203A614
 .public sub_021E00B8
 .public sub_0203A7F4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02021C44
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0
@@ -18,7 +18,7 @@
 .public sub_021F490C
 .public sub_021F518C
 .public GXx_SetMasterBrightness_
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_0204A934
 .public sub_0203D554

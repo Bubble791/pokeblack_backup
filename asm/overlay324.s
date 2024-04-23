@@ -926,12 +926,12 @@ ovy324_219d5c4: ; 0x0219D5C4
 	add r1, r4, #0
 	mov r2, #4
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5]
 	ldr r0, _0219D61C ; =ovy324_219d4f8
 	add r1, r6, #0
 	mov r2, #5
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #4]
 	mov r0, #1
 	bl sub_02046DF8
@@ -968,12 +968,12 @@ ovy324_219d620: ; 0x0219D620
 	add r1, r4, #0
 	mov r2, #4
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5]
 	ldr r0, _0219D678 ; =ovy324_219d57c
 	add r1, r6, #0
 	mov r2, #5
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #4]
 	mov r0, #1
 	bl sub_02046DF8
@@ -2646,7 +2646,7 @@ _0219E3C4:
 	mov r0, #0x73
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219E3D6
 	mov r0, #4

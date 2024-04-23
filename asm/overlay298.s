@@ -1252,7 +1252,7 @@ ovy298_21a03e8: ; 0x021A03E8
 	ldr r0, _021A04CC ; =0x021A0619
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x10]
 	ldr r0, [r5]
 	bl sub_0200D190
@@ -1719,7 +1719,7 @@ _021A082C:
 	ldr r0, _021A0854 ; =ovy298_21a091c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3219,7 +3219,7 @@ ovy298_21a1268: ; 0x021A1268
 	ldr r0, _021A12F8 ; =ovy298_21a167c
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x28]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -5348,7 +5348,7 @@ ovy298_21a21f0: ; 0x021A21F0
 	ldr r0, _021A2254 ; =0x021A2345
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x28]
 	ldrh r0, [r4]
 	bl sub_02021998
@@ -5730,7 +5730,7 @@ ovy298_21a24e4: ; 0x021A24E4
 	ldr r0, _021A256C ; =0x021A2AA5
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4]
 	add r0, r4, #0
 	mov r1, #6
@@ -7534,7 +7534,7 @@ _021A32DE:
 	ldr r0, _021A33F0 ; =ovy298_21a3b94
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r4, #0
 	add r1, #0x60
 	str r0, [r5, r1]
@@ -13703,7 +13703,7 @@ ovy298_21a63d8: ; 0x021A63D8
 	ldr r0, _021A64B8 ; =ovy298_21a6a20
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r4, #0
 	add r1, #0xbc
 	str r0, [r1]
@@ -16467,7 +16467,7 @@ _021A7A30:
 	ldr r0, _021A7AE4 ; =0x021A862D
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r4, #0x6a
 	lsl r4, r4, #4
 	str r0, [r5, r4]

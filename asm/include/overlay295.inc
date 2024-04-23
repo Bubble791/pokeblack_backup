@@ -51,7 +51,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_02024D00
 .public sub_020480C0
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_StrBufCreate
 .public sub_0203A850
 .public GFL_TCBExMgrFree

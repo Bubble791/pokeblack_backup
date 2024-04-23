@@ -121,7 +121,7 @@ ovy289_21f451c: ; 0x021F451C
 	add r4, r1, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F4540
 	ldr r0, [r4]
@@ -297,7 +297,7 @@ ovy289_21f4668: ; 0x021F4668
 	mov r3, #4
 	mov r4, #1
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #4]
 	ldr r0, [r5]
 	ldrh r0, [r0, #4]

@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_FadeScreenSet
 .public sub_0208D868
 .public sub_0208D65C
@@ -81,7 +81,7 @@
 .public sub_0219D9CC
 .public sub_0219D9CC
 .public sub_0219D888
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4

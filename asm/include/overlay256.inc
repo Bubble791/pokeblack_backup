@@ -5,7 +5,7 @@
 .public MI_CpuFill8
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02045A5C
 .public sub_0204B7C8
 .public sub_020275F8
@@ -94,10 +94,10 @@
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_0203CDC8
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenIsFinished
 .public sub_021BCF4C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -106,7 +106,7 @@
 .public GFL_SndSEPlay
 .public sub_02046CFC
 .public GFL_SndSEPlay
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

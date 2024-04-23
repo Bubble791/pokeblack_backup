@@ -11,7 +11,7 @@
 .public sub_0203DF20
 .public sub_0203CE0C
 .public sub_0203CE0C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public GXx_SetMasterBrightness_
@@ -167,7 +167,7 @@
 .public sub_020223B4
 .public sub_020223CC
 .public sub_02021A3C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02035660
 .public sub_02048244
 .public sub_0203A7F4
@@ -213,7 +213,7 @@
 .public sub_02024D00
 .public sub_0204B0B8
 .public sub_020232D8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_02021C44
 .public sub_02021A18
@@ -376,7 +376,7 @@
 .public sub_0204B264
 .public sub_0204B354
 .public sub_0201C1B4
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02060CDC
 .public sub_0203A24C
 .public sub_02060F24
@@ -577,7 +577,7 @@
 .public sub_021BB95C
 .public sub_0204EAC8
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_021F0470
 .public sub_0204AA30
 .public sub_02042BA8
@@ -726,13 +726,13 @@
 .public GFL_FontCreate
 .public sub_020487FC
 .public sub_0204B0B8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_0203A7F4
 .public sub_020223B4
 .public sub_020223CC
 .public sub_02021A3C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02048244
 .public sub_020223CC
 .public GFL_StrBufFree

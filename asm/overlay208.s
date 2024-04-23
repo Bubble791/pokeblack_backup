@@ -94,7 +94,7 @@ ovy208_21998c0: ; 0x021998C0
 	ldr r0, _02199A3C ; =ovy208_219a044
 	add r1, r5, #0
 	mov r2, #8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #8]
 	mov r0, #0x12
 	str r0, [sp]
@@ -768,7 +768,7 @@ _02199F32:
 	add r0, r5, #0
 	add r0, #0x1c
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _02199F8E
 	mov r0, #0

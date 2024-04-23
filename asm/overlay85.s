@@ -3769,14 +3769,14 @@ ovy85_21ecadc: ; 0x021ECADC
 	mov r2, #0x10
 	mov r3, #0x80
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	add r1, #0xd8
 	str r0, [r1]
 	ldr r0, _021ECBD4 ; =ovy85_21ec998
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	add r1, #0xdc
 	str r0, [r1]

@@ -125,7 +125,7 @@
 .public sub_02046DE0
 .public sub_02046CF0
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020444A4
 .public G2x_SetBlendAlpha_
 .public sub_02044710

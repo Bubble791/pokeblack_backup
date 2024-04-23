@@ -770,13 +770,13 @@ _021BBCB0:
 	ldr r0, _021BBDD4 ; =ovy216_21bc02c
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x30]
 	mov r0, #0x72
 	mov r1, #0x72
 	mov r2, #0x20
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r4, #0
 	add r1, #0xf4
 	str r0, [r1]
@@ -4015,7 +4015,7 @@ ovy216_21bd6a0: ; 0x021BD6A0
 	ldr r0, _021BD7E8 ; =ovy216_21be68c
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	sub r6, #0x10
 	str r0, [r5, r6]
 	mov r0, #0x14

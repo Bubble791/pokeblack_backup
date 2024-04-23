@@ -16,7 +16,7 @@
 .public sub_0203A970
 .public sub_0203A970
 .public sub_0202E678
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02042BA8
 .public sub_02016B20
 .public GFL_FadeScreenSet
@@ -87,7 +87,7 @@
 .public sub_02044F90
 .public sub_02044F90
 .public sub_020232E8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_FontCreate
 .public sub_02021998
 .public sub_020241E4
@@ -224,7 +224,7 @@
 .public sub_0203DA48
 .public sub_0203DEFC
 .public GFL_SndSEPlay
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02046DC0
 .public sub_020223CC
 .public GFL_StrBufFree
@@ -282,7 +282,7 @@
 .public sub_0203D564
 .public GFL_SndSEPlay
 .public sub_0219A7A0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02046DC0
 .public sub_0219B694
 .public sub_0203AB10
@@ -385,7 +385,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C
@@ -448,7 +448,7 @@
 .public MI_CpuFill8
 .public GFL_MsgSysLoadData
 .public sub_0219C9D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203D554
 .public sub_020484F4
 .public sub_02021C1C
@@ -517,7 +517,7 @@
 .public sub_0219A530
 .public sub_0202472C
 .public sub_0202472C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02046DC0
 .public GFL_TCBRemove
 .public sub_020223CC
@@ -672,8 +672,8 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActive
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C
@@ -741,7 +741,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0219E728
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203D554
 .public sub_020484F4
 .public sub_02021C1C
@@ -796,7 +796,7 @@
 .public sub_020120C8
 .public sub_0202BE00
 .public sub_02016BB4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02046DC0
 .public GFL_TCBRemove
 .public sub_020223CC
@@ -1009,8 +1009,8 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActive
 .public sub_02046D38
 .public sub_0203AB10
 .public sub_0204476C

@@ -465,7 +465,7 @@ _0219DA94: .word ovy296_219e164
 _0219DA98:
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x50]
 	add r0, r4, #0
 	bl ovy296_219ec08

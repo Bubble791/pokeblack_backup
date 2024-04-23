@@ -832,10 +832,10 @@ _0219D482:
 
 	thumb_func_start sub_0219D484
 sub_0219D484: ; 0x0219D484
-	ldr r3, _0219D488 ; =sub_020056FC
+	ldr r3, _0219D488 ; =GFL_VBlankTCBAdd
 	bx r3
 	.align 2, 0
-_0219D488: .word sub_020056FC
+_0219D488: .word GFL_VBlankTCBAdd
 	thumb_func_end sub_0219D484
 
 	thumb_func_start ovy185_219d48c
@@ -5428,7 +5428,7 @@ _0219F818:
 	ldr r0, _0219F830 ; =ovy185_219f76c
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x1b
 	lsl r1, r1, #4
 	str r0, [r4, r1]
@@ -14315,7 +14315,7 @@ ovy185_21a3b0c: ; 0x021A3B0C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x5c]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021A3B2A
 	add r4, #0x8c
@@ -16990,7 +16990,7 @@ ovy185_21a4ef0: ; 0x021A4EF0
 	ldr r0, _021A4F8C ; =ovy185_21a5004
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

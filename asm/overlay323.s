@@ -119,7 +119,7 @@ _0219CF86:
 	ldr r0, _0219CFB0 ; =ovy323_219d120
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x44]
 	mov r0, #6
 	mov r1, #3
@@ -1502,7 +1502,7 @@ _0219DA0C:
 	mov r2, #0x20
 	mov r3, #0x20
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x38]
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
@@ -2548,7 +2548,7 @@ ovy323_219e2d4: ; 0x0219E2D4
 	ldr r0, [r5, #0x2c]
 	mov r4, #0
 	mvn r4, r4
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219E2EA
 	mov r0, #0
@@ -3121,7 +3121,7 @@ ovy323_219e6cc: ; 0x0219E6CC
 	ldr r0, _0219E768 ; =ovy323_219e7e0
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

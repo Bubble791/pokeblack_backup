@@ -428,7 +428,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -525,7 +525,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_0202E678
@@ -537,7 +537,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020223CC
 .public sub_0203580C
 .public sub_0202E818
@@ -1105,7 +1105,7 @@
 .public MIi_CpuCopy16
 .public sub_02044C98
 .public sub_02044C98
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02045738
 .public sub_02044F90
 .public sub_0204C124

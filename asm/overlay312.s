@@ -89,7 +89,7 @@ _0217C99A:
 	lsr r0, r0, #0x10
 	add r1, r0, #0
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r4, #0
 	add r1, #0x48
 	str r0, [r5, r1]
@@ -381,7 +381,7 @@ _0217CC34:
 _0217CC52:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _0217CCDC
 	sub r6, #0x34
@@ -487,7 +487,7 @@ _0217CD0C:
 _0217CD1E:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _0217CD3C
 	sub r6, #0x34
@@ -565,7 +565,7 @@ _0217CDA6:
 _0217CDB8:
 	ldr r6, _0217CE30 ; =0x0000C080
 	ldr r0, [r4, r6]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _0217CEB0
 	sub r6, #0x34
@@ -759,7 +759,7 @@ _0217CF68:
 	str r0, [sp, #0xc]
 	ldr r0, _0217D188 ; =0x0000C080
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0217CF7C
 	b _0217D0FA

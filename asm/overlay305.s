@@ -2984,7 +2984,7 @@ ovy305_219e444: ; 0x0219E444
 	ldr r0, _0219E4E8 ; =ovy305_219e580
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

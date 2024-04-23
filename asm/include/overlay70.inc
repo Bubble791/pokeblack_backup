@@ -40,7 +40,7 @@
 .public sub_0217D6B0
 .public GFL_FadeScreenSet
 .public sub_0204AA30
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02042BA8
 .public sub_0204AB0C
 .public sub_0203FFC4
@@ -167,7 +167,7 @@
 .public sub_020480C0
 .public sub_020484F4
 .public sub_0204713C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_02021998
 .public sub_020480C0

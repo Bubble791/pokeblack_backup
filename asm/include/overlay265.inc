@@ -6,8 +6,8 @@
 .public sub_02038BC8
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_020056FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
+.public GFL_VBlankTCBAdd
 .public sub_0204B7C8
 .public sub_0204E27C
 .public sub_02045A5C

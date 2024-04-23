@@ -207,7 +207,7 @@
 .public GFL_FontCreate
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_02042BA8
@@ -239,7 +239,7 @@
 .public sub_0203A24C
 .public sub_0202780C
 .public DC_FlushRange
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C
 .public sub_02044564
@@ -285,7 +285,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

@@ -160,7 +160,7 @@
 .public sub_02046DE0
 .public sub_02046CF0
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public MI_CpuFill8
 .public sub_0219B730
@@ -183,7 +183,7 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_02048210
 .public sub_0219C548

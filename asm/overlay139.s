@@ -3400,7 +3400,7 @@ _0219B2A8:
 	b _0219B2D6
 _0219B2C4:
 	ldr r0, [r4, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _0219B2D6
 	mov r0, #0
@@ -4213,7 +4213,7 @@ ovy139_219b8ac: ; 0x0219B8AC
 	sub sp, #4
 	add r4, r0, #0
 	ldr r0, [r4, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219B8C4
 	mov r0, #0
@@ -4734,7 +4734,7 @@ ovy139_219bca0: ; 0x0219BCA0
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219BCB2
 	mov r0, #1
@@ -5675,7 +5675,7 @@ ovy139_219c3b4: ; 0x0219C3B4
 	sub sp, #4
 	add r4, r0, #0
 	ldr r0, [r4, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219C3CA
 	add sp, #4
@@ -5793,7 +5793,7 @@ ovy139_219c48c: ; 0x0219C48C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219C49E
 	mov r0, #1

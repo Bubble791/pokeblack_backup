@@ -174,7 +174,7 @@ ovy171_21ddbb4: ; 0x021DDBB4
 	b _021DDCBC
 _021DDBCC:
 	ldr r0, [r5, #0x1c]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021DDCBC
 	ldr r0, [r5]
@@ -574,7 +574,7 @@ ovy171_21ddee4: ; 0x021DDEE4
 	ldr r0, _021DDEF8 ; =ovy171_21ddf08
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	nop

@@ -534,7 +534,7 @@ _0217D362:
 	ldr r0, _0217D450 ; =ovy70_217d67c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #8]
 	add r0, r4, #0
 	bl ovy70_217d7d8
@@ -1619,7 +1619,7 @@ ovy70_217dcac: ; 0x0217DCAC
 	mov r1, #0x28
 	mov r2, #0x20
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r7, #0
 	add r1, #0x14
 	str r0, [r6, r1]

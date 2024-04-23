@@ -3444,7 +3444,7 @@
 .public sub_0203A1FC
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_0200746C
@@ -3539,7 +3539,7 @@
 .public sub_020484F4
 .public sub_02021C1C
 .public sub_02048244
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_0204898C
@@ -4503,7 +4503,7 @@
 .public sub_021B878C
 .public sub_02016D68
 .public sub_0208D868
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020304E0
 .public sub_020307C4
 .public sub_02017D10

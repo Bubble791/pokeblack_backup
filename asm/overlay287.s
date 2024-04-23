@@ -8316,7 +8316,7 @@ ovy287_21f880c: ; 0x021F880C
 	mov r3, #4
 	mov r6, #4
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	mov r1, #0x75
 	lsl r1, r1, #2
 	str r0, [r5, r1]
@@ -8485,7 +8485,7 @@ ovy287_21f8988: ; 0x021F8988
 	add r4, r0, #0
 	ldr r0, _021F89C0 ; =0x00001EAC
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021F89B8
 	mov r0, #6
@@ -10306,7 +10306,7 @@ ovy287_21f9758: ; 0x021F9758
 	bne _021F97FC
 	ldr r6, _021F9814 ; =0x00001EAC
 	ldr r0, [r4, r6]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F9788
 	ldr r0, [r4]
@@ -11369,7 +11369,7 @@ ovy287_21f9fc0: ; 0x021F9FC0
 _021F9FD6:
 	ldr r0, _021FA080 ; =0x00001EAC
 	ldr r0, [r5, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021FA078
 	add r0, r5, #0
@@ -11397,7 +11397,7 @@ _021F9FD6:
 _021FA014:
 	ldr r0, _021FA080 ; =0x00001EAC
 	ldr r0, [r5, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021FA078
 	add r0, r5, #0

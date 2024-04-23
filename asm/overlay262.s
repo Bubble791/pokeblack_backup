@@ -55,7 +55,7 @@ ovy262_21c2560: ; 0x021C2560
 	ldr r0, _021C25FC ; =ovy262_21c2674
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -6235,7 +6235,7 @@ ovy262_21c568c: ; 0x021C568C
 	add r1, r5, #0
 	mov r2, #1
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0xc]
 	ldr r3, [sp, #0xc]
 	ldr r0, [r4, #0x14]

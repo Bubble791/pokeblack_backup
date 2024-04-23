@@ -186,7 +186,7 @@ ovy264_2199a0c: ; 0x02199A0C
 	ldr r0, _02199A20 ; =0x02199A39
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, _02199A24 ; =0x00006014
 	str r0, [r4, r1]
 	pop {r4, pc}

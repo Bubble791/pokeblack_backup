@@ -73,8 +73,8 @@
 .public sub_0203A24C
 .public sub_0203A24C
 .public sub_0203A24C
-.public sub_0203A78C
-.public sub_020056FC
+.public GFL_TCBExMgrCreate
+.public GFL_VBlankTCBAdd
 .public sub_02026DC0
 .public sub_02026E04
 .public sub_02026E04

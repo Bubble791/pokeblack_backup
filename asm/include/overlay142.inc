@@ -31,7 +31,7 @@
 .public sub_02199978
 .public sub_0203DAC8
 .public sub_02035198
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02199978
 .public sub_02199978
 .public sub_0203DA2C
@@ -118,7 +118,7 @@
 .public sub_0219F760
 .public sub_0204C520
 .public sub_021998C0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203DA2C
 .public sub_020504F0
 .public sub_02035198
@@ -369,7 +369,7 @@
 .public GFL_SndSEPlay
 .public sub_020275F8
 .public sub_0204B7C8
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenSet
 .public GFL_SndSEPlay
 .public sub_021998C0
@@ -393,8 +393,8 @@
 .public GFL_FontCreate
 .public sub_021998DC
 .public ButtonSystem_Create
-.public sub_020056FC
-.public sub_0203A78C
+.public GFL_VBlankTCBAdd
+.public GFL_TCBExMgrCreate
 .public sub_0202E168
 .public sub_02042BA8
 .public sub_0203D554
@@ -402,7 +402,7 @@
 .public GFL_FadeScreenSet
 .public sub_0203A7F4
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_TCBRemove
 .public sub_021A046C
 .public sub_020088A4

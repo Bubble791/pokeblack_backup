@@ -63,7 +63,7 @@ ovy265_219991c: ; 0x0219991C
 	ldr r0, _02199930 ; =ovy265_2199958
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	nop
@@ -77,7 +77,7 @@ ovy265_2199934: ; 0x02199934
 	ldr r0, _02199948 ; =ovy265_2199978
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	nop

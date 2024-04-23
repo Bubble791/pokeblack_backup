@@ -18,7 +18,7 @@
 .public sub_021998FC
 .public sub_021E00B8
 .public sub_021EA2A8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02199900
 .public sub_02199910
 .public sub_02008860

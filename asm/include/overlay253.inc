@@ -7,7 +7,7 @@
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A58C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0217CAEC
 .public sub_02005EA0
 .public GFL_TCBRemove

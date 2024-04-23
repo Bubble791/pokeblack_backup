@@ -1344,7 +1344,7 @@ ovy180_219b7b4: ; 0x0219B7B4
 	ldr r0, _0219B834 ; =ovy180_219b878
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x24]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1659,7 +1659,7 @@ _0219BA8C:
 	ldr r0, _0219BABC ; =ovy180_219be4c
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r4, #0x32
 	str r0, [r5, r4]
 	add sp, #0x44

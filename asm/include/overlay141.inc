@@ -22,7 +22,7 @@
 .public sub_020486F0
 .public GFL_StrBufCreate
 .public sub_020241E4
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02017968
 .public sub_0200E7F0
 .public sub_0200E82C
@@ -128,7 +128,7 @@
 .public sub_02021C1C
 .public sub_02048244
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0202B6AC
 .public sub_0204C560
 .public GFL_FadeScreenSet

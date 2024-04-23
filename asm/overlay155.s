@@ -90,7 +90,7 @@ _021F5A66:
 	add r1, r4, #0
 	mov r2, #1
 	mov r5, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x18]
 	str r7, [r4, #0x1c]
 	str r5, [r4, #0x74]

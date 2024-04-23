@@ -201,7 +201,7 @@ _0219CFEC:
 	ldr r0, _0219D060 ; =ovy141_219cfa8
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x80
 	add r1, #0xd0
 	str r0, [r5, r1]
@@ -1082,7 +1082,7 @@ ovy141_219d754: ; 0x0219D754
 	add r5, r0, #0
 	add r0, #0xe8
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219D768
 	mov r0, #1

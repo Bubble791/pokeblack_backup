@@ -94,7 +94,7 @@
 .public sub_021F560C
 .public sub_021F559C
 .public sub_021F55C8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_021F559C
 .public sub_021F55C8
@@ -1024,7 +1024,7 @@
 .public MI_CpuFill8
 .public sub_021F2FF8
 .public sub_0204AA30
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204AB0C
 .public sub_020504DC

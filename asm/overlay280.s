@@ -5905,7 +5905,7 @@ ovy280_21dc2b8: ; 0x021DC2B8
 	add r1, r4, #0
 	mov r2, #1
 	mov r3, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #4]
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -8059,7 +8059,7 @@ ovy280_21dd28c: ; 0x021DD28C
 	ldr r0, _021DD328 ; =ovy280_21dd3a0
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

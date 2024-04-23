@@ -276,7 +276,7 @@
 .public sub_02016AD8
 .public sub_02016B34
 .public sub_0204AA30
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0203A584
 .public sub_0203A1FC
 .public sub_0203A58C
@@ -289,7 +289,7 @@
 .public sub_02026F7C
 .public sub_02026F7C
 .public sub_020275F8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203D174
 .public sub_0203D194
 .public sub_021ED320

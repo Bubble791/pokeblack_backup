@@ -8,7 +8,7 @@
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_02045A5C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020444A4
 .public sub_02044710
 .public sub_0204476C

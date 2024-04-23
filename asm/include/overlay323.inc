@@ -10,7 +10,7 @@
 .public sub_0203D554
 .public sub_0219D620
 .public sub_0219CFB4
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044CFC
 .public sub_02042BA8
 .public sub_02035024
@@ -139,7 +139,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_TCBExMgrFree
 .public GFL_MsgDataFree
 .public sub_02021A18
@@ -257,7 +257,7 @@
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219CFB4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02199C58
 .public GFL_SndSEPlay
 .public sub_020352C0
@@ -308,7 +308,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

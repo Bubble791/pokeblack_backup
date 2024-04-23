@@ -229,7 +229,7 @@
 .public sub_0203A24C
 .public sub_0202780C
 .public DC_FlushRange
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C
 .public GX_LoadBGPltt
@@ -262,7 +262,7 @@
 .public sub_02029B54
 .public sub_0204B6A8
 .public sub_0204BF1C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -281,7 +281,7 @@
 .public sub_0203A1FC
 .public sub_02048080
 .public sub_020232D0
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public GFL_StrBufCreate
 .public GFL_FontCreate

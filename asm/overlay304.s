@@ -110,7 +110,7 @@ ovy304_219fc80: ; 0x0219FC80
 	ldr r0, _0219FC94 ; =0x0219FCAD
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, _0219FC98 ; =0x00000708
 	str r0, [r4, r1]
 	pop {r4, pc}

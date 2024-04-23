@@ -84,7 +84,7 @@ ovy284_21e30e0: ; 0x021E30E0
 	ldr r0, _021E31D4 ; =ovy284_21e4308
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x38]
 	add r7, #0xfc
 	mov r0, #0x28
@@ -2450,7 +2450,7 @@ ovy284_21e435c: ; 0x021E435C
 	mov r2, #1
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x68]
 	mov r0, #1
 	mov r1, #2
@@ -3292,7 +3292,7 @@ ovy284_21e4a54: ; 0x021E4A54
 	ldr r0, _021E4AF8 ; =ovy284_21e4c08
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

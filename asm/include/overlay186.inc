@@ -16,8 +16,8 @@
 .public sub_02046C40
 .public sub_02034168
 .public sub_021AAEFC
-.public sub_020056FC
-.public sub_0203A78C
+.public GFL_VBlankTCBAdd
+.public GFL_TCBExMgrCreate
 .public sub_02042BA8
 .public GFL_FadeScreenSet
 .public GFL_SndSEPlay
@@ -433,7 +433,7 @@
 .public sub_020241E4
 .public sub_0203A1FC
 .public MI_CpuFill8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020179BC
 .public MTX_Identity33_
 .public GFL_StrBufFree
@@ -554,7 +554,7 @@
 .public sub_02021C1C
 .public sub_02048244
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0204C560
 .public sub_0204C560
 .public sub_0204C560
@@ -590,11 +590,11 @@
 .public GFL_SndSEPlay
 .public sub_0203DEFC
 .public sub_0203DEFC
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021ACA38
 .public sub_021ACA9C
 .public sub_021AC9E4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021ACA38
 .public sub_021ACA9C
 .public sub_021ACC10

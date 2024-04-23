@@ -61,7 +61,7 @@ ovy256_21bb758: ; 0x021BB758
 	ldr r0, _021BB76C ; =ovy256_21bb784
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, _021BB770 ; =0x00000B28
 	str r0, [r4, r1]
 	pop {r4, pc}
@@ -915,7 +915,7 @@ ovy256_21bbe48: ; 0x021BBE48
 	add r4, r0, #0
 	ldr r0, _021BBE6C ; =0x00000B6C
 	ldr r0, [r4, r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021BBE66
 	bl GFL_FadeScreenIsFinished
@@ -957,7 +957,7 @@ ovy256_21bbe94: ; 0x021BBE94
 	ldr r5, _021BBF74 ; =0x00000B6C
 	add r4, r0, #0
 	ldr r0, [r4, r5]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021BBEA8
 	mov r0, #4
@@ -1220,7 +1220,7 @@ ovy256_21bc0b8: ; 0x021BC0B8
 	ldr r5, _021BC21C ; =0x00000B6C
 	add r4, r0, #0
 	ldr r0, [r4, r5]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021BC0CC
 	mov r0, #7

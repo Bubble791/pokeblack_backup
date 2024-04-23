@@ -117,7 +117,7 @@ ovy301_219fc74: ; 0x0219FC74
 	ldr r0, _0219FC88 ; =ovy301_219fc58
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	pop {r4, pc}
 	nop

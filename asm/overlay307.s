@@ -567,7 +567,7 @@ _021DE032:
 	ldr r0, _021DE0F8 ; =ovy307_21de010
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x28]
 	add r0, r6, #0
 	add r1, r5, #0
@@ -1170,7 +1170,7 @@ ovy307_21de468: ; 0x021DE468
 	mov r2, #1
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x54]
 	mov r0, #1
 	mov r1, #2
@@ -1601,7 +1601,7 @@ ovy307_21de7d4: ; 0x021DE7D4
 	ldr r0, _021DE878 ; =ovy307_21de910
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -2021,7 +2021,7 @@ ovy307_21deb28: ; 0x021DEB28
 	str r6, [r5, #0x28]
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x2c]
 	add r0, r5, #0
 	bl ovy307_21deec8

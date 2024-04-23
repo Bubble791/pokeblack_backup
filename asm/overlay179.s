@@ -388,7 +388,7 @@ ovy179_219b00c: ; 0x0219B00C
 	ldr r0, _0219B05C ; =ovy179_219b0a0
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r5, #0xac
 	str r0, [r5]
 	pop {r4, r5, r6, pc}

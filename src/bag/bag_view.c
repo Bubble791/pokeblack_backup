@@ -167,7 +167,6 @@ int ovy142_2199ad4(BagView *bagView, int itemCount, int param_3)
     return v4 != bagView->posNow || v5 != bagView->unk834;
 }
 
-// https://decomp.me/scratch/GGLff
 int ovy142_2199b48(BagView *bagView, int itemCount, int param_3);
 
 int ovy142_2199b48(BagView *bagView, int itemCount, int param_3)
@@ -428,8 +427,8 @@ void ovy142_2199ecc(BagView *bagView)
     int uVar3;
 
     sub_02035198(bagView->unk8A4);
-    iVar1 = sub_02021C0C(bagView->printSystem);
-    if (iVar1 != 0)
+
+    if (PrintSystem_IsTextPrintActive(bagView->printSystem) != 0)
     {
         uVar2 = sub_02199978(bagView);
 
@@ -1046,7 +1045,7 @@ void ovy142_219a850(BagView *bagView)
     int v5;     // r5
     int v6;     // r5
 
-    if (sub_02021C0C(bagView->printSystem))
+    if (PrintSystem_IsTextPrintActive(bagView->printSystem))
     {
         if (!sub_0203DA2C())
             bagView->unk8B0 = 0;
@@ -2651,7 +2650,7 @@ void ovy142_219c38c(int a1, BagView *bagView)
 
 void ovy142_219c3cc(BagView *bagView)
 {
-    if (sub_02021C0C(bagView->printSystem))
+    if (PrintSystem_IsTextPrintActive(bagView->printSystem))
     {
         GFL_FadeScreenSet(0, 1, 1, 0, 6, 1, bagView->heapId);
         GFL_SndSEPlay(1950);
@@ -2702,10 +2701,10 @@ extern int sub_020219A8(int, u16);
 extern int sub_0202E7A4(int ,int ,int, u16);
 extern int GFL_FontCreate(int ,int, int, int, u16);
 extern int ButtonSystem_Create(int template, void* data1, void* data2, u16 heap);
-extern int sub_020056FC(void*, void*, int);
+extern int GFL_VBlankTCBAdd(void*, void*, int);
 extern void sub_02042BA8(int, u16);
 extern int sub_0202E168(int, int, int, int, u16);
-extern int sub_0203A78C(u16, u16, int, int);
+extern int GFL_TCBExMgrCreate(u16, u16, int, int);
 
 int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
 {
@@ -2795,10 +2794,10 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
     v6->buttonManSystem = ButtonSystem_Create(0x21A0A18, ovy142_219c100, (void*)v6, v6->heapId);
     ovy142_219c900(v6);
     ovy142_219cc24(v6);
-    v6->unk6A8 = sub_020056FC(ovy142_219c38c, v6, 0);
-    v6->unk748 = sub_0203A78C(v6->heapId, v6->heapId, 1, 0);
+    v6->taskCallBack = GFL_VBlankTCBAdd(ovy142_219c38c, v6, 0);
+    v6->unk748 = GFL_TCBExMgrCreate(v6->heapId, v6->heapId, 1, 0);
     ovy142_219f84c(v6);
-    v6->unk800 = sub_0202E168(
+    v6->taskMenuData = sub_0202E168(
         3,
         9,
         v6->font,

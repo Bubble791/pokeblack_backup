@@ -71,7 +71,7 @@ _0219CF04:
 	ldr r0, _0219CF50 ; =0x0219D5F5
 	add r1, r4, #0
 	mov r2, #8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	add r0, r4, #0
 	add r0, #0x28
@@ -5624,7 +5624,7 @@ _0219FC8E:
 	mov r2, #3
 	add r1, r0, #0
 	add r3, #0xfd
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0xc]
 	mov r7, #0
 	str r7, [r4, #0x1c]
@@ -6513,10 +6513,10 @@ sub_021A034C: ; 0x021A034C
 	thumb_func_start sub_021A0350
 sub_021A0350: ; 0x021A0350
 	ldr r0, [r0, #0x34]
-	ldr r3, _021A0358 ; =sub_02021C0C
+	ldr r3, _021A0358 ; =PrintSystem_IsTextPrintActive
 	bx r3
 	nop
-_021A0358: .word sub_02021C0C
+_021A0358: .word PrintSystem_IsTextPrintActive
 	thumb_func_end sub_021A0350
 
 	thumb_func_start sub_021A035C

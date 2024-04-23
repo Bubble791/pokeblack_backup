@@ -48,7 +48,7 @@ ovy87_21ea860: ; 0x021EA860
 	ldr r0, _021EA8D0 ; =ovy87_21eb418
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	sub r5, #0x14
 	str r0, [r4, r5]
 	add r0, r4, #0
@@ -88,7 +88,7 @@ ovy87_21ea8fc: ; 0x021EA8FC
 	tst r0, r1
 	bne _021EA952
 	ldr r0, [r5, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021EA952
 	ldr r0, [r5]
@@ -133,7 +133,7 @@ ovy87_21ea954: ; 0x021EA954
 	tst r0, r1
 	bne _021EA9AA
 	ldr r0, [r6, #8]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021EA9AA
 	mov r0, #4

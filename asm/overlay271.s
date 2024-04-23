@@ -6818,7 +6818,7 @@ _021F31EC:
 	ldr r0, _021F326C ; =ovy271_21f32e4
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	add sp, #8

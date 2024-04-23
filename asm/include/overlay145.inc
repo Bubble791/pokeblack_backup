@@ -50,7 +50,7 @@
 .public sub_02046CF0
 .public sub_020232D0
 .public sub_0202E678
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020444A4
 .public sub_02044710
 .public sub_0204476C
@@ -238,7 +238,7 @@
 .public sub_02045E1C
 .public sub_0219E118
 .public sub_02045E1C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_0202E7A4
 .public sub_0203A7F4

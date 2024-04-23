@@ -1083,7 +1083,7 @@ ovy266_219d710: ; 0x0219D710
 	ldr r0, _0219D724 ; =ovy266_219d6e8
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #8]
 	pop {r4, pc}
 	nop

@@ -128,7 +128,7 @@ struct BagViewWork
     /*0x664*/ int unk664[8];
     /*0x684*/ int unk684[8];
     /*0x6A4*/ int buttonManSystem;
-    /*0x6A8*/ int unk6A8;
+    /*0x6A8*/ int taskCallBack;
     /*0x6AC*/ int unk6AC;
     /*0x6B0*/ int unk6B0;
     /*0x6B4*/ int unk6B4;
@@ -162,7 +162,7 @@ struct BagViewWork
     /*0x798*/ u8 unk798;
     /*0x79C*/ int unk79C;
     /*0x7A0*/ ITEM_TASK unk7A0[8];
-    /*0x800*/ int unk800;
+    /*0x800*/ int taskMenuData;
     /*0x804*/ int unk804;
     /*0x808*/ int unk808;
     /*0x80C*/ int unk80C;
@@ -266,7 +266,7 @@ extern int ovy142_21a00a0(BagView*);
 typedef void (*UnknowFunc)(BagView *);
 
 extern void sub_02035198(int);
-extern int sub_02021C0C(int);
+extern int PrintSystem_IsTextPrintActive(int);
 extern int sub_0203DA2C(void);
 extern void sub_02007FE8(void*, ItemTable*, int, int);
 extern void sub_0204C488(int, u16);

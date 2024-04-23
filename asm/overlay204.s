@@ -54,7 +54,7 @@ ovy204_21a9b60: ; 0x021A9B60
 	ldr r0, _021A9BE4 ; =0x021A9D35
 	add r1, r5, #0
 	mov r2, #0x10
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	sub r6, #8
 	str r0, [r5, r6]
 _021A9BD6:
@@ -253,7 +253,7 @@ ovy204_21a9d40: ; 0x021A9D40
 	ldr r0, _021A9D6C ; =0x021A9D35
 	add r1, r4, #0
 	mov r2, #0x10
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, r5]
 _021A9D66:
 	pop {r3, r4, r5, pc}
@@ -988,7 +988,7 @@ ovy204_21aa30c: ; 0x021AA30C
 	add r1, r4, #0
 	mov r2, #3
 	add r3, #0xfd
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x28]
 	add r0, r4, #0
 	str r7, [r5, #0x2c]
@@ -4140,7 +4140,7 @@ ovy204_21abc24: ; 0x021ABC24
 	ldr r0, [r4, #0x34]
 	str r1, [sp, #8]
 	add r7, r3, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021ABC40
 	add sp, #0x10
@@ -4272,7 +4272,7 @@ ovy204_21abd38: ; 0x021ABD38
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r1, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021ABD66
 	mov r0, #2
@@ -6251,7 +6251,7 @@ _021ACC9C:
 	b _021ACC7E
 _021ACCA8:
 	ldr r0, [r7, #0x34]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021ACD98
 	mov r0, #2
@@ -6571,7 +6571,7 @@ ovy204_21acf28: ; 0x021ACF28
 	str r0, [sp]
 	ldr r0, [r4, #0x34]
 	add r5, r1, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021ACF42
 	mov r0, #2

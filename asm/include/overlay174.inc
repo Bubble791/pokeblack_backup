@@ -286,7 +286,7 @@
 .public sub_0204E060
 .public sub_0204B6A8
 .public sub_0204BF1C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02021998
 .public sub_0202E168
 .public sub_02046D38

@@ -78,7 +78,7 @@
 .public sub_0204A934
 .public sub_02049344
 .public sub_020495A0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0204972C
 .public sub_0203A1FC
 .public sub_0203A1FC
@@ -201,7 +201,7 @@
 .public ovy167_0219E39C
 .public sub_0204F918
 .public ovy167_219dac4
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_020066E4
 .public sub_02006758
 .public sub_02026E48
@@ -412,7 +412,7 @@
 .public sub_0204F980
 .public sub_0204FEF8
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02015A88
 .public ovy168_21e4cf0
 .public sub_0203A24C
@@ -1851,19 +1851,19 @@
 .public sub_0204BFD4
 .public sub_0203A6D0
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public MTX_Scale22_
 .public sub_02044E88
 .public sub_02044E88
 .public sub_0203A6D0
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_0203A6D0
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_0203A6D0
@@ -1885,7 +1885,7 @@
 .public sub_0204C140
 .public sub_0203A6D0
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044C98
@@ -1906,7 +1906,7 @@
 .public G2x_SetBlendBrightness_
 .public G2x_SetBlendBrightness_
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendBrightness_
 .public sub_02022888
 .public FX_ModS32
@@ -2023,7 +2023,7 @@
 .public sub_0204BDC0
 .public sub_02026F7C
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02020F94
 .public sub_0204B81C
 .public sub_0204C040
@@ -2038,7 +2038,7 @@
 .public sub_0204BE64
 .public sub_0204BCD0
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0204C040
 .public sub_0204C140
 .public sub_0204C520
@@ -2534,7 +2534,7 @@
 .public sub_0204C488
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02044E60
 .public sub_02044E74
 .public sub_0203A1FC
@@ -2548,7 +2548,7 @@
 .public sub_02029B54
 .public sub_0203A614
 .public sub_02005680
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A1FC
 .public sub_0208D374
 .public sub_0208DF14

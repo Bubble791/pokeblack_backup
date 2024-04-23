@@ -2533,7 +2533,7 @@ ovy332_21c01c4: ; 0x021C01C4
 	ldr r0, _021C0260 ; =ovy332_21c033c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x14]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3016,7 +3016,7 @@ ovy332_21c054c: ; 0x021C054C
 	add r1, r5, #0
 	mov r2, #1
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	add sp, #0x14

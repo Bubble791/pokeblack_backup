@@ -280,8 +280,8 @@ sub_020056D8: ; 0x020056D8
 _020056F8: .word 0x0209DA58
 	thumb_func_end sub_020056D8
 
-	thumb_func_start sub_020056FC
-sub_020056FC: ; 0x020056FC
+	thumb_func_start GFL_VBlankTCBAdd
+GFL_VBlankTCBAdd: ; 0x020056FC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _02005714 ; =0x0209DA58
@@ -295,7 +295,7 @@ sub_020056FC: ; 0x020056FC
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _02005714: .word 0x0209DA58
-	thumb_func_end sub_020056FC
+	thumb_func_end GFL_VBlankTCBAdd
 
 	thumb_func_start sub_02005718
 sub_02005718: ; 0x02005718

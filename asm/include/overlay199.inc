@@ -209,10 +209,10 @@
 .public sub_02046DC0
 .public sub_0204B6A8
 .public sub_0204BF1C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_0202E168
@@ -263,7 +263,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_02048080
 .public sub_020232D0
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
@@ -389,7 +389,7 @@
 .public sub_0204BF1C
 .public sub_02046C40
 .public sub_02044710
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02046DC0
 .public sub_02046D38
 .public sub_0204B794
@@ -1072,7 +1072,7 @@
 .public sub_0203A1FC
 .public sub_02048080
 .public sub_020232D0
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
@@ -1192,7 +1192,7 @@
 .public sub_0204BF1C
 .public sub_02046C40
 .public sub_02044710
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02046DC0
 .public sub_02046D38
 .public GFL_TCBRemove
@@ -1262,7 +1262,7 @@
 .public sub_0203A24C
 .public sub_0202780C
 .public DC_FlushRange
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
 .public sub_0204AB0C
 .public GX_LoadBGPltt

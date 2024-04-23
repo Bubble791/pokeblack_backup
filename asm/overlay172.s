@@ -249,7 +249,7 @@ ovy172_21999a8: ; 0x021999A8
 	add r1, r6, #0
 	mov r2, #0x40
 	mov r3, #0x80
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #0x18]
 	add r0, r5, #0
 	bl sub_02199900

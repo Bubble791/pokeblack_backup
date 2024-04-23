@@ -293,7 +293,7 @@ _021BA37E:
 	ldr r0, _021BA404 ; =0x021BA4F5
 	ldr r1, [sp, #0xc]
 	mov r2, #0x40
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, [sp, #0xc]
 	str r0, [r1, #4]
 	add r0, r1, #0
@@ -1658,7 +1658,7 @@ _021BAF24:
 	cmp r0, #1
 	bne _021BAF56
 	ldr r0, [r4, #0x38]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021BAF56
 	mov r0, #0
@@ -1961,7 +1961,7 @@ ovy209_21bb150: ; 0x021BB150
 	mov r2, #3
 	add r1, r0, #0
 	add r3, #0xfd
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x18]
 	ldrh r0, [r5]
 	str r4, [r5, #0x24]
@@ -5613,7 +5613,7 @@ _021BCD6C:
 	ldr r0, _021BCD94 ; =ovy209_21bcd98
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _021BCD80:
@@ -9453,7 +9453,7 @@ ovy209_21be9b0: ; 0x021BE9B0
 	str r5, [r4, #0x2c]
 	add r1, r4, #0
 	mov r2, #0x40
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x20]
 	ldr r1, [r4, #0x30]
 	ldr r0, [r1]
@@ -11184,7 +11184,7 @@ ovy209_21bf7fc: ; 0x021BF7FC
 	mov r2, #3
 	add r1, r0, #0
 	add r3, #0xfd
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	add r1, #0xcc
 	str r0, [r1]
@@ -11241,7 +11241,7 @@ _021BF8D4:
 	add r0, r4, #0
 	add r0, #0xe8
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021BF906
 	add r0, r4, #0

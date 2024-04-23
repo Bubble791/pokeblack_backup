@@ -31,7 +31,7 @@
 .public GX_SetBankForTex
 .public sub_02181298
 .public GX_SetBankForLCDC
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public GX_GetBankForTex
 .public sub_02016ED8

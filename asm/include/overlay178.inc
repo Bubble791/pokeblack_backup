@@ -16,7 +16,7 @@
 .public sub_0219A89C
 .public sub_02199B8C
 .public G2x_SetBlendBrightness_
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0219B93C
 .public GFL_TCBRemove
 .public sub_0219C29C
@@ -39,7 +39,7 @@
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046CF0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0219B2E4
 .public sub_0219B4D4

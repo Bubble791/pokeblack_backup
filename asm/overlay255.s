@@ -126,7 +126,7 @@ ovy255_21bb7e0: ; 0x021BB7E0
 	ldr r0, _021BB7F4 ; =ovy255_21bb804
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r1, [r4, #0x2c]
 	str r0, [r1, #0x5c]
 	pop {r4, pc}
@@ -14800,7 +14800,7 @@ ovy255_21c28a8: ; 0x021C28A8
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021C28C4
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021C28DE
 _021C28C4:
@@ -15341,7 +15341,7 @@ ovy255_21c2d44: ; 0x021C2D44
 	ldr r0, [r4, #0x2c]
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021C2D5A
 	mov r0, #0xc
@@ -49170,7 +49170,7 @@ _021D3D22:
 	b _021D3D8E
 _021D3D36:
 	ldr r0, [r4, #0x18]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021D3D8E
 	mov r6, #0x7f
@@ -55420,7 +55420,7 @@ ovy255_21d6d28: ; 0x021D6D28
 	ldr r0, _021D6DC4 ; =ovy255_21d6e44
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

@@ -18,7 +18,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219E33C
@@ -194,7 +194,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -231,7 +231,7 @@
 .public sub_020241E4
 .public GFL_MsgSysLoadData
 .public sub_02021998
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_FadeScreenSet
 .public sub_0202E818
 .public sub_0202E1DC
@@ -244,7 +244,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0203A7F4
@@ -266,7 +266,7 @@
 .public sub_020484D4
 .public sub_02044F90
 .public sub_02044CFC
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203D564
 .public sub_0203D564
 .public GFL_SndSEPlay
@@ -288,10 +288,10 @@
 .public GFL_SndSEPlay
 .public sub_0203DEFC
 .public sub_0203DA48
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02044CFC
 .public sub_021A1C0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
@@ -315,7 +315,7 @@
 .public sub_0219CCB0
 .public sub_02044C98
 .public sub_0203D554
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203D554
 .public sub_0203DEFC
 .public GFL_SndSEPlay
@@ -328,11 +328,11 @@
 .public sub_0219B294
 .public sub_02044C98
 .public sub_0203D554
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021A287C
 .public sub_02045708
 .public sub_02044CFC
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203D564
 .public sub_0203D564
 .public GFL_SndSEPlay
@@ -352,10 +352,10 @@
 .public sub_0203D564
 .public sub_0203DEFC
 .public GFL_SndSEPlay
-.public sub_02021C0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
+.public PrintSystem_IsTextPrintActive
 .public sub_021A287C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_SndSEPlay
 .public sub_0202E168
 .public sub_0204AA30
@@ -626,7 +626,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

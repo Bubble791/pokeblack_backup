@@ -28,7 +28,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public GFL_MsgDataFree
 .public sub_0204AB0C
@@ -61,7 +61,7 @@
 .public sub_0219A414
 .public sub_0203A24C
 .public sub_0219B850
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02048244
 .public sub_02005748
 .public sub_0204C540
@@ -263,7 +263,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -305,7 +305,7 @@
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_020232D8
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public GFL_StrBufCreate
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
@@ -429,7 +429,7 @@
 .public sub_0204566C
 .public sub_02044F90
 .public sub_0204AB0C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0203A24C
 .public sub_02005784
@@ -591,7 +591,7 @@
 .public sub_02045B7C
 .public sub_0201FDF8
 .public sub_02045B7C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_02048210
 .public sub_0204C108

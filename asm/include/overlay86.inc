@@ -9,7 +9,7 @@
 .public sub_020191AC
 .public sub_0203A1FC
 .public sub_0204B570
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_02017394

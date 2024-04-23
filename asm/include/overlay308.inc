@@ -18,7 +18,7 @@
 .public sub_02021A3C
 .public sub_021A054C
 .public sub_021A08E8
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_021A0004
@@ -37,7 +37,7 @@
 .public sub_0202D7B8
 .public sub_0219F728
 .public sub_0203A24C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0204AA30
 .public sub_020232E8
 .public sub_020219A8
@@ -145,7 +145,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -317,7 +317,7 @@
 .public sub_02199D08
 .public sub_02013B44
 .public sub_02199C08
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02199C68
 .public sub_0204C124
 .public sub_0204C124

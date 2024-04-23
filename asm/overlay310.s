@@ -8557,7 +8557,7 @@ ovy310_21a0f30: ; 0x021A0F30
 	ldr r0, _021A0F48 ; =ovy310_219ff7c
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x55
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -15247,7 +15247,7 @@ ovy310_21a42ec: ; 0x021A42EC
 	ldr r0, _021A4304 ; =ovy310_21a30dc
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0xf
 	lsl r1, r1, #6
 	str r0, [r4, r1]

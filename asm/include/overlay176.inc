@@ -36,7 +36,7 @@
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046C40
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020444A4
 .public sub_02048080
@@ -58,7 +58,7 @@
 .public sub_02045118
 .public sub_0204AE3C
 .public sub_0204AB0C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_02044668
 .public sub_02045264

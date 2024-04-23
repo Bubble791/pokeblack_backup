@@ -61,7 +61,7 @@
 .public sub_0204713C
 .public sub_02048244
 .public sub_0204826C
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_020223CC
 .public GFL_StrBufFree

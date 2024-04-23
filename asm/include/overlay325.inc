@@ -171,7 +171,7 @@
 .public sub_02044CFC
 .public sub_0204898C
 .public GFL_StrBufFree
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0219B294
 .public sub_02044C98
 .public sub_02044C98
@@ -180,9 +180,9 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0219E7B0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0219E7C4
 .public sub_0203DEFC
 .public GFL_SndSEPlay
@@ -284,7 +284,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

@@ -13,7 +13,7 @@
 .public sub_02016CB4
 .public sub_02180570
 .public sub_0203A614
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02016ED8
 .public sub_02016AF0
 .public sub_02181300

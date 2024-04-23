@@ -55,7 +55,7 @@ ovy253_217c940: ; 0x0217C940
 	ldr r0, _0217CA24 ; =ovy253_217cd20
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	sub r1, #8
 	str r0, [r4, r1]

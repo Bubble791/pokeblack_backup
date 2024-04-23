@@ -141,7 +141,7 @@ _021B73F6:
 	ldr r0, _021B74D0 ; =ovy205_21b76fc
 	add r1, r4, #0
 	mov r2, #0x10
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r5, #0xc0
 	str r0, [r4, r5]
 	mov r0, #1

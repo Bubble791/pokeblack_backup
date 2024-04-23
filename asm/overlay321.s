@@ -69,7 +69,7 @@ ovy321_219cf00: ; 0x0219CF00
 	add r5, r3, #0
 	add r4, r0, #0
 	ldr r0, [r5, #0x44]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219CF14
 	mov r0, #0
@@ -1787,7 +1787,7 @@ ovy321_219dc04: ; 0x0219DC04
 	ldr r0, _0219DCA8 ; =ovy321_219dd30
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

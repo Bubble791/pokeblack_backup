@@ -52,7 +52,7 @@ ovy317_219ce80: ; 0x0219CE80
 	ldr r0, _0219CFD4 ; =0x0219D0F1
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r7, #0x14]
 	add r0, r7, #0
 	bl ovy317_219d0f4
@@ -486,7 +486,7 @@ ovy317_219d210: ; 0x0219D210
 	ldr r0, _0219D2B4 ; =ovy317_219d328
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0xc]
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

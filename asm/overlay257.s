@@ -24708,7 +24708,7 @@ ovy257_21a5a54: ; 0x021A5A54
 	ldr r0, _021A5B10 ; =ovy257_21a5c8c
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	add r1, #0x9c
 	str r0, [r4, r1]
@@ -29571,7 +29571,7 @@ _021A819C:
 	add r1, r4, #0
 	mov r2, #1
 	mov r6, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	bl sub_02042788
 	cmp r0, #0
@@ -30281,7 +30281,7 @@ ovy257_21a8748: ; 0x021A8748
 	add r1, r4, #0
 	mov r2, #2
 	mov r3, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #4]
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -32666,7 +32666,7 @@ ovy257_21a98d4: ; 0x021A98D4
 	ldr r0, _021A9AE8 ; =ovy257_21a9f84
 	add r1, r4, #0
 	mov r2, #8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	str r6, [r4, #8]
 	strh r6, [r4, #0x38]
@@ -32854,7 +32854,7 @@ ovy257_21a9af4: ; 0x021A9AF4
 	add r1, r5, #0
 	mov r2, #8
 	str r4, [r5, r6]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r7, #1
 	str r0, [r5, #4]
 	strh r4, [r5, #0x38]
@@ -34137,7 +34137,7 @@ ovy257_21aa5a0: ; 0x021AA5A0
 	mov r2, #1
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r4, #0
 	add r1, #0x10
 	str r0, [r5, r1]

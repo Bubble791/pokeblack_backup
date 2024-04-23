@@ -36,7 +36,7 @@
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046CF0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0219B240
 .public sub_0219B3CC

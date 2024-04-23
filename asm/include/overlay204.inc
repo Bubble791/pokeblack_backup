@@ -5,13 +5,13 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public sub_0203CDC8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020480C0
 .public sub_020484F4
@@ -100,7 +100,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_02021C44
 .public sub_02021A18
@@ -366,7 +366,7 @@
 .public sub_0203DA0C
 .public sub_0203D564
 .public GFL_SndSEPlay
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0204BEDC
 .public sub_0208D65C
 .public sub_02045E1C
@@ -374,7 +374,7 @@
 .public sub_0204BEDC
 .public sub_0208D65C
 .public sub_0208D65C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02017238
@@ -529,7 +529,7 @@
 .public sub_02045B7C
 .public sub_02045604
 .public sub_02045B7C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02045E1C
 .public sub_02045E1C
 .public GFL_SndSEPlay
@@ -549,7 +549,7 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public sub_0203DA0C
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203D564
 .public sub_021AD5D0
 .public GFL_SndSEPlay

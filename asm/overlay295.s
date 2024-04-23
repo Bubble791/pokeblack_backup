@@ -431,7 +431,7 @@ ovy295_219d154: ; 0x0219D154
 	mov r2, #0xa
 	mov r3, #0x20
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #0x24]
 	ldrh r1, [r5]
 	lsl r0, r6, #8

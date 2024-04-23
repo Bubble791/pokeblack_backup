@@ -18,7 +18,7 @@ ovy200_21b2f80: ; 0x021B2F80
 	ldr r0, _021B2FBC ; =0x021B3121
 	add r1, r4, #0
 	mov r2, #8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	strb r5, [r4, #0x18]
 	str r0, [r4, #0x14]
 	mov r0, #1
@@ -142,7 +142,7 @@ _021B3088:
 	cmp r0, #1
 	bne _021B310E
 	ldr r0, [r4, #0x30]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #1
 	bne _021B310E
 	ldr r0, [r4, #0x3c]

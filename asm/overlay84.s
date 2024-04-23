@@ -810,14 +810,14 @@ ovy84_21eb4b4: ; 0x021EB4B4
 	mov r2, #0x10
 	mov r3, #0x80
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	add r1, #0xec
 	str r0, [r1]
 	ldr r0, _021EB5B0 ; =ovy84_21eb368
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	add r1, #0xf0
 	str r0, [r1]

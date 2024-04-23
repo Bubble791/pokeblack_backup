@@ -14,7 +14,7 @@
 .public sub_0203A980
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02045A5C
 .public sub_0204B7C8
 .public sub_020275F8
@@ -518,7 +518,7 @@
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_02026BA0
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203CE0C
 .public sub_02046D38
 .public sub_02046DC0
@@ -562,7 +562,7 @@
 .public sub_021BF234
 .public sub_021BF234
 .public sub_021BF234
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_0203A24C
 .public sub_021CEFA4
 .public sub_0203A24C
@@ -2393,7 +2393,7 @@
 .public sub_0203A1D0
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021D3EF8
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
@@ -2862,7 +2862,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

@@ -5630,7 +5630,7 @@
 .public GFL_StrBufCreate
 .public GFL_FontCreate
 .public GFL_FontCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_021CE860
 .public sub_021CE8B8
 .public GFL_TCBExMgrFree

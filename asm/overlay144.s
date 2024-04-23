@@ -302,7 +302,7 @@ _0219D11A:
 	ldr r0, _0219D13C ; =0x0219F2D9
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x52
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -4664,7 +4664,7 @@ ovy144_219f2dc: ; 0x0219F2DC
 	ldr r0, _0219F328 ; =ovy144_219f400
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x28]
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}

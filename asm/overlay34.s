@@ -9913,7 +9913,7 @@ ovy34_217b63c: ; 0x0217B63C
 	mov r0, #1
 	pop {r4, pc}
 _0217B656:
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	pop {r4, pc}
 	.align 2, 0
 _0217B65C: .word 0x00003534

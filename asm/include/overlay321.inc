@@ -7,7 +7,7 @@
 .public GFL_FontCreate
 .public sub_02021998
 .public GFL_FadeScreenSet
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02021A18
 .public sub_02022DA8
 .public sub_0203AB10
@@ -152,7 +152,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_02026DC0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_02026DE8
 .public sub_020232D8

@@ -1236,7 +1236,7 @@ _021DE3B8:
 	ldr r0, _021DE550 ; =ovy168_21de55c
 	add r1, r5, #0
 	mov r2, #0xa
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #0x74]
 	mov r0, #0
 	str r0, [r5, #4]
@@ -2926,7 +2926,7 @@ _021DF0FE:
 	ldr r0, _021DF134 ; =ovy168_21e0580
 	mov r1, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0x6e
 	ldr r2, [r5]
 	lsl r1, r1, #2
@@ -8418,7 +8418,7 @@ _021E1B42:
 	str r0, [r5]
 	ldr r0, _021E1C70 ; =ovy168_21e659c
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0
 	mov r2, #1
 	bl ovy168_21e035c
@@ -31266,7 +31266,7 @@ ovy168_21ecea8: ; 0x021ECEA8
 	str r0, [r1, #0x10]
 	ldr r0, _021ECF18 ; =ovy168_21ecf20
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	ldr r2, _021ECF1C ; =ovy168_21ecf88
 	add r0, r5, #0
@@ -31399,7 +31399,7 @@ ovy168_21ecfa8: ; 0x021ECFA8
 	str r0, [r1, #0x14]
 	ldr r0, _021ED01C ; =ovy168_21ed024
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	ldr r2, _021ED020 ; =ovy168_21ed070
 	add r0, r5, #0
@@ -31513,7 +31513,7 @@ ovy168_21ed090: ; 0x021ED090
 	str r0, [r1, #0xc]
 	ldr r0, _021ED100 ; =ovy168_21ed108
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	ldr r2, _021ED104 ; =ovy168_21ed164
 	add r0, r5, #0
@@ -32007,7 +32007,7 @@ ovy168_21ed44c: ; 0x021ED44C
 	ldr r0, [sp, #0x24]
 	str r0, [r1, #0x1c]
 	ldr r0, _021ED4B0 ; =ovy168_21ed4b4
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	add r0, r5, #0
 	mov r2, #0
@@ -32406,7 +32406,7 @@ ovy168_21ed784: ; 0x021ED784
 	ldr r0, _021ED7D0 ; =ovy168_21ed7d4
 	mov r2, #0
 	str r4, [r1]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #0
@@ -33931,7 +33931,7 @@ _021EE37C:
 	str r0, [r1, #4]
 	ldr r0, _021EE620 ; =ovy168_21ed6b8
 	ldr r2, [sp, #0x14]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	ldr r2, [sp, #0x14]
 	add r0, r5, #0
@@ -34270,7 +34270,7 @@ _021EE6A8:
 	ldr r0, _021EE6F4 ; =ovy168_21ed734
 	mov r2, #0
 	str r5, [r1]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r0, #0
 	add r0, r5, #0
 	mov r2, #0
@@ -42650,7 +42650,7 @@ ovy168_21f26e0: ; 0x021F26E0
 	ldr r0, _021F2724 ; =ovy168_21f2ad0
 	mov r2, #0
 	str r4, [r1, #4]
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r1, #0
 	mov r2, #0
 	bl ovy168_21e035c
@@ -42855,7 +42855,7 @@ _021F2856:
 	ldr r0, _021F28D0 ; =ovy168_21f2c14
 	add r1, r4, #0
 	mov r2, #0xa
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #4]
 	ldr r1, [r5, #4]
 	mov r0, #2

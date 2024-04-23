@@ -3,7 +3,7 @@
 .public GFL_HeapCreateChild
 .public sub_0219FC54
 .public sub_0203A1D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public GFL_MsgSysLoadData
@@ -414,7 +414,7 @@
 .public sub_02045B7C
 .public GFL_FontCreate
 .public sub_0202E678
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_0204B6A8
 .public sub_0204AA30

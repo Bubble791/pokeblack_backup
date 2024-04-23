@@ -361,7 +361,7 @@ _02199D58:
 	ldr r0, _02199DA4 ; =0x0219A315
 	add r1, r5, #0
 	mov r2, #8
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r5, #4]
 	add r0, r5, #0
 	bl ovy165_219f5ec
@@ -11472,7 +11472,7 @@ ovy165_219f5ec: ; 0x0219F5EC
 	mov r2, #1
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r4, #8]
 	str r6, [r4, #0xc]
 	mov r0, #4

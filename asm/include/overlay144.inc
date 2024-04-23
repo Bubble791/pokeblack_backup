@@ -28,7 +28,7 @@
 .public sub_0219DFBC
 .public sub_02042788
 .public sub_02042BA8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0219F1D4
 .public sub_0219E8D4
@@ -409,7 +409,7 @@
 .public VEC_Mag
 .public sub_0203A1FC
 .public MI_CpuFill8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0203A24C
 .public sub_0219F710

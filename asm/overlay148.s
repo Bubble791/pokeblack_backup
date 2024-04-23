@@ -296,7 +296,7 @@ ovy148_21f5c20: ; 0x021F5C20
 	ldr r0, _021F5C3C ; =ovy148_21f5c40
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	pop {r4, pc}
 	.align 2, 0
 _021F5C3C: .word ovy148_21f5c40

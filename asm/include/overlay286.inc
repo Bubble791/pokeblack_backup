@@ -222,7 +222,7 @@
 .public sub_0203349C
 .public sub_021F4CA0
 .public GXx_SetMasterBrightness_
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_021F4260
 .public sub_021F4E98
 .public sub_021F4CB0
@@ -232,7 +232,7 @@
 .public sub_021E00AC
 .public sub_02026FE4
 .public GXx_SetMasterBrightness_
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_021F4260
 .public sub_021F4CB0
 .public sub_021F42FC
@@ -240,7 +240,7 @@
 .public sub_02026F7C
 .public sub_021E00AC
 .public sub_02026FE4
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_02027780
@@ -251,7 +251,7 @@
 .public sub_0202B768
 .public sub_0202BA60
 .public sub_0202BA60
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021F4CB0
 .public sub_021F6BD0
 .public sub_0202B768
@@ -263,7 +263,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public Item_GetItemParam
 .public GFL_MsgDataLoadStrbuf
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02024EEC
 .public sub_020223B4
 .public sub_0203DA48
@@ -279,7 +279,7 @@
 .public sub_021E00AC
 .public sub_02026FE4
 .public sub_02027780
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_02021C44
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0

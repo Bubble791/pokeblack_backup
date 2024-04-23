@@ -75,9 +75,9 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
 
     if (GFL_FadeScreenIsFinished() != 1)
         return 0;
-    if (!sub_02021C0C(wk->printSystem))
+    if (!PrintSystem_IsTextPrintActive(wk->printSystem))
         return 0;
-    GFL_TCBRemove(wk->unk6A8);
+    GFL_TCBRemove(wk->taskCallBack);
     sub_021A046C(&wk->unk8C8);
     sub_020088A4(wk->unk14, wk->itemType);
     sub_02008894(
@@ -85,7 +85,7 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
         wk->itemType,
         wk->posNow,
         (wk->unk834 + 1));
-    sub_0202E1DC(wk->unk800);
+    sub_0202E1DC(wk->taskMenuData);
     ovy142_219e168(wk);
     ovy142_219dd14(wk);
     GFL_TCBExMgrFree(wk->unk748);
@@ -2145,7 +2145,7 @@ void ovy142_219f0bc(BagView *a1, u32 *a2, int a3)
     }
 
     a1->unk7A0[i - 1].unk8  = 1;
-    a1->unk79C = sub_0202D974(&task, a1->unk800);
+    a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (v9 = 0; v9 < a3; ++v9)
         GFL_StrBufFree(a1->unk7A0[v9].unk0);
     ovy142_219fda8(a1, 0);
@@ -2176,7 +2176,7 @@ void ovy142_219f1a0(BagView *a1, u32 *a2, int a3)
     }
 
     a1->unk7A0[i - 1].unk8  = 1;
-    a1->unk79C = sub_0202D974(&task, a1->unk800);
+    a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (v9 = 0; v9 < a3; ++v9)
         GFL_StrBufFree(a1->unk7A0[v9].unk0);
     ovy142_219fda8(a1, 0);
@@ -2230,7 +2230,7 @@ void ovy142_219f284(BagView *a1, u8 a2)
 
         }
     }
-    a1->unk79C = sub_0202D974(&task, a1->unk800);
+    a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (i = 0; i < a2; ++i)
         GFL_StrBufFree(a1->unk7A0[i].unk0);
     ovy142_219fda8(a1, 0);
@@ -2506,7 +2506,7 @@ void ovy142_219faac(BagView *a1)
     GFL_MsgDataLoadStrbuf(a1->msgData, 133, a1->unk7A0[1].unk0);
     a1->unk7A0[1].unk4 = 14816;
     a1->unk7A0[1].unk8 = 0;
-    a1->unk79C = sub_0202D974(&task, a1->unk800);
+    a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     GFL_StrBufFree(a1->unk7A0[0].unk0);
     GFL_StrBufFree(a1->unk7A0[1].unk0);
     ovy142_219ff40(a1, 0);

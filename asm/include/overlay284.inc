@@ -8,7 +8,7 @@
 .public sub_0201CCF8
 .public sub_0203A1FC
 .public sub_0204E060
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0203A970
 .public sub_02042BA8
 .public sub_0203A980
@@ -199,7 +199,7 @@
 .public sub_02024D20
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020232E8
 .public sub_0202E7A4
 .public sub_02044C98
@@ -313,7 +313,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8

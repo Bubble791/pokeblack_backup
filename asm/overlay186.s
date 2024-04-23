@@ -238,14 +238,14 @@ _021A7742:
 	add r1, r5, #0
 	mov r2, #1
 	mov r4, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	ldr r6, _021A7804 ; =0x00003210
 	mov r2, #3
 	str r0, [r5, r6]
 	ldrh r0, [r5]
 	mov r3, #0
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r6, #4
 	str r0, [r5, r1]
 	ldrh r1, [r5]
@@ -7853,7 +7853,7 @@ _021AB364:
 	ldr r0, _021AB4A4 ; =ovy186_21ab2b8
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	mov r6, #0x5d
 	lsl r6, r6, #2
 	add r1, r6, #0
@@ -8946,7 +8946,7 @@ ovy186_21abc94: ; 0x021ABC94
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021ABCA6
 	mov r0, #1
@@ -9427,7 +9427,7 @@ _021AC026: ; jump table
 	.short _021AC21E - _021AC026 - 2 ; case 19
 _021AC04E:
 	ldr r0, [r4, #0x14]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021AC0EE
 	mov r0, #0xbe
@@ -9490,7 +9490,7 @@ _021AC0CC:
 	pop {r3, r4, r5, r6, r7, pc}
 _021AC0D6:
 	ldr r0, [r4, #0x14]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	beq _021AC0EE
 	mov r0, #0x73

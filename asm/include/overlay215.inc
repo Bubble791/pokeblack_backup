@@ -74,7 +74,7 @@
 .public MIi_CpuClearFast
 .public sub_02017BCC
 .public GFL_FontCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_020444A4
 .public sub_02044528
 .public GFL_TCBExMgrFree
@@ -86,7 +86,7 @@
 .public sub_02027B64
 .public sub_02027B4C
 .public sub_02027B4C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02046CFC
 .public sub_02027B58
 .public G2x_SetBlendAlpha_
@@ -451,7 +451,7 @@
 .public sub_0204BF98
 .public sub_02048080
 .public GFL_FontCreate
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_02021998
 .public sub_020480C0
 .public sub_020484F4
@@ -608,7 +608,7 @@
 .public sub_0203A1FC
 .public MIi_CpuClearFast
 .public sub_021A8DF0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02042BA8
 .public GFL_TCBRemove
 .public sub_021AAF5C
@@ -630,7 +630,7 @@
 .public sub_0202DA54
 .public sub_0202DA54
 .public sub_0203A978
-.public sub_02021C0C
+.public PrintSystem_IsTextPrintActive
 .public sub_021AAEFC
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay

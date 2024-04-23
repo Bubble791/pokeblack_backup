@@ -219,7 +219,7 @@ _0219ADDC:
 	ldr r0, _0219AF20 ; =0x0219C6C9
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	sub r4, #0xc
 	str r0, [r5, r4]
 	ldr r1, _0219AF24 ; =ovy178_219b958
@@ -446,7 +446,7 @@ ovy178_219b0ac: ; 0x0219B0AC
 	ldr r0, _0219B0FC ; =ovy178_219b140
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r5, #0xb8
 	str r0, [r5]
 	pop {r4, r5, r6, pc}

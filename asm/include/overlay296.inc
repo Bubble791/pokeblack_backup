@@ -28,7 +28,7 @@
 .public sub_0204ABA4
 .public sub_020602D8
 .public sub_0203A24C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public G2x_SetBlendBrightness_
 .public sub_02044CFC
 .public sub_02044CFC

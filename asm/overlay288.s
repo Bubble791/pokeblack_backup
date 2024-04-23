@@ -189,7 +189,7 @@ ovy288_21f45a0: ; 0x021F45A0
 	add r5, r1, #0
 	str r0, [sp]
 	ldr r0, [r5, #0x10]
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F45C4
 	ldr r0, [r5]
@@ -350,7 +350,7 @@ ovy288_21f46c8: ; 0x021F46C8
 	mov r3, #4
 	mov r4, #4
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	str r0, [r5, #4]
 	ldr r0, [r5]
 	mov r1, #3
@@ -955,7 +955,7 @@ ovy288_21f4bac: ; 0x021F4BAC
 	mov r6, #0
 	mov r4, #0
 	mov r7, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F4BC2
 	b _021F4D6E
@@ -1440,7 +1440,7 @@ ovy288_21f4f44: ; 0x021F4F44
 	mov r4, #0
 	mov r6, #0
 	mov r7, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F4F5E
 	b _021F5368
@@ -2346,7 +2346,7 @@ ovy288_21f5630: ; 0x021F5630
 	mov r4, #0
 	mov r6, #0
 	mov r7, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _021F564A
 	b _021F5932

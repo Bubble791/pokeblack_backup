@@ -69,7 +69,7 @@
 .public MI_CpuFill8
 .public GFL_FontCreate
 .public sub_02021998
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0200D190
 .public sub_0200D1DC
 .public sub_0204E060
@@ -109,7 +109,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_020232D0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
@@ -221,7 +221,7 @@
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_021A0CF0
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_0204BF98
 .public sub_0203A24C
@@ -286,7 +286,7 @@
 .public sub_0203A1FC
 .public sub_02044CFC
 .public sub_02044BD8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02021998
 .public sub_02021C44
 .public sub_02021A18
@@ -331,7 +331,7 @@
 .public sub_0203CE0C
 .public sub_0203CE0C
 .public MI_CpuFill8
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0219FE98
 .public sub_0219FE98
 .public sub_0219FE88
@@ -471,7 +471,7 @@
 .public sub_020173AC
 .public sub_0219F718
 .public sub_0204AA30
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0219FE98
 .public sub_0219FE98
 .public sub_0219FE88
@@ -990,7 +990,7 @@
 .public sub_021A08E4
 .public sub_0219FD2C
 .public sub_0219FD30
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0219FE98
 .public sub_0219FE98
 .public sub_0219FE88
@@ -1249,7 +1249,7 @@
 .public sub_0219FD28
 .public sub_021A08E4
 .public sub_0219FD2C
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_0219FE98
 .public sub_0219FE98
 .public sub_0219FE88

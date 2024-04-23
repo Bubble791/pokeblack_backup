@@ -2528,7 +2528,7 @@ _0219E2BE:
 	ldr r0, _0219E4DC ; =0x0219DC15
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r4, #0
 	add r1, #0x38
 	str r0, [r5, r1]

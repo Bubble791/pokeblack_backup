@@ -20,7 +20,7 @@
 .public sub_0219F48C
 .public sub_0202E168
 .public sub_0219DA58
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_02045B7C
 .public sub_02045B7C
 .public sub_02045B7C
@@ -690,7 +690,7 @@
 .public sub_0204BEFC
 .public sub_0203A1FC
 .public sub_02024D00
-.public sub_0203A78C
+.public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_0203580C

@@ -89,7 +89,7 @@ ovy140_219ce80: ; 0x0219CE80
 	mov r1, #0x1c
 	mov r2, #0x20
 	mov r3, #0x20
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	sub r1, #8
 	str r0, [r4, r1]
@@ -358,7 +358,7 @@ ovy140_219d130: ; 0x0219D130
 	ldr r0, _0219D1BC ; =ovy140_219d24c
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r5, #0xd0
 	str r0, [r5]
 	pop {r4, r5, r6, pc}
@@ -3749,7 +3749,7 @@ ovy140_219eac8: ; 0x0219EAC8
 	add r7, r0, #0
 	ldr r0, [r4, r6]
 	add r5, r1, #0
-	bl sub_02021C0C
+	bl PrintSystem_IsTextPrintActive
 	cmp r0, #0
 	bne _0219EAE2
 	b _0219ED0C

@@ -816,7 +816,7 @@
 .public sub_021A008C
 .public sub_0204C140
 .public sub_0204C124
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public sub_021A43C4
 .public sub_021A316C
@@ -1367,7 +1367,7 @@
 .public sub_02026E48
 .public sub_02026DE8
 .public sub_021A6420
-.public sub_020056FC
+.public GFL_VBlankTCBAdd
 .public sub_021A3154
 .public sub_02016B20
 .public sub_0202BE14

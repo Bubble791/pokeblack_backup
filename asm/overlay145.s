@@ -481,7 +481,7 @@ ovy145_219d20c: ; 0x0219D20C
 	ldr r0, _0219D2B0 ; =0x0219DC0D
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	str r0, [r4, #8]
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -2119,7 +2119,7 @@ ovy145_219e020: ; 0x0219E020
 	ldrh r0, [r4]
 	mov r2, #1
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	sub r1, #0x10
 	str r0, [r4, r1]

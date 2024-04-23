@@ -4673,7 +4673,7 @@ ovy79_21ecb78: ; 0x021ECB78
 	mov r2, #0x10
 	mov r3, #0x80
 	add r1, r0, #0
-	bl sub_0203A78C
+	bl GFL_TCBExMgrCreate
 	add r1, r5, #0
 	add r1, #0xec
 	str r0, [r1]
@@ -4773,7 +4773,7 @@ _021ECC3E:
 	ldr r0, _021ECD40 ; =ovy79_21ecb64
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_020056FC
+	bl GFL_VBlankTCBAdd
 	add r1, r5, #0
 	add r1, #0xf4
 	str r0, [r1]
