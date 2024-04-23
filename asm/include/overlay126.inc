@@ -14,7 +14,7 @@
 .public sub_02049974
 .public sub_02049974
 .public sub_02049214
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02049934
 .public sub_02049888
 .public sub_020497D4

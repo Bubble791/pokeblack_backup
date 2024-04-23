@@ -1,10 +1,10 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02016B20
 .public sub_02035318
 .public sub_02016B34
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021984DC
 .public sub_02021A3C
 .public GFL_FontCreate
@@ -39,7 +39,7 @@
 .public sub_0204B0D4
 .public sub_0204AE3C
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044668
 .public sub_02044B84
 .public sub_02044B84

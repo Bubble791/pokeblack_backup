@@ -217,7 +217,7 @@ ovy109_21eede8: ; 0x021EEDE8
 	ldr r0, [sp, #0xc]
 	str r0, [r5, #8]
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #8]
 	mov r1, #0
 	mov r2, #1
@@ -256,7 +256,7 @@ ovy109_21eede8: ; 0x021EEDE8
 	ldr r0, [sp, #0x10]
 	str r0, [r5, #0x10]
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #8]
 	mov r1, #0
 	mov r2, #3
@@ -294,7 +294,7 @@ ovy109_21eede8: ; 0x021EEDE8
 	bl sub_021BEC1C
 	add r0, r6, #0
 	str r7, [r5, #0x18]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r1, r4, #0
 _021EEF12:
 	lsl r0, r4, #2
@@ -341,7 +341,7 @@ _021EEF52:
 	str r1, [r2, #0x30]
 	ldr r1, [r0, #4]
 	str r1, [r2, #0x44]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	cmp r4, #5
 	blt _021EEF52

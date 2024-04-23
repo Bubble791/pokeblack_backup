@@ -21,7 +21,7 @@ ovy28_2170340: ; 0x02170340
 	mov r0, #0x41
 	mov r2, #1
 	mov r6, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	str r4, [r5]
 	bl ovy28_2170c64
@@ -56,16 +56,16 @@ ovy28_21703a0: ; 0x021703A0
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021703B2
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021703B2:
 	add r0, r4, #0
 	bl ovy28_2170ba4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x41
 	bl sub_0203A1D0
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021703CC: .word 0x00003530
@@ -1050,7 +1050,7 @@ ovy28_2170ba4: ; 0x02170BA4
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _02170BC0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #4
 	str r4, [r5, r0]
 _02170BC0:
@@ -1058,7 +1058,7 @@ _02170BC0:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _02170BD0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r5, r4]
 _02170BD0:
@@ -1066,7 +1066,7 @@ _02170BD0:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _02170BE0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r5, r4]
 _02170BE0:
@@ -1074,7 +1074,7 @@ _02170BE0:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _02170BF0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r5, r4]
 _02170BF0:
@@ -1466,7 +1466,7 @@ _02170EEE:
 	mov r0, #5
 	mov r1, #0x10
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	add r0, r7, #0
 	bl sub_0201736C
@@ -3863,7 +3863,7 @@ _0217215A:
 	blt _0217215A
 _0217217A:
 	ldr r0, [sp, #0x20]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0x28]
 	mov r1, #1
 	bl ovy28_2172b4c
@@ -4736,7 +4736,7 @@ ovy28_2172830: ; 0x02172830
 	mov r0, #0x41
 	mov r2, #1
 	str r1, [sp, #0x14]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r0, #4
 	add r1, r5, #0
@@ -4767,7 +4767,7 @@ _02172886:
 	ldr r3, _02172960 ; =0x02173084
 	mov r0, #0x41
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r1, [sp, #0x1c]
 	str r0, [r5, r1]
 	ldr r0, [sp, #0x18]
@@ -4882,9 +4882,9 @@ _02172976:
 	mov r0, #0x4d
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r5, r7]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	cmp r4, #4
 	blt _02172976
@@ -4892,7 +4892,7 @@ _02172976:
 	ldr r1, [r6]
 	bl sub_02161404
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy28_2172968
 _021729A0:

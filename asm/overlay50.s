@@ -1235,7 +1235,7 @@ _021E61CA:
 	bl sub_0200E82C
 	strh r0, [r5]
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	b _021E6998
 _021E61E2:
 	mov r3, #0
@@ -1744,11 +1744,11 @@ _021E650C:
 	bl sub_0201F268
 	add r6, r0, #0
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	cmp r4, #0
 	beq _021E6524
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021E6524:
 	cmp r6, #1
 	bhi _021E65C6
@@ -2859,7 +2859,7 @@ _021E6D82:
 	blt _021E6CFE
 _021E6D8A:
 	ldr r0, [sp, #0x20]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x3c
 	pop {r4, r5, r6, r7, pc}
 _021E6D94:

@@ -29,7 +29,7 @@ ovy5_214f500: ; 0x0214F500
 	mov r0, #4
 	mov r1, #8
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #8]
 	add r4, r0, #0
 	str r5, [r4]
@@ -90,7 +90,7 @@ _0214F596:
 	b _0214F592
 _0214F5B2:
 	ldr r0, [r2, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 _0214F5BC:

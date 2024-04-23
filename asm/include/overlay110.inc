@@ -26,14 +26,14 @@
 .public sub_021B8224
 .public sub_021BEB70
 .public sub_021BEC1C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204A934
 .public sub_021B8224
 .public sub_021BEB70
 .public sub_021BEC1C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204A934
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_0201793C

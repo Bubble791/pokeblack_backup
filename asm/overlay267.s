@@ -280,7 +280,7 @@ ovy267_219d058: ; 0x0219D058
 	bl sub_0204566C
 _0219D0BE:
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #1
 	bl sub_02044F90
 	mov r0, #1
@@ -413,7 +413,7 @@ ovy267_219d1b4: ; 0x0219D1B4
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -501,7 +501,7 @@ ovy267_219d25c: ; 0x0219D25C
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _0219D2AC: .word 0x04000050

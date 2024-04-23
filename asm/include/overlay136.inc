@@ -36,8 +36,8 @@
 .public DC_FlushRange
 .public GX_LoadTexPltt
 .public GX_EndLoadTexPltt
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02046EDC
 .public STD_GetStringLength
 .public sub_02068458

@@ -620,7 +620,7 @@ _0219D284:
 	str r6, [sp, #8]
 	bl sub_0204ADA8
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x1b
 	mov r1, #1
 	add r2, sp, #0xc
@@ -635,7 +635,7 @@ _0219D284:
 	mov r2, #0x20
 	blx MI_CpuCopy8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #4
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -699,7 +699,7 @@ _0219D45E:
 	cmp r4, #0x13
 	blt _0219D452
 	ldr r0, [r5, #0x54]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #4
 	mov r1, #1
 	mov r2, #0
@@ -1095,7 +1095,7 @@ ovy140_219d708: ; 0x0219D708
 	bl sub_0204BDE0
 	str r0, [r5, #0x14]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, sp, #0xc
 	add r1, r7, #0
 	mov r2, #8

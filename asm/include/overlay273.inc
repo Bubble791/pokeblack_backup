@@ -27,11 +27,11 @@
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0201FD34
 .public sub_0201CD1C
 .public sub_0201FD6C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public MI_CpuFill8
 .public sub_02008B34
 .public sub_02008B34
@@ -55,8 +55,8 @@
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0201FD34
 .public sub_0201CD1C
 .public sub_0201FD6C
-.public sub_0203A24C
+.public GFL_HeapFree

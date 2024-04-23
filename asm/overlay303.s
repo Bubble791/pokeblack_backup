@@ -3960,7 +3960,7 @@ ovy303_21a1b30: ; 0x021A1B30
 	mov r0, #0x27
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
 	bl ovy303_21a2814
 	add r0, r4, #0
@@ -4708,7 +4708,7 @@ ovy303_21a2104: ; 0x021A2104
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x54
 	mov r1, #0xa5
 	bl sub_0204AA30
@@ -4760,7 +4760,7 @@ ovy303_21a2104: ; 0x021A2104
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r6, #0x20
 	add r2, r4, #0
 	mov r4, #0x1e
@@ -5630,7 +5630,7 @@ ovy303_21a2920: ; 0x021A2920
 	mov r3, #0x10
 	bl sub_02035104
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -6023,7 +6023,7 @@ ovy303_21a2be0: ; 0x021A2BE0
 	mov r2, #1
 	bl sub_0204C378
 	ldr r0, [sp, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, #1

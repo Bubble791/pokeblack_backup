@@ -26,7 +26,7 @@
 .public sub_021804C0
 .public ovy36_2180ff0
 .public sub_0218105C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public ovy36_0218056c
 .public ovy36_21b80b4
 .public sub_021B8258
@@ -46,7 +46,7 @@
 .public ovy36_21b8538
 .public ovy36_0218056c
 .public sub_0218105C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public ovy36_218102c
 .public ovy36_21b81bc
 .public sub_0218105C
@@ -103,7 +103,7 @@
 .public sub_021804C0
 .public ovy36_2180ff0
 .public sub_0218105C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public ovy36_0218056c
 .public ovy36_21b80b4
 .public sub_021B8258
@@ -122,7 +122,7 @@
 .public ovy36_21b8538
 .public ovy36_0218056c
 .public sub_0218105C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public ovy36_218102c
 .public ovy36_21b81bc
 .public ovy36_0218056c

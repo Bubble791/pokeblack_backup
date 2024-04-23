@@ -43,7 +43,7 @@ ovy253_217c940: ; 0x0217C940
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	lsl r1, r6, #6
 	str r0, [r4, r1]
 	ldr r1, [r4, r1]
@@ -125,7 +125,7 @@ ovy253_217ca30: ; 0x0217CA30
 	add r0, r6, #0
 	sub r0, #8
 	ldr r0, [r4, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl sub_0217CF18
 	add r0, r4, #0
@@ -683,9 +683,9 @@ ovy253_217cda4: ; 0x0217CDA4
 	bl sub_0204BDE0
 	str r0, [r5, #0x4c]
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 _0217CE94:
 	mov r0, #0xc
 	add r1, r4, #0
@@ -1074,7 +1074,7 @@ ovy253_217d178: ; 0x0217D178
 	lsr r0, r0, #0x10
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	add r2, r6, #0
 	add r4, r0, #0
@@ -1109,7 +1109,7 @@ _0217D1E4: .word 0x00001001
 ovy253_217d1e8: ; 0x0217D1E8
 	push {r3, lr}
 	ldr r0, [r0, #0x1c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	bl sub_02006DEC
 	mov r0, #8
 	bl sub_0203D134

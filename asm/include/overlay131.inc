@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_021804C0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02180498
 .public sub_02195618
 .public sub_0218050C
@@ -15,7 +15,7 @@
 .public sub_02180570
 .public sub_0203A614
 .public GFL_TCBRemove
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02195A58
 .public VEC_Fx16Normalize
 .public sub_021B09DC

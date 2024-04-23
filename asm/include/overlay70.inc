@@ -42,7 +42,7 @@
 .public sub_0204AA30
 .public GFL_VBlankTCBAdd
 .public sub_02042BA8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0203FFC4
 .public sub_0217F338
 .public GFL_FadeScreenIsFinished
@@ -99,8 +99,8 @@
 .public sub_0203FFC4
 .public sub_0217F224
 .public GFL_MsgDataLoadStrbuf
-.public sub_0203A1FC
-.public sub_0203A24C
+.public GFL_HeapAllocate
+.public GFL_HeapFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -139,7 +139,7 @@
 .public sub_0204B81C
 .public sub_0204BBA0
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C488

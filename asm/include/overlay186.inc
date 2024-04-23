@@ -44,9 +44,9 @@
 .public sub_020091F0
 .public sub_020091F8
 .public sub_02034264
-.public sub_0203A24C
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public GFL_TCBRemove
 .public GFL_TCBExMgrFree
 .public sub_0203D564
@@ -255,7 +255,7 @@
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021A9E70
 .public sub_0205FA10
 .public sub_02048080
@@ -375,7 +375,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D810
@@ -385,7 +385,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0204C040
@@ -431,7 +431,7 @@
 .public sub_020486F0
 .public GFL_StrBufCreate
 .public sub_020241E4
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_VBlankTCBAdd
 .public sub_020179BC
@@ -441,8 +441,8 @@
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public GFL_TCBRemove
-.public sub_0204AB0C
-.public sub_0203A24C
+.public GFL_ArcToolFree
+.public GFL_HeapFree
 .public sub_02046BE0
 .public sub_02046C40
 .public sub_020444A4
@@ -472,7 +472,7 @@
 .public sub_0204B124
 .public sub_0204566C
 .public sub_02044F90
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_0204ADA8
@@ -484,7 +484,7 @@
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0204B6A8
@@ -501,7 +501,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204B98C
@@ -665,7 +665,7 @@
 .public sub_02034074
 .public sub_020340A4
 .public sub_020340C8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64

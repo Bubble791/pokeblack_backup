@@ -8,9 +8,9 @@
 .public sub_02016D68
 .public sub_021B878C
 .public sub_02016D68
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 
 .public ovy36_21b870c

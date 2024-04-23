@@ -1,6 +1,25 @@
 #ifndef BAG_H
 #define BAG_H
 
+enum
+{
+    BAG_MODE_NORMAL,
+    BAG_MODE_UNION_ROOM,
+    BAG_MODE_2,
+    BAG_MODE_LINK_BATTLE_ROOM,
+    BAG_MODE_SELL_ITEM,
+    BAG_MODE_SELECT_ITEM
+};
+
+enum
+{
+    BAG_SORT_TYPE,
+    BAG_SORT_NAME,
+    BAG_SORT_AMOUNT_MORE,
+    BAG_SORT_AMOUNT_LESS,
+    BAG_SORT_INDEX
+};
+
 extern void sub_0203DEB4(int, int);
 extern int Item_GetItemParam(u16, int, u16);
 extern void LoadItemNameToStrbuf(int , int, int);
@@ -66,7 +85,7 @@ struct BagViewWork
     /*0x004*/ void *unk4;
     /*0x008*/ void *unk8;
     /*0x00C*/ int unkC;
-    /*0x010*/ int unk10;
+    /*0x010*/ int bagMode;
     /*0x014*/ void *unk14;
     /*0x018*/ void* bagSave;
     /*0x01C*/ int unk1C;
@@ -201,7 +220,7 @@ struct BagViewWork
     /*0x8C0*/ int KeyRetypeIntervalRepeated;
     /*0x8C4*/ int KeyRetypeIntervalFirst;
     /*0x8C8*/ ITEM_UNKNOW_DATA unk8C8; // 某种结构体
-    /*0x1F4C*/ int unk1F4C;
+    /*0x1F4C*/ int sortOptionType;
     /*0x1F50*/ int unk1F50;
 }; // size of 0x1F54
 
@@ -299,14 +318,14 @@ extern int ovy142_219d22c(BagView*);
 extern void ovy142_219c8e8(BagView*);
 extern void ovy142_219cac0(BagView*, int, int, FieldBagItemUse);
 
-extern void *sub_0203A1FC(int, int, int, char*, int line);
-extern void sub_02008074(void*, ItemTable*, int, int);
-extern int sub_020084AC(void*, int, int);
-extern void* sub_02026720(int);
-extern void* sub_0202672C(void*, u16, int);
-extern void sub_0203A24C(void*);
-extern int sub_02026820(void*, int);
-extern void sub_0204AB0C(void*);
+extern void *GFL_HeapAllocate(int, int, int, char*, int line);
+extern void BagSave_CopyPocketRaw(void*, ItemTable*, int, int);
+extern int BagSave_GetPocketItemCountCore(void*, int, int);
+extern void* Item_ArcHandleCreate(int);
+extern void* Item_ArcHandleReadFile(void*, u16, int);
+extern void GFL_HeapFree(void*);
+extern int Item_GetParam(void*, int);
+extern void GFL_ArcToolFree(void*);
 void ovy142_219b784(BagView *m_bagView);
 extern MATH_QSort(void*, int, int, int, int);
 
@@ -316,9 +335,9 @@ extern void ovy142_219dda0(BagView*, int);
 extern void sub_020352B0(int);
 
 extern void ovy142_219acb8(BagView*);
-extern void ovy142_219af84(BagView*);
-extern int sub_02026C14(u16);
-extern int sub_02026BA0(u16);
+extern void BagMenu_TrySellItem(BagView*);
+extern int Item_IsNotSpecialMonsball(u16);
+extern int Item_IsMail(u16);
 extern void sub_0219F760(BagView*);
 extern void ovy142_219c014(BagView*);
 extern void ovy142_219f76c(BagView*, int);

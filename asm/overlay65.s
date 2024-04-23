@@ -450,7 +450,7 @@ _021E5B6A:
 	cmp r4, #0x11
 	blo _021E5B52
 	ldr r0, [sp, #0x1c]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x1fc
 	add sp, #0x1fc
 	add sp, #0x1fc
@@ -972,7 +972,7 @@ _021E5F3C:
 	cmp r5, #0xff
 	blo _021E5F16
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	str r0, [r6, #0x48]
 _021E5F4C:

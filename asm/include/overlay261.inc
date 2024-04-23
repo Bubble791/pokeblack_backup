@@ -48,7 +48,7 @@
 .public MI_CpuFill8
 .public sub_021C5C74
 .public sub_021C5C74
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_WordSetSystemCreateDefault
 .public GFL_StrBufCreate
@@ -58,7 +58,7 @@
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C5C64
 .public sub_021C5C74
 .public sub_021C5C74
@@ -155,7 +155,7 @@
 .public sub_021C5A88
 .public sub_021C5888
 .public sub_021C5888
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0200BB80
 .public sub_021C29C4
@@ -175,7 +175,7 @@
 .public sub_0200F2D8
 .public sub_0201FD00
 .public sub_0203D254
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203D27C
 .public sub_021C4F14
 .public sub_021C5C4C
@@ -183,7 +183,7 @@
 .public GFL_MsgDataFree
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C5C54
 .public sub_0217A2E4
 .public sub_021C4F2C
@@ -275,7 +275,7 @@
 .public sub_0200C360
 .public sub_0200B830
 .public sub_0200B9C4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C5C88
 .public sub_0201782C
 .public sub_02017850
@@ -461,7 +461,7 @@
 .public sub_0200C28C
 .public sub_0201FCF8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201736C
 .public sub_02008B08
 .public MI_CpuCopy8
@@ -474,7 +474,7 @@
 .public sub_0200C28C
 .public sub_0201FCF8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0200F1D8
 .public sub_0200F1D8
 .public sub_0200F1D8
@@ -493,7 +493,7 @@
 .public sub_021C58A4
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021C29C4
 .public GFL_MsgSysLoadData
@@ -502,7 +502,7 @@
 .public sub_021C5C4C
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C5C54
 .public sub_021C35E4
 .public sub_02017934
@@ -640,13 +640,13 @@
 .public sub_021C5BA4
 .public sub_021C5BD4
 .public sub_021C5888
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02042788
 .public sub_02040C20
 .public sub_02042788
 .public sub_02040C64
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020120C8
 .public sub_02153150
 .public sub_02012154

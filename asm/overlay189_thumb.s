@@ -387,7 +387,7 @@ ovy189_219d1b8: ; 0x0219D1B8
 	ldr r3, _0219D1E8 ; =0x021ACFFC
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r1, _0219D1EC ; =0x021ae6a0
 	add r4, r0, #0
 	str r4, [r1]
@@ -410,7 +410,7 @@ ovy189_219d1f0: ; 0x0219D1F0
 	beq _0219D200
 	bl ovy189_219d384
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _0219D200:
 	pop {r4, pc}
 	.align 2, 0
@@ -731,7 +731,7 @@ ovy189_219d458: ; 0x0219D458
 	ldr r3, _0219D47C ; =0x021AD0AC
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	add r2, r4, #0
 	add r5, r0, #0
@@ -779,7 +779,7 @@ _0219D4B4:
 	add r1, r5, #0
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	bne _0219D4E0
 	ldrh r0, [r6]

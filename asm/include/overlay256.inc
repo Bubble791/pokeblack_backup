@@ -39,7 +39,7 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02045814
 .public sub_020454AC
 .public sub_0204B0B8
@@ -229,7 +229,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -243,7 +243,7 @@
 .public sub_02033E34
 .public sub_02033EF4
 .public sub_02026F7C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044388
 .public sub_0208D60C
 .public sub_02044360

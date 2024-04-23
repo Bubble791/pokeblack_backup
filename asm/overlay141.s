@@ -228,7 +228,7 @@ ovy141_219d064: ; 0x0219D064
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r6, #1
 	mov r4, #0
 	lsl r6, r6, #8
@@ -257,7 +257,7 @@ _0219D074:
 	ldr r0, [r5, r0]
 	bl GFL_TCBRemove
 	ldr r0, [r5]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy141_219d064
 
@@ -490,7 +490,7 @@ ovy141_219d18c: ; 0x0219D18C
 	mov r0, #1
 	bl sub_02044F90
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r3, [sp, #0x10]
 	mov r0, #0x20
 	str r0, [sp]
@@ -657,7 +657,7 @@ ovy141_219d330: ; 0x0219D330
 	add r4, #0xc8
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop

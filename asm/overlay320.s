@@ -291,7 +291,7 @@ ovy320_219d048: ; 0x0219D048
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end ovy320_219d048
@@ -604,7 +604,7 @@ _0219D2F0:
 	add r3, r6, #0
 	bl sub_0204B0D4
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r0, [r5]
 	mov r1, #1
 	mov r2, #8
@@ -660,7 +660,7 @@ ovy320_219d3d8: ; 0x0219D3D8
 	mov r0, #0xfa
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl ovy320_219d8d0
 	add r0, r4, #0
@@ -1419,7 +1419,7 @@ ovy320_219d97c: ; 0x0219D97C
 	add r1, r5, r1
 	str r0, [r1, #8]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy320_219d97c
@@ -3795,7 +3795,7 @@ ovy320_219eb70: ; 0x0219EB70
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -3877,7 +3877,7 @@ ovy320_219ec10: ; 0x0219EC10
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _0219EC58: .word 0x04000050

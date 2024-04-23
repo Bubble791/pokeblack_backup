@@ -148,7 +148,7 @@ _0219CF86:
 	str r4, [sp, #8]
 	bl sub_0204AF50
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #4
 	bl sub_02044F90
 	add r0, r7, #0
@@ -428,7 +428,7 @@ ovy314_219d1d0: ; 0x0219D1D0
 	mov r3, #0
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #1
 	bl sub_02044F90
 	add sp, #0xc
@@ -713,7 +713,7 @@ ovy314_219d454: ; 0x0219D454
 	ldr r3, _0219D510 ; =0x0219DB80
 	mov r1, #0x20
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r7, r0, #0
 	mov r5, #0
 	mov r3, #0x1e
@@ -729,7 +729,7 @@ ovy314_219d454: ; 0x0219D454
 	strh r5, [r7, #6]
 	bl sub_02045320
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r6, #0x20]
 	bl BmpWin_GetBitmap
 	mov r1, #3
@@ -743,7 +743,7 @@ ovy314_219d454: ; 0x0219D454
 	ldr r3, _0219D510 ; =0x0219DB80
 	lsl r1, r7, #9
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [r6, #0x20]
 	bl sub_020484F0
@@ -783,7 +783,7 @@ _0219D4CA:
 	mov r0, #2
 	bl sub_02044F90
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -828,7 +828,7 @@ ovy314_219d51c: ; 0x0219D51C
 	bl sub_0204BDE0
 	str r0, [r5, #0x50]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, [r5, #8]
 	bl sub_0219D860
 	ldr r1, _0219D598 ; =0x0219DA10
@@ -1082,7 +1082,7 @@ ovy314_219d748: ; 0x0219D748
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -1170,7 +1170,7 @@ ovy314_219d7f0: ; 0x0219D7F0
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _0219D840: .word 0x04000050

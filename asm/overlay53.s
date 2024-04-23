@@ -28,7 +28,7 @@ ovy53_21e5800: ; 0x021E5800
 	mov r1, #8
 	mov r7, #0
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	strb r7, [r0]
 	str r4, [r0, #4]
 	str r0, [sp]

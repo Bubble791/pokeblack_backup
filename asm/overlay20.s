@@ -114,7 +114,7 @@ ovy20_216e714: ; 0x0216E714
 	mov r0, #4
 	mov r1, #0x28
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	str r6, [r4]
 	str r5, [r4, #8]
@@ -249,11 +249,11 @@ _0216E85A:
 	ldr r0, [r4, #0x10]
 	strh r1, [r0]
 	ldr r0, [r4, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0xc]
 	cmp r0, #0
 	beq _0216E86E
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _0216E86E:
 	add sp, #0xc
 	mov r0, #1
@@ -281,7 +281,7 @@ ovy20_216e87c: ; 0x0216E87C
 	mov r0, #4
 	mov r1, #0x28
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [sp, #4]
 	str r0, [r4]
@@ -423,7 +423,7 @@ _0216E9B4:
 	ldr r0, [r3, #0xc]
 	strh r1, [r0]
 	ldr r0, [r3, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0xc
 	mov r0, #1
 	pop {r4, r5, pc}

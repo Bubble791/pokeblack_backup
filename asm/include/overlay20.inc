@@ -16,7 +16,7 @@
 .public sub_0201735C
 .public sub_0200D190
 .public sub_02034C54
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0201FDF8
 .public sub_0200D1AC
 .public sub_02016CB4
@@ -31,11 +31,11 @@
 .public sub_02016D68
 .public sub_021B878C
 .public sub_02016D68
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02016AD8
 .public sub_0201735C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0201FDF8
 .public sub_02016CB4
 .public sub_02016EDC
@@ -48,6 +48,6 @@
 .public sub_02016D68
 .public sub_021B878C
 .public sub_02016D68
-.public sub_0203A24C
+.public GFL_HeapFree
 
 .public ovy36_21b870c

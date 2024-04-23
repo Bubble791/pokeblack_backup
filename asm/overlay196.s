@@ -16,7 +16,7 @@ ovy196_21b5420: ; 0x021B5420
 	ldr r3, _021B5450 ; =0x021B5D20
 	add r1, #0x7c
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r3, r0, #0
 	add r2, r3, #0
 	ldmia r4!, {r0, r1}
@@ -1077,7 +1077,7 @@ ovy196_21b5be4: ; 0x021B5BE4
 	ldr r3, _021B5C14 ; =0x021B5D20
 	add r0, r6, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5]
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -1103,7 +1103,7 @@ ovy196_21b5c18: ; 0x021B5C18
 	add r0, r6, #0
 	mov r1, #0xb0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5]
 	ldr r0, [r4]
 	bl sub_02043EC0
@@ -1128,7 +1128,7 @@ ovy196_21b5c60: ; 0x021B5C60
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _021B5C6E
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021B5C6E:
 	add r0, r4, #0
 	mov r1, #0

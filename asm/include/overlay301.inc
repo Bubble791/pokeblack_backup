@@ -48,7 +48,7 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02017934
 .public sub_020074EC
 .public sub_02007678

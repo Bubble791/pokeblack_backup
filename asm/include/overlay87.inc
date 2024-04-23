@@ -1,10 +1,10 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02042BA8
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
-.public sub_0203A24C
+.public GFL_HeapFree
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_02016AD8
 .public sub_0201735C
@@ -57,7 +57,7 @@
 .public sub_02045350
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02021998
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -180,12 +180,12 @@
 .public sub_0202111C
 .public sub_02021190
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0201FF08
 .public sub_0204C040
 .public sub_0204C124

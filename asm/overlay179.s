@@ -586,7 +586,7 @@ _0219B0D2:
 	ldr r1, [sp, #0xc]
 	str r0, [r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -688,7 +688,7 @@ ovy179_219b248: ; 0x0219B248
 	bl sub_0204BDE0
 	str r0, [r5, #0xc]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, sp, #0x14
 	mov r1, #0
 	mov r2, #8
@@ -1999,7 +1999,7 @@ _0219BCDA:
 	str r6, [sp, #8]
 	bl sub_0204AF50
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x5d
 	mov r1, #0x10
 	add r2, sp, #0xc
@@ -2021,7 +2021,7 @@ _0219BCDA:
 	mov r2, #0x20
 	blx MI_CpuCopy8
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	add r1, r5, #0
 	add r0, #8

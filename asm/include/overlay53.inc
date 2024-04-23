@@ -4,7 +4,7 @@
 .public sub_0215516C
 .public sub_02155174
 .public sub_02016AF0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02019708
 .public ovy12_2153880
 .public ovy12_21548e8

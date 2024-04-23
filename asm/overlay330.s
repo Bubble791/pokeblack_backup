@@ -17,7 +17,7 @@ ovy330_219ce80: ; 0x0219CE80
 	ldr r3, _0219CEA4 ; =0x0219D1E0
 	mov r1, #0xc
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r5, [r0]
 	str r4, [r0, #4]
 	str r6, [r0, #8]

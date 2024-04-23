@@ -1,13 +1,13 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02018AF8
 .public sub_020191AC
 .public sub_020191AC
 .public sub_0215F2C4
 .public sub_02018AF8
 .public sub_020191AC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204B570
 .public GFL_VBlankTCBAdd
 .public sub_021804BC
@@ -18,9 +18,9 @@
 .public sub_02042BA8
 .public sub_021EA884
 .public GFL_TCBRemove
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021EB0CC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202A3E0
 .public sub_021804BC
 .public sub_02016ADC
@@ -65,7 +65,7 @@
 .public sub_0204B124
 .public sub_0204AE3C
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204566C
 .public sub_02045B7C
 .public sub_0204AA30
@@ -75,7 +75,7 @@
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C318
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C140
 .public sub_0204C140
 .public sub_0204C140
@@ -96,7 +96,7 @@
 .public sub_0204B32C
 .public sub_020454D4
 .public sub_02045B7C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202D810
 .public sub_0204BBB8
 .public sub_0202D814
@@ -108,7 +108,7 @@
 .public sub_0204C520
 .public sub_0204C53C
 .public sub_0204C488
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C108
 .public sub_0204BE64
 .public sub_0204B98C
@@ -125,7 +125,7 @@
 .public sub_0204C488
 .public sub_0219846C
 .public sub_0203A584
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0203A58C
 .public sub_02026DC0
 .public sub_0202778C
@@ -137,7 +137,7 @@
 .public sub_02026E48
 .public sub_02026DE8
 .public sub_0203A610
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203A5D0
 .public sub_02027780
 .public sub_02026FE4

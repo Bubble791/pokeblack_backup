@@ -420,7 +420,7 @@
 .public sub_021C4E44
 .public sub_021C4F30
 .public sub_0201FD00
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C4F14
 .public sub_021C5C4C
 .public sub_021C5C4C
@@ -587,7 +587,7 @@
 .public sub_0200C360
 .public sub_0200B830
 .public sub_0200B9C4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201782C
 .public sub_02017850
 .public MI_CpuFill8
@@ -881,7 +881,7 @@
 .public sub_0201FD28
 .public sub_0201FCF8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02017934
 .public sub_0201736C
 .public sub_02008B34
@@ -927,13 +927,13 @@
 .public sub_0200E87C
 .public sub_0200E87C
 .public sub_0200E87C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02017238
 .public sub_02009F7C
 .public sub_0201736C
 .public sub_02008BDC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02042788
 .public sub_0203CB80
@@ -944,8 +944,8 @@
 .public ovy11_215205c
 .public sub_02152040
 .public sub_02040C64
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02040440
 .public sub_02040624
 .public sub_02040440

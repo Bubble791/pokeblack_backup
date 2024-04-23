@@ -334,7 +334,7 @@
 .public sub_021A1D6C
 .public sub_021A2730
 .public sub_0219F728
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public sub_02046D38
@@ -426,7 +426,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
@@ -434,7 +434,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_021999C8
@@ -545,7 +545,7 @@
 .public sub_02035104
 .public sub_02035024
 .public sub_02035104
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -581,7 +581,7 @@
 .public sub_0204BA40
 .public sub_02021034
 .public sub_0204C378
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021A2CA0
 .public sub_0204C540
 .public sub_0204C520

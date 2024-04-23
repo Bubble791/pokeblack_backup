@@ -4,7 +4,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02034B64
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_0204AA30
@@ -40,7 +40,7 @@
 .public sub_02044528
 .public sub_02026E48
 .public sub_02026DE8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_020504DC
 .public GFL_StrBufFree
 .public sub_0203AB10
@@ -235,7 +235,7 @@
 .public sub_0202AEAC
 .public sub_0204AA30
 .public sub_0204BC48
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_02046E28

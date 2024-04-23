@@ -31,7 +31,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_021999B8
 .public sub_0204A5C0
 .public sub_0204A5C0
@@ -178,7 +178,7 @@
 .public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -191,7 +191,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219E694
 .public sub_0219E62C
 .public sub_0219E630

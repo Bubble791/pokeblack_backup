@@ -14,7 +14,7 @@ ovy285_21f4260: ; 0x021F4260
 	mov r1, #0x18
 	mov r2, #0
 	add r4, r0, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	strh r4, [r0, #0x10]
 	mov r1, #1
 	str r1, [r0, #0x14]

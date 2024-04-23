@@ -243,7 +243,7 @@ ovy192_21b310c: ; 0x021B310C
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, [r5, #0xc]
 	mov r0, #0
 	add r1, #0xb0
@@ -414,7 +414,7 @@ ovy192_21b3288: ; 0x021B3288
 	ldrh r0, [r5, r0]
 	mov r1, #4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r4, _021B3394 ; =0x00000818
 	str r0, [r5, r4]
 	mov r0, #0xe
@@ -607,7 +607,7 @@ _021B3462:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021B3472
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4, r5]
 _021B3472:
@@ -891,7 +891,7 @@ _021B36CA:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021B36DA
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r5, r4]
 _021B36DA:
@@ -925,7 +925,7 @@ ovy192_21b3708: ; 0x021B3708
 	ldr r0, [r4, #0xc]
 	bl sub_021C1D30
 	ldr r0, [r4, #0xc]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4, #0xc]
 	ldr r1, _021B3734 ; =0x021BEB49
@@ -1193,7 +1193,7 @@ ovy192_21b3938: ; 0x021B3938
 	mov r1, #0xbc
 	mov r2, #1
 	mov r4, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0xc]
 	ldrh r1, [r5, r6]
 	add r0, #0xba
@@ -1781,12 +1781,12 @@ _021B3E94:
 	bne _021B3EC8
 	ldr r4, _021B3F18 ; =0x0000085C
 	ldr r0, [r5, r4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r6, #0
 	str r6, [r5, r4]
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #4
 	str r6, [r5, r0]
 	add r0, r5, #0

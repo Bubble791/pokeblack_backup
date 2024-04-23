@@ -1,9 +1,9 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public OS_DisableInterrupts
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public OS_IsRunOnTwl
-.public sub_0203A24C
+.public GFL_HeapFree
 .public OS_RestoreInterrupts
 .public GFL_HeapCreateChild
 .public sub_020116C0

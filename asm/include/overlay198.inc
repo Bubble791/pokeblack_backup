@@ -89,14 +89,14 @@
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204AE3C
 .public sub_0204AFB0
 .public sub_0204AFB0
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02024D20
 .public sub_0204B0B8
 .public ButtonSystem_Create

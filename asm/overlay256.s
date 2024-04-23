@@ -349,7 +349,7 @@ ovy256_21bb91c: ; 0x021BB91C
 	str r4, [sp, #8]
 	bl sub_0204AF50
 	add r0, r5, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r7, #0
 	bl sub_02045814
 	mov r1, #0x15
@@ -3240,7 +3240,7 @@ _021BD012:
 	add r4, #0x68
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021BD084: .word 0x00000BB4
@@ -3692,7 +3692,7 @@ _021BD3CC:
 	mov r4, #0
 	bl sub_02026F7C
 	ldr r0, [sp, #0x24]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0xc6
 	lsl r0, r0, #4
 	ldrb r0, [r5, r0]

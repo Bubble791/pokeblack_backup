@@ -16,7 +16,7 @@
 .public GFL_FadeScreenIsFinished
 .public sub_020051D8
 .public sub_0219D728
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public sub_02046D38
@@ -28,7 +28,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204566C
 .public sub_02045350
 .public sub_02044F90
@@ -36,7 +36,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204566C
 .public sub_02045350
 .public sub_02044F90
@@ -67,7 +67,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0D4
 .public sub_0204B0D4
 .public sub_02045350
@@ -89,10 +89,10 @@
 .public sub_0204B758
 .public sub_0204AA04
 .public sub_0204AA04
-.public sub_0203A1FC
-.public sub_0203A1FC
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapAllocate
+.public GFL_HeapAllocate
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02045A5C
 .public sub_0204B7C8
 .public GFL_VBlankTCBAdd
@@ -109,7 +109,7 @@
 .public BmpWin_GetBitmap
 .public sub_02047008
 .public sub_0204A934
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02048080
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic

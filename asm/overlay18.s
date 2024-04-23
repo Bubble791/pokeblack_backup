@@ -76,7 +76,7 @@ _0216E6D0:
 	b _0216E69E
 _0216E6EC:
 	ldr r0, [r3, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0xc
 	mov r0, #1
 	pop {r4, r5, pc}
@@ -109,7 +109,7 @@ ovy18_216e708: ; 0x0216E708
 	mov r0, #4
 	mov r1, #4
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r6, #8]
 	str r5, [r0]
 	add r0, r7, #0

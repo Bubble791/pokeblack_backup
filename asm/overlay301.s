@@ -426,7 +426,7 @@ _0219FE96:
 	str r6, [sp, #8]
 	bl sub_0204AF50
 	add r0, r5, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

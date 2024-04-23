@@ -242,9 +242,9 @@ ovy136_21eedc0: ; 0x021EEDC0
 	bl GX_LoadTexPltt
 	bl GX_EndLoadTexPltt
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #0
 	bl sub_02046EDC
 	add sp, #0x18

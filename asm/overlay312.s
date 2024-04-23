@@ -315,7 +315,7 @@ _0217CB94:
 	add r1, r6, #0
 	bl ovy312_217d78c
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _0217CE1C ; =0x0000C314
 	mov r0, #0
 	str r0, [r4, r1]
@@ -1303,7 +1303,7 @@ _0217D408:
 	blt _0217D3E0
 _0217D410:
 	ldr r0, [sp, #0x18]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r7, #1
 	bl sub_0202B45C
 	str r0, [sp, #0x10]
@@ -1359,14 +1359,14 @@ _0217D452:
 	blt _0217D452
 _0217D486:
 	ldr r0, [sp, #0x14]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0x10]
 	add r7, r7, #1
 	cmp r7, r0
 	blt _0217D426
 _0217D494:
 	ldr r0, [sp, #0x1c]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

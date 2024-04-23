@@ -119,7 +119,7 @@ ovy264_219992c: ; 0x0219992C
 	ldr r3, _021999DC ; =0x0219A2C0
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r5, #0
@@ -129,7 +129,7 @@ ovy264_219992c: ; 0x0219992C
 	add r2, r5, #0
 	bl GX_LoadBG3Scr
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x13
 	mov r1, #0
 	bl sub_02046CFC
@@ -330,7 +330,7 @@ ovy264_2199af8: ; 0x02199AF8
 	ldr r2, [r1, r2]
 	blx MIi_CpuCopy32
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -455,7 +455,7 @@ _02199C24:
 	add r0, r4, #0
 	bl sub_02199A28
 	ldr r0, [r4, #4]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
 	bl sub_02199A08
 	bl sub_021999E0
@@ -758,7 +758,7 @@ _02199E84:
 	bl GX_LoadBG3Scr
 _02199E8E:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, r5, r6, pc}
 	nop
 _02199E98: .word 0x0000807F

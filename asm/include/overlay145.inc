@@ -10,7 +10,7 @@
 .public sub_02035024
 .public sub_0204AA30
 .public sub_02035104
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02042BA8
 .public sub_02017934
 .public sub_0200FB40
@@ -79,7 +79,7 @@
 .public sub_0219E118
 .public sub_0204AF50
 .public sub_0204B124
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public G2x_SetBlendAlpha_
 .public sub_0219E118
@@ -94,7 +94,7 @@
 .public sub_0204ADA8
 .public sub_0219E118
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02045708
 .public sub_02044B84
 .public G2x_SetBlendAlpha_
@@ -120,7 +120,7 @@
 .public sub_0204B81C
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C488
@@ -655,7 +655,7 @@
 .public sub_02017934
 .public sub_0200FB40
 .public sub_0200FAC8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021A0C44
 .public sub_0204AA30
@@ -664,7 +664,7 @@
 .public sub_0200FA58
 .public sub_0200FA68
 .public sub_0204ABA4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0200FA44
@@ -681,4 +681,4 @@
 .public sub_0208D60C
 .public sub_021A07C8
 
-.public sub_0203A24C
+.public GFL_HeapFree

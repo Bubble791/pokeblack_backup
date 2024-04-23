@@ -50,7 +50,7 @@ _021B73D0:
 	ldr r0, [r2]
 	str r0, [r6]
 	add r0, r3, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	b _021B73F6
 _021B73E4:
 	sub r6, #0x24
@@ -239,7 +239,7 @@ ovy205_21b74ec: ; 0x021B74EC
 	add r0, r4, #0
 	sub r0, #0xc0
 	ldr r0, [r5, r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
 	sub r0, #0x84
 	ldr r0, [r5, r0]
@@ -3960,7 +3960,7 @@ ovy205_21b91bc: ; 0x021B91BC
 	lsl r1, r1, #2
 	str r0, [r5, r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

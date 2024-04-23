@@ -144,7 +144,7 @@ ovy129_21eed68: ; 0x021EED68
 	lsr r0, r0, #0x10
 	lsl r1, r1, #2
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0x2c]
 	add r0, r6, #0
 	str r6, [r5, #4]
@@ -255,7 +255,7 @@ ovy129_21eee9c: ; 0x021EEE9C
 	mov r1, #1
 	bl sub_0218105C
 	ldr r0, [r0, #0x2c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy36_218102c
@@ -705,7 +705,7 @@ ovy129_21ef210: ; 0x021EF210
 	lsr r0, r0, #0x10
 	mov r1, #4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0x2c]
 	add r0, r6, #0
 	str r6, [r5, #4]
@@ -811,7 +811,7 @@ ovy129_21ef334: ; 0x021EF334
 	mov r1, #1
 	bl sub_0218105C
 	ldr r0, [r0, #0x2c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy36_218102c

@@ -135,7 +135,7 @@ _021FB974:
 	add r1, r5, #0
 	blx MI_CpuCopy8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021FB99C:
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
@@ -158,13 +158,13 @@ ovy290_21fb9b0: ; 0x021FB9B0
 	bl ovy290_21fc704
 	bl sub_0200BB48
 	ldr r0, [r4, #0x3c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x38]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x34]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x30]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _021FB9EC
@@ -181,7 +181,7 @@ _021FB9F8:
 	cmp r0, #0
 	beq _021FBA04
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021FBA04:
 	add r0, r5, #0
 	bl sub_0203AB10
@@ -248,7 +248,7 @@ ovy290_21fba64: ; 0x021FBA64
 	mov r1, #0x18
 	mov r2, #0
 	str r6, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x18
 	add r4, r0, #0
@@ -383,7 +383,7 @@ _021FBB62:
 	bl sub_0203CB80
 _021FBB6C:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r4, pc}
 	nop
@@ -403,7 +403,7 @@ ovy290_21fbb80: ; 0x021FBB80
 	mov r1, #0x48
 	mov r2, #0
 	str r6, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x48
 	add r4, r0, #0
@@ -548,7 +548,7 @@ _021FBC9C:
 	bl sub_0203CB80
 _021FBCA6:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0
@@ -571,7 +571,7 @@ ovy290_21fbcb8: ; 0x021FBCB8
 	add r0, r7, #0
 	mov r1, #0x24
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x24
 	add r5, r0, #0
@@ -738,10 +738,10 @@ _021FBE12:
 	cmp r0, #1
 	bhi _021FBE20
 	ldr r0, [r5]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021FBE20:
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -768,7 +768,7 @@ ovy290_21fbe2c: ; 0x021FBE2C
 	add r0, r6, #0
 	mov r1, #0x10
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -790,7 +790,7 @@ ovy290_21fbe2c: ; 0x021FBE2C
 	add r0, r6, #0
 	mov r1, #0x58
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #8]
 	mov r1, #0
 	mov r2, #0x58
@@ -1152,7 +1152,7 @@ _021FC156:
 	cmp r7, #0
 	beq _021FC16E
 	ldr r0, [sp, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021FC16E:
 	add r0, r4, #0
 	add sp, #0x28
@@ -1284,14 +1284,14 @@ _021FC258:
 	bl ovy290_21fc718
 _021FC28E:
 	ldr r0, [sp, #0x18]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021FC294:
 	ldr r0, [r6, #4]
 	bl sub_02017C84
 	ldr r0, [r6, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r5, #0x1c]
 	cmp r0, #1
 	bne _021FC2C6
@@ -1357,7 +1357,7 @@ ovy290_21fc2fc: ; 0x021FC2FC
 	mov r1, #0x28
 	mov r2, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x28
 	add r4, r0, #0
@@ -1407,7 +1407,7 @@ ovy290_21fc360: ; 0x021FC360
 	ldr r4, [r1, #0x1c]
 	add r0, r1, #0
 	add r5, r2, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	cmp r4, #0
 	beq _021FC378
 	cmp r4, #1
@@ -1448,7 +1448,7 @@ ovy290_21fc39c: ; 0x021FC39C
 	mov r1, #0x1c
 	mov r2, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x1c
 	add r4, r0, #0
@@ -1490,7 +1490,7 @@ ovy290_21fc3f8: ; 0x021FC3F8
 	add r5, r2, #0
 	add r0, r1, #0
 	ldr r4, [r1, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r5, #0x1c]
 	cmp r0, #1
 	bne _021FC426
@@ -1552,7 +1552,7 @@ ovy290_21fc458: ; 0x021FC458
 	mov r1, #0x18
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x18
 	add r4, r0, #0
@@ -1660,7 +1660,7 @@ ovy290_21fc534: ; 0x021FC534
 	add r5, r0, #0
 	add r4, r2, #0
 	add r0, r1, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x1c]
 	cmp r0, #1
 	bne _021FC54C
@@ -1690,7 +1690,7 @@ ovy290_21fc55c: ; 0x021FC55C
 	mov r1, #0x1c
 	mov r2, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x1c
 	add r4, r0, #0
@@ -1751,7 +1751,7 @@ _021FC5DA:
 	bl sub_021FCB44
 _021FC5DE:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0
@@ -1772,7 +1772,7 @@ ovy290_21fc5f0: ; 0x021FC5F0
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	add r2, r7, #0
 	add r4, r0, #0
@@ -1816,11 +1816,11 @@ ovy290_21fc66c: ; 0x021FC66C
 	add r5, r0, #0
 	bl sub_02005D8C
 	ldr r0, [r4, #0x34]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl sub_020185B4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, _021FC69C ; =0x000000A7
 	bl sub_0203CDC8
 	add r0, r5, #0
@@ -1846,7 +1846,7 @@ ovy290_21fc6a0: ; 0x021FC6A0
 	add r1, #0xd4
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0x28]
 	bl sub_0201FCF8
 	add r2, r0, #0
@@ -1862,7 +1862,7 @@ ovy290_21fc6a0: ; 0x021FC6A0
 	add r1, #0xd4
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0x2c]
 	bl sub_0201FCF8
 	add r2, r0, #0
@@ -1881,9 +1881,9 @@ ovy290_21fc704: ; 0x021FC704
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x28]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x2c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy290_21fc704
@@ -2291,7 +2291,7 @@ ovy290_21fca18: ; 0x021FCA18
 	add r0, r5, #0
 	mov r1, #0x20
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x20
 	add r4, r0, #0
@@ -2327,7 +2327,7 @@ _021FCA74:
 	ldr r0, [r4]
 	bl sub_0203A980
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	nop
 _021FCA84: .word 0x021FD040

@@ -17,7 +17,7 @@ ovy87_21ea860: ; 0x021EA860
 	add r1, #0x18
 	mov r2, #0
 	str r5, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r5, #0
@@ -72,7 +72,7 @@ ovy87_21ea8d4: ; 0x021EA8D4
 	bl ovy87_21eb350
 	bl ovy87_21eab98
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy87_21ea8d4
@@ -439,7 +439,7 @@ ovy87_21eabc8: ; 0x021EABC8
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1088,7 +1088,7 @@ _021EB1B2:
 	sub r1, #0x30
 	str r0, [r5, r1]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r1, #0xc1
 	add r1, #0x73
 	ldrh r1, [r5, r1]
@@ -1132,7 +1132,7 @@ _021EB1B2:
 	add r6, #0xa8
 	str r0, [r5, r6]
 	ldr r0, [sp, #0x14]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _021EB34C ; =0x021EB4C8
 	add r0, sp, #0x20
 	ldrh r2, [r1]

@@ -920,7 +920,7 @@ ovy198_21b3618: ; 0x021B3618
 	mov r2, #7
 	bl ovy198_21b3384
 	ldr r0, [sp, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	str r6, [sp]
 	ldrh r0, [r5, #0xc]
 	mov r1, #4
@@ -985,7 +985,7 @@ ovy198_21b3618: ; 0x021B3618
 	add r1, r7, #4
 	str r0, [r5, r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r3, [r5, #0xc]
 	mov r0, #5
 	mov r1, #0xb

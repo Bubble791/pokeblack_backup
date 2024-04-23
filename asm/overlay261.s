@@ -665,7 +665,7 @@ ovy261_2176fcc: ; 0x02176FCC
 	add r0, r6, #0
 	mov r1, #0x44
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x44
@@ -720,7 +720,7 @@ ovy261_2177040: ; 0x02177040
 	ldr r0, [r4, #0x3c]
 	bl GFL_StrBufFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy261_2177040
 
@@ -1943,7 +1943,7 @@ ovy261_2177954: ; 0x02177954
 	str r1, [sp, #4]
 	mov r2, #0
 	str r7, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r2, [sp, #4]
 	mov r1, #0
 	add r4, r0, #0
@@ -2057,7 +2057,7 @@ ovy261_2177a70: ; 0x02177A70
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x30]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x67
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
@@ -2085,7 +2085,7 @@ _02177A8A:
 	ldr r0, [r4, #0x2c]
 	bl GFL_WordSetSystemFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy261_2177a70
 
@@ -3126,7 +3126,7 @@ _021782B0:
 	add r1, r7, #0
 	bl sub_0200B9C4
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xe
 	add sp, #8
 	str r0, [r6]
@@ -5355,7 +5355,7 @@ ovy261_2179400: ; 0x02179400
 	add r1, r6, #0
 	blx MI_CpuCopy8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy261_2179400
 
@@ -5400,7 +5400,7 @@ ovy261_2179434: ; 0x02179434
 	add r1, #0xd4
 	blx MI_CpuCopy8
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x34]
 	mov r1, #1
 	bl sub_0200F1D8
@@ -5562,7 +5562,7 @@ ovy261_21795c8: ; 0x021795C8
 	add r0, r6, #0
 	mov r1, #0x38
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r1, #0
 	mov r2, #0x38
@@ -5620,7 +5620,7 @@ ovy261_2179644: ; 0x02179644
 	ldr r0, [r4]
 	bl GFL_MsgDataFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy261_2179644
 
@@ -7180,7 +7180,7 @@ ovy261_217a27c: ; 0x0217A27C
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r1, #0
 	add r2, r6, #0
@@ -7217,7 +7217,7 @@ ovy261_217a2c8: ; 0x0217A2C8
 	bl sub_02040C64
 _0217A2DC:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy261_217a2c8
 

@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02042BC4
 .public MI_CpuFill8
 .public OS_GetMacAddress

@@ -48,7 +48,7 @@
 .public sub_0204AF50
 .public sub_0204B0D4
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02045350
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
@@ -148,7 +148,7 @@
 .public sub_02021154
 .public sub_020211C8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0204B81C
@@ -164,7 +164,7 @@
 .public sub_0202D95C
 .public sub_0202D960
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -178,7 +178,7 @@
 .public sub_020210C0
 .public sub_0204C378
 .public sub_0201CCF8
-.public sub_02026BA0
+.public Item_IsMail
 .public sub_0204C4D4
 .public sub_0204C4D4
 .public sub_0204C488
@@ -192,12 +192,12 @@
 .public sub_02033150
 .public sub_020335C4
 .public sub_02045814
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MIi_CpuCopy16
 .public sub_020331D4
 .public MIi_CpuCopy16
 .public sub_020331D4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02045738
 .public sub_02033558
 .public sub_02033558

@@ -22,7 +22,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_02046CFC
 .public ovy36_21b8598

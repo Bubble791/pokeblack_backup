@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204AA30
-.public sub_02026720
+.public Item_ArcHandleCreate
 .public sub_0219BD80
 .public sub_0219BED4
 .public sub_020158AC
@@ -15,9 +15,9 @@
 .public sub_02043F2C
 .public sub_0208D60C
 .public sub_020159DC
-.public sub_0204AB0C
-.public sub_0204AB0C
-.public sub_0203A24C
+.public GFL_ArcToolFree
+.public GFL_ArcToolFree
+.public GFL_HeapFree
 .public sub_020158F8
 .public sub_02021960
 .public sub_02021918
@@ -424,14 +424,14 @@
 .public sub_021BACC0
 .public sub_021AB954
 .public sub_021BAC48
-.public sub_0202672C
-.public sub_02026820
-.public sub_0203A24C
-.public sub_0203A1FC
-.public sub_0203A24C
-.public sub_0203A24C
+.public Item_ArcHandleReadFile
+.public Item_GetParam
+.public GFL_HeapFree
+.public GFL_HeapAllocate
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0204AB1C
-.public sub_0203A24C
+.public GFL_HeapFree
 
 .public sub_0219D188
 .public sub_0219D4F4

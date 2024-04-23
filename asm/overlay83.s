@@ -69,7 +69,7 @@ ovy83_21ea8ac: ; 0x021EA8AC
 	add r0, r6, #0
 	mov r1, #0x50
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	strh r6, [r5]
 	ldr r2, [sp, #4]
@@ -147,7 +147,7 @@ _021EA944:
 	ldr r0, [r4, #4]
 	bl sub_0202E1DC
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy83_21ea928
 

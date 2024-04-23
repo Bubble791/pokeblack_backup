@@ -1871,7 +1871,7 @@ ovy165_219a894: ; 0x0219A894
 	add r1, #0x1c
 	str r0, [r5, r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r1, [r5]
 	mov r0, #7
 	bl sub_0204AA30
@@ -1901,7 +1901,7 @@ ovy165_219a894: ; 0x0219A894
 	add r1, #0x34
 	str r0, [r5, r1]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	bl sub_0202D7E0
 	ldrh r1, [r5]
 	bl sub_0204AA30
@@ -2107,7 +2107,7 @@ ovy165_219a894: ; 0x0219A894
 	add r6, #0x2c
 	str r0, [r5, r6]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r5, #0x44
 	ldr r0, _0219AC1C ; =0x050000C0
 	add r1, r5, #0
@@ -2126,7 +2126,7 @@ ovy165_219ac20: ; 0x0219AC20
 	add r5, r0, #0
 	lsl r6, r6, #2
 	ldr r0, [r5, r6]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r4, #0
 	add r6, #0x20
 	sub r7, r4, #1
@@ -3299,7 +3299,7 @@ _0219B58E:
 	ldr r0, [r4, r5]
 	add r0, #0x54
 	ldrh r0, [r0]
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219B5BC
 	mov r0, #0x13
@@ -3393,7 +3393,7 @@ _0219B660:
 _0219B66E:
 	lsl r0, r6, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219B68E
 	ldr r0, [r4, r5]
@@ -3452,7 +3452,7 @@ _0219B6CA:
 	add r2, r6, #0
 	bl sub_0201CD1C
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r2, [r4, r5]
 	ldr r0, [r4, #0x3c]
 	add r2, #0x54
@@ -3733,7 +3733,7 @@ _0219B926:
 	bl sub_0201CCF8
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219B954
 	mov r0, #5
@@ -5009,7 +5009,7 @@ ovy165_219c36c: ; 0x0219C36C
 	add r4, r1, #0
 	add r6, r2, #0
 	str r3, [sp]
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #0
 	bne _0219C396
 	add r0, r5, #0
@@ -5049,9 +5049,9 @@ _0219C396:
 	mov r2, #0
 	bl sub_0201CD1C
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy165_219c36c
@@ -5077,11 +5077,11 @@ ovy165_219c3e8: ; 0x0219C3E8
 	bl sub_020096B8
 	str r0, [sp, #4]
 	add r0, r7, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #0
 	bne _0219C438
 	add r0, r6, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #0
 	bne _0219C438
 	add r0, r5, #0
@@ -5096,11 +5096,11 @@ _0219C436:
 	b _0219C502
 _0219C438:
 	add r0, r7, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219C47C
 	add r0, r6, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #0
 	bne _0219C47C
 	ldr r2, [sp, #0xc]
@@ -5125,11 +5125,11 @@ _0219C438:
 	b _0219C436
 _0219C47C:
 	add r0, r7, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #0
 	bne _0219C4B6
 	add r0, r6, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219C4B6
 	ldr r2, [sp, #8]
@@ -5150,11 +5150,11 @@ _0219C47C:
 	b _0219C42C
 _0219C4B6:
 	add r0, r7, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219C506
 	add r0, r6, #0
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219C506
 	ldr r2, [sp, #0xc]
@@ -5184,11 +5184,11 @@ _0219C502:
 	bl sub_0201CD1C
 _0219C506:
 	ldr r0, [sp, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0xc]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy165_219c3e8
@@ -8715,7 +8715,7 @@ _0219E0EE:
 	ldr r0, [r5, r4]
 	add r0, #0x54
 	ldrh r0, [r0]
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	bne _0219E110
 	ldr r1, [r5, #0x30]
@@ -9055,7 +9055,7 @@ ovy165_219e378: ; 0x0219E378
 	add r3, r7, #0
 	bl sub_020097E0
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r5, #0x3c]
 	mov r1, #6
 	mov r2, #0
@@ -9442,7 +9442,7 @@ ovy165_219e678: ; 0x0219E678
 	str r0, [sp]
 	ldrh r0, [r6]
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	strb r4, [r5, #4]
 	str r7, [r5]
@@ -9662,7 +9662,7 @@ ovy165_219e838: ; 0x0219E838
 	ldr r0, [r4, #0x2c]
 	bl sub_0204B98C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy165_219e838
@@ -9927,7 +9927,7 @@ _0219EA6A:
 	bl sub_0204B81C
 	str r0, [r4, #0x2c]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r3, #0x65
 	mov r1, #0x18
 	add r0, sp, #0x14
@@ -10427,7 +10427,7 @@ _0219EE3C:
 	bl sub_0204C124
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	ldr r0, [r4, #0x3c]
 	bne _0219EE6C
@@ -11459,7 +11459,7 @@ ovy165_219f5ec: ; 0x0219F5EC
 	mov r1, #0x38
 	mov r2, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldrh r0, [r5]
 	mov r1, #1
@@ -11528,7 +11528,7 @@ _0219F67C:
 	ldr r0, [r4, #8]
 	bl GFL_TCBExMgrFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy165_219f654
 
@@ -12128,7 +12128,7 @@ ovy165_219fae8: ; 0x0219FAE8
 	ldr r3, _0219FB38 ; =0x021A4D0C
 	mov r1, #0x84
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	bl sub_0202D7E0
 	mov r1, #0x40
@@ -12164,9 +12164,9 @@ ovy165_219fb3c: ; 0x0219FB3C
 	add r0, r4, #0
 	add r0, #0x80
 	ldr r0, [r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy165_219fb3c
@@ -12703,102 +12703,102 @@ ovy165_219fef0: ; 0x0219FEF0
 	bl sub_02026740
 	mov r1, #0xe
 	add r4, r0, #0
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #1
 	beq _0219FF12
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x1d
 	pop {r4, r5, r6, pc}
 _0219FF12:
 	add r0, r4, #0
 	mov r1, #0x1e
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x1f
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x20
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x21
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x22
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x23
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _0219FF66
 	add r0, r4, #0
 	mov r1, #0x24
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _0219FF70
 _0219FF66:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	pop {r4, r5, r6, pc}
 _0219FF70:
 	add r0, r4, #0
 	mov r1, #0x1b
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _0219FF86
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 _0219FF86:
 	add r0, r4, #0
 	mov r1, #0x1c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _0219FF9C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #2
 	pop {r4, r5, r6, pc}
 _0219FF9C:
 	add r0, r4, #0
 	mov r1, #0x12
-	bl sub_02026820
+	bl Item_GetParam
 	add r5, r0, #0
 	add r0, r4, #0
 	mov r1, #0x13
-	bl sub_02026820
+	bl Item_GetParam
 	lsl r0, r0, #1
 	add r5, r5, r0
 	add r0, r4, #0
 	mov r1, #0x14
-	bl sub_02026820
+	bl Item_GetParam
 	lsl r0, r0, #2
 	add r5, r5, r0
 	add r0, r4, #0
 	mov r1, #0x15
-	bl sub_02026820
+	bl Item_GetParam
 	lsl r0, r0, #3
 	add r5, r5, r0
 	add r0, r4, #0
 	mov r1, #0x16
-	bl sub_02026820
+	bl Item_GetParam
 	lsl r0, r0, #4
 	add r5, r5, r0
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02026820
+	bl Item_GetParam
 	lsl r0, r0, #5
 	add r5, r5, r0
 	cmp r5, #0x10
@@ -12833,227 +12833,227 @@ _021A0012:
 	b _021A0074
 _021A0018:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #3
 	pop {r4, r5, r6, pc}
 _021A0022:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #4
 	pop {r4, r5, r6, pc}
 _021A002C:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #5
 	pop {r4, r5, r6, pc}
 _021A0036:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #6
 	pop {r4, r5, r6, pc}
 _021A0040:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #7
 	pop {r4, r5, r6, pc}
 _021A004A:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #8
 	pop {r4, r5, r6, pc}
 _021A0054:
 	add r0, r4, #0
 	mov r1, #0x29
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A006A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xb
 	pop {r4, r5, r6, pc}
 _021A006A:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #9
 	pop {r4, r5, r6, pc}
 _021A0074:
 	add r0, r4, #0
 	mov r1, #0x18
 	mov r5, #0x18
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A008C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xa
 	pop {r4, r5, r6, pc}
 _021A008C:
 	add r0, r4, #0
 	mov r1, #0x29
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A00A2
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xb
 	pop {r4, r5, r6, pc}
 _021A00A2:
 	add r0, r4, #0
 	mov r1, #0x1a
 	mov r6, #0x1a
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A00BA
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xc
 	pop {r4, r5, r6, pc}
 _021A00BA:
 	add r0, r4, #0
 	mov r1, #0x34
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A00D0
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xd
 	pop {r4, r5, r6, pc}
 _021A00D0:
 	bge _021A00DC
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x13
 	pop {r4, r5, r6, pc}
 _021A00DC:
 	add r0, r4, #0
 	mov r1, #0x35
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A00F2
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xe
 	pop {r4, r5, r6, pc}
 _021A00F2:
 	bge _021A00FE
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x14
 	pop {r4, r5, r6, pc}
 _021A00FE:
 	add r0, r4, #0
 	mov r1, #0x36
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A0114
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xf
 	pop {r4, r5, r6, pc}
 _021A0114:
 	bge _021A0120
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x15
 	pop {r4, r5, r6, pc}
 _021A0120:
 	add r0, r4, #0
 	mov r1, #0x37
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A0136
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x10
 	pop {r4, r5, r6, pc}
 _021A0136:
 	bge _021A0142
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x16
 	pop {r4, r5, r6, pc}
 _021A0142:
 	add r0, r4, #0
 	mov r1, #0x38
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A0158
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x11
 	pop {r4, r5, r6, pc}
 _021A0158:
 	bge _021A0164
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x17
 	pop {r4, r5, r6, pc}
 _021A0164:
 	add r0, r4, #0
 	mov r1, #0x39
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A017A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x12
 	pop {r4, r5, r6, pc}
 _021A017A:
 	bge _021A0186
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	pop {r4, r5, r6, pc}
 _021A0186:
 	add r0, r4, #0
 	mov r1, #0x1d
 	mov r5, #0x1d
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A019E
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x19
 	pop {r4, r5, r6, pc}
 _021A019E:
 	add r0, r4, #0
 	mov r1, #0x25
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A01B4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 _021A01B4:
 	add r0, r4, #0
 	mov r1, #0x26
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A01CA
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x1b
 	pop {r4, r5, r6, pc}
 _021A01CA:
 	add r0, r4, #0
 	mov r1, #0x27
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A01E2
 	add r0, r4, #0
 	mov r1, #0x28
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A01EC
 _021A01E2:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x1c
 	pop {r4, r5, r6, pc}
 _021A01EC:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -14781,7 +14781,7 @@ _021A0F9C:
 	bl sub_0204AF50
 _021A0FA4:
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	bl sub_0202D7E0
 	ldrh r1, [r5]
 	bl sub_0204AA30
@@ -14871,7 +14871,7 @@ _021A0FA4:
 	bl sub_02045B7C
 _021A107A:
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r1, [r5]
 	mov r0, #7
 	bl sub_0204AA30
@@ -14888,7 +14888,7 @@ _021A107A:
 	add r4, #0xd8
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _021A10BC ; =0x00000216
 	ldr r0, _021A10C0 ; =0x05000440
 	add r1, r5, r1
@@ -14923,7 +14923,7 @@ ovy165_21a10c8: ; 0x021A10C8
 	mov r1, #0x20
 	mov r2, #0
 	mov r5, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [sp, #0x10]
 	ldr r0, [r0]
@@ -15079,7 +15079,7 @@ _021A1210:
 	ldr r0, [r5, #4]
 	bl sub_02048210
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy165_21a11f8
 
@@ -15143,7 +15143,7 @@ ovy165_21a1284: ; 0x021A1284
 	ldr r3, _021A14BC ; =0x021A4D1C
 	mov r1, #0x18
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [sp, #0xc]
 	mov r1, #0x4c
@@ -15167,7 +15167,7 @@ ovy165_21a1284: ; 0x021A1284
 	bl sub_0204B81C
 	str r0, [r4, #0xc]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, [sp, #0x24]
 	bl sub_020210C0
 	str r0, [sp, #0x28]
@@ -15252,7 +15252,7 @@ ovy165_21a1284: ; 0x021A1284
 	ldr r0, [sp, #0x2c]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026BA0
+	bl Item_IsMail
 	cmp r0, #1
 	ldr r0, [r4, #0x14]
 	bne _021A13A4
@@ -15414,7 +15414,7 @@ ovy165_21a14c0: ; 0x021A14C0
 	ldr r0, [r4, #0xc]
 	bl sub_0204B98C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy165_21a14c0
@@ -17338,11 +17338,11 @@ ovy165_21a23e8: ; 0x021A23E8
 	bl sub_02026740
 	mov r1, #0xe
 	add r4, r0, #0
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #1
 	beq _021A2416
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	add r0, r5, #0
 	pop {r4, r5, r6, r7, pc}
@@ -17352,65 +17352,65 @@ _021A2416:
 	add r5, r0, #0
 	add r0, r4, #0
 	mov r1, #0x12
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A243A
 	cmp r5, #2
 	bne _021A243A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A243A:
 	add r0, r4, #0
 	mov r1, #0x13
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2456
 	cmp r5, #5
 	bne _021A2456
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A2456:
 	add r0, r4, #0
 	mov r1, #0x14
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2472
 	cmp r5, #4
 	bne _021A2472
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A2472:
 	add r0, r4, #0
 	mov r1, #0x15
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A248E
 	cmp r5, #3
 	bne _021A248E
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A248E:
 	add r0, r4, #0
 	mov r1, #0x16
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A24AA
 	cmp r5, #1
 	bne _021A24AA
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17422,31 +17422,31 @@ _021A24AA:
 	add r5, r0, #0
 	add r0, r4, #0
 	mov r1, #0x1a
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A24CE
 	add r0, r4, #0
 	mov r1, #0x1b
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A24EA
 _021A24CE:
 	add r0, r4, #0
 	mov r1, #0x1c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A24EA
 	cmp r5, #0
 	bne _021A2514
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A24EA:
 	add r0, r4, #0
 	mov r1, #0x29
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2514
 	cmp r5, #0
@@ -17458,14 +17458,14 @@ _021A24EA:
 	cmp r5, r0
 	bhs _021A2514
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A2514:
 	add r0, r4, #0
 	mov r1, #0x1c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A253A
 	add r0, r6, #0
@@ -17475,19 +17475,19 @@ _021A2514:
 	cmp r0, #0x64
 	bhs _021A253A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A253A:
 	add r0, r4, #0
 	mov r1, #0x25
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A2552
 	add r0, r4, #0
 	mov r1, #0x26
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A258A
 _021A2552:
@@ -17511,14 +17511,14 @@ _021A2552:
 	cmp r0, #5
 	blo _021A258A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A258A:
 	add r0, r4, #0
 	mov r1, #0x27
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A25AE
 	add r0, r6, #0
@@ -17527,14 +17527,14 @@ _021A258A:
 	cmp r0, #1
 	bne _021A25AE
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A25AE:
 	add r0, r4, #0
 	mov r1, #0x28
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A25DA
 	mov r5, #0
@@ -17545,7 +17545,7 @@ _021A25BC:
 	cmp r0, #1
 	bne _021A25D4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17586,18 +17586,18 @@ _021A25DA:
 	add r7, r0, #0
 	add r0, r4, #0
 	mov r1, #0x30
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r1, #0x2a
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A26BE
 	mov r1, #0x34
 	str r1, [sp, #0x18]
 	add r0, r4, #0
 	mov r1, #0x34
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp]
 	cmp r0, #0
 	ble _021A2690
@@ -17631,7 +17631,7 @@ _021A2668:
 	cmp r1, r0
 	bge _021A26BE
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17642,7 +17642,7 @@ _021A2690:
 	cmp r5, #0
 	ble _021A26A6
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17653,19 +17653,19 @@ _021A26A6:
 	cmp r0, #1
 	bne _021A26BE
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A26BE:
 	add r0, r4, #0
 	mov r1, #0x2b
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2736
 	add r0, r4, #0
 	mov r1, #0x35
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A270A
 	ldr r0, [sp, #0x14]
@@ -17690,7 +17690,7 @@ _021A26E2:
 	cmp r1, r0
 	bge _021A2736
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17700,7 +17700,7 @@ _021A270A:
 	cmp r0, #0
 	ble _021A271E
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17711,19 +17711,19 @@ _021A271E:
 	cmp r0, #1
 	bne _021A2736
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A2736:
 	add r0, r4, #0
 	mov r1, #0x2c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A27B0
 	add r0, r4, #0
 	mov r1, #0x36
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A2784
 	ldr r0, [sp, #0x10]
@@ -17749,7 +17749,7 @@ _021A275A:
 	cmp r1, r0
 	bge _021A27B0
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17759,7 +17759,7 @@ _021A2784:
 	cmp r0, #0
 	ble _021A2798
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17770,19 +17770,19 @@ _021A2798:
 	cmp r0, #1
 	bne _021A27B0
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A27B0:
 	add r0, r4, #0
 	mov r1, #0x2d
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A282A
 	add r0, r4, #0
 	mov r1, #0x37
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A27FE
 	ldr r0, [sp, #0xc]
@@ -17808,7 +17808,7 @@ _021A27D4:
 	cmp r1, r0
 	bge _021A282A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17818,7 +17818,7 @@ _021A27FE:
 	cmp r0, #0
 	ble _021A2812
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17829,19 +17829,19 @@ _021A2812:
 	cmp r0, #1
 	bne _021A282A
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A282A:
 	add r0, r4, #0
 	mov r1, #0x2e
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A28A4
 	add r0, r4, #0
 	mov r1, #0x38
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A2878
 	ldr r0, [sp, #8]
@@ -17867,7 +17867,7 @@ _021A284E:
 	cmp r1, r0
 	bge _021A28A4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17877,7 +17877,7 @@ _021A2878:
 	cmp r0, #0
 	ble _021A288C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17888,19 +17888,19 @@ _021A288C:
 	cmp r0, #1
 	bne _021A28A4
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A28A4:
 	add r0, r4, #0
 	mov r1, #0x2f
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2918
 	add r0, r4, #0
 	mov r1, #0x39
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A28EE
 	cmp r7, #0x64
@@ -17924,7 +17924,7 @@ _021A28C6:
 	cmp r1, r0
 	bge _021A2918
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17933,7 +17933,7 @@ _021A28EE:
 	cmp r7, #0
 	ble _021A2900
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
@@ -17944,13 +17944,13 @@ _021A2900:
 	cmp r0, #1
 	bne _021A2918
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x1c
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _021A2918:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
@@ -17977,11 +17977,11 @@ ovy165_21a2928: ; 0x021A2928
 	bl sub_02026740
 	mov r1, #0xe
 	add r4, r0, #0
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #1
 	beq _021A2960
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	add r0, r7, #0
 	pop {r4, r5, r6, r7, pc}
@@ -17995,7 +17995,7 @@ _021A2960:
 	str r0, [sp, #0x50]
 	add r0, r4, #0
 	mov r1, #0x12
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2980
 	str r7, [sp, #0x50]
@@ -18003,7 +18003,7 @@ _021A2960:
 _021A2980:
 	add r0, r4, #0
 	mov r1, #0x13
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2992
 	mov r0, #0
@@ -18012,7 +18012,7 @@ _021A2980:
 _021A2992:
 	add r0, r4, #0
 	mov r1, #0x14
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A29A4
 	mov r0, #0
@@ -18021,7 +18021,7 @@ _021A2992:
 _021A29A4:
 	add r0, r4, #0
 	mov r1, #0x15
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A29B6
 	mov r0, #0
@@ -18030,7 +18030,7 @@ _021A29A4:
 _021A29B6:
 	add r0, r4, #0
 	mov r1, #0x16
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A29C8
 	mov r0, #0
@@ -18059,18 +18059,18 @@ _021A29DC:
 	str r0, [sp, #0x30]
 	add r0, r4, #0
 	mov r1, #0x1a
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A2A0C
 	add r0, r4, #0
 	mov r1, #0x1b
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2A36
 _021A2A0C:
 	add r0, r4, #0
 	mov r1, #0x1c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	bne _021A2A36
 	ldr r0, [sp, #0x38]
@@ -18078,7 +18078,7 @@ _021A2A0C:
 	bne _021A2A34
 	add r0, r4, #0
 	mov r1, #0x3a
-	bl sub_02026820
+	bl Item_GetParam
 	add r3, r0, #0
 	ldr r1, [sp, #0x38]
 	ldr r2, [sp, #0x30]
@@ -18090,7 +18090,7 @@ _021A2A34:
 _021A2A36:
 	add r0, r4, #0
 	mov r1, #0x29
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2A62
 	ldr r1, [sp, #0x38]
@@ -18099,7 +18099,7 @@ _021A2A36:
 	bge _021A2A60
 	add r0, r4, #0
 	mov r1, #0x3a
-	bl sub_02026820
+	bl Item_GetParam
 	add r3, r0, #0
 	ldr r1, [sp, #0x38]
 	ldr r2, [sp, #0x30]
@@ -18116,7 +18116,7 @@ _021A2A62:
 	str r0, [sp, #0x58]
 	add r0, r4, #0
 	mov r1, #0x1c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2ADE
 	ldr r0, [sp, #0x58]
@@ -18167,14 +18167,14 @@ _021A2ADC:
 _021A2ADE:
 	add r0, r4, #0
 	mov r1, #0x1d
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2AEC
 	mov r6, #1
 _021A2AEC:
 	add r0, r4, #0
 	mov r1, #0x25
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2B0C
 	ldr r1, [sp, #0xc]
@@ -18190,7 +18190,7 @@ _021A2B0A:
 _021A2B0C:
 	add r0, r4, #0
 	mov r1, #0x26
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2B2A
 	ldr r1, [sp, #0xc]
@@ -18205,12 +18205,12 @@ _021A2B28:
 _021A2B2A:
 	add r0, r4, #0
 	mov r1, #0x27
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2B50
 	add r0, r4, #0
 	mov r1, #0x3b
-	bl sub_02026820
+	bl Item_GetParam
 	add r2, r0, #0
 	ldr r1, [sp, #0xc]
 	add r0, r5, #0
@@ -18223,14 +18223,14 @@ _021A2B4E:
 _021A2B50:
 	add r0, r4, #0
 	mov r1, #0x28
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2B7E
 	mov r6, #0
 _021A2B5E:
 	add r0, r4, #0
 	mov r1, #0x3b
-	bl sub_02026820
+	bl Item_GetParam
 	add r2, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
@@ -18277,18 +18277,18 @@ _021A2B7E:
 	str r0, [sp, #0x48]
 	add r0, r4, #0
 	mov r1, #0x30
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp, #0x44]
 	add r0, r4, #0
 	mov r1, #0x2a
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2C4E
 	mov r1, #0x34
 	str r1, [sp, #0x5c]
 	add r0, r4, #0
 	mov r1, #0x34
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp, #0x40]
 	cmp r0, #0
 	ble _021A2C0E
@@ -18302,7 +18302,7 @@ _021A2B7E:
 	cmp r0, r1
 	bne _021A2C0E
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	mov r0, #0
 	pop {r4, r5, r6, r7, pc}
@@ -18340,14 +18340,14 @@ _021A2C46:
 _021A2C4E:
 	add r0, r4, #0
 	mov r1, #0x2b
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2CAA
 	mov r1, #0x35
 	str r1, [sp, #0x60]
 	add r0, r4, #0
 	mov r1, #0x35
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r2, [sp, #0x3c]
 	ldr r1, [sp, #0x2c]
 	str r0, [sp, #0x14]
@@ -18383,14 +18383,14 @@ _021A2CA2:
 _021A2CAA:
 	add r0, r4, #0
 	mov r1, #0x2c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2D06
 	mov r1, #0x36
 	str r1, [sp, #0x64]
 	add r0, r4, #0
 	mov r1, #0x36
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r2, [sp, #0x3c]
 	ldr r1, [sp, #0x34]
 	str r0, [sp, #0x18]
@@ -18426,14 +18426,14 @@ _021A2CFE:
 _021A2D06:
 	add r0, r4, #0
 	mov r1, #0x2d
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2D62
 	mov r1, #0x37
 	str r1, [sp, #0x68]
 	add r0, r4, #0
 	mov r1, #0x37
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r2, [sp, #0x3c]
 	ldr r1, [sp, #0x34]
 	str r0, [sp, #0x1c]
@@ -18469,14 +18469,14 @@ _021A2D5A:
 _021A2D62:
 	add r0, r4, #0
 	mov r1, #0x2e
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2DBE
 	mov r1, #0x38
 	str r1, [sp, #0x6c]
 	add r0, r4, #0
 	mov r1, #0x38
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r2, [sp, #0x3c]
 	ldr r1, [sp, #0x34]
 	str r0, [sp, #0x20]
@@ -18512,14 +18512,14 @@ _021A2DB6:
 _021A2DBE:
 	add r0, r4, #0
 	mov r1, #0x2f
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2E18
 	mov r1, #0x39
 	str r1, [sp, #0x70]
 	add r0, r4, #0
 	mov r1, #0x39
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r2, [sp, #0x3c]
 	ldr r1, [sp, #0x34]
 	str r0, [sp, #0x24]
@@ -18557,7 +18557,7 @@ _021A2E18:
 	cmp r6, #1
 	bne _021A2E2C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	mov r0, #0
 	pop {r4, r5, r6, r7, pc}
@@ -18571,12 +18571,12 @@ _021A2E2C:
 	bge _021A2E70
 	add r0, r4, #0
 	mov r1, #0x31
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2EE6
 	add r0, r4, #0
 	mov r1, #0x3c
-	bl sub_02026820
+	bl Item_GetParam
 	add r2, r0, #0
 	ldr r0, [sp, #0x10]
 	add r1, r6, #0
@@ -18587,7 +18587,7 @@ _021A2E2C:
 	add r0, r5, #0
 	bl ovy165_21a30c8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	add r0, r7, #0
 	pop {r4, r5, r6, r7, pc}
@@ -18597,12 +18597,12 @@ _021A2E70:
 	bge _021A2EAA
 	add r0, r4, #0
 	mov r1, #0x32
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2EE6
 	add r0, r4, #0
 	mov r1, #0x3d
-	bl sub_02026820
+	bl Item_GetParam
 	add r2, r0, #0
 	ldr r0, [sp, #0x10]
 	add r1, r6, #0
@@ -18613,7 +18613,7 @@ _021A2E70:
 	add r0, r5, #0
 	bl ovy165_21a30c8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	add r0, r7, #0
 	pop {r4, r5, r6, r7, pc}
@@ -18624,12 +18624,12 @@ _021A2EAA:
 	bgt _021A2EE6
 	add r0, r4, #0
 	mov r1, #0x33
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A2EE6
 	add r0, r4, #0
 	mov r1, #0x3e
-	bl sub_02026820
+	bl Item_GetParam
 	add r2, r0, #0
 	ldr r0, [sp, #0x10]
 	add r1, r6, #0
@@ -18640,13 +18640,13 @@ _021A2EAA:
 	add r0, r5, #0
 	bl ovy165_21a30c8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x74
 	add r0, r7, #0
 	pop {r4, r5, r6, r7, pc}
 _021A2EE6:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r7, #0
 	add sp, #0x74
 	pop {r4, r5, r6, r7, pc}
@@ -18853,12 +18853,12 @@ _021A3052:
 	bge _021A3076
 	add r0, r5, #0
 	mov r1, #0x31
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A3072
 	add r0, r5, #0
 	mov r1, #0x3c
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A3072
 	mov r0, #1
@@ -18872,12 +18872,12 @@ _021A3076:
 	bge _021A309C
 	add r0, r5, #0
 	mov r1, #0x32
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A3098
 	add r0, r5, #0
 	mov r1, #0x3d
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A3098
 	mov r0, #1
@@ -18892,12 +18892,12 @@ _021A309C:
 	bge _021A30C4
 	add r0, r5, #0
 	mov r1, #0x33
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _021A30C0
 	add r0, r5, #0
 	mov r1, #0x3e
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	ble _021A30C0
 	mov r0, #1

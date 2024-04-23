@@ -32,13 +32,13 @@
 .public sub_021804D8
 .public sub_0200BAC4
 .public sub_0218050C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021A373C
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_0201793C
 .public sub_021804D8
 .public sub_0200BAC4
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021804D4
 .public sub_021852D0

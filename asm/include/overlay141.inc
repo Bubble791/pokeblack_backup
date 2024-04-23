@@ -26,13 +26,13 @@
 .public sub_02017968
 .public sub_0200E7F0
 .public sub_0200E82C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public GFL_TCBRemove
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02046C40
 .public sub_020444A4
 .public sub_02044710
@@ -63,7 +63,7 @@
 .public sub_0204B124
 .public sub_0204566C
 .public sub_02044F90
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_020330C8
@@ -87,7 +87,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204B98C

@@ -7,7 +7,7 @@
 .public sub_0204B0D4
 .public sub_0204AE3C
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02042BA8
 .public sub_02046D84
 .public sub_02044C98
@@ -35,8 +35,8 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02046D84
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02016AD8
 .public sub_02017238
 .public sub_02012BE4
-.public sub_0203A24C
+.public GFL_HeapFree

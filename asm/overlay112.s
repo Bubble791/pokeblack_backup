@@ -179,7 +179,7 @@ ovy112_21eed60: ; 0x021EED60
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #3
 	bl sub_02044F90
 	mov r0, #8

@@ -1599,7 +1599,7 @@ _02006704:
 	ldr r3, _02006750 ; =0x02099F14
 	add r0, r7, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #4]
 	str r0, [r4, #0x10]
 	mov r0, #1
@@ -1645,7 +1645,7 @@ _0200676A:
 	ldr r1, [r4, #0x30]
 	cmp r1, #1
 	bne _02006786
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl sub_02006840
 _02006786:
@@ -2493,7 +2493,7 @@ sub_02006D64: ; 0x02006D64
 	add r3, r7, #0
 	add r5, r0, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x28
 	add r4, r0, #0
@@ -2504,7 +2504,7 @@ sub_02006D64: ; 0x02006D64
 	add r0, r5, #0
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r2, _02006DD8 ; =0x00002014
 	mov r1, #0
 	add r5, r0, #0

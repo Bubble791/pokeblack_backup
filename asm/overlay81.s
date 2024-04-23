@@ -80,7 +80,7 @@ ovy81_21ea8e8: ; 0x021EA8E8
 	mov r1, #0x34
 	mov r2, #1
 	mov r6, #0x15
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	strh r6, [r4, #8]
 	str r5, [r4, #0x18]
@@ -120,7 +120,7 @@ ovy81_21ea938: ; 0x021EA938
 	mov r1, #0
 	strh r1, [r0]
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	nop
 _021EA950: .word 0x04001050
@@ -256,7 +256,7 @@ _021EAA2E:
 	blt _021EAA2E
 _021EAA4E:
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

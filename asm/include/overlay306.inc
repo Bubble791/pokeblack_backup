@@ -98,9 +98,9 @@
 .public sub_0219EB68
 .public sub_0219D7D0
 .public sub_0219D7F0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02045320
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204B0B8
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -179,9 +179,9 @@
 .public sub_02044564
 .public sub_02044668
 .public sub_0204B0B8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02045320
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020254E0
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -275,7 +275,7 @@
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204AE3C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AF18
 .public sub_02045B7C
 .public sub_02045E1C
@@ -298,12 +298,12 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_02044B84
 .public sub_0219EB74
 .public sub_0203A584
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0203A58C
 .public sub_02026DC0
 .public sub_0202778C
@@ -315,7 +315,7 @@
 .public sub_02026E48
 .public sub_02026DE8
 .public sub_0203A610
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203A5D0
 .public sub_02027780
 .public sub_02026FE4
@@ -327,7 +327,7 @@
 .public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -340,7 +340,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219EC94
 .public sub_0219EC2C
 .public sub_0219EC30

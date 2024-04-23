@@ -143,7 +143,7 @@ void ovy142_219c900(BagView *bagView)
     bagView->unk8A4 = sub_02035024(16, 16, 0xFFFE, bagView->heapId);
     v2 = sub_0204AA30(87, bagView->heapId);
     sub_02035104(bagView->unk8A4, v2, 21, 16, 32);
-    sub_0204AB0C(v2);
+    GFL_ArcToolFree(v2);
 }
 
 extern void sub_02035178(int);
@@ -486,7 +486,7 @@ extern void ovy142_219d3d8(BagView*);
 
 void BagMenu_PrintItemSortEnd(BagView* bagView)
 {
-    switch (bagView->unk1F4C)
+    switch (bagView->sortOptionType)
     {
     case 0:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x8C, bagView->stringBuff2);
@@ -769,8 +769,8 @@ int ovy142_219d43c(BagView *a1, u8 a2)
 {
     int v3; // r1
 
-    v3 = a1->unk10;
-    if (v3 == 3 || v3 == 1)
+    v3 = a1->bagMode;
+    if (v3 == BAG_MODE_LINK_BATTLE_ROOM || v3 == BAG_MODE_UNION_ROOM)
         return 0;
     if (sub_020175E4(a1->m_GameData) == 1 && a2 == 4)
         return 0;
@@ -1038,7 +1038,7 @@ void ovy142_219d7a8(BagView *a1)
     a1->unk828 = sub_0204AE3C(v7, 33, 3, 0, 0, a1->heapId);
     
     sub_0204B0D4(v7, 34, 0, 96, 32, a1->heapId);
-    sub_0204AB0C((void*)v7);
+    GFL_ArcToolFree((void*)v7);
     sub_0204B0B8(23, 5, 0, 384, 32, a1->heapId);
     a1->unk6AC = sub_0204BF1C(54, 0, a1->heapId);
     sub_02046D84(16, 1);
@@ -1054,7 +1054,7 @@ void ovy142_219d7a8(BagView *a1)
     a1->unk57C = sub_0204BDE0(v11, 23, 26, a1->heapId);
     a1->unk570 = sub_0204B81C(v11, 175, 0, 0, a1->heapId);
     a1->unk580 = sub_0204BDE0(v11, 174, 173, a1->heapId);
-    sub_0204AB0C((void*)v11);
+    GFL_ArcToolFree((void*)v11);
     ovy142_219ed8c(a1);
     v14 = sub_0202D7E0();
     v33 = (int)sub_0204AA30(v14, a1->heapId);
@@ -1074,7 +1074,7 @@ void ovy142_219d7a8(BagView *a1)
         v23 = sub_0202D7F4((u8)i);
         a1->unk5AC[i] = sub_0204B81C(v33, v23, 0, 1, a1->heapId);
     }
-    sub_0204AB0C((void*)v33);
+    GFL_ArcToolFree((void*)v33);
     
     newtemp[2].x = 80;
     newtemp[2].y = 0xb8;
@@ -1120,7 +1120,7 @@ void ovy142_219d7a8(BagView *a1)
     a1->unk590 = sub_0204BBB8(v31, 39, 0, 128, 0, 2, a1->heapId);
     a1->unk594 = sub_0204B81C(v31, 38, 0, 0, a1->heapId);
     a1->unk59C = sub_0204BDE0(v31, 37, 36, a1->heapId);
-    sub_0204AB0C((void*)v31);
+    GFL_ArcToolFree((void*)v31);
     
     newtemp[0].flag = 10;
     newtemp[0].unk = 1;
@@ -1378,7 +1378,7 @@ void ovy142_219e284(BagView *a1)
     sub_0204826C(a1->unk74C);
     v2 = sub_0204AA30(25, a1->heapId);
     a1->unk558 = sub_0204BDE0((int)v2, 1, 0, a1->heapId);
-    sub_0204AB0C(v2);
+    GFL_ArcToolFree(v2);
     GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
     ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0u);
     GFL_MsgDataLoadStrbuf(a1->msgData, 93, a1->stringBuff1);
@@ -1424,7 +1424,7 @@ void ovy142_219e4dc(BagView *a1, int a2)
     a1->unk550 = sub_0204BBB8((int)v4, v5, 1, 0, 0, 1, a1->heapId);
     v6 = sub_02026670(a2, 1);
     a1->unk554 = sub_0204B81C((int)v4, v6, 0, 1, a1->heapId);
-    sub_0204AB0C(v4);
+    GFL_ArcToolFree(v4);
     v8.x = 132;
     v8.y = 80;
     v8.anim = 0;
@@ -1477,7 +1477,7 @@ void ovy142_219e5c4(BagView *a1)
     sub_02008BF0(a1->unk8);
     a1->unk598 = sub_0204BBB8(v3, 21, 0, 0, 0, 3, a1->heapId);
     a1->unk578 = sub_0204BDE0(v3, 19, 18, a1->heapId);
-    sub_0204AB0C((void*)v3);
+    GFL_ArcToolFree((void*)v3);
 }
 
 
@@ -1623,7 +1623,7 @@ _0219E95C:
 _0219E96A:
 	ldr r0, =0x0000054C
 	ldrh r0, [r5, r0]
-	bl sub_02026720
+	bl Item_ArcHandleCreate
 	str r0, [sp, #0x14]
 	mov r0, #0
 	str r0, [sp, #0x18]
@@ -1702,10 +1702,10 @@ _0219EA04:
 	ldr r2, =0x0000054C
 	ldr r0, [sp, #0x14]
 	ldrh r2, [r5, r2]
-	bl sub_0202672C
+	bl Item_ArcHandleReadFile
 	mov r1, #0xf
 	str r0, [sp, #0x10]
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp, #0xc]
 	ldr r1, =0x021A0FE6
 	ldr r0, [sp, #0x18]
@@ -1818,7 +1818,7 @@ _0219EADE:
 _0219EAEC:
 	ldr r0, [sp, #0x10]
 	mov r1, #4
-	bl sub_02026820
+	bl Item_GetParam
 	cmp r0, #0
 	beq _0219EB0C
 	ldrh r1, [r6]
@@ -1836,7 +1836,7 @@ _0219EB0C:
 _0219EB0E:
 	str r0, [r4, r7]
 	ldr r0, [sp, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _0219EB16:
 	ldr r0, [sp, #0x18]
 	add r0, r0, #1
@@ -1846,7 +1846,7 @@ _0219EB16:
 	b _0219E9DE
 _0219EB22:
 	ldr r0, [sp, #0x14]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x89
 	mov r1, #1
 	lsl r0, r0, #4
@@ -2025,7 +2025,7 @@ void ovy142_219ed8c(BagView *a1)
     sub_0204C5C8(a1->unk740, 0);
     if (!sub_0219BE00(a1))
         sub_0204C124(a1->unk724[2], 0);
-    if (a1->unk10 == 2)
+    if (a1->bagMode == BAG_MODE_2)
         sub_0204C124(a1->unk724[3], 0);
 
     v11 = data_21a0fcc;
@@ -2247,7 +2247,7 @@ void ovy142_219f450(BagView *a1, u32 a2)
     else
         sub_0204AFD8(v3, 23, 5, 0, a1->unk820, 0, 0, a1->heapId);
     
-    sub_0204AB0C(v3);
+    GFL_ArcToolFree(v3);
 }
 
 void ovy142_219f4b0(BagView *a1, int a2)
@@ -2593,9 +2593,9 @@ _0219FBD8:
 	bl sub_02045B7C
 _0219FBFC:
 	ldr r0, [sp, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 }
@@ -2703,7 +2703,7 @@ void ovy142_219fda8(BagView *a1, int a2)
             v14 = sub_02005718();
             sub_02026FE4(a1->unk8A8, 1, 1, 0, 8, 8, 0, v14);
 
-            if (a1->unk10 == 4 && !sub_0204C138(a1->unk724[0]))
+            if (a1->bagMode == BAG_MODE_SELL_ITEM && !sub_0204C138(a1->unk724[0]))
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 2, -8);
             else
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, -8);

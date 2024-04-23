@@ -647,7 +647,7 @@ ovy204_21aa044: ; 0x021AA044
 	add r0, r4, #0
 	bl ovy204_21aa170
 	ldr r0, [r4, #8]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r4, pc}
 	thumb_func_end ovy204_21aa044
 
@@ -897,7 +897,7 @@ ovy204_21aa188: ; 0x021AA188
 	add r6, #0xf8
 	str r0, [r5, r6]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1165,7 +1165,7 @@ _021AA4AE:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021AA4AE
@@ -1317,7 +1317,7 @@ ovy204_21aa5b0: ; 0x021AA5B0
 	add r2, r5, #0
 	bl GFL_CopyVarForText
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21aa5b0
@@ -1895,7 +1895,7 @@ _021AAA40:
 	mov r1, #0
 	bl GFL_CopyVarForText
 	ldr r0, [sp, #0xc]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x5c]
 	add r1, sp, #0x10
 	bl ovy204_21ad9f8
@@ -2181,7 +2181,7 @@ ovy204_21aac84: ; 0x021AAC84
 	ldr r0, [r5, #0xc]
 	bl sub_02048210
 	ldr r0, [r5, #0x14]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21aac84
@@ -6082,7 +6082,7 @@ ovy204_21acb38: ; 0x021ACB38
 	ldr r0, [r5, #8]
 	bl sub_02048210
 	ldr r0, [r5, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21acb38
@@ -7338,7 +7338,7 @@ _021AD4EE:
 	add r1, #0xc4
 	str r0, [r4, r1]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, sp, #0x24
 	str r0, [sp]
 	mov r0, #0
@@ -7728,7 +7728,7 @@ ovy204_21ad838: ; 0x021AD838
 	mov r4, #0
 _021AD83E:
 	ldr r0, [r5]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	add r5, #8
 	cmp r4, #4

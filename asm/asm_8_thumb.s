@@ -109,7 +109,7 @@ _02005584:
 	mov r2, #0
 	add r3, r7, #0
 	str r5, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r4, _02005630 ; =0x0209DA58
 	str r0, [r4, #0x14]
 	mov r0, #4
@@ -120,7 +120,7 @@ _02005584:
 	mov r0, #0
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r1, [r4, #0x14]
 	str r0, [r1, #0x1c]
 	ldr r1, [r4, #0x14]
@@ -137,7 +137,7 @@ _02005584:
 	mov r0, #0
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	ldr r1, [r4, #0x14]
 	str r0, [r1, #0x24]
 	ldr r1, [r4, #0x14]

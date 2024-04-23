@@ -38,7 +38,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public G2x_SetBlendBrightness_
 .public sub_0204AA30
 .public sub_0204B0D4
@@ -49,12 +49,12 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_02199AA0
 .public sub_02199B5C
@@ -68,7 +68,7 @@
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -83,7 +83,7 @@
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -107,7 +107,7 @@
 .public sub_020105E0
 .public sub_02010644
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_020107F0
 .public sub_020107F0
 .public sub_020107F0
@@ -118,7 +118,7 @@
 .public sub_0201CCF8
 .public sub_020107F0
 .public sub_020243F4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02010600
 .public sub_0200C200
 .public sub_0203DA0C
@@ -299,7 +299,7 @@
 .public sub_02048210
 .public sub_02199D18
 .public sub_02199D18
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -312,7 +312,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219E8F4
 .public sub_0219E88C
 .public sub_0219E890

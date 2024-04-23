@@ -5,7 +5,7 @@
 .public sub_0204C56C
 .public sub_02021A34
 .public sub_02021A34
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0202E168
 .public GFL_MsgSysLoadData
 .public sub_0204898C
@@ -13,7 +13,7 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public sub_0202E1DC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202E210
 .public sub_0202E674
 .public sub_0202E37C

@@ -627,7 +627,7 @@ _0219B172:
 	ldr r1, [sp, #0xc]
 	str r0, [r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x20
 	str r0, [sp]
 	mov r3, #0x1a
@@ -792,7 +792,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	bl sub_0204BDE0
 	str r0, [r5, #0x18]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, sp, #0xc
 	mov r1, #0
 	mov r2, #8

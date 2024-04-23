@@ -14,7 +14,7 @@ ovy289_21f4440: ; 0x021F4440
 	ldrh r0, [r5, #4]
 	mov r1, #0xc8
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	bl sub_021E00AC
 	ldr r1, _021F44C8 ; =ovy289_21f44cc
@@ -157,7 +157,7 @@ _021F455A:
 	add r0, r4, #0
 	add r0, #0xc0
 	ldr r0, [r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl ovy289_21f4ba4
 	ldr r0, [r4, #0xc]
@@ -186,7 +186,7 @@ _021F45AA:
 	add r0, r5, #0
 	bl GFL_TCBRemove
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -906,7 +906,7 @@ _021F4B1A:
 	blt _021F4B1A
 _021F4B3A:
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1258,7 +1258,7 @@ ovy289_21f4d74: ; 0x021F4D74
 	add r5, #0x9c
 	str r0, [r5]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	nop

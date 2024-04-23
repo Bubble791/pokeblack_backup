@@ -22,7 +22,7 @@
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C124
@@ -276,12 +276,12 @@
 .public sub_0204AE3C
 .public sub_0204AFB0
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204AE3C
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02024D20
 .public sub_0204E060
 .public sub_0204B6A8
@@ -295,8 +295,8 @@
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
-.public sub_0204AB0C
+.public GFL_HeapFree
+.public GFL_ArcToolFree
 .public sub_0219CE98
 .public sub_0204E0E0
 .public sub_02017238
@@ -401,7 +401,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_020429F0
 .public G2x_SetBlendAlpha_
 .public GX_LoadBGPltt
@@ -422,7 +422,7 @@
 .public sub_0202E34C
 .public sub_0202E34C
 .public sub_020504DC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_WordSetSystemFree
 .public GFL_TCBRemove
 .public sub_0204BF98

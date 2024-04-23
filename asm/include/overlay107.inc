@@ -12,7 +12,7 @@
 .public sub_021804D8
 .public sub_021EF354
 .public sub_0200BAC4
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021A373C
 .public sub_021804B8
 .public ovy12_2167870
@@ -26,7 +26,7 @@
 .public sub_021804D8
 .public sub_021EF354
 .public sub_0200BAC4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021804F0
 .public sub_0219A664
 .public sub_0215EC6C

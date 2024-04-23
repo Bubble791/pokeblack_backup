@@ -7,11 +7,11 @@
 .public sub_02016D68
 .public sub_020193A4
 .public sub_02016D68
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02016AD8
 .public sub_02016A98
 .public sub_02016AD4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02016AD8
 .public sub_02017934
 .public sub_0200F2C4

@@ -78,7 +78,7 @@ _0214F582:
 	mov r0, #4
 	mov r1, #0x14
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r7, r0, #0
 	ldr r0, [r5, #0x10]
 	str r7, [r5, #0xc]
@@ -102,7 +102,7 @@ _0214F5B8:
 	cmp r0, #0
 	bne _0214F626
 	ldr r0, [r5, #0xc]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	b _0214F54C
 _0214F5CA:
 	add r0, r6, #0

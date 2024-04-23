@@ -22,7 +22,7 @@
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -38,7 +38,7 @@
 .public sub_02040664
 .public sub_021B7BE4
 .public sub_021B31C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021B31C4
 .public sub_021BEACC
 .public sub_021B31C4
@@ -71,7 +71,7 @@
 .public sub_0201CCF8
 .public sub_02006D54
 .public sub_020069F4
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201AB0C
 .public sub_021BEACC
 .public sub_021BE95C
@@ -102,12 +102,12 @@
 .public sub_021C00B0
 .public sub_021BFE9C
 .public sub_021C24DC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021B7BE4
 .public sub_021BEA10
 .public sub_021C1E38
 .public sub_021C1D30
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021B7BE4
 .public sub_0201AE98
 .public sub_0201AD8C
@@ -140,7 +140,7 @@
 .public sub_0204B758
 .public sub_021C2C44
 .public sub_0204BF1C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021C4088
 .public sub_021C200C
 .public sub_021B7D04
@@ -227,8 +227,8 @@
 .public sub_021B31C4
 .public GFL_FadeScreenSet
 .public sub_021B31C4
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_021C2034
 .public sub_021B7BE4
 .public sub_021BEA10

@@ -54,7 +54,7 @@
 .public sub_02021A3C
 .public sub_0203A7F4
 .public sub_0204B794
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_020444A4
 .public sub_02044710
 .public sub_0204476C
@@ -88,7 +88,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -124,7 +124,7 @@
 .public sub_02048210
 .public sub_020480A8
 .public sub_0204B32C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
@@ -149,7 +149,7 @@
 .public sub_02008B84
 .public GFL_StrBufFree
 .public GFL_CopyVarForText
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02017238
 .public sub_02009F80
 .public StringSetNumber
@@ -194,7 +194,7 @@
 .public sub_02008B0C
 .public sub_02008B84
 .public GFL_CopyVarForText
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203D554
 .public sub_0203D554
 .public GFL_StrBufCreate
@@ -219,7 +219,7 @@
 .public GFL_StrBufFree
 .public sub_02048210
 .public sub_02048210
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020454AC
 .public sub_02044CFC
 .public sub_02044CFC
@@ -514,7 +514,7 @@
 .public sub_021ADE28
 .public sub_02048210
 .public sub_02048210
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201736C
 .public GFL_CopyVarForText
 .public sub_020454AC
@@ -585,7 +585,7 @@
 .public sub_020340A4
 .public sub_02034074
 .public sub_020340C8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_020484B4
 .public sub_020484D4
@@ -605,7 +605,7 @@
 .public sub_0208D868
 .public sub_02009F80
 .public sub_0204B32C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02048210
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

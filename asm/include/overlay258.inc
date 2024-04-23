@@ -32,7 +32,7 @@
 .public GFL_FadeScreenSet
 .public sub_02046DF8
 .public GFL_VBlankTCBAdd
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219B454
 .public sub_0219A98C
 .public sub_02199F54
@@ -331,7 +331,7 @@
 .public sub_0204C108
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D814
@@ -357,7 +357,7 @@
 .public sub_0204BDE0
 .public sub_0204BDE0
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02033E24
 .public sub_0201D620
 .public sub_0201CC98
@@ -365,10 +365,10 @@
 .public sub_02033F2C
 .public sub_02034000
 .public sub_0201CCC0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B2DC
 .public sub_0204BA40
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02021280
 .public sub_0202D7E8
 .public sub_0204C378

@@ -4,7 +4,7 @@
 .public sub_02016CB4
 .public sub_02016EDC
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02016AD8
 .public sub_02016B20
 .public sub_0202BDD4
@@ -14,4 +14,4 @@
 .public sub_0202BDD4
 .public sub_020195C0
 .public sub_02016D68
-.public sub_0203A24C
+.public GFL_HeapFree

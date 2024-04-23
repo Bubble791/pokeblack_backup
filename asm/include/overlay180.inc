@@ -18,7 +18,7 @@
 .public sub_0219A89C
 .public sub_0204AA30
 .public sub_0204BC48
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0219CB94
 .public sub_0219CB98
@@ -121,7 +121,7 @@
 .public sub_0204AE3C
 .public sub_0204B0B8
 .public sub_0204B0B8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
 .public BmpWin_CreateDynamic
@@ -174,7 +174,7 @@
 .public sub_0204BC48
 .public sub_02021114
 .public sub_0204BC48
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219C548
 .public sub_0219C548
 .public BmpWin_CreateDynamic
@@ -252,7 +252,7 @@
 .public sub_0204AA30
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
 .public sub_02021034
@@ -271,13 +271,13 @@
 .public sub_0219B738
 .public sub_0219B738
 .public sub_0204B304
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020454AC
 .public sub_0204566C
 .public sub_02017934
 .public sub_0200AFBC
 .public sub_0200AFC8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0200B04C
 .public GFL_StrBufCreate
@@ -288,7 +288,7 @@
 .public sub_0200B014
 .public sub_0200B024
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203DAC8
 .public sub_0203DA84
 .public GCTX_HIDGetPressedKeys
@@ -362,7 +362,7 @@
 .public sub_02046EF4
 .public sub_02046EF4
 .public MIi_CpuCopy32
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_StrBufCreate
 .public sub_02046E28
@@ -371,7 +371,7 @@
 .public sub_0202B030
 .public sub_02046EDC
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_BitmapFill
 .public GFL_MsgDataLoadStrbuf
 .public sub_02021C7C

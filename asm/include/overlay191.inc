@@ -56,7 +56,7 @@
 .public sub_0200E7A8
 .public MI_CpuFill8
 .public sub_02008B0C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201736C
 .public sub_02008B34
 .public sub_02008BB0
@@ -236,12 +236,12 @@
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202780C
 .public DC_FlushRange
 .public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044564
 .public sub_02044564
 .public sub_02024D20
@@ -276,7 +276,7 @@
 .public sub_0203580C
 .public sub_0201782C
 .public sub_02017850
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -289,7 +289,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public MI_CpuFill8
 .public sub_020444A4
 .public sub_02048080

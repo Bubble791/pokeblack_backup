@@ -13,7 +13,7 @@ ovy281_21f59e0: ; 0x021F59E0
 	mov r1, #0x38
 	mov r2, #1
 	str r1, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	str r0, [sp, #8]
 	add r0, #0x1c
@@ -53,12 +53,12 @@ ovy281_21f5a30: ; 0x021F5A30
 _021F5A36:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	cmp r4, #7
 	blt _021F5A36
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy281_21f5a30
 
@@ -183,7 +183,7 @@ _021F5B10:
 	cmp r6, #0
 	bne _021F5B2C
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021F5B2C:
 	cmp r7, #1
 	beq _021F5B36

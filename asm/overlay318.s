@@ -93,7 +93,7 @@ _0219CF04:
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #4
 	bl sub_02044F90
 	ldrh r0, [r7, #4]
@@ -318,7 +318,7 @@ _0219D0E2:
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #1
 	bl sub_02044F90
 	mov r0, #0x17
@@ -334,7 +334,7 @@ _0219D0E2:
 	str r5, [sp, #4]
 	bl sub_0204B0D4
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #5
 	mov r1, #0
 	mov r2, #1
@@ -576,7 +576,7 @@ ovy318_219d324: ; 0x0219D324
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -658,7 +658,7 @@ ovy318_219d3c4: ; 0x0219D3C4
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _0219D40C: .word 0x04000050

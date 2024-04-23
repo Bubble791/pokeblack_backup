@@ -43,7 +43,7 @@
 .public sub_0200F9AC
 .public sub_020191AC
 .public sub_0200F9AC
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0200F98C
 .public sub_0200D190
 .public sub_0204A928
@@ -82,7 +82,7 @@
 .public sub_0204A950
 .public MI_CpuFill8
 .public sub_0200F978
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020179A8
 .public sub_0200AE58
 .public sub_02017364

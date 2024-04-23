@@ -555,7 +555,7 @@ _0217D362:
 	mov r1, #0x28
 	bl sub_02042BA8
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, [r5]
 	add r0, r0, #1
 	str r0, [r5]
@@ -1105,7 +1105,7 @@ _0217D7FC:
 	mov r0, #0x28
 	lsl r1, r1, #0xa
 	add r2, r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r6, #0x7e
 	str r0, [r5, r6]
 	mov r0, #0x6b
@@ -1128,7 +1128,7 @@ ovy70_217d8e4: ; 0x0217D8E4
 	add r5, r0, #0
 	ldr r0, _0217D910 ; =0x00004288
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r4, #0
 _0217D8F2:
 	lsl r0, r4, #2
@@ -1366,7 +1366,7 @@ ovy70_217da28: ; 0x0217DA28
 	bl sub_0204BDE0
 	str r0, [r5, #0x5c]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

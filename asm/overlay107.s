@@ -111,7 +111,7 @@ ovy107_21eecf0: ; 0x021EECF0
 	add r0, r4, #0
 	mov r1, #0xa4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [sp, #4]
 	add r1, sp, #0x1c
@@ -246,7 +246,7 @@ ovy107_21eee28: ; 0x021EEE28
 	add r0, r4, #0
 	bl sub_0200BAC4
 	ldr r0, [r0, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy107_21eee28
 _021EEE60:

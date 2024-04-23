@@ -68,9 +68,9 @@
 .public sub_0201FF08
 .public sub_020173AC
 .public sub_02020788
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0203A988
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0201FF08
@@ -102,7 +102,7 @@
 .public sub_02168468
 .public sub_0201FDF8
 .public sub_0204A934
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201CCF8

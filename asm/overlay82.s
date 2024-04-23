@@ -18,7 +18,7 @@ ovy82_21ea860: ; 0x021EA860
 	mov r1, #0x80
 	mov r2, #1
 	mov r7, #0x15
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r0, #0x58
 	mov r1, #0x15
@@ -41,7 +41,7 @@ ovy82_21ea860: ; 0x021EA860
 	add r0, r4, #0
 	bl ovy82_21ead18
 	add r0, r5, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #9
 	str r0, [sp]
 	mov r0, #3
@@ -163,7 +163,7 @@ _021EA9A0:
 	add r0, r4, #0
 	bl ovy82_21eabcc
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r4, _021EA9EC ; =0x04001050
 	mov r0, #0
 	strh r0, [r4]
@@ -500,7 +500,7 @@ ovy82_21eabf0: ; 0x021EABF0
 	lsl r2, r2, #6
 	blx MI_CpuCopy8
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xa0
 	str r0, [sp]
 	add r0, r5, #0
@@ -608,7 +608,7 @@ ovy82_21ead18: ; 0x021EAD18
 	mov r2, #0xc0
 	blx MI_CpuCopy8
 	ldr r0, [sp, #0x10]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	lsl r2, r7, #6
 	mov r1, #0xd
 	ldr r7, _021EADBC ; =0x00000FFF
@@ -635,7 +635,7 @@ _021EAD86:
 	lsl r3, r3, #4
 	bl sub_0204B0D4
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

@@ -232,7 +232,7 @@ ovy32_2199a58: ; 0x02199A58
 	blx MIi_CpuCopy16
 _02199AA2:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x16
 	mov r1, #2
 	mov r2, #0
@@ -258,7 +258,7 @@ _02199AA2:
 	blx MIi_CpuCopy16
 _02199AE0:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x16
 	mov r1, #0
 	mov r2, #0
@@ -284,7 +284,7 @@ _02199AE0:
 	blx MIi_CpuCopy16
 _02199B1E:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x10
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy32_2199a58

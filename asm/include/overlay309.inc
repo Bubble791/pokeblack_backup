@@ -20,12 +20,12 @@
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public GFL_FadeScreenSet
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
 .public sub_02170B00
-.public sub_0204AB0C
-.public sub_0203A24C
+.public GFL_ArcToolFree
+.public GFL_HeapFree
 .public sub_02014AC8
 .public sub_0202E818
 .public sub_02021A18
@@ -170,7 +170,7 @@
 .public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -183,7 +183,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219EC2C
 .public sub_0219EBC4
 .public sub_0219EBC8
@@ -222,7 +222,7 @@
 .public sub_0204B124
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D820
@@ -233,7 +233,7 @@
 .public sub_0204AF50
 .public sub_02045814
 .public sub_02044F90
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
@@ -241,7 +241,7 @@
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219A2A4
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -259,7 +259,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0219EB0C
@@ -270,7 +270,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219EB0C
 .public sub_02042BA8
 .public sub_0204C108
@@ -397,10 +397,10 @@
 .public BmpWin_GetBitmap
 .public sub_0202E82C
 .public BmpWin_FlushChar
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02015018
 .public sub_02048570
 .public sub_02017934

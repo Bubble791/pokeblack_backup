@@ -13,7 +13,7 @@
 .public sub_02013B80
 .public sub_0202D7B8
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_02013B8C
@@ -25,7 +25,7 @@
 .public sub_02013BD4
 .public sub_02013C88
 .public sub_02013DC8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02013B44
 .public sub_02013CC0
 .public sub_02013BD4
@@ -35,7 +35,7 @@
 .public sub_02013CAC
 .public sub_02013DC8
 .public sub_02013DD0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02042BA8
 .public BmpWin_FlushChar
@@ -53,7 +53,7 @@
 .public sub_02021C1C
 .public BmpWin_FlushChar
 .public sub_0204B794
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203D564
@@ -94,12 +94,12 @@
 .public sub_0204C124
 .public sub_0204ABA4
 .public sub_0204C488
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_021E9710
 .public sub_021E9710
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public BmpWin_FlushChar
 .public sub_021E9710
 .public sub_02045B7C
@@ -154,8 +154,8 @@
 .public sub_0204ADA8
 .public sub_021E9710
 .public sub_0204AF50
-.public sub_0204AB0C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
+.public GFL_ArcToolFree
 .public sub_021E9710
 .public sub_0204566C
 .public sub_021E9710
@@ -269,13 +269,13 @@
 .public sub_0204BDE0
 .public sub_0204BBB8
 .public sub_0204B81C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204AA30
 .public sub_0204ABA4
 .public sub_0204C040
 .public sub_0204C488
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C124
 .public MI_CpuFill8
 .public sub_0204C040

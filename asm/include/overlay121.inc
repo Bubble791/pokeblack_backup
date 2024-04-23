@@ -47,11 +47,11 @@
 .public sub_0204AB1C
 .public sub_0204AC0C
 .public sub_0204AC58
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204AC0C
 .public sub_0204AB1C
-.public sub_0204AB0C
-.public sub_0203A24C
+.public GFL_ArcToolFree
+.public GFL_HeapFree
 .public sub_02005748
 .public sub_0208D868
 .public sub_0208D868

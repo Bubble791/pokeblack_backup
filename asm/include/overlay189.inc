@@ -14,9 +14,9 @@
 .public sub_02080108
 .public sub_020424AC
 .public sub_020424AC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0219D3CC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02042EA4
 .public MI_CpuFill8
 .public MI_CpuCopy8
@@ -28,11 +28,11 @@
 .public sub_02042ED0
 .public sub_021A9778
 .public sub_021A96CC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public MI_CpuCopy8
 .public sub_0203CB94
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0203A2A8
 .public sub_0203CB94
 .public MI_CpuFill8

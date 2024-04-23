@@ -682,7 +682,7 @@ _021EF490:
 	mov r5, #0
 	bl sub_0204AC58
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r7, #0
 	mov r1, #6
 	bl sub_0204AC0C
@@ -695,7 +695,7 @@ _021EF490:
 	lsr r0, r6, #4
 	str r0, [r4, #0x3c]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r1, r5, #0
 _021EF4C6:
 	lsl r0, r5, #1
@@ -716,7 +716,7 @@ ovy121_21ef4e0: ; 0x021EF4E0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x38]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4, #0x38]
 	pop {r4, pc}

@@ -194,7 +194,7 @@
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D824
@@ -205,7 +205,7 @@
 .public sub_0204AF50
 .public sub_0204566C
 .public sub_02045B7C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_021999C8
@@ -298,7 +298,7 @@
 .public sub_0204AA30
 .public sub_02035024
 .public sub_02035104
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public G2x_SetBlendAlpha_
 .public sub_02021A3C
 .public sub_0204C124
@@ -331,7 +331,7 @@
 .public sub_0219B1E0
 .public sub_0219B1E0
 .public sub_0219B1E0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_MsgSysLoadData
 .public sub_02018C80
 .public sub_0204898C
@@ -339,7 +339,7 @@
 .public GFL_MsgDataFree
 .public sub_0204AA30
 .public sub_0219B27C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_021A1550
 .public sub_0204C124
 .public sub_021A1550

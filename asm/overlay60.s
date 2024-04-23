@@ -66,7 +66,7 @@ ovy60_21e58c0: ; 0x021E58C0
 	mov r0, #4
 	add r1, r5, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	ldr r0, [sp, #0x30]
 	str r4, [r0]
@@ -531,7 +531,7 @@ _021E5D08:
 	b _021E5CE8
 _021E5D24:
 	ldr r0, [r5]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _021E5D2E:
@@ -3143,7 +3143,7 @@ ovy60_21e71c8: ; 0x021E71C8
 	mov r3, #0
 	bl sub_0204AFB0
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r0, [r5, #4]
 	mov r1, #0xe4
 	mov r2, #9
@@ -3252,7 +3252,7 @@ ovy60_21e7294: ; 0x021E7294
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -3350,9 +3350,9 @@ ovy60_21e737c: ; 0x021E737C
 	ldr r1, [sp, #8]
 	bl sub_0204BA40
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	sub r4, #0x1e
 	ldr r0, [r5, r4]
 	mov r1, #1
@@ -3389,7 +3389,7 @@ ovy60_21e7404: ; 0x021E7404
 	add r3, #2
 	bl ovy60_21e8720
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #4
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -3702,7 +3702,7 @@ ovy60_21e766c: ; 0x021E766C
 	bl sub_0204BCD0
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	sub r4, #0x3c
 	ldr r0, [r5, r4]
 	bl sub_0204BF98

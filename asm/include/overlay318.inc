@@ -13,7 +13,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_0204E060
 .public sub_02042BA8
@@ -38,11 +38,11 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_0204AA30
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02024D00
 .public MI_CpuFill8
@@ -80,7 +80,7 @@
 .public sub_0202E8D8
 .public sub_0202E68C
 .public sub_020223CC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -93,7 +93,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219D540
 .public sub_0219D4D8
 .public sub_0219D4DC

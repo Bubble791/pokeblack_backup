@@ -1,9 +1,9 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_02016B20
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204AA30
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02034168
 .public sub_020344B8
 .public sub_0202BDF4
@@ -15,7 +15,7 @@
 .public sub_0202BDF4
 .public sub_02034264
 .public sub_021EADC0
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0203E860
 .public sub_02016B20
 .public sub_0202BDF4
@@ -51,7 +51,7 @@
 .public sub_02045814
 .public sub_0204B32C
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204B0D4
 .public sub_0204B0B8
 .public sub_02044C98
@@ -70,9 +70,9 @@
 .public sub_02045814
 .public sub_0204B32C
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public sub_02048210
 .public sub_0204BBB8

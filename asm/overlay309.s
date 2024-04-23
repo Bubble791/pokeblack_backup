@@ -205,7 +205,7 @@ ovy309_219d028: ; 0x0219D028
 	mov r0, #0x8b
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r4, #0
 	add r7, r4, #0
 _0219D042:
@@ -238,11 +238,11 @@ _0219D058:
 	add r0, r4, #0
 	add r0, #0x24
 	ldr r0, [r5, r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
 	add r0, #0x28
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	add r0, #0x48
 	ldr r0, [r5, r0]
@@ -3499,7 +3499,7 @@ ovy309_219e9dc: ; 0x0219E9DC
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -3588,7 +3588,7 @@ ovy309_219ea84: ; 0x0219EA84
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _0219EAD4: .word 0x04000050
@@ -4028,7 +4028,7 @@ _0219EDE4:
 	blt _0219EDC2
 _0219EDEC:
 	ldr r0, [sp, #0x10]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -4110,7 +4110,7 @@ _0219EE84:
 	lsr r0, r0, #0x18
 	bl sub_02044F90
 	ldr r0, [sp, #0x10]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy309_219ee08
@@ -4179,7 +4179,7 @@ _0219EEFE:
 	add r3, r5, #0
 	bl sub_0204B0D4
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -4457,7 +4457,7 @@ ovy309_219f0d0: ; 0x0219F0D0
 	add r1, r5, r1
 	str r0, [r1, #4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -4515,7 +4515,7 @@ ovy309_219f154: ; 0x0219F154
 	bl sub_0204BDE0
 	str r0, [r5, #0x18]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -5766,7 +5766,7 @@ ovy309_219fbc0: ; 0x0219FBC0
 	mov r1, #0x1c
 	mov r2, #1
 	add r6, r0, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	mov r5, #0
 	mov r7, #8
@@ -5805,7 +5805,7 @@ _0219FC00:
 	blt _0219FC00
 	add r0, r6, #0
 	str r7, [r6]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy309_219fbf8
 

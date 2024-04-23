@@ -972,7 +972,7 @@ ovy91_21ef3e4: ; 0x021EF3E4
 	lsr r0, r0, #0x10
 	mov r1, #0x30
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [sp, #4]
 	str r4, [r0, #0x2c]
 	add r0, r5, #0
@@ -1131,7 +1131,7 @@ _021EF560:
 	cmp r5, #1
 	blo _021EF560
 	ldr r0, [sp, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp]
 	bl GFL_TCBRemove
 _021EF586:

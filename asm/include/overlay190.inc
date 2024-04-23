@@ -131,7 +131,7 @@
 .public sub_02044B84
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02046D38
 .public sub_02046DC0
 .public sub_02046DF8
@@ -149,7 +149,7 @@
 .public sub_02044B84
 .public sub_02044C98
 .public sub_02044528
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02044F90
@@ -226,12 +226,12 @@
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202780C
 .public DC_FlushRange
 .public GFL_VBlankTCBAdd
 .public G2x_SetBlendAlpha_
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GX_LoadBGPltt
 .public GXS_LoadBGPltt
 .public sub_02044CFC
@@ -249,7 +249,7 @@
 .public sub_0204B81C
 .public sub_0204BBB8
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C124
@@ -278,7 +278,7 @@
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02048080
 .public sub_020232D0
 .public GFL_TCBExMgrCreate
@@ -309,7 +309,7 @@
 .public sub_02048210
 .public sub_02048210
 .public sub_020480A8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap

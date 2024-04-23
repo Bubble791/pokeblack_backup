@@ -265,7 +265,7 @@ ovy272_21f8140: ; 0x021F8140
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -305,7 +305,7 @@ ovy272_21f8188: ; 0x021F8188
 	bl sub_021F813C
 _021F819E:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy272_21f8188
@@ -378,7 +378,7 @@ _021F8230:
 	ldr r0, _021F8260 ; =0x000017E4
 	str r1, [r4, r0]
 	ldr r0, [r5, #0x34]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	bl sub_020185B4
 	add r0, r5, #0

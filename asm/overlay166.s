@@ -499,7 +499,7 @@ _0219D274:
 	mov r1, #0x14
 	mov r2, #0
 	mov r6, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r3, r0, #0
 	ldr r0, [r5]
 	ldr r1, _0219D318 ; =0x0000011C
@@ -532,7 +532,7 @@ _0219D2CE:
 	cmp r0, #1
 	beq _0219D2E6
 	ldr r0, [r4, #0x34]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4, #0x34]
 	ldrh r0, [r4, #0x3a]
@@ -894,7 +894,7 @@ ovy166_219d58c: ; 0x0219D58C
 	ldr r1, [r4, #4]
 	add r1, r2, r1
 	ldrb r4, [r1, #0x16]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	pop {r4, pc}
 	thumb_func_end ovy166_219d58c

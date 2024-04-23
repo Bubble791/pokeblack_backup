@@ -19,7 +19,7 @@ ovy182_21a4920: ; 0x021A4920
 	lsl r1, r1, #0x12
 	mov r2, #1
 	mov r6, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	bl OS_IsRunOnTwl
 	cmp r0, #0
@@ -30,7 +30,7 @@ ovy182_21a4920: ; 0x021A4920
 	bl ovy182_21adbc0
 _021A4954:
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	blx OS_RestoreInterrupts
 	ldr r1, _021A4970 ; =0x04000208

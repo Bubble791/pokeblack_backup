@@ -152,7 +152,7 @@
 .public sub_021670BC
 .public sub_0200E7F0
 .public sub_0200E82C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02019048
 .public sub_02017298
 .public sub_020191D8
@@ -199,8 +199,8 @@
 .public sub_0200C28C
 .public sub_0201735C
 .public sub_0201F268
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0217BD34
 .public sub_021E6F60
 .public sub_0217BDC0
@@ -333,7 +333,7 @@
 .public ovy12_2166880
 .public sub_021670A0
 .public sub_02167034
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0200E418
 .public ovy12_2166880
 .public sub_021670A0

@@ -641,7 +641,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02187C1C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02155184
 .public sub_0215516C
 .public sub_02155174
@@ -652,7 +652,7 @@
 .public sub_02153F04
 .public ovy12_2154910
 .public ovy12_21548e8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02015A88
 .public sub_02155184
 .public sub_0215516C
@@ -699,7 +699,7 @@
 .public sub_02016AD8
 .public sub_02016AF0
 .public sub_02155184
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021F10E8
 .public sub_021F10E8
 .public sub_021F10E8
@@ -710,7 +710,7 @@
 .public sub_020196D0
 .public ovy12_2153880
 .public GFL_StrBufFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02181048
 .public sub_021F0E74
 .public sub_02181048

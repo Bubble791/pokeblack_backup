@@ -238,7 +238,7 @@ _0214F6A8:
 	mov r1, #0x14
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r3, r0, #0
 	mov r0, #0xd3
 	lsl r0, r0, #2
@@ -273,7 +273,7 @@ _0214F6EE:
 	mov r6, #0xd6
 	lsl r6, r6, #2
 	ldr r0, [r5, r6]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	bl sub_02042788
 	cmp r0, #0
 	bne _0214F712
@@ -304,14 +304,14 @@ _0214F734:
 	add r0, r7, #0
 	add r0, #0x1c
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r7, #0x20
 	ldr r0, [r5, r7]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0xeb
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r5]
 	ldr r1, _0214F79C ; =0x0000FFFF
 	bl sub_02005DF4
@@ -399,7 +399,7 @@ _0214F7C2:
 	ldr r3, _0214F8A8 ; =sub_0214F8E0
 	mov r0, #4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r1, r6, #0
 	add r1, #0x1c
 	str r0, [r5, r1]
@@ -411,7 +411,7 @@ _0214F7C2:
 	ldr r3, _0214F8A8 ; =sub_0214F8E0
 	mov r0, #4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r1, r6, #0
 	add r1, #0x20
 	str r0, [r5, r1]

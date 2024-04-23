@@ -888,7 +888,7 @@ ovy273_21e999c: ; 0x021E999C
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	ldrh r1, [r6]
 	ldr r0, [sp, #4]
@@ -917,7 +917,7 @@ _021E99DA:
 	blt _021E99DA
 _021E9A00:
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -1707,7 +1707,7 @@ ovy273_21e9f70: ; 0x021E9F70
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	ldr r0, [sp, #4]
 	mov r1, #6
@@ -1736,7 +1736,7 @@ _021E9FAE:
 	blt _021E9FAE
 _021E9FD4:
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

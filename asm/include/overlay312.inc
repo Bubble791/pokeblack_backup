@@ -30,7 +30,7 @@
 .public sub_0203DAC8
 .public GFL_MsgSysLoadData
 .public sub_0204AA30
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_FadeScreenSet
 .public sub_02044C98
 .public sub_02044C98
@@ -113,13 +113,13 @@
 .public sub_0204AA30
 .public sub_0204B610
 .public sub_0208D868
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0202B45C
 .public sub_0202B4F8
 .public sub_0204B610
 .public sub_0202B4E0
-.public sub_0203A24C
-.public sub_0204AB0C
+.public GFL_HeapFree
+.public GFL_ArcToolFree
 .public sub_02009BA4
 .public sub_0203DA0C
 .public BmpWin_CreateDynamic

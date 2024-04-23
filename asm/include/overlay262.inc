@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -13,7 +13,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021C2788
 .public sub_021C2720
 .public sub_021C2724
@@ -38,7 +38,7 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0204AA30
 .public sub_0204B0D4
@@ -54,8 +54,8 @@
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
-.public sub_0204AB0C
+.public GFL_HeapFree
+.public GFL_ArcToolFree
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_02045118
@@ -72,7 +72,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_02045264
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204AA30
 .public sub_0204AF50
 .public sub_0204AF50
@@ -81,7 +81,7 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0205FA10
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
@@ -109,7 +109,7 @@
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public G2x_SetBlendAlpha_
 .public sub_021C4E14
@@ -118,8 +118,8 @@
 .public sub_0204566C
 .public sub_02044F90
 .public G2x_SetBlendAlpha_
-.public sub_0203A24C
-.public sub_0203A1FC
+.public GFL_HeapFree
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public G2x_SetBlendAlpha_
 .public sub_0204566C
@@ -128,7 +128,7 @@
 .public sub_02044F90
 .public sub_0204C140
 .public sub_021C4578
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02044E60
@@ -150,7 +150,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public G2x_SetBlendAlpha_
 .public sub_0204566C
@@ -159,7 +159,7 @@
 .public sub_02044F90
 .public sub_0204C140
 .public sub_021C4578
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02044E60
@@ -295,7 +295,7 @@
 .public sub_0200B934
 .public sub_02020F94
 .public sub_0204B81C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D890
@@ -305,7 +305,7 @@
 .public sub_0202D898
 .public sub_0202D89C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0200B934
 .public sub_0200B934
@@ -327,7 +327,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C378
@@ -347,7 +347,7 @@
 .public sub_021C2A98
 .public sub_0204C040
 .public sub_0204C108
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02034168
 .public sub_020344C4
@@ -370,7 +370,7 @@
 .public sub_02034264
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204C178
 .public sub_0204C178
 .public GFL_SndSEPlay
@@ -424,7 +424,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
 .public sub_0204C378
@@ -439,7 +439,7 @@
 .public sub_021C2A98
 .public sub_0204C040
 .public sub_0204C108
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public sub_021C2A98
@@ -454,12 +454,12 @@
 .public sub_0204C520
 .public sub_0204C108
 .public sub_0204C108
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_SndSEPlay
 .public sub_02006268
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0200C28C
 .public sub_0204AF18
@@ -476,7 +476,7 @@
 .public sub_02020F40
 .public sub_0204B81C
 .public sub_0201FDF8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D890
@@ -486,7 +486,7 @@
 .public sub_0204BDE0
 .public sub_0202D894
 .public sub_0204B81C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0201FDF8
 .public sub_0201FF08
@@ -533,7 +533,7 @@
 .public sub_0204C140
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public G2x_SetBlendAlpha_
 .public sub_020484B4
 .public sub_02048210
@@ -544,7 +544,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02044E60
 .public sub_0204C178
 .public sub_0208D868
@@ -563,7 +563,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02021998
 .public GFL_StrBufCreate
@@ -584,7 +584,7 @@
 .public sub_02048210
 .public GFL_StrBufFree
 .public sub_02021A18
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -625,7 +625,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public BmpWin_CreateDynamic
 .public sub_02024E80
@@ -643,12 +643,12 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02048210
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
 .public sub_020258A4
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021C5C74
 .public sub_02017934

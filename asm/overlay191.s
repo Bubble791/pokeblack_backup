@@ -680,7 +680,7 @@ ovy191_21b5930: ; 0x021B5930
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021B5946
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4, r5]
 _021B5946:
@@ -3110,7 +3110,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	add r2, r4, #0
 	blx MI_CpuCopy8
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x10]
@@ -3217,7 +3217,7 @@ _021B6C6A:
 	mov r1, #0
 	strb r1, [r0, r4]
 	ldr r0, [sp, #0x2c]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #1
 	mov r1, #0x20
 	mov r2, #0
@@ -3646,7 +3646,7 @@ ovy191_21b6fe0: ; 0x021B6FE0
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -3720,7 +3720,7 @@ ovy191_21b7070: ; 0x021B7070
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021B70B0: .word 0x04000050

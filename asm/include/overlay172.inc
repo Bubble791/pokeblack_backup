@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0203CE0C
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
@@ -8,13 +8,13 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203CDC8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public GFL_FontCreate
 .public GFL_FontCreate
 .public sub_02199904
 .public sub_021DEC88
 .public sub_021DEE04
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021998FC
 .public sub_021E00B8
 .public sub_021EA2A8
@@ -31,8 +31,8 @@
 .public sub_021EA4C0
 .public sub_02022DA8
 .public sub_02022DA8
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_020444A4
 .public sub_02048080
 .public sub_020232D0
@@ -98,7 +98,7 @@
 .public GXx_GetMasterBrightness_
 .public sub_0204E060
 .public sub_0204E060
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204476C
 .public GFL_MsgSysLoadData
 .public sub_02008A14
@@ -121,7 +121,7 @@
 .public sub_02044B84
 .public GFL_MsgDataFree
 .public sub_02048210
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204898C
 .public sub_02199900
 .public sub_02024464

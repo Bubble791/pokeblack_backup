@@ -17,7 +17,7 @@ ovy131_21eec80: ; 0x021EEC80
 	ldr r3, _021EED10 ; =0x021EF340
 	mov r1, #0x84
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02180498
@@ -78,7 +78,7 @@ ovy131_21eed18: ; 0x021EED18
 	ldr r0, [r0]
 	bl GFL_TCBRemove
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy131_21eed18
 _021EED2C:

@@ -22,7 +22,7 @@ ovy135_21eec80: ; 0x021EEC80
 	lsr r0, r0, #0x10
 	mov r1, #0x24
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	str r5, [r4]
 	mov r0, #0x4a
@@ -32,7 +32,7 @@ ovy135_21eec80: ; 0x021EEC80
 	ldr r3, _021EECF8 ; =0x021EFC20
 	lsr r0, r0, #0x10
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #0x1c]
 	mov r0, #0x4b
 	str r0, [sp]
@@ -41,7 +41,7 @@ ovy135_21eec80: ; 0x021EEC80
 	ldr r3, _021EECF8 ; =0x021EFC20
 	lsr r0, r0, #0x10
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #0x20]
 	add r0, r4, #0
 	add r1, r7, #0
@@ -73,11 +73,11 @@ ovy135_21eed08: ; 0x021EED08
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x1c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x20]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy135_21eed08
 
@@ -1187,7 +1187,7 @@ _021EF4E8:
 	mov r1, #0x80
 	mov r2, #0
 	mov r5, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	add r6, sp, #0x2c
 _021EF50C:
@@ -1207,7 +1207,7 @@ _021EF50C:
 	mov r2, #0x80
 	blx MIi_CpuCopy32
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x6c
 	pop {r4, r5, r6, r7, pc}
 	nop

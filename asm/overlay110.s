@@ -164,7 +164,7 @@ ovy110_21eed74: ; 0x021EED74
 	ldr r0, [sp, #0xc]
 	str r0, [r5, #8]
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0x80
 	mov r1, #2
 	add r2, r7, #0
@@ -189,7 +189,7 @@ ovy110_21eed74: ; 0x021EED74
 	bl sub_021BEC1C
 	add r0, r6, #0
 	str r7, [r5, #0xc]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r1, r4, #0
 _021EEE1C:
 	lsl r0, r4, #2
@@ -228,7 +228,7 @@ _021EEE48:
 	str r1, [r2, #0x18]
 	ldr r1, [r0, #4]
 	str r1, [r2, #0x20]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021EEE48

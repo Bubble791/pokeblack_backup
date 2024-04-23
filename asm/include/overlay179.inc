@@ -59,7 +59,7 @@
 .public sub_0204AF50
 .public sub_02045118
 .public sub_0204AE3C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044668
 .public sub_02045264
 .public sub_02044B84
@@ -75,7 +75,7 @@
 .public sub_0204BBA0
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0204C040
 .public MI_CpuFill8
@@ -230,11 +230,11 @@
 .public sub_0204AA30
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public MI_CpuCopy8
 .public sub_0205FA10
 .public GFL_SndSEPlay

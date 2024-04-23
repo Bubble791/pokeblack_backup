@@ -19,7 +19,7 @@ ovy331_21bea20: ; 0x021BEA20
 	mov r2, #1
 	add r3, r5, #0
 	add r4, r0, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r7, r0, #0
 	mov r0, #0x7b
 	str r0, [sp]
@@ -30,7 +30,7 @@ ovy331_21bea20: ; 0x021BEA20
 	mov r2, #1
 	add r3, r5, #0
 	str r7, [sp, #0x28]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [sp, #0x2c]
 	add r0, r7, r4
 	mov r3, #0
@@ -235,7 +235,7 @@ _021BEBB8:
 	blx MI_CpuCopy8
 _021BEBCA:
 	ldr r0, [sp, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r1, #0
 	ldr r0, [sp, #0xc]
 	mvn r1, r1
@@ -498,7 +498,7 @@ ovy331_21bede0: ; 0x021BEDE0
 	add r1, r6, #0
 	mov r2, #0
 	mov r5, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	sub r0, r5, #1
 	add r1, r4, #0
@@ -510,7 +510,7 @@ ovy331_21bede0: ; 0x021BEDE0
 	add r2, r6, #0
 	bl sub_0203BEE8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -531,7 +531,7 @@ ovy331_21bee24: ; 0x021BEE24
 	add r1, r6, #0
 	mov r2, #0
 	mov r5, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	sub r0, r5, #1
 	add r1, r4, #0
@@ -542,7 +542,7 @@ ovy331_21bee24: ; 0x021BEE24
 	add r2, r6, #0
 	bl sub_0203BEE8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	nop

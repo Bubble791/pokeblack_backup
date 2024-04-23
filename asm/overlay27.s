@@ -965,7 +965,7 @@ ovy27_2170ac4: ; 0x02170AC4
 	mov r2, #1
 	add r6, r0, #0
 	str r5, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, #0xdb
 	add r4, r0, #0
 	add r0, r5, #0
@@ -992,9 +992,9 @@ ovy27_2170b00: ; 0x02170B00
 	ldr r0, [r4, #4]
 	bl GFL_MsgDataFree
 	ldr r0, [r4]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy27_2170b00
 _02170B18:
@@ -1035,7 +1035,7 @@ ovy27_2170b50: ; 0x02170B50
 	ldr r1, _02170B84 ; =0x00000974
 	ldr r3, _02170B88 ; =0x021711E0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	mov r4, #0
 	mov r7, #0x2c

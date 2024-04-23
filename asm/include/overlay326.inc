@@ -26,8 +26,8 @@
 .public sub_0204A934
 .public sub_0204A934
 .public sub_0219D128
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0219B294
 .public sub_02021A3C
 .public BmpWin_GetBitmap
@@ -37,7 +37,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219E344
 .public MI_CpuFill8
 .public sub_0219D27C
@@ -52,7 +52,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0219E344
@@ -63,12 +63,12 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02034060
 .public sub_02034074
 .public sub_020340A4
 .public sub_020340C8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219E344
 .public sub_02042BA8
 .public sub_0204C108
@@ -102,7 +102,7 @@
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219A2A4
 .public sub_02048210
 .public sub_0204898C
@@ -142,7 +142,7 @@
 .public sub_0219AF1C
 .public sub_0219B1E0
 .public sub_0219B27C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219B1B4
 .public sub_0219B294
 .public sub_0219CCB0
@@ -185,7 +185,7 @@
 .public sub_0219CC58
 .public GCTX_HIDGetPressedKeys
 .public sub_0219CC58
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -198,7 +198,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219E464
 .public sub_0219E3FC
 .public sub_0219E400
@@ -255,9 +255,9 @@
 .public sub_0202E678
 .public sub_0202E7A4
 .public sub_021A0A84
-.public sub_0203A24C
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -362,11 +362,11 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
@@ -375,7 +375,7 @@
 .public sub_0204B0D4
 .public sub_0204B0D4
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219A2A4
 .public sub_02048210
 .public GFL_StrBufFree
@@ -406,7 +406,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_021A2C0C
@@ -417,7 +417,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_021A2C0C
 .public sub_02042BA8
 .public sub_0204C108
@@ -497,7 +497,7 @@
 .public sub_0219B1E0
 .public sub_0219B1E0
 .public sub_0219B27C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219B1B4
 .public sub_0219B2E0
 .public sub_0219B138
@@ -524,7 +524,7 @@
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0205FA10
 .public sub_0204C178
 .public sub_0219C324
@@ -583,9 +583,9 @@
 .public sub_0203D564
 .public sub_0204B354
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0205FA10
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MIi_CpuClear32
 .public sub_02016AD8
 .public sub_02017934
@@ -593,7 +593,7 @@
 .public sub_02007678
 .public MIi_CpuCopy32
 .public sub_02007534
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02048658
 .public sub_02048658
 .public sub_02048658
@@ -615,9 +615,9 @@
 .public sub_0200D190
 .public sub_0200D660
 .public sub_0204405C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MIi_CpuCopy32
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -630,7 +630,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021A2D2C
 .public sub_021A2CC4
 .public sub_021A2CC8

@@ -152,7 +152,7 @@
 .public sub_021A8384
 .public MI_CpuFill8
 .public sub_0204B354
-.public sub_0203A24C
+.public GFL_HeapFree
 .public MI_CpuFill8
 .public sub_0219E044
 .public sub_0205FA10
@@ -339,7 +339,7 @@
 .public sub_020340A4
 .public sub_02034074
 .public sub_020340C8
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C108
 .public sub_0204B98C
@@ -351,7 +351,7 @@
 .public sub_02199B5C
 .public sub_0204AA30
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_020232D8
 .public sub_02009F80
 .public sub_020232E8
@@ -456,7 +456,7 @@
 .public sub_02021154
 .public sub_02021190
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -560,9 +560,9 @@
 .public sub_0200C260
 .public sub_0200C340
 .public sub_0200C28C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201F424
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0201F734
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
@@ -691,7 +691,7 @@
 .public GFL_VBlankTCBAdd
 .public sub_021A1F50
 .public sub_02046CFC
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_TCBRemove
 .public sub_0219CFAC
 .public sub_021A5424
@@ -742,8 +742,8 @@
 .public sub_0204AE3C
 .public sub_0204B2DC
 .public sub_0204B32C
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02044668
 .public sub_02044668
 .public sub_021A1E88
@@ -817,7 +817,7 @@
 .public sub_021A5424
 .public sub_02045708
 .public sub_0204AA30
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02048210
 .public sub_02025A10
 .public sub_02024FAC
@@ -888,7 +888,7 @@
 .public sub_02008BF0
 .public sub_0200A170
 .public sub_021A5424
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_FadeScreenSet
 .public sub_02042E94
 .public sub_02042E9C
@@ -1302,8 +1302,8 @@
 .public sub_02048210
 .public sub_02048210
 .public sub_02048210
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_02045708
 .public sub_02009F80
 .public sub_0204826C
@@ -1374,7 +1374,7 @@
 .public sub_02042788
 .public sub_0219E0D8
 .public sub_0200B524
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02042788
 .public sub_02151CB8
 .public sub_0203AB10

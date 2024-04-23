@@ -16,10 +16,10 @@
 .public sub_0203CB80
 .public sub_0203A980
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021F813C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02017C60
 .public sub_02018540
 .public sub_0200C1F0
@@ -33,7 +33,7 @@
 .public sub_02005E54
 .public sub_02005E68
 .public sub_0202ECDC
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020185B4
 .public sub_02017C84
 .public sub_021F813C

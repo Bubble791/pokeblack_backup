@@ -443,7 +443,7 @@ ovy297_21f4580: ; 0x021F4580
 	lsr r3, r3, #0x10
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #1
 	bl sub_02044F90
 	add sp, #0xc
@@ -496,7 +496,7 @@ ovy297_21f4638: ; 0x021F4638
 	mov r1, #0x10
 	mov r2, #0
 	mov r7, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	mov r1, #0
 	mov r2, #0x10
 	add r4, r0, #0
@@ -578,7 +578,7 @@ ovy297_21f46d8: ; 0x021F46D8
 	mov r2, #0x10
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
 	nop
 _021F4720: .word 0x04000050
@@ -798,7 +798,7 @@ ovy297_21f487c: ; 0x021F487C
 	mov r2, #0
 	add r7, r0, #0
 	str r6, [sp]
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	mov r1, #0
 	mov r2, #0x60
@@ -992,7 +992,7 @@ ovy297_21f4a1c: ; 0x021F4A1C
 	ldr r0, [r4, #0x38]
 	bl sub_02048210
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy297_21f4a1c

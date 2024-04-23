@@ -30,7 +30,7 @@
 .public sub_0219E45C
 .public sub_0203D554
 .public G2x_SetBlendAlpha_
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219E450
 .public sub_0219E450
 .public GFL_SndSEPlay
@@ -45,7 +45,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D820
@@ -56,7 +56,7 @@
 .public sub_0204AF50
 .public sub_02045814
 .public sub_02044F90
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219EAE8
 .public MI_CpuFill8
 .public sub_0219D590
@@ -71,7 +71,7 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0219EAE8
@@ -82,12 +82,12 @@
 .public sub_0204BBB8
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219EAE8
 .public sub_02042BA8
 .public sub_0204AA30
 .public sub_0204BC48
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0202AE5C
 .public sub_0204C108
 .public sub_0204C108
@@ -131,7 +131,7 @@
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0219A2A4
 .public sub_02048210
 .public BmpWin_GetBitmap
@@ -209,7 +209,7 @@
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0205FA10
 .public sub_0204898C
 .public sub_0204898C
@@ -263,7 +263,7 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044BD8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -276,7 +276,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219EC08
 .public sub_0219EBA0
 .public sub_0219EBA4

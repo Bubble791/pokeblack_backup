@@ -14,7 +14,7 @@ ovy86_21ea860: ; 0x021EA860
 	ldr r3, _021EA880 ; =0x021EB760
 	mov r1, #8
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r4, [r0]
 	mov r1, #0
 	strh r1, [r0, #4]
@@ -26,10 +26,10 @@ _021EA880: .word 0x021EB760
 
 	thumb_func_start sub_021EA884
 sub_021EA884: ; 0x021EA884
-	ldr r3, _021EA888 ; =sub_0203A24C
+	ldr r3, _021EA888 ; =GFL_HeapFree
 	bx r3
 	.align 2, 0
-_021EA888: .word sub_0203A24C
+_021EA888: .word GFL_HeapFree
 	thumb_func_end sub_021EA884
 
 	thumb_func_start ovy86_21ea88c
@@ -186,7 +186,7 @@ ovy86_21ea990: ; 0x021EA990
 	mov r1, #0xcc
 	mov r2, #1
 	add r5, r0, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	strh r5, [r4]
 	strh r6, [r4, #2]
@@ -312,7 +312,7 @@ ovy86_21eaaa0: ; 0x021EAAA0
 	ldr r0, [r0]
 	bl GFL_TCBRemove
 	ldr r0, [r4, #0x60]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl ovy86_21eb380
 	add r0, r4, #0
@@ -322,7 +322,7 @@ ovy86_21eaaa0: ; 0x021EAAA0
 	add r0, r4, #0
 	bl ovy86_21eb028
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	nop
 _021EAAEC: .word 0x04001050
@@ -1077,7 +1077,7 @@ ovy86_21eb050: ; 0x021EB050
 	str r5, [sp, #0xc]
 	bl sub_0204AFB0
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r0, #0x18
 	str r0, [sp]
 	mov r0, #1
@@ -1198,7 +1198,7 @@ _021EB15A:
 	cmp r4, #4
 	blo _021EB10A
 	ldr r0, [sp, #0xc]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r7, sp, #0x10
 	mov r0, #0x50
 	add r4, sp, #0x10
@@ -1354,7 +1354,7 @@ _021EB298:
 	mov r0, #4
 	bl sub_02045B7C
 	ldr r0, [sp, #0x1c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	bl sub_0202D810
 	str r4, [sp]
 	str r6, [sp, #4]
@@ -1412,7 +1412,7 @@ _021EB298:
 	mov r1, #0
 	bl sub_0204C488
 	ldr r0, [sp, #0x18]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	str r4, [r5, #0x28]
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
@@ -1545,7 +1545,7 @@ ovy86_21eb464: ; 0x021EB464
 	str r0, [sp]
 	ldrh r0, [r5]
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r1, r0, #0
 	add r0, r5, #0
 	add r0, #0xb0
@@ -1625,7 +1625,7 @@ ovy86_21eb4fc: ; 0x021EB4FC
 	bl sub_0203A610
 	add r4, #0xb0
 	ldr r0, [r4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	thumb_func_end ovy86_21eb4fc
 

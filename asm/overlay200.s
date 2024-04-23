@@ -406,7 +406,7 @@ ovy200_21b3288: ; 0x021B3288
 	mov r3, #0
 	bl sub_0204AF50
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, [r5, #4]
 	ldr r0, [r0]
 	bl sub_02008BF0
@@ -457,7 +457,7 @@ ovy200_21b3288: ; 0x021B3288
 	bl sub_0204BDE0
 	str r0, [r5, #0x58]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r1, #0x20
 	add r0, sp, #0xc
 	strh r1, [r0]
@@ -939,7 +939,7 @@ ovy200_21b3760: ; 0x021B3760
 	mov r1, #8
 	add r2, r7, #0
 	mov r6, #8
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	mov r0, #0x8a
 	bl sub_02008B0C
@@ -980,9 +980,9 @@ ovy200_21b37d0: ; 0x021B37D0
 	bne _021B37F0
 	ldr r0, [r4, #4]
 	ldr r0, [r0]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 _021B37F0:
 	add r0, r6, #0
 	bl sub_0203AB10

@@ -578,7 +578,7 @@ _0219B0E6:
 	ldr r1, [sp, #0xc]
 	str r0, [r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, _0219B21C ; =0x0219B26D
 	ldr r1, [sp, #0xc]
 	add r2, r5, #0
@@ -685,7 +685,7 @@ ovy176_219b274: ; 0x0219B274
 	bl sub_0204BDE0
 	str r0, [r5, #0xc]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, sp, #0xc
 	mov r1, #0
 	mov r2, #8

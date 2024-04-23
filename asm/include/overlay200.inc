@@ -61,7 +61,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02008BF0
 .public sub_0204AA30
 .public sub_0204BBB8
@@ -69,7 +69,7 @@
 .public sub_0204BDE0
 .public sub_0204B81C
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C124
 .public sub_0204C520
@@ -145,12 +145,12 @@
 .public sub_0204C124
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02008B0C
 .public sub_0203DF20
 .public sub_02008BEC
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_020120C8

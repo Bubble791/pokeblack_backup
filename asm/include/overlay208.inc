@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public GFL_VBlankTCBAdd
 .public GFL_FadeScreenSet
 .public sub_0208D868
@@ -37,7 +37,7 @@
 .public sub_02044B84
 .public sub_020480A8
 .public sub_02044528
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_SndSEPlay
 .public GFL_FadeScreenIsFinished
 .public GFL_FadeScreenIsFinished
@@ -174,7 +174,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_02044F90
 .public sub_02044F90
@@ -783,11 +783,11 @@
 .public sub_0204C56C
 .public sub_0204C124
 .public sub_0204C140
-.public sub_0203A1FC
-.public sub_0203A1FC
+.public GFL_HeapAllocate
+.public GFL_HeapAllocate
 .public sub_021BB6C4
 .public sub_021BB7E8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021BB81C
 .public sub_021BB9AC
 .public sub_021BB9A4

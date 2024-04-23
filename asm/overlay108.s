@@ -197,7 +197,7 @@ ovy108_21eee04: ; 0x021EEE04
 	ldrh r0, [r5, #0xc]
 	mov r1, #4
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r5, #0x24]
 	mov r0, #0xd
 	str r0, [sp, #4]
@@ -252,7 +252,7 @@ ovy108_21eee80: ; 0x021EEE80
 	ldr r3, _021EEEA0 ; =0x021EF080
 	mov r1, #0xc
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4, #0x24]
 	add sp, #4
 	pop {r3, r4, pc}

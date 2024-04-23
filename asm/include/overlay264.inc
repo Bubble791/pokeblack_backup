@@ -9,10 +9,10 @@
 .public sub_02050610
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public GX_LoadBG2Scr
 .public GX_LoadBG3Scr
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02046CFC
 .public sub_02046CFC
 .public GFL_VBlankTCBAdd
@@ -22,7 +22,7 @@
 .public GFL_FadeScreenSet
 .public sub_0204B37C
 .public MIi_CpuCopy32
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GCTX_HIDGetPressedKeys
 .public sub_02005FA8
 .public sub_02005EA0
@@ -36,7 +36,7 @@
 .public sub_02005EC0
 .public sub_02005D8C
 .public sub_02199A28
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02199A08
 .public sub_021999E0
 .public GFL_FadeScreenIsFinished
@@ -54,7 +54,7 @@
 .public DC_FlushRange
 .public GX_LoadBG2Scr
 .public GX_LoadBG3Scr
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_02044C98

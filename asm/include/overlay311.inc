@@ -25,10 +25,10 @@
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_02045080
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02045080
-.public sub_0203A24C
-.public sub_0204AB0C
+.public GFL_HeapFree
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_02199AA0
 .public sub_02199CB8
@@ -41,7 +41,7 @@
 .public sub_02029818
 .public sub_020298BC
 .public sub_02029818
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204B0B8
 .public sub_02024D00
 .public GFL_WordSetSystemCreateDefault
@@ -73,7 +73,7 @@
 .public sub_02022DA8
 .public GFL_TCBExMgrFree
 .public GFL_WordSetSystemFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02021A3C
 .public sub_0203A7F4
 .public GFL_MsgDataLoadStrbuf
@@ -118,7 +118,7 @@
 .public sub_0219B1E0
 .public sub_0219B1E0
 .public sub_0219B27C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public GFL_MsgSysLoadData
 .public sub_0219B1B4
 .public sub_0204898C
@@ -179,7 +179,7 @@
 .public sub_0204B81C
 .public sub_0204BBA0
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -218,7 +218,7 @@
 .public G3X_SetClearColor
 .public sub_02049100
 .public sub_02049214
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
 .public sub_02046C40
@@ -231,7 +231,7 @@
 .public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0219E364
 .public sub_0219E2FC
 .public sub_0219E300

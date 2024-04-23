@@ -380,7 +380,7 @@ ovy265_2199b24: ; 0x02199B24
 	str r5, [sp, #8]
 	bl sub_0204AF50
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy265_2199b24
@@ -2864,7 +2864,7 @@ _0219AE34:
 	add r0, r6, #0
 	bl sub_0201CCC0
 	ldr r0, [sp, #8]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _0219AF0C ; =0x0219B938
 	add r0, r5, #0
 	bl ovy265_219ad68
@@ -2908,9 +2908,9 @@ ovy265_219af14: ; 0x0219AF14
 	mov r2, #1
 	bl sub_0204BD10
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0219AF50: .word 0x0000808D
@@ -3534,7 +3534,7 @@ ovy265_219b43c: ; 0x0219B43C
 	add r1, #0x34
 	str r0, [r5, r1]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _0219B4AC ; =0x0000808D
 	mov r0, #0x17
 	bl sub_0204AA30
@@ -3547,7 +3547,7 @@ ovy265_219b43c: ; 0x0219B43C
 	add r4, #0x1c
 	str r0, [r5, r4]
 	add r0, r6, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0219B4AC: .word 0x0000808D
@@ -3707,7 +3707,7 @@ ovy265_219b544: ; 0x0219B544
 	sub r1, r1, #4
 	str r0, [r5, r1]
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r0, [r5]
 	ldr r0, [r0, #4]
 	bl sub_02008BF0
@@ -3768,7 +3768,7 @@ _0219B610:
 	add r1, #0x38
 	str r0, [r5, r1]
 	add r0, r7, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldr r1, _0219B6C8 ; =0x0219BA10
 	add r0, r5, #0
 	bl ovy265_219ad68

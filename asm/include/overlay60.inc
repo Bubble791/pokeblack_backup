@@ -15,7 +15,7 @@
 .public sub_02153F04
 .public sub_02180490
 .public sub_021F4670
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0218799C
 .public PlayerSave_GetPlayerSaveOffset
 .public sub_02017354
@@ -41,7 +41,7 @@
 .public sub_02180494
 .public sub_0218A598
 .public sub_0218A598
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02016AD8
 .public sub_0201736C
 .public sub_0204898C
@@ -263,7 +263,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AFB0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02024D00
 .public sub_02045738
 .public sub_02044BD8
@@ -279,7 +279,7 @@
 .public sub_0204B81C
 .public sub_0204BDE0
 .public sub_0204BDE0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_02026670
 .public sub_0204BBB8
 .public sub_02026670
@@ -291,12 +291,12 @@
 .public sub_0204B2DC
 .public sub_0204BD10
 .public sub_0204BA40
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204AA30
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_020164E8
 .public sub_0204C124
 .public sub_0204C124
@@ -327,7 +327,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BCD0
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public sub_0204BF98
 .public BmpWin_CreateDynamic
 .public sub_02021998

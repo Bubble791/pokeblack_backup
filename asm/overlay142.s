@@ -26,7 +26,7 @@
 	.public ovy142_219ad30
 	.public ovy142_219ae10
 	.public ovy142_219ae90
-	.public ovy142_219af84
+	.public BagMenu_TrySellItem
 	.public ovy142_219b0a0
 	.public ovy142_219b1a0
 	.public ovy142_219b2f0
@@ -57,7 +57,7 @@ ovy142_21a0748: ; 0x021A0748
 	ldrh r0, [r0, #8]
 	mov r2, #0
 	mov r4, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r5, r0, #0
 	ldr r0, [sp, #8]
 	mov r1, #5
@@ -118,7 +118,7 @@ _021A07B8:
 	blt _021A07B8
 _021A07D4:
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -142,7 +142,7 @@ ovy142_21a07f4: ; 0x021A07F4
 	ldrh r0, [r0, #8]
 	mov r2, #0
 	mov r5, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r6, r0, #0
 	ldr r0, [sp, #4]
 	mov r1, #5
@@ -151,7 +151,7 @@ ovy142_21a07f4: ; 0x021A07F4
 	str r0, [sp, #0x10]
 	ldr r0, [sp, #4]
 	ldrh r0, [r0, #8]
-	bl sub_02026720
+	bl Item_ArcHandleCreate
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
@@ -168,18 +168,18 @@ _021A0830:
 	ldrh r1, [r4, r1]
 	ldrh r2, [r2, #8]
 	ldr r0, [sp, #8]
-	bl sub_0202672C
+	bl Item_ArcHandleReadFile
 	mov r1, #0xc
 	mul r1, r5
 	str r0, [sp, #0x18]
 	str r1, [sp, #0x1c]
 	add r7, r6, r1
 	mov r1, #0xf
-	bl sub_02026820
+	bl Item_GetParam
 	str r0, [sp, #0x20]
 	ldr r0, [sp, #0x18]
 	mov r1, #0x11
-	bl sub_02026820
+	bl Item_GetParam
 	ldr r1, [sp, #0x14]
 	lsl r0, r0, #0x10
 	ldrh r2, [r4, r1]
@@ -196,14 +196,14 @@ _021A0830:
 	str r0, [r6, r1]
 	ldr r0, [sp, #0x18]
 	str r2, [r7, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0x10]
 	add r5, r5, #1
 	cmp r5, r0
 	blt _021A0830
 _021A088C:
 	ldr r0, [sp, #8]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	mov r4, #0
 	ldr r1, [sp, #0x10]
 	ldr r3, _021A08DC ; =0x021A03D5
@@ -232,7 +232,7 @@ _021A08AA:
 	blt _021A08AA
 _021A08C6:
 	add r0, r6, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

@@ -65,7 +65,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	mov r3, #0
 	bl sub_0204AFB0
 	add r0, r4, #0
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	ldrh r1, [r5, #8]
 	mov r0, #0
 	bl sub_02042BA8
@@ -260,7 +260,7 @@ ovy80_21eaa68: ; 0x021EAA68
 	mov r1, #0x20
 	mov r2, #1
 	mov r6, #0x15
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	strh r6, [r4, #8]
 	str r5, [r4, #0x18]
@@ -299,7 +299,7 @@ ovy80_21eaab8: ; 0x021EAAB8
 	mov r1, #0
 	strh r1, [r0]
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, pc}
 	nop
 _021EAAD0: .word 0x04001050

@@ -4,7 +4,7 @@
 .public sub_02008BF0
 .public sub_0201FD00
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204A934
 .public sub_0201FD34
 .public sub_0201C404
@@ -28,10 +28,10 @@
 .public sub_0201CD1C
 .public sub_0201D5F4
 .public sub_0201FD6C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020200AC
-.public sub_0203A24C
-.public sub_0203A24C
+.public GFL_HeapFree
+.public GFL_HeapFree
 .public sub_0204A934
 .public sub_02008BF0
 .public GFL_MsgSysLoadData
@@ -40,15 +40,15 @@
 .public GFL_MsgDataFree
 .public sub_02029BB0
 .public sub_02029BB0
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204A934
 .public sub_02008BF0
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02016AD8
 .public sub_02017C60
 .public sub_02011040
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0201736C
 .public sub_02017A04
 .public sub_02017DDC
@@ -57,7 +57,7 @@
 .public sub_0201736C
 .public sub_021E62A8
 .public sub_021E62D8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020111B0
 .public sub_020111EC
 .public sub_02005748
@@ -88,10 +88,10 @@
 .public GFL_MsgDataFree
 .public sub_02011040
 .public sub_0204A934
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02008A54
 .public sub_020111A0
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_020185B4
 .public sub_02017C84
 .public sub_02017A04
@@ -101,7 +101,7 @@
 .public sub_0200C200
 .public GFL_StrBufCreate
 .public sub_0201C2C8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0200C1F0
 .public sub_020107F0
 .public sub_0201CCF8
@@ -109,7 +109,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
 .public sub_0200C200
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02008BF0
 .public sub_02017934
 .public sub_020173AC
@@ -239,7 +239,7 @@
 .public sub_0201CD1C
 .public GFL_StrBufFree
 .public sub_0201FDF8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_MsgDataFree
 
 .public ovy36_21b870c

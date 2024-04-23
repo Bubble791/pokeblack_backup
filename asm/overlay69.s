@@ -18,7 +18,7 @@ ovy69_217c940: ; 0x0217C940
 	add r1, r2, #0
 	ldr r3, _0217C9BC ; =0x0217CFA0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	bl sub_02042BC4
 	cmp r0, #1

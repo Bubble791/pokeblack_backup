@@ -19,7 +19,7 @@ ovy170_217f600: ; 0x0217F600
 	add r0, r5, #0
 	mov r1, #0xd8
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, r0, #0
 	add r0, #0xa0
 	add r1, r4, #0
@@ -36,7 +36,7 @@ ovy170_217f600: ; 0x0217F600
 	add r1, #0xa4
 	str r0, [r1]
 	add r0, r5, #0
-	bl sub_02026720
+	bl Item_ArcHandleCreate
 	add r1, r4, #0
 	add r1, #0xa8
 	str r0, [r1]
@@ -200,13 +200,13 @@ ovy170_217f780: ; 0x0217F780
 	add r4, r0, #0
 	add r0, #0xa4
 	ldr r0, [r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
 	add r0, #0xa8
 	ldr r0, [r0]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	bl sub_020158F8
 	bl sub_02021960
@@ -4925,13 +4925,13 @@ ovy170_2181af4: ; 0x02181AF4
 	add r0, #0xa8
 	ldrh r2, [r3]
 	ldr r0, [r0]
-	bl sub_0202672C
+	bl Item_ArcHandleReadFile
 	add r4, r0, #0
 	add r1, r5, #0
-	bl sub_02026820
+	bl Item_GetParam
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -4950,7 +4950,7 @@ ovy170_2181b1c: ; 0x02181B1C
 	str r1, [sp]
 	mov r1, #0x18
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [r4]
 	mov r2, #0
 	mov r1, #0xff
@@ -4985,7 +4985,7 @@ _02181B66:
 	ldr r0, [r0, #8]
 	cmp r0, #0
 	beq _02181B7C
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r6]
 	add r0, r0, r5
 	str r7, [r0, #8]
@@ -4995,7 +4995,7 @@ _02181B7C:
 	blt _02181B66
 	ldr r4, _02181B90 ; =0x02181ec0
 	ldr r0, [r4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	mov r0, #0
 	str r0, [r4]
 _02181B8E:
@@ -5114,7 +5114,7 @@ _02181C34:
 	lsl r5, r1, #2
 	add r0, r0, r5
 	ldr r0, [r0, #8]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4]
 	mov r1, #0
 	add r0, r0, r5

@@ -112,7 +112,7 @@ _021EED22:
 	mov r1, #1
 	bl sub_02049214
 	ldr r0, [sp]
-	bl sub_0204AB0C
+	bl GFL_ArcToolFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021EED68: .word 0x00007FFF

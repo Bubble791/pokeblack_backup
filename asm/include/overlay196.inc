@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public sub_020178BC
@@ -51,11 +51,11 @@
 .public sub_02042AB8
 .public sub_021B5504
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02043EC0
 .public MI_CpuCopy8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public MI_CpuFill8
 .public ovy189_21a57dc

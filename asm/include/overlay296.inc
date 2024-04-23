@@ -5,7 +5,7 @@
 .public sub_0201CEB4
 .public sub_0201CDAC
 .public sub_0201CCF8
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02021998
 .public sub_02044BD8
@@ -24,10 +24,10 @@
 .public sub_0204566C
 .public sub_0204566C
 .public sub_0204AC0C
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_0204ABA4
 .public sub_020602D8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_VBlankTCBAdd
 .public G2x_SetBlendBrightness_
 .public sub_02044CFC
@@ -41,7 +41,7 @@
 .public sub_02044668
 .public sub_02021C44
 .public sub_02021A18
-.public sub_0203A24C
+.public GFL_HeapFree
 .public G2x_SetBlendBrightness_
 .public sub_020069F4
 .public sub_0204C21C
@@ -68,7 +68,7 @@
 .public BmpWin_BitmapFill
 .public sub_02021C44
 .public sub_02048210
-.public sub_0203A24C
+.public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public GFL_StrBufCreate
 .public GFL_WordSetFormatStrbuf
@@ -80,7 +80,7 @@
 .public sub_0204898C
 .public GFL_StrBufFree
 .public sub_02020428
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
 .public GFL_WordSetSystemFree
@@ -89,7 +89,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_02020428
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
 .public GFL_WordSetSystemFree
@@ -183,7 +183,7 @@
 .public sub_0204B81C
 .public sub_0204BAB8
 .public sub_0204BAB8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_0204C040
 .public sub_0202D7E8
 .public sub_0204C378
@@ -235,4 +235,4 @@
 .public GFL_StrBufFree
 .public sub_020202A4
 .public GFL_MsgDataFree
-.public sub_0204AB0C
+.public GFL_ArcToolFree

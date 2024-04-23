@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021E00AC
 .public sub_0203A614
 .public sub_021E00B8
@@ -10,11 +10,11 @@
 .public GFL_FadeScreenIsFinished
 .public sub_02027AE0
 .public GFL_TCBExMgrFree
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02021A18
 .public sub_0203D564
 .public GFL_TCBRemove
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_021F490C
 .public sub_021F518C
 .public GXx_SetMasterBrightness_
@@ -62,7 +62,7 @@
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
@@ -87,7 +87,7 @@
 .public sub_0204BBB8
 .public sub_0204BDE0
 .public sub_0204B81C
-.public sub_0204AB0C
+.public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_021F4EF8
 .public sub_021F4EF8

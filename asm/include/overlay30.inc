@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02042E84
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02173B24
 .public sub_02173B50
 .public sub_02175630
@@ -18,7 +18,7 @@
 .public sub_02173AE4
 .public sub_02042E84
 .public sub_02042E84
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_02174E28
 .public sub_020812B8
 .public sub_02042E84
@@ -41,7 +41,7 @@
 .public sub_0217333C
 .public sub_0217333C
 .public sub_0217333C
-.public sub_0203A24C
+.public GFL_HeapFree
 .public sub_02042788
 .public sub_02042E84
 .public OS_Terminate

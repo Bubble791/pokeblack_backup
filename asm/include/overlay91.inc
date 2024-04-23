@@ -90,7 +90,7 @@
 .public sub_0218105C
 .public sub_02180570
 .public sub_021804C0
-.public sub_0203A1FC
+.public GFL_HeapAllocate
 .public sub_021804F0
 .public sub_0219A6A0
 .public sub_021B8224
@@ -115,7 +115,7 @@
 .public sub_021B8258
 .public ovy36_21b84a8
 .public sub_021B84E8
-.public sub_0203A24C
+.public GFL_HeapFree
 .public GFL_TCBRemove
 .public sub_021804D4
 .public ovy36_02184590

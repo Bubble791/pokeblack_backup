@@ -26,7 +26,7 @@ ovy23_216e660: ; 0x0216E660
 	ldr r0, [sp, #0x18]
 	ldr r3, _0216E83C ; =0x0216F8E0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	add r4, #0x74
 	add r5, r0, #0
 	ldr r2, [sp, #0x18]
@@ -206,14 +206,14 @@ _0216E742:
 	b _0216E6D8
 _0216E81C:
 	ldr r0, [sp, #0x2c]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x14]
 	bl sub_020200AC
 	add r0, r5, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #0x30]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #0x40
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -332,7 +332,7 @@ _0216E8D2:
 	add r0, r4, #0
 	bl sub_02029BB0
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -377,7 +377,7 @@ _0216E960:
 	str r0, [r5, #4]
 _0216E962:
 	add r0, r4, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	pop {r4, r5, r6, pc}
 	nop
 _0216E96C: .word 0x00007FFF
@@ -405,7 +405,7 @@ ovy23_216e974: ; 0x0216E974
 	str r0, [sp]
 	add r0, r5, #0
 	mov r2, #1
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [sp, #4]
 	add r0, r6, #0
 	bl sub_0201736C
@@ -472,7 +472,7 @@ _0216EA22:
 _0216EA38:
 	strb r0, [r1]
 	ldr r0, [sp, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	add r0, #0xdd
 	ldrb r1, [r0]
@@ -766,7 +766,7 @@ _0216EC3E:
 	add r1, r4, #0
 	bl ovy23_216eba0
 	add r0, r7, #0
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [r4, #0x74]
 	mov r1, #0
 	bl sub_02008A54
@@ -821,7 +821,7 @@ ovy23_216ed00: ; 0x0216ED00
 	cmp r0, #2
 	bne _0216ED1C
 	ldr r0, [r4, #0x34]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	bl sub_020185B4
 _0216ED1C:
@@ -871,7 +871,7 @@ ovy23_216ed58: ; 0x0216ED58
 	str r0, [sp]
 	mov r0, #4
 	mov r2, #0
-	bl sub_0203A1FC
+	bl GFL_HeapAllocate
 	str r0, [sp, #4]
 	bl sub_0200C1F0
 	ldr r1, [sp, #4]
@@ -896,7 +896,7 @@ ovy23_216ed58: ; 0x0216ED58
 	str r6, [r5, #8]
 	bl sub_0200C200
 	ldr r0, [sp, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	add r0, r4, #0
 	add r0, #0xdf
 	ldrb r0, [r0]
@@ -2249,7 +2249,7 @@ _0216F818:
 	blt _0216F7A0
 _0216F824:
 	ldr r0, [sp, #4]
-	bl sub_0203A24C
+	bl GFL_HeapFree
 	ldr r0, [sp, #8]
 	bl GFL_MsgDataFree
 	add sp, #0x18
