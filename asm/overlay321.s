@@ -1680,7 +1680,7 @@ ovy321_219db18: ; 0x0219DB18
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r4, [sp]
 	mov r0, #2
 	str r0, [sp, #4]

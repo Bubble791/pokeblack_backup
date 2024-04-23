@@ -2663,7 +2663,7 @@ ovy199_21b452c: ; 0x021B452C
 	ldr r0, [r5, #0x24]
 	ldr r1, [r5, #0x2c]
 	ldr r2, [r5, #0x30]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add sp, #8
 	pop {r4, r5, r6, pc}
 	.align 2, 0

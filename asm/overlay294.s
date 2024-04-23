@@ -2614,7 +2614,7 @@ ovy294_21a2eb8: ; 0x021A2EB8
 	ldr r2, [r5, #4]
 	add r1, r4, #0
 	ldr r2, [r2]
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy294_21a2eb8
 
@@ -3061,7 +3061,7 @@ ovy294_21a3204: ; 0x021A3204
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0x40]
 	ldr r2, [r5, #0x3c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x10]
 	mov r1, #4
 	str r0, [sp]

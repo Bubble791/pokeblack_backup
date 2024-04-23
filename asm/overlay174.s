@@ -2033,7 +2033,7 @@ _0219DEE2:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, r7]
 	bl sub_020484F4
 	add r1, r7, #0
@@ -2124,7 +2124,7 @@ _0219DFA8:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, r4]
 	bl sub_020484F4
 	add r1, r4, #0

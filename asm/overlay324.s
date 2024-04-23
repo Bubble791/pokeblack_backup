@@ -1292,7 +1292,7 @@ ovy324_219d88c: ; 0x0219D88C
 	ldr r0, [r5, r4]
 	ldr r2, [sp]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0219D91C: .word 0x0000010B
@@ -1744,7 +1744,7 @@ _0219DCC6:
 	ldr r0, [r5, r4]
 	ldr r2, [r5, r2]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r0, #0x64
 	ldr r0, [r5, r0]
@@ -2774,7 +2774,7 @@ _0219E4A8:
 	ldr r0, [r5, r4]
 	ldr r1, [r5, r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	add r0, r5, r6

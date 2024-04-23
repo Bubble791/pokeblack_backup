@@ -24,7 +24,7 @@
 .public sub_02048530
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -46,7 +46,7 @@
 .public sub_021FA40C
 .public sub_0204898C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -58,14 +58,14 @@
 .public sub_02048564
 .public sub_0204898C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
 .public sub_0204898C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -80,7 +80,7 @@
 .public sub_02048530
 .public sub_0204898C
 .public sub_02024500
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -90,7 +90,7 @@
 .public sub_02048530
 .public sub_0204898C
 .public LoadItemNameToStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_020484F4
 .public sub_02021C7C
@@ -98,7 +98,7 @@
 .public sub_02048530
 .public sub_0204898C
 .public sub_020244A4
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484D8
 .public sub_02022888
 .public sub_020484F4
@@ -129,7 +129,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -141,7 +141,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484D8
 .public sub_02022888
 .public sub_020484F4
@@ -156,7 +156,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -171,7 +171,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -186,7 +186,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -201,7 +201,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -216,7 +216,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -237,7 +237,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
 .public sub_02021C7C
@@ -246,7 +246,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -271,7 +271,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -291,7 +291,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484D8
 .public sub_020484F4
@@ -322,7 +322,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
 .public sub_02021C7C
@@ -331,7 +331,7 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -342,7 +342,7 @@
 .public sub_02021C7C
 .public sub_02048564
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048530
 .public sub_0204898C
@@ -356,13 +356,13 @@
 .public sub_02048564
 .public sub_0204898C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
 .public sub_0204898C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
 .public sub_02021C7C
@@ -390,7 +390,7 @@
 .public sub_02048530
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0204898C
 .public sub_02022888
@@ -430,7 +430,7 @@
 .public sub_0204898C
 .public sub_02024464
 .public sub_020244A4
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_021F43D0
 .public sub_021F43D0
@@ -730,7 +730,7 @@
 .public sub_0204898C
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_021FA40C
 .public sub_021FA234
@@ -742,21 +742,21 @@
 .public sub_021FA40C
 .public sub_021FA40C
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_021FA2BC
 .public sub_021FA2BC
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02027780
 .public sub_02024EEC

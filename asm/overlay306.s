@@ -2365,7 +2365,7 @@ _0219E12A:
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x1c]
 	ldr r2, [sp, #0x18]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add r0, #0x98
 	ldr r0, [r0]

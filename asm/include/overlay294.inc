@@ -191,7 +191,7 @@
 .public sub_0204C124
 .public sub_02008BF0
 .public sub_021A3524
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_021A3524
 .public sub_020245C4
 .public sub_0203A1FC
@@ -240,7 +240,7 @@
 .public sub_0204713C
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022268
 .public sub_02024E80
 .public sub_02048244

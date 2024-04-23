@@ -1895,7 +1895,7 @@ ovy319_219dc7c: ; 0x0219DC7C
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x14]
 	bl sub_020484F4
 	str r6, [sp]

@@ -211,7 +211,7 @@
 .public sub_0204C56C
 .public sub_0204C140
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_0204BA40
 .public GFL_MsgDataLoadStrbuf
 .public sub_0204713C

@@ -1576,7 +1576,7 @@ _02177690:
 	ldr r0, [r4, #0x38]
 	mov r1, #0
 	mov r7, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r4, #0x30]
 	bl sub_02017B8C
 	str r7, [sp]
@@ -1589,7 +1589,7 @@ _02177690:
 	ldr r0, [r4, #0x38]
 	ldr r1, [r4, #0x3c]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	ldr r0, [r4, #0x18]
@@ -5509,11 +5509,11 @@ ovy261_2179528: ; 0x02179528
 	mov r1, #0
 	str r0, [sp, #8]
 	ldr r0, [r5, #0x2c]
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r5, #0x2c]
 	ldr r2, [sp, #8]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -5535,7 +5535,7 @@ ovy261_2179528: ; 0x02179528
 	ldr r0, [r5, #0x2c]
 	ldr r2, [sp, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	sub r4, #0x24
 	ldr r0, [r5, r4]
 	add r1, r7, #0

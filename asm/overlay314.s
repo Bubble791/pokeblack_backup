@@ -528,11 +528,11 @@ _0219D28C:
 	ldr r2, [sp, #0xc]
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r0, r6, #0
 	add r1, r4, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x24]
 	bl sub_020484F4
 	str r4, [sp]

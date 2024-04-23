@@ -36978,7 +36978,7 @@ ovy255_21ce0c0: ; 0x021CE0C0
 	ldr r0, [r0]
 	ldr r1, [r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r0, #0x94
 	lsl r5, r5, #3
@@ -38618,7 +38618,7 @@ ovy255_21cedb4: ; 0x021CEDB4
 	add r1, #0x90
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x2c]
 	lsl r4, r4, #3
 	add r0, r0, r4
@@ -39410,7 +39410,7 @@ _021CF342:
 	add r1, #0x90
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #8]
 	mov r1, #0
 	ldr r0, [r0, #0x2c]
@@ -53951,7 +53951,7 @@ ovy255_21d6250: ; 0x021D6250
 	ldr r0, [r4, #0x30]
 	ldr r1, [r4, #0x34]
 	ldr r2, [sp, #0xc]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0x91
 	add r0, #0x7f
 	ldr r0, [r4, r0]
@@ -54067,7 +54067,7 @@ _021D6368:
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x34]
 	ldr r2, [sp, #0xc]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r7, #0x11
 	lsl r7, r7, #4
 	ldr r0, [r5, r7]

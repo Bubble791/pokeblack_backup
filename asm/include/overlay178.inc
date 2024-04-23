@@ -167,9 +167,9 @@
 .public sub_0204713C
 .public sub_0219B5AC
 .public sub_0219B5A8
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0219B5A4
 .public sub_0219B5A0

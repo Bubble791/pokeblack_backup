@@ -279,7 +279,7 @@
 .public ovy36_2187c4c
 .public GFL_MsgDataLoadStrbuf
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public ovy36_2187c4c
 .public sub_020487D4
 .public ovy36_2187c9c
@@ -372,7 +372,7 @@
 .public sub_0203A24C
 .public sub_02155174
 .public sub_0201736C
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02024434
 .public sub_0201CCF8
 .public sub_02024444
@@ -383,7 +383,7 @@
 .public sub_02178074
 .public sub_02155174
 .public sub_0201736C
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public LoadItemNameToStrbuf
 .public LoadItemNameToStrbuf
 .public sub_02017934
@@ -393,7 +393,7 @@
 .public sub_02017934
 .public sub_0200C62C
 .public sub_0201736C
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_0202472C
 .public sub_0201736C
 .public sub_02017974
@@ -403,12 +403,12 @@
 .public sub_0201736C
 .public sub_0215515C
 .public sub_021782D0
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02024868
 .public sub_02155174
 .public sub_0201736C
 .public sub_021782D0
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_0202472C
 .public sub_0200A800
 .public sub_0200A820
@@ -612,7 +612,7 @@
 .public sub_02006E80
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02188474
 .public sub_021883B0
@@ -627,7 +627,7 @@
 .public sub_02016D68
 .public sub_0204898C
 .public sub_02024464
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02188474
 .public sub_021883B0
@@ -1069,12 +1069,12 @@
 .public sub_02008C10
 .public sub_02024630
 .public sub_0201736C
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02009D50
 .public sub_020243D0
 .public sub_02009D44
 .public sub_02024754
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02009D50
 .public sub_0202451C
 .public sub_02009D50

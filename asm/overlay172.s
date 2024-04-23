@@ -1035,7 +1035,7 @@ ovy172_219a0d8: ; 0x0219A0D8
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x2c]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r1, #0x50
 	bl ovy172_219a354
@@ -1059,11 +1059,11 @@ ovy172_219a114: ; 0x0219A114
 	add r2, r0, #0
 	ldr r0, [r5, #0x30]
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x2c]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy172_219a354
@@ -1091,7 +1091,7 @@ ovy172_219a150: ; 0x0219A150
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x2c]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r1, #0x50
 	bl ovy172_219a354
@@ -1119,7 +1119,7 @@ ovy172_219a18c: ; 0x0219A18C
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x2c]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r1, #0x50
 	bl ovy172_219a354
@@ -1143,11 +1143,11 @@ ovy172_219a1c8: ; 0x0219A1C8
 	add r2, r0, #0
 	ldr r0, [r5, #0x30]
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r5, #0x30]
 	ldr r1, [r5, #0x2c]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r1, #0x50
 	bl ovy172_219a354

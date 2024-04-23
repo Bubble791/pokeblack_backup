@@ -2456,7 +2456,7 @@ ovy299_21a0fb8: ; 0x021A0FB8
 	ldr r0, [r5, #0x58]
 	ldr r1, [r5, #0x5c]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x5c]
 	add r1, r5, #0
 	str r0, [sp]
@@ -2924,7 +2924,7 @@ _021A1384:
 	ldr r0, [r5, #0x58]
 	ldr r1, [r5, #0x5c]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	ldr r0, [r5, #0x5c]

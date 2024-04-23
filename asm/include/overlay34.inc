@@ -635,7 +635,7 @@
 .public sub_021704EC
 .public sub_021777DC
 .public sub_02008BFC
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_0203DEFC
 .public sub_02169B3C
 .public sub_02171ACC
@@ -660,7 +660,7 @@
 .public sub_02048614
 .public sub_0202437C
 .public sub_02048564
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_0204898C
 .public sub_0202437C
 .public sub_02048564
@@ -687,7 +687,7 @@
 .public sub_021879B8
 .public sub_0203CB80
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02188BA4
 .public sub_02188BDC
 .public sub_02180490

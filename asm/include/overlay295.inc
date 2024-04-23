@@ -76,8 +76,8 @@
 .public sub_020484F4
 .public sub_0204713C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_02017BCC
 .public sub_02022268
 .public sub_02048564
@@ -154,8 +154,8 @@
 .public sub_020484F4
 .public sub_0204713C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_020232E8
 .public sub_020484F4
 .public sub_02021CFC

@@ -7816,7 +7816,7 @@
 .public sub_02024540
 .public sub_02024574
 .public sub_02024598
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_020245C4
 .public sub_020245E0
 .public sub_02024630
@@ -7840,7 +7840,7 @@
 .public sub_0202483C
 .public sub_02024868
 .public sub_02024900
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020249D4
 .public sub_020249FC
 .public sub_02024A14

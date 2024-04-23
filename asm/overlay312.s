@@ -2798,7 +2798,7 @@ ovy312_217df84: ; 0x0217DF84
 	ldr r0, [r5, r0]
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]

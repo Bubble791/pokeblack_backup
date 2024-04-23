@@ -10414,7 +10414,7 @@ ovy257_219e6b4: ; 0x0219E6B4
 	ldr r1, [r1]
 	ldr r2, [r2]
 	add r0, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x20]
 	bl sub_02048564
 	add r0, r5, #0
@@ -10516,7 +10516,7 @@ _0219E806:
 	ldr r1, [r1]
 	ldr r2, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x10]
 	bl sub_02048564
 	add r0, r5, #0
@@ -17209,7 +17209,7 @@ _021A1E34:
 	ldr r1, [sp, #0x18]
 	ldr r2, [sp, #0xc]
 	add r0, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0xc]
 	bl sub_02048564
 	ldr r0, [r5, #0x14]
@@ -17258,7 +17258,7 @@ _021A1E34:
 	ldr r1, [sp, #0x2c]
 	ldr r2, [sp, #0x28]
 	add r0, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x28]
 	bl sub_02048564
 	ldr r0, [r5, #0x14]
@@ -21080,7 +21080,7 @@ _021A3C4A:
 	ldr r0, [sp, #0x20]
 	ldr r2, [sp, #0x24]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x24]
 	bl sub_02048564
 	add r0, r4, #0
@@ -25690,7 +25690,7 @@ ovy257_21a62cc: ; 0x021A62CC
 	ldr r2, [sp, #0x1c]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x1c]
 	bl sub_02048564
 	ldr r0, [r5, r6]
@@ -27002,7 +27002,7 @@ ovy257_21a6cfc: ; 0x021A6CFC
 	ldr r0, [sp, #0x14]
 	ldr r1, [r5, #0x40]
 	ldr r2, [r5, #0x3c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x2c]
 	bl sub_020484F4
 	add r1, r0, #0
@@ -27092,7 +27092,7 @@ _021A6E02:
 	ldr r1, [r4, #0x40]
 	ldr r2, [r4, #0x3c]
 	add r0, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r4, #0x2c]
 	bl sub_020484F4
 	add r1, r0, #0
@@ -27493,7 +27493,7 @@ ovy257_21a7074: ; 0x021A7074
 	ldr r0, [sp, #0x10]
 	ldr r1, [r5, #0x40]
 	ldr r2, [r5, #0x3c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x2c]
 	bl sub_020484F4
 	mov r1, #0
@@ -30388,7 +30388,7 @@ ovy257_21a880c: ; 0x021A880C
 	ldr r0, [r4, #0x18]
 	ldr r1, [r4, #0x20]
 	ldr r2, [r4, #0x1c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5]
 	cmp r0, #0
 	beq _021A8848

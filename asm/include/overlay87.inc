@@ -70,8 +70,8 @@
 .public sub_02017934
 .public sub_0204898C
 .public sub_0201736C
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -80,7 +80,7 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -88,7 +88,7 @@
 .public RTC_GetTime
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -108,7 +108,7 @@
 .public sub_02048564
 .public sub_02018C80
 .public sub_02024700
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -116,7 +116,7 @@
 .public sub_02017974
 .public sub_0200C9A0
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -127,7 +127,7 @@
 .public sub_0200D190
 .public sub_0200D83C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -137,7 +137,7 @@
 .public sub_0202451C
 .public sub_02008CF0
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564
@@ -155,7 +155,7 @@
 .public sub_0202451C
 .public sub_02008D88
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
 .public sub_02048564

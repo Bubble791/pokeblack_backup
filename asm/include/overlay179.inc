@@ -156,7 +156,7 @@
 .public sub_0219B468
 .public sub_0202451C
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0219B464
 .public sub_0219B460
@@ -166,10 +166,10 @@
 .public sub_0204713C
 .public sub_0219B46C
 .public sub_0219B468
-.public sub_020245A8
-.public sub_020245A8
+.public GFL_CopyVarForText
+.public GFL_CopyVarForText
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0219B464
 .public sub_0219B460
@@ -179,11 +179,11 @@
 .public sub_0204713C
 .public sub_0219B46C
 .public sub_0219B468
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_020244E0
 .public sub_0202451C
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0219B464
 .public sub_0219B460

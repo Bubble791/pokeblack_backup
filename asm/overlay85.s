@@ -1191,7 +1191,7 @@ ovy85_21eb6f8: ; 0x021EB6F8
 	ldr r0, [r4, r0]
 	ldr r1, [r4, r1]
 	ldr r2, [r4, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy85_21eb6f8
@@ -1829,7 +1829,7 @@ ovy85_21ebb28: ; 0x021EBB28
 	ldr r0, [r6, r0]
 	ldr r1, [r4, #0x5c]
 	ldr r2, [r6, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r2, r6, #0
 	mov r1, #0xe
 	add r2, #0xd0
@@ -1854,7 +1854,7 @@ ovy85_21ebb28: ; 0x021EBB28
 	ldr r0, [r6, r0]
 	ldr r1, [r4, #0x58]
 	ldr r2, [r6, r5]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, _021EBCDC ; =0x021ED950
 	add r0, sp, #0x14
 	ldrh r2, [r1]

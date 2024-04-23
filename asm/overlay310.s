@@ -12070,7 +12070,7 @@ _021A2B96:
 	ldr r0, [r5, #0x18]
 	ldr r2, [sp, #0x14]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r1, r6, #0
 	bl ovy310_21a4990
@@ -12136,7 +12136,7 @@ _021A2C80:
 	ldr r0, [r5, #0x18]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	sub r0, #0x70
 	ldr r0, [r5, r0]
@@ -12216,7 +12216,7 @@ _021A2D2A:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0xd7
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]

@@ -2322,7 +2322,7 @@ _021EFEA0:
 	ldr r0, [r5, #0x14]
 	ldr r1, [r5, #0x18]
 	ldr r2, [r5, #0x1c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r2, #0xe
 	mul r2, r4
 	lsl r2, r2, #0x10

@@ -4516,7 +4516,7 @@ ovy84_21ed168: ; 0x021ED168
 	ldr r0, [r4, r0]
 	ldr r1, [r4, r1]
 	ldr r2, [r4, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy84_21ed168

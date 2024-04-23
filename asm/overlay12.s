@@ -3302,7 +3302,7 @@ _02151CFE:
 _02151D10:
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	mov r4, #1
 _02151D1A:
 	cmp r4, #0
@@ -10680,7 +10680,7 @@ ovy12_2155380: ; 0x02155380
 	ldr r0, [r4, #0xc]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldrh r1, [r5]
 	add r0, r6, #0
 	bl sub_020485A4
@@ -10696,7 +10696,7 @@ _021553CC:
 	ldr r0, [r4, #0xc]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldrh r3, [r5]
 	ldr r0, [r4, #0x18]
 	ldr r2, [sp, #8]
@@ -41218,12 +41218,12 @@ _02163D60:
 	add r2, r0, #0
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r1, [r4, #0x1c]
 	add r0, r6, #0
 	ldr r1, [r1, #0x18]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	add r0, r6, #0

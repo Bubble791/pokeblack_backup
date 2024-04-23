@@ -89,8 +89,8 @@
 .public sub_021B7808
 .public sub_021B7D04
 .public sub_02024464
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_02045604
 .public sub_021BFDF8
 .public sub_021C600C
@@ -648,8 +648,8 @@
 .public sub_021B7808
 .public sub_021B7D04
 .public sub_02024464
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_02045604
 .public sub_021BFDF8
 .public sub_021C600C

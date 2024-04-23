@@ -134,7 +134,7 @@
 .public sub_020241D4
 .public sub_0201FF08
 .public sub_020243F4
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564
@@ -185,7 +185,7 @@
 .public sub_0201CCF8
 .public sub_0201FDF8
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_020111B0
 .public sub_020111EC
@@ -255,7 +255,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_02021C0C
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_020484F4
 .public sub_0204713C

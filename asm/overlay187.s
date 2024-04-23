@@ -1560,7 +1560,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldr r2, [sp, #0x28]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0x24]
 	ldr r0, [r5, #0x48]
@@ -1626,7 +1626,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldr r2, [sp, #0x2c]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #0x48]
@@ -1691,7 +1691,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldr r2, [sp, #0x30]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0x14]
 	ldr r0, [r5, #0x48]
@@ -1780,7 +1780,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	ldr r2, [sp, #0x34]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x48]
@@ -1863,7 +1863,7 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	ldr r2, [sp, #0x20]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #0x48]
@@ -1929,7 +1929,7 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	ldr r2, [sp, #0x24]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x40]
 	str r0, [sp, #0x14]
 	ldr r0, [r5, #0x48]

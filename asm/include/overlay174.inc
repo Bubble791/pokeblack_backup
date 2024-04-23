@@ -238,7 +238,7 @@
 .public sub_0200A150
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021CFC
 .public sub_02048244
@@ -251,7 +251,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_02042A48
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021CFC
 .public sub_02048244

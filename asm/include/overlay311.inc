@@ -78,7 +78,7 @@
 .public sub_0203A7F4
 .public GFL_MsgDataLoadStrbuf
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_0219A2A4
 .public sub_0202284C
 .public sub_0219A2A4
@@ -87,7 +87,7 @@
 .public sub_0204713C
 .public sub_020232E8
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022268
 .public sub_02024E80
 .public sub_02048244

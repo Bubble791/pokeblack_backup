@@ -1140,7 +1140,7 @@
 .public sub_0202437C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564
@@ -1148,14 +1148,14 @@
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202437C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564
 .public sub_0204898C
 .public sub_02048530
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_021A3428

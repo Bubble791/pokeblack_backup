@@ -429,7 +429,7 @@ ovy156_21f5d08: ; 0x021F5D08
 	ldr r0, [r5, #0x2c]
 	ldr r1, [r5, #0x38]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r2, sp, #0x20
 	ldrb r2, [r2]
 	ldr r0, [r5, #0x18]

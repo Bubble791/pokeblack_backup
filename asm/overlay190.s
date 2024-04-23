@@ -3546,7 +3546,7 @@ ovy190_21b4c38: ; 0x021B4C38
 	ldr r0, [r5, #0x20]
 	ldr r1, [r5, #0x28]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x30]
 	cmp r0, #0
 	bne _021B4C80

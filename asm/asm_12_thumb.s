@@ -28485,7 +28485,7 @@ _02012886:
 	add r0, r6, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, _020128F0 ; =0x00001167
 	str r7, [sp]
 	str r0, [sp, #4]
@@ -58011,7 +58011,7 @@ _0201F788:
 	ldr r2, [sp, #8]
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -58076,7 +58076,7 @@ _0201F810:
 	ldr r2, [sp, #8]
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -68905,8 +68905,8 @@ sub_02024598: ; 0x02024598
 _020245A4: .word 0x0000018E
 	thumb_func_end sub_02024598
 
-	thumb_func_start sub_020245A8
-sub_020245A8: ; 0x020245A8
+	thumb_func_start GFL_CopyVarForText
+GFL_CopyVarForText: ; 0x020245A8
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -68919,7 +68919,7 @@ sub_020245A8: ; 0x020245A8
 	mov r3, #0
 	bl sub_020242F4
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_020245A8
+	thumb_func_end GFL_CopyVarForText
 
 	thumb_func_start sub_020245C4
 sub_020245C4: ; 0x020245C4
@@ -69402,8 +69402,8 @@ _02024912:
 	.align 2, 0
 	thumb_func_end sub_02024900
 
-	thumb_func_start sub_02024920
-sub_02024920: ; 0x02024920
+	thumb_func_start GFL_WordSetFormatStrbuf
+GFL_WordSetFormatStrbuf: ; 0x02024920
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r7, r0, #0
@@ -69489,7 +69489,7 @@ _020249CE:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end sub_02024920
+	thumb_func_end GFL_WordSetFormatStrbuf
 
 	thumb_func_start sub_020249D4
 sub_020249D4: ; 0x020249D4
@@ -81205,7 +81205,7 @@ _02029CE0:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	add r0, r7, #0

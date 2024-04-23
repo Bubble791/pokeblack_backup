@@ -313,7 +313,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_02024464
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_0202E8D8
 .public sub_0202E68C
 .public sub_020223CC

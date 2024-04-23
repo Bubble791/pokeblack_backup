@@ -5840,7 +5840,7 @@ ovy280_21dc220: ; 0x021DC220
 	ldr r0, [r5, #0x18]
 	ldr r1, [r5, #0x1c]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	ldr r4, [r5, #0x10]
 	bl sub_020484F4
@@ -5989,7 +5989,7 @@ _021DC362:
 	ldr r1, [r4, #0x1c]
 	ldr r2, [r6, #0xc]
 	add r0, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	bl sub_02017BCC
 	ldr r1, [r4, #4]
 	mov r2, #0

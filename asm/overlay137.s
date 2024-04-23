@@ -11007,7 +11007,7 @@ _021F4092:
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [sp, #0x28]
 	add r0, r5, #0
 	mov r2, #0
@@ -11035,7 +11035,7 @@ _021F4092:
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x34]
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	b _021F4130
 _021F40FE:
 	ldr r0, [sp, #0x18]
@@ -11063,7 +11063,7 @@ _021F4130:
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [sp, #0x28]
 	add r0, r5, #0
 	mov r2, #0
@@ -11102,7 +11102,7 @@ _021F4130:
 	ldr r0, [sp, #0x14]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [sp, #0x28]
 	add r0, r5, #0
 	mov r2, #0
@@ -12150,7 +12150,7 @@ ovy137_21f4930: ; 0x021F4930
 	ldr r2, [sp, #0x10]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	bl sub_02048564
 	ldr r0, [sp, #0x10]

@@ -4163,7 +4163,7 @@ ovy205_21b9338: ; 0x021B9338
 	ldr r2, [sp, #0x10]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	bl sub_020484F4
 	mov r1, #0xf

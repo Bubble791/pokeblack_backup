@@ -2370,7 +2370,7 @@ _0219E0FE:
 	ldr r1, [r5, r6]
 	ldr r2, [sp, #0x20]
 	add r0, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	bl sub_02017BCC
 	ldr r1, [r5, #0x70]
 	mov r7, #0xf

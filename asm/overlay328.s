@@ -2358,7 +2358,7 @@ _0219E040:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x14]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r1, r4, #0
 	str r7, [sp]
 	mov r0, #0
@@ -2648,7 +2648,7 @@ ovy328_219e274: ; 0x0219E274
 	ldr r0, [r0]
 	ldr r2, [sp, #0xc]
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r4, [sp]
 	mov r0, #0
 	str r0, [sp, #4]
@@ -2729,7 +2729,7 @@ _0219E370:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x14]
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r4, [sp]
 	mov r0, #0
 	str r0, [sp, #4]

@@ -71,7 +71,7 @@
 .public sub_0203A24C
 .public sub_020484F4
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_02022888
 .public sub_02046EF8

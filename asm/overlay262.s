@@ -869,7 +869,7 @@ ovy262_21c2bfc: ; 0x021C2BFC
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x1c]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r2, #0
@@ -932,7 +932,7 @@ ovy262_21c2bfc: ; 0x021C2BFC
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x24]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	add r1, r4, #0
 	mov r2, #0
@@ -2488,11 +2488,11 @@ _021C3942:
 	ldr r2, [sp, #0x18]
 	add r0, r7, #0
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C3930
 _021C3962:
 	ldr r0, [sp, #0x10]
@@ -2586,7 +2586,7 @@ _021C3A00:
 	add r0, r7, #0
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 _021C3A0E:
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
@@ -2835,7 +2835,7 @@ _021C3B56:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C3CAE
 _021C3C10:
 	ldr r0, [sp, #0x18]
@@ -2868,7 +2868,7 @@ _021C3C42:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C3CB2
 _021C3C52:
 	ldr r0, [sp, #0x50]
@@ -3168,7 +3168,7 @@ _021C3DFE:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C3F52
 _021C3EB8:
 	ldr r0, [sp, #0x14]
@@ -3201,7 +3201,7 @@ _021C3EE6:
 	add r0, r4, #0
 	add r1, r5, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C3F56
 _021C3EFA:
 	ldr r0, [sp, #0x4c]
@@ -4732,7 +4732,7 @@ _021C4B04:
 	ldr r0, [sp, #0x4c]
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C4ACA
 _021C4B14:
 	ldr r0, [r4]
@@ -4772,7 +4772,7 @@ _021C4B58:
 	ldr r0, [sp, #0x4c]
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021C4BAE
 _021C4B64:
 	add r0, r7, #0
@@ -5707,7 +5707,7 @@ _021C52DC:
 	ldr r0, [sp, #0x34]
 	ldr r1, [sp, #0x30]
 	ldr r2, [sp, #0x2c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x10]
 	mov r2, #0

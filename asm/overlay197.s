@@ -9984,7 +9984,7 @@ _021BA250:
 	ldr r0, [r5, #0x18]
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r7, _021BA2E8 ; =0x00000AB4
 	ldr r1, _021BA2EC ; =0x000039EA
 	ldr r0, [r5, r7]
@@ -11219,7 +11219,7 @@ _021BABDE:
 	ldr r0, [r4, #0x18]
 	ldr r2, [sp, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r4, #0x10]
 	add r0, r7, #0
 	mov r2, #0
@@ -13996,7 +13996,7 @@ _021BC102:
 	ldr r0, [r0]
 	ldr r1, [sp, #0x100]
 	ldr r2, [sp, #0x50]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r4]
 	add r1, r7, #0
 	bl ovy197_21b9100

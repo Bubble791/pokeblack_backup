@@ -7147,7 +7147,7 @@ ovy208_219d3c8: ; 0x0219D3C8
 	add r0, r7, #0
 	add r1, r5, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	add r6, r5, #0

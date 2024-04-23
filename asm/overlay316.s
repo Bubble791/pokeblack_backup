@@ -3251,7 +3251,7 @@ ovy316_219e824: ; 0x0219E824
 	ldr r0, [sp, #0x10]
 	ldr r2, [sp, #0x14]
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x14]
 	bl sub_02048564
 	ldr r0, [sp, #0x10]

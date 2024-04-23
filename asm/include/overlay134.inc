@@ -186,7 +186,7 @@
 .public sub_0201FF08
 .public GFL_MsgDataLoadStrbuf
 .public sub_020243F4
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public ovy36_2187c4c
 .public ovy36_2187c9c
 .public sub_020484D4

@@ -1083,7 +1083,7 @@ _0219D724:
 	ldr r0, [sp, #0x18]
 	ldr r2, [sp, #0x14]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x5c]
 	mov r1, #0x29
 	bl sub_0204898C

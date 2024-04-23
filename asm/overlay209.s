@@ -1347,7 +1347,7 @@ ovy209_21bab9c: ; 0x021BAB9C
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x14]
 	add r0, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x54]
 	bl sub_020484F4
 	ldr r1, [r5, #0x5c]

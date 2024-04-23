@@ -103,7 +103,7 @@
 .public sub_0204875C
 .public sub_0204898C
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_020487D4
 .public sub_02024274
@@ -152,7 +152,7 @@
 .public sub_02024464
 .public sub_0202470C
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02024274
 .public sub_02017BCC
 .public sub_02022268

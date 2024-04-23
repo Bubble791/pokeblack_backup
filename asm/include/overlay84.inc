@@ -305,7 +305,7 @@
 .public sub_0203DADC
 .public sub_021EA860
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021EAC18
 .public sub_0202451C
 .public sub_021EAD28

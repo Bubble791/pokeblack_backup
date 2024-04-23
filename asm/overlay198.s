@@ -1354,7 +1354,7 @@ _021B3A6A:
 	ldr r0, [r6, #0x48]
 	ldr r1, [r6, #0x54]
 	ldr r2, [r6, #0x50]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021B3A9A
 _021B3A92:
 	ldr r1, [sp, #0xc]
@@ -1618,7 +1618,7 @@ _021B3C72:
 	ldr r0, [r4, #0x48]
 	ldr r1, [r4, #0x54]
 	ldr r2, [r4, #0x50]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021B3C60
 _021B3CBC:
 	ldr r0, [r4, #0x44]

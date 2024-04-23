@@ -3121,7 +3121,7 @@ ovy265_219b0a4: ; 0x0219B0A4
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #8
 	str r0, [sp]
 	add r2, r4, #0
@@ -3181,7 +3181,7 @@ ovy265_219b0a4: ; 0x0219B0A4
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [sp, #0x14]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r2, r4, #0
 	add r7, #0x70
 	str r7, [sp]
@@ -3317,7 +3317,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	ldr r2, [r2, #4]
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r0, r4, #0
 	add r1, r4, #0
 	sub r0, #0xb4
@@ -3325,7 +3325,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #8
 	str r0, [sp]
 	add r2, r4, #0
@@ -3367,7 +3367,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0x5c
 	str r0, [sp]
 	add r2, r4, #0
@@ -3422,7 +3422,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r2, r4, #0
 	mov r0, #0xc8
 	str r0, [sp]

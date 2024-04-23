@@ -1119,7 +1119,7 @@ _021EF478:
 	ldr r2, [sp, #0x24]
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x24]
 	bl sub_02048564
 	add r0, r5, #0
@@ -1669,7 +1669,7 @@ _021EF8DA:
 	add r2, r0, #0
 	add r0, r4, #0
 	mov r1, #6
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r1, _021EF920 ; =0x021F0620
 	add r0, sp, #4
 	ldrh r2, [r1, #0xa]
@@ -2481,7 +2481,7 @@ ovy104_21efe88: ; 0x021EFE88
 	ldr r0, [r6, #0x18]
 	ldr r2, [sp, #0x20]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x20]
 	bl sub_0203A24C
 	b _021EFEEE

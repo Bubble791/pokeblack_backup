@@ -2805,7 +2805,7 @@ _021F5960:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r1, #1
 	str r1, [sp, #0x18]
 	str r6, [sp]
@@ -2896,7 +2896,7 @@ _021F5A2E:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x20]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	mov r0, #0x11
 	str r4, [sp, #4]
@@ -2938,7 +2938,7 @@ _021F5A2E:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x24]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	mov r0, #0x11
 	str r4, [sp, #4]
@@ -2993,7 +2993,7 @@ _021F5AFE:
 	ldr r0, [r0]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	mov r0, #0
 	str r0, [sp, #4]
@@ -3044,7 +3044,7 @@ _021F5B78:
 	ldr r0, [r0]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	mov r0, #0
 	str r0, [sp, #4]

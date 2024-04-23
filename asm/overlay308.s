@@ -2274,7 +2274,7 @@ ovy308_21a0ae0: ; 0x021A0AE0
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r4]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy308_21a0ae0

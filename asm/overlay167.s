@@ -122966,7 +122966,7 @@ _021D4E92:
 	add r2, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _021D4EA6:
@@ -122976,7 +122976,7 @@ _021D4EA6:
 	add r2, r0, #0
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -123094,7 +123094,7 @@ ovy167_21d4f64: ; 0x021D4F64
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r4, r5, r6, pc}
 	nop
 _021D4F8C: .word 0x021DD87C
@@ -123564,7 +123564,7 @@ _021D52EC:
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0xc]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021D5314: .word 0x021DD8BC
@@ -123716,7 +123716,7 @@ _021D5414:
 	ldr r0, [r4, #8]
 	ldr r1, [sp]
 	ldr r2, [r4, #0xc]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021D5438: .word 0x021DD8BC
@@ -123810,7 +123810,7 @@ _021D54B2:
 	ldr r0, [r0, #8]
 	ldr r1, [sp]
 	ldr r2, [r2, #0xc]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021D54F4: .word 0x021DD8BC
@@ -123896,7 +123896,7 @@ _021D557A:
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021D559C: .word 0x021DD8BC
@@ -123965,7 +123965,7 @@ _021D5604:
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021D5628: .word 0x021DD8BC
@@ -124009,7 +124009,7 @@ _021D565E:
 	ldr r0, [r5, #8]
 	ldr r2, [r5, #0xc]
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021D5680: .word 0x021DD87C
@@ -124070,7 +124070,7 @@ _021D56CC:
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021D56F8: .word 0x021DD8BC
@@ -124169,7 +124169,7 @@ ovy167_21d5778: ; 0x021D5778
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021D57A8: .word 0x021DD87C
@@ -124200,7 +124200,7 @@ ovy167_21d57b8: ; 0x021D57B8
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r4, r5, r6, pc}
 	nop
 _021D57E0: .word 0x021DD87C
@@ -124266,7 +124266,7 @@ ovy167_21d57e4: ; 0x021D57E4
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -124333,7 +124333,7 @@ ovy167_21d5874: ; 0x021D5874
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -124351,7 +124351,7 @@ ovy167_21d5904: ; 0x021D5904
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, pc}
 	nop
 _021D5920: .word 0x021DD87C
@@ -124368,7 +124368,7 @@ ovy167_21d5924: ; 0x021D5924
 	ldr r0, [r4, #8]
 	ldr r2, [r4, #0xc]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	pop {r3, r4, r5, pc}
 	nop
 _021D5940: .word 0x021DD87C
@@ -124387,7 +124387,7 @@ ovy167_21d5944: ; 0x021D5944
 	ldr r0, [r4, #8]
 	mov r1, #1
 	add r2, r5, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021D5964: .word 0x021DD87C

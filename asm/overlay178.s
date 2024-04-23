@@ -1354,7 +1354,7 @@ ovy178_219b7f0: ; 0x0219B7F0
 	add r0, r7, #0
 	mov r1, #0
 	add r2, r6, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #8]
 	bl sub_0204898C
@@ -1362,7 +1362,7 @@ ovy178_219b7f0: ; 0x0219B7F0
 	ldr r1, [r5, #0xc]
 	add r0, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	add r0, r4, #0

@@ -5264,7 +5264,7 @@ _021F25DA:
 	ldr r0, [sp, #0xc]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0xc]
 	bl sub_02024274
 	add r0, r4, #0
@@ -8686,7 +8686,7 @@ _021F40B8:
 	ldr r0, [sp, #0x28]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x44]
 	bl sub_02048564
 _021F4100:
@@ -8712,7 +8712,7 @@ _021F4108:
 	ldr r0, [sp, #0x28]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _021F4100
 _021F413A:
 	ldr r0, [sp, #0x10]
@@ -8734,7 +8734,7 @@ _021F4160:
 	ldr r0, [sp, #0x28]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 _021F416A:
 	add r0, r6, #0
 	bl sub_02048564

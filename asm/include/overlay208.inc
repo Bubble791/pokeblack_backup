@@ -726,7 +726,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_020484F4
 .public sub_02021C7C

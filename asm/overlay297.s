@@ -869,7 +869,7 @@ ovy297_21f487c: ; 0x021F487C
 	add r0, r7, #0
 	add r2, r4, #0
 	str r1, [r5, #0x2c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	bl sub_02048564
 	add r0, r6, #0
@@ -1139,7 +1139,7 @@ _021F4B3E:
 	ldr r2, [r4, #8]
 	add r0, r6, #0
 	str r1, [r4, #0x2c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02024274
 	bl sub_02017BCC

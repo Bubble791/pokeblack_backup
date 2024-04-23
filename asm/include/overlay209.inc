@@ -114,7 +114,7 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021D28
 .public sub_02048564

@@ -20,7 +20,7 @@
 .public sub_02153EC4
 .public sub_02153ECC
 .public sub_021F08B8
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021A8EB4
 .public sub_02155184
 .public sub_0215516C
@@ -38,7 +38,7 @@
 .public sub_02153EC4
 .public sub_02153ECC
 .public sub_021F08B8
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021A9280
 .public sub_02155184
 .public sub_02153EC4

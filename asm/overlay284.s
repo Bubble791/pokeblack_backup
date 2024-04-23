@@ -2985,7 +2985,7 @@ _021E480A:
 	ldr r2, [sp, #0xc]
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0xc]
 	bl sub_02048564
 	add r0, r5, #0

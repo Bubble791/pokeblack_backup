@@ -485,7 +485,7 @@
 .public sub_0204898C
 .public sub_020485F8
 .public sub_02048530
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_0203A1FC
 .public sub_021C11EC
@@ -869,8 +869,8 @@
 .public sub_02010564
 .public sub_020105A0
 .public sub_0204898C
-.public sub_020245A8
-.public sub_02024920
+.public GFL_CopyVarForText
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public MI_CpuFill8
 .public sub_021BF854
@@ -959,7 +959,7 @@
 .public sub_02008BD4
 .public sub_0202451C
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_021C2A3C
 .public sub_021C2A3C
@@ -1054,7 +1054,7 @@
 .public sub_02048530
 .public sub_02008BD4
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_0204AA30

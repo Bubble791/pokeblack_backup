@@ -1489,7 +1489,7 @@ ovy139_219a2ec: ; 0x0219A2EC
 	ldr r0, [sp, #0x20]
 	ldr r2, [sp, #0x28]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	str r5, [sp, #4]
 	ldrh r0, [r7, #4]
@@ -1519,7 +1519,7 @@ ovy139_219a2ec: ; 0x0219A2EC
 	ldr r0, [sp, #0x20]
 	ldr r2, [sp, #0x2c]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	str r6, [sp]
 	str r5, [sp, #4]
 	ldrh r0, [r7, #4]

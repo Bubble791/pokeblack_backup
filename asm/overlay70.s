@@ -2724,7 +2724,7 @@ ovy70_217e5d4: ; 0x0217E5D4
 	beq _0217E5F2
 	ldr r0, [r5, #0x10]
 	add r1, r4, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 _0217E5F2:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy70_217e5d4
@@ -4026,7 +4026,7 @@ ovy70_217efa4: ; 0x0217EFA4
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #0x30]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	mov r0, #0x28

@@ -100,7 +100,7 @@ ovy57_21e7630: ; 0x021E7630
 	ldr r0, [sp, #0x14]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -192,7 +192,7 @@ ovy57_21e770c: ; 0x021E770C
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #4]
 	add r1, r4, #0
 	lsl r0, r0, #0x18

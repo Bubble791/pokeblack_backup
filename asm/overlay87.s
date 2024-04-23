@@ -520,11 +520,11 @@ _021EAC3A:
 	add r2, r0, #0
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r2, [sp, #0x38]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x2c]
 	ldr r0, [r5, #0xc]
@@ -580,7 +580,7 @@ _021EAC3A:
 	ldr r2, [sp, #0x3c]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x28]
 	ldr r0, [r5, #0x14]
@@ -627,7 +627,7 @@ _021EAC3A:
 	ldr r2, [sp, #0x40]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x24]
 	ldr r0, [r5, #0x1c]
@@ -707,7 +707,7 @@ _021EAE82:
 	ldr r2, [sp, #0xc]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x20]
 	ldr r0, [r5, #0x24]
@@ -748,7 +748,7 @@ _021EAE82:
 	ldr r2, [sp, #0x50]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #0x2c]
@@ -805,7 +805,7 @@ _021EAF34:
 	ldr r2, [sp, #0x54]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x18]
 	ldr r0, [r5, #0x34]
@@ -859,7 +859,7 @@ _021EAFA4:
 	ldr r2, [sp, #0x58]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x14]
 	ldr r0, [r5, #0x3c]
@@ -954,7 +954,7 @@ _021EAFA4:
 	ldr r2, [sp, #0x64]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #8]
 	str r0, [sp, #0x10]
 	ldr r0, [r5, #0x44]

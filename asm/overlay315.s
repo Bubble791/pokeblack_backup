@@ -558,11 +558,11 @@ _0219D30A:
 	add r0, r6, #0
 	mov r1, #0
 	mov r7, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r2, [sp, #0x14]
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5, #0xc]
 	add r0, r4, #0
 	mov r2, #0

@@ -552,11 +552,11 @@ ovy295_219d2c4: ; 0x0219D2C4
 	ldr r2, [r5, #8]
 	mov r1, #0
 	mov r6, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r5, #0x18]
 	ldr r1, [r5, #0xc]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	bl sub_02017BCC
 	ldr r1, [r5, #0x10]
 	str r1, [sp]
@@ -1007,11 +1007,11 @@ ovy295_219d66c: ; 0x0219D66C
 	ldr r0, [r5, #0x10]
 	ldr r2, [r5, #8]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	ldr r0, [r5, #0x10]
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #1
 	mov r1, #2
 	mov r2, #0xf

@@ -44,7 +44,7 @@
 .public sub_0203DADC
 .public sub_021EA860
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021EAC18
 .public sub_02170D04
 .public sub_02022888
@@ -83,9 +83,9 @@
 .public sub_021ED864
 .public sub_0202451C
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public GFL_MsgDataLoadStrbuf
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02021D28
 .public sub_02021C7C
 .public sub_021EA87C

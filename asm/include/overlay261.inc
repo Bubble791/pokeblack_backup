@@ -125,10 +125,10 @@
 .public sub_02005DF4
 .public sub_0204898C
 .public sub_0201736C
-.public sub_020245A8
+.public GFL_CopyVarForText
 .public sub_02017B8C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_021C58A4
 .public sub_02005FA8
@@ -485,11 +485,11 @@
 .public sub_020485F8
 .public sub_02048530
 .public sub_0201736C
-.public sub_020245A8
-.public sub_020245A8
+.public GFL_CopyVarForText
+.public GFL_CopyVarForText
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021C58A4
 .public sub_02048564
 .public sub_02048564

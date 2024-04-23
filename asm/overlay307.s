@@ -1292,7 +1292,7 @@ _021DE5C6:
 	add r0, r7, #0
 	add r2, r6, #0
 	str r1, [r4, #0x68]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02024274
 	add r0, r6, #0

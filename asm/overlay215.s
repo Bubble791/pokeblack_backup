@@ -4763,7 +4763,7 @@ ovy215_21a9b6c: ; 0x021A9B6C
 	ldr r0, [r1, r0]
 	ldr r1, [r1, r4]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	add r0, r5, #0

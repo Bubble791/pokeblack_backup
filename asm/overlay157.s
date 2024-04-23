@@ -923,7 +923,7 @@ ovy157_21f6114: ; 0x021F6114
 	ldr r1, [r1]
 	add r5, r3, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	lsl r2, r5, #4
 	ldr r0, [r4, #0x18]
 	add r2, #8

@@ -65,7 +65,7 @@
 .public sub_0202451C
 .public sub_0208D65C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02187D28
 .public sub_02017934
 .public sub_0200C62C

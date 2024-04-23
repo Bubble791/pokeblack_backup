@@ -753,7 +753,7 @@
 .public sub_0202451C
 .public sub_021BAB80
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_021B88F0
 .public sub_021B88F4
 .public sub_02048564
@@ -829,7 +829,7 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020229B0
 .public sub_02021CFC
@@ -975,7 +975,7 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564

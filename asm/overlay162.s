@@ -3202,13 +3202,13 @@ _0219E816:
 	ldr r0, [r5, #0x7c]
 	ldr r2, [r5, #4]
 	mov r1, #0
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r1, r5, #0
 	add r1, #0x80
 	ldr r0, [r5, #0x7c]
 	ldr r1, [r1]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #4]
 	bl sub_02008BF0
 	cmp r0, #0
@@ -3345,7 +3345,7 @@ _0219EA02:
 	ldr r0, [r5, #0x7c]
 	ldr r1, [r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r4, [r0]
@@ -3405,7 +3405,7 @@ _0219EA02:
 	ldr r0, [r5, #0x7c]
 	ldr r1, [r1]
 	ldr r2, [sp, #0x34]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r7, [r0]
@@ -3464,7 +3464,7 @@ _0219EAEC:
 	ldr r0, [r5, #0x7c]
 	ldr r1, [r1]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r6, [r0]
@@ -3514,7 +3514,7 @@ _0219EB66:
 	ldr r0, [r5, #0x7c]
 	ldr r1, [r1]
 	ldr r2, [sp, #0x38]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	mov r4, #0x45
 	add r0, #0x84

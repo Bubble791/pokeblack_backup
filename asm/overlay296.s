@@ -1487,7 +1487,7 @@ ovy296_219e260: ; 0x0219E260
 	ldr r0, [sp, #0x3c]
 	ldr r2, [sp, #0x28]
 	add r1, r5, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	b _0219E290
 _0219E28E:
 	ldr r5, [sp, #0x28]

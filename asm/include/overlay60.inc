@@ -196,11 +196,11 @@
 .public sub_02048530
 .public sub_0202451C
 .public sub_0202437C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020485A4
 .public sub_02048564
 .public sub_02048564
@@ -231,9 +231,9 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048580
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_02048564
@@ -350,7 +350,7 @@
 .public sub_02048530
 .public sub_0200C9BC
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02021D28
@@ -365,7 +365,7 @@
 .public sub_02024E80
 .public sub_02008538
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_0204713C
 .public sub_02021D28
@@ -393,7 +393,7 @@
 .public sub_02046EF8
 .public sub_020484F4
 .public sub_0202451C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02022888
 .public sub_020484F4
 .public sub_02046EF8
@@ -406,7 +406,7 @@
 .public sub_0204713C
 .public sub_02024E80
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02017BCC
 .public sub_02022294
@@ -420,7 +420,7 @@
 .public sub_0204713C
 .public sub_02024E80
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02017BCC
 .public sub_02022294
@@ -432,7 +432,7 @@
 .public sub_0204713C
 .public sub_02024E80
 .public sub_0204898C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02017BCC
 .public sub_02022294
@@ -474,8 +474,8 @@
 .public sub_0202451C
 .public sub_0202451C
 .public sub_0202451C
-.public sub_02024920
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048564
 .public sub_020487D4
@@ -488,7 +488,7 @@
 .public sub_020370EC
 .public sub_0202451C
 .public sub_0202437C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02048564
 .public sub_02048580
 .public sub_02048580

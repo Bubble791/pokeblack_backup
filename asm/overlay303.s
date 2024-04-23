@@ -2180,7 +2180,7 @@ _021A0CC0:
 	ldr r0, [r4, r0]
 	ldr r2, [sp, #4]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
 	add r0, #0x9c
 	ldr r0, [r4, r0]
@@ -2568,7 +2568,7 @@ _021A1018:
 	add r1, r6, #0
 	ldr r0, [r5, r0]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #4
 	str r0, [sp]
 	mov r0, #0xf0
@@ -2727,7 +2727,7 @@ ovy303_21a113c: ; 0x021A113C
 	ldr r0, [r5, r7]
 	add r1, r4, #0
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #4
 	str r0, [sp]
 	add r0, #0xfc

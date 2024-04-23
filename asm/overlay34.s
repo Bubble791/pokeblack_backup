@@ -8159,7 +8159,7 @@ _0217A9C8:
 	ldr r0, [r6, r0]
 	mov r1, #0
 	add r2, r3, r2
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r0, r6, #0
 	add r1, r4, #0
 	bl ovy34_217b010
@@ -8759,7 +8759,7 @@ _0217AD68:
 	ldr r2, [sp, #0xc]
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	cmp r5, #8
 	bhi _0217ADDC
 	add r0, r5, r5
@@ -9106,7 +9106,7 @@ _0217B028:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r3, r4, #0
 	add r0, r4, #4
 	add r3, #0x1c

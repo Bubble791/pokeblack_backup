@@ -706,7 +706,7 @@ _0219D3E2:
 	ldr r0, [r5, #0x14]
 	ldr r1, [r5, #0x1c]
 	ldr r2, [r5, #0x18]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0x1c]
 	ldr r1, [sp, #0x14]
 	str r0, [sp]
@@ -770,7 +770,7 @@ ovy311_219d458: ; 0x0219D458
 	ldr r0, [r5, #0x14]
 	ldr r1, [r5, #0x1c]
 	ldr r2, [r5, #0x18]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [r5, #0xc]
 	mov r1, #4
 	str r0, [sp]

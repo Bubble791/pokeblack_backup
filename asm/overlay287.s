@@ -1810,7 +1810,7 @@ ovy287_21f51d8: ; 0x021F51D8
 	sub r0, #0xcc
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x3c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x34]
 	cmp r0, #9
 	ldr r0, _021F53DC ; =0x00001F70
@@ -2049,7 +2049,7 @@ ovy287_21f53f0: ; 0x021F53F0
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [sp, #0x14]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -2174,7 +2174,7 @@ ovy287_21f548c: ; 0x021F548C
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [sp, #0x3c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	sub r0, r6, #4
 	ldr r0, [r5, r0]
 	mov r2, #0
@@ -2234,7 +2234,7 @@ ovy287_21f548c: ; 0x021F548C
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [sp, #0x40]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -2384,7 +2384,7 @@ ovy287_21f56b8: ; 0x021F56B8
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x14]
 	add r1, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -2465,7 +2465,7 @@ _021F5776:
 	add r0, r0, #4
 	ldr r0, [r5, r0]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 _021F57B0:
@@ -2538,7 +2538,7 @@ ovy287_21f57fc: ; 0x021F57FC
 	ldr r0, [r5, r4]
 	ldr r2, [sp, #0x18]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, sp, #0x40
 	ldrh r1, [r0]
 	ldr r0, _021F58C4 ; =0x0000FFFF
@@ -2844,7 +2844,7 @@ ovy287_21f5a34: ; 0x021F5A34
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x24]
 	ldr r2, [sp, #0x20]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -2943,7 +2943,7 @@ _021F5B8E:
 	ldr r2, [sp, #0xc]
 	ldr r0, [r5, r6]
 	add r1, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, _021F5C08 ; =0x00001FD0
 	ldr r0, [r5, r0]
 	bl sub_020484D8
@@ -3056,7 +3056,7 @@ ovy287_21f5c10: ; 0x021F5C10
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -3171,7 +3171,7 @@ ovy287_21f5d10: ; 0x021F5D10
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -3286,7 +3286,7 @@ ovy287_21f5e10: ; 0x021F5E10
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -3401,7 +3401,7 @@ ovy287_21f5f10: ; 0x021F5F10
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -3517,7 +3517,7 @@ ovy287_21f6010: ; 0x021F6010
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x1c]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -3676,7 +3676,7 @@ ovy287_21f6110: ; 0x021F6110
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x28]
 	ldr r2, [sp, #0x24]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	ldr r0, [sp, #0x28]
 	ldr r1, [r1, #0xc]
@@ -3738,7 +3738,7 @@ ovy287_21f6110: ; 0x021F6110
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x34]
 	ldr r2, [sp, #0x30]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	sub r0, #0x48
 	ldr r0, [r5, r0]
@@ -3958,7 +3958,7 @@ _021F6432:
 	sub r0, #0xcc
 	ldr r0, [r5, r0]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -4142,7 +4142,7 @@ _021F65BC:
 	sub r0, #0xcc
 	ldr r0, [r5, r0]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -4445,7 +4445,7 @@ ovy287_21f67bc: ; 0x021F67BC
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x30]
 	ldr r2, [sp, #0x2c]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	ldr r0, [sp, #0x30]
 	ldr r1, [r1, #0xc]
@@ -4509,7 +4509,7 @@ ovy287_21f67bc: ; 0x021F67BC
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x3c]
 	ldr r2, [sp, #0x38]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x1c]
 	sub r4, #0xc4
 	ldr r0, [r0, r6]
@@ -4623,7 +4623,7 @@ ovy287_21f69d4: ; 0x021F69D4
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r4]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	add r0, r5, #0
@@ -4735,7 +4735,7 @@ ovy287_21f6a04: ; 0x021F6A04
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x30]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -4783,7 +4783,7 @@ ovy287_21f6a04: ; 0x021F6A04
 	ldr r0, [r5, r0]
 	ldr r2, [sp, #0x34]
 	add r1, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r1, [r5]
 	add r0, r7, #0
 	ldr r1, [r1, #0xc]
@@ -5102,7 +5102,7 @@ ovy287_21f6d94: ; 0x021F6D94
 	ldr r0, [r4, r0]
 	ldr r1, [sp, #0x20]
 	ldr r2, [sp, #0x30]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x30]
 	bl sub_02048564
 	ldr r0, [sp, #0x24]
@@ -5970,7 +5970,7 @@ ovy287_21f74fc: ; 0x021F74FC
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r4]
 	ldr r2, [sp]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp]
 	bl sub_02048564
 	pop {r3, r4, r5, r6, r7, pc}
@@ -11642,7 +11642,7 @@ _021FA1EC:
 	ldr r0, [r4, r1]
 	add r1, r1, #4
 	ldr r1, [r4, r1]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	mov r0, #0
@@ -12114,7 +12114,7 @@ ovy287_21fa4c8: ; 0x021FA4C8
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r4]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	mov r0, #0
@@ -12151,7 +12151,7 @@ _021FA538:
 	ldr r0, [r5, r7]
 	ldr r1, [r5, r1]
 	add r2, r6, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02048564
 	mov r0, #0
@@ -12179,7 +12179,7 @@ _021FA560:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r6]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	mov r0, #0
@@ -12203,7 +12203,7 @@ _021FA5A0:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r6]
 	add r2, r7, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
 	bl sub_02048564
 	mov r0, #0

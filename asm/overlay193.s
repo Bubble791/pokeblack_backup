@@ -778,14 +778,14 @@ _021B35AE:
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r4]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r1, r4, #0
 	sub r1, #0xfc
 	sub r4, #0xf8
 	ldr r0, [r5, r6]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r4]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0x20
 	str r0, [sp]
 	mov r0, #0x18
@@ -4771,14 +4771,14 @@ _021B586A:
 	ldr r0, [r5, r6]
 	ldr r2, [r5, r4]
 	mov r1, #1
-	bl sub_020245A8
+	bl GFL_CopyVarForText
 	add r1, r4, #0
 	sub r1, #0xfc
 	sub r4, #0xf8
 	ldr r0, [r5, r6]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r4]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	mov r0, #0x20
 	str r0, [sp]
 	mov r0, #0x18

@@ -117,7 +117,7 @@
 .public sub_021B878C
 .public sub_0201749C
 .public sub_0202EC3C
-.public sub_02024920
+.public GFL_WordSetFormatStrbuf
 .public sub_02187D28
 .public sub_02014DCC
 .public GFL_MsgDataLoadStrbuf

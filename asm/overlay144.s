@@ -3968,7 +3968,7 @@ _0219ED52:
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02046EF8
 	str r0, [sp, #0x34]
@@ -4012,7 +4012,7 @@ _0219EDB2:
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02046EF8
 	str r0, [sp, #0x38]
@@ -4054,7 +4054,7 @@ _0219EE16:
 	ldr r0, [r5, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r4, #0
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
 	bl sub_02046EF8
 	add r7, r0, #0

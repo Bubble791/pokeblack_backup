@@ -3387,7 +3387,7 @@ _021B6DEC:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
-	bl sub_02024920
+	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
 	sub r0, #0x14
 	ldr r0, [r5, r0]
