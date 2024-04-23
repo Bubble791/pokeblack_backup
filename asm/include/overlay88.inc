@@ -17,7 +17,7 @@
 .public sub_021EAAF8
 .public sub_02021C44
 .public sub_02021A18
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02044C98
 .public sub_0204476C
@@ -64,9 +64,9 @@
 .public sub_0203A78C
 .public sub_0202E7A4
 .public sub_020223CC
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0202E818
-.public sub_0203A83C
+.public GFL_TCBExMgrFree
 .public sub_02048210
 .public sub_02048210
 .public sub_02024D58
@@ -75,7 +75,7 @@
 .public sub_02021CFC
 .public sub_02024EE0
 .public sub_02048244
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02048504
 .public sub_020484F4
@@ -86,18 +86,18 @@
 .public sub_02021CFC
 .public sub_02024EE0
 .public sub_02048244
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_0204898C
 .public sub_0202DA48
 .public sub_0202DED4
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_0202DA54
 .public sub_0202DB70
 .public sub_02016AD8
 .public sub_0201740C
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public sub_021EAD0C
 .public sub_021EAD00
 .public sub_02016B40
@@ -114,7 +114,7 @@
 .public sub_0202BDD4
 .public sub_02016AD8
 .public sub_0201740C
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public sub_021EAD0C
 .public sub_02016BEC
 .public sub_021EAD00
@@ -130,7 +130,7 @@
 .public sub_0204826C
 .public sub_02016AD8
 .public sub_0201740C
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public sub_0203DA48
 
 .public sub_0202E1DC

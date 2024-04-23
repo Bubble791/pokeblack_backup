@@ -451,7 +451,7 @@ _021EEFDC:
 	bl ovy12_2166e88
 	ldr r0, _021EF06C ; =0x000006CE
 _021EEFF6:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5]
 	add r0, r0, #1
 	str r0, [r5]
@@ -550,7 +550,7 @@ _021EF0A2:
 	add r0, r6, #0
 	bl ovy12_2166e88
 	ldr r0, _021EF100 ; =0x0000055A
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	add r0, r0, #1
 	str r0, [r4]

@@ -50,10 +50,10 @@ ovy166_219cec8: ; 0x0219CEC8
 	ldr r0, [r4, #0x2c]
 	cmp r0, #0
 	beq _0219CEDE
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219CEDE:
 	ldr r0, [r4, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	bl sub_0203AB10
 	mov r0, #0x52
@@ -216,7 +216,7 @@ _0219D03E:
 	bl sub_0204898C
 	str r0, [r4, #0x2c]
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _0219D04C:
 	ldr r0, [r5]
 	bl sub_020171F4
@@ -375,7 +375,7 @@ _0219D148:
 	bl sub_020095A0
 _0219D194:
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219D19A:
 	ldr r0, [r4]
 	bl sub_02165AE8

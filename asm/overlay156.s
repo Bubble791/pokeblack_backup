@@ -215,13 +215,13 @@ ovy156_21f5b9c: ; 0x021F5B9C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x38]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x34]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x2c]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r4, #0x28]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x30]
 	bl sub_0201362C
 	ldr r0, [r4, #0x1c]
@@ -250,7 +250,7 @@ _021F5BDC:
 	bl sub_0204E060
 	mov r0, #0x5e
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	add r0, r0, #1
 	str r0, [r4]

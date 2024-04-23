@@ -347,9 +347,9 @@ _021E5AA0:
 	strh r0, [r1]
 _021E5AA6:
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E5AB2:
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy64_21e5a50

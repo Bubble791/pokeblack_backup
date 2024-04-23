@@ -37,7 +37,7 @@
 .public sub_02021998
 .public sub_02022D58
 .public sub_0204875C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02021C44
 .public sub_02021A18
@@ -87,7 +87,7 @@
 .public sub_0204C108
 .public sub_0203DAC8
 .public sub_0204C178
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0204C378
 .public sub_020342F4
 .public sub_020484F4
@@ -95,7 +95,7 @@
 .public sub_02048244
 .public sub_021B4620
 .public sub_0203CB80
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02045814
 .public MI_CpuCopy8
 .public sub_0204566C
@@ -112,16 +112,16 @@
 .public sub_02045B7C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048530
 .public sub_02048614
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_021B4620
 .public sub_0203CB80
 .public sub_0203CB80
@@ -153,7 +153,7 @@
 .public sub_0203DAC8
 .public sub_021B4620
 .public MI_CpuCopy8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0203CB80
 .public sub_02045814
 .public sub_0204566C

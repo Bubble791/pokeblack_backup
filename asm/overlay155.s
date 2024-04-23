@@ -446,7 +446,7 @@ _021F5D74:
 	cmp r0, #0
 	bne _021F5DC2
 	ldr r0, [r5, #0x14]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	b _021F5D6C
 _021F5D84:
 	ldr r0, [r5, #0x2c]
@@ -456,7 +456,7 @@ _021F5D84:
 	cmp r0, #0
 	bne _021F5DC2
 	ldr r0, [r5, #0x18]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r6, [r5, #0x70]
 	add r0, r7, #0
 	add r1, r5, #0

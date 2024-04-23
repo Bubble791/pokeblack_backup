@@ -12,10 +12,10 @@
 .public sub_0218105C
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public ovy36_21b8598
 .public sub_021B8224
 .public sub_021B8248

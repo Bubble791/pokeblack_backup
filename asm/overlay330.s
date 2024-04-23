@@ -71,10 +71,10 @@ ovy330_219cef0: ; 0x0219CEF0
 	ldr r0, [r4, #0x28]
 	cmp r0, #0
 	beq _0219CF06
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219CF06:
 	ldr r0, [r4, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	bl sub_0203AB10
 	mov r0, #0x8b
@@ -188,7 +188,7 @@ _0219CFFA:
 	bl sub_0204898C
 	str r0, [r4, #0x28]
 	ldr r0, [sp, #0x14]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _0219D008:
 	ldr r0, [r5]
 	bl sub_020171F4
@@ -344,7 +344,7 @@ _0219D0FE:
 	bl sub_020095A0
 _0219D14A:
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219D150:
 	ldr r0, [r4]
 	bl sub_02165AE8

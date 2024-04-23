@@ -31,8 +31,8 @@
 .public sub_02042BA8
 .public sub_0219DC7C
 .public sub_0219E51C
-.public sub_020487D4
-.public sub_0203A6A8
+.public GFL_MsgDataFree
+.public GFL_TCBRemove
 .public sub_02021C44
 .public sub_02021A18
 .public sub_02021C44
@@ -80,7 +80,7 @@
 .public sub_0200BE50
 .public sub_0200BBB4
 .public sub_0203580C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0219D798
 .public sub_02040440
 .public sub_02040624
@@ -115,8 +115,8 @@
 .public sub_020232E8
 .public sub_02045B7C
 .public sub_020223CC
-.public sub_02048564
-.public sub_0203A83C
+.public GFL_StrBufFree
+.public GFL_TCBExMgrFree
 .public sub_02044668
 .public sub_02048210
 .public sub_02048210
@@ -143,7 +143,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_020223CC
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02017BCC
 .public sub_02022268
@@ -156,7 +156,7 @@
 .public sub_0203D564
 .public sub_0203DEFC
 .public sub_0203DA48
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020223BC
 .public sub_0203DEFC
 .public sub_0203DEFC
@@ -166,7 +166,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_020223CC
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C54
@@ -210,11 +210,11 @@
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02021C44
 .public sub_020484F4
 .public sub_0204713C
@@ -246,7 +246,7 @@
 .public sub_0204898C
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_020241D4
 .public sub_0204898C
 .public sub_02048530
@@ -255,9 +255,9 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
-.public sub_02048564
-.public sub_02024274
+.public GFL_StrBufFree
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
 .public sub_0219EB74
 .public sub_02021114
 .public sub_02020F94
@@ -337,7 +337,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
 .public sub_0203A24C

@@ -324,7 +324,7 @@ ovy144_219d140: ; 0x0219D140
 	lsl r5, r5, #2
 	add r6, r0, #0
 	ldr r0, [r4, r5]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r5, #0
 	sub r0, #0x48
 	add r0, r4, r0
@@ -365,10 +365,10 @@ _0219D194:
 	mov r5, #0x4e
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	sub r5, #8
 	ldr r0, [r4, r5]
 	bl sub_02022DA8
@@ -774,7 +774,7 @@ _0219D43E:
 	strh r6, [r2, #8]
 _0219D4B2:
 	ldr r0, _0219D708 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [sp]
 	ldr r1, _0219D70C ; =ovy144_219d298
 	bl sub_0219D248
@@ -805,7 +805,7 @@ _0219D4D4:
 	cmp r6, #0
 	beq _0219D53A
 	ldr r0, _0219D710 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	add r0, #0xb0
 	add r1, r6, #0
@@ -954,7 +954,7 @@ _0219D60A:
 	add r3, r6, #0
 	bl ovy144_219e9ec
 	ldr r0, _0219D718 ; =0x00000648
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r0, #0x40
 	ldr r0, [r5, r0]
@@ -1011,7 +1011,7 @@ _0219D67A:
 	add r2, r6, #0
 	bl ovy144_219e9ec
 	ldr r0, _0219D71C ; =0x00000649
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
 	cmp r0, #0
@@ -3719,11 +3719,11 @@ ovy144_219eb48: ; 0x0219EB48
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #4]
 	bl sub_02048210
 	ldr r0, [r4, #0x10]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x1c
@@ -4074,7 +4074,7 @@ _0219EE16:
 	bl sub_02021CFC
 _0219EE74:
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _0219EEFA
 _0219EE7C:
 	add r0, r7, #0
@@ -4201,7 +4201,7 @@ ovy144_219ef78: ; 0x0219EF78
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4]
 	bl sub_02048210
 	add r0, r4, #0
@@ -4431,7 +4431,7 @@ _0219F118:
 	mov r3, #2
 	bl ovy144_219efe8
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _0219F192
 _0219F180:
 	add r0, r4, #0
@@ -4679,7 +4679,7 @@ ovy144_219f32c: ; 0x0219F32C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x28]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #4
 	bl ovy144_219f6a8
 	add r0, r4, #0

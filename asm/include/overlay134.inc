@@ -225,7 +225,7 @@
 .public sub_02048530
 .public sub_02048658
 .public sub_0201CD1C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0201CD1C
 .public sub_0201D5F4
 .public MIi_CpuClear32
@@ -280,8 +280,8 @@
 .public sub_02048530
 .public sub_021E5CA4
 .public sub_021E5CC4
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_02017C84
 .public sub_0201FDF8
 .public sub_021F0610
@@ -301,7 +301,7 @@
 .public sub_021E5E28
 .public sub_0204875C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_021E5E34
 .public sub_021E5E20
 .public sub_02048658
@@ -309,4 +309,4 @@
 .public sub_02048658
 .public sub_0204875C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020487D4
+.public GFL_MsgDataFree

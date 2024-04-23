@@ -261,15 +261,15 @@ ovy157_21f5be4: ; 0x021F5BE4
 	add r4, r0, #0
 	add r0, #0x98
 	ldr r0, [r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x38]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r4, #0x34]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x3c]
 	bl sub_0201362C
 	ldr r0, [r4, #0x74]
@@ -552,7 +552,7 @@ _021F5E24:
 _021F5E52:
 	mov r0, #0x5e
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #8]
 	ldr r1, [r4, #0x10]
 	mov r2, #1

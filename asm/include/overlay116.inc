@@ -8,7 +8,7 @@
 .public sub_021EF088
 .public ovy36_218102c
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EF094
 .public sub_02016AF0
 .public sub_0218105C

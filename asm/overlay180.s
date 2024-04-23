@@ -312,7 +312,7 @@ _0219AF60:
 	add r0, r4, #0
 	sub r0, #0x24
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	sub r0, #0x2c
 	ldr r0, [r5, r0]
@@ -1141,11 +1141,11 @@ _0219B4F6:
 	add r3, r4, #0
 	bl ovy180_219c964
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_02022DA8
 	ldr r0, [sp, #0x10]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r6, #0xc]
 	bl sub_02048244
 	ldr r0, [r6, #0xc]
@@ -1360,7 +1360,7 @@ ovy180_219b838: ; 0x0219B838
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x24]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #0x10
 	bl ovy180_219b784
@@ -1677,7 +1677,7 @@ ovy180_219bac0: ; 0x0219BAC0
 	ldr r6, _0219BB40 ; =0x0000058C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	mov r4, #0
 	sub r6, #0x24
 _0219BAD0:
@@ -1717,7 +1717,7 @@ _0219BB0A:
 	bl sub_0219C308
 	ldr r4, _0219BB44 ; =0x00000588
 	ldr r0, [r5, r4]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r4, #0
 	sub r0, #0x18
 	ldr r0, [r5, r0]
@@ -1762,7 +1762,7 @@ ovy180_219bb48: ; 0x0219BB48
 	beq _0219BB86
 	add r4, #0xb1
 	add r0, r4, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _0219BB86:
 	ldr r4, _0219BBC0 ; =0x00000556
 	mov r1, #0x18
@@ -2440,13 +2440,13 @@ ovy180_219bf6c: ; 0x0219BF6C
 	mov r2, #5
 	bl sub_02021CFC
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x14]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r0, [r7, #8]
 	ldrb r1, [r7, #0xa]
 	ldrb r2, [r7, #0xb]
@@ -3019,7 +3019,7 @@ _0219C528:
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0219C536
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219C536:
 	ldr r0, [r5]
 	add r4, r4, #1
@@ -3708,9 +3708,9 @@ _0219C9C6:
 	str r5, [sp]
 	bl sub_02021CFC
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0xc]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -3824,7 +3824,7 @@ ovy180_219cb1c: ; 0x0219CB1C
 	ldr r0, [r4]
 	bl sub_02046EDC
 	ldr r0, [r4, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}

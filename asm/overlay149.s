@@ -268,7 +268,7 @@ _021F5B5C:
 	sub r1, r7, #3
 	cmp r0, r1
 	beq _021F5BE6
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021F5BE6:
 	b _021F5B10
 _021F5BE8:

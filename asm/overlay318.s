@@ -140,9 +140,9 @@ ovy318_219cf98: ; 0x0219CF98
 	add r0, #8
 	bl ovy318_219d1f4
 	ldr r0, [r5, #0x54]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r5, #0x4c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x50]
 	bl sub_02021C44
 	ldr r0, [r5, #0x50]
@@ -421,7 +421,7 @@ ovy318_219d1f4: ; 0x0219D1F4
 	ldr r0, [r4, #0x14]
 	bl sub_02048210
 	ldr r0, [r4, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x24
@@ -464,7 +464,7 @@ _0219D24A:
 	ldr r0, [r4, #0x18]
 	bl sub_0202E818
 	ldr r0, [r4, #4]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x1c
@@ -634,7 +634,7 @@ ovy318_219d3c4: ; 0x0219D3C4
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #4
 	bl ovy318_219d524
 	add r0, r4, #0

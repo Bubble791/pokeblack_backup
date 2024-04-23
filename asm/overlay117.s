@@ -126,7 +126,7 @@ ovy117_21eed64: ; 0x021EED64
 	lsr r1, r1, #0x10
 	bl ovy117_21ef5cc
 	ldr r0, _021EED84 ; =0x000008AA
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r4, pc}
 	nop
 _021EED84: .word 0x000008AA
@@ -143,7 +143,7 @@ ovy117_21eed88: ; 0x021EED88
 	lsr r1, r1, #0x10
 	bl ovy117_21ef64c
 	ldr r0, _021EEDA8 ; =0x000008A9
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r4, pc}
 	nop
 _021EEDA8: .word 0x000008A9
@@ -1561,7 +1561,7 @@ _021EF876:
 	add r0, r7, #0
 	bl ovy117_21ef910
 	ldr r0, _021EF8B4 ; =0x000008A9
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 _021EF88C:
 	str r0, [r4]
@@ -1710,7 +1710,7 @@ _021EF988:
 	ldr r0, [r4, #4]
 	bl ovy117_21ef358
 	ldr r0, _021EF9DC ; =0x000008AC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrh r0, [r4, #2]
 	bl ovy117_21efab4
 	cmp r0, #0
@@ -1805,7 +1805,7 @@ _021EFA3A:
 	bl ovy117_21ef704
 	ldr r0, _021EFAAC ; =0x000008AB
 _021EFA4C:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EFA50:
 	ldrh r0, [r4]
 	add r0, r0, #1

@@ -73,8 +73,8 @@
 .public sub_0203A1FC
 .public sub_0203A1FC
 .public sub_0203A1FC
-.public sub_02006254
-.public sub_02006254
+.public GFL_SndSEPlay
+.public GFL_SndSEPlay
 .public sub_0203A24C
 .public sub_02008B08
 .public sub_0201C2C4

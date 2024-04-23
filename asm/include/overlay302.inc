@@ -83,8 +83,8 @@
 .public sub_0200D660
 .public sub_0200D7F4
 .public sub_0200D1F8
-.public sub_020279B4
-.public sub_020279B4
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenSet
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_0204C040

@@ -24,7 +24,7 @@
 .public sub_021804F0
 .public sub_021EFF6C
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0218105C
 .public sub_0218105C
 .public sub_021804F0
@@ -155,14 +155,14 @@
 .public sub_02005784
 .public sub_02005784
 .public sub_021EF1E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EF1E8
 .public sub_02005784
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EF1E8
 .public sub_02005784
 .public MI_CpuFill8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public VEC_Add
 .public sub_02016CB4
 .public sub_02016EDC

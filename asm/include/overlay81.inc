@@ -39,10 +39,10 @@
 .public sub_02048530
 .public sub_021E5CA4
 .public sub_021E5D44
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048530
 .public sub_021E5CAC
 .public sub_021E6488
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02042BA8
 .public sub_02046D84

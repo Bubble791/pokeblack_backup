@@ -310,7 +310,7 @@ ovy86_21eaaa0: ; 0x021EAAA0
 	add r0, r4, #0
 	add r0, #0xa0
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r4, #0x60]
 	bl sub_0203A24C
 	add r0, r4, #0
@@ -788,7 +788,7 @@ _021EAE5A:
 	cmp r1, r0
 	beq _021EAE6C
 	ldr r0, _021EAE90 ; =0x00000761
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EAE6C:
 	add r1, r5, #0
 	ldr r0, [sp, #0x38]
@@ -1505,7 +1505,7 @@ _021EB41A:
 	mov r1, #8
 	bl sub_0204C488
 	ldr r0, _021EB460 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #8
 	pop {r3, r4, r5, pc}
 _021EB434:

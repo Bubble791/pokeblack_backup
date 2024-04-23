@@ -42,7 +42,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
 .public sub_0203A24C
@@ -86,10 +86,10 @@
 .public sub_020223CC
 .public sub_0203580C
 .public sub_0202E818
-.public sub_0203A83C
+.public GFL_TCBExMgrFree
 .public sub_02024EEC
 .public sub_02048210
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02021A18
 .public sub_0203A24C
 .public sub_02021A3C
@@ -162,8 +162,8 @@
 .public sub_021B67AC
 .public sub_021B5458
 .public sub_021B6D54
-.public sub_02024274
-.public sub_020487D4
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
 .public sub_0203AB10
@@ -220,7 +220,7 @@
 .public sub_02044CFC
 .public sub_02044668
 .public sub_02044668
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_02043E98
 
 .public sub_02045A5C

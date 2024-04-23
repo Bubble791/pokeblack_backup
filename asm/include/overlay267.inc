@@ -12,7 +12,7 @@
 .public GXS_LoadBGPltt
 .public sub_02044B84
 .public sub_0219D0E0
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_02021C44
 .public sub_02021A18
 .public sub_02022DA8
@@ -52,7 +52,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
 .public sub_0203A24C

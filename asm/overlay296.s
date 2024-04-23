@@ -641,7 +641,7 @@ _0219DBF6:
 	add r0, r4, #0
 	bl ovy296_219ed84
 	ldr r0, [r4, #0x50]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl ovy296_219e9e8
 	ldr r0, [r4, #0x40]
@@ -1548,7 +1548,7 @@ _0219E2DC:
 	cmp r0, #0
 	beq _0219E302
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219E302:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -1584,7 +1584,7 @@ ovy296_219e308: ; 0x0219E308
 	add r0, r5, #0
 	bl ovy296_219e260
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1704,7 +1704,7 @@ _0219E3E4:
 	ldr r3, [r5, #0x28]
 	bl ovy296_219e260
 	ldr r0, [sp, #0x2c]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	b _0219E45A
 _0219E434:
 	mov r0, #0x9d
@@ -1745,7 +1745,7 @@ _0219E45A:
 	mov r3, #5
 	bl sub_02021C7C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #8]
 	mov r1, #0
 	cmp r0, #0
@@ -2026,7 +2026,7 @@ _0219E682:
 	ldr r3, [r5, #0x28]
 	bl ovy296_219e260
 	ldr r0, [sp, #0x1c]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	b _0219E6E6
 _0219E6C0:
 	mov r0, #0x9d
@@ -4439,7 +4439,7 @@ _0219F918:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -4494,7 +4494,7 @@ _0219F97E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _0219F988:
 	add r0, r4, #1
 	lsl r0, r0, #0x18

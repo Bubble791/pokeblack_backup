@@ -212,7 +212,7 @@ _0219D024:
 	add r0, r5, #0
 	bl sub_0219D230
 	ldr r0, [r5, #0x14]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r5, #0x10]
 	bl sub_02021C44
 	ldr r0, [r5, #0x10]
@@ -547,11 +547,11 @@ _0219D28C:
 	mov r3, #0
 	bl sub_02021C7C
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r5, #0x18]
 	mov r1, #1
 	mov r4, #1
@@ -571,7 +571,7 @@ _0219D28C:
 	mov r3, #0
 	bl sub_02021C7C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x18]
 	mov r1, #3
 	bl sub_0204898C
@@ -590,7 +590,7 @@ _0219D28C:
 	mov r3, #0
 	bl sub_02021C7C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219D388:
 	lsl r0, r4, #2
 	add r0, r5, r0
@@ -636,7 +636,7 @@ _0219D3D0:
 	ldr r0, [r5, #0x18]
 	cmp r0, #0
 	beq _0219D3E4
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _0219D3E4:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -1143,7 +1143,7 @@ ovy314_219d7f0: ; 0x0219D7F0
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy314_219da00

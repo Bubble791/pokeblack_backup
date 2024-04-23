@@ -19,7 +19,7 @@
 .public sub_02006268
 .public sub_02006268
 .public sub_02006268
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_0203AB10
 .public sub_0203A1D0
@@ -27,12 +27,12 @@
 .public sub_02021A3C
 .public sub_021A2678
 .public sub_021A2690
-.public sub_02027ACC
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
+.public GFL_FadeScreenIsFinished
 .public sub_02027B90
 .public sub_0204E038
-.public sub_020279B4
-.public sub_02027ACC
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenIsFinished
 .public sub_0203DEFC
 .public sub_0203A1FC
 .public sub_0203A24C
@@ -57,7 +57,7 @@
 .public sub_02046D78
 .public sub_020232D0
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_020232D8
 .public MI_CpuFill8
 .public sub_0203A24C
@@ -198,10 +198,10 @@
 .public sub_0203A870
 .public GX_SetBankForLCDC
 .public GX_SetGraphicsMode
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public MIi_CpuClearFast
 .public sub_020061DC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020061B8
 .public sub_0200632C
 .public sub_020062D8
@@ -301,7 +301,7 @@
 .public sub_020484D4
 .public sub_02044F90
 .public sub_02024EE0
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044C98
@@ -313,7 +313,7 @@
 .public sub_020484F4
 .public sub_0204713C
 .public sub_020223CC
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_020232D8
 .public sub_02024EEC
 .public sub_02048210
@@ -368,7 +368,7 @@
 .public sub_02005E68
 .public sub_0204AB0C
 .public sub_02022DA8
-.public sub_0203A83C
+.public GFL_TCBExMgrFree
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204ADA8

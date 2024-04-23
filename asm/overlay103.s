@@ -629,13 +629,13 @@ ovy103_21ef188: ; 0x021EF188
 	bne _021EF19A
 	mov r0, #0x8a
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF19A:
 	ldr r0, [r4, #8]
 	cmp r0, #0x32
 	bne _021EF1A6
 	ldr r0, _021EF1A8 ; =0x0000089B
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF1A6:
 	pop {r4, pc}
 	.align 2, 0
@@ -1181,29 +1181,29 @@ ovy103_21ef5dc: ; 0x021EF5DC
 	cmp r0, #0x64
 	bne _021EF5EC
 	ldr r0, _021EF61C ; =0x0000089D
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF5EC:
 	ldr r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021EF5F8
 	ldr r0, _021EF620 ; =0x0000089C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF5F8:
 	ldr r0, [r4, #0x18]
 	cmp r0, #0x8c
 	bne _021EF60C
 	ldr r5, _021EF624 ; =0x0000089E
 	add r0, r5, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #3
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF60C:
 	ldr r1, [r4, #0x18]
 	ldr r0, _021EF628 ; =0x0000014A
 	cmp r1, r0
 	bne _021EF61A
 	ldr r0, _021EF62C ; =0x0000089F
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF61A:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

@@ -86,7 +86,7 @@ ovy113_21eecd8: ; 0x021EECD8
 	mov r1, #0
 	bl ovy113_21eee80
 	ldr r0, _021EED34 ; =0x000008D7
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -409,7 +409,7 @@ _021EEFA4:
 	add r1, r5, #0
 	bl ovy12_2167bcc
 	ldr r0, _021EEFD4 ; =0x00000682
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #0x10
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}

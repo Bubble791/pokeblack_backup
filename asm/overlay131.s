@@ -76,7 +76,7 @@ ovy131_21eed18: ; 0x021EED18
 	add r4, r0, #0
 	add r0, #0x80
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -480,7 +480,7 @@ _021EF010:
 	pop {r4, r5, r6, r7, pc}
 _021EF07A:
 	ldr r0, _021EF158 ; =0x000006ED
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 	str r0, [r4]
 	mov r1, #2

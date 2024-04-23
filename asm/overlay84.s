@@ -924,22 +924,22 @@ ovy84_21eb5b4: ; 0x021EB5B4
 	add r5, r0, #0
 	lsl r4, r4, #4
 	ldr r0, [r5, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	sub r0, #8
 	ldr r0, [r5, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	sub r0, #0xc
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	sub r0, #0x10
 	ldr r0, [r5, r0]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r4, #0
 	sub r0, #0x20
 	ldr r0, [r5, r0]
@@ -969,10 +969,10 @@ ovy84_21eb5b4: ; 0x021EB5B4
 	add r0, r5, #0
 	add r0, #0xf0
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r5, #0xec
 	ldr r0, [r5]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy84_21eb5b4
 
@@ -2351,9 +2351,9 @@ ovy84_21ec128: ; 0x021EC128
 	mul r0, r1
 	add r5, r2, r0
 	ldr r0, [r5, #0x48]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x44]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	add r0, #0x30
 	bl sub_021EAB6C

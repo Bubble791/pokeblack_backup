@@ -250,9 +250,9 @@ ovy306_219d078: ; 0x0219D078
 	add r1, r4, #0
 	bl sub_0219E51C
 	ldr r0, [r4, #0x58]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x4c]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r4, #0x18]
 	bl sub_02021C44
 	ldr r0, [r4, #0x18]
@@ -917,7 +917,7 @@ _0219D5D6:
 	cmp r0, #2
 	bne _0219D612
 	ldr r0, _0219D794 ; =0x00000558
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	str r0, [sp]
 	ldr r0, [sp, #0x14]
@@ -1312,10 +1312,10 @@ _0219D906:
 	ldr r0, [r4, #0x78]
 	cmp r0, #0
 	beq _0219D910
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219D910:
 	ldr r0, [r4, #0x68]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r2, [r4, #0x74]
 	mov r0, #1
 	lsl r1, r2, #0x10
@@ -1440,7 +1440,7 @@ _0219DA08:
 	ldr r0, [r5, #0x78]
 	cmp r0, #0
 	beq _0219DA12
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219DA12:
 	ldr r0, [r5, #0x58]
 	add r1, r6, #0
@@ -1539,7 +1539,7 @@ _0219DABC:
 	beq _0219DB2A
 _0219DACE:
 	ldr r0, _0219DB30 ; =0x00000547
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x5c]
 	bl sub_020223BC
 	bl sub_0203DEFC
@@ -1612,7 +1612,7 @@ _0219DB54:
 	ldr r0, [r4, #0x78]
 	cmp r0, #0
 	beq _0219DB62
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219DB62:
 	ldr r0, [r4, #0x58]
 	add r1, r6, #0
@@ -2057,7 +2057,7 @@ ovy306_219dea8: ; 0x0219DEA8
 	mov r3, #1
 	bl sub_02021C7C
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r1, r4, #0
 	add r1, #0x9c
 	mov r0, #0
@@ -2082,7 +2082,7 @@ ovy306_219dea8: ; 0x0219DEA8
 	mov r3, #1
 	bl sub_02021C7C
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r1, r4, #0
 	add r1, #0xa0
 	mov r0, #0
@@ -2327,7 +2327,7 @@ _0219E0CE:
 	add r0, #0xa4
 	str r1, [r0]
 	ldr r0, [sp, #0x10]
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219E116:
 	add r0, r5, #0
 	add r0, #0xbc
@@ -2385,11 +2385,11 @@ _0219E12A:
 	add r0, #0xa8
 	str r1, [r0]
 	ldr r0, [sp, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x14]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 _0219E1A4:
 	add r0, r5, #0
 	add r0, #0xbc
@@ -3591,7 +3591,7 @@ ovy306_219eaec: ; 0x0219EAEC
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy306_219ed14

@@ -1426,7 +1426,7 @@ _021EF9FA:
 	ldr r0, [r5, #8]
 	mov r4, #0
 	str r4, [r5, #0xc]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	str r4, [r5, #8]
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy121_21ef9f0

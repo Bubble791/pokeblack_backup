@@ -708,7 +708,7 @@ _021EF1FA:
 	bl sub_020061B8
 	strb r0, [r5, #0x12]
 	add r0, r4, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	bl ovy91_21ef148
 	add r2, r0, #0
@@ -1072,7 +1072,7 @@ _021EF4CC:
 	cmp r5, #1
 	blo _021EF4CC
 	ldr r0, _021EF51C ; =0x00000812
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [sp, #8]
 	ldr r1, _021EF520 ; =ovy91_21ef524
 	ldr r2, [sp, #4]
@@ -1133,7 +1133,7 @@ _021EF560:
 	ldr r0, [sp, #4]
 	bl sub_0203A24C
 	ldr r0, [sp]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 _021EF586:
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}

@@ -135,7 +135,7 @@ _021F453C:
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 _021F4540:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	bne _021F455A
 	ldr r0, [r4]
@@ -153,7 +153,7 @@ _021F455A:
 	add r0, r4, #0
 	bl ovy289_21f4874
 	ldr r0, [r4, #4]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	add r0, r4, #0
 	add r0, #0xc0
 	ldr r0, [r0]
@@ -184,7 +184,7 @@ _021F4596:
 	str r0, [r1]
 _021F45AA:
 	add r0, r5, #0
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl sub_0203A24C
 	mov r0, #1
@@ -369,7 +369,7 @@ ovy289_21f470c: ; 0x021F470C
 	mov r3, #0
 	str r0, [sp, #8]
 	mov r0, #4
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	add sp, #0xc
 	pop {pc}
 	thumb_func_end ovy289_21f470c
@@ -378,7 +378,7 @@ ovy289_21f470c: ; 0x021F470C
 ovy289_21f472c: ; 0x021F472C
 	push {r4, lr}
 	mov r4, #1
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021F473A
 	mov r4, #0
@@ -703,7 +703,7 @@ _021F499A:
 	cmp r0, #0
 	beq _021F49C4
 	ldr r0, _021F4A80 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021F49C4:
 	add r0, r5, #0
 	add r0, #0xb4
@@ -733,7 +733,7 @@ _021F49E0:
 	cmp r1, r0
 	beq _021F49FC
 	ldr r0, _021F4A80 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021F49FC:
 	add r0, r5, #0
 	add r0, #0xb4
@@ -789,7 +789,7 @@ _021F4A52:
 	str r0, [r1]
 _021F4A5C:
 	ldr r0, _021F4A84 ; =0x0000054D
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021F4A62:
 	mov r6, #1
 _021F4A64:

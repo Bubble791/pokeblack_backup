@@ -100,7 +100,7 @@
 .public sub_02153ECC
 .public sub_0204875C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_0202437C
 .public ovy12_2154910
 .public ovy12_2154910

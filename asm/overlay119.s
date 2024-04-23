@@ -89,7 +89,7 @@ ovy119_21eed10: ; 0x021EED10
 	lsr r1, r1, #0x10
 	bl ovy119_21eef24
 	ldr r0, _021EED30 ; =0x000008A9
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r4, pc}
 	nop
 _021EED30: .word 0x000008A9
@@ -106,7 +106,7 @@ ovy119_21eed34: ; 0x021EED34
 	lsr r1, r1, #0x10
 	bl ovy119_21eefd8
 	ldr r0, _021EED54 ; =0x000008AA
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r4, pc}
 	nop
 _021EED54: .word 0x000008AA

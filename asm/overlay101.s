@@ -142,7 +142,7 @@ _021EED90:
 	bl ovy101_21f0194
 _021EED9E:
 	ldr r0, _021EEDAC ; =0x0000087D
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EEDA4:
 	add r0, r5, #0
 	bl sub_021EF288
@@ -286,7 +286,7 @@ _021EEE90:
 	cmp r5, #2
 	blt _021EEE90
 	ldr r0, _021EEEDC ; =0x000008D7
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -912,7 +912,7 @@ _021EF3E4:
 	mov r2, #0
 	bl ovy101_21f006c
 	ldr r0, _021EF624 ; =0x0000087C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021EF550
 _021EF412:
 	ldr r0, [r4, #8]
@@ -1002,7 +1002,7 @@ _021EF468:
 	ldrh r1, [r4]
 	bl ovy101_21eff64
 	ldr r0, _021EF624 ; =0x0000087C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 	b _021EF36E
 _021EF4C8:
@@ -1045,7 +1045,7 @@ _021EF514:
 _021EF516:
 	str r0, [r6]
 	ldr r0, _021EF62C ; =0x0000055A
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021EF61C
 _021EF520:
 	add r0, r4, #0
@@ -1060,7 +1060,7 @@ _021EF520:
 	mov r2, #0
 	bl ovy101_21f006c
 	ldr r0, _021EF62C ; =0x0000055A
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #7
 	b _021EF36E
 _021EF546:
@@ -2907,7 +2907,7 @@ _021F03AE:
 	mov r0, #0
 	str r0, [r5]
 	ldr r0, [sp, #4]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 _021F03B8:
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}

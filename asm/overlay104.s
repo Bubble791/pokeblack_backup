@@ -602,9 +602,9 @@ _021EF0CA:
 	lsl r0, r4, #2
 	str r1, [r7, r0]
 	ldr r0, [sp, #8]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -1029,7 +1029,7 @@ ovy104_21ef3c0: ; 0x021EF3C0
 	str r4, [sp, #0x30]
 	bl ovy104_21ef28c
 	add r0, r4, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x34
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1121,9 +1121,9 @@ _021EF478:
 	add r1, r6, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x24]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	mov r0, #1
 	str r0, [sp]
 	mov r0, #0
@@ -1134,19 +1134,19 @@ _021EF478:
 	mov r3, #0
 	bl sub_0202437C
 	ldr r0, [sp, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021EF52A:
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021EF478
 	ldr r0, [sp, #8]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [sp, #0xc]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, sp, #0x28
 	bl ovy104_21ef9c8
 	cmp r0, #4
@@ -1198,7 +1198,7 @@ _021EF56C:
 	add r0, r7, #0
 	bl ovy104_21ef28c
 	ldr r0, [sp, #0x10]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x50
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1251,9 +1251,9 @@ _021EF5D0:
 	mov r3, #0
 	bl sub_0202437C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r1, _021EF654 ; =0x021F0620
 	add r0, sp, #8
 	ldrh r2, [r1, #8]
@@ -1276,7 +1276,7 @@ _021EF5D0:
 	str r4, [sp, #0x20]
 	bl ovy104_21ef28c
 	add r0, r4, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 _021EF648:
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
@@ -1690,7 +1690,7 @@ _021EF8DA:
 	str r4, [sp, #0x38]
 	bl ovy104_21ef28c
 	add r0, r4, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x3c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -2053,7 +2053,7 @@ ovy104_21efb90: ; 0x021EFB90
 	bl ovy12_2154910
 	add r4, r0, #0
 	ldr r0, _021EFBD4 ; =0x00000547
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [sp]
 	add r0, r7, #0
 	add r2, r4, #0
@@ -2516,7 +2516,7 @@ _021EFEEE:
 	add r0, r7, #0
 	bl sub_0203A24C
 	ldr r0, [sp, #0x1c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldrh r1, [r6]
 	ldr r0, [r5, #0x10]
 	bl sub_02049968

@@ -929,7 +929,7 @@ _021EF3E8:
 	bl sub_021B84E8
 _021EF3F8:
 	ldr r0, _021EF404 ; =0x00000875
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021EF400: .word 0xFFFF9B00
@@ -1051,7 +1051,7 @@ ovy96_21ef4a4: ; 0x021EF4A4
 	mov r1, #0
 	bl sub_021B84E8
 	ldr r0, _021EF50C ; =0x00000876
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #8]
 	bl sub_021804BC
 	bl sub_02016AD8
@@ -1182,7 +1182,7 @@ _021EF5F4:
 	b _021EF670
 _021EF5FA:
 	ldr r0, _021EF674 ; =0x000006CA
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #2
 	str r0, [r5]
 _021EF604:
@@ -1513,7 +1513,7 @@ _021EF88C:
 _021EF896:
 	ldr r0, _021EFA94 ; =0x000006CA
 _021EF898:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x34]
 	cmp r0, #1
 	bne _021EF946
@@ -1609,7 +1609,7 @@ _021EF94E:
 	add r3, #0xc
 	bl ovy96_21efabc
 	ldr r0, _021EFA98 ; =0x000006CB
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF97E:
 	ldr r0, [r5]
 	add r0, r0, #1

@@ -534,10 +534,10 @@
 .public sub_02014580
 .public sub_0218055C
 .public sub_021B5168
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B8720
 .public sub_02016D68
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021812A8
 .public sub_021C5DB8
 .public sub_02016CB4

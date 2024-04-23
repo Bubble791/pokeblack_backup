@@ -16,10 +16,10 @@
 .public sub_02046CFC
 .public sub_02046CFC
 .public sub_020056FC
-.public sub_020279B4
-.public sub_020279B4
-.public sub_020279B4
-.public sub_020279B4
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenSet
 .public sub_0204B37C
 .public MIi_CpuCopy32
 .public sub_0203A24C
@@ -32,14 +32,14 @@
 .public sub_0219991C
 .public sub_0204AA30
 .public sub_021999EC
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public sub_02005EC0
 .public sub_02005D8C
 .public sub_02199A28
 .public sub_0204AB0C
 .public sub_02199A08
 .public sub_021999E0
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public OS_GetTick
 .public OS_GetTick
 .public sub_0208D60C
@@ -63,4 +63,4 @@
 .public sub_02005E10
 
 .public sub_02046C40
-.public sub_0203A6A8
+.public GFL_TCBRemove

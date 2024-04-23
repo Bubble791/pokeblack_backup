@@ -1412,14 +1412,14 @@ _021EFCAE:
 	cmp r2, #1
 	bne _021EFCBC
 	ldr r0, _021EFCE0 ; =0x0000062C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _021EFCBC:
 	cmp r2, #2
 	bne _021EFCC6
 	ldr r0, _021EFCE4 ; =0x0000062B
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EFCC6:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}

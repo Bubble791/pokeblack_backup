@@ -1317,7 +1317,7 @@ _021EF706:
 	cmp r5, #2
 	blt _021EF706
 	ldr r0, _021EF828 ; =0x000008DC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x3c
 	str r0, [r4, #8]
 	str r7, [r6]
@@ -1337,7 +1337,7 @@ _021EF736:
 	mov r1, #5
 	bl ovy129_21ef548
 	ldr r0, _021EF82C ; =0x000008DD
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #4
 	b _021EF732
 _021EF748:
@@ -1356,7 +1356,7 @@ _021EF760:
 	mov r1, #3
 	bl ovy129_21ef548
 	ldr r0, _021EF82C ; =0x000008DD
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #6
 	b _021EF732
 _021EF772:
@@ -1376,7 +1376,7 @@ _021EF78C:
 	mov r1, #4
 	bl ovy129_21ef548
 	ldr r0, _021EF82C ; =0x000008DD
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #8
 	b _021EF732
 _021EF79E:
@@ -1409,7 +1409,7 @@ _021EF7BC:
 	mov r1, #4
 	bl ovy129_21ef5f0
 	ldr r0, _021EF830 ; =0x000008E1
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	b _021EF732
 _021EF7E8:
@@ -1470,7 +1470,7 @@ ovy129_21ef834: ; 0x021EF834
 	bne _021EF866
 	ldr r0, _021EF914 ; =0x00000566
 	mov r6, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EF866:
 	lsl r2, r6, #0x10
 	add r0, r5, #0
@@ -1579,7 +1579,7 @@ ovy129_21ef91c: ; 0x021EF91C
 _021EF942:
 	ldr r0, _021EF9B8 ; =0x00000792
 _021EF944:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	lsl r2, r6, #0x10
 	add r0, r5, #0
 	mov r1, #0

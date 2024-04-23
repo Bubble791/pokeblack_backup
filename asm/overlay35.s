@@ -4100,7 +4100,7 @@ _0217EA38:
 	cmp r0, #0
 	ldr r0, _0217EB08 ; =0x00000772
 	beq _0217EA68
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #4
 	str r0, [sp]
 	add r0, r7, #0
@@ -4113,7 +4113,7 @@ _0217EA38:
 	bl sub_02016D68
 	b _0217EA7A
 _0217EA68:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r6, #0
 	bl sub_021812A8
 	ldr r1, [sp, #4]

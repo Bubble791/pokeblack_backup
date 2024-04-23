@@ -306,7 +306,7 @@ ovy172_2199aec: ; 0x02199AEC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r0, [r4, #0x14]
 	bl ovy172_219a0a4
 	bl sub_021DF138
@@ -998,9 +998,9 @@ ovy172_219a0a4: ; 0x0219A0A4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x30]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _0219A0BE
@@ -1009,7 +1009,7 @@ _0219A0BE:
 	mov r0, #1
 	bl sub_02044B84
 	ldr r0, [r4, #0x20]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x1c]
 	bl sub_02048210
 	add r0, r4, #0
@@ -1040,7 +1040,7 @@ ovy172_219a0d8: ; 0x0219A0D8
 	mov r1, #0x50
 	bl ovy172_219a354
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy172_219a0d8
@@ -1068,7 +1068,7 @@ ovy172_219a114: ; 0x0219A114
 	mov r1, #0
 	bl ovy172_219a354
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy172_219a114
@@ -1096,7 +1096,7 @@ ovy172_219a150: ; 0x0219A150
 	mov r1, #0x50
 	bl ovy172_219a354
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy172_219a150
@@ -1124,7 +1124,7 @@ ovy172_219a18c: ; 0x0219A18C
 	mov r1, #0x50
 	bl ovy172_219a354
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy172_219a18c
@@ -1152,7 +1152,7 @@ ovy172_219a1c8: ; 0x0219A1C8
 	mov r1, #0x50
 	bl ovy172_219a354
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy172_219a1c8

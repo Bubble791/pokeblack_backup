@@ -59,7 +59,7 @@ _021F7FE6:
 	ldr r0, [r0, r4]
 	cmp r0, #0
 	beq _021F7FF4
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021F7FF4:
 	add r5, r5, #1
 	cmp r5, #4

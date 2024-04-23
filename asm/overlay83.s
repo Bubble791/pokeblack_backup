@@ -6,10 +6,10 @@
 
 	thumb_func_start ovy83_021EA860
 ovy83_021EA860: ; 0x021EA860
-	ldr r3, _021EA864 ; =sub_02006254
+	ldr r3, _021EA864 ; =GFL_SndSEPlay
 	bx r3
 	.align 2, 0
-_021EA864: .word sub_02006254
+_021EA864: .word GFL_SndSEPlay
 	thumb_func_end ovy83_021EA860
 
 	thumb_func_start ovy83_21ea868
@@ -138,12 +138,12 @@ _021EA944:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x10]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r5, r5, #1
 	cmp r5, #4
 	blt _021EA944
 	ldr r0, [r4, #8]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #4]
 	bl sub_0202E1DC
 	add r0, r4, #0

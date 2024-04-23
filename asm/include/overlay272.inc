@@ -5,7 +5,7 @@
 .public MI_CpuFill8
 .public sub_0200BB24
 .public sub_021F813C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0200BB48
 .public sub_0203AB10
 .public sub_0203A1D0

@@ -37,7 +37,7 @@
 .public sub_02046DE0
 .public sub_02046CF0
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_0219B240
 .public sub_0219B3CC
 .public sub_020444A4
@@ -101,8 +101,8 @@
 .public sub_02021998
 .public sub_0204875C
 .public sub_020241D4
-.public sub_02024274
-.public sub_020487D4
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
 .public MI_CpuFill8
@@ -124,7 +124,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048210
 .public MI_CpuFill8
 .public sub_020484F4
@@ -157,7 +157,7 @@
 .public sub_0202451C
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0219B464
 .public sub_0219B460
 .public sub_020484F4
@@ -170,7 +170,7 @@
 .public GFL_CopyVarForText
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0219B464
 .public sub_0219B460
 .public sub_020484F4
@@ -184,14 +184,14 @@
 .public sub_0202451C
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0219B464
 .public sub_0219B460
 .public sub_020484F4
 .public sub_02021C54
 .public sub_0219BF08
 .public sub_0219BF1C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0219BC24
 .public sub_0219BC24
 .public sub_0219BC24
@@ -237,8 +237,8 @@
 .public sub_0203A24C
 .public MI_CpuCopy8
 .public sub_0205FA10
-.public sub_02006254
-.public sub_02006254
+.public GFL_SndSEPlay
+.public GFL_SndSEPlay
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0208D65C

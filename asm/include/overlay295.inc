@@ -13,7 +13,7 @@
 .public GXS_LoadBGPltt
 .public sub_0204E060
 .public sub_0204E0E0
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -26,7 +26,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02048244
 .public sub_0204826C
 .public sub_020484D4
@@ -54,12 +54,12 @@
 .public sub_0203A78C
 .public sub_02048530
 .public sub_0203A850
-.public sub_0203A83C
+.public GFL_TCBExMgrFree
 .public sub_02024EEC
 .public sub_02048210
-.public sub_02048564
-.public sub_02024274
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02044B84
 .public sub_02022DA8
 .public sub_020444A4
@@ -80,7 +80,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_02017BCC
 .public sub_02022268
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02024E80
 .public sub_02017994
 .public sub_02017A40
@@ -132,8 +132,8 @@
 .public sub_0204713C
 .public sub_02024EEC
 .public sub_02048210
-.public sub_02024274
-.public sub_020487D4
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02044B84
 .public sub_02022DA8
 .public sub_0203AB10
@@ -159,8 +159,8 @@
 .public sub_020232E8
 .public sub_020484F4
 .public sub_02021CFC
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_02048244
 .public sub_020484D4
 .public sub_02045B7C

@@ -60,7 +60,7 @@
 .public ovy36_21b84a8
 .public sub_021B84E8
 .public sub_0202ED00
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020061B8
 .public sub_0202ED9C
 .public sub_020061A8
@@ -79,7 +79,7 @@
 .public sub_02016AD8
 .public sub_0201749C
 .public sub_0202EDD4
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public ovy36_218102c
 .public ovy36_21b81bc
 .public ovy36_0218056c
@@ -136,7 +136,7 @@
 .public sub_021B84E8
 .public ovy36_21b8504
 .public ovy36_21b8504
-.public sub_02006254
+.public GFL_SndSEPlay
 .public ovy36_21b84a8
 .public ovy36_21b84a8
 .public sub_021B84F4
@@ -178,7 +178,7 @@
 .public sub_0200BAC4
 .public sub_02015AE0
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B84E8
 .public sub_02153684
 .public sub_021B84F4
@@ -189,7 +189,7 @@
 .public ovy36_21b84a8
 .public sub_021B84E8
 .public sub_0202ED00
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020061A8
 .public sub_0206BE44
 .public sub_0202ED9C
@@ -197,7 +197,7 @@
 .public ovy36_21b84a8
 .public sub_021B84E8
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804F0
 .public sub_0219A6A0
 .public ovy12_2167060
@@ -219,7 +219,7 @@
 .public sub_02006280
 .public sub_0202EDD4
 .public sub_02006280
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B8278
 .public ovy36_21b84a8
 .public ovy36_21b8580
@@ -241,7 +241,7 @@
 .public sub_02153684
 .public sub_021B84E8
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B84F4
 .public sub_021B84E8
 .public ovy36_21b84a8

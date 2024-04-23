@@ -403,7 +403,7 @@ ovy179_219b060: ; 0x0219B060
 	add r4, r0, #0
 	add r0, #0xac
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl ovy179_219b1fc
 	add r0, r4, #4
@@ -880,9 +880,9 @@ ovy179_219b42c: ; 0x0219B42C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r4, #4]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #8]
 	bl sub_02021A18
 	ldr r0, [r4]
@@ -1034,7 +1034,7 @@ ovy179_219b550: ; 0x0219B550
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4]
 	bl sub_02048210
 	add r0, r4, #0
@@ -1233,7 +1233,7 @@ ovy179_219b6ac: ; 0x0219B6AC
 	add r2, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_0219B464
 	add r6, r0, #0
@@ -1295,7 +1295,7 @@ ovy179_219b738: ; 0x0219B738
 	add r2, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_0219B464
 	add r6, r0, #0
@@ -1377,7 +1377,7 @@ _0219B80E:
 	add r2, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_0219B464
 	add r6, r0, #0
@@ -1481,7 +1481,7 @@ _0219B8FE:
 	cmp r0, #0
 	beq _0219B9AE
 	ldr r0, _0219BB14 ; =0x00000653
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r0, #0xe8
 	mov r1, #0
@@ -2115,7 +2115,7 @@ _0219BDDA:
 	bne _0219BDE8
 	ldr r0, _0219BEF4 ; =0x000007CF
 	add r0, r1, r0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _0219BDE8:
 	add r0, r5, #0
 	add r0, #0x56
@@ -2194,7 +2194,7 @@ _0219BE6C:
 	ldrh r1, [r0]
 	ldr r0, _0219BF04 ; =0x000007CD
 	add r0, r1, r0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _0219BE80:
 	add r0, r5, #0
 	add r0, #0x56

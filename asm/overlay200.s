@@ -39,7 +39,7 @@ ovy200_21b2fc0: ; 0x021B2FC0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl ovy200_21b35a0
 	add r0, r4, #0
@@ -81,11 +81,11 @@ _021B3002:
 	str r0, [sp, #8]
 	mov r0, #4
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	str r5, [r4, #0x10]
 	b _021B306A
 _021B301E:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021B306A
 	mov r0, #4
@@ -107,11 +107,11 @@ _021B302C:
 	str r0, [sp, #8]
 	mov r0, #4
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #3
 	b _021B3028
 _021B3052:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021B306A
 	add sp, #0xc
@@ -656,7 +656,7 @@ ovy200_21b3400: ; 0x021B3400
 	bl sub_0202E1F0
 	str r0, [r5, #0x3c]
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x2c]
 	mov r1, #0x20
 	bl sub_0204898C
@@ -672,7 +672,7 @@ ovy200_21b3400: ; 0x021B3400
 	bl sub_0202E1F0
 	str r0, [r5, #0x38]
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x2c]
 	mov r1, #0x1f
 	bl sub_0204898C
@@ -689,7 +689,7 @@ ovy200_21b3400: ; 0x021B3400
 	bl sub_0202E1F0
 	str r0, [r5, #0x40]
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x38]
 	bl sub_0202E644
 	ldr r0, _021B359C ; =0x050005E2
@@ -726,7 +726,7 @@ _021B35B8:
 	ldr r0, [r4, #0x24]
 	bl sub_02048210
 	ldr r0, [r4, #0x2c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x28]
 	bl sub_02022DA8
 	bl sub_020232D8
@@ -791,7 +791,7 @@ _021B3648:
 	str r0, [r4, #0x10]
 	ldr r0, _021B3680 ; =0x00000551
 _021B3656:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021B365A:
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #4]
@@ -845,7 +845,7 @@ ovy200_21b3684: ; 0x021B3684
 	mov r3, #8
 	bl sub_02021C7C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, #0xf
 	ldr r0, [r5, #0x2c]
 	add r1, r4, #0
@@ -865,7 +865,7 @@ ovy200_21b3684: ; 0x021B3684
 	mov r3, #0
 	bl sub_02021C7C
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	str r7, [r5, #0x1c]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

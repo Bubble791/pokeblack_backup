@@ -161,7 +161,7 @@ ovy88_21ea974: ; 0x021EA974
 	ldr r0, [r4, #0x3c]
 	bl sub_02021A18
 	ldr r0, [r4, #0x38]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x34]
 	bl sub_02022DA8
 	pop {r4, pc}
@@ -410,13 +410,13 @@ ovy88_21eabb4: ; 0x021EABB4
 	mov r4, #0
 	ldr r0, [r5, #0x28]
 	str r4, [r5, #0x24]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	str r4, [r5, #0x28]
 _021EABCE:
 	ldr r0, [r5, #0x30]
 	bl sub_0202E818
 	ldr r0, [r5, #0x20]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r0, [r5, #0x1c]
 	bl sub_02048210
 	ldr r0, [r5, #0x18]
@@ -453,7 +453,7 @@ ovy88_21eabf0: ; 0x021EABF0
 	add r0, r4, #0
 	bl sub_02048244
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -498,7 +498,7 @@ ovy88_21eac34: ; 0x021EAC34
 	add r0, r4, #0
 	bl sub_02048244
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy88_21eac34
 
@@ -523,9 +523,9 @@ ovy88_21eac98: ; 0x021EAC98
 	mov r1, #1
 	bl sub_0202DED4
 	ldr r0, [r4, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r3, r4, r5, pc}
 	nop
 _021EACD4: .word 0x021EB000
@@ -627,7 +627,7 @@ _021EAD70:
 	strh r1, [r0]
 	b _021EAE2A
 _021EAD78:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021EAE2A
 	b _021EAD68
@@ -762,7 +762,7 @@ _021EAE7E:
 	strh r1, [r0]
 	b _021EAF0A
 _021EAE8E:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021EAF0A
 	b _021EAE7E
@@ -878,7 +878,7 @@ _021EAF6A:
 	strh r0, [r4]
 	b _021EAF90
 _021EAF78:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021EAF90
 	b _021EAF6A

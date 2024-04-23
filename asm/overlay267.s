@@ -109,7 +109,7 @@ _0219CF38:
 	add r0, r5, #0
 	bl sub_0219D0E0
 	ldr r0, [r5, #0x14]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r5, #0xc]
 	bl sub_02021C44
 	ldr r0, [r5, #0xc]
@@ -474,7 +474,7 @@ ovy267_219d25c: ; 0x0219D25C
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy267_219d45c

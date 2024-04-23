@@ -152,7 +152,7 @@ _021BA25C:
 	bl sub_021F4678
 	mov r0, #7
 	lsl r0, r0, #8
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 _021BA278:
 	str r0, [r5]
@@ -258,7 +258,7 @@ _021BA340:
 	cmp r0, #0
 	beq _021BA3DC
 	ldr r0, _021BA3EC ; =0x000006FF
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #8]
 	bl sub_021F3530
 	mov r0, #0
@@ -641,7 +641,7 @@ _021BA620:
 	bls _021BA650
 _021BA646:
 	ldr r0, _021BA778 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #6
 	b _021BA612
 _021BA650:
@@ -766,7 +766,7 @@ _021BA73C:
 	cmp r0, #0
 	beq _021BA76A
 	ldr r0, [r6, #8]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	mov r0, #0xa
 	b _021BA612
 _021BA74C:
@@ -1835,7 +1835,7 @@ _021BAF76:
 	ldr r0, [r4, #0x10]
 	bl sub_021F4678
 	ldr r0, _021BB080 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r4, #0xd0
 	ldr r0, [r4]
 	ldr r0, [r0, #0x14]
@@ -2218,7 +2218,7 @@ _021BB288:
 	ldr r0, [r4, #0x10]
 	bl sub_021F4678
 	ldr r0, _021BB350 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xc
 	add sp, #0x24
 	str r0, [r5]
@@ -2937,9 +2937,9 @@ _021BB802:
 	add r2, r5, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x34]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BB860:
 	ldr r0, [r7, #0x30]
 	mov r1, #0
@@ -3007,7 +3007,7 @@ _021BB88C:
 	bl sub_0204898C
 	add r5, r0, #0
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BB902
 _021BB8F8:
 	ldr r0, [sp, #0x28]
@@ -3058,7 +3058,7 @@ _021BB902:
 	mov r3, #0
 	bl sub_021F3664
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BB86C
 _021BB96A:
 	add r0, r4, #0
@@ -3098,7 +3098,7 @@ _021BB96A:
 	add r2, r5, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BB9C4:
 	ldr r0, [r7, #0x30]
 	mov r1, #0
@@ -3136,7 +3136,7 @@ _021BB9F4:
 	add r1, r6, #0
 	bl sub_021F35C0
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BBA0C:
 	ldr r0, [sp, #0x30]
 	add r0, r0, #1
@@ -4067,7 +4067,7 @@ _021BC0FE:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BC11C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021BC116:
 	add r0, r4, #0
 	add sp, #8
@@ -4105,7 +4105,7 @@ _021BC13E:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BC15C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021BC156:
 	add r0, r4, #0
 	add sp, #8
@@ -4143,7 +4143,7 @@ _021BC17E:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BC19C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021BC196:
 	add r0, r4, #0
 	add sp, #8
@@ -4181,7 +4181,7 @@ _021BC1BE:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BC1DC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021BC1D6:
 	add r0, r4, #0
 	add sp, #8
@@ -4707,7 +4707,7 @@ _021BC5C8:
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x2c]
 _021BC5FE:
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BC65A
 _021BC604:
 	ldr r0, [r6, #0x10]
@@ -4758,7 +4758,7 @@ _021BC65A:
 	add r1, r4, #0
 	bl sub_021F35C0
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x20]
 	add r0, r0, #1
 	str r0, [sp, #0x20]
@@ -4934,7 +4934,7 @@ _021BC79C:
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x2c]
 _021BC7D2:
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BC82E
 _021BC7D8:
 	ldr r0, [r6, #0x10]
@@ -4985,7 +4985,7 @@ _021BC82E:
 	add r1, r4, #0
 	bl sub_021F35C0
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x20]
 	add r0, r0, #1
 	str r0, [sp, #0x20]
@@ -5176,7 +5176,7 @@ _021BC98C:
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x38]
 _021BC9C2:
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BCACA
 _021BC9C8:
 	ldr r0, [r5, #0x10]
@@ -5308,7 +5308,7 @@ _021BCACA:
 	add r1, r4, #0
 	bl sub_021F35C0
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x28]
 	add r0, r0, #1
 	str r0, [sp, #0x28]
@@ -5426,7 +5426,7 @@ _021BCB66:
 	add r2, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021BCBEC
 _021BCBE2:
 	ldr r0, [sp, #0x1c]
@@ -5441,7 +5441,7 @@ _021BCBEC:
 	add r1, r4, #0
 	bl sub_021F35C0
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r5, r5, #1
 	cmp r5, #5
 	blt _021BCB66
@@ -5739,7 +5739,7 @@ _021BCE12:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BCE60 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #8
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -6427,7 +6427,7 @@ _021BD364:
 	add r2, r6, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BD392:
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x20]
@@ -6436,7 +6436,7 @@ _021BD392:
 	ldr r3, _021BD3BC ; =0x00003DA0
 	bl sub_021F35C0
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x1c]
 	add r0, r0, #1
 	str r0, [sp, #0x1c]
@@ -6561,7 +6561,7 @@ _021BD46C:
 	add r2, r5, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BD4AA:
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x24]
@@ -6570,7 +6570,7 @@ _021BD4AA:
 	add r1, r7, #0
 	bl sub_021F35C0
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #0x12
 	blt _021BD3F6
@@ -6692,7 +6692,7 @@ _021BD57E:
 	add r2, r5, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021BD5BC:
 	ldr r0, [sp, #0x14]
 	ldr r2, [sp, #0x24]
@@ -6701,7 +6701,7 @@ _021BD5BC:
 	add r1, r7, #0
 	bl sub_021F35C0
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #0x12
 	blt _021BD506
@@ -6883,9 +6883,9 @@ _021BD734:
 	cmp r4, #3
 	blt _021BD6D4
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x44
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -6965,7 +6965,7 @@ _021BD7B2:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021BD800 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #8
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -7851,7 +7851,7 @@ _021BDEC4:
 	ldr r0, [r4, #0x20]
 	bl sub_021F4678
 	ldr r0, _021BDF48 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x42
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
@@ -8197,11 +8197,11 @@ _021BE112:
 	blt _021BE112
 _021BE1A4:
 	ldr r0, [sp, #0x10]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x14]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #4]
 	bl sub_021F3C64
 	ldr r1, [sp, #0xc]
@@ -8260,7 +8260,7 @@ _021BE210:
 	blo _021BE210
 _021BE22C:
 	ldr r0, [r5, #8]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r5, #4]
 	bl sub_021F3A84
 	ldr r0, [r5]
@@ -8950,7 +8950,7 @@ _021BE77A:
 	and r4, r1
 	beq _021BE786
 	ldr r0, _021BE78C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021BE786:
 	add r0, r4, #0
 	pop {r4, pc}
@@ -9473,7 +9473,7 @@ _021BEB62:
 	mov r6, #1
 	bl sub_021F4678
 	ldr r0, _021BECFC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x13
 	str r0, [r4, #0x18]
 	add r0, r5, #0
@@ -9501,7 +9501,7 @@ _021BEBA4:
 	ldr r0, [r5, #0x40]
 	bl sub_021F4678
 	ldr r0, _021BECFC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _021BED00 ; =0x0000FFFF
 	add r1, r4, #0
 	strh r0, [r4, #0x14]
@@ -9535,7 +9535,7 @@ _021BEBE6:
 	mov r2, #0x78
 	bl sub_021F3F84
 	ldr r0, _021BED04 ; =0x00000704
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021BEC58
 _021BEC16:
 	add r0, sp, #0x24
@@ -9550,7 +9550,7 @@ _021BEC16:
 	ldr r0, [r5, #0x40]
 	bl sub_021F4678
 	ldr r0, _021BECFC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x16]
 	cmp r0, #0xff
 	bne _021BEC42
@@ -9620,7 +9620,7 @@ _021BECB8:
 	ldr r0, [sp, #0x10]
 	str r0, [sp, #4]
 	ldr r0, _021BECFC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x40]
 	mov r6, #1
 	mov r1, #1
@@ -9636,7 +9636,7 @@ _021BECB8:
 	pop {r3, r4, r5, r6, r7, pc}
 _021BECE4:
 	ldr r0, _021BED04 ; =0x00000704
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x38]
 	ldr r1, [r4, #8]
 	mov r2, #0x6c
@@ -9996,7 +9996,7 @@ _021BEFC6:
 	add r1, r7, #0
 	bl GFL_WordSetFormatStrbuf
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r1, r5, #0
 	add r1, #0x54
 	ldrh r1, [r1]
@@ -10010,7 +10010,7 @@ _021BEFC6:
 	str r0, [r5, #0x14]
 	bl sub_02024FDC
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r6, _021BF07C ; =0x021C2600
 	add r3, sp, #0x40
 	mov r2, #5
@@ -10400,9 +10400,9 @@ _021BF306:
 	add r2, r7, #0
 	bl sub_021F35C0
 	ldr r0, [sp, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -10762,7 +10762,7 @@ ovy268_21bf5e4: ; 0x021BF5E4
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r5, #0
 	bl ovy268_21bf760
 	add r0, r4, #0
@@ -10851,7 +10851,7 @@ _021BF68C:
 	bl sub_0203CB80
 _021BF69A:
 	ldr r0, [r4, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -12120,7 +12120,7 @@ ovy268_21bff98: ; 0x021BFF98
 	ldr r0, [sp, #0x10]
 	bl sub_02046EDC
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -12971,7 +12971,7 @@ _021C0686:
 	blt _021C0614
 _021C06AC:
 	ldr r0, [sp, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	mov r1, #3
 	bl sub_021C01F0
@@ -13241,7 +13241,7 @@ _021C08A0:
 	str r0, [r5, r4]
 _021C08AE:
 	ldr r0, _021C0A20 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #0x34
 	pop {r4, r5, r6, r7, pc}
 _021C08B8:
@@ -13255,7 +13255,7 @@ _021C08B8:
 	sub r4, #0x72
 	strh r0, [r5, r4]
 	ldr r0, _021C0A20 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, sp, #0x30
 	add r1, sp, #0x2c
 	bl sub_0203DAC8
@@ -13282,7 +13282,7 @@ _021C08F0:
 	sub r4, #0x72
 	strh r0, [r5, r4]
 	ldr r0, _021C0A20 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, sp, #0x20
 	add r1, sp, #0x1c
 	bl sub_0203DAC8
@@ -13311,7 +13311,7 @@ _021C0924:
 	sub r4, #0x72
 	strh r0, [r5, r4]
 	ldr r0, _021C0A20 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C0948:
 	cmp r6, #0xc
 	blo _021C0A06
@@ -13938,9 +13938,9 @@ _021C0D40:
 	add r2, r7, #0
 	bl sub_021F3FB0
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _021C0E42
 _021C0E20:
 	cmp r0, #3
@@ -13988,7 +13988,7 @@ _021C0E5E:
 	ldr r0, [r4, #0x14]
 	bl sub_021F4678
 	ldr r0, _021C0EA0 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #3
 	str r0, [r5]
 _021C0E8A:
@@ -14451,7 +14451,7 @@ _021C11FE:
 	ldr r0, [r4, #0x18]
 	bl sub_021F4678
 	ldr r0, _021C1240 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	add sp, #0x28
 	str r0, [r5]
@@ -14519,9 +14519,9 @@ _021C1262:
 	add r2, r7, #0
 	bl sub_021F3FB0
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r2, [r5, #0x1c]
 	ldr r0, [r6, #0xc]
 	mov r1, #0x1e
@@ -14645,7 +14645,7 @@ _021C1396:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021C13B4 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C13AE:
 	add r0, r4, #0
 	add sp, #8
@@ -14683,7 +14683,7 @@ _021C13D6:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021C13F4 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C13EE:
 	add r0, r4, #0
 	add sp, #8
@@ -15067,7 +15067,7 @@ _021C16D0:
 	ldr r0, [r4, #0x34]
 	bl sub_021F4678
 	ldr r0, _021C1788 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	add sp, #0x30
 	str r0, [r5]
@@ -15748,7 +15748,7 @@ _021C1C28:
 	ldr r0, [r4, #0x34]
 	bl sub_021F4678
 	ldr r0, _021C1CAC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5]
 	add sp, #0x28
 	add r0, r0, #1
@@ -15894,9 +15894,9 @@ _021C1D0A:
 	add r2, r7, #0
 	bl sub_021F3FB0
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r2, [r5, #0x38]
 	ldr r0, [r6, #8]
 	mov r1, #0x1e
@@ -16234,11 +16234,11 @@ _021C1FDA:
 	add r2, r7, #0
 	bl sub_021F3FB0
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x44
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -16308,7 +16308,7 @@ _021C2086:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021C20A4 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C209E:
 	add r0, r4, #0
 	add sp, #8
@@ -16346,7 +16346,7 @@ _021C20C6:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021C20E4 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C20DE:
 	add r0, r4, #0
 	add sp, #8

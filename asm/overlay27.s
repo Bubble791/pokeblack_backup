@@ -697,7 +697,7 @@ ovy27_21708d0: ; 0x021708D0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	mov r0, #0
 	str r0, [r4, #0x18]
 	pop {r4, pc}
@@ -778,7 +778,7 @@ ovy27_2170954: ; 0x02170954
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x1c]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	mov r0, #0
 	str r0, [r4, #0x1c]
 	pop {r4, pc}
@@ -853,9 +853,9 @@ ovy27_2170964: ; 0x02170964
 	bl sub_020484D4
 	bl sub_02044F90
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -990,7 +990,7 @@ ovy27_2170b00: ; 0x02170B00
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4]
 	bl sub_0204AB0C
 	add r0, r4, #0
@@ -1293,9 +1293,9 @@ ovy27_2170d04: ; 0x02170D04
 	add r2, r4, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1358,9 +1358,9 @@ ovy27_2170d90: ; 0x02170D90
 	add r2, r4, #0
 	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

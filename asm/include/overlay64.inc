@@ -48,7 +48,7 @@
 .public sub_0204875C
 .public sub_0204898C
 .public sub_02024B68
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_02008BD0
 .public sub_0208D868

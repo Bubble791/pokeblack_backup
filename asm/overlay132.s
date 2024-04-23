@@ -223,7 +223,7 @@ ovy132_21eee0c: ; 0x021EEE0C
 	bne _021EEE64
 	bl sub_02006280
 	ldr r0, _021EEF20 ; =0x000007CF
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	str r0, [r4, #8]
 	b _021EEEBC
@@ -237,7 +237,7 @@ _021EEE64:
 	bne _021EEE82
 	bl sub_02006280
 	ldr r0, _021EEF24 ; =0x000007CA
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	str r0, [r4, #0xc]
 	b _021EEEBC
@@ -251,7 +251,7 @@ _021EEE82:
 	bne _021EEEA0
 	bl sub_02006280
 	ldr r0, _021EEF28 ; =0x000007CB
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	str r0, [r4, #0x10]
 	b _021EEEBC
@@ -265,7 +265,7 @@ _021EEEA0:
 	bne _021EEEBC
 	bl sub_02006280
 	ldr r0, _021EEF2C ; =0x000007F1
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	str r0, [r4, #0x14]
 _021EEEBC:
@@ -346,7 +346,7 @@ ovy132_21eef30: ; 0x021EEF30
 	bl ovy36_0218056c
 	add r5, r0, #0
 	ldr r0, _021EEFFC ; =0x00000566
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #1
@@ -435,7 +435,7 @@ ovy132_21ef004: ; 0x021EF004
 	bl ovy36_0218056c
 	add r5, r0, #0
 	ldr r0, _021EF07C ; =0x00000567
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #1

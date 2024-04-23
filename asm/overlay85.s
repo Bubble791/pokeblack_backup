@@ -3881,21 +3881,21 @@ ovy85_21ecbd8: ; 0x021ECBD8
 	add r5, r0, #0
 	lsl r4, r4, #4
 	ldr r0, [r5, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	sub r0, #8
 	ldr r0, [r5, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	sub r0, #0xc
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	sub r4, #0x10
 	ldr r0, [r5, r4]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r5, #0
 	add r0, #0xf0
 	ldr r0, [r0]
@@ -3926,14 +3926,14 @@ ovy85_21ecbd8: ; 0x021ECBD8
 	add r0, r5, #0
 	add r0, #0xdc
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r5, #0
 	add r0, #0xd8
 	ldr r0, [r0]
 	bl sub_0203A850
 	add r5, #0xd8
 	ldr r0, [r5]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy85_21ecbd8
@@ -5175,7 +5175,7 @@ _021ED636:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x54]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	mul r0, r7
 	add r0, r6, r0
@@ -5617,7 +5617,7 @@ _021ED936:
 	bl sub_020243D0
 _021ED940:
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021ED946:
 	add sp, #8
 	pop {r4, r5, r6, pc}

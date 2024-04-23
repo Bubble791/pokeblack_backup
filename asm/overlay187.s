@@ -207,7 +207,7 @@ _021E8D58:
 	lsl r0, r4, #4
 	add r0, r1, r0
 	ldr r0, [r0, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x10]
 	add r4, r4, #1
 	cmp r4, r0
@@ -692,7 +692,7 @@ ovy187_21e912c: ; 0x021E912C
 	mov r1, #3
 	bl sub_021E93BC
 	ldr r0, _021E9154 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	str r4, [r5, #0x6c]
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -713,7 +713,7 @@ ovy187_21e9158: ; 0x021E9158
 	mov r1, #3
 	bl sub_021E93BC
 	ldr r0, _021E9180 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	str r0, [r4, #0x6c]
 	pop {r4, pc}
@@ -745,7 +745,7 @@ ovy187_21e9184: ; 0x021E9184
 	mov r1, #0
 	bl sub_0204C4D4
 	ldr r0, _021E91C4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl sub_021E9234
 _021E91C2:
@@ -777,7 +777,7 @@ ovy187_21e91c8: ; 0x021E91C8
 	mov r1, #0
 	bl sub_0204C4D4
 	ldr r0, _021E9208 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl sub_021E920C
 _021E9204:
@@ -1123,11 +1123,11 @@ ovy187_21e9484: ; 0x021E9484
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x58]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x60]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x5c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x54]
 	bl sub_02022DA8
 	ldr r0, [r4, #0x50]
@@ -1423,7 +1423,7 @@ ovy187_21e9720: ; 0x021E9720
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl ovy187_21e97c0
 	add r0, r4, #0
@@ -1580,9 +1580,9 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x28]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x58]
 	mov r1, #1
 	bl sub_0204898C
@@ -1606,7 +1606,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r1, [r5]
 	mov r0, #0x31
 	bl sub_02048530
@@ -1646,9 +1646,9 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x58]
 	mov r1, #2
 	bl sub_0204898C
@@ -1672,7 +1672,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r1, [r5]
 	mov r0, #0x31
 	bl sub_02048530
@@ -1711,9 +1711,9 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x30]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x70]
 	ldr r0, [r0, #0x10]
 	cmp r0, #2
@@ -1741,7 +1741,7 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r1, [r5]
 	mov r0, #0x31
 	bl sub_02048530
@@ -1800,9 +1800,9 @@ ovy187_21e97f4: ; 0x021E97F4
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x34]
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021E9A6E:
 	ldr r1, [r5, #0x74]
 	ldr r0, [r5, #0x60]
@@ -1827,9 +1827,9 @@ _021E9A6E:
 	add r5, #0x4c
 	strb r0, [r5]
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x38
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy187_21e97f4
@@ -1883,9 +1883,9 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x20]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x58]
 	mov r1, #1
 	bl sub_0204898C
@@ -1909,7 +1909,7 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r1, [r5]
 	mov r0, #0x31
 	bl sub_02048530
@@ -1949,9 +1949,9 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x24]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x58]
 	mov r1, #2
 	bl sub_0204898C
@@ -1975,7 +1975,7 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r0, #0x4c
 	strb r6, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x58]
 	mov r1, #7
 	bl sub_0204898C
@@ -1998,9 +1998,9 @@ ovy187_21e9ab0: ; 0x021E9AB0
 	add r5, #0x4c
 	add r0, r7, #0
 	strb r6, [r5]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

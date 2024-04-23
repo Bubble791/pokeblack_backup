@@ -107,7 +107,7 @@
 .public sub_021F0754
 .public sub_02048570
 .public sub_02024BE4
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0201736C
 .public sub_02008BB0
 .public sub_0201736C
@@ -118,9 +118,9 @@
 .public sub_021F0754
 .public sub_02048570
 .public sub_02024BE4
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_021EECF0
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0215516C
 .public sub_02155174
 .public sub_0215515C

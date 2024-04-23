@@ -357,9 +357,9 @@ _02199B3E:
 	add r3, r6, #0
 	bl sub_02021D28
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	bl sub_02022DA8
 	add r0, r5, #0

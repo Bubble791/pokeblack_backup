@@ -10,8 +10,8 @@
 .public sub_0204875C
 .public sub_0204898C
 .public sub_0202E34C
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_0202E1DC
 .public sub_0203A24C
 .public sub_0202E210
@@ -68,4 +68,4 @@
 .public sub_02044CFC
 .public sub_0203A870
 
-.public sub_02006254
+.public GFL_SndSEPlay

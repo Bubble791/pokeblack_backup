@@ -111,7 +111,7 @@ _021EED5C:
 	bl ovy130_21ef094
 	mov r0, #0x85
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021EED8E
 _021EED80:
 	add r0, r5, #0
@@ -135,7 +135,7 @@ ovy130_21eed98: ; 0x021EED98
 	bl sub_0218105C
 	bl ovy130_21ef0c0
 	ldr r0, _021EEDB0 ; =0x00000851
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, pc}
 	.align 2, 0
 _021EEDB0: .word 0x00000851
@@ -149,7 +149,7 @@ ovy130_21eedb4: ; 0x021EEDB4
 	bl sub_0218105C
 	bl ovy130_21ef0f8
 	ldr r0, _021EEDCC ; =0x00000852
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, pc}
 	.align 2, 0
 _021EEDCC: .word 0x00000852

@@ -3,7 +3,7 @@
 .public sub_0203A1FC
 .public sub_02042BA8
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_0203A24C
 .public sub_02021C0C
 .public sub_02016AD8
@@ -74,7 +74,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public RTC_GetDate
 .public sub_0202451C
@@ -83,7 +83,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public RTC_GetTime
 .public sub_0202451C
@@ -91,7 +91,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02016ADC
 .public sub_02017544
@@ -105,13 +105,13 @@
 .public sub_02038F00
 .public sub_02048614
 .public sub_0202437C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02018C80
 .public sub_02024700
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02017974
 .public sub_0200C9A0
@@ -119,7 +119,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02016AD8
 .public sub_02017394
 .public sub_020191AC
@@ -130,7 +130,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02017A40
 .public sub_02008CEC
@@ -140,7 +140,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0200746C
 .public sub_02007468
 .public sub_02008DE8
@@ -158,11 +158,11 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484F4
 .public sub_02021C7C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048244
-.public sub_02048564
-.public sub_02024274
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02048210
 .public sub_02021A18

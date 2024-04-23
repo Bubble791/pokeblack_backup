@@ -8,7 +8,7 @@ extern void LoadBagPocketNameToStrbuf(int , int, int);
 extern int sub_0203DA84(u32*, u32*);
 extern int sub_0203DA48(void);
 extern int sub_020355B8(int, int, int, int, int);
-extern void sub_02006254(int);
+extern void GFL_SndSEPlay(int);
 extern int sub_0203DAC8(u32*, u32*);
 
 typedef struct
@@ -73,7 +73,7 @@ struct BagViewWork
     /*0x020*/int unk20;
     /*0x024*/ ItemTable m_itemTable[6];
     /*0x03C*/ u8 unk3C[0x4C0];
-    /*0x4FC*/ FieldBagItemUse unk4FC;
+    /*0x4FC*/ FieldBagItemUse bagMenuFunc;
     /*0x500*/ int unk500;
     /*0x504*/ u8 unk504;
     /*0x508*/ int unk508;
@@ -260,8 +260,8 @@ extern void ovy142_219f450(BagView*, u32);
 
 void ovy142_219c3cc(BagView *m_bagView);
 void ovy142_219c414(BagView *m_bagView);
-extern void sub_020279B4(int, int, int, int, int, int, u16);
-extern int sub_02027ACC(void);
+extern void GFL_FadeScreenSet(int, int, int, int, int, int, u16);
+extern int GFL_FadeScreenIsFinished(void);
 extern int ovy142_21a00a0(BagView*);
 
 typedef void (*UnknowFunc)(BagView *);
@@ -275,15 +275,15 @@ extern int sub_0203DEFC(void);
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 
 void ovy142_2199ecc(BagView *m_bagView);
-extern void sub_0203A6A8(int);
+extern void GFL_TCBRemove(int);
 extern void sub_021A046C(ITEM_UNKNOW_DATA*);
 extern void sub_0202E1DC(int);
 extern void ovy142_219e168(BagView*);
 extern void ovy142_219dd14(BagView*);
-extern void sub_0203A83C(int);
-extern void sub_020487D4(int);
-extern void sub_02048564(int);
-extern void sub_02024274(int);
+extern void GFL_TCBExMgrFree(int);
+extern void GFL_MsgDataFree(int);
+extern void GFL_StrBufFree(int);
+extern void GFL_WordSetSystemFree(int);
 extern void ovy142_219f8c4(BagView*);
 extern void sub_02044668(int, u16, u16);
 extern void sub_02048210(int);

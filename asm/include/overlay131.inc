@@ -14,7 +14,7 @@
 .public sub_021675E8
 .public sub_02180570
 .public sub_0203A614
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_0203A24C
 .public sub_02195A58
 .public VEC_Fx16Normalize
@@ -55,7 +55,7 @@
 .public sub_021862DC
 .public sub_02186320
 .public sub_02186384
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02166FE8
 .public sub_0208D374
 .public sub_0208DF14

@@ -31,7 +31,7 @@
 .public sub_02181290
 .public sub_02181298
 .public sub_02049A0C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020499CC
 .public sub_0204E060
 .public sub_02049A28

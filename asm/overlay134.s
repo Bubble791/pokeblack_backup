@@ -2602,7 +2602,7 @@ _021EFFF4:
 	add r2, r4, #0
 	bl sub_0201CD1C
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r6, #0x31
 	ldrb r2, [r6]
 	add r0, r5, #0
@@ -3191,13 +3191,13 @@ ovy134_21f05c4: ; 0x021F05C4
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021F05D6
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021F05D6:
 	ldr r0, _021F05F0 ; =0x000013D8
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021F05E2
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021F05E2:
 	add r0, r4, #0
 	bl sub_02017C84
@@ -3524,7 +3524,7 @@ _021F07FE:
 	add r2, r7, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021F082C: .word 0x00000197
@@ -3712,7 +3712,7 @@ _021F0968:
 	add r2, r6, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021F098E:
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

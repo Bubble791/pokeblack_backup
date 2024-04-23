@@ -738,7 +738,7 @@ _021EF230:
 	cmp r1, r0
 	blt _021EF25A
 	add r0, r4, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #1
 	add r0, #0x8a

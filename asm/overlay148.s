@@ -309,7 +309,7 @@ ovy148_21f5c40: ; 0x021F5C40
 	ldr r2, _021F5C58 ; =0x81330010
 	ldr r1, _021F5C5C ; =0x04000064
 	str r2, [r1]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	cmp r4, #0
 	beq _021F5C56
 	mov r0, #1

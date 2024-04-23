@@ -589,7 +589,7 @@ _021E7A66:
 	add r0, r7, #0
 	bl sub_02024BE4
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x10]
 	bl sub_0201736C
 	ldr r1, [sp, #0x14]
@@ -626,7 +626,7 @@ _021E7AC2:
 	add r1, r4, #0
 	bl sub_02024BE4
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	mov r6, #0
 	b _021E7AFC
 _021E7AF4:
@@ -648,7 +648,7 @@ _021E7AFE:
 	cmp r6, #0
 	beq _021E7B1A
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021E7B1A:
 	mov r0, #0
 	add sp, #0x20

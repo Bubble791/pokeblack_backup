@@ -512,7 +512,7 @@ _021EF5DE:
 	ldr r0, [r4, #0x3c]
 	bl sub_021F4678
 	ldr r0, _021EF61C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021EF620 ; =ovy270_21ef780
 	add r0, r6, #0
 	bl sub_021F4550
@@ -1496,7 +1496,7 @@ _021EFD5E:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021EFD7C ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EFD76:
 	add r0, r4, #0
 	add sp, #8
@@ -1534,7 +1534,7 @@ _021EFD9E:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021EFDBC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EFDB6:
 	add r0, r4, #0
 	add sp, #8
@@ -1572,7 +1572,7 @@ _021EFDDE:
 	add r2, sp, #0
 	bl sub_021F4678
 	ldr r0, _021EFDFC ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EFDF6:
 	add r0, r4, #0
 	add sp, #8

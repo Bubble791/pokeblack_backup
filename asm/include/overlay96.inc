@@ -106,7 +106,7 @@
 .public sub_021B84EC
 .public sub_021B84E4
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public ovy36_21b84a8
 .public sub_021B84EC
 .public sub_021B84E8
@@ -120,7 +120,7 @@
 .public ovy36_21b84a8
 .public ovy36_21b8538
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_0201793C
@@ -136,7 +136,7 @@
 .public ovy36_0218056c
 .public ovy36_21b84a8
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EF768
 .public ovy36_21b84a8
 .public ovy36_21b8504
@@ -177,7 +177,7 @@
 .public sub_02180494
 .public sub_021862E4
 .public sub_021862DC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804F0
 .public sub_0219A664
 .public sub_02016AD8
@@ -196,7 +196,7 @@
 .public sub_02049808
 .public sub_02068434
 .public sub_021EFA9C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B8224
 .public sub_021804F0
 .public sub_0219A664

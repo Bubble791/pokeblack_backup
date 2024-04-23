@@ -923,15 +923,15 @@ _0200624E:
 _02006250: .word 0x0209DB58
 	thumb_func_end sub_02006214
 
-	thumb_func_start sub_02006254
-sub_02006254: ; 0x02006254
+	thumb_func_start GFL_SndSEPlay
+GFL_SndSEPlay: ; 0x02006254
 	mov r1, #0
 	ldr r3, _0200625C ; =sub_02006214
 	mvn r1, r1
 	bx r3
 	.align 2, 0
 _0200625C: .word sub_02006214
-	thumb_func_end sub_02006254
+	thumb_func_end GFL_SndSEPlay
 
 	thumb_func_start sub_02006260
 sub_02006260: ; 0x02006260

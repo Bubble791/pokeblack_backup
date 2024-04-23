@@ -115,11 +115,11 @@
 .public sub_02016AD8
 .public sub_02180490
 .public sub_0204875C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public ovy36_2187bfc
 .public sub_02187C1C
 .public sub_020241D4
-.public sub_02024274
+.public GFL_WordSetSystemFree
 .public sub_02048530
 .public sub_02048530
 .public sub_02170A74
@@ -134,8 +134,8 @@
 .public ovy36_2187c9c
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_02187C7C
 .public ovy36_2187c9c
 .public sub_020484D4
@@ -152,7 +152,7 @@
 .public sub_0203A1FC
 .public sub_0204AA30
 .public sub_0204875C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_0204AB0C
 .public sub_0203A24C
 .public sub_0204AC58
@@ -164,15 +164,15 @@
 .public sub_0202451C
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
-.public sub_02024274
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
 .public sub_020241E4
 .public sub_02048530
 .public sub_0202451C
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
-.public sub_02024274
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
 .public sub_020243D0
 .public LoadItemNameToStrbuf
 

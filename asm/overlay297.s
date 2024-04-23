@@ -131,7 +131,7 @@ ovy297_21f4368: ; 0x021F4368
 	add r4, r3, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0x28]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl sub_021F4600
 	ldr r0, [r4, #0x24]
@@ -554,7 +554,7 @@ ovy297_21f46d8: ; 0x021F46D8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #4
 	bl ovy297_21f484c
 	add r0, r4, #0
@@ -871,11 +871,11 @@ ovy297_21f487c: ; 0x021F487C
 	str r1, [r5, #0x2c]
 	bl GFL_WordSetFormatStrbuf
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r7, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	mov r4, #1
 	str r4, [sp]
 	mov r6, #9
@@ -972,7 +972,7 @@ ovy297_21f4a1c: ; 0x021F4A1C
 	add r4, r0, #0
 	bl ovy297_21f4cf8
 	ldr r0, [r4, #0x4c]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r4, #0x28]
 	bl sub_020223CC
 	ldr r2, [r4, #0x30]
@@ -986,9 +986,9 @@ ovy297_21f4a1c: ; 0x021F4A1C
 	ldr r0, [r4, #0x24]
 	bl sub_02048210
 	ldr r0, [r4, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x34]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r0, [r4, #0x38]
 	bl sub_02048210
 	add r0, r4, #0
@@ -1095,7 +1095,7 @@ _021F4B1A:
 	ldr r0, [r4, #0x28]
 	bl sub_020223BC
 	ldr r0, _021F4C4C ; =0x00000547
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021F4C3E
 _021F4B28:
 	ldr r0, [r4, #0x40]
@@ -1120,7 +1120,7 @@ _021F4B3E:
 	ldr r0, [r4, #0x28]
 	bl sub_020223CC
 	ldr r0, [r4, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r0, [r4]
 	bl sub_020241D4
 	ldr r2, [r4, #4]
@@ -1141,7 +1141,7 @@ _021F4B3E:
 	str r1, [r4, #0x2c]
 	bl GFL_WordSetFormatStrbuf
 	add r0, r6, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	bl sub_02017BCC
 	ldr r1, [r4, #0x18]
 	add r2, r5, #0
@@ -1394,7 +1394,7 @@ _021F4D70:
 	cmp r5, #0
 	beq _021F4E20
 	ldr r0, _021F4E2C ; =0x00000547
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	str r0, [r4, #0x40]
 	mov r0, #4
@@ -1432,11 +1432,11 @@ _021F4D90:
 	add r2, sp, #0
 	bl sub_021EAA3C
 	ldr r0, [sp]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	mov r0, #3
 	b _021F4D80
 _021F4DDC:

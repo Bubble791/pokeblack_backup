@@ -142,13 +142,13 @@
 .public MI_CpuFill8
 .public sub_0204898C
 .public sub_0202E1F0
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_0202E34C
 .public sub_0202E1DC
 .public sub_0203A24C
 .public sub_0202E454
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0202E430
 .public sub_0202E438
 .public sub_0202E4AC
@@ -161,8 +161,8 @@
 .public MI_CpuFill8
 .public sub_0204898C
 .public sub_0202E1F0
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_0204AA30
 .public sub_0204BBB8
 .public sub_0204B81C

@@ -30,7 +30,7 @@ ovy174_219cea0: ; 0x0219CEA0
 ovy174_219ceb8: ; 0x0219CEB8
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	beq _0219CECC
 	add r0, r4, #0
@@ -154,7 +154,7 @@ ovy174_219cf98: ; 0x0219CF98
 	str r0, [sp, #8]
 	mov r0, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	ldr r1, _0219CFC8 ; =ovy174_219ceb8
 	add r0, r4, #0
 	bl sub_0219CE98
@@ -656,7 +656,7 @@ _0219D3CE:
 	add r1, r4, #0
 	bl ovy174_219dea0
 	ldr r0, _0219D404 ; =0x00000763
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	bl sub_02040440
 	mov r1, #0x7f
 	mov r2, #0xc
@@ -1723,10 +1723,10 @@ ovy174_219dc1c: ; 0x0219DC1C
 _0219DCB8:
 	ldr r4, _0219DCD4 ; =0x00000CC8
 	ldr r0, [r5, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, #0xc
 	ldr r0, [r5, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy174_219cf5c
@@ -1807,11 +1807,11 @@ ovy174_219dcdc: ; 0x0219DCDC
 	sub r1, #8
 	str r0, [r4, r1]
 	ldr r0, [r4, r5]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	add r0, #0xc
 	ldr r0, [r4, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	sub r5, #0xc
 	mov r0, #0
 	str r0, [r4, r5]
@@ -1843,7 +1843,7 @@ _0219DD84:
 	sub r1, #8
 	str r0, [r4, r1]
 	ldr r0, [r4, r5]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	sub r5, #0xc
 	str r7, [r4, r5]
 _0219DDC6:
@@ -2903,7 +2903,7 @@ ovy174_219e654: ; 0x0219E654
 	add r0, r4, #0
 	sub r0, #0x7c
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	sub r0, #0x74
 	ldr r0, [r5, r0]
@@ -2911,10 +2911,10 @@ ovy174_219e654: ; 0x0219E654
 	add r0, r4, #0
 	sub r0, #0x70
 	ldr r0, [r5, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	sub r4, #0x6c
 	ldr r0, [r5, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	mov r0, #5
 	mov r1, #0
 	bl sub_02044C98
@@ -4031,7 +4031,7 @@ ovy174_219efdc: ; 0x0219EFDC
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r0, #0
 	add r5, r3, #0
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	bne _0219EFEE
 	mov r0, #0
@@ -4080,13 +4080,13 @@ _0219F032:
 	lsl r4, r4, #2
 	str r7, [r5, r0]
 	ldr r0, [r5, r4]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r5, #0
 	bl ovy174_219e654
 	add r0, r4, #0
 	add r0, #0x24
 	ldr r0, [r5, r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #0x28
 	ldr r0, [r5, r0]
@@ -4105,7 +4105,7 @@ _0219F032:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _0219F096
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #0x80
 	str r7, [r5, r0]

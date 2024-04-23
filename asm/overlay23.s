@@ -324,7 +324,7 @@ _0216E8D2:
 	ldr r2, [r4, #0x14]
 	bl GFL_MsgDataLoadStrbuf
 	ldr r0, [sp, #4]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	add r0, #0x18
 	bl sub_02029BB0
@@ -676,7 +676,7 @@ _0216EBE8:
 	ldr r0, [r5, #0x68]
 	str r0, [r4, #0x5c]
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy23_216eba0
 
@@ -892,7 +892,7 @@ ovy23_216ed58: ; 0x0216ED58
 	add r2, r6, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	str r6, [r5, #8]
 	bl sub_0200C200
 	ldr r0, [sp, #4]
@@ -915,10 +915,10 @@ _0216EDDC: .word 0x00008004
 	thumb_func_start sub_0216EDE0
 sub_0216EDE0: ; 0x0216EDE0
 	ldr r0, [r0, #8]
-	ldr r3, _0216EDE8 ; =sub_02048564
+	ldr r3, _0216EDE8 ; =GFL_StrBufFree
 	bx r3
 	nop
-_0216EDE8: .word sub_02048564
+_0216EDE8: .word GFL_StrBufFree
 	thumb_func_end sub_0216EDE0
 
 	thumb_func_start sub_0216EDEC
@@ -1179,7 +1179,7 @@ _0216EFC4:
 	b _0216EF0E
 _0216EFD6:
 	ldr r0, [r7, #0x68]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5]
 	add r0, #0xdf
 	ldrb r0, [r0]
@@ -1440,7 +1440,7 @@ _0216F1DC:
 	b _0216F164
 _0216F1F2:
 	ldr r0, [r6, #0x68]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0x14]
 	bl sub_02017A04
 	ldr r7, [r0]
@@ -2240,7 +2240,7 @@ _0216F7A0:
 	add r2, r6, #0
 	bl sub_0201CD1C
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0216F818:
 	ldr r0, [sp]
 	add r5, r5, #1
@@ -2251,7 +2251,7 @@ _0216F824:
 	ldr r0, [sp, #4]
 	bl sub_0203A24C
 	ldr r0, [sp, #8]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

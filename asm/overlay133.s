@@ -164,7 +164,7 @@ ovy133_21eed9c: ; 0x021EED9C
 	cmp r0, r1
 	bne _021EEDDC
 	ldr r0, _021EEE18 ; =0x000007F8
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EEDDC:
 	add r0, r4, #0
 	mov r1, #0
@@ -229,11 +229,11 @@ _021EEE44:
 	cmp r0, #0
 	beq _021EEE6C
 	ldr r0, _021EEE74 ; =0x000007F6
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, r4, r5, r6, r7, pc}
 _021EEE6C:
 	ldr r0, _021EEE78 ; =0x000007F7
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021EEE74: .word 0x000007F6

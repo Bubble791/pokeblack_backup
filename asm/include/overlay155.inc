@@ -62,8 +62,8 @@
 .public sub_02181300
 .public sub_0204E060
 .public sub_0204E0E0
-.public sub_0203A6A8
-.public sub_0203A6A8
+.public GFL_TCBRemove
+.public GFL_TCBRemove
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0218055C

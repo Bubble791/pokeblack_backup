@@ -13,7 +13,7 @@
 .public GXx_SetMasterBrightness_
 .public sub_0204AA30
 .public sub_020051D8
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
 .public sub_020051D8
 .public sub_0219D728
 .public sub_0204AB0C
@@ -102,8 +102,8 @@
 .public sub_02022D58
 .public sub_02022DA8
 .public sub_02022DA8
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_02046E28
 .public sub_02046EDC
 .public sub_020484F4
@@ -126,8 +126,8 @@
 .public sub_020480A8
 .public sub_02048244
 .public sub_02048244
-.public sub_020279B4
-.public sub_020279B4
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenSet
 .public sub_020484F4
 .public sub_02046EF4
 .public sub_020484F4
@@ -181,5 +181,5 @@
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0208D65C
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public G2x_ChangeBlendBrightness_

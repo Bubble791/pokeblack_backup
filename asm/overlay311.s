@@ -67,7 +67,7 @@ _0219CEE6:
 	mov r0, #0x8f
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, _0219CF48 ; =0x04000050
 	mov r1, #0
 	strh r1, [r0]
@@ -440,7 +440,7 @@ _0219D1DA:
 	add r0, r5, #0
 	mul r0, r6
 	ldr r0, [r4, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r5, r5, #1
 	cmp r5, #2
 	blo _0219D1DA
@@ -643,19 +643,19 @@ _0219D372:
 	ldr r0, [r4, #0x24]
 	bl sub_02048210
 	ldr r0, [r4, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #8]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x10]
 	bl sub_02021A18
 	ldr r0, [r4, #0xc]
 	bl sub_02022DA8
 	ldr r0, [r4, #4]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r0, [r4, #0x14]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -840,7 +840,7 @@ _0219D520:
 	ldr r0, [r4, #0x20]
 	bl sub_020223BC
 	ldr r0, _0219D550 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _0219D548
 _0219D52E:
 	bl sub_0203DF20
@@ -1086,7 +1086,7 @@ _0219D6E6:
 	cmp r4, #0x82
 	blt _0219D6BE
 	ldr r0, [sp, #4]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1105,7 +1105,7 @@ _0219D712:
 	lsl r0, r4, #2
 	add r0, r1, r0
 	ldr r0, [r0, #0x2c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #0x82
 	blt _0219D712
@@ -1352,7 +1352,7 @@ _0219D8F0:
 	mov r2, #3
 	bl sub_0219CAD8
 	ldr r0, _0219D988 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x20]
 	ldrb r1, [r0]
 	mov r0, #0x83
@@ -2464,7 +2464,7 @@ ovy311_219e1d4: ; 0x0219E1D4
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy311_219e3e4

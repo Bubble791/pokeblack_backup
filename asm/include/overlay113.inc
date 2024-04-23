@@ -15,7 +15,7 @@
 .public ovy36_0218056c
 .public sub_021B8224
 .public sub_021B8258
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02016AD8
 .public sub_02016AF0
 .public sub_021804B8
@@ -48,7 +48,7 @@
 .public sub_02167308
 .public sub_02167078
 .public ovy12_2167bcc
-.public sub_02006254
+.public GFL_SndSEPlay
 
 .public ovy36_21b81bc
 .public ovy36_21b83b4

@@ -287,7 +287,7 @@ _021EEED6:
 _021EEEE0:
 	ldr r0, _021EEFDC ; =0x000006CA
 _021EEEE2:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EEEE6:
 	ldr r0, [r5]
 	add r0, r0, #1
@@ -308,7 +308,7 @@ _021EEEEE:
 	cmp r0, #0
 	bne _021EEF10
 	ldr r0, _021EEFE0 ; =0x000006CB
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EEF10:
 	ldr r0, [r5]
 	add r0, r0, #1

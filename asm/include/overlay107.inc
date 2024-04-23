@@ -42,7 +42,7 @@
 .public sub_02166E44
 .public sub_0218EFBC
 .public ovy12_2166e88
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02166E44
 .public sub_0218EFBC
 .public ovy12_2166e88
@@ -55,7 +55,7 @@
 .public sub_02166E44
 .public sub_0218EFBC
 .public ovy12_2166e88
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021C29CC
 .public sub_021C29F0
 .public sub_02166ECC

@@ -37,7 +37,7 @@
 .public sub_02046DE0
 .public sub_02046C40
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_020444A4
 .public sub_02048080
 .public sub_02044710
@@ -59,7 +59,7 @@
 .public sub_0204AE3C
 .public sub_0204AB0C
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_02044668
 .public sub_02045264
 .public sub_02044B84
@@ -100,8 +100,8 @@
 .public sub_020241D4
 .public sub_0204B0B8
 .public sub_0204B0B8
-.public sub_02024274
-.public sub_020487D4
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
 .public MI_CpuFill8
@@ -123,7 +123,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048210
 .public MI_CpuFill8
 .public sub_020484F4
@@ -158,7 +158,7 @@
 .public sub_02044F90
 .public sub_02199B7C
 .public sub_02199910
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0219AA60
 .public sub_02199A14
 .public sub_02199A6C
@@ -178,7 +178,7 @@
 .public sub_02199BE4
 .public sub_02199ACC
 .public sub_0219AA60
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0219B6C8
 .public sub_02199C40
 .public sub_0219B6C8
@@ -234,14 +234,14 @@
 .public sub_020484F4
 .public sub_0219B47C
 .public sub_02021CFC
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02048244
 .public sub_020232D8
 .public sub_02048210
 .public sub_020504DC
 .public MI_CpuFill8
 .public sub_020504F0
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020484D4
 .public sub_0204566C
 .public sub_02044F90

@@ -627,7 +627,7 @@ ovy62_21e5cbc: ; 0x021E5CBC
 	add r2, r6, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E5D14:
 	mov r0, #1
 	str r0, [sp]

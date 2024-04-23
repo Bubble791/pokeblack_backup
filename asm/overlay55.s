@@ -779,9 +779,9 @@ ovy55_21e5dfc: ; 0x021E5DFC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy55_21e5dfc
@@ -1559,7 +1559,7 @@ ovy55_21e6388: ; 0x021E6388
 	add r2, r4, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E63AC:
 	pop {r4, r5, r6, pc}
 	nop
@@ -1582,7 +1582,7 @@ ovy55_21e63b4: ; 0x021E63B4
 	add r2, r4, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E63D8:
 	pop {r4, r5, r6, pc}
 	nop
@@ -1674,7 +1674,7 @@ ovy55_21e6488: ; 0x021E6488
 	add r2, r5, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E64B4:
 	pop {r4, r5, r6, pc}
 	nop
@@ -2220,18 +2220,18 @@ _021E6878:
 	mul r0, r6
 	add r0, r5, r0
 	ldr r0, [r0, #8]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #8
 	blt _021E6878
 	add r0, r5, #0
 	add r0, #0x98
 	ldr r0, [r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r5, #0
 	bl sub_0203A24C
 	pop {r4, r5, r6, pc}
@@ -3424,7 +3424,7 @@ ovy55_21e713c: ; 0x021E713C
 	add r2, r7, #0
 	bl GFL_MsgDataLoadStrbuf
 	add r0, r4, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 _021E7192:
 	mov r5, #0
 _021E7194:
@@ -3455,7 +3455,7 @@ _021E7194:
 	cmp r5, #6
 	blt _021E7194
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

@@ -182,10 +182,10 @@
 .public sub_021B31C4
 .public sub_021B31C4
 .public sub_021B31C4
-.public sub_020279B4
+.public GFL_FadeScreenSet
 .public sub_021B31C4
 .public sub_021B31C4
-.public sub_020279B4
+.public GFL_FadeScreenSet
 .public sub_021B31C4
 .public sub_0201AD8C
 .public sub_0201AB24
@@ -222,10 +222,10 @@
 .public sub_021BE840
 .public sub_021B31C4
 .public sub_021B31C4
-.public sub_020279B4
+.public GFL_FadeScreenSet
 .public sub_021B31C4
 .public sub_021B31C4
-.public sub_020279B4
+.public GFL_FadeScreenSet
 .public sub_021B31C4
 .public sub_0203A24C
 .public sub_0203A24C

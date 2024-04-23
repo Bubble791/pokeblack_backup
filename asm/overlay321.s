@@ -55,7 +55,7 @@ ovy321_219ce80: ; 0x0219CE80
 	str r0, [sp, #8]
 	mov r0, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #1
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -117,7 +117,7 @@ _0219CF62: ; jump table
 	.short _0219CF90 - _0219CF62 - 2 ; case 2
 	.short _0219CFAC - _0219CF62 - 2 ; case 3
 _0219CF6A:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	beq _0219CFBA
 	ldr r0, [r5]
@@ -148,11 +148,11 @@ _0219CF90:
 	str r0, [sp, #8]
 	mov r0, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	ldr r0, [r5]
 	b _0219CF8A
 _0219CFAC:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	beq _0219CFBA
 	add sp, #0xc
@@ -262,7 +262,7 @@ _0219D088:
 	ldr r0, [r5, #0x58]
 	cmp r0, #0
 	beq _0219D098
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	str r7, [r5, #0x58]
 _0219D098:
 	add r4, r4, #1
@@ -368,7 +368,7 @@ _0219D12C:
 	mov r3, #0
 	bl ovy321_219d6dc
 	ldr r0, _0219D2C8 ; =0x000008BB
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, r4, r5, pc}
 _0219D148:
 	bl ovy321_219d788
@@ -412,7 +412,7 @@ _0219D18E:
 	mov r0, #0xc8
 	str r0, [r4, #0x60]
 	ldr r0, _0219D2CC ; =0x000008BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	pop {r3, r4, r5, pc}
 _0219D1AA:
 	mov r1, #1
@@ -1646,7 +1646,7 @@ ovy321_219db18: ; 0x0219DB18
 	mov r3, #0
 	bl ovy321_219da9c
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x3c]
 	ldr r3, _0219DBF0 ; =0x0219E024
 	ldr r1, [r0, #4]
@@ -1693,7 +1693,7 @@ ovy321_219db18: ; 0x0219DB18
 	mov r3, #0
 	bl ovy321_219da9c
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	b _0219DBE0
 _0219DBBE:
 	ldr r0, [r5, #0x58]
@@ -1713,9 +1713,9 @@ _0219DBBE:
 	bl ovy321_219da9c
 _0219DBE0:
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1806,7 +1806,7 @@ ovy321_219dcac: ; 0x0219DCAC
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #4
 	bl ovy321_219de2c
 	add r0, r4, #0

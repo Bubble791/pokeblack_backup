@@ -5,8 +5,8 @@
 .public sub_02048530
 .public sub_0203A970
 .public sub_0203A980
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_0203A978
@@ -30,7 +30,7 @@
 .public sub_02017394
 .public sub_020191AC
 .public sub_0204898C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_020171F4
 .public sub_0201CCF8
 .public sub_02017544
@@ -54,7 +54,7 @@
 .public sub_02165B10
 .public sub_02017994
 .public sub_020095A0
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02165AE8
 .public sub_0201735C
 .public sub_0201FD6C

@@ -77,7 +77,7 @@
 .public sub_02180578
 .public sub_021C09E4
 .public sub_0208D60C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0208D868
 .public sub_02180578
 .public sub_021C0A4C

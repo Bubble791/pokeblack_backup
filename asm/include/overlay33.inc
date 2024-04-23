@@ -211,7 +211,7 @@
 .public sub_02048614
 .public sub_020195C0
 .public sub_02016D68
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0200C940
 .public sub_0202D138
 .public sub_0200C958
@@ -257,7 +257,7 @@
 .public sub_02048530
 .public sub_02048658
 .public sub_0202437C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_021804C0
 .public sub_0203A1FC
 .public sub_0204875C
@@ -269,10 +269,10 @@
 .public sub_02187C7C
 .public sub_02187C1C
 .public sub_02044F90
-.public sub_02048564
-.public sub_02048564
-.public sub_02024274
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_0203A24C
 .public sub_0204875C
 .public GFL_MsgDataLoadStrbuf
@@ -281,7 +281,7 @@
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf
 .public ovy36_2187c4c
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public ovy36_2187c9c
 .public sub_020484D4
 .public sub_02044F90
@@ -293,7 +293,7 @@
 .public ovy36_2189de8
 .public sub_02048244
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public ovy36_2189cd8
 .public sub_0203A24C
 .public sub_02017354
@@ -479,7 +479,7 @@
 .public sub_02016EDC
 .public sub_02180670
 .public sub_02016D68
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021C80D4
 .public sub_021C80D4
 .public sub_021C80A8
@@ -613,7 +613,7 @@
 .public sub_0204898C
 .public sub_02024464
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02188474
 .public sub_021883B0
 .public sub_02006DEC
@@ -628,7 +628,7 @@
 .public sub_0204898C
 .public sub_02024464
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02188474
 .public sub_021883B0
 .public sub_021883E8
@@ -636,8 +636,8 @@
 .public sub_020069F4
 .public sub_02006C40
 .public sub_021883E8
-.public sub_02048564
-.public sub_02024274
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
 .public sub_02188338
 .public sub_021879B8
 .public sub_02016AF0
@@ -710,7 +710,7 @@
 .public sub_0219A580
 .public sub_021670F4
 .public sub_02167564
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021795A4
 .public sub_02005784
 .public sub_021670F4
@@ -757,7 +757,7 @@
 .public sub_020507D4
 .public VEC_Add
 .public sub_02184074
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02184110
 .public sub_02184110
 .public sub_02184134
@@ -770,7 +770,7 @@
 .public sub_02016AD8
 .public sub_020195C0
 .public sub_02016D68
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804F0
 .public sub_0219A664
 .public sub_021804D4
@@ -779,7 +779,7 @@
 .public ovy36_2183f50
 .public sub_020061B8
 .public sub_02006294
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804D4
 .public sub_021852F0
 .public ovy36_2183f50
@@ -793,7 +793,7 @@
 .public ovy36_2183f50
 .public sub_02016CB4
 .public sub_02016EDC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804F0
 .public sub_0219A664
 .public sub_021804D4
@@ -827,7 +827,7 @@
 .public sub_020507D4
 .public VEC_Add
 .public sub_02184074
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02184110
 .public ovy36_2183f50
 .public sub_02184110
@@ -852,7 +852,7 @@
 .public sub_02180578
 .public sub_021C14A0
 .public sub_021C09E4
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_020061B8
 .public sub_02006294
 .public sub_021804F0
@@ -868,7 +868,7 @@
 .public sub_0219A6A0
 .public sub_02166ECC
 .public sub_02180578
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021804A0
 .public sub_021C0E94
 .public sub_021C0E08
@@ -948,7 +948,7 @@
 .public sub_02008B0C
 .public sub_02008B40
 .public sub_020486B8
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02008B74
 .public sub_02008BEC
 .public sub_0203A24C
@@ -957,12 +957,12 @@
 .public sub_0203A24C
 .public sub_0204875C
 .public sub_0204898C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_0201D6F8
 .public sub_0201C464
 .public sub_0201CD1C
 .public sub_0201CD1C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0201CD1C
@@ -978,7 +978,7 @@
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0201CD1C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0201CD1C
 .public sub_0201CD1C
 .public sub_0201736C

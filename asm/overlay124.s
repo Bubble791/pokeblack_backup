@@ -694,7 +694,7 @@ _021EF1B8:
 	blt _021EF1F0
 	ldr r0, _021EF280 ; =0x00000899
 	str r1, [r4, #8]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [sp]
 	mov r1, #2
 	str r1, [r0]

@@ -46,9 +46,9 @@
 .public sub_02180494
 .public sub_021862E4
 .public sub_021862DC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EF0AC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021B8224
 .public sub_021804F0
 .public sub_0219A664

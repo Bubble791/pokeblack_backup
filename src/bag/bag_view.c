@@ -14,9 +14,9 @@ const u8 data_021A0FEE[5][2] = {0};
 const u32 data_21A1028[6] = {0};
 const data_21A1120[6] = {0};
 
-void sub_021998C0(BagView *m_bagView, FieldBagItemUse a2)
+void sub_021998C0(BagView *m_bagView, FieldBagItemUse func)
 {
-    m_bagView->unk4FC = a2;
+    m_bagView->bagMenuFunc = func;
     sub_0203DEB4(m_bagView->KeyRetypeIntervalRepeated, m_bagView->KeyRetypeIntervalFirst);
 }
 
@@ -91,11 +91,11 @@ void ovy142_21999f0(BagView *m_bagView, int pockId1, int pockId2);
 
 void ovy142_21999f0(BagView *m_bagView, int pockId1, int pockId2)
 {
-    int *uStack_18;
+    int *data;
 
-    MI_CpuCopy8(&m_bagView->m_itemTable[pockId1], &uStack_18, 4);
+    MI_CpuCopy8(&m_bagView->m_itemTable[pockId1], &data, 4);
     MI_CpuCopy8(&m_bagView->m_itemTable[pockId2], &m_bagView->m_itemTable[pockId1], 4);
-    MI_CpuCopy8(&uStack_18, &m_bagView->m_itemTable[pockId2], 4);
+    MI_CpuCopy8(&data, &m_bagView->m_itemTable[pockId2], 4);
 }
 
 void ovy142_2199a20(BagView *m_bagView, int param_2, int param_3);
@@ -235,7 +235,7 @@ int ovy142_2199bcc(BagView *m_bagView)
         ovy142_219ecec(m_bagView);
         if (m_bagView->unk834 != v4)
         {
-            sub_02006254(0x548);
+            GFL_SndSEPlay(0x548);
             return 1;
         }
     }
@@ -285,7 +285,7 @@ int ovy142_2199c70(BagView *m_bagView)
     if (iVar5 != 0)
     {
         int uVar2 = sub_02199978(m_bagView);
-        sub_02006254(0x548);
+        GFL_SndSEPlay(0x548);
         ovy142_2199a20(m_bagView, uVar1, uVar2);
     }
     return iVar5;
@@ -448,7 +448,7 @@ void ovy142_2199ecc(BagView *m_bagView)
 
             if (m_bagView->unk8B4 == 1)
             {
-                sub_02006254(0x54c);
+                GFL_SndSEPlay(0x54c);
                 m_bagView->unk8B4 = 0;
                 sub_02007FE8(m_bagView->bagSave, &m_bagView->m_itemTable[0], m_bagView->itemType, 0);
                 sub_0204C488(m_bagView->unk6B4, 1);
@@ -463,7 +463,7 @@ void ovy142_2199ecc(BagView *m_bagView)
         {
             if ((sub_0203DEFC() & (1 | 4)) != 0)
             {
-                sub_02006254(0x54C);
+                GFL_SndSEPlay(0x54C);
                 sub_02007FE8(m_bagView->bagSave, &m_bagView->m_itemTable[0], m_bagView->itemType, 0);
                 sub_0204C488(m_bagView->unk6B4, 1);
                 ovy142_219ffe8(m_bagView, 1);
@@ -475,7 +475,7 @@ void ovy142_2199ecc(BagView *m_bagView)
 
             if ((sub_0203DEFC() & 2) != 0)
             {
-                sub_02006254(0x551);
+                GFL_SndSEPlay(0x551);
                 sub_0204C488(m_bagView->unk6B4, 1);
                 m_bagView->unk83C = 0;
                 ovy142_219bda4(m_bagView, 1);
@@ -487,7 +487,7 @@ void ovy142_2199ecc(BagView *m_bagView)
 
             if (ovy142_2199e88() == 1)
             {
-                sub_02006254(0x551);
+                GFL_SndSEPlay(0x551);
                 sub_0204C488(m_bagView->unk6B4, 1);
                 m_bagView->unk83C = 0;
                 ovy142_219bda4(m_bagView, 0);
@@ -502,7 +502,7 @@ void ovy142_2199ecc(BagView *m_bagView)
             {
                 m_bagView->unk8B4 = 1;
                 ovy142_219ed3c(m_bagView);
-                sub_02006254(0x548);
+                GFL_SndSEPlay(0x548);
                 m_bagView->unk838 = 0xffff;
                 ovy142_21998f4(m_bagView);
                 return;
@@ -511,7 +511,7 @@ void ovy142_2199ecc(BagView *m_bagView)
             if (ovy142_2199c70(m_bagView) != 0)
             {
                 ovy142_219ed3c(m_bagView);
-                sub_02006254(0x548);
+                GFL_SndSEPlay(0x548);
                 m_bagView->unk838 = 0xffff;
                 ovy142_21998f4(m_bagView);
             }
@@ -590,7 +590,7 @@ void ovy142_219a104(BagView *m_bagView)
                                     m_bagView->unk52C,
                                     m_bagView->unk528);
             ovy142_219f6a4(m_bagView, 1);
-            sub_02006254(0x7cc);
+            GFL_SndSEPlay(0x7cc);
         }
         else
         {
@@ -1052,7 +1052,7 @@ void ovy142_219a850(BagView *m_bagView)
             m_bagView->unk8B0 = 0;
         sub_020504F0(m_bagView->unk6A4);
         sub_02035198(m_bagView->unk8A4);
-        if (m_bagView->unk4FC != ovy142_219a850)
+        if (m_bagView->bagMenuFunc != ovy142_219a850)
             return;
         {
             if (ovy142_2199bcc(m_bagView))
@@ -1074,7 +1074,7 @@ void ovy142_219a850(BagView *m_bagView)
                     {
                         if ((v3 & 0xC0A) == 0)
                         {
-                            sub_02006254(1352);
+                            GFL_SndSEPlay(1352);
                             ovy142_219de0c(m_bagView);
                             ovy142_219bda4(m_bagView, 1);
                             return;
@@ -1178,7 +1178,7 @@ void ovy142_219a850(BagView *m_bagView)
                         if (ovy142_2199d24(m_bagView))
                         {
                             ovy142_219ed3c(m_bagView);
-                            sub_02006254(0x548);
+                            GFL_SndSEPlay(0x548);
                             ovy142_21998f4(m_bagView);
                             return;
                         }
@@ -1295,7 +1295,7 @@ void ovy142_219ac4c(BagView *m_bagView)
     iVar1 = ovy142_219f7a4(m_bagView);
     if (iVar1 != 0)
     {
-        sub_02006254(0x55C);
+        GFL_SndSEPlay(0x55C);
         sub_021998C0(m_bagView, ovy142_219abd8);
     }
 }
@@ -1362,7 +1362,7 @@ void ovy142_219ad30(BagView *m_bagView)
         sub_02045738(3);
         if (iVar1 == 0)
         {
-            sub_02006254(0x647);
+            GFL_SndSEPlay(0x647);
             ovy142_219b340(m_bagView, m_bagView->unk814);
             GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x36, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, ((int)m_bagView->unk814 > 1), 0);
@@ -1443,7 +1443,7 @@ void ovy142_219ae90(BagView *m_bagView)
 
         if (iVar2 == 0)
         {
-            sub_02006254(0x54C);
+            GFL_SndSEPlay(0x54C);
             ovy142_219b46c(m_bagView);
             GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x37, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
@@ -1455,7 +1455,7 @@ void ovy142_219ae90(BagView *m_bagView)
         }
         else if (iVar2 == 1)
         {
-            sub_02006254(0x551);
+            GFL_SndSEPlay(0x551);
             ovy142_219c9f8(m_bagView, 4, ovy142_219cba8);
         }
     }
@@ -1546,13 +1546,13 @@ void ovy142_219b0a0(BagView *m_bagView)
         }
         if (iVar1 == 0)
         {
-            sub_02006254(0x54C);
+            GFL_SndSEPlay(0x54C);
             ovy142_219b46c(m_bagView);
             sub_021998C0(m_bagView, ovy142_219b12c);
         }
         else if (iVar1 == 1)
         {
-            sub_02006254(0x551);
+            GFL_SndSEPlay(0x551);
             ovy142_219c9f8(m_bagView, 4, ovy142_219cbe4);
         }
     }
@@ -1594,7 +1594,7 @@ void ovy142_219b1a0(BagView *m_bagView)
             ovy142_219b340(m_bagView, m_bagView->unk814);
             uVar3 = sub_02017974(m_bagView->m_GameData);
             sub_0200C9C0(uVar3, uVar2);
-            sub_02006254(0x655);
+            GFL_SndSEPlay(0x655);
             ovy142_219f978(m_bagView);
             GFL_MsgDataLoadStrbuf(m_bagView->unk520, 0x50, m_bagView->unk528);
             ovy142_21999d8(m_bagView, 0, m_bagView->selectItem, 1 < m_bagView->unk814, 0);
@@ -1856,7 +1856,7 @@ int ovy142_219b490(BagView *m_bagView)
     {
         u16 uVar8;
         int uVar22;
-        sub_02006254(0x548);
+        GFL_SndSEPlay(0x548);
         if (unaff_r4 == 0)
         {
             uVar22 = m_bagView->unk724[5];
@@ -1904,7 +1904,7 @@ void ovy142_219b5d4(BagView *m_bagView)
     }
     GFL_WordSetFormatStrbuf(m_bagView->messageParam, m_bagView->unk52C, m_bagView->unk528);
     ovy142_219f6a4(m_bagView, 0);
-    sub_02006254(0x663);
+    GFL_SndSEPlay(0x663);
     ovy142_219ff40(m_bagView, 0);
     ovy142_219b3b0(m_bagView);
     sub_021998C0(m_bagView, ovy142_219b6dc);
@@ -2123,7 +2123,7 @@ void ovy142_219bac4(BagView *m_bagView, int param_2)
 
 void ovy142_219bca4(BagView *m_bagView)
 {
-    sub_02006254(0x54C);
+    GFL_SndSEPlay(0x54C);
     if (m_bagView->itemType != 5)
         sub_0204C488(m_bagView->unk744, 2);
     else
@@ -2250,7 +2250,7 @@ int ovy142_219be18(BagView *m_bagView, int param_2)
         sub_02017644(m_bagView->m_GameData, iVar1, 0);
     else
         sub_02017644(m_bagView->m_GameData, iVar1, 1);
-    sub_02006254(0x646);
+    GFL_SndSEPlay(0x646);
     m_bagView->unk838 = 0xffff;
     return 1;
 }
@@ -2268,7 +2268,7 @@ void ovy142_219be90(BagView *m_bagView)
     uVar1 = sub_0219BE88(m_bagView->itemType);
     uVar2 = sub_0201765C(m_bagView->m_GameData, uVar1);
     sub_02017644(m_bagView->m_GameData, uVar1, uVar2 ^ 1);
-    sub_02006254(0x646);
+    GFL_SndSEPlay(0x646);
     ovy142_219becc(m_bagView);
 }
 
@@ -2575,7 +2575,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *m_bagView)
     else if (a1 >= 12 && a1 < 0x12)
     {
         {
-            if (m_bagView->unk4FC == ovy142_219a850)
+            if (m_bagView->bagMenuFunc == ovy142_219a850)
             {
                 v12 = m_bagView->posNow;
                 v18 = sub_02199978(m_bagView);
@@ -2618,7 +2618,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *m_bagView)
     {
         v16 = m_bagView->itemType;
         m_bagView->itemType = v7;
-        sub_02006254(2008);
+        GFL_SndSEPlay(2008);
         ovy142_2199a5c(m_bagView, v16, m_bagView->itemType);
         ovy142_219bd84(m_bagView);
         ovy142_219bda4(m_bagView, 0);
@@ -2653,8 +2653,8 @@ void ovy142_219c3cc(BagView *m_bagView)
 {
     if (sub_02021C0C(m_bagView->unk510))
     {
-        sub_020279B4(0, 1, 1, 0, 6, 1, m_bagView->heapId);
-        sub_02006254(1950);
+        GFL_FadeScreenSet(0, 1, 1, 0, 6, 1, m_bagView->heapId);
+        GFL_SndSEPlay(1950);
         sub_021998C0(m_bagView, ovy142_219c414);
     }
 }
@@ -2664,7 +2664,7 @@ void ovy142_219c414(BagView *m_bagView)
     int v2;     // r5
     int result; // r0
 
-    v2 = sub_02027ACC();
+    v2 = GFL_FadeScreenIsFinished();
     result = ovy142_21a00a0(m_bagView);
     if (v2 == 1 && !result)
     {

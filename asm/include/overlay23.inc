@@ -37,7 +37,7 @@
 .public sub_0204875C
 .public sub_0216E850
 .public GFL_MsgDataLoadStrbuf
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02029BB0
 .public sub_02029BB0
 .public sub_0203A24C
@@ -85,7 +85,7 @@
 .public sub_02008BF0
 .public sub_0204875C
 .public sub_0204898C
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02011040
 .public sub_0204A934
 .public sub_0203A24C
@@ -107,7 +107,7 @@
 .public sub_0201CCF8
 .public sub_0204875C
 .public GFL_MsgDataLoadStrbuf
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_0200C200
 .public sub_0203A24C
 .public sub_02008BF0
@@ -133,7 +133,7 @@
 .public sub_02005DF4
 .public sub_02016E38
 .public sub_02019494
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02017A04
 .public sub_021E6298
 .public sub_021E636C
@@ -160,7 +160,7 @@
 .public sub_02019494
 .public sub_0202FF44
 .public sub_021B878C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_02017A04
 .public sub_02017994
 .public sub_021E6298
@@ -237,9 +237,9 @@
 .public sub_0201D5F4
 .public sub_0204898C
 .public sub_0201CD1C
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_0201FDF8
 .public sub_0203A24C
-.public sub_020487D4
+.public GFL_MsgDataFree
 
 .public ovy36_21b870c

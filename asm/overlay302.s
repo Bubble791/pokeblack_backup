@@ -1182,7 +1182,7 @@ ovy302_21ad78c: ; 0x021AD78C
 	mov r0, #0
 	mov r2, #1
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	add sp, #0xc
 	pop {pc}
 	thumb_func_end ovy302_21ad78c
@@ -1200,7 +1200,7 @@ ovy302_21ad7a8: ; 0x021AD7A8
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	add sp, #0xc
 	pop {pc}
 	.align 2, 0

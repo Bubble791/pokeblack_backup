@@ -14,16 +14,16 @@ int ovy142_219c6b4(int a1, int a2, int a3, void *a4)
 {
     BagView *wk = (BagView*) a4;
 
-    FieldBagItemUse v5 = wk->unk4FC;
-    if (!v5)
+    FieldBagItemUse func = wk->bagMenuFunc;
+    if (!func)
     {
-        sub_020279B4(0, 0, 0, 0, 6, 1, wk->heapId);
+        GFL_FadeScreenSet(0, 0, 0, 0, 6, 1, wk->heapId);
         return 1;
     }
     else
     {
         wk->unk838 = wk->unk834;
-        v5(wk);
+        func(wk);
         if (wk->unk892)
         {
             ovy142_219eb54(a4);
@@ -73,11 +73,11 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
 {
     BagView *wk = (BagView*) a4;
 
-    if (sub_02027ACC() != 1)
+    if (GFL_FadeScreenIsFinished() != 1)
         return 0;
     if (!sub_02021C0C(wk->unk510))
         return 0;
-    sub_0203A6A8(wk->unk6A8);
+    GFL_TCBRemove(wk->unk6A8);
     sub_021A046C(&wk->unk8C8);
     sub_020088A4(wk->unk14, wk->itemType);
     sub_02008894(
@@ -88,12 +88,12 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
     sub_0202E1DC(wk->unk800);
     ovy142_219e168(wk);
     ovy142_219dd14(wk);
-    sub_0203A83C(wk->unk748);
-    sub_020487D4(wk->unk520);
-    sub_02048564(wk->unk528);
-    sub_02048564(wk->unk52C);
-    sub_02048564(wk->unk530);
-    sub_02024274(wk->messageParam);
+    GFL_TCBExMgrFree(wk->unk748);
+    GFL_MsgDataFree(wk->unk520);
+    GFL_StrBufFree(wk->unk528);
+    GFL_StrBufFree(wk->unk52C);
+    GFL_StrBufFree(wk->unk530);
+    GFL_WordSetSystemFree(wk->messageParam);
     ovy142_219f8c4(wk);
     if (wk->unk500)
     {
@@ -162,7 +162,7 @@ void ovy142_219c958(BagView *bagView)
     switch (bagView->unk8B8)
     {
     case 0:
-        sub_02006254(0x54c);
+        GFL_SndSEPlay(0x54c);
     case 3:
         ovy142_219fd4c(bagView, 0);
         bagView->unk8B8++;
@@ -203,22 +203,22 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
 
     if (a2 == 4)
     {
-        sub_02006254(1361);
+        GFL_SndSEPlay(1361);
         v3 = 9;
     }
     else if (a2 == 3)
     {
-        sub_02006254(1366);
+        GFL_SndSEPlay(1366);
         v3 = 8;
     }
     else if (a2 == 1)
     {
-        sub_02006254(2008);
+        GFL_SndSEPlay(2008);
         v3 = 13;
     }
     else if (a2 == 0)
     {
-        sub_02006254(2008);
+        GFL_SndSEPlay(2008);
         v3 = 12;
     }
     a1->unk8B8 = a2;
@@ -254,12 +254,12 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
     ovy142_21998f4(bagView);
     if (a3 == 1)
     {
-        sub_02006254(2008);
+        GFL_SndSEPlay(2008);
         v4 = 13;
     }
     else if (!a3)
     {
-        sub_02006254(2008);
+        GFL_SndSEPlay(2008);
         v4 = 12;
     }
     bagView->unk8B8 = a3;
@@ -432,34 +432,34 @@ void ovy142_219cd98(BagView* bagView)
             switch (bagView->unk89C)
             {
             case 0:
-                sub_02006254(0x663);
+                GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 0);
                 sub_021998C0(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             case 1:
-                sub_02006254(0x663);
+                GFL_SndSEPlay(0x663);
                 r5 = 1;
                 ovy142_219bcd8(bagView, 1);
                 sub_021998C0(bagView, ovy142_219cea8);
                 break;
             
             case 2:
-                sub_02006254(0x663);
+                GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 2);
                 sub_021998C0(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             
             case 3:
-                sub_02006254(0x663);
+                GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 3);
                 sub_021998C0(bagView, ovy142_219cea8);
                 r5 = 1;
                 break;
             
             case 4:
-                sub_02006254(0x663);
+                GFL_SndSEPlay(0x663);
                 ovy142_219bcd8(bagView, 4);
                 sub_021998C0(bagView, ovy142_219cea8);
                 r5 = 1;
@@ -687,37 +687,37 @@ void ovy142_219d2bc(BagView *bagView)
             switch (bagView->unk89C)
             {
                 case 5:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 0);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 0:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 1);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 1:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 2);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 2:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 3);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 3:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 4);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
                     break;
                 case 4:
-                    sub_02006254(0x663);
+                    GFL_SndSEPlay(0x663);
                     ovy142_219bd2c(bagView, 5);
                     sub_021998C0(bagView, ovy142_219cf28);
                     r5 = 1;
@@ -2169,7 +2169,7 @@ void ovy142_219f0bc(BagView *a1, u32 *a2, int a3)
     a1->unk7A0[i - 1].unk8  = 1;
     a1->unk79C = sub_0202D974(&task, a1->unk800);
     for (v9 = 0; v9 < a3; ++v9)
-        sub_02048564(a1->unk7A0[v9].unk0);
+        GFL_StrBufFree(a1->unk7A0[v9].unk0);
     ovy142_219fda8(a1, 0);
 }
 
@@ -2200,7 +2200,7 @@ void ovy142_219f1a0(BagView *a1, u32 *a2, int a3)
     a1->unk7A0[i - 1].unk8  = 1;
     a1->unk79C = sub_0202D974(&task, a1->unk800);
     for (v9 = 0; v9 < a3; ++v9)
-        sub_02048564(a1->unk7A0[v9].unk0);
+        GFL_StrBufFree(a1->unk7A0[v9].unk0);
     ovy142_219fda8(a1, 0);
 }
 
@@ -2254,7 +2254,7 @@ void ovy142_219f284(BagView *a1, u8 a2)
     }
     a1->unk79C = sub_0202D974(&task, a1->unk800);
     for (i = 0; i < a2; ++i)
-        sub_02048564(a1->unk7A0[i].unk0);
+        GFL_StrBufFree(a1->unk7A0[i].unk0);
     ovy142_219fda8(a1, 0);
 }
 
@@ -2414,7 +2414,7 @@ int ovy142_219f7a4(BagView *a1)
                 {
                     if ((sub_0203DEFC() & 3) != 0 || sub_0203DA48())
                     {
-                        sub_02006254(1351);
+                        GFL_SndSEPlay(1351);
                         sub_020223BC(a1->unk514);
                         a1->unk518 = 1;
                     }
@@ -2537,8 +2537,8 @@ void ovy142_219faac(BagView *a1)
     a1->unk7A0[1].unk4 = 14816;
     a1->unk7A0[1].unk8 = 0;
     a1->unk79C = sub_0202D974(&task, a1->unk800);
-    sub_02048564(a1->unk7A0[0].unk0);
-    sub_02048564(a1->unk7A0[1].unk0);
+    GFL_StrBufFree(a1->unk7A0[0].unk0);
+    GFL_StrBufFree(a1->unk7A0[1].unk0);
     ovy142_219ff40(a1, 0);
     ovy142_219fda8(a1, 0);
 }

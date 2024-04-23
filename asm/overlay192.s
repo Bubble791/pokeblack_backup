@@ -1447,7 +1447,7 @@ _021B3B82:
 	mov r2, #0
 	str r0, [sp, #8]
 	mov r0, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 _021B3BAE:
 	mov r0, #0xb4
 	bl sub_021B31C4
@@ -1466,7 +1466,7 @@ _021B3BAE:
 	mov r2, #1
 	str r0, [sp, #8]
 	mov r0, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 _021B3BD8:
 	mov r0, #0xfa
 	bl sub_021B31C4
@@ -1751,7 +1751,7 @@ _021B3E36:
 	mov r2, #0
 	str r0, [sp, #8]
 	mov r0, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 _021B3E68:
 	mov r0, #0x69
 	lsl r0, r0, #2
@@ -1771,7 +1771,7 @@ _021B3E68:
 	mov r2, #1
 	str r0, [sp, #8]
 	mov r0, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 _021B3E94:
 	ldr r0, _021B3F14 ; =0x00000293
 	bl sub_021B31C4

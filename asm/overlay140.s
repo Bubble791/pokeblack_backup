@@ -243,11 +243,11 @@ ovy140_219d048: ; 0x0219D048
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r5, r0]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	add r0, r4, #0
 	add r0, #0x84
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	add r0, #0x8c
 	ldr r0, [r5, r0]
@@ -376,7 +376,7 @@ ovy140_219d1c0: ; 0x0219D1C0
 	add r4, r0, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #0x7c
 	bl ovy140_219d850
@@ -855,7 +855,7 @@ _0219D526:
 	bl sub_020484D4
 	bl sub_02045B7C
 	ldr r0, [sp, #0x14]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #0x10
 	blt _0219D50C
@@ -902,9 +902,9 @@ _0219D526:
 	bl sub_020484D4
 	bl sub_02045B7C
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #0xc]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [sp, #0x10]
 	bl sub_02022DA8
 	add sp, #0x1c
@@ -1380,7 +1380,7 @@ _0219D990:
 	mov r0, #0xe
 	str r0, [r5]
 	ldr r0, _0219DA6C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add sp, #8
 	pop {r4, r5, r6, pc}
 _0219D9C2:
@@ -1592,7 +1592,7 @@ ovy140_219db34: ; 0x0219DB34
 	str r0, [r4, #8]
 _0219DB46:
 	ldr r0, [r4, #0x14]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x38
@@ -1823,7 +1823,7 @@ _0219DCFE:
 	mul r0, r6
 	add r0, r5, r0
 	ldr r0, [r0, #0x1c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x34]
@@ -1906,7 +1906,7 @@ _0219DD80:
 	add r1, r5, #0
 	bl sub_02044C98
 	ldr r0, _0219DF18 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	str r5, [r4, #0xc]
 	mov r5, #1
 	str r5, [r4, #0x10]
@@ -1931,7 +1931,7 @@ _0219DDC6:
 	mov r1, #0
 	bl sub_02044C98
 	ldr r0, _0219DF20 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r5, #1
 	str r5, [r4, #0xc]
 	str r5, [r4, #0x10]
@@ -1977,19 +1977,19 @@ _0219DE1E:
 _0219DE2C:
 	ldr r0, _0219DF18 ; =0x0000054C
 _0219DE2E:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _0219DE3E
 _0219DE34:
 	mov r0, #0
 	str r0, [r4, #0xc]
 	ldr r0, _0219DF18 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _0219DE3E:
 	mov r5, #1
 	b _0219DE4C
 _0219DE42:
 	ldr r0, _0219DF20 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r5, #1
 	str r5, [r4, #0xc]
 _0219DE4C:
@@ -2192,7 +2192,7 @@ _0219DFA8:
 	ldr r0, [r0, #0x1c]
 	cmp r0, #0
 	beq _0219DFBA
-	bl sub_02048564
+	bl GFL_StrBufFree
 _0219DFBA:
 	mov r0, #0xc
 	mul r0, r4
@@ -2393,7 +2393,7 @@ _0219E124:
 	mov r0, #1
 	str r0, [r4, #0x50]
 	ldr r0, _0219E2BC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _0219E1B0
 _0219E130:
 	ldr r1, [r4, #0x38]
@@ -2453,7 +2453,7 @@ _0219E19C:
 	cmp r0, #5
 	bge _0219E1C0
 	ldr r0, _0219E2BC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 _0219E1AC:
@@ -2470,7 +2470,7 @@ _0219E1C0:
 	add r0, r0, #1
 	str r0, [r4, #4]
 	ldr r0, _0219E2BC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #4]
 	cmp r0, #6
 	ble _0219E1D6
@@ -2488,7 +2488,7 @@ _0219E1E0:
 	cmp r0, #5
 	bge _0219E1F4
 	ldr r0, _0219E2BC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r1, #0
 	add r0, r4, #0
 	mvn r1, r1
@@ -2499,7 +2499,7 @@ _0219E1F4:
 	sub r0, r0, #1
 	str r0, [r4, #4]
 	ldr r0, _0219E2BC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #4]
 	cmp r0, #6
 	ble _0219E20C
@@ -3019,7 +3019,7 @@ _0219E57E:
 	cmp r0, #0
 	beq _0219E5E4
 	ldr r0, _0219E5F4 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	add r0, #0x44
 	add r1, r4, #0
@@ -3202,7 +3202,7 @@ _0219E708:
 	mul r0, r6
 	add r0, r5, r0
 	ldr r0, [r0, #0x3c]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0219E708
@@ -3326,7 +3326,7 @@ ovy140_219e7c8: ; 0x0219E7C8
 	add r3, r7, #0
 	bl ovy140_219db6c
 	add r0, r4, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0219E808: .word 0x04000050
@@ -4135,7 +4135,7 @@ ovy140_219edd8: ; 0x0219EDD8
 	add r0, r5, #0
 	bl ovy140_219e8ac
 	ldr r0, _0219EE04 ; =0x00000558
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _0219EE08 ; =ovy140_219ea8c
 	add r0, r4, #0
 	bl sub_0219EA3C

@@ -491,7 +491,7 @@ _021EF5AA:
 	ldr r0, [r4, #0x18]
 	bl sub_021F4678
 	ldr r0, _021EF618 ; =0x00000703
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #9
 	add sp, #0x24
 	str r0, [r5]

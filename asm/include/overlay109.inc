@@ -87,6 +87,6 @@
 .public sub_0200632C
 .public sub_02186374
 .public sub_0219AB18
-.public sub_02006254
+.public GFL_SndSEPlay
 
 .public MIi_CpuClear32

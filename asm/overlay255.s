@@ -137,11 +137,11 @@ _021BB7F4: .word ovy255_21bb804
 	thumb_func_start sub_021BB7F8
 sub_021BB7F8: ; 0x021BB7F8
 	ldr r0, [r0, #0x2c]
-	ldr r3, _021BB800 ; =sub_0203A6A8
+	ldr r3, _021BB800 ; =GFL_TCBRemove
 	ldr r0, [r0, #0x5c]
 	bx r3
 	.align 2, 0
-_021BB800: .word sub_0203A6A8
+_021BB800: .word GFL_TCBRemove
 	thumb_func_end sub_021BB7F8
 
 	thumb_func_start ovy255_21bb804
@@ -763,7 +763,7 @@ ovy255_21bbd18: ; 0x021BBD18
 	ldr r0, [r4, #0x2c]
 	add r0, #0x90
 	ldr r0, [r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x2c]
 	add r0, #0x94
 	ldr r0, [r0]
@@ -771,7 +771,7 @@ ovy255_21bbd18: ; 0x021BBD18
 	ldr r0, [r4, #0x2c]
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r4, #0x2c]
 	add r0, #0x84
 	ldr r0, [r0]
@@ -783,7 +783,7 @@ ovy255_21bbd18: ; 0x021BBD18
 	ldr r0, [r4, #0x2c]
 	add r0, #0x88
 	ldr r0, [r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy255_21bbd18
@@ -859,11 +859,11 @@ ovy255_21bbdd0: ; 0x021BBDD0
 	ldr r1, [r5, #0x2c]
 	sub r0, #0xc
 	ldr r0, [r1, r0]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x2c]
 	sub r4, #0x18
 	ldr r0, [r0, r4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy255_21bbdd0
 
@@ -8443,7 +8443,7 @@ _021BF666:
 	ldr r0, [r4]
 	bl sub_02165AE8
 	ldr r0, [r4, #4]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0xc]
 	bl sub_0203A24C
 	add r0, r5, #0
@@ -8697,7 +8697,7 @@ _021BF860:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3b34
 	ldr r0, _021BFB20 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xe
 	b _021BF7F6
 _021BF872:
@@ -8838,7 +8838,7 @@ _021BF95E:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d37b0
 	ldr r0, _021BFB20 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #0
@@ -8880,7 +8880,7 @@ _021BF9DE:
 	cmp r0, #0
 	bne _021BF9FE
 	ldr r0, _021BFB38 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -8890,7 +8890,7 @@ _021BF9FE:
 	cmp r0, #1
 	bne _021BFA14
 	ldr r0, _021BFB38 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -8923,9 +8923,9 @@ _021BFA14:
 	mov r1, #0xa
 	bl ovy255_21bbf30
 	ldr r0, _021BFB3C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _021BFB20 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #1
 	strb r1, [r0, r6]
@@ -8944,9 +8944,9 @@ _021BFA62:
 	mov r1, #0xb
 	bl ovy255_21bbf30
 	ldr r0, _021BFB3C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _021BFB20 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021BFB1C ; =0x0000A551
 	mov r2, #1
@@ -8969,7 +8969,7 @@ _021BFAA0:
 	cmp r0, #0
 	bne _021BFAC8
 	ldr r0, _021BFB38 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r1, #0
 	add r0, r4, #0
 	mvn r1, r1
@@ -8980,7 +8980,7 @@ _021BFAC8:
 	cmp r0, #1
 	bne _021BFAE2
 	ldr r0, _021BFB38 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -9033,7 +9033,7 @@ _021BFB40:
 	cmp r0, #0
 	bne _021BFBF2
 	ldr r0, _021BFD38 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #3
 	b _021BF7F6
 _021BFB54:
@@ -9141,7 +9141,7 @@ _021BFBF6:
 	ldr r0, [r4, #0x2c]
 	bl ovy255_21d3a64
 	ldr r0, _021BFD3C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xc
 	strh r0, [r5, #0xc]
 _021BFC34:
@@ -9175,7 +9175,7 @@ _021BFC58:
 	ldr r0, [r4, #0x2c]
 	bl ovy255_21d3a48
 	ldr r0, _021BFD3C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	strh r0, [r5, #0xc]
 _021BFC7E:
@@ -9232,7 +9232,7 @@ _021BFCDC:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3744
 	ldr r0, _021BFD3C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xf
 	b _021BF7F6
 _021BFD00:
@@ -9497,7 +9497,7 @@ _021BFF06:
 	bl ovy255_21d1ac8
 _021BFF18:
 	ldr r0, _021C00C4 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xe
 	b _021BFDC8
 _021BFF22:
@@ -9656,7 +9656,7 @@ _021C0026:
 	add r0, r4, #0
 	bl ovy255_21bc0c0
 	ldr r0, _021C00C4 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r2, [r4, #0x16]
 	add r0, r4, #0
 	mov r1, #4
@@ -9683,7 +9683,7 @@ _021C008E:
 	cmp r0, #0
 	bne _021C00AE
 	ldr r0, _021C00CC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -9702,7 +9702,7 @@ _021C00C4: .word 0x00000669
 _021C00C8: .word 0x0000A548
 _021C00CC: .word 0x00000548
 _021C00D0:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -9740,9 +9740,9 @@ _021C00E0:
 	mov r1, #0xa
 	bl ovy255_21bbf30
 	ldr r0, _021C03D8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _021C03DC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #1
 	strb r1, [r0, r6]
@@ -9761,9 +9761,9 @@ _021C0138:
 	mov r1, #0xb
 	bl ovy255_21bbf30
 	ldr r0, _021C03D8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _021C03DC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021C03D4 ; =0x0000A551
 	mov r2, #1
@@ -9786,7 +9786,7 @@ _021C0176:
 	cmp r0, #0
 	bne _021C019E
 	ldr r0, _021C03E0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r1, #0
 	add r0, r4, #0
 	mvn r1, r1
@@ -9797,7 +9797,7 @@ _021C019E:
 	cmp r0, #1
 	bne _021C01B8
 	ldr r0, _021C03E0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -9858,7 +9858,7 @@ _021C0212:
 	cmp r0, #0
 	bne _021C0230
 	ldr r0, _021C03E4 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #3
 	b _021BFDC8
 _021C0226:
@@ -9972,7 +9972,7 @@ _021C02D4:
 	ldr r0, [r4, #0x2c]
 	bl ovy255_21d3a64
 	ldr r0, _021C03DC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xc
 	strh r0, [r5, #0xc]
 _021C0312:
@@ -10015,7 +10015,7 @@ _021C0342:
 	ldr r0, [r4, #0x2c]
 	bl ovy255_21d3a48
 	ldr r0, _021C03DC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xa
 	strh r0, [r5, #0xc]
 _021C036E:
@@ -10037,7 +10037,7 @@ _021C037C:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3744
 	ldr r0, _021C03DC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xf
 	b _021BFDC8
 _021C03A0:
@@ -10187,7 +10187,7 @@ _021C04C4:
 	add r0, r5, #0
 	bl ovy255_21be950
 	ldr r0, _021C04E4 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strh r0, [r4, #0xc]
 	pop {r3, r4, r5, pc}
@@ -10475,7 +10475,7 @@ _021C06F6:
 	cmp r0, #0
 	bne _021C0708
 	ldr r0, _021C0888 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C0708:
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
@@ -10516,7 +10516,7 @@ _021C072C:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
 	ldr r0, _021C0888 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C0796
 _021C0760:
 	ldrh r0, [r5, #0xe]
@@ -10526,7 +10526,7 @@ _021C0760:
 	cmp r0, #0
 	bne _021C0780
 	ldr r0, _021C088C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -10536,7 +10536,7 @@ _021C0780:
 	cmp r0, #1
 	bne _021C0796
 	ldr r0, _021C088C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -10587,7 +10587,7 @@ _021C07E2:
 	cmp r0, #0
 	bne _021C087E
 	ldr r0, _021C0890 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 	b _021C0678
 _021C07F6:
@@ -10621,9 +10621,9 @@ _021C081C:
 	bl ovy255_21bf288
 	ldr r6, _021C0890 ; =0x00000667
 	add r0, r6, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r6, #2
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3744
@@ -10765,7 +10765,7 @@ _021C094E:
 	bne _021C096C
 _021C095E:
 	ldr r0, _021C0A88 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
@@ -10789,7 +10789,7 @@ _021C0970:
 	cmp r1, r0
 	beq _021C09BE
 	ldr r0, _021C0A88 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3734
@@ -10818,7 +10818,7 @@ _021C09CA:
 	cmp r0, #0
 	bne _021C09DE
 	ldr r0, _021C0A90 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #3
 	strh r0, [r5, #0xc]
 _021C09DE:
@@ -10863,9 +10863,9 @@ _021C0A1E:
 	bl ovy255_21be950
 	ldr r6, _021C0A90 ; =0x00000667
 	add r0, r6, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r6, #2
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xff
 	strb r0, [r4, #0x16]
 	ldr r0, [r4, #0x2c]
@@ -11120,7 +11120,7 @@ _021C0C02:
 	b _021C0D28
 _021C0C2E:
 	ldr r0, _021C0D38 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r6, #0
 	mov r1, #8
 	bl sub_021D0FF8
@@ -11320,7 +11320,7 @@ _021C0D9E:
 	mov r1, #0
 	bl sub_021D1E2C
 	ldr r0, _021C0EDC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 _021C0DC8:
 	b _021C0ED2
@@ -11420,7 +11420,7 @@ _021C0E78:
 	mov r4, #0
 	bl ovy255_21d11a4
 	ldr r0, _021C0EE0 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	strh r4, [r5, #0xc]
 	mov r0, #0
 	pop {r4, r5, r6, pc}
@@ -11435,7 +11435,7 @@ _021C0EA6:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3744
 	ldr r0, _021C0EDC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #6
 	b _021C0DC8
 _021C0EC8:
@@ -11490,7 +11490,7 @@ _021C0F12:
 	mov r1, #6
 	bl sub_021D0FF8
 	ldr r0, _021C0F40 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strh r0, [r4, #0xc]
 	pop {r3, r4, r5, pc}
@@ -11813,7 +11813,7 @@ _021C1172:
 	mov r2, #1
 	bl ovy255_21d0310
 	ldr r0, _021C1314 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r2, [r4, #0x16]
 	add r0, r4, #0
 	mov r1, #6
@@ -11852,7 +11852,7 @@ _021C1202:
 	cmp r0, #0
 	bne _021C1222
 	ldr r0, _021C131C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -11862,7 +11862,7 @@ _021C1222:
 	cmp r0, #1
 	bne _021C1238
 	ldr r0, _021C131C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -11928,7 +11928,7 @@ _021C129E:
 	cmp r0, #0
 	bne _021C1356
 	ldr r0, _021C1320 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #9
 	b _021C1290
 _021C12B2:
@@ -11937,7 +11937,7 @@ _021C12B2:
 	cmp r0, #0
 	bne _021C1356
 	ldr r0, _021C1320 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r1, _021C1308 ; =0x0000A54C
 	ldrh r1, [r0, r1]
@@ -12378,7 +12378,7 @@ _021C161C:
 	cmp r0, #0
 	bne _021C163C
 	ldr r0, _021C1730 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -12388,7 +12388,7 @@ _021C163C:
 	cmp r0, #1
 	bne _021C1652
 	ldr r0, _021C1730 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -12458,7 +12458,7 @@ _021C16BE:
 	cmp r0, #7
 	bne _021C1722
 	ldr r0, _021C1734 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #8
 	b _021C1558
 _021C16D8:
@@ -12593,7 +12593,7 @@ _021C17C8:
 	b _021C17FA
 _021C17DE:
 	ldr r0, _021C182C ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #4
 	b _021C179A
 _021C17E8:
@@ -12720,7 +12720,7 @@ _021C18AE:
 	b _021C194A
 _021C18D2:
 	ldr r0, _021C1960 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #8
 	bl sub_021D0FF8
@@ -12853,7 +12853,7 @@ _021C19A6:
 	b _021C1A2E
 _021C19D8:
 	ldr r0, _021C1A34 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #6
 	bl sub_021D0FF8
@@ -12980,7 +12980,7 @@ _021C1AD0:
 	cmp r0, #0
 	bne _021C1B28
 	ldr r0, _021C1B30 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 	b _021C1A98
 _021C1AE2:
@@ -13263,7 +13263,7 @@ _021C1CE0:
 	mov r6, #1
 	bl ovy255_21d0310
 	ldr r0, _021C1E88 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r2, [r4, #0x16]
 	add r0, r4, #0
 	mov r1, #6
@@ -13302,7 +13302,7 @@ _021C1D5C:
 	cmp r0, #0
 	bne _021C1D7C
 	ldr r0, _021C1E90 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -13312,7 +13312,7 @@ _021C1D7C:
 	cmp r0, #1
 	bne _021C1D92
 	ldr r0, _021C1E90 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -13363,7 +13363,7 @@ _021C1DDE:
 	cmp r0, #0
 	bne _021C1E72
 	ldr r0, _021C1E94 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrh r0, [r5, #0xc]
 	cmp r0, #7
 	bne _021C1DF8
@@ -13880,7 +13880,7 @@ _021C21A8:
 	mov r1, #1
 	bl ovy255_21cfd34
 	ldr r0, _021C2334 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r2, [r4, #0x16]
 	add r0, r4, #0
 	mov r1, #6
@@ -13906,7 +13906,7 @@ _021C2212:
 	cmp r0, #0
 	bne _021C2232
 	ldr r0, _021C233C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	bl ovy255_21bc044
@@ -13916,7 +13916,7 @@ _021C2232:
 	cmp r0, #1
 	bne _021C2248
 	ldr r0, _021C233C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc044
@@ -13949,7 +13949,7 @@ _021C226E:
 	cmp r0, #0
 	bne _021C2322
 	ldr r0, _021C2340 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #3
 	b _021C20A2
 _021C2282:
@@ -15003,7 +15003,7 @@ _021C2AA4: .word 0x0000008B
 ovy255_21c2aa8: ; 0x021C2AA8
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021C2ABC
 	ldr r1, [r4, #0x2c]
@@ -15068,7 +15068,7 @@ ovy255_21c2b1c: ; 0x021C2B1C
 	cmp r0, #1
 	bne _021C2B38
 	ldr r0, _021C2B58 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	bl sub_0203D564
 	ldr r0, [r4, #0x28]
@@ -15079,7 +15079,7 @@ _021C2B38:
 	tst r0, r1
 	beq _021C2B52
 	ldr r0, _021C2B58 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	bl sub_0203D564
 	ldr r0, [r4, #0x28]
@@ -15209,7 +15209,7 @@ ovy255_21c2c28: ; 0x021C2C28
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, _021C2D3C ; =0x0000055C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	ldr r1, [r0, #0x24]
 	cmp r1, #5
@@ -15702,7 +15702,7 @@ _021C2FDE:
 	add r0, r4, #0
 	bl ovy255_21bc09c
 	ldr r0, _021C30DC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x28]
 	cmp r0, #0x15
 	bne _021C3012
@@ -15728,7 +15728,7 @@ _021C3020:
 	add r0, r4, #0
 	bl ovy255_21bc09c
 	ldr r0, _021C30DC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x28]
 	cmp r0, #0x15
 	bne _021C304A
@@ -15760,7 +15760,7 @@ _021C3058:
 	mov r1, #1
 	bl ovy255_21bc09c
 	ldr r0, _021C30DC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x28]
 	cmp r0, #0x15
 	bne _021C308E
@@ -15785,7 +15785,7 @@ _021C309C:
 	sub r1, r1, #3
 	bl ovy255_21bc09c
 	ldr r0, _021C30DC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x28]
 	cmp r0, #0x15
 	bne _021C30C4
@@ -15852,7 +15852,7 @@ _021C3118:
 	mov r0, #2
 	strb r0, [r4, #0x13]
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -15884,7 +15884,7 @@ _021C315C:
 	cmp r0, #0
 	beq _021C31C8
 	ldr r0, _021C349C ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C34A0 ; =0x0000A560
 	add r0, r2, r1
@@ -16034,7 +16034,7 @@ _021C32B0:
 	b _021C35F2
 _021C32B2:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -16044,7 +16044,7 @@ _021C32B2:
 	pop {r3, r4, r5, r6, pc}
 _021C32CA:
 	ldr r0, _021C34AC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -16066,7 +16066,7 @@ _021C32CA:
 	pop {r3, r4, r5, r6, pc}
 _021C32FE:
 	ldr r0, _021C34AC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -16088,7 +16088,7 @@ _021C32FE:
 	pop {r3, r4, r5, r6, pc}
 _021C3332:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1a
 	bl sub_021CBE58
@@ -16100,7 +16100,7 @@ _021C3332:
 	pop {r3, r4, r5, r6, pc}
 _021C334E:
 	ldr r0, _021C34B4 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -16113,7 +16113,7 @@ _021C334E:
 	pop {r3, r4, r5, r6, pc}
 _021C336A:
 	ldr r0, _021C34B8 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -16126,7 +16126,7 @@ _021C336A:
 	pop {r3, r4, r5, r6, pc}
 _021C3386:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x1b]
 	ldrb r1, [r4, #0x1c]
@@ -16144,7 +16144,7 @@ _021C3386:
 	pop {r3, r4, r5, r6, pc}
 _021C33AE:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x13]
 	ldrb r0, [r4, #0x14]
@@ -16159,7 +16159,7 @@ _021C33AE:
 	pop {r3, r4, r5, r6, pc}
 _021C33CE:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x13]
 	mov r0, #0x26
@@ -16175,7 +16175,7 @@ _021C33CE:
 	pop {r3, r4, r5, r6, pc}
 _021C33F2:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x61
 	bl sub_021CBE58
@@ -16187,7 +16187,7 @@ _021C33F2:
 	pop {r3, r4, r5, r6, pc}
 _021C340E:
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x65
 	bl sub_021CBE58
@@ -16199,7 +16199,7 @@ _021C340E:
 	pop {r3, r4, r5, r6, pc}
 _021C342A:
 	ldr r0, _021C34B8 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldrb r5, [r4, #0x16]
 	ldr r0, [r0, #0x78]
@@ -16231,7 +16231,7 @@ _021C3462:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C3498 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x14
 	bl ovy255_21cde88
@@ -16259,7 +16259,7 @@ _021C34B0: .word 0x0000A548
 _021C34B4: .word 0x00000556
 _021C34B8: .word 0x00000551
 _021C34BC:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x23
 	bl ovy255_21cde88
@@ -16275,7 +16275,7 @@ _021C34CC:
 	mov r0, #2
 	strb r0, [r4, #0x13]
 	ldr r0, _021C3658 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -16290,7 +16290,7 @@ _021C34F4:
 	cmp r0, #0x1e
 	bne _021C3526
 	ldr r0, _021C365C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -16309,7 +16309,7 @@ _021C3526:
 	b _021C3652
 _021C3528:
 	ldr r0, _021C365C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -16345,7 +16345,7 @@ _021C3558:
 	bl ovy255_21bf288
 _021C3576:
 	ldr r0, _021C365C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x11
 	bl sub_021CBEE8
@@ -16356,7 +16356,7 @@ _021C3576:
 	pop {r3, r4, r5, r6, pc}
 _021C3590:
 	ldr r0, _021C3660 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -16396,7 +16396,7 @@ _021C35D4:
 	pop {r3, r4, r5, r6, pc}
 _021C35EA:
 	ldr r0, _021C365C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C3652
 _021C35F2:
 	mov r0, #0
@@ -16410,7 +16410,7 @@ _021C35F2:
 	cmp r0, #0
 	beq _021C3652
 	ldr r0, _021C3658 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C3668 ; =0x021D71F0
 	add r0, r4, #0
 	mov r2, #6
@@ -16604,7 +16604,7 @@ _021C37A2:
 	cmp r0, #0
 	bne _021C37C2
 	ldr r0, _021C3854 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0x14
 	bl ovy255_21cdc38
@@ -16726,7 +16726,7 @@ _021C3884:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C3BC8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x16
 	bl sub_021CBE58
@@ -16758,7 +16758,7 @@ _021C38E4:
 	strb r0, [r4, #0x1d]
 _021C38F2:
 	ldr r0, _021C3BC8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -16795,7 +16795,7 @@ _021C390E:
 	cmp r0, #0
 	beq _021C397E
 	ldr r0, _021C3BCC ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C3BD0 ; =0x0000A560
 	add r0, r2, r1
@@ -16955,7 +16955,7 @@ _021C3A7A:
 	b _021C3EAA
 _021C3A7C:
 	ldr r0, _021C3BC8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -16965,7 +16965,7 @@ _021C3A7C:
 	pop {r3, r4, r5, r6, pc}
 _021C3A94:
 	ldr r0, _021C3BD8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -17002,7 +17002,7 @@ _021C3ADA:
 	pop {r3, r4, r5, r6, pc}
 _021C3AE8:
 	ldr r0, _021C3BD8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -17039,7 +17039,7 @@ _021C3B2E:
 	pop {r3, r4, r5, r6, pc}
 _021C3B3C:
 	ldr r0, _021C3BC8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C3B4E
@@ -17089,7 +17089,7 @@ _021C3B98:
 	strb r0, [r4, #0x1d]
 _021C3BA6:
 	ldr r0, _021C3BC8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #1
@@ -17111,7 +17111,7 @@ _021C3BD4: .word 0x0000A548
 _021C3BD8: .word 0x00000548
 _021C3BDC: .word 0x00000551
 _021C3BE0:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -17138,7 +17138,7 @@ _021C3C04:
 	bic r1, r0
 	ldr r0, _021C3EB0 ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x16
 	bl sub_021CBE58
@@ -17161,7 +17161,7 @@ _021C3C3A:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C3EB0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x16
 	bl sub_021CBE58
@@ -17189,7 +17189,7 @@ _021C3C70:
 	strb r0, [r4, #0x1d]
 _021C3C7E:
 	ldr r0, _021C3EB0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -17209,7 +17209,7 @@ _021C3C94:
 	pop {r3, r4, r5, r6, pc}
 _021C3CA8:
 	ldr r0, _021C3EB4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -17231,7 +17231,7 @@ _021C3CCE:
 	cmp r0, #0x22
 	bne _021C3D4A
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r6, #4
 	bl ovy255_21bc09c
@@ -17248,7 +17248,7 @@ _021C3CF6:
 	cmp r0, #0x25
 	bne _021C3D4A
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -17265,7 +17265,7 @@ _021C3D1E:
 	cmp r0, #0x1e
 	bne _021C3D4A
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x15
@@ -17282,7 +17282,7 @@ _021C3D4A:
 	b _021C3EAA
 _021C3D4C:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x15
@@ -17291,7 +17291,7 @@ _021C3D4C:
 	pop {r3, r4, r5, r6, pc}
 _021C3D60:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x78]
 	bl sub_0202BA60
@@ -17334,11 +17334,11 @@ _021C3DA2:
 	pop {r3, r4, r5, r6, pc}
 _021C3DBA:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C3EAA
 _021C3DC2:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r6, #4
 	bl ovy255_21bc09c
@@ -17350,7 +17350,7 @@ _021C3DC2:
 	pop {r3, r4, r5, r6, pc}
 _021C3DDE:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -17377,7 +17377,7 @@ _021C3DFA:
 	pop {r3, r4, r5, r6, pc}
 _021C3E1A:
 	ldr r0, _021C3EB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	ldrb r0, [r4, #0x19]
@@ -17497,7 +17497,7 @@ _021C3F02:
 	str r1, [sp]
 	bl ovy255_21d1af8
 	ldr r0, _021C3FB8 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021C3FB4 ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -17765,7 +17765,7 @@ _021C4136: ; jump table
 	.short _021C419C - _021C4136 - 2 ; case 5
 _021C4142:
 	ldr r0, _021C41E4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -17778,7 +17778,7 @@ _021C4142:
 	pop {r3, r4, r5, r6, pc}
 _021C4160:
 	ldr r0, _021C41E4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -17791,7 +17791,7 @@ _021C4160:
 	pop {r3, r4, r5, r6, pc}
 _021C417E:
 	ldr r0, _021C41E4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -17804,7 +17804,7 @@ _021C417E:
 	pop {r3, r4, r5, r6, pc}
 _021C419C:
 	ldr r0, _021C41E4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -17920,7 +17920,7 @@ _021C4270:
 	mov r2, #0
 	bl ovy255_21d1ac8
 	ldr r0, _021C431C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	ldr r0, [r1, r4]
 	add r0, r0, #1
@@ -17947,7 +17947,7 @@ _021C42B6:
 _021C42BA:
 	bl ovy255_21cfd34
 	ldr r0, _021C431C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r5, #0x2c]
 	ldr r0, _021C4318 ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -18080,7 +18080,7 @@ _021C43C6:
 	cmp r0, #0
 	bne _021C43EC
 	ldr r0, _021C4454 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x23
 	bl ovy255_21cdc38
@@ -18161,7 +18161,7 @@ ovy255_21c445c: ; 0x021C445C
 	bic r1, r0
 	ldr r0, _021C479C ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x25
 	bl sub_021CBE58
@@ -18184,7 +18184,7 @@ _021C449A:
 	strb r0, [r4, #0x13]
 	ldr r0, _021C479C ; =0x0000054C
 	strb r1, [r4, #0x17]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -18382,7 +18382,7 @@ _021C4658:
 	cmp r3, r0
 	bhs _021C46A6
 	ldr r0, _021C47A8 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r5, _021C47AC ; =0x0000A560
 	ldr r2, [r4, #0x2c]
 	add r1, r5, #4
@@ -18549,7 +18549,7 @@ _021C47A4: .word 0x0000A5B4
 _021C47A8: .word 0x00000666
 _021C47AC: .word 0x0000A560
 _021C47B0:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -18570,7 +18570,7 @@ _021C47CC:
 	b _021C4D82
 _021C47DA:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -18615,7 +18615,7 @@ _021C4832:
 	pop {r4, r5, r6, r7, pc}
 _021C4840:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -18660,7 +18660,7 @@ _021C4898:
 	pop {r4, r5, r6, r7, pc}
 _021C48A6:
 	ldr r0, _021C4B08 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C48B4
@@ -18708,7 +18708,7 @@ _021C48DA:
 	mov r0, #2
 	strb r0, [r4, #0x13]
 	ldr r0, _021C4B08 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #1
@@ -18721,7 +18721,7 @@ _021C4922:
 	cmp r0, #0
 	bne _021C4998
 	ldr r0, _021C4B0C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -18745,7 +18745,7 @@ _021C494E:
 	bic r1, r0
 	ldr r0, _021C4B08 ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x25
 	bl sub_021CBE58
@@ -18762,7 +18762,7 @@ _021C496E:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C4B08 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x25
 	bl sub_021CBE58
@@ -18784,7 +18784,7 @@ _021C499A:
 	strb r0, [r4, #0x13]
 	ldr r0, _021C4B08 ; =0x0000054C
 	strb r1, [r4, #0x17]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -18826,7 +18826,7 @@ _021C49EC:
 	pop {r4, r5, r6, r7, pc}
 _021C4A06:
 	ldr r0, _021C4B0C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -18856,7 +18856,7 @@ _021C4A2C:
 	bl ovy255_21cded4
 _021C4A4A:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r1, #0
 	add r0, r4, #0
 	mvn r1, r1
@@ -18882,7 +18882,7 @@ _021C4A68:
 	bl ovy255_21cded4
 _021C4A86:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -18905,7 +18905,7 @@ _021C4AA2:
 	bl ovy255_21cded4
 _021C4ABA:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x24
@@ -18928,7 +18928,7 @@ _021C4ADC:
 	bl ovy255_21cded4
 _021C4AE8:
 	ldr r0, _021C4B00 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x24
@@ -18946,7 +18946,7 @@ _021C4B0C: .word 0x00000551
 _021C4B10: .word ovy255_21c1f38
 _021C4B14: .word ovy255_21c1ee4
 _021C4B18:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x78]
 	bl sub_0202BA60
@@ -19003,7 +19003,7 @@ _021C4B72:
 _021C4B8A:
 	ldr r0, _021C4D8C ; =0x00000548
 _021C4B8C:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C4D82
 _021C4B92:
 	ldrb r0, [r4, #0x18]
@@ -19013,7 +19013,7 @@ _021C4B92:
 	bl ovy255_21cded4
 _021C4B9E:
 	ldr r0, _021C4D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r1, #0
 	add r0, r4, #0
 	mvn r1, r1
@@ -19032,7 +19032,7 @@ _021C4BBC:
 	bl ovy255_21cded4
 _021C4BC8:
 	ldr r0, _021C4D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -19065,7 +19065,7 @@ _021C4C06:
 	bl ovy255_21cded4
 _021C4C10:
 	ldr r0, _021C4D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	ldrb r0, [r4, #0x19]
@@ -19290,7 +19290,7 @@ _021C4DE4:
 	str r1, [sp]
 	bl ovy255_21d1af8
 	ldr r0, _021C4E98 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021C4E94 ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -19561,7 +19561,7 @@ _021C501E: ; jump table
 	.short _021C5084 - _021C501E - 2 ; case 5
 _021C502A:
 	ldr r0, _021C50CC ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -19574,7 +19574,7 @@ _021C502A:
 	pop {r3, r4, r5, r6, pc}
 _021C5048:
 	ldr r0, _021C50CC ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -19587,7 +19587,7 @@ _021C5048:
 	pop {r3, r4, r5, r6, pc}
 _021C5066:
 	ldr r0, _021C50CC ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -19600,7 +19600,7 @@ _021C5066:
 	pop {r3, r4, r5, r6, pc}
 _021C5084:
 	ldr r0, _021C50CC ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21d101c
@@ -19716,7 +19716,7 @@ _021C5158:
 	mov r2, #0
 	bl ovy255_21d1ac8
 	ldr r0, _021C5220 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	ldr r0, [r1, r4]
 	add r0, r0, #1
@@ -19748,7 +19748,7 @@ _021C51A8:
 	bl ovy255_21cfd34
 _021C51B4:
 	ldr r0, _021C5220 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r5, #0x2c]
 	ldr r0, _021C521C ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -19896,7 +19896,7 @@ _021C52D8:
 	cmp r0, #1
 	bne _021C530A
 	ldr r0, _021C53E8 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	mov r6, #0
@@ -19936,7 +19936,7 @@ _021C5328:
 	bl ovy255_21cfd34
 _021C533E:
 	ldr r0, _021C53EC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C53F0 ; =ovy255_21c05d4
 	add r0, r5, #0
 	mov r2, #0x29
@@ -20035,7 +20035,7 @@ ovy255_21c53f4: ; 0x021C53F4
 	bic r1, r0
 	ldr r0, _021C574C ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x2b
 	bl sub_021CBE58
@@ -20058,7 +20058,7 @@ _021C542A:
 	strb r0, [r4, #0x13]
 	ldr r0, _021C574C ; =0x0000054C
 	strb r1, [r4, #0x17]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -20403,7 +20403,7 @@ _021C572C:
 	cmp r2, r0
 	bhs _021C5792
 	ldr r0, _021C5758 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r5, _021C575C ; =0x0000A560
 	b _021C5760
 	nop
@@ -20468,7 +20468,7 @@ _021C57BC:
 	cmp r2, r0
 	bhs _021C581E
 	ldr r0, _021C5AE0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r6, _021C5AE4 ; =0x0000A5B2
 	ldr r3, [r4, #0x2c]
 	add r2, r6, #1
@@ -20600,7 +20600,7 @@ _021C58BE:
 	cmp r0, #0
 	bne _021C58DC
 	ldr r0, _021C5AEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -20621,7 +20621,7 @@ _021C58E2:
 	b _021C5D82
 _021C58F0:
 	ldr r0, _021C5AF0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -20662,7 +20662,7 @@ _021C593E:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C594C:
 	ldr r0, _021C5AF0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -20703,7 +20703,7 @@ _021C599A:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C59A8:
 	ldr r0, _021C5AEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C59B6
@@ -20751,7 +20751,7 @@ _021C59DC:
 	mov r0, #4
 	strb r0, [r4, #0x13]
 	ldr r0, _021C5AEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #1
@@ -20764,7 +20764,7 @@ _021C5A24:
 	cmp r0, #0
 	bne _021C5A76
 	ldr r0, _021C5AF8 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -20788,7 +20788,7 @@ _021C5A50:
 	bic r1, r0
 	ldr r0, _021C5AEC ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x2b
 	bl sub_021CBE58
@@ -20808,7 +20808,7 @@ _021C5A78:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C5AEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x2b
 	bl sub_021CBE58
@@ -20827,7 +20827,7 @@ _021C5A96:
 	strb r0, [r4, #0x13]
 	ldr r0, _021C5AEC ; =0x0000054C
 	strb r1, [r4, #0x17]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -20877,7 +20877,7 @@ _021C5B0A:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C5B24:
 	ldr r0, _021C5D88 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -20907,7 +20907,7 @@ _021C5B4A:
 	bl ovy255_21cded4
 _021C5B68:
 	ldr r0, _021C5D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x2a
@@ -20932,7 +20932,7 @@ _021C5B8A:
 	bl ovy255_21cded4
 _021C5B9C:
 	ldr r0, _021C5D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x2a
@@ -20942,11 +20942,11 @@ _021C5B9C:
 _021C5BB0:
 	ldr r0, _021C5D8C ; =0x00000548
 _021C5BB2:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C5D82
 _021C5BB8:
 	ldr r0, _021C5D8C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x78]
 	bl sub_0202BA60
@@ -21230,7 +21230,7 @@ _021C5DF2:
 	str r7, [r0, r4]
 _021C5E10:
 	ldr r0, _021C5EEC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C5EF0 ; =ovy255_21c05d4
 	add r0, r5, #0
 	mov r2, #0x2b
@@ -21359,7 +21359,7 @@ _021C5F0C:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
 	ldr r0, _021C5F8C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	mov r2, #0x2c
 	ldr r0, [r1, r4]
@@ -21371,7 +21371,7 @@ _021C5F0C:
 	pop {r4, r5, r6, pc}
 _021C5F38:
 	ldr r0, _021C5F8C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3b48
@@ -21460,7 +21460,7 @@ _021C5FA8:
 	bl ovy255_21d0310
 _021C5FF8:
 	ldr r0, _021C6050 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021C604C ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -21539,7 +21539,7 @@ _021C6078:
 	strb r0, [r4, #0x16]
 	ldr r0, _021C63E0 ; =0x0000054C
 	strb r5, [r4, #0x13]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -21573,7 +21573,7 @@ _021C60BC:
 	cmp r0, #0
 	beq _021C6130
 	ldr r0, _021C63E4 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C63E8 ; =0x0000A560
 	add r0, r2, r1
@@ -21722,7 +21722,7 @@ _021C6216:
 	b _021C647E
 _021C6218:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1c
 	bl sub_021CBE58
@@ -21734,7 +21734,7 @@ _021C6218:
 	pop {r3, r4, r5, r6, pc}
 _021C6234:
 	ldr r0, _021C63F4 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -21747,7 +21747,7 @@ _021C6234:
 	pop {r3, r4, r5, r6, pc}
 _021C6250:
 	ldr r0, _021C63F8 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1c
 	bl sub_021CBE58
@@ -21760,7 +21760,7 @@ _021C6250:
 	pop {r3, r4, r5, r6, pc}
 _021C626E:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	strb r0, [r4, #0x1b]
 	ldrb r1, [r4, #0x1c]
@@ -21778,7 +21778,7 @@ _021C626E:
 	pop {r3, r4, r5, r6, pc}
 _021C6296:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x14]
 	mov r1, #1
 	mov r2, #0x59
@@ -21790,7 +21790,7 @@ _021C6296:
 	pop {r3, r4, r5, r6, pc}
 _021C62B0:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	strb r0, [r4, #0x13]
 	add r0, r4, #0
@@ -21804,7 +21804,7 @@ _021C62B0:
 	pop {r3, r4, r5, r6, pc}
 _021C62D0:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x61
 	bl sub_021CBE58
@@ -21816,7 +21816,7 @@ _021C62D0:
 	pop {r3, r4, r5, r6, pc}
 _021C62EC:
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x65
 	bl sub_021CBE58
@@ -21828,7 +21828,7 @@ _021C62EC:
 	pop {r3, r4, r5, r6, pc}
 _021C6308:
 	ldr r0, _021C63F8 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x16]
 	sub r0, #0x1e
 	lsl r0, r0, #0x18
@@ -21863,7 +21863,7 @@ _021C6346:
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C63E0 ; =0x0000054C
 	strb r2, [r4, #0x1b]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1f
 	bl ovy255_21cde88
@@ -21879,7 +21879,7 @@ _021C6368:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x29
 	bl ovy255_21cde88
@@ -21896,7 +21896,7 @@ _021C638A:
 	mov r0, #4
 	strb r0, [r4, #0x13]
 	ldr r0, _021C63E0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -21906,7 +21906,7 @@ _021C638A:
 	pop {r3, r4, r5, r6, pc}
 _021C63B4:
 	ldr r0, _021C6400 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C64E6
 _021C63BC:
 	ldr r0, [r4, #0x2c]
@@ -21937,7 +21937,7 @@ _021C63F8: .word 0x00000551
 _021C63FC: .word 0x0000A548
 _021C6400: .word 0x00000548
 _021C6404:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1b
 	bl sub_021CBEE8
@@ -21948,7 +21948,7 @@ _021C6404:
 	pop {r3, r4, r5, r6, pc}
 _021C641C:
 	ldr r0, _021C64EC ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -22003,7 +22003,7 @@ _021C647E:
 	cmp r0, #0
 	beq _021C64E6
 	ldr r0, _021C64F4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C64F8 ; =0x021D71F0
 	add r0, r4, #0
 	mov r2, #6
@@ -22069,7 +22069,7 @@ _021C6510:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
 	ldr r0, _021C659C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	mov r2, #0x1c
 	ldr r0, [r1, r4]
@@ -22156,7 +22156,7 @@ ovy255_21c65e4: ; 0x021C65E4
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _021C663C ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	bl ovy255_21bc78c
 	add r0, r5, #0
@@ -22309,7 +22309,7 @@ _021C671A:
 	cmp r0, #1
 	bne _021C674C
 	ldr r0, _021C6860 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	mov r6, #0
@@ -22349,7 +22349,7 @@ _021C676A:
 	bl ovy255_21cfd34
 _021C6780:
 	ldr r0, _021C6864 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C6868 ; =ovy255_21c05d4
 	add r0, r5, #0
 	mov r2, #0x1f
@@ -22499,7 +22499,7 @@ _021C6894:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C6BEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x21
 	bl sub_021CBE58
@@ -22531,7 +22531,7 @@ _021C68F4:
 	strb r0, [r4, #0x1d]
 _021C6902:
 	ldr r0, _021C6BEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -22567,7 +22567,7 @@ _021C6924:
 	cmp r0, #0
 	beq _021C697C
 	ldr r0, _021C6BF0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C6BF4 ; =0x0000A560
 	add r0, r2, r1
@@ -22626,7 +22626,7 @@ _021C69AA:
 	cmp r0, #0
 	beq _021C6A08
 	ldr r0, _021C6BF0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C6BF4 ; =0x0000A560
 	add r0, r2, r1
@@ -22757,7 +22757,7 @@ _021C6ACE:
 	b _021C6DCC
 _021C6AD0:
 	ldr r0, _021C6BEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -22767,7 +22767,7 @@ _021C6AD0:
 	pop {r3, r4, r5, r6, pc}
 _021C6AE8:
 	ldr r0, _021C6BFC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -22800,7 +22800,7 @@ _021C6B24:
 	pop {r3, r4, r5, r6, pc}
 _021C6B32:
 	ldr r0, _021C6BFC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -22833,7 +22833,7 @@ _021C6B6E:
 	pop {r3, r4, r5, r6, pc}
 _021C6B7C:
 	ldr r0, _021C6BEC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C6B8E
@@ -22891,7 +22891,7 @@ _021C6BF4: .word 0x0000A560
 _021C6BF8: .word 0x0000A548
 _021C6BFC: .word 0x00000548
 _021C6C00:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #1
@@ -22904,7 +22904,7 @@ _021C6C14:
 	cmp r0, #0
 	bne _021C6C66
 	ldr r0, _021C6DD4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -22928,7 +22928,7 @@ _021C6C40:
 	bic r1, r0
 	ldr r0, _021C6DD8 ; =0x0000054C
 	strb r1, [r4, #0x1c]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x21
 	bl sub_021CBE58
@@ -22948,7 +22948,7 @@ _021C6C68:
 	orr r0, r1
 	strb r0, [r4, #0x1c]
 	ldr r0, _021C6DD8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x21
 	bl sub_021CBE58
@@ -22976,7 +22976,7 @@ _021C6CA0:
 	strb r0, [r4, #0x1d]
 _021C6CAE:
 	ldr r0, _021C6DD8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -22996,7 +22996,7 @@ _021C6CC4:
 	pop {r3, r4, r5, r6, pc}
 _021C6CD8:
 	ldr r0, _021C6DD4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -23018,7 +23018,7 @@ _021C6CFE:
 	cmp r0, #0x24
 	bne _021C6DCC
 	ldr r0, _021C6DDC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x20
@@ -23032,7 +23032,7 @@ _021C6D1E:
 	cmp r0, #0x24
 	bne _021C6DCC
 	ldr r0, _021C6DDC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x20
@@ -23041,11 +23041,11 @@ _021C6D1E:
 	pop {r3, r4, r5, r6, pc}
 _021C6D3E:
 	ldr r0, _021C6DDC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C6DCC
 _021C6D46:
 	ldr r0, _021C6DDC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C6D6E
@@ -23171,7 +23171,7 @@ _021C6E32:
 	str r7, [r0, r4]
 _021C6E50:
 	ldr r0, _021C6F2C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C6F30 ; =ovy255_21c05d4
 	add r0, r5, #0
 	mov r2, #0x21
@@ -23300,7 +23300,7 @@ _021C6F4C:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
 	ldr r0, _021C6FCC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	mov r2, #0x22
 	ldr r0, [r1, r4]
@@ -23312,7 +23312,7 @@ _021C6F4C:
 	pop {r4, r5, r6, pc}
 _021C6F78:
 	ldr r0, _021C6FCC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3b48
@@ -23390,7 +23390,7 @@ _021C6FF4:
 	mov r0, #2
 	strb r0, [r4, #0x13]
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -23422,7 +23422,7 @@ _021C7038:
 	cmp r0, #0
 	beq _021C70A8
 	ldr r0, _021C7358 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C735C ; =0x0000A560
 	add r0, r2, r1
@@ -23572,7 +23572,7 @@ _021C718C:
 	b _021C7482
 _021C718E:
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -23582,7 +23582,7 @@ _021C718E:
 	pop {r3, r4, r5, r6, pc}
 _021C71A6:
 	ldr r0, _021C7368 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -23604,7 +23604,7 @@ _021C71A6:
 	pop {r3, r4, r5, r6, pc}
 _021C71DA:
 	ldr r0, _021C7368 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -23626,7 +23626,7 @@ _021C71DA:
 	pop {r3, r4, r5, r6, pc}
 _021C720E:
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x30
 	bl sub_021CBE58
@@ -23638,7 +23638,7 @@ _021C720E:
 	pop {r3, r4, r5, r6, pc}
 _021C722A:
 	ldr r0, _021C7370 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -23651,7 +23651,7 @@ _021C722A:
 	pop {r3, r4, r5, r6, pc}
 _021C7246:
 	ldr r0, _021C7374 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -23664,7 +23664,7 @@ _021C7246:
 	pop {r3, r4, r5, r6, pc}
 _021C7262:
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x1b]
 	ldrb r1, [r4, #0x1c]
@@ -23682,7 +23682,7 @@ _021C7262:
 	pop {r3, r4, r5, r6, pc}
 _021C728A:
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x13]
 	ldrb r0, [r4, #0x14]
@@ -23697,7 +23697,7 @@ _021C728A:
 	pop {r3, r4, r5, r6, pc}
 _021C72AA:
 	ldr r0, _021C7354 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0
 	strb r0, [r4, #0x13]
 	mov r0, #0x26
@@ -23713,7 +23713,7 @@ _021C72AA:
 	pop {r3, r4, r5, r6, pc}
 _021C72CE:
 	ldr r0, _021C7374 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldrb r5, [r4, #0x16]
 	ldr r0, [r0, #0x78]
@@ -23785,7 +23785,7 @@ _021C736C: .word 0x0000A548
 _021C7370: .word 0x00000556
 _021C7374: .word 0x00000551
 _021C7378:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -23800,7 +23800,7 @@ _021C738C:
 	cmp r0, #0x1e
 	bne _021C73BE
 	ldr r0, _021C74E8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -23819,7 +23819,7 @@ _021C73BE:
 	b _021C74E2
 _021C73C0:
 	ldr r0, _021C74E8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -23851,7 +23851,7 @@ _021C73F0:
 	bl ovy255_21bf288
 _021C7406:
 	ldr r0, _021C74E8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x2d
 	bl sub_021CBEE8
@@ -23862,7 +23862,7 @@ _021C7406:
 	pop {r3, r4, r5, r6, pc}
 _021C7420:
 	ldr r0, _021C74EC ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -23902,7 +23902,7 @@ _021C7464:
 	pop {r3, r4, r5, r6, pc}
 _021C747A:
 	ldr r0, _021C74E8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C74E2
 _021C7482:
 	mov r0, #0
@@ -23916,7 +23916,7 @@ _021C7482:
 	cmp r0, #0
 	beq _021C74E2
 	ldr r0, _021C74F4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C74F8 ; =0x021D70F8
 	add r0, r4, #0
 	mov r2, #4
@@ -23962,7 +23962,7 @@ ovy255_21c74fc: ; 0x021C74FC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _021C754C ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	bl ovy255_21bc78c
 	add r0, r5, #0
@@ -24061,7 +24061,7 @@ _021C75A8:
 	mov r1, #0
 	bl ovy255_21cfd34
 	ldr r0, _021C7624 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	mov r2, #0x30
 	ldr r0, [r1, r5]
@@ -24128,7 +24128,7 @@ _021C764C:
 	strb r0, [r4, #0x16]
 	ldr r0, _021C79AC ; =0x0000054C
 	strb r5, [r4, #0x13]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc110
 	add r0, r4, #0
@@ -24162,7 +24162,7 @@ _021C7690:
 	cmp r0, #0
 	beq _021C7704
 	ldr r0, _021C79B0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C79B4 ; =0x0000A560
 	add r0, r2, r1
@@ -24309,7 +24309,7 @@ _021C77E6:
 	b _021C7A0A
 _021C77E8:
 	ldr r0, _021C79AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x32
 	bl sub_021CBE58
@@ -24321,7 +24321,7 @@ _021C77E8:
 	pop {r3, r4, r5, r6, pc}
 _021C7804:
 	ldr r0, _021C79C0 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -24334,7 +24334,7 @@ _021C7804:
 	pop {r3, r4, r5, r6, pc}
 _021C7820:
 	ldr r0, _021C79C4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x32
 	bl sub_021CBE58
@@ -24347,7 +24347,7 @@ _021C7820:
 	pop {r3, r4, r5, r6, pc}
 _021C783E:
 	ldr r0, _021C79AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	strb r0, [r4, #0x1b]
 	ldrb r1, [r4, #0x1c]
@@ -24365,7 +24365,7 @@ _021C783E:
 	pop {r3, r4, r5, r6, pc}
 _021C7866:
 	ldr r0, _021C79AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	strb r0, [r4, #0x13]
 	ldrb r0, [r4, #0x14]
@@ -24378,7 +24378,7 @@ _021C7866:
 	pop {r3, r4, r5, r6, pc}
 _021C7882:
 	ldr r0, _021C79AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	strb r0, [r4, #0x13]
 	add r0, r4, #0
@@ -24392,7 +24392,7 @@ _021C7882:
 	pop {r3, r4, r5, r6, pc}
 _021C78A2:
 	ldr r0, _021C79C4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x16]
 	sub r0, #0x1e
 	lsl r0, r0, #0x18
@@ -24456,7 +24456,7 @@ _021C7918:
 	mov r0, #4
 	strb r0, [r4, #0x13]
 	ldr r0, _021C79AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1e
 	mov r2, #1
@@ -24466,7 +24466,7 @@ _021C7918:
 	pop {r3, r4, r5, r6, pc}
 _021C7942:
 	ldr r0, _021C79C4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -24509,7 +24509,7 @@ _021C798C:
 	pop {r3, r4, r5, r6, pc}
 _021C79A4:
 	ldr r0, _021C79CC ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C7A72
 	.align 2, 0
 _021C79AC: .word 0x0000054C
@@ -24538,7 +24538,7 @@ _021C79E8:
 	bl ovy255_21bf288
 _021C79F0:
 	ldr r0, _021C7A78 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x31
 	bl sub_021CBEE8
@@ -24561,7 +24561,7 @@ _021C7A0A:
 	cmp r0, #0
 	beq _021C7A72
 	ldr r0, _021C7A7C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C7A80 ; =0x021D70F8
 	add r0, r4, #0
 	mov r2, #4
@@ -24627,7 +24627,7 @@ _021C7A9C:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
 	ldr r0, _021C7B04 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	mov r2, #0x32
 	ldr r0, [r1, r5]
@@ -24808,7 +24808,7 @@ ovy255_21c7c10: ; 0x021C7C10
 	cmp r0, #0
 	beq _021C7C82
 	ldr r0, _021C7F40 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C7F44 ; =0x0000A560
 	add r0, r2, r1
@@ -24950,7 +24950,7 @@ _021C7D58:
 	b _021C7FBA
 _021C7D5A:
 	ldr r0, _021C7F50 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -24960,7 +24960,7 @@ _021C7D5A:
 	pop {r3, r4, r5, r6, pc}
 _021C7D72:
 	ldr r0, _021C7F54 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -24978,7 +24978,7 @@ _021C7D72:
 	pop {r3, r4, r5, r6, pc}
 _021C7D9E:
 	ldr r0, _021C7F54 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -24996,7 +24996,7 @@ _021C7D9E:
 	pop {r3, r4, r5, r6, pc}
 _021C7DCA:
 	ldr r0, _021C7F58 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -25009,7 +25009,7 @@ _021C7DCA:
 	pop {r3, r4, r5, r6, pc}
 _021C7DE6:
 	ldr r0, _021C7F5C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -25022,7 +25022,7 @@ _021C7DE6:
 	pop {r3, r4, r5, r6, pc}
 _021C7E02:
 	ldr r0, _021C7F50 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x38
 	bl sub_021CBE58
@@ -25034,7 +25034,7 @@ _021C7E02:
 	pop {r3, r4, r5, r6, pc}
 _021C7E1E:
 	ldr r0, _021C7F50 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x14]
 	mov r1, #2
 	mov r2, #0x59
@@ -25047,7 +25047,7 @@ _021C7E1E:
 	pop {r3, r4, r5, r6, pc}
 _021C7E3A:
 	ldr r0, _021C7F50 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x61
 	bl sub_021CBE58
@@ -25059,7 +25059,7 @@ _021C7E3A:
 	pop {r3, r4, r5, r6, pc}
 _021C7E56:
 	ldr r0, _021C7F50 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x65
 	bl sub_021CBE58
@@ -25071,7 +25071,7 @@ _021C7E56:
 	pop {r3, r4, r5, r6, pc}
 _021C7E72:
 	ldr r0, _021C7F5C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldrb r5, [r4, #0x16]
 	ldr r0, [r0, #0x78]
@@ -25097,7 +25097,7 @@ _021C7EA4:
 	cmp r0, #0x1e
 	bne _021C7ED6
 	ldr r0, _021C7F54 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -25116,7 +25116,7 @@ _021C7ED6:
 	b _021C8012
 _021C7ED8:
 	ldr r0, _021C7F54 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -25150,7 +25150,7 @@ _021C7F08:
 	bl ovy255_21bf288
 _021C7F22:
 	ldr r0, _021C7F54 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x36
 	bl sub_021CBEE8
@@ -25172,7 +25172,7 @@ _021C7F54: .word 0x00000548
 _021C7F58: .word 0x00000556
 _021C7F5C: .word 0x00000551
 _021C7F60:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -25209,7 +25209,7 @@ _021C7F9C:
 	pop {r3, r4, r5, r6, pc}
 _021C7FB2:
 	ldr r0, _021C8018 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C8012
 _021C7FBA:
 	mov r0, #0
@@ -25223,7 +25223,7 @@ _021C7FBA:
 	cmp r0, #0
 	beq _021C8012
 	ldr r0, _021C801C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C8020 ; =0x021D7194
 	add r0, r4, #0
 	mov r2, #5
@@ -25329,7 +25329,7 @@ _021C80A4:
 	pop {r3, r4, r5, pc}
 _021C80BA:
 	ldr r0, _021C80E8 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #2
@@ -25372,7 +25372,7 @@ _021C8106: ; jump table
 	.short _021C819E - _021C8106 - 2 ; case 3
 _021C810E:
 	ldr r0, _021C81CC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21cfe0c
 	ldr r0, [r4, #0x2c]
@@ -25412,7 +25412,7 @@ _021C8142:
 	pop {r3, r4, r5, pc}
 _021C816A:
 	ldr r0, _021C81CC ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bc78c
 	add r0, r4, #0
@@ -25532,7 +25532,7 @@ ovy255_21c8238: ; 0x021C8238
 	cmp r0, #0
 	beq _021C82B2
 	ldr r0, _021C8574 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C8578 ; =0x0000A560
 	add r0, r2, r1
@@ -25668,7 +25668,7 @@ _021C8382:
 	b _021C850E
 _021C8384:
 	ldr r0, _021C8584 ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -25681,7 +25681,7 @@ _021C8384:
 	pop {r3, r4, r5, r6, pc}
 _021C83A0:
 	ldr r0, _021C8588 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -25694,7 +25694,7 @@ _021C83A0:
 	pop {r3, r4, r5, r6, pc}
 _021C83BC:
 	ldr r0, _021C858C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x3e
 	bl sub_021CBE58
@@ -25706,7 +25706,7 @@ _021C83BC:
 	pop {r3, r4, r5, r6, pc}
 _021C83D8:
 	ldr r0, _021C858C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #9
 	str r0, [r4, #0x24]
 	add r0, r4, #0
@@ -25717,7 +25717,7 @@ _021C83D8:
 	pop {r3, r4, r5, r6, pc}
 _021C83F0:
 	ldr r0, _021C858C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x61
 	bl sub_021CBE58
@@ -25729,7 +25729,7 @@ _021C83F0:
 	pop {r3, r4, r5, r6, pc}
 _021C840C:
 	ldr r0, _021C858C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x65
 	bl sub_021CBE58
@@ -25741,7 +25741,7 @@ _021C840C:
 	pop {r3, r4, r5, r6, pc}
 _021C8428:
 	ldr r0, _021C8588 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x16]
 	sub r0, #0x1e
 	lsl r0, r0, #0x18
@@ -25765,7 +25765,7 @@ _021C8428:
 	pop {r3, r4, r5, r6, pc}
 _021C8460:
 	ldr r0, _021C8590 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C856E
 _021C8468:
 	ldr r0, [r4, #0x2c]
@@ -25793,7 +25793,7 @@ _021C8480:
 	bl ovy255_21bf288
 _021C849A:
 	ldr r0, _021C8590 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x3b
 	bl sub_021CBEE8
@@ -25804,7 +25804,7 @@ _021C849A:
 	pop {r3, r4, r5, r6, pc}
 _021C84B4:
 	ldr r0, _021C8588 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -25856,7 +25856,7 @@ _021C850E:
 	cmp r0, #0
 	beq _021C856E
 	ldr r0, _021C858C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C857C ; =0x021D7130
 	add r0, r4, #0
 	mov r2, #5
@@ -26033,7 +26033,7 @@ _021C866E:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C86AE:
 	ldr r0, _021C8788 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r6, #0
@@ -26050,7 +26050,7 @@ _021C86AE:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C86D4:
 	ldr r0, _021C8788 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r6, #0
@@ -26068,7 +26068,7 @@ _021C86D4:
 	pop {r3, r4, r5, r6, r7, pc}
 _021C86FC:
 	ldr r0, _021C878C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3778
@@ -26227,7 +26227,7 @@ _021C882E:
 	cmp r0, #0
 	bne _021C8864
 	ldr r0, _021C890C ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #4
@@ -26255,7 +26255,7 @@ _021C8864:
 	strb r5, [r4, #0x1a]
 	strb r0, [r4, #0x17]
 	ldr r0, _021C8914 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x40
 	bl sub_021CBE58
@@ -26268,7 +26268,7 @@ _021C8896:
 	bl sub_0202BA64
 _021C88A0:
 	ldr r0, _021C8918 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x3f
@@ -26282,7 +26282,7 @@ _021C88B4:
 	bl sub_0202BA64
 _021C88BE:
 	ldr r0, _021C8918 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x3f
@@ -26291,7 +26291,7 @@ _021C88BE:
 	pop {r4, r5, r6, pc}
 _021C88D2:
 	ldr r0, _021C891C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021C8910 ; =0x0000A55E
 	mov r2, #0xff
@@ -26312,7 +26312,7 @@ _021C88D2:
 	pop {r4, r5, r6, pc}
 _021C8900:
 	ldr r0, _021C8918 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021C8906:
 	mov r0, #0x3f
 	add sp, #8
@@ -26384,7 +26384,7 @@ _021C898C:
 	ldr r0, [r1, #0x68]
 	bl sub_0203A24C
 	ldr r0, _021C8A8C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3744
@@ -26408,7 +26408,7 @@ _021C89B2:
 	pop {r3, r4, r5, pc}
 _021C89C8:
 	ldr r0, _021C8A8C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #4
 	mov r2, #0
@@ -26628,7 +26628,7 @@ _021C8B7A:
 	cmp r0, #0
 	beq _021C8BCE
 	ldr r0, _021C8EEC ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C8EF0 ; =0x0000A560
 	add r0, r2, r1
@@ -26768,7 +26768,7 @@ _021C8CB2:
 	b _021C8F88
 _021C8CB4:
 	ldr r0, _021C8EF4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -26778,7 +26778,7 @@ _021C8CB4:
 	pop {r3, r4, r5, r6, pc}
 _021C8CCC:
 	ldr r0, _021C8EF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -26800,7 +26800,7 @@ _021C8CCC:
 	pop {r3, r4, r5, r6, pc}
 _021C8D02:
 	ldr r0, _021C8EF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -26822,7 +26822,7 @@ _021C8D02:
 	pop {r3, r4, r5, r6, pc}
 _021C8D38:
 	ldr r0, _021C8EF4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1a
 	bl sub_021CBE58
@@ -26834,7 +26834,7 @@ _021C8D38:
 	pop {r3, r4, r5, r6, pc}
 _021C8D54:
 	ldr r0, _021C8EFC ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -26847,7 +26847,7 @@ _021C8D54:
 	pop {r3, r4, r5, r6, pc}
 _021C8D70:
 	ldr r0, _021C8F00 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -26860,7 +26860,7 @@ _021C8D70:
 	pop {r3, r4, r5, r6, pc}
 _021C8D8C:
 	ldr r0, _021C8EF4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -26876,7 +26876,7 @@ _021C8D8C:
 	pop {r3, r4, r5, r6, pc}
 _021C8DB0:
 	ldr r0, _021C8EF4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021C8F04 ; =0x0000A54C
 	ldrh r0, [r1, r0]
@@ -26907,7 +26907,7 @@ _021C8DDE:
 	pop {r3, r4, r5, r6, pc}
 _021C8DF4:
 	ldr r0, _021C8F00 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldrb r5, [r4, #0x16]
 	ldr r0, [r0, #0x78]
@@ -26982,7 +26982,7 @@ _021C8E8A:
 	b _021C8FB0
 _021C8E8C:
 	ldr r0, _021C8EF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -26998,7 +26998,7 @@ _021C8EA6:
 	cmp r0, #0x1e
 	bne _021C8FB0
 	ldr r0, _021C8EF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -27009,7 +27009,7 @@ _021C8EA6:
 	pop {r3, r4, r5, r6, pc}
 _021C8ECC:
 	ldr r0, _021C8EF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C8FB0
 _021C8ED4:
 	ldr r0, [r4, #0x2c]
@@ -27040,7 +27040,7 @@ _021C8F08:
 	bl ovy255_21bf288
 _021C8F1A:
 	ldr r0, _021C8FB8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x43
 	bl sub_021CBEE8
@@ -27051,7 +27051,7 @@ _021C8F1A:
 	pop {r3, r4, r5, r6, pc}
 _021C8F34:
 	ldr r0, _021C8FBC ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -27098,7 +27098,7 @@ _021C8F88:
 	cmp r0, #0
 	beq _021C8FB0
 	ldr r0, _021C8FC0 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl ovy255_21cd6cc
@@ -27437,7 +27437,7 @@ _021C9254:
 	bl ovy255_21cfd34
 _021C926A:
 	ldr r0, _021C9330 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C9334 ; =ovy255_21c05d4
 	add r0, r5, #0
 	mov r2, #0x49
@@ -27749,7 +27749,7 @@ _021C94EE:
 	cmp r0, #0
 	bne _021C9586
 	ldr r0, _021C96AC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf288
 	add r0, r4, #0
@@ -27759,7 +27759,7 @@ _021C94EE:
 	pop {r3, r4, r5, r6, pc}
 _021C950C:
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -27785,7 +27785,7 @@ _021C9538:
 	pop {r3, r4, r5, r6, pc}
 _021C9546:
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #0x24
 	ldr r0, [r0, #0x78]
@@ -27817,7 +27817,7 @@ _021C9586:
 	b _021C96A4
 _021C9588:
 	ldr r0, _021C96B4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -27859,7 +27859,7 @@ _021C95CE:
 	pop {r3, r4, r5, r6, pc}
 _021C95E0:
 	ldr r0, _021C96B4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -27881,7 +27881,7 @@ _021C9606:
 	cmp r0, #0x24
 	bne _021C96A4
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x4a
@@ -27895,7 +27895,7 @@ _021C9626:
 	cmp r0, #0x24
 	bne _021C96A4
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x4a
@@ -27904,11 +27904,11 @@ _021C9626:
 	pop {r3, r4, r5, r6, pc}
 _021C9646:
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C96A4
 _021C964E:
 	ldr r0, _021C96B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x18]
 	cmp r0, #0
 	bne _021C9676
@@ -27995,7 +27995,7 @@ _021C96EE:
 	bl ovy255_21d37c4
 _021C9706:
 	ldr r0, _021C97C0 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r5, #0x2c]
 	ldr r0, _021C97BC ; =0x0000A574
 	ldr r1, [r2, r0]
@@ -28142,7 +28142,7 @@ _021C97FE:
 	cmp r4, r0
 	beq _021C9852
 	ldr r0, _021C9998 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0x18
 	bl sub_021CF074
@@ -28288,7 +28288,7 @@ _021C995A:
 	ldr r0, [r5, #0x2c]
 	bl ovy255_21d0bc8
 	ldr r0, _021C99A0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C99A4 ; =ovy255_21c1738
 	add r0, r5, #0
 	mov r2, #0x4d
@@ -28338,7 +28338,7 @@ _021C99BE:
 	cmp r4, r6
 	beq _021C9A0C
 	ldr r0, _021C9A40 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy255_21d101c
@@ -28592,7 +28592,7 @@ _021C9BCC:
 	ldr r0, [r4, #0x2c]
 	bl ovy255_21d0bc8
 	ldr r0, _021C9C2C ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021C9C30 ; =ovy255_21c1738
 	add r0, r4, #0
 	mov r2, #0x4d
@@ -28667,7 +28667,7 @@ _021C9C78:
 	cmp r0, #0
 	beq _021C9CD4
 	ldr r0, _021C9FE0 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r1, _021C9FE4 ; =0x0000A560
 	add r0, r2, r1
@@ -28808,7 +28808,7 @@ _021C9DBA:
 	b _021C9FAC
 _021C9DBC:
 	ldr r0, _021C9FE8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1c
 	bl sub_021CBE58
@@ -28820,7 +28820,7 @@ _021C9DBC:
 	pop {r3, r4, r5, r6, pc}
 _021C9DD8:
 	ldr r0, _021C9FEC ; =0x00000556
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	strh r1, [r0, #0x28]
@@ -28833,7 +28833,7 @@ _021C9DD8:
 	pop {r3, r4, r5, r6, pc}
 _021C9DF4:
 	ldr r0, _021C9FF0 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x1c
 	bl sub_021CBE58
@@ -28846,7 +28846,7 @@ _021C9DF4:
 	pop {r3, r4, r5, r6, pc}
 _021C9E12:
 	ldr r0, _021C9FE8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x1c]
 	mov r0, #0xf
 	bic r1, r0
@@ -28862,7 +28862,7 @@ _021C9E12:
 	pop {r3, r4, r5, r6, pc}
 _021C9E36:
 	ldr r0, _021C9FE8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021C9FF4 ; =0x0000A54C
 	ldrh r0, [r1, r0]
@@ -28893,7 +28893,7 @@ _021C9E64:
 	pop {r3, r4, r5, r6, pc}
 _021C9E7A:
 	ldr r0, _021C9FF0 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r0, [r4, #0x16]
 	sub r0, #0x1e
 	lsl r0, r0, #0x18
@@ -28967,7 +28967,7 @@ _021C9F08:
 	pop {r3, r4, r5, r6, pc}
 _021C9F0E:
 	ldr r0, _021C9FF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021C9FDA
 _021C9F16:
 	ldr r0, [r4, #0x2c]
@@ -28986,7 +28986,7 @@ _021C9F2E:
 	bl ovy255_21bf288
 _021C9F36:
 	ldr r0, _021C9FF8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x50
 	bl sub_021CBEE8
@@ -28997,7 +28997,7 @@ _021C9F36:
 	pop {r3, r4, r5, r6, pc}
 _021C9F50:
 	ldr r0, _021C9FF0 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -29049,7 +29049,7 @@ _021C9FAC:
 	cmp r0, #0
 	beq _021C9FDA
 	ldr r0, _021C9FE8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r5, #0x1e
 	add r0, r4, #0
 	add r1, r5, #0
@@ -29164,7 +29164,7 @@ _021CA080:
 	mov r2, #0x18
 	bl ovy255_21cf208
 	ldr r0, _021CA190 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0xe
 	str r0, [r4, #0x28]
 	add r0, r4, #0
@@ -29190,7 +29190,7 @@ _021CA0F6:
 	bl sub_021CDB5C
 	ldr r5, _021CA190 ; =0x00000557
 	add r0, r5, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r4, #0x16]
 	ldr r0, [r4, #0x2c]
 	mov r2, #0
@@ -29200,7 +29200,7 @@ _021CA0F6:
 	mov r2, #0x18
 	bl ovy255_21cf208
 	add r0, r5, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	mov r1, #9
 	ldr r0, [r0, #0x78]
@@ -29384,7 +29384,7 @@ _021CA274:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA2BE:
 	ldr r0, _021CA30C ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x2c]
 	ldrh r1, [r0, r6]
 	bl ovy255_21d0a94
@@ -29430,7 +29430,7 @@ ovy255_21ca314: ; 0x021CA314
 	b _021CA3A6
 _021CA328:
 	ldr r0, _021CA3B0 ; =0x00000667
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x2c]
 	mov r2, #0
 	ldr r1, [r0, #0x68]
@@ -29571,7 +29571,7 @@ _021CA430:
 	b _021CA6AC
 _021CA438:
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -29588,7 +29588,7 @@ _021CA438:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA462:
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	ldr r0, [r4, #0x2c]
@@ -29605,7 +29605,7 @@ _021CA462:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA48C:
 	ldr r0, _021CA6B4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #0
 	strh r1, [r0, #0x28]
@@ -29624,7 +29624,7 @@ _021CA48C:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA4B4:
 	ldr r0, _021CA6B8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x57
 	bl sub_021CBE58
@@ -29635,7 +29635,7 @@ _021CA4B4:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA4CE:
 	ldr r0, _021CA6B4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldrb r5, [r4, #0x16]
 	ldr r0, [r0, #0x78]
@@ -29660,7 +29660,7 @@ _021CA4FE:
 	cmp r0, #0x1e
 	bne _021CA52E
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -29678,7 +29678,7 @@ _021CA52E:
 	b _021CA6AC
 _021CA530:
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21bf304
 	add r0, r4, #0
@@ -29688,7 +29688,7 @@ _021CA530:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA548:
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021CA6AC
 _021CA550:
 	ldr r0, [r4, #0x2c]
@@ -29709,7 +29709,7 @@ _021CA566:
 	bl ovy255_21bf288
 _021CA574:
 	ldr r0, _021CA6B0 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x55
 	bl sub_021CBEE8
@@ -29719,7 +29719,7 @@ _021CA574:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA58C:
 	ldr r0, _021CA6B4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x2c]
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d39c0
@@ -29772,7 +29772,7 @@ _021CA5EA:
 	cmp r0, #0
 	beq _021CA668
 	ldr r0, _021CA6B8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, _021CA6BC ; =0x021D70CC
 	add r0, r4, #0
 	mov r2, #2
@@ -29814,7 +29814,7 @@ _021CA642:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CA668:
 	lsl r0, r6, #3
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	bl sub_021BF234
@@ -30148,7 +30148,7 @@ _021CA910:
 	pop {r3, r4, r5, r6, pc}
 _021CA938:
 	ldr r0, _021CA9A0 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x18
 	bl sub_021CF068
@@ -30161,7 +30161,7 @@ _021CA938:
 	pop {r3, r4, r5, r6, pc}
 _021CA956:
 	ldr r0, _021CA9A0 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #5
 	mov r2, #0x18
@@ -30175,7 +30175,7 @@ _021CA956:
 	pop {r3, r4, r5, r6, pc}
 _021CA976:
 	ldr r0, _021CA9A0 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21cf2cc
@@ -30537,7 +30537,7 @@ _021CAC12:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3a80
 	ldr r0, _021CACA4 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r5, #0x2c]
 	mov r2, #0x61
 	ldr r0, [r1, r4]
@@ -30626,7 +30626,7 @@ _021CACEE:
 	b _021CADB8
 _021CACF6:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 _021CAD00:
@@ -30634,31 +30634,31 @@ _021CAD00:
 	b _021CADB8
 _021CAD06:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	b _021CAD00
 _021CAD12:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #2
 	b _021CAD00
 _021CAD1E:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #3
 	b _021CAD00
 _021CAD2A:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #4
 	b _021CAD00
 _021CAD36:
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #5
 	b _021CAD00
@@ -30682,7 +30682,7 @@ _021CAD42:
 	add r0, r4, #0
 	bl ovy255_21d0640
 	ldr r0, _021CADBC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x63
@@ -30690,7 +30690,7 @@ _021CAD42:
 	pop {r3, r4, r5, pc}
 _021CAD7E:
 	ldr r0, _021CADC4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #0x63
@@ -30698,7 +30698,7 @@ _021CAD7E:
 	pop {r3, r4, r5, pc}
 _021CAD90:
 	ldr r0, _021CADC4 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #0x63
@@ -30706,14 +30706,14 @@ _021CAD90:
 	pop {r3, r4, r5, pc}
 _021CADA2:
 	ldr r0, _021CADC8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x64
 	bl ovy255_21cbed8
 	pop {r3, r4, r5, pc}
 _021CADB2:
 	ldr r0, _021CADC8 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021CADB8:
 	mov r0, #0x62
 	pop {r3, r4, r5, pc}
@@ -30790,7 +30790,7 @@ _021CAE3E:
 	ldr r0, [r0, #0x7c]
 	bl ovy255_21d3aa4
 	ldr r0, _021CAE6C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0xe
 	bl sub_021CBE58
@@ -30868,7 +30868,7 @@ _021CAEC8:
 	cmp r0, #0
 	bne _021CAF16
 	ldr r0, _021CB014 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #6
 	mov r2, #0x18
@@ -30897,7 +30897,7 @@ _021CAF16:
 	cmp r0, #1
 	bne _021CAF78
 	ldr r0, _021CB014 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #5
@@ -30962,7 +30962,7 @@ _021CAFC0:
 	cmp r4, r0
 	beq _021CAFEC
 	ldr r0, _021CB014 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #0x18
@@ -31450,7 +31450,7 @@ _021CB3CE:
 	b _021CB472
 _021CB3D8:
 	ldr r0, _021CB478 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6c
 	bl sub_021CBE58
@@ -31461,7 +31461,7 @@ _021CB3D8:
 	pop {r4, pc}
 _021CB3F2:
 	ldr r0, _021CB478 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, _021CB47C ; =0x0000A55C
 	mov r2, #0
@@ -31476,7 +31476,7 @@ _021CB3F2:
 	pop {r4, pc}
 _021CB414:
 	ldr r0, _021CB478 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #4
 	mov r2, #0x73
@@ -31484,7 +31484,7 @@ _021CB414:
 	pop {r4, pc}
 _021CB426:
 	ldr r0, _021CB480 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6b
 	bl sub_021CBE58
@@ -31495,7 +31495,7 @@ _021CB426:
 	pop {r4, pc}
 _021CB440:
 	ldr r0, _021CB480 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6b
 	bl sub_021CBE58
@@ -31506,7 +31506,7 @@ _021CB440:
 	pop {r4, pc}
 _021CB45A:
 	ldr r0, _021CB484 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6a
 	bl sub_021CBEE8
@@ -31718,7 +31718,7 @@ _021CB612:
 	add r1, r1, #1
 	str r1, [r2, r0]
 	ldr r0, _021CB678 ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0x6c
 	bl ovy255_21cdc38
@@ -31833,7 +31833,7 @@ _021CB6F8:
 	b _021CB80E
 _021CB700:
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r6, #6
 	bl ovy255_21bc09c
@@ -31845,7 +31845,7 @@ _021CB700:
 	pop {r4, r5, r6, pc}
 _021CB71C:
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -31887,7 +31887,7 @@ _021CB752:
 	pop {r4, r5, r6, pc}
 _021CB774:
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	sub r1, r5, #1
 	mov r2, #1
@@ -31895,7 +31895,7 @@ _021CB774:
 	b _021CB80E
 _021CB786:
 	ldr r0, _021CB828 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6e
 	bl sub_021CBE58
@@ -31908,7 +31908,7 @@ _021CB786:
 	pop {r4, r5, r6, pc}
 _021CB7A4:
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x6d
 	bl sub_021CBEE8
@@ -31924,7 +31924,7 @@ _021CB7BE:
 	cmp r0, #1
 	bne _021CB80E
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r6, #7
 	bl ovy255_21bc09c
@@ -31941,7 +31941,7 @@ _021CB7E6:
 	cmp r0, #4
 	bne _021CB80E
 	ldr r0, _021CB818 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #1
 	bl ovy255_21bc09c
@@ -31994,7 +31994,7 @@ _021CB842:
 	mov r2, #0
 	bl ovy255_21d1ac8
 	ldr r0, _021CB95C ; =0x00000669
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r0, [r1, r5]
 	add r0, r0, #1
@@ -32359,7 +32359,7 @@ _021CBB3E:
 	b _021CBD18
 _021CBB40:
 	ldr r0, _021CBD1C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32382,7 +32382,7 @@ _021CBB68:
 	pop {r3, r4, r5, pc}
 _021CBB72:
 	ldr r0, _021CBD1C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32405,7 +32405,7 @@ _021CBB9A:
 	pop {r3, r4, r5, pc}
 _021CBBA4:
 	ldr r0, _021CBD1C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32428,7 +32428,7 @@ _021CBBCC:
 	pop {r3, r4, r5, pc}
 _021CBBD6:
 	ldr r0, _021CBD1C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32451,7 +32451,7 @@ _021CBBFE:
 	pop {r3, r4, r5, pc}
 _021CBC08:
 	ldr r0, _021CBD1C ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r1, [r4, #0x2c]
 	ldr r5, _021CBD20 ; =0x0000A55C
 	ldrb r0, [r1, r5]
@@ -32510,7 +32510,7 @@ _021CBC7E:
 	pop {r3, r4, r5, pc}
 _021CBC88:
 	ldr r0, _021CBD24 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32537,7 +32537,7 @@ _021CBCAC:
 	pop {r3, r4, r5, pc}
 _021CBCC4:
 	ldr r0, _021CBD24 ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x2c]
 	ldr r0, _021CBD20 ; =0x0000A55C
 	ldrb r1, [r2, r0]
@@ -32564,7 +32564,7 @@ _021CBCE8:
 	pop {r3, r4, r5, pc}
 _021CBD00:
 	ldr r0, _021CBD28 ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0x71
 	bl sub_021CBEE8
@@ -32753,7 +32753,7 @@ ovy255_21cbe68: ; 0x021CBE68
 	mov r0, #0
 	mov r2, #1
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	ldr r1, [r5, #0x2c]
 	ldr r0, _021CBE94 ; =0x0000A568
 	str r4, [r1, r0]
@@ -32780,7 +32780,7 @@ ovy255_21cbe98: ; 0x021CBE98
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	ldr r1, [r5, #0x2c]
 	ldr r0, _021CBEC4 ; =0x0000A568
 	str r4, [r1, r0]
@@ -32907,7 +32907,7 @@ _021CBF8A:
 	b _021CBFAC
 _021CBF9E:
 	ldr r0, _021CBFE4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #0x18
 	bl sub_021CF0A4
@@ -33117,7 +33117,7 @@ _021CC134:
 	pop {r3, r4, r5, pc}
 _021CC16E:
 	ldr r0, _021CC194 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r5, #0
 	mov r1, #6
 	mov r2, #0x18
@@ -33139,7 +33139,7 @@ ovy255_21cc198: ; 0x021CC198
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _021CC1B8 ; =0x0000055D
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	bl ovy255_21beae0
 	mov r0, #0x75
@@ -35450,7 +35450,7 @@ _021CD4DA:
 	cmp r1, r0
 	bne _021CD4EA
 	ldr r0, _021CD520 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x15
 	pop {r4, r5, r6, pc}
 _021CD4EA:
@@ -35460,7 +35460,7 @@ _021CD4EA:
 	cmp r0, #0
 	bne _021CD500
 	ldr r0, _021CD520 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x15
 	pop {r4, r5, r6, pc}
 _021CD500:
@@ -35507,7 +35507,7 @@ _021CD54E:
 	cmp r1, r0
 	bne _021CD55E
 	ldr r0, _021CD5A4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x24
 	pop {r3, r4, r5, r6, r7, pc}
 _021CD55E:
@@ -35520,7 +35520,7 @@ _021CD55E:
 	cmp r4, r0
 	bhs _021CD57C
 	ldr r0, _021CD5A4 ; =0x00000557
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x24
 	pop {r3, r4, r5, r6, r7, pc}
 _021CD57C:
@@ -35809,7 +35809,7 @@ _021CD7AA:
 	pop {r3, r4, r5, r6, r7, pc}
 _021CD7D8:
 	ldr r0, _021CD850 ; =0x00000666
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5, #0x2c]
 	mov r1, #0xc
 	add r2, r6, #0
@@ -36299,7 +36299,7 @@ _021CDBDE:
 _021CDBE0:
 	ldr r0, _021CDC00 ; =0x00000548
 	str r6, [r4, #0x28]
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4, #0x28]
 	add r0, r4, #0
 	add r1, r5, #0
@@ -36579,7 +36579,7 @@ ovy255_21cddf0: ; 0x021CDDF0
 	add r5, r0, #0
 	ldr r0, _021CDE84 ; =0x0000054C
 	add r4, r1, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r2, [r5, #0x1c]
 	mov r0, #0x30
 	add r1, r5, #0
@@ -36657,7 +36657,7 @@ ovy255_21cde88: ; 0x021CDE88
 	add r5, r0, #0
 	ldr r0, _021CDED0 ; =0x0000054C
 	add r4, r1, #0
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldrb r1, [r5, #0x1c]
 	mov r0, #0x30
 	bic r1, r0
@@ -36955,7 +36955,7 @@ ovy255_21ce068: ; 0x021CE068
 	add r0, #0xa0
 	strb r1, [r0]
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -37010,7 +37010,7 @@ ovy255_21ce0c0: ; 0x021CE0C0
 	add r0, #0xa0
 	strb r1, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -37060,7 +37060,7 @@ ovy255_21ce140: ; 0x021CE140
 	add r3, #0x26
 	bl ovy255_21ce068
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x2c]
 	add r0, #0x9c
 	bl ovy255_21ce038
@@ -37815,7 +37815,7 @@ _021CE75A:
 	bl ovy255_21ce068
 _021CE77A:
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r1, [sp, #0x14]
 	ldr r0, [sp, #0x18]
 	add r0, r1, r0
@@ -38319,7 +38319,7 @@ _021CEB7C:
 	mov r3, #4
 	bl sub_0219A2A4
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x54
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -38518,7 +38518,7 @@ ovy255_21cece4: ; 0x021CECE4
 	add r3, r4, #0
 	bl sub_02021D28
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -38651,7 +38651,7 @@ _021CEE2C:
 	mov r2, #0
 	bl sub_02021D28
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r5, #0x2c]
 	add r0, r0, r4
 	ldr r0, [r0, #4]
@@ -38895,7 +38895,7 @@ ovy255_21cefcc: ; 0x021CEFCC
 	add r0, r0, r6
 	bl ovy255_21ce038
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r5, #0
 	bl ovy255_21d1c00
 	add sp, #0x14
@@ -39432,7 +39432,7 @@ _021CF342:
 	ldr r3, [r3]
 	bl sub_02021D28
 	add r0, r5, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [sp, #8]
 	ldr r0, [r0, #0x2c]
 	ldr r0, [r0, #0x4c]
@@ -49086,7 +49086,7 @@ ovy255_21d3b64: ; 0x021D3B64
 	str r0, [sp, #8]
 	mov r0, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #1
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -49108,17 +49108,17 @@ ovy255_21d3c90: ; 0x021D3C90
 	add r0, r5, #0
 	bl sub_021D3EEC
 	ldr r0, [r5, #0x30]
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	ldr r0, [r5, #0x20]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x2c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x24]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x28]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x1c]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r0, [r5, #0x18]
 	bl sub_02021A18
 	ldr r0, [r5, #0x10]
@@ -49159,7 +49159,7 @@ _021D3D1A: ; jump table
 	.short _021D3D62 - _021D3D1A - 2 ; case 2
 	.short _021D3D80 - _021D3D1A - 2 ; case 3
 _021D3D22:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021D3D8E
 	mov r1, #1
@@ -49201,12 +49201,12 @@ _021D3D62:
 	str r0, [sp, #8]
 	mov r0, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #3
 	str r0, [r5]
 	b _021D3D8E
 _021D3D80:
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _021D3D8E
 	add sp, #0xc
@@ -50044,7 +50044,7 @@ _021D43F6:
 	ldr r0, [r4, r0]
 	bl sub_0202B694
 	ldr r0, _021D4480 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #7
 	mov r2, #0xe
@@ -50056,7 +50056,7 @@ _021D4410:
 	ldr r0, [r4, r0]
 	bl sub_0202B694
 	ldr r0, _021D4480 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #0x11
@@ -50071,7 +50071,7 @@ _021D442A:
 	ldr r0, [r4, r0]
 	bl sub_0202B694
 	ldr r0, _021D4480 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #8
@@ -50079,7 +50079,7 @@ _021D442A:
 	b _021D446E
 _021D444A:
 	ldr r0, _021D4480 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #6
 	mov r2, #0xb
@@ -50143,7 +50143,7 @@ _021D44AC:
 	mov r1, #1
 	bl sub_0202BA74
 	ldr r0, _021D4568 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #6
 	mov r2, #0xb
@@ -50168,7 +50168,7 @@ _021D44E4:
 	ldr r0, [r4, r5]
 	bl sub_0202B694
 	ldr r0, _021D4568 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #7
 	mov r2, #0xe
@@ -50201,7 +50201,7 @@ _021D4540: ; jump table
 	.short _021D4562 - _021D4540 - 2 ; case 7
 _021D4550:
 	ldr r0, _021D456C ; =0x00000548
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D4562
 _021D4558:
 	add r0, r4, #0
@@ -50350,7 +50350,7 @@ _021D465A:
 	cmp r0, #0
 	bne _021D4698
 	ldr r0, _021D4814 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -50380,7 +50380,7 @@ _021D4698:
 	cmp r0, #0
 	beq _021D46C0
 	ldr r0, _021D4814 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #5
 	pop {r3, r4, r5, r6, r7, pc}
 _021D46C0:
@@ -50487,7 +50487,7 @@ _021D4774:
 	cmp r0, #0
 	bne _021D47CA
 	ldr r0, _021D4814 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -50521,7 +50521,7 @@ _021D47CA:
 	cmp r0, #0
 	beq _021D47FC
 	ldr r0, _021D4814 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, r5]
 	add r1, r6, #0
 	bl sub_0219CC58
@@ -50534,7 +50534,7 @@ _021D47FC:
 _021D4804:
 	ldr r0, _021D4818 ; =0x00000557
 _021D4806:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021D480A:
 	add r0, r4, #0
 	bl ovy255_21d6bac
@@ -50876,7 +50876,7 @@ _021D4A88:
 	mov r2, #0xc7
 	bl ovy255_21d4248
 	ldr r0, _021D4B58 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D4B36
 _021D4AB8:
 	add r0, r4, #0
@@ -50930,7 +50930,7 @@ _021D4AD6:
 	bl sub_0219CC58
 _021D4B2A:
 	ldr r0, _021D4B58 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	add r6, #0xd0
 	str r0, [r4, r6]
@@ -51189,7 +51189,7 @@ _021D4D20:
 	mov r2, #0xc7
 	bl ovy255_21d4248
 	ldr r0, _021D4DB4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D4DA8
 _021D4D32:
 	add r0, r4, #0
@@ -51244,7 +51244,7 @@ _021D4D90:
 	bl sub_0219CC58
 _021D4DA0:
 	ldr r0, _021D4DB4 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r7, #0xe
 _021D4DA8:
 	add r0, r4, #0
@@ -51398,7 +51398,7 @@ _021D4EAE:
 	cmp r0, #0
 	bne _021D4EEC
 	ldr r0, _021D5060 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #3
 	mov r2, #0
@@ -51427,7 +51427,7 @@ _021D4EEC:
 	cmp r0, #0
 	beq _021D4F12
 	ldr r0, _021D5060 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #0x11
 	pop {r3, r4, r5, r6, r7, pc}
 _021D4F12:
@@ -51566,7 +51566,7 @@ _021D5018:
 	cmp r0, #0
 	beq _021D5048
 	ldr r0, _021D5060 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4, r5]
 	add r1, r6, #0
 	bl sub_0219CC58
@@ -51579,7 +51579,7 @@ _021D5048:
 _021D5050:
 	ldr r0, _021D5064 ; =0x00000557
 _021D5052:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021D5056:
 	add r0, r4, #0
 	bl ovy255_21d6bac
@@ -51917,7 +51917,7 @@ _021D52CC:
 	mov r2, #0xc7
 	bl ovy255_21d4248
 	ldr r0, _021D5398 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D537A
 _021D52FC:
 	add r0, r4, #0
@@ -51969,7 +51969,7 @@ _021D5318:
 	bl sub_0219CC58
 _021D536A:
 	ldr r0, _021D5398 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 	add r6, #0xd0
 	str r0, [r4, r6]
@@ -52156,7 +52156,7 @@ _021D54AC:
 	ldrh r2, [r2, r3]
 	bl ovy255_21d4248
 	ldr r0, _021D5558 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D554E
 _021D54E8:
 	add r0, r4, #0
@@ -52202,7 +52202,7 @@ _021D5502:
 	bl sub_0219CC58
 _021D5546:
 	ldr r0, _021D5558 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r6, #0x1a
 _021D554E:
 	add r0, r6, #0
@@ -52359,7 +52359,7 @@ _021D5654:
 	ldrh r2, [r2, r3]
 	bl ovy255_21d4248
 	ldr r0, _021D56FC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _021D56F2
 _021D5690:
 	add r0, r4, #0
@@ -52403,7 +52403,7 @@ _021D56AA:
 	bl sub_0219CC58
 _021D56EA:
 	ldr r0, _021D56FC ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r6, #0x1d
 _021D56F2:
 	add r0, r6, #0
@@ -52633,7 +52633,7 @@ _021D58BE:
 	mov r1, #0x1c
 	bl ovy255_21d6ae8
 	ldr r0, _021D58D8 ; =0x0000054C
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021D58D4:
 	ldr r0, [sp]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -53093,13 +53093,13 @@ ovy255_21d5c0c: ; 0x021D5C0C
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #0x34]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	mov r4, #0
 _021D5C18:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x38]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, r4, #1
 	cmp r4, #9
 	blt _021D5C18
@@ -53192,7 +53192,7 @@ ovy255_21d5c84: ; 0x021D5C84
 	add r0, #0xa4
 	strb r1, [r0]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -53434,7 +53434,7 @@ _021D5E56:
 	cmp r6, #0
 	beq _021D5EA4
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021D5EA4:
 	ldr r0, [r5, #4]
 	ldr r0, [r0, #4]
@@ -53495,7 +53495,7 @@ ovy255_21d5ec8: ; 0x021D5EC8
 	add r0, r7, #4
 	strb r6, [r5, r0]
 	add r0, r4, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r5, #0x94
 	ldr r0, [r5]
 	bl ovy255_21d41b0
@@ -53689,7 +53689,7 @@ ovy255_21d6038: ; 0x021D6038
 	mov r0, #1
 	strb r0, [r4, #4]
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy255_21d6038
@@ -53975,7 +53975,7 @@ ovy255_21d6250: ; 0x021D6250
 	mov r0, #1
 	strb r0, [r4, r1]
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x28]
 	add r1, r6, #0
 	bl sub_0204898C
@@ -54001,7 +54001,7 @@ ovy255_21d6250: ; 0x021D6250
 	mov r0, #1
 	strb r0, [r4, r5]
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r4, #0x94
 	ldr r0, [r4]
 	bl ovy255_21d41b0
@@ -54089,7 +54089,7 @@ _021D6368:
 	add r0, r7, #4
 	strb r6, [r5, r0]
 	ldr r0, [sp, #0xc]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r5, #0x94
 	ldr r0, [r5]
 	bl ovy255_21d41b0
@@ -55439,7 +55439,7 @@ ovy255_21d6dc8: ; 0x021D6DC8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #4
 	bl ovy255_21d6f3c
 	add r0, r4, #0

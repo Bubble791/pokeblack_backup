@@ -21,14 +21,14 @@
 .public ovy36_0218056c
 .public sub_0218105C
 .public sub_02016B20
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EEEE0
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public ovy36_21b80b4
 .public sub_021B8224
 .public sub_021B8248

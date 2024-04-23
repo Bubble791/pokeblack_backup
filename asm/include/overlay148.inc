@@ -32,7 +32,7 @@
 .public sub_02181298
 .public GX_SetBankForLCDC
 .public sub_020056FC
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public GX_GetBankForTex
 .public sub_02016ED8
 .public sub_02016AF0

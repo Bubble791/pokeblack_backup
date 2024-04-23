@@ -2272,9 +2272,9 @@ _0219A8E8:
 	bl sub_0202E1F0
 	str r0, [r4]
 	ldr r0, [sp, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
@@ -2324,7 +2324,7 @@ _0219A9BE:
 	cmp r0, #0
 	beq _0219AA04
 	ldr r0, _0219AA0C ; =0x00000551
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r4]
 	mov r1, #1
 	mov r5, #1
@@ -2426,9 +2426,9 @@ ovy175_219aa68: ; 0x0219AA68
 	bl sub_0202E1F0
 	str r0, [r5]
 	ldr r0, [sp, #8]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	mov r0, #0
 	sub r4, #0x16
 	str r6, [r5, #0x54]

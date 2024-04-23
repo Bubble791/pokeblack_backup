@@ -30,10 +30,10 @@
 .public sub_02048530
 .public sub_02048530
 .public ovy12_216740c
-.public sub_02048564
-.public sub_02048564
-.public sub_02024274
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_StrBufFree
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_0201362C
 .public sub_02170B00
 .public ovy12_2167450
@@ -82,7 +82,7 @@
 .public sub_021B65E8
 .public sub_021804D8
 .public sub_021683F4
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02016D68
 .public sub_02180524
 .public sub_021A2174

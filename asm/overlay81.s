@@ -392,7 +392,7 @@ ovy81_21eab1c: ; 0x021EAB1C
 	str r6, [sp]
 	bl ovy81_21eaaa0
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldrh r1, [r5, #8]
 	mov r0, #0x80
 	bl sub_02048530
@@ -408,7 +408,7 @@ ovy81_21eab1c: ; 0x021EAB1C
 	str r6, [sp]
 	bl ovy81_21eaaa0
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021EAB8E:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}

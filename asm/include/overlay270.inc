@@ -63,7 +63,7 @@
 .public sub_0203DA48
 .public sub_0203DAC8
 .public sub_021F4678
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021F4550
 .public sub_021F559C
 .public sub_021F55C8
@@ -145,8 +145,8 @@
 .public sub_021F3F84
 .public sub_021F3F70
 .public sub_021F4678
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021F4678
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021F4678
-.public sub_02006254
+.public GFL_SndSEPlay

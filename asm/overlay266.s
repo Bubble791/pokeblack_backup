@@ -144,7 +144,7 @@ _0219CF98: .word 0x04001050
 ovy266_219cf9c: ; 0x0219CF9C
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_02027ACC
+	bl GFL_FadeScreenIsFinished
 	cmp r0, #1
 	bne _0219CFB0
 	mov r0, #0x96
@@ -1093,10 +1093,10 @@ _0219D724: .word ovy266_219d6e8
 	thumb_func_start sub_0219D728
 sub_0219D728: ; 0x0219D728
 	ldr r0, [r0, #8]
-	ldr r3, _0219D730 ; =sub_0203A6A8
+	ldr r3, _0219D730 ; =GFL_TCBRemove
 	bx r3
 	nop
-_0219D730: .word sub_0203A6A8
+_0219D730: .word GFL_TCBRemove
 	thumb_func_end sub_0219D728
 
 	thumb_func_start ovy266_219d734
@@ -1142,9 +1142,9 @@ ovy266_219d778: ; 0x0219D778
 	ldr r0, [r4, #0xc]
 	bl sub_02022DA8
 	ldr r0, [r4, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	ldr r0, [r4, #0x14]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy266_219d778
@@ -1485,7 +1485,7 @@ ovy266_219d9e8: ; 0x0219D9E8
 	mov r1, #1
 	mov r2, #1
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #0x96
 	lsl r0, r0, #2
 	str r4, [r5, r0]
@@ -1510,7 +1510,7 @@ ovy266_219da14: ; 0x0219DA14
 	mov r1, #0
 	mov r2, #0
 	mov r3, #0
-	bl sub_020279B4
+	bl GFL_FadeScreenSet
 	mov r0, #0x96
 	lsl r0, r0, #2
 	str r4, [r5, r0]

@@ -77,8 +77,8 @@
 .public sub_0219FC8C
 .public sub_02046D38
 .public sub_02046DC0
-.public sub_02027ACC
-.public sub_02027ACC
+.public GFL_FadeScreenIsFinished
+.public GFL_FadeScreenIsFinished
 .public sub_0203DA2C
 .public sub_0203D564
 .public sub_0203DEFC
@@ -89,21 +89,21 @@
 .public sub_0203DEFC
 .public sub_0203D564
 .public sub_021AD7A8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045E1C
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_02045EA0
 .public sub_02045EA0
 .public sub_02045EA0
 .public sub_02045EA0
-.public sub_020279B4
-.public sub_02027ACC
+.public GFL_FadeScreenSet
+.public GFL_FadeScreenIsFinished
 .public sub_02045E74
 .public sub_02045E74
 .public sub_02045E74
 .public sub_02045E74
 
-.public sub_0203A6A8
+.public GFL_TCBRemove

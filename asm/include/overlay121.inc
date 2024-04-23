@@ -90,7 +90,7 @@
 .public sub_0208D868
 .public sub_0204875C
 .public sub_021EFAD0
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02005748
 .public sub_021812D8
 .public sub_021812CC

@@ -228,20 +228,20 @@
 .public sub_02048530
 .public sub_02048530
 .public sub_02048530
-.public sub_02048564
-.public sub_02048564
-.public sub_02048564
-.public sub_020487D4
-.public sub_02024274
+.public GFL_StrBufFree
+.public GFL_StrBufFree
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
+.public GFL_WordSetSystemFree
 .public sub_02021C44
 .public sub_02021A18
 .public sub_020232D8
 .public sub_02026E48
 .public sub_02026E48
 .public sub_02026DE8
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_0203A850
-.public sub_0203A83C
+.public GFL_TCBExMgrFree
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
@@ -327,7 +327,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_021EAB6C
 .public sub_0204C124
 .public sub_0204C108
@@ -358,6 +358,6 @@
 .public sub_0202437C
 .public sub_0202472C
 .public sub_020243D0
-.public sub_02048564
+.public GFL_StrBufFree
 
 .public sub_0204C560

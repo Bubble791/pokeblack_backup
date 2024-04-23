@@ -148,7 +148,7 @@ _021EED76:
 _021EED7A:
 	ldr r0, _021EEDBC ; =0x000007E5
 _021EED7C:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021EED80:
 	ldr r0, [r4, #0xc]
 	add r1, r0, #1

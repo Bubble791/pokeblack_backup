@@ -80,9 +80,9 @@
 .public sub_021EEF68
 .public ovy36_21b84a8
 .public sub_021B84E8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021EEF68
 .public ovy36_21b84a8
 .public sub_021B84F4
 .public sub_02006280
-.public sub_02006254
+.public GFL_SndSEPlay

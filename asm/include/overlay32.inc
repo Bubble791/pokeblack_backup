@@ -42,8 +42,8 @@
 .public sub_0204875C
 .public sub_0204898C
 .public sub_02021D28
-.public sub_02048564
-.public sub_020487D4
+.public GFL_StrBufFree
+.public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02046EDC
 .public GXx_SetMasterBrightness_

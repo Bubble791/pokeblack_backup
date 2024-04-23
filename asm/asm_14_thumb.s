@@ -1772,8 +1772,8 @@ _0203A6A6:
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end sub_0203A628
 
-	thumb_func_start sub_0203A6A8
-sub_0203A6A8: ; 0x0203A6A8
+	thumb_func_start GFL_TCBRemove
+GFL_TCBRemove: ; 0x0203A6A8
 	add r1, r0, #0
 	ldr r2, [r1]
 	ldr r0, [r2, #0x34]
@@ -1793,7 +1793,7 @@ _0203A6B6:
 	bx r3
 	.align 2, 0
 _0203A6C8: .word sub_0203A558
-	thumb_func_end sub_0203A6A8
+	thumb_func_end GFL_TCBRemove
 
 	thumb_func_start sub_0203A6CC
 sub_0203A6CC: ; 0x0203A6CC
@@ -2022,8 +2022,8 @@ _0203A834:
 	.align 2, 0
 	thumb_func_end sub_0203A7F4
 
-	thumb_func_start sub_0203A83C
-sub_0203A83C: ; 0x0203A83C
+	thumb_func_start GFL_TCBExMgrFree
+GFL_TCBExMgrFree: ; 0x0203A83C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
@@ -2032,7 +2032,7 @@ sub_0203A83C: ; 0x0203A83C
 	bl sub_0203A24C
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_0203A83C
+	thumb_func_end GFL_TCBExMgrFree
 
 	thumb_func_start sub_0203A850
 sub_0203A850: ; 0x0203A850
@@ -32591,15 +32591,15 @@ _0204855C: .word 0xB6F8D2EC
 _02048560: .word 0x0209AECC
 	thumb_func_end sub_02048530
 
-	thumb_func_start sub_02048564
-sub_02048564: ; 0x02048564
+	thumb_func_start GFL_StrBufFree
+GFL_StrBufFree: ; 0x02048564
 	ldr r3, _0204856C ; =sub_0203A24C
 	mov r1, #0
 	str r1, [r0, #4]
 	bx r3
 	.align 2, 0
 _0204856C: .word sub_0203A24C
-	thumb_func_end sub_02048564
+	thumb_func_end GFL_StrBufFree
 
 	thumb_func_start sub_02048570
 sub_02048570: ; 0x02048570
@@ -32967,8 +32967,8 @@ _020487C8:
 _020487D0: .word 0x0209AEDC
 	thumb_func_end sub_0204875C
 
-	thumb_func_start sub_020487D4
-sub_020487D4: ; 0x020487D4
+	thumb_func_start GFL_MsgDataFree
+GFL_MsgDataFree: ; 0x020487D4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
@@ -32987,7 +32987,7 @@ _020487F4:
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
-	thumb_func_end sub_020487D4
+	thumb_func_end GFL_MsgDataFree
 
 	thumb_func_start sub_020487FC
 sub_020487FC: ; 0x020487FC
@@ -49800,7 +49800,7 @@ sub_0204FF40: ; 0x0204FF40
 	add r0, r1, #0
 	bl sub_0204FF04
 	add r0, r4, #0
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end sub_0204FF40

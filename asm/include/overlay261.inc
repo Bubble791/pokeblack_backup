@@ -26,7 +26,7 @@
 .public sub_021C568C
 .public sub_021C5750
 .public sub_02021A18
-.public sub_020487D4
+.public GFL_MsgDataFree
 .public sub_02022DA8
 .public ovy262_21c57a4
 .public sub_02021A3C
@@ -55,9 +55,9 @@
 .public sub_0204875C
 .public sub_021C5C10
 .public sub_021C5C4C
-.public sub_020487D4
-.public sub_02024274
-.public sub_02048564
+.public GFL_MsgDataFree
+.public GFL_WordSetSystemFree
+.public GFL_StrBufFree
 .public sub_0203A24C
 .public sub_021C5C64
 .public sub_021C5C74
@@ -129,7 +129,7 @@
 .public sub_02017B8C
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf
-.public sub_02048564
+.public GFL_StrBufFree
 .public sub_021C58A4
 .public sub_02005FA8
 .public sub_02005F0C
@@ -180,9 +180,9 @@
 .public sub_021C4F14
 .public sub_021C5C4C
 .public sub_02022DA8
-.public sub_020487D4
-.public sub_020487D4
-.public sub_02024274
+.public GFL_MsgDataFree
+.public GFL_MsgDataFree
+.public GFL_WordSetSystemFree
 .public sub_0203A24C
 .public sub_021C5C54
 .public sub_0217A2E4
@@ -219,7 +219,7 @@
 .public sub_021C4F30
 .public sub_021C4F30
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A684
 .public sub_021C4F30
 .public sub_021C5C88
@@ -322,11 +322,11 @@
 .public sub_021C5C74
 .public sub_021C5C88
 .public sub_021C4F30
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021C5C88
 .public sub_0217A31C
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_021C4F30
 .public sub_021C5C88
 .public sub_02179120
@@ -348,7 +348,7 @@
 .public sub_02040664
 .public sub_021C4F30
 .public sub_02006280
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A42C
 .public sub_021C5C88
 .public sub_0217A42C
@@ -491,8 +491,8 @@
 .public sub_0202451C
 .public GFL_WordSetFormatStrbuf
 .public sub_021C58A4
-.public sub_02048564
-.public sub_02048564
+.public GFL_StrBufFree
+.public GFL_StrBufFree
 .public sub_0203A1FC
 .public MI_CpuFill8
 .public sub_021C29C4
@@ -500,8 +500,8 @@
 .public sub_020241E4
 .public sub_021C5C10
 .public sub_021C5C4C
-.public sub_02024274
-.public sub_020487D4
+.public GFL_WordSetSystemFree
+.public GFL_MsgDataFree
 .public sub_0203A24C
 .public sub_021C5C54
 .public sub_021C35E4
@@ -518,7 +518,7 @@
 .public sub_021C5C74
 .public sub_0217A0FC
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A270
 .public sub_0217A260
 .public sub_021C5C88
@@ -540,7 +540,7 @@
 .public sub_021C5C8C
 .public sub_0217A0FC
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A270
 .public sub_0217A260
 .public sub_021C5C88
@@ -562,7 +562,7 @@
 .public sub_021C5C8C
 .public sub_0217A0FC
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A270
 .public sub_0217A260
 .public sub_0217A254
@@ -570,7 +570,7 @@
 .public sub_021C5C74
 .public sub_0217A0FC
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A270
 .public sub_0217A260
 .public sub_0217A254
@@ -578,7 +578,7 @@
 .public sub_021C5C74
 .public sub_0217A0FC
 .public sub_0203DEFC
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0217A270
 .public sub_0217A260
 .public sub_0217A254

@@ -157,7 +157,7 @@ _0219CFC2:
 	bl sub_021998FC
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	add r0, r4, #0
 	sub r0, #8
 	ldr r0, [r5, r0]
@@ -495,7 +495,7 @@ _0219D26C:
 	mov r0, #1
 	ldr r1, [r1, #0x50]
 	bl sub_0219D1BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r4, _0219D338 ; =0x0219E984
 	add r3, sp, #0x24
 	ldmia r4!, {r0, r1}
@@ -562,7 +562,7 @@ _0219D302:
 	mov r0, #3
 	ldr r1, [r1, #0x50]
 	bl sub_0219D1BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	b _0219D320
 _0219D316:
 	cmp r0, #0xa8
@@ -756,7 +756,7 @@ _0219D492:
 	mov r0, #2
 	ldr r1, [r1, #0x50]
 	bl sub_0219D1BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, _0219D600 ; =0x0000498C
 	add r1, r4, #0
 	add r0, r5, r0
@@ -965,7 +965,7 @@ ovy305_219d62c: ; 0x0219D62C
 	mov r0, #4
 	ldr r1, [r1, #0x50]
 	bl sub_0219D1BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	add r0, r4, #0
 	mov r1, #2
 	bl sub_021999B8
@@ -1401,7 +1401,7 @@ ovy305_219d914: ; 0x0219D914
 	mov r0, #0
 	mov r1, #0
 	bl sub_0219D1BC
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _0219D93A:
 	ldrb r0, [r4, #8]
 	bl sub_0219D730
@@ -1774,7 +1774,7 @@ ovy305_219dbd0: ; 0x0219DBD0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r4, #0
 	add r0, #0x20
 	bl ovy305_219d8f4
@@ -3002,7 +3002,7 @@ ovy305_219e4ec: ; 0x0219E4EC
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy305_219e720

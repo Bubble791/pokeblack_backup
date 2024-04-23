@@ -424,9 +424,9 @@ _021DDEDE:
 	bl sub_020095A0
 _021DDF40:
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021DDF4C:
 	add r0, r4, #0
 	add r0, #0x84
@@ -648,7 +648,7 @@ ovy307_21de104: ; 0x021DE104
 	add r1, r4, #0
 	bl sub_021DE1B0
 	ldr r0, [r4, #0x28]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	ldr r0, [r4, #0xc]
 	bl sub_02021C44
 	ldr r0, [r4, #0xc]
@@ -1200,12 +1200,12 @@ _021DE52A:
 	ldr r0, [r4, #0x68]
 	cmp r0, #0
 	beq _021DE534
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021DE534:
 	ldr r0, [r4, #0x54]
-	bl sub_0203A83C
+	bl GFL_TCBExMgrFree
 	ldr r0, [r4, #0x64]
-	bl sub_020487D4
+	bl GFL_MsgDataFree
 	ldr r2, [r4, #0x60]
 	mov r0, #1
 	lsl r1, r2, #0x10
@@ -1272,7 +1272,7 @@ _021DE5BC:
 	ldr r0, [r4, #0x68]
 	cmp r0, #0
 	beq _021DE5C6
-	bl sub_02048564
+	bl GFL_StrBufFree
 _021DE5C6:
 	ldr r0, [r4, #0x64]
 	add r1, r6, #0
@@ -1294,9 +1294,9 @@ _021DE5C6:
 	str r1, [r4, #0x68]
 	bl GFL_WordSetFormatStrbuf
 	add r0, r7, #0
-	bl sub_02024274
+	bl GFL_WordSetSystemFree
 	add r0, r6, #0
-	bl sub_02048564
+	bl GFL_StrBufFree
 	bl sub_02017BCC
 	ldr r1, [r4, #8]
 	mov r2, #0
@@ -1620,7 +1620,7 @@ ovy307_21de87c: ; 0x021DE87C
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	add r0, #8
 	bl ovy307_21deaa4
@@ -2069,7 +2069,7 @@ ovy307_21debb8: ; 0x021DEBB8
 	add r0, r4, #0
 	bl sub_021DEEF0
 	ldr r0, [r4, #0x2c]
-	bl sub_0203A6A8
+	bl GFL_TCBRemove
 	add r0, r4, #0
 	bl sub_0203A24C
 	pop {r4, pc}
@@ -2152,7 +2152,7 @@ _021DEC68:
 	cmp r0, #0xa
 	bne _021DED4C
 	ldr r0, _021DEE18 ; =0x000007A2
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #1
 _021DEC74:
 	str r0, [r4, #0x28]
@@ -2162,7 +2162,7 @@ _021DEC78:
 	cmp r0, #0
 	bne _021DED4C
 	ldr r0, _021DEE1C ; =0x000007A7
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #2
 	b _021DEC74
 _021DEC8A:
@@ -2187,7 +2187,7 @@ _021DECA4:
 	mov r0, #0x5d
 	lsl r0, r0, #4
 _021DECAC:
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021DECB0:
 	ldr r0, [r4, #0x18]
 	cmp r0, #0xa
@@ -2206,7 +2206,7 @@ _021DECC4:
 	bne _021DECCE
 _021DECC8:
 	ldr r0, _021DEE24 ; =0x000007AF
-	bl sub_02006254
+	bl GFL_SndSEPlay
 _021DECCE:
 	ldr r0, [r4, #0x1c]
 	cmp r0, #0
@@ -2281,7 +2281,7 @@ _021DED4C:
 	add r0, r4, #0
 	bl sub_021DF508
 	ldr r0, _021DEE30 ; =0x0000078E
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	mov r0, #2
 	b _021DEDF4
 _021DED68:

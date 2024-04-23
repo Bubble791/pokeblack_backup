@@ -17,7 +17,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_02042BA8
 .public sub_021EA884
-.public sub_0203A6A8
+.public GFL_TCBRemove
 .public sub_0203A24C
 .public sub_021EB0CC
 .public sub_0203A24C
@@ -39,7 +39,7 @@
 .public sub_020061B8
 .public sub_020061DC
 .public sub_020062D8
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C140
@@ -120,7 +120,7 @@
 .public sub_0203DEFC
 .public sub_0203D564
 .public sub_0204C488
-.public sub_02006254
+.public GFL_SndSEPlay
 .public sub_0204C560
 .public sub_0204C488
 .public sub_0219846C

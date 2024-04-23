@@ -497,7 +497,7 @@ _021EF06C:
 	bl sub_021B84E8
 	mov r0, #0x6d
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r0, [r5]
 	add r0, r0, #1
 	str r0, [r5]
@@ -519,7 +519,7 @@ _021EF09A:
 	bl sub_02006280
 	mov r0, #0x6f
 	lsl r0, r0, #4
-	bl sub_02006254
+	bl GFL_SndSEPlay
 	ldr r2, [r4]
 	lsl r0, r2, #2
 	ldr r0, [r6, r0]
