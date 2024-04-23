@@ -2072,7 +2072,7 @@
 .public sub_0204C438
 .public sub_0204C468
 .public sub_0204C378
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BE64
 .public GFL_HeapAllocate
 .public sub_02039E2C
@@ -2550,13 +2550,13 @@
 .public sub_0204BA40
 .public GFL_HeapFree
 .public sub_0204AA30
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public sub_0204AA30
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AB1C
 .public sub_020602D8
@@ -2594,7 +2594,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204BCD0
 .public sub_0204B98C

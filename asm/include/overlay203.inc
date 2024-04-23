@@ -28,7 +28,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C210
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BE64
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
@@ -38,7 +38,7 @@
 .public sub_0204B98C
 .public sub_021A7E5C
 .public sub_021A7E5C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public sub_021A7F30
@@ -47,7 +47,7 @@
 .public sub_0204BE64
 .public Oam_LoadNCLRFile
 .public sub_0204BCD0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BE64
 .public sub_021A8170
 .public sub_0204C4B8

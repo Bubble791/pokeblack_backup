@@ -7332,7 +7332,7 @@ ovy186_21aaf00: ; 0x021AAF00
 	add r0, r4, #0
 	mov r1, #0x35
 	mov r2, #0x37
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xd8
 	str r0, [r1]
@@ -7373,7 +7373,7 @@ ovy186_21aaf00: ; 0x021AAF00
 	ldrh r3, [r5]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r5, #0xe4
 	str r0, [r5]
 	add r0, r4, #0
@@ -8397,7 +8397,7 @@ ovy186_21ab7e0: ; 0x021AB7E0
 	mov r2, #0x36
 	mov r3, #0x27
 	mov r5, #0x36
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x36
 	add r1, #0xce
 	str r0, [r4, r1]
@@ -8435,7 +8435,7 @@ ovy186_21ab7e0: ; 0x021AB7E0
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0x27
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r5, #0xda
 	str r0, [r4, r5]
 	add r0, r6, #0

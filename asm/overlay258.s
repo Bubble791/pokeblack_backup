@@ -2778,7 +2778,7 @@ _0219AEEE:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xb8
 	str r0, [r1]
@@ -2786,7 +2786,7 @@ _0219AEEE:
 	mov r1, #7
 	mov r2, #8
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xbc
 	str r0, [r1]
@@ -2799,7 +2799,7 @@ _0219AEEE:
 	add r0, r6, #0
 	add r1, r4, #0
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xc0
 	str r0, [r1]
@@ -2807,7 +2807,7 @@ _0219AEEE:
 	mov r1, #0x18
 	mov r2, #0x19
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xc4
 	str r0, [r1]
@@ -2815,7 +2815,7 @@ _0219AEEE:
 	mov r1, #0x1b
 	mov r2, #0x1c
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xc8
 	str r0, [r1]

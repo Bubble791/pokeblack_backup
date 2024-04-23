@@ -4324,7 +4324,7 @@ ovy288_21f64f4: ; 0x021F64F4
 	mov r1, #0x3b
 	mov r2, #0x3e
 	mov r7, #0x3e
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r7, #0xf2
 	str r0, [r5, r7]
 	add r7, r4, #0
@@ -4391,7 +4391,7 @@ ovy288_21f657c: ; 0x021F657C
 	ldrh r3, [r3, #4]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x4d
 	lsl r1, r1, #2
 	str r0, [r5, r1]
@@ -4512,7 +4512,7 @@ ovy288_21f6678: ; 0x021F6678
 	add r0, r6, #0
 	add r1, #0xc9
 	add r2, #0xca
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0xe0
 	add r1, #0x58
 	str r0, [r5, r1]
@@ -4573,7 +4573,7 @@ ovy288_21f66f8: ; 0x021F66F8
 	ldrh r3, [r3, #4]
 	mov r1, #0x1c
 	mov r2, #0x28
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x64
 	add r1, #0xd8
 	str r0, [r5, r1]

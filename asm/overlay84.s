@@ -1805,7 +1805,7 @@ _021EBCE4:
 	add r3, r7, #0
 	add r3, #0xe0
 	ldrh r3, [r3]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	lsl r1, r5, #2
 	ldr r2, [r4, #0x14]
 	add r5, r5, #1

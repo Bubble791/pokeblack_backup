@@ -810,7 +810,7 @@ ovy326_219d450: ; 0x0219D450
 	ldrsh r1, [r4, r1]
 	ldrh r3, [r5]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x12
 	ldrsh r1, [r4, r1]
 	lsl r1, r1, #2
@@ -871,7 +871,7 @@ ovy326_219d4d0: ; 0x0219D4D0
 	ldr r1, [sp, #0x10]
 	ldr r2, [sp, #0x14]
 	add r0, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	bl GFL_ArcToolFree
@@ -8289,7 +8289,7 @@ ovy326_21a0f1c: ; 0x021A0F1C
 	ldrsh r1, [r4, r1]
 	ldrh r3, [r5]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x12
 	ldrsh r1, [r4, r1]
 	lsl r1, r1, #2
@@ -8350,7 +8350,7 @@ ovy326_21a0f9c: ; 0x021A0F9C
 	ldr r1, [sp, #0x10]
 	ldr r2, [sp, #0x14]
 	add r0, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

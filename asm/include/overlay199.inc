@@ -90,7 +90,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public ButtonSystem_Create
 .public sub_021B2F84
@@ -453,10 +453,10 @@
 .public sub_0204AFB0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204C108
 .public sub_0204C040
@@ -474,7 +474,7 @@
 .public sub_0204BC48
 .public GFL_ArcToolFree
 .public sub_0204AA30
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_02020F40
@@ -575,7 +575,7 @@
 .public Oam_LoadNCLRFile
 .public sub_02026670
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520

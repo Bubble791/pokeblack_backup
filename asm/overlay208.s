@@ -1353,7 +1353,7 @@ ovy208_219a364: ; 0x0219A364
 	ldrh r3, [r5]
 	add r0, r4, #0
 	mov r1, #0x14
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, _0219A608 ; =0x00001858
 	mov r2, #1
 	add r1, #0x18
@@ -1381,7 +1381,7 @@ ovy208_219a364: ; 0x0219A364
 	ldrh r3, [r5]
 	add r0, r4, #0
 	mov r1, #0x13
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, _0219A608 ; =0x00001858
 	mov r2, #0
 	add r1, #0x20
@@ -1409,7 +1409,7 @@ ovy208_219a364: ; 0x0219A364
 	ldrh r3, [r5]
 	add r0, r4, #0
 	mov r1, #0x11
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, _0219A608 ; =0x00001858
 	ldr r3, _0219A608 ; =0x00001858
 	add r1, #0x1c

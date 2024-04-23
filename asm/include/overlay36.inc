@@ -2190,7 +2190,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204C108
 .public sub_0204C040
@@ -3961,7 +3961,7 @@
 .public GFL_ArcToolFree
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -4905,7 +4905,7 @@
 .public sub_0204AF50
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D810
@@ -4914,7 +4914,7 @@
 .public Oam_LoadNCGRFile
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_02044F90
 .public sub_0204BF1C
@@ -4982,7 +4982,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204C0A4
 .public sub_0204C53C
 .public sub_0204C520
@@ -7554,14 +7554,14 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_02026670
 .public Oam_LoadNCLRFile
 .public sub_02026670
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02026670
 .public sub_0204B37C
 .public sub_02026670
@@ -9157,7 +9157,7 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
@@ -9275,7 +9275,7 @@
 .public sub_0204C004
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02046CFC
 .public sub_02046CFC
 .public sub_0204BE64
@@ -9414,7 +9414,7 @@
 .public sub_0202B098
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204C040
 .public sub_0204C124
 .public sub_0204C468
@@ -10749,7 +10749,7 @@
 .public sub_0204B0D4
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204B0D4
 .public sub_0204ADA8
 .public sub_0204AF50
@@ -11600,7 +11600,7 @@
 .public sub_0204BC48
 .public sub_0202111C
 .public sub_02021190
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0201FDF8
 .public sub_0201FF08
 .public sub_0201D620
@@ -11651,7 +11651,7 @@
 .public Oam_LoadNCLRFile
 .public sub_0202D898
 .public sub_0202D89C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0202D894
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree

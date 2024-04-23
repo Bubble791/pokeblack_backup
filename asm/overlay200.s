@@ -440,7 +440,7 @@ ovy200_21b3288: ; 0x021B3288
 	add r0, r6, #0
 	mov r1, #0x11
 	mov r2, #0x12
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x54]
 	ldrh r0, [r5]
 	mov r1, #0x13
@@ -454,7 +454,7 @@ ovy200_21b3288: ; 0x021B3288
 	add r0, r6, #0
 	mov r1, #0x1d
 	mov r2, #0x1e
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x58]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

@@ -3529,7 +3529,7 @@ ovy265_219b43c: ; 0x0219B43C
 	mov r1, #0x1a
 	mov r2, #0x20
 	mov r3, #0x8d
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #0
 	add r1, #0x34
 	str r0, [r5, r1]
@@ -3702,7 +3702,7 @@ ovy265_219b544: ; 0x0219B544
 	add r0, r4, #0
 	mov r1, #0x1b
 	mov r3, #0x8d
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, _0219B6B4 ; =0x00009118
 	sub r1, r1, #4
 	str r0, [r5, r1]

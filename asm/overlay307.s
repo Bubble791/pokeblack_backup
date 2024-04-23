@@ -742,7 +742,7 @@ ovy307_21de1b4: ; 0x021DE1B4
 	add r0, r6, #0
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x34]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

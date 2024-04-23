@@ -2779,7 +2779,7 @@ _0219EC38:
 	ldrh r3, [r5]
 	ldr r0, [sp, #0x10]
 	add r1, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xcc
 	str r0, [r1]
@@ -3661,7 +3661,7 @@ _0219F310:
 	ldrh r3, [r4]
 	ldr r1, [sp, #0xc]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0xa0
 	add r1, #0xe0
 	add r7, #0x16
@@ -3675,7 +3675,7 @@ _0219F310:
 	ldrh r3, [r4]
 	ldr r1, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r5, #0xe4
 	str r0, [r4, r5]
 	add sp, #0x14

@@ -981,7 +981,7 @@ ovy198_21b3618: ; 0x021B3618
 	add r0, r4, #0
 	mov r1, #7
 	mov r2, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r7, #4
 	str r0, [r5, r1]
 	add r0, r4, #0

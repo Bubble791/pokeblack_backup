@@ -739,7 +739,7 @@ ovy82_21eae30: ; 0x021EAE30
 	mov r1, #0xc
 	mov r2, #0xd
 	mov r3, #0x15
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x10]
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}

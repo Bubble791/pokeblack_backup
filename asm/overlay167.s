@@ -125451,7 +125451,7 @@ ovy167_21d6044: ; 0x021D6044
 	ldr r1, [sp, #0x10]
 	ldr r2, [sp, #0x30]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0x74
 	strh r0, [r1]

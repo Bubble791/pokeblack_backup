@@ -163,13 +163,13 @@
 .public sub_0204B0D4
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02024D00
 .public sub_0204B0B8
 .public sub_0204C108

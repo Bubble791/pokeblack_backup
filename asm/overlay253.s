@@ -620,7 +620,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #8
 	mov r2, #9
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x28]
 	str r6, [sp]
 	add r0, r7, #0
@@ -640,7 +640,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0xc
 	mov r2, #0xd
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x34]
 	str r6, [sp]
 	add r0, r7, #0
@@ -660,7 +660,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0x10
 	mov r2, #0x11
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x40]
 	ldr r0, [sp, #0xc]
 	str r6, [sp]
@@ -680,7 +680,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	mov r1, #0x12
 	mov r2, #0x13
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x4c]
 	ldr r0, [sp, #0xc]
 	bl GFL_ArcToolFree

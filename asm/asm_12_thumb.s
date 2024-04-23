@@ -84446,7 +84446,7 @@ _0202B406:
 	ldr r1, [r1, r3]
 	ldr r2, [r2, r3]
 	ldrh r3, [r6, #4]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, r7]
 	add r0, r5, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -104647,7 +104647,7 @@ sub_02033EF4: ; 0x02033EF4
 	add r6, r0, #0
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, r0, #0
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -104879,7 +104879,7 @@ sub_020340C8: ; 0x020340C8
 	add r1, r7, #0
 	add r2, r4, #0
 	add r3, r5, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, r0, #0
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -105593,7 +105593,7 @@ sub_020345C4: ; 0x020345C4
 	ldr r2, [sp, #0x10]
 	add r0, r6, #0
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x10]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

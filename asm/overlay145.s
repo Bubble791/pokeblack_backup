@@ -870,7 +870,7 @@ _0219D598:
 	add r3, r4, #0
 	str r0, [sp, #0x10]
 	str r0, [sp, #0x5c]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r6, #0x3e
 	str r0, [r5, r6]
 	mov r6, #0
@@ -895,7 +895,7 @@ _0219D598:
 	mov r1, #0xc
 	mov r2, #0xd
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r7, #0xc]
 	mov r3, #0xc0
 	str r3, [sp, #0x14]
@@ -939,7 +939,7 @@ _0219D598:
 	mov r2, #0x1a
 	add r3, r4, #0
 	str r0, [sp, #0xc]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r7, #0x18]
 	mov r3, #5
 	str r6, [sp]
@@ -970,7 +970,7 @@ _0219D598:
 	mov r1, #0xae
 	mov r2, #0xad
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r7, #0x28]
 	add r7, sp, #0x54
 _0219D6D8:

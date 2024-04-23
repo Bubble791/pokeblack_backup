@@ -616,7 +616,7 @@ ovy141_219d330: ; 0x0219D330
 	mov r1, #8
 	mov r2, #9
 	mov r3, #0x80
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x80
 	add r1, #0xbc
 	str r0, [r5, r1]
@@ -653,7 +653,7 @@ ovy141_219d330: ; 0x0219D330
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0x80
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0xc8
 	str r0, [r5, r4]
 	add r0, r6, #0

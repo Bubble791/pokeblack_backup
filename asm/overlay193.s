@@ -239,7 +239,7 @@ ovy193_21b310c: ; 0x021B310C
 	add r0, r6, #0
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -2350,7 +2350,7 @@ ovy193_21b4370: ; 0x021B4370
 	add r0, r6, #0
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -4232,7 +4232,7 @@ ovy193_21b53c8: ; 0x021B53C8
 	add r0, r6, #0
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0

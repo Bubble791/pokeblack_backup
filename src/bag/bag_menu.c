@@ -916,7 +916,7 @@ void ovy142_219d6a0(BagView *bagView, int a2)
 
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
 extern int Oam_LoadNCGRFile(int, int, int, int, u16);
-extern int sub_0204BDE0(int, int, int, u16);
+extern int Oam_LoadNCERFile(int, int, int, u16);
 
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
 {
@@ -943,7 +943,7 @@ void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
     }
     bagView->bagPocketNCLR = Oam_LoadNCLRFile(fileHandle, nclrFileId, 0, 0xC0, 0, 5, bagView->heapId);
     bagView->bagPocketNCGR = Oam_LoadNCGRFile(fileHandle, ncgrFileId, 0, 0, bagView->heapId);
-    bagView->bagPocketNCER = sub_0204BDE0(fileHandle, ncerFileId, nanrFileId, bagView->heapId);
+    bagView->bagPocketNCER = Oam_LoadNCERFile(fileHandle, ncerFileId, nanrFileId, bagView->heapId);
 }
 
 extern int unk_21A16A4[4] = {0};
@@ -1051,16 +1051,16 @@ void ovy142_219d7a8(BagView *a1)
     sub_02044F90(1);
     a1->unk564 = Oam_LoadNCLRFile(v11, 19, 0, 352, 0, 3, a1->heapId);
     a1->unk56C = Oam_LoadNCGRFile(v11, 20, 0, 0, a1->heapId);
-    a1->unk57C = sub_0204BDE0(v11, 23, 26, a1->heapId);
+    a1->unk57C = Oam_LoadNCERFile(v11, 23, 26, a1->heapId);
     a1->unk570 = Oam_LoadNCGRFile(v11, 175, 0, 0, a1->heapId);
-    a1->unk580 = sub_0204BDE0(v11, 174, 173, a1->heapId);
+    a1->unk580 = Oam_LoadNCERFile(v11, 174, 173, a1->heapId);
     GFL_ArcToolFree((void*)v11);
     ovy142_219ed8c(a1);
     v14 = sub_0202D7E0();
     v33 = (int)sub_0204AA30(v14, a1->heapId);
     
     a1->unk5F0 = Oam_LoadNCLRFile(v33, sub_0202D7E4(), 1, 128, 0, 3, a1->heapId);
-    a1->unk5F4 = sub_0204BDE0(v33, sub_0202D7F8(2), sub_0202D7FC(2), a1->heapId);
+    a1->unk5F4 = Oam_LoadNCERFile(v33, sub_0202D7F8(2), sub_0202D7FC(2), a1->heapId);
     for (u32 i = 0; i < 3; i++)
     {
         v19 = sub_0202D80C((u8)i);
@@ -1119,7 +1119,7 @@ void ovy142_219d7a8(BagView *a1)
     v31 = (int)sub_0204AA30(87, a1->heapId);
     a1->unk590 = Oam_LoadNCLRFile(v31, 39, 0, 128, 0, 2, a1->heapId);
     a1->unk594 = Oam_LoadNCGRFile(v31, 38, 0, 0, a1->heapId);
-    a1->unk59C = sub_0204BDE0(v31, 37, 36, a1->heapId);
+    a1->unk59C = Oam_LoadNCERFile(v31, 37, 36, a1->heapId);
     GFL_ArcToolFree((void*)v31);
     
     newtemp[0].flag = 10;
@@ -1377,7 +1377,7 @@ void ovy142_219e284(BagView *a1)
     sub_0204826C(a1->unk764);
     sub_0204826C(a1->unk74C);
     v2 = sub_0204AA30(25, a1->heapId);
-    a1->unk558 = sub_0204BDE0((int)v2, 1, 0, a1->heapId);
+    a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
     GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
     ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0u);
@@ -1460,25 +1460,26 @@ void ovy142_219e5a8(BagView *a1)
 
 void ovy142_219e5c4(BagView *a1)
 {
-    int v3; // r4
+    int fileHandle; // r4
 
-    v3 = (int)sub_0204AA30(87, a1->heapId);
-    a1->unk584 = Oam_LoadNCLRFile(v3, 32, 0, 448, 0, 1, a1->heapId);
-    a1->unk588 = Oam_LoadNCGRFile(v3, 31, 0, 0, a1->heapId);
-    a1->unk58C = sub_0204BDE0(v3, 30, 29, a1->heapId);
+    fileHandle = (int)sub_0204AA30(87, a1->heapId);
+    a1->barLeftIconNCLR = Oam_LoadNCLRFile(fileHandle, 32, 0, 448, 0, 1, a1->heapId);
+    a1->barLeftIconNCGR = Oam_LoadNCGRFile(fileHandle, 31, 0, 0, a1->heapId);
+    a1->barLeftIconNCER = Oam_LoadNCERFile(fileHandle, 30, 29, a1->heapId);
 
-    a1->unk55C = Oam_LoadNCLRFile(v3, 28, 0, 96, 0, 1, a1->heapId);
-    a1->unk568 = Oam_LoadNCGRFile(v3, 27, 0, 0, a1->heapId);
-    a1->unk574 = sub_0204BDE0(v3, 26, 25, a1->heapId);
+    a1->cursorNCLR = Oam_LoadNCLRFile(fileHandle, 28, 0, 96, 0, 1, a1->heapId);
+    a1->cursorNCGR = Oam_LoadNCGRFile(fileHandle, 27, 0, 0, a1->heapId);
+    a1->cursorNCER = Oam_LoadNCERFile(fileHandle, 26, 25, a1->heapId);
+    
     for (int i = 0; i < 8; i++)
     {
         a1->unk624[i] = sub_02046E28(12, 2, 32, a1->heapId);
-        a1->unk604[i] = Oam_LoadNCGRFile(v3, 20, 0, 0, a1->heapId);
+        a1->itemBarNCGR[i] = Oam_LoadNCGRFile(fileHandle, 20, 0, 0, a1->heapId);
     }
     MyStatus_GetTrainerGender(a1->unk8);
-    a1->unk598 = Oam_LoadNCLRFile(v3, 21, 0, 0, 0, 3, a1->heapId);
-    a1->unk578 = sub_0204BDE0(v3, 19, 18, a1->heapId);
-    GFL_ArcToolFree((void*)v3);
+    a1->unk598 = Oam_LoadNCLRFile(fileHandle, 21, 0, 0, 0, 3, a1->heapId);
+    a1->unk578 = Oam_LoadNCERFile(fileHandle, 19, 18, a1->heapId);
+    GFL_ArcToolFree((void*)fileHandle);
 }
 
 
@@ -1494,9 +1495,9 @@ void ovy142_219e6f8(BagView *a1)
     
     a1->unk6B8 = sub_0204C040(
         a1->spriteGroup,
-        a1->unk568,
-        a1->unk55C,
-        a1->unk574,
+        a1->cursorNCGR,
+        a1->cursorNCLR,
+        a1->cursorNCER,
         &temp[2],
         0,
         a1->heapId);
@@ -1513,9 +1514,9 @@ void ovy142_219e6f8(BagView *a1)
     
     a1->unk6B4 = sub_0204C040(
         a1->spriteGroup,
-        a1->unk568,
-        a1->unk55C,
-        a1->unk574,
+        a1->cursorNCGR,
+        a1->cursorNCLR,
+        a1->cursorNCER,
         &temp[1],
         0,
         a1->heapId);
@@ -1531,7 +1532,7 @@ void ovy142_219e6f8(BagView *a1)
         temp[0].anim = 0;
         a1->unk644[i] = sub_0204C040(
             a1->spriteGroup,
-            a1->unk604[i],
+            a1->itemBarNCGR[i],
             a1->unk598,
             a1->unk578,
             &temp[0],
@@ -1541,9 +1542,9 @@ void ovy142_219e6f8(BagView *a1)
         temp[0].anim = 1;
         a1->unk684[i] = sub_0204C040(
             a1->spriteGroup,
-            a1->unk588,
-            a1->unk584,
-            a1->unk58C,
+            a1->barLeftIconNCGR,
+            a1->barLeftIconNCLR,
+            a1->barLeftIconNCER,
             &temp[0],
             0,
             a1->heapId);
@@ -1894,7 +1895,7 @@ void ovy142_219ebdc(BagView *a1)
 
     for (i = 0; i < 8; ++i)
     {
-        v3 = sub_0204BB80(a1->unk604[i], 0);
+        v3 = sub_0204BB80(a1->itemBarNCGR[i], 0);
         v4 = sub_02046EF4(a1->unk624[i]);
         v5 = sub_02046F00(a1->unk624[i]);
         DC_FlushRange((void*)v4, v5);

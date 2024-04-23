@@ -99,7 +99,7 @@
 .public sub_0204C124
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0208D3BC
@@ -268,7 +268,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0219F8A8

@@ -1218,7 +1218,7 @@ ovy162_219d844: ; 0x0219D844
 	mov r1, #6
 	mov r2, #7
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x34]
 	mov r1, #0x80
 	add r0, sp, #0xc
@@ -3996,7 +3996,7 @@ _0219EF90:
 	mov r2, #3
 _0219EFB4:
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x64]
 	add r0, r4, #0
 	bl GFL_ArcToolFree
@@ -4023,7 +4023,7 @@ _0219EFB4:
 	mov r1, #0xc
 	mov r2, #0xd
 	mov r3, #0xb
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x68]
 	str r7, [sp]
 	add r0, r6, #0
@@ -4043,7 +4043,7 @@ _0219EFB4:
 	mov r1, #0x14
 	mov r2, #0x15
 	mov r3, #0xb
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x6c]
 	str r7, [sp]
 	add r0, r6, #0
@@ -4063,7 +4063,7 @@ _0219EFB4:
 	mov r1, #0x10
 	mov r2, #0x11
 	mov r3, #0xb
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x70]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

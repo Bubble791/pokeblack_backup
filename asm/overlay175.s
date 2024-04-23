@@ -2476,7 +2476,7 @@ ovy175_219aaec: ; 0x0219AAEC
 	mov r1, #0x27
 	mov r2, #0x26
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x38]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

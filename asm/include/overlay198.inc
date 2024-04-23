@@ -95,7 +95,7 @@
 .public sub_0204AFB0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_02024D20
 .public sub_0204B0B8

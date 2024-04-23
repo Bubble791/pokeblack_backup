@@ -179,12 +179,12 @@
 .public sub_0204BC48
 .public sub_0202111C
 .public sub_02021190
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0201FF08
 .public sub_0204C040

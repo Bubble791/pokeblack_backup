@@ -1079,7 +1079,7 @@ ovy140_219d708: ; 0x0219D708
 	mov r1, #4
 	mov r2, #3
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	str r6, [sp]
 	add r0, r4, #0
@@ -1092,7 +1092,7 @@ ovy140_219d708: ; 0x0219D708
 	mov r1, #0xb
 	mov r2, #0xa
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x14]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

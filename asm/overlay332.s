@@ -976,7 +976,7 @@ ovy332_21bf628: ; 0x021BF628
 	mov r1, #0xd
 	mov r2, #0xe
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -19931,7 +19931,7 @@ _021C8696:
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x28]
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	ldr r0, [sp, #0x20]
 	bl sub_0201D620
@@ -19986,7 +19986,7 @@ _021C870C:
 	mov r1, #1
 	add r2, r6, #0
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	ldr r0, [sp, #0x3c]
 	mov r1, #1

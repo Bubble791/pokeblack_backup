@@ -62,8 +62,8 @@
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
+.public Oam_LoadNCERFile
 .public sub_0204B37C
 .public MIi_CpuCopy16
 .public GFL_HeapFree

@@ -283,7 +283,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204BC48
@@ -296,7 +296,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MyStatus_GetTrainerGender
 .public sub_02034060

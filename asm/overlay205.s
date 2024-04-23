@@ -2531,7 +2531,7 @@ ovy205_21b8650: ; 0x021B8650
 	mov r1, #0xc
 	mov r2, #0xf
 	mov r3, #0x32
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	sub r1, #0xc
 	str r0, [r5, r1]
@@ -2557,7 +2557,7 @@ ovy205_21b8650: ; 0x021B8650
 	mov r1, #0xe
 	mov r2, #0x11
 	mov r3, #0x32
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	sub r1, r6, #4
 	str r0, [r5, r1]
 	add r0, r4, #0
@@ -2582,7 +2582,7 @@ ovy205_21b8650: ; 0x021B8650
 	mov r1, #0xd
 	mov r2, #0x10
 	mov r3, #0x32
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	sub r6, #8
 	str r0, [r5, r6]
 	mov r0, #4

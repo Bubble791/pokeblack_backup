@@ -2945,7 +2945,7 @@ ovy324_219e5c4: ; 0x0219E5C4
 	ldr r3, [sp, #0xc]
 	add r1, r5, #1
 	add r2, r5, #2
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r6, #8]
 	str r4, [sp]
 	mov r0, #4

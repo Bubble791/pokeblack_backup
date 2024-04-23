@@ -825,7 +825,7 @@ ovy314_219d51c: ; 0x0219D51C
 	add r0, r4, #0
 	mov r1, #8
 	mov r2, #9
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x50]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

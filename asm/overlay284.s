@@ -2194,7 +2194,7 @@ ovy284_21e41d0: ; 0x021E41D0
 	add r0, r6, #0
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x44]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

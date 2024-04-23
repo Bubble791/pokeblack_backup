@@ -2472,7 +2472,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r2, [sp, #0x2c]
 	ldr r3, [sp, #0x6c]
 	add r0, r5, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r6, #0x18]
 	add r0, r5, #0
 	bl GFL_ArcToolFree

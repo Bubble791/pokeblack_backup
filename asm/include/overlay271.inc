@@ -293,7 +293,7 @@
 .public sub_0204AA30
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204AA30
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
@@ -308,7 +308,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
@@ -316,7 +316,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public sub_0204AA30
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_0204BCD0
@@ -517,7 +517,7 @@
 .public sub_0204BC48
 .public sub_0202111C
 .public sub_02021190
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02020F94
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
@@ -529,12 +529,12 @@
 .public sub_0200DF84
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public sub_0200E0B8
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8

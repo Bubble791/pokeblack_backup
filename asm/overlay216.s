@@ -1563,7 +1563,7 @@ _021BC394:
 	add r0, r6, #0
 	ldr r2, [r3, r2]
 	mov r3, #0x72
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r7, #0
 	add r1, #0x94
 	str r0, [r1]
@@ -6986,7 +6986,7 @@ ovy216_21bee14: ; 0x021BEE14
 	mov r1, #0xa
 	mov r2, #0xe
 	mov r3, #0x72
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #8
 	str r0, [r5, r4]
 	add r0, r6, #0

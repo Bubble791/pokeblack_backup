@@ -68,7 +68,7 @@
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public sub_0204B37C
 .public MI_CpuCopy8
@@ -330,13 +330,13 @@
 .public sub_0204AA30
 .public sub_02026670
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02026670
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuCopy8
@@ -726,7 +726,7 @@
 .public sub_02044F90
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
@@ -776,7 +776,7 @@
 .public BmpWin_FlushChar
 .public sub_021BADEC
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
@@ -938,7 +938,7 @@
 .public GFL_HeapAllocate
 .public sub_0204AA30
 .public sub_0204BBA0
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8

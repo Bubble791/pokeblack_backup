@@ -1858,7 +1858,7 @@ ovy165_219a894: ; 0x0219A894
 	add r0, r4, #0
 	mov r1, #0x17
 	mov r2, #0x1a
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #0x18
 	str r0, [r5, r1]
@@ -1866,7 +1866,7 @@ ovy165_219a894: ; 0x0219A894
 	add r0, r4, #0
 	mov r1, #0x16
 	mov r2, #0x19
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #0x1c
 	str r0, [r5, r1]
@@ -1896,7 +1896,7 @@ ovy165_219a894: ; 0x0219A894
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x10]
 	add r0, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #0x34
 	str r0, [r5, r1]
@@ -1985,7 +1985,7 @@ ovy165_219a894: ; 0x0219A894
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x14]
 	add r0, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #0x30
 	str r0, [r5, r1]
@@ -2025,7 +2025,7 @@ ovy165_219a894: ; 0x0219A894
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x18]
 	add r0, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #7
 	lsl r1, r1, #6
 	str r0, [r5, r1]
@@ -2064,7 +2064,7 @@ ovy165_219a894: ; 0x0219A894
 	ldrh r3, [r5]
 	ldr r1, [sp, #0x1c]
 	add r0, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #0x24
 	str r0, [r5, r1]
@@ -2103,7 +2103,7 @@ ovy165_219a894: ; 0x0219A894
 	ldrh r3, [r5]
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r6, #0x2c
 	str r0, [r5, r6]
 	add r0, r7, #0
@@ -14817,7 +14817,7 @@ _021A0FA4:
 	ldrh r3, [r5]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r6, #0x40
 	str r0, [r5, r6]
 	mov r0, #0xa3

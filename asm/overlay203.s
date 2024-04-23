@@ -597,7 +597,7 @@ _021A7CEA:
 	ldr r0, [r5, r0]
 	add r2, r1, #1
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x14
 	mul r1, r4
 	add r1, r5, r1
@@ -852,7 +852,7 @@ _021A7EA0:
 	mov r1, #9
 	mov r2, #8
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #0
 	sub r1, #0x10
 	str r0, [r5, r1]
@@ -992,7 +992,7 @@ _021A7F9A:
 	add r1, #0x11
 	add r2, #0x12
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x14
 	mul r1, r4
 	add r1, r5, r1

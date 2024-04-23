@@ -595,7 +595,7 @@ _0219D330:
 	ldrh r3, [r5]
 	ldr r0, [sp, #0x1c]
 	add r1, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r7, #0x24]
 	add r0, sp, #0x24
 	mov r1, #0
@@ -749,7 +749,7 @@ ovy313_219d434: ; 0x0219D434
 	add r0, r4, #0
 	mov r1, #6
 	mov r2, #7
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0x90
 	str r0, [r1]

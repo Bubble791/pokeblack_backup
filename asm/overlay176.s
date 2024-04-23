@@ -682,7 +682,7 @@ ovy176_219b274: ; 0x0219B274
 	mov r1, #0xa
 	mov r2, #9
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

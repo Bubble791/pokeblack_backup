@@ -5686,7 +5686,7 @@ _021A287A:
 	mov r2, #0x66
 	mov r3, #0x7b
 	mov r7, #0x66
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x66
 	add r1, #0xda
 	str r0, [r5, r1]
@@ -5730,7 +5730,7 @@ _021A287A:
 	mov r7, #0x65
 	mov r2, #0x65
 	mov r3, #0x7b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r7, #0xe3
 	str r0, [r5, r7]
 	add r0, r4, #0
@@ -5756,7 +5756,7 @@ _021A287A:
 	mov r2, #0x67
 	mov r3, #0x7b
 	mov r7, #0x67
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x67
 	add r1, #0xdd
 	str r0, [r5, r1]
@@ -5813,7 +5813,7 @@ _021A287A:
 	ldr r0, [sp, #4]
 	add r1, r6, #0
 	mov r3, #0x7b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x9c
 	str r0, [r5, r4]
 	ldr r0, [sp, #4]

@@ -883,7 +883,7 @@ ovy308_21a000c: ; 0x021A000C
 	ldrh r3, [r6]
 	add r0, r7, #0
 	add r2, r1, #1
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

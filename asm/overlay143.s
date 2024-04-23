@@ -961,7 +961,7 @@ _0219A06A:
 	mov r1, #1
 	mov r2, #2
 	mov r3, #0x61
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0x48]
 	str r6, [sp]
 	mov r0, #1

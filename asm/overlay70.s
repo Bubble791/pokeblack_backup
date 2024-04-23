@@ -1311,7 +1311,7 @@ ovy70_217da28: ; 0x0217DA28
 	mov r1, #5
 	mov r2, #8
 	mov r3, #0x28
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x44]
 	bl sub_0202D814
 	add r1, r0, #0
@@ -1343,7 +1343,7 @@ ovy70_217da28: ; 0x0217DA28
 	ldr r1, [sp, #0xc]
 	add r0, r7, #0
 	mov r3, #0x28
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x50]
 	str r6, [sp]
 	add r0, r4, #0
@@ -1363,7 +1363,7 @@ ovy70_217da28: ; 0x0217DA28
 	mov r1, #5
 	mov r2, #8
 	mov r3, #0x28
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x5c]
 	add r0, r7, #0
 	bl GFL_ArcToolFree

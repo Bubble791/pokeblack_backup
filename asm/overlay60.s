@@ -3240,7 +3240,7 @@ ovy60_21e7294: ; 0x021E7294
 	add r0, r6, #0
 	mov r1, #9
 	mov r2, #0xa
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #0
 	add r1, #8
 	str r0, [r5, r1]
@@ -3248,7 +3248,7 @@ ovy60_21e7294: ; 0x021E7294
 	add r0, r6, #0
 	mov r1, #6
 	mov r2, #7
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x14
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -3299,7 +3299,7 @@ ovy60_21e7318: ; 0x021E7318
 	ldr r0, [r4, r5]
 	mov r1, #1
 	mov r2, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	sub r1, r5, #4
 	str r0, [r4, r1]
 	add sp, #0xc
@@ -3653,7 +3653,7 @@ ovy60_21e7604: ; 0x021E7604
 	ldr r0, [r5, r4]
 	mov r1, #0x41
 	mov r2, #0x42
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	sub r1, r4, #4
 	str r0, [r5, r1]
 	ldr r1, _021E7668 ; =0x021E8B78

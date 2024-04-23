@@ -88,7 +88,7 @@
 .public MI_CpuFill8
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0

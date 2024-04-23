@@ -1489,7 +1489,7 @@ _0219DA7C:
 	ldrh r3, [r5]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x78]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

@@ -1082,7 +1082,7 @@ _021EB1B2:
 	ldrh r3, [r5, r3]
 	ldr r1, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x4d
 	lsl r1, r1, #2
 	sub r1, #0x30
@@ -1128,7 +1128,7 @@ _021EB1B2:
 	ldr r0, [sp, #0x14]
 	mov r1, #6
 	mov r2, #7
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r6, #0xa8
 	str r0, [r5, r6]
 	ldr r0, [sp, #0x14]

@@ -201,7 +201,7 @@ ovy174_219cfcc: ; 0x0219CFCC
 	add r0, r6, #0
 	mov r1, #9
 	mov r2, #0xf
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x48
 	str r0, [r5, r4]
 	add r0, r6, #0

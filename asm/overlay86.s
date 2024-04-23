@@ -1167,7 +1167,7 @@ _021EB12A:
 	ldrb r2, [r7, #2]
 	ldrh r3, [r5]
 	ldr r0, [sp, #0xc]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r6, #0x34]
 _021EB15A:
 	add r0, sp, #0x10
@@ -1385,7 +1385,7 @@ _021EB298:
 	ldrh r3, [r5]
 	ldr r0, [sp, #0x18]
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x20]
 	mov r1, #0xe8
 	add r0, sp, #0x20

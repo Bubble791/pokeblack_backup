@@ -3201,7 +3201,7 @@ ovy268_21bba3c: ; 0x021BBA3C
 	ldr r0, [sp, #0x34]
 	ldr r3, [sp, #0x14]
 	add r1, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0xc]
 	mov r5, #0
 	str r0, [r1, #0x4c]
@@ -8361,7 +8361,7 @@ _021BE2B4:
 	ldr r0, [sp, #0x2c]
 	ldr r3, [sp, #0x14]
 	add r1, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0xc]
 	mov r2, #8
 	strh r0, [r1, #0x16]

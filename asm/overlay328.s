@@ -1268,7 +1268,7 @@ ovy328_219d808: ; 0x0219D808
 	ldrsh r1, [r4, r1]
 	ldrh r3, [r5]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x12
 	ldrsh r1, [r4, r1]
 	lsl r1, r1, #2
@@ -1328,7 +1328,7 @@ ovy328_219d888: ; 0x0219D888
 	ldr r1, [sp, #0x10]
 	ldr r2, [sp, #0x14]
 	add r0, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

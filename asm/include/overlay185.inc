@@ -80,10 +80,10 @@
 .public GFL_ArcToolFree
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_02048210
@@ -551,7 +551,7 @@
 .public sub_0204AA30
 .public sub_0219E544
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_021A09D8
 .public sub_0204C124
@@ -569,7 +569,7 @@
 .public Oam_LoadNCGRFile
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0219E520

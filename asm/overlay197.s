@@ -554,7 +554,7 @@ ovy197_21b58ac: ; 0x021B58AC
 	mov r1, #0x22
 	mov r2, #0x25
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	str r7, [sp]
 	add r0, r6, #0
@@ -4575,7 +4575,7 @@ _021B7868:
 	ldr r3, [sp, #0x8c]
 	add r0, r5, #0
 	mov r1, #1
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x10]
 	str r0, [r1, #0x14]
 	ldr r0, [r4]
@@ -4621,7 +4621,7 @@ _021B78DC:
 	ldr r3, [sp, #0x8c]
 	add r0, r5, #0
 	mov r1, #0x21
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x10]
 	add r2, r6, #0
 	str r0, [r1, #0x14]
@@ -9673,7 +9673,7 @@ _021B9F8E:
 	ldr r3, [sp, #0x14]
 	add r0, r6, #0
 	mov r1, #0x20
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x24]
 	add r2, r4, #0
 	add r1, #0x4c
@@ -10331,7 +10331,7 @@ _021BA554:
 	ldr r0, [sp, #0x48]
 	ldr r3, [sp, #0x7c]
 	add r1, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x44]
 	sub r4, #0x20
 	str r0, [r1, r5]
@@ -13624,7 +13624,7 @@ _021BBE06:
 	mov r1, #0x21
 	mov r2, #0x24
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0xc]
 	add r3, r4, #0
 	str r6, [sp]

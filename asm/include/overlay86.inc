@@ -71,7 +71,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C318
@@ -103,7 +103,7 @@
 .public Oam_LoadNCGRFile
 .public sub_0202D818
 .public sub_0202D81C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204C040
 .public sub_0204C520
 .public sub_0204C53C

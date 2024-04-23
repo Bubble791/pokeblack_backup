@@ -1094,7 +1094,7 @@ ovy144_219d720: ; 0x0219D720
 	mov r1, #0xc
 	mov r2, #0x13
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	add r0, r7, #0
 	bl GFL_ArcToolFree
@@ -5049,7 +5049,7 @@ ovy144_219f5ac: ; 0x0219F5AC
 	mov r1, #0xc
 	mov r2, #0x13
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x1c]
 	add r0, r7, #0
 	bl GFL_ArcToolFree

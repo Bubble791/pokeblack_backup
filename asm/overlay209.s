@@ -1850,7 +1850,7 @@ ovy209_21bafa0: ; 0x021BAFA0
 	ldrh r3, [r5]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x54]
 	add r0, r4, #0
 	bl GFL_ArcToolFree
@@ -6608,7 +6608,7 @@ _021BD44A:
 	add r0, r4, #0
 	mov r1, #0x14
 	mov r2, #0x17
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xb4
 	str r0, [r1]
@@ -14128,7 +14128,7 @@ ovy209_21c0d10: ; 0x021C0D10
 	add r0, r6, #0
 	mov r1, #0x12
 	mov r2, #0x15
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x34]
 	str r4, [sp]
 	str r7, [sp, #4]
@@ -14152,7 +14152,7 @@ ovy209_21c0d10: ; 0x021C0D10
 	add r0, r6, #0
 	mov r1, #0x13
 	mov r2, #0x16
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x38]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -14179,7 +14179,7 @@ ovy209_21c0d10: ; 0x021C0D10
 	add r0, r6, #0
 	mov r1, #0x12
 	mov r2, #0x16
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x3c]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

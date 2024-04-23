@@ -71,7 +71,7 @@
 .public sub_0219DD20
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0219DD20
 .public sub_0204C318

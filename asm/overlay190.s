@@ -2497,7 +2497,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	add r0, r6, #0
 	mov r1, #0xc
 	mov r2, #0x19
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #4
 	str r0, [r5, r1]
 	add r0, r6, #0

@@ -1723,13 +1723,13 @@ ovy79_21eb494: ; 0x021EB494
 	mov r1, #0x11
 	mov r2, #0x12
 	mov r6, #0x12
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x2c]
 	ldrh r3, [r5, #8]
 	ldr r0, [r5, #0x1c]
 	mov r1, #0x1d
 	mov r2, #0x1e
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x30]
 	ldrh r3, [r5, #8]
 	ldr r0, [r5, #0x1c]

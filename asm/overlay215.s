@@ -5437,7 +5437,7 @@ _021AA05A:
 	ldr r1, [sp, #4]
 	add r0, r6, #0
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x20
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -5476,7 +5476,7 @@ ovy215_21aa0bc: ; 0x021AA0BC
 	mov r1, #0x2d
 	mov r2, #0x2e
 	mov r3, #0x66
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #0
 	add r1, #0x38
 	str r0, [r5, r1]
@@ -5514,7 +5514,7 @@ ovy215_21aa0bc: ; 0x021AA0BC
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0x66
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x3c
 	str r0, [r5, r4]
 	add r0, r6, #0

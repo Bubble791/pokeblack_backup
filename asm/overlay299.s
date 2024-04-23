@@ -3299,7 +3299,7 @@ _021A161A:
 	add r0, r4, #0
 	mov r1, #0x3f
 	mov r3, #0x6b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #8]
 	add r1, #0x30
 	str r0, [r5, r1]
@@ -3356,7 +3356,7 @@ _021A1692:
 	add r0, r7, #0
 	add r1, r6, #0
 	mov r3, #0x6b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #8]
 	str r0, [r5, r1]
 	ldr r0, _021A17D4 ; =0x00000BC8
@@ -3403,7 +3403,7 @@ _021A16FE:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r3, #0x6b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x10]
 	str r0, [r5, r1]
 	add r0, r7, #0
@@ -3443,7 +3443,7 @@ _021A16FE:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0x6b
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x30
 	str r0, [r5, r4]
 	add r0, r6, #0
@@ -3962,7 +3962,7 @@ _021A1B72:
 	ldr r0, [sp, #0x28]
 	mov r1, #0x3e
 	mov r2, #0x48
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x48]
 	add r7, #0xa8
 	lsl r1, r1, #2

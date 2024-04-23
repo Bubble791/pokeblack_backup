@@ -198,7 +198,7 @@ _02199A14:
 	ldr r2, [r4, #0x18]
 	add r0, r7, #0
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	ldr r0, [r4]
 	str r0, [r5, #0xc]
@@ -820,7 +820,7 @@ _02199E5E:
 	add r0, r6, #0
 	add r1, r7, #0
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	add r0, r6, #0
 	bl GFL_ArcToolFree

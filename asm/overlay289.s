@@ -1243,7 +1243,7 @@ ovy289_21f4d74: ; 0x021F4D74
 	ldrh r3, [r3, #4]
 	add r1, r6, #4
 	add r2, r6, #5
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xa0
 	str r0, [r1]

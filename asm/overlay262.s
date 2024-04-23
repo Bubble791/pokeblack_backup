@@ -381,7 +381,7 @@ ovy262_21c279c: ; 0x021C279C
 	mov r1, #4
 	mov r2, #0xb
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0x10]
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
@@ -406,7 +406,7 @@ ovy262_21c279c: ; 0x021C279C
 	mov r1, #4
 	mov r2, #0xb
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0x14]
 	add r0, r6, #0
 	mov r1, #0
@@ -3429,7 +3429,7 @@ ovy262_21c4044: ; 0x021C4044
 	ldr r0, [sp, #0x28]
 	ldr r3, [sp, #0x10]
 	add r1, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x8d
 	lsl r1, r1, #2
 	sub r1, #0x54
@@ -3558,7 +3558,7 @@ _021C4108:
 	ldr r0, [sp, #0x38]
 	ldr r3, [sp, #0x10]
 	add r1, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x8d
 	lsl r1, r1, #2
 	sub r1, #0x38
@@ -3900,7 +3900,7 @@ ovy262_21c4420: ; 0x021C4420
 	mov r1, #0x41
 	mov r2, #0x42
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r4, #0
 	sub r1, #0x44
 	str r0, [r5, r1]
@@ -4970,7 +4970,7 @@ ovy262_21c4c8c: ; 0x021C4C8C
 	mov r2, #0x42
 	add r3, r4, #0
 	mov r6, #0x42
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0x84
 	strh r0, [r1]
@@ -5359,7 +5359,7 @@ ovy262_21c4f60: ; 0x021C4F60
 	ldr r0, [sp, #0x3c]
 	ldr r1, [sp, #0x40]
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x20]
 	add r0, r6, #0
 	bl sub_0201FDF8
@@ -5438,7 +5438,7 @@ _021C504C:
 	ldr r1, [sp, #0x48]
 	add r0, r4, #0
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x2c]
 	bl sub_0202D894
 	add r1, r0, #0

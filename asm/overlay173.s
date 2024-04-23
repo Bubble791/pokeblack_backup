@@ -1240,7 +1240,7 @@ ovy173_219d730: ; 0x0219D730
 	mov r1, #0x14
 	mov r2, #0x20
 	lsr r3, r3, #0x10
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x10]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -5210,7 +5210,7 @@ ovy173_219f670: ; 0x0219F670
 	ldr r1, [sp, #8]
 	add r0, r4, #0
 	mov r3, #0x21
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	sub r6, #0x14
 	str r0, [r5, r6]
 	add r0, r5, #0

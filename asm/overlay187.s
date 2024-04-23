@@ -2052,7 +2052,7 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	mov r2, #3
 	add r3, r6, #0
 	str r0, [sp, #0x18]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x20]
 	mov r4, #0
 	str r4, [sp]
@@ -2077,7 +2077,7 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	mov r2, #0x1a
 	add r3, r6, #0
 	str r0, [sp, #0xc]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r7, #0xc]
 	str r4, [sp]
 	mov r0, #4

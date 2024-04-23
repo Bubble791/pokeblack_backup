@@ -964,7 +964,7 @@ ovy321_219d5a8: ; 0x0219D5A8
 	ldrsh r1, [r4, r1]
 	ldrh r3, [r5]
 	add r0, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x12
 	ldrsh r1, [r4, r1]
 	lsl r1, r1, #2

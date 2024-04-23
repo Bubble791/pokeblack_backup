@@ -579,7 +579,7 @@
 .public MyStatus_GetTrainerGender
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_020444A4
 .public sub_02048080
 .public sub_020232D0
@@ -612,9 +612,9 @@
 .public sub_02044F90
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0202D7E0
 .public sub_0204AA30
@@ -622,7 +622,7 @@
 .public Oam_LoadNCLRFile
 .public sub_0202D7F8
 .public sub_0202D7FC
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0202D80C
 .public Oam_LoadNCGRFile
 .public sub_0202D7F4
@@ -641,7 +641,7 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C520
@@ -734,7 +734,7 @@
 .public sub_0204826C
 .public sub_0204826C
 .public sub_0204AA30
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataLoadStrbuf
@@ -760,15 +760,15 @@
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02046E28
 .public Oam_LoadNCGRFile
 .public MyStatus_GetTrainerGender
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204C040
 .public sub_0204C124

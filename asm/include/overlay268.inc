@@ -297,7 +297,7 @@
 .public sub_0204BC48
 .public sub_0202111C
 .public sub_02021190
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0200C124
 .public sub_0200C124
 .public sub_0200C124
@@ -786,7 +786,7 @@
 .public sub_0204BC48
 .public sub_0202111C
 .public sub_02021190
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public MI_CpuFill8
 .public sub_02020F94
 .public Oam_LoadNCGRFile

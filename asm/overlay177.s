@@ -753,7 +753,7 @@ ovy177_219b2fc: ; 0x0219B2FC
 	mov r1, #0xa
 	mov r2, #9
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r6, #0xc]
 	add r0, r5, #0
 	bl GFL_ArcToolFree

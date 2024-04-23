@@ -497,13 +497,13 @@
 .public sub_0204AFB0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_02035024
 .public sub_02035104
 .public sub_02035024
@@ -511,7 +511,7 @@
 .public GFL_ArcToolFree
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile
 .public GFL_ArcToolFree
 .public G2x_SetBlendAlpha_

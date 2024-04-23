@@ -1304,7 +1304,7 @@ _0219D822:
 	mov r1, #0x24
 	add r2, r7, #0
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x2c]
 	str r7, [sp]
 	add r0, r6, #0
@@ -1324,7 +1324,7 @@ _0219D822:
 	mov r1, #0x22
 	mov r2, #0x28
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, r4, #1
 	str r0, [r5, #0x44]
 	cmp r4, #2
@@ -7767,7 +7767,7 @@ ovy185_21a0924: ; 0x021A0924
 	mov r1, #0x23
 	mov r2, #0x29
 	mov r3, #0x2a
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x18]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -7954,7 +7954,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	ldr r1, [sp, #0xc]
 	add r0, r4, #0
 	mov r3, #0x2a
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x24]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

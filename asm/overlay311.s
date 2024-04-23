@@ -1660,7 +1660,7 @@ ovy311_219db74: ; 0x0219DB74
 	mov r1, #9
 	mov r2, #8
 	add r3, r6, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #8
 	str r0, [r5, r4]
 	add r0, r7, #0

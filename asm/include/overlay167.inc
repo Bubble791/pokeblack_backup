@@ -6553,7 +6553,7 @@
 .public sub_0204BBA0
 .public ovy168_21e00b8
 .public sub_02026F7C
-.public sub_0204BDE0
+.public Oam_LoadNCERFile
 .public sub_0204B3CC
 .public GFL_ArcToolFree
 .public sub_0204C040

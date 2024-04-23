@@ -745,7 +745,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0x21
 	mov r2, #0x20
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0xc]
 	mov r0, #0xc
 	str r0, [sp]
@@ -769,7 +769,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0xa
 	mov r2, #9
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x24]
 	str r7, [sp]
 	add r0, r4, #0
@@ -789,7 +789,7 @@ ovy178_219b2ec: ; 0x0219B2EC
 	mov r1, #0x21
 	mov r2, #0x20
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x18]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

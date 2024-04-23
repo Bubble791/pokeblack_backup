@@ -40347,8 +40347,8 @@ _0204BDCC:
 	pop {r4, r5, pc}
 	thumb_func_end sub_0204BDC0
 
-	thumb_func_start sub_0204BDE0
-sub_0204BDE0: ; 0x0204BDE0
+	thumb_func_start Oam_LoadNCERFile
+Oam_LoadNCERFile: ; 0x0204BDE0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
@@ -40414,7 +40414,7 @@ _0204BE1A:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0204BE60: .word 0x0214193C
-	thumb_func_end sub_0204BDE0
+	thumb_func_end Oam_LoadNCERFile
 
 	thumb_func_start sub_0204BE64
 sub_0204BE64: ; 0x0204BE64

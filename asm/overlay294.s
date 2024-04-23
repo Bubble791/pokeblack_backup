@@ -2378,7 +2378,7 @@ ovy294_21a2cc0: ; 0x021A2CC0
 	add r0, r4, #0
 	mov r1, #9
 	mov r2, #8
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #0
 	add r1, #8
 	str r0, [r5, r1]

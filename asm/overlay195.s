@@ -4684,7 +4684,7 @@ ovy195_21b5510: ; 0x021B5510
 	add r0, r6, #0
 	mov r1, #0xa
 	mov r2, #0x16
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xbc
 	str r0, [r1]
@@ -4717,7 +4717,7 @@ ovy195_21b5510: ; 0x021B5510
 	add r0, r6, #0
 	mov r1, #0xb
 	mov r2, #0x17
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x74]
 	add r0, r5, #0
 	add r0, #0xf4
@@ -4747,7 +4747,7 @@ ovy195_21b5510: ; 0x021B5510
 	add r0, r6, #0
 	mov r1, #0xb
 	mov r2, #0x17
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r3, r5, #0
 	add r3, #0xf4
 	str r0, [r5, #0x78]
@@ -4815,7 +4815,7 @@ _021B5744:
 	add r0, r7, #0
 	add r1, #0x11
 	add r2, #0x12
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, r4, #1
 	str r0, [r6, #0x7c]
 	cmp r4, #0x10

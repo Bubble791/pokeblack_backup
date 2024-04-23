@@ -856,7 +856,7 @@ ovy204_21aa188: ; 0x021AA188
 	mov r1, #0xf
 	mov r2, #0x10
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	mov r1, #0x70
 	add r1, #0xe4
 	str r0, [r5, r1]
@@ -893,7 +893,7 @@ ovy204_21aa188: ; 0x021AA188
 	ldr r1, [sp, #4]
 	add r0, r7, #0
 	add r3, r4, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r6, #0xf8
 	str r0, [r5, r6]
 	add r0, r7, #0

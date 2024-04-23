@@ -554,7 +554,7 @@ ovy323_219d2cc: ; 0x0219D2CC
 	mov r2, #0x13
 	add r3, r4, #0
 	mov r6, #0xc
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x20]
 	add r0, r7, #0
 	bl GFL_ArcToolFree
@@ -749,7 +749,7 @@ ovy323_219d43c: ; 0x0219D43C
 	mov r1, #0x1b
 	mov r2, #0x27
 	mov r3, #0xa1
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x5c]
 	add r0, r4, #0
 	bl GFL_ArcToolFree
@@ -903,7 +903,7 @@ ovy323_219d55c: ; 0x0219D55C
 	mov r1, #0x1b
 	mov r2, #0x27
 	mov r3, #0xa1
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x78]
 	add r0, r4, #0
 	bl GFL_ArcToolFree

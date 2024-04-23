@@ -3236,7 +3236,7 @@ _021BD012:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r3, #0x8c
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r4, #0x68
 	str r0, [r5, r4]
 	add r0, r6, #0

@@ -1970,7 +1970,7 @@ ovy319_219dd30: ; 0x0219DD30
 	ldrh r3, [r3, #4]
 	add r0, r6, #0
 	add r1, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x34]
 	add r0, r6, #0
 	bl GFL_ArcToolFree
@@ -2572,7 +2572,7 @@ ovy319_219e1ac: ; 0x0219E1AC
 	ldrh r3, [r3, #4]
 	mov r1, #7
 	mov r2, #8
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #0x58]
 	ldr r1, _0219E2DC ; =0x0219F8A0
 	add r0, sp, #0x10

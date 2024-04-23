@@ -956,7 +956,7 @@ ovy266_219d5c4: ; 0x0219D5C4
 	mov r1, #8
 	mov r2, #9
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0x10]
 	mov r0, #0x80
 	add r1, sp, #0xc

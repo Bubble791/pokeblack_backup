@@ -1030,7 +1030,7 @@ _0219D632:
 	ldrb r1, [r4, #2]
 	ldrh r3, [r5]
 	ldr r0, [sp, #0x20]
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	ldr r1, [sp, #0x18]
 	str r0, [r1, #0x64]
 	add r0, r6, #1
@@ -2361,7 +2361,7 @@ ovy316_219e11c: ; 0x0219E11C
 	add r0, r4, #0
 	mov r1, #0x18
 	mov r2, #0x1c
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r6, #4
 	str r0, [r5, r1]
 	add r0, r4, #0

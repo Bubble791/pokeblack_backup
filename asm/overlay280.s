@@ -582,7 +582,7 @@ ovy280_21d9b94: ; 0x021D9B94
 	mov r1, #7
 	mov r2, #6
 	add r3, r7, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r5, #8]
 	str r7, [sp]
 	add r0, r6, #0
@@ -6197,7 +6197,7 @@ _021DC514:
 	ldr r1, [sp, #0x34]
 	ldr r2, [sp, #0x30]
 	add r3, r5, #0
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	str r0, [r4, #0x10]
 	ldr r0, [sp, #0x28]
 	ldr r1, [sp, #0x38]

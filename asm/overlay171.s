@@ -1334,7 +1334,7 @@ _021DE4C4:
 	add r0, r7, #0
 	add r1, r4, #0
 	mov r3, #0x71
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -1367,7 +1367,7 @@ _021DE4C4:
 	mov r1, #0xf
 	mov r2, #0x12
 	mov r3, #0x71
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xf0
 	str r0, [r1]
@@ -1395,7 +1395,7 @@ _021DE4C4:
 	mov r1, #0x45
 	mov r2, #0x48
 	mov r3, #0x71
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r1, r5, #0
 	add r1, #0xec
 	str r0, [r1]
@@ -1431,7 +1431,7 @@ _021DE4C4:
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r3, #0x71
-	bl sub_0204BDE0
+	bl Oam_LoadNCERFile
 	add r5, #0xf4
 	str r0, [r5]
 	add r0, r4, #0
