@@ -275,8 +275,8 @@
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C318
-.public sub_0204C140
-.public sub_0204C178
+.public Oam_SetSpritePosData
+.public Oam_GetSpritePosData
 .public sub_0219FCFC
 .public sub_0204B6A8
 .public sub_0204AA30

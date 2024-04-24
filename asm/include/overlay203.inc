@@ -13,11 +13,11 @@
 .public sub_021A7D34
 .public sub_021A7E5C
 .public sub_021A7D34
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C468
 .public sub_0204C504
 .public sub_021A7F30
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C468
 .public sub_0204C108
 .public sub_0204C108

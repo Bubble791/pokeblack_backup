@@ -1171,7 +1171,7 @@ _0219D75A:
 	ldr r1, [r1, #4]
 	ldr r2, [r2, #4]
 	ldr r3, [r3, #4]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r6, r4]
 	ldrb r0, [r5, #3]
 	mov r1, #0

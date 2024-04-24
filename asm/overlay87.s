@@ -1174,7 +1174,7 @@ _021EB27E:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #0
 	str r0, [r6, #0x54]
 	bl sub_0204C124
@@ -1228,7 +1228,7 @@ _021EB2FC:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r5, r7]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #0
 	str r0, [r6, #0x54]
 	bl sub_0204C124

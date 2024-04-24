@@ -14,7 +14,7 @@
 .public sub_020202AC
 .public sub_020202A4
 .public sub_0201D4B0
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C56C

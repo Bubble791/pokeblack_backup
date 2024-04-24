@@ -1143,7 +1143,7 @@ ovy308_21a023c: ; 0x021A023C
 	ldr r1, [r4, #4]
 	ldr r2, [r4]
 	ldr r3, [r4, #8]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add sp, #0x14
 	pop {r4, r5, pc}
 	.align 2, 0
@@ -2249,7 +2249,7 @@ ovy308_21a0ac8: ; 0x021A0AC8
 	strh r2, [r4, #2]
 	add r1, sp, #0
 	add r2, r3, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0

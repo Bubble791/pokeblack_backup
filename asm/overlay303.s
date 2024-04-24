@@ -5216,7 +5216,7 @@ _021A25D8:
 	add r0, r6, #0
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r4, r4, #1
 	cmp r4, #0x1e
 	blt _021A25D8
@@ -6181,7 +6181,7 @@ ovy303_21a2d3c: ; 0x021A2D3C
 	strh r0, [r4, #2]
 	ldr r0, _021A2DAC ; =0x00000474
 	ldr r0, [r5, r0]
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r5, #0
 	bl ovy303_21a2ddc
 	pop {r3, r4, r5, r6, r7, pc}
@@ -6525,7 +6525,7 @@ ovy303_21a2ff0: ; 0x021A2FF0
 	add r0, #0x18
 	strh r0, [r7, #2]
 	add r0, r4, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r4, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -6558,7 +6558,7 @@ _021A307C:
 	ldr r5, [r1, r0]
 	add r1, sp, #0
 	add r0, r5, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	mov r0, #2
 	ldrsh r0, [r1, r0]
@@ -6568,7 +6568,7 @@ _021A307C:
 	strh r1, [r0, #2]
 	add r0, r5, #0
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r4, r4, #1
 	cmp r4, #0x11
 	ble _021A307C

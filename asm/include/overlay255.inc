@@ -1897,7 +1897,7 @@
 .public sub_0204BCD0
 .public sub_0204BE64
 .public sub_0204BF1C
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C5C8
 .public sub_0204C108
 .public sub_0204BF98
@@ -1910,8 +1910,8 @@
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C318
-.public sub_0204C140
-.public sub_0204C178
+.public Oam_SetSpritePosData
+.public Oam_GetSpritePosData
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
@@ -2828,9 +2828,9 @@
 .public sub_0204C520
 .public sub_021D6AAC
 .public sub_0204C488
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C21C
 .public sub_0219C324

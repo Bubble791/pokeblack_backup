@@ -2979,7 +2979,7 @@ _0219E578:
 	ldr r1, [r6, #4]
 	ldr r2, [r6]
 	ldr r3, [r6, #8]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r4, r0, #0
 	add r0, r7, #0
 	blx OS_RestoreInterrupts
@@ -4400,7 +4400,7 @@ _0219F030:
 	ldr r0, [r5, #0x54]
 	add r1, sp, #8
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	lsl r1, r6, #0x10
 	ldr r0, [r5, #0x54]
 	lsr r1, r1, #0x10
@@ -5028,7 +5028,7 @@ _0219F4D8:
 	ldr r0, [r5, #0x54]
 	add r1, sp, #8
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	lsl r1, r6, #0x10
 	ldr r0, [r5, #0x54]
 	lsr r1, r1, #0x10
@@ -6354,7 +6354,7 @@ _0219FF0E:
 	add r0, r7, #0
 	add r1, sp, #0x10
 	lsr r2, r2, #0x10
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r7, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -6529,7 +6529,7 @@ _021A0040:
 	ldr r0, [r5, #0x14]
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r1, sp, #0
 	mov r0, #6
 	ldrsh r0, [r1, r0]
@@ -6538,7 +6538,7 @@ _021A0040:
 	strh r0, [r1, #6]
 	ldr r0, [r5, #0x18]
 	add r1, r4, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy185_219ff7c
@@ -7981,7 +7981,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	ldr r1, [r5, #0x20]
 	ldr r2, [r5, #0x1c]
 	ldr r3, [r5, #0x24]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x28]
 	mov r1, #1
 	bl sub_0204C520
@@ -13586,7 +13586,7 @@ ovy185_21a3544: ; 0x021A3544
 	ldr r0, [r4, #0x14]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x14]
 	mov r1, #8
 	bl sub_0204C488
@@ -13732,7 +13732,7 @@ ovy185_21a3674: ; 0x021A3674
 	ldr r0, [r5, #0x1c]
 	add r1, r4, #0
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy185_21a3674
@@ -13798,7 +13798,7 @@ _021A36F4:
 	add r1, sp, #4
 	ldr r0, [r0, #0x1c]
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy185_21a3690
@@ -13811,7 +13811,7 @@ ovy185_21a3704: ; 0x021A3704
 	add r4, r1, #0
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	strh r4, [r1, #2]
 	mov r0, #2
@@ -13832,7 +13832,7 @@ _021A3732:
 	ldr r0, [r5, #0x1c]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy185_21a3704
@@ -14162,7 +14162,7 @@ ovy185_21a398c: ; 0x021A398C
 	ldr r0, [r5, #0x14]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r5, #0x14]
 	mov r1, #0x1c
 	bl sub_0204C488

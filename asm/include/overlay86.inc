@@ -42,7 +42,7 @@
 .public GFL_SndSEPlay
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C488
 .public sub_0204C488
 .public sub_0204C488
@@ -72,13 +72,13 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C318
 .public GFL_ArcToolFree
-.public sub_0204C140
-.public sub_0204C140
-.public sub_0204C140
+.public Oam_SetSpritePosData
+.public Oam_SetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_0204C108
 .public sub_0204BE64
 .public sub_0204B98C
@@ -104,7 +104,7 @@
 .public sub_0202D818
 .public sub_0202D81C
 .public Oam_LoadNCERFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C53C
 .public sub_0204C488

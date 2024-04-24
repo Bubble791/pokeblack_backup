@@ -3178,7 +3178,7 @@ ovy299_21a1568: ; 0x021A1568
 	ldr r0, [r1, r0]
 	ldrh r2, [r2]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0
@@ -3197,7 +3197,7 @@ ovy299_21a158c: ; 0x021A158C
 	ldrh r2, [r2]
 	add r1, sp, #0
 	add r4, r3, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	mov r0, #0
 	ldrsh r0, [r1, r0]

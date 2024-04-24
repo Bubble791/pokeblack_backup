@@ -84,11 +84,11 @@
 .public sub_0204BC48
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C550
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C550
@@ -125,7 +125,7 @@
 .public sub_0204BC48
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_02005784
@@ -142,7 +142,7 @@
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C108
@@ -151,7 +151,7 @@
 .public sub_0204BE64
 .public sub_02199E24
 .public sub_0219A5E8
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C56C
 .public sub_02044C98
@@ -484,7 +484,7 @@
 .public GFL_HeapFree
 .public GFL_ArcToolFree
 .public sub_0219D43C
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0219D43C
 .public sub_0204C488
 .public BmpWin_CreateDynamic
@@ -577,7 +577,7 @@
 .public sub_020210C0
 .public MI_CpuFill8
 .public Oam_LoadNCGRFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C378
 .public sub_0204C124
 .public sub_0201FDF8
@@ -666,7 +666,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C108
@@ -746,10 +746,10 @@
 .public sub_0219E180
 .public sub_0219E180
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public BmpWin_CreateDynamic
 .public sub_0219B85C
@@ -763,9 +763,9 @@
 .public MI_CpuFill8
 .public sub_0204C560
 .public sub_0204C488
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C488
 .public sub_0204C488
@@ -773,12 +773,12 @@
 .public sub_0204C4A0
 .public sub_0204C488
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C108
 .public MI_CpuFill8
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0203DAC8
 .public sub_0203DA84
 .public sub_0204C488

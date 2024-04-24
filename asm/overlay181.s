@@ -1512,7 +1512,7 @@ _0219DA7C:
 	ldr r1, [r5, #0x74]
 	ldr r2, [r5, #0x70]
 	ldr r3, [r5, #0x78]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x7c]
 	add r5, #0x28
 	ldrb r1, [r5]

@@ -975,7 +975,7 @@ ovy266_219d5c4: ; 0x0219D5C4
 	ldr r1, [r4, #0xc]
 	ldr r2, [r4, #8]
 	ldr r3, [r4, #0x10]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r4, #4]
 	mov r1, #1
 	bl sub_0204C520

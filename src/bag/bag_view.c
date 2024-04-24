@@ -617,7 +617,7 @@ void BagMenu_WaitPrintKeyPad(BagView *bagView)
             ovy142_21998f4(bagView);
             bagView->unk892 = 1;
             ovy142_219ed3c(bagView);
-            sub_0204C520(bagView->unk6B8, 1);
+            sub_0204C520(bagView->scrollBarOam, 1);
             ovy142_219fda8(bagView, 1);
             BagMenu_KeyPadMain(bagView);
         }
@@ -931,7 +931,7 @@ void ovy142_219a4d0(BagView *bagView)
                     ovy142_219be18(bagView, bagView->posNow);
                     ovy142_21998f4(bagView);
                     ovy142_219fda8(bagView, 1);
-                    sub_0204C520(bagView->unk6B8, 1);
+                    sub_0204C520(bagView->scrollBarOam, 1);
                     BagMenu_KeyPadMain(bagView);
                 }
 
@@ -958,7 +958,7 @@ void ovy142_219a4d0(BagView *bagView)
                 }
                 ovy142_219bda4(bagView, sub_0203D554() == 0);
                 ovy142_219fda8(bagView, 1);
-                sub_0204C520(bagView->unk6B8, 1);
+                sub_0204C520(bagView->scrollBarOam, 1);
                 BagMenu_KeyPadMain(bagView);
                 break;
             case 11:
@@ -1032,7 +1032,7 @@ void ovy142_219a724(BagView *bagView)
         ovy142_219c014(bagView);
         ovy142_219f76c(bagView, bagView->selectItem);
         sub_0219F760(bagView);
-        sub_0204C520(bagView->unk6B8, 0);
+        sub_0204C520(bagView->scrollBarOam, 0);
         BagMenu_SetRunFunc(bagView, ovy142_219a4d0);
     }
 }
@@ -1228,7 +1228,7 @@ void ovy142_219ab38(BagView *bagView)
         {
             sub_0219F0AC(bagView);
             sub_02045738(3);
-            sub_0204C520(bagView->unk6B8, 1);
+            sub_0204C520(bagView->scrollBarOam, 1);
             ovy142_219fda8(bagView, 1);
             if (sub_0203D554() == 1)
             {
@@ -1331,7 +1331,7 @@ void ovy142_219acb8(BagView *bagView)
         ovy142_21998f4(bagView);
         bagView->unk892 = 1;
         ovy142_219ed3c(bagView);
-        sub_0204C520(bagView->unk6B8, 1);
+        sub_0204C520(bagView->scrollBarOam, 1);
         ovy142_219fda8(bagView, 1);
         BagMenu_KeyPadMain(bagView);
     }
@@ -1372,7 +1372,7 @@ void ovy142_219ad30(BagView *bagView)
         }
         else
         {
-            sub_0204C520(bagView->unk6B8, 1);
+            sub_0204C520(bagView->scrollBarOam, 1);
             ovy142_219fda8(bagView, 1);
             iVar2 = sub_0203D554();
             ovy142_219bda4(bagView, iVar2 == 0);
@@ -1474,7 +1474,7 @@ void BagMenu_TrySellItem(BagView *bagView)
     int isImportItem;
     int uVar4;
 
-    sub_0204C520(bagView->unk6B8, 0);
+    sub_0204C520(bagView->scrollBarOam, 0);
 
     price = Item_GetItemParam(bagView->selectItem, ITEM_DATA_PRICE, bagView->heapId);
     isImportItem = Item_GetItemParam(bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, bagView->heapId);
@@ -1644,7 +1644,7 @@ void ovy142_219b2f0(BagView *bagView)
     bagView->unk892 = 1;
     ovy142_219ed3c(bagView);
     ovy142_219fa6c(bagView);
-    sub_0204C520(bagView->unk6B8, 1);
+    sub_0204C520(bagView->scrollBarOam, 1);
     ovy142_219fda8(bagView, 1);
     BagMenu_KeyPadMain(bagView);
 }
@@ -1930,7 +1930,7 @@ void ovy142_219b6dc(BagView *bagView)
     bagView->unk892 = 1;
     ovy142_219ed3c(bagView);
     sub_0219F0AC(bagView);
-    sub_0204C520(bagView->unk6B8, 1);
+    sub_0204C520(bagView->scrollBarOam, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219ff40(bagView, 1);
     BagMenu_KeyPadMain(bagView);
@@ -2271,7 +2271,7 @@ void ovy142_219becc(BagView *bagView)
     int sVar1;
     int uVar2;
 
-    if (bagView->isSwitchMode != 1)
+    if (bagView->isSwitchMode != TRUE)
     {
         uVar2 = sub_0219BE88(bagView->itemPocket);
         sVar1 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar2);
@@ -2658,10 +2658,10 @@ void BagMenu_BagWaitFadeIn(BagView *bagView)
     int result; // r0
 
     v2 = GFL_FadeScreenIsFinished();
-    result = ovy142_21a00a0(bagView);
+    result = BagMenu_PokcetIconMoveFadeIn(bagView);
     if (v2 == 1 && !result)
     {
-        sub_0204C520(bagView->unk6B8, 1);
+        sub_0204C520(bagView->scrollBarOam, 1); // enabltCursorAnim
         BagMenu_KeyPadMain(bagView);
     }
 }

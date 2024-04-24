@@ -4723,7 +4723,7 @@ ovy33_2178ffc: ; 0x02178FFC
 	ldr r1, [r5, #0x40]
 	ldr r2, [r5, #0x44]
 	ldr r3, [r5, #0x48]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x3c]
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
@@ -4792,7 +4792,7 @@ _0217910C:
 	ldr r0, [r5, #0x3c]
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	mov r0, #2
 	mov r4, #0x4d
@@ -4803,7 +4803,7 @@ _0217910C:
 	ldr r0, [r5, #0x3c]
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldrsb r0, [r5, r4]
 	add r5, #0x4d
 	sub r0, r0, #1

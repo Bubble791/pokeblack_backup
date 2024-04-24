@@ -2142,7 +2142,7 @@ _021E9D3C:
 	ldr r1, [r5, #0x28]
 	ldr r2, [r5, #0x24]
 	ldr r3, [r5, #0x20]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0xc]
 	ldrb r1, [r4, #0x19]
 	bl sub_0204C488
@@ -2178,7 +2178,7 @@ _021E9D84:
 	ldr r1, [r5, #0x34]
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x2c]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, #0x14]
 	bl sub_0204C488
@@ -2200,7 +2200,7 @@ _021E9D84:
 	ldr r1, [r5, #0x34]
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x2c]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x10]
 	mov r1, #0
 	bl sub_0204C488
@@ -2241,7 +2241,7 @@ _021E9E08:
 	ldr r1, [r5, #0x34]
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x2c]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [r5, #0x78]
 	str r0, [r5, #0x18]
 	cmp r1, #0
@@ -2274,7 +2274,7 @@ _021E9E4E:
 	ldr r1, [r5, #0x34]
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x2c]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [r5, #0x70]
 	str r0, [r5, #0x1c]
 	ldr r2, [r1, #8]

@@ -175,7 +175,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public GFL_HeapFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C5C8
 .public sub_0204C124

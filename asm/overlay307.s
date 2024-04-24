@@ -762,7 +762,7 @@ _021DE204:
 	ldr r1, [r5, #0x2c]
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x34]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r7, #0
 	str r0, [r6, #0x38]
 	bl sub_0204C520

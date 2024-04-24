@@ -250,10 +250,10 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public G2x_SetBlendAlpha_

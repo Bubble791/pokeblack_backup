@@ -2530,7 +2530,7 @@ ovy175_219ab5c: ; 0x0219AB5C
 	ldr r2, [r5, #0x30]
 	ldr r3, [r5, #0x38]
 	add r0, r6, #0
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #8]
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}

@@ -169,7 +169,7 @@
 .public sub_0204BCD0
 .public sub_0204BE64
 .public sub_0204BF1C
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
@@ -185,8 +185,8 @@
 .public sub_0204C124
 .public sub_0204C108
 .public sub_0204BF98
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_020330C8
 .public sub_02033150
 .public sub_02033150

@@ -177,7 +177,7 @@ ovy193_21b3090: ; 0x021B3090
 	ldr r0, [r4, r0]
 	ldr r2, [r4, r2]
 	ldr r3, [r4, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [r4, #0xc]
 	add r1, #0xb0
 	str r0, [r1]
@@ -2288,7 +2288,7 @@ ovy193_21b42f4: ; 0x021B42F4
 	ldr r0, [r4, r0]
 	ldr r2, [r4, r2]
 	ldr r3, [r4, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [r4, #0xc]
 	add r1, #0xb0
 	str r0, [r1]
@@ -4170,7 +4170,7 @@ ovy193_21b534c: ; 0x021B534C
 	ldr r0, [r4, r0]
 	ldr r2, [r4, r2]
 	ldr r3, [r4, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [r4, #0xc]
 	add r1, #0xb0
 	str r0, [r1]

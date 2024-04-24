@@ -61,7 +61,7 @@
 .public MI_CpuFill8
 .public sub_0219D590
 .public sub_0219D590
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C2B0

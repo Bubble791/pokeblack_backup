@@ -300,7 +300,7 @@ ovy203_21a7a9c: ; 0x021A7A9C
 	ldr r1, [r1, #0x14]
 	ldr r2, [r2, #0x18]
 	ldr r3, [r6, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #6
 	ldrsh r1, [r5, r1]
 	str r0, [r4, #4]
@@ -365,7 +365,7 @@ _021A7B1C:
 	ldr r0, [r7]
 	ldr r2, [r7, r2]
 	ldr r3, [r7, r6]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #6
 	ldrsh r1, [r5, r1]
 	str r0, [r4, #8]

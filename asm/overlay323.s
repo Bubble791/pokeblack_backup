@@ -806,7 +806,7 @@ _0219D4B8:
 	ldr r1, [r5, #0x54]
 	ldr r2, [r5, #0x58]
 	ldr r3, [r5, #0x5c]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r7, #0x60]
 	bl sub_0204C520
@@ -953,7 +953,7 @@ ovy323_219d5c4: ; 0x0219D5C4
 	ldr r1, [r5, #0x70]
 	ldr r2, [r5, #0x74]
 	ldr r3, [r5, #0x78]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, #0x7c]
 	bl sub_0204C520

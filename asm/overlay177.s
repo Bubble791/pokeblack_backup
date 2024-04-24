@@ -773,7 +773,7 @@ _0219B380:
 	ldr r1, [r6, #8]
 	ldr r2, [r6, #4]
 	ldr r3, [r6, #0xc]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x10]
 	mov r1, #0
 	bl sub_0204C124

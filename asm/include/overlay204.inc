@@ -158,12 +158,12 @@
 .public sub_02009F80
 .public StringSetNumber
 .public StringSetNumber
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C108
 .public sub_0204C108
@@ -324,9 +324,9 @@
 .public sub_0204898C
 .public sub_0202E168
 .public GFL_StrBufCreate
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_021ADE28
 .public sub_0204C108
 .public sub_0204C108
@@ -416,7 +416,7 @@
 .public sub_0204C488
 .public sub_0204C56C
 .public sub_0204C520
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public GFL_SndSEPlay
 .public sub_0204C560
 .public sub_0204C4F8
@@ -446,7 +446,7 @@
 .public sub_02048614
 .public sub_0219A2A4
 .public GFL_StrBufFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0203CDC8
 .public sub_02034B64
 .public sub_0203A970
@@ -586,7 +586,7 @@
 .public sub_02034074
 .public sub_020340C8
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_020484B4
 .public sub_020484D4
 .public sub_02045B7C

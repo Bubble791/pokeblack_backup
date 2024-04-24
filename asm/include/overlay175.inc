@@ -172,7 +172,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C108
 
 .public sub_0203A978

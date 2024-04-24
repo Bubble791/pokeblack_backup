@@ -174,7 +174,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_021A1E5C
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204B98C
 .public sub_0204BCD0

@@ -1647,7 +1647,7 @@ _021BC464:
 	ldr r1, [r1]
 	ldr r2, [r4, #0x6c]
 	ldr r3, [r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x9c
 	str r0, [r1]
@@ -9545,7 +9545,7 @@ ovy216_21c0140: ; 0x021C0140
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r6, #0x14]
 	lsl r1, r7, #5
 	bl sub_0204C4E0

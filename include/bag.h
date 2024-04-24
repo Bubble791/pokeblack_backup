@@ -155,8 +155,8 @@ struct BagViewWork
     /*0x6AC*/ int spriteGroup;
     /*0x6B0*/ int unk6B0;
     /*0x6B4*/ int unk6B4;
-    /*0x6B8*/ int unk6B8;
-    /*0x6BC*/ int unk6BC[6];
+    /*0x6B8*/ int scrollBarOam;
+    /*0x6BC*/ int bagPocketOam[6];
     /*0x6D4*/ int unk6D4[3];
     /*0x6E0*/ int unk6E0[17];
     /*0x724*/ int unk724[7];
@@ -282,7 +282,7 @@ void BagMenu_BagStart(BagView *m_bagView);
 void BagMenu_BagWaitFadeIn(BagView *m_bagView);
 extern void GFL_FadeScreenSet(int, int, int, int, int, int, u16);
 extern int GFL_FadeScreenIsFinished(void);
-extern int ovy142_21a00a0(BagView*);
+extern int BagMenu_PokcetIconMoveFadeIn(BagView*);
 
 typedef void (*UnknowFunc)(BagView *);
 

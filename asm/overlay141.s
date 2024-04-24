@@ -737,7 +737,7 @@ _0219D45E:
 	ldr r3, [sp, #0x14]
 	ldr r0, [r5, r0]
 	ldr r3, [r6, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [sp, #0x10]
 	str r0, [r7, r1]
 	ldr r0, [sp, #0xc]
@@ -1281,7 +1281,7 @@ ovy141_219d8a8: ; 0x0219D8A8
 	strh r0, [r1, #2]
 	ldr r0, [r4, r5]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy141_219d8a8

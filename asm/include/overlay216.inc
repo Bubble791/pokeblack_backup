@@ -163,7 +163,7 @@
 .public sub_0204BE64
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C488
 .public sub_0204C124
@@ -833,7 +833,7 @@
 .public GFL_TCBRemove
 .public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C4E0
 .public sub_0203A614
 .public sub_021BED44

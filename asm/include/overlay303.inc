@@ -478,7 +478,7 @@
 .public sub_02199A5C
 .public sub_02199A5C
 .public sub_02199A5C
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_02021114
 .public sub_02020F94
 .public sub_0202111C
@@ -598,7 +598,7 @@
 .public MI_CpuFill8
 .public sub_0219F730
 .public sub_0219F730
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public G2x_SetBlendAlpha_
 .public sub_021ADE74
 .public sub_021ADEC0
@@ -641,11 +641,11 @@
 .public sub_0219F73C
 .public sub_0219F730
 .public sub_0219F730
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02035178

@@ -253,7 +253,7 @@ ovy174_219d02c: ; 0x0219D02C
 	ldr r1, [r6, r1]
 	ldr r2, [r6, r2]
 	ldr r3, [r6, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -282,7 +282,7 @@ ovy174_219d09c: ; 0x0219D09C
 	beq _0219D0DC
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	lsl r2, r6, #0x10
 	add r0, sp, #0
 	mov r1, #0
@@ -299,7 +299,7 @@ ovy174_219d09c: ; 0x0219D09C
 	ldr r0, [r4, r5]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 _0219D0DC:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -321,7 +321,7 @@ ovy174_219d0e0: ; 0x0219D0E0
 	strh r2, [r3, #2]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 _0219D100:
 	add sp, #4
 	pop {r3, r4, pc}

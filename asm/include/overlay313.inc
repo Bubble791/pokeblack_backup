@@ -72,7 +72,7 @@
 .public Oam_LoadNCERFile
 .public MI_CpuFill8
 .public sub_0219DAB0
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C488
 .public sub_0204C520
 .public sub_02021034
@@ -89,7 +89,7 @@
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public sub_0219DAB0
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C488
 .public sub_0204C520
 .public sub_0204C108

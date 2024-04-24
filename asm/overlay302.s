@@ -1241,7 +1241,7 @@ ovy302_21ad7f0: ; 0x021AD7F0
 	ldr r1, [r3, #8]
 	ldr r2, [r3, #0xc]
 	ldr r3, [r3, #0x10]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add sp, #0xc
 	pop {pc}
 	thumb_func_end ovy302_21ad7f0

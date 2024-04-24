@@ -5238,7 +5238,7 @@ ovy215_21a9ef4: ; 0x021A9EF4
 	add r3, #0x64
 	ldr r2, [r6, r2]
 	ldr r3, [r4, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add sp, #0x14
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end ovy215_21a9ef4
@@ -5334,7 +5334,7 @@ _021A9FD6:
 	add r1, sp, #0
 	mov r2, #1
 _021A9FE4:
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4]
 	mov r1, #0
 	bl sub_0204C4D4

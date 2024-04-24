@@ -1352,7 +1352,7 @@ _021F4E3E:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r7, r6]
 	ldrb r0, [r4, #3]
 	mov r1, #0
@@ -1479,7 +1479,7 @@ _021F4F58:
 	ldr r0, [r0]
 	add r1, sp, #8
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021F4F58

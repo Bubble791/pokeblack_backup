@@ -3447,7 +3447,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #4
 	str r0, [r5, r1]
 	ldr r0, _021E75A8 ; =0x021E8B58
@@ -3465,7 +3465,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #8
 	str r0, [r5, r1]
@@ -3484,7 +3484,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0xc
 	str r0, [r5, r1]
@@ -3503,7 +3503,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x10
 	str r0, [r5, r1]
@@ -3523,7 +3523,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x14
 	str r0, [r5, r1]
@@ -3545,7 +3545,7 @@ ovy60_21e7470: ; 0x021E7470
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x18
 	str r0, [r5, r1]
@@ -4784,7 +4784,7 @@ ovy60_21e7f5c: ; 0x021E7F5C
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
 	add r1, sp, #4
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	cmp r5, #0x11
 	bhs _021E7FC8
 	mov r0, #0x1c
@@ -5153,7 +5153,7 @@ ovy60_21e827c: ; 0x021E827C
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
 	add r1, sp, #4
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	cmp r5, #0x11
 	bhs _021E82D6
 	mov r0, #0x1c
@@ -5208,7 +5208,7 @@ ovy60_21e82f0: ; 0x021E82F0
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
 	add r1, sp, #4
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	cmp r5, #0x11
 	bhs _021E8344
 	mov r0, #0x1c
@@ -5286,7 +5286,7 @@ ovy60_21e837c: ; 0x021E837C
 	ldr r0, [r5, r0]
 	add r1, sp, #4
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	mov r0, #6
 	ldrsh r0, [r6, r0]
 	cmp r0, #6

@@ -2049,7 +2049,7 @@
 .public sub_02046EF8
 .public sub_02046EFC
 .public sub_0204B8BC
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C378
 .public sub_0204C5C8
 .public sub_0204B98C
@@ -2066,8 +2066,8 @@
 .public sub_0204BB80
 .public GX_LoadOBJ
 .public GXS_LoadOBJ
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_0204C318
 .public sub_0204C438
 .public sub_0204C468
@@ -2584,8 +2584,8 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_020484D4
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_0204C4A0
 .public sub_0204C488
 .public sub_0204C124
@@ -2599,13 +2599,13 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0203D5A8
 .public sub_0204C53C
 .public sub_020484D4
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204588C
 .public sub_0204C468
 .public sub_0204C488

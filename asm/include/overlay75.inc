@@ -90,8 +90,8 @@
 .public sub_0219974C
 .public sub_02199C5C
 .public sub_02199C64
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_0219980C
 .public sub_021997E4
 .public sub_021997F4
@@ -102,7 +102,7 @@
 .public sub_0204C504
 .public sub_02005748
 .public sub_02005748
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_02199A78
 .public sub_02199B90
 .public sub_0208D65C

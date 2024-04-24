@@ -87,7 +87,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C244
@@ -808,7 +808,7 @@
 .public sub_0204C124
 .public MI_CpuFill8
 .public sub_021BF844
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_020104F4
 .public sub_021BF844
 .public sub_0204C124
@@ -817,7 +817,7 @@
 .public sub_0204C124
 .public sub_021BF844
 .public sub_02010528
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_02010528
 .public sub_020104F4
@@ -825,14 +825,14 @@
 .public sub_02010514
 .public sub_021C1198
 .public sub_021BF844
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_020104F4
 .public sub_021BF844
 .public sub_0204C124
 .public sub_021BF844
 .public sub_02010564
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_02010564
 .public sub_02017934
@@ -845,7 +845,7 @@
 .public sub_02010550
 .public sub_021C1198
 .public sub_021BF844
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_020104F4
 .public sub_021BF844
@@ -855,7 +855,7 @@
 .public sub_0204C124
 .public sub_021BF844
 .public sub_020105A0
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_020105A0
 .public sub_020104F4
@@ -863,7 +863,7 @@
 .public sub_0201058C
 .public sub_021C1198
 .public sub_021BF844
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_02010528
 .public sub_02010564
@@ -891,8 +891,8 @@
 .public sub_021C152C
 .public sub_0202B098
 .public sub_021C17FC
-.public sub_0204C140
-.public sub_0204C140
+.public Oam_SetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_021C152C
 .public sub_0202B230
 .public sub_0204C124
@@ -902,7 +902,7 @@
 .public sub_0204C510
 .public sub_0204C550
 .public sub_021C1600
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C488
 .public sub_0204C560
 .public GFL_SndSEPlay
@@ -910,7 +910,7 @@
 .public sub_0204C488
 .public sub_0204C520
 .public sub_0204C560
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C488
 .public sub_0204C520
@@ -924,8 +924,8 @@
 .public sub_021C152C
 .public sub_0202B098
 .public sub_021C1600
-.public sub_0204C140
-.public sub_0204C140
+.public Oam_SetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_021C152C
 .public sub_0204C124
 .public sub_0204C520
@@ -933,7 +933,7 @@
 .public sub_0204C510
 .public sub_0204C550
 .public sub_021C1600
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_02045B7C
 .public sub_021C095C
 .public sub_021C11A0
@@ -1162,7 +1162,7 @@
 .public GFL_ArcToolFree
 .public MI_CpuCopy8
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C108
@@ -1174,7 +1174,7 @@
 .public MI_CpuCopy8
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0208D868
 .public sub_0208D868
@@ -1278,7 +1278,7 @@
 .public MI_CpuFill8
 .public sub_0208D65C
 .public sub_0208D65C
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C378
 .public sub_0204C124
 .public sub_0204C318
@@ -1293,10 +1293,10 @@
 .public sub_0208D5C4
 .public OS_GetTick
 .public sub_0208D5C4
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C318
 .public sub_0208D5C4
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_021C79D0
 .public sub_02045738
 .public sub_021BFB24

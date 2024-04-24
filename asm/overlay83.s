@@ -20,7 +20,7 @@ ovy83_21ea868: ; 0x021EA868
 	strh r2, [r3, #2]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy83_21ea868

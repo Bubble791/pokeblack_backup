@@ -624,7 +624,7 @@ _0219D330:
 	ldr r1, [r7, #0x1c]
 	ldr r2, [r5, #0x20]
 	ldr r3, [r7, #0x24]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r6, #0x4c]
 	mov r1, #1
 	bl sub_0204C488
@@ -792,7 +792,7 @@ _0219D4CA:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r5, r4
 	add r1, #0x94
 	str r0, [r1]

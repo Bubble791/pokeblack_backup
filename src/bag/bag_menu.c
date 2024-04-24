@@ -299,7 +299,7 @@ void ovy142_219cba8(BagView *bagView);
 void ovy142_219cba8(BagView *bagView)
 {
     ovy142_219b46c(bagView);
-    sub_0204C520(bagView->unk6B8, 1);
+    sub_0204C520(bagView->scrollBarOam, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
     BagMenu_KeyPadMain(bagView);
@@ -308,7 +308,7 @@ void ovy142_219cbe4(BagView *bagView);
 void ovy142_219cbe4(BagView *bagView)
 {
     ovy142_219b46c(bagView);
-    sub_0204C520(bagView->unk6B8, 1);
+    sub_0204C520(bagView->scrollBarOam, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
     BagMenu_SetRunFunc(bagView, ovy142_219b2f0);
@@ -344,7 +344,7 @@ void ovy142_219cc84(BagView *bagView)
     if (!sub_0204C560(bagView->unk744))
     {
         sub_0204C488(bagView->unk744, 0);
-        sub_0204C520(bagView->unk6B8, 0);
+        sub_0204C520(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 151, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
         ovy142_219fda8(bagView, 0);
@@ -466,7 +466,7 @@ void ovy142_219cd98(BagView* bagView)
                 ovy142_219bda4(bagView, sub_0203D554() == 0);
                 r5 = 1;
                 ovy142_219fda8(bagView, 1);
-                sub_0204C520(bagView->unk6B8, 1);
+                sub_0204C520(bagView->scrollBarOam, 1);
                 BagMenu_KeyPadMain(bagView);
                 break;
 
@@ -580,7 +580,7 @@ void ovy142_219d0c8(BagView* bagView)
     if (!sub_0204C560(bagView->unk740))
     {
         sub_0204C488(bagView->unk740, 2);
-        sub_0204C520(bagView->unk6B8, 0);
+        sub_0204C520(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 147, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
         ovy142_219fda8(bagView, 0);
@@ -724,7 +724,7 @@ void ovy142_219d2bc(BagView *bagView)
                     ovy142_219bda4(bagView, sub_0203D554() == 0);
                     r5 = 1;
                     ovy142_219fda8(bagView, 1);
-                    sub_0204C520(bagView->unk6B8, 1);
+                    sub_0204C520(bagView->scrollBarOam, 1);
                     BagMenu_KeyPadMain(bagView);
                     break;
             }
@@ -760,7 +760,7 @@ void ovy142_219d3d8(BagView *bagView)
     ovy142_219ed3c(bagView);
     ovy142_21998f4(bagView);
     sub_0219F0AC(bagView);
-    sub_0204C520(bagView->unk6B8, 1);
+    sub_0204C520(bagView->scrollBarOam, 1);
     ovy142_219fda8(bagView, 1);
     BagMenu_KeyPadMain(bagView);
 }
@@ -981,7 +981,7 @@ extern int sub_0202D7F8(int);
 extern int sub_0202D7FC(int);
 extern int sub_0202D80C(u8);
 extern int sub_0202D7F4(u8);
-extern int sub_0204C040(int, int, int, int, OAM_TEMP *, int, u16);
+extern int Oam_CreateSprite(int, int, int, int, OAM_TEMP *, int, u16);
 extern int sub_0202D800(u8);
 extern void sub_0204C378(int, int, int);
 extern void sub_0204C124(int, int);
@@ -1083,7 +1083,7 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[2].anim = 0;
     for (u32 i = 0; i < 3; i++)
     {
-        a1->unk6D4[i] = sub_0204C040(
+        a1->unk6D4[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk5F8[i],
             a1->unk5F0,
@@ -1103,7 +1103,7 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[1].anim = 0;
     for (u32 i = 0; i < 0x11; i++)
     {
-        a1->unk6E0[i] = sub_0204C040(
+        a1->unk6E0[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk5AC[i],
             a1->unk5F0,
@@ -1127,7 +1127,7 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[0].x = 146;
     newtemp[0].y = 176;
     newtemp[0].anim = 0;
-    a1->unk744 = sub_0204C040(
+    a1->unk744 = Oam_CreateSprite(
         a1->spriteGroup,
         a1->unk594,
         a1->unk590,
@@ -1322,7 +1322,7 @@ void ovy142_219e168(BagView *a1)
     sub_02048210(a1->unk774);
     sub_02048210(a1->unk78C);
     sub_02048210(a1->unk794);
-    sub_0204C108(a1->unk6B8);
+    sub_0204C108(a1->scrollBarOam);
     if (a1->unk6B0)
     {
         sub_0204C108(a1->unk6B0);
@@ -1432,7 +1432,7 @@ void ovy142_219e4dc(BagView *a1, int a2)
     v8.flag = 0;
     v8.unk = 0;
 
-    a1->unk6B0 = sub_0204C040(
+    a1->unk6B0 = Oam_CreateSprite(
         a1->spriteGroup,
         a1->unk554,
         a1->unk550,
@@ -1494,7 +1494,7 @@ void ovy142_219e6f8(BagView *a1)
     temp[2].unk = 2;
     temp[2].anim = 0;
     
-    a1->unk6B8 = sub_0204C040(
+    a1->scrollBarOam = Oam_CreateSprite(
         a1->spriteGroup,
         a1->cursorNCGR,
         a1->cursorNCLR,
@@ -1502,9 +1502,9 @@ void ovy142_219e6f8(BagView *a1)
         &temp[2],
         0,
         a1->heapId);
-    sub_0204C124(a1->unk6B8, 1);
-    sub_0204C520(a1->unk6B8, 1);
-    sub_0204C5C8(a1->unk6B8, 0);
+    sub_0204C124(a1->scrollBarOam, 1);
+    sub_0204C520(a1->scrollBarOam, 1);
+    sub_0204C5C8(a1->scrollBarOam, 0);
     ovy142_219ed3c(a1);
     temp[1].x = 140;
     temp[1].y = 48;
@@ -1513,7 +1513,7 @@ void ovy142_219e6f8(BagView *a1)
     temp[1].unk = 2;
     temp[1].anim = 1;
     
-    a1->unk6B4 = sub_0204C040(
+    a1->unk6B4 = Oam_CreateSprite(
         a1->spriteGroup,
         a1->cursorNCGR,
         a1->cursorNCLR,
@@ -1531,7 +1531,7 @@ void ovy142_219e6f8(BagView *a1)
         temp[0].flag = 10;
         temp[0].unk = 3; 
         temp[0].anim = 0;
-        a1->unk644[i] = sub_0204C040(
+        a1->unk644[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->itemBarNCGR[i],
             a1->unk598,
@@ -1541,7 +1541,7 @@ void ovy142_219e6f8(BagView *a1)
             a1->heapId);
         temp[0].x -= 24;
         temp[0].anim = 1;
-        a1->unk684[i] = sub_0204C040(
+        a1->unk684[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->barLeftIconNCGR,
             a1->barLeftIconNCLR,
@@ -1859,8 +1859,8 @@ _0219EB30:
 	pop {r3, r4, r5, r6, r7, pc}
 }
 
-extern void sub_0204C178(int, u16*, int);
-extern int sub_0204C140(int, u16*, int);
+extern void Oam_GetSpritePosData(int, u16*, int);
+extern int Oam_SetSpritePosData(int, u16*, int);
 extern void sub_0204C504(int, int);
 
 void ovy142_219eb54(BagView *a1)
@@ -1870,16 +1870,16 @@ void ovy142_219eb54(BagView *a1)
     u16 v8[2]; // [sp+0h] [bp-18h] BYREF
 
     ovy142_219fd4c(a1, 0);
-    sub_0204C178(a1->unk6B4, v8, 0xFFFF);
+    Oam_GetSpritePosData(a1->unk6B4, v8, 0xFFFF);
     v8[1] = 24 * (a1->posNow + 1);
-    v5 = sub_0204C140(a1->unk6B4, v8, 0xFFFF);
+    v5 = Oam_SetSpritePosData(a1->unk6B4, v8, 0xFFFF);
     if (!sub_0203D554())
         ovy142_219fd4c(a1, 1);
     sub_020352B0(a1->unk8A4);
     v6 = BagMenu_GetPocketItemAmount(a1) >= 7;
-    sub_0204C124(a1->unk6B8, v6);
+    sub_0204C124(a1->scrollBarOam, v6);
     sub_0204C504(a1->unk6B4, 0);
-    sub_0204C504(a1->unk6B8, 0);
+    sub_0204C504(a1->scrollBarOam, 0);
 }
 
 extern int sub_0204BB80(int, int);
@@ -1949,9 +1949,9 @@ void ovy142_219ecec(BagView *a1)
             v7 = 0x8e;
         }
 
-        sub_0204C178(a1->unk6B8, v4, 0xFFFF);
+        Oam_GetSpritePosData(a1->scrollBarOam, v4, 0xFFFF);
         v4[1] = v7;
-        sub_0204C140(a1->unk6B8, v4, 0xFFFF);
+        Oam_SetSpritePosData(a1->scrollBarOam, v4, 0xFFFF);
     }
 }
 
@@ -1965,9 +1965,9 @@ void ovy142_219ed3c(BagView *a1)
     result = BagMenu_GetPocketItemAmount(a1);
     if (result >= 7)
     {
-        sub_0204C178(a1->unk6B8, v7, 0xFFFF);
+        Oam_GetSpritePosData(a1->scrollBarOam, v7, 0xFFFF);
         v7[1] = sub_020355E0(result - 6, a1->unk834 + 1, 26, 142, 0);
-        sub_0204C140(a1->unk6B8, v7, 0xFFFF);
+        Oam_SetSpritePosData(a1->scrollBarOam, v7, 0xFFFF);
     }
 }
 
@@ -1998,7 +1998,7 @@ void ovy142_219ed8c(BagView *a1)
         temp.anim = data1[i];
         if (i == 2)
             temp.y += 4;
-        a1->unk724[i] = sub_0204C040(
+        a1->unk724[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk56C,
             a1->unk564,
@@ -2015,7 +2015,7 @@ void ovy142_219ed8c(BagView *a1)
     temp.y = 168;
     temp.anim = 0;
 
-    a1->unk740 = sub_0204C040(
+    a1->unk740 = Oam_CreateSprite(
         a1->spriteGroup,
         a1->unk570,
         a1->unk564,
@@ -2042,7 +2042,7 @@ void ovy142_219ed8c(BagView *a1)
         temp.unk = 0;
         u8 newnum = i + 5;
 
-        a1->unk724[newnum] = sub_0204C040(
+        a1->unk724[newnum] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk56C,
             a1->unk564,
@@ -2073,7 +2073,7 @@ void ovy142_219efc0(BagView *a1)
         v8.x = word_21A168C[i][0] - 16;
         v8.y = word_21A168C[i][1];
         v8.anim = data_021a0fee[i][1];
-        a1->unk6BC[i] = sub_0204C040(
+        a1->bagPocketOam[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->bagPocketNCGR,
             a1->bagPocketNCLR,
@@ -2081,7 +2081,7 @@ void ovy142_219efc0(BagView *a1)
             &v8,
             0,
             a1->heapId);
-        sub_0204C520(a1->unk6BC[i], 1);
+        sub_0204C520(a1->bagPocketOam[i], 1);
     }
 
 }
@@ -2093,9 +2093,9 @@ void ovy142_219f06c(BagView *a1, u32 a2)
     for (i = 0; i < 6; ++i)
     {
         if (i == a2)
-            sub_0204C488(a1->unk6BC[i], data_021A0FEE[i][0]);
+            sub_0204C488(a1->bagPocketOam[i], data_021A0FEE[i][0]);
         else
-            sub_0204C488(a1->unk6BC[i], data_021A0FEE[i][1]);
+            sub_0204C488(a1->bagPocketOam[i], data_021A0FEE[i][1]);
     }
 
 }
@@ -2651,10 +2651,10 @@ void ovy142_219fd4c(BagView *a1, int a2)
     s16 v8[2];
     s16 v6[2];
 
-    sub_0204C178(a1->unk6B4, v8, 0);
+    Oam_GetSpritePosData(a1->unk6B4, v8, 0);
     for (i = 0; i < 8; i++)
     {
-        sub_0204C178(a1->unk644[i], v6, 0);
+        Oam_GetSpritePosData(a1->unk644[i], v6, 0);
         if (v6[1] == v8[1])
             break;
     }
@@ -2792,18 +2792,18 @@ void ovy142_219ffe8(BagView *a1, int a2)
 
 extern s16 word_21A168C[][2];
 
-int ovy142_21a00a0(BagView *a1)
+int BagMenu_PokcetIconMoveFadeIn(BagView *a1)
 {
-    s16 v8[2];   // [sp+0h] [bp-18h] BYREF
+    s16 v8[2];
     u32 i; // r4
 
     for (i = 0; i < 6; ++i)
     {
-        sub_0204C178(a1->unk6BC[i], v8, 0xFFFF);
+        Oam_GetSpritePosData(a1->bagPocketOam[i], v8, 0xFFFF);
         if (v8[0] == word_21A168C[i][0])
             return 0;
         v8[0] += 4;
-        sub_0204C140(a1->unk6BC[i], v8, 0xFFFF);
+        Oam_SetSpritePosData(a1->bagPocketOam[i], v8, 0xFFFF);
     }
     return 1;
 }

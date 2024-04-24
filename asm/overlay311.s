@@ -1929,7 +1929,7 @@ ovy311_219ddb8: ; 0x0219DDB8
 	ldr r1, [r3, #8]
 	ldr r2, [r3, #0xc]
 	ldr r3, [r3, #0x10]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	add r4, r0, #0
 	bl sub_0204C520
@@ -2013,7 +2013,7 @@ _0219DE4C:
 	add r0, r5, #0
 	add r1, sp, #0x10
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	mov r0, #2
 	ldrsh r1, [r7, r0]
 	ldr r0, [sp, #8]
@@ -2024,7 +2024,7 @@ _0219DE4C:
 	ldrsh r6, [r7, r0]
 	add r0, r5, #0
 	add r1, sp, #0x10
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	mov r0, #0x13
 	mvn r0, r0
 	cmp r6, r0
@@ -2059,7 +2059,7 @@ _0219DEAA:
 	add r0, r4, #0
 	add r1, sp, #0x10
 	mov r2, #1
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	mov r0, #2
 	ldrsh r1, [r7, r0]
 	ldr r0, [sp, #0xc]
@@ -2070,7 +2070,7 @@ _0219DEAA:
 	ldrsh r6, [r7, r0]
 	add r0, r4, #0
 	add r1, sp, #0x10
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	mov r0, #0x1b
 	mvn r0, r0
 	cmp r6, r0
@@ -2120,7 +2120,7 @@ _0219DF32:
 	add r0, r5, #0
 	add r1, sp, #8
 	add r2, r7, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	mov r0, #0xb7
 	lsl r0, r0, #2
 	ldr r0, [r6, r0]
@@ -2131,7 +2131,7 @@ _0219DF32:
 	strh r1, [r0, #2]
 	add r0, r5, #0
 	add r1, sp, #8
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 _0219DF54:
 	add r4, r4, #1
 	cmp r4, #0x14
@@ -2164,13 +2164,13 @@ _0219DF80:
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r0, sp, #0
 	strh r4, [r0, #2]
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -2188,13 +2188,13 @@ ovy311_219dfa0: ; 0x0219DFA0
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r0, sp, #0
 	strh r5, [r0, #2]
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0219DFC8: .word 0x0000FFFF
@@ -2254,13 +2254,13 @@ ovy311_219e004: ; 0x0219E004
 	add r0, r5, #0
 	add r1, sp, #0
 	add r2, r6, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r0, sp, #0
 	strh r7, [r0, #2]
 	add r0, r5, #0
 	add r1, sp, #0
 	add r2, r6, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 _0219E03C:
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}

@@ -1911,7 +1911,7 @@ ovy84_21ebd80: ; 0x021EBD80
 	mov r4, #0x4a
 	lsl r4, r4, #2
 	ldr r0, [r0, r4]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r4, r0, #0
 	mov r1, #0
 	bl sub_0204C520

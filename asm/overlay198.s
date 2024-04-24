@@ -681,7 +681,7 @@ _021B3486:
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [sp, #0x18]
 	str r0, [r6, r1]
 	ldr r0, [sp, #0x14]
@@ -728,7 +728,7 @@ _021B3486:
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x90
 	str r0, [r5, r1]
@@ -769,7 +769,7 @@ _021B3486:
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x94
 	str r0, [r5, r1]
@@ -810,7 +810,7 @@ _021B3486:
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x98
 	str r0, [r5, r1]

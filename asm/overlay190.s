@@ -2526,7 +2526,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	ldr r1, [r5, r4]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0xc
 	str r0, [r5, r1]
@@ -2561,7 +2561,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	ldr r1, [r5, r4]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r4, #0
 	add r1, #0x10
 	str r0, [r5, r1]

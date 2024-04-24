@@ -793,7 +793,7 @@ ovy75_21e96f8: ; 0x021E96F8
 	mov r2, #0
 	add r6, r0, #0
 	mov r7, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	ldr r0, [r4, #0xc]
 	cmp r0, #0
 	beq _021E9720
@@ -845,7 +845,7 @@ _021E976E:
 	add r0, r6, #0
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, r6, r7, pc}
 _021E977A:
 	add r0, r5, #0
@@ -945,7 +945,7 @@ _021E9822:
 	add r0, r7, #0
 	add r1, sp, #0x14
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [sp, #0xc]
 	add r1, r0, #1
 	ldr r0, [sp, #4]

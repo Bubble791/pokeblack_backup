@@ -57,7 +57,7 @@ _021F42AC:
 	ldr r0, [sp, #0xc]
 	ldr r3, [sp, #0x38]
 	lsl r6, r4, #2
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, r6]
 	mov r1, #0
 	add r2, r7, #0
@@ -133,7 +133,7 @@ ovy285_21f4320: ; 0x021F4320
 	strh r1, [r0, #2]
 	ldr r0, [r6]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldrb r0, [r5]
 	mov r2, #1
 	sub r1, r0, r7
@@ -145,7 +145,7 @@ ovy285_21f4320: ; 0x021F4320
 	strh r1, [r0, #2]
 	ldr r0, [r6, #4]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldrb r0, [r5]
 	mov r2, #1
 	add r1, r0, r7
@@ -157,7 +157,7 @@ ovy285_21f4320: ; 0x021F4320
 	strh r1, [r0, #2]
 	ldr r0, [r6, #8]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldrb r0, [r5]
 	mov r2, #1
 	add r1, r0, r7
@@ -169,7 +169,7 @@ ovy285_21f4320: ; 0x021F4320
 	strh r1, [r0, #2]
 	ldr r0, [r6, #0xc]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy285_21f4320
 

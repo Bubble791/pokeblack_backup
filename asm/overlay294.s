@@ -2407,7 +2407,7 @@ ovy294_21a2cc0: ; 0x021A2CC0
 	ldr r1, [r5, r6]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	sub r1, r6, #4
 	str r0, [r5, r1]
 	mov r1, #0

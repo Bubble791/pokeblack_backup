@@ -62,7 +62,7 @@
 .public MI_CpuFill8
 .public sub_0219D2D0
 .public sub_0219D2D0
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C2B0
@@ -95,8 +95,8 @@
 .public sub_0204C560
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98

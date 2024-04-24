@@ -40696,8 +40696,8 @@ sub_0204C028: ; 0x0204C028
 _0204C03C: .word 0x0214193C
 	thumb_func_end sub_0204C028
 
-	thumb_func_start sub_0204C040
-sub_0204C040: ; 0x0204C040
+	thumb_func_start Oam_CreateSprite
+Oam_CreateSprite: ; 0x0204C040
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x30
 	str r0, [sp, #0xc]
@@ -40745,7 +40745,7 @@ sub_0204C040: ; 0x0204C040
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _0204C0A0: .word 0x0214193C
-	thumb_func_end sub_0204C040
+	thumb_func_end Oam_CreateSprite
 
 	thumb_func_start sub_0204C0A4
 sub_0204C0A4: ; 0x0204C0A4
@@ -40835,8 +40835,8 @@ sub_0204C138: ; 0x0204C138
 	bx lr
 	thumb_func_end sub_0204C138
 
-	thumb_func_start sub_0204C140
-sub_0204C140: ; 0x0204C140
+	thumb_func_start Oam_SetSpritePosData
+Oam_SetSpritePosData: ; 0x0204C140
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r4, r1, #0
@@ -40863,10 +40863,10 @@ sub_0204C140: ; 0x0204C140
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_0204C140
+	thumb_func_end Oam_SetSpritePosData
 
-	thumb_func_start sub_0204C178
-sub_0204C178: ; 0x0204C178
+	thumb_func_start Oam_GetSpritePosData
+Oam_GetSpritePosData: ; 0x0204C178
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	add r1, r2, #0
@@ -40889,7 +40889,7 @@ sub_0204C178: ; 0x0204C178
 	strh r0, [r4, #2]
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_0204C178
+	thumb_func_end Oam_GetSpritePosData
 
 	thumb_func_start sub_0204C1A8
 sub_0204C1A8: ; 0x0204C1A8

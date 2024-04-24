@@ -88,7 +88,7 @@
 .public sub_0202D81C
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -137,7 +137,7 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_0202BAEC
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public GFL_StrBufCreate
 .public StringSetNumber
 .public StringSetNumber

@@ -83,8 +83,8 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204C040
-.public sub_0204C040
+.public Oam_CreateSprite
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C520
@@ -340,7 +340,7 @@
 .public sub_02034074
 .public sub_020340C8
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -447,7 +447,7 @@
 .public sub_0201D624
 .public sub_02020F40
 .public Oam_LoadNCGRFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_020210C0
 .public sub_0204C378
 .public sub_0204AA30

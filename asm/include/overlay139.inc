@@ -11,7 +11,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C488
 .public GFL_HeapAllocate
 .public MI_CpuFill8
@@ -63,7 +63,7 @@
 .public sub_02199EF0
 .public sub_02199EF0
 .public sub_02199EF0
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C108
 .public MI_CpuFill8
@@ -153,7 +153,7 @@
 .public sub_02048210
 .public sub_02044668
 .public GFL_HeapFree
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_02044C98
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -204,7 +204,7 @@
 .public sub_0203D554
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public GFL_SndSEPlay
 .public sub_0203DADC
 .public GFL_SndSEPlay

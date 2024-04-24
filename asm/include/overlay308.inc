@@ -112,7 +112,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_021A0664
 .public sub_0204C378
 .public sub_0204C124
@@ -209,7 +209,7 @@
 .public sub_02024700
 .public sub_0204C488
 .public sub_0204C56C
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_0204BA40

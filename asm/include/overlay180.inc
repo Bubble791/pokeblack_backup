@@ -254,7 +254,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_02021034
 .public sub_0204C378
 .public sub_0204C124
@@ -264,8 +264,8 @@
 .public sub_02046EDC
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public MI_CpuFill8
 .public sub_0219B738

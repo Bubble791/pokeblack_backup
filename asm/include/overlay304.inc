@@ -303,12 +303,12 @@
 .public sub_02021A3C
 .public sub_0204C124
 .public sub_0204C488
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C488
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C488
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -354,9 +354,9 @@
 .public sub_0208D868
 .public sub_0208D868
 .public sub_021A1550
-.public sub_0204C178
+.public Oam_GetSpritePosData
 .public sub_0219C324
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0219CC44
 .public sub_021A1AF0
 .public sub_0219CC34
@@ -368,7 +368,7 @@
 .public sub_0204C520
 .public sub_0219CC34
 .public sub_021A1B2C
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_021A1B2C
 .public sub_021A1AF0
 .public sub_021A1BA8
@@ -376,8 +376,8 @@
 .public sub_021A1BA8
 .public sub_021A1BB8
 .public sub_02045E1C
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_0204C4D4

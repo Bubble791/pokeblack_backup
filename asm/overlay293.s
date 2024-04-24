@@ -4459,7 +4459,7 @@ ovy293_21a3d14: ; 0x021A3D14
 	add r1, r2, r1
 	ldr r0, [r4, #0x14]
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldrb r0, [r4]
 	add r0, r0, #1
 	strb r0, [r4]

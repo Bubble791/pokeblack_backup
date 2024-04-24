@@ -2405,7 +2405,7 @@ ovy286_21f56e4: ; 0x021F56E4
 	ldr r0, [r4, r0]
 	ldr r2, [r6, r2]
 	ldr r3, [r3, r5]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add sp, #0x14
 	pop {r3, r4, r5, r6, pc}
 	nop
@@ -2525,7 +2525,7 @@ ovy286_21f5804: ; 0x021F5804
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy286_21f5804
 

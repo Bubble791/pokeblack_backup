@@ -993,7 +993,7 @@ _0219D5C6:
 	ldr r1, [r7, #0x50]
 	ldr r2, [r7, #0x54]
 	ldr r3, [r7, #0x58]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add r1, r6, #0
 	str r0, [r7, #0x68]
 	bl sub_0204C124
@@ -1611,7 +1611,7 @@ _0219DB76:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x8c
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x84
 	b _0219DBD2
@@ -1645,7 +1645,7 @@ _0219DB8E:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x80
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x78
 _0219DBD2:
@@ -1738,7 +1738,7 @@ _0219DC8C:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x74
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x6c
 	bl sub_0204C270
@@ -1838,7 +1838,7 @@ _0219DD60:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x68
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x60
 	b _0219DDC8
@@ -1876,7 +1876,7 @@ _0219DD84:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x5c
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x54
 _0219DDC8:
@@ -1963,7 +1963,7 @@ _0219DE72:
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x50
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x1c]
 	add r1, sp, #0x48
 	bl sub_0204C270
@@ -2040,7 +2040,7 @@ _0219DF08:
 	add r0, r0, r1
 	ldr r0, [r0, #0x6c]
 	add r1, sp, #0x38
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	mov r0, #2
 	ldrsh r1, [r6, r0]
 	lsl r0, r5, #1
@@ -2391,7 +2391,7 @@ ovy316_219e11c: ; 0x0219E11C
 	ldr r1, [r5, r1]
 	ldr r2, [r5, r6]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #0x11
 	lsl r1, r1, #5
 	str r0, [r5, r1]
@@ -2445,7 +2445,7 @@ _0219E1FC:
 	ldr r0, [r0, r3]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, pc}
 	thumb_func_end ovy316_219e1f0
 
@@ -2468,7 +2468,7 @@ ovy316_219e218: ; 0x0219E218
 	ldr r0, [r0, r1]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #4
 	pop {r3, r4, pc}
 	nop

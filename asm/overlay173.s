@@ -1283,7 +1283,7 @@ ovy173_219d798: ; 0x0219D798
 	ldr r1, [r5, #8]
 	ldr r2, [r5, #0xc]
 	ldr r3, [r5, #0x10]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x14]
 	mov r0, #2
 	strh r0, [r6, #4]
@@ -1301,7 +1301,7 @@ ovy173_219d798: ; 0x0219D798
 	ldr r1, [r5, #8]
 	ldr r2, [r5, #0xc]
 	ldr r3, [r5, #0x10]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x18]
 	ldr r0, [r5, #0x14]
 	mov r1, #0
@@ -4096,7 +4096,7 @@ _0219ED04:
 	ldr r1, [r5, r7]
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	sub r1, r7, #4
 	str r0, [r5, r1]
 	add sp, #0x18
@@ -5160,7 +5160,7 @@ _0219F5EA:
 	ldr r1, [r5, r1]
 	ldr r2, [r6, r2]
 	ldr r3, [r6, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [sp, #0x20]
 	str r0, [r5, r1]
 	add r0, r7, #0

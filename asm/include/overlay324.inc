@@ -271,7 +271,7 @@
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C378

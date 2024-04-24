@@ -77,9 +77,9 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public MI_CpuFill8
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C438
@@ -216,7 +216,7 @@
 .public sub_0219BC20
 .public MI_CpuFill8
 .public sub_0219B088
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0208D65C
 .public sub_0204C124

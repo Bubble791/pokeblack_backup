@@ -556,9 +556,9 @@
 .public sub_0204BCD0
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C108
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C4D4
 .public sub_0204C318
 .public sub_0204C318

@@ -187,7 +187,7 @@
 .public sub_02026E64
 .public GFL_HeapFree
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204BF1C
 .public sub_021F5A18
 .public sub_0204C108
@@ -197,7 +197,7 @@
 .public sub_0204BE64
 .public sub_0204BF98
 .public sub_0204C124
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_021F5A44
 .public sub_021F428C

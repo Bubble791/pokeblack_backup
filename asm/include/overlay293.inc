@@ -385,7 +385,7 @@
 .public sub_02044C98
 .public sub_02046D84
 .public sub_021A2678
-.public sub_0204C140
+.public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_02199A44
 .public GFL_HeapFree

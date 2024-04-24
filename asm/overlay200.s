@@ -481,7 +481,7 @@ _021B3388:
 	ldr r1, [r6, #0x4c]
 	ldr r2, [r5, #0x48]
 	ldr r3, [r6, #0x54]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r6, #0x5c]
 	add r1, r7, #0
 	bl sub_0204C124

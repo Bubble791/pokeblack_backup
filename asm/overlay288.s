@@ -4792,7 +4792,7 @@ _021F6892:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r6, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldr r1, [sp, #0x2c]
 	str r0, [r1, r4]
 	ldrb r0, [r5, #3]
@@ -5138,7 +5138,7 @@ _021F6B72:
 	ldr r0, [r0]
 	add r1, sp, #4
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021F6B72
@@ -5415,7 +5415,7 @@ ovy288_21f6d60: ; 0x021F6D60
 	ldr r0, [r0]
 	add r1, sp, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r5, #0
 	mov r1, #4
 	mov r2, #0xa

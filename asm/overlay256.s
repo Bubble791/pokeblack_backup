@@ -3109,7 +3109,7 @@ ovy256_21bcf60: ; 0x021BCF60
 	ldr r0, [r1, r0]
 	add r1, sp, #0
 	mov r2, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
@@ -3129,7 +3129,7 @@ ovy256_21bcf84: ; 0x021BCF84
 	mov r2, #0
 	add r4, r3, #0
 	mov r6, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	ldrsh r0, [r1, r6]
 	strh r0, [r5]
@@ -3370,7 +3370,7 @@ ovy256_21bd130: ; 0x021BD130
 	add r3, #0xac
 	ldr r2, [r6, r2]
 	ldr r3, [r4, r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

@@ -78,7 +78,7 @@
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public sub_02046CFC

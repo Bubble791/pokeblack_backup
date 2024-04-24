@@ -248,7 +248,7 @@ ovy139_2199a5c: ; 0x02199A5C
 	ldr r1, [r4]
 	ldr r2, [r4, #4]
 	ldr r3, [r4, #8]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	ldrb r1, [r5]
 	add r4, r0, #0
 	bl sub_0204C488
@@ -1054,7 +1054,7 @@ _0219A05C:
 	add r2, r7, #0
 	str r0, [sp, #8]
 	ldr r0, [sp, #0xc]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5]
 	bl sub_0204C520
@@ -2176,7 +2176,7 @@ _0219A8E0:
 	ldr r0, [r0]
 	add r1, sp, #0x14
 	lsr r2, r2, #0x10
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -2562,7 +2562,7 @@ _0219AC22:
 	ldr r0, [r0]
 	add r1, sp, #0xc
 	lsr r2, r2, #0x10
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add r0, r5, #1
 	lsl r0, r0, #0x18
 	lsr r5, r0, #0x18

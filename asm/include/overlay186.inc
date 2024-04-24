@@ -388,7 +388,7 @@
 .public GFL_ArcToolFree
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C53C
 .public sub_0204C520
@@ -502,7 +502,7 @@
 .public sub_0202D81C
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -669,7 +669,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204C178
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
 
 .public MTX_RotX33_

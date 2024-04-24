@@ -710,7 +710,7 @@ _0217CE94:
 	ldr r1, [r3, #0x20]
 	ldr r2, [r3, #0x24]
 	ldr r3, [r3, #0x28]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, r7]
 	bl sub_0204C520

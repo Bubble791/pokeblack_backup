@@ -856,7 +856,7 @@ _021EAEC8:
 	ldr r0, [r5, #0x50]
 	add r1, sp, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	ldr r1, [r5, #0x68]
 	ldr r0, [r5, #0x38]
 	lsl r1, r1, #2
@@ -1185,7 +1185,7 @@ _021EB15A:
 	ldr r1, [r6, #0x30]
 	ldr r2, [r5, #0x2c]
 	ldr r3, [r6, #0x34]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r6, #0x38]
 	mov r1, #1
 	bl sub_0204C520
@@ -1208,21 +1208,21 @@ _021EB15A:
 	ldr r0, [r5, #0x38]
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	mov r0, #0xb0
 	strh r0, [r4]
 	strh r6, [r4, #2]
 	ldr r0, [r5, #0x44]
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	mov r0, #0x80
 	strh r0, [r4]
 	strh r6, [r4, #2]
 	ldr r0, [r5, #0x5c]
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1401,7 +1401,7 @@ _021EB298:
 	ldr r1, [r5, #0x1c]
 	ldr r2, [r5, #0x18]
 	ldr r3, [r5, #0x20]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r5, #0x24]
 	mov r1, #1
 	bl sub_0204C520

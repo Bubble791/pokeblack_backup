@@ -1169,7 +1169,7 @@ _0219A208:
 	ldr r1, [r3, #0x44]
 	ldr r2, [r3, #0x40]
 	ldr r3, [r3, #0x48]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r4]
 	ldr r0, [r5, #0x2c]
 	add r1, sp, #0x18
@@ -1322,7 +1322,7 @@ _0219A336:
 	ldr r1, [r3, #0x44]
 	ldr r2, [r3, #0x40]
 	ldr r3, [r3, #0x48]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	str r0, [r4]
 	ldr r0, [r5, #0x2c]
 	add r1, sp, #0x1c
@@ -1863,7 +1863,7 @@ ovy143_219a6fc: ; 0x0219A6FC
 	ldr r1, [r3, #0x54]
 	ldr r2, [r3, #0x50]
 	ldr r3, [r3, #0x58]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	add r5, r0, #0
 	bl sub_0204C520
@@ -1967,7 +1967,7 @@ ovy143_219a7a4: ; 0x0219A7A4
 	ldr r1, [r4, #0x54]
 	ldr r2, [r4, #0x50]
 	ldr r3, [r4, #0x58]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	add r4, r0, #0
 	bl sub_0204C520
@@ -11117,7 +11117,7 @@ _0219EEB4:
 	ldr r1, [r3, #0x54]
 	ldr r2, [r3, #0x50]
 	ldr r3, [r3, #0x58]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, #0x38]
 	bl sub_0204C520
@@ -11167,7 +11167,7 @@ ovy143_219ef40: ; 0x0219EF40
 	ldr r0, [r5, r4]
 	add r1, r7, #0
 	mov r2, #1
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r1, sp, #0
 	strh r6, [r1, #2]
 	mov r0, #2
@@ -11177,7 +11177,7 @@ ovy143_219ef40: ; 0x0219EF40
 	strh r0, [r1, #2]
 	ldr r0, [r5, r4]
 	add r1, r7, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy143_219ef40

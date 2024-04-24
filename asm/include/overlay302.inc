@@ -87,7 +87,7 @@
 .public GFL_FadeScreenSet
 .public sub_02045E1C
 .public sub_02045E1C
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_02010D78
 .public sub_02010D98
 .public sub_02010D88

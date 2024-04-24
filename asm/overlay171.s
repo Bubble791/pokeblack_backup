@@ -1517,7 +1517,7 @@ _021DE664:
 	ldr r1, [r1]
 	ldr r2, [r2]
 	ldr r3, [r3]
-	bl sub_0204C040
+	bl Oam_CreateSprite
 	lsl r1, r4, #2
 	add r1, r5, r1
 	add r4, r4, #1
@@ -1685,7 +1685,7 @@ ovy171_21de7dc: ; 0x021DE7DC
 	add r1, sp, #0
 	mov r2, #0
 	mov r7, #0
-	bl sub_0204C178
+	bl Oam_GetSpritePosData
 	add r0, sp, #0
 	ldrsh r1, [r0, r7]
 	mov r2, #0
@@ -1693,7 +1693,7 @@ ovy171_21de7dc: ; 0x021DE7DC
 	strh r1, [r0]
 	ldr r0, [r5, r4]
 	add r1, sp, #0
-	bl sub_0204C140
+	bl Oam_SetSpritePosData
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy171_21de7dc

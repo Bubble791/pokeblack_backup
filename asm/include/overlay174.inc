@@ -23,13 +23,13 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C040
+.public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C244
-.public sub_0204C178
-.public sub_0204C140
-.public sub_0204C140
+.public Oam_GetSpritePosData
+.public Oam_SetSpritePosData
+.public Oam_SetSpritePosData
 .public MATH_CountPopulation
 .public sub_02040440
 .public sub_02040440
