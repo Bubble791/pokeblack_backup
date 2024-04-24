@@ -4,6 +4,105 @@
 #include "bag.h"
 #include "constants/arc_id.h"
 
+typedef struct
+{
+    u16 unk0;
+    u16 unk2;
+    int unk4;
+    int unk8;
+    int unkC;
+}BgInit;
+
+typedef struct
+{
+    u32 PosX;
+    u32 PosY;
+    u32 ScreenSize;
+    u32 ScreenOffset;
+    u8 Resolution;
+    u8 ColorsPalettes;
+    u8 ScreenBaseBlock;
+    u8 CharBaseBlock;
+    u32 CharBlockSize;
+    u8 ExtPaletteSlot;
+    u8 Priority;
+    u8 DisplayAreaOverflow;
+    u8 _padDisplayAreaOverflow;
+    u32 Mosaic;
+} BGSetup;
+
+const BgInit data_021A1018 = 
+{
+    .unk0 = 1,
+    .unk2 = 0,
+    .unk4 = 0,
+    .unk8 = 0,
+    .unkC = 0
+};
+
+const u32 data_021A1028[6] = {1, 1, 0, 1, 0, 1};
+
+const BGSetup data_21A1040[] = 
+{
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1E,
+        .CharBaseBlock = 2,
+        .CharBlockSize = 0x8000,
+        .Priority = 2,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1D,
+        .CharBaseBlock = 4,
+        .CharBlockSize = 0x8000,
+        .Priority = 0,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1F,
+        .CharBaseBlock = 0,
+        .CharBlockSize = 0x8000,
+        .Priority = 3,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1D,
+        .CharBaseBlock = 2,
+        .CharBlockSize = 0x8000,
+        .Priority = 2,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1E,
+        .CharBaseBlock = 4,
+        .CharBlockSize = 0x8000,
+        .Priority = 1,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1F,
+        .CharBaseBlock = 6,
+        .CharBlockSize = 0x8000,
+        .Priority = 0,
+    },
+    {
+        .ScreenSize = 0x0800,
+        .Resolution = 1,
+        .ScreenBaseBlock = 0x1C,
+        .CharBaseBlock = 0,
+        .CharBlockSize = 0x8000,
+        .Priority = 3,
+    },
+};
+
+
 int BagMenu_Loop(int a1, int a2, void *a3, void *a4)
 {
     BagView *wk = (BagView*) a4;
@@ -295,13 +394,7 @@ void ovy142_219cc60(BagView *bagView)
     sub_02026DE8(bagView->unk8A8);
 }
 
-void ovy142_219cc84(BagView *bagView);
-extern void ovy142_219cd98(BagView*);
-extern void GFL_MsgDataLoadStrbuf(int, int, int);
-extern void BagMenu_PrintBagMessage(BagView*, int);
-extern void ovy142_219cce0(BagView*);
-
-void ovy142_219cc84(BagView *bagView)
+void BagMenu_StartSortItem(BagView *bagView)
 {
     if (!sub_0204C560(bagView->unk744))
     {
@@ -742,12 +835,6 @@ void ovy142_219D464(BagView* a1)
     BagMenu_KeyPadMain(a1);
 }
 
-typedef struct
-{
-    u8 unk0[23];
-}ItemTypeSomeData;
-
-const ItemTypeSomeData data_021A0A3C[6] = {0};
 extern void sub_020088EC(void*, int);
 
 void ovy142_219d46c(void *a1, int a2, int a3, int a4)
@@ -774,16 +861,8 @@ void ovy142_219d46c(void *a1, int a2, int a3, int a4)
     }
 }
 
-const u32 data_21A1100[8] = {0};
-const u32 data_21A10A0[8] = {0};
-const u32 data_21A10C0[8] = {0};
-const u32 data_21A10E0[8] = {0};
-const u32 data_21A1080[8] = {0};
-const u32 data_21A1040[8] = {0};
-const u32 data_21A1060[8] = {0};
-
 void ovy142_219d4c0(void);
-extern void sub_0204476C(int, u32*, int);
+extern void sub_0204476C(int, BGSetup*, int);
 extern void sub_02045708(int);
 extern void GFL_BGSysLoadScr(int);
 extern void sub_02044C98(int, u8);
@@ -791,45 +870,45 @@ extern void sub_02045118(int, int, int, int);
 
 void ovy142_219d4c0(void)
 {
-    u32 v7[8]; // [sp+C0h] [bp-28h] BYREF
-    u32 v6[8];  // [sp+A0h] [bp-48h] BYREF
-    u32 v5[8];  // [sp+80h] [bp-68h] BYREF
-    u32 v4[8];  // [sp+60h] [bp-88h] BYREF
-    u32 v3[8];  // [sp+40h] [bp-A8h] BYREF
-    u32 v2[8];  // [sp+20h] [bp-C8h] BYREF
-    u32 v1[8];  // [sp+0h] [bp-E8h] BYREF
+    BGSetup v7; // [sp+C0h] [bp-28h] BYREF
+    BGSetup v6;  // [sp+A0h] [bp-48h] BYREF
+    BGSetup v5;  // [sp+80h] [bp-68h] BYREF
+    BGSetup v4;  // [sp+60h] [bp-88h] BYREF
+    BGSetup v3;  // [sp+40h] [bp-A8h] BYREF
+    BGSetup v2;  // [sp+20h] [bp-C8h] BYREF
+    BGSetup v1;  // [sp+0h] [bp-E8h] BYREF
 
     reg_GX_POWCNT = reg_GX_POWCNT & 0xffff7fff;
-    v7 = data_21A1100;
-    sub_0204476C(0, v7, 0);
+    v7 = data_21A1040[6];
+    sub_0204476C(0, &v7, 0);
     sub_02045708(0);
     GFL_BGSysLoadScr(0);
     sub_02044C98(0, 0);
-    v6 = data_21A10A0;
-    sub_0204476C(1, v6, 0);
+    v6 = data_21A1040[3];
+    sub_0204476C(1, &v6, 0);
     sub_02045708(1);
     GFL_BGSysLoadScr(1);
     sub_02044C98(1, 0);
-    v5 = data_21A10C0;
-    sub_0204476C(2, v5, 0);
+    v5 = data_21A1040[4];
+    sub_0204476C(2, &v5, 0);
     sub_02045708(2);
     GFL_BGSysLoadScr(2);
     sub_02044C98(2, 0);
-    v4 = data_21A10E0;
-    sub_0204476C(3, v4, 0);
+    v4 = data_21A1040[5];
+    sub_0204476C(3, &v4, 0);
     sub_02045118(3, 0, 1, 0);
     sub_02045708(3);
     GFL_BGSysLoadScr(3);
     sub_02044C98(3, 0);
-    v3 = data_21A1080;
-    sub_0204476C(4, v3, 0);
+    v3 = data_21A1040[2];
+    sub_0204476C(4, &v3, 0);
     sub_02044C98(4, 0);
     GFL_BGSysLoadScr(4);
-    v2 = data_21A1040;
-    sub_0204476C(5, v2, 0);
+    v2 = data_21A1040[0];
+    sub_0204476C(5, &v2, 0);
     sub_02044C98(5, 0);
-    v1 = data_21A1060;
-    sub_0204476C(6, v1, 0);
+    v1 = data_21A1040[1];
+    sub_0204476C(6, &v1, 0);
     sub_02044C98(6, 0);
     sub_02045118(6, 0, 1, 0);
     sub_02045738(6);
@@ -905,7 +984,6 @@ void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
 extern int unk_21A16A4[4] = {0};
 extern int unk_21A103C[4] = {0};
 
-extern int data_21a1018[4] = {0};
 typedef struct
 {
     s16 x;
@@ -919,8 +997,8 @@ extern int BmpWin_InitAllocator(u16);
 extern void sub_020232D0(void);
 extern void GFL_BGSysCreate(u16);
 extern void GFL_BGSysSetVRAMBanks(int*);
-extern void Oam_CreateSystem(int*, int*, u16);
-extern void GFL_BGSysSetLCDConfig(int*);
+extern void Oam_CreateSystem(const OamSystemInitTemplate*, int*, u16);
+extern void GFL_BGSysSetLCDConfig(BgInit*);
 extern void GFL_BGSysSetEnabledBGsA(int);
 extern void GFL_BGSysSetEnabledBGsB(int);
 extern void sub_020232D8(void);
@@ -947,7 +1025,7 @@ extern int GFL_FontGetBlockWidth(int, int, int);
 
 void ovy142_219d7a8(BagView *bagView)
 {
-    int v43[4];
+    BgInit v43;
     OAM_TEMP newtemp[3];
     int v28;          // r0
     int v30;          // r0
@@ -968,10 +1046,10 @@ void ovy142_219d7a8(BagView *bagView)
     BmpWin_InitAllocator(bagView->heapId);
     sub_020232D0();
     GFL_BGSysSetVRAMBanks(unk_21A16A4);
-    Oam_CreateSystem(unk_21A103C, unk_21A16A4, bagView->heapId);
+    Oam_CreateSystem(&data_021A0FFC, unk_21A16A4, bagView->heapId);
 
-    v43 = data_21a1018;
-    GFL_BGSysSetLCDConfig(v43);
+    v43 = data_021A1018;
+    GFL_BGSysSetLCDConfig(&v43);
     GFL_BGSysSetEnabledBGsA(0);
     GFL_BGSysSetEnabledBGsB(0);
     ovy142_219d4c0();
@@ -1932,11 +2010,6 @@ void ovy142_219ed3c(BagView *a1)
     }
 }
 
-extern u8 data_21A0FD8[5];
-extern u8 data_21a0fc8[2];
-extern u8 data_21a0fcc[2];
-extern u8 data_21A0FD0[5];
-
 void ovy142_219ed8c(BagView *a1)
 {
     OAM_TEMP temp;
@@ -1948,9 +2021,8 @@ void ovy142_219ed8c(BagView *a1)
 
     temp.flag = 10;
     temp.unk = 1;
-    data1 = data_21A0FD0;
-    data2 = data_21A0FD8;
-    
+    data1 = data_021A0FD0;
+    data2 = data_021A0FD8;
     
     for (u8 i = 0; i < 5; i++)
     {
@@ -1989,11 +2061,11 @@ void ovy142_219ed8c(BagView *a1)
     sub_0204C5C8(a1->unk740, 0);
     if (!BagMenu_IsNotNormalBagMode(a1))
         sub_0204C124(a1->unk724[2], 0);
-    if (a1->bagMode == BAG_MODE_BOX_SELECT_ITEM)
+    if (a1->bagMode == BAG_MODE_BOX_SELECT_ITEM_HELD)
         sub_0204C124(a1->unk724[3], 0);
 
-    v11 = data_21a0fcc;
-    v10 = data_21a0fc8;
+    v11 = data_021A0FCC;
+    v10 = data_021A0FC8;
 
     for (u8 i = 0; i < 2; i++)
     {
@@ -2018,22 +2090,17 @@ void ovy142_219ed8c(BagView *a1)
     }
 }
 
-extern s16 word_21A168C[][2];
-extern u8 byte_21A1020[];
-extern u8 data_021a0fee[][2];
-
-
 void ovy142_219efc0(BagView *a1)
 {
     u32 i;      // r4
     OAM_TEMP v8;       // [sp+20h] [bp+0h] BYREF
     for (i = 0; i < 6; ++i)
     {
-        v8.flag = byte_21A1020[i];
+        v8.flag = data_021A0FE0[i];
         v8.unk = 1;
         v8.x = word_21A168C[i][0] - 16;
         v8.y = word_21A168C[i][1];
-        v8.anim = data_021a0fee[i][1];
+        v8.anim = data_021A0FEC[i + 1][1];
         a1->bagPocketOam[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->bagPocketNCGR,
@@ -2046,7 +2113,6 @@ void ovy142_219efc0(BagView *a1)
     }
 
 }
-extern u8 data_021A0FEE[][2];
 
 void ovy142_219f06c(BagView *a1, u32 a2)
 {
@@ -2054,9 +2120,9 @@ void ovy142_219f06c(BagView *a1, u32 a2)
     for (i = 0; i < 6; ++i)
     {
         if (i == a2)
-            sub_0204C488(a1->bagPocketOam[i], data_021A0FEE[i][0]);
+            sub_0204C488(a1->bagPocketOam[i], data_021A0FEC[i + 1][0]);
         else
-            sub_0204C488(a1->bagPocketOam[i], data_021A0FEE[i][1]);
+            sub_0204C488(a1->bagPocketOam[i], data_021A0FEC[i + 1][1]);
     }
 
 }
@@ -2751,8 +2817,6 @@ void ovy142_219ffe8(BagView *a1, int a2)
     }
 }
 
-extern s16 word_21A168C[][2];
-
 int BagMenu_PokcetIconMoveFadeIn(BagView *a1)
 {
     s16 v8[2];
@@ -2947,13 +3011,11 @@ void ovy142_21a014c(BagView *a1)
     }
 }
 
-extern u32 data_21A1028[6];
-
 int ovy142_21a03ac(u8 a1)
 {
     u32 v2[6]; // [sp+0h] [bp-20h]
 
-    v2 = data_21A1028;
+    v2 = data_021A1028;
     return v2[a1];
 }
 
@@ -3167,8 +3229,6 @@ int ovy142_21a0610(ITEM_UNKNOW_DATA *a1, int a2)
     }
     return v2;
 }
-
-extern int data_21A1120[6];
 
 extern void ovy142_21a071c(ITEM_UNKNOW_DATA*, u16);
 

@@ -7,7 +7,7 @@ enum
 {
     BAG_MODE_NORMAL,
     BAG_MODE_UNION_ROOM,
-    BAG_MODE_BOX_SELECT_ITEM,
+    BAG_MODE_BOX_SELECT_ITEM_HELD,
     BAG_MODE_LINK_BATTLE_ROOM,
     BAG_MODE_SELL_ITEM,
     BAG_MODE_SELECT_ITEM
@@ -49,9 +49,57 @@ enum
     BAG_OPTION_11,
 };
 
+enum
+{
+    BAG_BUTTON_POCKET_NORMAL,
+    BAG_BUTTON_POCKET_HEAL,
+    BAG_BUTTON_POCKET_TMHM,
+    BAG_BUTTON_POCKET_BERRY,
+    BAG_BUTTON_POCKET_IMPORT_ITEM,
+    BAG_BUTTON_POCKET_FREE_SPACE,
+    BAG_BUTTON_SWITCH_POCKET_LEFT,
+    BAG_BUTTON_SWITCH_POCKET_RIGHT,
+    BAG_BUTTON_SORT_OR_SEACHER,
+    BAG_BUTTON_REGBOX,
+    BAG_BUTTON_EXIT_FIELD,
+    BAG_BUTTON_EXIT_BAG,
+    BAG_BUTTON_ITEM_LIST_0,
+    BAG_BUTTON_ITEM_LIST_1,
+    BAG_BUTTON_ITEM_LIST_2,
+    BAG_BUTTON_ITEM_LIST_3,
+    BAG_BUTTON_ITEM_LIST_4,
+    BAG_BUTTON_ITEM_LIST_5,
+
+    BAG_BUTTON_ITEM_BOX_0,
+    BAG_BUTTON_ITEM_BOX_1,
+    BAG_BUTTON_ITEM_BOX_2,
+    BAG_BUTTON_ITEM_BOX_3,
+    BAG_BUTTON_ITEM_BOX_4,
+    BAG_BUTTON_ITEM_BOX_5,
+
+    BAG_BUTTON_ITEM_LIST_END = BAG_BUTTON_ITEM_LIST_5 + 1,
+};
+
 #define SORT_MORE_TO_LESS   0
 #define SORT_LESS_TO_MORE   1
 
+typedef struct
+{
+    u16 unk0;
+    u16 unk2;
+    int unk4;
+    u8 unk8;
+    u8 unk9;
+    u8 unkA;
+    u8 unkB;
+    int unkC;
+    u16 unk10;
+    u16 unk12;
+    u16 unk14;
+    u16 unk16;
+    u16 unk18;
+    u16 unk1A;
+}OamSystemInitTemplate;
 
 typedef struct
 {
@@ -264,6 +312,18 @@ typedef struct
     ItemSort ItemClass;
 } ItemSortTable; // size of 12
 
+typedef struct
+{
+    u16 item;
+    u16 num;
+    FieldBagItemUse func;
+} ItemUsedFunc;
+
+typedef struct
+{
+    u8 unk0[23];
+}ItemTypeSomeData;
+
 void BagMenu_WaitPrintKeyPad(BagView *m_bagView);
 
 void sub_021998DC(BagView *m_bagView);
@@ -331,7 +391,7 @@ void BagMenu_HandleKeyPad(BagView *m_bagView);
 extern void sub_020504F0(int);
 extern void sub_0203D564(int);
 extern void ovy142_219be90(BagView*);
-extern void ovy142_219cc84(BagView*);
+extern void BagMenu_StartSortItem(BagView*);
 extern void ovy142_219d0c8(BagView*);
 extern void ovy142_219c958(BagView*);
 extern void ovy142_219bca4(BagView*);
@@ -393,7 +453,7 @@ extern void BagMenu_TmHmUseStart(BagView*);
 extern void BagMenu_MoveItemToFreeSpace(BagView*);
 void BagMenu_ItemToss(BagView*);
 extern int BagMenu_IsNotNormalBagMode(BagView*);
-extern int ovy142_219be18(BagView*, int);
+extern int BagMenu_CheckItemCanRegist(BagView*, int);
 extern void sub_0219F0AC(BagView*);
 extern void sub_0202DA54(int);
 void BagMenu_TrySortItem(BagView *m_bagView, int param_2);
@@ -551,7 +611,7 @@ extern int GFL_WordSetSystemCreateDefault(u16);
 extern int sub_020219A8(int, u16);
 extern int sub_0202E7A4(int ,int ,int, u16);
 extern int GFL_FontCreate(int ,int, int, int, u16);
-extern int ButtonSystem_Create(int touchTemplate, void* checkFunc, void* data, u16 heap);
+extern int ButtonSystem_Create(const TouchscreenHitbox *touchTemplate, void* checkFunc, void* data, u16 heap);
 extern int GFL_VBlankTCBAdd(void*, void*, int);
 extern void sub_02042BA8(int, u16);
 extern int sub_0202E168(int, int, int, int, u16);
@@ -589,11 +649,44 @@ extern void sub_02044528(void);
 extern void ovy142_219d46c(void*, int, int, int);
 extern void sub_0203AB10(int);
 extern void sub_0203A1D0(int);
+int ovy142_219a354(BagView * bagView);
+void ovy142_219a3c4(BagView *bagView);
+void ovy142_219a3d4(BagView *bagView);
+void ovy142_219a3e4(BagView *bagView);
+void ovy142_219a3f4(BagView *bagView);
+int ovy142_219a404(BagView *bagView);
+
+int ovy142_219a440(BagView *bagView);
+int ovy142_219a460(BagView *bagView);
+void ovy142_219a480(BagView *bagView);
+void ovy142_219a490(BagView *bagView);
+
+
+void BagMenu_StartSortItem(BagView *bagView);
+extern void ovy142_219cd98(BagView*);
+extern void GFL_MsgDataLoadStrbuf(int, int, int);
+extern void BagMenu_PrintBagMessage(BagView*, int);
+extern void ovy142_219cce0(BagView*);
 
 extern const TouchscreenHitbox data_021A08F8[3];
 extern const TouchscreenHitbox data_021A0904[3];
 extern const int data_021A091C[6];
 extern const u32 data_021A0934[6];
 extern const int data_021A094C[13];
+extern const ItemUsedFunc data_021A0980[];
+extern const TouchscreenHitbox data_021A09D8[];
+extern const ItemTypeSomeData data_021A0A3C[6];
+extern const u16 data_021A0AC8[];
 
+extern const u8 data_021A0FC8[2];
+extern const u8 data_021A0FCC[2];
+extern const u8 data_021A0FD8[5];
+extern const u8 data_021A0FD0[5];
+extern const u8 data_021A0FE0[];
+extern const u8 data_021A0FEC[][2];
+extern const OamSystemInitTemplate data_021A0FFC;
+extern const s16 word_21A168C[10][2];
+extern const int data_21A1120[6];
+
+extern const char gItemMenuText[];
 #endif //BAG_H

@@ -862,6 +862,8 @@ Overlay OVY_142
     Object src/bag/bag_data.o
     Object src/bag/bag_view.o
     Object src/bag/bag_menu.o
+    Object src/bag/bag_data2.o
+    Object src/bag/bag_data3.o
     Object asm/overlay142.o
 }
 Overlay OVY_143
