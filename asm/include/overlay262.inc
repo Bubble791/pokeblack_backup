@@ -21,7 +21,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
@@ -40,9 +40,9 @@
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204BBA0
@@ -73,7 +73,7 @@
 .public sub_0204BE64
 .public sub_02045264
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204AF50
@@ -284,7 +284,7 @@
 .public sub_02021C1C
 .public BmpWin_FlushChar
 .public sub_02048210
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0202111C
@@ -297,7 +297,7 @@
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D890
 .public Oam_LoadNCLRFile
 .public sub_0202D894
@@ -323,7 +323,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -420,7 +420,7 @@
 .public sub_020342F4
 .public sub_020484B4
 .public sub_02048210
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -463,7 +463,7 @@
 .public MI_CpuFill8
 .public sub_0200C28C
 .public sub_0204AF18
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0202111C
@@ -478,7 +478,7 @@
 .public sub_0201FDF8
 .public GFL_ArcToolFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D890
 .public Oam_LoadNCLRFile
 .public sub_0202D898

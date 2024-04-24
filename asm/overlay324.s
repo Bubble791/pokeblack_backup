@@ -720,9 +720,9 @@ ovy324_219d434: ; 0x0219D434
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	mov r6, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	sub r0, #0x1c
 	strh r6, [r0]
@@ -751,7 +751,7 @@ ovy324_219d488: ; 0x0219D488
 	ldr r0, _0219D498 ; =0x0219F62C
 	bl GFL_BGSysSetVRAMBanks
 	ldr r0, _0219D49C ; =0x0219F16C
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	pop {r3, pc}
 	.align 2, 0
 _0219D498: .word 0x0219F62C
@@ -2918,7 +2918,7 @@ ovy324_219e5c4: ; 0x0219E5C4
 	add r6, r0, #0
 	mov r0, #0xb
 	str r1, [sp, #0xc]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r6, #0
 	add r1, #0x94
 	str r0, [r1]
@@ -3275,7 +3275,7 @@ _0219E818:
 	add r1, r4, #0
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy324_219e7e4

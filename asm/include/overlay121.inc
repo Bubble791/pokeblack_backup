@@ -43,7 +43,7 @@
 .public sub_0215EC5C
 .public sub_0215ED08
 .public ovy12_2166e88
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_0204AC0C
 .public sub_0204AC58

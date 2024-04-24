@@ -5404,7 +5404,7 @@ ovy271_21f274c: ; 0x021F274C
 	add r6, r1, #0
 	mov r0, #0x89
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	cmp r6, #0x1e
 	bls _021F2764
@@ -6087,7 +6087,7 @@ _021F2C80: ; jump table
 _021F2C9C:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6099,7 +6099,7 @@ _021F2C9C:
 _021F2CB4:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6121,7 +6121,7 @@ _021F2CD6:
 _021F2CE0:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6133,7 +6133,7 @@ _021F2CE0:
 _021F2CF8:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6151,7 +6151,7 @@ _021F2D0E:
 _021F2D1C:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6163,7 +6163,7 @@ _021F2D1C:
 _021F2D34:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6181,7 +6181,7 @@ _021F2D4A:
 _021F2D58:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	mov r2, #0
 	str r1, [r4, #8]
@@ -6198,7 +6198,7 @@ _021F2D58:
 _021F2D7C:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6216,7 +6216,7 @@ _021F2D92:
 _021F2DA0:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6228,7 +6228,7 @@ _021F2DA0:
 _021F2DB8:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #1
@@ -6259,7 +6259,7 @@ _021F2DEE:
 _021F2DFA:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #1
@@ -6285,7 +6285,7 @@ _021F2DFA:
 _021F2E32:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6297,7 +6297,7 @@ _021F2E32:
 _021F2E4A:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6, #4]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6316,7 +6316,7 @@ _021F2E6C:
 _021F2E6E:
 	mov r0, #0x89
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r6]
 	add r7, r0, #0
 	str r1, [r4, #8]
@@ -6431,7 +6431,7 @@ ovy271_21f2f34: ; 0x021F2F34
 	add r7, r1, #0
 	mov r0, #0x89
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	add r0, r5, #0
 	add r0, #0xf8
@@ -6462,7 +6462,7 @@ ovy271_21f2f34: ; 0x021F2F34
 	mov r2, #0
 	mov r3, #0
 	str r4, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r5, #0xf8
 	ldr r0, [r5]
 	bl ovy271_21f3160
@@ -6485,7 +6485,7 @@ _021F2FA2:
 	mov r2, #4
 	mov r3, #0
 	str r4, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r5, #0xf8
 	ldr r0, [r5]
 	bl ovy271_21f3160
@@ -6498,7 +6498,7 @@ _021F2FA2:
 _021F2FD2:
 	mov r3, #7
 	lsl r3, r3, #6
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r6, #0
 	bl GFL_ArcToolFree
 	add sp, #0xc
@@ -6572,7 +6572,7 @@ ovy271_21f302c: ; 0x021F302C
 	add r7, r1, #0
 	mov r0, #0x89
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	add r0, r5, #0
 	add r0, #0xf8
@@ -6917,7 +6917,7 @@ ovy271_21f32f8: ; 0x021F32F8
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _021F3350 ; =0x021F7758
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021F3354 ; =0x021F77F4
 _021F331A:
 	mov r0, #0x2c
@@ -8849,7 +8849,7 @@ _021F422C:
 	lsl r1, r6, #0x10
 	mov r0, #7
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	bl sub_02021114
 	add r1, r0, #0
@@ -8965,7 +8965,7 @@ _021F435C:
 	lsl r1, r1, #0x10
 	mov r0, #0x1e
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #1
@@ -9005,7 +9005,7 @@ _021F43AA:
 	add r6, r0, #0
 	mov r0, #0x1f
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, _021F4450 ; =0x021F7954
 	mov r3, #0x1a
 	ldrb r1, [r1, r6]

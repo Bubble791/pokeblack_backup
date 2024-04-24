@@ -259,10 +259,10 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
-.public sub_0204AFB0
+.public GFL_G2DIOLoadNSCRSync
 .public GFL_ArcToolFree
 .public sub_02024D00
 .public sub_02045738
@@ -273,7 +273,7 @@
 .public sub_02045738
 .public sub_02044BD8
 .public sub_0218A598
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCGRFile
@@ -295,7 +295,7 @@
 .public GFL_HeapFree
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_020164E8
 .public sub_0204C124
@@ -314,8 +314,8 @@
 .public sub_0204C124
 .public sub_0204BF1C
 .public sub_0204BFD4
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile

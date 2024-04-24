@@ -48,7 +48,7 @@
 .public sub_02046EDC
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public G2_GetBG1CharPtr
 .public MIi_CpuClear16
 .public G2_GetBG1ScrPtr

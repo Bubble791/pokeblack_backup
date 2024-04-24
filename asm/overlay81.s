@@ -192,7 +192,7 @@ ovy81_21ea9c4: ; 0x021EA9C4
 	ldr r4, _021EAA58 ; =0x021EABAC
 	ldr r6, _021EAA5C ; =0x021EABB4
 	ldr r5, _021EAA60 ; =0x021EABBC
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r0, #0
 	str r0, [sp, #0x10]
@@ -209,7 +209,7 @@ _021EA9DE:
 	ldrb r1, [r4, #1]
 	ldr r0, [sp, #0xc]
 	lsl r3, r3, #5
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x10]
 	add r4, r4, #4
 	add r0, r0, #1

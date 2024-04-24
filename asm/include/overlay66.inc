@@ -27,8 +27,8 @@
 .public sub_02046E10
 .public sub_02046E1C
 .public sub_021805E0
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public ovy36_21805f0
 .public GXx_SetMasterBrightness_
 .public G2x_SetBlendBrightness_

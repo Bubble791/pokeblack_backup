@@ -583,10 +583,10 @@ _021F5E6A:
 	thumb_func_start sub_021F5E7C
 sub_021F5E7C: ; 0x021F5E7C
 	ldr r0, [r0, #4]
-	ldr r3, _021F5E84 ; =sub_02046D38
+	ldr r3, _021F5E84 ; =GFL_BGSysSetEnabledBGsA
 	bx r3
 	nop
-_021F5E84: .word sub_02046D38
+_021F5E84: .word GFL_BGSysSetEnabledBGsA
 	thumb_func_end sub_021F5E7C
 
 	thumb_func_start ovy155_21f5e88

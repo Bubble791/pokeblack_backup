@@ -546,7 +546,7 @@
 .public ovy12_2167534
 .public sub_02046E10
 .public sub_021805E0
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public ovy36_21805f0
 .public sub_021804B8
 .public ovy12_216740c

@@ -4141,7 +4141,7 @@ _02178B6A:
 	add r5, r0, #0
 	bl sub_021805E0
 	add r0, r5, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r7, #0
 	bl ovy36_21805f0
 	b _021789CA

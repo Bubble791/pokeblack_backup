@@ -18,7 +18,7 @@ ovy126_21eec80: ; 0x021EEC80
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r7, _021EED6C ; =0x021EEE68
 	str r0, [sp]
 	mov r4, #0

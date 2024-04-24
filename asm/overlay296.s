@@ -268,7 +268,7 @@ _0219D8D4:
 	ldr r2, [r4, #0x48]
 	add r0, r5, #0
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	ldrh r0, [r4]
 	add r2, r4, #0
@@ -279,7 +279,7 @@ _0219D8D4:
 	add r0, r5, #0
 	mov r1, #0x1a
 	lsl r3, r3, #0xc
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r4, #0x30]
 	mov r0, #1
 	lsl r0, r0, #0xc
@@ -307,7 +307,7 @@ _0219D8D4:
 	add r0, r5, #0
 	mov r1, #0x1a
 	lsl r3, r3, #0xc
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r4, #0x34]
 	str r6, [sp]
 	str r7, [sp, #4]
@@ -356,7 +356,7 @@ _0219D8D4:
 	str r0, [sp, #8]
 	ldr r2, [r4, #0x48]
 	add r0, r5, #0
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	str r7, [sp]
 	ldrh r0, [r4]
 	add r2, r4, #0
@@ -367,7 +367,7 @@ _0219D8D4:
 	add r0, r5, #0
 	mov r1, #0xc
 	lsl r3, r3, #0xc
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r4, #0x3c]
 	mov r3, #1
 	lsl r0, r0, #0x10
@@ -384,7 +384,7 @@ _0219D8D4:
 	add r0, r5, #0
 	mov r1, #0x25
 	lsl r3, r3, #0xa
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	mov r0, #0x15
 	str r0, [sp]
 	mov r0, #4
@@ -1390,7 +1390,7 @@ _0219E1B8:
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
 	mov r3, #0x60
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r3, _0219E230 ; =0x0219FAEC
 	add r2, sp, #0x10
 	mov r1, #0x10
@@ -4242,7 +4242,7 @@ _0219F79E:
 	bl sub_0219F9E4
 _0219F7A2:
 	ldrh r1, [r4]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 _0219F7A8:
 	lsl r1, r5, #2
 	add r1, r4, r1
@@ -4252,7 +4252,7 @@ _0219F7AE:
 	lsl r7, r5, #2
 	ldrh r1, [r4]
 	ldr r0, [r0, r7]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r4, r7
 _0219F7BC:
 	str r0, [r1, r6]

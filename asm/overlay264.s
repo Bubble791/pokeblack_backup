@@ -388,9 +388,9 @@ ovy264_2199b94: ; 0x02199B94
 	add r4, r0, #0
 	mov r0, #0
 	mov r5, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _02199BF8 ; =0x04000050
 	strh r5, [r0]
 	ldr r0, _02199BFC ; =0x04001050
@@ -409,7 +409,7 @@ ovy264_2199b94: ; 0x02199B94
 	ldr r0, _02199C00 ; =0x0219A1DC
 	mov r1, #0x7f
 	ldrh r0, [r0, r2]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #4]
 	add r0, r4, #0
 	bl sub_021999EC

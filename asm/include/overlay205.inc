@@ -7,7 +7,7 @@
 .public GFL_HeapFree
 .public sub_02046CF0
 .public sub_02046D78
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
 .public sub_02026DC0
@@ -160,7 +160,7 @@
 .public sub_02026EE8
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -233,7 +233,7 @@
 .public sub_0202B030
 .public sub_0202B030
 .public sub_0202AEAC
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BC48
 .public GFL_ArcToolFree
 .public GFL_MsgSysLoadData

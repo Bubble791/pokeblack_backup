@@ -6656,7 +6656,7 @@ _021F1E74:
 	bl sub_02044C98
 	ldr r0, _021F1F50 ; =0x0000011F
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r7, #4]
 	bl sub_02016AD8
@@ -6673,14 +6673,14 @@ _021F1E74:
 	add r0, r4, #0
 	mov r2, #4
 	add r3, r6, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r5, [sp, #4]
 	add r0, r4, #0
 	mov r1, #2
 	mov r2, #6
 	add r3, r6, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r7, #0x10]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -6692,7 +6692,7 @@ _021F1E74:
 	mov r2, #6
 	add r3, r6, #0
 	str r5, [sp, #0xc]
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0x10
@@ -6722,7 +6722,7 @@ ovy127_21f1f58: ; 0x021F1F58
 	mov r1, #2
 	mov r2, #0
 	add r3, r5, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	str r0, [r4, #0x14]
 	mov r0, #7
 	str r0, [sp]

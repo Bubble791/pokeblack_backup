@@ -18,7 +18,7 @@
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C56C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile

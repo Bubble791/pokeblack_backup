@@ -40,7 +40,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
@@ -92,8 +92,8 @@
 .public sub_02021998
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B0F0
 .public sub_0219D7FC
 .public sub_0219D5F0
@@ -189,7 +189,7 @@
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D810
 .public Oam_LoadNCLRFile
 .public sub_0202D814
@@ -231,7 +231,7 @@
 .public sub_0219DA68
 .public sub_0219E948
 .public sub_0202E438
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AFD8
 .public Oam_LoadNCLRFile
@@ -353,7 +353,7 @@
 .public sub_0219DA68
 .public sub_0202E37C
 .public sub_0202E438
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AFD8
 .public sub_0202E168
@@ -417,7 +417,7 @@
 .public sub_0219F564
 .public sub_0219DA6C
 .public sub_0219DA68
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AFD8
 .public BmpWin_CreateDynamic

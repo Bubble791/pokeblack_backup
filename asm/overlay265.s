@@ -190,7 +190,7 @@ ovy265_21999e8: ; 0x021999E8
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	mov r0, #0
 	mov r1, #0
 	bl sub_02045350
@@ -328,7 +328,7 @@ ovy265_2199b24: ; 0x02199B24
 	mov r0, #0xd5
 	mov r1, #0x8d
 	mov r5, #0x8d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0x20
 	mov r7, #6
 	str r6, [sp]
@@ -338,14 +338,14 @@ ovy265_2199b24: ; 0x02199B24
 	mov r1, #1
 	mov r2, #2
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #6
 	add r3, r7, #0
 	str r5, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r6, #0
 	str r6, [sp]
 	str r6, [sp, #4]
@@ -1239,9 +1239,9 @@ ovy265_219a224: ; 0x0219A224
 	add r5, r0, #0
 	mov r0, #0
 	mov r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _0219A26C ; =0x04000050
 	ldr r6, _0219A270 ; =0x04001050
 	strh r4, [r0]
@@ -1292,9 +1292,9 @@ ovy265_219a274: ; 0x0219A274
 	sub r4, #0x1c
 	strh r0, [r4]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #0xa
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -2891,7 +2891,7 @@ ovy265_219af14: ; 0x0219AF14
 	ldr r1, _0219AF50 ; =0x0000808D
 	add r5, r0, #0
 	mov r0, #0xd5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r4, _0219AF54 ; =0x0000915A
 	mov r3, #0x8d
 	ldrh r1, [r5, r4]
@@ -3506,7 +3506,7 @@ ovy265_219b43c: ; 0x0219B43C
 	ldr r1, _0219B4AC ; =0x0000808D
 	add r5, r0, #0
 	mov r0, #0xd5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0x8d
 	mov r1, #0x18
 	mov r2, #0
@@ -3537,7 +3537,7 @@ ovy265_219b43c: ; 0x0219B43C
 	bl GFL_ArcToolFree
 	ldr r1, _0219B4AC ; =0x0000808D
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #5
 	mov r2, #0
 	mov r3, #0xa0
@@ -3679,7 +3679,7 @@ ovy265_219b544: ; 0x0219B544
 	bl ovy265_219ac30
 	ldr r1, _0219B6C0 ; =0x0000808D
 	mov r0, #0xd5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x19
 	mov r2, #0
 	mov r3, #1

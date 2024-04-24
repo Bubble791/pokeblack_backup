@@ -150,7 +150,7 @@
 .public sub_0200C830
 .public sub_0200C90C
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public GFL_ArcToolFree

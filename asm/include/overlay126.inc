@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_021804C0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02049384
 .public sub_02049434
 .public sub_020494AC

@@ -28,7 +28,7 @@
 .public sub_02017394
 .public sub_0203CB80
 .public MI_CpuFill8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC58
 .public sub_0200FB40
 .public sub_02009408

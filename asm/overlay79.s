@@ -1496,7 +1496,7 @@ _021EB2EA:
 	add r1, r1, #4
 	mov r3, #0
 	mov r5, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldrh r3, [r4, #8]
 	ldr r1, [sp, #0xc]
 	ldr r0, [r4, #0x1c]
@@ -4667,7 +4667,7 @@ ovy79_21ecb78: ; 0x021ECB78
 	add r6, #0xaf
 	ldrh r1, [r5, #8]
 	add r0, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #0x1c]
 	ldrh r0, [r5, #8]
 	mov r2, #0x10

@@ -20,7 +20,7 @@
 .public sub_0200CE44
 .public sub_0200CE48
 .public sub_0204AA60
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B610
 .public sub_0204B610
 .public sub_0204B610

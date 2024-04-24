@@ -157,9 +157,9 @@ ovy66_21e5910: ; 0x021E5910
 	add r6, r0, #0
 	bl sub_021805E0
 	add r0, r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r6, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	bl ovy36_21805f0
 	ldr r4, _021E5974 ; =0x0400006C

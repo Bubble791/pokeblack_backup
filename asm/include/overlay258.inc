@@ -27,7 +27,7 @@
 .public sub_0202E37C
 .public sub_02046CF0
 .public sub_02046D78
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02199C80
 .public GFL_FadeScreenSet
 .public sub_02046DF8
@@ -41,7 +41,7 @@
 .public sub_0204B7C8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_0204476C
@@ -75,10 +75,10 @@
 .public sub_02044528
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B32C
 .public sub_0204B0B8
 .public sub_0204B0B8
@@ -333,7 +333,7 @@
 .public sub_0204B758
 .public GFL_ArcToolFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D814
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCGRFile
@@ -381,7 +381,7 @@
 .public sub_02021280
 .public sub_0204C488
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C520

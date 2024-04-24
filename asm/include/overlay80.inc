@@ -1,12 +1,12 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02016AD8
 .public sub_0201736C
 .public MyStatus_GetTrainerGender
-.public sub_0204B0D4
-.public sub_0204AE3C
-.public sub_0204AFB0
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_BGSysLoadArcNCGRDynamic
+.public GFL_G2DIOLoadNSCRSync
 .public GFL_ArcToolFree
 .public sub_02042BA8
 .public sub_02046D84

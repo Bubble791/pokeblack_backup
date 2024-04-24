@@ -482,7 +482,7 @@ ovy295_219d250: ; 0x0219D250
 	ldr r0, _0219D2A8 ; =0x0219D744
 	bl GFL_BGSysSetVRAMBanks
 	ldr r0, _0219D2AC ; =0x0219D714
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _0219D2B0 ; =0x0219D724
 	mov r0, #0
 	mov r2, #0
@@ -939,7 +939,7 @@ ovy295_219d60c: ; 0x0219D60C
 	ldr r0, _0219D654 ; =0x0219D7B0
 	bl GFL_BGSysSetVRAMBanks
 	ldr r0, _0219D658 ; =0x0219D780
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _0219D65C ; =0x0219D790
 	mov r0, #0
 	mov r2, #0

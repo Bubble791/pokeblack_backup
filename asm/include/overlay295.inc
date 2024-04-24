@@ -64,7 +64,7 @@
 .public sub_02022DA8
 .public GFL_BGSysCreate
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204B0B8
 .public sub_02015878
@@ -140,7 +140,7 @@
 .public sub_0203A1D0
 .public GFL_BGSysCreate
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204B0B8
 .public sub_02045350

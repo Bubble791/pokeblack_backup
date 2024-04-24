@@ -2,15 +2,15 @@
 #pragma once
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public sub_02046DF8
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02199C90
 .public sub_0201361C
 .public sub_0203A970
@@ -42,7 +42,7 @@
 .public sub_0203A1D0
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public MIi_CpuClear32
 .public MIi_CpuClear32
 .public MIi_CpuClear32
@@ -77,7 +77,7 @@
 .public sub_0204AF50
 .public sub_02026E94
 .public sub_02026E94
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02044564
 .public sub_0204ADA8
 .public sub_0202D830
@@ -115,7 +115,7 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_0202AC7C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202AD94
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -225,7 +225,7 @@
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public sub_020223CC
 .public GFL_StrBufFree
 .public sub_0219ACF8
@@ -283,7 +283,7 @@
 .public GFL_SndSEPlay
 .public sub_0219A7A0
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public sub_0219B694
 .public sub_0203AB10
 .public sub_0204476C
@@ -386,7 +386,7 @@
 .public sub_02021C1C
 .public BmpWin_FlushChar
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public sub_0203AB10
 .public sub_0204476C
 .public sub_0204476C
@@ -518,7 +518,7 @@
 .public sub_0202472C
 .public sub_0202472C
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public GFL_TCBRemove
 .public sub_020223CC
 .public GFL_StrBufFree
@@ -544,7 +544,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02044564
 .public sub_0204ADA8
 .public sub_0202D830
@@ -674,7 +674,7 @@
 .public BmpWin_FlushChar
 .public PrintSystem_IsTextPrintActiveEnd
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public sub_0203AB10
 .public sub_0204476C
 .public sub_0204476C
@@ -797,7 +797,7 @@
 .public sub_0202BE00
 .public sub_02016BB4
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public GFL_TCBRemove
 .public sub_020223CC
 .public GFL_StrBufFree
@@ -829,7 +829,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02044564
 .public sub_0204ADA8
 .public sub_0202D830
@@ -1011,7 +1011,7 @@
 .public BmpWin_FlushChar
 .public PrintSystem_IsTextPrintActiveEnd
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public sub_0203AB10
 .public sub_0204476C
 .public sub_0204476C
@@ -1034,7 +1034,7 @@
 .public sub_02021C54
 .public GFL_StrBufFree
 .public sub_02170AC4
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public ovy27_2170b50
 .public sub_02170B00
 .public GFL_ArcToolFree

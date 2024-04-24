@@ -653,7 +653,7 @@ ovy121_21ef444: ; 0x021EF444
 	lsl r1, r6, #0x10
 	mov r0, #0xb7
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	lsl r2, r6, #0x10
 	add r7, r0, #0
 	mov r1, #5

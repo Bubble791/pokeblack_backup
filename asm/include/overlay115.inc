@@ -18,8 +18,8 @@
 .public sub_021804C0
 .public sub_02044B84
 .public sub_0204476C
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree

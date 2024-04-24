@@ -135,7 +135,7 @@
 .public sub_02049214
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02044BB8
 .public sub_02044C98
 .public G2x_SetBlendAlpha_
@@ -145,12 +145,12 @@
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_0204E390
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204AF50

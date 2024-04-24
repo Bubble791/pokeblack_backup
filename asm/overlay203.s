@@ -29,14 +29,14 @@ ovy203_21a78c0: ; 0x021A78C0
 	str r0, [r4, #4]
 	mov r0, #0x1e
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r6, #0
 	sub r1, #0x3c
 	str r0, [r4, r1]
 	lsl r1, r5, #0x10
 	mov r0, #0x1f
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	sub r6, #0x38
 	mov r3, #0
 	str r0, [r4, r6]

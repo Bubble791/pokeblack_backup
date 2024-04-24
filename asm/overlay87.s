@@ -408,7 +408,7 @@ ovy87_21eabc8: ; 0x021EABC8
 	add r5, r0, #0
 	mov r0, #0xc1
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x60
 	str r1, [sp]
 	mov r1, #3
@@ -417,7 +417,7 @@ ovy87_21eabc8: ; 0x021EABC8
 	add r4, r0, #0
 	str r5, [sp, #4]
 	mov r6, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #4
 	mov r1, #0
 	bl sub_02045350
@@ -1032,7 +1032,7 @@ ovy87_21eb144: ; 0x021EB144
 	lsl r1, r1, #2
 	ldrh r1, [r5, r1]
 	mov r0, #7
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	cmp r7, #0
 	bls _021EB1B2
@@ -1093,7 +1093,7 @@ _021EB1B2:
 	add r1, #0x73
 	ldrh r1, [r5, r1]
 	mov r0, #0xc1
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x4d
 	lsl r1, r1, #2
 	ldrh r1, [r5, r1]

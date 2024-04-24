@@ -211,7 +211,7 @@ ovy193_21b310c: ; 0x021B310C
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #0x68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #0
@@ -2322,7 +2322,7 @@ ovy193_21b4370: ; 0x021B4370
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #0x68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #0
@@ -2940,7 +2940,7 @@ ovy193_21b47a8: ; 0x021B47A8
 	add r0, r5, #0
 	bl sub_021B7BE4
 	mov r0, #0x18
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021B4898: .word 0x000005F4
@@ -4204,7 +4204,7 @@ ovy193_21b53c8: ; 0x021B53C8
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #0x68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #0

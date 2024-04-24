@@ -1602,7 +1602,7 @@ ovy55_21e63e0: ; 0x021E63E0
 	lsl r1, r1, #0x10
 	mov r0, #0xf7
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	add r6, r0, #0
 	bl sub_0204AC0C
@@ -2355,7 +2355,7 @@ _021E6974:
 	ldrh r4, [r4, #4]
 	mov r0, #0x2f
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	add r1, r4, #0
 	add r2, r5, #6
@@ -2859,7 +2859,7 @@ ovy55_21e6cfc: ; 0x021E6CFC
 	lsl r1, r1, #0x10
 	ldr r0, [sp, #4]
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r0, [sp, #8]
 	cmp r5, #0

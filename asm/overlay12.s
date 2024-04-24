@@ -9714,7 +9714,7 @@ ovy12_2154c94: ; 0x02154C94
 	mov r0, #0xa
 	add r1, r5, #0
 	strh r5, [r4]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r0, [r4, #4]
 	bl sub_0204AC0C
@@ -20748,7 +20748,7 @@ _0215A366:
 	add r5, r0, #0
 	bl sub_021805E0
 	add r0, r5, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	ldr r0, [sp, #0x14]
 	bl ovy36_21805f0
 	ldr r0, [sp, #0x14]
@@ -20765,7 +20765,7 @@ _0215A392:
 	add r5, r0, #0
 	bl sub_021805E0
 	add r0, r5, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	ldr r0, [sp, #0x14]
 	bl ovy36_21805f0
 	ldr r0, [sp, #0x14]
@@ -26213,15 +26213,15 @@ ovy12_215cda4: ; 0x0215CDA4
 	add r5, r0, #0
 	mov r0, #0x7e
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #4]
 	mov r0, #0x7f
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #8]
 	mov r0, #0x38
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #0xc]
 	add r0, r5, #0
 	pop {r3, r4, r5, pc}
@@ -31387,7 +31387,7 @@ ovy12_215f32c: ; 0x0215F32C
 	add r4, r0, #0
 	ldrh r1, [r4]
 	mov r0, #0x60
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #8]
 	pop {r4, pc}
 	thumb_func_end ovy12_215f32c
@@ -40055,7 +40055,7 @@ ovy12_21633fc: ; 0x021633FC
 	str r1, [r0, #4]
 	add r0, r4, #0
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #0x10]
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy12_21633fc
@@ -46470,7 +46470,7 @@ ovy12_21666ec: ; 0x021666EC
 	str r0, [r5, #0x24]
 	mov r0, #0x30
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #0x14]
 	ldr r0, [sp, #0x14]
 	mov r1, #0x10
@@ -49981,7 +49981,7 @@ ovy12_2167e70: ; 0x02167E70
 	push {r4, lr}
 	add r4, r0, #0
 	mov r0, #0x2f
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #0x18]
 	pop {r4, pc}
 	.align 2, 0
@@ -55948,9 +55948,9 @@ ovy12_216ada4: ; 0x0216ADA4
 	add r6, r0, #0
 	bl sub_021805E0
 	add r0, r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r6, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	bl ovy36_21805f0
 	pop {r4, r5, r6, pc}

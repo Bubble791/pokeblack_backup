@@ -25,7 +25,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	add r5, r0, #0
 	ldrh r1, [r5, #8]
 	ldr r0, _021EA8EC ; =0x0000011F
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r5, #0x18]
 	bl sub_02016AD8
@@ -42,7 +42,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	add r0, r4, #0
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	ldrh r0, [r5, #8]
 	mov r1, #2
@@ -50,7 +50,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r5, #0x14]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -63,7 +63,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	str r0, [sp, #0xc]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	ldrh r1, [r5, #8]

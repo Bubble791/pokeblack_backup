@@ -5614,7 +5614,7 @@
 .public BmpWin_InitAllocator
 .public sub_020232D0
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02048D28
 .public sub_02049214
 .public G3X_SetFog
@@ -5920,8 +5920,8 @@
 .public sub_02046CFC
 .public sub_02044CFC
 .public sub_02046CFC
-.public sub_0204AA30
-.public sub_0204AE3C
+.public GFL_ArcSysCreateFileHandle
+.public GFL_BGSysLoadArcNCGRDynamic
 .public GFL_ArcToolFree
 .public sub_02048210
 .public sub_02048210
@@ -5933,7 +5933,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public GFL_ArcToolFree
@@ -6548,7 +6548,7 @@
 .public sub_021D6C04
 .public sub_021D6C04
 .public sub_021D6C14
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public ovy168_21e00b8

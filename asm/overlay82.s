@@ -23,7 +23,7 @@ ovy82_21ea860: ; 0x021EA860
 	mov r0, #0x58
 	mov r1, #0x15
 	str r5, [r4]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	add r0, r4, #0
 	bl ovy82_21eab90
@@ -509,7 +509,7 @@ ovy82_21eabf0: ; 0x021EABF0
 	mov r3, #0
 	str r4, [sp, #4]
 	mov r5, #4
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0x20
 	str r0, [sp]
 	mov r3, #0xf
@@ -571,7 +571,7 @@ ovy82_21ead18: ; 0x021EAD18
 	mov r0, #0x52
 	mov r1, #0x15
 	mov r7, #0x15
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r0, #5
 	mov r1, #0x80
@@ -633,7 +633,7 @@ _021EAD86:
 	mov r1, #0x1b
 	mov r2, #4
 	lsl r3, r3, #4
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0xc]
 	bl GFL_ArcToolFree
 	add sp, #0x18

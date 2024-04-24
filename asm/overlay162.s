@@ -409,9 +409,9 @@ ovy162_219d1b8: ; 0x0219D1B8
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
 	mov r6, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	sub r0, #0x1c
 	strh r6, [r0]
@@ -440,7 +440,7 @@ ovy162_219d20c: ; 0x0219D20C
 	ldr r0, _0219D21C ; =0x021A15A8
 	bl GFL_BGSysSetVRAMBanks
 	ldr r0, _0219D220 ; =0x021A14C0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	pop {r3, pc}
 	.align 2, 0
 _0219D21C: .word 0x021A15A8
@@ -1187,7 +1187,7 @@ ovy162_219d844: ; 0x0219D844
 	add r5, r0, #0
 	mov r0, #0x1a
 	add r4, r1, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r0, _0219D8E0 ; =0x02093F08
 	ldr r1, _0219D8E4 ; =0x021A15A8
@@ -1511,9 +1511,9 @@ ovy162_219dae8: ; 0x0219DAE8
 _0219DB04:
 	mov r0, #0
 	mov r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _0219DB7C ; =0x04000050
 	strh r4, [r0]
 	ldr r0, _0219DB80 ; =0x04001050
@@ -1595,9 +1595,9 @@ _0219DB9A:
 	ldr r0, _0219DBF8 ; =0x04001050
 	strh r1, [r0]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #0xd
 	pop {r4, pc}
 _0219DBEA:
@@ -2741,7 +2741,7 @@ ovy162_219e4c8: ; 0x0219E4C8
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _0219E5E4 ; =0x021A1804
 	add r3, sp, #0xc0
 	add r2, r3, #0
@@ -2902,7 +2902,7 @@ ovy162_219e644: ; 0x0219E644
 	sub sp, #0xc
 	ldr r1, _0219E700 ; =0x0000800B
 	mov r0, #0x22
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0xc0
 	str r1, [sp]
 	mov r4, #0xb
@@ -2912,7 +2912,7 @@ ovy162_219e644: ; 0x0219E644
 	mov r2, #0
 	mov r3, #0
 	add r5, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	mov r7, #1
 	str r7, [sp, #4]
@@ -2937,7 +2937,7 @@ ovy162_219e644: ; 0x0219E644
 	mov r1, #4
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r7, [sp, #4]
 	str r4, [sp, #8]
@@ -2991,7 +2991,7 @@ ovy162_219e704: ; 0x0219E704
 	ldr r1, _0219E73C ; =0x0000800B
 	add r5, r0, #0
 	mov r0, #0x22
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	mov r0, #0x20
 	mov r1, #0x10
@@ -3953,7 +3953,7 @@ ovy162_219ef2c: ; 0x0219EF2C
 	bl Oam_CreateSystem
 	ldr r1, _0219F120 ; =0x0000800B
 	mov r0, #0x1e
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r5, #4]
 	bl MyStatus_GetTrainerGender
@@ -4002,7 +4002,7 @@ _0219EFB4:
 	bl GFL_ArcToolFree
 	ldr r1, _0219F120 ; =0x0000800B
 	mov r0, #0x22
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0xb
 	str r7, [sp]
 	mov r1, #0xa
@@ -4406,7 +4406,7 @@ ovy162_219f308: ; 0x0219F308
 	ldr r1, _0219F380 ; =0x0000800B
 	str r0, [sp, #4]
 	mov r0, #0x22
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #8]
 	mov r4, #0
 _0219F31A:
@@ -6866,16 +6866,16 @@ ovy162_21a0684: ; 0x021A0684
 	add r1, r4, #0
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A0768 ; =0x021A19B4
 	bl GFL_BGSysSetVRAMBanks
 	mov r0, #0x39
 	mov r4, #0x39
 	bl GFL_BGSysCreate
 	ldr r0, _021A076C ; =0x021A1944
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r2, _021A0770 ; =0x04000304
 	ldr r0, _021A0774 ; =0xFFFF7FFF
 	ldrh r1, [r2]
@@ -7344,9 +7344,9 @@ _021A0A60: ; jump table
 _021A0A7C:
 	mov r0, #0
 	mov r7, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r5, _021A0CFC ; =0x04000050
 	ldr r6, _021A0D00 ; =0x04001050
 	strh r7, [r5]
@@ -7367,7 +7367,7 @@ _021A0A7C:
 	mov r0, #0x16
 	bl GFL_BGSysCreate
 	ldr r0, _021A0D0C ; =0x021A19F0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _021A0D10 ; =0x021A1A00
 	mov r0, #1
 	mov r2, #0
@@ -8018,7 +8018,7 @@ ovy162_21a0fd0: ; 0x021A0FD0
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _021A1030 ; =0x021A1A8C
 	add r3, sp, #0
 	add r2, r3, #0

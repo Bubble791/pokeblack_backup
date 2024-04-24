@@ -26,7 +26,7 @@
 .public sub_021A47FC
 .public sub_021A47F4
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02044C98
@@ -38,7 +38,7 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044528
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_020602D8
 .public sub_02045320
@@ -63,7 +63,7 @@
 .public sub_0208D868
 .public sub_0204566C
 .public sub_02044F90
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_020602D8
 .public sub_02045320
@@ -269,7 +269,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
@@ -289,7 +289,7 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -298,7 +298,7 @@
 .public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02045738
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -307,7 +307,7 @@
 .public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02045738
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
@@ -315,7 +315,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
@@ -692,7 +692,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
@@ -715,7 +715,7 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -724,14 +724,14 @@
 .public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02045738
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
 .public sub_02045B7C
 .public GFL_HeapFree
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_021A0048
 .public sub_0204AB1C
 .public sub_02060338
@@ -745,7 +745,7 @@
 .public sub_021A0048
 .public sub_021A0048
 .public sub_021A0048
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
@@ -753,12 +753,12 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public GFL_ArcToolFree
 .public sub_0204B98C
@@ -1121,7 +1121,7 @@
 .public sub_021A4318
 .public sub_021A4318
 .public sub_021A4318
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -1266,7 +1266,7 @@
 .public G3X_Init
 .public G3X_InitMtxStack
 .public G3X_SetEdgeColorTable
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02044BB8
 .public sub_0204476C
 .public sub_0204476C
@@ -1289,7 +1289,7 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -1298,7 +1298,7 @@
 .public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02045738
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02060338
 .public sub_020454AC
@@ -1307,7 +1307,7 @@
 .public GFL_ArcToolFree
 .public sub_02045118
 .public sub_02045738
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
@@ -1315,12 +1315,12 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public GFL_ArcToolFree
 .public sub_0204B98C
@@ -1396,7 +1396,7 @@
 .public sub_021A4644
 .public sub_021A45C0
 .public sub_021A4508
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile

@@ -740,7 +740,7 @@
 .public sub_0200A46C
 .public GFL_HeapAllocate
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02049384
 .public sub_02049384
 .public sub_020494AC
@@ -765,7 +765,7 @@
 .public sub_0216749C
 .public MTX_Identity33_
 .public sub_0216749C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02049384
 .public sub_02049384
 .public sub_020494AC

@@ -10919,7 +10919,7 @@ sub_0203E6CC: ; 0x0203E6CC
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	add r0, sp, #0x10
 	bl sub_020116B0
@@ -10940,7 +10940,7 @@ _0203E702:
 	ldr r1, [sp, #0x18]
 	add r0, r7, #0
 	lsl r3, r3, #6
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	cmp r4, #0
 	bne _0203E71E
 	mov r4, #1
@@ -23932,8 +23932,8 @@ _02044708:
 _0204470C: .word 0x0214190C
 	thumb_func_end sub_02044668
 
-	thumb_func_start sub_02044710
-sub_02044710: ; 0x02044710
+	thumb_func_start GFL_BGSysSetLCDConfig
+GFL_BGSysSetLCDConfig: ; 0x02044710
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
@@ -23957,7 +23957,7 @@ sub_02044710: ; 0x02044710
 	pop {r4, pc}
 	nop
 _02044744: .word 0xC7FFFFFF
-	thumb_func_end sub_02044710
+	thumb_func_end GFL_BGSysSetLCDConfig
 
 	thumb_func_start sub_02044748
 sub_02044748: ; 0x02044748
@@ -29169,8 +29169,8 @@ _02046D30: .word 0x02141910
 _02046D34: .word 0xFFFFE0FF
 	thumb_func_end sub_02046CFC
 
-	thumb_func_start sub_02046D38
-sub_02046D38: ; 0x02046D38
+	thumb_func_start GFL_BGSysSetEnabledBGsA
+GFL_BGSysSetEnabledBGsA: ; 0x02046D38
 	ldr r1, _02046D50 ; =0x02141910
 	mov r3, #1
 	str r0, [r1, #4]
@@ -29185,7 +29185,7 @@ sub_02046D38: ; 0x02046D38
 	nop
 _02046D50: .word 0x02141910
 _02046D54: .word 0xFFFFE0FF
-	thumb_func_end sub_02046D38
+	thumb_func_end GFL_BGSysSetEnabledBGsA
 
 	thumb_func_start sub_02046D58
 sub_02046D58: ; 0x02046D58
@@ -29254,8 +29254,8 @@ _02046DB8: .word 0x04001000
 _02046DBC: .word 0xFFFFE0FF
 	thumb_func_end sub_02046D84
 
-	thumb_func_start sub_02046DC0
-sub_02046DC0: ; 0x02046DC0
+	thumb_func_start GFL_BGSysSetEnabledBGsB
+GFL_BGSysSetEnabledBGsB: ; 0x02046DC0
 	ldr r1, _02046DD4 ; =0x02141910
 	ldr r3, _02046DD8 ; =0x04001000
 	str r0, [r1]
@@ -29270,7 +29270,7 @@ sub_02046DC0: ; 0x02046DC0
 _02046DD4: .word 0x02141910
 _02046DD8: .word 0x04001000
 _02046DDC: .word 0xFFFFE0FF
-	thumb_func_end sub_02046DC0
+	thumb_func_end GFL_BGSysSetEnabledBGsB
 
 	thumb_func_start sub_02046DE0
 sub_02046DE0: ; 0x02046DE0
@@ -32928,7 +32928,7 @@ GFL_MsgSysLoadData: ; 0x0204875C
 	strh r5, [r4, #0x18]
 	add r0, r7, #0
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #0x14]
 	ldr r1, [sp, #4]
 	bl sub_0204AD14
@@ -37726,8 +37726,8 @@ sub_0204AA04: ; 0x0204AA04
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0204AA04
 
-	thumb_func_start sub_0204AA30
-sub_0204AA30: ; 0x0204AA30
+	thumb_func_start GFL_ArcSysCreateFileHandle
+GFL_ArcSysCreateFileHandle: ; 0x0204AA30
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	ldr r0, _0204AA58 ; =0x00000209
@@ -37747,7 +37747,7 @@ sub_0204AA30: ; 0x0204AA30
 	nop
 _0204AA58: .word 0x00000209
 _0204AA5C: .word 0x0209AF30
-	thumb_func_end sub_0204AA30
+	thumb_func_end GFL_ArcSysCreateFileHandle
 
 	thumb_func_start sub_0204AA60
 sub_0204AA60: ; 0x0204AA60
@@ -38255,8 +38255,8 @@ _0204AE34:
 _0204AE38: .word 0x00007FFF
 	thumb_func_end sub_0204AE00
 
-	thumb_func_start sub_0204AE3C
-sub_0204AE3C: ; 0x0204AE3C
+	thumb_func_start GFL_BGSysLoadArcNCGRDynamic
+GFL_BGSysLoadArcNCGRDynamic: ; 0x0204AE3C
 	push {r4, r5, r6, lr}
 	add r4, r3, #0
 	add r3, sp, #0x10
@@ -38285,7 +38285,7 @@ _0204AE70:
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0204AE74: .word 0x00007FFF
-	thumb_func_end sub_0204AE3C
+	thumb_func_end GFL_BGSysLoadArcNCGRDynamic
 
 	thumb_func_start sub_0204AE78
 sub_0204AE78: ; 0x0204AE78
@@ -38456,8 +38456,8 @@ sub_0204AF88: ; 0x0204AF88
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0204AF88
 
-	thumb_func_start sub_0204AFB0
-sub_0204AFB0: ; 0x0204AFB0
+	thumb_func_start GFL_G2DIOLoadNSCRSync
+GFL_G2DIOLoadNSCRSync: ; 0x0204AFB0
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r4, r3, #0
@@ -38476,7 +38476,7 @@ sub_0204AFB0: ; 0x0204AFB0
 	bl sub_0204B000
 	add sp, #8
 	pop {r3, r4, r5, pc}
-	thumb_func_end sub_0204AFB0
+	thumb_func_end GFL_G2DIOLoadNSCRSync
 
 	thumb_func_start sub_0204AFD8
 sub_0204AFD8: ; 0x0204AFD8
@@ -38613,8 +38613,8 @@ sub_0204B0B8: ; 0x0204B0B8
 	.align 2, 0
 	thumb_func_end sub_0204B0B8
 
-	thumb_func_start sub_0204B0D4
-sub_0204B0D4: ; 0x0204B0D4
+	thumb_func_start GFL_G2DIOLoadArcNCLRDefault
+GFL_G2DIOLoadArcNCLRDefault: ; 0x0204B0D4
 	push {lr}
 	sub sp, #0xc
 	str r3, [sp]
@@ -38624,11 +38624,11 @@ sub_0204B0D4: ; 0x0204B0D4
 	ldrh r3, [r3, #4]
 	str r3, [sp, #8]
 	mov r3, #0
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	add sp, #0xc
 	pop {pc}
 	.align 2, 0
-	thumb_func_end sub_0204B0D4
+	thumb_func_end GFL_G2DIOLoadArcNCLRDefault
 
 	thumb_func_start sub_0204B0F0
 sub_0204B0F0: ; 0x0204B0F0
@@ -38658,8 +38658,8 @@ sub_0204B0F0: ; 0x0204B0F0
 _0204B120: .word 0x00007FFF
 	thumb_func_end sub_0204B0F0
 
-	thumb_func_start sub_0204B124
-sub_0204B124: ; 0x0204B124
+	thumb_func_start GFL_G2DIOLoadArcNCLR
+GFL_G2DIOLoadArcNCLR: ; 0x0204B124
 	push {r3, r4, r5, r6, lr}
 	sub sp, #4
 	add r4, r3, #0
@@ -38684,7 +38684,7 @@ sub_0204B124: ; 0x0204B124
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
 _0204B154: .word 0x00007FFF
-	thumb_func_end sub_0204B124
+	thumb_func_end GFL_G2DIOLoadArcNCLR
 
 	thumb_func_start sub_0204B158
 sub_0204B158: ; 0x0204B158

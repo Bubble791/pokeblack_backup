@@ -253,7 +253,7 @@ _021EEE4E:
 	lsl r1, r1, #0x10
 	add r0, #0x70
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 _021EEE62:
 	add r6, r0, #0
 	add r0, r5, #0

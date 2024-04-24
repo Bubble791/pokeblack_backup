@@ -38,7 +38,7 @@
 .public sub_0219F728
 .public GFL_HeapFree
 .public GFL_TCBExMgrCreate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_020232E8
 .public sub_020219A8
 .public GFL_FontCreate
@@ -60,9 +60,9 @@
 .public sub_020232D8
 .public GFL_TCBExMgrFree
 .public GFL_ArcToolFree
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204ADA8
@@ -93,7 +93,7 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_02034060
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_020602D8
 .public sub_0204AB1C
@@ -157,7 +157,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98

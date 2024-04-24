@@ -2,7 +2,7 @@
 #pragma once
 .public sub_02016B20
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_02034168
 .public sub_020344B8
@@ -52,7 +52,7 @@
 .public sub_0204B32C
 .public MI_CpuCopy8
 .public GFL_HeapFree
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B0B8
 .public sub_02044C98
 .public sub_02044C98
@@ -64,14 +64,14 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02044564
 .public sub_0204ADA8
 .public sub_02045814
 .public sub_0204B32C
 .public MI_CpuCopy8
 .public GFL_HeapFree
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public sub_02048210

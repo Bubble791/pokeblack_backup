@@ -443,7 +443,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	sub sp, #0xc
 	mov r0, #0x77
 	add r5, r1, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0
 	str r6, [sp]
 	str r5, [sp, #4]
@@ -451,7 +451,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	mov r2, #4
 	mov r3, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	str r5, [sp, #8]
@@ -474,7 +474,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	mov r2, #0
 	mov r3, #0
 	str r5, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0x60
 	str r0, [sp]
 	mov r7, #0x20
@@ -484,7 +484,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	mov r2, #0
 	mov r3, #0x40
 	str r5, [sp, #8]
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	mov r0, #0x80
 	str r0, [sp]
 	str r7, [sp, #4]
@@ -493,7 +493,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	mov r1, #2
 	mov r2, #0
 	mov r3, #0x40
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	str r6, [sp]
 	str r6, [sp, #4]
 	str r5, [sp, #8]
@@ -522,7 +522,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	bl GFL_ArcToolFree
 	mov r0, #0x17
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r3, #0x1e
 	str r7, [sp]
 	add r4, r0, #0
@@ -530,7 +530,7 @@ ovy280_21d9a8c: ; 0x021D9A8C
 	mov r2, #4
 	lsl r3, r3, #4
 	str r5, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #4
@@ -569,7 +569,7 @@ ovy280_21d9b94: ; 0x021D9B94
 	str r1, [sp, #0xc]
 	mov r0, #0x77
 	add r1, r7, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	str r7, [sp]
 	mov r1, #9
@@ -6171,7 +6171,7 @@ _021DC4CC:
 _021DC4E4:
 	ldr r0, [sp, #0x40]
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x28]
 	cmp r6, #0
 	beq _021DC500
@@ -6332,7 +6332,7 @@ _021DC61E:
 	beq _021DC6C6
 	mov r0, #0x17
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	mov r0, #2
 	mov r1, #2
@@ -8156,7 +8156,7 @@ ovy280_21dd3b4: ; 0x021DD3B4
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _021DD40C ; =0x021DD9A4
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021DD410 ; =0x021DDA00
 _021DD3D6:
 	mov r0, #0x2c

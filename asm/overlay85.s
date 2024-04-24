@@ -3173,7 +3173,7 @@ ovy85_21ec5cc: ; 0x021EC5CC
 	add r1, #0xd0
 	ldrh r1, [r1]
 	add r0, #0xee
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r4, #0
 	add r1, #0xd4
 	str r0, [r1]
@@ -4173,7 +4173,7 @@ ovy85_21ece54: ; 0x021ECE54
 	add r1, #0xce
 	ldrh r1, [r1]
 	mov r0, #0x1f
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	ldr r0, _021ECF80 ; =0x021ED9A0
 	add r4, sp, #0x1c

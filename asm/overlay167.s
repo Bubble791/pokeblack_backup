@@ -108881,7 +108881,7 @@ ovy167_21ce678: ; 0x021CE678
 	orr r0, r1
 	strh r0, [r2]
 	ldr r0, _021CE738 ; =0x021DA8D4
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	str r5, [sp]
 	str r4, [sp, #4]
 	str r5, [sp, #8]
@@ -114462,7 +114462,7 @@ ovy167_21d0f28: ; 0x021D0F28
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
 	add r7, r3, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #0x4f
@@ -114479,7 +114479,7 @@ ovy167_21d0f28: ; 0x021D0F28
 	str r1, [sp, #4]
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	add r4, r0, #0
 	ldr r0, [sp, #8]
 	bl GFL_ArcToolFree
@@ -114561,7 +114561,7 @@ ovy167_21d0ff8: ; 0x021D0FF8
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0
 	str r7, [sp]
 	ldrh r1, [r5, r4]
@@ -125419,7 +125419,7 @@ ovy167_21d6044: ; 0x021D6044
 	add r0, r7, #0
 	lsr r1, r1, #0x10
 	str r3, [sp, #0x10]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, #0x20]
 	mov r2, #1
 	mov r3, #0

@@ -160,7 +160,7 @@ ovy299_219fd04: ; 0x0219FD04
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _0219FE88 ; =0x021A26C8
 	add r3, sp, #0xe0
 	add r2, r3, #0
@@ -365,7 +365,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	mov r0, #0x9d
 	mov r1, #0x6b
 	mov r4, #0x6b
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x80
 	str r1, [sp]
 	mov r1, #0x31
@@ -374,7 +374,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	add r5, r0, #0
 	str r4, [sp, #4]
 	mov r6, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0xa0
 	str r0, [sp]
 	str r4, [sp, #4]
@@ -382,7 +382,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	mov r1, #0x33
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	str r4, [sp, #8]
@@ -443,7 +443,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	bl GFL_ArcToolFree
 	bl sub_0202D7E0
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	bl sub_0202D824
 	add r1, r0, #0
@@ -452,7 +452,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	mov r2, #1
 	add r3, r6, #0
 	str r4, [sp, #4]
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	bl sub_0202D820
 	mov r7, #0x20
 	str r7, [sp]
@@ -462,7 +462,7 @@ ovy299_219fef0: ; 0x0219FEF0
 	add r0, r5, #0
 	add r2, r6, #0
 	lsl r3, r3, #6
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	bl sub_0202D828
 	str r6, [sp]
 	add r1, r0, #0
@@ -892,7 +892,7 @@ ovy299_21a0324: ; 0x021A0324
 	ldr r1, _021A04D8 ; =0x0000806B
 	add r5, r0, #0
 	mov r0, #0x9d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	ldr r0, [r5]
 	ldr r0, [r0, #4]
@@ -1275,9 +1275,9 @@ ovy299_21a0618: ; 0x021A0618
 	bl sub_0203CE0C
 	mov r0, #0
 	mov r6, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A06C4 ; =0x04000050
 	ldr r4, _021A06C8 ; =0x04001050
 	strh r6, [r0]
@@ -1387,9 +1387,9 @@ _021A06E6:
 	sub r4, #0x1c
 	strh r0, [r4]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A0760 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #9
@@ -2522,7 +2522,7 @@ ovy299_21a1024: ; 0x021A1024
 	str r0, [sp, #0x14]
 	mov r0, #0x9d
 	mov r1, #0x6b
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, _021A1100 ; =0x0000806B
 	mov r2, #0
 	str r1, [sp]
@@ -3274,7 +3274,7 @@ _021A161A:
 	blo _021A161A
 	ldr r1, _021A17CC ; =0x0000806B
 	mov r0, #0x9d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0x6b
 	mov r1, #0x39
 	mov r2, #0
@@ -3307,7 +3307,7 @@ _021A161A:
 	bl GFL_ArcToolFree
 	ldr r1, _021A17CC ; =0x0000806B
 	mov r0, #7
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	add r4, r6, #0
@@ -3410,7 +3410,7 @@ _021A16FE:
 	bl GFL_ArcToolFree
 	bl sub_0202D7E0
 	ldr r1, _021A17CC ; =0x0000806B
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	bl sub_0202D814
 	add r1, r0, #0
@@ -3464,7 +3464,7 @@ ovy299_21a17d8: ; 0x021A17D8
 	add r5, r0, #0
 	mov r0, #0x9d
 	mov r1, #0x6b
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r2, _021A1810 ; =0x0000FFFE
 	mov r0, #0x10
@@ -3927,7 +3927,7 @@ _021A1B72:
 	bne _021A1BE2
 	ldr r1, _021A1D5C ; =0x0000806B
 	mov r0, #0x9d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x6b
 	str r1, [sp]
 	mov r1, #0x38
@@ -4362,7 +4362,7 @@ ovy299_21a1f04: ; 0x021A1F04
 	mov r0, #7
 	add r6, r2, #0
 	add r7, r3, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	add r0, sp, #0x28
 	ldrh r0, [r0]

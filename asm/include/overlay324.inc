@@ -54,10 +54,10 @@
 .public sub_0203CDC8
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0219D67C
 .public sub_0219E108
 .public sub_0219E20C
@@ -266,7 +266,7 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataLoadStrbuf
 .public sub_020485BC
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -294,7 +294,7 @@
 .public sub_02046D84
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204C488
 .public sub_0204C378
 .public sub_0219E718

@@ -1044,7 +1044,7 @@ ovy86_21eb050: ; 0x021EB050
 	ldrh r5, [r6, #2]
 	mov r0, #0xc0
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #0x40
@@ -1054,7 +1054,7 @@ ovy86_21eb050: ; 0x021EB050
 	mov r3, #0
 	add r4, r0, #0
 	str r5, [sp, #8]
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	mov r0, #0
 	str r0, [sp]
 	add r0, r4, #0
@@ -1062,7 +1062,7 @@ ovy86_21eb050: ; 0x021EB050
 	mov r2, #7
 	mov r3, #0
 	str r5, [sp, #4]
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	add r7, r0, #0
 	lsl r0, r7, #0x10
 	lsr r0, r0, #0x10
@@ -1075,7 +1075,7 @@ ovy86_21eb050: ; 0x021EB050
 	mov r2, #7
 	mov r3, #0
 	str r5, [sp, #0xc]
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #0x18
@@ -1117,7 +1117,7 @@ ovy86_21eb0e4: ; 0x021EB0E4
 	add r5, r0, #0
 	ldrh r1, [r5, #2]
 	mov r0, #0xc0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r4, [sp]
 	mov r1, #1
@@ -1281,7 +1281,7 @@ ovy86_21eb214: ; 0x021EB214
 	strh r4, [r0, #6]
 	bl sub_0202D7E0
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x18]
 	bl sub_0202D820
 	add r1, r0, #0
@@ -1291,7 +1291,7 @@ ovy86_21eb214: ; 0x021EB214
 	str r6, [sp, #4]
 	mov r2, #4
 	mov r3, #0x40
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	bl sub_0202D824
 	add r1, r0, #0
 	str r4, [sp]
@@ -1299,7 +1299,7 @@ ovy86_21eb214: ; 0x021EB214
 	str r6, [sp, #4]
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r5, #0x14]
 	bl sub_0202D828
 	add r1, r0, #0

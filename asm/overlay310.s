@@ -465,7 +465,7 @@ ovy310_219d198: ; 0x0219D198
 	push {r3, lr}
 	bl GFL_BGSysCreate
 	ldr r0, _0219D1EC ; =0x021A6848
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _0219D1F0 ; =0x021A6878
 	mov r0, #4
 	mov r2, #0
@@ -519,7 +519,7 @@ ovy310_219d210: ; 0x0219D210
 	add r5, r0, #0
 	mov r0, #0xbd
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #9
 	add r2, r5, #0
 	add r4, r0, #0
@@ -638,7 +638,7 @@ ovy310_219d314: ; 0x0219D314
 	lsl r1, r1, #0x10
 	mov r0, #0xbd
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	add r2, r5, #0
 	add r4, r0, #0
@@ -2254,7 +2254,7 @@ ovy310_219df88: ; 0x0219DF88
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _0219E01C ; =0x021A6904
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _0219E020 ; =0x021A6990
 	mov r0, #6
 	mov r2, #0
@@ -2341,7 +2341,7 @@ ovy310_219e058: ; 0x0219E058
 	add r4, r0, #0
 	ldrh r1, [r4, #4]
 	mov r0, #0xbd
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #4]
 	mov r1, #0xd
 	add r5, r0, #0
@@ -2407,7 +2407,7 @@ ovy310_219e0d0: ; 0x0219E0D0
 	add r4, r0, #0
 	ldrh r1, [r4, #4]
 	mov r0, #0xbd
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #4]
 	mov r1, #4
 	add r5, r0, #0
@@ -2583,7 +2583,7 @@ ovy310_219e200: ; 0x0219E200
 	ldrh r4, [r5, #4]
 	mov r0, #0xbd
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	mov r1, #0xf
 	mov r2, #0
@@ -2635,7 +2635,7 @@ ovy310_219e268: ; 0x0219E268
 	ldrh r4, [r5, #4]
 	mov r0, #0xbd
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0xf
 	mov r2, #0
 	mov r3, #0
@@ -6986,7 +6986,7 @@ ovy310_21a0368: ; 0x021A0368
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _021A040C ; =0x021A6AD8
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _021A0410 ; =0x021A6B28
 	mov r0, #6
 	mov r2, #0
@@ -7089,7 +7089,7 @@ ovy310_21a0454: ; 0x021A0454
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #8]
 	mov r1, #0xd
 	add r5, r0, #0
@@ -7163,7 +7163,7 @@ ovy310_21a04dc: ; 0x021A04DC
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #8]
 	mov r1, #3
 	add r5, r0, #0
@@ -7212,7 +7212,7 @@ ovy310_21a053c: ; 0x021A053C
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	add r0, r5, #0
 	bl sub_021A0048
@@ -7502,7 +7502,7 @@ ovy310_21a075c: ; 0x021A075C
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	mov r1, #0xf
 	mov r2, #0
@@ -7572,7 +7572,7 @@ ovy310_21a07e8: ; 0x021A07E8
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0xf
 	mov r2, #0
 	mov r3, #0
@@ -7601,7 +7601,7 @@ ovy310_21a07e8: ; 0x021A07E8
 	bl GFL_ArcToolFree
 	mov r0, #0x52
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #2
@@ -11868,7 +11868,7 @@ ovy310_21a2a80: ; 0x021A2A80
 	add r5, r0, #0
 	ldrh r1, [r5, #4]
 	mov r0, #0xbd
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0x3d
 	lsl r4, r4, #4
 	add r6, r0, #0
@@ -14020,7 +14020,7 @@ ovy310_21a39e0: ; 0x021A39E0
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _021A3A80 ; =0x021A7074
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	mov r0, #2
 	bl sub_02044BB8
 	ldr r1, _021A3A84 ; =0x021A70D0
@@ -14115,7 +14115,7 @@ ovy310_21a3ac4: ; 0x021A3AC4
 	add r4, r0, #0
 	ldrh r1, [r4, #4]
 	mov r0, #0xbd
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #4]
 	mov r1, #0xd
 	add r5, r0, #0
@@ -14181,7 +14181,7 @@ ovy310_21a3b3c: ; 0x021A3B3C
 	add r4, r0, #0
 	ldrh r1, [r4, #4]
 	mov r0, #0xbd
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r2, [r4, #4]
 	mov r1, #7
 	add r5, r0, #0
@@ -14350,7 +14350,7 @@ ovy310_21a3c68: ; 0x021A3C68
 	ldrh r4, [r5, #4]
 	mov r0, #0xbd
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	mov r1, #0xf
 	mov r2, #0
@@ -14410,7 +14410,7 @@ ovy310_21a3ce0: ; 0x021A3CE0
 	ldrh r4, [r5, #4]
 	mov r0, #0xbd
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0xf
 	mov r2, #0
 	mov r3, #0
@@ -14439,7 +14439,7 @@ ovy310_21a3ce0: ; 0x021A3CE0
 	bl GFL_ArcToolFree
 	mov r0, #0x52
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #2
@@ -15614,7 +15614,7 @@ ovy310_21a4524: ; 0x021A4524
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x14
 	mov r2, #0
 	mov r3, #0

@@ -26,11 +26,11 @@
 .public GCTX_HIDGetPressedKeys
 .public sub_02005FA8
 .public sub_02005EA0
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
 .public sub_0219991C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_021999EC
 .public GFL_FadeScreenIsFinished
 .public sub_02005EC0

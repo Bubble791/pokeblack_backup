@@ -925,7 +925,7 @@ ovy328_219d5a4: ; 0x0219D5A4
 	ldr r4, _0219D63C ; =0x0219EC3C
 	ldr r6, _0219D640 ; =0x0219EC48
 	ldr r5, _0219D644 ; =0x0219EC68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r0, #0
 	str r0, [sp, #0x10]
@@ -941,7 +941,7 @@ _0219D5BE:
 	ldrh r0, [r7]
 	str r0, [sp, #4]
 	ldr r0, [sp, #0xc]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x10]
 	add r4, r4, #4
 	add r0, r0, #1
@@ -1008,7 +1008,7 @@ ovy328_219d648: ; 0x0219D648
 	add r6, r3, #0
 	bl sub_0202D7E0
 	ldrh r1, [r5]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x10]
 	bl sub_0202D820
 	add r1, r0, #0
@@ -1019,7 +1019,7 @@ ovy328_219d648: ; 0x0219D648
 	lsl r3, r6, #5
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x10]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	bl sub_0202D824
 	mov r4, #0
 	str r4, [sp]
@@ -1229,7 +1229,7 @@ ovy328_219d808: ; 0x0219D808
 	ldrh r1, [r5]
 	ldr r0, _0219D884 ; =0x0000011D
 	add r4, r2, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r0, [r5, #0x34]
 	bl sub_0219EAE8
@@ -1290,7 +1290,7 @@ ovy328_219d888: ; 0x0219D888
 	add r6, r1, #0
 	bl sub_0202D7E0
 	ldrh r1, [r5]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r5, #0x34]
 	bl sub_0219EAE8
@@ -1366,7 +1366,7 @@ ovy328_219d904: ; 0x0219D904
 	bl sub_02042BA8
 	ldrh r1, [r5]
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5]
 	add r7, r0, #0
 	mov r2, #0
@@ -1811,7 +1811,7 @@ _0219DC7A:
 _0219DCB2:
 	ldrh r1, [r7]
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0x20
 	str r6, [sp]
 	ldrh r1, [r7]
@@ -1822,7 +1822,7 @@ _0219DCB2:
 	mov r2, #0
 	add r3, r5, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	ldrh r0, [r7]
 	mov r1, #6
@@ -1830,7 +1830,7 @@ _0219DCB2:
 	str r0, [sp, #4]
 	add r0, r4, #0
 	add r3, r5, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0xc
@@ -3673,7 +3673,7 @@ ovy328_219eb08: ; 0x0219EB08
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _0219EB60 ; =0x0219EDC4
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _0219EB64 ; =0x0219EE20
 _0219EB2A:
 	mov r0, #0x2c

@@ -136,7 +136,7 @@ void ovy142_219c900(BagView *bagView)
     void *v2; // r4
 
     bagView->unk8A4 = sub_02035024(16, 16, 0xFFFE, bagView->heapId);
-    v2 = sub_0204AA30(87, bagView->heapId);
+    v2 = GFL_ArcSysCreateFileHandle(87, bagView->heapId);
     sub_02035104(bagView->unk8A4, v2, 21, 16, 32);
     GFL_ArcToolFree(v2);
 }
@@ -902,10 +902,10 @@ void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
         backgroundNCGR = 0;
         backgroundNSCR = 2;
     }
-    sub_0204B0D4(fileHandle, backgroundNCLR, 0, 0, 32, bagView->heapId);
-    v7 = sub_0204AE3C(fileHandle, backgroundNCGR, 0, 0, 0, bagView->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(fileHandle, backgroundNCLR, 0, 0, 32, bagView->heapId);
+    v7 = GFL_BGSysLoadArcNCGRDynamic(fileHandle, backgroundNCGR, 0, 0, 0, bagView->heapId);
     bagView->unk818 = v7;
-    sub_0204AFB0(fileHandle, backgroundNSCR, 0, 0, (u16)v7, 0, 0, bagView->heapId);
+    GFL_G2DIOLoadNSCRSync(fileHandle, backgroundNSCR, 0, 0, (u16)v7, 0, 0, bagView->heapId);
 }
 
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
@@ -958,12 +958,12 @@ extern void sub_020232D0(void);
 extern void GFL_BGSysCreate(u16);
 extern void GFL_BGSysSetVRAMBanks(int*);
 extern void Oam_CreateSystem(int*, int*, u16);
-extern void sub_02044710(int*);
-extern void sub_02046D38(int);
-extern void sub_02046DC0(int);
+extern void GFL_BGSysSetLCDConfig(int*);
+extern void GFL_BGSysSetEnabledBGsA(int);
+extern void GFL_BGSysSetEnabledBGsB(int);
 extern void sub_020232D8(void);
-extern u32 sub_02024D20(int, int, int, u16);
-extern void sub_0204B124(int, int, int, int, int, int, u16);
+extern u32 LoadCursorImageEndOfHeap(int, int, int, u16);
+extern void GFL_G2DIOLoadArcNCLR(int, int, int, int, int, int, u16);
 extern void sub_0204B0B8(int, int, int, int, int, u16);
 extern int sub_0204BF1C(int, int, u16);
 extern void sub_02046D84(int, int);
@@ -1007,42 +1007,44 @@ void ovy142_219d7a8(BagView *a1)
     sub_020232D0();
     GFL_BGSysSetVRAMBanks(unk_21A16A4);
     Oam_CreateSystem(unk_21A103C, unk_21A16A4, a1->heapId);
+
     v43 = data_21a1018;
-    sub_02044710(v43);
-    sub_02046D38(0);
-    sub_02046DC0(0);
+    GFL_BGSysSetLCDConfig(v43);
+    GFL_BGSysSetEnabledBGsA(0);
+    GFL_BGSysSetEnabledBGsB(0);
     ovy142_219d4c0();
     sub_020232D8();
-    a1->unk88C = sub_02024D20(3, 13, 0, a1->heapId);
-    v7 = (int)sub_0204AA30(87, a1->heapId);
-    sub_0204B0D4(v7, 8, 4, 0, 0, a1->heapId);
+    a1->unk88C = LoadCursorImageEndOfHeap(3, 13, 0, a1->heapId);
+    v7 = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(v7, 8, 4, 0, 0, a1->heapId);
     if (!MyStatus_GetTrainerGender(a1->unk8))
-        sub_0204B124(v7, 8, 4, 32, 0, 32, a1->heapId);
-    v8 = sub_0204AE3C(v7, 6, 4, 0, 0, a1->heapId);
+        GFL_G2DIOLoadArcNCLR(v7, 8, 4, 32, 0, 32, a1->heapId);
+    v8 = GFL_BGSysLoadArcNCGRDynamic(v7, 6, 4, 0, 0, a1->heapId);
     a1->unk81C = v8;
-    sub_0204AFB0(v7, 7, 4, 0, (u16)v8, 0, 0, a1->heapId);
+    GFL_G2DIOLoadNSCRSync(v7, 7, 4, 0, (u16)v8, 0, 0, a1->heapId);
     BagMenu_LoadBagBackGround(a1, v7);
-    v9 = sub_0204AE3C(v7, 17, 5, 0, 0, a1->heapId);
+    v9 = GFL_BGSysLoadArcNCGRDynamic(v7, 17, 5, 0, 0, a1->heapId);
     a1->unk820 = v9;
     if (a1->itemPocket == BAG_POCKET_FREE_SPACE)
-        sub_0204AFB0(v7, 24, 5, 0, (u16)v9, 0, 0, a1->heapId);
+        GFL_G2DIOLoadNSCRSync(v7, 24, 5, 0, (u16)v9, 0, 0, a1->heapId);
     else
-        sub_0204AFB0(v7, 23, 5, 0, (u16)v9, 0, 0, a1->heapId);
+        GFL_G2DIOLoadNSCRSync(v7, 23, 5, 0, (u16)v9, 0, 0, a1->heapId);
     BagMenu_LoadBagPocketSpriteResource(a1, v7);
     
-    a1->unk828 = sub_0204AE3C(v7, 33, 3, 0, 0, a1->heapId);
+    a1->unk828 = GFL_BGSysLoadArcNCGRDynamic(v7, 33, 3, 0, 0, a1->heapId);
     
-    sub_0204B0D4(v7, 34, 0, 96, 32, a1->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(v7, 34, 0, 96, 32, a1->heapId);
     GFL_ArcToolFree((void*)v7);
+    
     sub_0204B0B8(23, 5, 0, 384, 32, a1->heapId);
     a1->spriteGroup = sub_0204BF1C(54, 0, a1->heapId);
     sub_02046D84(16, 1);
     sub_02046CFC(16, 1);
-    v11 = (int)sub_0204AA30(82, a1->heapId);
-    sub_0204B0D4(v11, 27, 0, 256, 32, a1->heapId);
-    v12 = sub_0204AE3C(v11, 28, 1, 0, 0, a1->heapId);
+    v11 = (int)GFL_ArcSysCreateFileHandle(82, a1->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(v11, 27, 0, 256, 32, a1->heapId);
+    v12 = GFL_BGSysLoadArcNCGRDynamic(v11, 28, 1, 0, 0, a1->heapId);
     a1->unk824 = v12;
-    sub_0204AFB0(v11, 29, 1, 0, ((u16)v12 + (1 << 15)), 0, 0, a1->heapId);
+    GFL_G2DIOLoadNSCRSync(v11, 29, 1, 0, ((u16)v12 + (1 << 15)), 0, 0, a1->heapId);
     sub_02044F90(1);
     a1->unk564 = Oam_LoadNCLRFile(v11, 19, 0, 352, 0, 3, a1->heapId);
     a1->unk56C = Oam_LoadNCGRFile(v11, 20, 0, 0, a1->heapId);
@@ -1052,7 +1054,7 @@ void ovy142_219d7a8(BagView *a1)
     GFL_ArcToolFree((void*)v11);
     ovy142_219ed8c(a1);
     v14 = sub_0202D7E0();
-    v33 = (int)sub_0204AA30(v14, a1->heapId);
+    v33 = (int)GFL_ArcSysCreateFileHandle(v14, a1->heapId);
     
     a1->unk5F0 = Oam_LoadNCLRFile(v33, sub_0202D7E4(), 1, 128, 0, 3, a1->heapId);
     a1->unk5F4 = Oam_LoadNCERFile(v33, sub_0202D7F8(2), sub_0202D7FC(2), a1->heapId);
@@ -1111,7 +1113,7 @@ void ovy142_219d7a8(BagView *a1)
         sub_0204C124(a1->unk6E0[i], 0);
         sub_0204C5C8(a1->unk6E0[i], 0);
     }
-    v31 = (int)sub_0204AA30(87, a1->heapId);
+    v31 = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
     a1->unk590 = Oam_LoadNCLRFile(v31, 39, 0, 128, 0, 2, a1->heapId);
     a1->unk594 = Oam_LoadNCGRFile(v31, 38, 0, 0, a1->heapId);
     a1->unk59C = Oam_LoadNCERFile(v31, 37, 36, a1->heapId);
@@ -1371,7 +1373,7 @@ void ovy142_219e284(BagView *a1)
     sub_0204826C(a1->unk75C);
     sub_0204826C(a1->unk764);
     sub_0204826C(a1->unk74C);
-    v2 = sub_0204AA30(25, a1->heapId);
+    v2 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
     a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
 
@@ -1415,7 +1417,7 @@ void ovy142_219e4dc(BagView *a1, int a2)
 
     if (a1->unk6B0)
         ovy142_219e4b0(a1);
-    v4 = sub_0204AA30(25, a1->heapId);
+    v4 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
     v5 = sub_02026670(a2, 2);
     a1->unk550 = Oam_LoadNCLRFile((int)v4, v5, 1, 0, 0, 1, a1->heapId);
     v6 = sub_02026670(a2, 1);
@@ -1458,7 +1460,7 @@ void BagMenu_LoadBagItemBarResource(BagView *a1)
 {
     int fileHandle; // r4
 
-    fileHandle = (int)sub_0204AA30(87, a1->heapId);
+    fileHandle = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
     a1->barLeftIconNCLR = Oam_LoadNCLRFile(fileHandle, 32, 0, 448, 0, 1, a1->heapId);
     a1->barLeftIconNCGR = Oam_LoadNCGRFile(fileHandle, 31, 0, 0, a1->heapId);
     a1->barLeftIconNCER = Oam_LoadNCERFile(fileHandle, 30, 29, a1->heapId);
@@ -2238,7 +2240,7 @@ void ovy142_219f450(BagView *a1, u32 a2)
 {
     void *v3; // r0
 
-    v3 = sub_0204AA30(87, a1->heapId);
+    v3 = GFL_ArcSysCreateFileHandle(87, a1->heapId);
 
     if (a2 == 5)
         sub_0204AFD8(v3, 24, 5, 0, a1->unk820, 0, 0, a1->heapId);
@@ -2532,7 +2534,7 @@ asm void ovy142_219fb78(BagView *a1)
 	add r5, r0, #0
 	ldrh r1, [r5, r6]
 	mov r0, #0x57
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r3, [r5, r6]
 	mov r1, #0x23
 	mov r2, #0
@@ -3290,5 +3292,4 @@ void ovy142_21a071c(ITEM_UNKNOW_DATA* a1, u16 a2)
     case 5:
         ovy142_21a07f4(a1);
         return;
-    }
-}
+    

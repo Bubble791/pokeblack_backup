@@ -40,7 +40,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
@@ -52,7 +52,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
@@ -93,9 +93,9 @@
 .public sub_021A305C
 .public sub_021A3500
 .public sub_021A305C
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204ADA8
@@ -168,7 +168,7 @@
 .public sub_02045604
 .public sub_02045604
 .public sub_02044C98
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile

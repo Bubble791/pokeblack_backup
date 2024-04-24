@@ -1,8 +1,8 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public GFL_HeapAllocate
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public GFL_HeapAllocate
 .public sub_021A8170
 .public GFL_ArcToolFree

@@ -48,9 +48,9 @@
 .public sub_02045738
 .public sub_02044BD8
 .public sub_02044BD8
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204AE3C
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_BGSysLoadArcNCGRDynamic
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public sub_02044F90
@@ -77,7 +77,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
@@ -120,7 +120,7 @@
 .public sub_020232E8
 .public sub_02017BCC
 .public sub_02022268
-.public sub_02024D20
+.public LoadCursorImageEndOfHeap
 .public sub_0203D554
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove

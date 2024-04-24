@@ -58,8 +58,8 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
@@ -83,7 +83,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BF98
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public Oam_LoadNCGRFile

@@ -355,7 +355,7 @@ ovy172_2199b2c: ; 0x02199B2C
 	orr r0, r1
 	strh r0, [r2]
 	ldr r0, _02199BE8 ; =0x0219A578
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	str r6, [sp]
 	str r5, [sp, #4]
 	str r6, [sp, #8]

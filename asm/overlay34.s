@@ -10186,7 +10186,7 @@ ovy34_217b824: ; 0x0217B824
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	mov r0, #0x58
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	mov r1, #0x14
 	bl sub_02049384
@@ -10458,7 +10458,7 @@ ovy34_217ba20: ; 0x0217BA20
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	mov r0, #0x58
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x16
 	add r4, r0, #0
 	bl sub_02049384

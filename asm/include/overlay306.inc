@@ -110,7 +110,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_02024D20
+.public LoadCursorImageEndOfHeap
 .public GFL_TCBExMgrCreate
 .public sub_020232E8
 .public sub_02045B7C
@@ -272,9 +272,9 @@
 .public sub_0204C378
 .public sub_0204C108
 .public sub_02199A44
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204AE3C
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_BGSysLoadArcNCGRDynamic
 .public GFL_ArcToolFree
 .public sub_0204AF18
 .public sub_02045B7C
@@ -294,8 +294,8 @@
 .public sub_02045708
 .public sub_02044C98
 .public sub_02046D84
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
@@ -348,7 +348,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98

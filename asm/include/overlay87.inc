@@ -52,8 +52,8 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_02045350
 .public sub_0204ADA8
 .public sub_0204AF50
@@ -170,7 +170,7 @@
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0204BF1C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0201FF08
 .public sub_0201D624
 .public sub_02020F40
@@ -181,7 +181,7 @@
 .public sub_02021190
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile

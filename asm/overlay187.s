@@ -905,7 +905,7 @@ _021E92D6:
 	ldrh r1, [r4]
 	str r0, [r4, #0x38]
 	mov r0, #0xeb
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r4, #0x38]
 	add r5, r0, #0
 	cmp r1, #1
@@ -945,7 +945,7 @@ _021E932C:
 _021E9332:
 	ldrh r1, [r4]
 	mov r0, #0xed
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	ldr r0, [r4, #0x38]
 	cmp r0, #1
@@ -1188,7 +1188,7 @@ ovy187_21e9504: ; 0x021E9504
 	mov r3, #0x10
 	bl G2x_SetBlendAlpha_
 	ldr r0, _021E9708 ; =0x021E9F0C
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021E970C ; =0x021E9F78
 	mov r5, #0
 _021E952C:
@@ -1212,11 +1212,11 @@ _021E952C:
 	blt _021E952C
 	mov r0, #0xed
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	mov r0, #0x52
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	ldr r0, [sp, #0xc]
 	ldr r0, [r0, #0x70]
@@ -1249,7 +1249,7 @@ _021E958E:
 	mov r1, #0
 	mov r2, #0
 	str r4, [sp, #8]
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	mov r0, #0x20
 	str r0, [sp]
 	add r0, r7, #0
@@ -1257,7 +1257,7 @@ _021E958E:
 	mov r2, #0
 	mov r3, #0x20
 	str r4, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0x40
 	str r0, [sp]
 	mov r0, #0x20
@@ -1267,7 +1267,7 @@ _021E958E:
 	mov r2, #0
 	mov r3, #0xc0
 	str r4, [sp, #8]
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	mov r0, #0
 	bl sub_021E9710
 	str r6, [sp]
@@ -1357,7 +1357,7 @@ _021E9664:
 	mov r1, #0
 	mov r2, #4
 	str r4, [sp, #8]
-	bl sub_0204B124
+	bl GFL_G2DIOLoadArcNCLR
 	mov r0, #4
 	bl sub_021E9710
 	str r6, [sp]
@@ -2043,11 +2043,11 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	mov r0, #0x52
 	add r1, r6, #0
 	add r7, #0x20
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x1c]
 	mov r0, #0xee
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #2
 	mov r2, #3
 	add r3, r6, #0
@@ -2111,7 +2111,7 @@ _021E9D08:
 	blx MI_CpuFill8
 	mov r0, #0xeb
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r5, #0x38]
 	add r7, r0, #0
 	cmp r1, #1

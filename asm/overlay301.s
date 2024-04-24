@@ -147,7 +147,7 @@ ovy301_219fc98: ; 0x0219FC98
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _0219FDA4 ; =0x021A0290
 	add r3, sp, #0x80
 	add r2, r3, #0
@@ -293,7 +293,7 @@ ovy301_219fdf4: ; 0x0219FDF4
 	ldr r1, _0219FF2C ; =0x0000807E
 	add r4, r0, #0
 	mov r0, #0x9d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	ldr r0, [r4]
 	ldr r0, [r0, #4]
@@ -310,7 +310,7 @@ ovy301_219fdf4: ; 0x0219FDF4
 	mov r1, #0x68
 	mov r2, #2
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	mov r3, #6
 	str r6, [sp, #4]
@@ -318,14 +318,14 @@ ovy301_219fdf4: ; 0x0219FDF4
 	mov r1, #0x68
 	mov r2, #2
 	lsl r3, r3, #0xc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r6, [sp, #4]
 	add r0, r5, #0
 	mov r1, #0x68
 	mov r2, #6
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r6, [sp, #4]
 	add r0, r5, #0
@@ -342,7 +342,7 @@ _0219FE54:
 	mov r1, #0x69
 	mov r2, #2
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	mov r3, #6
 	str r6, [sp, #4]
@@ -350,14 +350,14 @@ _0219FE54:
 	mov r1, #0x69
 	mov r2, #2
 	lsl r3, r3, #0xc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	add r0, r5, #0
 	mov r1, #0x69
 	mov r2, #6
 	add r3, r7, #0
 	str r6, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r6, [sp, #4]
 	add r0, r5, #0
@@ -366,7 +366,7 @@ _0219FE96:
 	mov r3, #6
 	mov r2, #6
 	lsl r3, r3, #0xc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r4, #0
 	str r4, [sp]
 	str r4, [sp, #4]
@@ -521,9 +521,9 @@ ovy301_219fff0: ; 0x0219FFF0
 	add r5, r0, #0
 	mov r0, #0
 	mov r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A0044 ; =0x04000050
 	strh r4, [r0]
 	ldr r0, _021A0048 ; =0x04001050
@@ -564,9 +564,9 @@ ovy301_21a004c: ; 0x021A004C
 	ldr r0, _021A0074 ; =0x04001050
 	strh r1, [r0]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #6
 	pop {r3, pc}
 	.align 2, 0

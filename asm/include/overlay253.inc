@@ -56,9 +56,9 @@
 .public sub_0204C4E0
 .public sub_0204B794
 .public sub_0204BF1C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -80,7 +80,7 @@
 .public sub_0204C2B0
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public GFL_FontCreate
 .public sub_0204476C
 .public sub_02045738

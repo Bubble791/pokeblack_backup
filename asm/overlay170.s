@@ -31,7 +31,7 @@ ovy170_217f600: ; 0x0217F600
 	add r1, r5, #0
 	str r0, [r4, #0x40]
 	mov r0, #0xa9
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r4, #0
 	add r1, #0xa4
 	str r0, [r1]

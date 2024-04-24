@@ -87,9 +87,9 @@ ovy266_219cf04: ; 0x0219CF04
 	bl sub_0203CE0C
 	mov r0, #0
 	mov r7, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r4, _0219CF94 ; =0x04000050
 	ldr r6, _0219CF98 ; =0x04001050
 	strh r7, [r4]
@@ -108,7 +108,7 @@ ovy266_219cf04: ; 0x0219CF04
 	bl GXx_SetMasterBrightness_
 	mov r0, #0xd7
 	mov r1, #0x8e
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #4]
 	bl ovy266_219d3cc
 	bl ovy266_219d3e0
@@ -201,9 +201,9 @@ _0219CFD8:
 	sub r4, #0x1c
 	strh r0, [r4]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _0219D03C ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #6
@@ -511,7 +511,7 @@ _0219D252:
 	ldr r6, _0219D3C8 ; =0x0000808E
 	mov r0, #0xa2
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #0x8e
@@ -520,7 +520,7 @@ _0219D252:
 	mov r2, #0
 	mov r3, #0
 	add r7, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	sub r6, #0x8e
 	str r6, [sp]
 	mov r0, #0
@@ -597,7 +597,7 @@ _0219D308:
 	ldr r6, _0219D3C8 ; =0x0000808E
 	mov r0, #0xa2
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #0x8e
@@ -606,7 +606,7 @@ _0219D308:
 	mov r2, #0
 	mov r3, #0
 	add r7, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	sub r6, #0x8e
 	str r6, [sp]
 	mov r0, #0
@@ -715,7 +715,7 @@ ovy266_219d3e0: ; 0x0219D3E0
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _0219D4E8 ; =0x0219E5D4
 	add r3, sp, #0x94
 	add r2, r3, #0
@@ -860,7 +860,7 @@ ovy266_219d534: ; 0x0219D534
 	ldr r1, _0219D5C0 ; =0x0000808E
 	add r6, r0, #0
 	mov r0, #0x1a
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0
 	mov r3, #6
 	str r7, [sp]
@@ -870,7 +870,7 @@ ovy266_219d534: ; 0x0219D534
 	mov r2, #2
 	lsl r3, r3, #0xc
 	add r5, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	mov r0, #1
 	str r0, [sp, #4]
@@ -900,14 +900,14 @@ ovy266_219d534: ; 0x0219D534
 	mov r1, #0x14
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r5, [sp]
 	add r0, r6, #0
 	mov r1, #0x14
 	mov r2, #4
 	add r3, r7, #0
 	str r4, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	mov r1, #0
 	bl sub_02045350
@@ -2514,7 +2514,7 @@ _0219E17A:
 	add r1, r5, #0
 	mov r2, #2
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	mov r1, #1
 	bl sub_02046CFC
@@ -2545,7 +2545,7 @@ _0219E1C4:
 	add r1, r5, #0
 	mov r2, #6
 	lsl r3, r7, #0xc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	mov r1, #1
 	bl sub_02046D84

@@ -8,7 +8,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02035024
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02035104
 .public GFL_ArcToolFree
 .public sub_02042BA8
@@ -52,11 +52,11 @@
 .public sub_0202E678
 .public GFL_VBlankTCBAdd
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02044C98
-.public sub_0204AA30
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0219E118
 .public sub_0204ADA8
 .public sub_0219E118
@@ -69,7 +69,7 @@
 .public sub_0204ADA8
 .public sub_0219E118
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0219E118
 .public sub_0204ADA8
 .public sub_0219E118
@@ -78,7 +78,7 @@
 .public sub_0204AF50
 .public sub_0219E118
 .public sub_0204AF50
-.public sub_0204B124
+.public GFL_G2DIOLoadArcNCLR
 .public GFL_ArcToolFree
 .public sub_0204B0B8
 .public G2x_SetBlendAlpha_
@@ -89,7 +89,7 @@
 .public sub_0219E118
 .public sub_02045E1C
 .public sub_0200FA4C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0219E118
 .public sub_0204ADA8
 .public sub_0219E118
@@ -105,9 +105,9 @@
 .public sub_0204C028
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_0204AA30
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
@@ -658,7 +658,7 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021A0C44
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0200F978
 .public sub_0200FA68
 .public sub_0200FA58

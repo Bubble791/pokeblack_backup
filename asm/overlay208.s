@@ -1104,7 +1104,7 @@ ovy208_219a16c: ; 0x0219A16C
 	ldrh r0, [r5]
 	bl BmpWin_InitAllocator
 	ldr r0, _0219A33C ; =0x0219DBE8
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	mov r0, #1
 	bl sub_02044BB8
 	ldr r0, _0219A340 ; =0x0219DBF8
@@ -1221,7 +1221,7 @@ ovy208_219a364: ; 0x0219A364
 	add r5, r0, #0
 	ldrh r1, [r5]
 	mov r0, #0x2d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0
 	str r6, [sp]
 	ldrh r1, [r5]
@@ -1230,7 +1230,7 @@ ovy208_219a364: ; 0x0219A364
 	str r1, [sp, #4]
 	mov r1, #4
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	ldrh r0, [r5]
@@ -1265,7 +1265,7 @@ ovy208_219a364: ; 0x0219A364
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	ldrh r0, [r5]

@@ -542,7 +542,7 @@ ovy326_219d290: ; 0x0219D290
 	ldr r4, _0219D328 ; =0x021A2D66
 	ldr r6, _0219D32C ; =0x021A2D9C
 	ldr r5, _0219D330 ; =0x021A2DB4
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r0, #0
 	str r0, [sp, #0x10]
@@ -559,7 +559,7 @@ _0219D2AA:
 	lsl r3, r3, #5
 	str r0, [sp, #4]
 	ldr r0, [sp, #0xc]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x10]
 	add r4, r4, #4
 	add r0, r0, #1
@@ -771,7 +771,7 @@ ovy326_219d450: ; 0x0219D450
 	ldrh r1, [r5]
 	ldr r0, _0219D4CC ; =0x00000109
 	add r4, r2, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r0, [r5, #0x44]
 	bl sub_0219E344
@@ -832,7 +832,7 @@ ovy326_219d4d0: ; 0x0219D4D0
 	add r6, r1, #0
 	bl sub_0202D7E0
 	ldrh r1, [r5]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r5, #0x44]
 	bl sub_0219E344
@@ -1186,7 +1186,7 @@ _0219D77E:
 _0219D7B6:
 	ldrh r1, [r7]
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0x20
 	str r6, [sp]
 	ldrh r1, [r7]
@@ -1197,7 +1197,7 @@ _0219D7B6:
 	mov r2, #4
 	add r3, r5, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	ldrh r0, [r7]
 	mov r1, #6
@@ -1206,7 +1206,7 @@ _0219D7B6:
 	add r0, r4, #0
 	add r3, r5, #0
 	mov r6, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	str r6, [sp]
@@ -1959,7 +1959,7 @@ _0219DD80:
 	bl ovy326_219df80
 	ldrh r1, [r5]
 	ldr r0, _0219DE68 ; =0x00000109
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r4, [sp]
 	str r4, [sp, #4]
@@ -2727,7 +2727,7 @@ ovy326_219e364: ; 0x0219E364
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _0219E3BC ; =0x021A2FB0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _0219E3C0 ; =0x021A300C
 _0219E386:
 	mov r0, #0x2c
@@ -7696,7 +7696,7 @@ ovy326_21a0ae0: ; 0x021A0AE0
 	ldr r4, _021A0B78 ; =0x021A31EE
 	ldr r6, _021A0B7C ; =0x021A3238
 	ldr r5, _021A0B80 ; =0x021A3224
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r0, #0
 	str r0, [sp, #0x10]
@@ -7712,7 +7712,7 @@ _021A0AFA:
 	ldrh r0, [r7]
 	str r0, [sp, #4]
 	ldr r0, [sp, #0xc]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x10]
 	add r4, r4, #4
 	add r0, r0, #1
@@ -7781,7 +7781,7 @@ ovy326_21a0b84: ; 0x021A0B84
 	ldr r5, [r0, r1]
 	ldrh r1, [r6]
 	ldr r0, _021A0C00 ; =0x0000010A
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp, #0xc]
@@ -7879,7 +7879,7 @@ _021A0C0E:
 _021A0C5A:
 	ldrh r1, [r6]
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0x20
 	str r7, [sp]
 	ldrh r1, [r6]
@@ -7889,7 +7889,7 @@ _021A0C5A:
 	mov r1, #6
 	add r4, r0, #0
 	mov r5, #0xe0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	ldrh r0, [r6]
 	add r5, #0x40
@@ -7898,7 +7898,7 @@ _021A0C5A:
 	add r0, r4, #0
 	mov r2, #0
 	add r3, r5, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	ldrh r0, [r6]
 	mov r3, #4
@@ -7907,7 +7907,7 @@ _021A0C5A:
 	add r0, r4, #0
 	mov r2, #4
 	add r3, #0xfc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0xc
@@ -8250,7 +8250,7 @@ ovy326_21a0f1c: ; 0x021A0F1C
 	ldrh r1, [r5]
 	ldr r0, _021A0F98 ; =0x0000010A
 	add r4, r2, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r0, [r5, #0x58]
 	bl sub_021A2C0C
@@ -8311,7 +8311,7 @@ ovy326_21a0f9c: ; 0x021A0F9C
 	add r6, r1, #0
 	bl sub_0202D7E0
 	ldrh r1, [r5]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	ldr r0, [r5, #0x58]
 	bl sub_021A2C0C
@@ -9248,7 +9248,7 @@ _021A16F4:
 	bl ovy326_21a1898
 	ldrh r1, [r5]
 	ldr r0, _021A17BC ; =0x0000010A
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r3, #0
 	str r3, [sp]
 	str r3, [sp, #4]
@@ -12141,7 +12141,7 @@ ovy326_21a2c2c: ; 0x021A2C2C
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _021A2C84 ; =0x021A34EC
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021A2C88 ; =0x021A3548
 _021A2C4E:
 	mov r0, #0x2c

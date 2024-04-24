@@ -498,9 +498,9 @@ void BagMenu_LoadBagBackGround(BagView *bagView, int a2);
 extern int MyStatus_GetTrainerGender(void*);
 extern int Oam_LoadNCLRFile(int, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
-extern void sub_0204B0D4(int, int, int, int, int, u16);
-extern int sub_0204AE3C(int, int, int, int, int, u16);
-extern void sub_0204AFB0(int, int, int, int, int, int, int, u16);
+extern void GFL_G2DIOLoadArcNCLRDefault(int, int, int, int, int, u16);
+extern int GFL_BGSysLoadArcNCGRDynamic(int, int, int, int, int, u16);
+extern void GFL_G2DIOLoadNSCRSync(int, int, int, int, int, int, int, u16);
 void ovy142_219e284(BagView *a1);
 extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
 extern void sub_0204826C(int);
@@ -512,7 +512,7 @@ void ovy142_219e6f8(BagView *a1);
 
 void ovy142_219c900(BagView *bagView);
 extern int sub_02035024(int, int, int, u16);
-extern void *sub_0204AA30(int, u16);
+extern void *GFL_ArcSysCreateFileHandle(int, u16);
 extern void sub_02035104(int, void*, int, int, int);
 
 extern int sub_02026DC0(u16);

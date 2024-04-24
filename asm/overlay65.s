@@ -231,7 +231,7 @@ _021E59B0:
 	blt _021E59B0
 	ldr r1, [sp, #0x10]
 	mov r0, #0xeb
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r6, [sp]
 	ldr r3, _021E5B90 ; =0x00000BF4
 	mov r1, #0

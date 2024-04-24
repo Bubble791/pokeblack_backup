@@ -27926,7 +27926,7 @@ _020123D2:
 	bl sub_02046E1C
 	str r0, [r4, #0x38]
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r1, _02012454 ; =0x05000400
 	add r4, #0x40
 	ldrh r0, [r1]
@@ -27998,7 +27998,7 @@ _02012472:
 	ldr r0, _020125DC ; =0x05000400
 	strh r1, [r0]
 	ldr r0, [r4, #0x38]
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	ldrh r1, [r4, #0x34]
 	sub r0, #0x1c
@@ -29765,9 +29765,9 @@ sub_02013210: ; 0x02013210
 	mov r0, #0
 	add r4, r2, #0
 	mov r6, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r1, #1
 	lsl r1, r1, #0x1a
 	ldr r0, [r1]
@@ -32660,7 +32660,7 @@ sub_02014498: ; 0x02014498
 	str r0, [r4, #4]
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #0x1c]
 	add r1, r5, #0
 	bl sub_02170B18
@@ -36377,7 +36377,7 @@ sub_02015DF8: ; 0x02015DF8
 	add r1, r3, #0
 	add r4, r2, #0
 	strh r3, [r5]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #4]
 	add r0, r5, #0
 	str r4, [r5, #8]
@@ -37278,7 +37278,7 @@ sub_02016510: ; 0x02016510
 	ldrh r1, [r1, #0x18]
 	ldr r7, [sp, #0x68]
 	str r2, [sp, #0x10]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r2, sp, #0x58
 	ldrh r2, [r2, #0x18]
 	add r1, r4, #0
@@ -42248,7 +42248,7 @@ sub_020186E0: ; 0x020186E0
 	str r0, [r4]
 	mov r0, #0xc
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r4]
 	add r6, sp, #8
 	str r0, [r1]
@@ -45444,7 +45444,7 @@ sub_02019B98: ; 0x02019B98
 	ldr r1, [r4, #0x40]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4]
 _02019BB2:
 	pop {r4, pc}
@@ -59488,11 +59488,11 @@ sub_02020208: ; 0x02020208
 	bne _02020228
 	mov r0, #0x10
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5]
 	ldr r0, _02020230 ; =0x0000012E
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #4]
 _02020228:
 	pop {r3, r4, r5, pc}
@@ -60860,12 +60860,12 @@ _02020BD8:
 
 	thumb_func_start sub_02020BE4
 sub_02020BE4: ; 0x02020BE4
-	ldr r3, _02020BEC ; =sub_0204AA30
+	ldr r3, _02020BEC ; =GFL_ArcSysCreateFileHandle
 	add r1, r0, #0
 	mov r0, #0x13
 	bx r3
 	.align 2, 0
-_02020BEC: .word sub_0204AA30
+_02020BEC: .word GFL_ArcSysCreateFileHandle
 	thumb_func_end sub_02020BE4
 
 	thumb_func_start sub_02020BF0
@@ -65685,7 +65685,7 @@ GFL_FontCreate: ; 0x02022D58
 	beq _02022D9C
 	add r0, r6, #0
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #0x50]
 	ldr r2, [sp, #8]
 	add r0, r4, #0
@@ -69975,8 +69975,8 @@ sub_02024D00: ; 0x02024D00
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end sub_02024D00
 
-	thumb_func_start sub_02024D20
-sub_02024D20: ; 0x02024D20
+	thumb_func_start LoadCursorImageEndOfHeap
+LoadCursorImageEndOfHeap: ; 0x02024D20
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r6, r2, #0
@@ -70002,7 +70002,7 @@ sub_02024D20: ; 0x02024D20
 	ldr r0, [sp, #8]
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_02024D20
+	thumb_func_end LoadCursorImageEndOfHeap
 
 	thumb_func_start sub_02024D58
 sub_02024D58: ; 0x02024D58
@@ -73555,12 +73555,12 @@ sub_0202671C: ; 0x0202671C
 
 	thumb_func_start Item_ArcHandleCreate
 Item_ArcHandleCreate: ; 0x02026720
-	ldr r3, _02026728 ; =sub_0204AA30
+	ldr r3, _02026728 ; =GFL_ArcSysCreateFileHandle
 	add r1, r0, #0
 	mov r0, #0x18
 	bx r3
 	.align 2, 0
-_02026728: .word sub_0204AA30
+_02026728: .word GFL_ArcSysCreateFileHandle
 	thumb_func_end Item_ArcHandleCreate
 
 	thumb_func_start Item_ArcHandleReadFile
@@ -83198,7 +83198,7 @@ sub_0202AB20: ; 0x0202AB20
 _0202AB32:
 	mov r0, #0x31
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #1
 	str r0, [sp, #0xc]
 	add r0, r5, #0
@@ -83215,7 +83215,7 @@ _0202AB32:
 	ldr r0, [sp, #0xc]
 	mov r1, #0
 	str r6, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -83675,7 +83675,7 @@ _0202AE7C:
 	lsl r1, r1, #0x10
 	mov r0, #0x32
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #8]
 	add r0, r4, #0
 	add sp, #4
@@ -96153,7 +96153,7 @@ sub_02030548: ; 0x02030548
 	bl sub_0204A940
 	mov r0, #0x59
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, sp, #0xc
 	ldrh r2, [r4]
 	str r0, [sp, #8]
@@ -96246,7 +96246,7 @@ _02030624:
 	bl sub_0204A940
 	ldr r1, [sp, #8]
 	mov r0, #0x59
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, sp, #0x14
 	ldrh r2, [r4]
 	str r0, [sp, #0x10]
@@ -99671,7 +99671,7 @@ sub_02031D34: ; 0x02031D34
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #4]
 	bl sub_0204AD80
 	mov r7, #0x9a
@@ -100480,7 +100480,7 @@ sub_020322C8: ; 0x020322C8
 	add r5, r0, #0
 	mov r0, #0x88
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	bl sub_0204AD80
 	add r6, r0, #0
@@ -104530,7 +104530,7 @@ sub_02033E24: ; 0x02033E24
 	add r4, r0, #0
 	bl sub_02033768
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	pop {r4, pc}
 	thumb_func_end sub_02033E24
 
@@ -104642,7 +104642,7 @@ sub_02033EF4: ; 0x02033EF4
 	bl sub_0202D7E0
 	add r7, sp, #0x18
 	ldrh r1, [r7, #0x10]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r3, [r7, #0x10]
 	add r6, r0, #0
 	add r1, r5, #0
@@ -104810,7 +104810,7 @@ sub_02034060: ; 0x02034060
 	mov r0, #0
 	bl sub_02033CE4
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end sub_02034060
@@ -104874,7 +104874,7 @@ sub_020340C8: ; 0x020340C8
 	add r4, r0, #0
 	bl sub_0202D7E0
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	add r1, r7, #0
 	add r2, r4, #0
@@ -105569,7 +105569,7 @@ sub_020345C4: ; 0x020345C4
 	str r0, [sp, #0x14]
 	mov r0, #0x2a
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #5
@@ -109221,7 +109221,7 @@ sub_02036098: ; 0x02036098
 	sub r0, #0x1c
 	strh r6, [r0]
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r1, _0203614C ; =0x0400106C
 	add r5, #0x41
 	sub r1, #0x6c

@@ -51,7 +51,7 @@ _0219F350:
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _0219F4A0 ; =0x0219F4EC
 	add r3, sp, #0x4c
 	mov r2, #0x10

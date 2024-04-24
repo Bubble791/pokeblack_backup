@@ -107,7 +107,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC0C
 .public GFL_HeapAllocate
 .public sub_0204ABA4
@@ -151,7 +151,7 @@
 .public sub_021E5CA4
 .public sub_021E5CAC
 .public sub_021E5E3C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_0200FE34
 .public sub_0204AC58
@@ -178,7 +178,7 @@
 .public GFL_HeapFree
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204ABA4
 .public GFL_ArcToolFree
 .public GFL_HeapFree

@@ -833,7 +833,7 @@ ovy289_21f4a88: ; 0x021F4A88
 	mov r0, #0x65
 	lsr r1, r1, #0x10
 	ldr r6, _021F4B50 ; =0x021F51D2
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	mov r0, #0
 	str r0, [sp, #0x10]
@@ -853,7 +853,7 @@ _021F4AC0:
 	ldrb r1, [r4, #1]
 	ldrb r3, [r4, #2]
 	add r0, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x10]
 	add r4, r4, #4
 	add r0, r0, #1
@@ -1221,7 +1221,7 @@ ovy289_21f4d74: ; 0x021F4D74
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #4
 	str r1, [sp]
 	mov r1, #1

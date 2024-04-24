@@ -48,7 +48,7 @@ ovy84_21eae60: ; 0x021EAE60
 	add r1, #0xe4
 	ldrh r1, [r1]
 	mov r0, #0xab
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r4, #0
 	add r1, #0xe8
 	str r0, [r1]
@@ -1211,7 +1211,7 @@ ovy84_21eb824: ; 0x021EB824
 	add r1, #0xe2
 	ldrh r1, [r1]
 	mov r0, #0x1f
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x14]
 	ldr r0, _021EB9D0 ; =0x021EEB24
 	add r4, sp, #0x2c

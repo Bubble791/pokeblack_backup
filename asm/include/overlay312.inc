@@ -29,7 +29,7 @@
 .public sub_0203DA48
 .public sub_0203DAC8
 .public GFL_MsgSysLoadData
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public GFL_FadeScreenSet
 .public sub_02044C98
@@ -102,7 +102,7 @@
 .public MIi_CpuClearFast
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02048D28
 .public sub_02044BB8
 .public BmpWin_InitAllocator
@@ -110,7 +110,7 @@
 .public sub_020480A8
 .public sub_02048F44
 .public sub_02044528
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B610
 .public sub_0208D868
 .public GFL_HeapFree
@@ -133,7 +133,7 @@
 .public sub_02045738
 .public sub_0204476C
 .public sub_0204ADA8
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204AF50
 .public sub_02024D00
 .public sub_02024D00
@@ -147,7 +147,7 @@
 .public sub_02044BB8
 .public sub_0204476C
 .public sub_0204ADA8
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204AF50
 .public sub_02024D00
 .public sub_0204B0B8

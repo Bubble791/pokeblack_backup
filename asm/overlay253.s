@@ -596,11 +596,11 @@ ovy253_217cda4: ; 0x0217CDA4
 	str r0, [r5, #0x1c]
 	mov r0, #0x6b
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	bl sub_0202D7E0
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	str r6, [sp]
 	add r0, r7, #0
@@ -778,7 +778,7 @@ ovy253_217cf2c: ; 0x0217CF2C
 	lsr r0, r0, #0x10
 	bl BmpWin_InitAllocator
 	ldr r0, _0217CFA0 ; =0x0217D658
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp]

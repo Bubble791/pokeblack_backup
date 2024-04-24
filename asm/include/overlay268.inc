@@ -292,7 +292,7 @@
 .public sub_0204898C
 .public sub_021F35C0
 .public GFL_StrBufFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0202111C
@@ -781,7 +781,7 @@
 .public sub_021F3B10
 .public sub_021F3C1C
 .public sub_021F3C1C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
 .public sub_0202111C
@@ -809,7 +809,7 @@
 .public sub_0204C40C
 .public sub_0204C39C
 .public sub_0204C124
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02020F94
 .public sub_0204B2DC
 .public sub_0204BA40
@@ -1023,7 +1023,7 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021F2FF8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public GFL_ArcToolFree
@@ -1094,7 +1094,7 @@
 .public sub_0202B030
 .public sub_0202B030
 .public sub_0202AEAC
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_021F3000
 .public sub_0204898C

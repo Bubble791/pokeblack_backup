@@ -667,7 +667,7 @@ ovy307_21de154: ; 0x021DE154
 	add r5, r1, #0
 	ldrh r1, [r5]
 	mov r0, #0xba
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x20
 	str r1, [sp]
 	ldrh r1, [r5]
@@ -677,7 +677,7 @@ ovy307_21de154: ; 0x021DE154
 	mov r1, #3
 	mov r3, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	ldrh r0, [r5]
@@ -717,7 +717,7 @@ ovy307_21de1b4: ; 0x021DE1B4
 	add r5, r1, #0
 	ldrh r1, [r5]
 	mov r0, #0xba
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r4, [sp]
 	mov r1, #1
@@ -1157,7 +1157,7 @@ ovy307_21de468: ; 0x021DE468
 	mov r0, #1
 	mov r1, #2
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	mov r2, #0x66
 	str r0, [r5, #0x60]
 	ldrh r3, [r5]
@@ -1719,7 +1719,7 @@ ovy307_21de924: ; 0x021DE924
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _021DE97C ; =0x021DF588
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021DE980 ; =0x021DF604
 _021DE946:
 	mov r0, #0x2c

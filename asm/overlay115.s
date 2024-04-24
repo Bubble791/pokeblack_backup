@@ -119,14 +119,14 @@ ovy115_21eed28: ; 0x021EED28
 	lsl r1, r1, #0x10
 	ldr r0, _021EEDC4 ; =0x0000012F
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r6, [sp]
 	str r5, [sp, #4]
 	mov r1, #4
 	mov r2, #0
 	mov r3, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	str r6, [sp, #4]
 	str r5, [sp, #8]

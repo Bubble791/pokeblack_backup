@@ -163,7 +163,7 @@
 .public sub_0202E1F0
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile

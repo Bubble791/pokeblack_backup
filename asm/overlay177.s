@@ -507,7 +507,7 @@ ovy177_219b130: ; 0x0219B130
 	add r0, r6, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _0219B294 ; =0x0219CA0C
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _0219B298 ; =0x0219CA3C
 	mov r4, #0
 _0219B14E:
@@ -536,7 +536,7 @@ _0219B14E:
 	mov r0, #0x5d
 	add r1, r6, #0
 	mov r7, #0x5d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r5, #0
 	str r5, [sp]
 	str r6, [sp, #4]
@@ -544,14 +544,14 @@ _0219B14E:
 	mov r2, #0
 	mov r3, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r5, [sp]
 	str r6, [sp, #4]
 	add r0, r4, #0
 	mov r1, #1
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r5, [sp]
 	add r7, #0xc3
 	str r6, [sp, #4]
@@ -559,7 +559,7 @@ _0219B14E:
 	mov r1, #6
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r5, [sp]
 	str r5, [sp, #4]
 	str r6, [sp, #8]
@@ -639,7 +639,7 @@ _0219B14E:
 	mov r2, #5
 	add r3, r5, #0
 	str r6, [sp, #4]
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	ldr r1, [sp, #0xc]
 	str r0, [r1]
 	add r0, r4, #0
@@ -734,7 +734,7 @@ ovy177_219b2fc: ; 0x0219B2FC
 	bl sub_02046D84
 	mov r0, #0x5d
 	add r1, r7, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r7, [sp]
 	mov r1, #0xc
 	mov r2, #1
@@ -899,7 +899,7 @@ ovy177_219b428: ; 0x0219B428
 	str r0, [r5]
 	mov r0, #0x5d
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r7, _0219B4C4 ; =0x0219C9D8
 	add r0, r5, #4
@@ -3449,7 +3449,7 @@ ovy177_219c820: ; 0x0219C820
 	add r5, r0, #0
 	mov r0, #0x5d
 	add r4, r1, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #1
 	add r6, r0, #0
 	tst r1, r5

@@ -37,7 +37,7 @@
 .public BmpWin_InitAllocator
 .public sub_020232D0
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02048D28
 .public sub_02049214
 .public G3X_SetFog

@@ -97,7 +97,7 @@
 .public sub_0219F8A8
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
@@ -265,7 +265,7 @@
 .public sub_0204C318
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -304,8 +304,8 @@
 .public GFL_HeapFree
 .public sub_02045790
 .public sub_02045790
-.public sub_0204AA30
-.public sub_0204B124
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLR
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204AF50
@@ -401,7 +401,7 @@
 .public sub_0202D974
 .public GFL_StrBufFree
 .public sub_0202DC00
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public GFL_HeapFree
@@ -412,7 +412,7 @@
 .public MI_CpuCopy8
 .public sub_0205FA10
 .public sub_0205FA10
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B37C
 .public MI_CpuCopy8
 .public GFL_HeapFree
@@ -517,7 +517,7 @@
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98

@@ -88,4 +88,4 @@
 .public sub_02044FB0
 .public sub_02044FB0
 
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA

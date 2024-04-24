@@ -6,7 +6,7 @@
 .public MIi_CpuClear32
 .public MIi_CpuClear32
 .public MIi_CpuClear32
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_0204476C

@@ -3871,7 +3871,7 @@ ovy288_21f61a8: ; 0x021F61A8
 	orr r1, r3
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r7]
 	mov r7, #0
 	ldr r2, [r1, #0xc]
@@ -3893,7 +3893,7 @@ ovy288_21f61a8: ; 0x021F61A8
 	ldr r3, [sp, #0x14]
 	ldrb r1, [r1, #1]
 	ldrb r3, [r3, #2]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0xc]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -4302,7 +4302,7 @@ ovy288_21f64f4: ; 0x021F64F4
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r4, [sp]
 	mov r1, #3
@@ -4368,7 +4368,7 @@ ovy288_21f657c: ; 0x021F657C
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	bl sub_02021114
 	add r1, r0, #0
@@ -4488,7 +4488,7 @@ ovy288_21f6678: ; 0x021F6678
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #4
 	str r1, [sp]
 	mov r1, #1
@@ -4551,7 +4551,7 @@ ovy288_21f66f8: ; 0x021F66F8
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #5
@@ -4612,7 +4612,7 @@ ovy288_21f6770: ; 0x021F6770
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #4]
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18

@@ -970,7 +970,7 @@ ovy27_2170ac4: ; 0x02170AC4
 	add r4, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4]
 	mov r0, #0
 	mov r1, #2

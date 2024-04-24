@@ -6,7 +6,7 @@
 .public sub_02180670
 .public sub_02016B08
 .public sub_0201458C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0203A850
 .public GFL_ArcToolFree
 .public GFL_HeapFree
@@ -130,7 +130,7 @@
 .public sub_021EA8AC
 .public sub_021EA928
 .public sub_0202E818
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02026F5C
 .public sub_02026EE8
 .public sub_0204AB1C

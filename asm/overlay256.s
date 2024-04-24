@@ -137,7 +137,7 @@ ovy256_21bb7cc: ; 0x021BB7CC
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _021BB8C8 ; =0x021BD960
 	add r3, sp, #0xa0
 	add r2, r3, #0
@@ -280,7 +280,7 @@ ovy256_21bb91c: ; 0x021BB91C
 	sub sp, #0xc
 	ldr r1, _021BBA0C ; =0x0000808C
 	mov r0, #0xd2
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x80
 	str r1, [sp]
 	mov r4, #0x8c
@@ -291,7 +291,7 @@ ovy256_21bb91c: ; 0x021BB91C
 	str r4, [sp, #4]
 	mov r6, #1
 	mov r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #0x40
 	str r0, [sp]
 	str r4, [sp, #4]
@@ -299,7 +299,7 @@ ovy256_21bb91c: ; 0x021BB91C
 	mov r1, #6
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	str r6, [sp, #4]
 	str r4, [sp, #8]
@@ -815,9 +815,9 @@ ovy256_21bbd44: ; 0x021BBD44
 	bl sub_0203CE0C
 	mov r0, #0
 	mov r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r6, _021BBDD0 ; =0x04000050
 	ldr r7, _021BBDD4 ; =0x04001050
 	strh r4, [r6]
@@ -896,9 +896,9 @@ ovy256_21bbdd8: ; 0x021BBDD8
 	sub r4, #0x1c
 	strh r0, [r4]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021BBE44 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #0xb
@@ -3204,7 +3204,7 @@ _021BD012:
 	blo _021BD012
 	bl sub_0202D7E0
 	ldr r1, _021BD090 ; =0x0000808C
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	bl sub_0202D814
 	add r1, r0, #0

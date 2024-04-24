@@ -2376,7 +2376,7 @@ ovy194_21b8894: ; 0x021B8894
 	mov r2, #3
 	bl ovy194_21c0214
 	mov r0, #0x1f
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x27
 	lsl r0, r0, #6
 	ldr r0, [r4, r0]
@@ -3990,9 +3990,9 @@ _021B961C:
 	mov r0, #0
 	bl GFL_FadeScreenSet
 	mov r0, #0x1f
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x1e
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add sp, #0xc
 	pop {r3, r4, pc}
 	.align 2, 0
@@ -4444,9 +4444,9 @@ _021B99D4:
 	add r0, r5, #0
 	bl ovy194_21bfe34
 	mov r0, #0x10
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #4
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #0
 	bl sub_02027B58
 	str r4, [sp]
@@ -5142,7 +5142,7 @@ ovy194_21b9fcc: ; 0x021B9FCC
 	push {r4, lr}
 	add r4, r0, #0
 	mov r0, #0x1e
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r1, _021B9FE0 ; =ovy194_21babc4
 	add r0, r4, #0
 	bl sub_021B7BE4
@@ -5156,7 +5156,7 @@ ovy194_21b9fe4: ; 0x021B9FE4
 	push {r4, lr}
 	add r4, r0, #0
 	mov r0, #0x1a
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r4, #0
 	bl ovy194_21c4b88
 	add r0, r4, #0
@@ -5211,7 +5211,7 @@ ovy194_21ba058: ; 0x021BA058
 	add r5, r0, #0
 	mov r0, #0x1f
 	mov r6, #0x1f
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	bl ovy194_21c00b0
 	cmp r0, #0
@@ -5279,7 +5279,7 @@ _021BA0E8:
 	cmp r0, #1
 	bne _021BA14A
 	mov r0, #0x1a
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #2
 	mov r1, #0
 	lsl r0, r0, #0xa
@@ -7999,7 +7999,7 @@ _021BB73A:
 	cmp r0, #1
 	bne _021BB794
 	mov r0, #0x10
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	ldr r1, _021BB810 ; =ovy194_21bf938
 	add r0, r4, #0
 	bl sub_021B7BE4
@@ -8029,9 +8029,9 @@ _021BB7BE:
 	mov r1, #0
 	bl ovy194_21c200c
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r1, _021BB814 ; =ovy194_21b99b4
 	add r0, r4, #0
 	bl sub_021B7BE4
@@ -9442,7 +9442,7 @@ ovy194_21bc2d0: ; 0x021BC2D0
 	ldr r1, _021BC32C ; =0x000005F4
 	mov r0, #7
 	ldrh r1, [r5, r1]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	mov r4, #0x60
 	cmp r6, #1
@@ -10668,7 +10668,7 @@ ovy194_21bccd0: ; 0x021BCCD0
 	mov r2, #2
 	bl ovy194_21c0214
 	mov r0, #0x1f
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x27
 	lsl r0, r0, #6
 	ldr r0, [r4, r0]
@@ -11111,7 +11111,7 @@ ovy194_21bd06c: ; 0x021BD06C
 	ldr r7, _021BD154 ; =0x000005F4
 	mov r0, #0x67
 	ldrh r1, [r5, r7]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, _021BD158 ; =0x0000086C
 	add r6, r0, #0
 	ldr r1, [r5, r1]
@@ -11125,7 +11125,7 @@ ovy194_21bd06c: ; 0x021BD06C
 	mov r3, #0
 	str r1, [sp, #0xc]
 	mov r1, #0xb
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r6, #0
 	bl GFL_ArcToolFree
 	add r0, r5, #0
@@ -11749,9 +11749,9 @@ ovy194_21bd5c8: ; 0x021BD5C8
 	mov r1, #0
 	bl ovy194_21c200c
 	mov r0, #0x1f
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x1e
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	bl ovy194_21c2a24
 	ldrh r1, [r5, r4]
@@ -12828,7 +12828,7 @@ ovy194_21bdf10: ; 0x021BDF10
 	add r0, r4, #0
 	bl ovy194_21c368c
 	mov r0, #4
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r0, #4
 	bl sub_02027B58
 	ldr r0, _021BDF64 ; =0x000011FA
@@ -14563,7 +14563,7 @@ _021BEC60:
 	ldrh r3, [r5, r4]
 	mov r1, #0xf
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	add r4, #0x50
 	str r0, [r5, r4]
 	add r0, r5, #0
@@ -16053,7 +16053,7 @@ ovy194_21bf938: ; 0x021BF938
 	ldrh r3, [r5, r4]
 	mov r1, #0xf
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	add r1, r4, #0
 	add r1, #0x50
 	str r0, [r5, r1]
@@ -16246,9 +16246,9 @@ _021BFAF0:
 	mov r6, #0
 	mov r0, #0
 	str r6, [r5, r4]
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r7, _021BFB98 ; =0x000009C4
 	ldr r0, [r5, r7]
 	bl sub_0204BF98
@@ -16286,9 +16286,9 @@ _021BFAF0:
 	mov r1, #0
 	bl ovy194_21c200c
 	mov r0, #0x1f
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x1e
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r5, #0
 	bl ovy194_21c2a24
 	sub r4, #0x50
@@ -18319,9 +18319,9 @@ ovy194_21c0b6c: ; 0x021C0B6C
 	add r0, r5, #0
 	bl ovy194_21c2d34
 	mov r0, #0x1d
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0x1f
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r2, #0x1a
 	ldr r0, _021C0BF8 ; =0x04001050
 	mov r1, #0x1a
@@ -21973,7 +21973,7 @@ ovy194_21c2930: ; 0x021C2930
 	add r5, r0, #0
 	ldrh r1, [r5, r4]
 	mov r0, #0x75
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r3, [r5, r4]
 	mov r1, #0x48
 	add r2, sp, #0
@@ -22385,7 +22385,7 @@ ovy194_21c2c84: ; 0x021C2C84
 	add r5, r0, #0
 	ldrh r1, [r5, r1]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_021B7808
@@ -22403,7 +22403,7 @@ _021C2CA4:
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, _021C2D08 ; =0x0000086C
 	ldr r0, [r5, r0]
 	cmp r0, #0
@@ -22416,7 +22416,7 @@ _021C2CA4:
 	str r0, [sp, #4]
 	add r0, r4, #0
 	add r3, r7, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	ldr r1, _021C2D08 ; =0x0000086C
 	str r0, [r5, r1]
 _021C2CDA:
@@ -22434,7 +22434,7 @@ _021C2CDA:
 	mov r2, #2
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0x10
@@ -22476,7 +22476,7 @@ ovy194_21c2d34: ; 0x021C2D34
 	add r5, r0, #0
 	ldrh r1, [r5, r6]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x87
 	lsl r1, r1, #4
 	ldr r1, [r5, r1]
@@ -22491,7 +22491,7 @@ ovy194_21c2d34: ; 0x021C2D34
 	mov r2, #4
 	str r1, [sp, #0xc]
 	mov r1, #0xc
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0x10
@@ -22514,7 +22514,7 @@ ovy194_21c2d78: ; 0x021C2D78
 	add r5, r0, #0
 	ldrh r1, [r5, r6]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0xc0
 	str r1, [sp]
 	ldrh r1, [r5, r6]
@@ -22524,7 +22524,7 @@ ovy194_21c2d78: ; 0x021C2D78
 	mov r1, #0x11
 	mov r3, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	ldrh r0, [r5, r6]
 	mov r1, #0xd
@@ -22532,7 +22532,7 @@ ovy194_21c2d78: ; 0x021C2D78
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	ldr r1, _021C2DE4 ; =0x00000874
 	mov r2, #5
 	str r0, [r5, r1]
@@ -22542,7 +22542,7 @@ ovy194_21c2d78: ; 0x021C2D78
 	mov r3, #0
 	str r0, [sp, #4]
 	add r0, r4, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	ldr r1, _021C2DE4 ; =0x00000874
 	sub r1, r1, #4
 	str r0, [r5, r1]
@@ -22568,7 +22568,7 @@ ovy194_21c2de8: ; 0x021C2DE8
 	mov r0, #6
 	mov r1, #0xf
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	add r4, #0x50
 	str r0, [r5, r4]
 	pop {r3, r4, r5, pc}
@@ -22642,7 +22642,7 @@ ovy194_21c2e6c: ; 0x021C2E6C
 	bl sub_0202D7E0
 	ldr r7, _021C2EEC ; =0x000005F4
 	ldrh r1, [r5, r7]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	bl sub_0202D814
 	add r1, r0, #0
@@ -22705,7 +22705,7 @@ ovy194_21c2ef0: ; 0x021C2EF0
 	ldrh r1, [r5, r1]
 	mov r0, #0x67
 	add r6, r2, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x87
 	lsl r1, r1, #4
 	ldr r1, [r5, r1]
@@ -22725,7 +22725,7 @@ ovy194_21c2ef0: ; 0x021C2EF0
 	add r1, sp, #0x10
 	ldr r1, [r1, r2]
 	mov r2, #4
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	cmp r4, #0
 	beq _021C2F44
 	add r0, r6, #0
@@ -23423,7 +23423,7 @@ ovy194_21c3480: ; 0x021C3480
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #7
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x10]
 	bl sub_02021114
 	add r1, r0, #0
@@ -24773,7 +24773,7 @@ _021C3EBC:
 	ldr r1, _021C3F54 ; =0x000005F4
 	mov r0, #7
 	ldrh r1, [r5, r1]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #4]
 	b _021C3F36
 _021C3ECA:
@@ -25076,7 +25076,7 @@ ovy194_21c4088: ; 0x021C4088
 	bne _021C4166
 	ldrh r1, [r5, r6]
 	mov r0, #0x68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r7, [sp]
 	ldrh r1, [r5, r6]
 	mov r3, #0x18
@@ -25085,7 +25085,7 @@ ovy194_21c4088: ; 0x021C4088
 	mov r1, #5
 	lsl r3, r3, #0xa
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	str r7, [sp, #4]
 	ldrh r0, [r5, r6]
@@ -25115,7 +25115,7 @@ ovy194_21c4088: ; 0x021C4088
 _021C4166:
 	ldrh r1, [r5, r6]
 	mov r0, #0x69
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r7, [sp]
 	ldrh r1, [r5, r6]
 	mov r3, #0x18
@@ -25124,7 +25124,7 @@ _021C4166:
 	mov r1, #1
 	lsl r3, r3, #0xa
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r7, [sp]
 	str r7, [sp, #4]
 	ldrh r0, [r5, r6]
@@ -25197,9 +25197,9 @@ ovy194_21c41fc: ; 0x021C41FC
 	mov r0, #0
 	bl sub_021C45EC
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021C4228: .word 0x021C6B44
@@ -25645,12 +25645,12 @@ _021C45E8: .word 0x000011EB
 sub_021C45EC: ; 0x021C45EC
 	ldr r1, _021C45F8 ; =0x021C6B24
 	lsl r0, r0, #4
-	ldr r3, _021C45FC ; =sub_02044710
+	ldr r3, _021C45FC ; =GFL_BGSysSetLCDConfig
 	add r0, r1, r0
 	bx r3
 	nop
 _021C45F8: .word 0x021C6B24
-_021C45FC: .word sub_02044710
+_021C45FC: .word GFL_BGSysSetLCDConfig
 	thumb_func_end sub_021C45EC
 
 	thumb_func_start ovy194_21c4600
@@ -25665,7 +25665,7 @@ ovy194_21c4600: ; 0x021C4600
 	ldr r7, _021C4668 ; =0x000005F4
 	mov r0, #0x67
 	ldrh r1, [r5, r7]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #0
@@ -25743,7 +25743,7 @@ ovy194_21c46a4: ; 0x021C46A4
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #1
@@ -25827,7 +25827,7 @@ ovy194_21c475c: ; 0x021C475C
 	add r5, r0, #0
 	ldrh r1, [r5, r6]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, _021C4798 ; =0x0000086C
 	mov r3, #0
 	ldr r1, [r5, r1]
@@ -25841,7 +25841,7 @@ ovy194_21c475c: ; 0x021C475C
 	mov r2, #2
 	str r1, [sp, #0xc]
 	mov r1, #0x1d
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	add sp, #0x10
@@ -25933,7 +25933,7 @@ _021C4842:
 	ldr r1, _021C4960 ; =0x000005F4
 	mov r0, #7
 	ldrh r1, [r5, r1]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	add r0, r5, #0
 	mov r1, #0
@@ -26202,7 +26202,7 @@ ovy194_21c4a68: ; 0x021C4A68
 	ldr r6, _021C4B80 ; =0x000005F4
 	mov r0, #0x67
 	ldrh r1, [r5, r6]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x87
 	lsl r1, r1, #4
 	ldr r1, [r5, r1]
@@ -26218,7 +26218,7 @@ ovy194_21c4a68: ; 0x021C4A68
 	str r1, [sp, #0xc]
 	mov r1, #0x10
 	mov r6, #0x10
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	mov r0, #4
 	bl sub_02045B7C
 	sub r6, #0x14
@@ -27063,7 +27063,7 @@ ovy194_21c5138: ; 0x021C5138
 	str r0, [sp, #0x18]
 	ldrh r1, [r5, r1]
 	mov r0, #7
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x14]
 	add r0, r5, #0
 	add r1, r6, #0
@@ -28142,13 +28142,13 @@ ovy194_21c5994: ; 0x021C5994
 	mov r1, #0xf
 	mov r2, #0
 	mov r7, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	add r1, r6, #0
 	add r1, #0x50
 	str r0, [r5, r1]
 	ldrh r1, [r5, r6]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r7, [sp]
 	ldrh r1, [r5, r6]
 	mov r2, #5
@@ -28156,7 +28156,7 @@ ovy194_21c5994: ; 0x021C5994
 	str r1, [sp, #4]
 	mov r1, #0xd
 	add r4, r0, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	mov r1, #0x87
 	lsl r1, r1, #4
 	str r0, [r5, r1]
@@ -28171,7 +28171,7 @@ ovy194_21c5994: ; 0x021C5994
 	str r0, [sp, #0xc]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	mov r0, #0x87
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
@@ -28186,7 +28186,7 @@ ovy194_21c5994: ; 0x021C5994
 	mov r3, #0
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r3, _021C5AB4 ; =0x021C6C48
 	add r2, sp, #0x18
 	str r2, [sp, #0x10]
@@ -28220,7 +28220,7 @@ ovy194_21c5994: ; 0x021C5994
 	add r0, r4, #0
 	mov r2, #7
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r2, [sp, #0x14]
 	mov r0, #4
 	sub r2, #0x88
@@ -28249,7 +28249,7 @@ ovy194_21c5994: ; 0x021C5994
 	add r3, r7, #0
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	ldr r0, _021C5AB8 ; =0x000011DE
@@ -28257,7 +28257,7 @@ ovy194_21c5994: ; 0x021C5994
 	add r0, r5, #0
 	bl ovy194_21c58b4
 	mov r0, #0x1f
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add sp, #0x38
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -28284,7 +28284,7 @@ _021C5AC8:
 	ldr r1, _021C5BE0 ; =0x000005F4
 	mov r0, #0x67
 	ldrh r1, [r5, r1]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r6, #0
 	str r6, [sp]
 	mov r1, #1
@@ -28569,7 +28569,7 @@ ovy194_21c5d10: ; 0x021C5D10
 	add r7, r1, #0
 	ldrh r1, [r4, r5]
 	mov r0, #0x67
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	cmp r7, #0
 	ldrh r1, [r4, r5]
@@ -28960,7 +28960,7 @@ ovy194_21c6024: ; 0x021C6024
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r4, #0
 	bl GFL_TCBRemove
 	pop {r4, pc}
@@ -28972,7 +28972,7 @@ ovy194_21c6038: ; 0x021C6038
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r4, #0
 	bl GFL_TCBRemove
 	pop {r4, pc}

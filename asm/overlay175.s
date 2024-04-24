@@ -2450,7 +2450,7 @@ ovy175_219aaec: ; 0x0219AAEC
 	add r7, r1, #0
 	mov r0, #0x5d
 	add r1, r4, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp]
 	mov r1, #1

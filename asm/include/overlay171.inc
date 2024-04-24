@@ -7,8 +7,8 @@
 .public sub_0204B794
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
 .public sub_021DDD2C
 .public sub_02042BA8
@@ -33,7 +33,7 @@
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
@@ -43,10 +43,10 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044528
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public sub_02045350
@@ -138,7 +138,7 @@
 .public sub_020470F8
 .public sub_021DE480
 .public Oam_CreateSystem
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0201D624
 .public sub_02020F40
 .public sub_02020F94
@@ -150,7 +150,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile

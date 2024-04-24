@@ -78,7 +78,7 @@ _021B73F6:
 	str r0, [r7]
 	mov r0, #0x3a
 	mov r1, #0x32
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r5, #0x96
 	lsl r5, r5, #2
 	str r0, [r4, r5]
@@ -2508,7 +2508,7 @@ ovy205_21b8650: ; 0x021B8650
 	mov r2, #4
 	mov r3, #0
 	str r7, [sp, #4]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0
@@ -3949,7 +3949,7 @@ ovy205_21b91bc: ; 0x021B91BC
 	mov r0, #0x17
 	mov r1, #0x32
 	mov r6, #0x32
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #5
 	mov r2, #0
 	mov r3, #0x80

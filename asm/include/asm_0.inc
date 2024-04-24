@@ -843,12 +843,12 @@
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
 .public sub_02046E1C
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public G2_GetBG1CharPtr
 .public MIi_CpuCopy16
 .public G2_GetBG1ScrPtr
@@ -966,8 +966,8 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public OS_ResetSystem
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -1014,7 +1014,7 @@
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02170B18
 .public GFL_HeapFree
 .public GFL_ArcToolFree
@@ -1079,7 +1079,7 @@
 .public sub_0208D868
 .public sub_0208D868
 .public sub_0208D868
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC58
 .public sub_0204AC58
 .public sub_0204AC58
@@ -1179,7 +1179,7 @@
 .public sub_0204A65C
 .public sub_0204A69C
 .public MI_CpuCopy8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_02068664
 .public GFL_HeapAllocate
@@ -1296,7 +1296,7 @@
 .public GFL_HeapFree
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B570
 .public sub_0204B570
 .public sub_0204B570
@@ -1341,7 +1341,7 @@
 .public GFL_HeapFree
 .public sub_020616D8
 .public sub_020616D8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_02067B9C
 .public MTX_Inverse43
@@ -1559,8 +1559,8 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_HeapFree
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AD14
 .public sub_0204AD74
 .public sub_0204AD64
@@ -1583,7 +1583,7 @@
 .public GFL_HeapAllocate
 .public sub_0208D65C
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204ABA4
 .public sub_0204A928
 .public sub_02043F2C
@@ -1671,7 +1671,7 @@
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_HeapFree
 .public sub_0204AC58
 .public sub_0204ACC0
@@ -1857,7 +1857,7 @@
 .public FS_SeekFile
 .public FS_ReadFile
 .public FS_CloseFile
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_0204A934
 .public sub_0204A934
@@ -2024,9 +2024,9 @@
 .public sub_02044F90
 .public sub_020454D4
 .public sub_02045320
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02044564
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public GFL_ArcToolFree
 .public sub_02045604
@@ -2040,7 +2040,7 @@
 .public sub_0204BDC0
 .public sub_0204BCD0
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public GFL_HeapFree
 .public GFL_HeapAllocate
@@ -2344,7 +2344,7 @@
 .public GFL_HeapFree
 .public sub_0204AA04
 .public sub_0204A940
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC58
 .public GFL_ArcToolFree
 .public GFL_MsgSysLoadData
@@ -2353,7 +2353,7 @@
 .public sub_02048570
 .public GFL_MsgDataFree
 .public sub_0204A940
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC58
 .public GFL_MsgDataLoadStrbuf
 .public GFL_ArcToolFree
@@ -2424,7 +2424,7 @@
 .public GFL_HeapFree
 .public GFL_HeapAllocate
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AD80
 .public GFL_HeapAllocate
 .public sub_0204ABA4
@@ -2461,7 +2461,7 @@
 .public GFL_HeapAllocate
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AD80
 .public GFL_HeapAllocate
 .public sub_0204AC58
@@ -2544,18 +2544,18 @@
 .public GFL_HeapFree
 .public sub_0204AA04
 .public sub_0204B2B4
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public sub_0204BA40
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public sub_0204AB1C
@@ -2591,7 +2591,7 @@
 .public sub_0204C124
 .public sub_020484E8
 .public sub_020484EC
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -2771,7 +2771,7 @@
 .public GX_ResetBankForSubBG
 .public GX_SetBankForBG
 .public GX_SetGraphicsMode
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public G2_GetBG1CharPtr

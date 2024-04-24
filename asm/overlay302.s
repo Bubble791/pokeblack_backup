@@ -1270,7 +1270,7 @@ ovy302_21ad80c: ; 0x021AD80C
 	mov r0, #0x4a
 	lsl r0, r0, #2
 	add r1, r6, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #0x20]
 	bl ovy302_21add74
@@ -1364,7 +1364,7 @@ ovy302_21ad8e0: ; 0x021AD8E0
 	mov r0, #0x4a
 	lsl r0, r0, #2
 	mov r1, #0x69
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, sp, #0x34
 	str r0, [sp, #0x20]
 	ldr r1, [sp, #0x24]
@@ -1629,7 +1629,7 @@ ovy302_21adae8: ; 0x021ADAE8
 	mov r0, #0x4a
 	lsl r0, r0, #2
 	mov r1, #0x69
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	ldr r0, [sp]
 	ldr r0, [r0]
@@ -2192,7 +2192,7 @@ _021ADF28: ; jump table
 	.short _021AE1E2 - _021ADF28 - 2 ; case 5
 _021ADF34:
 	mov r0, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r4, #0xc]
 	mov r0, #1
 _021ADF3E:

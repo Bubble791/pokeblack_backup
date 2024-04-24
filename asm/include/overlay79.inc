@@ -43,7 +43,7 @@
 .public sub_0204C378
 .public sub_0204C520
 .public sub_020278AC
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B37C
 .public GFL_HeapFree
 .public sub_0204B37C
@@ -275,7 +275,7 @@
 .public sub_020275F8
 .public sub_02016AD8
 .public sub_02016B34
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_TCBExMgrCreate
 .public sub_0203A584
 .public GFL_HeapAllocate

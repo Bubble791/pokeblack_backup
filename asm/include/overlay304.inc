@@ -105,8 +105,8 @@
 .public sub_02017644
 .public GameData_IsShortcutRegistered
 .public sub_0203CE0C
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public sub_02046DF8
@@ -118,8 +118,8 @@
 .public sub_021A132C
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public sub_0203CDC8
 .public sub_0204B7C8
 .public sub_020275F8
@@ -130,7 +130,7 @@
 .public sub_0219B2E0
 .public sub_021A1BC8
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
@@ -183,9 +183,9 @@
 .public sub_02045B7C
 .public GFL_FontCreate
 .public Oam_CreateSystem
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204ADA8
@@ -196,11 +196,11 @@
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D824
-.public sub_0204AE3C
+.public GFL_BGSysLoadArcNCGRDynamic
 .public sub_0202D820
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0202D828
 .public sub_0204AF50
 .public sub_0204566C
@@ -295,7 +295,7 @@
 .public sub_02026FE4
 .public sub_02005718
 .public sub_02026FE4
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02035024
 .public sub_02035104
 .public GFL_ArcToolFree
@@ -319,7 +319,7 @@
 .public sub_02021C7C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0219AF1C
 .public sub_0219B1E0
 .public sub_0219B1E0
@@ -337,7 +337,7 @@
 .public sub_0204898C
 .public sub_0219B1B4
 .public GFL_MsgDataFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0219B27C
 .public GFL_ArcToolFree
 .public sub_021A1550

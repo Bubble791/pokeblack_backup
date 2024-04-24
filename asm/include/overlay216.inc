@@ -58,7 +58,7 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public GFL_HeapCreateChild
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public GFL_BGSysCreate
@@ -106,7 +106,7 @@
 .public sub_02045A5C
 .public sub_02021A3C
 .public sub_0203A7F4
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_0204476C
@@ -135,7 +135,7 @@
 .public sub_02044528
 .public sub_0201736C
 .public MyStatus_GetTrainerGender
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204B0B8
@@ -149,14 +149,14 @@
 .public sub_02044C98
 .public sub_0201736C
 .public MyStatus_GetTrainerGender
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -422,7 +422,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_0201735C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_VBlankTCBAdd
 .public sub_02049D24
 .public sub_0203FFC4
@@ -604,7 +604,7 @@
 .public sub_0204A5C8
 .public sub_0204A638
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
@@ -669,7 +669,7 @@
 .public sub_020278AC
 .public Oam_CreateSystem
 .public sub_0204BF1C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile

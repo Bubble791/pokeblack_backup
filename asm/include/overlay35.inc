@@ -518,7 +518,7 @@
 .public ovy12_2167534
 .public sub_0201793C
 .public sub_0200BA9C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_0204AC0C
 .public sub_0200BAB4
@@ -611,7 +611,7 @@
 .public sub_0217F4A8
 .public sub_02046E10
 .public sub_021805E0
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02044BD8
@@ -619,7 +619,7 @@
 .public sub_02045708
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysCreate
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02044BD8
 .public sub_02044BD8
@@ -630,7 +630,7 @@
 .public sub_0217F0C0
 .public sub_02044B84
 .public sub_02044528
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AB1C
 .public sub_020602D8
 .public sub_02045320

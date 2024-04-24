@@ -3891,9 +3891,9 @@ ovy303_21a1a80: ; 0x021A1A80
 	ldr r0, _021A1B20 ; =0x00000090
 	bl sub_0203CE0C
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	mov r7, #0
 	ldr r0, _021A1B24 ; =0x04000050
 	mov r1, #0
@@ -3916,7 +3916,7 @@ ovy303_21a1a80: ; 0x021A1A80
 	str r0, [r5, r1]
 	mov r0, #7
 	mov r1, #0xa5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x27
 	lsl r1, r1, #4
 	str r0, [r5, r1]
@@ -3986,9 +3986,9 @@ ovy303_21a1b30: ; 0x021A1B30
 	sub r4, #0x1c
 	strh r0, [r4]
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A1BB0 ; =0x00000090
 	bl sub_0203CDC8
 	ldr r0, _021A1BB4 ; =0x0000008B
@@ -4260,7 +4260,7 @@ ovy303_21a1d7c: ; 0x021A1D7C
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _021A1F80 ; =0x021A3664
 	add r3, sp, #0xe4
 	add r2, r3, #0
@@ -4642,7 +4642,7 @@ ovy303_21a2104: ; 0x021A2104
 	mov r0, #0x9d
 	mov r1, #0xa5
 	mov r5, #0xa5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r4, #0
 	str r4, [sp]
 	str r5, [sp, #4]
@@ -4650,14 +4650,14 @@ ovy303_21a2104: ; 0x021A2104
 	mov r2, #0
 	mov r3, #0
 	add r6, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r5, [sp, #4]
 	add r0, r6, #0
 	mov r1, #0x33
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r5, [sp, #8]
@@ -4711,14 +4711,14 @@ ovy303_21a2104: ; 0x021A2104
 	bl GFL_ArcToolFree
 	mov r0, #0x54
 	mov r1, #0xa5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r4, [sp]
 	str r5, [sp, #4]
 	mov r1, #0
 	mov r2, #6
 	lsl r3, r7, #7
 	add r6, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	mov r3, #6
 	str r5, [sp, #4]
@@ -4726,7 +4726,7 @@ ovy303_21a2104: ; 0x021A2104
 	mov r1, #0
 	mov r2, #6
 	lsl r3, r3, #0xc
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r5, [sp, #8]
@@ -5601,7 +5601,7 @@ ovy303_21a2920: ; 0x021A2920
 	add r5, r0, #0
 	mov r0, #0x9d
 	mov r1, #0xa5
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
 	mov r0, #0xa0
 	mov r1, #5

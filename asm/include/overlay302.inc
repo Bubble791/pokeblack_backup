@@ -91,12 +91,12 @@
 .public sub_02010D78
 .public sub_02010D98
 .public sub_02010D88
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public MI_CpuFill8
 .public sub_0204ABA4
 .public GFL_ArcToolFree
 .public sub_02017394
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0200D190
 .public MI_CpuFill8
 .public sub_020191AC
@@ -109,7 +109,7 @@
 .public sub_0200D7F4
 .public GFL_ArcToolFree
 .public sub_02017394
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02017934
 .public sub_02010CB8
 .public sub_0200D190
@@ -135,7 +135,7 @@
 .public sub_0204ABA4
 .public sub_021ADD2C
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_HeapAllocate
 .public sub_0200D7F4
 .public sub_0200D3C8

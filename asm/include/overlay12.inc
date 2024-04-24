@@ -778,7 +778,7 @@
 .public sub_02018810
 .public MIi_CpuClear16
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204AC0C
 .public sub_0204AC58
 .public GFL_ArcToolFree
@@ -1906,13 +1906,13 @@
 .public sub_0217E2B4
 .public sub_02046E10
 .public sub_021805E0
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public ovy36_21805f0
 .public sub_02180508
 .public sub_0219847C
 .public sub_02046E10
 .public sub_021805E0
-.public sub_02046D38
+.public GFL_BGSysSetEnabledBGsA
 .public ovy36_21805f0
 .public sub_02180508
 .public sub_0219847C
@@ -2349,9 +2349,9 @@
 .public sub_020187B0
 .public sub_020187B0
 .public GFL_HeapAllocate
-.public sub_0204AA30
-.public sub_0204AA30
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public GFL_ArcToolFree
 .public GFL_ArcToolFree
@@ -2635,7 +2635,7 @@
 .public GFL_HeapAllocate
 .public sub_0215F320
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_0201899C
 .public sub_0204AC58
@@ -3384,7 +3384,7 @@
 .public GFL_HeapFree
 .public sub_021635A0
 .public sub_0216398C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_02163A18
 .public sub_021635D0
@@ -4089,7 +4089,7 @@
 .public sub_0203A584
 .public GFL_HeapAllocate
 .public sub_0203A58C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02166F54
 .public sub_0203A610
 .public GFL_HeapFree
@@ -4308,7 +4308,7 @@
 .public sub_021670FC
 .public sub_02167014
 .public sub_02167500
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02167018
 .public sub_0200FE34
 .public sub_0204AC58
@@ -4924,8 +4924,8 @@
 .public sub_02046E10
 .public sub_02046E1C
 .public sub_021805E0
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public ovy36_21805f0
 
 .public sub_021B870C

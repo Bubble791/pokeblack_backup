@@ -879,7 +879,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [r5, #0x44]
 	ldrh r1, [r5, #0xc]
 	mov r0, #0x1d
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r6, [sp]
 	ldrh r1, [r5, #0xc]
 	mov r2, #0
@@ -887,7 +887,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r1, [sp, #4]
 	mov r1, #0
 	add r4, r0, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	str r6, [sp]
 	ldrh r0, [r5, #0xc]
 	mov r1, #1
@@ -895,7 +895,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [sp, #4]
 	add r0, r4, #0
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldrh r3, [r5, #0xc]
 	add r0, r4, #0
 	mov r1, #1
@@ -928,7 +928,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [sp, #4]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	str r0, [r5, #0x60]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -941,7 +941,7 @@ ovy198_21b3618: ; 0x021B3618
 	str r0, [sp, #0xc]
 	add r0, r4, #0
 	add r3, r6, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r0, [r5, #0x60]
 	mov r1, #0xf
 	lsl r0, r0, #0x10
@@ -954,7 +954,7 @@ ovy198_21b3618: ; 0x021B3618
 	add r3, r6, #0
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldrh r0, [r5, #0xc]
 	mov r1, #5
 	add r2, r6, #0
@@ -990,7 +990,7 @@ ovy198_21b3618: ; 0x021B3618
 	mov r0, #5
 	mov r1, #0xb
 	add r2, r6, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	str r0, [r5, #0x5c]
 	mov r0, #0x20
 	str r0, [sp]
@@ -2166,11 +2166,11 @@ ovy198_21b40b0: ; 0x021B40B0
 	ldmia r3!, {r0, r1}
 	stmia r2!, {r0, r1}
 	mov r0, ip
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldrh r2, [r4, #0xc]
 	ldr r0, _021B4240 ; =0x021B4480
 	ldr r1, _021B4238 ; =0x021B45F0
@@ -2243,7 +2243,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	mov r3, #0
 	bl GFL_FadeScreenSet
 	mov r0, #0x1f
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r1, _021B4248 ; =ovy198_21b37a4
 	ldr r2, _021B424C ; =0x000006CB
 	add r0, r4, #0

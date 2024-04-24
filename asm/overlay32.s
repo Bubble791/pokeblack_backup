@@ -386,7 +386,7 @@ ovy32_2199be0: ; 0x02199BE0
 	add r0, r6, #0
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	bl G2_GetBG1CharPtr
 	add r1, r0, #0
 	mov r0, #0

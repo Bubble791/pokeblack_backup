@@ -39,7 +39,7 @@
 .public GFL_FontCreate
 .public sub_0217D6B0
 .public GFL_FadeScreenSet
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_VBlankTCBAdd
 .public sub_02042BA8
 .public GFL_ArcToolFree
@@ -79,7 +79,7 @@
 .public sub_0204B7C8
 .public sub_02045A5C
 .public sub_0203FFC4
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045738
 .public sub_0204476C
@@ -112,8 +112,8 @@
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044528
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_0204ADA8
@@ -123,7 +123,7 @@
 .public sub_02024D00
 .public sub_02024D00
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile

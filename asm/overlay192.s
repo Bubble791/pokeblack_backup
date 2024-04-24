@@ -211,7 +211,7 @@ ovy192_21b310c: ; 0x021B310C
 	add r5, r0, #0
 	ldrh r1, [r5, r7]
 	mov r0, #0x68
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldrh r1, [r5, r7]
 	mov r2, #0
 	mov r3, #0

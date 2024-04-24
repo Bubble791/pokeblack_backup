@@ -43,14 +43,14 @@
 .public sub_0219B414
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204ADA8
@@ -60,7 +60,7 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_02045118
-.public sub_0204AE3C
+.public GFL_BGSysLoadArcNCGRDynamic
 .public GFL_ArcToolFree
 .public G2x_SetBlendAlpha_
 .public sub_02044668
@@ -74,7 +74,7 @@
 .public sub_0204C028
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
@@ -94,7 +94,7 @@
 .public MI_CpuFill8
 .public sub_02048D28
 .public sub_0204A5C8
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public GFL_ArcToolFree
 .public sub_0204A630
 .public sub_02048F44
@@ -306,7 +306,7 @@
 .public sub_0204566C
 .public sub_02044F90
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02045604
 .public sub_02045604
 .public sub_02045B7C

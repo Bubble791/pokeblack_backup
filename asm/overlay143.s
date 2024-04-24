@@ -20,9 +20,9 @@ ovy143_21998c0: ; 0x021998C0
 	mvn r1, r1
 	bl GXx_SetMasterBrightness_
 	mov r0, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r1, r5, #0
 	sub r1, #0x6c
 	ldr r0, [r1]
@@ -81,7 +81,7 @@ ovy143_21998c0: ; 0x021998C0
 	mov r0, #0x26
 	mov r1, #0x61
 	mov r6, #0x26
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r5, #0x30]
 	bl ovy143_2199c34
 	bl sub_02199C90
@@ -425,7 +425,7 @@ ovy143_2199c34: ; 0x02199C34
 	mov r0, #0x61
 	bl GFL_BGSysCreate
 	ldr r0, _02199C84 ; =0x0219FE7C
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	mov r5, #2
 	mov r1, #6
 	lsl r5, r5, #0x12
@@ -694,7 +694,7 @@ ovy143_2199da8: ; 0x02199DA8
 	bl sub_02026E94
 	mov r0, #0x52
 	mov r1, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x10]
 	mov r0, #7
 	mov r1, #0x80
@@ -927,7 +927,7 @@ ovy143_219a050: ; 0x0219A050
 	add r5, r0, #0
 	mov r0, #0x17
 	mov r1, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	mov r7, #0
 _0219A062:
@@ -2525,7 +2525,7 @@ ovy143_219abd4: ; 0x0219ABD4
 	pop {r3, r4, r5, pc}
 _0219ABEA:
 	mov r0, #8
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, [r4, #0x44]
 	cmp r0, #0
 	beq _0219ABFA
@@ -3251,7 +3251,7 @@ ovy143_219b150: ; 0x0219B150
 	pop {r3, r4, r5, pc}
 _0219B166:
 	mov r0, #8
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	add r0, r4, #0
 	bl sub_0219B694
 	add r0, r4, #0
@@ -4061,7 +4061,7 @@ ovy143_219b808: ; 0x0219B808
 	pop {r3, r4, r5, pc}
 _0219B81E:
 	mov r0, #8
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r4, #0
 	bl ovy143_219b988
 	add r0, r4, #0
@@ -5339,7 +5339,7 @@ _0219C2BC:
 	add r1, r4, #0
 	bl ovy143_219d0c8
 	mov r0, #8
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, [r4]
 	bl GFL_TCBRemove
 	mov r0, #0xd5
@@ -5500,7 +5500,7 @@ ovy143_219c3e0: ; 0x0219C3E0
 	bl sub_0204AF50
 	mov r0, #0x52
 	mov r1, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	mov r0, #5
 	mov r1, #0x80
@@ -7794,7 +7794,7 @@ ovy143_219d4f8: ; 0x0219D4F8
 	pop {r3, r4, r5, pc}
 _0219D50E:
 	mov r0, #8
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r4, #0
 	bl ovy143_219d648
 	bl ovy143_219d574
@@ -9059,7 +9059,7 @@ ovy143_219df48: ; 0x0219DF48
 	pop {r4, r5, r6, pc}
 _0219DF60:
 	mov r0, #8
-	bl sub_02046DC0
+	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, [r4]
 	bl GFL_TCBRemove
 	mov r0, #0x26
@@ -9261,7 +9261,7 @@ ovy143_219e0d0: ; 0x0219E0D0
 	bl sub_0204AF50
 	mov r0, #0x52
 	mov r1, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	mov r0, #5
 	mov r1, #0x80
@@ -12303,7 +12303,7 @@ ovy143_219f7a8: ; 0x0219F7A8
 	pop {r3, r4, r5, pc}
 _0219F7BE:
 	mov r0, #8
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	add r0, r4, #0
 	bl ovy143_219f9fc
 	bl ovy143_219f868
@@ -12582,7 +12582,7 @@ ovy143_219f9d8: ; 0x0219F9D8
 	mov r0, #0x61
 	add r0, #0xc0
 	mov r1, #0x61
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x61
 	str r0, [r4, #0x70]
 	bl ovy27_2170b50

@@ -1442,7 +1442,7 @@
 .public sub_0204BF1C
 .public sub_0204BF98
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BC48
 .public Oam_LoadNCERFile
@@ -1453,7 +1453,7 @@
 .public sub_0204C0A4
 .public sub_0204C520
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
@@ -1559,7 +1559,7 @@
 .public sub_0203A5D0
 .public sub_0202A3E0
 .public sub_02044748
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BF1C
 .public sub_0204BF1C
 .public sub_0204BF1C
@@ -1682,7 +1682,7 @@
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D7F8
 .public sub_0202D7FC
 .public Oam_LoadNCERFile
@@ -1807,7 +1807,7 @@
 .public sub_02046D84
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0D4
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B0B8
 .public sub_02026F7C
 .public sub_0204C124
@@ -2014,7 +2014,7 @@
 .public sub_02045604
 .public sub_020270F0
 .public sub_020270F0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_02021154
 .public sub_020211C8
 .public Oam_LoadNCERFile
@@ -2157,7 +2157,7 @@
 .public ovy168_21ef6c8
 .public GFL_SndSEPlay
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BF1C
 .public sub_02005C9C
 .public GFL_HeapAllocate
@@ -2220,7 +2220,7 @@
 .public sub_0204BDC0
 .public sub_02026F7C
 .public sub_0202D7E0
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0202D8B4
 .public Oam_LoadNCGRFile
 .public sub_0202D8B8
@@ -2455,7 +2455,7 @@
 .public GFL_SndSEPlay
 .public sub_0204BF98
 .public GFL_HeapFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public sub_0204BBA0
@@ -2481,7 +2481,7 @@
 .public Oam_SetSpritePosData
 .public sub_0203A6D0
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BF1C
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile
@@ -2599,7 +2599,7 @@
 .public sub_02044E74
 .public sub_0208D868
 .public GFL_HeapAllocate
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile

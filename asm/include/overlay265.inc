@@ -15,7 +15,7 @@
 .public sub_02046BE0
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysSetVRAMBanks
-.public sub_02044710
+.public GFL_BGSysSetLCDConfig
 .public sub_02045350
 .public sub_02045350
 .public sub_0204476C
@@ -39,9 +39,9 @@
 .public sub_02046D84
 .public sub_02044B84
 .public sub_02044B84
-.public sub_0204AA30
-.public sub_0204B0D4
-.public sub_0204B0D4
+.public GFL_ArcSysCreateFileHandle
+.public GFL_G2DIOLoadArcNCLRDefault
+.public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204ADA8
 .public sub_0204AF50
@@ -129,8 +129,8 @@
 .public sub_0201ACE0
 .public sub_0201AE08
 .public sub_0219B6F4
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public sub_021999D4
@@ -138,8 +138,8 @@
 .public sub_021999E0
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
-.public sub_02046D38
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsA
+.public GFL_BGSysSetEnabledBGsB
 .public GFL_FadeScreenIsFinished
 .public sub_02199F28
 .public sub_02199F14
@@ -219,7 +219,7 @@
 .public sub_02034000
 .public sub_0201CCC0
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204B37C
 .public sub_0204BD10
 .public GFL_HeapFree
@@ -280,12 +280,12 @@
 .public GFL_StrBufFree
 .public sub_0202B230
 .public sub_0202B230
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public sub_0204BC48
 .public GFL_ArcToolFree
 .public sub_0204E260
@@ -293,7 +293,7 @@
 .public sub_0204BE9C
 .public sub_0204BF14
 .public sub_0204C018
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile

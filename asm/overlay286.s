@@ -1415,7 +1415,7 @@ ovy286_21f4f04: ; 0x021F4F04
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #8]
 	mov r0, #0x52
 	lsl r0, r0, #4
@@ -2026,7 +2026,7 @@ _021F53FC:
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
 	ldr r0, _021F5498 ; =0x00000544
 	mov r4, #0
@@ -2116,7 +2116,7 @@ _021F54BE:
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
@@ -2224,7 +2224,7 @@ ovy286_21f559c: ; 0x021F559C
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r5]
 	mov r2, #1
 	ldrh r1, [r1, #0xc]
@@ -2289,7 +2289,7 @@ ovy286_21f5624: ; 0x021F5624
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	ldr r1, [r5]
 	mov r2, #0
 	ldrh r1, [r1, #0xc]
@@ -4851,7 +4851,7 @@ ovy286_21f6a28: ; 0x021F6A28
 	orr r1, r2
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r7, #0
 	str r7, [sp]
 	mov r6, #1

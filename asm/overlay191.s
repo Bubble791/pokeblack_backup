@@ -2993,7 +2993,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #0x10]
 	mov r0, #0x91
 	str r1, [sp, #0x14]
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0
 	str r1, [sp, #0x20]
 	str r1, [sp]
@@ -3003,7 +3003,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	mov r1, #3
 	mov r3, #0
 	str r0, [sp, #0x2c]
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x20]
 	mov r1, #4
 	str r0, [sp]
@@ -3012,7 +3012,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp]
@@ -3025,7 +3025,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r0, [sp, #0x20]
 	mov r1, #3
 	str r0, [sp]
@@ -3034,7 +3034,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	ldr r0, [sp, #0x20]
 	mov r1, #4
 	str r0, [sp]
@@ -3043,7 +3043,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp]
@@ -3056,7 +3056,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r0, [sp, #0x20]
 	mov r1, #4
 	str r0, [sp]
@@ -3065,7 +3065,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #4]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AE3C
+	bl GFL_BGSysLoadArcNCGRDynamic
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp]
@@ -3078,7 +3078,7 @@ ovy191_21b6ad0: ; 0x021B6AD0
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x2c]
 	mov r3, #0
-	bl sub_0204AFB0
+	bl GFL_G2DIOLoadNSCRSync
 	ldr r0, [sp, #0x10]
 	mov r2, #0x97
 	add r0, #0xc
@@ -3231,7 +3231,7 @@ _021B6C6A:
 	mov r0, #1
 	mov r1, #0xd
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	add r2, r4, #0
 	ldr r1, [sp, #0x10]
 	add r2, #0xc
@@ -3240,7 +3240,7 @@ _021B6C6A:
 	mov r0, #2
 	mov r1, #0xd
 	mov r2, #0
-	bl sub_02024D20
+	bl LoadCursorImageEndOfHeap
 	sub r5, #0x74
 	ldr r1, [sp, #0x10]
 	add r4, #0x10
@@ -3744,7 +3744,7 @@ ovy191_21b70c8: ; 0x021B70C8
 	add r0, r5, #0
 	bl BmpWin_InitAllocator
 	ldr r0, _021B7120 ; =0x021B7174
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r7, _021B7124 ; =0x021B71B4
 _021B70EA:
 	mov r0, #0x2c

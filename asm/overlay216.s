@@ -718,7 +718,7 @@ _021BBCB0:
 	bl GFL_HeapCreateChild
 	mov r0, #0xb5
 	mov r1, #0x72
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	ldr r1, _021BBDD0 ; =0x00004874
 	add r0, r4, #0
@@ -1162,7 +1162,7 @@ ovy216_21bc068: ; 0x021BC068
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _021BC154 ; =0x021C0A84
 	add r3, sp, #0x80
 	add r2, r3, #0
@@ -1406,7 +1406,7 @@ ovy216_21bc260: ; 0x021BC260
 	mov r3, #0
 	str r5, [sp, #4]
 	mov r7, #0
-	bl sub_0204B0D4
+	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	lsl r0, r0, #0xd
 	str r0, [sp]
@@ -1506,7 +1506,7 @@ ovy216_21bc34c: ; 0x021BC34C
 	add r5, r0, #0
 	mov r0, #0x1e
 	mov r1, #0x72
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
 	ldr r0, _021BC400 ; =0x02093F08
 	ldr r1, _021BC404 ; =0x021C09E4
@@ -1571,7 +1571,7 @@ _021BC394:
 	bl GFL_ArcToolFree
 	mov r0, #0x1f
 	mov r1, #0x72
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [r7, #0x34]
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
@@ -4006,7 +4006,7 @@ ovy216_21bd6a0: ; 0x021BD6A0
 	str r0, [r5, #0x24]
 	mov r0, #0xb4
 	mov r1, #0x72
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r6, #0
 	sub r1, #0x54
 	str r0, [r5, r1]
@@ -6508,7 +6508,7 @@ ovy216_21bea04: ; 0x021BEA04
 	ldmia r4!, {r0, r1}
 	stmia r3!, {r0, r1}
 	add r0, r2, #0
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r4, _021BEB04 ; =0x021C0EF0
 	add r3, sp, #0x80
 	add r2, r3, #0
@@ -6965,7 +6965,7 @@ ovy216_21bee14: ; 0x021BEE14
 	mov r0, #0xb5
 	mov r1, #0x72
 	mov r7, #0x72
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	mov r1, #6
 	mov r2, #0
 	mov r3, #0

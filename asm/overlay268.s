@@ -3182,7 +3182,7 @@ ovy268_21bba3c: ; 0x021BBA3C
 	lsl r1, r1, #0x10
 	mov r0, #7
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x34]
 	bl sub_02021114
 	add r1, r0, #0
@@ -8340,7 +8340,7 @@ _021BE2B4:
 	lsl r1, r1, #0x10
 	mov r0, #7
 	lsr r1, r1, #0x10
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x2c]
 	bl sub_02021114
 	add r1, r0, #0
@@ -8679,7 +8679,7 @@ _021BE554:
 	mov r0, #7
 	lsr r1, r1, #0x10
 	mov r4, #7
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x24]
 	ldr r0, [sp, #0xc]
 	sub r4, #8
@@ -10706,7 +10706,7 @@ _021BF56C:
 	str r0, [r5, r1]
 	ldrh r1, [r5, r4]
 	mov r0, #0x3a
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r4, #0
 	sub r1, #0xf4
 	str r0, [r5, r1]
@@ -12015,7 +12015,7 @@ ovy268_21bff58: ; 0x021BFF58
 	lsl r1, r1, #2
 	ldrh r1, [r2, r1]
 	mov r0, #0x17
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	bl GFL_ArcToolFree
 	pop {r3, pc}
 	.align 2, 0

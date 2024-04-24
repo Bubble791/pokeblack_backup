@@ -3956,7 +3956,7 @@ ovy35_217e914: ; 0x0217E914
 	ldr r5, _0217E970 ; =0x00008001
 	mov r0, #0x66
 	add r1, r5, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
 	mov r1, #0
 	add r2, r5, #0
@@ -4853,7 +4853,7 @@ ovy35_217f00c: ; 0x0217F00C
 	add r4, r0, #0
 	bl sub_021805E0
 	add r0, r4, #0
-	bl sub_02046D38
+	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
 	mov r1, #1
 	bl sub_02044BD8
@@ -4881,7 +4881,7 @@ ovy35_217f048: ; 0x0217F048
 	ldrh r0, [r4, #8]
 	bl GFL_BGSysCreate
 	ldr r0, _0217F094 ; =0x0217F54C
-	bl sub_02044710
+	bl GFL_BGSysSetLCDConfig
 	ldr r1, _0217F098 ; =0x0217F55C
 	mov r0, #3
 	mov r2, #0
@@ -4984,7 +4984,7 @@ _0217F10A:
 _0217F110:
 	mov r0, #0x96
 	add r1, r7, #0
-	bl sub_0204AA30
+	bl GFL_ArcSysCreateFileHandle
 	add r1, r6, #0
 	add r2, r7, #0
 	str r0, [sp]

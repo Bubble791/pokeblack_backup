@@ -18,7 +18,7 @@
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C56C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
@@ -322,7 +322,7 @@
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C56C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
@@ -399,7 +399,7 @@
 .public sub_021B442C
 .public sub_021BE808
 .public sub_021B7BE4
-.public sub_02046DC0
+.public GFL_BGSysSetEnabledBGsB
 .public sub_021BE808
 .public sub_021C1E08
 .public sub_021B7BE4
@@ -577,7 +577,7 @@
 .public sub_0204C520
 .public sub_0204C124
 .public sub_0204C56C
-.public sub_0204AA30
+.public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
