@@ -7,7 +7,7 @@
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02042BA8
 .public GFL_TCBRemove
 .public sub_021B804C

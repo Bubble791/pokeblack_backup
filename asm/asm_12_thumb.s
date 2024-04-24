@@ -39878,8 +39878,8 @@ sub_02017644: ; 0x02017644
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_02017644
 
-	thumb_func_start GameData_IsShortcutRegistered
-GameData_IsShortcutRegistered: ; 0x0201765C
+	thumb_func_start GameData_IsPocketRegistered
+GameData_IsPocketRegistered: ; 0x0201765C
 	push {r4, lr}
 	add r4, r1, #0
 	bl sub_02017938
@@ -39887,7 +39887,7 @@ GameData_IsShortcutRegistered: ; 0x0201765C
 	add r1, r4, #0
 	bl sub_0200CB98
 	pop {r4, pc}
-	thumb_func_end GameData_IsShortcutRegistered
+	thumb_func_end GameData_IsPocketRegistered
 
 	thumb_func_start sub_02017670
 sub_02017670: ; 0x02017670

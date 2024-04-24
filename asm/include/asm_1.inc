@@ -7106,7 +7106,7 @@
 .public sub_02017614
 .public sub_0201762C
 .public sub_02017644
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017670
 .public sub_02017678
 .public sub_02017750

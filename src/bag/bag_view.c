@@ -2241,7 +2241,7 @@ int BagMenu_CheckItemCanRegist(BagView *bagView, int slot)
 
 int sub_0219BE88(int a1)
 {
-    return sub_0219FD18(a1);
+    return BagMenu_GetPocketRegistId(a1);
 }
 
 void ovy142_219be90(BagView *bagView)
@@ -2250,7 +2250,7 @@ void ovy142_219be90(BagView *bagView)
     int uVar2;
 
     uVar1 = sub_0219BE88(bagView->itemPocket);
-    uVar2 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar1);
+    uVar2 = GameData_IsPocketRegistered(bagView->m_GameData, uVar1);
     sub_02017644(bagView->m_GameData, uVar1, uVar2 ^ 1);
     GFL_SndSEPlay(0x646);
     ovy142_219becc(bagView);
@@ -2264,7 +2264,7 @@ void ovy142_219becc(BagView *bagView)
     if (bagView->isSwitchMode != TRUE)
     {
         uVar2 = sub_0219BE88(bagView->itemPocket);
-        sVar1 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar2);
+        sVar1 = GameData_IsPocketRegistered(bagView->m_GameData, uVar2);
         Oam_SetOamAnimIndex(bagView->unk724[2], (u16)(sVar1 + 6));
     }
 }
@@ -2438,7 +2438,7 @@ int ovy142_219c0e8(BagView *bagView, int param_2)
     int uVar1;
 
     uVar1 = sub_02034AA4(param_2); // 判断快捷道具
-    return GameData_IsShortcutRegistered(bagView->m_GameData, uVar1);
+    return GameData_IsPocketRegistered(bagView->m_GameData, uVar1);
 }
 
 void BagMenu_ButtonManCallBack(u32 a1, int a2, BagView *bagView);

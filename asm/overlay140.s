@@ -1791,7 +1791,7 @@ _0219DC8A:
 	bl ovy140_219df98
 	ldr r0, [r5, #0x3c]
 	mov r1, #0x1b
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	cmp r0, #0
 	ldr r0, [r5, #8]
 	beq _0219DCE0

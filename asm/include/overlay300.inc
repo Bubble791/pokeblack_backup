@@ -149,13 +149,13 @@
 .public GFL_ArcToolFree
 .public sub_020454AC
 .public sub_02045B7C
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2800
 .public sub_021A2800
 .public sub_021A2800
 .public sub_02045604
 .public sub_02045B7C
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2800
 .public sub_021A2800
 .public sub_021A2800
@@ -303,7 +303,7 @@
 .public sub_0219CC58
 .public sub_0219CC3C
 .public sub_0219CC58
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
 .public sub_02017644
 .public BmpWin_InitAllocator
@@ -429,7 +429,7 @@
 .public sub_0204BE64
 .public sub_0204BF1C
 .public sub_021AD7F0
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_0204C318
 .public sub_0204C318
 .public sub_021AD7F0

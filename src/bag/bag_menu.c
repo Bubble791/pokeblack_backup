@@ -2651,24 +2651,24 @@ void ovy142_219fc14(BagView *a1, int a2)
     }
 }
 
-int sub_0219FD18(int a1)
+int BagMenu_GetPocketRegistId(int pocket)
 {
-    switch (a1)
+    switch (pocket)
     {
-        case 0:
+        case BAG_POCKET_NORMAL:
             return 12;
-        case 3:
-            return 0xf;
-        case 1:
-            return 0xd;
-        case 2:
-            return 0xe;
-        case 4:
-            return 0x10;
-        case 5:
-            return 0x11;
+        case BAG_POCKET_BERRY:
+            return 15;
+        case BAG_POCKET_HEAL:
+            return 13;
+        case BAG_POCKET_TMHM:
+            return 14;
+        case BAG_POCKET_IMPORT:
+            return 16;
+        case BAG_POCKET_FREE_SPACE:
+            return 17;
     }
-    return a1;
+    return pocket;
 }
 
 void ovy142_219fd4c(BagView *a1, int a2)
@@ -2691,9 +2691,9 @@ void ovy142_219fd4c(BagView *a1, int a2)
 extern int sub_02026FE4(int, int, int, int, int, int, int, int);
 extern int sub_0204C138(int);
 
-void ovy142_219fda8(BagView *a1, int a2)
+void ovy142_219fda8(BagView *bagView, int a2)
 {
-    int v5;     // r0
+    int pocket;     // r0
     int v6;     // r7
     int v7;     // r0
     int v8;     // r0
@@ -2702,50 +2702,50 @@ void ovy142_219fda8(BagView *a1, int a2)
     int v13;    // r0
     int v14;    // r0
 
-    if (a1->unk8AC != a2)
+    if (bagView->unk8AC != a2)
     {
-        a1->unk8AC = a2;
-        v5 = sub_0219FD18(a1->itemPocket);
-        v6 = GameData_IsShortcutRegistered(a1->m_GameData, v5);
+        bagView->unk8AC = a2;
+        pocket = BagMenu_GetPocketRegistId(bagView->itemPocket);
+        v6 = GameData_IsPocketRegistered(bagView->m_GameData, pocket);
         if (a2 == 1)
         {
             v7 = sub_02005718();
-            v8 = sub_02026FE4(a1->unk8A8, 4, 18383, 0, 0, 0, 0, v7);
+            v8 = sub_02026FE4(bagView->unk8A8, 4, 18383, 0, 0, 0, 0, v7);
             v9 = sub_02005718();
-            sub_02026FE4(a1->unk8A8, 1, 1, 0, 0, 0, 0, v9);
+            sub_02026FE4(bagView->unk8A8, 1, 1, 0, 0, 0, 0, v9);
             G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, 0);
-            ovy142_219ff60(a1);
-            Oam_SetOamAnimIndex(a1->unk724[0], 4);
-            Oam_SetOamAnimIndex(a1->unk724[1], 5);
-            Oam_SetOamAnimIndex(a1->unk724[3], 0);
+            ovy142_219ff60(bagView);
+            Oam_SetOamAnimIndex(bagView->unk724[0], 4);
+            Oam_SetOamAnimIndex(bagView->unk724[1], 5);
+            Oam_SetOamAnimIndex(bagView->unk724[3], 0);
             if (v6 == 1)
-                Oam_SetOamAnimIndex(a1->unk724[2], 7);
+                Oam_SetOamAnimIndex(bagView->unk724[2], 7);
             else
-                Oam_SetOamAnimIndex(a1->unk724[2], 6);
-            ovy142_219ff40(a1, 1);
+                Oam_SetOamAnimIndex(bagView->unk724[2], 6);
+            ovy142_219ff40(bagView, 1);
         }
         else
         {
-            sub_02026F7C(a1->unk8A8, 2, 0, 512);
+            sub_02026F7C(bagView->unk8A8, 2, 0, 512);
             v12 = sub_02005718();
-            v13 = sub_02026FE4(a1->unk8A8, 4, 18383, 0, 8, 8, 0, v12);
+            v13 = sub_02026FE4(bagView->unk8A8, 4, 18383, 0, 8, 8, 0, v12);
             v14 = sub_02005718();
-            sub_02026FE4(a1->unk8A8, 1, 1, 0, 8, 8, 0, v14);
+            sub_02026FE4(bagView->unk8A8, 1, 1, 0, 8, 8, 0, v14);
 
-            if (a1->bagMode == BAG_MODE_SELL_ITEM && !sub_0204C138(a1->unk724[0]))
+            if (bagView->bagMode == BAG_MODE_SELL_ITEM && !sub_0204C138(bagView->unk724[0]))
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 2, -8);
             else
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, -8);
             
-            Oam_SetOamAnimIndex(a1->unk744, 4);
-            Oam_SetOamAnimIndex(a1->unk740, 2);
-            Oam_SetOamAnimIndex(a1->unk724[0], 18);
-            Oam_SetOamAnimIndex(a1->unk724[1], 19);
-            Oam_SetOamAnimIndex(a1->unk724[3], 14);
+            Oam_SetOamAnimIndex(bagView->unk744, 4);
+            Oam_SetOamAnimIndex(bagView->unk740, 2);
+            Oam_SetOamAnimIndex(bagView->unk724[0], 18);
+            Oam_SetOamAnimIndex(bagView->unk724[1], 19);
+            Oam_SetOamAnimIndex(bagView->unk724[3], 14);
             if (v6 == 1)
-                Oam_SetOamAnimIndex(a1->unk724[2], 22);
+                Oam_SetOamAnimIndex(bagView->unk724[2], 22);
             else
-                Oam_SetOamAnimIndex(a1->unk724[2], 21);
+                Oam_SetOamAnimIndex(bagView->unk724[2], 21);
         }
     }
 
@@ -2789,8 +2789,8 @@ void ovy142_219ffe8(BagView *a1, int a2)
     int v4; // r0
     int v5; // r6
 
-    v4 = sub_0219FD18(a1->itemPocket);
-    v5 = GameData_IsShortcutRegistered(a1->m_GameData, v4);
+    v4 = BagMenu_GetPocketRegistId(a1->itemPocket);
+    v5 = GameData_IsPocketRegistered(a1->m_GameData, v4);
     if (a2 == 1)
     {
         ovy142_219ff60(a1);

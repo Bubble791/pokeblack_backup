@@ -143,10 +143,10 @@
 .public sub_02045738
 .public sub_02045738
 .public sub_02034220
-.public GameData_IsShortcutRegistered
-.public GameData_IsShortcutRegistered
-.public GameData_IsShortcutRegistered
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
+.public GameData_IsPocketRegistered
+.public GameData_IsPocketRegistered
+.public GameData_IsPocketRegistered
 .public GFL_SndSEPlay
 .public sub_02034330
 .public sub_0208D60C
@@ -171,9 +171,9 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
 .public sub_0204C124
 .public sub_0204C124
@@ -611,7 +611,7 @@
 .public sub_0203D564
 .public sub_0203D564
 .public Oam_SetOamAnimIndex
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public Oam_SetOamAnimIndex
 .public sub_02017644
 .public GFL_SndSEPlay
@@ -622,7 +622,7 @@
 .public sub_0200C97C
 .public sub_0204C124
 .public sub_0204C124
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public Oam_SetOamAnimIndex
 .public sub_021ACA9C
 .public sub_02044210

@@ -361,7 +361,7 @@
 .public sub_0219FD3C
 .public sub_021A1478
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2320
 .public sub_021A2324
 .public sub_0219FD24
@@ -506,7 +506,7 @@
 .public sub_0219FD3C
 .public sub_021A1478
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2320
 .public sub_021A2324
 .public sub_0219FE48
@@ -851,7 +851,7 @@
 .public sub_0204C124
 .public sub_0219FD3C
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A1544
 .public sub_0219FD40
 .public sub_0204C124
@@ -1022,7 +1022,7 @@
 .public sub_0219FD3C
 .public sub_021A1478
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2320
 .public sub_021A2324
 .public sub_021A0048
@@ -1286,7 +1286,7 @@
 .public sub_0219FD3C
 .public sub_021A1478
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021A2320
 .public sub_021A2324
 .public sub_0201AD8C
@@ -1576,7 +1576,7 @@
 .public sub_0201AB24
 .public sub_0219FD3C
 .public sub_0219FD24
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile

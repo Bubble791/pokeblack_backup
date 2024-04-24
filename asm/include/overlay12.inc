@@ -2124,7 +2124,7 @@
 .public sub_0201735C
 .public sub_02034C54
 .public sub_020171F4
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_0203CE0C
 .public sub_021A76E0
 .public sub_0203CDC8

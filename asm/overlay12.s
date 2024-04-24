@@ -23472,7 +23472,7 @@ ovy12_215b7d8: ; 0x0215B7D8
 	strh r1, [r0]
 	ldr r0, [sp, #4]
 	mov r1, #0x1e
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	cmp r0, #1
 	bne _0215B84E
 	add r0, r4, #0

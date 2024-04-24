@@ -1514,7 +1514,7 @@ ovy186_21a81f0: ; 0x021A81F0
 	ldr r0, [r5, #0x24]
 	mov r1, #0x18
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r2, r0, #0
 	add r2, r2, #6
 	lsl r2, r2, #0x18
@@ -1593,7 +1593,7 @@ _021A8248:
 	ldr r0, [r5, #0x24]
 	mov r1, #0x19
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r2, r0, #0
 	add r2, r2, #6
 	add r4, #0x12
@@ -1689,7 +1689,7 @@ ovy186_21a8370: ; 0x021A8370
 	ldr r0, [r5, #0x24]
 	mov r1, #0x18
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r2, r0, #0
 	add r2, r2, #6
 	lsl r2, r2, #0x18
@@ -1741,7 +1741,7 @@ _021A83C8:
 	ldr r0, [r5, #0x24]
 	mov r1, #0x19
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r2, r0, #0
 	add r2, r2, #6
 	lsl r2, r2, #0x18
@@ -2700,7 +2700,7 @@ ovy186_21a8b7c: ; 0x021A8B7C
 	bne _021A8BBE
 	ldr r0, [r0, #8]
 	mov r1, #0x18
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	mov r1, #1
 	add r6, r0, #0
 	eor r6, r1
@@ -2721,7 +2721,7 @@ ovy186_21a8b7c: ; 0x021A8B7C
 _021A8BBE:
 	ldr r0, [r0, #8]
 	mov r1, #0x19
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	mov r1, #1
 	add r6, r0, #0
 	eor r6, r1
@@ -9710,7 +9710,7 @@ ovy186_21ac298: ; 0x021AC298
 	ldr r0, [r5, r6]
 	mov r1, #0x1a
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r4, r0, #0
 	mov r1, #1
 	eor r4, r1
@@ -9831,7 +9831,7 @@ _021AC372:
 	ldr r0, [r5, r0]
 	mov r1, #0x1a
 	ldr r0, [r0, #8]
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	add r1, r0, #0
 	add r1, r1, #6
 	lsl r1, r1, #0x10

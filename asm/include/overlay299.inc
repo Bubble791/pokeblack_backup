@@ -207,7 +207,7 @@
 .public sub_0219CC1C
 .public sub_0219CC1C
 .public sub_0200D200
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
 .public sub_02017644
 .public BmpWin_InitAllocator
@@ -325,7 +325,7 @@
 .public sub_0200D1DC
 .public sub_0200D1F8
 .public sub_021A14B0
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_0204C108
 .public sub_0204BF98
 .public sub_0204B98C

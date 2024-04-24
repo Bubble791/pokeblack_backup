@@ -160,7 +160,7 @@ _021B30CA:
 	add r1, r4, #0
 	ldr r0, [r0, #8]
 	add r1, #9
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	lsl r1, r4, #2
 	add r1, r5, r1
 	str r0, [r1, #0x60]

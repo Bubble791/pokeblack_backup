@@ -189,7 +189,7 @@
 .public MI_CpuFill8
 .public MI_CpuFill8
 .public sub_02199AA0
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02199D58
 .public sub_02199D58
 .public sub_02199B5C

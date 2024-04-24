@@ -339,11 +339,11 @@
 .public sub_02017644
 .public GFL_SndSEPlay
 .public sub_0219BE88
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
 .public GFL_SndSEPlay
 .public sub_0219BE88
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public Oam_SetOamAnimIndex
 .public Item_GetParam
 .public Item_IsMail
@@ -356,7 +356,7 @@
 .public GFL_HeapFree
 .public sub_02199978
 .public sub_02034AA4
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_021998C0
 .public sub_021998C0
 .public BagMenu_IsNotNormalBagMode
@@ -969,7 +969,7 @@
 .public Oam_GetSpritePosData
 .public sub_0204C378
 .public sub_0219FD18
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02005718
 .public sub_02026FE4
 .public sub_02005718
@@ -1004,7 +1004,7 @@
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public sub_0219FD18
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex

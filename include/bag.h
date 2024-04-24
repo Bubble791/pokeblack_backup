@@ -547,8 +547,8 @@ void ovy142_219fc14(BagView*, int);
 extern void sub_0204C124(int, int);
 
 int sub_0219BE88(int a1);
-extern int sub_0219FD18(int);
-extern int GameData_IsShortcutRegistered(void*, int);
+extern int BagMenu_GetPocketRegistId(int pocket);
+extern int GameData_IsPocketRegistered(void*, int);
 extern int sub_02005718(void);
 extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
 extern int BagSave_IsItemInFreeSpace(void*, u16);

@@ -100,10 +100,10 @@
 .public sub_0200D190
 .public sub_0200D1AC
 .public sub_0219FDE4
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_02017644
 .public sub_02017644
-.public GameData_IsShortcutRegistered
+.public GameData_IsPocketRegistered
 .public sub_0203CE0C
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB

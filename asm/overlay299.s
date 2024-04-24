@@ -2286,7 +2286,7 @@ ovy299_21a0e7c: ; 0x021A0E7C
 	mov r1, #0x12
 	ldr r0, [r0]
 	mov r4, #0x12
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	cmp r0, #1
 	ldr r0, [r5]
 	bne _021A0EA8
@@ -3789,7 +3789,7 @@ _021A1A32:
 _021A1A70:
 	ldr r0, [r1]
 	mov r1, #0x12
-	bl GameData_IsShortcutRegistered
+	bl GameData_IsPocketRegistered
 	cmp r0, #1
 	bne _021A1A86
 	add r0, r5, #0
