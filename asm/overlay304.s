@@ -1099,7 +1099,7 @@ _021A0448:
 	lsl r1, r1, #0x10
 	add r0, r6, #0
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_0204C520
@@ -2891,7 +2891,7 @@ _021A137A:
 	bl sub_0204C124
 	ldrh r1, [r5, #8]
 	add r0, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r1, r5, #0
 	add r0, r6, #0
 	add r1, #0xa
@@ -2929,7 +2929,7 @@ _021A13BE:
 	bl sub_0204C124
 	ldrh r1, [r4, #8]
 	add r0, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r1, r4, #0
 	add r0, r7, #0
 	add r1, #0xa
@@ -2947,7 +2947,7 @@ _021A13BE:
 	bl Oam_SetSpritePosData
 	ldrh r1, [r4, #8]
 	add r0, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021A1416:
 	add r5, r5, #1
 	cmp r5, #0x37
@@ -3985,7 +3985,7 @@ ovy304_21a1b84: ; 0x021A1B84
 	lsl r1, r5, #0x10
 	add r4, r0, #0
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C4D4
@@ -4239,12 +4239,12 @@ ovy304_21a1d58: ; 0x021A1D58
 	bl sub_0204C4D4
 	add r0, r4, #0
 	mov r1, #0x28
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 _021A1D7C:
 	add r0, r4, #0
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy304_21a1d58

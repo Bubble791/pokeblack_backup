@@ -1687,7 +1687,7 @@ ovy320_219dbf0: ; 0x0219DBF0
 	lsl r1, r2, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520
@@ -2629,7 +2629,7 @@ ovy320_219e2e0: ; 0x0219E2E0
 	lsl r1, r1, #1
 	ldrh r1, [r7, r1]
 	ldr r0, [r5, r4]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C124

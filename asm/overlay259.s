@@ -5148,7 +5148,7 @@ _0219C0E6:
 	add r0, r5, #0
 	bl sub_0219D43C
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _0219C108 ; =0x00000551
 	bl GFL_SndSEPlay
 	mov r0, #1
@@ -5204,12 +5204,12 @@ ovy259_219c144: ; 0x0219C144
 	beq _0219C158
 	bl sub_0219D43C
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0219C158:
 	bl sub_0219D43C
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	thumb_func_end ovy259_219c144
 
@@ -5397,7 +5397,7 @@ _0219C1F0:
 	add r0, #0xa4
 	bl sub_0219D43C
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x1c]
 	cmp r0, #0
 	bls _0219C33E
@@ -9015,7 +9015,7 @@ ovy259_219ded0: ; 0x0219DED0
 	ldr r1, _0219DF40 ; =0x021A0720
 	ldr r0, [r5, #0x10]
 	ldrb r1, [r1, r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219DEEE:
 	ldr r0, [r5, #0x20]
 	lsl r0, r0, #5
@@ -9062,11 +9062,11 @@ _0219DF40: .word 0x021A0720
 	thumb_func_start sub_0219DF44
 sub_0219DF44: ; 0x0219DF44
 	ldr r0, [r0, #0x10]
-	ldr r3, _0219DF4C ; =sub_0204C488
+	ldr r3, _0219DF4C ; =Oam_SetOamAnimIndex
 	mov r1, #6
 	bx r3
 	.align 2, 0
-_0219DF4C: .word sub_0204C488
+_0219DF4C: .word Oam_SetOamAnimIndex
 	thumb_func_end sub_0219DF44
 
 	thumb_func_start ovy259_219df50
@@ -9110,16 +9110,16 @@ ovy259_219df74: ; 0x0219DF74
 	cmp r1, #0
 	beq _0219DF92
 	mov r1, #2
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0219DF92:
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0219DF9A:
 	ldr r0, [r0, #0x14]
 	mov r1, #3
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	thumb_func_end ovy259_219df74
 
@@ -9142,7 +9142,7 @@ ovy259_219dfa8: ; 0x0219DFA8
 	ldr r1, _0219DFC8 ; =0x021A0722
 	ldr r0, [r4, #0x10]
 	ldrb r1, [r1, r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219DFC4:
 	pop {r4, pc}
 	nop
@@ -9322,7 +9322,7 @@ _0219E0C6:
 	str r0, [r4, #4]
 	ldr r0, [r4, #0x10]
 	mov r1, #5
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _0219E164 ; =0x0000066C
 	bl GFL_SndSEPlay
 	add sp, #0x10
@@ -9366,7 +9366,7 @@ _0219E150:
 	str r0, [r4, #4]
 	ldr r0, [r4, #0x10]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219E15C:
 	mov r0, #0
 	add sp, #0x10

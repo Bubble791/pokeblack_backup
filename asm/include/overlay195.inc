@@ -538,9 +538,9 @@
 .public sub_0202E41C
 .public sub_0202E41C
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
 .public sub_0204C560
 .public Oam_CreateSprite
@@ -548,7 +548,7 @@
 .public sub_0204C124
 .public sub_0204C108
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_021B57B8
 .public GFL_ArcSysCreateFileHandle
@@ -611,7 +611,7 @@
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
@@ -628,9 +628,9 @@
 .public GFL_G2DIOLoadNSCRSync
 .public GFL_ArcToolFree
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C504
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02045B7C
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadNSCRSync

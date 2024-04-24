@@ -41387,8 +41387,8 @@ sub_0204C47C: ; 0x0204C47C
 	bx lr
 	thumb_func_end sub_0204C47C
 
-	thumb_func_start sub_0204C488
-sub_0204C488: ; 0x0204C488
+	thumb_func_start Oam_SetOamAnimIndex
+Oam_SetOamAnimIndex: ; 0x0204C488
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, #0x5a
@@ -41399,7 +41399,7 @@ sub_0204C488: ; 0x0204C488
 	add r0, r4, #0
 	bl sub_0204C540
 	pop {r4, pc}
-	thumb_func_end sub_0204C488
+	thumb_func_end Oam_SetOamAnimIndex
 
 	thumb_func_start sub_0204C4A0
 sub_0204C4A0: ; 0x0204C4A0
@@ -41429,7 +41429,7 @@ sub_0204C4B8: ; 0x0204C4B8
 	ldrh r2, [r2]
 	cmp r1, r2
 	beq _0204C4D0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	bl sub_0204C540
 _0204C4D0:
@@ -43172,7 +43172,7 @@ sub_0204D094: ; 0x0204D094
 	bl sub_0204C468
 	ldrh r1, [r4, #4]
 	add r0, r5, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	bl sub_0204C540
 	pop {r4, r5, r6, pc}

@@ -1463,7 +1463,7 @@ ovy328_219da0c: ; 0x0219DA0C
 	lsl r1, r3, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520
@@ -1479,7 +1479,7 @@ _0219DA30:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520

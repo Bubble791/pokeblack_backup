@@ -1256,7 +1256,7 @@ ovy325_219d884: ; 0x0219D884
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1272,7 +1272,7 @@ _0219D8A8:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1288,7 +1288,7 @@ _0219D8CA:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1304,7 +1304,7 @@ _0219D8EC:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520

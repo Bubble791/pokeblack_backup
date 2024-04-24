@@ -3466,7 +3466,7 @@ ovy174_219eb10: ; 0x0219EB10
 _0219EB28:
 	ldr r0, [r4, r5]
 	mov r1, #0xb
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #0xc8
 	mov r2, #0x26
@@ -3483,7 +3483,7 @@ _0219EB28:
 _0219EB4E:
 	ldr r0, [r4, r5]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219EB56:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy174_219eb10
@@ -3504,7 +3504,7 @@ ovy174_219eb58: ; 0x0219EB58
 _0219EB70:
 	ldr r0, [r4, r5]
 	mov r1, #0xa
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #0x39
 	mov r2, #0x9a
@@ -3521,7 +3521,7 @@ _0219EB70:
 _0219EB96:
 	ldr r0, [r4, r5]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219EB9E:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy174_219eb58

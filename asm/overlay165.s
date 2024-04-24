@@ -4125,7 +4125,7 @@ _0219BC1E:
 	add r1, r1, #6
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	bl sub_0219DA58
 	cmp r0, #1
@@ -4319,7 +4319,7 @@ _0219BDC2:
 	add r1, #0xc
 	str r0, [r4, r1]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219BDD6:
 	mov r0, #0xa3
 	lsl r0, r0, #2
@@ -4368,7 +4368,7 @@ _0219BE12:
 	sub r5, #0x9c
 	mov r1, #8
 	str r0, [r4, r5]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219BE3C:
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -5948,7 +5948,7 @@ _0219CAD8:
 	add r1, #0xc
 	str r0, [r5, r1]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	add sp, #0x14
 	str r0, [r5, #8]
@@ -5968,7 +5968,7 @@ _0219CAFE:
 	add r1, #8
 	str r0, [r5, r1]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	add sp, #0x14
 	str r0, [r5, #8]
@@ -6000,7 +6000,7 @@ _0219CB26:
 	add r1, r1, #6
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _0219CB7C ; =0x00000646
 	bl GFL_SndSEPlay
 	mov r0, #0
@@ -6251,7 +6251,7 @@ _0219CD2A:
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219CD52:
 	mov r0, #0
 	mvn r0, r0
@@ -6303,7 +6303,7 @@ _0219CD66:
 	add r1, r1, #6
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _0219CDD4 ; =0x00000646
 	bl GFL_SndSEPlay
 	str r4, [r5, #8]
@@ -6352,13 +6352,13 @@ ovy165_219cdd8: ; 0x0219CDD8
 	add r4, #0x78
 	ldr r0, [r5, r4]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 _0219CE28:
 	add r4, #0x78
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy165_219cdd8
 
@@ -6397,13 +6397,13 @@ ovy165_219ce34: ; 0x0219CE34
 	add r4, #0x7c
 	ldr r0, [r5, r4]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 _0219CE84:
 	add r4, #0x7c
 	ldr r0, [r5, r4]
 	mov r1, #3
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy165_219ce34
 
@@ -10178,7 +10178,7 @@ _0219EC68:
 	ldr r0, [r4, #0x40]
 	mov r1, #4
 _0219EC6C:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219EC70:
 	ldr r0, [r4, #0x40]
 	mov r1, #1
@@ -10433,7 +10433,7 @@ _0219EE3C:
 	bne _0219EE6C
 	add r1, r7, #0
 _0219EE66:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _0219EE76
 _0219EE6C:
 	add r1, r6, #0
@@ -10474,7 +10474,7 @@ _0219EEA6:
 _0219EEAC:
 	ldr r0, [r4, #0x30]
 	add r1, r5, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #1
 	str r0, [r4, #0x18]
 	add sp, #0x18
@@ -10599,7 +10599,7 @@ ovy165_219ef50: ; 0x0219EF50
 	bl sub_0204C124
 	ldr r0, [r4, #0x30]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #1
 	str r0, [r4, #0x18]
 	add sp, #0xc
@@ -10647,7 +10647,7 @@ _0219F002:
 	bl ovy165_219f0a0
 	ldr r0, [r4, #0x34]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r5, sp, #4
 	add r0, r4, #0
 	mov r1, #0x1a
@@ -10708,7 +10708,7 @@ _0219F076:
 	bl ovy165_219f0a0
 	ldr r0, [r4, #0x34]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r5, sp, #0
 	add r0, r4, #0
 	mov r1, #0x18
@@ -15258,7 +15258,7 @@ ovy165_21a1284: ; 0x021A1284
 	bne _021A13A4
 	mov r1, #1
 _021A139E:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _021A13AE
 _021A13A4:
 	mov r1, #0

@@ -295,7 +295,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_G2DIOLoadArcNCLRDefault
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C378
 .public sub_0219E718
 .public GFL_SndSEPlay

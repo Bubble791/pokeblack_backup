@@ -69132,7 +69132,7 @@ _0219FD9E:
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C124
@@ -70385,7 +70385,7 @@ ovy36_21a0770: ; 0x021A0770
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 _021A078E:
 	mov r0, #0
@@ -70430,7 +70430,7 @@ ovy36_21a07ac: ; 0x021A07AC
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0xf8
 	ldr r2, [r0]
@@ -70448,7 +70448,7 @@ ovy36_21a07ac: ; 0x021A07AC
 	cmp r1, #1
 	bne _021A0808
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021A0808:
 	cmp r4, #0
 	beq _021A0818
@@ -70456,7 +70456,7 @@ _021A0808:
 	cmp r0, #0
 	beq _021A0818
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021A0818:
 	mov r0, #0
 	str r0, [r5, #0x24]
@@ -70573,7 +70573,7 @@ ovy36_21a0820: ; 0x021A0820
 	bl sub_0204C520
 	ldr r0, [r5, #0x18]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #8]
 	cmp r0, #7
 	ldr r0, [r5, #0x18]
@@ -114957,7 +114957,7 @@ ovy36_21b60f8: ; 0x021B60F8
 	lsl r1, r1, #0x10
 	ldr r0, [r5, #0x64]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x64]
 	bl sub_0204C56C
 	add r2, sp, #4
@@ -116079,7 +116079,7 @@ ovy36_21b6950: ; 0x021B6950
 	ldr r0, [r5, #0x14]
 	mov r1, #0
 	mov r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldrh r3, [r5, #8]
 	mov r0, #0x19
 	mov r1, #2
@@ -116666,7 +116666,7 @@ ovy36_21b6dec: ; 0x021B6DEC
 	add r4, r1, #0
 	mov r1, #1
 	add r6, r2, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r1, sp, #0xc
 	mov r0, #0
 	strh r0, [r1]
@@ -116757,7 +116757,7 @@ ovy36_21b6ea0: ; 0x021B6EA0
 	lsl r1, r1, #0x10
 	ldr r0, [r0]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	pop {r3, pc}
 	thumb_func_end ovy36_21b6ea0

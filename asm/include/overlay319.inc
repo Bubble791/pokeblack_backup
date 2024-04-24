@@ -211,10 +211,10 @@
 .public sub_0203D564
 .public sub_0203DAC8
 .public sub_0203D564
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
 .public sub_0204C560
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_HeapAllocate
 .public sub_0219E358
 .public sub_02045E1C

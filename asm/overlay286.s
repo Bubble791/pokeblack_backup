@@ -2849,7 +2849,7 @@ ovy286_21f5a54: ; 0x021F5A54
 	ldr r0, [sp, #8]
 	add r1, r4, #0
 	ldr r0, [r7, r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #1
 	lsl r0, r0, #0x10
 	lsr r5, r0, #0x10
@@ -2881,7 +2881,7 @@ _021F5AA4:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _021F5B2E
 _021F5ABC:
 	cmp r4, #1
@@ -2891,7 +2891,7 @@ _021F5ABC:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0x13
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	sub r0, r4, #1
 _021F5AD0:
 	lsl r0, r0, #0x18
@@ -2903,7 +2903,7 @@ _021F5AD6:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0x14
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	sub r0, r4, #2
 	b _021F5AD0
 _021F5AE8:
@@ -2916,7 +2916,7 @@ _021F5AE8:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _021F5B16
 _021F5B00:
 	ble _021F5B16
@@ -2925,7 +2925,7 @@ _021F5B00:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0x12
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	sub r0, r4, #1
 	lsl r0, r0, #0x18
 	asr r4, r0, #0x18
@@ -2938,7 +2938,7 @@ _021F5B1A:
 	ldr r0, _021F5B60 ; =0x00000424
 	ldr r0, [r1, r0]
 	mov r1, #0x11
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	sub r0, r7, #2
 _021F5B2A:
 	lsl r0, r0, #0x18

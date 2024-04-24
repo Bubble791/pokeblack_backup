@@ -371,11 +371,11 @@
 .public sub_020504DC
 .public sub_0219CE98
 .public sub_0204C4A0
-.public sub_0204C488
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
-.public sub_0204C488
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
 .public sub_0219CE98
 .public sub_0204C5B0
 .public sub_0204C5B0

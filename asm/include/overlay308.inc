@@ -207,7 +207,7 @@
 .public sub_02013DA0
 .public sub_02018CA0
 .public sub_02024700
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public Oam_SetSpritePosData
 .public GFL_MsgDataLoadStrbuf

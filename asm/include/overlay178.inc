@@ -91,7 +91,7 @@
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C378
@@ -182,7 +182,7 @@
 .public sub_0219B128
 .public GFL_SndSEPlay
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
 .public sub_0204C124
 .public sub_02044C98

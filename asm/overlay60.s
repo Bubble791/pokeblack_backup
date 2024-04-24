@@ -5307,7 +5307,7 @@ _021E83E4:
 	ldr r0, [r5, r4]
 	mov r1, #1
 _021E83EA:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r1, sp, #0
 	mov r0, #6
 	ldrsh r0, [r1, r0]

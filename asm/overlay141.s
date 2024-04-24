@@ -1635,7 +1635,7 @@ _0219DBBE:
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
 	mov r1, #0xc
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r5, #0x34
 	ldrh r1, [r4, r5]
 	add r0, r4, #0
@@ -1651,7 +1651,7 @@ _0219DBE4:
 	lsl r5, r5, #4
 	ldr r0, [r4, r5]
 	mov r1, #0xd
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r5, #0x30
 	ldrh r1, [r4, r5]
 	add r0, r4, #0
@@ -1667,7 +1667,7 @@ _0219DC0A:
 	sub r0, #0x30
 	ldr r0, [r4, r0]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219DC22:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

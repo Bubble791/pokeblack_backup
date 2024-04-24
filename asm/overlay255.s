@@ -39737,7 +39737,7 @@ ovy255_21cf5e4: ; 0x021CF5E4
 	lsl r1, r6, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, r5, r6, pc}
 	nop
 _021CF604: .word 0x00009E98
@@ -52671,7 +52671,7 @@ ovy255_21d58ec: ; 0x021D58EC
 	sub r4, #0x74
 	ldr r0, [r5, r4]
 	mov r1, #0xd
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021D5918:
 	mov r0, #0x27
 	pop {r3, r4, r5, pc}
@@ -52696,7 +52696,7 @@ ovy255_21d591c: ; 0x021D591C
 	sub r4, #0x70
 	ldr r0, [r5, r4]
 	mov r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021D5948:
 	mov r0, #0x27
 	pop {r3, r4, r5, pc}
@@ -52722,7 +52722,7 @@ ovy255_21d594c: ; 0x021D594C
 	sub r4, #0x78
 	ldr r0, [r5, r4]
 	mov r1, #0xa
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021D597C:
 	mov r0, #1
 	pop {r3, r4, r5, pc}
@@ -52929,7 +52929,7 @@ _021D5ADE:
 	add r1, r4, r1
 	ldrb r1, [r7, r1]
 _021D5AEE:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #8
 	ble _021D5AC6
@@ -52953,7 +52953,7 @@ _021D5B0C:
 	add r0, r5, r0
 	ldrb r1, [r6, r1]
 	ldr r0, [r0, r7]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #8
 	ble _021D5B0C
@@ -52992,7 +52992,7 @@ _021D5B4A:
 	add r1, r4, r1
 	ldrb r1, [r7, r1]
 _021D5B5A:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #8
 	ble _021D5B32
@@ -53016,14 +53016,14 @@ ovy255_21d5b70: ; 0x021D5B70
 	lsl r1, r1, #0x10
 	ldr r0, [r5, r6]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, _021D5BA0 ; =0x021D8F04
 	add r0, r6, #4
 	ldr r1, [r1, r4]
 	ldr r0, [r5, r0]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021D5B9C: .word 0x021D8F00
@@ -55050,7 +55050,7 @@ ovy255_21d6ac0: ; 0x021D6AC0
 	lsl r1, r6, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520
@@ -55078,7 +55078,7 @@ _021D6AF6:
 	lsl r1, r1, #0x10
 	ldr r0, [r0, r7]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021D6AF6

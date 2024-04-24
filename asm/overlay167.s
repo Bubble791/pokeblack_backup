@@ -125630,7 +125630,7 @@ _021D61D4:
 	bl Oam_SetSpritePosData
 	ldrh r1, [r4]
 	add r0, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r7, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -125724,7 +125724,7 @@ _021D628C:
 	bl Oam_SetSpritePosData
 	ldrh r1, [r4]
 	add r0, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r7, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -125845,7 +125845,7 @@ _021D6358:
 	bl Oam_SetSpritePosData
 	ldrh r1, [r4]
 	ldr r0, [sp]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp]
 	mov r1, #1
 	bl sub_0204C124

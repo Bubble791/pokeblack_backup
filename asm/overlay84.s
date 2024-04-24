@@ -4690,7 +4690,7 @@ _021ED2C6:
 	ldr r0, [r4, r0]
 	mov r1, #0xd
 _021ED2CE:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add r0, #0x8d
 	ldrb r1, [r0]
@@ -4707,14 +4707,14 @@ _021ED2CE:
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
 	mov r1, #0x11
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 _021ED2F8:
 	mov r0, #0xe7
 	lsl r0, r0, #2
 	ldr r0, [r4, r0]
 	mov r1, #0x14
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy84_21ed2b0
@@ -4779,14 +4779,14 @@ ovy84_21ed358: ; 0x021ED358
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _021ED372:
 	mov r1, #0x39
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
 	mov r1, #7
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	thumb_func_end ovy84_21ed358
 

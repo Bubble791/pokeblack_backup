@@ -370,7 +370,7 @@ _0217CC12:
 	ldr r0, [r0, #0xc]
 	mov r5, #1
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	str r5, [r4]
 	pop {r3, r4, r5, pc}
 _0217CC20:
@@ -1259,7 +1259,7 @@ _0217D2E4:
 	beq _0217D2FA
 	ldr r0, [r5, #8]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	str r0, [r4, #0x24]
 _0217D2FA:
@@ -1306,23 +1306,23 @@ _0217D34C:
 	lsl r1, r6, #0x10
 	ldr r0, [r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	lsl r1, r6, #0x10
 	ldr r0, [r5, #4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _0217D37C
 _0217D362:
 	bne _0217D37C
 	ldr r0, [r5, #8]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #4]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0217D37C:
 	ldr r0, _0217D388 ; =ovy253_217d820
 	ldr r1, [r0]

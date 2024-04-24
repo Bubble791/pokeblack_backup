@@ -506,7 +506,7 @@
 .public sub_02025B04
 .public sub_02025B58
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0203888C

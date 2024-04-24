@@ -752,7 +752,7 @@ _0219B2CE:
 	add r0, #0xa4
 	ldr r0, [r0]
 	mov r1, #0xb
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r7, #0
 _0219B354:
 	lsl r0, r4, #2
@@ -1912,7 +1912,7 @@ _0219BC4E:
 	lsl r0, r6, #2
 	ldr r0, [r5, r0]
 	add r1, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r6, r6, #1
 	cmp r6, #3
 	blt _0219BC4E
@@ -1939,7 +1939,7 @@ _0219BC60:
 	lsl r1, r1, #0x10
 	ldr r0, [r5, r0]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0219BC60

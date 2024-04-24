@@ -8150,7 +8150,7 @@ _021B93FE:
 	bl sub_0204C124
 	ldrh r1, [r4, #0x30]
 	ldr r0, [r4, #4]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #4]
 	mov r1, #1
 	bl sub_0204C520
@@ -8303,7 +8303,7 @@ _021B9530:
 _021B9564:
 	ldrh r1, [r5, #0x30]
 _021B9566:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, [r5, #0x34]
 	cmp r1, #0
 	beq _021B9574
@@ -12070,7 +12070,7 @@ _021BB256:
 	ldr r0, [r4, r0]
 	mov r1, #0xb
 _021BB266:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r5, _021BB2B4 ; =0x00000AEC
 	add r1, sp, #0x18
 	ldr r0, [r4, r5]

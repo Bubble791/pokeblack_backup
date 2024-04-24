@@ -251,7 +251,7 @@ ovy139_2199a5c: ; 0x02199A5C
 	bl Oam_CreateSprite
 	ldrb r1, [r5]
 	add r4, r0, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add sp, #0x14
 	pop {r4, r5, pc}
@@ -1228,11 +1228,11 @@ _0219A1A4:
 	ldr r1, [r2, #8]
 	ldr r0, [r2]
 	lsl r1, r1, #0x10
-	ldr r3, _0219A1B4 ; =sub_0204C488
+	ldr r3, _0219A1B4 ; =Oam_SetOamAnimIndex
 	lsr r1, r1, #0x10
 	bx r3
 	nop
-_0219A1B4: .word sub_0204C488
+_0219A1B4: .word Oam_SetOamAnimIndex
 	thumb_func_end sub_0219A198
 
 	thumb_func_start sub_0219A1B8
@@ -1277,7 +1277,7 @@ ovy139_219a1e8: ; 0x0219A1E8
 	ldrh r1, [r4, #0x2a]
 	ldr r0, [r4]
 	str r1, [r4, #8]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x34]
 	cmp r0, #0
 	beq _0219A200
@@ -1326,12 +1326,12 @@ _0219A23E:
 	ldr r0, [r2]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0219A24C:
 	ldrh r1, [r2, #0x28]
 	ldr r0, [r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy139_219a228
@@ -1361,7 +1361,7 @@ _0219A278:
 	ldr r0, [r2]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0219A286:
 	ldrh r0, [r2, #0x2c]
@@ -1379,7 +1379,7 @@ _0219A298:
 _0219A29A:
 	ldrh r1, [r2, #0x28]
 	ldr r0, [r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	thumb_func_end ovy139_219a258
 

@@ -1029,7 +1029,7 @@ _0219D704:
 	bl Oam_CreateSprite
 	str r0, [r7, #0x10]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x10]
 	mov r1, #0
 	bl sub_0204C124
@@ -1073,7 +1073,7 @@ _0219D772:
 	bl Oam_CreateSprite
 	str r0, [r7, #0x10]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x10]
 	mov r1, #1
 	bl sub_0204C124
@@ -1117,7 +1117,7 @@ _0219D7D0:
 	bl Oam_CreateSprite
 	str r0, [r7, #0x10]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x10]
 	mov r1, #1
 	bl sub_0204C124
@@ -1153,7 +1153,7 @@ _0219D7D0:
 	add r1, #0xc0
 	str r0, [r1]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0xc0
 	ldr r0, [r0]
@@ -1210,7 +1210,7 @@ _0219D88A:
 	bl Oam_CreateSprite
 	str r0, [r6, #0x10]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x10]
 	mov r1, #1
 	bl sub_0204C124
@@ -1247,7 +1247,7 @@ _0219D88A:
 	add r1, #0xe2
 	str r0, [r5, r1]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r6, #0xe2
 	ldr r0, [r5, r6]
 	mov r1, #0
@@ -1343,7 +1343,7 @@ ovy145_219d9cc: ; 0x0219D9CC
 	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x64]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0x74
 	strh r0, [r5]
 	strh r7, [r5, #2]
@@ -1353,14 +1353,14 @@ ovy145_219d9cc: ; 0x0219D9CC
 	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x68]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x6c]
 	add r1, sp, #4
 	mov r2, #0
 	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x6c]
 	mov r1, #2
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x6c]
 	mov r1, #3
 	bl sub_0204C468
@@ -1373,7 +1373,7 @@ ovy145_219d9cc: ; 0x0219D9CC
 	bl Oam_SetSpritePosData
 	ldr r0, [r4, #0x70]
 	mov r1, #3
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	strh r6, [r5]
 	strh r6, [r5, #2]
 _0219DA44:
@@ -1385,7 +1385,7 @@ _0219DA44:
 	bl Oam_SetSpritePosData
 	ldr r0, [r5, #0x74]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp]
 	mov r1, #0
 	add r0, r0, r7
@@ -1424,7 +1424,7 @@ _0219DA44:
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #5
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	strh r0, [r5]
 	mov r6, #0xa8
@@ -1439,7 +1439,7 @@ _0219DA44:
 	add r0, #0xb0
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0xd0
 	strh r0, [r5]
 	add r0, r4, #0
@@ -1453,7 +1453,7 @@ _0219DA44:
 	add r0, #0xac
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0xe8
 	strh r0, [r5]
 	add r0, r4, #0
@@ -1467,7 +1467,7 @@ _0219DA44:
 	add r0, #0xa0
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0xb0
 	strh r0, [r5]
 	add r0, r4, #0
@@ -1481,7 +1481,7 @@ _0219DA44:
 	add r0, #0xa8
 	ldr r0, [r0]
 	mov r1, #5
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0x20
 	strh r0, [r5]
 	add r0, r4, #0
@@ -1494,7 +1494,7 @@ _0219DA44:
 	add r4, #0xa4
 	ldr r0, [r4]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1701,7 +1701,7 @@ _0219DCD6:
 	ldr r0, [r4, #0x10]
 	lsr r1, r1, #0x10
 _0219DCEE:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219DCF2:
 	ldr r0, [sp, #0x10]
 	cmp r0, #1
@@ -2906,7 +2906,7 @@ _0219E684:
 	add r0, #0xb8
 	ldr r0, [r0]
 	mov r1, #0xd
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0xb8
 	b _0219E6BE
@@ -2915,7 +2915,7 @@ _0219E6AE:
 	add r0, #0xb4
 	ldr r0, [r0]
 	mov r1, #0xc
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0xb4
 _0219E6BE:
@@ -3471,7 +3471,7 @@ _0219EAEC:
 	ldr r0, [sp, #0x4c]
 	lsr r1, r1, #0x10
 _0219EAFC:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp, #0x4c]
 	mov r1, #1
 	b _0219EB08
@@ -4795,7 +4795,7 @@ _0219F500:
 	strh r1, [r0, #2]
 	ldr r0, [r7, #0x74]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x74]
 	add r1, sp, #0x14
 	mov r2, #0
@@ -4809,7 +4809,7 @@ _0219F5DA:
 	add r7, r6, r4
 	ldr r0, [r7, #0x74]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x74]
 	add r1, sp, #0x14
 	mov r2, #0
@@ -4916,7 +4916,7 @@ _0219F682: ; jump table
 _0219F68A:
 	add r0, r6, #0
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_0204C520
@@ -4980,7 +4980,7 @@ _0219F6FA: ; jump table
 _0219F702:
 	add r0, r6, #0
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_0204C520
@@ -5340,7 +5340,7 @@ _0219F9A4:
 	add r0, #0xc0
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add r0, #0xc0
 	ldr r0, [r0]

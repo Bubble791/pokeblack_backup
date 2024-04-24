@@ -1588,7 +1588,7 @@ ovy76_21e9ce4: ; 0x021E9CE4
 	lsl r0, r0, #3
 	strh r0, [r4, #2]
 	add r0, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r4, #1
 	mov r1, #1
@@ -1707,7 +1707,7 @@ ovy76_21e9dd4: ; 0x021E9DD4
 	lsl r0, r0, #3
 	strh r0, [r5, #2]
 	add r0, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_0204C520
@@ -1870,7 +1870,7 @@ ovy76_21e9f0c: ; 0x021E9F0C
 	lsl r0, r0, #3
 	strh r0, [r4, #2]
 	add r0, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r4, #1
 	mov r1, #1

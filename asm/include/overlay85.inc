@@ -59,9 +59,9 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C488
-.public sub_0204C488
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
 .public sub_0202B098
 .public sub_021EB934
 .public sub_0204C124

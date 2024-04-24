@@ -255,7 +255,7 @@
 .public sub_02045E1C
 .public sub_02045E1C
 .public MI_CpuFill8
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_02005784

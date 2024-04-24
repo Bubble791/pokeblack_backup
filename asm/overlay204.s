@@ -1593,7 +1593,7 @@ ovy204_21aa7fc: ; 0x021AA7FC
 	bl sub_0204C520
 	ldr r0, [r5, r4]
 	add r1, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	bl sub_0204C56C
 	pop {r4, r5, r6, pc}
@@ -4853,7 +4853,7 @@ ovy204_21ac194: ; 0x021AC194
 	bl sub_0204C124
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
 	add r0, r5, #0
@@ -8510,7 +8510,7 @@ ovy204_21add84: ; 0x021ADD84
 	bl sub_0204C4D4
 	ldr r0, [r5, r4]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520
@@ -8529,7 +8529,7 @@ ovy204_21adda8: ; 0x021ADDA8
 	bl sub_0204C4D4
 	ldr r0, [r5, r4]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520
@@ -8571,7 +8571,7 @@ ovy204_21addf0: ; 0x021ADDF0
 	lsl r1, r1, #0x10
 	ldr r0, [r5, r6]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy204_21addf0
 

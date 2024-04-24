@@ -3046,7 +3046,7 @@ ovy299_21a1488: ; 0x021A1488
 	lsl r1, r6, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	bl sub_0204C540
 	pop {r4, r5, r6, pc}

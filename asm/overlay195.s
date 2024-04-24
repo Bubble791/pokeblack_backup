@@ -5165,7 +5165,7 @@ _021B5A02:
 	ldr r1, _021B5A40 ; =0x021B7B38
 	ldr r0, [r4, r6]
 	ldrb r1, [r1, r5]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r6]
 	mov r1, #1
 	bl sub_0204C124
@@ -5192,7 +5192,7 @@ _021B5A54:
 	lsl r2, r1, #2
 	ldr r1, _021B5A64 ; =0x021B7B3B
 	ldrb r1, [r1, r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #1
 	pop {r3, pc}
 	nop
@@ -5327,7 +5327,7 @@ _021B5B42:
 	lsl r1, r1, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -6466,7 +6466,7 @@ _021B6372:
 	mov r0, #0x13
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy195_21b6358
@@ -6626,7 +6626,7 @@ _021B6466:
 	add r1, #0xb
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0x90
 	add r0, #0xa0
 	ldr r0, [r5, r0]
@@ -6636,7 +6636,7 @@ _021B6466:
 	ldr r0, [r5, r4]
 	mov r1, #0x1c
 	mov r4, #0x1c
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	bl sub_02045B7C
 	mov r1, #0x1c

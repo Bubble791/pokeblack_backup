@@ -259,7 +259,7 @@
 .public sub_02017BCC
 .public sub_02017BCC
 .public sub_021A0380
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02175578
 .public sub_0203D2BC
 .public sub_02175164
@@ -272,10 +272,10 @@
 .public sub_0219F4C0
 .public sub_0203DA0C
 .public GCTX_HIDGetPressedKeys
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02017BCC
 .public sub_02017BCC
 .public sub_021A035C
@@ -285,7 +285,7 @@
 .public sub_0201736C
 .public sub_021A026C
 .public sub_02008BD4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02017BCC
 .public sub_02017BCC
 .public sub_0200C8EC

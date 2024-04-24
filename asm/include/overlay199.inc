@@ -116,14 +116,14 @@
 .public sub_0204C56C
 .public sub_021B2F84
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_021B2F84
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_021B2F84
 .public sub_0204C4A0
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_FadeScreenIsFinished
 .public sub_020504F0
 .public sub_02026DC0
@@ -485,7 +485,7 @@
 .public sub_020210C0
 .public sub_0204C378
 .public GFL_ArcToolFree
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0208D65C
 .public GX_LoadBGPltt

@@ -630,7 +630,7 @@
 .public GFL_StrBufFree
 .public Oam_SetSpritePosData
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0204C124
 .public GFL_BGSysLoadScr
@@ -643,7 +643,7 @@
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021B9678
@@ -892,7 +892,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public MI_CpuFill8
 .public Oam_SetSpritePosData

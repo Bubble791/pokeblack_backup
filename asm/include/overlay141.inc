@@ -188,11 +188,11 @@
 .public sub_0203DA0C
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0204C124

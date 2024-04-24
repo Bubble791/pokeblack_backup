@@ -2106,7 +2106,7 @@ _0219E060:
 	bl sub_021A0380
 	ldr r0, [r4, #0x7c]
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #5
 	b _0219DFB4
 _0219E078:
@@ -2284,7 +2284,7 @@ _0219E1CC:
 	strb r1, [r0]
 	ldr r0, [r4, #0x7c]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x7c]
 	mov r1, #1
 	bl sub_0204C520
@@ -2325,7 +2325,7 @@ _0219E220:
 	bl ovy181_21a00e0
 	ldr r0, [r4, #0x7c]
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add r0, #0x28
 	ldrb r0, [r0]
@@ -2450,7 +2450,7 @@ _0219E316:
 	bl ovy181_21a0160
 	ldr r0, [r4, #0x7c]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add r0, #0x28
 	ldrb r0, [r0]

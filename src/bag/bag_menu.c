@@ -281,7 +281,7 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
     }
     a1->unk8B8 = a2;
     sub_0204C4D4(a1->unk724[a1->unk8B8], 0);
-    sub_0204C488(a1->unk724[a1->unk8B8], v3);
+    Oam_SetOamAnimIndex(a1->unk724[a1->unk8B8], v3);
     sub_0204C520(a1->unk724[a1->unk8B8], 1);
     a1->unk8BC = a3;
     BagMenu_SetRunFunc(a1, ovy142_219ca90);
@@ -323,7 +323,7 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
     bagView->unk8B8 = a3;
     bagView->unk8BA = 6;
     sub_0204C4D4(bagView->unk724[bagView->unk8B8], 0);
-    sub_0204C488(bagView->unk724[bagView->unk8B8], v4);
+    Oam_SetOamAnimIndex(bagView->unk724[bagView->unk8B8], v4);
     sub_0204C520(bagView->unk724[bagView->unk8B8], 1);
     bagView->unk8BC = a4;
     BagMenu_SetRunFunc(bagView, ovy142_219cb64);
@@ -398,7 +398,7 @@ void BagMenu_StartSortItem(BagView *bagView)
 {
     if (!sub_0204C560(bagView->unk744))
     {
-        sub_0204C488(bagView->unk744, 0);
+        Oam_SetOamAnimIndex(bagView->unk744, 0);
         sub_0204C520(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 151, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
@@ -632,7 +632,7 @@ void ovy142_219d0c8(BagView* bagView)
 {
     if (!sub_0204C560(bagView->unk740))
     {
-        sub_0204C488(bagView->unk740, 2);
+        Oam_SetOamAnimIndex(bagView->unk740, 2);
         sub_0204C520(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 147, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
@@ -1952,7 +1952,7 @@ void ovy142_219ebdc(BagView *a1)
             {
                 if (v9 != 8)
                 {
-                    sub_0204C488(a1->unk684[i], (u16)a1->unk664[i]);
+                    Oam_SetOamAnimIndex(a1->unk684[i], (u16)a1->unk664[i]);
                     sub_0204C124(a1->unk684[i], 1);
                 }
                 else
@@ -2121,9 +2121,9 @@ void ovy142_219f06c(BagView *a1, u32 a2)
     for (i = 0; i < 6; ++i)
     {
         if (i == a2)
-            sub_0204C488(a1->bagPocketOam[i], data_021A0FEC[i + 1][0]);
+            Oam_SetOamAnimIndex(a1->bagPocketOam[i], data_021A0FEC[i + 1][0]);
         else
-            sub_0204C488(a1->bagPocketOam[i], data_021A0FEC[i + 1][1]);
+            Oam_SetOamAnimIndex(a1->bagPocketOam[i], data_021A0FEC[i + 1][1]);
     }
 
 }
@@ -2715,13 +2715,13 @@ void ovy142_219fda8(BagView *a1, int a2)
             sub_02026FE4(a1->unk8A8, 1, 1, 0, 0, 0, 0, v9);
             G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, 0);
             ovy142_219ff60(a1);
-            sub_0204C488(a1->unk724[0], 4);
-            sub_0204C488(a1->unk724[1], 5);
-            sub_0204C488(a1->unk724[3], 0);
+            Oam_SetOamAnimIndex(a1->unk724[0], 4);
+            Oam_SetOamAnimIndex(a1->unk724[1], 5);
+            Oam_SetOamAnimIndex(a1->unk724[3], 0);
             if (v6 == 1)
-                sub_0204C488(a1->unk724[2], 7);
+                Oam_SetOamAnimIndex(a1->unk724[2], 7);
             else
-                sub_0204C488(a1->unk724[2], 6);
+                Oam_SetOamAnimIndex(a1->unk724[2], 6);
             ovy142_219ff40(a1, 1);
         }
         else
@@ -2737,15 +2737,15 @@ void ovy142_219fda8(BagView *a1, int a2)
             else
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, -8);
             
-            sub_0204C488(a1->unk744, 4);
-            sub_0204C488(a1->unk740, 2);
-            sub_0204C488(a1->unk724[0], 18);
-            sub_0204C488(a1->unk724[1], 19);
-            sub_0204C488(a1->unk724[3], 14);
+            Oam_SetOamAnimIndex(a1->unk744, 4);
+            Oam_SetOamAnimIndex(a1->unk740, 2);
+            Oam_SetOamAnimIndex(a1->unk724[0], 18);
+            Oam_SetOamAnimIndex(a1->unk724[1], 19);
+            Oam_SetOamAnimIndex(a1->unk724[3], 14);
             if (v6 == 1)
-                sub_0204C488(a1->unk724[2], 22);
+                Oam_SetOamAnimIndex(a1->unk724[2], 22);
             else
-                sub_0204C488(a1->unk724[2], 21);
+                Oam_SetOamAnimIndex(a1->unk724[2], 21);
         }
     }
 
@@ -2754,9 +2754,9 @@ void ovy142_219fda8(BagView *a1, int a2)
 void ovy142_219ff40(BagView *a1, int a2)
 {
     if (a2 == 1)
-        sub_0204C488(a1->unk724[4], 1);
+        Oam_SetOamAnimIndex(a1->unk724[4], 1);
     else
-        sub_0204C488(a1->unk724[4], 15);
+        Oam_SetOamAnimIndex(a1->unk724[4], 15);
 }
 
 void ovy142_219ff60(BagView *a1)
@@ -2766,18 +2766,18 @@ void ovy142_219ff60(BagView *a1)
         sub_0204C124(a1->unk744, 1);
         sub_0204C124(a1->unk740, 0);
         if (BagMenu_GetPocketItemAmount(a1) <= 1)
-            return sub_0204C488(a1->unk744, 4);
+            return Oam_SetOamAnimIndex(a1->unk744, 4);
         else
-            return sub_0204C488(a1->unk744, 0);
+            return Oam_SetOamAnimIndex(a1->unk744, 0);
     }
     else
     {
         sub_0204C124(a1->unk740, 1);
         sub_0204C124(a1->unk744, 0);
         if (ovy142_219d22c(a1) > 2)
-            return sub_0204C488(a1->unk740, 0);
+            return Oam_SetOamAnimIndex(a1->unk740, 0);
         else
-            return sub_0204C488(a1->unk740, 2);    
+            return Oam_SetOamAnimIndex(a1->unk740, 2);    
     }
     
 }
@@ -2794,25 +2794,25 @@ void ovy142_219ffe8(BagView *a1, int a2)
     if (a2 == 1)
     {
         ovy142_219ff60(a1);
-        sub_0204C488(a1->unk724[0], 4);
-        sub_0204C488(a1->unk724[1], 5);
-        sub_0204C488(a1->unk724[3], 0);
+        Oam_SetOamAnimIndex(a1->unk724[0], 4);
+        Oam_SetOamAnimIndex(a1->unk724[1], 5);
+        Oam_SetOamAnimIndex(a1->unk724[3], 0);
         if (v5 == 1)
-            return sub_0204C488(a1->unk724[2], 7);
+            return Oam_SetOamAnimIndex(a1->unk724[2], 7);
         else
-            return sub_0204C488(a1->unk724[2], 6);
+            return Oam_SetOamAnimIndex(a1->unk724[2], 6);
     }
     else
     {
-        sub_0204C488(a1->unk744, 4);
-        sub_0204C488(a1->unk740, 2);
-        sub_0204C488(a1->unk724[0], 18);
-        sub_0204C488(a1->unk724[1], 19);
-        sub_0204C488(a1->unk724[3], 14);
+        Oam_SetOamAnimIndex(a1->unk744, 4);
+        Oam_SetOamAnimIndex(a1->unk740, 2);
+        Oam_SetOamAnimIndex(a1->unk724[0], 18);
+        Oam_SetOamAnimIndex(a1->unk724[1], 19);
+        Oam_SetOamAnimIndex(a1->unk724[3], 14);
         if (v5 == 1)
-            return sub_0204C488(a1->unk724[2], 22);
+            return Oam_SetOamAnimIndex(a1->unk724[2], 22);
         else
-            return sub_0204C488(a1->unk724[2], 21);
+            return Oam_SetOamAnimIndex(a1->unk724[2], 21);
     }
 }
 

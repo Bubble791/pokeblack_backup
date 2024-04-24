@@ -1794,7 +1794,7 @@ ovy322_219dd20: ; 0x0219DD20
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1810,7 +1810,7 @@ _0219DD44:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1826,7 +1826,7 @@ _0219DD66:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1842,7 +1842,7 @@ _0219DD88:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520
@@ -1858,7 +1858,7 @@ _0219DDAA:
 	lsl r1, r3, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520

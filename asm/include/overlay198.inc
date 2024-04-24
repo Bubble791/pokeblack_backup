@@ -171,10 +171,10 @@
 .public sub_02153658
 .public sub_0204C4A0
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02042E84
 .public sub_020428C8
 .public MI_CpuCopy8
@@ -201,10 +201,10 @@
 .public sub_0201749C
 .public sub_0202ECE8
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0201749C
 .public sub_0202ECF4
 .public sub_0204C124
@@ -213,9 +213,9 @@
 .public BmpWin_FlushChar
 .public sub_0204C4A0
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02043E98
 .public MI_CpuCopy8
 .public GFL_HeapCreateChild

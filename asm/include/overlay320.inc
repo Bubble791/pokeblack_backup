@@ -131,7 +131,7 @@
 .public sub_0202B030
 .public GFL_BitmapFree
 .public sub_0202AEAC
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0204C560
 .public MIi_CpuCopy16
@@ -180,7 +180,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C2B0

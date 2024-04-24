@@ -2233,7 +2233,7 @@
 .public sub_0201CCF8
 .public Item_IsMail
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public GetDefaultUINarcIdx
 .public sub_0202D890
@@ -2274,7 +2274,7 @@
 .public sub_0201CDAC
 .public sub_02020758
 .public sub_021999C8
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02199A5C
 .public sub_0204C124
 .public sub_0204C108
@@ -2320,7 +2320,7 @@
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204C124

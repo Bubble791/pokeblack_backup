@@ -165,7 +165,7 @@
 .public sub_0204B758
 .public Oam_CreateSprite
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
@@ -397,11 +397,11 @@
 .public MyStatus_GetTrainerGender
 .public sub_02008BF4
 .public sub_0203FFC4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0203FFC4
 .public MyStatus_GetTrainerGender
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
 .public sub_0204B354
 .public GX_LoadOBJPltt

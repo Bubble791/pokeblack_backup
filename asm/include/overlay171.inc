@@ -181,7 +181,7 @@
 .public Item_IsMail
 .public sub_0204C4D4
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C108
 .public sub_0204BF98

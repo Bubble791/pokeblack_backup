@@ -9468,7 +9468,7 @@ _021F4766:
 	add r0, r5, r0
 	ldr r0, [r0, r7]
 	add r1, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #0xc
 	blt _021F4766

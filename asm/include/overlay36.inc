@@ -4874,7 +4874,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public GFL_SndSEPlay
 .public sub_0204C560
@@ -4968,11 +4968,11 @@
 .public sub_0204C124
 .public sub_0203D564
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_021A0544
-.public sub_0204C488
-.public sub_0204C488
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
 .public sub_02180490
 .public sub_0218799C
 .public BmpWin_CreateDynamic
@@ -4986,7 +4986,7 @@
 .public sub_0204C0A4
 .public sub_0204C53C
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C124
 .public BmpWin_Free
@@ -9309,7 +9309,7 @@
 .public sub_0201482C
 .public Oam_SetSpritePosData
 .public sub_02014828
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public sub_021B60EC
 .public sub_0204BFD4
@@ -9408,7 +9408,7 @@
 .public sub_0204C124
 .public sub_0204C108
 .public GFL_HeapFree
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02046E28
 .public sub_0202AEC4
 .public sub_0202B098
@@ -9456,13 +9456,13 @@
 .public Oam_SetSpritePosData
 .public Oam_SetSpritePosData
 .public sub_0202B230
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C438
 .public sub_0204C108
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0208D3BC
 .public sub_0208DD34
 .public sub_0208DA4C

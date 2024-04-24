@@ -6892,7 +6892,7 @@ ovy287_21f7ca0: ; 0x021F7CA0
 _021F7CB8:
 	add r0, r5, #0
 	add r1, r3, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy287_21f7af8
@@ -6996,7 +6996,7 @@ _021F7D80:
 	add r0, r5, #0
 	mov r1, #0
 _021F7D84:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy287_21f7af8
@@ -7848,7 +7848,7 @@ ovy287_21f8464: ; 0x021F8464
 	bl sub_0204C4D4
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021F8482:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy287_21f8464

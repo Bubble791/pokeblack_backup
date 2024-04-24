@@ -82,7 +82,7 @@
 .public sub_021A1B74
 .public sub_021A1550
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0219FDE4
 .public sub_0204898C
@@ -302,14 +302,14 @@
 .public G2x_SetBlendAlpha_
 .public sub_02021A3C
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public sub_0204C124
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
@@ -363,7 +363,7 @@
 .public sub_0219CAD8
 .public sub_02045B7C
 .public sub_021A1550
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4D4
 .public sub_0204C520
 .public sub_0219CC34
@@ -381,8 +381,8 @@
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_0204C4D4
-.public sub_0204C488
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
+.public Oam_SetOamAnimIndex
 
 .public GFL_TCBRemove
 .public GFL_BGSysSetVRAMBanks

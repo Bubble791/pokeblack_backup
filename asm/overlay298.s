@@ -3066,12 +3066,12 @@ _021A11D2:
 	ldr r0, [r2]
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _021A11E0:
 	ldrh r1, [r2, #0x26]
 	ldr r0, [r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy298_21a11bc
@@ -3096,11 +3096,11 @@ _021A11FC:
 	ldr r1, [r2, #8]
 	ldr r0, [r2]
 	lsl r1, r1, #0x10
-	ldr r3, _021A120C ; =sub_0204C488
+	ldr r3, _021A120C ; =Oam_SetOamAnimIndex
 	lsr r1, r1, #0x10
 	bx r3
 	nop
-_021A120C: .word sub_0204C488
+_021A120C: .word Oam_SetOamAnimIndex
 	thumb_func_end sub_021A11F0
 
 	thumb_func_start sub_021A1210
@@ -3131,7 +3131,7 @@ ovy298_21a1228: ; 0x021A1228
 	ldrh r1, [r4, #0x28]
 	ldr r0, [r4]
 	str r1, [r4, #8]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x30]
 	cmp r0, #0
 	beq _021A1240
@@ -6500,7 +6500,7 @@ _021A2B36:
 	add r1, r6, r1
 	ldr r0, [r1, #0x1c]
 	ldrh r1, [r1, #0x26]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _021A2B8C ; =0x0000054A
 	bl GFL_SndSEPlay
 	mov r0, #1
@@ -6668,7 +6668,7 @@ _021A2C7E:
 	add r1, r5, r1
 	ldr r0, [r1, #0x1c]
 	ldrh r1, [r1, #0x26]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _021A2CD4 ; =0x0000054A
 	bl GFL_SndSEPlay
 	mov r0, #0
@@ -7052,7 +7052,7 @@ _021A2FAE:
 	add r1, r5, r4
 	ldr r0, [r1, #0x1c]
 	ldrh r1, [r1, #0x24]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #0
 	str r0, [r6, r4]
 	mov r0, #6
@@ -7083,7 +7083,7 @@ _021A2FD4:
 	str r0, [r5, #0x2c]
 	ldrh r1, [r5, #0x24]
 	ldr r0, [r5, #0x1c]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -8921,7 +8921,7 @@ _021A3ECA:
 	add r0, #0xc8
 	ldrb r1, [r1, r4]
 	ldr r0, [r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, r6
 	add r0, #0xc8
 	ldr r0, [r0]
@@ -9121,7 +9121,7 @@ _021A402A:
 	add r0, r5, r4
 	add r0, #0xec
 	ldr r0, [r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, r4
 	add r0, #0xec
 	ldr r0, [r0]
@@ -9927,7 +9927,7 @@ _021A4680:
 	add r0, r5, r0
 	add r0, #0xc8
 	ldr r0, [r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r5, #0
 	add r4, #0xc8
 	lsl r6, r6, #2
@@ -9936,7 +9936,7 @@ _021A4680:
 	bl sub_0204C520
 	ldr r0, [r4, r6]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	mov r1, #8
 	add r0, #0xe8
@@ -10155,7 +10155,7 @@ ovy298_21a485c: ; 0x021A485C
 	add r0, #0xe4
 	ldr r0, [r0]
 	mov r1, #6
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, #0xe4
 	ldr r0, [r4]
 	mov r1, #1
@@ -12340,7 +12340,7 @@ _021A59AA:
 	add r0, #0xd0
 	ldr r0, [r0]
 	mov r1, #2
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
@@ -12350,7 +12350,7 @@ _021A59AA:
 	add r0, #0xcc
 	ldr r0, [r0]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, #0xcc
 	ldr r0, [r4]
 	add r1, r6, #0
@@ -12457,7 +12457,7 @@ ovy298_21a5a20: ; 0x021A5A20
 	add r0, #0xe0
 	ldr r0, [r0]
 	mov r1, #5
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0xe0
 	ldr r0, [r0]
@@ -12565,7 +12565,7 @@ _021A5B8C:
 	add r0, r5, r0
 	add r0, #0xc8
 	ldr r0, [r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp]
 	add r7, r5, #0
 	lsl r0, r0, #2
@@ -22078,7 +22078,7 @@ _021AA6D4:
 	sub r2, #0x8b
 	ldr r0, [r1, r0]
 	ldrb r1, [r1, r2]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, r5
 	sub r4, #0x84
 	ldr r0, [r0, r4]
@@ -22225,7 +22225,7 @@ _021AA814:
 	sub r0, #0x7c
 	ldrb r1, [r2, r1]
 	ldr r0, [r2, r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, [r4, r5]
 	mov r0, #0
 	add r2, r1, #0
@@ -22264,7 +22264,7 @@ _021AA848:
 	sub r6, #0xc
 	ldrb r1, [r1, r6]
 	ldr r0, [r7, r5]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021AA874:
 	ldr r0, _021AA890 ; =0x00000694
 	mov r1, #5
@@ -22365,7 +22365,7 @@ _021AA91A:
 	ldr r0, [r5, r4]
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	cmp r6, #0
 	beq _021AA966
 	sub r4, #0x9c
@@ -22387,7 +22387,7 @@ _021AA94C:
 	lsl r1, r7, #0x18
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x18
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 _021AA966:

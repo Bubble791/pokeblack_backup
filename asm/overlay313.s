@@ -627,7 +627,7 @@ _0219D330:
 	bl Oam_CreateSprite
 	str r0, [r6, #0x4c]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x4c]
 	mov r1, #0
 	bl sub_0204C520
@@ -800,7 +800,7 @@ _0219D4CA:
 	add r0, #0x94
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, r4
 	add r0, #0x94
 	ldr r0, [r0]

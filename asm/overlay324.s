@@ -3301,7 +3301,7 @@ ovy324_219e8b0: ; 0x0219E8B0
 	lsl r1, r2, #0x10
 	ldr r0, [r4, r5]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, _0219E8D0 ; =0x0219F6FA
 	ldr r0, [r4, r5]
 	ldrb r1, [r1, r5]

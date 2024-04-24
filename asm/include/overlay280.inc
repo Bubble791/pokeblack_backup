@@ -114,7 +114,7 @@
 .public sub_020486F4
 .public sub_020486B8
 .public sub_020485F8
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public Oam_SetSpritePosData
 .public sub_0204C124
@@ -141,13 +141,13 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_020486F4
 .public sub_020486F4
 .public sub_020486F4
@@ -355,9 +355,9 @@
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_020164E8
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02021034
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C378
 .public GFL_ArcSysCreateFileHandle
 .public sub_02046E28

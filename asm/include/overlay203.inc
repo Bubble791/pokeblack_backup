@@ -52,7 +52,7 @@
 .public sub_021A8170
 .public sub_0204C4B8
 .public sub_0204C4E0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
 .public GFL_HeapFree

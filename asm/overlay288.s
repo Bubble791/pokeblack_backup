@@ -5206,7 +5206,7 @@ ovy288_21f6c04: ; 0x021F6C04
 	lsl r1, r2, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520

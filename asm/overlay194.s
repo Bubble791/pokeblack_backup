@@ -26409,7 +26409,7 @@ _021C4C2A:
 _021C4C40:
 	lsl r1, r7, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x10]
 	mov r1, #1
 	bl sub_0204C124
@@ -26867,7 +26867,7 @@ _021C4FDE:
 	lsl r1, r5, #0x10
 	add r0, r7, #0
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r7, #0
 	mov r1, #1
 	b _021C503E
@@ -27651,12 +27651,12 @@ sub_021C55C8: ; 0x021C55C8
 	add r1, #0xf
 	lsl r1, r1, #0x10
 	ldr r0, [r2, r0]
-	ldr r3, _021C55E0 ; =sub_0204C488
+	ldr r3, _021C55E0 ; =Oam_SetOamAnimIndex
 	lsr r1, r1, #0x10
 	bx r3
 	nop
 _021C55DC: .word 0x000010BC
-_021C55E0: .word sub_0204C488
+_021C55E0: .word Oam_SetOamAnimIndex
 	thumb_func_end sub_021C55C8
 
 	thumb_func_start ovy194_21c55e4
@@ -27751,7 +27751,7 @@ _021C5646:
 _021C569C:
 	lsl r1, r7, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

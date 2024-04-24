@@ -1119,7 +1119,7 @@ _021A8112:
 	add r1, r1, #5
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	thumb_func_end ovy203_21a80fc
 _021A8120:

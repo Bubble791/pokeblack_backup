@@ -210,7 +210,7 @@
 .public sub_0204BF98
 .public GFL_BGSysSetBGEnabledB
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0200743C
 .public sub_0204B794

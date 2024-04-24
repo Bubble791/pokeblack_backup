@@ -1660,7 +1660,7 @@ _021BC464:
 	add r0, #0x9c
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, #0x9c
 	ldr r0, [r4]
 	add r1, r7, #0
@@ -3750,7 +3750,7 @@ _021BD4FE:
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #4
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	add r0, #0x9c
 	ldr r0, [r0]
@@ -3777,7 +3777,7 @@ _021BD538:
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #5
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp, #0x14]
 	mov r1, #0
 	str r1, [r5, r0]

@@ -5285,11 +5285,11 @@ sub_021A9F88: ; 0x021A9F88
 	lsl r0, r0, #4
 	ldr r0, [r1, r0]
 	lsl r1, r2, #0x10
-	ldr r3, _021A9F9C ; =sub_0204C488
+	ldr r3, _021A9F9C ; =Oam_SetOamAnimIndex
 	lsr r1, r1, #0x10
 	bx r3
 	nop
-_021A9F9C: .word sub_0204C488
+_021A9F9C: .word Oam_SetOamAnimIndex
 	thumb_func_end sub_021A9F88
 
 	thumb_func_start sub_021A9FA0

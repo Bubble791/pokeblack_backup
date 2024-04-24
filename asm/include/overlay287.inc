@@ -515,10 +515,10 @@
 .public sub_0202D800
 .public sub_0204C378
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public Item_IsMail
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_021FA40C
 .public sub_021FA40C
@@ -533,7 +533,7 @@
 .public sub_02021280
 .public sub_0204C4A0
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0203373C
 .public sub_021FA40C
 .public sub_0204C4E0

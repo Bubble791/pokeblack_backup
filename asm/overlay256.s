@@ -3074,7 +3074,7 @@ ovy256_21bcf20: ; 0x021BCF20
 	lsl r1, r6, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C520

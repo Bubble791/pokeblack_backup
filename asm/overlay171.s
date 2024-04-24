@@ -1585,7 +1585,7 @@ _021DE71C:
 	ldr r0, [r4, #0x6c]
 	mov r1, #0
 _021DE726:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021DE72A:
 	add r4, #0x84
 	ldr r0, [r4]

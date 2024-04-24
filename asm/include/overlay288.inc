@@ -253,7 +253,7 @@
 .public sub_021F6B34
 .public sub_021F6B34
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0204C560
 .public sub_0204566C

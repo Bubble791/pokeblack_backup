@@ -5453,7 +5453,7 @@ ovy300_21a2718: ; 0x021A2718
 	lsl r1, r6, #0x10
 	ldr r0, [r5, r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy300_21a2718

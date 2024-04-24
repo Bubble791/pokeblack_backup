@@ -889,7 +889,7 @@ ovy200_21b370c: ; 0x021B370C
 	lsl r1, r1, #0x18
 	ldr r0, [r0, #0x5c]
 	lsr r1, r1, #0x18
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldrh r0, [r6, r4]
 	mov r1, #1
 	mov r7, #1

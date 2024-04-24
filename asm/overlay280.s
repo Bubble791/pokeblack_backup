@@ -1457,7 +1457,7 @@ _021DA280:
 	add r6, r5, r0
 	ldr r0, [r6, #0x44]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x44]
 	mov r1, #1
 	bl sub_0204C520
@@ -1690,7 +1690,7 @@ _021DA45E:
 	bl sub_0204C4D4
 	ldr r0, [r6, #0x44]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x44]
 	add r1, r7, #0
 	bl sub_0204C124
@@ -1710,7 +1710,7 @@ _021DA488:
 	bl sub_0204C4D4
 	ldr r0, [r6, #0x44]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x44]
 	add r1, r7, #0
 	bl sub_0204C124
@@ -1741,7 +1741,7 @@ _021DA4CA:
 	ldr r0, [r0, #0x44]
 	mov r1, #0
 	mov r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	str r4, [r5, #0x28]
 _021DA4DA:
 	add r0, r5, #0
@@ -6294,7 +6294,7 @@ _021DC5DA:
 _021DC5DC:
 	ldr r0, [r4]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, [sp, #0x18]
 	mov r3, #0xff
 	lsl r1, r1, #0x18
@@ -6318,7 +6318,7 @@ _021DC60A:
 	ldr r0, [r4]
 	mov r1, #2
 _021DC60E:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	b _021DC614
 _021DC614:
 	ldr r0, [r4]

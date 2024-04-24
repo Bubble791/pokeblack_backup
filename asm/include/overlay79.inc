@@ -130,7 +130,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public GFL_BGSysSetBGEnabledB
 .public sub_0204C520

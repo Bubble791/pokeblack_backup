@@ -774,7 +774,7 @@
 .public Oam_SetSpritePosData
 .public sub_02043F2C
 .public sub_02043F2C
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_02043F2C
 .public sub_0208D60C
 .public sub_0204C138

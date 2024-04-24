@@ -478,7 +478,7 @@ void BagMenu_HandleSwitchModeKeyPad(BagView *bagView)
                 GFL_SndSEPlay(0x54c);
                 bagView->unk8B4 = 0;
                 BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 0);
-                sub_0204C488(bagView->unk6B4, 1);
+                Oam_SetOamAnimIndex(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
                 bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 0);
@@ -492,7 +492,7 @@ void BagMenu_HandleSwitchModeKeyPad(BagView *bagView)
             {
                 GFL_SndSEPlay(0x54C);
                 BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 0);
-                sub_0204C488(bagView->unk6B4, 1);
+                Oam_SetOamAnimIndex(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
                 bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 1);
@@ -503,7 +503,7 @@ void BagMenu_HandleSwitchModeKeyPad(BagView *bagView)
             if ((GCTX_HIDGetPressedKeys() & KEY_B) != 0)
             {
                 GFL_SndSEPlay(0x551);
-                sub_0204C488(bagView->unk6B4, 1);
+                Oam_SetOamAnimIndex(bagView->unk6B4, 1);
                 bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 1);
                 bagView->unk838 = 0xffff;
@@ -515,7 +515,7 @@ void BagMenu_HandleSwitchModeKeyPad(BagView *bagView)
             if (ovy142_2199e88() == 1)
             {
                 GFL_SndSEPlay(0x551);
-                sub_0204C488(bagView->unk6B4, 1);
+                Oam_SetOamAnimIndex(bagView->unk6B4, 1);
                 bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 0);
                 bagView->unk838 = 0xffff;
@@ -1170,7 +1170,7 @@ void BagMenu_HandleKeyPad(BagView *bagView)
                         {
                             MI_CpuFill8(bagView->m_itemTable, 0, 0x4D8);
                             BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 1);
-                            sub_0204C488(bagView->unk6B4, 2);
+                            Oam_SetOamAnimIndex(bagView->unk6B4, 2);
                             ovy142_219ffe8(bagView, 0);
                             bagView->isSwitchMode = TRUE;
                             BagMenu_KeyPadSwitchMode(bagView);
@@ -1855,7 +1855,7 @@ int ovy142_219b490(BagView *bagView)
             uVar22 = bagView->unk724[6];
             uVar8 = 10;
         }
-        sub_0204C488(uVar22, uVar8);
+        Oam_SetOamAnimIndex(uVar22, uVar8);
         ovy142_219fc14(bagView, bagView->selectAmount);
     }
     return bVar11;
@@ -2108,9 +2108,9 @@ void ovy142_219bca4(BagView *bagView)
 {
     GFL_SndSEPlay(0x54C);
     if (bagView->itemPocket != BAG_POCKET_FREE_SPACE)
-        sub_0204C488(bagView->unk744, 2);
+        Oam_SetOamAnimIndex(bagView->unk744, 2);
     else
-        sub_0204C488(bagView->unk740, 1);
+        Oam_SetOamAnimIndex(bagView->unk740, 1);
 
 }
 
@@ -2265,7 +2265,7 @@ void ovy142_219becc(BagView *bagView)
     {
         uVar2 = sub_0219BE88(bagView->itemPocket);
         sVar1 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar2);
-        sub_0204C488(bagView->unk724[2], (u16)(sVar1 + 6));
+        Oam_SetOamAnimIndex(bagView->unk724[2], (u16)(sVar1 + 6));
     }
 }
 

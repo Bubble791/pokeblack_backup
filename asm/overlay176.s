@@ -2359,7 +2359,7 @@ ovy176_219bfd0: ; 0x0219BFD0
 	mov r1, #0xc
 _0219BFEC:
 	ldr r0, [r5, #0x18]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	bl ovy176_219c0b8
 	ldr r1, [r5, #8]

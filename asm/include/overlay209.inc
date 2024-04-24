@@ -161,7 +161,7 @@
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DA0C
 .public GFL_SndSEPlay
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0204C560
 .public sub_020223B4

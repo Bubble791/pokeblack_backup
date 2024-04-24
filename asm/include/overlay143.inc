@@ -941,7 +941,7 @@
 .public sub_0204C108
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0219EF70
 .public sub_0219EF70

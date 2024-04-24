@@ -1748,7 +1748,7 @@ _021B3DA6:
 	add r5, #0x3c
 	ldr r0, [r4, r5]
 	mov r1, #0xc
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, pc}
 _021B3DCC:
 	add r0, r5, #0
@@ -1765,7 +1765,7 @@ _021B3DCC:
 	add r5, #0x3c
 	ldr r0, [r4, r5]
 	mov r1, #0x14
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021B3DF0:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -1904,7 +1904,7 @@ _021B3EF6:
 	add r4, #0x4c
 	ldr r0, [r5, r4]
 	mov r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021B3F22:
 	mov r4, #0xe5
 	lsl r4, r4, #2
@@ -1917,7 +1917,7 @@ _021B3F22:
 	bl sub_0204C520
 	ldr r0, [r5, r4]
 	mov r1, #0x13
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 _021B3F44:
@@ -1952,7 +1952,7 @@ _021B3F44:
 	add r4, #0x44
 	ldr r0, [r5, r4]
 	mov r1, #0xb
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021B3F98:
 	mov r4, #0xe7
 	lsl r4, r4, #2
@@ -1962,7 +1962,7 @@ _021B3F98:
 	bne _021B3FAE
 	ldr r0, [r5, r4]
 	mov r1, #0xf
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _021B3FAE:
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}

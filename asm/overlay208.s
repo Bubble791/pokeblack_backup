@@ -7637,7 +7637,7 @@ _0219D7E0:
 _0219D7F4:
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	bl sub_02043F2C
 	mov r1, #0
 	mov r2, #0xc8

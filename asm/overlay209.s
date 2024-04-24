@@ -1626,7 +1626,7 @@ _021BAEE2:
 	str r0, [r4, #4]
 	ldr r0, [r4, #0x58]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x58]
 	mov r1, #1
 	bl sub_0204C520

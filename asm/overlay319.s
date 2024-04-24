@@ -2135,7 +2135,7 @@ _0219DEBA:
 	lsl r1, r1, #0x10
 	ldr r0, [r0, #0x38]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	add r0, #0x40
 	ldrb r0, [r0]
@@ -2177,7 +2177,7 @@ _0219DF04:
 	add r0, r6, r0
 	ldrh r1, [r1, r2]
 	ldr r0, [r0, #0x38]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r0, #3
 	add sp, #0xc
 	str r0, [r6, #0x44]

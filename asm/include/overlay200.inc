@@ -140,7 +140,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C124
 .public GFL_HeapCreateChild

@@ -7537,7 +7537,7 @@ ovy186_21ab104: ; 0x021AB104
 	ldr r0, [r5, r4]
 	add r1, r2, #0
 	add r6, r3, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	bl sub_0204C56C
 	ldr r0, [r5, r4]
@@ -7565,7 +7565,7 @@ ovy186_21ab128: ; 0x021AB128
 	beq _021AB162
 	ldr r0, [r4, r5]
 	add r1, r6, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
 	add r1, sp, #0x18
@@ -9613,7 +9613,7 @@ _021AC1BC:
 	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x4c]
 	mov r1, #0xc
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 _021AC1E4:
 	mov r1, #0x75
@@ -9641,7 +9641,7 @@ _021AC1F6:
 	str r5, [r4, r6]
 	ldr r0, [r4, #0x54]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 _021AC21E:
 	mov r6, #0x73
@@ -9659,7 +9659,7 @@ _021AC21E:
 	str r5, [r4, r6]
 	ldr r0, [r4, #0x50]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	cmp r7, #0
 	beq _021AC24E
 	mov r0, #0
@@ -9678,7 +9678,7 @@ _021AC256:
 	bne _021AC282
 	ldr r0, [r4, #0x50]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r6]
 	mov r1, #2
 	cmp r0, #2
@@ -9718,7 +9718,7 @@ ovy186_21ac298: ; 0x021AC298
 	lsl r1, r1, #0x10
 	ldr r0, [r5, #0x58]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r6]
 	mov r1, #0x1a
 	ldr r0, [r0, #8]
@@ -9837,7 +9837,7 @@ _021AC372:
 	lsl r1, r1, #0x10
 	ldr r0, [r5, #0x58]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy186_21ac32c

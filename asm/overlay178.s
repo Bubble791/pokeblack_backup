@@ -821,7 +821,7 @@ _0219B3D4:
 	bl sub_0204C520
 	ldr r0, [r4, #0x28]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r6, r6, #1
 	cmp r6, #0x1e
 	blt _0219B3D4
@@ -1457,7 +1457,7 @@ ovy178_219b8c4: ; 0x0219B8C4
 	lsl r1, r1, #0x10
 	ldr r0, [r4]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0219B8F2:
 	ldr r1, [r4, #0xc]
 	add r0, r1, #1

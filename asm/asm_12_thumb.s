@@ -105335,7 +105335,7 @@ _02034406:
 	bl sub_0204C4A0
 	add r1, r0, #0
 	ldr r0, [r6, #8]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #8]
 	ldr r1, [r7, #0x20]
 	bl sub_0204C124
@@ -105694,7 +105694,7 @@ sub_0203469C: ; 0x0203469C
 	sub r1, r1, #1
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #0x10
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_0203469C

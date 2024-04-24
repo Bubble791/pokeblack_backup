@@ -1325,7 +1325,7 @@ ovy87_21eb3dc: ; 0x021EB3DC
 	bl sub_0204C4D4
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C520

@@ -2234,7 +2234,7 @@ _021A0AB4: .word 0x0000013D
 ovy308_21a0ab8: ; 0x021A0AB8
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	bl sub_0204C56C
 	pop {r4, pc}

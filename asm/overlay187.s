@@ -683,7 +683,7 @@ ovy187_21e912c: ; 0x021E912C
 	add r5, r0, #0
 	ldr r0, [r5, #0x10]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x10]
 	mov r1, #1
 	mov r4, #1
@@ -705,7 +705,7 @@ ovy187_21e9158: ; 0x021E9158
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x14]
 	mov r1, #1
 	bl sub_0204C520
@@ -734,10 +734,10 @@ ovy187_21e9184: ; 0x021E9184
 	bls _021E91C2
 	ldr r0, [r4, #0x18]
 	mov r1, #0xb
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x1c]
 	mov r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x18]
 	mov r1, #1
 	bl sub_0204C520
@@ -766,10 +766,10 @@ ovy187_21e91c8: ; 0x021E91C8
 	bls _021E9204
 	ldr r0, [r4, #0x1c]
 	mov r1, #0xa
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x18]
 	mov r1, #0x11
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x1c]
 	mov r1, #1
 	bl sub_0204C520
@@ -871,7 +871,7 @@ _021E928C:
 _021E9298:
 	mov r1, #3
 _021E929A:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x70]
 	ldr r1, [r0, #8]
 	ldr r0, [r4, #0x78]
@@ -884,7 +884,7 @@ _021E929A:
 _021E92B0:
 	mov r1, #2
 _021E92B2:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x44]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -930,7 +930,7 @@ _021E930E:
 	add r1, sp, #0xc
 	ldrb r1, [r1, #9]
 	ldr r0, [r4, #0xc]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, #0
 	bl GFL_ArcToolFree
 	ldr r0, [r4, #0x38]
@@ -2145,7 +2145,7 @@ _021E9D3C:
 	bl Oam_CreateSprite
 	str r0, [r5, #0xc]
 	ldrb r1, [r4, #0x19]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r7, #0
 	bl GFL_ArcToolFree
 	ldr r0, [r5, #0x38]
@@ -2181,7 +2181,7 @@ _021E9D84:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, #0x14]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, sp, #0x10
 	mov r1, #0
 	mov r2, #8
@@ -2203,7 +2203,7 @@ _021E9D84:
 	bl Oam_CreateSprite
 	str r0, [r5, #0x10]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x10]
 	mov r1, #1
 	bl sub_0204C124
@@ -2251,7 +2251,7 @@ _021E9E08:
 _021E9E4C:
 	mov r1, #3
 _021E9E4E:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x18]
 	mov r1, #1
 	bl sub_0204C124
@@ -2287,7 +2287,7 @@ _021E9E4E:
 _021E9E98:
 	mov r1, #2
 _021E9E9A:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x1c]
 	mov r1, #1
 	bl sub_0204C124

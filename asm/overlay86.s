@@ -865,7 +865,7 @@ _021EAEC8:
 	lsr r1, r1, #0x1d
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, [r5, #0x68]
 	ldr r0, [r5, #0x44]
 	lsl r1, r1, #2
@@ -874,7 +874,7 @@ _021EAEC8:
 	lsr r1, r1, #0x1d
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r1, [r5, #0x68]
 	ldr r0, [r5, #0x50]
 	lsl r1, r1, #2
@@ -883,7 +883,7 @@ _021EAEC8:
 	lsr r1, r1, #0x1d
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x68]
 	str r0, [r5, #0x6c]
 _021EAF2E:
@@ -898,7 +898,7 @@ _021EAF2E:
 	ldr r0, [r5, #0x5c]
 	mov r1, #0
 	mov r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x5c]
 	mov r1, #1
 	bl sub_0204C520
@@ -1410,7 +1410,7 @@ _021EB298:
 	bl sub_0204C53C
 	ldr r0, [r5, #0x24]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [sp, #0x18]
 	bl GFL_ArcToolFree
 	str r4, [r5, #0x28]
@@ -1503,7 +1503,7 @@ _021EB41A:
 	str r0, [r4, #0x28]
 	ldr r0, [r4, #0x24]
 	mov r1, #8
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, _021EB460 ; =0x00000556
 	bl GFL_SndSEPlay
 	add sp, #8
@@ -1517,7 +1517,7 @@ _021EB434:
 	str r0, [r4, #0x28]
 	ldr r0, [r4, #0x24]
 	mov r1, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add sp, #8
 	pop {r3, r4, r5, pc}
 _021EB44E:

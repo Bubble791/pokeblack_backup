@@ -392,7 +392,7 @@ extern void sub_02035198(int);
 extern int PrintSystem_IsTextPrintActiveEnd(int);
 extern int sub_0203DA2C(void);
 extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
-extern void sub_0204C488(int, u16);
+extern void Oam_SetOamAnimIndex(int, u16);
 extern int GCTX_HIDGetPressedKeys(void);
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 

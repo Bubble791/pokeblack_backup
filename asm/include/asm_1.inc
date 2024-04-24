@@ -4699,7 +4699,7 @@
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
 .public sub_0204C4A0
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_020484E8
 .public sub_020484EC
@@ -4720,7 +4720,7 @@
 .public Oam_SetSpritePosData
 .public sub_0204588C
 .public sub_0204C468
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C108
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
@@ -10408,7 +10408,7 @@
 .public sub_0204C45C
 .public sub_0204C468
 .public sub_0204C47C
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C4A0
 .public sub_0204C4A8
 .public sub_0204C4B8

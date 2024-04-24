@@ -1415,7 +1415,7 @@ _0217DB28:
 	lsl r1, r6, #0x10
 	ldr r0, [r7, #0x60]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	ldr r0, [r7, #0x60]
 	add r1, r4, #0
 	bl sub_0204C124
@@ -1457,7 +1457,7 @@ _0217DB72:
 	add r0, #0xd0
 	ldrh r1, [r7, #4]
 	ldr r0, [r0]
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	cmp r4, #8
 	blt _0217DBCE
 	add r0, r5, r6
@@ -1473,7 +1473,7 @@ _0217DBCE:
 	add r0, #0xd0
 	ldr r0, [r0]
 	mov r1, #6
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	mov r6, #0
 	mov r7, #1
 _0217DBE4:
@@ -1511,7 +1511,7 @@ _0217DBE4:
 	lsl r1, r6, #0x10
 	ldr r0, [r0]
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r5, r4
 	add r0, #0x98
 	ldr r0, [r0]
@@ -1550,7 +1550,7 @@ _0217DBE4:
 	add r0, #0x60
 	ldr r0, [r5, r0]
 	add r1, r7, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, #0x60
 	ldr r0, [r5, r4]
 	add r1, r7, #0
@@ -1905,7 +1905,7 @@ _0217DF4C:
 _0217DF58:
 	lsl r1, r1, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r5, r5, #1
 	cmp r5, #3
 	blt _0217DF3A
@@ -2070,7 +2070,7 @@ _0217E0B6:
 	ldrh r1, [r1, #4]
 	ldr r0, [r5, r0]
 _0217E0C2:
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r4, r4, #1
 	cmp r4, #8
 	blt _0217E09E
@@ -2085,11 +2085,11 @@ ovy70_217e0d4: ; 0x0217E0D4
 	cmp r1, #1
 	bne _0217E0E2
 	mov r1, #9
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 _0217E0E2:
 	mov r1, #1
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy70_217e0d4
@@ -4231,7 +4231,7 @@ _0217F144:
 	add r4, #0xf0
 	ldr r0, [r4]
 	mov r1, #0x15
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 _0217F164:
 	mov r0, #2
 	pop {r4, r5, r6, pc}

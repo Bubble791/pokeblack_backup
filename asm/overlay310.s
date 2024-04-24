@@ -18849,7 +18849,7 @@ _021A5C22:
 	bl Oam_SetSpritePosData
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C4D4
@@ -19620,7 +19620,7 @@ ovy310_21a61a4: ; 0x021A61A4
 	bl Oam_SetSpritePosData
 	ldrh r1, [r5, #0x10]
 	add r0, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #0
 	mov r7, #0
@@ -19642,7 +19642,7 @@ ovy310_21a61a4: ; 0x021A61A4
 	bl Oam_SetSpritePosData
 	ldrh r1, [r5, #0xe]
 	add r0, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	bl ovy310_21a62d4
 	add r1, r0, #0
@@ -19666,7 +19666,7 @@ ovy310_21a61a4: ; 0x021A61A4
 	bl Oam_SetSpritePosData
 	ldrh r1, [r5, #0xe]
 	add r0, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	bl ovy310_21a62bc
 	add r1, r0, #0
@@ -19690,7 +19690,7 @@ ovy310_21a61a4: ; 0x021A61A4
 	bl Oam_SetSpritePosData
 	ldrh r1, [r5, #0xe]
 	add r0, r4, #0
-	bl sub_0204C488
+	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	bl ovy310_21a62ac
 	add r1, r0, #0

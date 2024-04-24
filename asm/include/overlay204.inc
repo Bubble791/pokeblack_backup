@@ -171,7 +171,7 @@
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C520
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public sub_0202D974
 .public sub_0202DB70
@@ -413,7 +413,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_0204C124
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public sub_0204C520
 .public Oam_SetSpritePosData
@@ -641,15 +641,15 @@
 .public sub_020352B0
 .public sub_0203D554
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public sub_0204C520
 .public G2x_SetBlendBrightness_
 .public G2x_SetBlendBrightness_
 .public sub_0204C4D4
-.public sub_0204C488
+.public Oam_SetOamAnimIndex
 .public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
