@@ -7,8 +7,8 @@
 .public MI_CpuCopy8
 .public MI_CpuCopy8
 .public MI_CpuCopy8
-.public sub_020088A4
-.public sub_02008894
+.public GameData_SetLastSelectBagPocket
+.public GameData_SetLastPocketItem
 .public sub_0200887C
 .public sub_0203DA84
 .public sub_0203DA48
@@ -380,9 +380,9 @@
 .public MI_CpuFill8
 .public sub_0203DF64
 .public sub_020086C0
-.public sub_02008890
+.public GameData_GetLastBagPocket
 .public sub_0200887C
-.public sub_02008894
+.public GameData_SetLastPocketItem
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
@@ -405,8 +405,8 @@
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_TCBRemove
 .public sub_021A046C
-.public sub_020088A4
-.public sub_02008894
+.public GameData_SetLastSelectBagPocket
+.public GameData_SetLastPocketItem
 .public sub_0202E1DC
 .public GFL_TCBExMgrFree
 .public GFL_MsgDataFree

@@ -5524,9 +5524,9 @@
 .public sub_02008848
 .public sub_02008860
 .public sub_0200887C
-.public sub_02008890
-.public sub_02008894
-.public sub_020088A4
+.public GameData_GetLastBagPocket
+.public GameData_SetLastPocketItem
+.public GameData_SetLastSelectBagPocket
 .public sub_020088A8
 .public sub_020088BC
 .public sub_020088C0

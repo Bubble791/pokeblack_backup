@@ -8077,14 +8077,14 @@ sub_0219D488: ; 0x02073FB4
 .public ovy142_219a490
 .public BagMenu_MoveItemToFreeSpace
 .public ovy142_219b754
-.public ovy142_219c444
-.public ovy142_219c6b4
-.public ovy142_219c740
+.public BagMenu_Main
+.public BagMenu_Loop
+.public BagMenu_End
 .public ovy142_219d0c8
 .public ovy142_219efc0
 .public ovy142_21A03D4
 .public ovy142_21a03f0
-.public ovy142_219c444
+.public BagMenu_Main
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a354
@@ -8099,14 +8099,14 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a490
 	bl BagMenu_MoveItemToFreeSpace
 	bl ovy142_219b754
-	bl ovy142_219c444
-	bl ovy142_219c6b4
-	bl ovy142_219c740
+	bl BagMenu_Main
+	bl BagMenu_Loop
+	bl BagMenu_End
 	bl ovy142_219d0c8
 	bl ovy142_219efc0
 	bl ovy142_21A03D4
 	bl ovy142_21a03f0
-	bl ovy142_219c444
+	bl BagMenu_Main
 	bx lr
 	.align 2, 0
 	thumb_func_end sub_021C5C10

@@ -22,6 +22,17 @@ enum
     BAG_SORT_INDEX
 };
 
+enum
+{
+    BAG_POCKET_NORMAL,
+    BAG_POCKET_HEAL,
+    BAG_POCKET_TMHM,
+    BAG_POCKET_BERRY,
+    BAG_POCKET_IMPORT,
+    BAG_POCKET_FREE_SPACE,
+    BAG_POCKET_MAX
+};
+
 #define SORT_MORE_TO_LESS   0
 #define SORT_LESS_TO_MORE   1
 
@@ -99,7 +110,7 @@ struct BagViewWork
     /*0x4FC*/ FieldBagItemUse bagMenuFunc;
     /*0x500*/ int unk500;
     /*0x504*/ u8 unk504;
-    /*0x508*/ int unk508;
+    /*0x508*/ int pocketNameBmpWin;
     /*0x50C*/ u8 unk50C;
     /*0x510*/ int printSystem;
     /*0x514*/ int unk514;
@@ -175,9 +186,9 @@ struct BagViewWork
     /*0x770*/ u8 unk770;
     /*0x774*/ int unk774;
     /*0x778*/ u8 unk778;
-    /*0x77C*/ int unk77C;
+    /*0x77C*/ int moneyStringBmpWin;
     /*0x780*/ u8 unk780;
-    /*0x784*/ int unk784;
+    /*0x784*/ int MoneyBmpWin;
     /*0x788*/ u8 unk788;
     /*0x78C*/ int unk78C;
     /*0x790*/ u8 unk790;
@@ -269,8 +280,8 @@ typedef struct
     s16 y;
 } PosTable;
 
-extern void sub_020088A4(void*, u16);
-extern void sub_02008894(void*, u16, s16, s16);
+extern void GameData_SetLastSelectBagPocket(void*, u16);
+extern void GameData_SetLastPocketItem(void*, u16, s16, s16);
 extern void sub_0200887C(void*, u16, s16*, s16*);
 
 extern void ovy142_219ed3c(BagView*);
@@ -294,7 +305,7 @@ extern void sub_0204C488(int, u16);
 extern int GCTX_HIDGetPressedKeys(void);
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 
-void ovy142_2199ecc(BagView *m_bagView);
+void BagMenu_HandleSwitchModeKeyPad(BagView *m_bagView);
 extern void GFL_TCBRemove(int);
 extern void sub_021A046C(ITEM_UNKNOW_DATA*);
 extern void sub_0202E1DC(int);
@@ -317,7 +328,7 @@ extern void ovy142_219d0c8(BagView*);
 extern void ovy142_219c958(BagView*);
 extern void ovy142_219bca4(BagView*);
 extern int ovy142_219d22c(BagView*);
-extern void ovy142_219c8e8(BagView*);
+extern void BagMenu_KeyPadSwitchMode(BagView*);
 extern void ovy142_219cac0(BagView*, int, int, FieldBagItemUse);
 
 extern void *GFL_HeapAllocate(int, int, int, char*, int line);
@@ -465,6 +476,7 @@ extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
 void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_SetRunFunc(BagView *m_bagView, FieldBagItemUse fun);
+void BagMenu_PrintSeachItemEnd(BagView* bagView);
 
 void BagMenu_LoadBagBackGround(BagView *bagView, int a2);
 extern int MyStatus_GetTrainerGender(void*);

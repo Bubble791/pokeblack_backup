@@ -3906,14 +3906,14 @@ sub_0200887C: ; 0x0200887C
 	bx lr
 	thumb_func_end sub_0200887C
 
-	thumb_func_start sub_02008890
-sub_02008890: ; 0x02008890
+	thumb_func_start GameData_GetLastBagPocket
+GameData_GetLastBagPocket: ; 0x02008890
 	ldrh r0, [r0, #0x18]
 	bx lr
-	thumb_func_end sub_02008890
+	thumb_func_end GameData_GetLastBagPocket
 
-	thumb_func_start sub_02008894
-sub_02008894: ; 0x02008894
+	thumb_func_start GameData_SetLastPocketItem
+GameData_SetLastPocketItem: ; 0x02008894
 	push {r3, r4}
 	lsl r4, r1, #1
 	add r1, r0, r4
@@ -3922,13 +3922,13 @@ sub_02008894: ; 0x02008894
 	pop {r3, r4}
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02008894
+	thumb_func_end GameData_SetLastPocketItem
 
-	thumb_func_start sub_020088A4
-sub_020088A4: ; 0x020088A4
+	thumb_func_start GameData_SetLastSelectBagPocket
+GameData_SetLastSelectBagPocket: ; 0x020088A4
 	strh r1, [r0, #0x18]
 	bx lr
-	thumb_func_end sub_020088A4
+	thumb_func_end GameData_SetLastSelectBagPocket
 
 	thumb_func_start sub_020088A8
 sub_020088A8: ; 0x020088A8

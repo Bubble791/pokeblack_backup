@@ -24183,7 +24183,7 @@ _0215BD76:
 	lsl r1, r6, #0x10
 	ldr r0, [r4, #0xc]
 	lsr r1, r1, #0x10
-	bl sub_020088A4
+	bl GameData_SetLastSelectBagPocket
 	b _0215BDCC
 _0215BDA2:
 	ldr r1, [sp]

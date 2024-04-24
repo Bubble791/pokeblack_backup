@@ -2170,7 +2170,7 @@
 .public sub_02018A6C
 .public sub_02016AD8
 .public sub_02034AD0
-.public sub_020088A4
+.public GameData_SetLastSelectBagPocket
 .public sub_02034AD0
 .public sub_02016AD8
 .public sub_0201735C
