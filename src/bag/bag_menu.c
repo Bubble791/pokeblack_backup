@@ -91,10 +91,10 @@ int BagMenu_End(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
     GFL_StrBufFree(wk->stringBuff3);
     GFL_WordSetSystemFree(wk->wordSetSystem);
     ovy142_219f8c4(wk);
-    if (wk->unk500)
+    if (wk->unk500.winData)
     {
         sub_02044668(3, wk->unk88C, (wk->unk88C >> 16));
-        sub_02048210(wk->unk500);
+        sub_02048210(wk->unk500.winData);
     }
     sub_02045264(3, 1, 0);
     sub_02022DA8(wk->font);
@@ -612,7 +612,7 @@ void ovy142_219d120(BagView* bagView)
             v7++;
         }
     }
-    v9 = bagView->unk794;
+    v9 = bagView->unk794.winData;
     sub_020484B4(v9);
     GFL_BGSysLoadScr(sub_020484D4(v9));
     ovy142_219f284(bagView, (u8)v7);
@@ -983,14 +983,14 @@ extern void sub_0204C5C8(int, int);
 extern int sub_0202D7E8(u8);
 extern int GFL_FontGetBlockWidth(int, int, int);
 
-void ovy142_219d7a8(BagView *a1)
+void ovy142_219d7a8(BagView *bagView)
 {
     int v43[4];
     OAM_TEMP newtemp[3];
     int v28;          // r0
     int v30;          // r0
     int v31;          // r6
-    int v7;           // r5
+    int file;           // r5
     int v8;           // r0
     int v9;           // r0
     int v11;          // r5
@@ -1002,11 +1002,11 @@ void ovy142_219d7a8(BagView *a1)
 
     int v33;
     *(u16*)(0x4000050) = 0;
-    GFL_BGSysCreate(a1->heapId);
-    BmpWin_InitAllocator(a1->heapId);
+    GFL_BGSysCreate(bagView->heapId);
+    BmpWin_InitAllocator(bagView->heapId);
     sub_020232D0();
     GFL_BGSysSetVRAMBanks(unk_21A16A4);
-    Oam_CreateSystem(unk_21A103C, unk_21A16A4, a1->heapId);
+    Oam_CreateSystem(unk_21A103C, unk_21A16A4, bagView->heapId);
 
     v43 = data_21a1018;
     GFL_BGSysSetLCDConfig(v43);
@@ -1014,64 +1014,63 @@ void ovy142_219d7a8(BagView *a1)
     GFL_BGSysSetEnabledBGsB(0);
     ovy142_219d4c0();
     sub_020232D8();
-    a1->unk88C = LoadCursorImageEndOfHeap(3, 13, 0, a1->heapId);
+    bagView->unk88C = LoadCursorImageEndOfHeap(3, 13, 0, bagView->heapId);
     
-    v7 = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
-    GFL_G2DIOLoadArcNCLRDefault(v7, 8, 4, 0, 0, a1->heapId);
-    if (!MyStatus_GetTrainerGender(a1->unk8))
-        GFL_G2DIOLoadArcNCLR(v7, 8, 4, 32, 0, 32, a1->heapId);
-    v8 = GFL_BGSysLoadArcNCGRDynamic(v7, 6, 4, 0, 0, a1->heapId);
-    a1->unk81C = v8;
-    GFL_G2DIOLoadNSCRSync(v7, 7, 4, 0, (u16)v8, 0, 0, a1->heapId);
-    BagMenu_LoadBagBackGround(a1, v7);
-    v9 = GFL_BGSysLoadArcNCGRDynamic(v7, 17, 5, 0, 0, a1->heapId);
-    a1->unk820 = v9;
-    if (a1->itemPocket == BAG_POCKET_FREE_SPACE)
-        GFL_G2DIOLoadNSCRSync(v7, 24, 5, 0, (u16)v9, 0, 0, a1->heapId);
+    file = (int)GFL_ArcSysCreateFileHandle(87, bagView->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(file, 8, 4, 0, 0, bagView->heapId);
+    if (!MyStatus_GetTrainerGender(bagView->unk8))
+        GFL_G2DIOLoadArcNCLR(file, 8, 4, 32, 0, 32, bagView->heapId);
+    v8 = GFL_BGSysLoadArcNCGRDynamic(file, 6, 4, 0, 0, bagView->heapId);
+    bagView->unk81C = v8;
+    GFL_G2DIOLoadNSCRSync(file, 7, 4, 0, (u16)v8, 0, 0, bagView->heapId);
+    BagMenu_LoadBagBackGround(bagView, file);
+    v9 = GFL_BGSysLoadArcNCGRDynamic(file, 17, 5, 0, 0, bagView->heapId);
+    bagView->unk820 = v9;
+    if (bagView->itemPocket == BAG_POCKET_FREE_SPACE)
+        GFL_G2DIOLoadNSCRSync(file, 24, 5, 0, (u16)v9, 0, 0, bagView->heapId);
     else
-        GFL_G2DIOLoadNSCRSync(v7, 23, 5, 0, (u16)v9, 0, 0, a1->heapId);
-    BagMenu_LoadBagPocketSpriteResource(a1, v7);
+        GFL_G2DIOLoadNSCRSync(file, 23, 5, 0, (u16)v9, 0, 0, bagView->heapId);
+    BagMenu_LoadBagPocketSpriteResource(bagView, file);
     
-    a1->unk828 = GFL_BGSysLoadArcNCGRDynamic(v7, 33, 3, 0, 0, a1->heapId);
+    bagView->unk828 = GFL_BGSysLoadArcNCGRDynamic(file, 33, 3, 0, 0, bagView->heapId);
     
-    GFL_G2DIOLoadArcNCLRDefault(v7, 34, 0, 96, 32, a1->heapId);
-    GFL_ArcToolFree((void*)v7);
+    GFL_G2DIOLoadArcNCLRDefault(file, 34, 0, 96, 32, bagView->heapId);
+    GFL_ArcToolFree((void*)file);
 
-    GFL_BGSysLoadNCLRDefault(23, 5, 0, 384, 32, a1->heapId);
-    a1->spriteGroup = sub_0204BF1C(54, 0, a1->heapId);
+    GFL_BGSysLoadNCLRDefault(23, 5, 0, 384, 32, bagView->heapId);
+    bagView->spriteGroup = sub_0204BF1C(54, 0, bagView->heapId);
     GFL_BGSysSetBGEnabledB(16, 1);
     GFL_BGSysSetBGEnabledA(16, 1);
 
-    v11 = (int)GFL_ArcSysCreateFileHandle(82, a1->heapId);
-    GFL_G2DIOLoadArcNCLRDefault(v11, 27, 0, 256, 32, a1->heapId);
-    v12 = GFL_BGSysLoadArcNCGRDynamic(v11, 28, 1, 0, 0, a1->heapId);
-    a1->unk824 = v12;
-    GFL_G2DIOLoadNSCRSync(v11, 29, 1, 0, ((u16)v12 + (1 << 15)), 0, 0, a1->heapId);
+    v11 = (int)GFL_ArcSysCreateFileHandle(82, bagView->heapId);
+    GFL_G2DIOLoadArcNCLRDefault(v11, 27, 0, 256, 32, bagView->heapId);
+    v12 = GFL_BGSysLoadArcNCGRDynamic(v11, 28, 1, 0, 0, bagView->heapId);
+    bagView->unk824 = v12;
+    GFL_G2DIOLoadNSCRSync(v11, 29, 1, 0, ((u16)v12 + (1 << 15)), 0, 0, bagView->heapId);
     GFL_BGSysLoadScr(1);
-    a1->unk564 = Oam_LoadNCLRFile(v11, 19, 0, 352, 0, 3, a1->heapId);
-    a1->unk56C = Oam_LoadNCGRFile(v11, 20, 0, 0, a1->heapId);
-    a1->unk57C = Oam_LoadNCERFile(v11, 23, 26, a1->heapId);
-    a1->unk570 = Oam_LoadNCGRFile(v11, 175, 0, 0, a1->heapId);
-    a1->unk580 = Oam_LoadNCERFile(v11, 174, 173, a1->heapId);
+    bagView->unk564 = Oam_LoadNCLRFile(v11, 19, 0, 352, 0, 3, bagView->heapId);
+    bagView->unk56C = Oam_LoadNCGRFile(v11, 20, 0, 0, bagView->heapId);
+    bagView->unk57C = Oam_LoadNCERFile(v11, 23, 26, bagView->heapId);
+    bagView->unk570 = Oam_LoadNCGRFile(v11, 175, 0, 0, bagView->heapId);
+    bagView->unk580 = Oam_LoadNCERFile(v11, 174, 173, bagView->heapId);
     GFL_ArcToolFree((void*)v11);
-    ovy142_219ed8c(a1);
+    ovy142_219ed8c(bagView);
     v14 = GetDefaultUINarcIdx();
-    v33 = (int)GFL_ArcSysCreateFileHandle(v14, a1->heapId);
+    v33 = (int)GFL_ArcSysCreateFileHandle(v14, bagView->heapId);
     
-    a1->unk5F0 = Oam_LoadNCLRFile(v33, sub_0202D7E4(), 1, 128, 0, 3, a1->heapId);
-    a1->unk5F4 = Oam_LoadNCERFile(v33, sub_0202D7F8(2), sub_0202D7FC(2), a1->heapId);
+    bagView->unk5F0 = Oam_LoadNCLRFile(v33, sub_0202D7E4(), 1, 128, 0, 3, bagView->heapId);
+    bagView->unk5F4 = Oam_LoadNCERFile(v33, sub_0202D7F8(2), sub_0202D7FC(2), bagView->heapId);
     for (u32 i = 0; i < 3; i++)
     {
         v19 = sub_0202D80C((u8)i);
-        v20 = Oam_LoadNCGRFile(v33, v19, 0, 1, a1->heapId);
-        a1->unk5F8[i] = v20; 
+        v20 = Oam_LoadNCGRFile(v33, v19, 0, 1, bagView->heapId);
+        bagView->unk5F8[i] = v20; 
     }
 
     for (u32 i = 0; i < 0x11; i++)
     {
-        
         v23 = sub_0202D7F4((u8)i);
-        a1->unk5AC[i] = Oam_LoadNCGRFile(v33, v23, 0, 1, a1->heapId);
+        bagView->unk5AC[i] = Oam_LoadNCGRFile(v33, v23, 0, 1, bagView->heapId);
     }
     GFL_ArcToolFree((void*)v33);
     
@@ -1082,18 +1081,18 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[2].anim = 0;
     for (u32 i = 0; i < 3; i++)
     {
-        a1->unk6D4[i] = Oam_CreateSprite(
-            a1->spriteGroup,
-            a1->unk5F8[i],
-            a1->unk5F0,
-            a1->unk5F4,
+        bagView->unk6D4[i] = Oam_CreateSprite(
+            bagView->spriteGroup,
+            bagView->unk5F8[i],
+            bagView->unk5F0,
+            bagView->unk5F4,
             &newtemp[2],
             1,
-            a1->heapId);
+            bagView->heapId);
         v28 = sub_0202D800((u8)i);
-        sub_0204C378(a1->unk6D4[i], v28, 1);
-        sub_0204C124(a1->unk6D4[i], 0);
-        sub_0204C5C8(a1->unk6D4[i], 0);
+        sub_0204C378(bagView->unk6D4[i], v28, 1);
+        sub_0204C124(bagView->unk6D4[i], 0);
+        sub_0204C5C8(bagView->unk6D4[i], 0);
     }
     newtemp[1].x = 0x52;
     newtemp[1].y = 0xa5;
@@ -1102,23 +1101,23 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[1].anim = 0;
     for (u32 i = 0; i < 0x11; i++)
     {
-        a1->unk6E0[i] = Oam_CreateSprite(
-            a1->spriteGroup,
-            a1->unk5AC[i],
-            a1->unk5F0,
-            a1->unk5F4,
+        bagView->unk6E0[i] = Oam_CreateSprite(
+            bagView->spriteGroup,
+            bagView->unk5AC[i],
+            bagView->unk5F0,
+            bagView->unk5F4,
             &newtemp[1],
             1,
-            a1->heapId);
+            bagView->heapId);
         v30 = sub_0202D7E8((u8)i);
-        sub_0204C378(a1->unk6E0[i], v30, 1);
-        sub_0204C124(a1->unk6E0[i], 0);
-        sub_0204C5C8(a1->unk6E0[i], 0);
+        sub_0204C378(bagView->unk6E0[i], v30, 1);
+        sub_0204C124(bagView->unk6E0[i], 0);
+        sub_0204C5C8(bagView->unk6E0[i], 0);
     }
-    v31 = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
-    a1->unk590 = Oam_LoadNCLRFile(v31, 39, 0, 128, 0, 2, a1->heapId);
-    a1->unk594 = Oam_LoadNCGRFile(v31, 38, 0, 0, a1->heapId);
-    a1->unk59C = Oam_LoadNCERFile(v31, 37, 36, a1->heapId);
+    v31 = (int)GFL_ArcSysCreateFileHandle(87, bagView->heapId);
+    bagView->unk590 = Oam_LoadNCLRFile(v31, 39, 0, 128, 0, 2, bagView->heapId);
+    bagView->unk594 = Oam_LoadNCGRFile(v31, 38, 0, 0, bagView->heapId);
+    bagView->unk59C = Oam_LoadNCERFile(v31, 37, 36, bagView->heapId);
     GFL_ArcToolFree((void*)v31);
     
     newtemp[0].flag = 10;
@@ -1126,18 +1125,18 @@ void ovy142_219d7a8(BagView *a1)
     newtemp[0].x = 146;
     newtemp[0].y = 176;
     newtemp[0].anim = 0;
-    a1->unk744 = Oam_CreateSprite(
-        a1->spriteGroup,
-        a1->unk594,
-        a1->unk590,
-        a1->unk59C,
+    bagView->unk744 = Oam_CreateSprite(
+        bagView->spriteGroup,
+        bagView->unk594,
+        bagView->unk590,
+        bagView->unk59C,
         &newtemp[0],
         0,
-        a1->heapId);
-    sub_0204C520(a1->unk744, 1);
-    sub_0204C124(a1->unk744, 1);
-    sub_0204C5C8(a1->unk744, 0);
-    ovy142_219ff60(a1);
+        bagView->heapId);
+    sub_0204C520(bagView->unk744, 1);
+    sub_0204C124(bagView->unk744, 1);
+    sub_0204C5C8(bagView->unk744, 0);
+    ovy142_219ff60(bagView);
 }
 
 void ovy142_219dd14(BagView *a1)
@@ -1215,13 +1214,13 @@ void ovy142_219de0c(BagView *a1)
         return;
     }
     ovy142_219dda0(a1, 1);
-    v8 = BmpWin_GetBitmap(a1->unk76C);
+    v8 = BmpWin_GetBitmap(a1->unk76C.winData);
     BmpWin_BitmapFill(v8, 0);
-    v9 = BmpWin_GetBitmap(a1->unk754);
+    v9 = BmpWin_GetBitmap(a1->unk754.winData);
     BmpWin_BitmapFill(v9, 0);
-    v10 = BmpWin_GetBitmap(a1->unk75C);
+    v10 = BmpWin_GetBitmap(a1->unk75C.winData);
     BmpWin_BitmapFill(v10, 0);
-    v11 = BmpWin_GetBitmap(a1->unk764);
+    v11 = BmpWin_GetBitmap(a1->unk764.winData);
     BmpWin_BitmapFill(v11, 0);
     move = Item_GetTmHmMove(v6->itemid);
     v15 = BagSave_GetExistingItemPocket(a1->bagSave, v6->itemid);
@@ -1240,9 +1239,9 @@ void ovy142_219de0c(BagView *a1)
         }
         else
         {
-            BmpWin_FlushChar(a1->unk75C);
+            BmpWin_FlushChar(a1->unk75C.winData);
         }
-        sub_020484B4(a1->unk74C);
+        sub_020484B4(a1->unk74C.winData);
     }
     else
     {
@@ -1262,7 +1261,7 @@ void ovy142_219de0c(BagView *a1)
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
         BagMenu_DrawStringToBmpWin(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
         ovy142_219f4b0(a1, move);
-        BmpWin_FlushChar(a1->unk75C);
+        BmpWin_FlushChar(a1->unk75C.winData);
     }
     
     if (a1->itemPocket == BAG_POCKET_FREE_SPACE)
@@ -1276,8 +1275,8 @@ void ovy142_219de0c(BagView *a1)
     }
     else
     {
-        sub_020484B4(a1->unk76C);
-        BmpWin_FlushChar(a1->unk76C);
+        sub_020484B4(a1->unk76C.winData);
+        BmpWin_FlushChar(a1->unk76C.winData);
     }
     sub_020267C0(a1->stringBuff1, v6->itemid, a1->heapId);
     BagMenu_DrawStringToBmpWin(a1, &a1->unk764, a1->stringBuff1, 0, 4, 15808);
@@ -1291,7 +1290,7 @@ void ovy142_219de0c(BagView *a1)
 void ovy142_219e120(BagView *a1)
 {
     ovy142_219dda0(a1, 0);
-    sub_020484B4(a1->unk74C);
+    sub_020484B4(a1->unk74C.winData);
     for (u32 i = 0; i < 3; i++)
         sub_0204C124(a1->unk6D4[i], 0);
 
@@ -1313,14 +1312,14 @@ void ovy142_219e168(BagView *a1)
     int i;  // r4
     int v3; // r0
 
-    sub_02048210(a1->unk76C);
-    sub_02048210(a1->unk754);
-    sub_02048210(a1->unk764);
-    sub_02048210(a1->unk75C);
-    sub_02048210(a1->unk74C);
-    sub_02048210(a1->unk774);
-    sub_02048210(a1->unk78C);
-    sub_02048210(a1->unk794);
+    sub_02048210(a1->unk76C.winData);
+    sub_02048210(a1->unk754.winData);
+    sub_02048210(a1->unk764.winData);
+    sub_02048210(a1->unk75C.winData);
+    sub_02048210(a1->unk74C.winData);
+    sub_02048210(a1->unk774.winData);
+    sub_02048210(a1->unk78C.winData);
+    sub_02048210(a1->unk794.winData);
     sub_0204C108(a1->scrollBarOam);
     if (a1->unk6B0)
     {
@@ -1339,7 +1338,7 @@ void BagMenu_LoadBagBackDefaultText(BagView *a1)
 {
     int v2; // r0
 
-    v2 = BmpWin_GetBitmap(a1->unk794);
+    v2 = BmpWin_GetBitmap(a1->unk794.winData);
     BmpWin_BitmapFill(v2, 0);
     if (ovy142_219d22c(a1) > 2 && a1->itemPocket == BAG_POCKET_FREE_SPACE)
     {
@@ -1360,21 +1359,21 @@ void ovy142_219e284(BagView *a1)
 
     int result; // r0
 
-    a1->unk794 = BmpWin_CreateDynamic(3, 18, 9, 12, 3, 3, 1);
+    a1->unk794.winData = BmpWin_CreateDynamic(3, 18, 9, 12, 3, 3, 1);
     BagMenu_LoadBagBackDefaultText(a1);
-    sub_020484B4(a1->unk794);
-    a1->unk774 = BmpWin_CreateDynamic(3, 17, 13, 11, 2, 3, 1);
-    a1->unk78C = BmpWin_CreateDynamic(3, 17, 15, 11, 2, 3, 1);
-    a1->unk74C = BmpWin_CreateDynamic(6, 0, 19, 32, 5, 0, 1);
-    a1->unk754 = BmpWin_CreateDynamic(6, 7, 5, 18, 3, 0, 1);
-    a1->unk75C = BmpWin_CreateDynamic(6, 20, 8, 6, 3, 0, 1);
-    a1->unk764 = BmpWin_CreateDynamic(6, 2, 12, 29, 7, 0, 1);
-    a1->unk76C = BmpWin_CreateDynamic(6, 10, 1, 12, 2, 0, 1);
-    sub_0204826C(a1->unk76C);
-    sub_0204826C(a1->unk754);
-    sub_0204826C(a1->unk75C);
-    sub_0204826C(a1->unk764);
-    sub_0204826C(a1->unk74C);
+    sub_020484B4(a1->unk794.winData);
+    a1->unk774.winData = BmpWin_CreateDynamic(3, 17, 13, 11, 2, 3, 1);
+    a1->unk78C.winData = BmpWin_CreateDynamic(3, 17, 15, 11, 2, 3, 1);
+    a1->unk74C.winData = BmpWin_CreateDynamic(6, 0, 19, 32, 5, 0, 1);
+    a1->unk754.winData = BmpWin_CreateDynamic(6, 7, 5, 18, 3, 0, 1);
+    a1->unk75C.winData = BmpWin_CreateDynamic(6, 20, 8, 6, 3, 0, 1);
+    a1->unk764.winData = BmpWin_CreateDynamic(6, 2, 12, 29, 7, 0, 1);
+    a1->unk76C.winData = BmpWin_CreateDynamic(6, 10, 1, 12, 2, 0, 1);
+    sub_0204826C(a1->unk76C.winData);
+    sub_0204826C(a1->unk754.winData);
+    sub_0204826C(a1->unk75C.winData);
+    sub_0204826C(a1->unk764.winData);
+    sub_0204826C(a1->unk74C.winData);
     v2 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
     a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
@@ -2103,7 +2102,7 @@ extern void sub_02024EEC(int, int);
 
 void sub_0219F0AC(BagView *bagView)
 {
-    sub_02024EEC(bagView->unk500, 1);
+    sub_02024EEC(bagView->unk500.winData, 1);
 }
 
 typedef struct
@@ -2262,7 +2261,7 @@ void ovy142_219f4b0(BagView *a1, int a2)
     int v9;  // [sp+8h] [bp-20h]
     int v10; // [sp+10h] [bp-18h]
 
-    int *bgs;
+    BagBmpWinData *bgs;
     
     bgs = &a1->unk74C;
 
@@ -2273,9 +2272,9 @@ void ovy142_219f4b0(BagView *a1, int a2)
     v12 = sub_020216B0(a2, 0);
     v10 = sub_02021280(a2, 3);
     v9 = sub_02021280(a2, 4);
-    v6 = BmpWin_GetBitmap(a1->unk74C);
+    v6 = BmpWin_GetBitmap(a1->unk74C.winData);
     sub_020470F8(v6, 176, 0, 32, 40, 0);
-    v7 = BmpWin_GetBitmap(a1->unk74C);
+    v7 = BmpWin_GetBitmap(a1->unk74C.winData);
     sub_020470F8(v7, 232, 0, 24, 24, 0);
     if (v10 <= 1)
     {
@@ -2319,16 +2318,16 @@ void BagMenu_PrintBagMessage(BagView *a1, int a2)
     int v4; // r0
     int v6; // r0
 
-    if (!a1->unk500)
-        a1->unk500 = BmpWin_CreateDynamic(3, 1, 1, 0x1e, 4, 12, 1);
-    v4 = BmpWin_GetBitmap(a1->unk500);
+    if (!a1->unk500.winData)
+        a1->unk500.winData = BmpWin_CreateDynamic(3, 1, 1, 0x1e, 4, 12, 1);
+    v4 = BmpWin_GetBitmap(a1->unk500.winData);
     BmpWin_BitmapFill(v4, 15);
-    BmpWin_FlushChar(a1->unk500);
+    BmpWin_FlushChar(a1->unk500.winData);
     if (a2 == 1)
     {
         v6 = sub_02017BCC();
         a1->unk514 = sub_02022268(
-            a1->unk500,
+            a1->unk500.winData,
             0,
             0,
             a1->stringBuff2,
@@ -2343,7 +2342,7 @@ void BagMenu_PrintBagMessage(BagView *a1, int a2)
     {
         BagMenu_DrawStringToBmpWin(a1, &a1->unk500, a1->stringBuff2, 0, 0, 0x44Fu);
     }
-    sub_02024E80(a1->unk500, 1, a1->unk88C, 13);
+    sub_02024E80(a1->unk500.winData, 1, a1->unk88C, 13);
     ovy142_21a0134(&a1->unk500);
 }
 
@@ -2367,7 +2366,7 @@ int ovy142_219f7a4(BagView *a1)
     if (a1->unk514)
     {
         v2 = sub_020223B4();
-        v3 = sub_0202E8D8(a1->unk51C, a1->unk514, a1->unk500);
+        v3 = sub_0202E8D8(a1->unk51C, a1->unk514, a1->unk500.winData);
         if (v2)
         {
             if (v2 != 1)
@@ -2407,18 +2406,18 @@ int ovy142_219f7a4(BagView *a1)
 
 void ovy142_219f84c(BagView *a1)
 {
-    a1->pocketNameBmpWin = BmpWin_CreateDynamic(2, 3, 21, 12, 3, 12, 1);
-    a1->moneyStringBmpWin = BmpWin_CreateDynamic(2, 1, 21, 8, 3, 12, 1);
-    a1->MoneyBmpWin = BmpWin_CreateDynamic(2, 9, 21, 9, 3, 12, 1);
+    a1->pocketNameBmpWin.winData = BmpWin_CreateDynamic(2, 3, 21, 12, 3, 12, 1);
+    a1->moneyStringBmpWin.winData = BmpWin_CreateDynamic(2, 1, 21, 8, 3, 12, 1);
+    a1->MoneyBmpWin.winData = BmpWin_CreateDynamic(2, 9, 21, 9, 3, 12, 1);
     ovy142_219f8ec(a1, a1->itemPocket);
     ovy142_219f06c(a1, a1->itemPocket);
 }
 
 void ovy142_219f8c4(BagView *a1)
 {
-    sub_02048210(a1->pocketNameBmpWin);
-    sub_02048210(a1->MoneyBmpWin);
-    sub_02048210(a1->moneyStringBmpWin);
+    sub_02048210(a1->pocketNameBmpWin.winData);
+    sub_02048210(a1->MoneyBmpWin.winData);
+    sub_02048210(a1->moneyStringBmpWin.winData);
 }
 
 void ovy142_219f8ec(BagView *a1, u32 a2)
@@ -2426,7 +2425,7 @@ void ovy142_219f8ec(BagView *a1, u32 a2)
     int v4; // r0
     u32 v5; // r0
 
-    v4 = BmpWin_GetBitmap(a1->pocketNameBmpWin);
+    v4 = BmpWin_GetBitmap(a1->pocketNameBmpWin.winData);
     BmpWin_BitmapFill(v4, 0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
     LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, a2);
@@ -2447,9 +2446,9 @@ void BagMenu_PrintMoneyString(BagView *a1)
     int playSave; // r0
     int money; // r0
 
-    v2 = BmpWin_GetBitmap(a1->MoneyBmpWin);
+    v2 = BmpWin_GetBitmap(a1->MoneyBmpWin.winData);
     BmpWin_BitmapFill(v2, 0);
-    v3 = BmpWin_GetBitmap(a1->moneyStringBmpWin);
+    v3 = BmpWin_GetBitmap(a1->moneyStringBmpWin.winData);
     BmpWin_BitmapFill(v3, 0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 81, a1->stringBuff1);
     BagMenu_DrawStringToBmpWin(a1, &a1->moneyStringBmpWin, a1->stringBuff1, 0, 4, 0x3C40);
@@ -2468,7 +2467,7 @@ void ovy142_219fa3c(BagView *a1)
 {
     sub_0204C124(a1->unk724[0], 0);
     sub_0204C124(a1->unk724[1], 0);
-    sub_020484B4(a1->pocketNameBmpWin);
+    sub_020484B4(a1->pocketNameBmpWin.winData);
     BagMenu_PrintMoneyString(a1);
 }
 
@@ -2478,8 +2477,8 @@ void ovy142_219fa6c(BagView *a1)
 {
     sub_0204C124(a1->unk724[0], 1);
     sub_0204C124(a1->unk724[1], 1);
-    sub_020484B4(a1->MoneyBmpWin);
-    sub_020484B4(a1->moneyStringBmpWin);
+    sub_020484B4(a1->MoneyBmpWin.winData);
+    sub_020484B4(a1->moneyStringBmpWin.winData);
     ovy142_219f8ec(a1, a1->itemPocket);
 }
 
@@ -2604,7 +2603,7 @@ _0219FBFC:
 
 void ovy142_219fc14(BagView *a1, int a2)
 {
-    BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk774), 5);
+    BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk774.winData), 5);
     GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
     StringSetNumber(a1->wordSetSystem, 0, a2, 3, 0, 1);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
@@ -2613,9 +2612,9 @@ void ovy142_219fc14(BagView *a1, int a2)
 
     if (a1->unk80C == 2)
     {
-        int *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
+        BagBmpWinData *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
         int v7 = BagMenu_GetItemPrice(a1->selectItem, a1->selectAmount, a1->heapId);
-        BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk78C), 5);
+        BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk78C.winData), 5);
         GFL_MsgDataLoadStrbuf(a1->msgData, 84, a1->stringBuff1);
         StringSetNumber(a1->wordSetSystem, 0, v7, 7, 0, 1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
@@ -2809,23 +2808,23 @@ int BagMenu_PokcetIconMoveFadeIn(BagView *a1)
 
 extern void sub_02021C7C(int, int, s16, s16, int, int, u16);
 
-void BagMenu_DrawStringToBmpWin(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
+void BagMenu_DrawStringToBmpWin(BagView *a1, BagBmpWinData *a2, int a3, u16 a4, s16 a5, u16 a6)
 {
     int v12;
     int v4 = a4;
-    WinDowData *win = (WinDowData *)a2;
+
     v12 = a1->printSystem;
 
-    sub_02021C7C(v12, BmpWin_GetBitmap(win->bit), (s16)v4, a5, a3, a1->font, a6);
-    win->flag = 1;
+    sub_02021C7C(v12, BmpWin_GetBitmap(a2->winData), (s16)v4, a5, a3, a1->font, a6);
+    a2->flag = 1;
 }
 
-void ovy142_21a0134(int *a1)
+void ovy142_21a0134(BagBmpWinData *a1)
 {
     int v2; // r0
-    WinDowData *win = (WinDowData *)a1;
-    sub_0204826C(win->bit);
-    v2 = sub_020484D4(win->bit);
+
+    sub_0204826C(a1->winData);
+    v2 = sub_020484D4(a1->winData);
     sub_02045B7C(v2);
 }
 
@@ -2862,125 +2861,125 @@ void ovy142_21a014c(BagView *a1)
 
     sub_02021A3C(a1->printSystem);
     v2 = a1->printSystem;
-    if (a1->unk750)
+    if (a1->unk74C.flag)
     {
-        v3 = BmpWin_GetBitmap(a1->unk74C);
+        v3 = BmpWin_GetBitmap(a1->unk74C.winData);
         if (!sub_02021C1C(v2, v3))
         {
-            BmpWin_FlushChar(a1->unk74C);
-            a1->unk750 = 0;
+            BmpWin_FlushChar(a1->unk74C.winData);
+            a1->unk74C.flag = 0;
         }
     }
     v4 = a1->printSystem;
-    if (a1->unk770)
+    if (a1->unk76C.flag)
     {
-        v5 = BmpWin_GetBitmap(a1->unk76C);
+        v5 = BmpWin_GetBitmap(a1->unk76C.winData);
         if (!sub_02021C1C(v4, v5))
         {
-            BmpWin_FlushChar(a1->unk76C);
-            a1->unk770 = 0;
+            BmpWin_FlushChar(a1->unk76C.winData);
+            a1->unk76C.flag = 0;
         }
     }
     v6 = a1->printSystem;
-    if (a1->unk758)
+    if (a1->unk754.flag)
     {
-        v7 = BmpWin_GetBitmap(a1->unk754);
+        v7 = BmpWin_GetBitmap(a1->unk754.winData);
         if (!sub_02021C1C(v6, v7))
         {
-            BmpWin_FlushChar(a1->unk754);
-            a1->unk758 = 0;
+            BmpWin_FlushChar(a1->unk754.winData);
+            a1->unk754.flag = 0;
         }
     }
     v8 = a1->printSystem;
-    if (a1->unk760)
+    if (a1->unk75C.flag)
     {
-        v9 = BmpWin_GetBitmap(a1->unk75C);
+        v9 = BmpWin_GetBitmap(a1->unk75C.winData);
         if (!sub_02021C1C(v8, v9))
         {
-            BmpWin_FlushChar(a1->unk75C);
-            a1->unk760 = 0;
+            BmpWin_FlushChar(a1->unk75C.winData);
+            a1->unk75C.flag = 0;
         }
     }
     v10 = a1->printSystem;
-    if (a1->unk768)
+    if (a1->unk764.flag)
     {
-        v11 = BmpWin_GetBitmap(a1->unk764);
+        v11 = BmpWin_GetBitmap(a1->unk764.winData);
         if (!sub_02021C1C(v10, v11))
         {
-            BmpWin_FlushChar(a1->unk764);
-            a1->unk768 = 0;
+            BmpWin_FlushChar(a1->unk764.winData);
+            a1->unk764.flag = 0;
         }
     }
     v12 = a1->printSystem;
-    if (a1->unk778)
+    if (a1->unk774.flag)
     {
-        v13 = BmpWin_GetBitmap(a1->unk774);
+        v13 = BmpWin_GetBitmap(a1->unk774.winData);
         if (!sub_02021C1C(v12, v13))
         {
-            BmpWin_FlushChar(a1->unk774);
-            a1->unk778 = 0;
+            BmpWin_FlushChar(a1->unk774.winData);
+            a1->unk774.flag = 0;
         }
     }
     v14 = a1->printSystem;
-    if (a1->unk780)
+    if (a1->moneyStringBmpWin.flag)
     {
-        v15 = BmpWin_GetBitmap(a1->moneyStringBmpWin);
+        v15 = BmpWin_GetBitmap(a1->moneyStringBmpWin.winData);
         if (!sub_02021C1C(v14, v15))
         {
-            BmpWin_FlushChar(a1->moneyStringBmpWin);
-            a1->unk780 = 0;
+            BmpWin_FlushChar(a1->moneyStringBmpWin.winData);
+            a1->moneyStringBmpWin.flag = 0;
         }
     }
     v16 = a1->printSystem;
-    if (a1->unk788)
+    if (a1->MoneyBmpWin.flag)
     {
-        v17 = BmpWin_GetBitmap(a1->MoneyBmpWin);
+        v17 = BmpWin_GetBitmap(a1->MoneyBmpWin.winData);
         if (!sub_02021C1C(v16, v17))
         {
-            BmpWin_FlushChar(a1->MoneyBmpWin);
-            a1->unk788 = 0;
+            BmpWin_FlushChar(a1->MoneyBmpWin.winData);
+            a1->MoneyBmpWin.flag = 0;
         }
     }
     v18 = a1->printSystem;
-    if (a1->unk790)
+    if (a1->unk78C.flag)
     {
-        v19 = BmpWin_GetBitmap(a1->unk78C);
+        v19 = BmpWin_GetBitmap(a1->unk78C.winData);
         if (!sub_02021C1C(v18, v19))
         {
-            BmpWin_FlushChar(a1->unk78C);
-            a1->unk790 = 0;
+            BmpWin_FlushChar(a1->unk78C.winData);
+            a1->unk78C.flag = 0;
         }
     }
     v20 = a1->printSystem;
-    if (a1->unk798)
+    if (a1->unk794.flag)
     {
-        v21 = BmpWin_GetBitmap(a1->unk794);
+        v21 = BmpWin_GetBitmap(a1->unk794.winData);
         if (!sub_02021C1C(v20, v21))
         {
-            BmpWin_FlushChar(a1->unk794);
-            a1->unk798 = 0;
+            BmpWin_FlushChar(a1->unk794.winData);
+            a1->unk794.flag = 0;
         }
     }
     v22 = a1->printSystem;
-    if (a1->unk504)
+    if (a1->unk500.flag)
     {
-        v23 = BmpWin_GetBitmap(a1->unk500);
+        v23 = BmpWin_GetBitmap(a1->unk500.winData);
         if (!sub_02021C1C(v22, v23))
         {
-            BmpWin_FlushChar(a1->unk500);
-            a1->unk504 = 0;
+            BmpWin_FlushChar(a1->unk500.winData);
+            a1->unk500.flag = 0;
         }
     }
 
     v25 = a1->printSystem;
-    if (a1->unk50C)
+    if (a1->pocketNameBmpWin.flag)
     {
-        v26 = BmpWin_GetBitmap(a1->pocketNameBmpWin);
+        v26 = BmpWin_GetBitmap(a1->pocketNameBmpWin.winData);
         result = sub_02021C1C(v25, v26);
         if (!result)
         {
-            BmpWin_FlushChar(a1->pocketNameBmpWin);
-            a1->unk50C = 0;
+            BmpWin_FlushChar(a1->pocketNameBmpWin.winData);
+            a1->pocketNameBmpWin.flag = 0;
         }
     }
 }
@@ -3060,12 +3059,9 @@ extern ItemTable* sub_02008798(u32, u16, u16);
 
 ItemTable *ovy142_21a0470(ITEM_UNKNOW_DATA *a1, u16 a2, u16 a3)
 {
-    int v5;                // r4
-
-    int v8;                // r12
-
-
-    ItemTable *v12; // [sp+4h] [bp-1Ch]
+    int v5;
+    int v8;
+    ItemTable *v12;
 
     v5 = 0;
     if (a2 != 5)
@@ -3202,7 +3198,8 @@ int ovy142_21a0610(ITEM_UNKNOW_DATA *a1, int a2)
     v2 = 0;
     for (i = 0; i <= 638; ++i)
     {
-        if (a2 == a1->unkC[i].unk0.ItemData.num && a1->unkC[i].unk0.ItemData.itemid)
+        if (a2 == a1->unkC[i].unk0.ItemData.num 
+            && a1->unkC[i].unk0.ItemData.itemid)
             ++v2;
     }
     return v2;

@@ -52,21 +52,12 @@ enum
 #define SORT_MORE_TO_LESS   0
 #define SORT_LESS_TO_MORE   1
 
-extern void sub_0203DEB4(int, int);
-extern int Item_GetItemParam(u16, int, u16);
-extern void LoadItemNameToStrbuf(int , int, int);
-extern void LoadBagPocketNameToStrbuf(int , int, int);
-extern int sub_0203DA84(u32*, u32*);
-extern int sub_0203DA48(void);
-extern int sub_020355B8(int, int, int, int, int);
-extern void GFL_SndSEPlay(int);
-extern int sub_0203DAC8(u32*, u32*);
 
 typedef struct
 {
-    int bit;
+    int winData;
     u8 flag;
-} WinDowData;
+} BagBmpWinData;
 
 typedef struct
 {
@@ -124,10 +115,8 @@ struct BagViewWork
     /*0x020*/int unk20;
     /*0x024*/ ItemTable m_itemTable[NORMAL_ITEM_MAX];
     /*0x4FC*/ FieldBagItemUse bagMenuFunc;
-    /*0x500*/ int unk500;
-    /*0x504*/ u8 unk504;
-    /*0x508*/ int pocketNameBmpWin;
-    /*0x50C*/ u8 unk50C;
+    /*0x500*/ BagBmpWinData unk500;
+    /*0x508*/ BagBmpWinData pocketNameBmpWin;
     /*0x510*/ int printSystem;
     /*0x514*/ int unk514;
     /*0x518*/ int unk518;
@@ -190,26 +179,16 @@ struct BagViewWork
     /*0x740*/ int unk740;
     /*0x744*/ int unk744;
     /*0x748*/ int unk748;
-    /*0x74C*/ int unk74C;
-    /*0x750*/ u8 unk750;
-    /*0x754*/ int unk754;
-    /*0x758*/ u8 unk758;
-    /*0x75C*/ int unk75C;
-    /*0x760*/ u8 unk760;
-    /*0x764*/ int unk764;
-    /*0x768*/ u8 unk768;
-    /*0x76C*/ int unk76C;
-    /*0x770*/ u8 unk770;
-    /*0x774*/ int unk774;
-    /*0x778*/ u8 unk778;
-    /*0x77C*/ int moneyStringBmpWin;
-    /*0x780*/ u8 unk780;
-    /*0x784*/ int MoneyBmpWin;
-    /*0x788*/ u8 unk788;
-    /*0x78C*/ int unk78C;
-    /*0x790*/ u8 unk790;
-    /*0x794*/ int unk794;
-    /*0x798*/ u8 unk798;
+    /*0x74C*/ BagBmpWinData unk74C;
+    /*0x754*/ BagBmpWinData unk754;
+    /*0x75C*/ BagBmpWinData unk75C;
+    /*0x764*/ BagBmpWinData unk764;
+    /*0x76C*/ BagBmpWinData unk76C;
+    /*0x774*/ BagBmpWinData unk774;
+    /*0x77C*/ BagBmpWinData moneyStringBmpWin;
+    /*0x784*/ BagBmpWinData MoneyBmpWin;
+    /*0x78C*/ BagBmpWinData unk78C;
+    /*0x794*/ BagBmpWinData unk794;
     /*0x79C*/ int unk79C;
     /*0x7A0*/ ITEM_TASK unk7A0[8];
     /*0x800*/ int taskMenuData;
@@ -372,7 +351,7 @@ extern void ovy142_219c014(BagView*);
 extern void ovy142_219f76c(BagView*, int);
 
 void ovy142_219a724(BagView *m_bagView);
-extern int ovy142_219f7a4(BagView*);
+int ovy142_219f7a4(BagView*);
 extern void sub_02045738(int);
 extern void sub_0204C520(int, int);
 extern void ovy142_219fda8(BagView*, int);
@@ -440,7 +419,7 @@ void BagMenu_LoadBagBackDefaultText(BagView *a1);
 
 extern int BmpWin_GetBitmap(int);
 extern int BmpWin_BitmapFill(int, int);
-extern void BagMenu_DrawStringToBmpWin(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6);
+extern void BagMenu_DrawStringToBmpWin(BagView *a1, BagBmpWinData *a2, int a3, u16 a4, s16 a5, u16 a6);
 extern int ovy142_21a03ac(u8);
 extern void BmpWin_FlushChar(int);
 extern int Item_GetTmHmNo(u16);
@@ -449,7 +428,7 @@ extern void LoadMoveNameToStrbuf(int, int, int);
 extern void ovy142_219f4b0(BagView*, int);
 extern void sub_020267C0(int ,u16, u16);
 extern void ovy142_219e4dc(BagView*, int);
-extern void ovy142_21a0134(int*);
+extern void ovy142_21a0134(BagBmpWinData*);
 
 extern int sub_02034AA4(u16);
 extern void sub_02017644(void*, int, int);
@@ -531,4 +510,14 @@ void ovy142_219d664(void);
 
 extern int BagSave_GetUniqueItemCount(ItemTable* bagView, int maxItem);
 extern int BagSave_GetExistingItemPocket(void* bagSave, u16 item);
+
+extern void sub_0203DEB4(int, int);
+extern int Item_GetItemParam(u16, int, u16);
+extern void LoadItemNameToStrbuf(int , int, int);
+extern void LoadBagPocketNameToStrbuf(int , int, int);
+extern int sub_0203DA84(u32*, u32*);
+extern int sub_0203DA48(void);
+extern int sub_020355B8(int, int, int, int, int);
+extern void GFL_SndSEPlay(int);
+extern int sub_0203DAC8(u32*, u32*);
 #endif //BAG_H
