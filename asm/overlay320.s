@@ -622,7 +622,7 @@ _0219D2F0:
 	add r0, r6, #0
 	sub r0, #0x14
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	sub r0, #0x14
 	ldr r0, [r5, r0]
@@ -1273,7 +1273,7 @@ ovy320_219d88c: ; 0x0219D88C
 	lsr r3, r3, #0x10
 	bl sub_0219A2A4
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -2398,7 +2398,7 @@ _0219E0FE:
 	add r0, r5, #0
 	bl BmpWin_FlushChar
 	add r0, r5, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

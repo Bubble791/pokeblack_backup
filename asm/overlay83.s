@@ -489,7 +489,7 @@ _021EABAC:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -598,7 +598,7 @@ _021EAC9E:
 	bne _021EACCA
 	ldr r0, [r5, #4]
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #4]
 	ldr r0, [r0]
 	bl sub_020484D4

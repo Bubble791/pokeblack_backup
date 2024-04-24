@@ -41481,7 +41481,7 @@ ovy12_2163f50: ; 0x02163F50
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -41638,7 +41638,7 @@ ovy12_2164090: ; 0x02164090
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C

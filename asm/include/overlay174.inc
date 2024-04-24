@@ -220,7 +220,7 @@
 .public sub_0202DED4
 .public GFL_BGSysLoadNCLRDefault
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -229,7 +229,7 @@
 .public sub_02021CFC
 .public BmpWin_FlushChar
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -245,7 +245,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public sub_02024E80
 .public GFL_MsgDataLoadStrbuf

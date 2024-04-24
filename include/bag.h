@@ -495,7 +495,7 @@ extern int GFL_BGSysLoadArcNCGRDynamic(int, int, int, int, int, u16);
 extern void GFL_G2DIOLoadNSCRSync(int, int, int, int, int, int, int, u16);
 void ovy142_219e284(BagView *a1);
 extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
-extern void sub_0204826C(int);
+extern void BmpWin_FlushMap(int);
 
 void BagMenu_LoadBagItemBarResource(BagView *a1);
 extern int sub_02046E28(int, int, int, u16);

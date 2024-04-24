@@ -196,7 +196,7 @@
 .public sub_02022268
 .public sub_0202E678
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_020232D8
 .public BmpWin_CreateDynamic
@@ -204,7 +204,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024E80
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
@@ -222,7 +222,7 @@
 .public sub_02024F60
 .public sub_02024FBC
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024E80
 .public sub_020256F0
 .public PrintSystem_IsTextPrintActiveEnd
@@ -247,7 +247,7 @@
 .public sub_02021A3C
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_02026510
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -275,11 +275,11 @@
 .public sub_02021CFC
 .public sub_021A61D0
 .public sub_020484B4
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC
@@ -402,9 +402,9 @@
 .public GFL_WordSetFormatStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021D28
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public sub_021A624C
@@ -436,7 +436,7 @@
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public sub_020484B4
@@ -474,7 +474,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024E80
 .public sub_020232D8
 .public sub_0201F8B4
@@ -1289,12 +1289,12 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public GFL_BGSysLoadScr
@@ -1306,7 +1306,7 @@
 .public GFL_HeapFree
 .public sub_02045708
 .public sub_02009F80
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar

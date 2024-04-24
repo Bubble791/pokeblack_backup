@@ -114306,7 +114306,7 @@ ovy167_21d0cd4: ; 0x021D0CD4
 	bl BmpWin_GetBitmap
 	str r0, [r5, #4]
 	ldr r0, [r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r7, #0xd4
 	ldr r0, [r5, r7]
 	bl ovy167_0219C988
@@ -121403,7 +121403,7 @@ _021D43A0:
 	mov r2, #0xc
 	bl sub_020232E8
 	ldr r0, [r4, #8]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r1, [r4, #0x10]
 	ldr r0, [r4, #8]
 	lsl r1, r1, #0x10

@@ -1767,7 +1767,7 @@ ovy312_217d750: ; 0x0217D750
 	cmp r4, #1
 	bne _0217D786
 	add r0, r5, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 _0217D786:
 	add r0, r5, #0
 	add sp, #0xc
@@ -2898,7 +2898,7 @@ _0217E09C:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C

@@ -190,7 +190,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_021A2FFC
@@ -242,7 +242,7 @@
 .public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
@@ -264,7 +264,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public sub_02044CFC
 .public sub_0219E544
@@ -291,10 +291,10 @@
 .public GFL_ArcSysCreateFileHandle
 .public sub_021A2FBC
 .public sub_0204AFD8
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0204AFD8
-.public sub_0204826C
-.public sub_0204826C
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
 .public GFL_ArcToolFree
 .public sub_02045B7C
 .public sub_0219E524
@@ -306,7 +306,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public sub_021A30DC
@@ -321,7 +321,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_02044E74
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02044C98
 .public sub_0219E52C
@@ -366,8 +366,8 @@
 .public sub_0204ADA8
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_0204826C
-.public sub_0204826C
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
 .public sub_02033150
 .public sub_02033224
 .public sub_02033254
@@ -840,7 +840,7 @@
 .public sub_02045604
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public sub_02044C98
@@ -872,7 +872,7 @@
 .public Oam_SetSpritePosData
 .public sub_0204C488
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_021A30CC
 .public sub_0204C138
 .public Oam_GetSpritePosData
@@ -955,7 +955,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_021A4518
@@ -1054,7 +1054,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0204898C
@@ -1065,7 +1065,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0202A234

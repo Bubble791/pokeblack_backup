@@ -942,7 +942,7 @@ _021F4B62:
 	ldrb r3, [r5, #3]
 	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x10]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6, #0x10]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

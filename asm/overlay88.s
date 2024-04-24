@@ -373,7 +373,7 @@ ovy88_21eab04: ; 0x021EAB04
 	ldr r0, [r5, #0x18]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x18]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x1c]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf
@@ -381,7 +381,7 @@ ovy88_21eab04: ; 0x021EAB04
 	ldr r0, [r5, #0x1c]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x1c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	add r1, r4, #0
 	mov r2, #1
@@ -481,7 +481,7 @@ ovy88_21eac34: ; 0x021EAC34
 	mov r1, #2
 	bl sub_02024EEC
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl BmpWin_GetBitmap
 	ldr r1, [r5, #0x34]
@@ -860,7 +860,7 @@ _021EAF34:
 	ldr r0, [r4, #0x1c]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x1c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r1, [r4, #0x1c]
 	add r0, r4, #0
 	mov r2, #4

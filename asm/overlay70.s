@@ -65,7 +65,7 @@ _0217D010:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -1690,7 +1690,7 @@ _0217DD6A:
 	add r0, r5, #0
 	bl BmpWin_FlushChar
 	add r0, r5, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -2345,7 +2345,7 @@ _0217E2DC:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -2369,7 +2369,7 @@ _0217E2FA:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -3164,7 +3164,7 @@ _0217E942:
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -3570,7 +3570,7 @@ _0217EC32:
 	add r0, r7, #0
 	bl BmpWin_FlushChar
 	add r0, r7, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -3874,7 +3874,7 @@ _0217EE8A:
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -4104,7 +4104,7 @@ _0217F068:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

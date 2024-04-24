@@ -150,7 +150,7 @@ _021EA988:
 	lsl r0, r4, #3
 	add r0, r6, r0
 	ldr r0, [r0, #0xc]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r4, r4, #1
 	cmp r4, #8
 	blo _021EA988

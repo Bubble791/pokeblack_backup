@@ -1596,7 +1596,7 @@ ovy84_21ebb18: ; 0x021EBB18
 	str r4, [r5, #0x14]
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

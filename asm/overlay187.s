@@ -1489,7 +1489,7 @@ ovy187_21e9780: ; 0x021E9780
 	mov r4, #0
 	bl BmpWin_CreateDynamic
 	str r0, [r5, #0x44]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x44]
 	str r0, [r5, #0x48]
 	add r5, #0x4c

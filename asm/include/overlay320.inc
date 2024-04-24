@@ -62,7 +62,7 @@
 .public GFL_ArcToolFree
 .public sub_02024D00
 .public sub_02024E80
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_0202E678
@@ -93,7 +93,7 @@
 .public GFL_SndSEPlay
 .public BmpWin_CreateDynamic
 .public sub_0219A2A4
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_Free
@@ -170,7 +170,7 @@
 .public sub_02017BCC
 .public sub_02022268
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_WordSetSystemFree

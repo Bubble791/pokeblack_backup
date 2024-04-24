@@ -728,11 +728,11 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_0204826C
-.public sub_0204826C
-.public sub_0204826C
-.public sub_0204826C
-.public sub_0204826C
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
+.public BmpWin_FlushMap
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
@@ -1021,7 +1021,7 @@
 .public Oam_SetSpritePosData
 .public BmpWin_GetBitmap
 .public sub_02021C7C
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02021A3C

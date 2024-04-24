@@ -52,7 +52,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_Free
@@ -72,7 +72,7 @@
 .public BmpWin_FlushChar
 .public sub_02017BCC
 .public sub_02022268
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0202E678

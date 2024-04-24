@@ -2195,7 +2195,7 @@ ovy256_21bc7ec: ; 0x021BC7EC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4]
 	bl sub_020484D4
 	bl sub_02045B7C

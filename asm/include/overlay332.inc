@@ -235,7 +235,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_TCBExMgrCreate
 .public sub_020223CC
 .public sub_0203580C
@@ -283,7 +283,7 @@
 .public sub_02017BCC
 .public sub_02022268
 .public sub_0203580C
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_02024E80
@@ -315,7 +315,7 @@
 .public BmpWin_CreateDynamic
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024F60
 .public sub_02024FBC
 .public sub_020256F0

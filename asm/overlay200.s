@@ -617,7 +617,7 @@ ovy200_21b3400: ; 0x021B3400
 	ldr r0, [r5, #0x24]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x24]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x24]
 	mov r1, #1
 	mov r2, #1
@@ -630,7 +630,7 @@ ovy200_21b3400: ; 0x021B3400
 	ldr r0, [r5, #0x20]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x20]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #5
 	bl GFL_BGSysLoadScr
 	mov r0, #4

@@ -4116,7 +4116,7 @@ ovy205_21b92e4: ; 0x021B92E4
 	mov r3, #0xb
 	bl sub_02024E80
 	ldr r0, [r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5]
 	ldr r2, [sp, #0x24]
 	ldr r3, [sp, #0x28]

@@ -201,7 +201,7 @@
 .public sub_021A034C
 .public sub_02021D28
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_StrBufFree
@@ -536,7 +536,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public sub_020223CC
 .public sub_0203580C
@@ -597,7 +597,7 @@
 .public GFL_MsgDataFree
 .public sub_0202E678
 .public sub_0202E678
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public BmpWin_Free
 .public GFL_HeapAllocate

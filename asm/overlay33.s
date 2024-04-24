@@ -4848,7 +4848,7 @@ ovy33_2179140: ; 0x02179140
 	ldr r0, [r5, #0x30]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x30]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x30]
 	mov r1, #1
 	mov r2, #1

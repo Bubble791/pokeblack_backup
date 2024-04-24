@@ -1494,7 +1494,7 @@ ovy258_219a484: ; 0x0219A484
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1515,7 +1515,7 @@ ovy258_219a484: ; 0x0219A484
 	add r0, r7, #0
 	bl BmpWin_FlushChar
 	add r0, r7, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1551,7 +1551,7 @@ ovy258_219a484: ; 0x0219A484
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1634,7 +1634,7 @@ _0219A5BC:
 	str r0, [sp, #8]
 	bl BmpWin_FlushChar
 	ldr r0, [sp, #8]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #8]
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1684,7 +1684,7 @@ _0219A5BC:
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1698,7 +1698,7 @@ _0219A6B0:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1730,7 +1730,7 @@ _0219A6B0:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1766,7 +1766,7 @@ _0219A6B0:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1837,7 +1837,7 @@ ovy258_219a7b0: ; 0x0219A7B0
 	add r0, r7, #0
 	bl BmpWin_FlushChar
 	add r0, r7, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1857,7 +1857,7 @@ ovy258_219a7b0: ; 0x0219A7B0
 	add r0, r7, #0
 	bl BmpWin_FlushChar
 	add r0, r7, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1905,7 +1905,7 @@ ovy258_219a7b0: ; 0x0219A7B0
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -1939,7 +1939,7 @@ _0219A8BE:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2158,7 +2158,7 @@ _0219AA4E:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2166,7 +2166,7 @@ _0219AA4E:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2189,7 +2189,7 @@ _0219AB00:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2197,7 +2197,7 @@ _0219AB00:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2205,7 +2205,7 @@ _0219AB00:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -2389,7 +2389,7 @@ ovy258_219ac38: ; 0x0219AC38
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

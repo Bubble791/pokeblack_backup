@@ -5902,7 +5902,7 @@
 .public sub_0204AF18
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0219C988
 .public sub_02048358
 .public BmpWin_BitmapFill
@@ -6326,7 +6326,7 @@
 .public BmpWin_FlushChar
 .public sub_0204E060
 .public sub_020232E8
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02048358
 .public BmpWin_BitmapFill
 .public sub_020484D4

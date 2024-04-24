@@ -333,7 +333,7 @@ ovy81_21eaaa0: ; 0x021EAAA0
 	asr r2, r2, #0x10
 	bl sub_02021D28
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

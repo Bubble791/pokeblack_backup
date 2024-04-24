@@ -15,7 +15,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02021A3C
 .public BmpWin_GetBitmap

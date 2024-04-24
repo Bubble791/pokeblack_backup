@@ -133,7 +133,7 @@
 .public sub_02022DA8
 .public GFL_MsgDataFree
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public BmpWin_Free
 .public sub_02044668
@@ -210,7 +210,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public GFL_BGSysLoadScr
 .public GFL_BGSysLoadScr

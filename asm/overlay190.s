@@ -3139,7 +3139,7 @@ _021B4916:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x50]
 	bl ovy190_21b4d00
 	bl sub_02045B7C
@@ -3284,7 +3284,7 @@ _021B4A3A:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0xc
@@ -3590,7 +3590,7 @@ _021B4C80:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x50]
 	bl ovy190_21b4d28
 	bl sub_02045B7C

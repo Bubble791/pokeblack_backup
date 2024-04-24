@@ -317,7 +317,7 @@
 .public sub_0204898C
 .public sub_0219A2A4
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public BmpWin_GetBitmap

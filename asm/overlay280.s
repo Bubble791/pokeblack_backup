@@ -1368,7 +1368,7 @@ _021DA1B2:
 	str r0, [r5, #0x40]
 	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0x14]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -4126,7 +4126,7 @@ _021DB4A4:
 	str r7, [r1]
 	bl BmpWin_FlushChar
 	add r0, r7, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -5714,7 +5714,7 @@ ovy280_21dc0d8: ; 0x021DC0D8
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

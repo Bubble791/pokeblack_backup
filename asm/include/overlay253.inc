@@ -106,7 +106,7 @@
 .public sub_02021D28
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_GetBitmap

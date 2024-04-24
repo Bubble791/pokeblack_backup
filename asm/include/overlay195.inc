@@ -710,7 +710,7 @@
 .public sub_02021CFC
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_CreateDynamic
@@ -721,7 +721,7 @@
 .public sub_02021CFC
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_020223B4
 .public sub_020223CC
@@ -747,7 +747,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public GFL_MsgDataLoadStrbuf
@@ -778,7 +778,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02008C0C
 .public sub_02008C10
 .public sub_02008C04
@@ -800,7 +800,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -824,21 +824,21 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020232E8
 .public sub_02045B7C
 .public sub_02045B7C
 .public BmpWin_Free
 .public sub_020484EC
 .public sub_02048500
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02045B7C
 .public sub_02045B7C
 .public BmpWin_Free
 .public sub_020484EC
 .public sub_02048500
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
@@ -859,7 +859,7 @@
 .public sub_020344C0
 .public sub_020342BC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_CreateDynamic
@@ -869,7 +869,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
@@ -889,7 +889,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public StringSetNumber
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
@@ -900,7 +900,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_CopyVarForText
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
@@ -911,7 +911,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02045B7C

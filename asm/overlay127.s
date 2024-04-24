@@ -6740,7 +6740,7 @@ ovy127_21f1f58: ; 0x021F1F58
 	ldr r0, [r4, #0x18]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x18]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add sp, #0xc
 	pop {r4, r5, pc}
 	.align 2, 0

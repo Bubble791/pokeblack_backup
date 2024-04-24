@@ -3011,7 +3011,7 @@ ovy332_21c054c: ; 0x021C054C
 	ldr r0, [r4, #0x14]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	add r1, r5, #0
 	mov r2, #1
@@ -3479,7 +3479,7 @@ ovy332_21c0960: ; 0x021C0960
 	mov r0, #0
 	str r0, [r4, #0x10]
 	ldr r0, [r4, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -3918,7 +3918,7 @@ ovy332_21c0c40: ; 0x021C0C40
 	ldr r0, [r6]
 	bl BmpWin_FlushChar
 	ldr r0, [r6]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6]
 	add r1, r7, #0
 	str r0, [r6, #8]

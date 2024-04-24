@@ -401,13 +401,13 @@
 .public BmpWin_InitAllocator
 .public sub_02021998
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
@@ -609,7 +609,7 @@
 .public sub_0204C488
 .public sub_0204C124
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
@@ -617,7 +617,7 @@
 .public sub_021A2F94
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02024D00
 .public sub_02024E80
 .public sub_02017BCC

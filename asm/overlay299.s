@@ -2489,7 +2489,7 @@ ovy299_21a100c: ; 0x021A100C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4]
 	bl sub_020484D4
 	bl sub_02045B7C

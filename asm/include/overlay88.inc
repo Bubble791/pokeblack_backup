@@ -56,11 +56,11 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_020223CC
@@ -81,7 +81,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02024EEC
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_02024EE0
@@ -127,7 +127,7 @@
 .public sub_020484B4
 .public sub_02048500
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02016AD8
 .public sub_0201740C
 .public GFL_FadeScreenIsFinished

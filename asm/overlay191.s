@@ -2839,7 +2839,7 @@ ovy191_21b6930: ; 0x021B6930
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl BmpWin_FlushChar
 	mov r0, #1

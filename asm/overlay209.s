@@ -1391,11 +1391,11 @@ ovy209_21bab9c: ; 0x021BAB9C
 	ldr r0, [r5, #0x54]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x54]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0x58]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x58]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl GFL_BGSysLoadScr
 	add sp, #0x18
@@ -1921,7 +1921,7 @@ ovy209_21bb150: ; 0x021BB150
 	str r0, [r5, #0x1c]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x1c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #4
 	bl GFL_BGSysLoadScr
 	ldrh r0, [r5]
@@ -11148,7 +11148,7 @@ ovy209_21bf7fc: ; 0x021BF7FC
 	add r0, r5, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl GFL_BGSysLoadScr
 	ldrh r0, [r5]

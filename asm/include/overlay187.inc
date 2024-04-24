@@ -168,7 +168,7 @@
 .public BmpWin_InitAllocator
 .public sub_021E9710
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_Free
 .public sub_020480A8
 .public sub_02021998

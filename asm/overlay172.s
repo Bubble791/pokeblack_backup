@@ -971,7 +971,7 @@ ovy172_2199f94: ; 0x02199F94
 	mov r3, #0x1e
 	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x1c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	lsl r1, r5, #0x10
 	ldr r0, [r4, #0x1c]
 	lsr r1, r1, #0x10
@@ -1405,7 +1405,7 @@ _0219A3B0:
 	mov r1, #0
 	bl sub_02021CFC
 	ldr r0, [r5, #0x1c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r7, #0
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x1c]

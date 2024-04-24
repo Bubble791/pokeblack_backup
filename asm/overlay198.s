@@ -286,7 +286,7 @@ _021B31A8:
 	ldr r0, [r6, #0x10]
 	bl BmpWin_FlushChar
 	ldr r0, [r6, #0x10]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0xc]
 	add r4, r4, #1
 	cmp r4, r0
@@ -399,7 +399,7 @@ _021B3298:
 	ldr r0, [r6, r4]
 	bl BmpWin_FlushChar
 	ldr r0, [r6, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #7
 	bl sub_02045B7C
 	add sp, #0x14
@@ -1374,7 +1374,7 @@ _021B3A9A:
 	ldr r0, [r4, r5]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 _021B3ABE:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
@@ -1877,7 +1877,7 @@ ovy198_21b3e50: ; 0x021B3E50
 	ldr r0, [r5, #0x3c]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #0x3c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r4, #0x50
 	ldr r0, [r5, r4]
 	mov r1, #1

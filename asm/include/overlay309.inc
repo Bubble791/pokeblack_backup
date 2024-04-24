@@ -235,7 +235,7 @@
 .public GFL_BGSysLoadScr
 .public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
@@ -380,7 +380,7 @@
 .public sub_0202E68C
 .public sub_02024D00
 .public sub_02024E80
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_GetBitmap

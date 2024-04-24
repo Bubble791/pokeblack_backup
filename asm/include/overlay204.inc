@@ -261,7 +261,7 @@
 .public sub_02022268
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public GFL_StrBufFree
@@ -404,7 +404,7 @@
 .public sub_02022268
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public GFL_StrBufFree
@@ -650,13 +650,13 @@
 .public G2x_SetBlendBrightness_
 .public sub_0204C4D4
 .public sub_0204C488
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0204B98C

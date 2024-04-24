@@ -83,7 +83,7 @@
 .public sub_0219D888
 .public PrintSystem_IsTextPrintActiveEnd
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02044BD8

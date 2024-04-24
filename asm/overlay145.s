@@ -1525,7 +1525,7 @@ ovy145_219db5c: ; 0x0219DB5C
 	mov r4, #0x56
 	lsl r4, r4, #2
 	str r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #7
 	bl sub_0219E118
 	lsl r0, r0, #0x18
@@ -1541,7 +1541,7 @@ ovy145_219db5c: ; 0x0219DB5C
 	bl BmpWin_CreateDynamic
 	add r1, r4, #4
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #3
 	bl sub_0219E118
 	lsl r0, r0, #0x18
@@ -5804,7 +5804,7 @@ _0219FCE4:
 	bl BmpWin_CreateDynamic
 	lsl r1, r6, #5
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_0219E118
 	ldrh r1, [r5]
@@ -6781,7 +6781,7 @@ ovy145_21a0544: ; 0x021A0544
 	bl BmpWin_CreateDynamic
 	lsl r1, r4, #5
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_0219E118
 	ldrh r1, [r5]

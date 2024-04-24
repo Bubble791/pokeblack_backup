@@ -1645,7 +1645,7 @@ _0219DBAC:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -5954,7 +5954,7 @@ _0219FF2A:
 	ldr r0, [r4, #0x10]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x10]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldrb r0, [r4, #2]
 	bl GFL_BGSysLoadScr
 	add sp, #0xc
@@ -6538,7 +6538,7 @@ ovy181_21a036c: ; 0x021A036C
 	add r4, r0, #0
 	ldr r0, [r4, #0x10]
 	str r1, [r4, #0x3c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldrb r0, [r4, #2]
 	bl GFL_BGSysLoadScr
 	pop {r4, pc}

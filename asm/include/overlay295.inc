@@ -15,7 +15,7 @@
 .public sub_0204E0E0
 .public GFL_SndSEPlay
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_0201782C
@@ -23,12 +23,12 @@
 .public sub_02017850
 .public sub_0203580C
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_SndSEPlay
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_02015878
@@ -119,7 +119,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_02042BA8

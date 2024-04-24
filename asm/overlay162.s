@@ -715,7 +715,7 @@ ovy162_219d340: ; 0x0219D340
 	str r0, [r5, #4]
 	bl BmpWin_BitmapFill
 	ldr r0, [r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5]
 	bl BmpWin_FlushChar
 	ldr r0, [r5]
@@ -4813,7 +4813,7 @@ _0219F62C:
 	add r0, r5, r0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r4, r4, #1
 	cmp r4, #0xf
 	ble _0219F62C
@@ -4824,7 +4824,7 @@ _0219F62C:
 	mov r0, #0x49
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r1, #1
 	str r1, [sp, #0xc]
 	ldr r0, [r5, #0x38]
@@ -4841,7 +4841,7 @@ _0219F662:
 	add r0, r5, r0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	lsl r0, r7, #2
 	add r0, r5, r0
 	mov r1, #1
@@ -4860,7 +4860,7 @@ _0219F68C:
 	add r0, r5, r0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	lsl r0, r7, #2
 	add r0, r5, r0
 	mov r1, #1
@@ -4875,7 +4875,7 @@ _0219F6B2:
 	mov r0, #0x47
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r3, #0
 	str r3, [sp]
 	mov r0, #1
@@ -5500,7 +5500,7 @@ ovy162_219fa90: ; 0x0219FA90
 	add r0, r7, #0
 	bl GFL_StrBufFree
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #0
 	bl sub_02045B7C
 	mov r0, #2
@@ -5660,7 +5660,7 @@ ovy162_219fc68: ; 0x0219FC68
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #4
 	bl sub_02045B7C
 	mov r0, #5
@@ -5743,7 +5743,7 @@ ovy162_219fd30: ; 0x0219FD30
 	bl GFL_MsgDataFree
 	sub r4, #0x7b
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #0
 	bl sub_02045B7C
 	mov r0, #2
@@ -5840,7 +5840,7 @@ ovy162_219fe0c: ; 0x0219FE0C
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -7004,7 +7004,7 @@ ovy162_21a07b4: ; 0x021A07B4
 	mov r3, #0x1d
 	bl BmpWin_CreateDynamic
 	str r0, [r5, #0xc]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, #0xc]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf
@@ -7046,7 +7046,7 @@ _021A082A:
 	mov r3, #0x14
 	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x10]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x10]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf
@@ -8261,7 +8261,7 @@ ovy162_21a117c: ; 0x021A117C
 	str r6, [r5, #0x28]
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C

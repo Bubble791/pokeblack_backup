@@ -4233,7 +4233,7 @@ _021F6480:
 	tst r0, r7
 	bne _021F64B0
 	ldr r0, [r4, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

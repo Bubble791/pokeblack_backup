@@ -2931,7 +2931,7 @@ ovy294_21a3068: ; 0x021A3068
 	add r0, r5, #0
 	bl BmpWin_FlushChar
 	add r0, r5, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -3096,7 +3096,7 @@ _021A327A:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -3340,7 +3340,7 @@ _021A33AE:
 	ldr r0, [sp, #0x10]
 	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x10]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0x10]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

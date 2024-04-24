@@ -4517,7 +4517,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	bl BmpWin_CreateDynamic
 	add r1, r4, #4
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	bl BmpWin_GetBitmap
@@ -4549,7 +4549,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	add r1, r4, #0
 	add r1, #8
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
@@ -6296,7 +6296,7 @@ ovy303_21a2e54: ; 0x021A2E54
 	mov r4, #0x16
 	lsl r4, r4, #6
 	str r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl BmpWin_GetBitmap
 	mov r1, #0
@@ -6331,7 +6331,7 @@ ovy303_21a2ea8: ; 0x021A2EA8
 	mov r1, #0xf
 	bl BmpWin_BitmapFill
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #0xa5
 	str r0, [sp]
 	mov r0, #1

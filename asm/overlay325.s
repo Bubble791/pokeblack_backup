@@ -1683,7 +1683,7 @@ _0219DBB2:
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
@@ -1744,7 +1744,7 @@ _0219DC32:
 	bne _0219DC62
 	ldr r0, [sp, #0x30]
 	ldr r0, [r4, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r4, r0]
 	bl sub_020484D4

@@ -1843,7 +1843,7 @@ _0219DD8E:
 	mov r1, #0xee
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl BmpWin_FlushChar
 	add r6, r6, #1
@@ -4073,7 +4073,7 @@ _0219EE54:
 _0219EE66:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0

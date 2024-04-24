@@ -16360,7 +16360,7 @@ _021A49D6:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -16383,7 +16383,7 @@ ovy310_21a4a10: ; 0x021A4A10
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	b _021A4A40
 _021A4A30:
 	cmp r0, #0

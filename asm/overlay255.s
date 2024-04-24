@@ -36896,7 +36896,7 @@ ovy255_21ce038: ; 0x021CE038
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4]
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -49749,7 +49749,7 @@ _021D41A4:
 ovy255_21d41b0: ; 0x021D41B0
 	push {r4, lr}
 	add r4, r0, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -53507,7 +53507,7 @@ _021D5F2C:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl sub_02045B7C
@@ -54941,7 +54941,7 @@ _021D6A22:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r4, r4, #1
 	cmp r4, #0xb
 	ble _021D6A22

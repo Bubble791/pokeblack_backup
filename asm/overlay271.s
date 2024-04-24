@@ -7190,7 +7190,7 @@ ovy271_21f34a0: ; 0x021F34A0
 	add r0, r5, #0
 	bl BmpWin_FlushChar
 	add r0, r5, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -7582,7 +7582,7 @@ _021F3802:
 	ldrb r0, [r7, #0xd]
 	bl BmpWin_CreateDynamic
 	str r0, [r4, #0x38]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x38]
 	bl sub_020484D4
 	bl sub_02045B7C

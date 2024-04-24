@@ -26211,11 +26211,11 @@ ovy168_21ea51c: ; 0x021EA51C
 	add r0, r4, #0
 	sub r0, #0x18
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	sub r0, #0x10
 	ldr r0, [r5, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldrh r3, [r5, r4]
@@ -27490,7 +27490,7 @@ _021EB07E:
 	mov r5, #0xab
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, r5]
@@ -28738,7 +28738,7 @@ _021EB9EE:
 	ldr r0, [r5]
 	sub r4, #0x10
 	ldr r0, [r0, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r1, [r5]
@@ -28923,7 +28923,7 @@ _021EBBDA:
 	ldr r0, [r4]
 	lsl r5, r5, #2
 	ldr r0, [r0, r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	mov r3, #8
@@ -29044,7 +29044,7 @@ _021EBCDE:
 	ldr r0, [r5]
 	sub r4, #0x18
 	ldr r0, [r0, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	mov r3, #8
@@ -29182,7 +29182,7 @@ _021EBDDE:
 	ldr r0, [r4]
 	sub r5, #0x10
 	ldr r0, [r0, r5]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4]
 	bl ovy168_21ef588
 	mov r0, #6
@@ -29319,7 +29319,7 @@ ovy168_21ebee4: ; 0x021EBEE4
 	ldr r1, [r5]
 	sub r0, #0x18
 	ldr r0, [r1, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r4, [r5]
@@ -29407,7 +29407,7 @@ _021EBFEA:
 	ldr r1, [r5]
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r6, [r5]
@@ -29758,7 +29758,7 @@ _021EC2A8:
 	mov r6, #0xab
 	lsl r6, r6, #2
 	ldr r0, [r1, r6]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
@@ -29912,7 +29912,7 @@ _021EC3C6:
 	ldr r0, [r4]
 	sub r6, #0x18
 	ldr r0, [r0, r6]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4]
@@ -30135,7 +30135,7 @@ _021EC5D6:
 	ldr r0, [r5]
 	lsl r7, r7, #2
 	ldr r0, [r0, r7]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
@@ -31031,7 +31031,7 @@ _021ECCE6:
 	ldr r1, [r5]
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5]
 	bl ovy168_21ef5cc
 	mov r0, #6
@@ -31154,7 +31154,7 @@ _021ECDF2:
 	ldr r1, [r5]
 	lsl r0, r0, #2
 	ldr r0, [r1, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #6
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5]

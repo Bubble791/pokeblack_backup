@@ -803,7 +803,7 @@ ovy327_21b62f0: ; 0x021B62F0
 	ldr r0, [r4, #0x14]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	add r1, r5, #0
 	mov r2, #1
@@ -1188,7 +1188,7 @@ ovy327_21b6668: ; 0x021B6668
 	mov r0, #0
 	str r0, [r4, #0x10]
 	ldr r0, [r4, #0x14]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

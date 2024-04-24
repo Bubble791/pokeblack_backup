@@ -248,7 +248,7 @@
 .public GFL_MsgDataFree
 .public BmpWin_CreateDynamic
 .public sub_02024E80
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgSysLoadData
 .public sub_0204898C

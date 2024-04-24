@@ -85,7 +85,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public GFL_FontCreate
@@ -523,17 +523,17 @@
 .public sub_0204566C
 .public sub_02045B7C
 .public sub_0204C124
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02010528
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0204C124
 .public sub_02010564
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0204C124
 .public sub_020105A0
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0204C124
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0204AF18
 .public sub_02045B7C
 .public sub_02045B7C
@@ -585,7 +585,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02045E1C
 .public sub_02045E1C
@@ -606,7 +606,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_MsgSysLoadData
 .public BmpWin_CreateDynamic
@@ -615,7 +615,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02045E1C
 .public sub_02045E1C
@@ -628,7 +628,7 @@
 .public sub_02017BCC
 .public sub_02022268
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0202E8D8
@@ -767,7 +767,7 @@
 .public GFL_BGSysLoadScr
 .public GFL_MsgSysLoadData
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0204898C
@@ -777,7 +777,7 @@
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0204898C
@@ -910,7 +910,7 @@
 .public sub_02017C50
 .public sub_02022268
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0203A7F4

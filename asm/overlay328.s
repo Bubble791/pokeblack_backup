@@ -1800,7 +1800,7 @@ _0219DC7A:
 	ldrb r1, [r5, #1]
 	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x4c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6, #0x4c]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

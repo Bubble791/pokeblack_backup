@@ -321,7 +321,7 @@
 .public sub_02022268
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_0203580C
 .public sub_02005718
@@ -339,7 +339,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_020484B4
 .public BmpWin_Free
@@ -372,7 +372,7 @@
 .public sub_02021CFC
 .public sub_02024E80
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public GFL_StrBufFree
 .public sub_02024EEC

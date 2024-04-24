@@ -32148,8 +32148,8 @@ BmpWin_FlushChar: ; 0x02048244
 	pop {r3, r4, r5, pc}
 	thumb_func_end BmpWin_FlushChar
 
-	thumb_func_start sub_0204826C
-sub_0204826C: ; 0x0204826C
+	thumb_func_start BmpWin_FlushMap
+BmpWin_FlushMap: ; 0x0204826C
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x20
 	str r0, [sp, #0x18]
@@ -32262,7 +32262,7 @@ _02048348: .word 0x0209AEC0
 _0204834C: .word 0x02141918
 _02048350: .word 0x00007FFF
 _02048354: .word 0x0000013E
-	thumb_func_end sub_0204826C
+	thumb_func_end BmpWin_FlushMap
 
 	thumb_func_start sub_02048358
 sub_02048358: ; 0x02048358

@@ -1175,7 +1175,7 @@ _0219D77E:
 	ldrb r1, [r5, #1]
 	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x5c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6, #0x5c]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -3458,7 +3458,7 @@ _0219E904:
 	tst r0, r7
 	beq _0219E92E
 	ldr r0, [r4, #0x70]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r4, #0x70]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -7858,7 +7858,7 @@ _021A0C0E:
 	ldrb r1, [r5, #1]
 	bl BmpWin_CreateDynamic
 	str r0, [r7, #0x70]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r7, #0x70]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -8033,7 +8033,7 @@ _021A0D60:
 	ldrb r3, [r5, #3]
 	bl BmpWin_CreateDynamic
 	str r0, [r6, #0x70]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6, #0x70]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -8856,7 +8856,7 @@ ovy326_21a1388: ; 0x021A1388
 	mov r3, #8
 	bl sub_02024E80
 	ldr r0, [r5, r7]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r7]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

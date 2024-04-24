@@ -459,7 +459,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0202E168
 .public sub_0204898C
 .public BmpWin_GetBitmap

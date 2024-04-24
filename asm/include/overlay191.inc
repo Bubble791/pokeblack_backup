@@ -199,7 +199,7 @@
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public GFL_MsgSysLoadData

@@ -2457,7 +2457,7 @@ _0219E21E:
 	add r0, r4, #0
 	add r0, #0xf4
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	add r0, #0xf4
 	ldr r0, [r0]
@@ -2518,7 +2518,7 @@ _0219E29E:
 	bne _0219E2CE
 	ldr r0, [sp, #0x30]
 	ldr r0, [r4, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r4, r0]
 	bl sub_020484D4
@@ -6066,7 +6066,7 @@ ovy322_219fdd8: ; 0x0219FDD8
 	add r0, r5, #0
 	add r0, #0xf4
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r5, #0
 	add r0, #0xf4
 	ldr r0, [r0]

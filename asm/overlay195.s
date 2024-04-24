@@ -7264,7 +7264,7 @@ _021B69C8:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0xc
@@ -7322,7 +7322,7 @@ _021B6A48:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0xc
@@ -7566,7 +7566,7 @@ _021B6BFE:
 	add r0, r6, #0
 	bl BmpWin_FlushChar
 	add r0, r6, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add sp, #0x10
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -7957,7 +7957,7 @@ _021B6F38:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add sp, #0xc
 	pop {r4, r5, pc}
 	thumb_func_end ovy195_21b6f04
@@ -8068,7 +8068,7 @@ _021B7034:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0x10
@@ -8191,7 +8191,7 @@ _021B70F6:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #0
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
@@ -8279,7 +8279,7 @@ _021B7208:
 	lsr r1, r1, #0x18
 	bl sub_02048500
 	ldr r0, [r5, #0x6c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 _021B722A:
 	add r4, r4, #1
 	cmp r4, #6
@@ -8375,7 +8375,7 @@ _021B72BA:
 	lsr r1, r1, #0x18
 	bl sub_02048500
 	ldr r0, [r5, #0x6c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 _021B72DC:
 	add r4, r4, #1
 	cmp r4, #6
@@ -8620,7 +8620,7 @@ _021B7464:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0x14
@@ -8672,7 +8672,7 @@ _021B74F4:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #1
 	bl sub_02045B7C
 	add sp, #0xc
@@ -8856,7 +8856,7 @@ _021B7662:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r4, #1
 	str r4, [sp]
 	str r4, [sp, #4]
@@ -8913,7 +8913,7 @@ _021B76EA:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -8976,7 +8976,7 @@ _021B7774:
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add sp, #0xc
 	pop {r4, r5, pc}
 	thumb_func_end ovy195_21b772c

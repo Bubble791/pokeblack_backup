@@ -1904,7 +1904,7 @@ ovy174_219ddf0: ; 0x0219DDF0
 	bl BmpWin_CreateDynamic
 	add r1, r4, #4
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #4
 	add r4, #0x8c
 	ldr r2, [r5, r4]
@@ -1975,7 +1975,7 @@ ovy174_219dea0: ; 0x0219DEA0
 	mov r3, #0x12
 	bl BmpWin_CreateDynamic
 	str r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	add r4, #0x84
 	ldr r2, [r5, r4]
@@ -2084,7 +2084,7 @@ _0219DFA8:
 	mov r1, #0xff
 	bl BmpWin_BitmapFill
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl BmpWin_FlushChar
 	add r2, r4, #0

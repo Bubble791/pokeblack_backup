@@ -1961,7 +1961,7 @@ ovy304_21a0b90: ; 0x021A0B90
 	bl BmpWin_CreateDynamic
 	add r1, r4, #4
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	bl BmpWin_GetBitmap
@@ -1992,7 +1992,7 @@ ovy304_21a0b90: ; 0x021A0B90
 	add r1, r4, #0
 	add r1, #8
 	str r0, [r5, r1]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]

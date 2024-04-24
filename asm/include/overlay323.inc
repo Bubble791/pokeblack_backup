@@ -100,7 +100,7 @@
 .public sub_02024CC0
 .public sub_02024D00
 .public BmpWin_Free
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_0200C1F0
@@ -210,7 +210,7 @@
 .public sub_02017BCC
 .public sub_02022268
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_CreateDynamic
@@ -251,7 +251,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_FadeScreenSet

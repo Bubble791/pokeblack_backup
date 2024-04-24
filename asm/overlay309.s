@@ -4145,7 +4145,7 @@ _0219EEBA:
 	add r0, r6, r4
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r6, r4
 	add r0, #0x9c
 	ldr r0, [r0]
@@ -5648,7 +5648,7 @@ ovy309_219faa8: ; 0x0219FAA8
 	mov r3, #4
 	bl sub_02024E80
 	ldr r0, [r5, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r5, r4]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

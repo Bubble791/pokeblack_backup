@@ -1801,7 +1801,7 @@
 .public BmpWin_CreateDynamic
 .public GFL_HeapAllocate
 .public sub_0203D5A8
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
@@ -2179,7 +2179,7 @@
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0208D868
@@ -2188,11 +2188,11 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02048508
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0205FA10
@@ -2215,10 +2215,10 @@
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public GFL_HeapAllocate
@@ -2230,7 +2230,7 @@
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0208D65C
@@ -2242,7 +2242,7 @@
 .public sub_020484D8
 .public sub_020484D8
 .public sub_02048508
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_020484DC
@@ -2263,7 +2263,7 @@
 .public sub_020484DC
 .public sub_020484B4
 .public sub_02045B7C
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_02045B7C
 .public MI_CpuFill8
 .public GCTX_HIDGetPressedKeys
@@ -2580,7 +2580,7 @@
 .public BmpWin_GetBitmap
 .public sub_02046F18
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_020484D4
@@ -2625,7 +2625,7 @@
 .public BmpWin_GetBitmap
 .public sub_020470F8
 .public GFL_StrBufFree
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public BmpWin_GetBitmap
@@ -2635,7 +2635,7 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_0204C124
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484B4
 .public sub_020484D4
 .public sub_02045B7C
@@ -2718,7 +2718,7 @@
 .public sub_020484DC
 .public sub_020484F8
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public GFL_HeapAllocate
@@ -2730,7 +2730,7 @@
 .public sub_020484DC
 .public sub_020484F8
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0203A614

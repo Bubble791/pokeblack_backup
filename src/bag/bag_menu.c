@@ -1331,11 +1331,11 @@ void ovy142_219e284(BagView *a1)
     a1->unk75C.winData = BmpWin_CreateDynamic(6, 20, 8, 6, 3, 0, 1);
     a1->unk764.winData = BmpWin_CreateDynamic(6, 2, 12, 29, 7, 0, 1);
     a1->unk76C.winData = BmpWin_CreateDynamic(6, 10, 1, 12, 2, 0, 1);
-    sub_0204826C(a1->unk76C.winData);
-    sub_0204826C(a1->unk754.winData);
-    sub_0204826C(a1->unk75C.winData);
-    sub_0204826C(a1->unk764.winData);
-    sub_0204826C(a1->tmhmTextBmpWin.winData);
+    BmpWin_FlushMap(a1->unk76C.winData);
+    BmpWin_FlushMap(a1->unk754.winData);
+    BmpWin_FlushMap(a1->unk75C.winData);
+    BmpWin_FlushMap(a1->unk764.winData);
+    BmpWin_FlushMap(a1->tmhmTextBmpWin.winData);
     v2 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
     a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
@@ -2786,7 +2786,7 @@ void ovy142_21a0134(BagBmpWinData *a1)
 {
     int v2; // r0
 
-    sub_0204826C(a1->winData);
+    BmpWin_FlushMap(a1->winData);
     v2 = sub_020484D4(a1->winData);
     sub_02045B7C(v2);
 }

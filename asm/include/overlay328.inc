@@ -125,7 +125,7 @@
 .public sub_0202B230
 .public sub_0202B098
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle

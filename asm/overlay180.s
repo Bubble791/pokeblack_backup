@@ -1149,7 +1149,7 @@ _0219B4F6:
 	ldr r0, [r6, #0xc]
 	bl BmpWin_FlushChar
 	ldr r0, [r6, #0xc]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	mov r0, #0
 	bl GFL_BGSysLoadScr
 	add sp, #0x14
@@ -2116,7 +2116,7 @@ _0219BE0C:
 	ldr r0, [r6, r7]
 	bl BmpWin_FlushChar
 	ldr r0, [r6, r7]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0219BE0C

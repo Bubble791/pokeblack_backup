@@ -127,9 +127,9 @@
 .public sub_02021D28
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public GFL_HeapAllocate
 .public sub_0202E168
@@ -206,7 +206,7 @@
 .public GFL_BGSysLoadScr
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
@@ -721,7 +721,7 @@
 .public sub_0205FA10
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public GFL_BGSysLoadScr
 .public GFL_FontCreate
 .public sub_020487FC

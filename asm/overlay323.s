@@ -1114,7 +1114,7 @@ ovy323_219d710: ; 0x0219D710
 	lsl r4, r1, #3
 	add r6, #0x80
 	ldr r0, [r6, r4]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [r6, r4]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -2148,7 +2148,7 @@ ovy323_219df14: ; 0x0219DF14
 	add r0, r4, #0
 	bl BmpWin_FlushChar
 	add r0, r4, #0
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	add r0, r4, #0
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
@@ -2450,7 +2450,7 @@ _0219E204:
 	ldr r0, [sp, #0x2c]
 	bl BmpWin_FlushChar
 	ldr r0, [sp, #0x2c]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r0, [sp, #0x2c]
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr

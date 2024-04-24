@@ -1284,7 +1284,7 @@ _021EB25E:
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x24]
 	ldr r0, [r1, r0]
-	bl sub_0204826C
+	bl BmpWin_FlushMap
 	ldr r1, [sp, #0x20]
 	ldr r0, [sp, #0x24]
 	ldr r0, [r1, r0]

@@ -191,10 +191,10 @@
 .public BmpWin_InitAllocator
 .public sub_0219E118
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0219E118
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0219E118
 .public sub_02045B7C
 .public sub_0219E118
@@ -552,7 +552,7 @@
 .public sub_0202D974
 .public sub_0219E118
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0219E118
 .public sub_02024D00
 .public sub_02024E80
@@ -640,7 +640,7 @@
 .public sub_0219E00C
 .public sub_0219E118
 .public BmpWin_CreateDynamic
-.public sub_0204826C
+.public BmpWin_FlushMap
 .public sub_0219E118
 .public sub_02024D00
 .public sub_02024E80
