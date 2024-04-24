@@ -2210,18 +2210,18 @@ int BagMenu_IsNotNormalBagMode(BagView *bagView)
     return 0;
 }
 
-int BagMenu_CheckItemCanRegist(BagView *bagView, int param_2)
+int BagMenu_CheckItemCanRegist(BagView *bagView, int slot)
 {
     int iVar1;
     int iVar3;
 
-    param_2 += bagView->unk834 + 1;
+    slot += bagView->unk834 + 1;
     iVar1 = BagMenu_GetPocketItemAmount(bagView);
-    if (iVar1 <= param_2)
+    if (iVar1 <= slot)
     {
         return 0;
     }
-    ItemTable *puVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, param_2);
+    ItemTable *puVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, slot);
     iVar1 = sub_02034AA4(puVar2->itemid);
 
     if (iVar1 == 0xff)
@@ -2450,15 +2450,14 @@ void BagMenu_ButtonManCallBack(u32 a1, int a2, BagView *bagView);
 
 void BagMenu_ButtonManCallBack(u32 hitIndex, int a2, BagView *bagView)
 {
-    int v7;       // r6
-    int v8;       // r1
-    int v9;       // r1
+    int v7;
+    int pocketNow;
     BagView *v10; // r0
     int v11;      // r1
     int v12;      // r6
     int v14;      // r0
     int v16;      // r7
-    int v18;      // [sp+0h] [bp-38h]
+    int v18;
     int v19;
     int pocket[6];
 
@@ -2478,21 +2477,21 @@ void BagMenu_ButtonManCallBack(u32 hitIndex, int a2, BagView *bagView)
     else if (hitIndex == BAG_BUTTON_SWITCH_POCKET_LEFT)
     {
         ovy142_219bda4(bagView, 0);
-        v8 = bagView->itemPocket;
-        bagView->itemPocket = v8 - 1;
-        if (v8 - 1 < 0)
+        pocketNow = bagView->itemPocket;
+        bagView->itemPocket = pocketNow - 1;
+        if (pocketNow - 1 < 0)
             bagView->itemPocket = BAG_POCKET_FREE_SPACE;
-        ovy142_219cac0(bagView, v8, 0, ovy142_219D464);
+        ovy142_219cac0(bagView, pocketNow, 0, ovy142_219D464);
         return;
     }
     else if (hitIndex == BAG_BUTTON_SWITCH_POCKET_RIGHT)
     {
         ovy142_219bda4(bagView, 0);
-        v9 = bagView->itemPocket;
-        bagView->itemPocket = v9 + 1;
-        if (v9 + 1 >= BAG_POCKET_MAX)
-            bagView->itemPocket = 0;
-        ovy142_219cac0(bagView, v9, 1, ovy142_219D464);
+        pocketNow = bagView->itemPocket;
+        bagView->itemPocket = pocketNow + 1;
+        if (pocketNow + 1 >= BAG_POCKET_MAX)
+            bagView->itemPocket = BAG_POCKET_NORMAL;
+        ovy142_219cac0(bagView, pocketNow, 1, ovy142_219D464);
         return;
     }
     else if (hitIndex == BAG_BUTTON_SORT_OR_SEACHER)
@@ -2554,37 +2553,36 @@ void BagMenu_ButtonManCallBack(u32 hitIndex, int a2, BagView *bagView)
     }
     else if (hitIndex >= BAG_BUTTON_ITEM_LIST_0 && hitIndex < BAG_BUTTON_ITEM_LIST_END)
     {
+
+        if (bagView->bagMenuFunc == BagMenu_HandleKeyPad)
         {
-            if (bagView->bagMenuFunc == BagMenu_HandleKeyPad)
+            v12 = bagView->posNow;
+            v18 = sub_02199978(bagView);
+            if (BagMenu_GetPocketItemAmount(bagView))
             {
-                v12 = bagView->posNow;
-                v18 = sub_02199978(bagView);
-                if (BagMenu_GetPocketItemAmount(bagView))
+
+                if (bagView->posNow != hitIndex - 12)
                 {
-
-                    if (bagView->posNow != hitIndex - 12)
+                    bagView->posNow = hitIndex - 12;
+                    if (v19 <= sub_02199978(bagView))
                     {
-                        bagView->posNow = hitIndex - 12;
-                        if (v19 <= sub_02199978(bagView))
-                        {
-                            bagView->posNow = v12;
-                            return;
-                        }
-                    }
-
-                    {
-                        v14 = sub_02199978(bagView);
-                        ovy142_2199a20(bagView, v18, v14);
-                        ovy142_219bda4(bagView, 0);
-                        bagView->unk838 = 0xFFFF;
-                        ovy142_21998f4(bagView);
-                        ovy142_219de0c(bagView);
-                        BagMenu_SetRunFunc(bagView, ovy142_219c958);
+                        bagView->posNow = v12;
+                        return;
                     }
                 }
+
+                {
+                    v14 = sub_02199978(bagView);
+                    ovy142_2199a20(bagView, v18, v14);
+                    ovy142_219bda4(bagView, 0);
+                    bagView->unk838 = 0xFFFF;
+                    ovy142_21998f4(bagView);
+                    ovy142_219de0c(bagView);
+                    BagMenu_SetRunFunc(bagView, ovy142_219c958);
+                }
             }
-            return;
         }
+        return;
     }
     else if (hitIndex >= BAG_BUTTON_ITEM_BOX_0)
     {

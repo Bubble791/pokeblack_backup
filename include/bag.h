@@ -546,13 +546,13 @@ void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_SetRunFunc(BagView *m_bagView, FieldBagItemUse fun);
 void BagMenu_PrintSeachItemEnd(BagView* bagView);
 
-void BagMenu_LoadBagBackGround(BagView *bagView, int a2);
+void BagMenu_LoadBagBackGround(BagView *bagView, void *fileHandle);
 extern int MyStatus_GetTrainerGender(void*);
-extern int Oam_LoadNCLRFile(int, int, int, int, int, int, u16); 
+extern int Oam_LoadNCLRFile(void*, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
-extern void GFL_G2DIOLoadArcNCLRDefault(int, int, int, int, int, u16);
-extern int GFL_BGSysLoadArcNCGRDynamic(int, int, int, int, int, u16);
-extern void GFL_G2DIOLoadNSCRSync(int, int, int, int, int, int, int, u16);
+extern void GFL_G2DIOLoadArcNCLRDefault(void *fileHandle, int, int, int, int, u16);
+extern int GFL_BGSysLoadArcNCGRDynamic(void *fileHandle, int, int, int, int, u16);
+extern void GFL_G2DIOLoadNSCRSync(void *fileHandle, int, int, int, int, int, int, u16);
 void ovy142_219e284(BagView *a1);
 extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
 extern void BmpWin_FlushMap(int);
@@ -594,9 +594,9 @@ extern int sub_020355B8(int, int, int, int, int);
 extern void GFL_SndSEPlay(int);
 extern int sub_0203DAC8(u32*, u32*);
 
-void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
-extern int Oam_LoadNCGRFile(int, int, int, int, u16);
-extern int Oam_LoadNCERFile(int, int, int, u16);
+void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, void *fileHandle);
+extern int Oam_LoadNCGRFile(void *fileHandle, int, int, int, u16);
+extern int Oam_LoadNCERFile(void *fileHandle, int, int, u16);
 
 
 int BagMenu_Main(int a1, int a2, void *a3, void *a4);

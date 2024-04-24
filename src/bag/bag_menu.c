@@ -926,7 +926,7 @@ void ovy142_219d664(void)
     sub_02044C98(6, 1);
 }
 
-void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
+void BagMenu_LoadBagBackGround(BagView *bagView, void *fileHandle)
 {
     int backgroundNCLR;
     int gender;
@@ -953,7 +953,7 @@ void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
     GFL_G2DIOLoadNSCRSync(fileHandle, backgroundNSCR, 0, 0, (u16)v7, 0, 0, bagView->heapId);
 }
 
-void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
+void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, void *fileHandle)
 {
     int nclrFileId;
     int gender;
@@ -1003,7 +1003,7 @@ extern void GFL_BGSysSetEnabledBGsA(int);
 extern void GFL_BGSysSetEnabledBGsB(int);
 extern void sub_020232D8(void);
 extern u32 LoadCursorImageEndOfHeap(int, int, int, u16);
-extern void GFL_G2DIOLoadArcNCLR(int, int, int, int, int, int, u16);
+extern void GFL_G2DIOLoadArcNCLR(void* fileHandle, int, int, int, int, int, u16);
 extern void GFL_BGSysLoadNCLRDefault(int, int, int, int, int, u16);
 extern int sub_0204BF1C(int, int, u16);
 extern void GFL_BGSysSetBGEnabledB(int, int);
@@ -1029,18 +1029,18 @@ void ovy142_219d7a8(BagView *bagView)
     OAM_TEMP newtemp[3];
     int v28;          // r0
     int v30;          // r0
-    int v31;          // r6
-    int file;           // r5
+    void *v31;          // r6
+    void *file;           // r5
     int v8;           // r0
     int v9;           // r0
-    int v11;          // r5
+    void *v11;          // r5
     int v12;          // r0
     int v14;          // r0
     int v19;          // r0
     int v20;          // r0
     int v23;
 
-    int v33;
+    void *v33;
     *(u16*)(0x4000050) = 0;
     GFL_BGSysCreate(bagView->heapId);
     BmpWin_InitAllocator(bagView->heapId);
@@ -1056,7 +1056,7 @@ void ovy142_219d7a8(BagView *bagView)
     sub_020232D8();
     bagView->unk88C = LoadCursorImageEndOfHeap(3, 13, 0, bagView->heapId);
     
-    file = (int)GFL_ArcSysCreateFileHandle(87, bagView->heapId);
+    file = GFL_ArcSysCreateFileHandle(87, bagView->heapId);
     GFL_G2DIOLoadArcNCLRDefault(file, 8, 4, 0, 0, bagView->heapId);
     if (!MyStatus_GetTrainerGender(bagView->unk8))
         GFL_G2DIOLoadArcNCLR(file, 8, 4, 32, 0, 32, bagView->heapId);
@@ -1075,14 +1075,14 @@ void ovy142_219d7a8(BagView *bagView)
     bagView->unk828 = GFL_BGSysLoadArcNCGRDynamic(file, 33, 3, 0, 0, bagView->heapId);
     
     GFL_G2DIOLoadArcNCLRDefault(file, 34, 0, 96, 32, bagView->heapId);
-    GFL_ArcToolFree((void*)file);
+    GFL_ArcToolFree(file);
 
     GFL_BGSysLoadNCLRDefault(23, 5, 0, 384, 32, bagView->heapId);
     bagView->spriteGroup = sub_0204BF1C(54, 0, bagView->heapId);
     GFL_BGSysSetBGEnabledB(16, 1);
     GFL_BGSysSetBGEnabledA(16, 1);
 
-    v11 = (int)GFL_ArcSysCreateFileHandle(82, bagView->heapId);
+    v11 = GFL_ArcSysCreateFileHandle(82, bagView->heapId);
     GFL_G2DIOLoadArcNCLRDefault(v11, 27, 0, 256, 32, bagView->heapId);
     v12 = GFL_BGSysLoadArcNCGRDynamic(v11, 28, 1, 0, 0, bagView->heapId);
     bagView->unk824 = v12;
@@ -1093,10 +1093,11 @@ void ovy142_219d7a8(BagView *bagView)
     bagView->unk57C = Oam_LoadNCERFile(v11, 23, 26, bagView->heapId);
     bagView->unk570 = Oam_LoadNCGRFile(v11, 175, 0, 0, bagView->heapId);
     bagView->unk580 = Oam_LoadNCERFile(v11, 174, 173, bagView->heapId);
-    GFL_ArcToolFree((void*)v11);
+    GFL_ArcToolFree(v11);
+
     ovy142_219ed8c(bagView);
     v14 = GetDefaultUINarcIdx();
-    v33 = (int)GFL_ArcSysCreateFileHandle(v14, bagView->heapId);
+    v33 = GFL_ArcSysCreateFileHandle(v14, bagView->heapId);
     
     bagView->unk5F0 = Oam_LoadNCLRFile(v33, sub_0202D7E4(), 1, 128, 0, 3, bagView->heapId);
     bagView->unk5F4 = Oam_LoadNCERFile(v33, sub_0202D7F8(2), sub_0202D7FC(2), bagView->heapId);
@@ -1112,7 +1113,7 @@ void ovy142_219d7a8(BagView *bagView)
         v23 = sub_0202D7F4((u8)i);
         bagView->unk5AC[i] = Oam_LoadNCGRFile(v33, v23, 0, 1, bagView->heapId);
     }
-    GFL_ArcToolFree((void*)v33);
+    GFL_ArcToolFree(v33);
     
     newtemp[2].x = 80;
     newtemp[2].y = 0xb8;
@@ -1154,11 +1155,11 @@ void ovy142_219d7a8(BagView *bagView)
         sub_0204C124(bagView->unk6E0[i], 0);
         sub_0204C5C8(bagView->unk6E0[i], 0);
     }
-    v31 = (int)GFL_ArcSysCreateFileHandle(87, bagView->heapId);
+    v31 = GFL_ArcSysCreateFileHandle(87, bagView->heapId);
     bagView->unk590 = Oam_LoadNCLRFile(v31, 39, 0, 128, 0, 2, bagView->heapId);
     bagView->unk594 = Oam_LoadNCGRFile(v31, 38, 0, 0, bagView->heapId);
     bagView->unk59C = Oam_LoadNCERFile(v31, 37, 36, bagView->heapId);
-    GFL_ArcToolFree((void*)v31);
+    GFL_ArcToolFree(v31);
     
     newtemp[0].flag = 10;
     newtemp[0].unk = 1;
@@ -1415,7 +1416,7 @@ void ovy142_219e284(BagView *a1)
     BmpWin_FlushMap(a1->unk764.winData);
     BmpWin_FlushMap(a1->tmhmTextBmpWin.winData);
     v2 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
-    a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
+    a1->unk558 = Oam_LoadNCERFile(v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
 
     GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
@@ -1461,9 +1462,9 @@ void BagMenu_LoadItemIconOam(BagView *bagView, int item)
 
     file = GFL_ArcSysCreateFileHandle(ARC_ITEM_PICTURE, bagView->heapId);
     itemNCGR = Item_GetItemIconResourceId(item, 2);
-    bagView->unk550 = Oam_LoadNCLRFile((int)file, itemNCGR, 1, 0, 0, 1, bagView->heapId);
+    bagView->unk550 = Oam_LoadNCLRFile(file, itemNCGR, 1, 0, 0, 1, bagView->heapId);
     itemNCLR = Item_GetItemIconResourceId(item, 1);
-    bagView->unk554 = Oam_LoadNCGRFile((int)file, itemNCLR, 0, 1, bagView->heapId);
+    bagView->unk554 = Oam_LoadNCGRFile(file, itemNCLR, 0, 1, bagView->heapId);
     GFL_ArcToolFree(file);
 
     itemIconTemplate.x = 132;
@@ -1501,9 +1502,9 @@ void ovy142_219e5a8(BagView *a1)
 
 void BagMenu_LoadBagItemBarResource(BagView *a1)
 {
-    int fileHandle; // r4
+    void *fileHandle; // r4
 
-    fileHandle = (int)GFL_ArcSysCreateFileHandle(87, a1->heapId);
+    fileHandle = GFL_ArcSysCreateFileHandle(87, a1->heapId);
     a1->barLeftIconNCLR = Oam_LoadNCLRFile(fileHandle, 32, 0, 448, 0, 1, a1->heapId);
     a1->barLeftIconNCGR = Oam_LoadNCGRFile(fileHandle, 31, 0, 0, a1->heapId);
     a1->barLeftIconNCER = Oam_LoadNCERFile(fileHandle, 30, 29, a1->heapId);
@@ -1520,7 +1521,7 @@ void BagMenu_LoadBagItemBarResource(BagView *a1)
     MyStatus_GetTrainerGender(a1->unk8);
     a1->unk598 = Oam_LoadNCLRFile(fileHandle, 21, 0, 0, 0, 3, a1->heapId);
     a1->unk578 = Oam_LoadNCERFile(fileHandle, 19, 18, a1->heapId);
-    GFL_ArcToolFree((void*)fileHandle);
+    GFL_ArcToolFree(fileHandle);
 }
 
 
