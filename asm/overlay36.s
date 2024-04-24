@@ -18648,7 +18648,7 @@ _02188208:
 	bl GFL_SndSEPlay
 	b _02188216
 _02188210:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	pop {r3, pc}
 _02188216:
 	mov r0, #0

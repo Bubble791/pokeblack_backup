@@ -5826,7 +5826,7 @@ _021BA532:
 	bl ovy194_21c30b8
 	add r0, r5, #0
 	bl ovy194_21c339c
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021BA55E
 	cmp r6, #0

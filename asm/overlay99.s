@@ -792,7 +792,7 @@ _021EF2BE:
 	add r2, r2, #1
 	cmp r2, #3
 	blt _021EF2AE
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #1
 	bne _021EF2D0
 	mov r0, #0

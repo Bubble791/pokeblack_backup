@@ -798,7 +798,7 @@ _021A01DA:
 	str r0, [r5, #8]
 	pop {r3, r4, r5, pc}
 _021A01FE:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A0244
 	add r0, r4, #0
@@ -875,7 +875,7 @@ _021A029E:
 	str r0, [r4, #8]
 	pop {r4, pc}
 _021A02A6:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A0340
 	ldr r0, [r4, #8]

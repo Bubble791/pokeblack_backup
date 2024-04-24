@@ -2466,7 +2466,7 @@ _0219ABE8:
 	thumb_func_start ovy259_219abec
 ovy259_219abec: ; 0x0219ABEC
 	push {r3, lr}
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _0219ABFA
 	mov r0, #1

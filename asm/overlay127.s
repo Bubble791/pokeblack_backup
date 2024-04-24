@@ -712,7 +712,7 @@ _021EF1F8:
 	bl sub_021B8258
 	b _021EF1EC
 _021EF23C:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021EF24A
 	add sp, #8
@@ -874,7 +874,7 @@ _021EF384:
 	bl ovy127_21ef528
 	cmp r0, #0
 	beq _021EF414
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021EF414
 	mov r0, #3

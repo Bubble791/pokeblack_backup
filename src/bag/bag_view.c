@@ -1,6 +1,7 @@
 #include "global.h"
 #include "main.h"
 #include "bag.h"
+#include "item.h"
 #include "item_param.h"
 
 const u8 data_21A0FD0[5] = {0};
@@ -822,7 +823,7 @@ u32 ovy142_219a4a0(u16 item)
 }
 
 
-void ovy142_219a4d0(BagView *bagView)
+void BagMenu_HandlePressAButton(BagView *bagView)
 {
     u32 bVar1 = 0;
 
@@ -847,17 +848,16 @@ void ovy142_219a4d0(BagView *bagView)
                 }
                 else
                 {
-
-                    int fieldPocket = Item_GetItemParam((u16)bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, bagView->heapId);
+                    int fieldPocket = Item_GetItemParam(bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, bagView->heapId);
                     if (fieldPocket == 0)
                     {
                         sub_0202D384((u16)bagView->selectItem);
                     }
                 }
 
-                if (type == 2)
+                if (type == ITEM_TYPE_TMHM)
                 {
-                    BagMenu_SetRunFunc(bagView, ovy142_219ac70);
+                    BagMenu_SetRunFunc(bagView, BagMenu_TmHmUseStart);
                     break;
                 }
                 else
@@ -925,7 +925,7 @@ void ovy142_219a4d0(BagView *bagView)
                 break;
             case 4:
             case 5:
-                iVar3 = sub_0219BE00(bagView);
+                iVar3 = BagMenu_IsNotNormalBagMode(bagView);
                 if (iVar3 == 1)
                 {
                     ovy142_219be18(bagView, bagView->posNow);
@@ -1033,7 +1033,7 @@ void ovy142_219a724(BagView *bagView)
         ovy142_219f76c(bagView, bagView->selectItem);
         sub_0219F760(bagView);
         sub_0204C520(bagView->scrollBarOam, 0);
-        BagMenu_SetRunFunc(bagView, ovy142_219a4d0);
+        BagMenu_SetRunFunc(bagView, BagMenu_HandlePressAButton);
     }
 }
 
@@ -1107,7 +1107,7 @@ void BagMenu_HandleKeyPad(BagView *bagView)
                 }
                 if ((GCTX_HIDGetPressedKeys() & KEY_Y) != 0)
                 {
-                    if (sub_0219BE00(bagView) == 1)
+                    if (BagMenu_IsNotNormalBagMode(bagView) == 1)
                     {
                         if (ovy142_219be18(bagView, bagView->posNow) == 1)
                             ovy142_21998f4(bagView);
@@ -1159,7 +1159,8 @@ void BagMenu_HandleKeyPad(BagView *bagView)
                 {
                     if ((GCTX_HIDGetPressedKeys() & KEY_SELECT) != 0)
                     {
-                        if (bagView->itemPocket != BAG_POCKET_FREE_SPACE && BagMenu_GetPocketItemAmount(bagView) > 1)
+                        if (bagView->itemPocket != BAG_POCKET_FREE_SPACE 
+                            && BagMenu_GetPocketItemAmount(bagView) > 1)
                         {
                             MI_CpuFill8(bagView->m_itemTable, 0, 0x4D8);
                             BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 1);
@@ -1264,20 +1265,18 @@ void ovy142_219abb8(BagView *bagView)
 
 }
 
-void ovy142_219abd8(BagView *bagView);
-extern int sub_020062A8(void);
+void BagMenu_PrintPokeLearnHmTm(BagView *bagView);
+extern int GFL_SndPlayerIsActiveAny(void);
 extern void LoadMoveNameToStrbuf(int, int, int);
 
-void ovy142_219abd8(BagView *bagView)
+void BagMenu_PrintPokeLearnHmTm(BagView *bagView)
 {
-    int iVar1;
-
-    iVar1 = sub_020062A8();
-    if ((iVar1 != 1) && ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_B)) || (sub_0203DA48() != 0)))
+    if ((GFL_SndPlayerIsActiveAny() != 1) 
+        && ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_B)) || (sub_0203DA48() != 0)))
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3e, bagView->stringBuff1);
-        int uVar3 = Item_GetTmHmMove((u16)bagView->selectItem);
-        LoadMoveNameToStrbuf(bagView->wordSetSystem, 0, uVar3);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 62, bagView->stringBuff1);
+        int move = Item_GetTmHmMove((u16)bagView->selectItem);
+        LoadMoveNameToStrbuf(bagView->wordSetSystem, 0, move);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         BagMenu_PrintBagMessage(bagView, 1);
         BagMenu_SetRunFunc(bagView, ovy142_219abb8);
@@ -1294,25 +1293,25 @@ void ovy142_219ac4c(BagView *bagView)
     if (iVar1 != 0)
     {
         GFL_SndSEPlay(0x55C);
-        BagMenu_SetRunFunc(bagView, ovy142_219abd8);
+        BagMenu_SetRunFunc(bagView, BagMenu_PrintPokeLearnHmTm);
     }
 }
 
-extern int Item_GetTmHmNo(u16);
-void ovy142_219ac70(BagView *bagView);
+extern int Item_GetTmNo(u16);
+void BagMenu_TmHmUseStart(BagView *bagView);
 
-void ovy142_219ac70(BagView *bagView)
+void BagMenu_TmHmUseStart(BagView *bagView)
 {
     int iVar1;
 
-    iVar1 = Item_GetTmHmNo((u16)bagView->selectItem);
+    iVar1 = Item_GetTmNo((u16)bagView->selectItem);
     if (iVar1 == 0xFF)
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3c, bagView->stringBuff2);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 60, bagView->stringBuff2);
     }
     else
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3d, bagView->stringBuff2);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 61, bagView->stringBuff2);
     }
     
     BagMenu_PrintBagMessage(bagView, 1);
@@ -2206,12 +2205,13 @@ void ovy142_219bda4(BagView *bagView, int param_2)
     ovy142_219dda0(bagView, param_2);
 }
 
-int sub_0219BE00(BagView *bagView)
+int BagMenu_IsNotNormalBagMode(BagView *bagView)
 {
     int iVar1;
 
     iVar1 = bagView->bagMode;
-    if (!((iVar1 != BAG_MODE_NORMAL) && (iVar1 != BAG_MODE_UNION_ROOM)) || (iVar1 == BAG_MODE_LINK_BATTLE_ROOM))
+    if (!((iVar1 != BAG_MODE_NORMAL) 
+        && (iVar1 != BAG_MODE_UNION_ROOM)) || (iVar1 == BAG_MODE_LINK_BATTLE_ROOM))
     {
         return 1;
     }
@@ -2534,7 +2534,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     }
     else if (a1 == 9)
     {
-        if (sub_0219BE00(bagView) == 1)
+        if (BagMenu_IsNotNormalBagMode(bagView) == 1)
         {
             ovy142_219be90(bagView);
             ovy142_219bda4(bagView, 0);
@@ -2599,7 +2599,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     }
     else if (a1 >= 0x12)
     {
-        if (sub_0219BE00(bagView) == 1 && ovy142_219be18(bagView, a1 - 18) == 1)
+        if (BagMenu_IsNotNormalBagMode(bagView) == 1 && ovy142_219be18(bagView, a1 - 18) == 1)
         {
             ovy142_219bda4(bagView, 0);
             ovy142_21998f4(bagView);

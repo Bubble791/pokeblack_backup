@@ -736,7 +736,7 @@
 .public GFL_SndSEPlay
 .public sub_02042788
 .public sub_021C095C
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021C13A8
 .public sub_021C13A8
 .public sub_021C13A8
@@ -1006,7 +1006,7 @@
 .public sub_021C095C
 .public GFL_SndSEPlay
 .public sub_021C095C
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021BEC24
 .public sub_021BEC98
 .public sub_0201782C
@@ -1128,12 +1128,12 @@
 .public sub_02045B7C
 .public sub_020243D0
 .public GFL_StrBufFree
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021C095C
 .public sub_021C85D0
 .public sub_021C85E8
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021C095C
 .public sub_021C095C
 .public sub_021C095C

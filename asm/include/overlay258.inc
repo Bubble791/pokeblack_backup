@@ -313,8 +313,8 @@
 .public sub_020484B4
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_020062A8
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
+.public GFL_SndPlayerIsActiveAny
 .public GFL_SndSEPlay
 .public sub_02005E54
 .public sub_02005ED4

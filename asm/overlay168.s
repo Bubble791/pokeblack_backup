@@ -13264,7 +13264,7 @@ _021E43AE:
 	ldr r0, [r5, r0]
 	cmp r0, #0xa
 	bne _021E43D2
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021E43CE
 	ldr r0, [r5]

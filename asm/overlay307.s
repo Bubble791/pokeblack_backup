@@ -2158,7 +2158,7 @@ _021DEC74:
 	str r0, [r4, #0x28]
 	b _021DED4C
 _021DEC78:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021DED4C
 	ldr r0, _021DEE1C ; =0x000007A7
@@ -2166,7 +2166,7 @@ _021DEC78:
 	mov r0, #2
 	b _021DEC74
 _021DEC8A:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021DED4C
 	mov r0, #3

@@ -74237,8 +74237,8 @@ _02026B7C: .word 0x0000026A
 _02026B80: .word 0x00000145
 	thumb_func_end Item_GetTmHmIndex
 
-	thumb_func_start Item_GetTmHmNo
-Item_GetTmHmNo: ; 0x02026B84
+	thumb_func_start Item_GetTmNo
+Item_GetTmNo: ; 0x02026B84
 	mov r2, #0x69
 	lsl r2, r2, #2
 	cmp r0, r2
@@ -74254,7 +74254,7 @@ _02026B9A:
 	mov r0, #0xff
 	bx lr
 	.align 2, 0
-	thumb_func_end Item_GetTmHmNo
+	thumb_func_end Item_GetTmNo
 
 	thumb_func_start Item_IsMail
 Item_IsMail: ; 0x02026BA0

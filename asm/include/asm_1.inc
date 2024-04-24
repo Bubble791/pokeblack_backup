@@ -5329,7 +5329,7 @@
 .public sub_02006268
 .public sub_02006280
 .public sub_02006294
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_020062C4
 .public sub_020062D8
 .public sub_0200632C
@@ -7932,7 +7932,7 @@
 .public Item_GetTmHmMove
 .public sub_02026B18
 .public Item_GetTmHmIndex
-.public Item_GetTmHmNo
+.public Item_GetTmNo
 .public Item_IsMail
 .public sub_02026BC0
 .public sub_02026BE0

@@ -913,7 +913,7 @@
 .public ovy168_21e00d8
 .public ovy168_21f27b8
 .public sub_020500A8
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02006294
 .public sub_02006294
 .public sub_02006294

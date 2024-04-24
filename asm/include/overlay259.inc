@@ -180,7 +180,7 @@
 .public sub_02199E24
 .public sub_02199E24
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_HeapAllocate
 .public sub_0219C194
 .public GFL_HeapFree

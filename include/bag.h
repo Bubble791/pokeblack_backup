@@ -169,7 +169,7 @@ struct BagViewWork
     /*0x6A4*/ int buttonManSystem;
     /*0x6A8*/ int taskCallBack;
     /*0x6AC*/ int spriteGroup;
-    /*0x6B0*/ int unk6B0;
+    /*0x6B0*/ int itemIconOam;
     /*0x6B4*/ int unk6B4;
     /*0x6B8*/ int scrollBarOam;
     /*0x6BC*/ int bagPocketOam[6];
@@ -179,7 +179,7 @@ struct BagViewWork
     /*0x740*/ int unk740;
     /*0x744*/ int unk744;
     /*0x748*/ int unk748;
-    /*0x74C*/ BagBmpWinData unk74C;
+    /*0x74C*/ BagBmpWinData tmhmTextBmpWin;
     /*0x754*/ BagBmpWinData unk754;
     /*0x75C*/ BagBmpWinData unk75C;
     /*0x764*/ BagBmpWinData unk764;
@@ -370,16 +370,16 @@ extern void PlayerSave_AddMoney(int, int);
 extern void BagMenu_PrintMoneyString(BagView*);
 extern int PlayerSave_GetPlayerSaveOffset(void*);
 
-void ovy142_219a4d0(BagView *m_bagView);
+void BagMenu_HandlePressAButton(BagView *m_bagView);
 extern int sub_0202DBE4(int);
 extern int sub_0202DC00(int);
 
 extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
-extern void ovy142_219ac70(BagView*);
+extern void BagMenu_TmHmUseStart(BagView*);
 extern void BagMenu_MoveItemToFreeSpace(BagView*);
 void BagMenu_ItemToss(BagView*);
-extern int sub_0219BE00(BagView*);
+extern int BagMenu_IsNotNormalBagMode(BagView*);
 extern int ovy142_219be18(BagView*, int);
 extern void sub_0219F0AC(BagView*);
 extern void sub_0202DA54(int);
@@ -422,7 +422,7 @@ extern int BmpWin_BitmapFill(int, int);
 extern void BagMenu_DrawStringToBmpWin(BagView *a1, BagBmpWinData *a2, int a3, u16 a4, s16 a5, u16 a6);
 extern int ovy142_21a03ac(u8);
 extern void BmpWin_FlushChar(int);
-extern int Item_GetTmHmNo(u16);
+extern int Item_GetTmNo(u16);
 extern int Item_GetTmHmIndex(u16);
 extern void LoadMoveNameToStrbuf(int, int, int);
 extern void ovy142_219f4b0(BagView*, int);

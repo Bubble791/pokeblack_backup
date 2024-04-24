@@ -9674,7 +9674,7 @@ _021A18DA:
 	bl sub_021A1E88
 	pop {r3, r4, r5, pc}
 _021A192A:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A19BC
 	ldr r0, [r4, #0x28]
@@ -9904,7 +9904,7 @@ _021A1AA6:
 	bl sub_021A1E88
 	pop {r4, pc}
 _021A1B2E:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A1BA8
 	ldr r0, [r4, #0x28]
@@ -10021,7 +10021,7 @@ _021A1BCA:
 	bl sub_021A1E88
 	pop {r4, pc}
 _021A1C58:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A1CD8
 	ldr r0, [r4, #0x28]

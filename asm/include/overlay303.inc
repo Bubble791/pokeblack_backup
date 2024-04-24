@@ -60,7 +60,7 @@
 .public sub_0204C488
 .public sub_0204C520
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_0204C560
 .public sub_0204C488
 .public sub_0204C520
@@ -71,7 +71,7 @@
 .public sub_0219FCF8
 .public GFL_SndSEPlay
 .public sub_0219FCF8
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_0219FCF8
 .public sub_0219FCF8
 .public sub_0219FCF8

@@ -2793,7 +2793,7 @@
 .public sub_021BC6AC
 .public ovy168_21dfb28
 .public ovy168_21dfb58
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021D02F8
 .public sub_02005E54
 .public sub_02005ED4
@@ -6581,7 +6581,7 @@
 .public sub_021D04BC
 .public sub_021D04CC
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02006280
 .public Oam_GetSpritePosData
 .public FX_Div

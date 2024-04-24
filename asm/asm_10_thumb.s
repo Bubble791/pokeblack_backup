@@ -983,8 +983,8 @@ _020062A4:
 	pop {r3, pc}
 	thumb_func_end sub_02006294
 
-	thumb_func_start sub_020062A8
-sub_020062A8: ; 0x020062A8
+	thumb_func_start GFL_SndPlayerIsActiveAny
+GFL_SndPlayerIsActiveAny: ; 0x020062A8
 	push {r4, lr}
 	mov r4, #0
 _020062AC:
@@ -1000,7 +1000,7 @@ _020062BA:
 	blt _020062AC
 	mov r0, #0
 	pop {r4, pc}
-	thumb_func_end sub_020062A8
+	thumb_func_end GFL_SndPlayerIsActiveAny
 
 	thumb_func_start sub_020062C4
 sub_020062C4: ; 0x020062C4

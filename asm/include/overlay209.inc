@@ -613,7 +613,7 @@
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_021EF988
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_021C12AC

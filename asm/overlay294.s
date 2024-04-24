@@ -1814,7 +1814,7 @@ _021A28C6:
 	str r0, [r4]
 	b _021A28FE
 _021A28CC:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A28FE
 	ldr r0, [r5, #8]

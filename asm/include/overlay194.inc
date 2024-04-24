@@ -484,7 +484,7 @@
 .public sub_0203DF44
 .public sub_0203D564
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_SndSEPlay
 .public sub_02042B20
 .public sub_02040440

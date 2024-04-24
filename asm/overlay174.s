@@ -581,7 +581,7 @@ ovy174_219d338: ; 0x0219D338
 	ldr r0, [r4, r5]
 	add r0, r0, #1
 	str r0, [r4, r5]
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _0219D368
 	ldr r0, [r4, r5]

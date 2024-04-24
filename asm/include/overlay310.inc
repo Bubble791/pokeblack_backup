@@ -953,7 +953,7 @@
 .public sub_021A318C
 .public sub_021A4B6C
 .public sub_021A1E88
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021A1E88
 .public GFL_SndSEPlay
 .public sub_021A22D8
@@ -980,7 +980,7 @@
 .public sub_021A319C
 .public sub_021A4B90
 .public sub_021A1E88
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021A1E88
 .public GFL_SndSEPlay
 .public sub_021A319C
@@ -995,7 +995,7 @@
 .public sub_021A319C
 .public sub_021A4B90
 .public sub_021A1E88
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_021A1E88
 .public GFL_SndSEPlay
 .public sub_021A319C

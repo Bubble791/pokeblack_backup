@@ -57,7 +57,7 @@
 .public sub_02010078
 .public sub_0202DBE4
 .public sub_0219CE98
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02042860
 .public sub_0219CE98
 .public sub_02040440

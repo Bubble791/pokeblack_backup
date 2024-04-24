@@ -96,7 +96,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public GFL_CopyVarForText
 .public GFL_WordSetFormatStrbuf
-.public sub_0219BE00
+.public BagMenu_IsNotNormalBagMode
 .public sub_0204C520
 .public sub_0203D554
 .public sub_0203D554
@@ -130,7 +130,7 @@
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public GCTX_HIDGetPressedKeys
-.public sub_0219BE00
+.public BagMenu_IsNotNormalBagMode
 .public sub_0203D554
 .public GCTX_HIDGetPressedKeys
 .public sub_021998C0
@@ -155,7 +155,7 @@
 .public sub_0204C520
 .public sub_0203D554
 .public sub_021998C0
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DA48
 .public GFL_MsgDataLoadStrbuf
@@ -165,7 +165,7 @@
 .public sub_021998C0
 .public GFL_SndSEPlay
 .public sub_021998C0
-.public Item_GetTmHmNo
+.public Item_GetTmNo
 .public GFL_MsgDataLoadStrbuf
 .public sub_021998C0
 .public GCTX_HIDGetPressedKeys
@@ -359,13 +359,13 @@
 .public GameData_IsShortcutRegistered
 .public sub_021998C0
 .public sub_021998C0
-.public sub_0219BE00
+.public BagMenu_IsNotNormalBagMode
 .public sub_0203D564
 .public sub_02199978
 .public sub_02199978
 .public sub_02199978
 .public sub_021998C0
-.public sub_0219BE00
+.public BagMenu_IsNotNormalBagMode
 .public GFL_SndSEPlay
 .public sub_020275F8
 .public sub_0204B7C8
@@ -682,7 +682,7 @@
 .public GFL_WordSetFormatStrbuf
 .public BmpWin_FlushChar
 .public sub_020484B4
-.public Item_GetTmHmNo
+.public Item_GetTmNo
 .public GFL_MsgDataLoadStrbuf
 .public Item_GetTmHmIndex
 .public GFL_MsgDataLoadStrbuf
@@ -800,7 +800,7 @@
 .public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_02021D28
-.public Item_GetTmHmNo
+.public Item_GetTmNo
 .public Item_GetTmHmIndex
 .public Item_GetParam
 .public GFL_HeapFree
@@ -837,7 +837,7 @@
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C5C8
-.public sub_0219BE00
+.public BagMenu_IsNotNormalBagMode
 .public sub_0204C124
 .public sub_0204C124
 .public Oam_CreateSprite

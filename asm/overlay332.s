@@ -10146,7 +10146,7 @@ _021C3C00:
 	bl sub_021C095C
 	cmp r0, #0
 	beq _021C3C1E
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021C3C1E
 	ldr r0, [r4]
@@ -14973,7 +14973,7 @@ _021C6146:
 	bl sub_021C095C
 	cmp r0, #0
 	beq _021C6162
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021C6162
 	mov r0, #7
@@ -17655,7 +17655,7 @@ _021C756C:
 	str r0, [r5]
 	pop {r3, r4, r5, r6, r7, pc}
 _021C75D4:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021C75E8
 	ldr r0, [r4, #0x10]
@@ -17812,7 +17812,7 @@ _021C76F6:
 	str r0, [r4]
 	pop {r3, r4, r5, r6, r7, pc}
 _021C7710:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021C7724
 	ldr r0, [r5, #0x10]

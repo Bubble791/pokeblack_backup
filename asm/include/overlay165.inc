@@ -751,7 +751,7 @@
 .public sub_02005FA8
 .public sub_02005F0C
 .public sub_02005E54
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
 .public StringSetNumber
@@ -1135,7 +1135,7 @@
 .public sub_02044C98
 .public GFL_SndSEPlay
 .public sub_020500A8
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_020069F4
@@ -1145,7 +1145,7 @@
 .public GFL_SndSEPlay
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_020500A8
 .public sub_0201FF08
 .public sub_0201FDF8

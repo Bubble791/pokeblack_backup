@@ -74,7 +74,7 @@
 .public sub_02016AD8
 .public sub_0201793C
 .public sub_02017394
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02019294
 .public sub_02019294
 .public sub_021804BC

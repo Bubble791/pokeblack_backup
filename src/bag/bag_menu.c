@@ -1166,7 +1166,7 @@ void ovy142_219dda0(BagView *a1, int a2)
     else
         a1->unk894 = 2;
 
-    v5 = a1->unk6B0;
+    v5 = a1->itemIconOam;
     if (v5)
         sub_0204C124(v5, a2);
     v6 = sub_02199978(a1);
@@ -1238,11 +1238,11 @@ void ovy142_219de0c(BagView *a1)
         {
             BmpWin_FlushChar(a1->unk75C.winData);
         }
-        sub_020484B4(a1->unk74C.winData);
+        sub_020484B4(a1->tmhmTextBmpWin.winData);
     }
     else
     {
-        v12 = Item_GetTmHmNo(v6->itemid);
+        v12 = Item_GetTmNo(v6->itemid);
         if (v12 == 255)
         {
             GFL_MsgDataLoadStrbuf(a1->msgData, 69, a1->stringBuff1);
@@ -1287,7 +1287,7 @@ void ovy142_219de0c(BagView *a1)
 void ovy142_219e120(BagView *a1)
 {
     ovy142_219dda0(a1, 0);
-    sub_020484B4(a1->unk74C.winData);
+    sub_020484B4(a1->tmhmTextBmpWin.winData);
     for (u32 i = 0; i < 3; i++)
         sub_0204C124(a1->unk6D4[i], 0);
 
@@ -1313,14 +1313,14 @@ void ovy142_219e168(BagView *a1)
     sub_02048210(a1->unk754.winData);
     sub_02048210(a1->unk764.winData);
     sub_02048210(a1->unk75C.winData);
-    sub_02048210(a1->unk74C.winData);
+    sub_02048210(a1->tmhmTextBmpWin.winData);
     sub_02048210(a1->unk774.winData);
     sub_02048210(a1->unk78C.winData);
     sub_02048210(a1->unk794.winData);
     sub_0204C108(a1->scrollBarOam);
-    if (a1->unk6B0)
+    if (a1->itemIconOam)
     {
-        sub_0204C108(a1->unk6B0);
+        sub_0204C108(a1->itemIconOam);
         sub_0204B98C(a1->unk554);
         sub_0204BCD0(a1->unk550);
     }
@@ -1361,7 +1361,7 @@ void ovy142_219e284(BagView *a1)
     sub_020484B4(a1->unk794.winData);
     a1->unk774.winData = BmpWin_CreateDynamic(3, 17, 13, 11, 2, 3, 1);
     a1->unk78C.winData = BmpWin_CreateDynamic(3, 17, 15, 11, 2, 3, 1);
-    a1->unk74C.winData = BmpWin_CreateDynamic(6, 0, 19, 32, 5, 0, 1);
+    a1->tmhmTextBmpWin.winData = BmpWin_CreateDynamic(6, 0, 19, 32, 5, 0, 1);
     a1->unk754.winData = BmpWin_CreateDynamic(6, 7, 5, 18, 3, 0, 1);
     a1->unk75C.winData = BmpWin_CreateDynamic(6, 20, 8, 6, 3, 0, 1);
     a1->unk764.winData = BmpWin_CreateDynamic(6, 2, 12, 29, 7, 0, 1);
@@ -1370,21 +1370,21 @@ void ovy142_219e284(BagView *a1)
     sub_0204826C(a1->unk754.winData);
     sub_0204826C(a1->unk75C.winData);
     sub_0204826C(a1->unk764.winData);
-    sub_0204826C(a1->unk74C.winData);
+    sub_0204826C(a1->tmhmTextBmpWin.winData);
     v2 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
     a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
 
     GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
-    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &a1->tmhmTextBmpWin, a1->stringBuff1, 8, 4, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 93, a1->stringBuff1);
-    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 8, 24, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &a1->tmhmTextBmpWin, a1->stringBuff1, 8, 24, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 91, a1->stringBuff1);
-    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 112, 4, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &a1->tmhmTextBmpWin, a1->stringBuff1, 112, 4, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 92, a1->stringBuff1);
-    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 112, 24, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &a1->tmhmTextBmpWin, a1->stringBuff1, 112, 24, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 90, a1->stringBuff1);
-    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 208, 4, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &a1->tmhmTextBmpWin, a1->stringBuff1, 208, 4, 0x3DC0);
 
     result = sub_0203D554();
     if (!result)
@@ -1395,12 +1395,12 @@ void ovy142_219e4b0(BagView *a1);
 
 void ovy142_219e4b0(BagView *a1)
 {
-    if (a1->unk6B0)
+    if (a1->itemIconOam)
     {
-        sub_0204C108(a1->unk6B0);
+        sub_0204C108(a1->itemIconOam);
         sub_0204B98C(a1->unk554);
         sub_0204BCD0(a1->unk550);
-        a1->unk6B0 = 0;
+        a1->itemIconOam = 0;
     }
 }
 
@@ -1408,20 +1408,20 @@ extern int Item_GetItemIconResourceId(u16, int);
 
 void BagMenu_LoadItemIconOam(BagView *bagView, int item)
 {
-    void *v4;
-    int v5;
-    int v6;
+    void *file;
+    int itemNCGR;
+    int itemNCLR;
     OAM_TEMP itemIconTemplate;
 
-    if (bagView->unk6B0)
+    if (bagView->itemIconOam)
         ovy142_219e4b0(bagView);
 
-    v4 = GFL_ArcSysCreateFileHandle(ARC_ITEM_PICTURE, bagView->heapId);
-    v5 = Item_GetItemIconResourceId(item, 2);
-    bagView->unk550 = Oam_LoadNCLRFile((int)v4, v5, 1, 0, 0, 1, bagView->heapId);
-    v6 = Item_GetItemIconResourceId(item, 1);
-    bagView->unk554 = Oam_LoadNCGRFile((int)v4, v6, 0, 1, bagView->heapId);
-    GFL_ArcToolFree(v4);
+    file = GFL_ArcSysCreateFileHandle(ARC_ITEM_PICTURE, bagView->heapId);
+    itemNCGR = Item_GetItemIconResourceId(item, 2);
+    bagView->unk550 = Oam_LoadNCLRFile((int)file, itemNCGR, 1, 0, 0, 1, bagView->heapId);
+    itemNCLR = Item_GetItemIconResourceId(item, 1);
+    bagView->unk554 = Oam_LoadNCGRFile((int)file, itemNCLR, 0, 1, bagView->heapId);
+    GFL_ArcToolFree(file);
 
     itemIconTemplate.x = 132;
     itemIconTemplate.y = 80;
@@ -1429,7 +1429,7 @@ void BagMenu_LoadItemIconOam(BagView *bagView, int item)
     itemIconTemplate.flag = 0;
     itemIconTemplate.unk = 0;
 
-    bagView->unk6B0 = Oam_CreateSprite(
+    bagView->itemIconOam = Oam_CreateSprite(
         bagView->spriteGroup,
         bagView->unk554,
         bagView->unk550,
@@ -1437,9 +1437,9 @@ void BagMenu_LoadItemIconOam(BagView *bagView, int item)
         &itemIconTemplate,
         1,
         bagView->heapId);
-    sub_0204C520(bagView->unk6B0, 1);
-    sub_0204C124(bagView->unk6B0, 1);
-    sub_0204C5C8(bagView->unk6B0, 0);
+    sub_0204C520(bagView->itemIconOam, 1);
+    sub_0204C124(bagView->itemIconOam, 1);
+    sub_0204C5C8(bagView->itemIconOam, 0);
 }
 
 extern void sub_0204B794(void);
@@ -1803,7 +1803,7 @@ _0219EAC8:
 	b _0219EABE
 _0219EAD0:
 	ldrh r0, [r6]
-	bl Item_GetTmHmNo
+	bl Item_GetTmNo
 	cmp r0, #0xff
 	beq _0219EADE
 	mov r0, #7
@@ -2022,7 +2022,7 @@ void ovy142_219ed8c(BagView *a1)
     sub_0204C124(a1->unk740, 0);
     sub_0204C520(a1->unk740, 1);
     sub_0204C5C8(a1->unk740, 0);
-    if (!sub_0219BE00(a1))
+    if (!BagMenu_IsNotNormalBagMode(a1))
         sub_0204C124(a1->unk724[2], 0);
     if (a1->bagMode == BAG_MODE_2)
         sub_0204C124(a1->unk724[3], 0);
@@ -2261,7 +2261,7 @@ void ovy142_219f4b0(BagView *a1, int a2)
 
     BagBmpWinData *bgs;
     
-    bgs = &a1->unk74C;
+    bgs = &a1->tmhmTextBmpWin;
 
     v4 = sub_02021740(a2);
     sub_0204C124(a1->unk6D4[v4], 1);
@@ -2270,9 +2270,9 @@ void ovy142_219f4b0(BagView *a1, int a2)
     v12 = sub_020216B0(a2, 0);
     v10 = sub_02021280(a2, 3);
     v9 = sub_02021280(a2, 4);
-    v6 = BmpWin_GetBitmap(a1->unk74C.winData);
+    v6 = BmpWin_GetBitmap(a1->tmhmTextBmpWin.winData);
     sub_020470F8(v6, 176, 0, 32, 40, 0);
-    v7 = BmpWin_GetBitmap(a1->unk74C.winData);
+    v7 = BmpWin_GetBitmap(a1->tmhmTextBmpWin.winData);
     sub_020470F8(v7, 232, 0, 24, 24, 0);
     if (v10 <= 1)
     {
@@ -2859,13 +2859,13 @@ void ovy142_21a014c(BagView *a1)
 
     sub_02021A3C(a1->printSystem);
     v2 = a1->printSystem;
-    if (a1->unk74C.flag)
+    if (a1->tmhmTextBmpWin.flag)
     {
-        v3 = BmpWin_GetBitmap(a1->unk74C.winData);
+        v3 = BmpWin_GetBitmap(a1->tmhmTextBmpWin.winData);
         if (!sub_02021C1C(v2, v3))
         {
-            BmpWin_FlushChar(a1->unk74C.winData);
-            a1->unk74C.flag = 0;
+            BmpWin_FlushChar(a1->tmhmTextBmpWin.winData);
+            a1->tmhmTextBmpWin.flag = 0;
         }
     }
     v4 = a1->printSystem;

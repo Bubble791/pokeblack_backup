@@ -9832,7 +9832,7 @@ _021BED22:
 _021BED40:
 	b _021BEDD0
 _021BED42:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021BEDD4
 	mov r0, #6

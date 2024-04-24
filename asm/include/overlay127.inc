@@ -85,7 +85,7 @@
 .public sub_021B84F4
 .public sub_021B8258
 .public sub_021B8258
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02016CB4
 .public sub_02016EDC
 .public sub_0218105C
@@ -105,7 +105,7 @@
 .public sub_0204E0E0
 .public sub_021F0DD8
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_021804BC

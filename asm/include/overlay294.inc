@@ -135,7 +135,7 @@
 .public sub_02008A8C
 .public sub_02008BEC
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02006AD4
 .public sub_02006C40
 .public G2x_SetBlendAlpha_

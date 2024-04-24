@@ -2543,7 +2543,7 @@ _021E44BC:
 	bl GFL_SndSEPlay
 	b _021E44CA
 _021E44C4:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	pop {r3, pc}
 _021E44CA:
 	mov r0, #0

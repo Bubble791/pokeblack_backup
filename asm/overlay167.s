@@ -63239,7 +63239,7 @@ _021B7F08:
 	bl ovy168_21dfb58
 	cmp r0, #0
 	bne _021B7F30
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021B7F30
 	ldr r0, [r5, #0x54]
@@ -126093,7 +126093,7 @@ ovy167_21d6554: ; 0x021D6554
 	thumb_func_start ovy167_21d6560
 ovy167_21d6560: ; 0x021D6560
 	push {r3, lr}
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021D656E
 	mov r0, #1

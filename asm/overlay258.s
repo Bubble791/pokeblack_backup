@@ -2435,10 +2435,10 @@ _0219ACE2: ; jump table
 	.short _0219AD02 - _0219ACE2 - 2 ; case 4
 	.short _0219AD16 - _0219ACE2 - 2 ; case 5
 _0219ACEE:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	pop {r3, pc}
 _0219ACF4:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	pop {r3, pc}
 _0219ACFA:
 	ldr r0, _0219AD34 ; =0x0000056B

@@ -213,7 +213,7 @@
 .public sub_02048210
 .public sub_02048210
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_02017BCC
 .public sub_02022294
 .public sub_020223B4

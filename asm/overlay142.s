@@ -13,14 +13,14 @@
 	.public ovy142_219a404
 	.public ovy142_219a440
 	.public ovy142_219a4a0
-	.public ovy142_219a4d0
+	.public BagMenu_HandlePressAButton
 	.public ovy142_219a724
 	.public BagMenu_HandleKeyPad
 	.public ovy142_219ab38
 	.public ovy142_219abb8
-	.public ovy142_219abd8
+	.public BagMenu_PrintPokeLearnHmTm
 	.public ovy142_219ac4c
-	.public ovy142_219ac70
+	.public BagMenu_TmHmUseStart
 	.public ovy142_219acb8
 	.public ovy142_219ad14
 	.public ovy142_219ad30

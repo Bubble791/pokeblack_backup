@@ -11936,7 +11936,7 @@ _0219F9BE:
 	mov r0, #1
 	pop {r3, pc}
 _0219F9C2:
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	pop {r3, pc}
 _0219F9C8:
 	mov r0, #0
@@ -16461,7 +16461,7 @@ _021A1D42:
 	bl sub_020500A8
 	cmp r0, #0
 	bgt _021A1DAA
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #0
 	bne _021A1DAA
 	ldr r0, [r4, #0x3c]
@@ -16584,7 +16584,7 @@ _021A1E38:
 	bl GFL_FadeScreenIsFinished
 	cmp r0, #0
 	beq _021A1E48
-	bl sub_020062A8
+	bl GFL_SndPlayerIsActiveAny
 	cmp r0, #1
 	bne _021A1E4A
 _021A1E48:

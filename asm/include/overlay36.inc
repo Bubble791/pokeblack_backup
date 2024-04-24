@@ -1297,7 +1297,7 @@
 .public sub_02022294
 .public sub_0218A738
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public sub_020223CC
 .public GFL_HeapFree
 .public sub_020223B4

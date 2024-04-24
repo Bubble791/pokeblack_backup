@@ -234,9 +234,9 @@
 .public GFL_HeapFree
 .public sub_021DF2FC
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_SndSEPlay
-.public sub_020062A8
+.public GFL_SndPlayerIsActiveAny
 .public GFL_SndSEPlay
 .public GFL_SndSEPlay
 .public sub_02006294
