@@ -3,6 +3,29 @@
 
 #define NORMAL_ITEM_MAX 0x136
 
+// 设置文本
+enum
+{
+    BAG_OPTION_TEXT_USE = 0,
+    BAG_OPTION_TEXT_TOSS = 1,
+    BAG_OPTION_TEXT_REGISTER = 2,
+    BAG_OPTION_TEXT_TAKE = 3,
+    BAG_OPTION_TEXT_OK = 5,
+    BAG_OPTION_TEXT_OFF_BIKE = 6,
+    BAG_OPTION_TEXT_GIVE_UP = 8,
+    BAG_OPTION_TEXT_LOOK = 16,
+    BAG_OPTION_TEXT_FREE = 18,
+    BAG_OPTION_TEXT_SELL = 87,
+    BAG_OPTION_TEXT_TO_FREE_SPACE = 145,
+    BAG_OPTION_TEXT_BACK_ORIGIN_POCKET = 146,
+    BAG_OPTION_TEXT_SORT_TYPE = 152,
+    BAG_OPTION_TEXT_SORT_NAME = 153,
+    BAG_OPTION_TEXT_SORT_AMOUNT_MORE = 154,
+    BAG_OPTION_TEXT_SORT_AMOUNT_LESS = 155,
+    BAG_OPTION_TEXT_SORT_INDEX = 156,
+    BAG_OPTION_TEXT_END = 160
+};
+
 enum
 {
     BAG_MODE_NORMAL,
@@ -16,10 +39,10 @@ enum
 enum
 {
     BAG_SORT_TYPE,
+    BAG_SORT_INDEX,
     BAG_SORT_NAME,
     BAG_SORT_AMOUNT_MORE,
     BAG_SORT_AMOUNT_LESS,
-    BAG_SORT_INDEX
 };
 
 enum
@@ -42,11 +65,11 @@ enum
     BAG_OPTION_REGIT,
     BAG_OPTION_UNREGIT,
     BAG_OPTION_TAKE_MAIL,
-    BAG_OPTION_7,
+    BAG_OPTION_OK,
     BAG_OPTION_TO_FREE_SPACE,
     BAG_OPTION_FREESPACE_BACK,
-    BAG_OPTION_10,
-    BAG_OPTION_11,
+    BAG_OPTION_GIVE_UP,
+    BAG_OPTION_SELL,
 };
 
 enum
@@ -119,8 +142,8 @@ typedef void (*FieldBagItemUse)(BagView *);
 
 typedef struct
 {
-    int unk0;
-    u16 unk4;
+    int textBuff;
+    u16 textColor;
     int unk8;
 } ITEM_TASK;
 
@@ -671,8 +694,8 @@ extern void ovy142_219cce0(BagView*);
 extern const TouchscreenHitbox data_021A08F8[3];
 extern const TouchscreenHitbox data_021A0904[3];
 extern const int data_021A091C[6];
-extern const u32 data_021A0934[6];
-extern const int data_021A094C[13];
+extern const u32 gBagMenuSortTextTbl[6];
+extern const int gBagMenuOptionTextTbl[13];
 extern const ItemUsedFunc data_021A0980[];
 extern const TouchscreenHitbox data_021A09D8[];
 extern const ItemTypeSomeData data_021A0A3C[6];

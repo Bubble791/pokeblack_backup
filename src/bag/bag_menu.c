@@ -200,7 +200,7 @@ void BagMenu_KeyPadSwitchMode(BagView *bagView)
 
 void ovy142_219c900(BagView *bagView)
 {
-    void *v2; // r4
+    void *v2;
 
     bagView->unk8A4 = sub_02035024(16, 16, 0xFFFE, bagView->heapId);
     v2 = GFL_ArcSysCreateFileHandle(87, bagView->heapId);
@@ -410,55 +410,55 @@ void BagMenu_StartSortItem(BagView *bagView)
 
 extern const u8 data021A08E0[5];
 
-extern void sub_0219CD58(BagView*, u8*);
-extern void ovy142_219f1a0(BagView*, u32*, int);
+extern void BagMenu_GetItemSortMenuTextList(BagView*, u8*);
+extern void BagMenu_AddSortOptionListMenu(BagView*, u32*, int);
 
 void ovy142_219cce0(BagView *bagView)
 {
-    int v2;    // r6
+    int i;    // r6
     int v3;    // r2
     int v4;    // r5
     int v5;    // r3
-    u32 v9[6]; // [sp+1Ch] [bp-2Ch]
+    u32 textList[6]; // [sp+1Ch] [bp-2Ch]
     u32 v8[5]; // [sp+8h] [bp-40h] BYREF
-    u8 v7[5];  // [sp+0h] [bp-48h] BYREF
+    u8 optionTbl[5];  // [sp+0h] [bp-48h] BYREF
 
-    v9 = data_021A0934;
-    v7 = data021A08E0;
+    textList = gBagMenuSortTextTbl;
+    optionTbl = data021A08E0;
 
-    sub_0219CD58(bagView, v7);
+    BagMenu_GetItemSortMenuTextList(bagView, optionTbl);
 
-    for (v2 = 0, v3 = 0; v2 < 5; v2++)
+    for (i = 0, v3 = 0; i < 5; i++)
     {
-        v4 = v7[v2];
+        v4 = optionTbl[i];
         if (v4 != 255)
         {
             v5 = v3;
-            bagView->unk85C[v3++] = v7[v2];
-            v8[v5] = v9[v7[v2]];
+            bagView->unk85C[v3++] = optionTbl[i];
+            v8[v5] = textList[optionTbl[i]];
         }
     }
-    ovy142_219f1a0(bagView, v8, v3);
+    BagMenu_AddSortOptionListMenu(bagView, v8, v3);
 }
 
-void sub_0219CD58(BagView* bagView, u8* a2)
+void BagMenu_GetItemSortMenuTextList(BagView* bagView, u8* retList)
 {
-    u32 v2;     // r2
-    int v4;     // r0
+    u32 pocket;     // r2
+    int pocket2;     // r0
 
-    v2 = bagView->itemPocket;
-    if (!v2 || v2 == 1 || (v2 - 3) <= 1)
-        a2[0] = 0;
+    pocket = bagView->itemPocket;
+    if (pocket == BAG_POCKET_NORMAL || pocket == BAG_POCKET_HEAL || (pocket - 3) <= 1)
+        retList[0] = BAG_SORT_TYPE;
     else
-        a2[0] = 1;
-    v4 = bagView->itemPocket;
-    if (!v4 || v4 == 1 || v4 == 3)
+        retList[0] = BAG_SORT_INDEX;
+    pocket2 = bagView->itemPocket;
+    if (pocket2 == BAG_POCKET_NORMAL || pocket2 == BAG_POCKET_HEAL || pocket2 == BAG_POCKET_BERRY)
     {
-        a2[2] = 3;
-        a2[3] = 4;
+        retList[2] = BAG_SORT_AMOUNT_MORE;
+        retList[3] = BAG_SORT_AMOUNT_LESS;
     }
-    a2[1] = 2;
-    a2[4] = 5;
+    retList[1] = BAG_SORT_NAME;
+    retList[4] = 5;
 }
 
 extern void BagMenu_PrintItemSortEnd(BagView*);
@@ -2138,8 +2138,8 @@ void sub_0219F0AC(BagView *bagView)
 typedef struct
 {
     int heapId;
-    u8 unk4;
-    ITEM_TASK *unk8;
+    u8 numList;
+    ITEM_TASK *textList;
     int unkC;
     u8 unk10;
     u8 unk14;
@@ -2150,65 +2150,63 @@ typedef struct
 extern int GFL_StrBufCreate(int, u16);
 extern int sub_0202D974(TaskMenu*, int);
 
-void ovy142_219f0bc(BagView *a1, u32 *a2, int a3)
+void ovy142_219f0bc(BagView *bagView, u32 *textList, int numList)
 {
-    int v9;                // r4
+    int v9;
     TaskMenu task;
     int i =0;
 
-    task.heapId = a1->heapId;
-    task.unk4 = a3;
-    task.unk8 = a1->unk7A0;
+    task.heapId = bagView->heapId;
+    task.numList = numList;
+    task.textList = bagView->unk7A0;
     task.unkC = 1;
     task.unk10 = 32;
     task.unk14 = 24;
     task.unk18 = 14;
-
     task.unk1C = 3;
     
-    for (i = 0 ; i < a3; i++)
+    for (i = 0 ; i < numList; i++)
     {
-        a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
-        GFL_MsgDataLoadStrbuf(a1->msgData, a2[i], a1->unk7A0[i].unk0);
-        a1->unk7A0[i].unk4 = 0x39E0;
-        a1->unk7A0[i].unk8 = 0;
+        bagView->unk7A0[i].textBuff = GFL_StrBufCreate(100, bagView->heapId);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, textList[i], bagView->unk7A0[i].textBuff);
+        bagView->unk7A0[i].textColor = 0x39E0;
+        bagView->unk7A0[i].unk8 = 0;
     }
 
-    a1->unk7A0[i - 1].unk8  = 1;
-    a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
-    for (v9 = 0; v9 < a3; ++v9)
-        GFL_StrBufFree(a1->unk7A0[v9].unk0);
-    ovy142_219fda8(a1, 0);
+    bagView->unk7A0[i - 1].unk8  = 1;
+    bagView->unk79C = sub_0202D974(&task, bagView->taskMenuData);
+    for (v9 = 0; v9 < numList; ++v9)
+        GFL_StrBufFree(bagView->unk7A0[v9].textBuff);
+    ovy142_219fda8(bagView, 0);
 }
 
-void ovy142_219f1a0(BagView *a1, u32 *a2, int a3)
+void BagMenu_AddSortOptionListMenu(BagView *a1, u32 *textList, int a3)
 {
-    int v9;                // r4
+    int v9;
     TaskMenu task;
     int i = 0;
 
     task.heapId = a1->heapId;
-    task.unk4 = a3;
-    task.unk8 = a1->unk7A0;
+    task.numList = a3;
+    task.textList = a1->unk7A0;
     task.unkC = 1;
     task.unk10 = 32;
     task.unk14 = 24;
     task.unk18 = 14;
-
     task.unk1C = 3;
     
     for (i = 0 ; i < a3; i++)
     {
-        a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
-        GFL_MsgDataLoadStrbuf(a1->msgData, a2[i], a1->unk7A0[i].unk0);
-        a1->unk7A0[i].unk4 = 0x39E0;
+        a1->unk7A0[i].textBuff = GFL_StrBufCreate(100, a1->heapId);
+        GFL_MsgDataLoadStrbuf(a1->msgData, textList[i], a1->unk7A0[i].textBuff);
+        a1->unk7A0[i].textColor = 0x39E0;
         a1->unk7A0[i].unk8 = 0;
     }
 
     a1->unk7A0[i - 1].unk8  = 1;
     a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (v9 = 0; v9 < a3; ++v9)
-        GFL_StrBufFree(a1->unk7A0[v9].unk0);
+        GFL_StrBufFree(a1->unk7A0[v9].textBuff);
     ovy142_219fda8(a1, 0);
 }
 
@@ -2219,8 +2217,8 @@ void ovy142_219f284(BagView *a1, u8 a2)
     int v4;
 
     task.heapId = a1->heapId;
-    task.unk4 = a2;
-    task.unk8 = a1->unk7A0;
+    task.numList = a2;
+    task.textList = a1->unk7A0;
     task.unkC = 1;
     task.unk10 = 32;
     task.unk14 = 24;
@@ -2233,27 +2231,27 @@ void ovy142_219f284(BagView *a1, u8 a2)
             v4 = a1->unk870[i];
             if (v4 == 5)
             {
-                a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
-                GFL_MsgDataLoadStrbuf(a1->msgData, 144, a1->unk7A0[i].unk0);
-                a1->unk7A0[i].unk4 = 14816;
+                a1->unk7A0[i].textBuff = GFL_StrBufCreate(100, a1->heapId);
+                GFL_MsgDataLoadStrbuf(a1->msgData, 144, a1->unk7A0[i].textBuff);
+                a1->unk7A0[i].textColor = 14816;
                 a1->unk7A0[i].unk8 = 0;
             }
             else
             {
                 if (v4 == 6)
                 {
-                    a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
-                    GFL_MsgDataLoadStrbuf(a1->msgData, 8, a1->unk7A0[i].unk0);
-                    a1->unk7A0[i].unk4 = 14816;
+                    a1->unk7A0[i].textBuff = GFL_StrBufCreate(100, a1->heapId);
+                    GFL_MsgDataLoadStrbuf(a1->msgData, 8, a1->unk7A0[i].textBuff);
+                    a1->unk7A0[i].textColor = 14816;
                     a1->unk7A0[i].unk8 = 1;
                 }
                 else
                 {
-                    a1->unk7A0[i].unk0 = GFL_StrBufCreate(100, a1->heapId);
+                    a1->unk7A0[i].textBuff = GFL_StrBufCreate(100, a1->heapId);
                     GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
                     LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, v4);
-                    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->unk7A0[i].unk0, a1->stringBuff1);
-                    a1->unk7A0[i].unk4 = 14816;
+                    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->unk7A0[i].textBuff, a1->stringBuff1);
+                    a1->unk7A0[i].textColor = 14816;
                     a1->unk7A0[i].unk8 = 0;
                 }
             }
@@ -2262,7 +2260,7 @@ void ovy142_219f284(BagView *a1, u8 a2)
     }
     a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (i = 0; i < a2; ++i)
-        GFL_StrBufFree(a1->unk7A0[i].unk0);
+        GFL_StrBufFree(a1->unk7A0[i].textBuff);
     ovy142_219fda8(a1, 0);
 }
 
@@ -2519,26 +2517,26 @@ void ovy142_219faac(BagView *a1)
     TaskMenu task;
     
     task.heapId = a1->heapId;
-    task.unk4 = 2;
-    task.unk8 = a1->unk7A0;
+    task.numList = 2;
+    task.textList = a1->unk7A0;
     task.unkC = 1;
     task.unk10 = 32;
     task.unk14 = 12;
     task.unk18 = 8;
     task.unk1C = 3;
 
-    a1->unk7A0[0].unk0 = GFL_StrBufCreate(100, a1->heapId);
-    GFL_MsgDataLoadStrbuf(a1->msgData, 132, a1->unk7A0[0].unk0);
-    a1->unk7A0[0].unk4 = 14816;
+    a1->unk7A0[0].textBuff = GFL_StrBufCreate(100, a1->heapId);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 132, a1->unk7A0[0].textBuff);
+    a1->unk7A0[0].textColor = 14816;
     a1->unk7A0[0].unk8 = 0;
 
-    a1->unk7A0[1].unk0 = GFL_StrBufCreate(100, a1->heapId);
-    GFL_MsgDataLoadStrbuf(a1->msgData, 133, a1->unk7A0[1].unk0);
-    a1->unk7A0[1].unk4 = 14816;
+    a1->unk7A0[1].textBuff = GFL_StrBufCreate(100, a1->heapId);
+    GFL_MsgDataLoadStrbuf(a1->msgData, 133, a1->unk7A0[1].textBuff);
+    a1->unk7A0[1].textColor = 14816;
     a1->unk7A0[1].unk8 = 0;
     a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
-    GFL_StrBufFree(a1->unk7A0[0].unk0);
-    GFL_StrBufFree(a1->unk7A0[1].unk0);
+    GFL_StrBufFree(a1->unk7A0[0].textBuff);
+    GFL_StrBufFree(a1->unk7A0[1].textBuff);
     ovy142_219ff40(a1, 0);
     ovy142_219fda8(a1, 0);
 }

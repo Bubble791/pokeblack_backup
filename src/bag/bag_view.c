@@ -116,9 +116,9 @@ void ovy142_21999d8(BagView *bagView, int bufId, int msgId, int name1, int name2
     sub_020244E0(bagView->wordSetSystem, bufId, msgId, name1, name2);
 }
 
-void ovy142_21999f0(BagView *bagView, int pockId1, int pockId2);
+void BagMenu_SwitchItemPostion(BagView *bagView, int pockId1, int pockId2);
 
-void ovy142_21999f0(BagView *bagView, int itemSlot1, int itemSlot2)
+void BagMenu_SwitchItemPostion(BagView *bagView, int itemSlot1, int itemSlot2)
 {
     int *data;
 
@@ -138,14 +138,14 @@ void ovy142_2199a20(BagView *bagView, int param_2, int param_3)
         {
             for (i = param_2; i < param_3; i++)
             {
-                ovy142_21999f0(bagView, i, i + 1);
+                BagMenu_SwitchItemPostion(bagView, i, i + 1);
             }
         }
         else
         {
             for (i = param_2; i > param_3; i--)
             {
-                ovy142_21999f0(bagView, i, i - 1);
+                BagMenu_SwitchItemPostion(bagView, i, i - 1);
             }
         }
     }
@@ -2302,59 +2302,60 @@ void ovy142_219bf04(BagView *bagView, void *param_2, ItemTable *param_3, u8 *par
 }
 
 
-void ovy142_219bf58(BagView *bagView, u8 *param_2)
+void ovy142_219bf58(BagView *bagView, u8 *retList)
 {
-    u32 unkv2;
-    ItemTable *psVar3;
+    u32 item;
+    ItemTable *bagItemData;
 
-    unkv2 = sub_02199978(bagView);
-    psVar3 = (ItemTable *)BagMenu_GetBagItemDataBySlot(bagView, unkv2);
-    if ((psVar3 != NULL))
+    item = sub_02199978(bagView);
+    bagItemData = (ItemTable *)BagMenu_GetBagItemDataBySlot(bagView, item);
+    if ((bagItemData != NULL))
     {
-        if ((psVar3->itemid != 0))
+        if ((bagItemData->itemid != 0))
         {
-            void *uVar2 = sub_02026740(psVar3->itemid, 0, bagView->heapId);
-            u8 cVar1 = Item_GetParam(uVar2, 5);
-            ovy142_219bf04(bagView, uVar2, psVar3, param_2);
+            void *uVar2 = sub_02026740(bagItemData->itemid, 0, bagView->heapId);
 
-            if (!ovy142_219d43c(bagView, cVar1) && (param_2[0] != 2))
+            u8 pocket = Item_GetParam(uVar2, ITEM_DATA_POCKET_FIELD);
+            ovy142_219bf04(bagView, uVar2, bagItemData, retList);
+
+            if (!ovy142_219d43c(bagView, pocket) && (retList[0] != BAG_OPTION_LOOK_MAIL))
             {
-                param_2[0] = -1;
+                retList[0] = 0xFF;
             }
 
-            if (Item_GetParam(uVar2, 3) == 0)
+            if (Item_GetParam(uVar2, ITEM_DATA_IS_IMPORT_ITEM) == 0)
             {
-                if (Item_IsNotSpecialMonsball(psVar3->itemid) == 1)
+                if (Item_IsNotSpecialMonsball(bagItemData->itemid) == 1)
                 {
-                    param_2[1] = 6;
+                    retList[1] = BAG_OPTION_TAKE_MAIL;
                 }
-                if (cVar1 != 2)
+                if (pocket != BAG_POCKET_TMHM)
                 {
-                    param_2[2] = 3;
+                    retList[2] = BAG_OPTION_TOSS;
                 }
             }
 
-            if (Item_GetParam(uVar2, 4))
+            if (Item_GetParam(uVar2, ITEM_DATA_CONV_BUTTON))
             {
 
-                if (ovy142_219c0e8(bagView, psVar3->itemid) == 1)
+                if (ovy142_219c0e8(bagView, bagItemData->itemid) == 1)
                 {
-                    param_2[2] = 5;
+                    retList[2] = BAG_OPTION_UNREGIT;
                 }
                 else
                 {
-                    param_2[2] = 4;
+                    retList[2] = BAG_OPTION_REGIT;
                 }
             }
             if (bagView->itemPocket != BAG_POCKET_FREE_SPACE)
             {
-                param_2[3] = 8;
+                retList[3] = BAG_OPTION_TO_FREE_SPACE;
             }
             else
             {
-                param_2[3] = 9;
+                retList[3] = BAG_OPTION_FREESPACE_BACK;
             }
-            param_2[4] = 0xa;
+            retList[4] = BAG_OPTION_GIVE_UP;
             GFL_HeapFree(uVar2);
         }
     }
@@ -2364,22 +2365,16 @@ extern const u8 data021A08E8[5];
 
 void ovy142_219c014(BagView *bagView)
 {
-    int v6[13];        // r3
-    int v7;         // r2
+    int optionTextIndex[13];
     int v10;        // r6
     int v11;        // r4
     int v12;        // r3
     int v13;        // r2
     int v14;        // r3
-    u8 v16[8];    // [sp+0h] [bp-68h] BYREF
-    u32 v17[5];  // [sp+8h] [bp-60h] BYREF
+    u8 v16[8];
+    u32 list[5];
 
-    v7 = 6;
-    do
-    {
-        v6 = data_021A094C;
-        --v7;
-    } while (v7);
+    optionTextIndex = gBagMenuOptionTextTbl;
 
     v16[0] = data021A08E8[0];
     v16[1] = data021A08E8[1];
@@ -2396,7 +2391,7 @@ void ovy142_219c014(BagView *bagView)
         {
             v13 = v11;
             bagView->unk848[v11++]= v16[v10];
-            v17[v13] = v6[v16[v10]];
+            list[v13] = optionTextIndex[v16[v10]];
         }
         ++v10;
     } while (v10 < 5);
@@ -2407,14 +2402,14 @@ void ovy142_219c014(BagView *bagView)
         {
             if (bagView->unk848[v14] == 0)
             {
-                v17[v14] = 160;
+                list[v14] = BAG_OPTION_TEXT_END;
                 break;
             }
             v14++;
         }
         while (v14 < 5);
     }
-    ovy142_219f0bc(bagView, v17, v11);
+    ovy142_219f0bc(bagView, list, v11);
 }
 
 int ovy142_219c0b4(BagView *bagView)
