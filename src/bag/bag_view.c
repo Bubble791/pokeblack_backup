@@ -1,5 +1,6 @@
 #include "global.h"
 #include "main.h"
+#include "touchscreen.h"
 #include "bag.h"
 #include "item.h"
 #include "item_param.h"
@@ -996,7 +997,7 @@ void ovy142_219a724(BagView *bagView)
         bagView->selectItem = v3->itemid;
     bagMode = bagView->bagMode;
 
-    if (bagMode == BAG_MODE_2)
+    if (bagMode == BAG_MODE_BOX_SELECT_ITEM)
     {
         if (!Item_GetItemParam((u16)bagView->selectItem, ITEM_DATA_IS_IMPORT_ITEM, bagView->heapId) 
         && Item_IsNotSpecialMonsball((u16)bagView->selectItem) == 1)
@@ -1095,7 +1096,7 @@ void BagMenu_HandleKeyPad(BagView *bagView)
                 }
                 if ((GCTX_HIDGetPressedKeys() & KEY_X) != 0)
                 {
-                    if (bagView->bagMode != BAG_MODE_2)
+                    if (bagView->bagMode != BAG_MODE_BOX_SELECT_ITEM)
                     {
                         bagView->unk898 = 0;
                         bagView->selectItem = 0;
@@ -1742,36 +1743,24 @@ void ovy142_219b46c(BagView *bagView)
     sub_0204C124(bagView->unk724[6], 0);
 }
 
-const u8 sub021a08f8[12] = {0};
-
-extern int sub_0203D9C8(u8*);
+extern int sub_0203D9C8(TouchscreenHitbox*);
 
 int ovy142_219b490(BagView *bagView)
 {
-    const u8 *v9;
     int iVar5;
     int iVar6;
     int unaff_r4;
     int bVar11 = 0;
-    u32 i;
-    u8 *v16;
-    u8 local_24[12];
+
+
+    TouchscreenHitbox local_24[3];
 
     iVar5 = bagView->selectAmount;
 
     ItemTable *iVar3 = BagMenu_GetBagItemDataBySlot(bagView, sub_02199978(bagView));
-    v9 = &sub021a08f8[0];
-    v16 = &local_24[0];
-    i = 12;
-    do
-    {
-        int v13 = *v9++;
-        *v16 = v13;
-        v16++;
-        --i;
-    } while (i);
+    local_24 = data_021A08F8;
 
-    iVar6 = sub_0203D9C8(&local_24[0]);
+    iVar6 = sub_0203D9C8(local_24);
     if (iVar6 != -1)
     {
         bagView->unk810 = bagView->unk810 + 1;
@@ -2544,7 +2533,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     }
     else if (a1 == 0xa)
     {
-        if (bagView->bagMode != BAG_MODE_2)
+        if (bagView->bagMode != BAG_MODE_BOX_SELECT_ITEM)
         {
             bagView->unk898 = 0;
             bagView->selectItem = 0;
@@ -2664,45 +2653,14 @@ void BagMenu_BagWaitFadeIn(BagView *bagView)
     }
 }
 
-typedef struct
-{
-    /*0x00*/void *gamedata;
-    /*0x04*/void *trainerData;
-    /*0x08*/void *playerData;
-    /*0x0C*/void *m_itemData;
-    /*0x10*/int itemdata2;
-    /*0x14*/void *bagData;
-    /*0x18*/u8 unk18[0x20];
-    /*0x38*/int mode;
-    /*0x3C*/int playerstate;
-    /*0x40*/int playerLastScreen;
-}BAG_DATA;
-
 extern int data21A0A18[4];
 
-int BagMenu_Main(int a1, int a2, BAG_DATA *a3, int a4);
-extern void GFL_HeapCreateChild(int, int, int);
-extern void *GFL_ProcInitSubsystem(int, int, int);
-extern void sub_0203DF64(int*, int*);
-extern void sub_020086C0(void*);
-extern u32 GameData_GetLastBagPocket(void*);
-extern int GFL_MsgSysLoadData(int, int, int, u16);
-extern int GFL_StrBufCreate(int ,u16);
-extern int GFL_WordSetSystemCreateDefault(u16);
-extern int sub_020219A8(int, u16);
-extern int sub_0202E7A4(int ,int ,int, u16);
-extern int GFL_FontCreate(int ,int, int, int, u16);
-extern int ButtonSystem_Create(int template, void* data1, void* data2, u16 heap);
-extern int GFL_VBlankTCBAdd(void*, void*, int);
-extern void sub_02042BA8(int, u16);
-extern int sub_0202E168(int, int, int, int, u16);
-extern int GFL_TCBExMgrCreate(u16, u16, int, int);
-
-int BagMenu_Main(int a1, int a2, BAG_DATA *a3, int a4)
+int BagMenu_Main(int a1, int a2, void *data3, void *a4)
 {
     int v11;
     BagView *v6;
-    
+    BAG_DATA *a3 = (BAG_DATA *)data3;
+
     GFL_HeapCreateChild(1, 14, 0x34000);
     v6 = (BagView*)GFL_ProcInitSubsystem(a1, sizeof(BagView), 14);
 

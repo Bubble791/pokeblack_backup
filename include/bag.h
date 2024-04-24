@@ -7,7 +7,7 @@ enum
 {
     BAG_MODE_NORMAL,
     BAG_MODE_UNION_ROOM,
-    BAG_MODE_2,
+    BAG_MODE_BOX_SELECT_ITEM,
     BAG_MODE_LINK_BATTLE_ROOM,
     BAG_MODE_SELL_ITEM,
     BAG_MODE_SELECT_ITEM
@@ -234,6 +234,19 @@ struct BagViewWork
     /*0x1F50*/ int unk1F50;
 }; // size of 0x1F54
 
+typedef struct
+{
+    /*0x00*/void *gamedata;
+    /*0x04*/void *trainerData;
+    /*0x08*/void *playerData;
+    /*0x0C*/void *m_itemData;
+    /*0x10*/int itemdata2;
+    /*0x14*/void *bagData;
+    /*0x18*/u8 unk18[0x20];
+    /*0x38*/int mode;
+    /*0x3C*/int playerstate;
+    /*0x40*/int playerLastScreen;
+}BAG_DATA;
 
 typedef union
 {
@@ -524,4 +537,59 @@ extern int sub_0203DAC8(u32*, u32*);
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
 extern int Oam_LoadNCGRFile(int, int, int, int, u16);
 extern int Oam_LoadNCERFile(int, int, int, u16);
+
+
+int BagMenu_Main(int a1, int a2, void *a3, void *a4);
+extern void GFL_HeapCreateChild(int, int, int);
+extern void *GFL_ProcInitSubsystem(int, int, int);
+extern void sub_0203DF64(int*, int*);
+extern void sub_020086C0(void*);
+extern u32 GameData_GetLastBagPocket(void*);
+extern int GFL_MsgSysLoadData(int, int, int, u16);
+extern int GFL_StrBufCreate(int ,u16);
+extern int GFL_WordSetSystemCreateDefault(u16);
+extern int sub_020219A8(int, u16);
+extern int sub_0202E7A4(int ,int ,int, u16);
+extern int GFL_FontCreate(int ,int, int, int, u16);
+extern int ButtonSystem_Create(int touchTemplate, void* checkFunc, void* data, u16 heap);
+extern int GFL_VBlankTCBAdd(void*, void*, int);
+extern void sub_02042BA8(int, u16);
+extern int sub_0202E168(int, int, int, int, u16);
+extern int GFL_TCBExMgrCreate(u16, u16, int, int);
+int BagMenu_Loop(int a1, int a2, void *a3, void *a4);
+
+extern void ovy142_219eb54(BagView*);
+extern void ovy142_219ebdc(BagView*);
+extern void ovy142_219e5a8(BagView*);
+extern void ovy142_21a014c(BagView*);
+extern void sub_0203A7F4(int);
+typedef struct
+{
+    /*0x00*/ u8 unk0[0x38];
+    /*0x38*/ int unk38;
+    /*0x3C*/ int unk3C;
+    /*0x40*/ int unk40;
+    /*0x44*/ int unk44;
+    /*0x48*/ int unk48;
+    /*0x4C*/ int unk4C;
+} BAG_RETURN_DATA;
+
+int BagMenu_End(int a1, int a2, void *data3, void *a4);
+
+extern void sub_02045264(int, int, int);
+extern void sub_02022DA8(int);
+extern void sub_0202E818(int);
+extern void sub_02021C44(int);
+extern void sub_02021A18(int);
+extern void ovy142_219cc60(BagView*);
+extern void sub_0219C948(BagView*);
+extern void sub_020504DC(int);
+extern void sub_020480A8(void);
+extern void sub_02044528(void);
+extern void ovy142_219d46c(void*, int, int, int);
+extern void sub_0203AB10(int);
+extern void sub_0203A1D0(int);
+
+extern const TouchscreenHitbox data_021A08F8[3];
+extern const TouchscreenHitbox data_021A0904[3];
 #endif //BAG_H

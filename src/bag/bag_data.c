@@ -1,9 +1,33 @@
 #include "global.h"
+#include "touchscreen.h"
+#include "bag.h"
+#include "overlay_manager.h"
 
 const u8 data021A08E0[5] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
 const u8 data021A08E8[5] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
 const u8 data_021A08F0[7] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+
+const TouchscreenHitbox data_021A0904[3] = 
+{
+    {0x60, 0x8F, 0x80, 0xE7},
+    {0xA8, 0xBF, 0xE0, 0xF7},
+    {TOUCHSCREEN_RECTLIST_END, 0x00, 0x00, 0x00}
+};
+
+const TouchscreenHitbox data_021A08F8[3] = 
+{
+    {0x5C, 0x74, 0xEA, 0x00},
+    {0x74, 0x8C, 0xEA, 0x00},
+    {TOUCHSCREEN_RECTLIST_END, 0x00, 0x00, 0x00}
+};
+
+const OvyMangerTemplate data_021A0914 =
+{
+    BagMenu_Main,
+    BagMenu_Loop,
+    BagMenu_End,
+};
 
 const int data21A0A18[4] = {0};

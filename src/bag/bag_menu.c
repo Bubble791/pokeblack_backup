@@ -1,17 +1,10 @@
 #include "global.h"
 #include "main.h"
+#include "touchscreen.h"
 #include "bag.h"
 #include "constants/arc_id.h"
 
-int BagMenu_Loop(int a1, int a2, int a3, void *a4);
-
-extern void ovy142_219eb54(BagView*);
-extern void ovy142_219ebdc(BagView*);
-extern void ovy142_219e5a8(BagView*);
-extern void ovy142_21a014c(BagView*);
-extern void sub_0203A7F4(int);
-
-int BagMenu_Loop(int a1, int a2, int a3, void *a4)
+int BagMenu_Loop(int a1, int a2, void *a3, void *a4)
 {
     BagView *wk = (BagView*) a4;
 
@@ -43,36 +36,10 @@ int BagMenu_Loop(int a1, int a2, int a3, void *a4)
     
 }
 
-typedef struct
-{
-    /*0x00*/ u8 unk0[0x38];
-    /*0x38*/ int unk38;
-    /*0x3C*/ int unk3C;
-    /*0x40*/ int unk40;
-    /*0x44*/ int unk44;
-    /*0x48*/ int unk48;
-    /*0x4C*/ int unk4C;
-} BAG_RETURN_DATA;
-
-int BagMenu_End(int a1, int a2, BAG_RETURN_DATA *a3, void *a4);
-
-extern void sub_02045264(int, int, int);
-extern void sub_02022DA8(int);
-extern void sub_0202E818(int);
-extern void sub_02021C44(int);
-extern void sub_02021A18(int);
-extern void ovy142_219cc60(BagView*);
-extern void sub_0219C948(BagView*);
-extern void sub_020504DC(int);
-extern void sub_020480A8(void);
-extern void sub_02044528(void);
-extern void ovy142_219d46c(void*, int, int, int);
-extern void sub_0203AB10(int);
-extern void sub_0203A1D0(int);
-
-int BagMenu_End(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
+int BagMenu_End(int a1, int a2, void *data3, void *a4)
 {
     BagView *wk = (BagView*) a4;
+    BAG_RETURN_DATA* a3 = (BAG_RETURN_DATA*) data3;
 
     if (GFL_FadeScreenIsFinished() != 1)
         return 0;
@@ -276,15 +243,14 @@ void ovy142_219cb64(BagView *bagView)
     }
 }
 
-const u8 Data_021A0904[8] = {0};
-extern int sub_0203DA0C(const u8*);
+extern int sub_0203DA0C(const TouchscreenHitbox*);
 int ovy142_219cb88(void);
 
 int ovy142_219cb88(void)
 {
     int v0; // r4
 
-    v0 = sub_0203DA0C(Data_021A0904);
+    v0 = sub_0203DA0C(data_021A0904);
     if (v0 != -1)
         sub_0203D564(1);
     return v0;
@@ -2024,7 +1990,7 @@ void ovy142_219ed8c(BagView *a1)
     sub_0204C5C8(a1->unk740, 0);
     if (!BagMenu_IsNotNormalBagMode(a1))
         sub_0204C124(a1->unk724[2], 0);
-    if (a1->bagMode == BAG_MODE_2)
+    if (a1->bagMode == BAG_MODE_BOX_SELECT_ITEM)
         sub_0204C124(a1->unk724[3], 0);
 
     v11 = data_21a0fcc;
