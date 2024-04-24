@@ -476,8 +476,8 @@
 .public sub_0201AB54
 .public sub_0201AB54
 .public sub_0202015C
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0204C124
 .public GFL_WordSetSystemCreateDefault
 .public GFL_StrBufCreate
@@ -679,8 +679,8 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C488
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02045604
 .public sub_02045B7C
 .public sub_02045790
@@ -810,7 +810,7 @@
 .public sub_0204C124
 .public sub_02046EA8
 .public sub_0204C108
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
 .public GFL_SndSEPlay
@@ -843,8 +843,8 @@
 .public sub_020454D4
 .public sub_02045B7C
 .public sub_0204C488
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02045604
 .public GFL_BGSysLoadScr
 .public sub_0204C488
@@ -901,8 +901,8 @@
 .public sub_0204C124
 .public sub_02045054
 .public sub_02045B7C
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0204B98C
 .public sub_0204C108
 .public sub_02045790
@@ -966,7 +966,7 @@
 .public sub_020454D4
 .public sub_02045B7C
 .public sub_0204C488
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045604
 .public GFL_BGSysLoadScr
 .public sub_02045790
@@ -1097,8 +1097,8 @@
 .public sub_020454D4
 .public sub_02045B7C
 .public sub_0204C488
-.public sub_02046EDC
-.public sub_02048210
+.public GFL_BitmapFree
+.public BmpWin_Free
 .public sub_02045604
 .public GFL_BGSysLoadScr
 .public sub_02045790
@@ -1269,7 +1269,7 @@
 .public sub_0204C378
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C124
 .public sub_0204C124
 .public GFL_HeapAllocate

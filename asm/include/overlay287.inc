@@ -14,11 +14,11 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020484F8
 .public sub_021FA40C
 .public GFL_StrBufCreate

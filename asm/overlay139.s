@@ -2112,11 +2112,11 @@ _0219A86A:
 	add r0, r5, #0
 	add r0, #0x88
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r2, [r0]
@@ -3205,7 +3205,7 @@ _0219B152:
 	ldr r1, [r4, #0x38]
 	lsl r0, r5, #3
 	ldr r0, [r1, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0x44
 	ldrb r0, [r0]

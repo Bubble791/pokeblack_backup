@@ -206,7 +206,7 @@
 .public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0201736C
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
@@ -514,7 +514,7 @@
 .public sub_020223CC
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022DA8
 .public GFL_TCBExMgrFree
 .public GFL_HeapFree
@@ -531,7 +531,7 @@
 .public BmpWin_FlushChar
 .public sub_02035660
 .public sub_0202DB70
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -599,7 +599,7 @@
 .public sub_0202E678
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapAllocate
 .public sub_0203D10C
 .public sub_0203D134

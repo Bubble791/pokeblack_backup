@@ -102,7 +102,7 @@
 .public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02049D24
 .public sub_02049E00
 .public sub_0204A5A8
@@ -447,7 +447,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020480A8
 .public Oam_CreateSystem
 .public GFL_ArcSysCreateFileHandle
@@ -591,7 +591,7 @@
 .public sub_02045E1C
 .public sub_02045E1C
 .public sub_02045E1C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045790
 .public sub_02045E1C
 .public sub_02045E1C
@@ -786,8 +786,8 @@
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
 .public GFL_MsgDataFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02024E80
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
@@ -899,7 +899,7 @@
 .public BmpWin_CreateDynamic
 .public sub_02024D00
 .public GFL_BGSysLoadNCLRDefault
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020480A8
 .public sub_02045A5C
 .public GFL_VBlankTCBAdd

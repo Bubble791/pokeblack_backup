@@ -100,7 +100,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_MsgDataFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C

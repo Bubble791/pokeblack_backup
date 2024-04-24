@@ -142,8 +142,8 @@
 .public GFL_TCBExMgrFree
 .public GFL_MsgDataFree
 .public sub_02044668
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02024E80
 .public BmpWin_FlushChar
 .public sub_0204826C

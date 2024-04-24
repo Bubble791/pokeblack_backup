@@ -149,8 +149,8 @@
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02044668
 .public GFL_HeapFree
 .public Oam_SetSpritePosData
@@ -245,7 +245,7 @@
 .public GFL_HeapAllocate
 .public MIi_CpuCopy32
 .public GFL_HeapFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_02033120
 .public GFL_HeapFree

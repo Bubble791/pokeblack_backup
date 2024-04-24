@@ -5290,9 +5290,9 @@ ovy207_21b5a70: ; 0x021B5A70
 	bl sub_0202015C
 _021B5A88:
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy207_21b5a70
@@ -7589,14 +7589,14 @@ _021B6CB2:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
 	cmp r4, #0xa
 	blo _021B6CB2
 	ldr r0, [r5, #0x34]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, #4]
 	pop {r3, r4, r5, pc}
@@ -9032,7 +9032,7 @@ _021B786A:
 	ldr r0, [r0]
 	bl ovy207_21baaac
 	ldr r0, [r5, #0x7c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -9875,13 +9875,13 @@ ovy207_21b7efc: ; 0x021B7EFC
 	str r5, [r4]
 	cmp r0, #0
 	beq _021B7F10
-	bl sub_02048210
+	bl BmpWin_Free
 	str r5, [r4, #0x20]
 _021B7F10:
 	ldr r0, [r4, #0x24]
 	cmp r0, #0
 	beq _021B7F1E
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x24]
 _021B7F1E:
@@ -10594,14 +10594,14 @@ ovy207_21b84ac: ; 0x021B84AC
 	ldr r0, [r4, #0x20]
 	cmp r0, #0
 	beq _021B84BE
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x20]
 _021B84BE:
 	ldr r0, [r4, #0x24]
 	cmp r0, #0
 	beq _021B84CC
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x24]
 _021B84CC:
@@ -11512,7 +11512,7 @@ _021B8BDA:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -12808,7 +12808,7 @@ ovy207_21b96b8: ; 0x021B96B8
 	add r0, r5, #0
 	add r0, #0xa8
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, #0
 	add r0, #0xac
 	ldr r0, [r0]
@@ -12843,7 +12843,7 @@ _021B970C:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -14974,7 +14974,7 @@ ovy207_21ba858: ; 0x021BA858
 	push {r4, lr}
 	add r4, r2, #0
 	ldr r0, [r4, #0x10]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4, #0x14]
 	bl ovy207_21baaac
 	pop {r4, pc}

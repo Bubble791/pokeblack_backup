@@ -123,7 +123,7 @@
 .public sub_021DD708
 .public sub_021DD578
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public sub_02024AD4
 .public sub_02024AD4
@@ -193,7 +193,7 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_0203D554
-.public sub_02048210
+.public BmpWin_Free
 .public sub_021DA9F4
 .public sub_021D9D6C
 .public GFL_HeapFree
@@ -287,7 +287,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
@@ -371,7 +371,7 @@
 .public sub_0204BCD0
 .public GFL_StrBufFree
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

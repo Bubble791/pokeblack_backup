@@ -241,7 +241,7 @@
 .public sub_0203580C
 .public sub_0202E818
 .public GFL_TCBExMgrFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_02021A18
 .public GFL_HeapFree
@@ -325,7 +325,7 @@
 .public sub_02024FAC
 .public sub_02024EEC
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_020258A4
 .public BmpWin_GetBitmap
@@ -369,7 +369,7 @@
 .public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public sub_02021A18
 .public GFL_HeapFree

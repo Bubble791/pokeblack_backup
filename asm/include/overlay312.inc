@@ -163,7 +163,7 @@
 .public sub_0202E1DC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
@@ -208,7 +208,7 @@
 .public sub_02024FBC
 .public GFL_MsgDataFree
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02025A10
 .public sub_02024FAC
 .public GFL_StrBufCreate
@@ -231,7 +231,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufCreate
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

@@ -3599,7 +3599,7 @@ _021A3686:
 	mov r1, #1
 	bl sub_02024EEC
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r1, [r4, #0x18]
 	mov r0, #1
 	bl sub_02024D58

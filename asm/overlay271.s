@@ -4732,7 +4732,7 @@ ovy271_21f2268: ; 0x021F2268
 	ldr r0, [r4, #4]
 	bl sub_0202B030
 	ldr r0, [r4, #8]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4]
 	bl sub_0204C108
 	add r0, r4, #0
@@ -7208,7 +7208,7 @@ ovy271_21f3530: ; 0x021F3530
 	ldr r0, [r4, #0xc]
 	bl sub_020484B4
 	ldr r0, [r4, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x10]
 	bl GFL_StrBufFree
 	add r0, r4, #0
@@ -7907,7 +7907,7 @@ _021F3AB0:
 	ldr r1, [r2, r1]
 	cmp r1, #0
 	beq _021F3ACA
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 _021F3ACA:
 	ldr r0, [r4, #4]
 	add r5, r5, #1
@@ -7917,7 +7917,7 @@ _021F3AD2:
 	ldr r0, [r4, #0x38]
 	bl sub_020484B4
 	ldr r0, [r4, #0x38]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldrb r0, [r4, #0xd]
 	cmp r0, #4
 	ldr r0, [r4, #0x14]

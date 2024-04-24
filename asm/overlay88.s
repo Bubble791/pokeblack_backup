@@ -418,9 +418,9 @@ _021EABCE:
 	ldr r0, [r5, #0x20]
 	bl GFL_TCBExMgrFree
 	ldr r0, [r5, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x18]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r1, [r5, #0x14]
 	mov r0, #5
 	bl sub_02024D58

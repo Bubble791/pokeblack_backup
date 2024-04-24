@@ -639,9 +639,9 @@ ovy311_219d360: ; 0x0219D360
 	str r0, [r4, #0x20]
 _0219D372:
 	ldr r0, [r4, #0x28]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x1c]

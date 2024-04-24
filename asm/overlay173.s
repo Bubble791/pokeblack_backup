@@ -2651,7 +2651,7 @@ ovy173_219e19c: ; 0x0219E19C
 	mov r1, #0
 	bl sub_02024EEC
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 _0219E1AE:
 	mov r0, #0
 	pop {r4, pc}
@@ -3699,7 +3699,7 @@ ovy173_219ea18: ; 0x0219EA18
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _0219EA4E
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xbc
 	ldr r0, [r0]
@@ -3720,7 +3720,7 @@ _0219EA4E:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219EA60
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219EA60:
@@ -3729,7 +3729,7 @@ _0219EA60:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219EA72
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219EA72:
@@ -3738,7 +3738,7 @@ _0219EA72:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219EA84
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219EA84:
@@ -3747,7 +3747,7 @@ _0219EA84:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219EA96
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219EA96:
@@ -3756,7 +3756,7 @@ _0219EA96:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219EAA8
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219EAA8:
@@ -5065,7 +5065,7 @@ ovy173_219f570: ; 0x0219F570
 	mov r1, #1
 	bl sub_02024EEC
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _0219F594:
@@ -11122,7 +11122,7 @@ _021A23B6:
 	beq _021A241E
 	add r5, #8
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
@@ -11548,7 +11548,7 @@ ovy173_21a273c: ; 0x021A273C
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021A2750
-	bl sub_02048210
+	bl BmpWin_Free
 _021A2750:
 	mov r0, #0x20
 	mov r4, #0x1e
@@ -11705,7 +11705,7 @@ ovy173_21a2858: ; 0x021A2858
 	mov r0, #0x1a
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	add r0, #0xb4
 	ldr r0, [r0]
@@ -17797,7 +17797,7 @@ _021A5966:
 	add r1, r0, r1
 	ldr r0, [sp, #4]
 	ldr r0, [r1, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [sp]
 	lsl r1, r7, #3
 	mov r4, #0
@@ -17806,7 +17806,7 @@ _021A597C:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021A597C
@@ -17816,11 +17816,11 @@ _021A597C:
 	ldr r4, _021A59C4 ; =0x00000958
 	ldr r0, [sp]
 	ldr r0, [r0, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [sp]
 	add r1, r4, #4
 	ldr r0, [r0, r1]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r1, r4, #0
 	ldr r0, [sp]
 	sub r1, #0xa4

@@ -114501,14 +114501,14 @@ ovy167_21d0f84: ; 0x021D0F84
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _021D0FA0
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #8]
 _021D0FA0:
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _021D0FAE
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4]
 _021D0FAE:
@@ -120278,7 +120278,7 @@ _021D3B7C:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021D3B96
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, r6
 	add r0, #0x94
 	str r7, [r0]

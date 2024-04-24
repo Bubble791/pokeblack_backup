@@ -1576,10 +1576,10 @@ ovy145_219dbf4: ; 0x0219DBF4
 	add r4, r0, #0
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy145_219dbf4
 _0219DC0C:
@@ -5466,7 +5466,7 @@ _0219FAB0:
 	add r0, r5, #0
 	sub r0, #0x18
 	ldr r0, [r4, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl ovy145_219d4dc
 	ldr r0, _0219FBD4 ; =0x04000050
@@ -6848,10 +6848,10 @@ sub_021A0600: ; 0x021A0600
 	mov r1, #0x16
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
-	ldr r3, _021A060C ; =sub_02048210
+	ldr r3, _021A060C ; =BmpWin_Free
 	bx r3
 	nop
-_021A060C: .word sub_02048210
+_021A060C: .word BmpWin_Free
 	thumb_func_end sub_021A0600
 
 	thumb_func_start ovy145_21a0610

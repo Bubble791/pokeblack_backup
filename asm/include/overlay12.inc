@@ -4707,8 +4707,8 @@
 .public DC_FlushRange
 .public GX_LoadTex
 .public GX_EndLoadTex
-.public sub_02046EDC
-.public sub_02046EDC
+.public GFL_BitmapFree
+.public GFL_BitmapFree
 .public GX_BeginLoadTexPltt
 .public DC_FlushRange
 .public GX_LoadTexPltt
@@ -4936,4 +4936,4 @@
 .public sub_0202D534
 .public sub_0204A928
 .public sub_02049294
-.public sub_02048210
+.public BmpWin_Free

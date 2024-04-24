@@ -1232,7 +1232,7 @@ _0219D826:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldrh r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -1417,10 +1417,10 @@ ovy266_219d984: ; 0x0219D984
 	add r5, r0, #0
 	lsl r4, r4, #4
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, #8
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy266_219d984

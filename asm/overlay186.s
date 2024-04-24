@@ -5448,7 +5448,7 @@ _021AA02E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
@@ -8815,7 +8815,7 @@ ovy186_21abb7c: ; 0x021ABB7C
 ovy186_21abbb0: ; 0x021ABBB0
 	push {r3, lr}
 	ldr r0, [r0, #8]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r3, pc}
 	.align 2, 0

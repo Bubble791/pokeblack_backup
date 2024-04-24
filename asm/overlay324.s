@@ -1863,9 +1863,9 @@ ovy324_219ddd0: ; 0x0219DDD0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy324_219ddd0
@@ -2179,7 +2179,7 @@ ovy324_219e000: ; 0x0219E000
 _0219E012:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0

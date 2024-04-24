@@ -771,7 +771,7 @@
 .public sub_021F3C64
 .public sub_021F3C1C
 .public sub_021F3BF4
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_021F3C1C
 .public GFL_WordSetSystemFree
 .public sub_021F3A84
@@ -1103,7 +1103,7 @@
 .public sub_0202AEC4
 .public sub_0202B0F4
 .public sub_0202B2A0
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public sub_021C01F0
 .public sub_020504F0

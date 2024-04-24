@@ -149,7 +149,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_02021C44
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
@@ -430,7 +430,7 @@
 .public GFL_StrBufFree
 .public sub_02021C44
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045B7C
 .public BmpWin_GetBitmap
 .public sub_02021C1C

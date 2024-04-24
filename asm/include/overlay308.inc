@@ -131,10 +131,10 @@
 .public sub_0204C108
 .public sub_0204C124
 .public sub_0204C108
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02034264
 .public GFL_HeapAllocate
 .public MI_CpuFill8

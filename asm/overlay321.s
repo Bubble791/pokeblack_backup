@@ -1508,7 +1508,7 @@ _0219DA40:
 	ldr r0, [r5, #0x48]
 	cmp r0, #0
 	beq _0219DA50
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x48]
 _0219DA50:
 	add r4, r4, #1

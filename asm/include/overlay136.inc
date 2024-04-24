@@ -38,7 +38,7 @@
 .public GX_EndLoadTexPltt
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public STD_GetStringLength
 .public sub_02068458
 .public sub_021EEE94

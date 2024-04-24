@@ -1199,7 +1199,7 @@ _021EF5AC:
 	add r0, r5, #0
 	bl ovy134_21ef87c
 	ldr r0, [r5, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r5, #0x28]
 	bl GFL_HeapFree
 	ldr r0, [r5, #0x2c]

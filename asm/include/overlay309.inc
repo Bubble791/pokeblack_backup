@@ -215,7 +215,7 @@
 .public sub_02049A98
 .public sub_0204A638
 .public sub_02049AF0
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_020223CC
 .public GFL_ArcSysCreateFileHandle

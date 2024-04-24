@@ -20546,7 +20546,7 @@ ovy36_218903c: ; 0x0218903C
 	ldr r0, [r5, #4]
 	bl BmpWin_FlushChar
 	ldr r0, [r5, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5]
 	ldrh r0, [r0, #2]
 	lsl r0, r0, #0x18
@@ -20560,9 +20560,9 @@ ovy36_218903c: ; 0x0218903C
 	lsr r0, r0, #0x18
 	bl sub_02044CFC
 	ldr r0, [r5, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r5, #8]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	beq _021890FE
@@ -21707,7 +21707,7 @@ _02189956:
 	add r0, r5, #0
 	bl sub_02047008
 	add r0, r5, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x34
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -21900,9 +21900,9 @@ ovy36_2189b50: ; 0x02189B50
 	add r0, #0x10
 	bl sub_02189D10
 	ldr r0, [r5, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	bl GFL_HeapFree
 	add sp, #0xc
@@ -22091,10 +22091,10 @@ sub_02189D10: ; 0x02189D10
 	mov r1, #0
 	strb r1, [r0]
 	ldr r0, [r0, #4]
-	ldr r3, _02189D1C ; =sub_02046EDC
+	ldr r3, _02189D1C ; =GFL_BitmapFree
 	bx r3
 	nop
-_02189D1C: .word sub_02046EDC
+_02189D1C: .word GFL_BitmapFree
 	thumb_func_end sub_02189D10
 
 	thumb_func_start sub_02189D20
@@ -22577,7 +22577,7 @@ ovy36_218a0e8: ; 0x0218A0E8
 	add r4, r0, #0
 	bl ovy36_218a08c
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy36_218a0e8
 
@@ -23271,7 +23271,7 @@ ovy36_218a668: ; 0x0218A668
 	mov r1, #0
 	bl sub_02024EEC
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy36_218a668
@@ -25376,7 +25376,7 @@ ovy36_218b5d0: ; 0x0218B5D0
 	add r4, r1, #0
 	bl ovy36_218cf48
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy36_218b5d0
 
@@ -25532,7 +25532,7 @@ _0218B6E2:
 	add r0, r5, #0
 	bl ovy36_218cf48
 	ldr r0, [r4, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	strb r0, [r4, #2]
 	strh r0, [r4]
@@ -29263,7 +29263,7 @@ ovy36_218d3ac: ; 0x0218D3AC
 	mov r5, #0x2b
 	lsl r5, r5, #4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 	pop {r3, r4, r5, pc}
@@ -29310,7 +29310,7 @@ _0218D400:
 	mov r1, #2
 	bl sub_02024EEC
 	ldr r0, [r6, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 _0218D41C:
 	add r7, r7, #1
 	str r4, [r6, #0x14]
@@ -29452,7 +29452,7 @@ _0218D520:
 	mov r1, #2
 	bl sub_02024EEC
 	ldr r0, [r5, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 _0218D542:
 	add r4, r4, #1
 	str r7, [r5, #0x14]
@@ -32308,7 +32308,7 @@ _0218EC84:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0218ECBE
-	bl sub_02048210
+	bl BmpWin_Free
 _0218ECBE:
 	mov r5, #0xb
 	lsl r5, r5, #6
@@ -70603,7 +70603,7 @@ ovy36_21a0938: ; 0x021A0938
 	cmp r0, #1
 	bne _021A095E
 	ldr r0, [r4, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
 	cmp r0, #0
 	beq _021A095E
@@ -96191,7 +96191,7 @@ _021AD038:
 	lsl r0, r5, #2
 	add r0, r6, r0
 	ldr r0, [r0, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, r5, #1
 	cmp r5, #7
 	blt _021AD038
@@ -116213,7 +116213,7 @@ _021B6A82:
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021B6A90
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	mov r0, #0
 	str r0, [r4, #0x10]
 _021B6A90:
@@ -128110,7 +128110,7 @@ _021BC480:
 	add r0, r4, #0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r0]
@@ -128964,7 +128964,7 @@ _021BCB08:
 	add r0, r5, #0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, #0
 	add r0, #0x90
 	ldr r0, [r0]
@@ -129013,7 +129013,7 @@ _021BCB70:
 	add r0, r5, #0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, #0
 	add r0, #0x90
 	ldr r0, [r0]
@@ -129175,7 +129175,7 @@ _021BCC68:
 	bl GFL_HeapFree
 	add r6, #0x8c
 	ldr r0, [r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldrb r0, [r4, #6]
 	add r0, r0, #1
 	strb r0, [r4, #6]
@@ -134102,7 +134102,7 @@ ovy36_21bf288: ; 0x021BF288
 	add r2, r1, #2
 	bl ovy36_21bf810
 	ldr r0, [r4, #8]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x4c
@@ -150445,7 +150445,7 @@ ovy36_21c6db8: ; 0x021C6DB8
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x10]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	mov r0, #0
 	str r0, [r4, #0x10]
 	pop {r4, pc}
@@ -150639,7 +150639,7 @@ ovy36_21c6f54: ; 0x021C6F54
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #4]
 	pop {r4, pc}
@@ -151548,7 +151548,7 @@ _021C7670:
 	b _021C7668
 _021C7688:
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 _021C7692:
@@ -151663,7 +151663,7 @@ ovy36_21c76d8: ; 0x021C76D8
 	add r0, r6, #0
 	bl GFL_MsgDataFree
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	b _021C77BC
 _021C779E:
 	mov r0, #0x20

@@ -846,7 +846,7 @@ _021B63D2:
 	mov r1, #2
 	bl sub_02024EEC
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x28]

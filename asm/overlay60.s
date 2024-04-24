@@ -3827,7 +3827,7 @@ _021E77C0:
 	lsl r0, r5, #2
 	add r0, r6, r0
 	ldr r0, [r0, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, r5, #1
 	cmp r5, #7
 	blt _021E77C0

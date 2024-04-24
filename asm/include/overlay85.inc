@@ -296,7 +296,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public sub_0204BBA0

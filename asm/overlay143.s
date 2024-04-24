@@ -1403,7 +1403,7 @@ ovy143_219a3f4: ; 0x0219A3F4
 	ldr r0, [r4, #4]
 	bl sub_0202B030
 	ldr r0, [r4, #8]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	mov r0, #0
 	str r0, [r4]
 	str r0, [r4, #4]
@@ -2779,10 +2779,10 @@ ovy143_219ad58: ; 0x0219AD58
 	thumb_func_start sub_0219ADC8
 sub_0219ADC8: ; 0x0219ADC8
 	ldr r0, [r0, #0x40]
-	ldr r3, _0219ADD0 ; =sub_02048210
+	ldr r3, _0219ADD0 ; =BmpWin_Free
 	bx r3
 	nop
-_0219ADD0: .word sub_02048210
+_0219ADD0: .word BmpWin_Free
 	thumb_func_end sub_0219ADC8
 
 	thumb_func_start sub_0219ADD4
@@ -3452,7 +3452,7 @@ ovy143_219b30c: ; 0x0219B30C
 _0219B312:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #6
 	blt _0219B312
@@ -4238,7 +4238,7 @@ ovy143_219b988: ; 0x0219B988
 _0219B98E:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0219B98E
@@ -5621,7 +5621,7 @@ _0219C51E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0219C51E
@@ -6023,7 +6023,7 @@ _0219C846:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x24]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldrb r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -6178,7 +6178,7 @@ _0219C960:
 	ldr r0, [r5, r0]
 	bl sub_0202B030
 	ldr r0, [r5, r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #7
 	blt _0219C960
@@ -7951,7 +7951,7 @@ ovy143_219d648: ; 0x0219D648
 _0219D64E:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0219D64E
@@ -9386,7 +9386,7 @@ _0219E216:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0219E216
@@ -9760,7 +9760,7 @@ _0219E506:
 	add r0, r5, r0
 	add r0, #0x80
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldrb r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -9985,7 +9985,7 @@ _0219E6B8:
 	ldr r0, [r5, r0]
 	bl sub_0202B030
 	ldr r0, [r5, r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #7
 	blt _0219E6B8
@@ -11398,7 +11398,7 @@ _0219F0E4:
 	ldr r0, [r5, r0]
 	bl sub_0202B030
 	ldr r0, [r5, r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0219F0E4
@@ -12480,7 +12480,7 @@ ovy143_219f914: ; 0x0219F914
 _0219F91A:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #9
 	blt _0219F91A

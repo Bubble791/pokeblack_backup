@@ -164,7 +164,7 @@
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public sub_02022DA8
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02021A18
 .public sub_02016AD8
 .public sub_0201735C

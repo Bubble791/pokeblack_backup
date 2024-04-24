@@ -868,7 +868,7 @@ _0219D5BE:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, r5, #1
 	cmp r5, #0xa
 	blt _0219D5BE
@@ -877,7 +877,7 @@ _0219D5D0:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x38]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, r5, #1
 	cmp r5, #8
 	blt _0219D5D0

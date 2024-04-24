@@ -1246,10 +1246,10 @@ sub_021A0324: ; 0x021A0324
 	mov r1, #0x52
 	lsl r1, r1, #2
 	ldr r0, [r0, r1]
-	ldr r3, _021A0330 ; =sub_02048210
+	ldr r3, _021A0330 ; =BmpWin_Free
 	bx r3
 	nop
-_021A0330: .word sub_02048210
+_021A0330: .word BmpWin_Free
 	thumb_func_end sub_021A0324
 
 	thumb_func_start ovy308_21a0334
@@ -1475,13 +1475,13 @@ _021A04E6:
 	ldr r0, [r5, #0x74]
 	bl sub_0204C108
 	ldr r0, [r5, #0x60]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r7, #0
 _021A0510:
 	lsl r0, r4, #4
 	add r0, r5, r0
 	ldr r0, [r0, #0x40]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021A0510
@@ -1489,12 +1489,12 @@ _021A0510:
 _021A0522:
 	lsl r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021A0522
 	ldr r0, [r5, #0x70]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r6, r6, #1
 	cmp r6, #2
 	blt _021A04E6

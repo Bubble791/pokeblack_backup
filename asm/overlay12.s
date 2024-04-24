@@ -41414,11 +41414,11 @@ ovy12_2163ee0: ; 0x02163EE0
 	thumb_func_start sub_02163F2C
 sub_02163F2C: ; 0x02163F2C
 	ldr r0, [r0, #0x1c]
-	ldr r3, _02163F34 ; =sub_02048210
+	ldr r3, _02163F34 ; =BmpWin_Free
 	ldr r0, [r0, #8]
 	bx r3
 	.align 2, 0
-_02163F34: .word sub_02048210
+_02163F34: .word BmpWin_Free
 	thumb_func_end sub_02163F2C
 
 	thumb_func_start ovy12_2163f38
@@ -54421,9 +54421,9 @@ ovy12_216a0b8: ; 0x0216A0B8
 	bl GX_LoadTex
 	bl GX_EndLoadTex
 	ldr r0, [sp, #0x18]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

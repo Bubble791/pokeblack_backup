@@ -1098,7 +1098,7 @@ _0219D6FA:
 	add r0, r5, r0
 	add r0, #0x80
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #7
 	blt _0219D6FA
@@ -2768,7 +2768,7 @@ ovy323_219e45c: ; 0x0219E45C
 	bl GFL_BGSysLoadScr
 	add r5, #0xb8
 	ldr r0, [r5]
-	bl sub_02048210
+	bl BmpWin_Free
 _0219E4AA:
 	add r0, r4, #0
 	pop {r4, r5, r6, pc}
@@ -3031,7 +3031,7 @@ ovy323_219e64c: ; 0x0219E64C
 	add r0, r5, #0
 	add r0, #0xc0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy323_219e6a0

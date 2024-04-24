@@ -480,7 +480,7 @@
 .public sub_02021A18
 .public GFL_MsgDataFree
 .public sub_02022DA8
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02024D58
 .public sub_0202DA54
 .public sub_02044668

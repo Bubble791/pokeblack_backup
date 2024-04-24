@@ -2729,10 +2729,10 @@ ovy304_21a1238: ; 0x021A1238
 	bl sub_020480A8
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, #8
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy304_21a1238
 

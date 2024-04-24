@@ -984,13 +984,13 @@ ovy297_21f4a1c: ; 0x021F4A1C
 	lsr r2, r2, #0x10
 	bl sub_02044668
 	ldr r0, [r4, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x2c]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x34]
 	bl GFL_TCBExMgrFree
 	ldr r0, [r4, #0x38]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}

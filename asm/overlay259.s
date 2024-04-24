@@ -881,7 +881,7 @@ ovy259_2199f64: ; 0x02199F64
 	ldr r0, [r4, #0x1c]
 	bl sub_020484B4
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x14]
 	cmp r0, #0
 	beq _02199FA2
@@ -3435,7 +3435,7 @@ ovy259_219b378: ; 0x0219B378
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x14
@@ -3938,7 +3938,7 @@ _0219B794:
 	ldr r0, [r4, #0x20]
 	cmp r0, #0
 	beq _0219B79E
-	bl sub_02048210
+	bl BmpWin_Free
 _0219B79E:
 	ldr r0, [r4, #4]
 	bl sub_0202E818
@@ -5497,7 +5497,7 @@ _0219C398:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x1c]
 	add r4, r4, #1
 	cmp r4, r0
@@ -6392,7 +6392,7 @@ _0219CAF4:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219CB04
-	bl sub_02048210
+	bl BmpWin_Free
 _0219CB04:
 	add r5, r5, #1
 	cmp r5, #6
@@ -8988,7 +8988,7 @@ ovy259_219deac: ; 0x0219DEAC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x14]
 	bl sub_0204C108
 	ldr r0, [r4, #0x10]
@@ -9498,7 +9498,7 @@ _0219E24A:
 	ldr r0, [r4, #0x10]
 	bl GFL_StrBufFree
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #4
 	bl sub_02045738
 	mov r0, #4

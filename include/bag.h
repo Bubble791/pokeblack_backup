@@ -325,7 +325,7 @@ extern void GFL_StrBufFree(int);
 extern void GFL_WordSetSystemFree(int);
 extern void ovy142_219f8c4(BagView*);
 extern void sub_02044668(int, u16, u16);
-extern void sub_02048210(int);
+extern void BmpWin_Free(int);
 
 void BagMenu_HandleKeyPad(BagView *m_bagView);
 extern void sub_020504F0(int);
@@ -592,4 +592,8 @@ extern void sub_0203A1D0(int);
 
 extern const TouchscreenHitbox data_021A08F8[3];
 extern const TouchscreenHitbox data_021A0904[3];
+extern const int data_021A091C[6];
+extern const u32 data_021A0934[6];
+extern const int data_021A094C[13];
+
 #endif //BAG_H

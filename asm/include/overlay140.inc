@@ -80,7 +80,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public sub_02044C98
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_02045264
 .public sub_02045264

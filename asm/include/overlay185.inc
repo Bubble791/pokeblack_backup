@@ -86,7 +86,7 @@
 .public Oam_LoadNCERFile
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022DA8
 .public sub_02021C44
 .public sub_02021A18
@@ -218,10 +218,10 @@
 .public GFL_HeapAllocate
 .public sub_021A2FB4
 .public sub_0204C108
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_0204AF50
 .public sub_0204ADA8
@@ -356,8 +356,8 @@
 .public sub_0204C108
 .public GFL_MsgDataFree
 .public GFL_StrBufFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_0204AF50
 .public sub_0204AF50
@@ -833,8 +833,8 @@
 .public sub_0204C108
 .public sub_0204C108
 .public GFL_StrBufFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_020450CC
 .public sub_02045604
@@ -1000,7 +1000,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public GFL_ArcToolFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02044668
 .public GFL_HeapFree
 .public sub_020454D4
@@ -1021,7 +1021,7 @@
 .public BmpWin_CreateDynamic
 .public sub_021A4524
 .public sub_02034264
-.public sub_02048210
+.public BmpWin_Free
 .public sub_021A42C0
 .public sub_020342F4
 .public sub_02045790

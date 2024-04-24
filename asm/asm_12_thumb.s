@@ -28505,7 +28505,7 @@ _02012886:
 	add r0, r6, #0
 	bl GFL_WordSetSystemFree
 	ldr r0, [sp, #0x14]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -71289,7 +71289,7 @@ sub_020256B0: ; 0x020256B0
 	ldr r0, [r4]
 	bl sub_02024FAC
 	add r0, r5, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_02025128
@@ -73307,7 +73307,7 @@ _0202655A:
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _02026564
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 _02026564:
 	add r0, r4, #0
 	bl GFL_HeapFree
@@ -90076,7 +90076,7 @@ _0202DAB2:
 	bl sub_020484B4
 	ldr r0, [r5, #0x18]
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -91236,7 +91236,7 @@ sub_0202E368: ; 0x0202E368
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -91891,7 +91891,7 @@ sub_0202E818: ; 0x0202E818
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -108024,7 +108024,7 @@ sub_0203580C: ; 0x0203580C
 	cmp r0, #0
 	bne _0203582A
 	ldr r0, [r4, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -108038,9 +108038,9 @@ _0203582A:
 	ldr r0, [r4, #8]
 	bl BmpWin_FlushChar
 	ldr r0, [r4, #8]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _0203585E
@@ -109416,7 +109416,7 @@ _0203624A:
 	add r0, r4, #0
 	bl sub_02022DA8
 	add r0, r5, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

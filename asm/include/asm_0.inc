@@ -898,7 +898,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0203D0EC
 .public sub_0203CB80
 .public sub_0203CB80
@@ -1808,7 +1808,7 @@
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar
 .public GFL_HeapFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapAllocate
 .public sub_0203D5A8
 .public BmpWin_GetBitmap
@@ -1843,7 +1843,7 @@
 .public sub_02045864
 .public GFL_HeapAllocate
 .public GFL_StrBufFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_GetBitmap
@@ -2172,7 +2172,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_GetBitmap
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045B7C
 .public GFL_HeapFree
 .public GFL_HeapFree
@@ -2226,7 +2226,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
@@ -2276,7 +2276,7 @@
 .public sub_0203DA2C
 .public GFL_HeapAllocate
 .public sub_02046E74
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public sub_02046EF8
 .public sub_02046EFC
@@ -2734,13 +2734,13 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0203A614
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_02048210
-.public sub_02046EDC
+.public BmpWin_Free
+.public GFL_BitmapFree
 .public GFL_TCBRemove
 .public GFL_HeapFree
 .public sub_0203A870
@@ -2803,7 +2803,7 @@
 .public sub_0204898C
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0203A938
 .public sub_0203A938
 .public sub_0203A938

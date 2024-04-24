@@ -6886,7 +6886,7 @@ ovy127_21f20b4: ; 0x021F20B4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r1, [r4, #0x14]
 	mov r0, #5
 	bl sub_02024D58

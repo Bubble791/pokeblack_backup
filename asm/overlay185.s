@@ -1370,7 +1370,7 @@ _0219D8CC:
 	beq _0219D946
 	ldr r0, [r5]
 	ldr r0, [r0, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5]
 	ldr r0, [r0, #0x54]
 	bl ovy185_219f5d0
@@ -3849,7 +3849,7 @@ _0219EBBC:
 	ldr r0, [r0, #0x60]
 	cmp r0, #0
 	beq _0219EBCA
-	bl sub_02048210
+	bl BmpWin_Free
 _0219EBCA:
 	add r0, r4, #1
 	lsl r0, r0, #0x18
@@ -3861,21 +3861,21 @@ _0219EBCA:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219EBE2
-	bl sub_02048210
+	bl BmpWin_Free
 _0219EBE2:
 	add r0, r5, #0
 	add r0, #0x94
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219EBF0
-	bl sub_02048210
+	bl BmpWin_Free
 _0219EBF0:
 	add r0, r5, #0
 	add r0, #0x98
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219EBFE
-	bl sub_02048210
+	bl BmpWin_Free
 _0219EBFE:
 	add r0, r5, #0
 	bl GFL_HeapFree
@@ -5196,9 +5196,9 @@ _0219F620:
 	bl GFL_StrBufFree
 _0219F62A:
 	ldr r0, [r4, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
@@ -13109,9 +13109,9 @@ _021A31B4:
 	bl GFL_StrBufFree
 _021A31BE:
 	ldr r0, [r4, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -15019,7 +15019,7 @@ ovy185_21a40c8: ; 0x021A40C8
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r2, [r4]
 	mov r0, #3
 	lsl r1, r2, #0x10
@@ -15607,7 +15607,7 @@ _021A4506:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021A4506

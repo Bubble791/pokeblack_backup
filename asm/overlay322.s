@@ -1770,7 +1770,7 @@ _0219DCFA:
 	ldr r0, [r6, r0]
 	bl sub_0202B030
 	ldr r0, [r6, r7]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0219DCFA
@@ -2309,7 +2309,7 @@ _0219E0FA:
 	ldr r0, [r4, r7]
 	bl sub_020484B4
 	ldr r0, [r4, r7]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r7]
 _0219E11E:
@@ -2337,7 +2337,7 @@ _0219E12A:
 	add r0, r5, r4
 	add r0, #0xf4
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, r4
 	add r0, #0xf4
 	str r7, [r0]

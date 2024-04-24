@@ -62,7 +62,7 @@ int BagMenu_End(int a1, int a2, void *data3, void *a4)
     if (wk->unk500.winData)
     {
         sub_02044668(3, wk->unk88C, (wk->unk88C >> 16));
-        sub_02048210(wk->unk500.winData);
+        BmpWin_Free(wk->unk500.winData);
     }
     sub_02045264(3, 1, 0);
     sub_02022DA8(wk->font);
@@ -315,7 +315,6 @@ void ovy142_219cc84(BagView *bagView)
     }
 }
 
-const u32 data_021A0934[6] = {0};
 extern const u8 data021A08E0[5];
 
 extern void sub_0219CD58(BagView*, u8*);
@@ -1265,7 +1264,7 @@ void ovy142_219e120(BagView *a1)
 extern void sub_0204C108(int);
 extern void sub_0204B98C(int);
 extern void sub_0204BCD0(int);
-extern void sub_02046EDC(int);
+extern void GFL_BitmapFree(int);
 extern int sub_0204BF98(int);
 extern int sub_0204B758(int);
 extern void sub_0204BE64(int);
@@ -1275,14 +1274,14 @@ void ovy142_219e168(BagView *a1)
     int i;  // r4
     int v3; // r0
 
-    sub_02048210(a1->unk76C.winData);
-    sub_02048210(a1->unk754.winData);
-    sub_02048210(a1->unk764.winData);
-    sub_02048210(a1->unk75C.winData);
-    sub_02048210(a1->tmhmTextBmpWin.winData);
-    sub_02048210(a1->unk774.winData);
-    sub_02048210(a1->unk78C.winData);
-    sub_02048210(a1->unk794.winData);
+    BmpWin_Free(a1->unk76C.winData);
+    BmpWin_Free(a1->unk754.winData);
+    BmpWin_Free(a1->unk764.winData);
+    BmpWin_Free(a1->unk75C.winData);
+    BmpWin_Free(a1->tmhmTextBmpWin.winData);
+    BmpWin_Free(a1->unk774.winData);
+    BmpWin_Free(a1->unk78C.winData);
+    BmpWin_Free(a1->unk794.winData);
     sub_0204C108(a1->scrollBarOam);
     if (a1->itemIconOam)
     {
@@ -1292,7 +1291,7 @@ void ovy142_219e168(BagView *a1)
     }
     sub_0204BE64(a1->unk558);
     for (i = 0; i < 8; ++i)
-        sub_02046EDC(a1->unk624[i]);
+        GFL_BitmapFree(a1->unk624[i]);
     v3 = sub_0204BF98(a1->spriteGroup);
     sub_0204B758(v3);
 }
@@ -2379,9 +2378,9 @@ void ovy142_219f84c(BagView *a1)
 
 void ovy142_219f8c4(BagView *a1)
 {
-    sub_02048210(a1->pocketNameBmpWin.winData);
-    sub_02048210(a1->MoneyBmpWin.winData);
-    sub_02048210(a1->moneyStringBmpWin.winData);
+    BmpWin_Free(a1->pocketNameBmpWin.winData);
+    BmpWin_Free(a1->MoneyBmpWin.winData);
+    BmpWin_Free(a1->moneyStringBmpWin.winData);
 }
 
 void ovy142_219f8ec(BagView *a1, u32 a2)

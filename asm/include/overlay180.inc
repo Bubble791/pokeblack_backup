@@ -135,7 +135,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02044668
 .public sub_02044668
 .public sub_02045264
@@ -185,7 +185,7 @@
 .public sub_02044CFC
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0219C548
 .public sub_0219C548
 .public sub_0204BCD0
@@ -261,7 +261,7 @@
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
 .public Oam_GetSpritePosData
@@ -369,7 +369,7 @@
 .public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public GFL_HeapFree
 .public BmpWin_BitmapFill

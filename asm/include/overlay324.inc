@@ -202,8 +202,8 @@
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public GFL_BGSysLoadScr
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
@@ -213,7 +213,7 @@
 .public BmpWin_BitmapFill
 .public GFL_BGSysLoadScr
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02049D24
 .public sub_02049E00
 .public sub_0204A5A8

@@ -1456,7 +1456,7 @@ _0219E242:
 	add r0, r5, r0
 	str r6, [r0, #0x7c]
 	ldr r0, [r0, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0219E242
@@ -2413,7 +2413,7 @@ ovy296_219e8c8: ; 0x0219E8C8
 	str r4, [sp, #0x10]
 	bl sub_02047008
 	add r0, r6, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -2425,10 +2425,10 @@ ovy296_219e9e8: ; 0x0219E9E8
 	add r4, r0, #0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, #0x90
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy296_219e9e8

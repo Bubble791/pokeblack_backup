@@ -1535,7 +1535,7 @@ _0219DA8E:
 	ldr r0, [r4, r7]
 	bl sub_020484B4
 	ldr r0, [r4, r7]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r7]
 _0219DAB2:
@@ -1563,7 +1563,7 @@ _0219DABE:
 	add r0, r5, r4
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, r4
 	add r0, #0xd0
 	str r7, [r0]

@@ -46,8 +46,8 @@
 .public GFL_HeapAllocate
 .public sub_021EED30
 .public sub_021BD8EC
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02022DA8
 .public sub_02022DA8
 .public GFL_HeapFree
@@ -221,7 +221,7 @@
 .public sub_020223CC
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022DA8
 .public GFL_TCBExMgrFree
 .public sub_020223CC
@@ -592,7 +592,7 @@
 .public sub_02021C44
 .public sub_02021A18
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022DA8
 .public GFL_TCBExMgrFree
 .public sub_0204B758

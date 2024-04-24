@@ -72,7 +72,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020480A8
 .public sub_02021A3C
 .public BmpWin_GetBitmap

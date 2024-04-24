@@ -54,7 +54,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_0219A414
@@ -250,7 +250,7 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public sub_02006280
 .public sub_020061DC
@@ -313,7 +313,7 @@
 .public sub_020232E8
 .public G2x_SetBlendAlpha_
 .public sub_020223CC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0202E818
 .public sub_02021A18
 .public GFL_WordSetSystemFree
@@ -496,7 +496,7 @@
 .public sub_02024E80
 .public MI_CpuFill8
 .public sub_0219D47C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045738
 .public sub_02045B7C
 .public GFL_HeapFree
@@ -593,7 +593,7 @@
 .public sub_02045B7C
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -757,7 +757,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204C108
 .public MI_CpuFill8
@@ -801,7 +801,7 @@
 .public sub_0202E34C
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045738
 .public GFL_BGSysLoadScr
 .public sub_02045E1C

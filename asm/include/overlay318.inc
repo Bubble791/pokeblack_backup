@@ -55,7 +55,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public MI_CpuFill8
 .public MI_CpuFill8

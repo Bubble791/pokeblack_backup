@@ -83,7 +83,7 @@
 .public sub_021B8278
 .public sub_02049964
 .public sub_02049804
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_02180578

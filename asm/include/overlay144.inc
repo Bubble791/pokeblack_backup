@@ -282,7 +282,7 @@
 .public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_WordSetSystemFree
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
@@ -356,7 +356,7 @@
 .public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

@@ -120,7 +120,7 @@
 .public sub_020223CC
 .public sub_02044B84
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_0204898C
 .public sub_02199900

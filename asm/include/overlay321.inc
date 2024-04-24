@@ -122,7 +122,7 @@
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C

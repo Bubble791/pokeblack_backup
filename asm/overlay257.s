@@ -7875,9 +7875,9 @@ _0219D240:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x2c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x7c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xc8
 	ldr r0, [r0]
@@ -7905,11 +7905,11 @@ _0219D240:
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xb8
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0x98
 	ldr r0, [r0]
@@ -12626,7 +12626,7 @@ _0219F89C:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x48]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r5, [r4, #0x4c]
 	add r0, r5, #0
 	bl sub_020484B4
@@ -12634,7 +12634,7 @@ _0219F89C:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x4c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r5, [r4, #0x50]
 	cmp r5, #0
 	beq _0219F8FA
@@ -12644,7 +12644,7 @@ _0219F89C:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x50]
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r4, #0x50]
 _0219F8FA:
 	mov r5, #0
@@ -14538,7 +14538,7 @@ _021A08C4:
 	ldr r0, [sp, #0x10]
 	cmp r0, #0
 	beq _021A08DC
-	bl sub_02048210
+	bl BmpWin_Free
 _021A08DC:
 	add sp, #0x38
 	pop {r3, r4, r5, r6, r7, pc}
@@ -14600,7 +14600,7 @@ ovy257_21a0924: ; 0x021A0924
 	ldr r0, [r5, #0x50]
 	cmp r0, #0
 	beq _021A094E
-	bl sub_02048210
+	bl BmpWin_Free
 _021A094E:
 	ldrb r0, [r5, #4]
 	mov r2, #4
@@ -15267,7 +15267,7 @@ _021A0ECE:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x2c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r4, [r5, #0x30]
 	add r0, r4, #0
 	bl sub_020484B4
@@ -15275,7 +15275,7 @@ _021A0ECE:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x30]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r4, _021A0F88 ; =0x00000404
 	ldr r0, [r5, r4]
 	bl sub_0204C108
@@ -15289,7 +15289,7 @@ _021A0F12:
 	mul r0, r7
 	add r4, r5, r0
 	ldr r0, [r4, #0x54]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x50]
 	bl sub_0204C108
 	ldr r0, [r4, #0x4c]
@@ -15778,7 +15778,7 @@ _021A12CC:
 	b _021A146C
 _021A1310:
 	ldr r0, [r4, #0x2c]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0xe
 	str r0, [sp]
 	mov r0, #0xa
@@ -15848,7 +15848,7 @@ _021A138C:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x2c]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #0xa
@@ -24463,7 +24463,7 @@ _021A58D6:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021A58FA
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021A58FA:
@@ -24472,7 +24472,7 @@ _021A58FA:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021A590C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021A590C:
@@ -24480,7 +24480,7 @@ _021A590C:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021A591C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021A591C:
@@ -24488,7 +24488,7 @@ _021A591C:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021A592C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021A592C:
@@ -26807,9 +26807,9 @@ ovy257_21a6bfc: ; 0x021A6BFC
 	cmp r0, #0
 	bne _021A6C46
 	ldr r0, [r5, #0x28]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x2c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x40]
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x3c]
@@ -27908,7 +27908,7 @@ _021A748C:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r6, #0x28]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #5
 	mov r1, #0
 	bl sub_02044C98
@@ -30225,7 +30225,7 @@ ovy257_21a86ec: ; 0x021A86EC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x20]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x1c]
@@ -33023,7 +33023,7 @@ _021A9C86:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -33090,7 +33090,7 @@ _021A9D1E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

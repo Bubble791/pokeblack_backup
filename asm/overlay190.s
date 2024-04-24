@@ -3027,14 +3027,14 @@ _021B480A:
 	ldr r0, [r4, #0x2c]
 	cmp r0, #0
 	beq _021B487E
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x2c]
 _021B487E:
 	ldr r0, [r4, #0x30]
 	cmp r0, #0
 	beq _021B488C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x30]
 _021B488C:
@@ -3301,7 +3301,7 @@ ovy190_21b4a84: ; 0x021B4A84
 	beq _021B4AA2
 	bl sub_020484B4
 	ldr r0, [r4, #0x34]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x34]
 	mov r0, #1

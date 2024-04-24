@@ -1542,7 +1542,7 @@
 .public sub_02046EF4
 .public sub_0204BAB8
 .public GFL_StrBufFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapAllocate
 .public sub_0203A584
 .public GFL_HeapAllocate
@@ -1602,8 +1602,8 @@
 .public sub_0204BF98
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0202A6F0
 .public GFL_TCBRemove
 .public GFL_ArcToolFree
@@ -2085,7 +2085,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C108
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DF20
@@ -2360,7 +2360,7 @@
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
 .public GFL_StrBufFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C40C
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
@@ -2397,7 +2397,7 @@
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
 .public GFL_StrBufFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C40C
 .public MIi_CpuCopy16
 .public sub_0204C40C

@@ -200,7 +200,7 @@
 .public sub_0202B0F4
 .public sub_0202B2A0
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C108
 .public GFL_HeapFree
 .public GFL_SndSEPlay
@@ -390,7 +390,7 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
@@ -441,9 +441,9 @@
 .public sub_0204C124
 .public sub_0204C520
 .public sub_0204C108
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_020062C4
 .public GFL_SndSEPlay

@@ -67,7 +67,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02021C44
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public GFL_StrBufCreate
@@ -117,9 +117,9 @@
 .public sub_02047008
 .public BmpWin_GetBitmap
 .public sub_02047008
-.public sub_02046EDC
-.public sub_02048210
-.public sub_02048210
+.public GFL_BitmapFree
+.public BmpWin_Free
+.public BmpWin_Free
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4

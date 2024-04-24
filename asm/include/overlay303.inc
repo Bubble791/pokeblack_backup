@@ -528,8 +528,8 @@
 .public sub_0202E818
 .public GFL_TCBExMgrFree
 .public sub_020480A8
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02005718
 .public sub_02026FE4
 .public sub_02005718
@@ -629,7 +629,7 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_021A2B04
 .public sub_0204C488
 .public sub_0204C4D4

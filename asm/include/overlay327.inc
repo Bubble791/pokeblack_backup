@@ -88,7 +88,7 @@
 .public sub_0202E818
 .public GFL_TCBExMgrFree
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_02021A18
 .public GFL_HeapFree

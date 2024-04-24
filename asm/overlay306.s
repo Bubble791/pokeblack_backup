@@ -1325,9 +1325,9 @@ _0219D910:
 	lsr r2, r2, #0x10
 	bl sub_02044668
 	ldr r0, [r4, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x70]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy306_219d8f8
@@ -1845,7 +1845,7 @@ _0219DD22:
 	add r0, r5, r0
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

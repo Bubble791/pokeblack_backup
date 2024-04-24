@@ -99,7 +99,7 @@
 .public BmpWin_CreateDynamic
 .public sub_02024CC0
 .public sub_02024D00
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
@@ -280,7 +280,7 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0219CFB4
 .public sub_02199C68
 .public sub_02199C68
@@ -296,7 +296,7 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02199D18
 .public sub_02199D18
 .public GFL_HeapAllocate

@@ -306,8 +306,8 @@
 .public GFL_TCBExMgrFree
 .public sub_02021C44
 .public sub_02021A18
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020480A8
 .public GFL_HeapFree
 .public GFL_MsgDataLoadStrbuf
@@ -342,7 +342,7 @@
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045B7C
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf

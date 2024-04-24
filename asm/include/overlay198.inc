@@ -22,7 +22,7 @@
 .public GFL_BGSysLoadNCLRDefault
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -37,7 +37,7 @@
 .public sub_02045B7C
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -50,17 +50,17 @@
 .public sub_02045B7C
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045B7C
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045B7C
 .public sub_020504DC
 .public sub_020484B4
 .public sub_02045B7C
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
@@ -111,7 +111,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_FadeScreenIsFinished
 .public sub_02016B20
 .public sub_0202BDD4
@@ -280,7 +280,7 @@
 .public sub_020223CC
 .public GFL_WordSetSystemFree
 .public sub_0202DA54
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0202E1DC
 .public sub_020480A8
 .public sub_02044528

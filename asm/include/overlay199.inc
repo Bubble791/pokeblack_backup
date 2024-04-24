@@ -34,7 +34,7 @@
 .public sub_021B2F84
 .public sub_0204C5BC
 .public sub_0204C520
-.public sub_02048210
+.public BmpWin_Free
 .public OS_IsRunOnTwl
 .public GFL_MsgDataLoadStrbuf
 .public sub_021B2F84
@@ -46,7 +46,7 @@
 .public sub_020232D8
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_BGSysLoadNCLRDefault
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -65,7 +65,7 @@
 .public sub_020484B4
 .public sub_02045B7C
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public Oam_CreateSprite
 .public sub_0204C520
 .public sub_0204C124
@@ -152,7 +152,7 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0202E8D8
 .public sub_020223B4
 .public sub_020223CC
@@ -251,7 +251,7 @@
 .public sub_02044B84
 .public sub_02021C44
 .public sub_02021A18
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_TCBExMgrFree
 .public sub_0202E1DC
 .public sub_020480A8
@@ -277,9 +277,9 @@
 .public GFL_BGSysLoadNCLRDefault
 .public sub_0203A7F4
 .public sub_02021A3C
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02044668
 .public sub_02044668
 .public sub_0202E818
@@ -330,7 +330,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public G2x_SetBlendBrightness_
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -341,7 +341,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -1101,11 +1101,11 @@
 .public sub_02021A18
 .public sub_020223CC
 .public sub_0203580C
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_TCBExMgrFree
 .public sub_020480A8
 .public GFL_HeapFree
@@ -1130,7 +1130,7 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
 .public GFL_StrBufCreate
@@ -1178,8 +1178,8 @@
 .public sub_020484B4
 .public sub_02024EEC
 .public sub_020484B4
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02045B7C
 .public GFL_HeapAllocate
 .public sub_0203CE0C

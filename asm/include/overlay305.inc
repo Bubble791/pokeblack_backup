@@ -95,7 +95,7 @@
 .public MyStatus_GetTrainerGender
 .public sub_0219D760
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0219D760
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

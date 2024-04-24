@@ -1215,9 +1215,9 @@ _021DE534:
 	lsr r2, r2, #0x10
 	bl sub_02044668
 	ldr r0, [r4, #0x58]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x5c]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy307_21de51c
 

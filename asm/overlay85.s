@@ -4561,7 +4561,7 @@ _021ED17E:
 	ldr r0, [r0, r6]
 	cmp r0, #0
 	beq _021ED18C
-	bl sub_02048210
+	bl BmpWin_Free
 _021ED18C:
 	add r4, r4, #1
 	cmp r4, #4

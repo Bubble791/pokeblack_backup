@@ -1013,7 +1013,7 @@ ovy176_219b568: ; 0x0219B568
 	ldr r0, [r4, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14
@@ -2045,7 +2045,7 @@ _0219BDC0:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldrh r0, [r5, #0x2c]
 	add r4, r4, #1
 	cmp r4, r0

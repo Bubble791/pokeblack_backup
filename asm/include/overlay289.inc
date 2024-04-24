@@ -67,7 +67,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_FontGetBlockWidth

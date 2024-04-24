@@ -1444,11 +1444,11 @@
 .public sub_020484DC
 .public sub_02045604
 .public BmpWin_FlushChar
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_BGSysLoadScr
 .public sub_02044CFC
-.public sub_02046EDC
-.public sub_02046EDC
+.public GFL_BitmapFree
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public sub_02189D10
 .public GFL_HeapFree
@@ -1530,7 +1530,7 @@
 .public sub_02047008
 .public sub_02047008
 .public sub_02047008
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_020231F0
 .public sub_020485F8
 .public GFL_StrBufCreate
@@ -1554,8 +1554,8 @@
 .public BmpWin_FlushChar
 .public GFL_BGSysLoadScr
 .public sub_02189D10
-.public sub_02046EDC
-.public sub_02048210
+.public GFL_BitmapFree
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
@@ -1617,7 +1617,7 @@
 .public sub_020484DC
 .public sub_02045604
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02045118
@@ -1674,7 +1674,7 @@
 .public GFL_BGSysLoadScr
 .public sub_02024E80
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02024C8C
 .public sub_0204B0F0
 .public sub_02024C8C
@@ -1819,14 +1819,14 @@
 .public sub_020223CC
 .public sub_02022268
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_0218B5FC
 .public sub_020223CC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022268
 .public sub_02022268
 .public sub_02067E1C
@@ -2034,12 +2034,12 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045738
 .public GFL_BGSysLoadNCLRDefault
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020232E8
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -2058,7 +2058,7 @@
 .public sub_020484B4
 .public sub_02045B7C
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufCreate
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
@@ -2321,7 +2321,7 @@
 .public sub_02044B84
 .public sub_02021C44
 .public sub_02021A18
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0202DA54
 .public sub_0202E34C
 .public sub_0202E1DC
@@ -4989,7 +4989,7 @@
 .public sub_0204C488
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204BE64
 .public sub_0204B98C
@@ -7615,7 +7615,7 @@
 .public GFL_BGSysLoadScr
 .public sub_02021C44
 .public sub_02021A18
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public BagSave_GetItemCountByID
@@ -9424,7 +9424,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_021B692C
 .public sub_02018CEC
 .public BmpWin_BitmapFill
@@ -10285,7 +10285,7 @@
 .public sub_02016EDC
 .public sub_02016ED8
 .public sub_02016AF0
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_02006D54
@@ -10359,12 +10359,12 @@
 .public sub_02046E28
 .public MyStatus_GetTrainerGender
 .public MyStatus_GetTrainerGender
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_02046E28
 .public MyStatus_GetTrainerGender
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_02049214
@@ -10374,7 +10374,7 @@
 .public sub_02046E28
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public sub_02068458
 .public sub_021BCCF0
@@ -10797,7 +10797,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public sub_02025B58
 .public GFL_SndSEPlay
@@ -12073,7 +12073,7 @@
 .public sub_02046F3C
 .public GFL_G2DIOLoadArcNCLR
 .public GFL_ArcToolFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_021804F0
 .public sub_02180494
 .public sub_021862B4
@@ -12094,7 +12094,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204826C
 .public sub_02045B7C
 .public sub_02044C98
@@ -12182,7 +12182,7 @@
 .public sub_0204BF98
 .public GCTX_HIDGetPressedKeys
 .public sub_021C7560
-.public sub_02048210
+.public BmpWin_Free
 .public ovy12_2154910
 .public ovy12_21548e8
 .public sub_0215516C
@@ -12211,7 +12211,7 @@
 .public sub_02045B7C
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045604
 .public sub_02045B7C
 .public sub_0215516C

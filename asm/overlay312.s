@@ -2165,7 +2165,7 @@ ovy312_217da98: ; 0x0217DA98
 	add r0, r4, #0
 	sub r0, #0x3c
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #2
 	bl sub_02044B84
 	mov r0, #6
@@ -2731,7 +2731,7 @@ ovy312_217df54: ; 0x0217DF54
 	mov r1, #0
 	bl sub_02024EEC
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0x34
 	ldr r0, [r5, r0]
@@ -2919,7 +2919,7 @@ ovy312_217e0f8: ; 0x0217E0F8
 	mov r1, #0
 	bl sub_02024EEC
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r3, r4, r5, pc}
 	nop
 _0217E110: .word 0x0000C040

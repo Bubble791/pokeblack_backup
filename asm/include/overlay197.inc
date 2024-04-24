@@ -484,7 +484,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
@@ -543,7 +543,7 @@
 .public sub_0202E818
 .public GFL_TCBExMgrFree
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
@@ -590,7 +590,7 @@
 .public sub_02024FAC
 .public sub_02024EEC
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -613,7 +613,7 @@
 .public sub_02046EFC
 .public sub_02047000
 .public sub_02046E28
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_StrBufCreate
 .public BmpWin_BitmapFill
@@ -654,7 +654,7 @@
 .public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public GFL_HeapFree
 .public BmpWin_BitmapFill
@@ -747,7 +747,7 @@
 .public sub_0204BE64
 .public sub_0204BCD0
 .public sub_0204BCD0
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufCreate
 .public sub_0204898C
 .public StringSetNumber
@@ -835,7 +835,7 @@
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public MI_CpuFill8
 .public sub_021BADEC
 .public GFL_ArcSysCreateFileHandle

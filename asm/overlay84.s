@@ -1701,7 +1701,7 @@ _021EBC2A:
 	ldr r0, [r0, r4]
 	cmp r0, #0
 	beq _021EBC38
-	bl sub_02048210
+	bl BmpWin_Free
 _021EBC38:
 	add r5, r5, #1
 	cmp r5, #2

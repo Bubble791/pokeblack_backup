@@ -177,7 +177,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02021A3C

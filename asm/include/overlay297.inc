@@ -126,10 +126,10 @@
 .public GFL_TCBRemove
 .public sub_020223CC
 .public sub_02044668
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_TCBExMgrFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public sub_0203A7F4
 .public sub_020223B4

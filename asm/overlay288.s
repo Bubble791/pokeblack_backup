@@ -4155,7 +4155,7 @@ _021F63E8:
 	ldr r0, [r5, #0x14]
 	bl sub_020484B4
 	ldr r0, [r5, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x14]
 _021F640A:
 	add r4, r4, #1

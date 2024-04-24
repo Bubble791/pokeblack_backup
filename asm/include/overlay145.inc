@@ -199,8 +199,8 @@
 .public sub_02045B7C
 .public sub_0219E118
 .public sub_02045B7C
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02017B58
 .public sub_0208D65C
 .public sub_0204C4A8
@@ -537,7 +537,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0202E1DC
-.public sub_02048210
+.public BmpWin_Free
 .public G2x_SetBlendBrightness_
 .public sub_0219E118
 .public sub_02044BD8

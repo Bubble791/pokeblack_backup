@@ -5923,8 +5923,8 @@
 .public GFL_ArcSysCreateFileHandle
 .public GFL_BGSysLoadArcNCGRDynamic
 .public GFL_ArcToolFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
@@ -6274,7 +6274,7 @@
 .public sub_021D3F00
 .public sub_0204B264
 .public sub_02046E28
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public sub_021BAC40
 .public ovy168_21e04d8

@@ -722,9 +722,9 @@ _021B35B8:
 	ldr r0, [r4, #0x30]
 	bl sub_02021A18
 	ldr r0, [r4, #0x20]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x2c]
 	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x28]

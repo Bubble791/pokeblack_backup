@@ -2122,10 +2122,10 @@ ovy256_21bc75c: ; 0x021BC75C
 	ldr r4, _021BC778 ; =0x00000B48
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, #8
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r3, r4, r5, pc}
 	nop
@@ -4135,7 +4135,7 @@ ovy256_21bd724: ; 0x021BD724
 	bl sub_0202B030
 	add r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
 	bl sub_0202AEAC

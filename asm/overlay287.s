@@ -1600,7 +1600,7 @@ ovy287_21f50a4: ; 0x021F50A4
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021F50B8
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021F50B8:
@@ -1653,7 +1653,7 @@ _021F5106:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, r7]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldrb r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -1676,7 +1676,7 @@ _021F5130:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blo _021F5130

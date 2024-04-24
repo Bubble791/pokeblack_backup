@@ -64,8 +64,8 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_020223CC
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_MsgDataFree

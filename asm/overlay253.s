@@ -1040,7 +1040,7 @@ _0217D148:
 	ldr r0, [r5, r6]
 	bl sub_020484B4
 	ldr r0, [r5, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0217D148

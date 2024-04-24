@@ -283,7 +283,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
@@ -419,7 +419,7 @@
 .public sub_02034220
 .public sub_020342F4
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
@@ -536,7 +536,7 @@
 .public GFL_HeapFree
 .public G2x_SetBlendAlpha_
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204B98C
 .public sub_0204BE64
@@ -581,7 +581,7 @@
 .public sub_0202E818
 .public GFL_TCBExMgrFree
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_02021A18
 .public GFL_HeapFree
@@ -642,7 +642,7 @@
 .public sub_02024FAC
 .public sub_02024EEC
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C

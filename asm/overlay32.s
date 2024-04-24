@@ -363,7 +363,7 @@ _02199B3E:
 	add r0, r4, #0
 	bl sub_02022DA8
 	add r0, r5, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

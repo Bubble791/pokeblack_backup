@@ -1827,18 +1827,18 @@ _021BC614:
 	add r0, r4, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xdc
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	add r0, #0xd8
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, #0xd4
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r4, pc}
 	thumb_func_end ovy216_21bc604
@@ -7140,7 +7140,7 @@ ovy216_21bef78: ; 0x021BEF78
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	bl ovy216_21bf244
 	ldr r0, [r4, #8]
@@ -7467,7 +7467,7 @@ _021BF254:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r6, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5]
 	add r4, r4, #1
 	cmp r4, r0

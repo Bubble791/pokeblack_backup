@@ -32,7 +32,7 @@
 .public sub_0202AEC4
 .public sub_0202B098
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public MI_CpuFill8
 .public BmpWin_BitmapFill
 .public sub_02021D28

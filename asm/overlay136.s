@@ -246,7 +246,7 @@ ovy136_21eedc0: ; 0x021EEDC0
 	add r0, r5, #0
 	bl GFL_HeapFree
 	add r0, r6, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

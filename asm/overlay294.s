@@ -2980,11 +2980,11 @@ ovy294_21a316c: ; 0x021A316C
 	bl sub_020223CC
 _021A3196:
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x38]
 	cmp r0, #0
 	beq _021A31A6
-	bl sub_02048210
+	bl BmpWin_Free
 _021A31A6:
 	ldr r0, [r4, #0x18]
 	bl GFL_TCBExMgrFree

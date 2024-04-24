@@ -2,8 +2,8 @@
 #pragma once
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0204898C
 .public GFL_FontGetBlockWidth
 .public sub_020484D8

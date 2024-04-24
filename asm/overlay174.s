@@ -2152,14 +2152,14 @@ ovy174_219e040: ; 0x0219E040
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _0219E052
-	bl sub_02048210
+	bl BmpWin_Free
 _0219E052:
 	mov r0, #0xa
 	lsl r0, r0, #6
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _0219E060
-	bl sub_02048210
+	bl BmpWin_Free
 _0219E060:
 	mov r0, #0x9f
 	mov r1, #0

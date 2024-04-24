@@ -29416,8 +29416,8 @@ sub_02046EA8: ; 0x02046EA8
 _02046ED8: .word 0x0209AEB8
 	thumb_func_end sub_02046EA8
 
-	thumb_func_start sub_02046EDC
-sub_02046EDC: ; 0x02046EDC
+	thumb_func_start GFL_BitmapFree
+GFL_BitmapFree: ; 0x02046EDC
 	push {r4, lr}
 	add r4, r0, #0
 	ldrh r0, [r4, #0xa]
@@ -29429,7 +29429,7 @@ _02046EEC:
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
-	thumb_func_end sub_02046EDC
+	thumb_func_end GFL_BitmapFree
 
 	thumb_func_start sub_02046EF4
 sub_02046EF4: ; 0x02046EF4
@@ -31875,7 +31875,7 @@ _02048060:
 	ldr r1, [sp]
 	bl sub_02046F18
 	ldr r0, [sp, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	mov r0, #0
 	str r0, [sp, #0x1c]
 _02048078:
@@ -32098,8 +32098,8 @@ _02048208: .word 0xFFFF8000
 _0204820C: .word 0x00007FB2
 	thumb_func_end sub_02048180
 
-	thumb_func_start sub_02048210
-sub_02048210: ; 0x02048210
+	thumb_func_start BmpWin_Free
+BmpWin_Free: ; 0x02048210
 	push {r4, lr}
 	add r4, r0, #0
 	ldrh r0, [r4]
@@ -32121,11 +32121,11 @@ _0204822C:
 	lsl r2, r2, #5
 	bl sub_02044668
 	ldr r0, [r4, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
-	thumb_func_end sub_02048210
+	thumb_func_end BmpWin_Free
 
 	thumb_func_start BmpWin_FlushChar
 BmpWin_FlushChar: ; 0x02048244
@@ -45052,7 +45052,7 @@ _0204DDB6:
 	ldrh r0, [r0, #0x24]
 	strh r0, [r5, #6]
 	ldr r0, [sp, #0x18]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop

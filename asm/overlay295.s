@@ -457,7 +457,7 @@ ovy295_219d208: ; 0x0219D208
 	mov r1, #0
 	bl sub_02024EEC
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x18]
@@ -898,7 +898,7 @@ _0219D5BE:
 	mov r1, #0
 	bl sub_02024EEC
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x10]
 	bl GFL_WordSetSystemFree
 	ldr r0, [r4, #0xc]

@@ -225,7 +225,7 @@
 .public GFL_HeapFree
 .public GFL_ArcToolFree
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_02021D28
 .public sub_0202B0F4
 .public sub_02046E28

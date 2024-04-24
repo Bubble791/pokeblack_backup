@@ -105,7 +105,7 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public sub_02046E28
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public BmpWin_GetBitmap
 .public sub_02047008
 .public sub_0204A934
@@ -121,8 +121,8 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020480A8
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar

@@ -662,9 +662,9 @@ ovy209_21ba698: ; 0x021BA698
 	ldr r0, [r5, #0x24]
 	bl ovy209_21bb3f0
 	ldr r0, [r5, #0x58]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x54]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x60]
 	bl sub_02022DA8
 	ldr r0, [r5, #0x5c]
@@ -2003,7 +2003,7 @@ _021BB222:
 	ldr r0, [r4, #0x28]
 	bl GFL_MsgDataFree
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x20]
 	bl sub_02022DA8
 	ldr r0, [r4, #0x18]
@@ -9698,7 +9698,7 @@ _021BEBE2:
 	add r0, r5, #0
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	add r0, #0xd4
 	ldr r0, [r0]

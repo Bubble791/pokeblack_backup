@@ -9641,10 +9641,10 @@ ovy194_21bc434: ; 0x021BC434
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021BC482
-	bl sub_02048210
+	bl BmpWin_Free
 	sub r4, #0x1c
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 _021BC482:
 	mov r0, #2
 	str r0, [sp]
@@ -9936,7 +9936,7 @@ _021BC6E6:
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	beq _021BC6F6
-	bl sub_02048210
+	bl BmpWin_Free
 _021BC6F6:
 	ldr r0, _021BC780 ; =0x000005BC
 	lsl r6, r4, #2
@@ -10011,7 +10011,7 @@ ovy194_21bc784: ; 0x021BC784
 	beq _021BC79E
 	bl sub_020484B4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BC79E:
@@ -10022,7 +10022,7 @@ _021BC79E:
 	beq _021BC7B6
 	bl sub_020484B4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BC7B6:
@@ -10032,7 +10032,7 @@ _021BC7B6:
 	beq _021BC7CC
 	bl sub_020484B4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BC7CC:
@@ -10042,7 +10042,7 @@ _021BC7CC:
 	beq _021BC7E2
 	bl sub_020484B4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BC7E2:
@@ -16676,7 +16676,7 @@ _021BFE86:
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021BFE96
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BFE96:
@@ -16709,7 +16709,7 @@ _021BFEB2:
 	mov r1, #2
 	bl sub_02024EEC
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, r5]
 _021BFED6:
@@ -16860,7 +16860,7 @@ _021C0008:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021C0018
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021C0018:
@@ -16872,7 +16872,7 @@ _021C001C:
 	ldr r0, [r6, r7]
 	cmp r0, #0
 	beq _021C002E
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r6, r7]
 _021C002E:
@@ -18053,7 +18053,7 @@ ovy194_21c0918: ; 0x021C0918
 	ldr r0, [r0, r4]
 	cmp r0, #0
 	beq _021C0976
-	bl sub_02048210
+	bl BmpWin_Free
 _021C0976:
 	ldr r0, _021C0AA0 ; =0x000005BC
 	add r1, sp, #0x34
@@ -18271,7 +18271,7 @@ _021C0B16:
 	ldr r0, [r5, r4]
 	bl sub_020484B4
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	str r6, [r5, r4]
 	bl sub_021C2D74
@@ -18381,7 +18381,7 @@ _021C0C32:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021C0C48
-	bl sub_02048210
+	bl BmpWin_Free
 _021C0C48:
 	ldr r0, [sp, #0x18]
 	add r2, sp, #0x28
@@ -18622,7 +18622,7 @@ ovy194_21c0e58: ; 0x021C0E58
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C0E6E
-	bl sub_02048210
+	bl BmpWin_Free
 _021C0E6E:
 	pop {r4, pc}
 	.align 2, 0
@@ -19097,7 +19097,7 @@ ovy194_21c123c: ; 0x021C123C
 	ldr r0, [r4, r5]
 	bl sub_020484B4
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #3
 	bl sub_02045B7C
 	mov r0, #0
@@ -19151,7 +19151,7 @@ ovy194_21c1288: ; 0x021C1288
 _021C12D4:
 	ldr r4, _021C12E8 ; =0x000006B4
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021C12E0:
@@ -19365,7 +19365,7 @@ _021C148C:
 	ldr r0, [r5, r7]
 	cmp r0, #0
 	beq _021C149E
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r7]
 _021C149E:
@@ -19482,11 +19482,11 @@ ovy194_21c1530: ; 0x021C1530
 	ldr r0, [r0, r7]
 	cmp r0, #0
 	beq _021C158A
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, r4
 	add r7, #8
 	ldr r0, [r0, r7]
-	bl sub_02048210
+	bl BmpWin_Free
 _021C158A:
 	add r0, sp, #0x48
 	ldr r0, [r0, r4]
@@ -19690,12 +19690,12 @@ ovy194_21c1740: ; 0x021C1740
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	beq _021C177C
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, _021C1780 ; =0x000005C4
 	add r0, #8
 	add r6, r5, r0
 	ldr r0, [r6, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, _021C1784 ; =0x000008C4
 	add r2, r7, #1
 	mov r1, #0x14
@@ -23281,7 +23281,7 @@ _021C337C:
 	ldr r0, [r5, r7]
 	cmp r0, #0
 	beq _021C338E
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r7]
 _021C338E:
@@ -26359,7 +26359,7 @@ _021C4BCA:
 	mov r1, #2
 	bl sub_02024EEC
 	ldr r0, [r5, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r6]
 _021C4BEA:
@@ -28450,7 +28450,7 @@ _021C5C1A:
 	str r7, [r5, r0]
 	ldr r0, [sp, #0xc]
 	ldr r0, [r5, r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [sp, #8]
 	str r7, [r5, r0]
 	ldr r0, [sp, #4]

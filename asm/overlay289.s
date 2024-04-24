@@ -969,7 +969,7 @@ _021F4BAC:
 	ldr r0, [r5, #0x10]
 	cmp r0, #0
 	beq _021F4BBC
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x10]
 _021F4BBC:
 	add r4, r4, #1

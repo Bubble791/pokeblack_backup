@@ -255,8 +255,8 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public BmpWin_FlushChar
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator
 .public sub_020232D0

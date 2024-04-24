@@ -1292,7 +1292,7 @@ _0219D8D6:
 	add r0, r5, r0
 	add r0, #0xfc
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0219D8D6
@@ -1668,7 +1668,7 @@ _0219DBCA:
 	add r0, r5, r6
 	add r0, #0xbc
 	ldr r0, [r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #8
 	blt _0219DBCA

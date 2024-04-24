@@ -104,7 +104,7 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
 .public sub_0219A2A4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -377,7 +377,7 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
 .public sub_0219A2A4
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_020223CC
 .public BmpWin_GetBitmap
@@ -389,7 +389,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02045738
 .public sub_02045738
 .public sub_021A2C0C

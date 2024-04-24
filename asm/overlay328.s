@@ -1439,7 +1439,7 @@ _0219D9E6:
 	ldr r0, [r6, r0]
 	bl sub_0202B030
 	ldr r0, [r6, r7]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0219D9E6
@@ -1885,7 +1885,7 @@ _0219DD3C:
 	ldr r0, [r5, #0x4c]
 	cmp r0, #0
 	beq _0219DD4C
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x4c]
 _0219DD4C:
 	add r4, r4, #1

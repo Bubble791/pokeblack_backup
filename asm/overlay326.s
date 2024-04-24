@@ -1262,7 +1262,7 @@ _0219D84A:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #5
 	blt _0219D84A
@@ -7957,7 +7957,7 @@ _021A0CEC:
 	ldr r0, [r6, #0x70]
 	cmp r0, #0
 	beq _021A0CFC
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r6, #0x70]
 _021A0CFC:
 	add r4, r4, #1
@@ -8075,7 +8075,7 @@ _021A0DBC:
 	ldr r0, [r5, #0x70]
 	bl sub_020484B4
 	ldr r0, [r5, #0x70]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, #0x70]
 _021A0DE0:

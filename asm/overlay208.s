@@ -253,7 +253,7 @@ _02199AC4:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _02199AE4
-	bl sub_02048210
+	bl BmpWin_Free
 _02199AE4:
 	ldr r4, _02199B78 ; =0x00001848
 	ldr r0, [r5, r4]
@@ -670,7 +670,7 @@ _02199E00:
 	add r0, r5, #0
 	add r0, #0x24
 	ldr r0, [r4, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, #0x24
 	add r0, r4, #0
 	mov r1, #6

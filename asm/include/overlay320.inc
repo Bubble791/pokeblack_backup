@@ -96,7 +96,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_020223CC
 .public sub_0202E818
@@ -129,7 +129,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0202AEAC
 .public sub_0204C488
 .public sub_0204C520

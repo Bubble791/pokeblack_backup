@@ -693,7 +693,7 @@ _0219D452:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _0219D45E
-	bl sub_02048210
+	bl BmpWin_Free
 _0219D45E:
 	add r4, r4, #1
 	cmp r4, #0x13

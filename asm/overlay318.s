@@ -419,7 +419,7 @@ ovy318_219d1f4: ; 0x0219D1F4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x1c]
 	bl GFL_StrBufFree
 	add r0, r4, #0

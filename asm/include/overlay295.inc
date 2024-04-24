@@ -56,7 +56,7 @@
 .public sub_0203A850
 .public GFL_TCBExMgrFree
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
@@ -131,7 +131,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public sub_02044B84

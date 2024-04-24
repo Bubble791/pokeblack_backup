@@ -170,7 +170,7 @@
 .public sub_0204BE64
 .public sub_0204BCD0
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0202AEAC
 .public sub_0204C488
 .public sub_0204C520
@@ -210,11 +210,11 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_020484B4
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C

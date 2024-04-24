@@ -672,7 +672,7 @@
 .public sub_0204826C
 .public sub_02024E80
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_021804D4
 .public sub_021804F0
 .public sub_0219A6A0

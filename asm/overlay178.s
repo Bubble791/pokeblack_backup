@@ -1163,7 +1163,7 @@ ovy178_219b688: ; 0x0219B688
 	ldr r0, [r4, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14

@@ -1502,7 +1502,7 @@ ovy187_21e9780: ; 0x021E9780
 ovy187_21e97c0: ; 0x021E97C0
 	push {r3, lr}
 	ldr r0, [r0, #0x44]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r3, pc}
 	.align 2, 0

@@ -2954,7 +2954,7 @@ _021B6A32:
 _021B6A8C:
 	ldr r5, _021B6AB4 ; =0x0000097C
 	ldr r0, [r4, r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #8]
 	bl ovy191_21b7070
 	bl sub_020232D8

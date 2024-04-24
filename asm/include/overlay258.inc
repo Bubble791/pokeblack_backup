@@ -92,7 +92,7 @@
 .public sub_02045B7C
 .public sub_0202E7A4
 .public sub_0202E818
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020480A8
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault

@@ -45,7 +45,7 @@
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public sub_02022DA8
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsB

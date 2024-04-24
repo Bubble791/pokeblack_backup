@@ -3721,7 +3721,7 @@ ovy144_219eb48: ; 0x0219EB48
 	ldr r0, [r4, #8]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x10]
 	bl GFL_WordSetSystemFree
 	add r0, r4, #0
@@ -4203,7 +4203,7 @@ ovy144_219ef78: ; 0x0219EF78
 	ldr r0, [r4, #4]
 	bl GFL_StrBufFree
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x10

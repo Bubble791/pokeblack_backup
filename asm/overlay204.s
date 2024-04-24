@@ -1115,7 +1115,7 @@ ovy204_21aa440: ; 0x021AA440
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r4, pc}
 	thumb_func_end ovy204_21aa440
@@ -2177,9 +2177,9 @@ ovy204_21aac84: ; 0x021AAC84
 	ldr r0, [r5, #0x2c]
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x14]
 	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
@@ -3508,7 +3508,7 @@ ovy204_21ab72c: ; 0x021AB72C
 	add r0, r6, #0
 	sub r0, #0x9c
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r6, #0
 	sub r0, #0x94
 	ldr r0, [r5, r0]
@@ -3568,7 +3568,7 @@ _021AB7DA:
 	add r0, r5, r0
 	add r0, #0xf0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021AB7DA
@@ -6078,9 +6078,9 @@ ovy204_21acb38: ; 0x021ACB38
 	add r1, r4, #0
 	bl ovy204_21ade3c
 	ldr r0, [r5]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #8]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r5, #0x10]
 	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}
@@ -6855,7 +6855,7 @@ _021AD15A:
 	lsl r1, r5, #3
 	add r0, r0, r1
 	ldr r0, [r0, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, r5, #1
 	cmp r5, #2
 	blt _021AD15A
@@ -7787,7 +7787,7 @@ _021AD8A2:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0xa
 	blt _021AD8A2

@@ -1519,7 +1519,7 @@ _021DA2FA:
 	ldr r0, [r5, #0x3c]
 	bl GFL_StrBufFree
 	ldr r0, [r5, #0x40]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x94
@@ -4202,7 +4202,7 @@ ovy280_21db5a4: ; 0x021DB5A4
 	add r5, r0, #0
 	add r0, #0xe0
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, #0
 	bl sub_021DA9F4
 	add r0, r5, #0
@@ -5728,7 +5728,7 @@ ovy280_21dc15c: ; 0x021DC15C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x1c]
 	bl GFL_StrBufFree
 	add r0, r4, #0
@@ -6425,7 +6425,7 @@ ovy280_21dc6d0: ; 0x021DC6D0
 	ldr r0, [r4, #0x2c]
 	bl sub_0202B030
 	ldr r0, [r4, #0x30]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 _021DC6F2:
 	ldr r0, [r4, #8]
 	bl sub_0204BCD0

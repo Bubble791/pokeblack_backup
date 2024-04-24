@@ -1698,7 +1698,7 @@ _0219DB3C:
 	add r0, r5, r0
 	str r6, [r0, #0x18]
 	ldr r0, [r0, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -5157,7 +5157,7 @@ _0219F610:
 	ldr r0, [r5, #0x10]
 	bl sub_020484B4
 	ldr r0, [r5, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

@@ -345,7 +345,7 @@
 .public GFL_BGSysLoadScr
 .public sub_02021C44
 .public sub_02021A18
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public GFL_StrBufCreate
 .public PlayerSave_GetMoney

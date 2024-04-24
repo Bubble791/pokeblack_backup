@@ -4870,7 +4870,7 @@ ovy33_21791a8: ; 0x021791A8
 	mov r1, #1
 	bl sub_02024EEC
 	ldr r0, [r4, #0x30]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy33_21791a8
 

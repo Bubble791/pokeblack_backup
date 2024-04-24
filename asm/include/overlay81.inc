@@ -32,7 +32,7 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02022DA8
 .public sub_02016AD8
 .public sub_020179F0

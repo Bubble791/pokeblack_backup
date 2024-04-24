@@ -2932,7 +2932,7 @@ ovy265_219af5c: ; 0x0219AF5C
 	add r1, r5, r4
 	add r0, r6, #4
 	ldr r0, [r1, r0]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	mov r1, #0
 	add r0, r5, r4
 	str r1, [r0, r6]

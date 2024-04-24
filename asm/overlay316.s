@@ -2549,7 +2549,7 @@ ovy316_219e24c: ; 0x0219E24C
 	mov r3, #0
 	bl sub_02045080
 	add r0, r4, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -2898,7 +2898,7 @@ _0219E59E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

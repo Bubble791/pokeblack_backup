@@ -224,8 +224,8 @@
 .public GFL_StrBufFree
 .public sub_02022DA8
 .public sub_020223CC
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_TCBExMgrFree
 .public sub_02021A18
 .public GFL_MsgDataFree

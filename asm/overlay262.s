@@ -3372,7 +3372,7 @@ _021C402C:
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _021C403A
-	bl sub_02048210
+	bl BmpWin_Free
 _021C403A:
 	ldr r0, [r5]
 	add r4, r4, #1
@@ -4920,7 +4920,7 @@ _021C4C6E:
 	beq _021C4C82
 	bl sub_020484B4
 	ldr r0, [r5, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 _021C4C82:
 	add r4, r4, #1
 	cmp r4, #8
@@ -5824,7 +5824,7 @@ _021C53EA:
 	beq _021C53FE
 	bl sub_020484B4
 	ldr r0, [r6, #0x68]
-	bl sub_02048210
+	bl BmpWin_Free
 _021C53FE:
 	add r4, r4, #1
 	cmp r4, #6
@@ -6280,7 +6280,7 @@ _021C577A:
 	mov r1, #0
 	bl sub_02024EEC
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x28]
@@ -6826,7 +6826,7 @@ ovy262_21c5ba4: ; 0x021C5BA4
 	ldr r0, [r4]
 	bl sub_020484B4
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}

@@ -3911,7 +3911,7 @@ _0219ED04:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219ED1A
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r5, r6
 	add r0, #0x9c
 	str r7, [r0]

@@ -156,7 +156,7 @@
 .public GFL_StrBufFree
 .public sub_0204C108
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204C124
 .public sub_0202B098
 .public sub_02021C1C
@@ -316,7 +316,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02016AD8
 .public sub_02017934
 .public sub_02010DEC
@@ -412,7 +412,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02016AD8
 .public sub_02017394
 .public sub_020191AC
@@ -560,7 +560,7 @@
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021C54
@@ -598,7 +598,7 @@
 .public sub_0216A190
 .public sub_02046E28
 .public sub_02046E28
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
 .public sub_02021D28
@@ -606,7 +606,7 @@
 .public sub_02046E28
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0203D554
 .public sub_0204C124
 .public sub_0204C124
@@ -697,7 +697,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021C54
@@ -845,7 +845,7 @@
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021C54
@@ -881,7 +881,7 @@
 .public sub_02046E28
 .public sub_02046E28
 .public sub_02046E28
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufCreate
 .public ovy27_2170cf8
 .public sub_02170D04
@@ -896,7 +896,7 @@
 .public sub_02046E28
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0203D554
 .public sub_0204C124
 .public sub_0204C124
@@ -949,7 +949,7 @@
 .public sub_02046E28
 .public sub_0202AEC4
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public StringSetNumber
 .public GFL_StrBufCreate
 .public sub_0204898C
@@ -1028,7 +1028,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021C54

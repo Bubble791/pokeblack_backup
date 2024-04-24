@@ -7129,59 +7129,59 @@ _021B68C8:
 	ldr r0, [r4, #0x30]
 	cmp r0, #0
 	beq _021B68FA
-	bl sub_02048210
+	bl BmpWin_Free
 _021B68FA:
 	add r0, r4, #0
 	add r0, #0x84
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6908
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6908:
 	add r0, r4, #0
 	add r0, #0x98
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6916
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6916:
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6924
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6924:
 	add r0, r4, #0
 	add r0, #0x8c
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6932
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6932:
 	add r0, r4, #0
 	add r0, #0x94
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6940
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6940:
 	add r0, r4, #0
 	add r0, #0x88
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B694E
-	bl sub_02048210
+	bl BmpWin_Free
 _021B694E:
 	ldr r0, [r4, #0x34]
 	cmp r0, #0
 	beq _021B6958
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6958:
 	ldr r0, [r4, #0x68]
 	cmp r0, #0
 	beq _021B6962
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6962:
 	mov r5, #0
 _021B6964:
@@ -7190,7 +7190,7 @@ _021B6964:
 	ldr r0, [r0, #0x38]
 	cmp r0, #0
 	beq _021B6972
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6972:
 	add r5, r5, #1
 	cmp r5, #0xc
@@ -7202,7 +7202,7 @@ _021B697A:
 	ldr r0, [r0, #0x6c]
 	cmp r0, #0
 	beq _021B6988
-	bl sub_02048210
+	bl BmpWin_Free
 _021B6988:
 	add r5, r5, #1
 	cmp r5, #6
@@ -7381,7 +7381,7 @@ ovy195_21b6ae0: ; 0x021B6AE0
 	mov r0, #1
 	bl sub_02045B7C
 	ldr r0, [r4, #0x30]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x30]
 _021B6B06:
@@ -7498,7 +7498,7 @@ _021B6BCC:
 	ldr r0, [r5, #0x38]
 	cmp r0, #0
 	beq _021B6BDC
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x38]
 _021B6BDC:
 	add r4, r4, #1
@@ -8101,7 +8101,7 @@ ovy195_21b707c: ; 0x021B707C
 	add r0, r5, #0
 	add r0, #0x84
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r5, #0x84
 	str r4, [r5]
 _021B70BC:
@@ -8260,7 +8260,7 @@ ovy195_21b71f4: ; 0x021B71F4
 	ldr r0, [r6, #0x6c]
 	cmp r0, #0
 	beq _021B7206
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r6, #0x6c]
 _021B7206:
@@ -8354,7 +8354,7 @@ ovy195_21b72a0: ; 0x021B72A0
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B72B8
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r6, #0
 	mov r1, #0
 	add r0, #0x80
@@ -9019,7 +9019,7 @@ ovy195_21b77e4: ; 0x021B77E4
 	mov r0, #1
 	bl sub_02045B7C
 	ldr r0, [r6, #0x68]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r6, #0x68]
 _021B780C:
@@ -9044,7 +9044,7 @@ _021B7826:
 	beq _021B783C
 	bl sub_020484B4
 	ldr r0, [r5, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	str r7, [r5, #0x6c]
 _021B783C:
 	add r4, r4, #1

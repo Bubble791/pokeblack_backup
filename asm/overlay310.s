@@ -7953,7 +7953,7 @@ _021A0A38:
 	ldr r0, [sp, #0x1c]
 	bl GFL_HeapFree
 	ldr r0, [sp, #0x18]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 _021A0AD6:
 	add r6, r6, #1
 	cmp r6, #4
@@ -8036,7 +8036,7 @@ _021A0B24:
 	cmp r0, #3
 	blt _021A0B0E
 	ldr r0, [sp, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021A0BDC ; =0x021A6EB4
 	ldrb r1, [r0, #0x1e]
 	mov r0, #0x1f
@@ -8159,7 +8159,7 @@ _021A0C20:
 	cmp r0, #3
 	blt _021A0C0A
 	ldr r0, [sp, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021A0CD8 ; =0x021A6EE0
 	ldrb r1, [r0, #0x1e]
 	mov r0, #0x1f
@@ -8221,7 +8221,7 @@ _021A0CE6:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021A0CE6
@@ -14788,7 +14788,7 @@ _021A3F1C:
 	ldr r0, [sp, #0x1c]
 	bl GFL_HeapFree
 	ldr r0, [sp, #0x18]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 _021A3FBA:
 	add r6, r6, #1
 	cmp r6, #2
@@ -14871,7 +14871,7 @@ _021A4008:
 	cmp r0, #3
 	blt _021A3FF2
 	ldr r0, [sp, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021A40C0 ; =0x021A71C8
 	ldrb r1, [r0, #0x1e]
 	mov r0, #0x1f
@@ -14933,7 +14933,7 @@ _021A40CE:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021A40CE
@@ -16284,7 +16284,7 @@ ovy310_21a4960: ; 0x021A4960
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x18]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}

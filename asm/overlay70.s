@@ -1741,17 +1741,17 @@ _0217DE24:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #5
 	blt _0217DE24
 	mov r4, #0x46
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy70_217dde4
@@ -3255,7 +3255,7 @@ _0217E9DC:
 	add r3, r7, #0
 	bl sub_02047008
 	ldr r0, [sp, #0x18]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy70_217e99c

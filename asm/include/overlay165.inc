@@ -27,7 +27,7 @@
 .public sub_02042BA8
 .public GFL_TCBRemove
 .public sub_0219DA58
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0202E1DC
 .public sub_0219DA58
 .public sub_0203D564
@@ -567,7 +567,7 @@
 .public sub_0204C124
 .public sub_0219DA58
 .public sub_02045B7C
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204C108
@@ -724,7 +724,7 @@
 .public sub_02024E80
 .public sub_0203580C
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02021C44
 .public sub_0204898C
 .public GFL_StrBufCreate
@@ -953,7 +953,7 @@
 .public GFL_SndSEPlay
 .public sub_020484B4
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0201D358
 .public sub_0219F9F8
 .public sub_0219FA28
@@ -1006,7 +1006,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -1038,8 +1038,8 @@
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
 .public GFL_WordSetSystemFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204B98C
@@ -1066,8 +1066,8 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public sub_0208D65C

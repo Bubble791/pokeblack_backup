@@ -867,7 +867,7 @@ _02199FF8:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x10
 	blo _02199FF8

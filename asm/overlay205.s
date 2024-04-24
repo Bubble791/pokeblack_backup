@@ -2663,7 +2663,7 @@ _021B8806:
 	mov r7, #0x31
 	lsl r7, r7, #4
 	ldr r0, [r5, r7]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r7, #0
 	str r0, [sp, #4]
 	sub r0, #0xb0
@@ -4076,7 +4076,7 @@ ovy205_21b9214: ; 0x021B9214
 	str r0, [r7, r6]
 	bl sub_0202B0F4
 	ldr r0, [sp, #0x10]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [sp, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [sp, #8]

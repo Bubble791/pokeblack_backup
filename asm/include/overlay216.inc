@@ -190,10 +190,10 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public sub_020256B0
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020480A8
 .public sub_0203FFC4
 .public sub_02042E94
@@ -693,7 +693,7 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
 .public sub_02022DA8
@@ -755,7 +755,7 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

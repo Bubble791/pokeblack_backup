@@ -36778,7 +36778,7 @@ _021CDF62:
 	add r0, r1, r0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x1c
 	blo _021CDF62
@@ -37994,7 +37994,7 @@ ovy255_21ce870: ; 0x021CE870
 	mov r3, #0
 	bl sub_02047008
 	add r0, r6, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	str r7, [sp]
 	ldr r1, [sp, #0x1c]
 	ldr r0, [sp, #0x40]
@@ -38023,7 +38023,7 @@ ovy255_21ce870: ; 0x021CE870
 	mov r3, #0
 	bl sub_02047008
 	add r0, r6, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	str r7, [sp]
 	ldr r1, [sp, #0x1c]
 	ldr r0, [sp, #0x40]
@@ -38051,7 +38051,7 @@ ovy255_21ce870: ; 0x021CE870
 	mov r3, #0
 	bl sub_02047008
 	ldr r0, [sp, #0x48]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	str r7, [sp]
 	mov r1, #0x20
 	ldr r0, [sp, #0x1c]
@@ -38077,7 +38077,7 @@ ovy255_21ce870: ; 0x021CE870
 	mov r3, #0
 	bl sub_02047008
 	ldr r0, [sp, #0x4c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	str r7, [sp]
 	ldr r1, [sp, #0x1c]
 	ldr r0, [sp, #0x40]
@@ -38115,7 +38115,7 @@ _021CE9EA:
 	blt _021CE9EA
 _021CEA12:
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021CEBCC ; =0x0000804C
 	mov r2, #8
 	str r0, [sp]
@@ -38157,7 +38157,7 @@ _021CEA42:
 	blt _021CEA42
 _021CEA68:
 	ldr r0, [sp, #0x20]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021CEBCC ; =0x0000804C
 	mov r2, #8
 	str r0, [sp]
@@ -38197,7 +38197,7 @@ _021CEA92:
 	blt _021CEA92
 _021CEABA:
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, _021CEBCC ; =0x0000804C
 	ldr r1, [sp, #0x40]
 	str r0, [sp]
@@ -38240,7 +38240,7 @@ _021CEAEC:
 	blt _021CEAEC
 _021CEB12:
 	ldr r0, [sp, #0x24]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [sp, #0x44]
 	bl GFL_HeapFree
 	ldr r0, [sp, #0x6c]
@@ -38281,7 +38281,7 @@ _021CEB12:
 	mov r3, #0
 	bl sub_02047008
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, #0
 	bl GFL_HeapFree
 _021CEB7C:
@@ -44798,7 +44798,7 @@ _021D1D4A:
 	ldr r0, [r5, #4]
 	bl sub_0202B030
 	ldr r0, [r5, #8]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r4, r4, #1
 	cmp r4, #0xa
 	blo _021D1D4A
@@ -49453,7 +49453,7 @@ _021D3F62:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x11
 	blo _021D3F62

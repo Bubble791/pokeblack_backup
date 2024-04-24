@@ -1245,7 +1245,7 @@ _0219D8C6:
 	ldr r0, [r0, #0x60]
 	cmp r0, #0
 	beq _0219D8D4
-	bl sub_02048210
+	bl BmpWin_Free
 _0219D8D4:
 	add r0, r4, #1
 	lsl r0, r0, #0x18

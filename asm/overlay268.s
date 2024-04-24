@@ -8251,7 +8251,7 @@ _021BE210:
 	ldr r0, [r5, #4]
 	lsr r1, r1, #0x10
 	bl sub_021F3BF4
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r5, #4]
 	add r1, r6, #0
 	add r4, r4, #1
@@ -12118,7 +12118,7 @@ ovy268_21bff98: ; 0x021BFF98
 	mov r1, #1
 	bl sub_0202B2A0
 	ldr r0, [sp, #0x10]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [sp, #0xc]
 	bl GFL_StrBufFree
 	add sp, #0x2c

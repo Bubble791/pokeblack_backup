@@ -293,7 +293,7 @@
 .public sub_02046EF4
 .public sub_02046F00
 .public sub_02045080
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapAllocate
 .public sub_020454AC
 .public sub_02045B7C
@@ -323,7 +323,7 @@
 .public BmpWin_FlushChar
 .public sub_020223CC
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_TCBExMgrFree
 .public GFL_MsgDataFree
 .public sub_0203A7F4

@@ -3053,7 +3053,7 @@ _021C062E:
 	add r0, r4, #0
 	bl ovy332_21c09bc
 	ldr r0, [r4, #0x14]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x28]
@@ -4014,7 +4014,7 @@ ovy332_21c0d50: ; 0x021C0D50
 	ldr r0, [r4]
 	bl sub_020484B4
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -5033,7 +5033,7 @@ ovy332_21c146c: ; 0x021C146C
 	ldr r0, [r4, #0x1c]
 	bl sub_0202B030
 	ldr r0, [r4]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x20]

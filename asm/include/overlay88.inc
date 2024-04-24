@@ -67,8 +67,8 @@
 .public GFL_StrBufFree
 .public sub_0202E818
 .public GFL_TCBExMgrFree
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_02024D58
 .public sub_0204898C
 .public BmpWin_GetBitmap

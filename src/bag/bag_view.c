@@ -2357,9 +2357,7 @@ void ovy142_219bf58(BagView *bagView, u8 *param_2)
     }
 }
 
-const int unk_21A098C[13] = {0};
 extern const u8 data021A08E8[5];
-
 
 void ovy142_219c014(BagView *bagView)
 {
@@ -2376,7 +2374,7 @@ void ovy142_219c014(BagView *bagView)
     v7 = 6;
     do
     {
-        v6 = unk_21A098C;
+        v6 = data_021A094C;
         --v7;
     } while (v7);
 
@@ -2445,7 +2443,6 @@ int ovy142_219c0e8(BagView *bagView, int param_2)
     return GameData_IsShortcutRegistered(bagView->m_GameData, uVar1);
 }
 
-const int unk_21A095C[6] = {0};
 void ovy142_219c100(u32 a1, int a2, BagView *bagView);
 
 void ovy142_219c100(u32 a1, int a2, BagView *bagView)
@@ -2468,7 +2465,7 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
         return;
     if (a1 < 6)
     {
-        v20 = unk_21A095C;
+        v20 = data_021A091C;
         if (bagView->itemPocket != v20[a1])
         {
             v7 = v20[a1];

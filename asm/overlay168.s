@@ -25766,7 +25766,7 @@ ovy168_21ea210: ; 0x021EA210
 	add r0, r4, #0
 	bl GFL_StrBufFree
 	add r0, r6, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -26460,7 +26460,7 @@ _021EA838:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021EA84A
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021EA84A:
@@ -26469,7 +26469,7 @@ _021EA84A:
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _021EA85C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r5, r4]
 _021EA85C:
@@ -34997,7 +34997,7 @@ _021EEC32:
 	ldr r0, [sp, #0x10]
 	bl GFL_WordSetSystemFree
 	ldr r0, [sp, #0xc]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x64
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -39667,7 +39667,7 @@ _021F1058:
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x30
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -40168,7 +40168,7 @@ _021F1440:
 	ldr r0, [sp, #4]
 	bl GFL_StrBufFree
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x30
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

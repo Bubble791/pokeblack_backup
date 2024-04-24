@@ -352,7 +352,7 @@ _021EAB02:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, #0x20]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021EAB02

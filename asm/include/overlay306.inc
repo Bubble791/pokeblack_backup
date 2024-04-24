@@ -118,8 +118,8 @@
 .public GFL_StrBufFree
 .public GFL_TCBExMgrFree
 .public sub_02044668
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_0203A7F4
 .public sub_0203D5A8
 .public sub_0203A7F4
@@ -186,7 +186,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0203D5A8
 .public sub_0208D868
 .public BmpWin_GetBitmap

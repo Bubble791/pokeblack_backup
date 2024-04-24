@@ -822,7 +822,7 @@ ovy162_219d530: ; 0x0219D530
 	ldr r0, [r4, #0x14]
 	bl sub_02022DA8
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy162_219d530
 
@@ -3921,7 +3921,7 @@ _0219EF12:
 	add r0, r5, r0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x14
 	blo _0219EF12
@@ -5544,7 +5544,7 @@ ovy162_219fbf4: ; 0x0219FBF4
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
 	add r6, r1, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	cmp r6, #1
 	beq _0219FC64
 	mov r0, #2
@@ -5679,10 +5679,10 @@ sub_0219FD20: ; 0x0219FD20
 	mov r1, #0x4f
 	lsl r1, r1, #2
 	ldr r0, [r0, r1]
-	ldr r3, _0219FD2C ; =sub_02048210
+	ldr r3, _0219FD2C ; =BmpWin_Free
 	bx r3
 	nop
-_0219FD2C: .word sub_02048210
+_0219FD2C: .word BmpWin_Free
 	thumb_func_end sub_0219FD20
 
 	thumb_func_start ovy162_219fd30
@@ -7090,13 +7090,13 @@ ovy162_21a08a8: ; 0x021A08A8
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r4, #0
 _021A08B4:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x10]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -8174,7 +8174,7 @@ ovy162_21a10dc: ; 0x021A10DC
 ovy162_21a112c: ; 0x021A112C
 	push {r3, lr}
 	ldr r0, [r0, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	bl sub_020480A8
 	pop {r3, pc}
 	.align 2, 0

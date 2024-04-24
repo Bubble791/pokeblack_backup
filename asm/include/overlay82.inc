@@ -74,7 +74,7 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
-.public sub_02048210
+.public BmpWin_Free
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile

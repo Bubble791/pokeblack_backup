@@ -122,8 +122,8 @@
 .public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020480A8
 .public sub_02021A3C
 .public BmpWin_GetBitmap
@@ -255,7 +255,7 @@
 .public sub_0202AEC4
 .public sub_0202B098
 .public sub_0202B030
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0202AEAC
 .public sub_0203DA0C
 .public sub_0203DF44

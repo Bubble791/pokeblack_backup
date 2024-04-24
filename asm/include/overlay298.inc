@@ -313,14 +313,14 @@
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public sub_02044668
-.public sub_02046EDC
-.public sub_02048210
+.public GFL_BitmapFree
+.public BmpWin_Free
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLR
 .public GFL_ArcToolFree
 .public sub_02046F3C
 .public sub_02046F18
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public sub_0204898C
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -648,8 +648,8 @@
 .public GFL_MsgSysLoadData
 .public GFL_MsgDataFree
 .public sub_02021C44
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLR
 .public GFL_BGSysLoadArcNCGRDynamic
@@ -1143,7 +1143,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar
 .public sub_02021C44
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0219FD40
 .public sub_0204898C
 .public GFL_FontGetBlockWidth
@@ -1187,8 +1187,8 @@
 .public GFL_HeapAllocate
 .public BmpWin_CreateDynamic
 .public sub_02046E28
-.public sub_02046EDC
-.public sub_02048210
+.public GFL_BitmapFree
+.public BmpWin_Free
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -1362,7 +1362,7 @@
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_02021C44
-.public sub_02048210
+.public BmpWin_Free
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public GFL_MsgDataFree

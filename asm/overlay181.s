@@ -1654,7 +1654,7 @@ _0219DBAC:
 	add r0, r7, #0
 	bl GFL_MsgDataFree
 	add r0, r4, #0
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #5
 	ldr r1, _0219DCC8 ; =0x00007EEA
 	lsl r0, r0, #0x18
@@ -5741,7 +5741,7 @@ _0219FD90:
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _0219FDA0
-	bl sub_02048210
+	bl BmpWin_Free
 _0219FDA0:
 	add r0, r4, #0
 	bl ovy181_21a0384
@@ -5851,7 +5851,7 @@ ovy181_219fe70: ; 0x0219FE70
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _0219FE8C
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x10]
 _0219FE8C:
@@ -6557,7 +6557,7 @@ ovy181_21a0384: ; 0x021A0384
 	ldr r0, [r4, #0x14]
 	cmp r0, #0
 	beq _021A0398
-	bl sub_02048210
+	bl BmpWin_Free
 	mov r0, #0
 	str r0, [r4, #0x14]
 	str r0, [r4, #0x40]

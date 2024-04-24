@@ -2825,7 +2825,7 @@ _021A8C20:
 	bl sub_020484D4
 	bl GFL_BGSysLoadScr
 	ldr r0, [r6, #0x44]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #7
 	blt _021A8C20
@@ -4354,7 +4354,7 @@ _021A9848:
 	lsl r0, r4, #2
 	add r0, r1, r0
 	ldr r0, [r0, #0x44]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x20
 	blo _021A9848
@@ -4593,9 +4593,9 @@ _021A9A10:
 	ldr r0, [r0]
 	bl sub_020335C4
 	add r0, r7, #0
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [sp, #0x1c]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
 	nop

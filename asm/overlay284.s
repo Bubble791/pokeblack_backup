@@ -2515,9 +2515,9 @@ _021E4478:
 	lsr r2, r2, #0x10
 	bl sub_02044668
 	ldr r0, [r4, #0x6c]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r0, [r4, #0x70]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy284_21e444c
 
@@ -5520,7 +5520,7 @@ ovy284_21e5b98: ; 0x021E5B98
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x10]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4, #8]
 	bl GFL_HeapFree
 	ldr r0, [r4, #0xc]

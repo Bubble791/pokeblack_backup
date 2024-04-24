@@ -117,8 +117,8 @@
 .public sub_0202E34C
 .public sub_0202E1DC
 .public sub_02021A18
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_020232D8

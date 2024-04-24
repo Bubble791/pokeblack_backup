@@ -308,7 +308,7 @@
 .public sub_02017644
 .public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020480A8
 .public sub_02021A3C
 .public BmpWin_GetBitmap

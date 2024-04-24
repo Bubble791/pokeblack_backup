@@ -448,7 +448,7 @@ ovy83_21eab6c: ; 0x021EAB6C
 	ldr r0, [r4]
 	bl sub_0202B030
 	ldr r0, [r4, #4]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14

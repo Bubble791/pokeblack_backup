@@ -210,8 +210,8 @@
 .public GFL_MsgDataFree
 .public GFL_MsgDataFree
 .public sub_02044668
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public GFL_SndSEPlay
 .public GFL_SndPlayerIsActiveAny
 .public sub_02017BCC
@@ -501,7 +501,7 @@
 .public sub_02046EF4
 .public sub_0205FA10
 .public sub_0205FA10
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree

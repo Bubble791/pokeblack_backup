@@ -316,7 +316,7 @@
 .public GFL_StrBufFree
 .public sub_020232D8
 .public sub_02024EEC
-.public sub_02048210
+.public BmpWin_Free
 .public sub_02024D58
 .public MI_CpuFill8
 .public sub_02044BD8

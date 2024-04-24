@@ -1164,7 +1164,7 @@ ovy180_219b6bc: ; 0x0219B6BC
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r0, #0
 	ldr r0, [r7, #0xc]
-	bl sub_02048210
+	bl BmpWin_Free
 	ldr r2, [r7, #4]
 	mov r0, #1
 	lsl r1, r2, #0x10
@@ -1684,7 +1684,7 @@ _0219BAD0:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0219BAD0
@@ -2569,7 +2569,7 @@ _0219C1B6:
 	ldr r0, [r5, #0x18]
 	bl sub_0204BE64
 	ldr r0, [r5, #4]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x20
@@ -3822,7 +3822,7 @@ ovy180_219cb1c: ; 0x0219CB1C
 	ldr r0, [r4, #0x1c]
 	bl sub_0202B030
 	ldr r0, [r4]
-	bl sub_02046EDC
+	bl GFL_BitmapFree
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	add r0, r4, #0

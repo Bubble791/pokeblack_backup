@@ -124,7 +124,7 @@
 .public sub_020484D4
 .public GFL_BGSysLoadScr
 .public GFL_StrBufFree
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public BmpWin_GetBitmap
 .public sub_02021C1C
@@ -237,7 +237,7 @@
 .public GFL_StrBufFree
 .public BmpWin_FlushChar
 .public sub_020232D8
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020504DC
 .public MI_CpuFill8
 .public sub_020504F0

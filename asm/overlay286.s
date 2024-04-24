@@ -70,7 +70,7 @@ _021F44AE:
 	lsl r0, r4, #3
 	add r0, r5, r0
 	ldr r0, [r0, #0x28]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r4, r4, #1
 	cmp r4, #0x23
 	blo _021F44AE
@@ -83,7 +83,7 @@ ovy286_21f44c0: ; 0x021F44C0
 	add r4, r0, #0
 	bl ovy286_21f44a8
 	ldr r0, [r4, #0x24]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	thumb_func_end ovy286_21f44c0
 

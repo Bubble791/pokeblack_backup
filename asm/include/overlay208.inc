@@ -18,7 +18,7 @@
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_021BBB88
@@ -72,7 +72,7 @@
 .public sub_0204AF18
 .public sub_02045B7C
 .public sub_02021C44
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0219D888
 .public sub_0219D888
 .public sub_02045E1C

@@ -110,8 +110,8 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02048210
-.public sub_02048210
+.public BmpWin_Free
+.public BmpWin_Free
 .public sub_020480A8
 .public GFL_FontCreate
 .public sub_02021998

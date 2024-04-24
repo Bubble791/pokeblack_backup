@@ -1036,7 +1036,7 @@ ovy179_219b550: ; 0x0219B550
 	ldr r0, [r4, #0xc]
 	bl GFL_StrBufFree
 	ldr r0, [r4]
-	bl sub_02048210
+	bl BmpWin_Free
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x14

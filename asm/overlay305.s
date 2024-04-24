@@ -1779,7 +1779,7 @@ ovy305_219dbd0: ; 0x0219DBD0
 	add r0, #0x20
 	bl ovy305_219d8f4
 	ldr r0, [r4, #0x1c]
-	bl sub_02048210
+	bl BmpWin_Free
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy305_219dbd0

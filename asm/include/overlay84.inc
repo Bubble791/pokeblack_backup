@@ -165,7 +165,7 @@
 .public sub_02046E28
 .public sub_021EAB50
 .public sub_021EAB6C
-.public sub_02048210
+.public BmpWin_Free
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public sub_0204BBA0

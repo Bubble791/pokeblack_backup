@@ -176,7 +176,7 @@
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204C108
-.public sub_02048210
+.public BmpWin_Free
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -243,7 +243,7 @@
 .public sub_02021D28
 .public sub_0202AEC4
 .public sub_0202B0F4
-.public sub_02046EDC
+.public GFL_BitmapFree
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public BmpWin_CreateDynamic

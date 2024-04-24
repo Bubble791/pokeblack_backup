@@ -219,7 +219,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_020256B0
-.public sub_02048210
+.public BmpWin_Free
 .public sub_020232D8
 .public MI_CpuFill8
 .public sub_0203A7F4
