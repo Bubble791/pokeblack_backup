@@ -19968,7 +19968,7 @@ _021C870C:
 	mov r1, #2
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	ldr r3, [sp, #0x30]
 	add r1, r0, #0
 	add r3, r3, #7
@@ -19992,7 +19992,7 @@ _021C870C:
 	mov r1, #1
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [sp, #0x2c]
 	str r4, [sp]

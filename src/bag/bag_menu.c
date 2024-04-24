@@ -1,6 +1,7 @@
 #include "global.h"
 #include "main.h"
 #include "bag.h"
+#include "constants/arc_id.h"
 
 int BagMenu_Loop(int a1, int a2, int a3, void *a4);
 
@@ -883,11 +884,11 @@ void ovy142_219d664(void)
 
 void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
 {
-    int backgroundNCLR; // [sp+10h] [bp-18h]
-    int gender; // r0
-    int v7; // r0
-    int backgroundNCGR; // r6
-    int backgroundNSCR; // r7
+    int backgroundNCLR;
+    int gender;
+    int v7;
+    int backgroundNCGR;
+    int backgroundNSCR;
 
     gender = MyStatus_GetTrainerGender(bagView->unk8);
     if (!gender)
@@ -908,10 +909,6 @@ void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
     GFL_G2DIOLoadNSCRSync(fileHandle, backgroundNSCR, 0, 0, (u16)v7, 0, 0, bagView->heapId);
 }
 
-void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
-extern int Oam_LoadNCGRFile(int, int, int, int, u16);
-extern int Oam_LoadNCERFile(int, int, int, u16);
-
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
 {
     int nclrFileId;
@@ -923,19 +920,19 @@ void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle)
     gender = MyStatus_GetTrainerGender(bagView->unk8);
     if (gender == 0)
     {
-        nclrFileId = 0x10;
-        ncgrFileId = 0xf;
-        ncerFileId = 0xe;
-        nanrFileId = 0xd;
+        nclrFileId = 16;
+        ncgrFileId = 15;
+        ncerFileId = 14;
+        nanrFileId = 13;
     }
     else if(gender == 1)
     {
-        nclrFileId = 0xc;
-        ncgrFileId = 0xb;
-        ncerFileId = 0xa;
+        nclrFileId = 12;
+        ncgrFileId = 11;
+        ncerFileId = 10;
         nanrFileId = 9;
     }
-    bagView->bagPocketNCLR = Oam_LoadNCLRFile(fileHandle, nclrFileId, 0, 0xC0, 0, 5, bagView->heapId);
+    bagView->bagPocketNCLR = Oam_LoadNCLRFile(fileHandle, nclrFileId, 0, 192, 0, 5, bagView->heapId);
     bagView->bagPocketNCGR = Oam_LoadNCGRFile(fileHandle, ncgrFileId, 0, 0, bagView->heapId);
     bagView->bagPocketNCER = Oam_LoadNCERFile(fileHandle, ncerFileId, nanrFileId, bagView->heapId);
 }
@@ -1284,7 +1281,7 @@ void ovy142_219de0c(BagView *a1)
     ovy142_21a0134(&a1->unk754);
     ovy142_21a0134(&a1->unk75C);
     ovy142_21a0134(&a1->unk764);
-    ovy142_219e4dc(a1, v6->itemid);
+    BagMenu_LoadItemIconOam(a1, v6->itemid);
 }
 
 void ovy142_219e120(BagView *a1)
@@ -1407,40 +1404,42 @@ void ovy142_219e4b0(BagView *a1)
     }
 }
 
-extern int sub_02026670(u16, int);
+extern int Item_GetItemIconResourceId(u16, int);
 
-void ovy142_219e4dc(BagView *a1, int a2)
+void BagMenu_LoadItemIconOam(BagView *bagView, int item)
 {
-    void *v4;      // r7
-    int v5;      // r0
-    int v6;      // r0
-    OAM_TEMP v8; // [sp+Ch] [bp-1Ch] BYREF
+    void *v4;
+    int v5;
+    int v6;
+    OAM_TEMP itemIconTemplate;
 
-    if (a1->unk6B0)
-        ovy142_219e4b0(a1);
-    v4 = GFL_ArcSysCreateFileHandle(25, a1->heapId);
-    v5 = sub_02026670(a2, 2);
-    a1->unk550 = Oam_LoadNCLRFile((int)v4, v5, 1, 0, 0, 1, a1->heapId);
-    v6 = sub_02026670(a2, 1);
-    a1->unk554 = Oam_LoadNCGRFile((int)v4, v6, 0, 1, a1->heapId);
+    if (bagView->unk6B0)
+        ovy142_219e4b0(bagView);
+
+    v4 = GFL_ArcSysCreateFileHandle(ARC_ITEM_PICTURE, bagView->heapId);
+    v5 = Item_GetItemIconResourceId(item, 2);
+    bagView->unk550 = Oam_LoadNCLRFile((int)v4, v5, 1, 0, 0, 1, bagView->heapId);
+    v6 = Item_GetItemIconResourceId(item, 1);
+    bagView->unk554 = Oam_LoadNCGRFile((int)v4, v6, 0, 1, bagView->heapId);
     GFL_ArcToolFree(v4);
-    v8.x = 132;
-    v8.y = 80;
-    v8.anim = 0;
-    v8.flag = 0;
-    v8.unk = 0;
 
-    a1->unk6B0 = Oam_CreateSprite(
-        a1->spriteGroup,
-        a1->unk554,
-        a1->unk550,
-        a1->unk558,
-        &v8,
+    itemIconTemplate.x = 132;
+    itemIconTemplate.y = 80;
+    itemIconTemplate.anim = 0;
+    itemIconTemplate.flag = 0;
+    itemIconTemplate.unk = 0;
+
+    bagView->unk6B0 = Oam_CreateSprite(
+        bagView->spriteGroup,
+        bagView->unk554,
+        bagView->unk550,
+        bagView->unk558,
+        &itemIconTemplate,
         1,
-        a1->heapId);
-    sub_0204C520(a1->unk6B0, 1);
-    sub_0204C124(a1->unk6B0, 1);
-    sub_0204C5C8(a1->unk6B0, 0);
+        bagView->heapId);
+    sub_0204C520(bagView->unk6B0, 1);
+    sub_0204C124(bagView->unk6B0, 1);
+    sub_0204C5C8(bagView->unk6B0, 0);
 }
 
 extern void sub_0204B794(void);
@@ -1929,27 +1928,26 @@ void ovy142_219ebdc(BagView *a1)
     }
 }
 
-void ovy142_219ecec(BagView *a1)
+void BagMenu_TouchScrollBarUpdatePos(BagView *bagView)
 {
-    u32 v6; // [sp+4h] [bp-1Ch] BYREF
-    u32 v7;         // [sp+8h] [bp-18h] BYREF
-    u16 v4[2];      // [sp+0h] [bp-20h] BYREF
+    u32 touchX;
+    u32 touchY;
+    u16 oamPos[2];
 
-
-    if (sub_0203DA84(&v6, &v7) == 1)
+    if (sub_0203DA84(&touchX, &touchY) == 1)
     {
-        if (v7 < 0x1A)
+        if (touchY < 0x1A)
         {
-            v7 = 0x1a;
+            touchY = 0x1a;
         }
-        else if (v7 > 0x8E)
+        else if (touchY > 0x8E)
         {
-            v7 = 0x8e;
+            touchY = 0x8e;
         }
 
-        Oam_GetSpritePosData(a1->scrollBarOam, v4, 0xFFFF);
-        v4[1] = v7;
-        Oam_SetSpritePosData(a1->scrollBarOam, v4, 0xFFFF);
+        Oam_GetSpritePosData(bagView->scrollBarOam, oamPos, 0xFFFF);
+        oamPos[1] = touchY;
+        Oam_SetSpritePosData(bagView->scrollBarOam, oamPos, 0xFFFF);
     }
 }
 

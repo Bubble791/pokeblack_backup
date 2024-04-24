@@ -95722,7 +95722,7 @@ ovy36_21acc38: ; 0x021ACC38
 	mov r0, #1
 	mov r1, #2
 	mov r5, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -95740,7 +95740,7 @@ ovy36_21acc38: ; 0x021ACC38
 	str r0, [r4, r1]
 	mov r0, #1
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldrh r0, [r4, #4]
 	mov r2, #0
@@ -95774,7 +95774,7 @@ ovy36_21acc9c: ; 0x021ACC9C
 	bhi _021ACD10
 	add r0, r6, #0
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	add r0, r4, #0
 	sub r0, #0x5e
@@ -95785,7 +95785,7 @@ ovy36_21acc9c: ; 0x021ACC9C
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldrh r0, [r5, #4]
 	mov r2, #0

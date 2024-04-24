@@ -231,7 +231,7 @@ int ovy142_2199bcc(BagView *bagView)
         ovy142_219bda4(bagView, 0);
         v4 = bagView->unk834;
         bagView->unk834 = sub_020355B8(v2 - 6, v6, 26, 142, 0) - 1;
-        ovy142_219ecec(bagView);
+        BagMenu_TouchScrollBarUpdatePos(bagView);
         if (bagView->unk834 != v4)
         {
             GFL_SndSEPlay(0x548);

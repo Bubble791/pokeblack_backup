@@ -5182,7 +5182,7 @@ _021B58E0:
 	lsl r0, r7, #0x10
 	lsr r0, r0, #0x10
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	ldr r2, _021B5A30 ; =0x000043C8
 	add r1, r0, #0
 	ldrh r2, [r5, r2]
@@ -5205,7 +5205,7 @@ _021B58E0:
 	lsl r0, r7, #0x10
 	lsr r0, r0, #0x10
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	ldr r2, [sp, #0x24]
 	add r1, r0, #0
 	ldrh r2, [r2]
@@ -5475,7 +5475,7 @@ ovy199_21b5b50: ; 0x021B5B50
 	add r4, r0, #0
 	mov r0, #1
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	mov r7, #0
 	add r1, r0, #0
 	mov r3, #2
@@ -5491,7 +5491,7 @@ ovy199_21b5b50: ; 0x021B5B50
 	str r0, [r5, #0x34]
 	mov r0, #1
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldrh r0, [r5, r6]
 	mov r2, #0

@@ -4559,7 +4559,7 @@ _021B7868:
 	mov r1, #2
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [sp, #0x8c]
 	mov r7, #7
@@ -4582,7 +4582,7 @@ _021B7868:
 	mov r1, #1
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [sp, #0x8c]
 	add r2, r6, #0
@@ -11335,7 +11335,7 @@ _021BAD20:
 	mov r1, #2
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	pop {r4, pc}
 _021BAD34:
 	mov r0, #3
@@ -11396,7 +11396,7 @@ _021BAD92:
 	mov r1, #1
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	pop {r4, pc}
 _021BADA6:
 	mov r0, #0xc

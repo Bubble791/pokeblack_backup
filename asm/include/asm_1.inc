@@ -7915,7 +7915,7 @@
 .public sub_020265D8
 .public sub_020265FC
 .public sub_02026618
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_02026714
 .public sub_02026718
 .public sub_0202671C

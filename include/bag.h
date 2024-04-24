@@ -405,7 +405,7 @@ void ovy142_219D464(BagView* a1);
 
 int ovy142_2199bcc(BagView *m_bagView);
 void ovy142_219bda4(BagView*, int);
-void ovy142_219ecec(BagView*);
+void BagMenu_TouchScrollBarUpdatePos(BagView*);
 void ovy142_219bf58(BagView *m_bagView, u8 *param_2);
 extern void *sub_02026740(u16, int, int);
 extern int ovy142_219d43c(BagView*, u8);
@@ -427,7 +427,7 @@ extern int Item_GetTmHmIndex(u16);
 extern void LoadMoveNameToStrbuf(int, int, int);
 extern void ovy142_219f4b0(BagView*, int);
 extern void sub_020267C0(int ,u16, u16);
-extern void ovy142_219e4dc(BagView*, int);
+extern void BagMenu_LoadItemIconOam(BagView*, int);
 extern void ovy142_21a0134(BagBmpWinData*);
 
 extern int sub_02034AA4(u16);
@@ -520,4 +520,8 @@ extern int sub_0203DA48(void);
 extern int sub_020355B8(int, int, int, int, int);
 extern void GFL_SndSEPlay(int);
 extern int sub_0203DAC8(u32*, u32*);
+
+void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
+extern int Oam_LoadNCGRFile(int, int, int, int, u16);
+extern int Oam_LoadNCERFile(int, int, int, u16);
 #endif //BAG_H

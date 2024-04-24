@@ -746,9 +746,9 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public GFL_ArcSysCreateFileHandle
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCLRFile
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public Oam_CreateSprite

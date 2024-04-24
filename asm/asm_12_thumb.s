@@ -73447,8 +73447,8 @@ _02026638:
 _0202666C: .word 0x0209A474
 	thumb_func_end sub_02026618
 
-	thumb_func_start sub_02026670
-sub_02026670: ; 0x02026670
+	thumb_func_start Item_GetItemIconResourceId
+Item_GetItemIconResourceId: ; 0x02026670
 	push {r3, lr}
 	ldr r2, _020266F4 ; =0x0000027E
 	cmp r0, r2
@@ -73533,7 +73533,7 @@ _02026704: .word 0x000003FE
 _02026708: .word 0x02090D52
 _0202670C: .word 0x02090BCC
 _02026710: .word 0x02090BCE
-	thumb_func_end sub_02026670
+	thumb_func_end Item_GetItemIconResourceId
 
 	thumb_func_start sub_02026714
 sub_02026714: ; 0x02026714

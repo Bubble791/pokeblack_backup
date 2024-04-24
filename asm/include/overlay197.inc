@@ -328,10 +328,10 @@
 .public GFL_ArcToolFree
 .public GFL_HeapFree
 .public GFL_ArcSysCreateFileHandle
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public GFL_ArcSysCreateFileHandle
@@ -844,7 +844,7 @@
 .public sub_021BADEC
 .public sub_02021114
 .public sub_021BADF4
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_021BADEC
 .public sub_021BADF4
 .public sub_02021034
@@ -852,7 +852,7 @@
 .public sub_021BADF4
 .public sub_02020F94
 .public sub_021BADF4
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_021BADEC
 .public sub_0202111C
 .public sub_021BADEC

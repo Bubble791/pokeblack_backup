@@ -536,12 +536,12 @@
 .public sub_0203047C
 .public sub_02030420
 .public GFL_ArcSysCreateFileHandle
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_0204AB1C
 .public sub_020602D8
 .public MI_CpuCopy8
 .public GFL_HeapFree
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public sub_0204AB1C
 .public sub_020602A8
 .public MI_CpuCopy8
@@ -571,9 +571,9 @@
 .public sub_0204C124
 .public GFL_ArcToolFree
 .public GFL_ArcSysCreateFileHandle
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCLRFile
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree

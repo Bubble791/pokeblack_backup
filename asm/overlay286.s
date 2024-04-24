@@ -2038,7 +2038,7 @@ _021F5422:
 	add r6, r5, r0
 	ldr r1, [sp, #8]
 	add r0, r7, #0
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [r5]
 	mov r2, #0
@@ -2051,7 +2051,7 @@ _021F5422:
 	str r0, [r6, r1]
 	ldr r1, [sp, #4]
 	add r0, r7, #0
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [r5]
 	lsl r3, r4, #0x15
@@ -2120,7 +2120,7 @@ _021F54BE:
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
 	add r1, r7, #0
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldr r0, [r4]
 	mov r2, #0
@@ -2141,7 +2141,7 @@ _021F54BE:
 	bl GFL_HeapFree
 	ldr r0, [sp, #0xc]
 	add r1, r6, #0
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r2, r0, #0
 	mov r0, #3
 	str r0, [sp]
@@ -2179,7 +2179,7 @@ ovy286_21f5540: ; 0x021F5540
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #4
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	mov r0, #0x20
 	str r0, [sp]
@@ -2196,7 +2196,7 @@ _021F5576:
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	mov r0, #0x20
 	str r0, [sp]

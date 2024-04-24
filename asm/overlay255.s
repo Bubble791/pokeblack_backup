@@ -42395,7 +42395,7 @@ ovy255_21d0a58: ; 0x021D0A58
 	add r4, r0, #0
 	mov r0, #0
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	mov r3, #0x1a
 	add r1, r0, #0
 	add r0, r4, #0
@@ -42423,7 +42423,7 @@ ovy255_21d0a94: ; 0x021D0A94
 	add r6, r0, #0
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	mov r0, #0x4c
 	str r0, [sp]
@@ -42443,7 +42443,7 @@ ovy255_21d0a94: ; 0x021D0A94
 	add r6, r0, #0
 	add r0, r4, #0
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	add r0, r6, #0
 	add r2, sp, #4

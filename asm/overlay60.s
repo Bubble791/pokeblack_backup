@@ -3266,7 +3266,7 @@ ovy60_21e7318: ; 0x021E7318
 	mov r0, #1
 	mov r1, #2
 	mov r5, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -3284,7 +3284,7 @@ ovy60_21e7318: ; 0x021E7318
 	str r0, [r4, r1]
 	mov r0, #1
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldrh r0, [r4, #4]
 	mov r2, #0
@@ -3318,7 +3318,7 @@ ovy60_21e737c: ; 0x021E737C
 	bhi _021E73F2
 	add r0, r6, #0
 	mov r1, #2
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	add r0, r4, #0
 	add r0, #0xe
@@ -3329,7 +3329,7 @@ ovy60_21e737c: ; 0x021E737C
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_02026670
+	bl Item_GetItemIconResourceId
 	add r1, r0, #0
 	ldrh r0, [r5, #4]
 	mov r2, #0

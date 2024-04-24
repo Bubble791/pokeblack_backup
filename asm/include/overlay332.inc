@@ -1269,10 +1269,10 @@
 .public GFL_ArcToolFree
 .public GFL_HeapFree
 .public GFL_ArcSysCreateFileHandle
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
-.public sub_02026670
+.public Item_GetItemIconResourceId
 .public Oam_LoadNCGRFile
 .public GFL_ArcToolFree
 .public MI_CpuFill8
