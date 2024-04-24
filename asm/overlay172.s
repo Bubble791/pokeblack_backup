@@ -337,13 +337,13 @@ ovy172_2199b2c: ; 0x02199B2C
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r5, r0, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_020232D0
 	ldr r7, _02199BD8 ; =0x0219A5BC
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r4, _02199BDC ; =0x04000050
 	mov r6, #0
 	ldr r0, _02199BE0 ; =0x04001050
@@ -401,7 +401,7 @@ ovy172_2199b2c: ; 0x02199B2C
 	strh r0, [r4]
 	ldr r0, _02199BF4 ; =0x0219A5A0
 	add r1, r7, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #1
 	bl sub_02044BB8
 	mov r0, #0x10

@@ -40,8 +40,8 @@
 .public GFL_ArcToolFree
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public MIi_CpuClear32
 .public MIi_CpuClear32
@@ -104,7 +104,7 @@
 .public sub_02021A18
 .public sub_02022DA8
 .public GFL_TCBExMgrFree
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_0202AC3C
@@ -1108,7 +1108,7 @@
 .public BmpWin_BitmapFill
 
 .public sub_02044528
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020480A8
 .public sub_02044668
 .public sub_0202E1DC

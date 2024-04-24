@@ -3519,7 +3519,7 @@ ovy259_219b3f4: ; 0x0219B3F4
 	bl sub_02046BE0
 	ldr r7, _0219B48C ; =0x021A04C4
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add r0, r6, #0
 	bl sub_02046DF8
 	bl sub_02046DE0
@@ -3629,9 +3629,9 @@ ovy259_219b51c: ; 0x0219B51C
 	mov r4, #0
 	blx MI_CpuFill8
 	add r0, r5, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0219B574 ; =0x021A0498
 	bl sub_02044710
 	ldr r7, _0219B578 ; =0x021A04F4
@@ -3719,7 +3719,7 @@ ovy259_219b5c0: ; 0x0219B5C0
 	ldr r0, _0219B5FC ; =0x021A04A8
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x20
 	mov r1, #0
 	add r2, r4, #0

@@ -8042,7 +8042,7 @@ ovy280_21dd28c: ; 0x021DD28C
 	bl sub_02046BE0
 	ldr r7, _021DD324 ; =0x021DD9D0
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add r0, r6, #0
 	bl sub_02046DF8
 	bl sub_02046DE0
@@ -8152,9 +8152,9 @@ ovy280_21dd3b4: ; 0x021DD3B4
 	mov r4, #0
 	blx MI_CpuFill8
 	add r0, r5, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _021DD40C ; =0x021DD9A4
 	bl sub_02044710
 	ldr r7, _021DD410 ; =0x021DDA00
@@ -8242,7 +8242,7 @@ ovy280_21dd458: ; 0x021DD458
 	ldr r0, _021DD494 ; =0x021DD9B4
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x80
 	mov r1, #0
 	add r2, r4, #0

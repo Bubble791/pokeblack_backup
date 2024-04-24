@@ -619,11 +619,11 @@ ovy207_21b342c: ; 0x021B342C
 	and r0, r1
 	strh r0, [r2]
 	ldr r0, _021B35E8 ; =0x021BAF54
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldrh r0, [r5]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _021B35EC ; =0x021BAE64
 	bl sub_02044710
 	ldr r0, _021B35F0 ; =0x021BAF34
@@ -689,7 +689,7 @@ ovy207_21b342c: ; 0x021B342C
 	ldrh r2, [r5]
 	ldr r1, _021B35E8 ; =0x021BAF54
 	add r0, r7, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	ldrh r2, [r5]
 	mov r0, #0x60
 	mov r1, #0

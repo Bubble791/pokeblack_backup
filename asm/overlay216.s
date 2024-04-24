@@ -733,7 +733,7 @@ _021BBCB0:
 	ldr r0, [r6, #0x18]
 	str r0, [r4, #0x10]
 	mov r0, #0x72
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	mov r0, #0x72
 	bl GFL_WordSetSystemCreateDefault
 	str r0, [r4, #0x3c]
@@ -1143,11 +1143,11 @@ _021BC04C:
 	thumb_func_start sub_021BC058
 sub_021BC058: ; 0x021BC058
 	ldr r0, _021BC060 ; =0x021C09E4
-	ldr r3, _021BC064 ; =sub_02046C40
+	ldr r3, _021BC064 ; =GFL_BGSysSetVRAMBanks
 	bx r3
 	nop
 _021BC060: .word 0x021C09E4
-_021BC064: .word sub_02046C40
+_021BC064: .word GFL_BGSysSetVRAMBanks
 	thumb_func_end sub_021BC058
 
 	thumb_func_start ovy216_21bc068
@@ -1511,7 +1511,7 @@ ovy216_21bc34c: ; 0x021BC34C
 	ldr r0, _021BC400 ; =0x02093F08
 	ldr r1, _021BC404 ; =0x021C09E4
 	mov r2, #0x72
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x1e
 	mov r1, #1
 	mov r2, #0x72
@@ -1686,7 +1686,7 @@ ovy216_21bc4dc: ; 0x021BC4DC
 	sub sp, #0xc
 	add r5, r0, #0
 	mov r0, #0x72
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r7, #2
 	str r7, [sp]
 	mov r6, #0xd
@@ -6274,9 +6274,9 @@ _021BE824: .word 0x00000DA8
 ovy216_21be828: ; 0x021BE828
 	push {r3, lr}
 	ldr r0, _021BE838 ; =0x021C0D48
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	mov r0, #0x72
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	pop {r3, pc}
 	.align 2, 0
 _021BE838: .word 0x021C0D48
@@ -6494,7 +6494,7 @@ ovy216_21bea04: ; 0x021BEA04
 	push {r4, lr}
 	sub sp, #0xb0
 	mov r0, #0x72
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r2, _021BEAFC ; =0x04000304
 	ldr r4, _021BEB00 ; =0x021C0ED0
 	ldrh r1, [r2]
@@ -6944,7 +6944,7 @@ ovy216_21bede8: ; 0x021BEDE8
 	ldr r0, _021BEE08 ; =0x02093F08
 	ldr r1, _021BEE0C ; =0x021C0D48
 	mov r2, #0x72
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x1e
 	mov r1, #1
 	mov r2, #0x72

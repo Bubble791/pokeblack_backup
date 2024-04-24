@@ -619,8 +619,8 @@
 .public sub_02019A88
 .public sub_0204A630
 .public sub_02048F44
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_0204B758
 .public sub_020480A8
 .public sub_02044528
@@ -2103,8 +2103,8 @@
 .public sub_02045264
 .public sub_02044B84
 .public sub_02044B84
-.public sub_02046C40
-.public sub_0204B6A8
+.public GFL_BGSysSetVRAMBanks
+.public Oam_CreateSystem
 .public sub_021C45EC
 .public sub_02046D38
 .public sub_02046DC0

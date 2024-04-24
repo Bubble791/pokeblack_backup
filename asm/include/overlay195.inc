@@ -380,10 +380,10 @@
 .public sub_02046DC0
 .public sub_02046DF8
 .public GX_DispOn
-.public sub_020444A4
-.public sub_0204B6A8
+.public GFL_BGSysCreate
+.public Oam_CreateSystem
 .public sub_0204BF1C
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02044710
 .public GFL_VBlankTCBAdd
 .public GFL_HeapAllocate
@@ -653,7 +653,7 @@
 .public sub_02044C98
 .public sub_020504DC
 .public GFL_HeapAllocate
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020232D0
 .public GFL_TCBExMgrCreate
 .public sub_02021998

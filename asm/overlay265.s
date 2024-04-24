@@ -136,11 +136,11 @@ ovy265_2199998: ; 0x02199998
 	cmp r4, #0
 	bne _021999AE
 	ldr r0, _021999B8 ; =0x0219B824
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	pop {r4, pc}
 _021999AE:
 	ldr r0, _021999BC ; =0x0219B854
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	pop {r4, pc}
 	nop
 _021999B8: .word 0x0219B824
@@ -163,11 +163,11 @@ _021999D0: .word 0x0219B854
 
 	thumb_func_start sub_021999D4
 sub_021999D4: ; 0x021999D4
-	ldr r3, _021999DC ; =sub_020444A4
+	ldr r3, _021999DC ; =GFL_BGSysCreate
 	mov r0, #0x8d
 	bx r3
 	nop
-_021999DC: .word sub_020444A4
+_021999DC: .word GFL_BGSysCreate
 	thumb_func_end sub_021999D4
 
 	thumb_func_start sub_021999E0
@@ -2351,7 +2351,7 @@ _0219AAF0:
 	add r1, r0, #0
 	add r0, r5, #0
 	mov r2, #0x8d
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0xf9
 	mov r1, #0
 	mov r2, #0x8d

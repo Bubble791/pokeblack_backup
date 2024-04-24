@@ -136,8 +136,8 @@
 .public sub_02046DC0
 .public sub_02046DF8
 .public GX_DispOn
-.public sub_020444A4
-.public sub_02046C40
+.public GFL_BGSysCreate
+.public GFL_BGSysSetVRAMBanks
 .public sub_02044710
 .public sub_02046DC0
 .public sub_02046D38
@@ -260,7 +260,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_02005680
 .public sub_02029B54
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public GFL_VBlankTCBAdd
 .public sub_0204C108
@@ -279,7 +279,7 @@
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
 .public GFL_HeapAllocate
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020232D0
 .public GFL_TCBExMgrCreate
 .public sub_02021998

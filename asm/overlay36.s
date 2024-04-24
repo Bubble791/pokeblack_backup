@@ -285,14 +285,14 @@ ovy36_217f85c: ; 0x0217F85C
 	add r5, r1, #0
 	add r0, r4, #0
 	ldrh r6, [r5]
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add r0, r5, #0
 	bl ovy36_218059c
 	add r1, r4, #0
 	ldr r0, _0217F950 ; =0x021C9F20
 	mov r2, #0x89
 	mov r4, #0x89
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
 	mov r7, #1
@@ -301,7 +301,7 @@ ovy36_217f85c: ; 0x0217F85C
 	mov r1, #1
 	bl sub_02046D84
 	add r0, r6, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_020232D0
 	lsl r0, r7, #0xc
 	str r0, [sp]
@@ -1947,7 +1947,7 @@ sub_02180598: ; 0x02180598
 ovy36_218059c: ; 0x0218059C
 	push {r3, r4, r5, lr}
 	ldrh r0, [r0]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r5, _021805D8 ; =0x021C9F3C
 	mov r0, #0
 	add r1, r5, #0
@@ -31990,12 +31990,12 @@ ovy36_218e9a8: ; 0x0218E9A8
 	blx MI_CpuFill8
 	strh r6, [r4, #0x10]
 	ldrh r0, [r4, #0x10]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r4, #0x10]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_020232D0
 	ldr r0, _0218EB54 ; =0x021D4C74
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r6, _0218EB58 ; =0x021CABDC
 	add r3, sp, #0x10
 	add r2, r3, #0
@@ -32012,7 +32012,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	ldrh r2, [r4, #0x10]
 	ldr r0, _0218EB5C ; =0x02093F08
 	ldr r1, _0218EB54 ; =0x021D4C74
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	ldrh r2, [r4, #0x10]
 	mov r0, #0x28
 	mov r1, #0

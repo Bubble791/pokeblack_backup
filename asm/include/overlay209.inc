@@ -34,11 +34,11 @@
 .public sub_02027B64
 .public sub_02027B4C
 .public sub_02027B4C
-.public sub_02046C40
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_02046CFC
 .public sub_0204B758
 .public sub_020480A8
@@ -636,9 +636,9 @@
 .public sub_02027B64
 .public sub_02027B4C
 .public sub_02027B4C
-.public sub_02046C40
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public sub_02044C98
 .public sub_02048D28
@@ -650,7 +650,7 @@
 .public sub_02049214
 .public sub_0204E390
 .public sub_0204E488
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_02046CFC
 .public sub_02046D84
 .public G2x_SetBlendAlpha_

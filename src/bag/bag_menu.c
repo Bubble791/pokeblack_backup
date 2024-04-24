@@ -953,11 +953,11 @@ typedef struct
     u8 unk;
 }OAM_TEMP;
 
-extern int sub_02048080(u16);
-extern void sub_020232D0(int);
-extern void sub_020444A4(u16);
-extern void sub_02046C40(int*);
-extern void sub_0204B6A8(int*, int*, u16);
+extern int BmpWin_InitAllocator(u16);
+extern void sub_020232D0(void);
+extern void GFL_BGSysCreate(u16);
+extern void GFL_BGSysSetVRAMBanks(int*);
+extern void Oam_CreateSystem(int*, int*, u16);
 extern void sub_02044710(int*);
 extern void sub_02046D38(int);
 extern void sub_02046DC0(int);
@@ -1002,10 +1002,11 @@ void ovy142_219d7a8(BagView *a1)
 
     int v33;
     *(u16*)(0x4000050) = 0;
-    sub_020444A4(a1->heapId);
-    sub_020232D0(sub_02048080(a1->heapId));
-    sub_02046C40(unk_21A16A4);
-    sub_0204B6A8(unk_21A103C, unk_21A16A4, a1->heapId);
+    GFL_BGSysCreate(a1->heapId);
+    BmpWin_InitAllocator(a1->heapId);
+    sub_020232D0();
+    GFL_BGSysSetVRAMBanks(unk_21A16A4);
+    Oam_CreateSystem(unk_21A103C, unk_21A16A4, a1->heapId);
     v43 = data_21a1018;
     sub_02044710(v43);
     sub_02046D38(0);

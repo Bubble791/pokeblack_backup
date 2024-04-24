@@ -12,8 +12,8 @@
 .public sub_0203D554
 .public sub_02017BCC
 .public sub_02042A78
-.public sub_020444A4
-.public sub_02046C40
+.public GFL_BGSysCreate
+.public GFL_BGSysSetVRAMBanks
 .public sub_02034168
 .public sub_021AAEFC
 .public GFL_VBlankTCBAdd
@@ -258,7 +258,7 @@
 .public GFL_HeapFree
 .public sub_021A9E70
 .public sub_0205FA10
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -370,7 +370,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public sub_0204AA30
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
@@ -444,8 +444,8 @@
 .public GFL_ArcToolFree
 .public GFL_HeapFree
 .public sub_02046BE0
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -487,7 +487,7 @@
 .public GFL_HeapFree
 .public sub_0202D7E0
 .public sub_0204AA30
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_02046CFC
 .public sub_02046D84
@@ -533,7 +533,7 @@
 .public sub_0204A5C0
 .public sub_02049B5C
 .public sub_02049AA0
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

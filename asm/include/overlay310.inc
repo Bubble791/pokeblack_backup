@@ -2,7 +2,7 @@
 #pragma once
 .public GFL_ProcInitSubsystem
 .public sub_0219D13C
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02046DF8
 .public sub_0203AB10
 .public sub_02016BEC
@@ -25,7 +25,7 @@
 .public sub_021A107C
 .public sub_021A47FC
 .public sub_021A47F4
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_0204476C
@@ -283,7 +283,7 @@
 .public sub_02044C98
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020480A8
 .public sub_02044B84
 .public sub_02044B84
@@ -708,7 +708,7 @@
 .public sub_02044C98
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020480A8
 .public sub_02044B84
 .public sub_02044B84
@@ -1282,7 +1282,7 @@
 .public sub_02044C98
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020480A8
 .public sub_02044B84
 .public sub_02044B84
@@ -1773,6 +1773,6 @@
 .public sub_02022DA8
 .public sub_0202AEAC
 .public GFL_WordSetSystemFree
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204B758
 .public MI_CpuCopy8

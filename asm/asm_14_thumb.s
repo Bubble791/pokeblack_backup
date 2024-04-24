@@ -23616,8 +23616,8 @@ _0204449E:
 	.align 2, 0
 	thumb_func_end sub_02044404
 
-	thumb_func_start sub_020444A4
-sub_020444A4: ; 0x020444A4
+	thumb_func_start GFL_BGSysCreate
+GFL_BGSysCreate: ; 0x020444A4
 	push {r3, r4, r5, r6, r7, lr}
 	mov r6, #0x1d
 	mov r1, #0x86
@@ -23680,7 +23680,7 @@ _02044504:
 	.align 2, 0
 _02044520: .word 0x0209AEAC
 _02044524: .word 0x0214190C
-	thumb_func_end sub_020444A4
+	thumb_func_end GFL_BGSysCreate
 
 	thumb_func_start sub_02044528
 sub_02044528: ; 0x02044528
@@ -29048,8 +29048,8 @@ _02046C38: .word 0x07000400
 _02046C3C: .word 0x05000400
 	thumb_func_end sub_02046BE0
 
-	thumb_func_start sub_02046C40
-sub_02046C40: ; 0x02046C40
+	thumb_func_start GFL_BGSysSetVRAMBanks
+GFL_BGSysSetVRAMBanks: ; 0x02046C40
 	push {r4, lr}
 	add r4, r0, #0
 	bl GX_ResetBankForBG
@@ -29100,7 +29100,7 @@ sub_02046C40: ; 0x02046C40
 	nop
 _02046CC8: .word 0xFFCFFFEF
 _02046CCC: .word 0x04001000
-	thumb_func_end sub_02046C40
+	thumb_func_end GFL_BGSysSetVRAMBanks
 
 	thumb_func_start sub_02046CD0
 sub_02046CD0: ; 0x02046CD0
@@ -31885,8 +31885,8 @@ _02048078:
 	.align 2, 0
 	thumb_func_end sub_02047FB4
 
-	thumb_func_start sub_02048080
-sub_02048080: ; 0x02048080
+	thumb_func_start BmpWin_InitAllocator
+BmpWin_InitAllocator: ; 0x02048080
 	push {r3, r4, lr}
 	sub sp, #4
 	mov r1, #0x4f
@@ -31904,7 +31904,7 @@ sub_02048080: ; 0x02048080
 	nop
 _020480A0: .word 0x0209AEC0
 _020480A4: .word 0x02141918
-	thumb_func_end sub_02048080
+	thumb_func_end BmpWin_InitAllocator
 
 	thumb_func_start sub_020480A8
 sub_020480A8: ; 0x020480A8
@@ -39396,8 +39396,8 @@ _0204B6A0: .word 0x0209AF84
 _0204B6A4: .word 0x000006BD
 	thumb_func_end sub_0204B610
 
-	thumb_func_start sub_0204B6A8
-sub_0204B6A8: ; 0x0204B6A8
+	thumb_func_start Oam_CreateSystem
+Oam_CreateSystem: ; 0x0204B6A8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x18
 	add r5, r0, #0
@@ -39477,7 +39477,7 @@ _0204B72C:
 _0204B74C: .word 0x0000029F
 _0204B750: .word 0x0209AFD8
 _0204B754: .word 0x0214193C
-	thumb_func_end sub_0204B6A8
+	thumb_func_end Oam_CreateSystem
 
 	thumb_func_start sub_0204B758
 sub_0204B758: ; 0x0204B758

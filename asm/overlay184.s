@@ -9,7 +9,7 @@ ovy184_219f340: ; 0x0219F340
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xcc
 	mov r0, #1
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r4, _0219F498 ; =0x0219F4BC
 	add r3, sp, #0x1c
 	mov r2, #6
@@ -19,7 +19,7 @@ _0219F350:
 	sub r2, r2, #1
 	bne _0219F350
 	add r0, sp, #0x1c
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	mov r5, #2
 	mov r1, #6
 	lsl r5, r5, #0x12

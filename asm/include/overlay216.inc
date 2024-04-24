@@ -61,7 +61,7 @@
 .public sub_0204AA30
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
@@ -150,7 +150,7 @@
 .public sub_0201736C
 .public MyStatus_GetTrainerGender
 .public sub_0204AA30
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
@@ -169,7 +169,7 @@
 .public sub_0204C124
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -574,8 +574,8 @@
 .public sub_02021C1C
 .public BmpWin_FlushChar
 .public sub_02035884
-.public sub_02046C40
-.public sub_02048080
+.public GFL_BGSysSetVRAMBanks
+.public BmpWin_InitAllocator
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
@@ -603,7 +603,7 @@
 .public sub_02049214
 .public sub_0204A5C8
 .public sub_0204A638
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -667,7 +667,7 @@
 .public sub_02026E48
 .public sub_02026DE8
 .public sub_020278AC
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204AA30
 .public Oam_LoadNCGRFile

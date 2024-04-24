@@ -108863,13 +108863,13 @@ ovy167_21ce678: ; 0x021CE678
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r4, r0, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r4, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_020232D0
 	ldr r7, _021CE728 ; =0x021DA900
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r6, _021CE72C ; =0x04000050
 	mov r5, #0
 	ldr r0, _021CE730 ; =0x04001050
@@ -108935,7 +108935,7 @@ ovy167_21ce678: ; 0x021CE678
 	ldr r0, _021CE744 ; =0x021DA8E4
 	add r1, r7, #0
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

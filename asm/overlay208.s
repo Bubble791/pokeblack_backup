@@ -1049,7 +1049,7 @@ ovy208_219a16c: ; 0x0219A16C
 	and r0, r1
 	strh r0, [r2]
 	ldr r0, _0219A320 ; =0x0219DCD8
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	str r7, [sp]
 	ldrh r0, [r5]
 	mov r1, #2
@@ -1100,9 +1100,9 @@ ovy208_219a16c: ; 0x0219A16C
 	add r1, r7, #0
 	bl sub_02049214
 	ldrh r0, [r5]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0219A33C ; =0x0219DBE8
 	bl sub_02044710
 	mov r0, #1
@@ -1156,7 +1156,7 @@ ovy208_219a16c: ; 0x0219A16C
 	strb r0, [r2, #9]
 	add r0, r2, #0
 	ldrh r2, [r5]
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
 	bl sub_02046CFC

@@ -687,7 +687,7 @@
 .public GFL_FontCreate
 .public sub_02046DF8
 .public sub_021A19CC
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public GFL_VBlankTCBAdd
 .public sub_021A1F50
 .public sub_02046CFC
@@ -706,7 +706,7 @@
 .public GFL_WordSetSystemFree
 .public sub_02022DA8
 .public sub_02022DA8
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045708
@@ -760,7 +760,7 @@
 .public sub_02024D20
 .public sub_02024D20
 .public sub_02024D20
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204BE9C
 .public sub_0204C018
@@ -1385,7 +1385,7 @@
 .public sub_021A8FE8
 .public sub_021A942C
 .public sub_02040C64
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02151AB4
 .public sub_02151ADC
 .public sub_02151AF0

@@ -83,9 +83,9 @@ _021B73F6:
 	lsl r5, r5, #2
 	str r0, [r4, r5]
 	mov r0, #0x32
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	mov r0, #0x32
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #0x32
 	bl sub_02026DC0
 	add r1, r5, #0
@@ -264,7 +264,7 @@ ovy205_21b75c4: ; 0x021B75C4
 	sub sp, #0xe0
 	bl sub_02046CF0
 	ldr r0, _021B76F0 ; =0x021B95C0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	mov r5, #2
 	mov r1, #6
 	lsl r5, r5, #0x12
@@ -2423,7 +2423,7 @@ ovy205_21b85f8: ; 0x021B85F8
 	add r0, r2, #0
 	add r1, r3, #0
 	mov r2, #0x32
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
 	bl sub_02046CFC

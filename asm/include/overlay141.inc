@@ -33,8 +33,8 @@
 .public GFL_MsgDataFree
 .public GFL_TCBRemove
 .public GFL_ArcToolFree
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -72,7 +72,7 @@
 .public sub_02033254
 .public sub_0202D7E0
 .public sub_0204AA30
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204BF1C
 .public sub_02046CFC
@@ -99,7 +99,7 @@
 .public sub_0204BF98
 .public sub_0204BF98
 .public sub_0204B758
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

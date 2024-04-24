@@ -50,7 +50,7 @@
 .public sub_0205F9D0
 .public sub_0217CF24
 .public sub_0217D094
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_02046CFC
 .public sub_02046D84
 .public sub_0204C4E0
@@ -78,8 +78,8 @@
 .public sub_0204C124
 .public sub_0204C244
 .public sub_0204C2B0
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public GFL_FontCreate
 .public sub_0204476C
@@ -168,7 +168,7 @@
 .public sub_0217D61C
 .public GCTX_HIDGetPressedKeys
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_0204B758
 .public sub_0204BF98
 .public sub_0204B7C8

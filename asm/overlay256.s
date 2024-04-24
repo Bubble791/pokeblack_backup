@@ -109,7 +109,7 @@ ovy256_21bb7b0: ; 0x021BB7B0
 	mov r0, #0
 	bl sub_02046BE0
 	ldr r0, _021BB7C0 ; =0x021BD9C0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	pop {r3, pc}
 	.align 2, 0
 _021BB7C0: .word 0x021BD9C0
@@ -128,7 +128,7 @@ ovy256_21bb7cc: ; 0x021BB7CC
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xd0
 	mov r0, #0x8c
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r4, _021BB8C4 ; =0x021BD8F0
 	add r3, sp, #0xc0
 	add r2, r3, #0
@@ -2086,7 +2086,7 @@ ovy256_21bc714: ; 0x021BC714
 	sub sp, #0xc
 	add r5, r0, #0
 	mov r0, #0x8c
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #2
 	str r0, [sp]
 	mov r0, #3
@@ -3161,7 +3161,7 @@ ovy256_21bcfb4: ; 0x021BCFB4
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #0x8c
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	add sp, #0x1c
 	pop {r3, r4, pc}
 	.align 2, 0

@@ -32,7 +32,7 @@
 .public sub_021DDD1C
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -67,7 +67,7 @@
 .public sub_0201FF08
 .public sub_0201FDF8
 .public sub_0201FF08
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -137,7 +137,7 @@
 .public BmpWin_GetBitmap
 .public sub_020470F8
 .public sub_021DE480
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204AA30
 .public sub_0201D624
 .public sub_02020F40
@@ -226,7 +226,7 @@
 .public sub_02033254
 .public sub_02033254
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public GFL_TCBRemove
 .public sub_0204B758
 .public sub_02033120

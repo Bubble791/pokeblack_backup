@@ -87,7 +87,7 @@ _0219FC3A:
 	mov r0, #0
 	bl sub_02046BE0
 	add r0, sp, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add sp, #0x30
 	pop {r4, pc}
 	nop
@@ -138,7 +138,7 @@ ovy301_219fc98: ; 0x0219FC98
 	push {r4, r5, r6, lr}
 	sub sp, #0xb0
 	mov r0, #0x7e
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r4, _0219FDA0 ; =0x021A0248
 	add r3, sp, #0xa0
 	add r2, r3, #0

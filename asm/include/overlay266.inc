@@ -41,8 +41,8 @@
 .public sub_02045350
 .public sub_02044F90
 .public sub_02046BE0
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_0204476C
@@ -72,7 +72,7 @@
 .public sub_0204B0D4
 .public sub_02045350
 .public sub_02045350
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public Oam_LoadNCGRFile
@@ -110,7 +110,7 @@
 .public sub_02047008
 .public sub_0204A934
 .public GFL_HeapFree
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar

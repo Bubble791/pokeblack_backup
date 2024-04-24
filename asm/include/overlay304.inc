@@ -129,7 +129,7 @@
 .public sub_0204B794
 .public sub_0219B2E0
 .public sub_021A1BC8
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -167,7 +167,7 @@
 .public sub_0204C028
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_02021998
 .public BmpWin_CreateDynamic
 .public sub_0204826C
@@ -182,7 +182,7 @@
 .public BmpWin_FlushChar
 .public sub_02045B7C
 .public GFL_FontCreate
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204AA30
 .public sub_0204B0D4
 .public sub_0204B0D4
@@ -385,7 +385,7 @@
 .public sub_0204C488
 
 .public GFL_TCBRemove
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02035178
 .public sub_02027780
 .public sub_02035198

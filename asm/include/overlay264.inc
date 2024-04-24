@@ -62,5 +62,5 @@
 .public sub_02005D8C
 .public sub_02005E10
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public GFL_TCBRemove

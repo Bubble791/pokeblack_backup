@@ -1158,11 +1158,11 @@ _0219A36E:
 	and r0, r1
 	strh r0, [r2]
 	add r0, sp, #0x20
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldrh r0, [r5]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0219A498 ; =0x021A4A10
 	bl sub_02044710
 	ldr r0, _0219A49C ; =0x021A4B0C
@@ -1233,7 +1233,7 @@ _0219A36E:
 	str r0, [r3]
 	add r0, r2, #0
 	ldrh r2, [r5]
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
 	bl sub_02046CFC

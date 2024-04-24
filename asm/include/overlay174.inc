@@ -176,7 +176,7 @@
 .public sub_02042BC4
 .public sub_020429E0
 .public sub_0219CE98
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02044710
 .public sub_02046D38
 .public sub_02046DC0
@@ -257,8 +257,8 @@
 .public BmpWin_FlushChar
 .public sub_02048210
 .public sub_02048210
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_020232D0
 .public sub_02044528
 .public sub_020480A8
@@ -284,7 +284,7 @@
 .public GFL_ArcToolFree
 .public sub_02024D20
 .public sub_0204E060
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public GFL_VBlankTCBAdd
 .public sub_02021998

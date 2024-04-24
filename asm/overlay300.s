@@ -163,7 +163,7 @@ ovy300_219fd54: ; 0x0219FD54
 	mov r0, #0
 	bl sub_02046BE0
 	ldr r0, _0219FD64 ; =0x021A40D4
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	pop {r3, pc}
 	.align 2, 0
 _0219FD64: .word 0x021A40D4
@@ -182,7 +182,7 @@ ovy300_219fd70: ; 0x0219FD70
 	push {r4, lr}
 	sub sp, #0x110
 	mov r0, #0x7b
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r4, _0219FED4 ; =0x021A4104
 	add r3, sp, #0x100
 	add r2, r3, #0
@@ -4168,7 +4168,7 @@ ovy300_21a1ce8: ; 0x021A1CE8
 	sub sp, #0xc
 	add r5, r0, #0
 	mov r0, #0x7b
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r6, _021A1D30 ; =0x021A4280
 	mov r4, #0
 	mov r7, #1
@@ -5614,7 +5614,7 @@ ovy300_21a2814: ; 0x021A2814
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #0x7b
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	add sp, #0x1c
 	pop {r3, r4, pc}
 	.align 2, 0

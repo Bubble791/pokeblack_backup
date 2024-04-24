@@ -4877,9 +4877,9 @@ ovy35_217f048: ; 0x0217F048
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, _0217F090 ; =0x0217F57C
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldrh r0, [r4, #8]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r0, _0217F094 ; =0x0217F54C
 	bl sub_02044710
 	ldr r1, _0217F098 ; =0x0217F55C

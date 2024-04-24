@@ -2152,12 +2152,12 @@ ovy198_21b40b0: ; 0x021B40B0
 	str r0, [r7]
 	bl GX_DispOn
 	ldrh r0, [r4, #0xc]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r4, #0xc]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_020232D0
 	ldr r0, _021B4238 ; =0x021B45F0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r3, _021B423C ; =0x021B44B0
 	add r2, sp, #0xc
 	mov ip, r2
@@ -2174,7 +2174,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	ldrh r2, [r4, #0xc]
 	ldr r0, _021B4240 ; =0x021B4480
 	ldr r1, _021B4238 ; =0x021B45F0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	ldrh r2, [r4, #0xc]
 	mov r0, #0x28
 	mov r1, #0

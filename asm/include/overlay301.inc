@@ -6,10 +6,10 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_02046BE0
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02045A5C
 .public GFL_VBlankTCBAdd
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738

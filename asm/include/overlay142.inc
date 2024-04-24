@@ -580,11 +580,11 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_020232D0
-.public sub_02046C40
-.public sub_0204B6A8
+.public GFL_BGSysSetVRAMBanks
+.public Oam_CreateSystem
 .public sub_02044710
 .public sub_02046D38
 .public sub_02046DC0

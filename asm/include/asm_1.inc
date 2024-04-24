@@ -9979,7 +9979,7 @@
 .public sub_020443B4
 .public sub_020443D8
 .public sub_02044404
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044528
 .public sub_02044564
 .public sub_02044624
@@ -10058,7 +10058,7 @@
 .public sub_02046B4C
 .public sub_02046B98
 .public sub_02046BE0
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02046CD0
 .public sub_02046CE0
 .public sub_02046CF0
@@ -10099,7 +10099,7 @@
 .public sub_02047E28
 .public sub_02047F20
 .public sub_02047FB4
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_020480A8
 .public BmpWin_CreateDynamic
 .public sub_02048124
@@ -10336,7 +10336,7 @@
 .public sub_0204B570
 .public sub_0204B600
 .public sub_0204B610
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204B758
 .public sub_0204B794
 .public sub_0204B7C8

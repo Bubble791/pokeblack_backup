@@ -1147,7 +1147,7 @@ ovy187_21e94a8: ; 0x021E94A8
 	mov r0, #0
 	bl sub_02046BE0
 	ldr r0, _021E94FC ; =0x021E9F2C
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	mov r0, #0
 	bl sub_02046DF8
 	bl sub_02046DE0
@@ -1179,7 +1179,7 @@ ovy187_21e9504: ; 0x021E9504
 	ldrh r4, [r0]
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	mov r0, #5
 	str r0, [sp]
 	ldr r0, _021E9704 ; =0x04000050
@@ -1472,7 +1472,7 @@ ovy187_21e9780: ; 0x021E9780
 	sub sp, #0xc
 	add r5, r0, #0
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #3
 	bl sub_021E9710
 	mov r1, #0x18
@@ -2026,7 +2026,7 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	str r0, [r3]
 	add r0, r2, #0
 	add r2, r6, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x80
 	mov r1, #1
 	add r2, r6, #0

@@ -10,8 +10,8 @@
 .public sub_0204B7C8
 .public sub_020275F8
 .public sub_02046BE0
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_0204476C
@@ -119,7 +119,7 @@
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_021BD494
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public sub_02048210
@@ -219,7 +219,7 @@
 .public Oam_SetSpritePosData
 .public Oam_GetSpritePosData
 .public sub_021BB7C4
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0202D7E0
 .public sub_0204AA30
 .public sub_0202D814

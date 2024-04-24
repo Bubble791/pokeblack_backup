@@ -3817,7 +3817,7 @@ ovy320_219eb70: ; 0x0219EB70
 	bl sub_02046BE0
 	ldr r7, _0219EC08 ; =0x0219EFD8
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add r0, r6, #0
 	bl sub_02046DF8
 	bl sub_02046DE0
@@ -3939,9 +3939,9 @@ ovy320_219eca0: ; 0x0219ECA0
 	mov r4, #0
 	blx MI_CpuFill8
 	add r0, r5, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0219ECF8 ; =0x0219EFAC
 	bl sub_02044710
 	ldr r7, _0219ECFC ; =0x0219F008
@@ -4029,7 +4029,7 @@ ovy320_219ed44: ; 0x0219ED44
 	ldr r0, _0219ED80 ; =0x0219EFBC
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x80
 	mov r1, #0
 	add r2, r4, #0

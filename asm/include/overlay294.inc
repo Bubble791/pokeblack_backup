@@ -26,8 +26,8 @@
 .public sub_02046DE0
 .public sub_02046CF0
 .public sub_02046D78
-.public sub_02046C40
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysSetVRAMBanks
 .public sub_020232D0
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
@@ -38,8 +38,8 @@
 .public sub_021A1F0C
 .public sub_021A207C
 .public MI_CpuFill8
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045708
@@ -50,8 +50,8 @@
 .public sub_02046E10
 .public sub_02045E1C
 .public MI_CpuFill8
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public sub_0204476C
 .public sub_0204476C
@@ -63,7 +63,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public MI_CpuFill8
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC

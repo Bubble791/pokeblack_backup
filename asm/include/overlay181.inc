@@ -102,12 +102,12 @@
 .public sub_02027B64
 .public sub_02027B4C
 .public sub_02027B4C
-.public sub_02046C40
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public sub_02044C98
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC

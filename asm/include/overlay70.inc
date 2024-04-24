@@ -33,7 +33,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgSysLoadData
 .public GFL_FontCreate
@@ -124,7 +124,7 @@
 .public sub_02024D00
 .public sub_0202D7E0
 .public sub_0204AA30
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
@@ -160,7 +160,7 @@
 .public sub_0204C124
 .public sub_02046CFC
 .public sub_02046D84
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -410,5 +410,5 @@
 .public sub_0217F658
 .public sub_0217F658
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_0217CF28

@@ -100,12 +100,12 @@
 .public MIi_CpuClearFast
 .public MIi_CpuClearFast
 .public MIi_CpuClearFast
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_02048D28
 .public sub_02044BB8
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_02046DE0
 .public sub_020480A8
 .public sub_02048F44

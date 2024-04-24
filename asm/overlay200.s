@@ -240,11 +240,11 @@ ovy200_21b3128: ; 0x021B3128
 	orr r0, r1
 	strh r0, [r2]
 	add r0, r7, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldrh r0, [r5]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _021B321C ; =0x021B383C
 	bl sub_02044710
 	ldr r0, _021B3220 ; =0x021B38AC
@@ -288,7 +288,7 @@ ovy200_21b3128: ; 0x021B3128
 	add r0, r2, #0
 	ldrh r2, [r5]
 	add r1, r7, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	ldrh r2, [r5]
 	mov r0, #0x30
 	mov r1, #0

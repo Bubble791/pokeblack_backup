@@ -55,7 +55,7 @@
 .public sub_0203A7F4
 .public sub_0204B794
 .public GFL_ArcToolFree
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_020450CC
@@ -70,7 +70,7 @@
 .public sub_0204AF50
 .public sub_02044B84
 .public sub_02044528
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_0204BE9C
@@ -112,7 +112,7 @@
 .public sub_0204B0B8
 .public sub_0204B0B8
 .public sub_02024D00
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
@@ -664,4 +664,4 @@
 .public sub_0204BE64
 .public sub_0204C108
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks

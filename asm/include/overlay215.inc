@@ -75,7 +75,7 @@
 .public sub_02017BCC
 .public GFL_FontCreate
 .public GFL_TCBExMgrCreate
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044528
 .public GFL_TCBExMgrFree
 .public sub_02022DA8
@@ -286,7 +286,7 @@
 .public sub_0203A610
 .public GFL_HeapFree
 .public G2x_SetBlendAlpha_
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
@@ -324,7 +324,7 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC
@@ -343,7 +343,7 @@
 .public sub_0203A1D0
 .public sub_02045A5C
 .public sub_0204B7C8
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -449,7 +449,7 @@
 .public sub_02034264
 .public sub_02021A18
 .public sub_0204BF98
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public GFL_FontCreate
 .public GFL_TCBExMgrCreate
 .public sub_02021998
@@ -547,7 +547,7 @@
 .public sub_021A9FA0
 .public sub_021AA034
 .public sub_0204B794
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC
@@ -722,7 +722,7 @@
 .public GCTX_HIDGetPressedKeys
 .public GCTX_HIDGetPressedKeys
 
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02033120
 .public sub_0204C488
 .public sub_0204C124

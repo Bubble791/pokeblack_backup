@@ -462,11 +462,11 @@ _02199C7C: .word 0x00003FF8
 	thumb_func_start sub_02199C80
 sub_02199C80: ; 0x02199C80
 	ldr r0, _02199C88 ; =0x0219BA28
-	ldr r3, _02199C8C ; =sub_02046C40
+	ldr r3, _02199C8C ; =GFL_BGSysSetVRAMBanks
 	bx r3
 	nop
 _02199C88: .word 0x0219BA28
-_02199C8C: .word sub_02046C40
+_02199C8C: .word GFL_BGSysSetVRAMBanks
 	thumb_func_end sub_02199C80
 
 	thumb_func_start ovy258_2199c90
@@ -474,9 +474,9 @@ ovy258_2199c90: ; 0x02199C90
 	push {r3, r4, r5, lr}
 	sub sp, #0xd0
 	mov r0, #0x4f
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	mov r0, #0x4f
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r4, _02199E14 ; =0x0219BA58
 	add r3, sp, #0xc0
 	add r2, r3, #0
@@ -2613,7 +2613,7 @@ ovy258_219ae30: ; 0x0219AE30
 	ldr r0, _0219AE64 ; =0x0219B9E4
 	ldr r1, _0219AE68 ; =0x0219BA28
 	mov r2, #0x4f
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r4, #0xe
 	mov r0, #0xe
 	mov r1, #0

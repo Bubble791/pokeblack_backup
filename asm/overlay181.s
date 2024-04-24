@@ -1000,11 +1000,11 @@ ovy181_219d670: ; 0x0219D670
 	orr r0, r1
 	strh r0, [r2]
 	ldr r0, _0219D79C ; =0x021A4158
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldrh r0, [r5]
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldrh r0, [r5]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0219D7A0 ; =0x021A4048
 	bl sub_02044710
 	ldr r0, _0219D7A4 ; =0x021A4098
@@ -1070,7 +1070,7 @@ _0219D740:
 	add r0, r2, #0
 	ldrh r2, [r5]
 	ldr r1, _0219D79C ; =0x021A4158
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	ldrh r2, [r5]
 	mov r0, #8
 	mov r1, #0

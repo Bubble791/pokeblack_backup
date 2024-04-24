@@ -503,11 +503,11 @@ _0217CD0C: .word 0x04001000
 	thumb_func_start sub_0217CD10
 sub_0217CD10: ; 0x0217CD10
 	ldr r0, _0217CD18 ; =0x0217D6B4
-	ldr r3, _0217CD1C ; =sub_02046C40
+	ldr r3, _0217CD1C ; =GFL_BGSysSetVRAMBanks
 	bx r3
 	nop
 _0217CD18: .word 0x0217D6B4
-_0217CD1C: .word sub_02046C40
+_0217CD1C: .word GFL_BGSysSetVRAMBanks
 	thumb_func_end sub_0217CD10
 
 	thumb_func_start ovy253_217cd20
@@ -540,7 +540,7 @@ ovy253_217cd4c: ; 0x0217CD4C
 	ldr r0, _0217CD70 ; =0x02093F08
 	ldr r1, _0217CD74 ; =0x0217D6B4
 	lsr r2, r2, #0x10
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
 	bl sub_02046CFC
@@ -773,10 +773,10 @@ ovy253_217cf2c: ; 0x0217CF2C
 	add r6, r0, #0
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _0217CFA0 ; =0x0217D658
 	bl sub_02044710
 	lsl r0, r5, #0x10

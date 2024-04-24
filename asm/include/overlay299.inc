@@ -10,7 +10,7 @@
 .public sub_0204B7C8
 .public sub_020275F8
 .public sub_02005680
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045738
@@ -210,7 +210,7 @@
 .public GameData_IsShortcutRegistered
 .public sub_02017644
 .public sub_02017644
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public sub_02048210
 .public sub_020480A8
@@ -278,7 +278,7 @@
 .public Oam_SetSpritePosData
 .public Oam_GetSpritePosData
 .public sub_0219FCFC
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204AA30
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
@@ -419,7 +419,7 @@
 .public sub_0203D564
 
 .public GFL_TCBRemove
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_0204C550
 .public sub_0204C4A0
 .public sub_0204C560

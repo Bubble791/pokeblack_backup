@@ -1189,7 +1189,7 @@ _0217D2D6:
 	add r2, r4, #0
 	blx MIi_CpuClearFast
 	add r0, sp, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	add sp, #0x30
 	pop {r4, pc}
 	.align 2, 0
@@ -1212,7 +1212,7 @@ ovy312_217d340: ; 0x0217D340
 	ldmia r3!, {r0, r1}
 	stmia r2!, {r0, r1}
 	add r0, r4, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
 	bl sub_02044710
 	mov r0, #0
@@ -1226,7 +1226,7 @@ ovy312_217d340: ; 0x0217D340
 	mov r0, #1
 	bl sub_02044BB8
 	add r0, r4, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	bl sub_02046DE0
 	add sp, #0x1c
 	pop {r4, r5, pc}

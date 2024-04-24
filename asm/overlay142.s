@@ -25,7 +25,7 @@
 	.public ovy142_219ad14
 	.public ovy142_219ad30
 	.public ovy142_219ae10
-	.public ovy142_219ae90
+	.public BagMenu_SelectAmountItemToss
 	.public BagMenu_TrySellItem
 	.public ovy142_219b0a0
 	.public BagMenu_PrintSellItemYesNo

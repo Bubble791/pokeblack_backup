@@ -8,8 +8,8 @@
 .public sub_02046CF0
 .public sub_02046D78
 .public sub_0204AA30
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02026DC0
 .public GFL_FontCreate
 .public sub_0202778C
@@ -46,7 +46,7 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_02046CF0
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public MIi_CpuClear32
 .public MIi_CpuClear32
 .public MIi_CpuClear32
@@ -151,7 +151,7 @@
 .public sub_0208D868
 .public sub_021B78B4
 .public sub_021B8578
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_02046CFC
 .public sub_0204BF1C
 .public sub_0204C028

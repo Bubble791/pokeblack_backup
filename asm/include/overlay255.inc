@@ -19,8 +19,8 @@
 .public sub_0204B7C8
 .public sub_020275F8
 .public sub_02046BE0
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_0204476C
@@ -1729,7 +1729,7 @@
 .public sub_021CBE58
 .public sub_021D1E2C
 .public sub_0202BA60
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public BmpWin_CreateDynamic
 .public sub_02048210
 .public sub_020480A8
@@ -1892,7 +1892,7 @@
 .public sub_02046D84
 .public sub_0204B758
 .public sub_021BB86C
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -2856,7 +2856,7 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02046BE0
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046CF0
@@ -2872,8 +2872,8 @@
 .public sub_021D6EF4
 .public sub_021D6F60
 .public MI_CpuFill8
-.public sub_020444A4
-.public sub_02048080
+.public GFL_BGSysCreate
+.public BmpWin_InitAllocator
 .public sub_02044710
 .public sub_0204476C
 .public sub_02045708
@@ -2883,7 +2883,7 @@
 .public sub_02044528
 .public MI_CpuFill8
 .public MI_CpuFill8
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC

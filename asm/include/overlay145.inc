@@ -44,14 +44,14 @@
 .public GFL_MsgDataFree
 .public sub_02022DA8
 .public sub_02046BE0
-.public sub_02046C40
+.public GFL_BGSysSetVRAMBanks
 .public sub_02046DF8
 .public sub_02046DE0
 .public sub_02046CF0
 .public sub_020232D0
 .public sub_0202E678
 .public GFL_VBlankTCBAdd
-.public sub_020444A4
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02044C98
@@ -100,7 +100,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_020480A8
 .public sub_02044528
-.public sub_0204B6A8
+.public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_02046CFC
@@ -188,7 +188,7 @@
 .public sub_0204C488
 .public Oam_SetSpritePosData
 .public sub_0204C488
-.public sub_02048080
+.public BmpWin_InitAllocator
 .public sub_0219E118
 .public BmpWin_CreateDynamic
 .public sub_0204826C

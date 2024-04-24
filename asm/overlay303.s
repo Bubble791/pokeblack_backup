@@ -4232,11 +4232,11 @@ _021A1D68:
 	thumb_func_start sub_021A1D6C
 sub_021A1D6C: ; 0x021A1D6C
 	ldr r0, _021A1D74 ; =0x021A36C8
-	ldr r3, _021A1D78 ; =sub_02046C40
+	ldr r3, _021A1D78 ; =GFL_BGSysSetVRAMBanks
 	bx r3
 	nop
 _021A1D74: .word 0x021A36C8
-_021A1D78: .word sub_02046C40
+_021A1D78: .word GFL_BGSysSetVRAMBanks
 	thumb_func_end sub_021A1D6C
 
 	thumb_func_start ovy303_21a1d7c
@@ -4251,7 +4251,7 @@ ovy303_21a1d7c: ; 0x021A1D7C
 	mov r2, #2
 	bl GXS_LoadBGPltt
 	mov r0, #0xa5
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r4, _021A1F7C ; =0x021A3578
 	add r3, sp, #0x104
 	add r2, r3, #0
@@ -4499,7 +4499,7 @@ ovy303_21a1fcc: ; 0x021A1FCC
 	add r5, r0, #0
 	mov r0, #0xa5
 	mov r7, #0xa5
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #0xa5
 	bl sub_02021998
 	ldr r4, _021A20D0 ; =0x00000574
@@ -4627,7 +4627,7 @@ ovy303_21a20d4: ; 0x021A20D4
 	str r0, [r3]
 	add r0, r2, #0
 	mov r2, #0xa5
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	add sp, #0x1c
 	pop {r3, r4, pc}
 	.align 2, 0

@@ -33,6 +33,22 @@ enum
     BAG_POCKET_MAX
 };
 
+enum
+{
+    BAG_OPTION_USE,
+    BAG_OPTION_FREE,
+    BAG_OPTION_LOOK_MAIL,
+    BAG_OPTION_TOSS,
+    BAG_OPTION_REGIT,
+    BAG_OPTION_UNREGIT,
+    BAG_OPTION_TAKE_MAIL,
+    BAG_OPTION_7,
+    BAG_OPTION_TO_FREE_SPACE,
+    BAG_OPTION_FREESPACE_BACK,
+    BAG_OPTION_10,
+    BAG_OPTION_11,
+};
+
 #define SORT_MORE_TO_LESS   0
 #define SORT_LESS_TO_MORE   1
 
@@ -383,7 +399,7 @@ extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
 extern void ovy142_219ac70(BagView*);
 extern void BagMenu_MoveItemToFreeSpace(BagView*);
-void ovy142_219ae30(BagView*);
+void BagMenu_ItemToss(BagView*);
 extern int sub_0219BE00(BagView*);
 extern int ovy142_219be18(BagView*, int);
 extern void sub_0219F0AC(BagView*);

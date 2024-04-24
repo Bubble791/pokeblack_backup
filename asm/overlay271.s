@@ -6801,7 +6801,7 @@ _021F31EC:
 	mov r0, #0
 	bl sub_02046BE0
 	add r0, r6, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r0, [sp, #4]
 	bl sub_02046DF8
 	bl sub_02046DE0
@@ -6913,9 +6913,9 @@ ovy271_21f32f8: ; 0x021F32F8
 	mov r4, #0
 	blx MI_CpuFill8
 	add r0, r5, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r5, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	ldr r0, _021F3350 ; =0x021F7758
 	bl sub_02044710
 	ldr r7, _021F3354 ; =0x021F77F4
@@ -7003,7 +7003,7 @@ ovy271_21f339c: ; 0x021F339C
 	ldr r0, _021F33D8 ; =0x021F7778
 	add r1, r6, #0
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x80
 	mov r1, #0
 	add r2, r4, #0

@@ -835,7 +835,7 @@ void ovy142_219a4d0(BagView *bagView)
             bagView->unk89C = bagView->unk848[iVar3];
             switch (bagView->unk89C)
             {
-            case 0:
+            case BAG_OPTION_USE:
                 int type = BagSave_GetExistingItemPocket(bagView->bagSave, bagView->selectItem);
                 ovy142_219ff40(bagView, 0);
                 if (type != 5)
@@ -901,7 +901,7 @@ void ovy142_219a4d0(BagView *bagView)
                     }
                 }
                 break;
-            case 1:
+            case BAG_OPTION_FREE:
                 ovy142_219ff40(bagView, 0);
                 if (sub_0202E9DC(bagView->unkC, 0) == 0)
                 {
@@ -909,18 +909,18 @@ void ovy142_219a4d0(BagView *bagView)
                     BagMenu_SetRunFunc(bagView, 0);
                     break;
                 }
-                GFL_MsgDataLoadStrbuf(bagView->msgData, 0x39, bagView->stringBuff1);
+                GFL_MsgDataLoadStrbuf(bagView->msgData, 57, bagView->stringBuff1);
                 GFL_CopyVarForText(bagView->wordSetSystem, 0, bagView->unk8);
                 GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
                 BagMenu_SetRunFunc(bagView, ovy142_219a2ac);
                 break;
 
-            case 3:
-                BagMenu_SetRunFunc(bagView, ovy142_219ae30);
+            case BAG_OPTION_TOSS:
+                BagMenu_SetRunFunc(bagView, BagMenu_ItemToss);
                 break;
             
-            case 8:
-            case 9:
+            case BAG_OPTION_TO_FREE_SPACE:
+            case BAG_OPTION_FREESPACE_BACK:
                 BagMenu_SetRunFunc(bagView, BagMenu_MoveItemToFreeSpace);
                 break;
             case 4:
@@ -936,7 +936,7 @@ void ovy142_219a4d0(BagView *bagView)
                 }
 
                 break;
-            case 2:
+            case BAG_OPTION_LOOK_MAIL:
                 ovy142_219ff40(bagView, 0);
                 int item = bagView->selectItem;
                 if ((0x89 <= item) && (item <= 0x94))
@@ -966,7 +966,7 @@ void ovy142_219a4d0(BagView *bagView)
                 BagMenu_SetRunFunc(bagView, 0);
                 break;
 
-            case 6:
+            case BAG_OPTION_TAKE_MAIL:
                 bagView->unk898 = 2;
                 ovy142_219ff40(bagView, 0);
                 BagMenu_SetRunFunc(bagView, 0);
@@ -1395,23 +1395,22 @@ void ovy142_219ae10(BagView *bagView)
     }
 }
 
-extern void ovy142_219ae90(BagView*);
+extern void BagMenu_SelectAmountItemToss(BagView*);
 extern void ovy142_219b438(BagView*, int);
 
-void ovy142_219ae30(BagView *bagView)
+void BagMenu_ItemToss(BagView *bagView)
 {
     bagView->selectAmount = 1;
     ovy142_219b438(bagView, 1);
     GFL_MsgDataLoadStrbuf(bagView->msgData, 0x35, bagView->stringBuff1);
     ovy142_21999d8(bagView, 0, bagView->selectItem, 1, 0);
-    GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2,
-                    bagView->stringBuff1);
+    GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
     sub_0219F760(bagView);
-    BagMenu_SetRunFunc(bagView, ovy142_219ae90);
+    BagMenu_SetRunFunc(bagView, BagMenu_SelectAmountItemToss);
 }
 
 
-void ovy142_219ae90(BagView *bagView)
+void BagMenu_SelectAmountItemToss(BagView *bagView)
 {
     int iVar2;
     u32 uVar3;
@@ -1424,7 +1423,7 @@ void ovy142_219ae90(BagView *bagView)
         {
             uVar3 = GCTX_HIDGetPressedKeys();
             if ((uVar3 & KEY_A))
-                {
+            {
                 iVar2 = 0;
                 sub_0203D564(0);
             }
@@ -1443,11 +1442,10 @@ void ovy142_219ae90(BagView *bagView)
         {
             GFL_SndSEPlay(0x54C);
             ovy142_219b46c(bagView);
-            GFL_MsgDataLoadStrbuf(bagView->msgData, 0x37, bagView->stringBuff1);
+            GFL_MsgDataLoadStrbuf(bagView->msgData, 55, bagView->stringBuff1);
             ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
             StringSetNumber(bagView->wordSetSystem, 1, bagView->selectAmount, 3, 0, 1);
-            GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2,
-                            bagView->stringBuff1);
+            GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
             sub_0219F760(bagView);
             BagMenu_SetRunFunc(bagView, ovy142_219ae10);
         }

@@ -617,8 +617,8 @@
 .public sub_02044BD8
 .public sub_02044BD8
 .public sub_02045708
-.public sub_02046C40
-.public sub_020444A4
+.public GFL_BGSysSetVRAMBanks
+.public GFL_BGSysCreate
 .public sub_02044710
 .public sub_0204476C
 .public sub_02044BD8

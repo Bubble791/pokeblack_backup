@@ -60,11 +60,11 @@ ovy264_219990c: ; 0x0219990C
 	thumb_func_start sub_0219991C
 sub_0219991C: ; 0x0219991C
 	ldr r0, _02199924 ; =0x0219A0B0
-	ldr r3, _02199928 ; =sub_02046C40
+	ldr r3, _02199928 ; =GFL_BGSysSetVRAMBanks
 	bx r3
 	nop
 _02199924: .word 0x0219A0B0
-_02199928: .word sub_02046C40
+_02199928: .word GFL_BGSysSetVRAMBanks
 	thumb_func_end sub_0219991C
 
 	thumb_func_start ovy264_219992c

@@ -7338,10 +7338,10 @@ ovy194_21bb1ec: ; 0x021BB1EC
 	push {r4, lr}
 	add r4, r0, #0
 	mov r0, #0x91
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r0, _021BB214 ; =0x000005F4
 	ldrh r0, [r4, r0]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	add r0, r4, #0
 	bl ovy194_21c41fc
 	add r0, r4, #0
@@ -22368,13 +22368,13 @@ sub_021C2C64: ; 0x021C2C64
 	ldrh r2, [r3, r2]
 	ldr r0, _021C2C78 ; =0x021C6ACC
 	ldr r1, _021C2C7C ; =0x021C6B44
-	ldr r3, _021C2C80 ; =sub_0204B6A8
+	ldr r3, _021C2C80 ; =Oam_CreateSystem
 	bx r3
 	nop
 _021C2C74: .word 0x000005F4
 _021C2C78: .word 0x021C6ACC
 _021C2C7C: .word 0x021C6B44
-_021C2C80: .word sub_0204B6A8
+_021C2C80: .word Oam_CreateSystem
 	thumb_func_end sub_021C2C64
 
 	thumb_func_start ovy194_21c2c84
@@ -25188,12 +25188,12 @@ ovy194_21c41fc: ; 0x021C41FC
 	ldr r5, _021C4228 ; =0x021C6B44
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r2, _021C422C ; =0x000005F4
 	ldr r0, _021C4230 ; =0x021C6ACC
 	ldrh r2, [r4, r2]
 	add r1, r5, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0
 	bl sub_021C45EC
 	mov r0, #0

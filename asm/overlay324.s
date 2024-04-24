@@ -749,7 +749,7 @@ _0219D484: .word 0xFFFF1FFF
 ovy324_219d488: ; 0x0219D488
 	push {r3, lr}
 	ldr r0, _0219D498 ; =0x0219F62C
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	ldr r0, _0219D49C ; =0x0219F16C
 	bl sub_02044710
 	pop {r3, pc}
@@ -908,9 +908,9 @@ ovy324_219d5c4: ; 0x0219D5C4
 	add r5, r0, #0
 	add r0, r4, #0
 	add r6, r1, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r4, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #1
 	lsl r0, r0, #0xc
 	str r0, [sp]
@@ -950,9 +950,9 @@ ovy324_219d620: ; 0x0219D620
 	add r5, r0, #0
 	add r0, r4, #0
 	add r6, r1, #0
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	add r0, r4, #0
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	mov r0, #1
 	lsl r0, r0, #0xc
 	str r0, [sp]
@@ -2394,7 +2394,7 @@ ovy324_219e1d8: ; 0x0219E1D8
 	ldr r0, _0219E204 ; =0x02093F08
 	ldr r1, _0219E208 ; =0x0219F62C
 	add r2, r4, #0
-	bl sub_0204B6A8
+	bl Oam_CreateSystem
 	mov r0, #0x40
 	mov r1, #0
 	add r2, r4, #0

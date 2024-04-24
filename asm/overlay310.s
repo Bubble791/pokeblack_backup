@@ -28,7 +28,7 @@ _0219CEA2:
 	add r0, r4, #0
 	bl sub_0219D13C
 	ldr r0, _0219CEDC ; =0x021A68B8
-	bl sub_02046C40
+	bl GFL_BGSysSetVRAMBanks
 	mov r0, #0
 	bl sub_02046DF8
 	ldrh r0, [r4]
@@ -463,7 +463,7 @@ ovy310_219d188: ; 0x0219D188
 	thumb_func_start ovy310_219d198
 ovy310_219d198: ; 0x0219D198
 	push {r3, lr}
-	bl sub_020444A4
+	bl GFL_BGSysCreate
 	ldr r0, _0219D1EC ; =0x021A6848
 	bl sub_02044710
 	ldr r1, _0219D1F0 ; =0x021A6878
@@ -2307,7 +2307,7 @@ ovy310_219df88: ; 0x0219DF88
 	mov r3, #0x10
 	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #4]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	pop {r3, r4, r5, pc}
 	nop
 _0219E01C: .word 0x021A6904
@@ -7045,7 +7045,7 @@ ovy310_21a0368: ; 0x021A0368
 	str r4, [sp]
 	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #8]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	pop {r3, r4, r5, pc}
 	nop
 _021A040C: .word 0x021A6AD8
@@ -14078,7 +14078,7 @@ ovy310_21a39e0: ; 0x021A39E0
 	mov r3, #0x10
 	bl G2x_SetBlendAlpha_
 	ldrh r0, [r5, #4]
-	bl sub_02048080
+	bl BmpWin_InitAllocator
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021A3A80: .word 0x021A7074
@@ -15569,12 +15569,12 @@ sub_021A44F0: ; 0x021A44F0
 	ldrh r2, [r2]
 	ldr r0, _021A44FC ; =0x021A775C
 	ldr r1, _021A4500 ; =0x021A7794
-	ldr r3, _021A4504 ; =sub_0204B6A8
+	ldr r3, _021A4504 ; =Oam_CreateSystem
 	bx r3
 	.align 2, 0
 _021A44FC: .word 0x021A775C
 _021A4500: .word 0x021A7794
-_021A4504: .word sub_0204B6A8
+_021A4504: .word Oam_CreateSystem
 	thumb_func_end sub_021A44F0
 
 	thumb_func_start sub_021A4508
