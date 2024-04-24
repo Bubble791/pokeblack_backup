@@ -297,15 +297,15 @@ GFL_VBlankTCBAdd: ; 0x020056FC
 _02005714: .word 0x0209DA58
 	thumb_func_end GFL_VBlankTCBAdd
 
-	thumb_func_start sub_02005718
-sub_02005718: ; 0x02005718
+	thumb_func_start GFL_VBlankGetTCBMgr
+GFL_VBlankGetTCBMgr: ; 0x02005718
 	ldr r0, _02005720 ; =0x0209DA58
 	ldr r0, [r0, #0x14]
 	ldr r0, [r0, #0x20]
 	bx lr
 	.align 2, 0
 _02005720: .word 0x0209DA58
-	thumb_func_end sub_02005718
+	thumb_func_end GFL_VBlankGetTCBMgr
 
 	thumb_func_start sub_02005724
 sub_02005724: ; 0x02005724

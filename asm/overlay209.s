@@ -12911,7 +12911,7 @@ _021C0428:
 	mov r0, #0x2e
 	bl sub_0204FDF8
 	add r7, r0, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r3, r0, #0
 	add r0, r6, #4
 	ldr r0, [r4, r0]

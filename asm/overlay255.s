@@ -32614,7 +32614,7 @@ _021CBD50:
 	mov r2, #0
 	lsl r3, r3, #8
 	bl sub_02026F7C
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	mov r2, #3
 	str r6, [sp]
 	mov r1, #0x10
@@ -32659,7 +32659,7 @@ _021CBD9A:
 	str r0, [r1, r5]
 	b _021CBE0C
 _021CBDC8:
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	mov r1, #0x10
 	str r1, [sp]
 	mov r3, #0

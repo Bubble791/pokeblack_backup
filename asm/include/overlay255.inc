@@ -1591,10 +1591,10 @@
 .public GFL_SndSEPlay
 .public sub_021CBEE8
 .public sub_02026F7C
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public sub_02007B00
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet

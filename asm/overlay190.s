@@ -3174,7 +3174,7 @@ ovy190_21b4978: ; 0x021B4978
 	add r0, #0x80
 	str r1, [r0]
 _021B4998:
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r4, #0
 	add r1, #0x4c
 	ldrh r1, [r1]

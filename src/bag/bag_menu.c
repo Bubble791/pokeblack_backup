@@ -280,9 +280,9 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
         v3 = 12;
     }
     a1->unk8B8 = a2;
-    sub_0204C4D4(a1->unk724[a1->unk8B8], 0);
-    Oam_SetOamAnimIndex(a1->unk724[a1->unk8B8], v3);
-    sub_0204C520(a1->unk724[a1->unk8B8], 1);
+    sub_0204C4D4(a1->bottomIconOam[a1->unk8B8], 0);
+    Oam_SetOamAnimIndex(a1->bottomIconOam[a1->unk8B8], v3);
+    sub_0204C520(a1->bottomIconOam[a1->unk8B8], 1);
     a1->unk8BC = a3;
     BagMenu_SetRunFunc(a1, ovy142_219ca90);
 }
@@ -292,7 +292,7 @@ void ovy142_219ca90(BagView *bagView);
 
 void ovy142_219ca90(BagView *bagView)
 {
-    if (!sub_0204C560(bagView->unk724[bagView->unk8B8]))
+    if (!sub_0204C560(bagView->bottomIconOam[bagView->unk8B8]))
     {
         bagView->unk8B8 = 0;
         BagMenu_SetRunFunc(bagView, bagView->unk8BC);
@@ -322,9 +322,9 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
     }
     bagView->unk8B8 = a3;
     bagView->unk8BA = 6;
-    sub_0204C4D4(bagView->unk724[bagView->unk8B8], 0);
-    Oam_SetOamAnimIndex(bagView->unk724[bagView->unk8B8], v4);
-    sub_0204C520(bagView->unk724[bagView->unk8B8], 1);
+    sub_0204C4D4(bagView->bottomIconOam[bagView->unk8B8], 0);
+    Oam_SetOamAnimIndex(bagView->bottomIconOam[bagView->unk8B8], v4);
+    sub_0204C520(bagView->bottomIconOam[bagView->unk8B8], 1);
     bagView->unk8BC = a4;
     BagMenu_SetRunFunc(bagView, ovy142_219cb64);
 }
@@ -2032,7 +2032,7 @@ void ovy142_219ed8c(BagView *a1)
         temp.anim = data1[i];
         if (i == 2)
             temp.y += 4;
-        a1->unk724[i] = Oam_CreateSprite(
+        a1->bottomIconOam[i] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk56C,
             a1->unk564,
@@ -2041,8 +2041,8 @@ void ovy142_219ed8c(BagView *a1)
             0,
             a1->heapId);
         
-        sub_0204C124(a1->unk724[i], 1);
-        sub_0204C5C8(a1->unk724[i], 0);
+        sub_0204C124(a1->bottomIconOam[i], 1);
+        sub_0204C5C8(a1->bottomIconOam[i], 0);
     }
     
     temp.x = 146;
@@ -2061,9 +2061,9 @@ void ovy142_219ed8c(BagView *a1)
     sub_0204C520(a1->unk740, 1);
     sub_0204C5C8(a1->unk740, 0);
     if (!BagMenu_IsNotNormalBagMode(a1))
-        sub_0204C124(a1->unk724[2], 0);
+        sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 0);
     if (a1->bagMode == BAG_MODE_BOX_SELECT_ITEM_HELD)
-        sub_0204C124(a1->unk724[3], 0);
+        sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_RETURN_FIELD], 0);
 
     v11 = data_021A0FCC;
     v10 = data_021A0FC8;
@@ -2076,7 +2076,7 @@ void ovy142_219ed8c(BagView *a1)
         temp.unk = 0;
         u8 newnum = i + 5;
 
-        a1->unk724[newnum] = Oam_CreateSprite(
+        a1->bottomIconOam[newnum] = Oam_CreateSprite(
             a1->spriteGroup,
             a1->unk56C,
             a1->unk564,
@@ -2084,9 +2084,9 @@ void ovy142_219ed8c(BagView *a1)
             &temp,
             0,
             a1->heapId);
-        sub_0204C520(a1->unk724[newnum], 1);
-        sub_0204C124(a1->unk724[newnum], 0);
-        sub_0204C5C8(a1->unk724[newnum], 0);
+        sub_0204C520(a1->bottomIconOam[newnum], 1);
+        sub_0204C124(a1->bottomIconOam[newnum], 0);
+        sub_0204C5C8(a1->bottomIconOam[newnum], 0);
 
     }
 }
@@ -2493,8 +2493,8 @@ void BagMenu_PrintMoneyString(BagView *a1)
 
 void ovy142_219fa3c(BagView *a1)
 {
-    sub_0204C124(a1->unk724[0], 0);
-    sub_0204C124(a1->unk724[1], 0);
+    sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 0);
+    sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 0);
     sub_020484B4(a1->pocketNameBmpWin.winData);
     BagMenu_PrintMoneyString(a1);
 }
@@ -2503,8 +2503,8 @@ void ovy142_219fa6c(BagView *a1);
 
 void ovy142_219fa6c(BagView *a1)
 {
-    sub_0204C124(a1->unk724[0], 1);
-    sub_0204C124(a1->unk724[1], 1);
+    sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 1);
+    sub_0204C124(a1->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 1);
     sub_020484B4(a1->MoneyBmpWin.winData);
     sub_020484B4(a1->moneyStringBmpWin.winData);
     ovy142_219f8ec(a1, a1->itemPocket);
@@ -2694,7 +2694,7 @@ extern int sub_0204C138(int);
 void ovy142_219fda8(BagView *bagView, int a2)
 {
     int pocket;     // r0
-    int v6;     // r7
+    int isRegist;     // r7
     int v7;     // r0
     int v8;     // r0
     int v9;     // r0
@@ -2706,46 +2706,48 @@ void ovy142_219fda8(BagView *bagView, int a2)
     {
         bagView->unk8AC = a2;
         pocket = BagMenu_GetPocketRegistId(bagView->itemPocket);
-        v6 = GameData_IsPocketRegistered(bagView->m_GameData, pocket);
+        isRegist = GameData_IsPocketRegistered(bagView->m_GameData, pocket);
         if (a2 == 1)
         {
-            v7 = sub_02005718();
+            v7 = GFL_VBlankGetTCBMgr();
             v8 = sub_02026FE4(bagView->unk8A8, 4, 18383, 0, 0, 0, 0, v7);
-            v9 = sub_02005718();
+            v9 = GFL_VBlankGetTCBMgr();
             sub_02026FE4(bagView->unk8A8, 1, 1, 0, 0, 0, 0, v9);
             G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, 0);
             ovy142_219ff60(bagView);
-            Oam_SetOamAnimIndex(bagView->unk724[0], 4);
-            Oam_SetOamAnimIndex(bagView->unk724[1], 5);
-            Oam_SetOamAnimIndex(bagView->unk724[3], 0);
-            if (v6 == 1)
-                Oam_SetOamAnimIndex(bagView->unk724[2], 7);
+
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 4);
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 5);
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_RETURN_FIELD], 0);
+
+            if (isRegist == 1)
+                Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 7);
             else
-                Oam_SetOamAnimIndex(bagView->unk724[2], 6);
+                Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 6);
             ovy142_219ff40(bagView, 1);
         }
         else
         {
             sub_02026F7C(bagView->unk8A8, 2, 0, 512);
-            v12 = sub_02005718();
+            v12 = GFL_VBlankGetTCBMgr();
             v13 = sub_02026FE4(bagView->unk8A8, 4, 18383, 0, 8, 8, 0, v12);
-            v14 = sub_02005718();
+            v14 = GFL_VBlankGetTCBMgr();
             sub_02026FE4(bagView->unk8A8, 1, 1, 0, 8, 8, 0, v14);
 
-            if (bagView->bagMode == BAG_MODE_SELL_ITEM && !sub_0204C138(bagView->unk724[0]))
+            if (bagView->bagMode == BAG_MODE_SELL_ITEM && !sub_0204C138(bagView->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT]))
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 2, -8);
             else
                 G2x_SetBlendBrightness_(&reg_G2_BLDCNT, 6, -8);
             
             Oam_SetOamAnimIndex(bagView->unk744, 4);
             Oam_SetOamAnimIndex(bagView->unk740, 2);
-            Oam_SetOamAnimIndex(bagView->unk724[0], 18);
-            Oam_SetOamAnimIndex(bagView->unk724[1], 19);
-            Oam_SetOamAnimIndex(bagView->unk724[3], 14);
-            if (v6 == 1)
-                Oam_SetOamAnimIndex(bagView->unk724[2], 22);
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 18);
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 19);
+            Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_RETURN_FIELD], 14);
+            if (isRegist == 1)
+                Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 22);
             else
-                Oam_SetOamAnimIndex(bagView->unk724[2], 21);
+                Oam_SetOamAnimIndex(bagView->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 21);
         }
     }
 
@@ -2754,9 +2756,9 @@ void ovy142_219fda8(BagView *bagView, int a2)
 void ovy142_219ff40(BagView *a1, int a2)
 {
     if (a2 == 1)
-        Oam_SetOamAnimIndex(a1->unk724[4], 1);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_BACK], 1);
     else
-        Oam_SetOamAnimIndex(a1->unk724[4], 15);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_BACK], 15);
 }
 
 void ovy142_219ff60(BagView *a1)
@@ -2794,25 +2796,25 @@ void ovy142_219ffe8(BagView *a1, int a2)
     if (a2 == 1)
     {
         ovy142_219ff60(a1);
-        Oam_SetOamAnimIndex(a1->unk724[0], 4);
-        Oam_SetOamAnimIndex(a1->unk724[1], 5);
-        Oam_SetOamAnimIndex(a1->unk724[3], 0);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 4);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 5);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_RETURN_FIELD], 0);
         if (v5 == 1)
-            return Oam_SetOamAnimIndex(a1->unk724[2], 7);
+            return Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 7);
         else
-            return Oam_SetOamAnimIndex(a1->unk724[2], 6);
+            return Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 6);
     }
     else
     {
         Oam_SetOamAnimIndex(a1->unk744, 4);
         Oam_SetOamAnimIndex(a1->unk740, 2);
-        Oam_SetOamAnimIndex(a1->unk724[0], 18);
-        Oam_SetOamAnimIndex(a1->unk724[1], 19);
-        Oam_SetOamAnimIndex(a1->unk724[3], 14);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SWITCH_LEFT], 18);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SWITCH_RIGHT], 19);
+        Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_RETURN_FIELD], 14);
         if (v5 == 1)
-            return Oam_SetOamAnimIndex(a1->unk724[2], 22);
+            return Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 22);
         else
-            return Oam_SetOamAnimIndex(a1->unk724[2], 21);
+            return Oam_SetOamAnimIndex(a1->bottomIconOam[BOTTOM_ICON_SORT_OR_SEACHER], 21);
     }
 }
 

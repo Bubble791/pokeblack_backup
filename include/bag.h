@@ -106,6 +106,15 @@ enum
 #define SORT_MORE_TO_LESS   0
 #define SORT_LESS_TO_MORE   1
 
+enum
+{
+    BOTTOM_ICON_SWITCH_LEFT,
+    BOTTOM_ICON_SWITCH_RIGHT,
+    BOTTOM_ICON_SORT_OR_SEACHER,
+    BOTTOM_ICON_RETURN_FIELD,
+    BOTTOM_ICON_BACK
+};
+
 typedef struct
 {
     u16 unk0;
@@ -246,7 +255,7 @@ struct BagViewWork
     /*0x6BC*/ int bagPocketOam[6];
     /*0x6D4*/ int unk6D4[3];
     /*0x6E0*/ int unk6E0[17];
-    /*0x724*/ int unk724[7];
+    /*0x724*/ int bottomIconOam[7];
     /*0x740*/ int unk740;
     /*0x744*/ int unk744;
     /*0x748*/ int unk748;
@@ -549,7 +558,7 @@ extern void sub_0204C124(int, int);
 int sub_0219BE88(int a1);
 extern int BagMenu_GetPocketRegistId(int pocket);
 extern int GameData_IsPocketRegistered(void*, int);
-extern int sub_02005718(void);
+extern int GFL_VBlankGetTCBMgr(void);
 extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
 extern int BagSave_IsItemInFreeSpace(void*, u16);
 extern void BagSave_SubItem(void*, u16, u16, u16);

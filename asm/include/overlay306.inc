@@ -75,7 +75,7 @@
 .public sub_0219E5E8
 .public sub_0219D798
 .public sub_0219D984
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public sub_0200BE50
 .public sub_0200BBB4
@@ -84,7 +84,7 @@
 .public sub_0219D798
 .public sub_02040440
 .public sub_02040624
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public sub_020120C8
 .public sub_02040440

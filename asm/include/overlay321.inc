@@ -109,9 +109,9 @@
 .public sub_02026E48
 .public sub_02026E48
 .public sub_0219DD2C
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public sub_0219DD2C
 .public sub_02027780

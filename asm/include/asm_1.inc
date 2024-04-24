@@ -5254,7 +5254,7 @@
 .public sub_020056C8
 .public sub_020056D8
 .public GFL_VBlankTCBAdd
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02005724
 .public sub_0200572C
 .public sub_02005748

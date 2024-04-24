@@ -41133,7 +41133,7 @@ _02163CC2:
 	bl ovy12_21642dc
 	cmp r0, #0
 	beq _02163D5E
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4, #0x10]
 	mov r2, #0xf
 	mov r3, #0x10

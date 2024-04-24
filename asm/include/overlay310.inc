@@ -670,7 +670,7 @@
 .public sub_021A4410
 .public sub_021A0048
 .public GFL_HeapAllocate
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_021A02B8
 .public sub_021A027C
 .public sub_021A023C
@@ -1225,7 +1225,7 @@
 .public sub_021A31EC
 .public sub_0200ECF0
 .public GFL_HeapAllocate
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_021A3670
 .public sub_021A352C
 .public sub_021A3898

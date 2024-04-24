@@ -20523,7 +20523,7 @@ _021C1DDC:
 	add r0, r6, #0
 	add r1, r6, #0
 	bl OS_WaitInterrupt
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r5, #0
 	add r3, r0, #0
 	lsl r0, r4, #2
@@ -20550,7 +20550,7 @@ _021C1E10:
 	add r0, r6, #0
 	add r1, r6, #0
 	bl OS_WaitInterrupt
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r5, #0
 	add r3, r0, #0
 	lsl r0, r4, #2
@@ -28931,7 +28931,7 @@ _021C5FF0: .word 0x0000FFFE
 ovy194_21c5ff4: ; 0x021C5FF4
 	push {r4, lr}
 	add r4, r1, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldr r1, _021C6008 ; =ovy194_21c6024
 	add r2, r4, #0
 	mov r3, #0xa
@@ -28945,7 +28945,7 @@ _021C6008: .word ovy194_21c6024
 ovy194_21c600c: ; 0x021C600C
 	push {r4, lr}
 	add r4, r1, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldr r1, _021C6020 ; =ovy194_21c6038
 	add r2, r4, #0
 	mov r3, #0xa

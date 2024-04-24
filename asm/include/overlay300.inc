@@ -92,13 +92,13 @@
 .public sub_02026E48
 .public sub_02026E48
 .public sub_02026DE8
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_

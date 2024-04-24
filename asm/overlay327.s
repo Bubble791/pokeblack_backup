@@ -1039,7 +1039,7 @@ _021B654E: ; jump table
 	.short _021B6556 - _021B654E - 2 ; case 2
 	.short _021B65AA - _021B654E - 2 ; case 3
 _021B6556:
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4, #0x1e]
 	mov r2, #0x1f
 	str r1, [sp]

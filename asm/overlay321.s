@@ -1374,7 +1374,7 @@ _0219D94C:
 	mov r5, #0x10
 _0219D950:
 	mov r6, #4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r5, [sp, #4]
 	mov r1, #0
@@ -1385,7 +1385,7 @@ _0219D950:
 	mov r1, #1
 	add r3, r6, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r5, [sp, #4]
 	mov r1, #0

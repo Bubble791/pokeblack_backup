@@ -3448,7 +3448,7 @@ ovy294_21a3528: ; 0x021A3528
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, r0, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r0, #0
 	mov r0, #0x10
 	str r0, [sp]

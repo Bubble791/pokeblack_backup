@@ -3400,7 +3400,7 @@ ovy259_219b2cc: ; 0x0219B2CC
 	ldr r0, [r5, #8]
 	ldr r1, [r5]
 	bl ovy259_219bab4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	ldr r1, [r5]
 	mov r2, #0xf

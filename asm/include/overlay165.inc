@@ -1112,7 +1112,7 @@
 .public sub_0204FDF8
 .public sub_02042EA4
 .public sub_0204F968
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0204FE04
 .public sub_0219F424
 .public sub_0208D374

@@ -3456,7 +3456,7 @@
 .public sub_02198B10
 .public sub_02180508
 .public sub_02198B40
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public sub_02180508
 .public sub_02198B1C

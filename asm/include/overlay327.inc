@@ -109,7 +109,7 @@
 .public sub_020223CC
 .public sub_0202E818
 .public BmpWin_GetBitmap
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public BmpWin_GetBitmap
 .public sub_02021C7C

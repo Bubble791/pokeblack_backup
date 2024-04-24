@@ -90,11 +90,11 @@
 .public GFL_BGSysSetBGEnabledA
 .public sub_02027B58
 .public G2x_SetBlendAlpha_
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public sub_02027780
 .public sub_02034220
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public sub_02034220
 .public sub_0202E37C

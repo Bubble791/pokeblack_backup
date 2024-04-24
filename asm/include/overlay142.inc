@@ -970,9 +970,9 @@
 .public sub_0204C378
 .public sub_0219FD18
 .public GameData_IsPocketRegistered
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public G2x_SetBlendBrightness_
 .public Oam_SetOamAnimIndex
@@ -980,9 +980,9 @@
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public sub_02026F7C
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public sub_0204C138
 .public G2x_SetBlendBrightness_

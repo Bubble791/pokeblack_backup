@@ -16124,7 +16124,7 @@ ovy165_21a1a58: ; 0x021A1A58
 	mov r2, #0
 	bl sub_0204F968
 	str r0, [r4, r7]
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r3, r0, #0
 	ldr r0, [r4, r7]
 	ldr r1, [sp, #8]

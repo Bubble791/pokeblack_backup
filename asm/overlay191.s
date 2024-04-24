@@ -3557,7 +3557,7 @@ _021B6F50:
 ovy191_21b6f54: ; 0x021B6F54
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4, #4]
 	ldr r5, _021B6F74 ; =0x0000097C
 	mov r2, #0xf

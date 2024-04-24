@@ -241,7 +241,7 @@
 .public sub_0219B85C
 .public sub_02024D00
 .public sub_0219B858
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public GFL_BGSysLoadScr
 .public sub_020061DC

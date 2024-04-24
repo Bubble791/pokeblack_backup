@@ -1810,10 +1810,10 @@
 .public sub_0204F968
 .public sub_0204FDF8
 .public OS_WaitInterrupt
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0204FEE0
 .public OS_WaitInterrupt
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0204FEE0
 .public sub_0204FB4C
 .public GFL_HeapFree
@@ -2411,9 +2411,9 @@
 .public GXS_LoadOBJPltt
 .public DC_FlushRange
 .public GXS_LoadBGPltt
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0203A614
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0203A614
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_TCBRemove

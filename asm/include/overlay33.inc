@@ -598,7 +598,7 @@
 .public sub_021883E8
 .public sub_0203D10C
 .public sub_02006D64
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02188494
 .public sub_02035604
 .public sub_02006E0C

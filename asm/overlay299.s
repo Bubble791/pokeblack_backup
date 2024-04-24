@@ -565,7 +565,7 @@ ovy299_21a00ac: ; 0x021A00AC
 	add r4, r1, #0
 	add r5, r0, #0
 	add r6, r2, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	mov r7, #1
 	sub r7, #0xf
@@ -578,7 +578,7 @@ ovy299_21a00ac: ; 0x021A00AC
 	mov r1, #1
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r6, [sp, #4]
 	mov r1, #0
@@ -589,7 +589,7 @@ ovy299_21a00ac: ; 0x021A00AC
 	mov r1, #2
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r6, [sp, #4]
 	mov r1, #0
@@ -600,7 +600,7 @@ ovy299_21a00ac: ; 0x021A00AC
 	mov r1, #4
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r6, [sp, #4]
 	mov r1, #0

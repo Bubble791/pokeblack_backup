@@ -271,7 +271,7 @@
 .public StringSetNumber
 .public sub_020254E0
 .public sub_02025634
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public sub_0203580C
 .public sub_0201782C

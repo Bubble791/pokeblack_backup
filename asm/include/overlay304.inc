@@ -287,13 +287,13 @@
 .public sub_020480A8
 .public BmpWin_Free
 .public BmpWin_Free
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
 .public GFL_ArcSysCreateFileHandle
 .public sub_02035024

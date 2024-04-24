@@ -87110,7 +87110,7 @@ _021A8808:
 	bl sub_021551AC
 	bl sub_021886B0
 	add r4, r0, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r4, #0
 	mov r2, #0xf
 	mov r3, #0x10

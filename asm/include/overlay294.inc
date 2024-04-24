@@ -282,7 +282,7 @@
 .public sub_02024FAC
 .public MI_CpuFill8
 .public sub_020258A4
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0203576C
 .public sub_0203580C
 .public GFL_HeapAllocate

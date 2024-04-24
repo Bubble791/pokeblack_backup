@@ -2743,7 +2743,7 @@ ovy304_21a126c: ; 0x021A126C
 	add r4, r1, #0
 	add r5, r0, #0
 	add r6, r2, #0
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	mov r7, #1
 	sub r7, #0xf
@@ -2756,7 +2756,7 @@ ovy304_21a126c: ; 0x021A126C
 	mov r1, #1
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r6, [sp, #4]
 	mov r1, #0
@@ -2767,7 +2767,7 @@ ovy304_21a126c: ; 0x021A126C
 	mov r1, #2
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	str r6, [sp, #4]
 	mov r1, #0
@@ -2778,7 +2778,7 @@ ovy304_21a126c: ; 0x021A126C
 	mov r2, #0x3f
 	add r3, r7, #0
 	bl sub_02026FE4
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r4, [sp]
 	ldr r2, _021A12EC ; =0x00003FFE
 	str r6, [sp, #4]

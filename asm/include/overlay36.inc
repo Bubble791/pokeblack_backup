@@ -6538,7 +6538,7 @@
 .public sub_021551B4
 .public sub_021551AC
 .public sub_021886B0
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_02035604
 .public sub_021551B4
 .public ovy12_2154910

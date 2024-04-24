@@ -855,7 +855,7 @@ _0219D56A:
 	bl ovy306_219db98
 	cmp r0, #0
 	beq _0219D63E
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4]
 	mov r2, #0xf
 	mov r3, #0x10
@@ -1052,7 +1052,7 @@ _0219D6DA:
 	mov r1, #0x96
 	mov r2, #0x2b
 	bl sub_02040624
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4]
 	mov r2, #0xf
 	mov r3, #0x10

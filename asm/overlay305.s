@@ -2540,7 +2540,7 @@ _0219E10E:
 	bl sub_020503F0
 	add r4, #0x14
 	strb r0, [r5, r4]
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r3, r0, #0
 	ldr r0, [r5, #0x10]
 	add r1, r6, #0

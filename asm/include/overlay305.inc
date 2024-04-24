@@ -146,7 +146,7 @@
 .public sub_020500CC
 .public sub_0204FDF8
 .public sub_020503F0
-.public sub_02005718
+.public GFL_VBlankGetTCBMgr
 .public sub_0204FE04
 .public sub_020500B0
 .public sub_0204FA84

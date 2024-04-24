@@ -839,7 +839,7 @@ _021A7BF8:
 	mov r2, #8
 	mov r3, #0x1c
 	bl G2x_SetBlendAlpha_
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r6, [sp]
 	str r5, [sp, #4]
 	str r5, [sp, #8]
@@ -875,7 +875,7 @@ _021A7C64:
 	ldr r0, [r4, #4]
 	add r0, r0, #1
 	str r0, [r4, #4]
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	str r5, [sp]
 	mov r1, #0x10
 	str r1, [sp, #4]

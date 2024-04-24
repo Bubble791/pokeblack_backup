@@ -7225,7 +7225,7 @@ _021B8D20:
 	beq _021B8D74
 	cmp r5, #2
 	bne _021B8DB6
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4, #0x1a]
 	mov r3, #0x10
 	str r1, [sp]

@@ -6648,7 +6648,7 @@ ovy310_21a00e0: ; 0x021A00E0
 	add r0, #0x31
 	str r4, [r5, #0x2c]
 	strb r6, [r0]
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	mov r1, #0xff
 	add r1, #0x51
 	str r0, [r5, r1]
@@ -13288,7 +13288,7 @@ ovy310_21a3450: ; 0x021A3450
 	add r0, r6, #0
 	add r0, #0x14
 	str r4, [r5, r0]
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r1, r7, #0
 	sub r1, #0x20
 	str r0, [r5, r1]

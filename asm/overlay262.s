@@ -6502,7 +6502,7 @@ _021C5928: ; jump table
 	.short _021C5930 - _021C5928 - 2 ; case 2
 	.short _021C59C8 - _021C5928 - 2 ; case 3
 _021C5930:
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	ldrh r1, [r4, #0x1e]
 	mov r3, #0x10
 	str r1, [sp]

@@ -1737,15 +1737,15 @@ void ovy142_219b438(BagView *bagView, int param_2)
     bagView->unk80C = param_2;
     ovy142_219fb78(bagView);
     ovy142_219fc14(bagView, bagView->selectAmount);
-    sub_0204C124(bagView->unk724[5], 1);
-    sub_0204C124(bagView->unk724[6], 1);
+    sub_0204C124(bagView->bottomIconOam[5], 1);
+    sub_0204C124(bagView->bottomIconOam[6], 1);
 }
 
 void ovy142_219b46c(BagView *bagView)
 {
     sub_02045738(3);
-    sub_0204C124(bagView->unk724[5], 0);
-    sub_0204C124(bagView->unk724[6], 0);
+    sub_0204C124(bagView->bottomIconOam[5], 0);
+    sub_0204C124(bagView->bottomIconOam[6], 0);
 }
 
 extern int sub_0203D9C8(TouchscreenHitbox*);
@@ -1847,12 +1847,12 @@ int ovy142_219b490(BagView *bagView)
         GFL_SndSEPlay(0x548);
         if (unaff_r4 == 0)
         {
-            uVar22 = bagView->unk724[5];
+            uVar22 = bagView->bottomIconOam[5];
             uVar8 = 0xb;
         }
         else
         {
-            uVar22 = bagView->unk724[6];
+            uVar22 = bagView->bottomIconOam[6];
             uVar8 = 10;
         }
         Oam_SetOamAnimIndex(uVar22, uVar8);
@@ -2265,7 +2265,7 @@ void ovy142_219becc(BagView *bagView)
     {
         uVar2 = sub_0219BE88(bagView->itemPocket);
         sVar1 = GameData_IsPocketRegistered(bagView->m_GameData, uVar2);
-        Oam_SetOamAnimIndex(bagView->unk724[2], (u16)(sVar1 + 6));
+        Oam_SetOamAnimIndex(bagView->bottomIconOam[2], (u16)(sVar1 + 6));
     }
 }
 

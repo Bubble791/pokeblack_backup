@@ -4432,7 +4432,7 @@ _02178DEC:
 	mov r0, #0x15
 	mov r7, #0x15
 	bl sub_02006D64
-	bl sub_02005718
+	bl GFL_VBlankGetTCBMgr
 	add r6, r0, #0
 	ldr r0, [r4, #0x20]
 	bl sub_02188494
