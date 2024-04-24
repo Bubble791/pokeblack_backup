@@ -60,7 +60,7 @@ ovy81_21ea894: ; 0x021EA894
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r4, #0
 	bl ovy81_21eaafc
 	pop {r4, pc}
@@ -336,7 +336,7 @@ ovy81_21eaaa0: ; 0x021EAAA0
 	bl sub_0204826C
 	ldr r0, [r5, r4]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, r4]
 	bl BmpWin_FlushChar
 	add sp, #0x10
@@ -424,7 +424,7 @@ ovy81_21eab94: ; 0x021EAB94
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy81_21eab94

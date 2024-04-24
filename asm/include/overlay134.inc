@@ -190,10 +190,10 @@
 .public ovy36_2187c4c
 .public ovy36_2187c9c
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02187C7C
 .public sub_02187C1C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0201EF1C
 .public sub_0201EF1C
 .public sub_0201EF1C

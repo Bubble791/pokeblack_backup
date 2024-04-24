@@ -22,10 +22,10 @@
 .public sub_02045738
 .public sub_0204476C
 .public sub_02045738
-.public sub_02046CFC
-.public sub_02046D84
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
@@ -72,7 +72,7 @@
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
 .public sub_02042BA8
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_021AD78C
 .public sub_0219FC8C
 .public GFL_BGSysSetEnabledBGsA

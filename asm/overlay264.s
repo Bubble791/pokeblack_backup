@@ -132,10 +132,10 @@ ovy264_219992c: ; 0x0219992C
 	bl GFL_HeapFree
 	mov r0, #0x13
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xc
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add sp, #0x18
 	pop {r4, r5, r6, pc}
 	nop
@@ -148,12 +148,12 @@ _021999DC: .word 0x0219A2C0
 
 	thumb_func_start sub_021999E0
 sub_021999E0: ; 0x021999E0
-	ldr r3, _021999E8 ; =sub_02046CFC
+	ldr r3, _021999E8 ; =GFL_BGSysSetBGEnabledA
 	mov r0, #0xc
 	mov r1, #0
 	bx r3
 	.align 2, 0
-_021999E8: .word sub_02046CFC
+_021999E8: .word GFL_BGSysSetBGEnabledA
 	thumb_func_end sub_021999E0
 
 	thumb_func_start sub_021999EC

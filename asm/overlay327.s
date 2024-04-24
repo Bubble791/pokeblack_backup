@@ -689,10 +689,10 @@ ovy327_21b6264: ; 0x021B6264
 	bl sub_0204BF14
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021B62B8: .word 0x021B7130
@@ -1191,7 +1191,7 @@ ovy327_21b6668: ; 0x021B6668
 	bl sub_0204826C
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021B668E:
 	pop {r4, pc}
 	thumb_func_end ovy327_21b6668
@@ -2368,7 +2368,7 @@ _021B6EF8:
 	mov r0, #0x17
 	mov r2, #0
 	add r3, r5, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0x3c
 	pop {r4, r5, r6, r7, pc}
 	nop

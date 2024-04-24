@@ -140,8 +140,8 @@
 .public sub_02044C98
 .public G2x_SetBlendAlpha_
 .public Oam_CreateSystem
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF1C
 .public sub_0204C028
 .public sub_0204E390
@@ -175,13 +175,13 @@
 .public sub_0204C124
 .public sub_0204C124
 .public GFL_ArcToolFree
-.public sub_02044F90
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045708
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021BB9BC
 .public sub_021BBC90
 .public sub_021BBC9C
@@ -713,7 +713,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02021998
 .public sub_02024D00
 .public sub_02021A18

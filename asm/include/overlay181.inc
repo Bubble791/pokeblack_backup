@@ -110,8 +110,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
 .public sub_0204BF98
 .public sub_0204B758
@@ -128,7 +128,7 @@
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045708
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
@@ -142,7 +142,7 @@
 .public GFL_G2DIOLoadArcNCLR
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
@@ -158,11 +158,11 @@
 .public GFL_G2DIOLoadArcNCLR
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_02044C98
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D820
 .public GFL_G2DIOLoadArcNCLRDefault
@@ -171,7 +171,7 @@
 .public sub_0202D828
 .public sub_0204AF50
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0202D810
 .public Oam_LoadNCLRFile
 .public sub_0202D814
@@ -190,7 +190,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
 .public GFL_MsgSysLoadData
@@ -203,7 +203,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_MsgDataFree
 .public sub_02048210
@@ -495,7 +495,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public sub_02024D00
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020232D8
 .public GFL_TCBExMgrCreate
 .public sub_02021998
@@ -537,7 +537,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_0204826C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_020223CC
 .public sub_0203580C
 .public GFL_StrBufFree
@@ -564,12 +564,12 @@
 .public BmpWin_GetBitmap
 .public sub_02021C54
 .public sub_0218B5AC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_0218B5BC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024EEC
 .public sub_0203580C
 .public GFL_WordSetSystemCreateDefault
@@ -598,7 +598,7 @@
 .public sub_0202E678
 .public sub_0202E678
 .public sub_0204826C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public GFL_HeapAllocate
 .public sub_0203D10C

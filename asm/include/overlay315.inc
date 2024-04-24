@@ -15,13 +15,13 @@
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204E060
 .public sub_02042BA8
 .public sub_02005EA0
@@ -56,7 +56,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0201736C
 .public sub_02017934
 .public sub_02008DDC
@@ -117,7 +117,7 @@
 .public GFL_HeapAllocate
 .public sub_020484F0
 .public sub_020454AC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_HeapFree
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
@@ -141,7 +141,7 @@
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
 .public sub_02044E74
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -179,8 +179,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

@@ -74,7 +74,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204826C
 .public sub_0204826C
 .public sub_02045B7C
@@ -268,7 +268,7 @@
 .public sub_02045738
 .public sub_02044BD8
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045738
 .public sub_02045738
 .public sub_02044BD8
@@ -334,7 +334,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021D28
@@ -342,7 +342,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02021C44
 .public sub_02021A18
 .public sub_02048210
@@ -357,7 +357,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -372,7 +372,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public BmpWin_GetBitmap
@@ -381,7 +381,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02025060
 .public sub_020256F0
 .public sub_02021D28
@@ -415,7 +415,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02024E80
@@ -427,7 +427,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public sub_02024E80
@@ -441,7 +441,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public LoadItemNameToStrbuf
 .public sub_0202437C
 .public StringSetNumber

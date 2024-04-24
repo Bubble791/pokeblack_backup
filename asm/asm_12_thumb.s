@@ -69941,7 +69941,7 @@ sub_02024CC0: ; 0x02024CC0
 	mov r2, #0
 	lsl r3, r5, #5
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #8
 	pop {r4, r5, r6, pc}
 _02024CEA:
@@ -69951,7 +69951,7 @@ _02024CEA:
 	mov r2, #4
 	lsl r3, r5, #5
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #8
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -70185,7 +70185,7 @@ sub_02024E80: ; 0x02024E80
 	cmp r4, #0
 	bne _02024ED2
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 _02024ED2:
@@ -70249,7 +70249,7 @@ sub_02024EEC: ; 0x02024EEC
 	cmp r4, #0
 	bne _02024F50
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 _02024F50:
@@ -71190,7 +71190,7 @@ _02025600:
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r0]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0x2c]
 	ldr r0, [r0]
 	bl BmpWin_FlushChar
@@ -83076,7 +83076,7 @@ _0202AA42:
 	bne _0202AA4E
 	ldr r0, [r5]
 	ldrb r0, [r0, #6]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _0202AA4E:
 	add sp, #0x4c
 	pop {r4, r5, r6, r7, pc}
@@ -83260,7 +83260,7 @@ _0202AB32:
 	mov r3, #1
 	bl sub_02045604
 	add r0, r5, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -89505,11 +89505,11 @@ sub_0202D7DC: ; 0x0202D7DC
 	.align 2, 0
 	thumb_func_end sub_0202D7DC
 
-	thumb_func_start sub_0202D7E0
-sub_0202D7E0: ; 0x0202D7E0
+	thumb_func_start GetDefaultUINarcIdx
+GetDefaultUINarcIdx: ; 0x0202D7E0
 	mov r0, #0x52
 	bx lr
-	thumb_func_end sub_0202D7E0
+	thumb_func_end GetDefaultUINarcIdx
 
 	thumb_func_start sub_0202D7E4
 sub_0202D7E4: ; 0x0202D7E4
@@ -91004,7 +91004,7 @@ sub_0202E168: ; 0x0202E168
 	bls _0202E1A6
 	mov r7, #4
 _0202E1A6:
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r5, sp, #0x28
 	ldrh r1, [r5]
 	mov r2, #0
@@ -91013,7 +91013,7 @@ _0202E1A6:
 	mov r1, #0x20
 	bl sub_0204B264
 	str r0, [r4, #8]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0x40
 	str r1, [sp]
 	ldrh r1, [r5]
@@ -91021,7 +91021,7 @@ _0202E1A6:
 	lsl r3, r6, #5
 	str r1, [sp, #4]
 	mov r1, #0x1f
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -104639,7 +104639,7 @@ sub_02033EF4: ; 0x02033EF4
 	ldr r0, [sp, #0x20]
 	bl sub_0202D910
 	add r4, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r7, sp, #0x18
 	ldrh r1, [r7, #0x10]
 	bl GFL_ArcSysCreateFileHandle
@@ -104872,7 +104872,7 @@ sub_020340C8: ; 0x020340C8
 	add r0, r4, #0
 	bl sub_0202D918
 	add r4, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r5, #0
 	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
@@ -106095,7 +106095,7 @@ sub_020349E8: ; 0x020349E8
 	bl sub_020484B4
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _02034A16:
 	mov r4, #0
 	add r7, r4, #0

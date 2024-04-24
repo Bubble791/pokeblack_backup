@@ -1398,7 +1398,7 @@ _021E9664:
 	bl sub_021E9710
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -2035,10 +2035,10 @@ ovy187_21e9c3c: ; 0x021E9C3C
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r7, r5, #0
 	mov r0, #0x52
 	add r1, r6, #0

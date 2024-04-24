@@ -58,7 +58,7 @@
 .public sub_02044CFC
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_02044B84
 .public GFL_ArcSysCreateFileHandle
@@ -86,7 +86,7 @@
 .public sub_021804BC
 .public sub_02016AD8
 .public sub_0202A344
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D820
 .public GFL_G2DIOLoadArcNCLRDefault

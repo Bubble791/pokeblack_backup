@@ -699,7 +699,7 @@ ovy307_21de154: ; 0x021DE154
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	thumb_func_end ovy307_21de154
@@ -1122,7 +1122,7 @@ ovy307_21de468: ; 0x021DE468
 	str r0, [sp, #4]
 	mov r0, #0x17
 	mov r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r6, #1
 	str r6, [sp]
 	str r6, [sp, #4]
@@ -1248,7 +1248,7 @@ ovy307_21de56c: ; 0x021DE56C
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy307_21de56c
@@ -1475,7 +1475,7 @@ ovy307_21de730: ; 0x021DE730
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021DE7BC ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -1814,10 +1814,10 @@ ovy307_21de9c8: ; 0x021DE9C8
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021DEA04: .word 0x021DF598

@@ -1079,10 +1079,10 @@ _0219D740:
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1147,7 +1147,7 @@ ovy181_219d818: ; 0x0219D818
 	add r0, r4, #0
 	bl sub_02045708
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	thumb_func_end ovy181_219d818
 
@@ -1278,7 +1278,7 @@ _0219D84C:
 	add r3, r6, #0
 	bl sub_0204AF50
 	add r0, r7, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	b _0219DA7C
 _0219D956:
@@ -1403,7 +1403,7 @@ _0219D956:
 	add r3, r4, #0
 	bl sub_0204AF50
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #5
 	add r1, r4, #0
 	bl sub_02044C98
@@ -1413,7 +1413,7 @@ _0219D956:
 	add r0, r6, #0
 _0219DA7C:
 	bl GFL_ArcToolFree
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
@@ -1459,7 +1459,7 @@ _0219DA7C:
 	mov r3, #0x20
 	bl sub_0204566C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	bl sub_0202D810
 	str r6, [sp]
 	str r7, [sp, #4]
@@ -1602,7 +1602,7 @@ _0219DBAC:
 	str r7, [sp, #4]
 	bl sub_0204566C
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r6, #0
 	bl GFL_ArcToolFree
 	mov r0, #8
@@ -1648,7 +1648,7 @@ _0219DBAC:
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	add r0, r7, #0
@@ -5617,7 +5617,7 @@ _0219FC80:
 _0219FC8E:
 	mov r3, #7
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	bl sub_020232D8
 	ldrh r0, [r4]
 	mov r3, #3
@@ -5956,7 +5956,7 @@ _0219FF2A:
 	ldr r0, [r4, #0x10]
 	bl sub_0204826C
 	ldrb r0, [r4, #2]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, pc}
 	thumb_func_end ovy181_219fe70
@@ -6139,7 +6139,7 @@ _021A0092:
 	add r2, r5, #0
 	bl sub_0218B5AC
 	ldrb r0, [r4, #2]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r3, r4, r5, pc}
 _021A00CC:
@@ -6168,7 +6168,7 @@ ovy181_21a00e0: ; 0x021A00E0
 	ldr r1, [r4, #0x10]
 	bl sub_0218B5BC
 	ldrb r0, [r4, #2]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	b _021A010E
 _021A0106:
 	ldr r0, [r4, #0x10]
@@ -6540,7 +6540,7 @@ ovy181_21a036c: ; 0x021A036C
 	str r1, [r4, #0x3c]
 	bl sub_0204826C
 	ldrb r0, [r4, #2]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	thumb_func_end ovy181_21a036c
 

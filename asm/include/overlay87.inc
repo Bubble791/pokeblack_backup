@@ -37,15 +37,15 @@
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204476C
 .public sub_02045738
 .public sub_020450CC
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
@@ -194,7 +194,7 @@
 .public sub_0204C378
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_02016AD8
 .public sub_0201735C
 .public sub_0201FDF8
@@ -208,7 +208,7 @@
 .public sub_0204BE64
 .public sub_0204BE64
 .public sub_0204BF98
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204C4D4
 .public sub_0204C488
 .public sub_0204C520

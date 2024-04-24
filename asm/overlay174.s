@@ -1236,7 +1236,7 @@ ovy174_219d870: ; 0x0219D870
 	mov r0, #0x17
 	mov r2, #4
 	sub r3, #0xf8
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r7, #0
 	add r1, r5, #0
 	bl ovy174_219ddf0
@@ -1500,7 +1500,7 @@ ovy174_219da74: ; 0x0219DA74
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _0219DC00 ; =0x0219F1A0
 	add r3, sp, #0x8c
 	add r2, r3, #0
@@ -1526,7 +1526,7 @@ ovy174_219da74: ; 0x0219DA74
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _0219DC04 ; =0x0219F1C0
 	add r3, sp, #0x6c
 	add r2, r3, #0
@@ -1575,7 +1575,7 @@ ovy174_219da74: ; 0x0219DA74
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _0219DC0C ; =0x0219F200
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -1605,7 +1605,7 @@ ovy174_219da74: ; 0x0219DA74
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _0219DC10 ; =0x0219F220
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -1630,7 +1630,7 @@ ovy174_219da74: ; 0x0219DA74
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xcc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1887,7 +1887,7 @@ ovy174_219ddf0: ; 0x0219DDF0
 	mov r2, #4
 	sub r3, #0xd8
 	mov r7, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	cmp r0, #0
@@ -3244,7 +3244,7 @@ ovy174_219e92c: ; 0x0219E92C
 	mov r0, #0x17
 	mov r2, #4
 	sub r3, #0xf8
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r7, #0
 	add r1, r5, #0
 	bl ovy174_219ddf0
@@ -3294,7 +3294,7 @@ ovy174_219e998: ; 0x0219E998
 	mov r0, #0x17
 	mov r2, #4
 	sub r3, #0xf8
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r7, #0
 	add r1, r5, #0
 	bl ovy174_219ddf0
@@ -3422,7 +3422,7 @@ ovy174_219eaa4: ; 0x0219EAA4
 	mov r0, #0x17
 	mov r2, #4
 	sub r3, #0xf8
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r7, #0
 	add r1, r5, #0
 	bl ovy174_219ddf0

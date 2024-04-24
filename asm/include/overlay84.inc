@@ -151,8 +151,8 @@
 .public sub_0204BE9C
 .public sub_0204C018
 .public sub_0202AE5C
-.public sub_02046D84
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledB
 .public sub_0202AEAC
 .public sub_0204BECC
 .public sub_0204BF98
@@ -161,7 +161,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02046E28
 .public sub_021EAB50
 .public sub_021EAB6C

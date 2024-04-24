@@ -733,7 +733,7 @@ ovy139_2199dc8: ; 0x02199DC8
 	mov r7, #0
 	blx MI_CpuFill8
 	str r6, [r5, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r4, #0
 	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
@@ -946,7 +946,7 @@ _02199F52:
 	bl sub_0204566C
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _02199FA8:
 	add r0, r7, #0
 	bl GFL_HeapFree
@@ -1927,7 +1927,7 @@ _0219A65A:
 	mov r3, #0x20
 	bl sub_0204566C
 	ldrb r0, [r4, #0x14]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0x18]
 	bl GFL_ArcToolFree
 	add r2, r4, #0
@@ -1951,7 +1951,7 @@ _0219A65A:
 	ldr r2, [r4, #0x10]
 	mov r0, #0x17
 	lsl r3, r3, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #6
 	str r0, [sp]
 	ldrb r0, [r4, #0x1a]
@@ -2075,12 +2075,12 @@ _0219A7D8:
 	bne _0219A84E
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	b _0219A856
 _0219A84E:
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _0219A856:
 	add r0, r4, #0
 	add sp, #0x44

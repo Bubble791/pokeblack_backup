@@ -33,8 +33,8 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public GFL_TCBRemove
 .public sub_02044668
 .public sub_02044668
@@ -220,7 +220,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_02033E24
 .public sub_0219F9B0
 .public sub_0219F9E4

@@ -36,7 +36,7 @@
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public sub_0219EC80
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_0202D8A0
 .public sub_0202D8A4
 .public sub_0202D8A8
@@ -64,7 +64,7 @@
 .public sub_02024E80
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0202E678
 .public sub_0202E7A4
 .public GFL_HeapFree
@@ -95,7 +95,7 @@
 .public sub_0219A2A4
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public GFL_StrBufFree
 .public sub_020223CC
@@ -172,7 +172,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_WordSetSystemFree
 .public GFL_StrBufFree
 .public sub_0202E8D8
@@ -226,8 +226,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

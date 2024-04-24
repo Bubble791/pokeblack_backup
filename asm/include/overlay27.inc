@@ -133,13 +133,13 @@
 .public ovy36_2187c4c
 .public ovy36_2187c9c
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_02187C7C
 .public ovy36_2187c9c
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02017938
 .public sub_0200C830
 .public sub_0200C96C

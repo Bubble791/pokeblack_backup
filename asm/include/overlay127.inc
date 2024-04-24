@@ -435,15 +435,15 @@
 .public sub_02044C98
 .public sub_0204476C
 .public sub_02045738
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_0204476C
 .public sub_02045738
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_0204476C
 .public sub_02045738
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public GFL_ArcSysCreateFileHandle
 .public sub_02016AD8
@@ -453,7 +453,7 @@
 .public GFL_BGSysLoadArcNCGRDynamic
 .public GFL_G2DIOLoadNSCRSync
 .public GFL_ArcToolFree
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public LoadCursorImageEndOfHeap
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap

@@ -3901,7 +3901,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	mov r0, #0
 	bl sub_02045708
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0
 	mov r1, #1
 	mov r7, #1
@@ -3940,7 +3940,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B51AC ; =0x021B7998
 	add r3, sp, #0xac
 	add r2, r3, #0
@@ -3969,7 +3969,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	str r4, [sp, #8]
 	bl sub_02045604
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B51B0 ; =0x021B79B8
 	add r3, sp, #0x8c
 	add r2, r3, #0
@@ -3997,7 +3997,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B51B4 ; =0x021B79D8
 	add r3, sp, #0x6c
 	add r2, r3, #0
@@ -4017,7 +4017,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	add r1, r7, #0
 	bl sub_02044C98
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B51B8 ; =0x021B79F8
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -4051,7 +4051,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	str r4, [sp, #8]
 	bl sub_02045604
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B51BC ; =0x021B7A38
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -4084,7 +4084,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r4, _021B51C0 ; =0x021B7A58
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -4105,7 +4105,7 @@ ovy195_21b4f9c: ; 0x021B4F9C
 	add r1, r7, #0
 	bl sub_02044C98
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -6089,7 +6089,7 @@ ovy195_21b6098: ; 0x021B6098
 	mov r3, #0
 	bl sub_02045604
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {pc}
 	thumb_func_end ovy195_21b6098
@@ -7000,7 +7000,7 @@ ovy195_21b66cc: ; 0x021B66CC
 	str r0, [sp, #4]
 	mov r0, #0x17
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r5, #0
 	str r6, [sp]
 	add r0, #0xc8
@@ -7010,7 +7010,7 @@ ovy195_21b66cc: ; 0x021B66CC
 	str r0, [sp, #4]
 	mov r0, #0x17
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r5, #0
 	add sp, #8
 	pop {r4, r5, r6, pc}
@@ -9064,7 +9064,7 @@ _021B783C:
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #4
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #5
 	bl sub_02045B7C
 	add sp, #8

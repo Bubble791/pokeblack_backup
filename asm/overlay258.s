@@ -655,7 +655,7 @@ ovy258_2199e38: ; 0x02199E38
 	push {r3, lr}
 	mov r0, #0x1d
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #5
 	bl sub_02044B84
 	mov r0, #7
@@ -754,7 +754,7 @@ ovy258_2199e7c: ; 0x02199E7C
 	mov r2, #4
 	sub r3, r4, #4
 	str r5, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r6, [sp]
 	add r4, #0x1c
 	str r5, [sp, #4]
@@ -762,14 +762,14 @@ ovy258_2199e7c: ; 0x02199E7C
 	mov r1, #5
 	add r2, r7, #0
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r6, [sp]
 	mov r0, #0x17
 	mov r1, #5
 	mov r2, #4
 	add r3, r4, #0
 	str r5, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #4
 	mov r1, #1
 	mov r2, #0xd
@@ -2392,7 +2392,7 @@ ovy258_219ac38: ; 0x0219AC38
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x1c
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -2624,10 +2624,10 @@ ovy258_219ae30: ; 0x0219AE30
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _0219AE64: .word 0x0219B9E4
@@ -2667,7 +2667,7 @@ ovy258_219aea0: ; 0x0219AEA0
 	sub sp, #0x14
 	add r5, r0, #0
 	str r1, [sp, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0x4f
 	mov r4, #0x4f
 	bl GFL_ArcSysCreateFileHandle
@@ -3064,7 +3064,7 @@ ovy258_219b1d8: ; 0x0219B1D8
 	add r0, r5, #0
 	add r1, r4, #0
 	bl ovy258_219aea0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r4, #0x4f
 	mov r1, #0x4f
 	bl GFL_ArcSysCreateFileHandle
@@ -3705,7 +3705,7 @@ _0219B6EC:
 	ldr r0, [r5, r0]
 	bl sub_0202E34C
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r1, #0
 	str r1, [r5, r4]
 	add r0, r4, #4

@@ -42,7 +42,7 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_02044B84
@@ -54,7 +54,7 @@
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045708
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
@@ -82,10 +82,10 @@
 .public GFL_FontCreate
 .public sub_020232E8
 .public GFL_MsgSysLoadData
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02024D00
 .public sub_02024C8C
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020232D8
 .public sub_02021998
 .public sub_0202E168
@@ -100,8 +100,8 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public sub_0204826C
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_0204898C
 .public sub_0202E1F0
 .public GFL_StrBufFree

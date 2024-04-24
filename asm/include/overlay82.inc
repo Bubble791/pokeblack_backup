@@ -53,7 +53,7 @@
 .public MI_CpuCopy8
 .public GFL_HeapFree
 .public GFL_G2DIOLoadArcNCLRDefault
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98

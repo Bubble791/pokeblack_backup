@@ -439,8 +439,8 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02045118
 .public GFL_ArcToolFree
 .public sub_02045264
@@ -453,8 +453,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile

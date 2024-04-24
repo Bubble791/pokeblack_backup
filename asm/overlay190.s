@@ -1523,7 +1523,7 @@ ovy190_21b3ba0: ; 0x021B3BA0
 	bl sub_02044C98
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3CE0 ; =0x021B5234
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -1563,7 +1563,7 @@ ovy190_21b3ba0: ; 0x021B3BA0
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3CE4 ; =0x021B5214
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -1597,7 +1597,7 @@ ovy190_21b3ba0: ; 0x021B3BA0
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r5, #3
 	ldr r5, _021B3CE8 ; =0x021B51F4
 	add r3, sp, #0xc
@@ -1636,7 +1636,7 @@ ovy190_21b3ba0: ; 0x021B3BA0
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x8c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1674,7 +1674,7 @@ ovy190_21b3cec: ; 0x021B3CEC
 	bl sub_02044C98
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3DF8 ; =0x021B51B4
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -1698,7 +1698,7 @@ ovy190_21b3cec: ; 0x021B3CEC
 	bl sub_02044C98
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3DFC ; =0x021B5194
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -1722,7 +1722,7 @@ ovy190_21b3cec: ; 0x021B3CEC
 	bl sub_02044C98
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021B3E00 ; =0x021B5294
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -1762,7 +1762,7 @@ ovy190_21b3cec: ; 0x021B3CEC
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x8c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1799,7 +1799,7 @@ ovy190_21b3e04: ; 0x021B3E04
 	bl sub_02044C98
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3F50 ; =0x021B5134
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -1839,7 +1839,7 @@ ovy190_21b3e04: ; 0x021B3E04
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B3F54 ; =0x021B5114
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -1878,7 +1878,7 @@ ovy190_21b3e04: ; 0x021B3E04
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r5, #3
 	ldr r5, _021B3F58 ; =0x021B50F4
 	add r3, sp, #0xc
@@ -1917,7 +1917,7 @@ ovy190_21b3e04: ; 0x021B3E04
 	bl sub_02045604
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x8c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1955,7 +1955,7 @@ ovy190_21b3f5c: ; 0x021B3F5C
 	bl sub_02044C98
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B4068 ; =0x021B50B4
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -1995,7 +1995,7 @@ ovy190_21b3f5c: ; 0x021B3F5C
 	bl sub_02045604
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B406C ; =0x021B5254
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -2019,7 +2019,7 @@ ovy190_21b3f5c: ; 0x021B3F5C
 	bl sub_02044C98
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021B4070 ; =0x021B5274
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -2043,7 +2043,7 @@ ovy190_21b3f5c: ; 0x021B3F5C
 	bl sub_02044C98
 	lsl r0, r4, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x8c
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -2946,7 +2946,7 @@ _021B47AA:
 	mov r0, #0x17
 	add r2, r5, #0
 	lsl r3, r3, #4
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}

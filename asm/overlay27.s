@@ -851,7 +851,7 @@ ovy27_2170964: ; 0x02170964
 	ldr r0, [r5, #0x14]
 	bl ovy36_2187c9c
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_StrBufFree
 	add r0, r6, #0
@@ -870,7 +870,7 @@ ovy27_2170a1c: ; 0x02170A1C
 	ldr r0, [r4, #0x14]
 	bl ovy36_2187c9c
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy27_2170a1c

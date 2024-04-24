@@ -45,7 +45,7 @@
 .public sub_0204AF50
 .public sub_0204ADA8
 .public sub_02045764
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
@@ -102,7 +102,7 @@
 .public sub_02048210
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0200C1F0
 .public sub_020105E0
 .public sub_02010644
@@ -133,7 +133,7 @@
 .public GFL_SndSEPlay
 .public GCTX_HIDGetPressedKeys
 .public GFL_FontCreate
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
 .public GFL_WordSetSystemCreateDefault
@@ -212,7 +212,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_CreateDynamic
 .public sub_02024E80
 .public BmpWin_GetBitmap
@@ -253,7 +253,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
 .public sub_0219CFB4
@@ -279,7 +279,7 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public sub_0219CFB4
 .public sub_02199C68
@@ -295,7 +295,7 @@
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public sub_02199D18
 .public sub_02199D18
@@ -332,8 +332,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

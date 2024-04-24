@@ -686,7 +686,7 @@ _0219D2EC:
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0xf
 	str r0, [sp]
 	ldr r0, _0219D4C8 ; =0x04001050
@@ -847,10 +847,10 @@ _0219D598:
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r6, #0xac
 	mov r0, #0xec
 	add r1, r4, #0

@@ -445,7 +445,7 @@ ovy297_21f4580: ; 0x021F4580
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy297_21f4580
@@ -739,10 +739,10 @@ ovy297_21f480c: ; 0x021F480C
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021F4848: .word 0x021F4E54
@@ -842,7 +842,7 @@ ovy297_21f487c: ; 0x021F487C
 	mov r0, #0x17
 	mov r2, #0
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldrh r0, [r5]
 	bl GFL_WordSetSystemCreateDefault
 	ldr r2, [r5, #4]

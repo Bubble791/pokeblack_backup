@@ -36,7 +36,7 @@
 .public sub_0203DA48
 .public GFL_SndSEPlay
 .public sub_021F3530
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F55AC
 .public sub_021F5C3C
 .public sub_021F55C8
@@ -116,8 +116,8 @@
 .public sub_0200C0C0
 .public sub_0200C0A8
 .public sub_021F4550
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_021F3F70
 .public sub_021F4638
 .public sub_021F4528
@@ -318,7 +318,7 @@
 .public sub_0204BE64
 .public sub_021F3530
 .public sub_021F2B8C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F274C
 .public sub_021F2C3C
 .public sub_021F2FF8
@@ -335,7 +335,7 @@
 .public sub_021F3550
 .public sub_021F3530
 .public sub_021F2268
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2EB4
 .public sub_021F2B8C
 .public sub_021F3F40
@@ -350,7 +350,7 @@
 .public sub_021F34A0
 .public sub_021F3550
 .public sub_021F3530
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2B8C
 .public sub_021F3F70
 .public sub_0200C124
@@ -371,8 +371,8 @@
 .public sub_02021998
 .public sub_021F4574
 .public sub_021F2C3C
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_021F2EB4
 .public sub_021F4638
 .public sub_02021A18
@@ -548,8 +548,8 @@
 .public sub_0202AE5C
 .public sub_02021998
 .public sub_021F4574
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_021F4638
 .public sub_02021A18
 .public sub_0202AEAC
@@ -693,8 +693,8 @@
 .public sub_021F4550
 .public sub_021F3530
 .public sub_021F3530
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public sub_021F2268
 .public sub_021F2EB4
 .public sub_021F2B8C
@@ -863,7 +863,7 @@
 .public sub_021F3F84
 .public sub_021F3530
 .public sub_021F2268
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2B8C
 .public sub_0203DAC8
 .public sub_021F4678
@@ -904,7 +904,7 @@
 .public sub_021F3A84
 .public sub_02024FAC
 .public sub_021F2B8C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F3B10
 .public sub_021F3BAC
 .public sub_0203DAC8
@@ -919,7 +919,7 @@
 .public sub_021F6C80
 .public sub_021F6CBC
 .public sub_021F6AB4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F6AE4
 .public sub_021F6CDC
 .public sub_021F2FF8
@@ -947,7 +947,7 @@
 .public sub_021F3A84
 .public sub_02024FAC
 .public sub_021F2B8C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F3B10
 .public sub_021F3BAC
 .public sub_0203DAC8
@@ -967,7 +967,7 @@
 .public sub_021F3550
 .public sub_021F3530
 .public sub_021F2B8C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2FF8
 .public sub_021F3000
 .public sub_021F3550
@@ -1272,7 +1272,7 @@
 .public sub_021F3550
 .public sub_021F3F70
 .public sub_021F3530
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2B8C
 .public sub_021F4678
 .public GFL_SndSEPlay
@@ -1393,7 +1393,7 @@
 .public sub_021F34A0
 .public sub_021F3550
 .public sub_021F3530
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F2B8C
 .public sub_021F3F70
 .public sub_021F3F40

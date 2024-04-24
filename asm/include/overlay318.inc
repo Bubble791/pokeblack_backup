@@ -14,7 +14,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204E060
 .public sub_02042BA8
 .public GFL_WordSetSystemFree
@@ -39,7 +39,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
@@ -54,7 +54,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public GFL_StrBufFree
 .public MI_CpuFill8
@@ -113,8 +113,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

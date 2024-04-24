@@ -596,10 +596,10 @@ ovy204_21a9f6c: ; 0x021A9F6C
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021AA010: .word 0x04000050
@@ -860,7 +860,7 @@ ovy204_21aa188: ; 0x021AA188
 	mov r1, #0x70
 	add r1, #0xe4
 	str r0, [r5, r1]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r4, #0
 	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
@@ -1047,7 +1047,7 @@ ovy204_21aa3a8: ; 0x021AA3A8
 	lsl r3, r3, #6
 	str r4, [sp, #4]
 	mov r7, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0x20
 	str r0, [sp]
 	mov r3, #7
@@ -1056,7 +1056,7 @@ ovy204_21aa3a8: ; 0x021AA3A8
 	mov r2, #4
 	lsl r3, r3, #6
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldrb r3, [r6, #0xd]
 	mov r0, #1
 	mov r1, #0x46

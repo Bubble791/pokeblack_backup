@@ -101,7 +101,7 @@ ovy171_21ddad4: ; 0x021DDAD4
 	bl sub_02042BA8
 	mov r0, #0x17
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r5, #0
 	bl ovy171_21ddee4
 	add r0, r5, #0
@@ -124,7 +124,7 @@ ovy171_21ddb54: ; 0x021DDB54
 	bl sub_021DDEFC
 	mov r0, #0x17
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r4, #0
 	bl sub_021DEAE0
 	add r0, r4, #0
@@ -1340,7 +1340,7 @@ _021DE4C4:
 	str r0, [r1]
 	add r0, r7, #0
 	bl GFL_ArcToolFree
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r1, _021DE604 ; =0x00008071
 	bl GFL_ArcSysCreateFileHandle
 	mov r1, #0x71

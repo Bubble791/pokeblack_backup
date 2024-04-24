@@ -6073,7 +6073,7 @@ ovy287_21f75dc: ; 0x021F75DC
 	bl ovy287_21f8520
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy287_21f75dc
@@ -6455,7 +6455,7 @@ _021F7924: .word 0x00002504
 ovy287_21f7928: ; 0x021F7928
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r1, [r5]
 	ldrh r2, [r1, #0x10]
 	ldr r1, _021F79A8 ; =0x00007FFF
@@ -10491,7 +10491,7 @@ ovy287_21f9824: ; 0x021F9824
 	bl sub_02045B7C
 	mov r0, #0xf
 	add r1, r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x90
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -10507,7 +10507,7 @@ ovy287_21f991c: ; 0x021F991C
 	push {r3, lr}
 	mov r0, #0x1f
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #4
 	bl sub_02044B84
 	mov r0, #5

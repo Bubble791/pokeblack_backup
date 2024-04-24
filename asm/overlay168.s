@@ -26217,7 +26217,7 @@ ovy168_21ea51c: ; 0x021EA51C
 	ldr r0, [r5, r0]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldrh r3, [r5, r4]
 	ldr r2, [r5, #0x4c]
 	mov r0, #6
@@ -26229,7 +26229,7 @@ ovy168_21ea51c: ; 0x021EA51C
 	mov r0, #0x10
 	mov r1, #1
 	mov r7, #0x10
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldrh r1, [r5, r4]
 	mov r0, #0
 	bl sub_02042BA8
@@ -27492,7 +27492,7 @@ _021EB07E:
 	ldr r0, [r4, r5]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r4, r5]
 	bl BmpWin_FlushChar
 	b _021EB0E4
@@ -28585,7 +28585,7 @@ _021EB890:
 	add r1, r6, #0
 	sub r1, #0x90
 	str r0, [r5, r1]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0xb1
 	lsl r1, r1, #2
 	ldrh r2, [r5, r1]
@@ -28740,7 +28740,7 @@ _021EB9EE:
 	ldr r0, [r0, r4]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r1, [r5]
 	mov r0, #0xc
 	str r0, [sp]
@@ -28869,7 +28869,7 @@ _021EBB14:
 	lsl r2, r5, #0xc
 	bl ovy168_21ecea8
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r1, [r4]
 	mov r0, #0xc
 	str r0, [sp]
@@ -28925,7 +28925,7 @@ _021EBBDA:
 	ldr r0, [r0, r5]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r3, #8
 	str r3, [sp]
 	mov r1, #8
@@ -29046,7 +29046,7 @@ _021EBCDE:
 	ldr r0, [r0, r4]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r3, #8
 	str r3, [sp]
 	mov r1, #8
@@ -29186,7 +29186,7 @@ _021EBDDE:
 	ldr r0, [r4]
 	bl ovy168_21ef588
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -29321,7 +29321,7 @@ ovy168_21ebee4: ; 0x021EBEE4
 	ldr r0, [r1, r0]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r4, [r5]
 	ldr r0, [r4, #0x50]
 	cmp r0, #2
@@ -29409,7 +29409,7 @@ _021EBFEA:
 	ldr r0, [r1, r0]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, [r5]
 	mov r4, #0x5d
 	lsl r4, r4, #2
@@ -29760,7 +29760,7 @@ _021EC2A8:
 	ldr r0, [r1, r6]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
 	ldr r0, [r0, r6]
 	bl BmpWin_FlushChar
@@ -29866,7 +29866,7 @@ _021EC31C:
 	lsl r2, r5, #0xc
 	bl ovy168_21ecea8
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r1, [r4]
 	mov r0, #0xc
 	str r0, [sp]
@@ -29914,7 +29914,7 @@ _021EC3C6:
 	ldr r0, [r0, r6]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r4]
 	ldr r3, _021EC4C8 ; =0x021F3744
 	ldr r1, [r0, #0x68]
@@ -30137,7 +30137,7 @@ _021EC5D6:
 	ldr r0, [r0, r7]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
 	ldr r0, [r0, r7]
 	bl BmpWin_FlushChar
@@ -30485,7 +30485,7 @@ ovy168_21ec854: ; 0x021EC854
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	str r6, [sp]
 	add r0, r5, #0
 	add r1, r5, #0
@@ -30534,7 +30534,7 @@ ovy168_21ec854: ; 0x021EC854
 	mov r0, #0x17
 	add r3, r7, #0
 	mov r5, #0x17
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r7, #0x40
 	ldr r0, [r4, #0x64]
 	mov r1, #1
@@ -31035,7 +31035,7 @@ _021ECCE6:
 	ldr r0, [r5]
 	bl ovy168_21ef5cc
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
 	ldr r2, _021ECDC4 ; =0x021F3744
 	ldr r1, [r0, #0x68]
@@ -31156,7 +31156,7 @@ _021ECDF2:
 	ldr r0, [r1, r0]
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5]
 	ldr r2, _021ECE8C ; =0x021F3744
 	ldr r1, [r0, #0x68]
@@ -32686,7 +32686,7 @@ _021ED98C:
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x34]
 	ldr r0, [sp, #0x30]
 	lsl r0, r0, #0x18
@@ -37363,7 +37363,7 @@ _021EFE44:
 	add r6, r6, #1
 	cmp r6, #6
 	blt _021EFE44
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r1, _021F0008 ; =0x00000468
 	ldrh r2, [r5, r1]
 	ldr r1, _021F000C ; =0x00007FFF

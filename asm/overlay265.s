@@ -287,10 +287,10 @@ ovy265_2199a18: ; 0x02199A18
 	bl sub_02045EA0
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r4, #0
 	add r1, r4, #0
 	bl sub_02045350
@@ -310,10 +310,10 @@ ovy265_2199b04: ; 0x02199B04
 	push {r3, lr}
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #7
 	bl sub_02044B84
 	mov r0, #3
@@ -653,7 +653,7 @@ ovy265_2199dc0: ; 0x02199DC0
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _02199E4C ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -2367,10 +2367,10 @@ _0219AAF0:
 	bl ovy265_219ac8c
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x38
 	pop {r4, r5, r6, pc}
 	nop
@@ -3617,7 +3617,7 @@ _0219B532:
 	mov r0, #0x10
 	mov r1, #1
 _0219B536:
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r4, #0
 	bl ovy265_219ab74
 	pop {r4, pc}

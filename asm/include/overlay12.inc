@@ -3498,7 +3498,7 @@
 .public GFL_HeapFree
 .public BmpWin_CreateDynamic
 .public sub_02024D00
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_MsgDataLoadStrbuf
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill

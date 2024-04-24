@@ -24566,7 +24566,7 @@ sub_02044BB8: ; 0x02044BB8
 	add r4, r0, #0
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r1, _02044BD4 ; =0x04000008
 	mov r0, #3
 	ldrh r2, [r1]
@@ -24704,35 +24704,35 @@ _02044CAA: ; jump table
 	.short _02044CF2 - _02044CAA - 2 ; case 7
 _02044CBA:
 	mov r0, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	pop {r3, pc}
 _02044CC2:
 	mov r0, #2
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	pop {r3, pc}
 _02044CCA:
 	mov r0, #4
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	pop {r3, pc}
 _02044CD2:
 	mov r0, #8
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	pop {r3, pc}
 _02044CDA:
 	mov r0, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 _02044CE2:
 	mov r0, #2
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 _02044CEA:
 	mov r0, #4
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 _02044CF2:
 	mov r0, #8
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _02044CF8:
 	pop {r3, pc}
 	.align 2, 0
@@ -25083,8 +25083,8 @@ _02044F8A:
 	pop {r3, r4, r5, pc}
 	thumb_func_end sub_02044F58
 
-	thumb_func_start sub_02044F90
-sub_02044F90: ; 0x02044F90
+	thumb_func_start GFL_BGSysLoadScr
+GFL_BGSysLoadScr: ; 0x02044F90
 	push {r3, lr}
 	mov r1, #0x2c
 	add r2, r0, #0
@@ -25099,7 +25099,7 @@ sub_02044F90: ; 0x02044F90
 	pop {r3, pc}
 	nop
 _02044FAC: .word 0x0214190C
-	thumb_func_end sub_02044F90
+	thumb_func_end GFL_BGSysLoadScr
 
 	thumb_func_start sub_02044FB0
 sub_02044FB0: ; 0x02044FB0
@@ -26154,7 +26154,7 @@ sub_02045738: ; 0x02045738
 	mov r0, #0
 	blx MIi_CpuClear16
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _0204575C:
 	pop {r4, pc}
 	nop
@@ -26179,7 +26179,7 @@ sub_02045764: ; 0x02045764
 	ldr r2, [r3, #0xc]
 	blx MIi_CpuClear16
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _0204578A:
 	pop {r4, pc}
 	.align 2, 0
@@ -29134,8 +29134,8 @@ sub_02046CF0: ; 0x02046CF0
 	pop {r3, pc}
 	thumb_func_end sub_02046CF0
 
-	thumb_func_start sub_02046CFC
-sub_02046CFC: ; 0x02046CFC
+	thumb_func_start GFL_BGSysSetBGEnabledA
+GFL_BGSysSetBGEnabledA: ; 0x02046CFC
 	cmp r1, #1
 	bne _02046D0A
 	ldr r1, _02046D30 ; =0x02141910
@@ -29167,7 +29167,7 @@ _02046D2C:
 	nop
 _02046D30: .word 0x02141910
 _02046D34: .word 0xFFFFE0FF
-	thumb_func_end sub_02046CFC
+	thumb_func_end GFL_BGSysSetBGEnabledA
 
 	thumb_func_start GFL_BGSysSetEnabledBGsA
 GFL_BGSysSetEnabledBGsA: ; 0x02046D38
@@ -29219,8 +29219,8 @@ sub_02046D78: ; 0x02046D78
 	pop {r3, pc}
 	thumb_func_end sub_02046D78
 
-	thumb_func_start sub_02046D84
-sub_02046D84: ; 0x02046D84
+	thumb_func_start GFL_BGSysSetBGEnabledB
+GFL_BGSysSetBGEnabledB: ; 0x02046D84
 	cmp r1, #1
 	bne _02046D92
 	ldr r1, _02046DB4 ; =0x02141910
@@ -29252,7 +29252,7 @@ _02046DB2:
 _02046DB4: .word 0x02141910
 _02046DB8: .word 0x04001000
 _02046DBC: .word 0xFFFFE0FF
-	thumb_func_end sub_02046D84
+	thumb_func_end GFL_BGSysSetBGEnabledB
 
 	thumb_func_start GFL_BGSysSetEnabledBGsB
 GFL_BGSysSetEnabledBGsB: ; 0x02046DC0
@@ -38579,7 +38579,7 @@ _0204B068:
 _0204B094:
 	lsl r0, r7, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	b _0204B0AE
 _0204B09E:
 	ldr r1, [sp, #8]
@@ -38596,8 +38596,8 @@ _0204B0AE:
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end sub_0204B000
 
-	thumb_func_start sub_0204B0B8
-sub_0204B0B8: ; 0x0204B0B8
+	thumb_func_start GFL_BGSysLoadNCLRDefault
+GFL_BGSysLoadNCLRDefault: ; 0x0204B0B8
 	push {lr}
 	sub sp, #0xc
 	str r3, [sp]
@@ -38611,7 +38611,7 @@ sub_0204B0B8: ; 0x0204B0B8
 	add sp, #0xc
 	pop {pc}
 	.align 2, 0
-	thumb_func_end sub_0204B0B8
+	thumb_func_end GFL_BGSysLoadNCLRDefault
 
 	thumb_func_start GFL_G2DIOLoadArcNCLRDefault
 GFL_G2DIOLoadArcNCLRDefault: ; 0x0204B0D4

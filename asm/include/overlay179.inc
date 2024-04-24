@@ -69,8 +69,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
@@ -114,7 +114,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public MI_CpuFill8
 .public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
@@ -123,7 +123,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public sub_02048210
 .public MI_CpuFill8

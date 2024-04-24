@@ -65,7 +65,7 @@
 .public sub_020450CC
 .public sub_020450CC
 .public sub_020450CC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
@@ -80,9 +80,9 @@
 .public sub_0204AF50
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B32C
-.public sub_0204B0B8
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02024D00
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
@@ -308,7 +308,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024EEC
 .public sub_020484B4
 .public sub_020484D4
@@ -326,13 +326,13 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
 .public sub_0204BF98
 .public sub_0204B758
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D814
 .public Oam_LoadNCGRFile
@@ -380,7 +380,7 @@
 .public sub_0204C488
 .public sub_02021280
 .public sub_0204C488
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public Oam_CreateSprite
 .public sub_0204C520
@@ -421,7 +421,7 @@
 .public sub_0202BACC
 .public sub_0202E34C
 .public sub_0202E34C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0202BAA4
 .public sub_0202BAA4
 .public sub_0202BAA4

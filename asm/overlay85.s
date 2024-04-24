@@ -4400,7 +4400,7 @@ _021ED032:
 	blt _021ED032
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -4414,7 +4414,7 @@ ovy85_21ed054: ; 0x021ED054
 	mov r0, #0x10
 	mov r1, #0
 	mov r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _021ED062:
 	lsl r1, r4, #0x18
 	add r0, r5, #0
@@ -4480,7 +4480,7 @@ ovy85_21ed098: ; 0x021ED098
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, pc}
 	.align 2, 0

@@ -1947,7 +1947,7 @@ ovy286_21f5354: ; 0x021F5354
 	bl ovy286_21f5a00
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy286_21f5354
@@ -2188,7 +2188,7 @@ ovy286_21f5540: ; 0x021F5540
 	lsl r3, r5, #5
 	str r0, [sp, #4]
 	add r0, r7, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 _021F5576:
@@ -2205,7 +2205,7 @@ _021F5576:
 	lsl r3, r5, #5
 	str r0, [sp, #4]
 	add r0, r7, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy286_21f5540
@@ -4809,7 +4809,7 @@ ovy286_21f690c: ; 0x021F690C
 	bl sub_02045B7C
 	mov r0, #0xf
 	add r1, r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x90
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -4825,7 +4825,7 @@ ovy286_21f6a04: ; 0x021F6A04
 	push {r3, lr}
 	mov r0, #0x1f
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #4
 	bl sub_02044B84
 	mov r0, #5

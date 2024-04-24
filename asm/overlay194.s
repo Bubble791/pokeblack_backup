@@ -7378,7 +7378,7 @@ ovy194_21bb228: ; 0x021BB228
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	bl ovy194_21be6ac
 	ldr r0, _021BB28C ; =0x0000118C
@@ -9625,7 +9625,7 @@ ovy194_21bc434: ; 0x021BC434
 	ldr r0, [r5, r0]
 	str r1, [sp, #0x44]
 	str r0, [sp, #0x48]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0x20
 	mov r3, #0x1a
 	ldr r4, _021BC69C ; =0x000005F4
@@ -9635,7 +9635,7 @@ ovy194_21bc434: ; 0x021BC434
 	lsl r3, r3, #4
 	str r1, [sp, #4]
 	mov r1, #0x1f
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	sub r0, #0x20
 	ldr r0, [r5, r0]
@@ -16344,7 +16344,7 @@ ovy194_21bfbc0: ; 0x021BFBC0
 	ldr r0, [sp, #0x48]
 	str r7, [sp, #0xc]
 	str r0, [sp, #8]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x10]
 	bl sub_0202D7E4
 	str r0, [sp, #0x14]
@@ -16428,7 +16428,7 @@ ovy194_21bfc6c: ; 0x021BFC6C
 	str r0, [sp, #8]
 	mov r0, #0
 	str r0, [sp, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x10]
 	add r0, r4, #0
 	bl sub_0202D91C
@@ -16494,7 +16494,7 @@ ovy194_21bfcf8: ; 0x021BFCF8
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r0, [sp, #0x34]
 	ldr r3, [sp, #0x30]
 	lsl r0, r0, #0x18
@@ -18045,7 +18045,7 @@ ovy194_21c0918: ; 0x021C0918
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	sub r7, #0x38
 	add r0, r5, r7
 	lsl r4, r6, #2
@@ -18807,7 +18807,7 @@ ovy194_21c0fa0: ; 0x021C0FA0
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r0, _021C122C ; =0x00000844
 	lsl r7, r4, #2
 	add r0, r5, r0
@@ -22639,7 +22639,7 @@ ovy194_21c2e6c: ; 0x021C2E6C
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	bne _021C2EE4
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r7, _021C2EEC ; =0x000005F4
 	ldrh r1, [r5, r7]
 	bl GFL_ArcSysCreateFileHandle
@@ -23120,7 +23120,7 @@ ovy194_21c3224: ; 0x021C3224
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r0, [sp, #0xc]
 	mov r6, #0
 	add r0, #0x3c
@@ -25055,7 +25055,7 @@ ovy194_21c4088: ; 0x021C4088
 	mov r3, #0
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021C41C8 ; =0x021C6D48
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -25243,7 +25243,7 @@ ovy194_21c4234: ; 0x021C4234
 	str r7, [sp, #8]
 	bl sub_02045604
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021C431C ; =0x021C6C88
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -25273,7 +25273,7 @@ ovy194_21c4234: ; 0x021C4234
 	str r7, [sp, #8]
 	bl sub_02045604
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021C4320 ; =0x021C6CA8
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -25298,7 +25298,7 @@ ovy194_21c4234: ; 0x021C4234
 	str r7, [sp, #8]
 	bl sub_02045604
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0
 	bl sub_02044BB8
 	mov r0, #0
@@ -25320,7 +25320,7 @@ ovy194_21c4324: ; 0x021C4324
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021C43A4 ; =0x04000060
 	ldr r5, _021C43A8 ; =0xFFFFCFFD
 	ldrh r1, [r0]
@@ -25537,7 +25537,7 @@ ovy194_21c4484: ; 0x021C4484
 	str r7, [sp, #8]
 	bl sub_02045604
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021C459C ; =0x021C6D68
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -25564,7 +25564,7 @@ ovy194_21c4484: ; 0x021C4484
 	str r7, [sp, #8]
 	bl sub_02045604
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021C45A0 ; =0x021C6C08
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -25595,7 +25595,7 @@ ovy194_21c4484: ; 0x021C4484
 	str r7, [sp, #8]
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r1, _021C45A4 ; =0x000011EB
 	mov r0, #1
 	strb r0, [r5, r1]
@@ -26451,7 +26451,7 @@ _021C4C8A:
 _021C4C8E:
 	mov r6, #0
 	str r6, [sp, #0x18]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x1c]
 	bl sub_0202D890
 	str r0, [sp, #0x20]
@@ -26569,7 +26569,7 @@ _021C4D76:
 	strb r1, [r0, #0x1c]
 	mov r0, #0
 	str r0, [sp, #0x10]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x14]
 	bl sub_0202D8B0
 	str r0, [sp, #0x18]
@@ -26669,7 +26669,7 @@ _021C4E44:
 	strb r1, [r0, #0x1c]
 	mov r0, #0
 	str r0, [sp, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x10]
 	bl sub_0202D944
 	str r0, [sp, #0x14]
@@ -26751,7 +26751,7 @@ _021C4EF0:
 	mov r5, #0
 	str r5, [sp, #0x80]
 	str r5, [sp, #0x84]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x88]
 	bl sub_0202D944
 	str r0, [sp, #0x8c]
@@ -26978,8 +26978,8 @@ ovy194_21c5098: ; 0x021C5098
 	str r0, [sp, #4]
 	mov r0, #0x17
 	add r6, r2, #0
-	bl sub_0204B0B8
-	bl sub_0202D7E0
+	bl GFL_BGSysLoadNCLRDefault
+	bl GetDefaultUINarcIdx
 	add r4, #0x1c
 	str r4, [sp]
 	mov r1, #4

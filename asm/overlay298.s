@@ -1586,7 +1586,7 @@ ovy298_21a0700: ; 0x021A0700
 	mov r0, #1
 	mov r1, #1
 	mov r4, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021A0790 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -1967,10 +1967,10 @@ ovy298_21a09d4: ; 0x021A09D4
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021A0A10: .word 0x021ABFDC
@@ -2572,7 +2572,7 @@ ovy298_21a0de8: ; 0x021A0DE8
 	mov r7, #0
 	blx MI_CpuFill8
 	str r6, [r5, #0xc]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r4, #0
 	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0
@@ -2785,7 +2785,7 @@ _021A0F72:
 	bl sub_0204566C
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021A0FC8:
 	add r0, r7, #0
 	bl GFL_HeapFree
@@ -14432,7 +14432,7 @@ ovy298_21a6a20: ; 0x021A6A20
 	mov r2, #0
 	bl sub_02044CFC
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	str r4, [r5, #0x1c]
 _021A6A4C:
 	add r5, #0xc8

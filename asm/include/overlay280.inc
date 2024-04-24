@@ -92,8 +92,8 @@
 .public sub_0203D554
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public MI_CpuFill8
 .public sub_0203D554
 .public sub_02044E74
@@ -107,7 +107,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufCreate
 .public sub_021D9CF4
 .public sub_020485F8
@@ -185,13 +185,13 @@
 .public sub_02045054
 .public sub_02045054
 .public sub_02044C98
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021DB74C
 .public BmpWin_CreateDynamic
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0203D554
 .public sub_02048210
 .public sub_021DA9F4
@@ -236,7 +236,7 @@
 .public sub_02045054
 .public sub_02044C98
 .public sub_02045054
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021DB74C
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -286,7 +286,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02048210
 .public GFL_StrBufFree
 .public MI_CpuFill8
@@ -336,7 +336,7 @@
 .public sub_02022268
 .public GFL_WordSetSystemFree
 .public MI_CpuFill8
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_0202D8A0
 .public sub_0202D8A4
 .public sub_0202D8A8
@@ -518,8 +518,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

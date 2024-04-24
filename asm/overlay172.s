@@ -406,7 +406,7 @@ ovy172_2199b2c: ; 0x02199B2C
 	bl sub_02044BB8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -978,7 +978,7 @@ ovy172_2199f94: ; 0x02199F94
 	mov r2, #0
 	bl sub_02048358
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #1
 	mov r1, #0
 	bl sub_02044C98
@@ -1407,7 +1407,7 @@ _0219A3B0:
 	ldr r0, [r5, #0x1c]
 	bl sub_0204826C
 	add r0, r7, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x1c]
 	bl BmpWin_FlushChar
 _0219A3D6:

@@ -208,8 +208,8 @@
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
 .public GFL_TCBExMgrCreate
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_02042BA8
 .public sub_020223CC
 .public GFL_TCBExMgrFree
@@ -246,7 +246,7 @@
 .public sub_02044564
 .public LoadCursorImageEndOfHeap
 .public LoadCursorImageEndOfHeap
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GX_LoadBGPltt
 .public GXS_LoadBGPltt
 .public sub_02044CFC

@@ -39,7 +39,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_0203A888

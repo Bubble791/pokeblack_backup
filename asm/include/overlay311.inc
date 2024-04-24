@@ -42,7 +42,7 @@
 .public sub_020298BC
 .public sub_02029818
 .public GFL_HeapAllocate
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02024D00
 .public GFL_WordSetSystemCreateDefault
 .public GFL_MsgSysLoadData
@@ -213,7 +213,7 @@
 .public sub_0204C124
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -251,8 +251,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

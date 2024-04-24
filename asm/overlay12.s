@@ -41406,7 +41406,7 @@ ovy12_2163ee0: ; 0x02163EE0
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r4, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0xc
 	pop {r4, r5, pc}
 	thumb_func_end ovy12_2163ee0

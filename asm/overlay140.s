@@ -1054,10 +1054,10 @@ ovy140_219d708: ; 0x0219D708
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0x1b
 	add r1, r6, #0
 	bl GFL_ArcSysCreateFileHandle
@@ -1569,7 +1569,7 @@ ovy140_219daa4: ; 0x0219DAA4
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x10]
 	str r0, [r5, #0x1c]
 	add r5, #0x20

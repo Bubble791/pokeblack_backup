@@ -246,10 +246,10 @@ ovy301_219fc98: ; 0x0219FC98
 	bl sub_02045738
 	mov r0, #0xe
 	add r1, r5, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xa
 	add r1, r5, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0xb0
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -267,10 +267,10 @@ ovy301_219fdbc: ; 0x0219FDBC
 	push {r3, lr}
 	mov r0, #0xe
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xa
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #5
 	bl sub_02044B84
 	mov r0, #7
@@ -541,7 +541,7 @@ ovy301_219fff0: ; 0x0219FFF0
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r5, #0
 	bl ovy301_219fc74
 	mov r0, #0x7e

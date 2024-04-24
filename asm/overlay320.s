@@ -321,7 +321,7 @@ _0219D112:
 	mov r0, #0
 	str r0, [sp, #0x24]
 	str r0, [sp, #0x28]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x2c]
 	bl sub_0202D8A0
 	str r0, [sp, #0x30]
@@ -627,7 +627,7 @@ _0219D2F0:
 	sub r0, #0x14
 	ldr r0, [r5, r0]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	bl ovy320_219e2b0
 	add r0, r6, #4
@@ -1276,7 +1276,7 @@ ovy320_219d88c: ; 0x0219D88C
 	bl sub_0204826C
 	ldr r0, [r5, r4]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -2401,7 +2401,7 @@ _0219E0FE:
 	bl sub_0204826C
 	add r0, r5, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_WordSetSystemFree
 	ldr r0, [sp, #0x20]
@@ -4038,10 +4038,10 @@ ovy320_219ed44: ; 0x0219ED44
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219ED80: .word 0x0219EFBC

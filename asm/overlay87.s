@@ -322,7 +322,7 @@ ovy87_21eaab4: ; 0x021EAAB4
 	add r3, r5, #0
 	bl sub_020450CC
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EAB90 ; =0x021EB528
 	add r3, sp, #0x20
 	add r2, r3, #0
@@ -346,7 +346,7 @@ ovy87_21eaab4: ; 0x021EAAB4
 	add r3, r5, #0
 	bl sub_020450CC
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EAB94 ; =0x021EB508
 	add r3, sp, #0
 	add r2, r3, #0
@@ -370,7 +370,7 @@ ovy87_21eaab4: ; 0x021EAAB4
 	add r3, r5, #0
 	bl sub_020450CC
 	add r0, r7, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x60
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -1243,7 +1243,7 @@ _021EB2FC:
 	bls _021EB2FC
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -1308,7 +1308,7 @@ _021EB38A:
 	bl sub_0204BF98
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy87_21eb350

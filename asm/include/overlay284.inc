@@ -165,7 +165,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCGRFile
@@ -184,7 +184,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_020275F8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -245,7 +245,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_MsgSysLoadData
 .public sub_021E4B84
 .public sub_0219A584
@@ -299,7 +299,7 @@
 .public sub_02017994
 .public sub_020095A0
 .public sub_020095A0
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -342,8 +342,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

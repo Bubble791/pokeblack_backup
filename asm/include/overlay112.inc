@@ -25,8 +25,8 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
-.public sub_02046CFC
+.public GFL_BGSysLoadScr
+.public GFL_BGSysSetBGEnabledA
 .public ovy36_21b8598
 .public sub_021B8224
 .public sub_021B8248

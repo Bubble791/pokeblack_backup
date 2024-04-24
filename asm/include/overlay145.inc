@@ -80,7 +80,7 @@
 .public sub_0204AF50
 .public GFL_G2DIOLoadArcNCLR
 .public GFL_ArcToolFree
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public G2x_SetBlendAlpha_
 .public sub_0219E118
 .public sub_02044BD8
@@ -103,8 +103,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public GFL_ArcSysCreateFileHandle
 .public GFL_ArcSysCreateFileHandle

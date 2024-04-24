@@ -71,7 +71,7 @@ ovy80_21ea86c: ; 0x021EA86C
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x10
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -125,7 +125,7 @@ _021EA8FC:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EA9F0 ; =0x021EAAFC
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -156,7 +156,7 @@ _021EA8FC:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EA9F4 ; =0x021EAB1C
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -187,7 +187,7 @@ _021EA8FC:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x6c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -241,7 +241,7 @@ ovy80_21eaa1c: ; 0x021EAA1C
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 	thumb_func_end ovy80_21eaa1c
 _021EAA64:

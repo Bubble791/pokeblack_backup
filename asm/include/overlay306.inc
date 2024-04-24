@@ -101,7 +101,7 @@
 .public GFL_HeapAllocate
 .public sub_02045320
 .public GFL_HeapFree
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -178,7 +178,7 @@
 .public sub_02045B7C
 .public sub_02044564
 .public sub_02044668
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_HeapAllocate
 .public sub_02045320
 .public GFL_HeapFree
@@ -293,13 +293,13 @@
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044B84
 .public sub_0219EB74
 .public sub_0203A584
@@ -322,7 +322,7 @@
 .public sub_02026FE4
 .public sub_02026FE4
 .public sub_02026FE4
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -360,8 +360,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

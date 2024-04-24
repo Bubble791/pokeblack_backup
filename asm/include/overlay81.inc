@@ -8,7 +8,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_HeapAllocate
 .public sub_02016AD8
 .public sub_02017238
@@ -30,7 +30,7 @@
 .public sub_02021D28
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
 .public sub_02048210
 .public sub_02022DA8
@@ -45,4 +45,4 @@
 .public sub_021E6488
 .public GFL_StrBufFree
 .public sub_02042BA8
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB

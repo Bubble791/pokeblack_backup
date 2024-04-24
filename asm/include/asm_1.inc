@@ -3862,8 +3862,8 @@
 .public sub_02048734
 .public sub_02048700
 .public sub_0204AD88
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_0204AE00
 .public sub_02044668
 .public sub_02045604
@@ -3879,7 +3879,7 @@
 .public sub_020484EC
 .public sub_020484E0
 .public sub_020484E4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045B7C
 .public sub_020484D4
 .public sub_020484E8
@@ -3887,7 +3887,7 @@
 .public sub_020484E0
 .public sub_020484E4
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045B7C
 .public GFL_HeapAllocate
 .public GFL_HeapFree
@@ -3915,7 +3915,7 @@
 .public sub_0203D5A8
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar
@@ -4133,7 +4133,7 @@
 .public sub_0203D5A8
 .public OS_IsRunOnTwl
 .public sub_020454D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_020454D4
 .public sub_02045320
 .public GFL_ArcSysCreateFileHandle
@@ -4143,7 +4143,7 @@
 .public GFL_ArcToolFree
 .public sub_02045604
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044238
 .public GFL_HeapAllocate
 .public GFL_HeapFree
@@ -4323,7 +4323,7 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0204B264
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public BmpWin_FlushChar
@@ -4745,7 +4745,7 @@
 .public BmpWin_FlushChar
 .public sub_020484B4
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204C124
 .public sub_0204826C
 .public sub_020484B4
@@ -8336,7 +8336,7 @@
 .public sub_0202D7D0
 .public sub_0202D7D8
 .public sub_0202D7DC
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_0202D7E4
 .public sub_0202D7E8
 .public sub_0202D7F4
@@ -9997,7 +9997,7 @@
 .public sub_02044E88
 .public sub_02044EB0
 .public sub_02044F58
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044FB0
 .public sub_02045054
 .public sub_02045060
@@ -10062,12 +10062,12 @@
 .public sub_02046CD0
 .public sub_02046CE0
 .public sub_02046CF0
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetEnabledBGsA
 .public sub_02046D58
 .public sub_02046D68
 .public sub_02046D78
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DE0
 .public sub_02046DF8
@@ -10311,7 +10311,7 @@
 .public GFL_G2DIOLoadNSCRSync
 .public sub_0204AFD8
 .public sub_0204B000
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204B0F0
 .public GFL_G2DIOLoadArcNCLR

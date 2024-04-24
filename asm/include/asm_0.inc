@@ -1750,8 +1750,8 @@
 .public sub_02048734
 .public sub_02048700
 .public sub_0204AD88
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_0204AE00
 .public sub_02044668
 .public sub_02045604
@@ -1767,7 +1767,7 @@
 .public sub_020484EC
 .public sub_020484E0
 .public sub_020484E4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045B7C
 .public sub_020484D4
 .public sub_020484E8
@@ -1775,7 +1775,7 @@
 .public sub_020484E0
 .public sub_020484E4
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045B7C
 .public GFL_HeapAllocate
 .public GFL_HeapFree
@@ -1803,7 +1803,7 @@
 .public sub_0203D5A8
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar
 .public BmpWin_FlushChar
@@ -2021,7 +2021,7 @@
 .public sub_0203D5A8
 .public OS_IsRunOnTwl
 .public sub_020454D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_020454D4
 .public sub_02045320
 .public GFL_ArcSysCreateFileHandle
@@ -2031,7 +2031,7 @@
 .public GFL_ArcToolFree
 .public sub_02045604
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044238
 .public GFL_HeapAllocate
 .public GFL_HeapFree
@@ -2211,7 +2211,7 @@
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0204B264
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public BmpWin_FlushChar
@@ -2633,7 +2633,7 @@
 .public BmpWin_FlushChar
 .public sub_020484B4
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204C124
 .public sub_0204826C
 .public sub_020484B4

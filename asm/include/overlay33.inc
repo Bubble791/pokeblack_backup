@@ -268,7 +268,7 @@
 .public ovy36_2187bfc
 .public sub_02187C7C
 .public sub_02187C1C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
@@ -284,7 +284,7 @@
 .public GFL_MsgDataFree
 .public ovy36_2187c9c
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02180490
 .public sub_02189CB0
 .public sub_02187C70
@@ -488,12 +488,12 @@
 .public sub_02045320
 .public sub_02045118
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021C80A8
 .public sub_021C80A0
 .public sub_02045320
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045264
 .public sub_02016CB4
 .public sub_02016EDC

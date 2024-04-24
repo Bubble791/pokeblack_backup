@@ -3416,7 +3416,7 @@ ovy309_219e938: ; 0x0219E938
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _0219E9C4 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -3755,10 +3755,10 @@ ovy309_219ebd0: ; 0x0219EBD0
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219EC0C: .word 0x021A0210
@@ -4045,7 +4045,7 @@ ovy309_219ee08: ; 0x0219EE08
 	add r5, r0, #0
 	str r1, [sp, #0xc]
 	add r6, r2, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x10]
@@ -4108,7 +4108,7 @@ _0219EE84:
 	ldr r0, [sp, #0xc]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0x10]
 	bl GFL_ArcToolFree
 	add sp, #0x14
@@ -4150,7 +4150,7 @@ _0219EEBA:
 	add r0, #0x9c
 	ldr r0, [r0]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r7, r7, #1
 	add r5, r5, #6
 	cmp r7, #0x1e
@@ -4470,7 +4470,7 @@ ovy309_219f154: ; 0x0219F154
 	sub sp, #0x18
 	add r5, r0, #0
 	add r6, r1, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
@@ -5651,7 +5651,7 @@ ovy309_219faa8: ; 0x0219FAA8
 	bl sub_0204826C
 	ldr r0, [r5, r4]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, r4]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf

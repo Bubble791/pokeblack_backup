@@ -1897,7 +1897,7 @@ ovy33_2177a28: ; 0x02177A28
 	ldr r0, [r4, #0xc]
 	bl sub_02187C1C
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x18]
 	bl GFL_StrBufFree
 	ldr r0, [r4, #0x1c]
@@ -1983,7 +1983,7 @@ _02177AEA:
 	ldr r0, [r5, #0xc]
 	bl ovy36_2187c9c
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -3791,7 +3791,7 @@ ovy33_217884c: ; 0x0217884C
 	mov r3, #0
 	bl sub_02045604
 	ldrb r0, [r5]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldrb r3, [r5, #1]
 	mov r0, #0x10
 	mov r1, #8
@@ -3834,7 +3834,7 @@ ovy33_21788c4: ; 0x021788C4
 	mov r3, #0
 	bl sub_02045604
 	ldrb r0, [r4]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r5, #0xff
 	ldrb r0, [r4]
 	mov r1, #1

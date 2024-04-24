@@ -6931,7 +6931,7 @@ _0217A0EE:
 	mov r0, #1
 	bl sub_02045738
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	thumb_func_end ovy261_217a0d0
 

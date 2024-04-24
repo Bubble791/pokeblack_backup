@@ -492,7 +492,7 @@ _021EABAC:
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 _021EABE4:

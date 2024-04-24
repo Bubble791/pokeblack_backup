@@ -69,8 +69,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
@@ -98,8 +98,8 @@
 .public sub_02021998
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public sub_02021A18
@@ -113,7 +113,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public MI_CpuFill8
 .public BmpWin_CreateDynamic
 .public GFL_StrBufCreate
@@ -122,7 +122,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_StrBufFree
 .public sub_02048210
 .public MI_CpuFill8
@@ -155,7 +155,7 @@
 .public sub_0219B6C8
 .public sub_0219AA24
 .public sub_0219AA68
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02199B7C
 .public sub_02199910
 .public GFL_SndSEPlay
@@ -223,7 +223,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0219B484
 .public sub_0204898C
 .public sub_020232E8
@@ -244,10 +244,10 @@
 .public GFL_SndSEPlay
 .public sub_020484D4
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_020484D4
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public MI_CpuFill8
 .public sub_02045E1C
 .public sub_02045E1C

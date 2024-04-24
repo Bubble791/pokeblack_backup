@@ -190,28 +190,28 @@ ovy205_21b74ec: ; 0x021B74EC
 	bl sub_020480A8
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #1
 	bl sub_02044B84
 	mov r0, #2
@@ -316,16 +316,16 @@ _021B760E:
 	bl sub_02045738
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r4, _021B76F8 ; =0x021B9458
 	add r3, sp, #0
 	mov r2, #0x10
@@ -360,24 +360,24 @@ _021B766C:
 	bl sub_02045738
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0
 	bl sub_02046DF8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0xe0
 	pop {r3, r4, r5, pc}
 	nop
@@ -2426,7 +2426,7 @@ ovy205_21b85f8: ; 0x021B85F8
 	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x40
 	mov r1, #0
 	mov r2, #0x32
@@ -2599,7 +2599,7 @@ ovy205_21b8650: ; 0x021B8650
 	mov r2, #4
 	lsl r3, r3, #7
 	str r7, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy205_21b8650
@@ -4186,7 +4186,7 @@ ovy205_21b9338: ; 0x021B9338
 	add r0, r5, #0
 	bl BmpWin_FlushChar
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy205_21b9338

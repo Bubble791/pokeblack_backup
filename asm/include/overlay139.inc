@@ -30,7 +30,7 @@
 .public sub_0219A1B8
 .public sub_0219A178
 .public MI_CpuFill8
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D820
 .public GFL_G2DIOLoadArcNCLRDefault
@@ -56,7 +56,7 @@
 .public sub_02045814
 .public sub_020454D4
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_HeapFree
 .public MI_CpuFill8
 .public MI_CpuFill8
@@ -132,10 +132,10 @@
 .public sub_0204AF50
 .public sub_0204566C
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcToolFree
 .public sub_02044C98
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -146,8 +146,8 @@
 .public sub_0204C468
 .public sub_0204C124
 .public sub_0204C520
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
 .public sub_02048210
 .public sub_02048210

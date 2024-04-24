@@ -67,8 +67,8 @@
 .public sub_0204BE9C
 .public sub_0204C018
 .public sub_0204BF14
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BECC
 .public sub_0204BF98
 .public sub_0204B758
@@ -125,7 +125,7 @@
 .public sub_0203580C
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024E80
 .public sub_02046EF8
 .public sub_02046EFC
@@ -214,7 +214,7 @@
 .public sub_02044564
 .public LoadCursorImageEndOfHeap
 .public LoadCursorImageEndOfHeap
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GX_LoadBGPltt
 .public GXS_LoadBGPltt
 .public sub_02044CFC

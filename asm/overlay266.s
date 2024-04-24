@@ -557,7 +557,7 @@ _0219D252:
 	mov r1, #0
 	bl sub_02045350
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	mov r1, #5
 	str r6, [r4, r5]
@@ -643,7 +643,7 @@ _0219D308:
 	mov r1, #0
 	bl sub_02045350
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #3
 	str r0, [r4, r5]
 	add r0, r4, #0
@@ -808,16 +808,16 @@ ovy266_219d3e0: ; 0x0219D3E0
 	bl sub_0204476C
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r7, #0
 	add r1, r5, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r7, #0
 	add r1, r5, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0xc4
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -834,10 +834,10 @@ ovy266_219d4fc: ; 0x0219D4FC
 	push {r3, lr}
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #5
 	bl sub_02044B84
 	mov r0, #3
@@ -984,7 +984,7 @@ ovy266_219d5c4: ; 0x0219D5C4
 	bl sub_0204C124
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1395,7 +1395,7 @@ ovy266_219d908: ; 0x0219D908
 	bl sub_0204826C
 	add r0, r6, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, #8
 	ldr r4, [r5, r4]
 	add r0, r4, #0
@@ -1404,7 +1404,7 @@ ovy266_219d908: ; 0x0219D908
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -2205,7 +2205,7 @@ _0219DF36:
 	bl G2x_SetBlendAlpha_
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r6, #0x1c
 	add r0, r6, #0
 	mov r1, #0
@@ -2331,7 +2331,7 @@ _0219E01A:
 	strh r5, [r0]
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	strh r5, [r4, r6]
 	sub r0, r6, #4
 	strb r5, [r4, r0]
@@ -2517,7 +2517,7 @@ _0219E17A:
 	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 _0219E1C4:
 	ldrb r1, [r4, #1]
 	mov r0, #2
@@ -2548,7 +2548,7 @@ _0219E1C4:
 	bl GFL_G2DIOLoadArcNCLRDefault
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _0219E208:
 	mov r0, #5
 	add sp, #8
@@ -2617,10 +2617,10 @@ _0219E286:
 	mov r0, #1
 	mov r1, #0
 	mov r5, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r0, _0219E2A8 ; =0x04000050
 	strh r5, [r0]
 	ldr r0, _0219E2AC ; =0x04001050

@@ -47,7 +47,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_02045814
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcToolFree
 .public sub_02045350
 .public GFL_ArcSysCreateFileHandle
@@ -55,7 +55,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public sub_02045814
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcToolFree
 .public sub_02045350
 .public sub_0219DD20
@@ -76,7 +76,7 @@
 .public sub_0219DD20
 .public sub_0204C318
 .public sub_02042BA8
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
 .public sub_0204C108
 .public sub_0204BCD0
@@ -118,7 +118,7 @@
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
@@ -178,8 +178,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

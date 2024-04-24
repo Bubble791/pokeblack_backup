@@ -53,7 +53,7 @@
 .public GFL_BGSysLoadArcNCGRDynamic
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_02044C98
 .public GFL_HeapAllocate
@@ -89,15 +89,15 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0201CCF8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_WordSetSystemCreateDefault
 .public sub_020243F4
 .public GFL_MsgSysLoadData

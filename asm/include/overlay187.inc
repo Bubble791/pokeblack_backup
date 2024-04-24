@@ -159,7 +159,7 @@
 .public sub_021E9710
 .public sub_0204566C
 .public sub_021E9710
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_TCBRemove
 .public sub_02045708
 .public sub_02044B84
@@ -259,8 +259,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046D84
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledA
 .public GFL_ArcSysCreateFileHandle
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCERFile

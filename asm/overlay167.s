@@ -114361,12 +114361,12 @@ _021D0DFE:
 	add r0, r5, #0
 	bl ovy167_21d3ac4
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #2
 	mov r6, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0
 	mov r1, #1
 	bl sub_02044C98
@@ -114387,7 +114387,7 @@ _021D0DFE:
 	mov r4, #0x10
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	lsl r2, r4, #0x16
 	ldr r1, [r2]
 	ldr r0, _021D0F1C ; =0xFFFF1FFF
@@ -114430,7 +114430,7 @@ _021D0EBA:
 	bl sub_02044CFC
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -121415,7 +121415,7 @@ _021D43A0:
 	bl BmpWin_BitmapFill
 	ldr r0, [r4, #8]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021D43D0:
 	ldr r0, [r5]
 	add r0, r0, #1
@@ -121601,7 +121601,7 @@ _021D44F0:
 	str r1, [sp, #8]
 	bl sub_02045604
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, _021D4574 ; =0x00000547
 	bl GFL_SndSEPlay
 _021D4548:

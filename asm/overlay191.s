@@ -2888,10 +2888,10 @@ ovy191_21b6930: ; 0x021B6930
 	mov r0, #0x10
 	mov r1, #1
 	str r7, [r5]
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #1
 	add r1, r6, #0
 	bl sub_02042BA8
@@ -3252,7 +3252,7 @@ _021B6C6A:
 	mov r0, #0x17
 	mov r2, #0
 	add r3, r5, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0x3c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

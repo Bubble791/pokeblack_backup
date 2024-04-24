@@ -489,10 +489,10 @@ ovy310_219d198: ; 0x0219D198
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 	.align 2, 0
 _0219D1EC: .word 0x021A6848
@@ -569,7 +569,7 @@ ovy310_219d210: ; 0x0219D210
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r6, #0
 	bl GFL_HeapFree
 	add r0, r4, #0
@@ -589,7 +589,7 @@ ovy310_219d210: ; 0x0219D210
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	bl GFL_HeapFree
 	add r0, r4, #0
@@ -620,7 +620,7 @@ ovy310_219d2dc: ; 0x0219D2DC
 	mov r3, #0x20
 	bl sub_0204566C
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r3, pc}
 	thumb_func_end ovy310_219d2dc
@@ -688,7 +688,7 @@ ovy310_219d314: ; 0x0219D314
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	bl GFL_HeapFree
 	add r0, r4, #0
@@ -1628,7 +1628,7 @@ _0219DB92:
 	str r5, [sp, #4]
 	bl sub_0204566C
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy310_219db74
@@ -1664,7 +1664,7 @@ _0219DBD6:
 	str r5, [sp, #4]
 	bl sub_0204566C
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -2360,7 +2360,7 @@ ovy310_219e058: ; 0x0219E058
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r5, #0
@@ -2426,7 +2426,7 @@ ovy310_219e0d0: ; 0x0219E0D0
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r5, #0
@@ -10891,7 +10891,7 @@ _021A2342:
 	bl ovy310_21a2560
 _021A2346:
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0
@@ -10960,7 +10960,7 @@ _021A23C6:
 	bl ovy310_21a257c
 _021A23CA:
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0
@@ -11908,7 +11908,7 @@ _021A2AB8:
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r6, #0
@@ -14134,7 +14134,7 @@ ovy310_21a3ac4: ; 0x021A3AC4
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r5, #0
@@ -14199,7 +14199,7 @@ ovy310_21a3b3c: ; 0x021A3B3C
 	mov r3, #0
 	bl sub_020454AC
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r5, #0

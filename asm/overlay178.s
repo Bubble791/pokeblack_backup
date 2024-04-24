@@ -636,7 +636,7 @@ _0219B172:
 	add r2, r5, #0
 	lsl r3, r3, #4
 	str r6, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #2
 	add r1, r5, #0
 	mov r2, #1
@@ -720,10 +720,10 @@ ovy178_219b2ec: ; 0x0219B2EC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0x5d
 	add r1, r7, #0
 	bl GFL_ArcSysCreateFileHandle
@@ -992,14 +992,14 @@ _0219B522:
 	mov r1, #5
 	mov r2, #4
 	add r3, r6, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r5, [sp]
 	mov r0, #0x17
 	mov r1, #5
 	mov r2, #0
 	add r3, r6, #0
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -1100,7 +1100,7 @@ ovy178_219b5b0: ; 0x0219B5B0
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy178_219b5b0
@@ -1151,7 +1151,7 @@ ovy178_219b618: ; 0x0219B618
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy178_219b618

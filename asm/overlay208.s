@@ -1159,10 +1159,10 @@ ovy208_219a16c: ; 0x0219A16C
 	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldrh r2, [r5]
 	mov r0, #0x18
 	add r1, r7, #0
@@ -1513,11 +1513,11 @@ ovy208_219a364: ; 0x0219A364
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1539,7 +1539,7 @@ ovy208_219a60c: ; 0x0219A60C
 	add r0, r4, #0
 	bl sub_02045708
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy208_219a60c
@@ -7074,7 +7074,7 @@ ovy208_219d308: ; 0x0219D308
 	mov r0, #0x17
 	mov r2, #4
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldrh r0, [r4]
 	bl sub_02021998
 	add r1, r5, #4

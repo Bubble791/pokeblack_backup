@@ -17,7 +17,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0201782C
 .public sub_02035660
 .public sub_02017850
@@ -25,12 +25,12 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_SndSEPlay
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02015878
 .public sub_0204E060
 .public sub_0204E0E0
@@ -46,7 +46,7 @@
 .public MIi_CpuClearFast
 .public GX_DisableBankForLCDC
 .public GFL_FontCreate
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
 .public sub_02024D00
@@ -66,7 +66,7 @@
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysSetLCDConfig
 .public sub_0204476C
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02015878
 .public sub_02045350
 .public BmpWin_InitAllocator
@@ -121,9 +121,9 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02042BA8
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0204E060
@@ -142,7 +142,7 @@
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysSetLCDConfig
 .public sub_0204476C
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02045350
 .public BmpWin_InitAllocator
 .public sub_020480A8

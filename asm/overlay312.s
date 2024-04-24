@@ -116,7 +116,7 @@ _0217C99A:
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r5, #0
 	bl ovy312_217d39c
 	mov r0, #1
@@ -1877,7 +1877,7 @@ ovy312_217d78c: ; 0x0217D78C
 	mov r0, #0x17
 	mov r2, #4
 	mov r3, #0x80
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r3, [r5]
 	mov r0, #6
 	lsl r3, r3, #0x10
@@ -1969,7 +1969,7 @@ ovy312_217d78c: ; 0x0217D78C
 	mov r0, #0x17
 	add r2, r7, #0
 	mov r3, #0x80
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0x20
 	str r0, [sp]
 	ldr r0, [r5]
@@ -1981,7 +1981,7 @@ ovy312_217d78c: ; 0x0217D78C
 	mov r1, #5
 	add r2, r7, #0
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r3, [r5]
 	mov r0, #2
 	lsl r3, r3, #0x10

@@ -190,7 +190,7 @@ _021EA9B8:
 	mov r0, #6
 	bl sub_02045738
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #6
 	mov r1, #1
 	bl sub_02044C98
@@ -201,7 +201,7 @@ _021EA9B8:
 	mov r0, #5
 	bl sub_02045738
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #5
 	mov r1, #1
 	bl sub_02044C98
@@ -212,7 +212,7 @@ _021EA9B8:
 	mov r0, #4
 	bl sub_02045738
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #4
 	mov r1, #1
 	bl sub_02044C98
@@ -335,7 +335,7 @@ ovy88_21eab04: ; 0x021EAB04
 	mov r2, #4
 	mov r3, #0x20
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #5
 	mov r1, #2
 	mov r2, #0

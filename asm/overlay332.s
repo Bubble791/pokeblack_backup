@@ -2410,7 +2410,7 @@ ovy332_21c0120: ; 0x021C0120
 	mov r0, #1
 	mov r1, #0
 	mov r4, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021C01AC ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -2791,10 +2791,10 @@ ovy332_21c03f4: ; 0x021C03F4
 	bl sub_0204BF14
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021C0448: .word 0x021C8BA4
@@ -3482,7 +3482,7 @@ ovy332_21c0960: ; 0x021C0960
 	bl sub_0204826C
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021C0986:
 	pop {r4, pc}
 	thumb_func_end ovy332_21c0960
@@ -16533,7 +16533,7 @@ ovy332_21c6d64: ; 0x021C6D64
 	ldr r0, [r0, #0x10]
 	bl ovy332_21c09bc
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 	thumb_func_end ovy332_21c6d64
 

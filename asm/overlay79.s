@@ -1840,7 +1840,7 @@ _021EB590:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EB6DC ; =0x021ED944
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -1871,7 +1871,7 @@ _021EB590:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EB6E0 ; =0x021ED8E4
 	add r3, sp, #0x2c
 	add r2, r3, #0
@@ -1902,7 +1902,7 @@ _021EB590:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021EB6E4 ; =0x021ED904
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -1933,7 +1933,7 @@ _021EB590:
 	str r4, [sp, #8]
 	bl sub_02045604
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r2, _021EB6E8 ; =0x04001050
 	ldr r0, _021EB6EC ; =0xFFFF1FFF
 	strh r7, [r2]
@@ -2619,7 +2619,7 @@ ovy79_21ebbf0: ; 0x021EBBF0
 	add r5, r0, #0
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r6, #0
 	mov r7, #0x21
 	add r4, r6, #0
@@ -4568,7 +4568,7 @@ ovy79_21eca54: ; 0x021ECA54
 	mov r3, #0x20
 	bl sub_0204566C
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r6, #0
 	bl ovy79_21eb6f0
 _021ECAFC:

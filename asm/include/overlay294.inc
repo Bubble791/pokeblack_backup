@@ -14,7 +14,7 @@
 .public sub_021A1E44
 .public sub_021A3CB4
 .public sub_021A1E50
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -66,8 +66,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8
@@ -203,7 +203,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
 .public GFL_TCBExMgrCreate
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02024D00
 .public sub_02024D00
 .public GFL_FontCreate
@@ -270,7 +270,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024E80
 .public sub_02026520
 .public sub_02026520

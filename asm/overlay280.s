@@ -1016,10 +1016,10 @@ _021D9F10:
 	bl sub_0204C124
 _021D9F28:
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #1
 	mov r4, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	cmp r6, #0
 	beq _021D9F52
 	add r0, r5, #0
@@ -1371,7 +1371,7 @@ _021DA1B2:
 	bl sub_0204826C
 	ldr r0, [sp, #0x14]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x40]
 	add r1, r6, #0
 	str r0, [r5, #0x2c]
@@ -4082,7 +4082,7 @@ _021DB490:
 _021DB4A4:
 	bl sub_02044C98
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	ldr r2, [sp, #0x3c]
 	add r0, #0x24
@@ -4129,7 +4129,7 @@ _021DB4A4:
 	bl sub_0204826C
 	add r0, r7, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	add r0, #0xe0
 	ldr r1, [r0]
@@ -4798,7 +4798,7 @@ _021DBA24:
 _021DBA32:
 	mov r0, #1
 	mov r4, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	cmp r6, #3
 	beq _021DBA46
 	add r4, #0xff
@@ -5717,7 +5717,7 @@ ovy280_21dc0d8: ; 0x021DC0D8
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -6061,7 +6061,7 @@ _021DC3FC: ; jump table
 	.short _021DC4B2 - _021DC3FC - 2 ; case 6
 	.short _021DC460 - _021DC3FC - 2 ; case 7
 _021DC40C:
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x40]
 	bl sub_0202D8A0
 	str r0, [sp, #0x3c]
@@ -8251,10 +8251,10 @@ ovy280_21dd458: ; 0x021DD458
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021DD494: .word 0x021DD9B4

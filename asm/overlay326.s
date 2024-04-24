@@ -830,7 +830,7 @@ ovy326_219d4d0: ; 0x0219D4D0
 	sub sp, #0x18
 	add r5, r0, #0
 	add r6, r1, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
@@ -1178,7 +1178,7 @@ _0219D77E:
 	bl sub_0204826C
 	ldr r0, [r6, #0x5c]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r4, #1
 	add r5, r5, #6
 	cmp r4, #5
@@ -2822,10 +2822,10 @@ ovy326_219e408: ; 0x0219E408
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219E444: .word 0x021A2FC0
@@ -3461,7 +3461,7 @@ _0219E904:
 	bl sub_0204826C
 	ldr r0, [r4, #0x70]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0x59
 	lsl r0, r0, #2
 	ldr r1, [r5, r0]
@@ -7861,7 +7861,7 @@ _021A0C0E:
 	bl sub_0204826C
 	ldr r0, [r7, #0x70]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0x59
 	lsl r0, r0, #2
 	ldr r1, [r6, r0]
@@ -8036,7 +8036,7 @@ _021A0D60:
 	bl sub_0204826C
 	ldr r0, [r6, #0x70]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r4, #1
 	add r5, r5, #6
 	cmp r4, #0x11
@@ -8309,7 +8309,7 @@ ovy326_21a0f9c: ; 0x021A0F9C
 	sub sp, #0x18
 	add r5, r0, #0
 	add r6, r1, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
@@ -8859,7 +8859,7 @@ ovy326_21a1388: ; 0x021A1388
 	bl sub_0204826C
 	ldr r0, [r5, r7]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, r7]
 	bl BmpWin_GetBitmap
 	mov r1, #0xf
@@ -12236,10 +12236,10 @@ ovy326_21a2cd0: ; 0x021A2CD0
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021A2D0C: .word 0x021A34FC

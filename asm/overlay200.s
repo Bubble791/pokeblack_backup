@@ -297,7 +297,7 @@ ovy200_21b3128: ; 0x021B3128
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -347,7 +347,7 @@ ovy200_21b3264: ; 0x021B3264
 	add r0, r4, #0
 	bl sub_02045708
 	add r0, r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	thumb_func_end ovy200_21b3264
 
@@ -557,7 +557,7 @@ ovy200_21b3400: ; 0x021B3400
 	str r0, [sp, #4]
 	mov r0, #0x17
 	lsl r3, r6, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldrh r0, [r5]
 	mov r1, #1
 	mov r2, #0xd
@@ -577,7 +577,7 @@ ovy200_21b3400: ; 0x021B3400
 	str r0, [sp, #4]
 	mov r0, #5
 	lsl r3, r3, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	bl sub_020232D8
 	ldrh r0, [r5]
 	bl sub_02021998
@@ -632,9 +632,9 @@ ovy200_21b3400: ; 0x021B3400
 	ldr r0, [r5, #0x20]
 	bl sub_0204826C
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x2c]
 	mov r1, #0x1e
 	str r4, [r5, #0x1c]

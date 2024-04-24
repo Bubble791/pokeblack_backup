@@ -15,13 +15,13 @@
 .public sub_0204476C
 .public sub_02045708
 .public sub_02044C98
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204E060
 .public sub_02042BA8
 .public sub_02005EA0
@@ -60,8 +60,8 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public sub_02021114
 .public sub_0204BC48
@@ -186,8 +186,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

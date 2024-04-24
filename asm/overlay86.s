@@ -1007,7 +1007,7 @@ _021EAFB6:
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021EB024: .word 0x021EB6EC
@@ -1279,7 +1279,7 @@ ovy86_21eb214: ; 0x021EB214
 	strh r4, [r0, #2]
 	strh r4, [r0, #4]
 	strh r4, [r0, #6]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r6, #0
 	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x18]

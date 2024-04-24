@@ -2855,7 +2855,7 @@ ovy305_219e39c: ; 0x0219E39C
 	mov r0, #1
 	mov r1, #1
 	mov r4, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _0219E42C ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -3196,10 +3196,10 @@ ovy305_219e638: ; 0x0219E638
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219E674: .word 0x0219EA6C

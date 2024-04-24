@@ -43,7 +43,7 @@
 .public G3X_SetFog
 .public Oam_CreateSystem
 .public sub_02044BB8
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public sub_020480A8
 .public sub_02044528
 .public sub_0204B758
@@ -113,7 +113,7 @@
 .public BmpWin_CreateDynamic
 .public sub_0204826C
 .public sub_02048358
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
@@ -163,7 +163,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_0204826C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
 .public G2x_SetBlendAlpha_
 .public BmpWin_GetBitmap

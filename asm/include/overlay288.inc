@@ -47,8 +47,8 @@
 .public sub_020450CC
 .public sub_02045B7C
 .public sub_02045B7C
-.public sub_02046D84
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledB
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84
@@ -186,7 +186,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_FontGetBlockWidth
 .public GFL_FontGetBlockWidth
 .public GFL_ArcSysCreateFileHandle
@@ -257,7 +257,7 @@
 .public sub_0204C520
 .public sub_0204C560
 .public sub_0204566C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F6B34
 .public sub_021F6B34
 .public Oam_SetSpritePosData

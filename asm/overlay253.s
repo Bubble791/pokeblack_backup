@@ -543,10 +543,10 @@ ovy253_217cd4c: ; 0x0217CD4C
 	bl Oam_CreateSystem
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r3, pc}
 	nop
 _0217CD70: .word 0x02093F08
@@ -598,7 +598,7 @@ ovy253_217cda4: ; 0x0217CDA4
 	add r1, r6, #0
 	bl GFL_ArcSysCreateFileHandle
 	add r7, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r6, #0
 	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
@@ -868,7 +868,7 @@ ovy253_217cfd8: ; 0x0217CFD8
 	mov r2, #0
 	mov r3, #0
 	mov r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	lsl r0, r5, #0x10
 	str r6, [sp]
 	lsr r0, r0, #0x10
@@ -877,7 +877,7 @@ ovy253_217cfd8: ; 0x0217CFD8
 	mov r1, #1
 	mov r2, #4
 	mov r3, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	lsl r0, r5, #0x10
 	mov r7, #0x1a
 	lsl r7, r7, #4
@@ -888,7 +888,7 @@ ovy253_217cfd8: ; 0x0217CFD8
 	mov r1, #5
 	mov r2, #0
 	add r3, r7, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	lsl r0, r5, #0x10
 	str r6, [sp]
 	lsr r0, r0, #0x10
@@ -897,7 +897,7 @@ ovy253_217cfd8: ; 0x0217CFD8
 	mov r1, #5
 	mov r2, #4
 	add r3, r7, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r4, [sp]
 	lsl r0, r5, #0x10
 	str r4, [sp, #4]
@@ -1014,7 +1014,7 @@ _0217D0B6:
 	bl sub_0204826C
 	add r0, r6, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r4, #1
 	cmp r4, #3
 	blt _0217D0B6

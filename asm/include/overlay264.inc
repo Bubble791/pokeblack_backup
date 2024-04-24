@@ -13,8 +13,8 @@
 .public GX_LoadBG2Scr
 .public GX_LoadBG3Scr
 .public GFL_HeapFree
-.public sub_02046CFC
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledA
 .public GFL_VBlankTCBAdd
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet

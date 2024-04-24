@@ -146,7 +146,7 @@ ovy294_21a1c50: ; 0x021A1C50
 	mov r0, #1
 	mov r1, #1
 	mov r4, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021A1CE0 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -621,10 +621,10 @@ ovy294_21a2018: ; 0x021A2018
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021A2054: .word 0x021A3D64
@@ -2882,7 +2882,7 @@ ovy294_21a3068: ; 0x021A3068
 	mov r1, #5
 	mov r2, #0
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r5, [sp]
 	mov r0, #1
 	mov r1, #7
@@ -3343,7 +3343,7 @@ _021A33AE:
 	bl sub_0204826C
 	ldr r0, [sp, #0x10]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	mov r2, #7

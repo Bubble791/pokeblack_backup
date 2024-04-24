@@ -139,7 +139,7 @@
 .public sub_021F6CA8
 .public sub_021F6CBC
 .public sub_021F6AB4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021F3F70
 .public sub_021F3F40
 .public sub_021F3F84

@@ -1187,7 +1187,7 @@ ovy173_219d6ec: ; 0x0219D6EC
 	mov r2, #0
 	mov r3, #0
 	mov r6, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0
 	mov r1, #0
 	bl sub_02045350
@@ -2978,7 +2978,7 @@ ovy173_219e3e4: ; 0x0219E3E4
 	mov r1, #5
 	mov r2, #0
 	lsl r3, r7, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r0, [r5, r4]
 	bl BmpWin_GetBitmap
 	mov r1, #0xff
@@ -3634,7 +3634,7 @@ _0219E97A:
 	ldr r0, [r5, r4]
 	bl BmpWin_FlushChar
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _0219E9AC:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -3951,10 +3951,10 @@ ovy173_219ec14: ; 0x0219EC14
 	bl ovy173_219ee8c
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219EC50: .word 0x000008ED
@@ -4008,10 +4008,10 @@ ovy173_219ec54: ; 0x0219EC54
 	bl BmpWin_FlushChar
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219ECD4: .word 0x000008ED
@@ -4675,7 +4675,7 @@ _0219F240:
 	bl ovy173_219edc4
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x20
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -9732,7 +9732,7 @@ _021A183A:
 	bl ovy173_21a1f54
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	pop {r3, r4, r5, r6, r7, pc}
@@ -9859,7 +9859,7 @@ ovy173_21a19dc: ; 0x021A19DC
 	mov r0, #0
 	bl sub_02045708
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021A1B94 ; =0x021A721C
 	add r3, sp, #0xc0
 	add r2, r3, #0
@@ -9878,7 +9878,7 @@ ovy173_21a19dc: ; 0x021A19DC
 	mov r0, #1
 	bl sub_02045708
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021A1B98 ; =0x021A723C
 	add r3, sp, #0xa0
 	add r2, r3, #0
@@ -9902,7 +9902,7 @@ ovy173_21a19dc: ; 0x021A19DC
 	mov r0, #2
 	bl sub_02045708
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021A1B9C ; =0x021A725C
 	add r3, sp, #0x80
 	add r2, r3, #0
@@ -9921,7 +9921,7 @@ ovy173_21a19dc: ; 0x021A19DC
 	mov r0, #3
 	bl sub_02045708
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r5, _021A1BA0 ; =0x021A729C
 	add r3, sp, #0x60
 	add r2, r3, #0
@@ -10488,10 +10488,10 @@ ovy173_21a1ed8: ; 0x021A1ED8
 	mov r0, #0xf
 	mov r1, #1
 	mov r6, #0xf
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xd
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r0, _021A1F48 ; =0x00000898
 	add r1, r4, #0
 	add r0, r5, r0
@@ -10505,7 +10505,7 @@ ovy173_21a1ed8: ; 0x021A1ED8
 	mov r2, #0
 	lsl r3, r6, #5
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #2
 	mov r1, #0xe
 	mov r2, #0
@@ -11560,7 +11560,7 @@ _021A2750:
 	mov r1, #5
 	mov r2, #0
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	sub r0, #0x48
 	ldr r0, [r5, r0]
@@ -17159,10 +17159,10 @@ ovy173_21a5438: ; 0x021A5438
 	blx MI_CpuFill8
 	mov r0, #7
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r0, _021A5498 ; =0x021A716C
 	ldr r1, _021A549C ; =ovy173_21a567c
 	add r2, r5, #0
@@ -17214,10 +17214,10 @@ ovy173_21a54a0: ; 0x021A54A0
 	mov r0, #1
 	mov r1, #1
 	str r6, [r5, r4]
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0xe
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _021A54DC:
 	pop {r4, r5, r6, pc}
 	nop
@@ -17616,7 +17616,7 @@ ovy173_21a56fc: ; 0x021A56FC
 	mov r1, #5
 	mov r2, #4
 	lsl r3, r3, #5
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 _021A57EA:
 	ldr r0, [sp, #0x20]
 	mov r3, #9
@@ -17769,9 +17769,9 @@ _021A5874:
 	ldr r0, [r0, r1]
 	bl BmpWin_FlushChar
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x2c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -18138,10 +18138,10 @@ _021A5BCE:
 	bl sub_02045B7C
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -18634,10 +18634,10 @@ _021A5F7A:
 	str r5, [r4, r0]
 	mov r0, #0xf
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xf
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r4, #0
 	bl ovy173_219eb0c
 	sub r0, r7, #4

@@ -166,7 +166,7 @@
 .public sub_021C095C
 .public sub_02045B7C
 .public sub_02045B7C
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -208,8 +208,8 @@
 .public sub_0204BE9C
 .public sub_0204C018
 .public sub_0204BF14
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BECC
 .public sub_0204BF98
 .public sub_0204B758
@@ -285,7 +285,7 @@
 .public sub_0203580C
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02024E80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -1093,7 +1093,7 @@
 .public sub_02045B7C
 .public sub_021BFB24
 .public sub_02045B7C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02017934
 .public sub_02007468
 .public sub_02017A5C

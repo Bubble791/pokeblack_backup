@@ -4925,14 +4925,14 @@ _0219F438:
 	mov r1, #5
 	mov r2, #0
 	add r3, r6, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r7, [sp]
 	mov r0, #0x17
 	mov r1, #5
 	mov r2, #4
 	add r3, r6, #0
 	str r5, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #1
 	mov r1, #0
 	mov r2, #1
@@ -5024,10 +5024,10 @@ ovy144_219f5ac: ; 0x0219F5AC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0x54
 	add r1, r6, #0
 	bl GFL_ArcSysCreateFileHandle

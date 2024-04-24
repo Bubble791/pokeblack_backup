@@ -233,10 +233,10 @@ ovy256_21bb7cc: ; 0x021BB7CC
 	bl sub_0204476C
 	mov r0, #0xd
 	add r1, r4, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0xd0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -254,10 +254,10 @@ ovy256_21bb8e0: ; 0x021BB8E0
 	push {r3, lr}
 	mov r0, #0xf
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #3
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #5
 	bl sub_02044B84
 	mov r0, #4
@@ -371,14 +371,14 @@ ovy256_21bb91c: ; 0x021BB91C
 	mov r1, #5
 	add r2, r7, #0
 	add r3, r6, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r5, [sp]
 	mov r0, #0x17
 	mov r1, #5
 	mov r2, #4
 	add r3, r6, #0
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -1111,7 +1111,7 @@ _021BBFC0:
 	bl ovy256_21bcf20
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add r0, r5, #0
 	mov r1, #1
 	bl ovy256_21bd60c
@@ -1416,7 +1416,7 @@ _021BC240:
 	bl ovy256_21bba44
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, [r5, r4]
 	add r0, r0, #1
 	str r0, [r5, r4]
@@ -2994,10 +2994,10 @@ ovy256_21bce88: ; 0x021BCE88
 	bl ovy256_21bd6ac
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, pc}
 	thumb_func_end ovy256_21bce88
 
@@ -3202,7 +3202,7 @@ _021BD012:
 	str r2, [r1, r0]
 	cmp r3, #0xd
 	blo _021BD012
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r1, _021BD090 ; =0x0000808C
 	bl GFL_ArcSysCreateFileHandle
 	add r6, r0, #0

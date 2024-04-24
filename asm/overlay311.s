@@ -528,7 +528,7 @@ ovy311_219d244: ; 0x0219D244
 	mov r2, #0
 	sub r3, #0x74
 	str r5, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0
 	mov r1, #1
 	mov r2, #0xf
@@ -2319,7 +2319,7 @@ ovy311_219e088: ; 0x0219E088
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _0219E114 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -2640,10 +2640,10 @@ ovy311_219e308: ; 0x0219E308
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219E344: .word 0x0219E7A0

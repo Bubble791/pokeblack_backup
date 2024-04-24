@@ -54,8 +54,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_02048D28
 .public sub_0204A5C8
 .public sub_0204A638
@@ -83,7 +83,7 @@
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045708
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
@@ -107,7 +107,7 @@
 .public Oam_LoadNCERFile
 .public Oam_LoadNCERFile
 .public Oam_LoadNCERFile
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D820
 .public GFL_G2DIOLoadArcNCLRDefault
@@ -189,8 +189,8 @@
 .public sub_0204C108
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020219A8
 .public sub_02021C44
 .public sub_02021A18
@@ -441,12 +441,12 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0201CD88
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_0202D91C
 .public sub_0204B354
 .public sub_0204BD10
 .public GFL_HeapFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public sub_0202D928
 .public sub_0204B264
 .public sub_0204BA40
@@ -655,11 +655,11 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0201CD88
 .public sub_0201CD88
 .public sub_0204BB58
@@ -846,7 +846,7 @@
 .public sub_02048210
 .public sub_02048210
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204C488
 .public sub_021BAD9C
 .public sub_0201CD88
@@ -968,7 +968,7 @@
 .public sub_0204C488
 .public sub_02048210
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045790
 .public sub_02045B7C
 .public sub_0204C124
@@ -980,7 +980,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045054
 .public sub_02045B7C
 .public sub_020454D4
@@ -993,7 +993,7 @@
 .public BmpWin_FlushChar
 .public sub_0204826C
 .public sub_020484D4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044FB0
 .public sub_02045054
 .public sub_02045B7C
@@ -1100,7 +1100,7 @@
 .public sub_02046EDC
 .public sub_02048210
 .public sub_02045604
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02045790
 .public sub_02045B7C
 .public sub_0204C124

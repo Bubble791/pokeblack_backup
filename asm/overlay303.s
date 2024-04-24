@@ -4453,10 +4453,10 @@ ovy303_21a1d7c: ; 0x021A1D7C
 	bl sub_02044C98
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #7
 	add r1, r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x114
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -4484,10 +4484,10 @@ ovy303_21a1fa0: ; 0x021A1FA0
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy303_21a1fa0
@@ -4770,14 +4770,14 @@ ovy303_21a2104: ; 0x021A2104
 	mov r0, #0x17
 	mov r1, #5
 	add r3, r4, #0
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	str r6, [sp]
 	mov r0, #0x17
 	mov r1, #5
 	mov r2, #4
 	add r3, r4, #0
 	str r5, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -4814,7 +4814,7 @@ ovy303_21a224c: ; 0x021A224C
 	bl sub_021999C8
 	str r4, [sp, #0x58]
 	str r4, [sp, #0x5c]
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	str r0, [sp, #0x60]
 	bl sub_0202D810
 	str r0, [sp, #0x64]
@@ -5376,10 +5376,10 @@ ovy303_21a2744: ; 0x021A2744
 	push {r3, lr}
 	mov r0, #0xf
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0xf
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #7
 	bl sub_02044B84
 	mov r0, #6

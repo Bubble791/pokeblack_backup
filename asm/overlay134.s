@@ -2339,7 +2339,7 @@ _021EFED8:
 	ldr r0, [r5, #8]
 	bl ovy36_2187c9c
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -2354,7 +2354,7 @@ ovy134_21efeec: ; 0x021EFEEC
 	ldr r0, [r4, #8]
 	bl sub_02187C1C
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, pc}
 	thumb_func_end ovy134_21efeec
 _021EFF04:

@@ -1234,10 +1234,10 @@ _0219D784:
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	bl GX_DispOn
 	str r6, [sp]
 	str r6, [sp, #4]
@@ -3969,7 +3969,7 @@ ovy185_219ec08: ; 0x0219EC08
 	orr r0, r1
 	str r0, [r3]
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -4225,7 +4225,7 @@ ovy185_219eec0: ; 0x0219EEC0
 	add r5, r0, #0
 	bl sub_0204826C
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r2, #3
 	mov r0, #6
 	mov r1, #3
@@ -6868,7 +6868,7 @@ _021A02AC:
 	mov r2, #0
 	lsl r3, r3, #6
 	str r7, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r4, #0
 	bl ovy185_21a0a74
 	add r0, r4, #0
@@ -7028,7 +7028,7 @@ _021A040C:
 	cmp r4, #2
 	blt _021A040C
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x28]
 	add r1, r6, #0
 	bl sub_0204C124
@@ -7097,7 +7097,7 @@ _021A0468:
 	bl ovy185_21a0624
 	mov r0, #0
 	mov r4, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #4]
 	bl sub_021A30A4
 	cmp r0, #0
@@ -7919,7 +7919,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x18
 	add r5, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0x2a
 	mov r6, #0x2a
 	bl GFL_ArcSysCreateFileHandle
@@ -8068,7 +8068,7 @@ _021A0B76:
 	add r0, r6, #0
 	bl ovy185_21a0660
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xc
 	pop {r4, r5, r6, r7, pc}
 	nop
@@ -13147,7 +13147,7 @@ ovy185_21a31d4: ; 0x021A31D4
 	ldr r0, [r4, #0xc]
 	bl BmpWin_FlushChar
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl ovy185_21a322c
 	mov r0, #2
@@ -14839,7 +14839,7 @@ ovy185_21a3eec: ; 0x021A3EEC
 	mov r1, #5
 	mov r2, #0
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	ldr r0, _021A40B8 ; =0x00007FFF
 	mov r1, #0x4f
 	add r2, r5, #0
@@ -17182,10 +17182,10 @@ ovy185_21a50bc: ; 0x021A50BC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021A50F8: .word 0x021A7308

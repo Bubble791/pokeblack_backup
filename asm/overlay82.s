@@ -518,7 +518,7 @@ ovy82_21eabf0: ; 0x021EABF0
 	add r2, r5, #0
 	lsl r3, r3, #5
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r5, #0
 	add r1, r6, #0
 	bl sub_02044C98

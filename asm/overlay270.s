@@ -1417,7 +1417,7 @@ ovy270_21efcd0: ; 0x021EFCD0
 	mov r6, #0
 	mov r0, #4
 	str r6, [r5]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #4]
 	cmp r0, #0
 	beq _021EFCFE

@@ -443,7 +443,7 @@ ovy141_219d18c: ; 0x0219D18C
 	mov r3, #0
 	str r7, [sp, #8]
 	bl sub_0204AF50
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	add r1, r7, #0
 	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0xc]
@@ -488,7 +488,7 @@ ovy141_219d18c: ; 0x0219D18C
 	mov r3, #0x20
 	bl sub_0204566C
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0xc]
 	bl GFL_ArcToolFree
 	ldr r3, [sp, #0x10]
@@ -500,7 +500,7 @@ ovy141_219d18c: ; 0x0219D18C
 	add r2, r4, #0
 	str r3, [sp, #0x10]
 	str r7, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #0x20
 	str r0, [sp]
 	ldr r3, [sp, #0x10]
@@ -508,7 +508,7 @@ ovy141_219d18c: ; 0x0219D18C
 	mov r1, #5
 	mov r2, #4
 	str r7, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r0, #2
 	mov r1, #0xa
 	add r2, r7, #0
@@ -564,7 +564,7 @@ ovy141_219d330: ; 0x0219D330
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r5, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	mov r1, #0x80
 	mov r4, #0x80
 	bl GFL_ArcSysCreateFileHandle
@@ -589,10 +589,10 @@ ovy141_219d330: ; 0x0219D330
 	str r0, [r5, r1]
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	str r4, [sp]
 	ldr r0, [r5]
 	mov r1, #7
@@ -830,7 +830,7 @@ _0219D534:
 	bl sub_0204826C
 	add r0, r5, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r6, r6, #1
 	cmp r6, #8
 	blt _0219D534

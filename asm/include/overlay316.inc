@@ -310,10 +310,10 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_02044F90
-.public sub_02044F90
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_MsgSysLoadData
 .public GFL_TCBExMgrCreate
 .public sub_020232E8
@@ -491,7 +491,7 @@
 .public sub_02021C44
 .public sub_02021A18
 .public sub_02022DA8
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public G3X_SetFog
 .public G3X_SetClearColor
 .public sub_02049100
@@ -529,8 +529,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

@@ -49,8 +49,8 @@
 .public GFL_ArcSysCreateFileHandle
 .public sub_021AA078
 .public sub_02042BA8
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_02021A3C
 .public sub_0203A7F4
 .public sub_0204B794
@@ -79,7 +79,7 @@
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D814
 .public Oam_LoadNCGRFile
@@ -109,8 +109,8 @@
 .public sub_02022DA8
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02024D00
 .public BmpWin_InitAllocator
 .public GFL_StrBufCreate

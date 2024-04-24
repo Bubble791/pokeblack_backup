@@ -89,17 +89,17 @@ _0219F3AE:
 	mov r0, #1
 	mov r1, #0
 	mov r4, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #8
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r5, #4
 	mov r0, #4
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	lsl r2, r5, #0x18
 	ldr r1, [r2]
 	ldr r0, _0219F4A4 ; =0xFFCFFFEF
@@ -136,7 +136,7 @@ _0219F3AE:
 	add r2, r7, #0
 	add r3, r7, #0
 	str r4, [sp, #4]
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	bl sub_02046DE0
 	add r0, r7, #0
 	bl sub_02046DF8

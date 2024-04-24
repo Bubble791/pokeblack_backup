@@ -3613,7 +3613,7 @@ _021B70BE:
 	mov r5, #0
 	bl sub_0204566C
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #2
 	mov r1, #1
 	bl sub_02044C98
@@ -3670,7 +3670,7 @@ ovy197_21b7140: ; 0x021B7140
 	mov r0, #2
 	bl sub_02045738
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #2
 	mov r1, #0
 	mov r6, #0
@@ -3770,7 +3770,7 @@ _021B71B4:
 	mov r1, #1
 	bl ovy197_21b570c
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #6
 	mov r1, #1
 	bl sub_02044C98
@@ -3808,7 +3808,7 @@ ovy197_21b725c: ; 0x021B725C
 	bl ovy197_21b9048
 	mov r0, #4
 	str r6, [r5, r4]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #6
 	mov r1, #0
 	bl sub_02044C98
@@ -5958,7 +5958,7 @@ ovy197_21b8348: ; 0x021B8348
 	mov r0, #1
 	mov r1, #0
 	mov r4, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _021B83D4 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -6346,10 +6346,10 @@ ovy197_21b8634: ; 0x021B8634
 	bl sub_0204C018
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021B8680: .word 0x021BE398
@@ -6549,7 +6549,7 @@ ovy197_21b876c: ; 0x021B876C
 	bl sub_0204826C
 	ldr r0, [r4, #0xc]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021B87FE:
 	add r0, r4, #0
 	add sp, #0x14
@@ -6945,7 +6945,7 @@ ovy197_21b8a6c: ; 0x021B8A6C
 	bl sub_0204826C
 	add r0, r6, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	add r1, r5, #0
 	mov r2, #1
@@ -7026,7 +7026,7 @@ ovy197_21b8b14: ; 0x021B8B14
 	bl sub_0204826C
 	add r0, r6, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r5, #0
 	add r1, r5, #0
 	mov r2, #1
@@ -7329,7 +7329,7 @@ ovy197_21b8dd8: ; 0x021B8DD8
 	bl sub_0204826C
 	ldr r0, [r4, #0x10]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021B8DFE:
 	pop {r4, pc}
 	thumb_func_end ovy197_21b8dd8
@@ -7388,7 +7388,7 @@ ovy197_21b8e00: ; 0x021B8E00
 	bl sub_0204826C
 	ldr r0, [sp, #0xc]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r6]
 	add r1, r7, #0
 	str r0, [r6, #8]
@@ -8189,7 +8189,7 @@ _021B9472:
 	ldrh r0, [r4, #0x28]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -9467,7 +9467,7 @@ ovy197_21b9de0: ; 0x021B9DE0
 	mov r3, #0
 	bl sub_0204AF50
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	str r7, [sp]
 	ldr r0, [sp, #0x14]
 	mov r1, #1
@@ -9630,7 +9630,7 @@ _021B9F8E:
 	ldr r0, [r1, r0]
 	bl sub_0204826C
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r6, r6, #1
 	cmp r6, #8
 	blt _021B9F3A
@@ -10003,7 +10003,7 @@ _021BA250:
 	add r0, r6, #0
 	bl GFL_StrBufFree
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -10027,7 +10027,7 @@ _021BA2F8:
 	cmp r4, #4
 	blt _021BA2F8
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 	thumb_func_end ovy197_21ba2f0
@@ -13038,7 +13038,7 @@ _021BB9BE:
 	bl ovy197_21ba314
 _021BB9E8:
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, _021BBAA8 ; =0x00000A78
 	mov r1, #1
 	str r1, [r4, r0]
@@ -15119,7 +15119,7 @@ _021BCA3A:
 	ldr r0, [r5]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0xc]
 	bl GFL_ArcToolFree
 	add sp, #0x14
@@ -15172,7 +15172,7 @@ _021BCAD2:
 	ldr r0, [r5]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0xc]
 	bl GFL_ArcToolFree
 	add sp, #0x10
@@ -15625,7 +15625,7 @@ ovy197_21bcea4: ; 0x021BCEA4
 	mov r0, #4
 	bl sub_02045738
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r4, #0x1c]
 	mov r1, #0
 	bl sub_0204C124
@@ -16329,7 +16329,7 @@ _021BD3FC:
 	bl sub_020425EC
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #1
 	str r0, [r5]
 	pop {r4, r5, r6, pc}
@@ -16355,7 +16355,7 @@ _021BD412:
 _021BD43E:
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r1, _021BD454 ; =ovy197_21bd4c0
 	add r0, r6, #0
 	bl sub_021BDC6C
@@ -16486,7 +16486,7 @@ _021BD4EE:
 	bl ovy12_2152b64
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r0, _021BD57C ; =0x000017A4
 	add sp, #0x7c
 	str r7, [r4, r0]
@@ -16503,7 +16503,7 @@ _021BD548:
 	bl sub_02042BA8
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #2
 	add sp, #0x7c
 	str r0, [r5]

@@ -62,8 +62,8 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public Oam_CreateSystem
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0205F9C0
 .public GX_SetGraphicsMode
 .public GX_SetGraphicsMode
@@ -92,7 +92,7 @@
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045708
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204BF1C
 .public sub_0204C028
 .public Oam_CreateSprite
@@ -116,8 +116,8 @@
 .public GFL_FontCreate
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020219A8
 .public sub_020232D8
 .public sub_02021C44
@@ -148,7 +148,7 @@
 .public sub_02021190
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D820
 .public GFL_G2DIOLoadArcNCLRDefault
@@ -212,9 +212,9 @@
 .public sub_0219F9F8
 .public sub_0219FA08
 .public sub_0219FA08
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204C124
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02038BC8
 .public GFL_SndSEPlay
 .public ovy12_21659b4
@@ -244,7 +244,7 @@
 .public sub_0219FA28
 .public sub_0219F9F8
 .public sub_0219FA28
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0219F4B8
 .public sub_0201CCF8
 .public Item_IsMail
@@ -433,8 +433,8 @@
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_02044F90
-.public sub_02044F90
+.public GFL_BGSysLoadScr
+.public GFL_BGSysLoadScr
 .public GFL_SndSEPlay
 .public sub_0204C124
 .public sub_0219F48C
@@ -449,7 +449,7 @@
 .public sub_0219F9F8
 .public sub_0219FA08
 .public sub_0201CCF8
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public GFL_SndSEPlay
 .public sub_021A039C
 .public sub_02018C38
@@ -767,9 +767,9 @@
 .public sub_0202E82C
 .public BmpWin_FlushChar
 .public GFL_HeapAllocate
-.public sub_0202D7E0
-.public sub_0204B0B8
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
+.public GFL_BGSysLoadNCLRDefault
+.public GetDefaultUINarcIdx
 .public sub_0204B264
 .public GFL_HeapFree
 .public GFL_HeapFree
@@ -974,7 +974,7 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D890
 .public sub_0204BBA0

@@ -632,7 +632,7 @@
 .public sub_021C301C
 .public sub_021C33C4
 .public sub_02045738
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021C3048
 .public sub_021C33F0
 .public MI_CpuFill8

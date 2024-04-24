@@ -437,7 +437,7 @@
 .public sub_021F43B4
 .public sub_02024E80
 .public sub_021F439C
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public GFL_ArcSysCreateFileHandle
 .public sub_0201D624
 .public sub_02020F40
@@ -474,7 +474,7 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D958
 .public Oam_LoadNCGRFile
@@ -642,8 +642,8 @@
 .public sub_020450CC
 .public sub_02045B7C
 .public sub_02045B7C
-.public sub_02046D84
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledB
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84

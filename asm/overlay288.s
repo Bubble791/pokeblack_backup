@@ -630,7 +630,7 @@ ovy288_21f4858: ; 0x021F4858
 	bl sub_02045B7C
 	mov r0, #0x1f
 	add r1, r4, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x90
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -646,7 +646,7 @@ ovy288_21f4950: ; 0x021F4950
 	push {r3, lr}
 	mov r0, #0x1f
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #4
 	bl sub_02044B84
 	mov r0, #5
@@ -4236,7 +4236,7 @@ _021F6480:
 	bl sub_0204826C
 	ldr r0, [r4, #0x14]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0x59
 	lsl r0, r0, #2
 	ldr r0, [r5, r0]
@@ -5264,7 +5264,7 @@ ovy288_21f6c3c: ; 0x021F6C3C
 	lsr r3, r3, #0x18
 	bl sub_0204566C
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #8
 	pop {r4, pc}
 	.align 2, 0

@@ -728,10 +728,10 @@ ovy177_219b2fc: ; 0x0219B2FC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #0x5d
 	add r1, r7, #0
 	bl GFL_ArcSysCreateFileHandle
@@ -985,7 +985,7 @@ ovy177_219b518: ; 0x0219B518
 	push {r3, r4, r5, lr}
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	ldr r0, _0219B5A4 ; =0x04000008
 	mov r1, #3
 	ldrh r2, [r0]
@@ -1396,7 +1396,7 @@ ovy177_219b7cc: ; 0x0219B7CC
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy177_219b7cc
@@ -1447,7 +1447,7 @@ ovy177_219b834: ; 0x0219B834
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy177_219b834
@@ -3432,7 +3432,7 @@ _0219C7BA:
 	bl sub_0204566C
 	lsl r0, r5, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _0219C810:
 	add r0, r7, #0
 	bl GFL_HeapFree

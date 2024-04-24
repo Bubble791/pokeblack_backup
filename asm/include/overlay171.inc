@@ -12,10 +12,10 @@
 .public sub_02046DF8
 .public sub_021DDD2C
 .public sub_02042BA8
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public sub_021DDD1C
 .public sub_021DDEFC
-.public sub_02046CFC
+.public GFL_BGSysSetBGEnabledA
 .public sub_021DEAE0
 .public GFL_FadeScreenIsFinished
 .public PrintSystem_IsTextPrintActiveEnd
@@ -149,7 +149,7 @@
 .public sub_020211C8
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0

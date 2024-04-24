@@ -72,8 +72,8 @@
 .public sub_021A30A4
 .public sub_021A2FB8
 .public sub_02044C98
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public GX_DispOn
 .public sub_0204ADA8
 .public sub_0204ADA8
@@ -228,7 +228,7 @@
 .public sub_02044CFC
 .public sub_02044CFC
 .public G2x_SetBlendBrightness_
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0219E524
 .public GFL_MsgSysLoadData
 .public sub_0208D65C
@@ -265,7 +265,7 @@
 .public BmpWin_FlushChar
 .public BmpWin_CreateDynamic
 .public sub_0204826C
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044CFC
 .public sub_0219E544
 .public sub_0204C488
@@ -479,7 +479,7 @@
 .public sub_0219E524
 .public sub_0219E52C
 .public sub_0202E168
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -494,12 +494,12 @@
 .public sub_0202E34C
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204C124
 .public sub_0204898C
 .public sub_0202E1F0
 .public sub_0202E4B4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_021A30A4
 .public sub_021A2FB8
 .public sub_0204C124
@@ -561,7 +561,7 @@
 .public sub_0204C488
 .public sub_0204C124
 .public sub_0204C108
-.public sub_0202D7E0
+.public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D810
 .public Oam_LoadNCLRFile
@@ -581,7 +581,7 @@
 .public sub_0204898C
 .public sub_0202E1F0
 .public sub_0202E4B4
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_0204B354
 .public MI_CpuCopy8
 .public MI_CpuCopy8
@@ -842,7 +842,7 @@
 .public BmpWin_BitmapFill
 .public sub_0204826C
 .public BmpWin_FlushChar
-.public sub_02044F90
+.public GFL_BGSysLoadScr
 .public sub_02044C98
 .public sub_0219E544
 .public sub_0204C488
@@ -977,7 +977,7 @@
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_G2DIOLoadArcNCLRDefault
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_0205FA10
 .public sub_0205FA10
 .public sub_0204ADA8
@@ -1142,8 +1142,8 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public sub_0204C028
-.public sub_02046CFC
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledA
+.public GFL_BGSysSetBGEnabledB
 .public sub_0204BF98
 .public sub_0204B758
 .public MI_CpuFill8

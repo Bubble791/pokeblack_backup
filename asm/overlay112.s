@@ -181,10 +181,10 @@ ovy112_21eed60: ; 0x021EED60
 	add r0, r4, #0
 	bl GFL_ArcToolFree
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #8
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	add sp, #0x2c
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

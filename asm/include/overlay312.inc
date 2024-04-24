@@ -15,7 +15,7 @@
 .public sub_0202E7A4
 .public sub_02021998
 .public sub_02042BA8
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0203A7F4
 .public sub_02021A3C
 .public sub_0202E41C
@@ -137,7 +137,7 @@
 .public sub_0204AF50
 .public sub_02024D00
 .public sub_02024D00
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020450CC
 .public sub_02045350
 .public sub_02024E80
@@ -150,8 +150,8 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204AF50
 .public sub_02024D00
-.public sub_0204B0B8
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
+.public GFL_BGSysLoadNCLRDefault
 .public sub_020450CC
 .public sub_02045350
 .public sub_0204898C

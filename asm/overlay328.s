@@ -1006,7 +1006,7 @@ ovy328_219d648: ; 0x0219D648
 	str r1, [sp, #0xc]
 	add r4, r2, #0
 	add r6, r3, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	str r0, [sp, #0x10]
@@ -1069,7 +1069,7 @@ _0219D6C6:
 	ldr r0, [sp, #0xc]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [sp, #0x10]
 	bl GFL_ArcToolFree
 	add sp, #0x14
@@ -1288,7 +1288,7 @@ ovy328_219d888: ; 0x0219D888
 	sub sp, #0x18
 	add r5, r0, #0
 	add r6, r1, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldrh r1, [r5]
 	bl GFL_ArcSysCreateFileHandle
 	add r4, r0, #0
@@ -1803,7 +1803,7 @@ _0219DC7A:
 	bl sub_0204826C
 	ldr r0, [r6, #0x4c]
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r4, r4, #1
 	add r5, r5, #6
 	cmp r4, #0x16
@@ -3768,10 +3768,10 @@ ovy328_219ebac: ; 0x0219EBAC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219EBE8: .word 0x0219EDD4

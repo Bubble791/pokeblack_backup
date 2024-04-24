@@ -146,7 +146,7 @@
 .public sub_02033360
 .public sub_02033558
 .public sub_02033360
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
 .public sub_0203590C
 .public sub_02026714
 .public GFL_ArcSysCreateFileHandle
@@ -169,10 +169,10 @@
 .public GFL_ArcToolFree
 .public sub_02026714
 .public sub_02026670
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public sub_02026714
 .public sub_02026670
-.public sub_0204B0B8
+.public GFL_BGSysLoadNCLRDefault
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public sub_0204BBA0
@@ -307,8 +307,8 @@
 .public sub_020450CC
 .public sub_02045B7C
 .public sub_02045B7C
-.public sub_02046D84
-.public sub_02046D84
+.public GFL_BGSysSetBGEnabledB
+.public GFL_BGSysSetBGEnabledB
 .public sub_02044B84
 .public sub_02044B84
 .public sub_02044B84

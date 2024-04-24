@@ -602,11 +602,11 @@ _0219DB78:
 	add r0, r4, #0
 	add r0, #0x4d
 	ldrb r0, [r0]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	add r0, #0x4e
 	ldrb r0, [r0]
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
@@ -4229,7 +4229,7 @@ _0219F77C: ; jump table
 	.short _0219F798 - _0219F77C - 2 ; case 5
 	.short _0219F79E - _0219F77C - 2 ; case 6
 _0219F78A:
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	b _0219F7A2
 _0219F790:
 	ldrh r0, [r4]

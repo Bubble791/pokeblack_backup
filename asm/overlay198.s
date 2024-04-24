@@ -41,7 +41,7 @@ ovy198_21b2f8c: ; 0x021B2F8C
 	mov r0, #0
 	bl sub_02045708
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #0
 	mov r1, #0
 	bl sub_02044BD8
@@ -68,7 +68,7 @@ ovy198_21b2f8c: ; 0x021B2F8C
 	mov r1, #1
 	bl sub_02044C98
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B30B8 ; =0x021B4500
 	add r3, sp, #0x4c
 	add r2, r3, #0
@@ -101,7 +101,7 @@ ovy198_21b2f8c: ; 0x021B2F8C
 	mov r3, #0
 	bl sub_02045604
 	add r0, r6, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r6, #0
 	add r1, r4, #0
 	bl sub_02044C98
@@ -124,7 +124,7 @@ ovy198_21b2f8c: ; 0x021B2F8C
 	add r1, r4, #0
 	bl sub_02044C98
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r6, _021B30C0 ; =0x021B4540
 	add r3, sp, #0xc
 	add r2, r3, #0
@@ -144,7 +144,7 @@ ovy198_21b2f8c: ; 0x021B2F8C
 	add r1, r4, #0
 	bl sub_02044C98
 	mov r0, #7
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add sp, #0xac
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -180,7 +180,7 @@ ovy198_21b30c4: ; 0x021B30C4
 	mov r1, #5
 	mov r2, #4
 	lsl r3, r3, #6
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	mov r7, #0
 	add r4, r7, #0
 _021B30FA:
@@ -1001,7 +1001,7 @@ ovy198_21b3618: ; 0x021B3618
 	mov r0, #0x17
 	mov r2, #4
 	lsl r3, r3, #7
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r0, r5, #0
 	bl ovy198_21b340c
 	add sp, #0x18

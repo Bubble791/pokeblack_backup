@@ -5993,41 +5993,41 @@ _021F2BDC:
 	mov r0, #2
 	bl sub_02045738
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	mov r0, #5
 	bl sub_02045738
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 _021F2BF6:
 	mov r0, #3
 	bl sub_02045738
 	mov r0, #3
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 _021F2C04:
 	mov r0, #6
 	bl sub_02045738
 	mov r0, #6
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 _021F2C12:
 	mov r0, #0
 	bl sub_02045738
 	mov r0, #0
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 _021F2C20:
 	mov r0, #5
 	bl sub_02045738
 	mov r0, #5
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, pc}
 _021F2C2E:
 	mov r0, #2
 	bl sub_02045738
 	mov r0, #2
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 _021F2C3A:
 	pop {r3, pc}
 	thumb_func_end ovy271_21f2b8c
@@ -7012,10 +7012,10 @@ ovy271_21f339c: ; 0x021F339C
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021F33D8: .word 0x021F7778
@@ -7193,7 +7193,7 @@ ovy271_21f34a0: ; 0x021F34A0
 	bl sub_0204826C
 	add r0, r5, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	add r0, r4, #0
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
@@ -9118,7 +9118,7 @@ _021F44A2:
 	add r0, r5, #0
 	bl GFL_HeapFree
 	mov r0, #1
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy271_21f4454
 
@@ -11449,24 +11449,24 @@ ovy271_21f5658: ; 0x021F5658
 	bne _021F5698
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	b _021F56B0
 _021F5698:
 	add r0, r6, #0
 	add r1, r6, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	add r1, r6, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	add r1, r6, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 _021F56B0:
 	mov r6, #2
 	add r0, r5, #0
@@ -11484,19 +11484,19 @@ _021F56B0:
 	bne _021F56E2
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r6, #0
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 _021F56E2:
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _021F56F2:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -11747,24 +11747,24 @@ _021F588C:
 	bne _021F58BA
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	b _021F58D2
 _021F58BA:
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #4
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 _021F58D2:
 	ldr r1, [r5, #4]
 	mov r0, #2
@@ -11779,18 +11779,18 @@ _021F58D2:
 	bne _021F58FA
 	mov r0, #1
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #2
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	b _021F590A
 _021F58FA:
 	mov r0, #1
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	mov r0, #2
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 _021F590A:
 	ldr r1, [r5, #0x10]
 	add r0, r1, #1
@@ -12040,7 +12040,7 @@ _021F5ADE:
 	mov r0, #3
 	mov r1, #1
 _021F5AE2:
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldr r1, [r4, #0x10]
 	add r0, r1, #1
 	str r0, [r4, #0x10]
@@ -14565,7 +14565,7 @@ _021F6E24:
 	cmp r4, #9
 	blt _021F6E24
 	mov r0, #4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r6, #0x28]
 	mov r1, #0x14
 	bl ovy271_21f2b8c

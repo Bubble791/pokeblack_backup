@@ -683,10 +683,10 @@ ovy319_219d3ac: ; 0x0219D3AC
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _0219D3E8: .word 0x0219F714
@@ -1931,7 +1931,7 @@ ovy319_219dd30: ; 0x0219DD30
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xc
 	add r5, r0, #0
-	bl sub_0202D7E0
+	bl GetDefaultUINarcIdx
 	ldr r1, [r5]
 	ldrh r1, [r1, #4]
 	bl GFL_ArcSysCreateFileHandle

@@ -59,10 +59,10 @@ ovy293_21a1b20: ; 0x021A1B20
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #0
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	ldrh r2, [r4]
 	ldr r0, [r4, #0xc]
 	add r1, r5, #0
@@ -893,10 +893,10 @@ ovy293_21a21e8: ; 0x021A21E8
 	bl sub_0204C028
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046CFC
+	bl GFL_BGSysSetBGEnabledA
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021A2224: .word 0x021A3DA0
@@ -3492,7 +3492,7 @@ _021A3556:
 	bl sub_0204826C
 	add r0, r4, #0
 	bl sub_020484D4
-	bl sub_02044F90
+	bl GFL_BGSysLoadScr
 	ldr r0, [r5, #0x1c]
 	ldr r2, [r5, #0x18]
 	mov r1, #1
@@ -3563,7 +3563,7 @@ ovy293_21a360c: ; 0x021A360C
 	str r0, [sp, #4]
 	mov r0, #0x17
 	mov r3, #0x20
-	bl sub_0204B0B8
+	bl GFL_BGSysLoadNCLRDefault
 	add r3, sp, #0x20
 	ldrb r0, [r3, #0x10]
 	str r0, [sp]
@@ -4431,7 +4431,7 @@ _021A3C8A:
 	bl sub_02044C98
 	mov r0, #0x10
 	mov r1, #1
-	bl sub_02046D84
+	bl GFL_BGSysSetBGEnabledB
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
