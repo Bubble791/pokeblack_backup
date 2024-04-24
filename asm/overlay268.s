@@ -8162,7 +8162,7 @@ _021BE112:
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r1, r0, #0
 	ldr r0, [sp, #0x20]
 	mov r2, #0x10

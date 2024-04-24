@@ -311,7 +311,7 @@ ovy81_21eaaa0: ; 0x021EAAA0
 	ldr r1, [r6, #0x1c]
 	mov r2, #0
 	str r3, [sp, #0xc]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r5, r6, #0
 	add r5, #0x20
 	lsl r4, r4, #3

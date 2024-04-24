@@ -536,13 +536,13 @@
 .public sub_0204898C
 .public sub_020243D0
 .public LoadItemNameToStrbuf
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_020243D0
 .public LoadItemNameToStrbuf
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_StrBufFree

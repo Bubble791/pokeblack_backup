@@ -74,7 +74,7 @@
 .public ovy36_21b8538
 .public sub_021B84F0
 .public sub_021B84E8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_021B8278
 .public sub_02049964
 .public sub_02049804

@@ -2386,7 +2386,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r0, [sp, #0x20]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r2, r0, #1
 	mov r1, #0x26
 	sub r1, r1, r2
@@ -2410,7 +2410,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r0, [sp, #0x20]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r2, r0, #1
 	mov r1, #0x8e
 	sub r1, r1, r2
@@ -2428,7 +2428,7 @@ ovy180_219bf6c: ; 0x0219BF6C
 	ldr r0, [sp, #0x20]
 	add r1, r5, #0
 	add r2, r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r2, r0, #1
 	mov r1, #0xc2
 	sub r1, r1, r2
@@ -3631,7 +3631,7 @@ ovy180_219c964: ; 0x0219C964
 	ldr r0, [sp, #8]
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	sub r0, r6, r0
@@ -3684,7 +3684,7 @@ _0219C9C6:
 	add r0, r7, #0
 	add r1, r5, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	sub r0, r6, r0
@@ -3947,7 +3947,7 @@ _0219CBF2:
 	ldr r0, [r5, #0x18]
 	ldr r1, [sp]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r6, r6, r0
 	ldr r0, [r5, #0x18]

@@ -1,6 +1,8 @@
 #ifndef BAG_H
 #define BAG_H
 
+#define NORMAL_ITEM_MAX 0x136
+
 enum
 {
     BAG_MODE_NORMAL,
@@ -93,8 +95,7 @@ struct BagViewWork
     /*0x018*/ void* bagSave;
     /*0x01C*/ int unk1C;
     /*0x020*/int unk20;
-    /*0x024*/ ItemTable m_itemTable[6];
-    /*0x03C*/ u8 unk3C[0x4C0];
+    /*0x024*/ ItemTable m_itemTable[NORMAL_ITEM_MAX];
     /*0x4FC*/ FieldBagItemUse bagMenuFunc;
     /*0x500*/ int unk500;
     /*0x504*/ u8 unk504;
@@ -189,17 +190,17 @@ struct BagViewWork
     /*0x808*/ int unk808;
     /*0x80C*/ int unk80C;
     /*0x810*/ int unk810;
-    /*0x814*/ int unk814;
+    /*0x814*/ int selectAmount;
     /*0x818*/ u32 unk818;
     /*0x81C*/ u32 unk81C;
     /*0x820*/ u32 unk820;
     /*0x824*/ u32 unk824;
     /*0x828*/ u32 unk828;
-    /*0x82C*/ u32 itemType;
+    /*0x82C*/ u32 itemPocket;
     /*0x830*/ int posNow;
     /*0x834*/ int unk834;
     /*0x838*/ u32 unk838;
-    /*0x83C*/ int unk83C;
+    /*0x83C*/ int isSwitchMode;
     /*0x840*/ int unk840;
     /*0x844*/ int unk844;
     /*0x848*/ int unk848[5];
@@ -244,22 +245,20 @@ typedef struct
     ItemSort ItemClass;
 } ItemSortTable; // size of 12
 
-void ovy142_219a1ec(BagView *m_bagView);
+void BagMenu_WaitPrintKeyPad(BagView *m_bagView);
 
 void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
-ItemTable* ovy142_2199928(BagView *m_bagView, u32 pocket);
-int BagView_GetItemPrice(u32 itemId, int param_2, u16 heapId);
+ItemTable* BagMenu_GetBagItemDataBySlot(BagView *m_bagView, u32 pocket);
+int BagMenu_GetItemPrice(u32 itemId, int param_2, u16 heapId);
 
 
-int ovy142_2199988(BagView *m_bagView);
+int BagMenu_GetPocketItemAmount(BagView *m_bagView);
 extern int sub_0203D554(void);
 extern void ovy142_219de0c(BagView*);
 extern void ovy142_219e120(BagView*);
 extern void ovy142_219e924(BagView*);
 extern void ovy142_219becc(BagView*);
-
-#define NORMAL_ITEM_MAX 0x136
 
 extern int ovy142_21a0698(ITEM_UNKNOW_DATA*, int);
 extern void sub_020244E0(int, int, int, int, int);
@@ -279,8 +278,8 @@ extern void ovy142_219f8ec(BagView*, u32);
 extern void ovy142_219f06c(BagView*, u32);
 extern void ovy142_219f450(BagView*, u32);
 
-void ovy142_219c3cc(BagView *m_bagView);
-void ovy142_219c414(BagView *m_bagView);
+void BagMenu_BagStart(BagView *m_bagView);
+void BagMenu_BagWaitFadeIn(BagView *m_bagView);
 extern void GFL_FadeScreenSet(int, int, int, int, int, int, u16);
 extern int GFL_FadeScreenIsFinished(void);
 extern int ovy142_21a00a0(BagView*);
@@ -309,7 +308,7 @@ extern void ovy142_219f8c4(BagView*);
 extern void sub_02044668(int, u16, u16);
 extern void sub_02048210(int);
 
-void ovy142_219a850(BagView *m_bagView);
+void BagMenu_HandleKeyPad(BagView *m_bagView);
 extern void sub_020504F0(int);
 extern void sub_0203D564(int);
 extern void ovy142_219be90(BagView*);
@@ -362,7 +361,7 @@ extern void ovy142_219b46c(BagView*);
 
 void ovy142_219b2f0(BagView*);
 extern void PlayerSave_AddMoney(int, int);
-extern void ovy142_219f978(BagView*);
+extern void BagMenu_PrintMoneyString(BagView*);
 extern int PlayerSave_GetPlayerSaveOffset(void*);
 
 void ovy142_219a4d0(BagView *m_bagView);
@@ -372,7 +371,7 @@ extern int sub_0202DC00(int);
 extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
 extern void ovy142_219ac70(BagView*);
-extern void ovy142_219b5d4(BagView*);
+extern void BagMenu_MoveItemToFreeSpace(BagView*);
 void ovy142_219ae30(BagView*);
 extern int sub_0219BE00(BagView*);
 extern int ovy142_219be18(BagView*, int);
@@ -383,15 +382,15 @@ void BagMenu_TrySortItem(BagView *m_bagView, int param_2);
 void ovy142_219ad30(BagView *m_bagView);
 extern void StringSetNumber(int, int, int, int, int, int);
 
-void ovy142_219a104(BagView *m_bagView);
+void BagMenu_UseRepel(BagView *m_bagView);
 extern void *sub_02017934(void*);
-extern void* sub_0200DCF0(void*);
+extern void* SaveControl_GetEncountSave(void*);
 extern void GFL_MsgDataLoadStrbuf(int, int, int);
 extern void GFL_WordSetFormatStrbuf(int, int, int);
 extern void BagMenu_PrintBagMessage(BagView*, int);
-extern int sub_0200DDE0(void*);
-extern void sub_0200DDB0(void*, u8);
-extern void sub_0200DDF0(void*, u16);
+extern int EncountSave_IsRepelDepleted(void*);
+extern void EncountSave_SetRepelSteps(void*, u8);
+extern void EncountSave_SetRepelUsedItem(void*, u16);
 extern void BagView_DeletItem(BagView*, int);
 extern void GFL_CopyVarForText(int, int, void*);
 void ovy142_219bd2c(BagView *m_bagView, int param_2);
@@ -410,16 +409,16 @@ extern void ovy142_219dd84(BagView*, int);
 extern int sub_020275F8(int);
 extern void sub_0204B7C8(int);
 int sub_02199978(BagView *m_bagView);
-void ovy142_219e21c(BagView *a1);
+void BagMenu_LoadBagBackDefaultText(BagView *a1);
 
 extern int BmpWin_GetBitmap(int);
 extern int BmpWin_BitmapFill(int, int);
-extern void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6);
+extern void BagMenu_DrawStringToBmpWin(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6);
 extern int ovy142_21a03ac(u8);
 extern void BmpWin_FlushChar(int);
-extern int sub_02026B84(u16);
+extern int Item_GetTmHmNo(u16);
 extern int Item_GetTmHmIndex(u16);
-extern void sub_020244A4(int, int, int);
+extern void LoadMoveNameToStrbuf(int, int, int);
 extern void ovy142_219f4b0(BagView*, int);
 extern void sub_020267C0(int ,u16, u16);
 extern void ovy142_219e4dc(BagView*, int);
@@ -433,7 +432,7 @@ extern void sub_02021D28(u8, int, int, int, int, int);
 extern int ovy142_219c0b4(BagView*);
 extern void ovy142_219f0bc(BagView*, u32*, int);
 
-extern u16 sub_02026AE4(u16);
+extern u16 Item_GetTmHmMove(u16);
 extern int sub_02021740(u16);
 extern int sub_02021720(u16);
 extern int sub_020216B0(u16, int);
@@ -441,8 +440,8 @@ extern int sub_02021280(u16, int);
 extern int sub_0202174C(u16);
 extern void sub_020470F8(int, int, int, int, int, int);
 
-extern void ovy142_219fb78(BagView*);
-extern void ovy142_219fc14(BagView*, int);
+void ovy142_219fb78(BagView*);
+void ovy142_219fc14(BagView*, int);
 extern void sub_0204C124(int, int);
 
 int sub_0219BE88(int a1);
@@ -467,7 +466,7 @@ void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId);
 void BagMenu_SetRunFunc(BagView *m_bagView, FieldBagItemUse fun);
 
-void ovy142_219d6a0(BagView *bagView, int a2);
+void BagMenu_LoadBagBackGround(BagView *bagView, int a2);
 extern int MyStatus_GetTrainerGender(void*);
 extern int Oam_LoadNCLRFile(int, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
@@ -475,10 +474,10 @@ extern void sub_0204B0D4(int, int, int, int, int, u16);
 extern int sub_0204AE3C(int, int, int, int, int, u16);
 extern void sub_0204AFB0(int, int, int, int, int, int, int, u16);
 void ovy142_219e284(BagView *a1);
-extern int BmpWin_CreateDynamic(int, int, int, int, int, int, int);
+extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
 extern void sub_0204826C(int);
 
-void ovy142_219e5c4(BagView *a1);
+void BagMenu_LoadBagItemBarResource(BagView *a1);
 extern int sub_02046E28(int, int, int, u16);
 void ovy142_219efc0(BagView *a1);
 void ovy142_219e6f8(BagView *a1);

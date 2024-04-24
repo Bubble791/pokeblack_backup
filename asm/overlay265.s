@@ -3144,7 +3144,7 @@ ovy265_219b0a4: ; 0x0219B0A4
 	ldr r1, [r5, r1]
 	mov r2, #0
 	str r0, [sp, #0x10]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	mov r0, #0x70
 	str r0, [sp]
@@ -3261,7 +3261,7 @@ ovy265_219b1b8: ; 0x0219B1B8
 	ldr r1, [r5, r1]
 	mov r2, #0
 	str r0, [sp, #8]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, #0xf0
 	sub r0, r7, r0
 	lsr r0, r0, #1

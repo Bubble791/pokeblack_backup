@@ -270,7 +270,7 @@ _02199C80:
 	bne _02199CA6
 	add r1, #0x54
 	ldrh r0, [r1]
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	ldr r1, [r5, r4]
 	add r1, #0x56
 	strh r0, [r1]
@@ -12007,10 +12007,10 @@ sub_0219FA28: ; 0x0219FA28
 	ldr r0, [r1, #0x2c]
 	add r1, r2, #0
 	add r2, r3, #0
-	ldr r3, _0219FA34 ; =sub_020244A4
+	ldr r3, _0219FA34 ; =LoadMoveNameToStrbuf
 	bx r3
 	nop
-_0219FA34: .word sub_020244A4
+_0219FA34: .word LoadMoveNameToStrbuf
 	thumb_func_end sub_0219FA28
 
 	thumb_func_start sub_0219FA38
@@ -13919,7 +13919,7 @@ _021A0836:
 	add r0, r7, #0
 	ldr r1, [r4, r1]
 	add r2, r5, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0x14]
@@ -14125,7 +14125,7 @@ _021A0A2A:
 	add r0, r5, #0
 	ldr r1, [r4, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0x10]
@@ -15733,7 +15733,7 @@ _021A1750:
 	ldr r1, [r4, r1]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x18]
 	ldr r0, [r4, r5]
 	bl BmpWin_GetBitmap

@@ -1254,7 +1254,7 @@
 .public sub_02155174
 .public sub_020171F4
 .public PlayerSave_GetPlayerSaveOffset
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_02155184
 .public sub_0215516C
 .public sub_02019494
@@ -2557,7 +2557,7 @@
 .public sub_0216711C
 .public sub_0216711C
 .public sub_02017934
-.public sub_0200DCF0
+.public SaveControl_GetEncountSave
 .public sub_021591F4
 .public sub_02017394
 .public sub_02019200
@@ -3887,7 +3887,7 @@
 .public sub_02035EFC
 .public sub_02155174
 .public sub_02017934
-.public sub_0200DCF0
+.public SaveControl_GetEncountSave
 .public sub_0200DD38
 .public sub_02008BD0
 .public sub_0200CADC
@@ -4356,7 +4356,7 @@
 .public sub_020174AC
 .public sub_021690A0
 .public sub_02017934
-.public sub_0200DCF0
+.public SaveControl_GetEncountSave
 .public sub_0200DE24
 .public sub_0201738C
 .public sub_02167A60
@@ -4610,7 +4610,7 @@
 .public sub_020486F4
 .public MyStatus_GetTrainerGender
 .public sub_02008BD0
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_0200C97C
 .public sub_02017A40
 .public sub_02008BF4

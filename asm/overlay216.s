@@ -1781,7 +1781,7 @@ ovy216_21bc5a4: ; 0x021BC5A4
 	add r0, r4, #0
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	add r0, r5, #0
 	bl BmpWin_GetBitmap

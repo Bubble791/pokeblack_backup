@@ -873,7 +873,7 @@ ovy171_21de07c: ; 0x021DE07C
 	ldr r1, [r5, #0xc]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x2c]
 	lsl r1, r1, #3
 	sub r0, r1, r0
@@ -914,7 +914,7 @@ _021DE17A:
 	ldr r1, [r5, #0xc]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x30]
 	lsl r1, r1, #3
 	sub r0, r1, r0
@@ -1028,7 +1028,7 @@ ovy171_21de270: ; 0x021DE270
 	ldr r1, [r5, #0x10]
 	mov r2, #0
 	str r0, [sp, #0x28]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x24]
@@ -1101,7 +1101,7 @@ ovy171_21de270: ; 0x021DE270
 	str r0, [sp, #0x10]
 	ldr r1, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	sub r0, r7, r0
 	lsl r0, r0, #0x10
 	asr r0, r0, #0x10

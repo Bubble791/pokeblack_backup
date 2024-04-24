@@ -329,7 +329,7 @@
 .public sub_021A0880
 .public sub_0204898C
 .public sub_0219A2A4
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_021A0880
 .public sub_0204898C

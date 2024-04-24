@@ -1989,7 +1989,7 @@ ovy104_21efb30: ; 0x021EFB30
 	ldr r0, [r0, #8]
 	add r5, r1, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r7, r0, #0
 	add r0, r5, #0
 	bl ovy104_21ef9f8
@@ -2493,7 +2493,7 @@ _021EFEEE:
 	ldr r1, [r5, #0x14]
 	add r0, r7, #0
 	mov r2, #1
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x24]
 	ldr r0, [r5, #0x10]
 	bl sub_02049964

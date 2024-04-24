@@ -1029,7 +1029,7 @@ ovy289_21f4c1c: ; 0x021F4C1C
 	cmp r2, #1
 	bne _021F4C2E
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -1037,7 +1037,7 @@ _021F4C2E:
 	cmp r2, #2
 	bne _021F4C3E
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	pop {r3, pc}

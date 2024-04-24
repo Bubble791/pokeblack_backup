@@ -1584,7 +1584,7 @@ ovy177_219b964: ; 0x0219B964
 	ldr r0, [r5, #0xc]
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	sub r0, r6, r0

@@ -1379,7 +1379,7 @@ _0219A3DC:
 	ldr r0, [r5, #0x4c]
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
 	lsl r0, r4, #2
@@ -1396,7 +1396,7 @@ _0219A400:
 	ldr r0, [r5, #0x4c]
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
 	lsl r0, r4, #2
@@ -2295,7 +2295,7 @@ _0219ABD2:
 	ldr r0, [r4, #0x48]
 	mov r1, #0
 _0219ABDC:
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 _0219ABE0:
 	ldr r1, [r4]
 	ldr r0, [r4, #0x44]

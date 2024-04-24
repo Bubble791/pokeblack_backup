@@ -750,7 +750,7 @@ ovy162_219d340: ; 0x0219D340
 	ldr r0, [r5, #0x24]
 	ldr r1, [r5, #0x14]
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r2, r0, #0
 	ldr r0, [r5, #0x24]
 	lsr r3, r2, #0x1f

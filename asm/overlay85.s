@@ -1241,7 +1241,7 @@ ovy85_21eb74c: ; 0x021EB74C
 	ldr r1, [r1]
 	mov r2, #0
 	mov r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r4, #0xb8
 	sub r0, r4, r0
 	lsr r2, r0, #0x1f
@@ -5569,7 +5569,7 @@ _021ED8D6:
 	ldrh r2, [r4, #0x26]
 	add r0, r5, #0
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	b _021ED940
 _021ED8E2:
 	add r0, r4, #0

@@ -233,14 +233,14 @@
 .public StringSetNumber
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public sub_02021CFC
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -343,7 +343,7 @@
 .public sub_0208D60C
 .public sub_020484D8
 .public sub_020484DC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public BmpWin_GetBitmap
 .public sub_02021CFC
@@ -353,7 +353,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_020484D8
 .public sub_020484DC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public BmpWin_GetBitmap
 .public sub_02021CFC
@@ -379,7 +379,7 @@
 .public sub_0202B0F4
 .public sub_02046EF8
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02046EFC
 .public sub_020229B0

@@ -261,7 +261,7 @@
 .public sub_0202437C
 .public sub_020243F4
 .public sub_02024464
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_StrBufCreate
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree

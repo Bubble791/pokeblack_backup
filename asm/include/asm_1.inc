@@ -6070,7 +6070,7 @@
 .public sub_0200C97C
 .public sub_0200C990
 .public sub_0200C9A0
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public PlayerSave_AddMoney
 .public sub_0200C9E4
 .public sub_0200C9F8
@@ -6166,7 +6166,7 @@
 .public sub_0200DBD8
 .public sub_0200DBDC
 .public sub_0200DCEC
-.public sub_0200DCF0
+.public SaveControl_GetEncountSave
 .public sub_0200DCFC
 .public sub_0200DD1C
 .public sub_0200DD30
@@ -6175,10 +6175,10 @@
 .public sub_0200DD48
 .public sub_0200DD54
 .public sub_0200DD5C
-.public sub_0200DDB0
+.public EncountSave_SetRepelSteps
 .public sub_0200DDB8
-.public sub_0200DDE0
-.public sub_0200DDF0
+.public EncountSave_IsRepelDepleted
+.public EncountSave_SetRepelUsedItem
 .public sub_0200DDF4
 .public sub_0200DDF8
 .public sub_0200DE18
@@ -7740,7 +7740,7 @@
 .public sub_02022694
 .public sub_020227F0
 .public sub_0202284C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020228C0
 .public sub_02022900
 .public sub_020229B0
@@ -7805,7 +7805,7 @@
 .public sub_02024444
 .public sub_02024464
 .public sub_02024484
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public LoadItemNameToStrbuf
 .public sub_020244C0
 .public sub_020244D0
@@ -7929,10 +7929,10 @@
 .public sub_020268D4
 .public sub_02026A94
 .public sub_02026ABC
-.public sub_02026AE4
+.public Item_GetTmHmMove
 .public sub_02026B18
 .public Item_GetTmHmIndex
-.public sub_02026B84
+.public Item_GetTmHmNo
 .public Item_IsMail
 .public sub_02026BC0
 .public sub_02026BE0

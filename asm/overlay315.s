@@ -566,7 +566,7 @@ _0219D30A:
 	ldr r1, [r5, #0xc]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r0, [r5, #0x24]
 	bl BmpWin_GetBitmap
 	bl sub_02046EF8
@@ -595,7 +595,7 @@ _0219D30A:
 	ldr r1, [r5, #0xc]
 	mov r2, #0
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0x28]
@@ -633,7 +633,7 @@ _0219D3B4:
 	ldr r1, [r5, #0xc]
 	mov r2, #0
 	add r4, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r0, [r5, #0x2c]
 	bl BmpWin_GetBitmap
 	bl sub_02046EF8

@@ -4014,7 +4014,7 @@ ovy205_21b9214: ; 0x021B9214
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, r4]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r1, r0, #0
 	ldr r0, [r5, r4]
 	mov r2, #0x50

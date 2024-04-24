@@ -2516,7 +2516,7 @@ ovy309_219e23c: ; 0x0219E23C
 	ldr r1, [r1]
 	mov r2, #0
 	str r0, [sp, #0x10]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r1, r0, #0x10
 	mov r0, #0x18

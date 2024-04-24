@@ -6825,7 +6825,7 @@ _021B89E2:
 	ldr r0, [sp, #4]
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r6, r6, r0
 	ldr r0, [sp, #4]
@@ -6866,7 +6866,7 @@ _021B8A42:
 	ldr r0, [sp, #4]
 	mov r2, #0
 	mov r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	sub r1, r6, r0
 	bpl _021B8A5C
 	add r1, r7, #0
@@ -8703,7 +8703,7 @@ _021B9812:
 	ldr r0, [r5, #0x18]
 	ldr r1, [sp]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r6, r6, r0
 	ldr r0, [r5, #0x18]
@@ -11224,7 +11224,7 @@ _021BABDE:
 	add r0, r7, #0
 	mov r2, #0
 	mov r6, #0x28
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	asr r0, r0, #0x10
 	sub r0, r6, r0

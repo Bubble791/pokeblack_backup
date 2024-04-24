@@ -1536,7 +1536,7 @@
 .public GFL_StrBufCreate
 .public sub_02046E28
 .public ovy167_21d4ec0
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_BitmapFill
 .public sub_02021D28
 .public sub_02046EF4
@@ -1908,7 +1908,7 @@
 .public GFL_HeapAllocate
 .public GFL_VBlankTCBAdd
 .public G2x_SetBlendBrightness_
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public FX_ModS32
 .public GFL_StrBufCreate
 .public sub_0204898C
@@ -1930,7 +1930,7 @@
 .public GFL_HeapFree
 .public sub_02023370
 .public sub_020232E8
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public StringSetNumber
@@ -2073,7 +2073,7 @@
 .public BmpWin_BitmapFill
 .public sub_02023370
 .public sub_020232E8
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public sub_020232E8
@@ -2346,7 +2346,7 @@
 .public sub_0201CCF8
 .public sub_02023370
 .public sub_020232E8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public sub_020232E8
 .public sub_02046EF4

@@ -470,8 +470,8 @@
 .public sub_02048210
 .public sub_02022DA8
 .public sub_020480A8
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_0204898C

@@ -1508,7 +1508,7 @@ _0219E2A6:
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r1, r0, #0x10
 	add r0, sp, #0x28
@@ -1520,7 +1520,7 @@ _0219E2BE:
 	add r0, r5, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	add r0, r7, #0

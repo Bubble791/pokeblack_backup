@@ -139,9 +139,9 @@
 .public sub_0201CD1C
 .public GFL_FadeScreenSet
 .public sub_0219AC10
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484D8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484D8
 .public BmpWin_GetBitmap
 .public sub_02021D28
@@ -295,7 +295,7 @@
 .public sub_02024464
 .public sub_0219AC10
 .public GFL_CopyVarForText
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public sub_0204898C
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree

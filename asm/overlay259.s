@@ -1578,7 +1578,7 @@ _0219A4FE:
 	add r0, r4, #0
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	strb r0, [r5, #7]
 	ldr r0, [r5, #0x1c]
 	bl BmpWin_GetBitmap
@@ -4696,7 +4696,7 @@ _0219BD2C:
 	ldr r0, [sp, #4]
 	ldr r1, [r5, #0x24]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r4, r4, r0
 	ldr r0, [sp, #4]

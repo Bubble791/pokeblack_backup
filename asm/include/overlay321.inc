@@ -129,8 +129,8 @@
 .public BmpWin_FlushChar
 .public BmpWin_GetBitmap
 .public sub_02021C7C
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public GFL_WordSetSystemCreateDefault
 .public sub_0204898C
 .public GFL_StrBufFree

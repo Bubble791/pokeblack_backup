@@ -1606,7 +1606,7 @@ _021DA3B2:
 	ldr r0, [r5, #0x3c]
 	ldr r1, [r5, #0x34]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r4, r4, r0
 	b _021DA3E6
@@ -1619,7 +1619,7 @@ _021DA3CA:
 	ldr r0, [r5, #0x3c]
 	ldr r1, [r5, #0x34]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r1, r0, #1
 	mov r0, #7
 	sub r0, r0, r1
@@ -2712,7 +2712,7 @@ _021DAB36:
 	ldr r1, [sp, #0x10]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	sub r0, r7, r0

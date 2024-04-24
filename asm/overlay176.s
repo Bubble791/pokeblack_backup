@@ -1135,7 +1135,7 @@ ovy176_219b620: ; 0x0219B620
 	ldr r0, [r5, #0xc]
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	sub r0, r6, r0
@@ -1982,7 +1982,7 @@ _0219BCB0:
 	add r1, r0, #0
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x40]
 	bl sub_0219B47C

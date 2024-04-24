@@ -1460,7 +1460,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_020484D8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0208D374
 .public sub_0208DD34
 .public sub_0208DA4C

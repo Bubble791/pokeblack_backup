@@ -1602,7 +1602,7 @@ ovy321_219daf0: ; 0x0219DAF0
 	cmp r2, #1
 	bne _0219DB02
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -1610,7 +1610,7 @@ _0219DB02:
 	cmp r2, #2
 	bne _0219DB12
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	pop {r3, pc}

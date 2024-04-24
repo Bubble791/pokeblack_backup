@@ -813,7 +813,7 @@ _0219D526:
 	ldr r1, [sp, #0x10]
 	mov r2, #0
 	str r0, [sp, #0x14]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r0, r5, r0
 	add r0, r0, #7
 	lsl r0, r0, #0x15
@@ -879,7 +879,7 @@ _0219D526:
 	ldr r1, [sp, #0x10]
 	add r0, r5, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r4, r4, r0
 	ldr r0, [r6, #0x40]

@@ -4056,7 +4056,7 @@ _0219ED44:
 	ldr r1, [sp, #0x14]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0x48
 	sub r7, r1, r0
 	add r0, r4, #0
@@ -6014,7 +6014,7 @@ _0219FC88:
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x10]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r5, r5, r0
 	b _0219FD1C
 _0219FCB8:

@@ -70,8 +70,8 @@
 .public sub_02048210
 .public BmpWin_GetBitmap
 .public sub_02021C7C
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public sub_02021A3C
 .public BmpWin_GetBitmap
 .public sub_02021C1C

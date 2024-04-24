@@ -5803,7 +5803,7 @@ ovy36_2182468: ; 0x02182468
 	add r0, r7, #0
 	add r4, r1, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r6, r0, #0
 	bl sub_0200DDB8
 	lsl r0, r0, #0x18
@@ -18316,7 +18316,7 @@ _02187F78:
 	beq _02187F9A
 	ldr r1, [r7, #8]
 	ldr r2, [sp, #8]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	cmp r0, r6
 	bls _02187F8C
 	add r6, r0, #0
@@ -20101,7 +20101,7 @@ ovy36_2188d2c: ; 0x02188D2C
 	add r0, r6, #0
 	mov r2, #0
 	str r3, [sp]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r4, r0, #2
 	ldr r1, [r5, #8]
 	add r0, r6, #0
@@ -21973,7 +21973,7 @@ ovy36_2189c34: ; 0x02189C34
 	add r4, r2, #0
 	ldr r1, [r3, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r1, r4, #1
 	add r2, r1, r0
 	mov r1, #7
@@ -29364,7 +29364,7 @@ _0218D42A:
 	ldr r0, [r5, #0x38]
 	ldr r1, [r5, #0x2c]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x30]
 	lsr r0, r0, #1
 	ldr r1, [r1, r6]
@@ -70730,7 +70730,7 @@ ovy36_21a0a1c: ; 0x021A0A1C
 	str r0, [r5, #0xc]
 	ldr r0, [sp, #4]
 	str r4, [r5]
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	str r0, [r5, #4]
 	sub r0, r6, #5
 	cmp r0, #1
@@ -70797,8 +70797,8 @@ _021A0ACA:
 	orr r0, r1
 	str r0, [r5, #0x28]
 	ldr r0, [sp, #4]
-	bl sub_0200DCF0
-	bl sub_0200DDE0
+	bl SaveControl_GetEncountSave
+	bl EncountSave_IsRepelDepleted
 	cmp r0, #0
 	bne _021A0AFC
 	ldr r1, [r5, #0x28]
@@ -71708,7 +71708,7 @@ ovy36_21a118c: ; 0x021A118C
 	pop {r3, r4, r5, pc}
 _021A11AC:
 	add r0, r4, #0
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	bl sub_0200DD30
 	cmp r0, #0x13
 	blo _021A11BC
@@ -85251,11 +85251,11 @@ ovy36_21a7858: ; 0x021A7858
 	str r0, [r5, #0x20]
 	add r0, r5, #0
 	bl ovy12_2154910
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	add r2, r0, #0
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy36_21a7858
@@ -85279,7 +85279,7 @@ ovy36_21a788c: ; 0x021A788C
 	add r2, r0, #0
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	mov r0, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy36_21a788c
@@ -87193,7 +87193,7 @@ ovy36_21a8850: ; 0x021A8850
 	add r5, r0, #0
 	ldr r0, [sp, #0x1c]
 	bl PlayerSave_GetPlayerSaveOffset
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	str r0, [sp, #8]
 	ldr r0, [sp, #0x20]
 	cmp r0, #0
@@ -87285,7 +87285,7 @@ ovy36_21a8944: ; 0x021A8944
 	add r4, r0, #0
 	ldr r0, [sp, #8]
 	bl PlayerSave_GetPlayerSaveOffset
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r2, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -94271,7 +94271,7 @@ _021AC0B4:
 	pop {r3, pc}
 _021AC0C0:
 	ldr r0, [r2, #0xc]
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	pop {r3, pc}
 	.align 2, 0
 _021AC0C8: .word 0x0000018B
@@ -94995,7 +94995,7 @@ ovy36_21ac660: ; 0x021AC660
 	ldr r0, [r5, r6]
 	mov r1, #1
 	add r2, r7, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	add r1, r6, #0
 	add r2, r6, #0
 	add r1, #8
@@ -95034,11 +95034,11 @@ _021AC6A8:
 	bl StringSetNumber
 	lsl r0, r7, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	add r2, r0, #0
 	ldr r0, [r5, r6]
 	mov r1, #1
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	add r1, r6, #0
 	add r2, r6, #0
 	add r1, #8
@@ -96272,7 +96272,7 @@ _021AD0CC:
 	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r2, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -96774,7 +96774,7 @@ ovy36_21ad4d0: ; 0x021AD4D0
 	ldr r0, [r5, r0]
 	ldr r1, [r5, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0x24
@@ -96834,7 +96834,7 @@ ovy36_21ad560: ; 0x021AD560
 	ldr r0, [r5, r4]
 	ldr r1, [r5, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0x34
@@ -96883,7 +96883,7 @@ _021AD5D4:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0x24
@@ -97316,13 +97316,13 @@ ovy36_21ad954: ; 0x021AD954
 	mov r3, #2
 	bl StringSetNumber
 	add r0, r6, #0
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	add r2, r0, #0
 	add r0, r4, #0
 	add r0, #0x14
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	mov r0, #0
 	str r0, [sp]
 	mov r0, #1
@@ -97357,7 +97357,7 @@ ovy36_21ad9bc: ; 0x021AD9BC
 	mov r1, #0
 	add r2, r7, #0
 	mov r5, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	cmp r6, #1
 	beq _021AD9E6
 	mov r5, #1
@@ -98687,7 +98687,7 @@ ovy36_21ae4f4: ; 0x021AE4F4
 	bl sub_02155174
 	add r4, r0, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r6, r0, #0
 	add r0, r5, #0
 	add r1, r7, #0
@@ -98861,7 +98861,7 @@ ovy36_21ae644: ; 0x021AE644
 	bl sub_02155174
 	add r5, r0, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02017354
@@ -98884,7 +98884,7 @@ ovy36_21ae644: ; 0x021AE644
 	pop {r3, r4, r5, r6, r7, pc}
 _021AE692:
 	add r0, r4, #0
-	bl sub_0200DDE0
+	bl EncountSave_IsRepelDepleted
 	cmp r0, #0
 	beq _021AE6CA
 	add r0, r5, #0
@@ -98894,7 +98894,7 @@ _021AE692:
 	lsl r0, r0, #0x18
 	lsr r1, r0, #0x18
 	add r0, r4, #0
-	bl sub_0200DDB0
+	bl EncountSave_SetRepelSteps
 	ldr r0, [sp, #4]
 	add r1, r5, #0
 	mov r2, #1
@@ -101172,7 +101172,7 @@ _021AF8E2:
 	lsr r2, r2, #0x10
 	bl sub_02008730
 	ldrh r0, [r0]
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 _021AF8F4:
 	strh r0, [r5]
 	mov r0, #0
@@ -129441,7 +129441,7 @@ _021BCEB2:
 	ldr r1, [sp, #0x34]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	ldr r0, [sp, #0x34]
 	bl sub_02022DA8
@@ -132399,7 +132399,7 @@ _021BE4D0:
 _021BE4E8:
 	lsl r0, r4, #0x10
 	lsr r0, r0, #0x10
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	cmp r6, r0
 	bne _021BE518
 	ldr r1, [r5]

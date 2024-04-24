@@ -204,7 +204,7 @@
 .public GFL_CopyVarForText
 .public GFL_MsgDataLoadStrbuf
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public GFL_StrBufFree

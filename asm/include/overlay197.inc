@@ -509,12 +509,12 @@
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02046EFC
 .public sub_020229B0
 .public sub_02046EF8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_StrBufCreate
@@ -666,7 +666,7 @@
 .public sub_0202B0F4
 .public sub_02046EF8
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02046EFC
 .public sub_020229B0
@@ -830,7 +830,7 @@
 .public StringSetNumber
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02021CFC
 .public GFL_StrBufFree

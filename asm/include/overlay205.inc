@@ -239,7 +239,7 @@
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_02046E28
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public sub_0202AEC4
 .public sub_0202B0F4

@@ -47,7 +47,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_021EAC18
 .public sub_02170D04
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_021EAC18
 .public StringSetNumber
 .public sub_021EAC18
@@ -351,7 +351,7 @@
 .public sub_020244C0
 .public sub_02018C80
 .public sub_02024700
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public sub_021ED810
 .public sub_0202437C
 .public sub_02015018

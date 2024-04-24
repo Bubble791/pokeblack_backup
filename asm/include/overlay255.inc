@@ -1773,13 +1773,13 @@
 .public sub_02024484
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public StringSetNumber
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public StringSetNumber
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -1846,7 +1846,7 @@
 .public GFL_StrBufCreate
 .public sub_02007B24
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public GFL_StrBufFree
 .public sub_0202B0F4
@@ -2710,7 +2710,7 @@
 .public sub_0219CC18
 .public sub_0219CC1C
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484D8
 .public BmpWin_GetBitmap
 .public sub_02021C7C
@@ -2732,7 +2732,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484D8
 .public BmpWin_GetBitmap
 .public sub_02021C7C

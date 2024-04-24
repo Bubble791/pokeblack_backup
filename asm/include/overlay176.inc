@@ -145,7 +145,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_020484D8
 .public sub_020484DC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02021C44
 .public BmpWin_GetBitmap
@@ -228,7 +228,7 @@
 .public sub_0204898C
 .public sub_020232E8
 .public sub_0219B47C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0219B47C
 .public sub_020229B0
 .public BmpWin_GetBitmap

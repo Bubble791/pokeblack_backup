@@ -244,7 +244,7 @@ _021B3124:
 	ldr r0, [r5, #0x54]
 	ldr r1, [r5, #0x4c]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x30]
 	lsr r0, r0, #1
 	ldr r1, [r1, r6]
@@ -362,7 +362,7 @@ _021B322A:
 	ldr r0, [r5, #0x54]
 	ldr r1, [r5, #0x4c]
 	ldr r2, [sp, #0x10]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0xc]
 	lsr r0, r0, #1
 	ldr r1, [r1, r4]

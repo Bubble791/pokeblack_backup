@@ -3032,7 +3032,7 @@ _0219E698:
 	str r0, [r5, r1]
 	ldr r1, [r5, #0x18]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	add r6, #0x24
 	lsr r7, r0, #0x10
@@ -3263,7 +3263,7 @@ ovy316_219e824: ; 0x0219E824
 	ldr r1, [r5, #0x18]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [r5, #0x18]
 	add r0, r4, #0
 	bl sub_020229B0

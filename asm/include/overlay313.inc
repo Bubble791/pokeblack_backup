@@ -106,8 +106,8 @@
 .public sub_02048658
 .public sub_0204898C
 .public sub_0204898C
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public BmpWin_GetBitmap
@@ -122,8 +122,8 @@
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_0204898C
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public BmpWin_GetBitmap
@@ -135,7 +135,7 @@
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public BmpWin_GetBitmap

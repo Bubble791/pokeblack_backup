@@ -25732,7 +25732,7 @@ ovy168_21ea210: ; 0x021EA210
 	ldr r1, [sp, #8]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	add r0, r6, #0
 	mov r1, #0xff
@@ -32443,7 +32443,7 @@ ovy168_21ed7f4: ; 0x021ED7F4
 	add r6, r2, #0
 	mov r2, #0
 	add r7, r3, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r4, r0, #0
 	asr r1, r4, #2
 	lsr r1, r1, #0x1d
@@ -32742,7 +32742,7 @@ _021ED98C:
 	ldrh r2, [r6, r2]
 	ldr r0, [sp, #0xa0]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	ldr r0, [sp, #0xa0]
 	ldr r1, [sp, #0x20]
 	ldr r2, [sp, #0x1c]
@@ -34893,7 +34893,7 @@ ovy168_21eeafc: ; 0x021EEAFC
 	ldr r0, [sp, #0x10]
 	mov r1, #0
 	mov r2, #0xa5
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x18]
 	ldr r2, [sp, #0x14]
@@ -39552,7 +39552,7 @@ ovy168_21f0ef8: ; 0x021F0EF8
 	ldr r1, [r4, #8]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	cmp r0, #0x30
 	ldr r0, [r4, #8]
 	ble _021F0F78

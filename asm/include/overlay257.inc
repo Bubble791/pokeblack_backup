@@ -1836,7 +1836,7 @@
 .public sub_021AAA84
 .public sub_021AAA8C
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -1905,7 +1905,7 @@
 .public sub_021AAA84
 .public sub_021AAA8C
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -2442,7 +2442,7 @@
 .public sub_021AAA14
 .public sub_0219CCC0
 .public sub_02008BB0
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484B4
 .public sub_020484D4
 .public sub_02044F90
@@ -3021,7 +3021,7 @@
 .public sub_02045B7C
 .public sub_0219CC88
 .public sub_02008BB0
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public BmpWin_GetBitmap
@@ -3059,7 +3059,7 @@
 .public sub_0219CCB8
 .public sub_0219CCC0
 .public sub_02008BB0
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_0204C140
 .public sub_0204C124

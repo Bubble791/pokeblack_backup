@@ -1448,7 +1448,7 @@ ovy139_219a2ec: ; 0x0219A2EC
 	add r1, r5, #0
 	mov r2, #0
 	str r0, [sp, #0x24]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0x18]
@@ -1554,7 +1554,7 @@ ovy139_219a410: ; 0x0219A410
 	cmp r2, #1
 	bne _0219A422
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -1562,7 +1562,7 @@ _0219A422:
 	cmp r2, #2
 	bne _0219A432
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -2210,7 +2210,7 @@ _0219A8E0:
 	ldr r0, [sp, #0xc]
 	ldr r1, [r5, #8]
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x88
@@ -2237,7 +2237,7 @@ _0219A8E0:
 	ldr r0, [sp, #0x10]
 	ldr r1, [r5, #8]
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r4, r0, #0
 	add r0, r5, #0
 	add r0, #0x8c

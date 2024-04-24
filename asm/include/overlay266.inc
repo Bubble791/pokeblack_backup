@@ -134,8 +134,8 @@
 .public sub_02046EF4
 .public sub_0219D9A0
 .public GFL_MsgDataLoadStrbuf
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public BmpWin_GetBitmap
 .public BmpWin_GetBitmap

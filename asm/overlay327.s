@@ -1251,7 +1251,7 @@ _021B66DA:
 	ldr r0, [sp, #4]
 	add r1, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r6, r6, r0
 	ldr r0, [sp, #4]
@@ -1292,7 +1292,7 @@ _021B673A:
 	ldr r0, [sp, #4]
 	mov r2, #0
 	mov r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	sub r1, r6, r0
 	bpl _021B6754
 	add r1, r7, #0

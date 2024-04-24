@@ -16455,7 +16455,7 @@ ovy310_21a4aa8: ; 0x021A4AA8
 	add r0, r6, #0
 	mov r2, #0
 	mov r5, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	sub r0, r4, r0
 	blx sub_0208D374
 	add r1, r0, #0

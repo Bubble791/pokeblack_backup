@@ -2641,7 +2641,7 @@ ovy322_219e3a0: ; 0x0219E3A0
 	cmp r2, #1
 	bne _0219E3B2
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -2649,7 +2649,7 @@ _0219E3B2:
 	cmp r2, #2
 	bne _0219E3C2
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -4523,7 +4523,7 @@ _0219F232:
 	ldr r2, [sp, #0x14]
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	ldr r0, [sp, #0x30]
 	add r1, r6, #0
 	ldr r0, [r5, r0]
@@ -5990,7 +5990,7 @@ ovy322_219fd50: ; 0x0219FD50
 	ldr r1, [r1]
 	mov r2, #0
 	add r7, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x10]
 	ldr r0, [r4]
 	bl sub_020484D8

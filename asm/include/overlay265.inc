@@ -243,7 +243,7 @@
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_0201CD88
@@ -256,7 +256,7 @@
 .public sub_0202B098
 .public BmpWin_BitmapFill
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_02046E28
 .public sub_0202AEC4

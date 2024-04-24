@@ -239,7 +239,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021CFC
 .public sub_0204826C
@@ -420,7 +420,7 @@
 .public sub_020232E8
 .public BmpWin_GetBitmap
 .public sub_02021CFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0219FD64
 .public GFL_StrBufFree
 .public sub_021A2FE8

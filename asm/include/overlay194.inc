@@ -1623,7 +1623,7 @@
 .public sub_02021CFC
 .public sub_0201CCF8
 .public GFL_MsgDataLoadStrbuf
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public BmpWin_GetBitmap
 .public sub_02021CFC

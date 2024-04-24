@@ -10208,7 +10208,7 @@ _021A1E16:
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 _021A1E32:
 	mov r0, #0x11
 	lsl r0, r0, #4
@@ -10287,7 +10287,7 @@ _021A1EC0:
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 _021A1EDE:
 	mov r0, #0x11
 	lsl r0, r0, #4

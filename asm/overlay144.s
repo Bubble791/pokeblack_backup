@@ -3806,7 +3806,7 @@ _0219EC0A:
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	asr r0, r0, #0x10
 	sub r0, r4, r0
@@ -3975,7 +3975,7 @@ _0219ED52:
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x34]
 	mov r2, #0x80
 	sub r1, r1, r0
@@ -4019,7 +4019,7 @@ _0219EDB2:
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	ldr r1, [sp, #0x38]
 	mov r2, #0x90
 	sub r1, r1, r0
@@ -4061,7 +4061,7 @@ _0219EE16:
 	ldr r0, [r5, #8]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	sub r1, r7, r0
 	ldr r0, [r5, #0xc]
 	sub r1, #0x1e

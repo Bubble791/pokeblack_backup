@@ -13,7 +13,7 @@
 .public sub_021A3150
 .public sub_0201FDF8
 .public sub_0203D554
-.public sub_02026AE4
+.public Item_GetTmHmMove
 .public sub_0201FF08
 .public sub_0219E824
 .public sub_0219E82C
@@ -907,7 +907,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -935,7 +935,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -1081,7 +1081,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_WordSetSystemFree
@@ -1389,6 +1389,6 @@
 .public BagSave_GetItemCountByID
 .public LoadItemNameToStrbuf
 .public sub_020244C0
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public sub_020246E4
 .public sub_0202DB70

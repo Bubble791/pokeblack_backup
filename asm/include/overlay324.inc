@@ -204,7 +204,7 @@
 .public sub_02044F90
 .public sub_02048210
 .public sub_02048210
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_020485BC

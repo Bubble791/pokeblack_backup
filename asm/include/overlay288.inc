@@ -130,7 +130,7 @@
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -187,8 +187,8 @@
 .public sub_0204826C
 .public sub_020484D4
 .public sub_02044F90
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public sub_0204AA30
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile

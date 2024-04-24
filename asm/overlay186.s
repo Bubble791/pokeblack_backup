@@ -5630,7 +5630,7 @@ _021AA1A4:
 	ldr r1, [r5, r1]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #4]
 	ldr r0, [r5, #8]
 	bl BmpWin_GetBitmap
@@ -5683,7 +5683,7 @@ ovy186_21aa210: ; 0x021AA210
 	sub r1, r1, #4
 	ldr r1, [r5, r1]
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [r5, #0xc]
 	bl BmpWin_GetBitmap
@@ -6011,7 +6011,7 @@ _021AA4B4:
 	ldr r0, [r4, r0]
 	ldr r1, [r4, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, #0x98
 	add r2, r0, #0
 	ldr r0, [r4, r6]
@@ -6728,7 +6728,7 @@ ovy186_21aaa54: ; 0x021AAA54
 	ldr r0, [sp, #0x24]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -6789,7 +6789,7 @@ ovy186_21aaab8: ; 0x021AAAB8
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -6872,7 +6872,7 @@ ovy186_21aab38: ; 0x021AAB38
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -6974,7 +6974,7 @@ ovy186_21aabe8: ; 0x021AABE8
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -7032,7 +7032,7 @@ ovy186_21aacc0: ; 0x021AACC0
 	ldr r0, [sp, #0x2c]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -7081,7 +7081,7 @@ ovy186_21aad38: ; 0x021AAD38
 	ldr r0, [sp, #0x24]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [sp, #8]
 	bl BmpWin_GetBitmap
@@ -7121,7 +7121,7 @@ ovy186_21aad9c: ; 0x021AAD9C
 	ldr r1, [r5, r1]
 	mov r2, #0
 	add r6, r3, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	ldr r0, [sp, #4]
 	bl BmpWin_GetBitmap

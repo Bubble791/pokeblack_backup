@@ -4589,7 +4589,7 @@ _021A200C:
 	ldr r1, [r5, r1]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
 	add r0, r6, #0

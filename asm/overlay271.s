@@ -7388,7 +7388,7 @@ _021F368A:
 	ldr r0, [sp]
 	ldr r1, [sp, #0x18]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 	sub r6, r6, r0
 	ldr r0, [sp]

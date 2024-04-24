@@ -6796,7 +6796,7 @@ ovy167_219cb20: ; 0x0219CB20
 	bhi _0219CB68
 	ldr r0, [r2, #0x70]
 	bl PlayerSave_GetPlayerSaveOffset
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	sub r1, r6, #7
 	add r4, r0, #0
 	mov r0, #0x1b
@@ -120682,7 +120682,7 @@ _021D3EAA:
 	ldr r0, [r4, #0x38]
 	ldr r1, [r4, #0x28]
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0x88
 	sub r0, r1, r0
 	lsr r1, r0, #1
@@ -123446,7 +123446,7 @@ _021D5220:
 	ldr r0, [sp, #0xc]
 	ldr r2, [r6, r2]
 	add r1, r4, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	b _021D5248
 _021D522E:
 	lsl r2, r5, #2

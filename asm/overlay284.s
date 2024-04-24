@@ -2972,7 +2972,7 @@ _021E47FE:
 	add r0, r5, #0
 	ldrh r2, [r2]
 	add r1, r4, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 _021E480A:
 	add r4, r4, #1
 	cmp r4, #2

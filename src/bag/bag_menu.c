@@ -79,10 +79,10 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
         return 0;
     GFL_TCBRemove(wk->taskCallBack);
     sub_021A046C(&wk->unk8C8);
-    sub_020088A4(wk->unk14, wk->itemType);
+    sub_020088A4(wk->unk14, wk->itemPocket);
     sub_02008894(
         wk->unk14,
-        wk->itemType,
+        wk->itemPocket,
         wk->posNow,
         (wk->unk834 + 1));
     sub_0202E1DC(wk->taskMenuData);
@@ -120,12 +120,12 @@ int ovy142_219c740(int a1, int a2, BAG_RETURN_DATA *a3, void *a4)
     return 1;
 }
 
-void ovy142_219c8d0(BagView *bagView);
+void BagMenu_KeyPadMain(BagView *bagView);
 void ovy142_219c8e8(BagView *bagView);
 
-void ovy142_219c8d0(BagView *bagView)
+void BagMenu_KeyPadMain(BagView *bagView)
 {
-    BagMenu_SetRunFunc(bagView, ovy142_219a850);
+    BagMenu_SetRunFunc(bagView, BagMenu_HandleKeyPad);
     sub_0203DEB4(3, 6);
 }
 
@@ -243,7 +243,7 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
 {
     int v4; // r7
 
-    ovy142_2199a5c(bagView, a2, bagView->itemType);
+    ovy142_2199a5c(bagView, a2, bagView->itemPocket);
     ovy142_219bd84(bagView);
     ovy142_219becc(bagView);
     bagView->unk838 = 0xFFFF;
@@ -302,7 +302,7 @@ void ovy142_219cba8(BagView *bagView)
     sub_0204C520(bagView->unk6B8, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
-    ovy142_219c8d0(bagView);
+    BagMenu_KeyPadMain(bagView);
 }
 void ovy142_219cbe4(BagView *bagView);
 void ovy142_219cbe4(BagView *bagView)
@@ -392,12 +392,12 @@ void sub_0219CD58(BagView* bagView, u8* a2)
     u32 v2;     // r2
     int v4;     // r0
 
-    v2 = bagView->itemType;
+    v2 = bagView->itemPocket;
     if (!v2 || v2 == 1 || (v2 - 3) <= 1)
         a2[0] = 0;
     else
         a2[0] = 1;
-    v4 = bagView->itemType;
+    v4 = bagView->itemPocket;
     if (!v4 || v4 == 1 || v4 == 3)
     {
         a2[2] = 3;
@@ -467,7 +467,7 @@ void ovy142_219cd98(BagView* bagView)
                 r5 = 1;
                 ovy142_219fda8(bagView, 1);
                 sub_0204C520(bagView->unk6B8, 1);
-                ovy142_219c8d0(bagView);
+                BagMenu_KeyPadMain(bagView);
                 break;
 
             }
@@ -525,41 +525,41 @@ void BagMenu_PrintSeachItemEnd(BagView* bagView)
     {
     case 0:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x9D, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 1:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 0);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 2:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 1);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
     
     case 3:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 2);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
 
     case 4:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 3);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
     
     case 5:
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x94, bagView->stringBuff1);
-        StringSetNumber(bagView->wordSetSystem, 1, ovy142_2199988(bagView), 3, 0, 1);
+        StringSetNumber(bagView->wordSetSystem, 1, BagMenu_GetPocketItemAmount(bagView), 3, 0, 1);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 4);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         break;
@@ -725,7 +725,7 @@ void ovy142_219d2bc(BagView *bagView)
                     r5 = 1;
                     ovy142_219fda8(bagView, 1);
                     sub_0204C520(bagView->unk6B8, 1);
-                    ovy142_219c8d0(bagView);
+                    BagMenu_KeyPadMain(bagView);
                     break;
             }
         }
@@ -762,7 +762,7 @@ void ovy142_219d3d8(BagView *bagView)
     sub_0219F0AC(bagView);
     sub_0204C520(bagView->unk6B8, 1);
     ovy142_219fda8(bagView, 1);
-    ovy142_219c8d0(bagView);
+    BagMenu_KeyPadMain(bagView);
 }
 
 int ovy142_219d43c(BagView *a1, u8 a2)
@@ -779,7 +779,7 @@ int ovy142_219d43c(BagView *a1, u8 a2)
 
 void ovy142_219D464(BagView* a1)
 {
-    ovy142_219c8d0(a1);
+    BagMenu_KeyPadMain(a1);
 }
 
 typedef struct
@@ -887,31 +887,31 @@ void ovy142_219d664(void)
     sub_02044C98(6, 1);
 }
 
-void ovy142_219d6a0(BagView *bagView, int a2)
+void BagMenu_LoadBagBackGround(BagView *bagView, int fileHandle)
 {
-    int v9; // [sp+10h] [bp-18h]
-    int v6; // r0
+    int backgroundNCLR; // [sp+10h] [bp-18h]
+    int gender; // r0
     int v7; // r0
-    int v2; // r6
-    int v3; // r7
+    int backgroundNCGR; // r6
+    int backgroundNSCR; // r7
 
-    v6 = MyStatus_GetTrainerGender(bagView->unk8);
-    if (!v6)
+    gender = MyStatus_GetTrainerGender(bagView->unk8);
+    if (!gender)
     {
-        v9 = 4;
-        v2 = 3;
-        v3 = 5;
+        backgroundNCLR = 4;
+        backgroundNCGR = 3;
+        backgroundNSCR = 5;
     }
-    else if (v6 == 1)
+    else if (gender == 1)
     {
-        v9 = 1;
-        v2 = 0;
-        v3 = 2;
+        backgroundNCLR = 1;
+        backgroundNCGR = 0;
+        backgroundNSCR = 2;
     }
-    sub_0204B0D4(a2, v9, 0, 0, 32, bagView->heapId);
-    v7 = sub_0204AE3C(a2, v2, 0, 0, 0, bagView->heapId);
+    sub_0204B0D4(fileHandle, backgroundNCLR, 0, 0, 32, bagView->heapId);
+    v7 = sub_0204AE3C(fileHandle, backgroundNCGR, 0, 0, 0, bagView->heapId);
     bagView->unk818 = v7;
-    sub_0204AFB0(a2, v3, 0, 0, (u16)v7, 0, 0, bagView->heapId);
+    sub_0204AFB0(fileHandle, backgroundNSCR, 0, 0, (u16)v7, 0, 0, bagView->heapId);
 }
 
 void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, int fileHandle);
@@ -987,7 +987,7 @@ extern void sub_0204C378(int, int, int);
 extern void sub_0204C124(int, int);
 extern void sub_0204C5C8(int, int);
 extern int sub_0202D7E8(u8);
-extern int sub_02022888(int, int, int);
+extern int GFL_FontGetBlockWidth(int, int, int);
 
 void ovy142_219d7a8(BagView *a1)
 {
@@ -1026,10 +1026,10 @@ void ovy142_219d7a8(BagView *a1)
     v8 = sub_0204AE3C(v7, 6, 4, 0, 0, a1->heapId);
     a1->unk81C = v8;
     sub_0204AFB0(v7, 7, 4, 0, (u16)v8, 0, 0, a1->heapId);
-    ovy142_219d6a0(a1, v7);
+    BagMenu_LoadBagBackGround(a1, v7);
     v9 = sub_0204AE3C(v7, 17, 5, 0, 0, a1->heapId);
     a1->unk820 = v9;
-    if (a1->itemType == 5)
+    if (a1->itemPocket == 5)
         sub_0204AFB0(v7, 24, 5, 0, (u16)v9, 0, 0, a1->heapId);
     else
         sub_0204AFB0(v7, 23, 5, 0, (u16)v9, 0, 0, a1->heapId);
@@ -1175,8 +1175,8 @@ void ovy142_219dda0(BagView *a1, int a2)
     if (v5)
         sub_0204C124(v5, a2);
     v6 = sub_02199978(a1);
-    v7 = ovy142_2199928(a1, v6);
-    result = sub_02026AE4(v7->itemid);
+    v7 = BagMenu_GetBagItemDataBySlot(a1, v6);
+    result = Item_GetTmHmMove(v7->itemid);
     if (result)
     {
         v10 = sub_02021740(result);
@@ -1193,7 +1193,7 @@ void ovy142_219de0c(BagView *a1)
     int v12;              // r6
     int v13;              // r2
     int v15;              // [sp+8h] [bp-20h]
-    int v16;              // [sp+Ch] [bp-1Ch]
+    int move;              // [sp+Ch] [bp-1Ch]
     u32 v14;              // r0
     ItemTable *v5; // r0
     ItemTable *v6; // r4
@@ -1208,7 +1208,7 @@ void ovy142_219de0c(BagView *a1)
         sub_0204C124(a1->unk6E0[i], 0);
 
     v4 = sub_02199978(a1);
-    v5 = ovy142_2199928(a1, v4);
+    v5 = BagMenu_GetBagItemDataBySlot(a1, v4);
     v6 = v5;
     if (v5 == 0 || v5->itemid == 0)
     {
@@ -1224,20 +1224,20 @@ void ovy142_219de0c(BagView *a1)
     BmpWin_BitmapFill(v10, 0);
     v11 = BmpWin_GetBitmap(a1->unk764);
     BmpWin_BitmapFill(v11, 0);
-    v16 = sub_02026AE4(v6->itemid);
+    move = Item_GetTmHmMove(v6->itemid);
     v15 = BagSave_GetExistingItemPocket(a1->bagSave, v6->itemid);
-    if (!v16)
+    if (!move)
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 134, a1->stringBuff1);
         BagMenu_LoadItemNameToStrbuf(a1, 0, v6->itemid);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        ovy142_21a00f0(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
+        BagMenu_DrawStringToBmpWin(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
         if (ovy142_21a03ac((u8)v15))
         {
             GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
             StringSetNumber(a1->wordSetSystem, 0, v6->num, 3, 0, 1);
             GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-            ovy142_21a00f0(a1, &a1->unk75C, a1->stringBuff2, 0, 4, 15808);
+            BagMenu_DrawStringToBmpWin(a1, &a1->unk75C, a1->stringBuff2, 0, 4, 15808);
         }
         else
         {
@@ -1247,7 +1247,7 @@ void ovy142_219de0c(BagView *a1)
     }
     else
     {
-        v12 = sub_02026B84(v6->itemid);
+        v12 = Item_GetTmHmNo(v6->itemid);
         if (v12 == 255)
         {
             GFL_MsgDataLoadStrbuf(a1->msgData, 69, a1->stringBuff1);
@@ -1259,21 +1259,21 @@ void ovy142_219de0c(BagView *a1)
             GFL_MsgDataLoadStrbuf(a1->msgData, 71, a1->stringBuff1);
             StringSetNumber(a1->wordSetSystem, 0, v12 + 1, 2, 2, 1);
         }
-        sub_020244A4(a1->wordSetSystem, 1, v16);
+        LoadMoveNameToStrbuf(a1->wordSetSystem, 1, move);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        ovy142_21a00f0(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
-        ovy142_219f4b0(a1, v16);
+        BagMenu_DrawStringToBmpWin(a1, &a1->unk754, a1->stringBuff2, 0, 4, 15808);
+        ovy142_219f4b0(a1, move);
         BmpWin_FlushChar(a1->unk75C);
     }
     
-    if (a1->itemType == 5)
+    if (a1->itemPocket == 5)
     {
         BagMenu_LoadBagPocketNameToStrbuf(a1, 0, v15);
         GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        v14 = 0x60 - sub_02022888(a1->stringBuff2, a1->font, 0);
+        v14 = 0x60 - GFL_FontGetBlockWidth(a1->stringBuff2, a1->font, 0);
         u16 width = v14 / 2; 
-        ovy142_21a00f0(a1, &a1->unk76C, a1->stringBuff2, width, 0, 15808);
+        BagMenu_DrawStringToBmpWin(a1, &a1->unk76C, a1->stringBuff2, width, 0, 15808);
     }
     else
     {
@@ -1281,7 +1281,7 @@ void ovy142_219de0c(BagView *a1)
         BmpWin_FlushChar(a1->unk76C);
     }
     sub_020267C0(a1->stringBuff1, v6->itemid, a1->heapId);
-    ovy142_21a00f0(a1, &a1->unk764, a1->stringBuff1, 0, 4, 15808);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk764, a1->stringBuff1, 0, 4, 15808);
     ovy142_21a0134(&a1->unk76C);
     ovy142_21a0134(&a1->unk754);
     ovy142_21a0134(&a1->unk75C);
@@ -1336,13 +1336,13 @@ void ovy142_219e168(BagView *a1)
     sub_0204B758(v3);
 }
 
-void ovy142_219e21c(BagView *a1)
+void BagMenu_LoadBagBackDefaultText(BagView *a1)
 {
     int v2; // r0
 
     v2 = BmpWin_GetBitmap(a1->unk794);
     BmpWin_BitmapFill(v2, 0);
-    if (ovy142_219d22c(a1) > 2 && a1->itemType == 5)
+    if (ovy142_219d22c(a1) > 2 && a1->itemPocket == 5)
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 159, a1->stringBuff1);
     }
@@ -1351,7 +1351,7 @@ void ovy142_219e21c(BagView *a1)
         GFL_MsgDataLoadStrbuf(a1->msgData, 135, a1->stringBuff1);
     }
     
-    ovy142_21a00f0(a1, &(a1->unk794), a1->stringBuff1, 0, 4, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, &(a1->unk794), a1->stringBuff1, 0, 4, 0x3DC0);
 }
 
 
@@ -1362,7 +1362,7 @@ void ovy142_219e284(BagView *a1)
     int result; // r0
 
     a1->unk794 = BmpWin_CreateDynamic(3, 18, 9, 12, 3, 3, 1);
-    ovy142_219e21c(a1);
+    BagMenu_LoadBagBackDefaultText(a1);
     sub_020484B4(a1->unk794);
     a1->unk774 = BmpWin_CreateDynamic(3, 17, 13, 11, 2, 3, 1);
     a1->unk78C = BmpWin_CreateDynamic(3, 17, 15, 11, 2, 3, 1);
@@ -1379,16 +1379,18 @@ void ovy142_219e284(BagView *a1)
     v2 = sub_0204AA30(25, a1->heapId);
     a1->unk558 = Oam_LoadNCERFile((int)v2, 1, 0, a1->heapId);
     GFL_ArcToolFree(v2);
+
     GFL_MsgDataLoadStrbuf(a1->msgData, 102, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0u);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 8, 4, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 93, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 8, 24, 0x3DC0u);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 8, 24, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 91, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 112, 4, 0x3DC0u);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 112, 4, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 92, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 112, 24, 0x3DC0u);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 112, 24, 0x3DC0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 90, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk74C, a1->stringBuff1, 208, 4, 0x3DC0u);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk74C, a1->stringBuff1, 208, 4, 0x3DC0);
+
     result = sub_0203D554();
     if (!result)
         ovy142_219de0c(a1);
@@ -1415,7 +1417,6 @@ void ovy142_219e4dc(BagView *a1, int a2)
     int v5;      // r0
     int v6;      // r0
     OAM_TEMP v8; // [sp+Ch] [bp-1Ch] BYREF
-
 
     if (a1->unk6B0)
         ovy142_219e4b0(a1);
@@ -1458,7 +1459,7 @@ void ovy142_219e5a8(BagView *a1)
 }
 
 
-void ovy142_219e5c4(BagView *a1)
+void BagMenu_LoadBagItemBarResource(BagView *a1)
 {
     int fileHandle; // r4
 
@@ -1563,15 +1564,15 @@ void ovy142_219e6f8(BagView *a1)
 #define MOVE_DIVE       (291)
 
 extern int sub_02026A94(u16);
-int ovy142_219e8dc(u16 a1);
+int BagMenu_CheckIsHmItem(u16 a1);
 
-int ovy142_219e8dc(u16 a1)
+int BagMenu_CheckIsHmItem(u16 a1)
 {
     int v2; // r0
 
     if (sub_02026A94(a1) == 1)
     {
-        v2 = sub_02026AE4(a1);
+        v2 = Item_GetTmHmMove(a1);
         
         switch (v2)
         {
@@ -1595,11 +1596,11 @@ asm void ovy142_219e924(BagView* a1)
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x50
 	add r5, r0, #0
-	bl ovy142_2199988
+	bl BagMenu_GetPocketItemAmount
 	cmp r0, #0
 	bne _0219E948
 	add r0, r5, #0
-	bl ovy142_219e21c
+	bl BagMenu_LoadBagBackDefaultText
 	ldr r4, =0x00000794
 	ldr r0, [r5, r4]
 	bl sub_020484B4
@@ -1692,7 +1693,7 @@ _0219E9DE:
 	add r1, r1, r0
 	bmi _0219EA02
 	add r0, r5, #0
-	bl ovy142_2199928
+	bl BagMenu_GetBagItemDataBySlot
 	add r6, r0, #0
 	beq _0219EA02
 	ldrh r1, [r6]
@@ -1715,7 +1716,7 @@ _0219EA04:
 	cmp r0, #0
 	ldrh r0, [r6]
 	bne _0219EA34
-	bl ovy142_219e8dc
+	bl BagMenu_CheckIsHmItem
 	cmp r0, #1
 	bne _0219EA30
 	ldr r0, =0x000018AD
@@ -1724,7 +1725,7 @@ _0219EA30:
 	ldr r0, [sp, #0x1c]
 	b _0219EA42
 _0219EA34:
-	bl ovy142_219e8dc
+	bl BagMenu_CheckIsHmItem
 	cmp r0, #1
 	bne _0219EA40
 	ldr r0, =0x000020ED
@@ -1744,7 +1745,7 @@ _0219EA42:
 	mov r1, #0x82
 	bl GFL_MsgDataLoadStrbuf
 	ldrh r0, [r6]
-	bl sub_02026AE4
+	bl Item_GetTmHmMove
 	add r2, r0, #0
 	bne _0219EA72
 	ldrh r2, [r6]
@@ -1756,7 +1757,7 @@ _0219EA72:
 	ldr r0, [sp, #0x30]
 	mov r1, #0
 	ldr r0, [r5, r0]
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 _0219EA7C:
 	ldr r0, [sp, #0x4c]
 	ldr r1, [sp, #0x48]
@@ -1805,7 +1806,7 @@ _0219EAC8:
 	b _0219EABE
 _0219EAD0:
 	ldrh r0, [r6]
-	bl sub_02026B84
+	bl Item_GetTmHmNo
 	cmp r0, #0xff
 	beq _0219EADE
 	mov r0, #7
@@ -1875,7 +1876,7 @@ void ovy142_219eb54(BagView *a1)
     if (!sub_0203D554())
         ovy142_219fd4c(a1, 1);
     sub_020352B0(a1->unk8A4);
-    v6 = ovy142_2199988(a1) >= 7;
+    v6 = BagMenu_GetPocketItemAmount(a1) >= 7;
     sub_0204C124(a1->unk6B8, v6);
     sub_0204C504(a1->unk6B4, 0);
     sub_0204C504(a1->unk6B8, 0);
@@ -1961,7 +1962,7 @@ void ovy142_219ed3c(BagView *a1)
     int result;
     u16 v7[2];
 
-    result = ovy142_2199988(a1);
+    result = BagMenu_GetPocketItemAmount(a1);
     if (result >= 7)
     {
         sub_0204C178(a1->unk6B8, v7, 0xFFFF);
@@ -2280,33 +2281,33 @@ void ovy142_219f4b0(BagView *a1, int a2)
     if (v10 <= 1)
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 23, a1->stringBuff1);
-        ovy142_21a00f0(a1, bgs, a1->stringBuff1, 176, 4, 0x3DC0);
+        BagMenu_DrawStringToBmpWin(a1, bgs, a1->stringBuff1, 176, 4, 0x3DC0);
     }
     else
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 95, a1->stringBuff1);
         StringSetNumber(a1->wordSetSystem, 0, v10, 3, 0, 1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        ovy142_21a00f0(a1, bgs, a1->stringBuff2, 176, 4, 0x3DC0);
+        BagMenu_DrawStringToBmpWin(a1, bgs, a1->stringBuff2, 176, 4, 0x3DC0);
     }
     
     if (!v9 || sub_0202174C(a2) == 1)
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 23, a1->stringBuff1);
-        ovy142_21a00f0(a1, bgs, a1->stringBuff1, 176, 24, 0x3DC0);
+        BagMenu_DrawStringToBmpWin(a1, bgs, a1->stringBuff1, 176, 24, 0x3DC0);
     }
     else
     {
         GFL_MsgDataLoadStrbuf(a1->msgData, 95, a1->stringBuff1);
         StringSetNumber(a1->wordSetSystem, 0, v9, 3, 0, 1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        ovy142_21a00f0(a1, bgs, a1->stringBuff2, 176, 24, 0x3DC0);
+        BagMenu_DrawStringToBmpWin(a1, bgs, a1->stringBuff2, 176, 24, 0x3DC0);
     }
     
     GFL_MsgDataLoadStrbuf(a1->msgData, 94, a1->stringBuff1);
     StringSetNumber(a1->wordSetSystem, 0, v12, 2, 0, 1);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-    ovy142_21a00f0(a1, bgs, a1->stringBuff2, 232, 4, 0x3DC0);
+    BagMenu_DrawStringToBmpWin(a1, bgs, a1->stringBuff2, 232, 4, 0x3DC0);
     ovy142_21a0134(bgs);
 }
 
@@ -2341,7 +2342,7 @@ void BagMenu_PrintBagMessage(BagView *a1, int a2)
     }
     else
     {
-        ovy142_21a00f0(a1, &a1->unk500, a1->stringBuff2, 0, 0, 0x44Fu);
+        BagMenu_DrawStringToBmpWin(a1, &a1->unk500, a1->stringBuff2, 0, 0, 0x44Fu);
     }
     sub_02024E80(a1->unk500, 1, a1->unk88C, 13);
     ovy142_21a0134(&a1->unk500);
@@ -2410,8 +2411,8 @@ void ovy142_219f84c(BagView *a1)
     a1->unk508 = BmpWin_CreateDynamic(2, 3, 21, 12, 3, 12, 1);
     a1->unk77C = BmpWin_CreateDynamic(2, 1, 21, 8, 3, 12, 1);
     a1->unk784 = BmpWin_CreateDynamic(2, 9, 21, 9, 3, 12, 1);
-    ovy142_219f8ec(a1, a1->itemType);
-    ovy142_219f06c(a1, a1->itemType);
+    ovy142_219f8ec(a1, a1->itemPocket);
+    ovy142_219f06c(a1, a1->itemPocket);
 }
 
 void ovy142_219f8c4(BagView *a1)
@@ -2431,36 +2432,36 @@ void ovy142_219f8ec(BagView *a1, u32 a2)
     GFL_MsgDataLoadStrbuf(a1->msgData, 139, a1->stringBuff1);
     LoadBagPocketNameToStrbuf(a1->wordSetSystem, 0, a2);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-    v5 = 0x60 - sub_02022888(a1->stringBuff2, a1->font, 0);
+    v5 = 0x60 - GFL_FontGetBlockWidth(a1->stringBuff2, a1->font, 0);
     u16 width = (v5 / 2); 
-    ovy142_21a00f0(a1, &a1->unk508, a1->stringBuff2, width, 4, 0x3C40);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk508, a1->stringBuff2, width, 4, 0x3C40);
     ovy142_21a0134(&a1->unk508);
 }
 
-extern int sub_0200C9BC(int);
+extern int PlayerSave_GetMoney(int);
 void ovy142_219fa3c(BagView *a1);
 
-void ovy142_219f978(BagView *a1)
+void BagMenu_PrintMoneyString(BagView *a1)
 {
     int v2; // r0
     int v3; // r0
-    int v4; // r0
-    int v5; // r0
+    int playSave; // r0
+    int money; // r0
 
     v2 = BmpWin_GetBitmap(a1->unk784);
     BmpWin_BitmapFill(v2, 0);
     v3 = BmpWin_GetBitmap(a1->unk77C);
     BmpWin_BitmapFill(v3, 0);
     GFL_MsgDataLoadStrbuf(a1->msgData, 81, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk77C, a1->stringBuff1, 0, 4, 0x3C40);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk77C, a1->stringBuff1, 0, 4, 0x3C40);
     ovy142_21a0134(&a1->unk77C);
 
     GFL_MsgDataLoadStrbuf(a1->msgData, 82, a1->stringBuff1);
-    v4 = PlayerSave_GetPlayerSaveOffset(a1->m_GameData);
-    v5 = sub_0200C9BC(v4);
-    StringSetNumber(a1->wordSetSystem, 0, v5, 7, 1, 1);
+    playSave = PlayerSave_GetPlayerSaveOffset(a1->m_GameData);
+    money = PlayerSave_GetMoney(playSave);
+    StringSetNumber(a1->wordSetSystem, 0, money, 7, 1, 1);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk784, a1->stringBuff2, 0, 4, 0x3C40);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk784, a1->stringBuff2, 0, 4, 0x3C40);
     ovy142_21a0134(&a1->unk784);
 }
 
@@ -2469,7 +2470,7 @@ void ovy142_219fa3c(BagView *a1)
     sub_0204C124(a1->unk724[0], 0);
     sub_0204C124(a1->unk724[1], 0);
     sub_020484B4(a1->unk508);
-    ovy142_219f978(a1);
+    BagMenu_PrintMoneyString(a1);
 }
 
 void ovy142_219fa6c(BagView *a1);
@@ -2480,7 +2481,7 @@ void ovy142_219fa6c(BagView *a1)
     sub_0204C124(a1->unk724[1], 1);
     sub_020484B4(a1->unk784);
     sub_020484B4(a1->unk77C);
-    ovy142_219f8ec(a1, a1->itemType);
+    ovy142_219f8ec(a1, a1->itemPocket);
 }
 
 void ovy142_219faac(BagView *a1);
@@ -2608,18 +2609,18 @@ void ovy142_219fc14(BagView *a1, int a2)
     GFL_MsgDataLoadStrbuf(a1->msgData, 131, a1->stringBuff1);
     StringSetNumber(a1->wordSetSystem, 0, a2, 3, 0, 1);
     GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-    ovy142_21a00f0(a1, &a1->unk774, a1->stringBuff2, 0, 0, 0x3DC5);
+    BagMenu_DrawStringToBmpWin(a1, &a1->unk774, a1->stringBuff2, 0, 0, 0x3DC5);
     ovy142_21a0134(&a1->unk774);
 
     if (a1->unk80C == 2)
     {
         int *v8 = &a1->unk78C;  //参考，有些寄存器问题是声明前后的问题
-        int v7 = BagView_GetItemPrice(a1->selectItem, a1->unk814, a1->heapId);
+        int v7 = BagMenu_GetItemPrice(a1->selectItem, a1->selectAmount, a1->heapId);
         BmpWin_BitmapFill(BmpWin_GetBitmap(a1->unk78C), 5);
         GFL_MsgDataLoadStrbuf(a1->msgData, 84, a1->stringBuff1);
         StringSetNumber(a1->wordSetSystem, 0, v7, 7, 0, 1);
         GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
-        ovy142_21a00f0(a1, v8, a1->stringBuff2, 0, 0, 0x3DC5);
+        BagMenu_DrawStringToBmpWin(a1, v8, a1->stringBuff2, 0, 0, 0x3DC5);
         ovy142_21a0134(v8);
     }
 }
@@ -2678,7 +2679,7 @@ void ovy142_219fda8(BagView *a1, int a2)
     if (a1->unk8AC != a2)
     {
         a1->unk8AC = a2;
-        v5 = sub_0219FD18(a1->itemType);
+        v5 = sub_0219FD18(a1->itemPocket);
         v6 = GameData_IsShortcutRegistered(a1->m_GameData, v5);
         if (a2 == 1)
         {
@@ -2734,11 +2735,11 @@ void ovy142_219ff40(BagView *a1, int a2)
 
 void ovy142_219ff60(BagView *a1)
 {
-    if (a1->itemType != 5)
+    if (a1->itemPocket != 5)
     {
         sub_0204C124(a1->unk744, 1);
         sub_0204C124(a1->unk740, 0);
-        if (ovy142_2199988(a1) <= 1)
+        if (BagMenu_GetPocketItemAmount(a1) <= 1)
             return sub_0204C488(a1->unk744, 4);
         else
             return sub_0204C488(a1->unk744, 0);
@@ -2762,7 +2763,7 @@ void ovy142_219ffe8(BagView *a1, int a2)
     int v4; // r0
     int v5; // r6
 
-    v4 = sub_0219FD18(a1->itemType);
+    v4 = sub_0219FD18(a1->itemPocket);
     v5 = GameData_IsShortcutRegistered(a1->m_GameData, v4);
     if (a2 == 1)
     {
@@ -2809,7 +2810,7 @@ int ovy142_21a00a0(BagView *a1)
 
 extern void sub_02021C7C(int, int, s16, s16, int, int, u16);
 
-void ovy142_21a00f0(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
+void BagMenu_DrawStringToBmpWin(BagView *a1, int *a2, int a3, u16 a4, s16 a5, u16 a6)
 {
     int v12;
     int v4 = a4;

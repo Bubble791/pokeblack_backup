@@ -3752,7 +3752,7 @@ _0219ED48:
 	ldr r0, [sp, #0x14]
 	ldr r1, [r5, r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x6c]
 	ldr r0, _0219EE10 ; =0x000006C4
 	str r0, [sp, #0x88]

@@ -123,7 +123,7 @@
 .public sub_021804AC
 .public sub_021804AC
 .public sub_02017934
-.public sub_0200DCF0
+.public SaveControl_GetEncountSave
 .public sub_02159218
 .public sub_02015878
 .public sub_021591F8
@@ -158,7 +158,7 @@
 .public GFL_WordSetFormatStrbuf
 .public GFL_HeapFree
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02049964
 .public sub_02049804
 .public sub_0217ED70

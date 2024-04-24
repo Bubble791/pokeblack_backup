@@ -410,7 +410,7 @@
 .public BmpWin_FlushChar
 .public sub_02046EF8
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public GFL_HeapAllocate
 .public MI_CpuFill8

@@ -1885,7 +1885,7 @@ ovy324_219dde4: ; 0x0219DDE4
 	ldr r1, [r5, r1]
 	add r0, r6, #0
 	add r2, r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0x78
 	sub r4, r1, r0
 _0219DE06:

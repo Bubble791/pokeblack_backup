@@ -4379,7 +4379,7 @@ ovy215_21a9868: ; 0x021A9868
 	ldr r1, [sp, #0x28]
 	add r0, r5, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	b _021A9896
 _021A9886:
 	cmp r0, #2
@@ -4387,7 +4387,7 @@ _021A9886:
 	ldr r1, [sp, #0x28]
 	add r0, r5, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 _021A9896:
 	sub r4, r4, r0

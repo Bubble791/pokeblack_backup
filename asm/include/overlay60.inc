@@ -348,7 +348,7 @@
 .public sub_02048210
 .public sub_0204898C
 .public GFL_StrBufCreate
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public BmpWin_GetBitmap
@@ -388,13 +388,13 @@
 .public sub_02021C7C
 .public sub_0202651C
 .public sub_02036434
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public BmpWin_GetBitmap
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
 .public BmpWin_GetBitmap

@@ -93,7 +93,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021C7C
 .public sub_02044C98
 .public sub_02045E1C

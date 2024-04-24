@@ -7868,7 +7868,7 @@ ovy195_21b6e74: ; 0x021B6E74
 	ldr r0, [r0]
 	ldr r1, [r5, #0x14]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r0, #0x20
 	asr r1, r0, #3
 	lsr r1, r1, #0x1c

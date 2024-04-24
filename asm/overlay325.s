@@ -1881,7 +1881,7 @@ ovy325_219dd34: ; 0x0219DD34
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	b _0219DD8A
 _0219DD64:
 	cmp r3, #2
@@ -1898,7 +1898,7 @@ _0219DD64:
 	add r0, r4, #0
 	add r1, r6, #0
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsr r0, r0, #1
 _0219DD8A:
 	sub r5, r5, r0
@@ -4024,7 +4024,7 @@ ovy325_219ed70: ; 0x0219ED70
 	ldr r1, [r1]
 	mov r2, #0
 	add r7, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x10]
 	ldr r0, [r4]
 	bl sub_020484D8

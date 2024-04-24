@@ -987,13 +987,13 @@ _0219D672:
 	ldr r1, [r5, #0xc]
 	mov r2, #0
 	mov r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r6, r0, #0x10
 	ldr r0, [sp, #0x1c]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r1, r0, #0x10
 	add r0, r6, #0
@@ -1091,14 +1091,14 @@ _0219D724:
 	ldr r1, [r5, #0xc]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #0x10]
 	ldr r1, [r5, #0xc]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r1, r0, #0x10
 	ldr r0, [sp, #0xc]
@@ -1175,7 +1175,7 @@ _0219D7AA:
 	ldr r1, [r5, #0xc]
 	mov r2, #0
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0x6c]

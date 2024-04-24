@@ -14234,11 +14234,11 @@ _0200C9B6:
 	.align 2, 0
 	thumb_func_end sub_0200C9A0
 
-	thumb_func_start sub_0200C9BC
-sub_0200C9BC: ; 0x0200C9BC
+	thumb_func_start PlayerSave_GetMoney
+PlayerSave_GetMoney: ; 0x0200C9BC
 	ldr r0, [r0]
 	bx lr
-	thumb_func_end sub_0200C9BC
+	thumb_func_end PlayerSave_GetMoney
 
 	thumb_func_start PlayerSave_AddMoney
 PlayerSave_AddMoney: ; 0x0200C9C0
@@ -17082,14 +17082,14 @@ sub_0200DCEC: ; 0x0200DCEC
 	bx lr
 	thumb_func_end sub_0200DCEC
 
-	thumb_func_start sub_0200DCF0
-sub_0200DCF0: ; 0x0200DCF0
+	thumb_func_start SaveControl_GetEncountSave
+SaveControl_GetEncountSave: ; 0x0200DCF0
 	ldr r3, _0200DCF8 ; =sub_02007448
 	mov r1, #0x37
 	bx r3
 	nop
 _0200DCF8: .word sub_02007448
-	thumb_func_end sub_0200DCF0
+	thumb_func_end SaveControl_GetEncountSave
 
 	thumb_func_start sub_0200DCFC
 sub_0200DCFC: ; 0x0200DCFC
@@ -17113,7 +17113,7 @@ sub_0200DCFC: ; 0x0200DCFC
 	thumb_func_start sub_0200DD1C
 sub_0200DD1C: ; 0x0200DD1C
 	push {r4, lr}
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r4, r0, #0
 	mov r0, #0x13
 	bl sub_02005784
@@ -17222,13 +17222,13 @@ _0200DDAA:
 	.align 2, 0
 	thumb_func_end sub_0200DD5C
 
-	thumb_func_start sub_0200DDB0
-sub_0200DDB0: ; 0x0200DDB0
+	thumb_func_start EncountSave_SetRepelSteps
+EncountSave_SetRepelSteps: ; 0x0200DDB0
 	add r0, #0x2d
 	strb r1, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_0200DDB0
+	thumb_func_end EncountSave_SetRepelSteps
 
 	thumb_func_start sub_0200DDB8
 sub_0200DDB8: ; 0x0200DDB8
@@ -17255,8 +17255,8 @@ _0200DDDC:
 	bx lr
 	thumb_func_end sub_0200DDB8
 
-	thumb_func_start sub_0200DDE0
-sub_0200DDE0: ; 0x0200DDE0
+	thumb_func_start EncountSave_IsRepelDepleted
+EncountSave_IsRepelDepleted: ; 0x0200DDE0
 	add r0, #0x2d
 	ldrb r0, [r0]
 	cmp r0, #0
@@ -17266,13 +17266,13 @@ sub_0200DDE0: ; 0x0200DDE0
 _0200DDEC:
 	mov r0, #0
 	bx lr
-	thumb_func_end sub_0200DDE0
+	thumb_func_end EncountSave_IsRepelDepleted
 
-	thumb_func_start sub_0200DDF0
-sub_0200DDF0: ; 0x0200DDF0
+	thumb_func_start EncountSave_SetRepelUsedItem
+EncountSave_SetRepelUsedItem: ; 0x0200DDF0
 	strh r1, [r0, #0x2e]
 	bx lr
-	thumb_func_end sub_0200DDF0
+	thumb_func_end EncountSave_SetRepelUsedItem
 
 	thumb_func_start sub_0200DDF4
 sub_0200DDF4: ; 0x0200DDF4
@@ -32219,7 +32219,7 @@ _02014202:
 	add r2, r0, #0
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	b _020142D4
 _02014214:
 	add r0, r5, #0
@@ -64940,8 +64940,8 @@ _02022880:
 _02022884: .word 0x0000FFFF
 	thumb_func_end sub_0202284C
 
-	thumb_func_start sub_02022888
-sub_02022888: ; 0x02022888
+	thumb_func_start GFL_FontGetBlockWidth
+GFL_FontGetBlockWidth: ; 0x02022888
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r1, #0
 	add r6, r2, #0
@@ -64970,7 +64970,7 @@ _020228B6:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _020228BC: .word 0x0000FFFF
-	thumb_func_end sub_02022888
+	thumb_func_end GFL_FontGetBlockWidth
 
 	thumb_func_start sub_020228C0
 sub_020228C0: ; 0x020228C0
@@ -68744,8 +68744,8 @@ sub_02024484: ; 0x02024484
 	.align 2, 0
 	thumb_func_end sub_02024484
 
-	thumb_func_start sub_020244A4
-sub_020244A4: ; 0x020244A4
+	thumb_func_start LoadMoveNameToStrbuf
+LoadMoveNameToStrbuf: ; 0x020244A4
 	push {r3, lr}
 	add r3, r2, #0
 	ldr r2, _020244B0 ; =0x00000193
@@ -68753,7 +68753,7 @@ sub_020244A4: ; 0x020244A4
 	pop {r3, pc}
 	.align 2, 0
 _020244B0: .word 0x00000193
-	thumb_func_end sub_020244A4
+	thumb_func_end LoadMoveNameToStrbuf
 
 	thumb_func_start LoadItemNameToStrbuf
 LoadItemNameToStrbuf: ; 0x020244B4
@@ -70852,7 +70852,7 @@ _02025370:
 	ldr r0, [r1, r0]
 	ldr r1, [r5, #0x18]
 	add r2, r7, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	cmp r6, r0
@@ -74142,8 +74142,8 @@ _02026ADA:
 _02026AE0: .word 0x0000026A
 	thumb_func_end sub_02026ABC
 
-	thumb_func_start sub_02026AE4
-sub_02026AE4: ; 0x02026AE4
+	thumb_func_start Item_GetTmHmMove
+Item_GetTmHmMove: ; 0x02026AE4
 	push {r4, lr}
 	add r4, r0, #0
 	bl sub_02026A94
@@ -74171,7 +74171,7 @@ _02026B02:
 	.align 2, 0
 _02026B10: .word 0x0000026A
 _02026B14: .word 0x02090C84
-	thumb_func_end sub_02026AE4
+	thumb_func_end Item_GetTmHmMove
 
 	thumb_func_start sub_02026B18
 sub_02026B18: ; 0x02026B18
@@ -74237,8 +74237,8 @@ _02026B7C: .word 0x0000026A
 _02026B80: .word 0x00000145
 	thumb_func_end Item_GetTmHmIndex
 
-	thumb_func_start sub_02026B84
-sub_02026B84: ; 0x02026B84
+	thumb_func_start Item_GetTmHmNo
+Item_GetTmHmNo: ; 0x02026B84
 	mov r2, #0x69
 	lsl r2, r2, #2
 	cmp r0, r2
@@ -74254,7 +74254,7 @@ _02026B9A:
 	mov r0, #0xff
 	bx lr
 	.align 2, 0
-	thumb_func_end sub_02026B84
+	thumb_func_end Item_GetTmHmNo
 
 	thumb_func_start Item_IsMail
 Item_IsMail: ; 0x02026BA0
@@ -91173,7 +91173,7 @@ sub_0202E288: ; 0x0202E288
 	ldr r0, [r6]
 	ldr r1, [r5, #0x10]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r1, sp, #0x28
 	ldrb r1, [r1]
 	lsl r1, r1, #3

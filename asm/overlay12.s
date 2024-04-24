@@ -14793,7 +14793,7 @@ ovy12_2157468: ; 0x02157468
 	bl sub_020171F4
 	add r0, r5, #0
 	bl PlayerSave_GetPlayerSaveOffset
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	cmp r6, r0
 	bhi _0215749C
 	mov r0, #1
@@ -30714,7 +30714,7 @@ ovy12_215ee10: ; 0x0215EE10
 	add r5, r0, #0
 	add r4, r1, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r0, r5, #0
 	bl sub_021591F4
 	add r0, r5, #0
@@ -44732,7 +44732,7 @@ ovy12_2165950: ; 0x02165950
 	add r0, r6, #0
 	bl sub_02155174
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	add r7, r0, #0
 	add r0, r5, #0
 	add r1, r6, #0
@@ -50943,7 +50943,7 @@ _0216856C:
 	beq _02168596
 	add r0, r6, #0
 	bl sub_02017934
-	bl sub_0200DCF0
+	bl SaveControl_GetEncountSave
 	ldrb r1, [r4, #9]
 	bl sub_0200DE24
 _02168596:
@@ -53260,7 +53260,7 @@ _021697F2:
 	bl sub_02008BD0
 	strh r0, [r5, #0x28]
 	ldr r0, [sp, #0x1c]
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	str r0, [r5, #0x20]
 	mov r6, #0
 	mov r0, #0x17

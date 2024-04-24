@@ -91,13 +91,13 @@
 .public sub_0201CEB4
 .public sub_0204898C
 .public sub_020484D8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_0204898C
 .public sub_020484D8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -112,7 +112,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
@@ -120,7 +120,7 @@
 .public sub_0201CCF8
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree

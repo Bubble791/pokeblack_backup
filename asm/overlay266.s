@@ -1733,7 +1733,7 @@ _0219DBC0:
 	lsl r1, r1, #2
 	add r1, r5, r1
 	ldr r1, [r1, #0xc]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0xc
 	ldrsh r2, [r4, r1]
 	mov r1, #0xe
@@ -1749,7 +1749,7 @@ _0219DBE0:
 	lsl r1, r1, #2
 	add r1, r5, r1
 	ldr r1, [r1, #0xc]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0xc
 	ldrsh r2, [r4, r1]
 	mov r1, #0xe

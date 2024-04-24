@@ -300,12 +300,12 @@
 .public sub_0202E7A4
 .public sub_02046EF8
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_02046EFC
 .public sub_020229B0
 .public sub_02046EF8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_HeapAllocate
 .public sub_021C0770
 .public GFL_HeapFree

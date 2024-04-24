@@ -159,10 +159,10 @@
 .public sub_02021C7C
 .public BmpWin_GetBitmap
 .public sub_02046EF8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02046EF8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
@@ -260,7 +260,7 @@
 .public sub_0219CC18
 .public sub_0219CC1C
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020484D8
 .public BmpWin_GetBitmap
 .public sub_02021C7C

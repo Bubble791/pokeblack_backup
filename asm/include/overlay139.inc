@@ -88,7 +88,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public GFL_StrBufCreate
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_0204898C
 .public StringSetNumber
@@ -101,8 +101,8 @@
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_02022888
-.public sub_02022888
+.public GFL_FontGetBlockWidth
+.public GFL_FontGetBlockWidth
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_StrBufCreate
@@ -159,10 +159,10 @@
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public sub_02044C98

@@ -130,7 +130,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public GFL_StrBufFree
 .public sub_0219EF98
 .public sub_0219EF98

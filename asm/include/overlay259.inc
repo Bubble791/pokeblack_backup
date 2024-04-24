@@ -110,7 +110,7 @@
 .public GFL_WordSetFormatStrbuf
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public BmpWin_GetBitmap
@@ -399,7 +399,7 @@
 .public sub_02046EF8
 .public BmpWin_GetBitmap
 .public sub_02046EFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_020229B0
 .public sub_0202E8D8
 .public sub_0202E68C

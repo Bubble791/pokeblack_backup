@@ -151,13 +151,13 @@
 .public GFL_StrBufFree
 .public BmpWin_BitmapFill
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public GFL_StrBufFree
 .public sub_0204898C
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
@@ -177,7 +177,7 @@
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -196,7 +196,7 @@
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public sub_0204898C
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public GFL_WordSetFormatStrbuf
 .public sub_0219A2A4
 .public GFL_StrBufFree

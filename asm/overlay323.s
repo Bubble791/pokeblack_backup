@@ -1655,7 +1655,7 @@ ovy323_219db60: ; 0x0219DB60
 	add r0, r4, #0
 	mov r2, #0
 	add r7, r3, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x10]
 	ldr r0, [r5]
 	bl sub_020484D8
@@ -2363,7 +2363,7 @@ _0219E164:
 	ldr r1, [r5, #0x24]
 	mov r2, #0
 	mov r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r7, r0, #0
 	add r0, r5, #0
 	add r0, #0xc0

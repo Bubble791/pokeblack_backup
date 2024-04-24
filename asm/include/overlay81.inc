@@ -25,7 +25,7 @@
 .public sub_0204AF50
 .public GFL_ArcToolFree
 .public BmpWin_CreateDynamic
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public sub_0204826C

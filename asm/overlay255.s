@@ -37303,7 +37303,7 @@ ovy255_21ce328: ; 0x021CE328
 	ldr r0, [r0]
 	ldr r1, [r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x14]
 	mov r0, #0
 	str r0, [sp]
@@ -37495,7 +37495,7 @@ _021CE4C6:
 	add r1, #0x80
 	ldr r0, [r0]
 	ldr r1, [r1]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x14]
 	mov r0, #2
 	str r0, [sp]
@@ -38499,7 +38499,7 @@ ovy255_21cece4: ; 0x021CECE4
 	add r1, #0x80
 	ldr r1, [r1]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	mov r1, #0x60
 	sub r1, r1, r0
 	ldr r2, [r5, #0x2c]
@@ -53404,7 +53404,7 @@ _021D5E56:
 	ldr r1, [r5, #0x10]
 	add r0, r7, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x18]
 	ldr r0, [r4]
 	bl sub_020484D8
@@ -53661,7 +53661,7 @@ ovy255_21d6038: ; 0x021D6038
 	ldr r1, [r5, #0x10]
 	mov r2, #0
 	add r7, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x10]
 	ldr r0, [r4]
 	bl sub_020484D8

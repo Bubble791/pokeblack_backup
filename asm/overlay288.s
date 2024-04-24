@@ -2987,7 +2987,7 @@ _021F5AFE:
 	ldr r0, [r0]
 	ldr r2, [sp, #0x14]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	add r0, r5, #0
 	add r0, #0x8c
 	ldr r0, [r0]
@@ -4258,7 +4258,7 @@ ovy288_21f64b8: ; 0x021F64B8
 	cmp r2, #1
 	bne _021F64CA
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
 	pop {r3, pc}
@@ -4266,7 +4266,7 @@ _021F64CA:
 	cmp r2, #2
 	bne _021F64DA
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0xf
 	lsr r0, r0, #0x10
 	pop {r3, pc}

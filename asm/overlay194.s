@@ -17879,7 +17879,7 @@ _021C07E2:
 	mov r1, #0
 	ldr r0, [r5, r0]
 	add r2, r6, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	ldr r0, [sp, #0x20]
 	ldr r1, [sp, #0x1c]
 	ldr r2, [sp, #0x18]

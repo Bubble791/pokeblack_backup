@@ -33,7 +33,7 @@
 .public sub_02010268
 .public sub_0200C838
 .public sub_0201024C
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_020103EC
 .public sub_02010300
 .public sub_0215516C
@@ -236,7 +236,7 @@
 .public sub_02010268
 .public sub_0200C838
 .public ovy12_21548e8
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_020103E8
 .public sub_0215516C
 .public sub_02155184
@@ -246,7 +246,7 @@
 .public sub_0200C838
 .public ovy12_2154910
 .public sub_02153EC4
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_020103E8
 .public StringSetNumber
 .public sub_0200C9E4

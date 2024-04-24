@@ -12662,7 +12662,7 @@ ovy298_21a5c3c: ; 0x021A5C3C
 	ldr r1, [r5, #4]
 	mov r2, #0
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0x1c]
@@ -12854,7 +12854,7 @@ ovy298_21a5dac: ; 0x021A5DAC
 	ldr r1, [r5, #4]
 	mov r2, #0
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0x20]
@@ -15279,7 +15279,7 @@ ovy298_21a70f8: ; 0x021A70F8
 	ldr r1, [r5, #4]
 	mov r2, #0
 	add r6, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	ldr r0, [r5, #0xc]
@@ -18481,7 +18481,7 @@ _021A8A52:
 	ldr r1, [r5, #4]
 	add r2, r4, #0
 	str r0, [sp, #0x20]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r7, r0, #0x10
 	ldr r0, [sp, #0x1c]
@@ -18663,7 +18663,7 @@ _021A8C2A:
 	ldr r0, [sp, #0x28]
 	ldr r1, [r5, #4]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r2, r0, #0x10
 	ldr r0, [sp, #0x28]
@@ -18690,7 +18690,7 @@ _021A8C2A:
 	beq _021A8C9C
 	ldr r1, [r5, #4]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x10
 	lsr r2, r0, #0x10
 	ldr r0, [sp, #0x24]

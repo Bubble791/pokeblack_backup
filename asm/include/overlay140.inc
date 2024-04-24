@@ -91,7 +91,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public sub_0204898C
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -107,7 +107,7 @@
 .public MIi_CpuCopy32
 .public sub_0204898C
 .public sub_020484D8
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public sub_02021D28
 .public BmpWin_FlushChar

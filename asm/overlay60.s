@@ -583,10 +583,10 @@ ovy60_21e5d60: ; 0x021E5D60
 	thumb_func_start sub_021E5D84
 sub_021E5D84: ; 0x021E5D84
 	ldr r0, [r0, #0xc]
-	ldr r3, _021E5D8C ; =sub_0200C9BC
+	ldr r3, _021E5D8C ; =PlayerSave_GetMoney
 	bx r3
 	nop
-_021E5D8C: .word sub_0200C9BC
+_021E5D8C: .word PlayerSave_GetMoney
 	thumb_func_end sub_021E5D84
 
 	thumb_func_start ovy60_21e5d90
@@ -3851,7 +3851,7 @@ ovy60_21e77d4: ; 0x021E77D4
 	bl GFL_StrBufCreate
 	add r6, r0, #0
 	ldr r0, [r5, #0xc]
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r2, r0, #0
 	mov r0, #1
 	str r0, [sp]
@@ -4178,7 +4178,7 @@ ovy60_21e7a70: ; 0x021E7A70
 	ldr r0, [r5, r0]
 	ldr r1, [r5, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	add r0, r4, #0
 	sub r0, #0xb4
@@ -4233,7 +4233,7 @@ _021E7AEA:
 	ldr r0, [r5, r0]
 	ldr r1, [r5, #8]
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r6, r0, #0
 	mov r0, #1
 	lsl r0, r0, #9

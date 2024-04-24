@@ -3861,7 +3861,7 @@ ovy207_21b4ef0: ; 0x021B4EF0
 	ldr r1, [r1]
 	mov r2, #0
 	add r4, r0, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r2, r0, #0
 	add r0, r5, #0
 	lsr r2, r2, #1
@@ -3983,7 +3983,7 @@ ovy207_21b4fd0: ; 0x021B4FD0
 	ldr r1, [r1]
 	add r0, r4, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r2, r0, #0
 	add r0, r5, #0
 	str r4, [sp]

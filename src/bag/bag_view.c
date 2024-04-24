@@ -41,19 +41,19 @@ void ovy142_21998f4(BagView *bagView)
     bagView->unk892 = 1;
 }
 
-ItemTable* ovy142_2199928(BagView *bagView, u32 pocket)
+ItemTable* BagMenu_GetBagItemDataBySlot(BagView *bagView, u32 itemSlot)
 {
-    if (bagView->unk83C != 0)
+    if (bagView->isSwitchMode != 0)
     {
-        return &bagView->m_itemTable[pocket];
+        return &bagView->m_itemTable[itemSlot];
     }
-    return ovy142_21a0470(&bagView->unk8C8, bagView->itemType, pocket);
+    return ovy142_21a0470(&bagView->unk8C8, bagView->itemPocket, itemSlot);
 }
 
-int BagView_GetItemPrice(u32 itemId, int param_2, u16 heapId)
+int BagMenu_GetItemPrice(u32 itemId, int numItem, u16 heapId)
 {
     int price = Item_GetItemParam(itemId, ITEM_DATA_PRICE, heapId); // GetItemParam
-    return (price / 2) * param_2;
+    return (price / 2) * numItem;
 }
 
 int sub_02199978(BagView *bagView)
@@ -61,13 +61,13 @@ int sub_02199978(BagView *bagView)
     return bagView->posNow + bagView->unk834 + 1;
 }
 
-int ovy142_2199988(BagView *bagView)
+int BagMenu_GetPocketItemAmount(BagView *bagView)
 {
-    if (bagView->unk83C != 0)
+    if (bagView->isSwitchMode != 0)
     {
-        return BagSave_GetUniqueItemCount(&bagView->m_itemTable[0], NORMAL_ITEM_MAX);
+        return BagSave_GetUniqueItemCount(bagView->m_itemTable, NORMAL_ITEM_MAX);
     }
-    return ovy142_21a0698(&bagView->unk8C8, bagView->itemType);
+    return ovy142_21a0698(&bagView->unk8C8, bagView->itemPocket);
 }
 
 void BagMenu_LoadItemNameToStrbuf(BagView *bagView, int bufId, int msgId)
@@ -89,13 +89,13 @@ void ovy142_21999d8(BagView *bagView, int bufId, int msgId, int name1, int name2
 
 void ovy142_21999f0(BagView *bagView, int pockId1, int pockId2);
 
-void ovy142_21999f0(BagView *bagView, int pockId1, int pockId2)
+void ovy142_21999f0(BagView *bagView, int itemSlot1, int itemSlot2)
 {
     int *data;
 
-    MI_CpuCopy8(&bagView->m_itemTable[pockId1], &data, 4);
-    MI_CpuCopy8(&bagView->m_itemTable[pockId2], &bagView->m_itemTable[pockId1], 4);
-    MI_CpuCopy8(&data, &bagView->m_itemTable[pockId2], 4);
+    MI_CpuCopy8(&bagView->m_itemTable[itemSlot1], &data, 4);
+    MI_CpuCopy8(&bagView->m_itemTable[itemSlot2], &bagView->m_itemTable[itemSlot1], 4);
+    MI_CpuCopy8(&data, &bagView->m_itemTable[itemSlot2], 4);
 }
 
 void ovy142_2199a20(BagView *bagView, int param_2, int param_3);
@@ -212,7 +212,7 @@ int ovy142_2199bcc(BagView *bagView)
     u32 v5;
     u32 v6;
 
-    v2 = ovy142_2199988(bagView);
+    v2 = BagMenu_GetPocketItemAmount(bagView);
     if (v2 >= 7 && sub_0203DA84(&v5, &v6) == 1)
     {
         if (v5 >= 0x100 || v5 < 0xE0)
@@ -250,17 +250,17 @@ int ovy142_2199c70(BagView *bagView)
     int iVar5 = 0;
 
     int uVar1 = sub_02199978(bagView);
-    int ItemCount = ovy142_2199988(bagView);
+    int ItemCount = BagMenu_GetPocketItemAmount(bagView);
 
-    if (sub_0203DF44() & 0x80)
+    if (sub_0203DF44() & KEY_DOWN)
     {
         iVar5 = ovy142_2199ad4(bagView, ItemCount, 1);
     }
-    else if (sub_0203DF44() & 0x40)
+    else if (sub_0203DF44() & KEY_UP)
     {
         iVar5 = ovy142_2199b48(bagView, ItemCount, 1);
     }
-    else if (sub_0203DF44() & 0x100)
+    else if (sub_0203DF44() & KEY_R)
     {
         for (i = 0; i < 6; ++i)
         {
@@ -270,7 +270,7 @@ int ovy142_2199c70(BagView *bagView)
         if (i > 0)
             iVar5 = 1;
     }
-    else if (sub_0203DF44() & 0x200)
+    else if (sub_0203DF44() & KEY_L)
     {
         for (i = 0; i < 6; ++i)
         {
@@ -290,25 +290,25 @@ int ovy142_2199c70(BagView *bagView)
     return iVar5;
 }
 
-int ovy142_2199d24(BagView *bagView);
+int BagMenu_CheckUpDownKeyPad(BagView *bagView);
 
-int ovy142_2199d24(BagView *bagView)
+int BagMenu_CheckUpDownKeyPad(BagView *bagView)
 {
     u32 i;
     int local_18;
 
     local_18 = 0;
-    int ItemCount = ovy142_2199988(bagView);
+    int ItemCount = BagMenu_GetPocketItemAmount(bagView);
 
-    if (sub_0203DF44() & 0x80)
+    if (sub_0203DF44() & KEY_DOWN)
     {
         local_18 = ovy142_2199ad4(bagView, ItemCount, 1);
     }
-    else if (sub_0203DF44() & 0x40)
+    else if (sub_0203DF44() & KEY_UP)
     {
         local_18 = ovy142_2199b48(bagView, ItemCount, 1);
     }
-    else if (sub_0203DF44() & 0x100)
+    else if (sub_0203DF44() & KEY_R)
     {
         for (i = 0; i < 6; ++i)
         {
@@ -318,7 +318,7 @@ int ovy142_2199d24(BagView *bagView)
         if (i > 0)
             local_18 = 1;
     }
-    else if (sub_0203DF44() & 0x200)
+    else if (sub_0203DF44() & KEY_L)
     {
         for (i = 0; i < 6; ++i)
         {
@@ -357,7 +357,7 @@ int ovy142_2199db8(BagView *bagView)
         }
 
         {
-            itemCount = ovy142_2199988(bagView);
+            itemCount = BagMenu_GetPocketItemAmount(bagView);
             uVar4 = sub_02199978(bagView);
             uVar6 = bagView->posNow - uVar2;
             if (uVar6 < 0)
@@ -412,12 +412,12 @@ int ovy142_2199e88(void)
 
 void ovy142_2199eb8(BagView *bagView);
 extern void ovy142_219ffe8(BagView*, int);
-extern void ovy142_219c8d0(BagView*);
+extern void BagMenu_KeyPadMain(BagView*);
 
 void ovy142_2199eb8(BagView *bagView)
 {
     ovy142_219ffe8(bagView, 1);
-    ovy142_219c8d0(bagView);
+    BagMenu_KeyPadMain(bagView);
 }
 
 void ovy142_2199ecc(BagView *bagView)
@@ -448,12 +448,12 @@ void ovy142_2199ecc(BagView *bagView)
             {
                 GFL_SndSEPlay(0x54c);
                 bagView->unk8B4 = 0;
-                BagSave_CopyPocket(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
+                BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 0);
                 sub_0204C488(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
-                bagView->unk83C = 0;
+                bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 0);
-                ovy142_219c8d0(bagView);
+                BagMenu_KeyPadMain(bagView);
                 return;
             }
         }
@@ -462,12 +462,12 @@ void ovy142_2199ecc(BagView *bagView)
             if ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_SELECT)) != 0)
             {
                 GFL_SndSEPlay(0x54C);
-                BagSave_CopyPocket(bagView->bagSave, &bagView->m_itemTable[0], bagView->itemType, 0);
+                BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 0);
                 sub_0204C488(bagView->unk6B4, 1);
                 ovy142_219ffe8(bagView, 1);
-                bagView->unk83C = 0;
+                bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 1);
-                ovy142_219c8d0(bagView);
+                BagMenu_KeyPadMain(bagView);
                 return;
             }
 
@@ -475,7 +475,7 @@ void ovy142_2199ecc(BagView *bagView)
             {
                 GFL_SndSEPlay(0x551);
                 sub_0204C488(bagView->unk6B4, 1);
-                bagView->unk83C = 0;
+                bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 1);
                 bagView->unk838 = 0xffff;
                 ovy142_21998f4(bagView);
@@ -487,7 +487,7 @@ void ovy142_2199ecc(BagView *bagView)
             {
                 GFL_SndSEPlay(0x551);
                 sub_0204C488(bagView->unk6B4, 1);
-                bagView->unk83C = 0;
+                bagView->isSwitchMode = FALSE;
                 ovy142_219bda4(bagView, 0);
                 bagView->unk838 = 0xffff;
                 ovy142_21998f4(bagView);
@@ -522,9 +522,9 @@ u16 inline BagMenu_CheckItem(u16 id)
     return id + 0xffb4;
 }
 
-int sub_0219A0B8(u16 itemId);
+int BagMenu_IsRepelItem(u16 itemId);
 
-int sub_0219A0B8(u16 itemId)
+int BagMenu_IsRepelItem(u16 itemId)
 {
     int uVar1;
 
@@ -547,7 +547,7 @@ int ovy142_219a0dc(u16 param_1)
 {
     int iVar1;
 
-    iVar1 = sub_0219A0B8(param_1);
+    iVar1 = BagMenu_IsRepelItem(param_1);
     if (iVar1 != 0)
     {
         return 1;
@@ -560,28 +560,28 @@ int ovy142_219a0dc(u16 param_1)
 }
 
 
-void ovy142_219a104(BagView *bagView)
+void BagMenu_UseRepel(BagView *bagView)
 {
     int iVar2;
 
-    iVar2 = sub_0219A0B8((u16)bagView->selectItem);
+    iVar2 = BagMenu_IsRepelItem(bagView->selectItem);
     if (iVar2 != 0)
     {
         void *saveData = sub_02017934(bagView->m_GameData);
-        void *uVar3 = sub_0200DCF0(saveData);
-        int repelCountNull = sub_0200DDE0(uVar3);
+        void *encount = SaveControl_GetEncountSave(saveData);
+        int repelCountNull = EncountSave_IsRepelDepleted(encount);
 
         if (repelCountNull)
         {
             u16 items = bagView->selectItem;
             u32 heap = bagView->heapId;
-            u8 uVar1;
+            u8 step;
             
-            uVar1 = Item_GetItemParam(items, ITEM_DATA_USE_PARAM, heap);
-            sub_0200DDB0(uVar3, uVar1);
-            sub_0200DDF0(uVar3, (u16)bagView->selectItem);
+            step = Item_GetItemParam(items, ITEM_DATA_USE_PARAM, heap);
+            EncountSave_SetRepelSteps(encount, step);
+            EncountSave_SetRepelUsedItem(encount, bagView->selectItem);
             BagView_DeletItem(bagView, 1);
-            GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3f, bagView->stringBuff1);
+            GFL_MsgDataLoadStrbuf(bagView->msgData, 63, bagView->stringBuff1);
             GFL_CopyVarForText(bagView->wordSetSystem, 0, bagView->unk8);
             BagMenu_LoadItemNameToStrbuf(bagView, 1, bagView->selectItem);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem,
@@ -592,16 +592,16 @@ void ovy142_219a104(BagView *bagView)
         }
         else
         {
-            GFL_MsgDataLoadStrbuf(bagView->msgData, 0x40, bagView->stringBuff1);
+            GFL_MsgDataLoadStrbuf(bagView->msgData, 64, bagView->stringBuff1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
             BagMenu_PrintBagMessage(bagView, 1);
         }
         
-        BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
+        BagMenu_SetRunFunc(bagView, BagMenu_WaitPrintKeyPad);
     }
 }
 
-void ovy142_219a1ec(BagView *bagView)
+void BagMenu_WaitPrintKeyPad(BagView *bagView)
 {
     int iVar1;
     u32 uVar2;
@@ -619,7 +619,7 @@ void ovy142_219a1ec(BagView *bagView)
             ovy142_219ed3c(bagView);
             sub_0204C520(bagView->unk6B8, 1);
             ovy142_219fda8(bagView, 1);
-            ovy142_219c8d0(bagView);
+            BagMenu_KeyPadMain(bagView);
         }
     }
 }
@@ -632,18 +632,18 @@ void ovy142_219a250(BagView *bagView)
 {
     if (bagView->selectItem - 616 <= 1) // 光之石 暗之石
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x38, bagView->stringBuff1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 56, bagView->stringBuff1);
         GFL_CopyVarForText(bagView->wordSetSystem, 0, bagView->unk8);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         BagMenu_PrintBagMessage(bagView, 1);
-        BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
+        BagMenu_SetRunFunc(bagView, BagMenu_WaitPrintKeyPad);
     }
 }
 
 void ovy142_219a2ac(BagView *bagView)
 {
     BagMenu_PrintBagMessage(bagView, 1);
-    BagMenu_SetRunFunc(bagView, ovy142_219a1ec);
+    BagMenu_SetRunFunc(bagView, BagMenu_WaitPrintKeyPad);
 }
 
 void ovy142_219a2c4(BagView *bagView, int param_2)
@@ -882,7 +882,7 @@ void ovy142_219a4d0(BagView *bagView)
                         iVar5 = ovy142_219a0dc((u16)bagView->selectItem);
                         if (iVar5 == 1)
                         {
-                            BagMenu_SetRunFunc(bagView, ovy142_219a104);
+                            BagMenu_SetRunFunc(bagView, BagMenu_UseRepel);
 
                             break;
                         }
@@ -921,7 +921,7 @@ void ovy142_219a4d0(BagView *bagView)
             
             case 8:
             case 9:
-                BagMenu_SetRunFunc(bagView, ovy142_219b5d4);
+                BagMenu_SetRunFunc(bagView, BagMenu_MoveItemToFreeSpace);
                 break;
             case 4:
             case 5:
@@ -932,7 +932,7 @@ void ovy142_219a4d0(BagView *bagView)
                     ovy142_21998f4(bagView);
                     ovy142_219fda8(bagView, 1);
                     sub_0204C520(bagView->unk6B8, 1);
-                    ovy142_219c8d0(bagView);
+                    BagMenu_KeyPadMain(bagView);
                 }
 
                 break;
@@ -959,7 +959,7 @@ void ovy142_219a4d0(BagView *bagView)
                 ovy142_219bda4(bagView, sub_0203D554() == 0);
                 ovy142_219fda8(bagView, 1);
                 sub_0204C520(bagView->unk6B8, 1);
-                ovy142_219c8d0(bagView);
+                BagMenu_KeyPadMain(bagView);
                 break;
             case 11:
                 bagView->unk898 = 1;
@@ -990,7 +990,7 @@ void ovy142_219a724(BagView *bagView)
     u32 bagMode; // r0
 
     v2 = sub_02199978(bagView);
-    ItemTable *v3 = ovy142_2199928(bagView, v2);
+    ItemTable *v3 = BagMenu_GetBagItemDataBySlot(bagView, v2);
     bagView->selectItem = 0;
     if (v3)
         bagView->selectItem = v3->itemid;
@@ -1037,7 +1037,7 @@ void ovy142_219a724(BagView *bagView)
     }
 }
 
-void ovy142_219a850(BagView *bagView)
+void BagMenu_HandleKeyPad(BagView *bagView)
 {
     int v2;     // r0
     int v3; // r5
@@ -1050,7 +1050,7 @@ void ovy142_219a850(BagView *bagView)
             bagView->unk8B0 = 0;
         sub_020504F0(bagView->buttonManSystem);
         sub_02035198(bagView->unk8A4);
-        if (bagView->bagMenuFunc != ovy142_219a850)
+        if (bagView->bagMenuFunc != BagMenu_HandleKeyPad)
             return;
         {
             if (ovy142_2199bcc(bagView))
@@ -1068,7 +1068,7 @@ void ovy142_219a850(BagView *bagView)
                     v3 = v2;
                     if (!v2)
                         return;
-                    if (ovy142_2199988(bagView))
+                    if (BagMenu_GetPocketItemAmount(bagView))
                     {
                         if ((v3 & (KEY_B | KEY_START | KEY_X | KEY_Y)) == 0)
                         {
@@ -1123,15 +1123,15 @@ void ovy142_219a850(BagView *bagView)
                 }
                 if ((GCTX_HIDGetPressedKeys() & KEY_START) != 0)
                 {
-                    if (bagView->itemType != 5)
+                    if (bagView->itemPocket != 5)
                     {
-                        if (ovy142_2199988(bagView) > 1)
+                        if (BagMenu_GetPocketItemAmount(bagView) > 1)
                         {
                             ovy142_219bca4(bagView);
                             ovy142_219bda4(bagView, 1);
                             ovy142_219ff40(bagView, 0);
                             bagView->unk838 = 0xffff;
-                                    ovy142_21998f4(bagView);
+                            ovy142_21998f4(bagView);
                             BagMenu_SetRunFunc(bagView, ovy142_219cc84);
                             return;
                         }
@@ -1149,7 +1149,7 @@ void ovy142_219a850(BagView *bagView)
                 }
                 if ((GCTX_HIDGetPressedKeys() & KEY_A) != 0)
                 {
-                    if (ovy142_2199988(bagView) > 0)
+                    if (BagMenu_GetPocketItemAmount(bagView) > 0)
                     {
                         BagMenu_SetRunFunc(bagView, ovy142_219c958);
                         return;
@@ -1159,13 +1159,13 @@ void ovy142_219a850(BagView *bagView)
                 {
                     if ((GCTX_HIDGetPressedKeys() & KEY_SELECT) != 0)
                     {
-                        if (bagView->itemType != 5 && ovy142_2199988(bagView) > 1)
+                        if (bagView->itemPocket != 5 && BagMenu_GetPocketItemAmount(bagView) > 1)
                         {
                             MI_CpuFill8(bagView->m_itemTable, 0, 0x4D8);
-                            BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemType, 1);
+                            BagSave_CopyPocket(bagView->bagSave, bagView->m_itemTable, bagView->itemPocket, 1);
                             sub_0204C488(bagView->unk6B4, 2);
                             ovy142_219ffe8(bagView, 0);
-                            bagView->unk83C = 1;
+                            bagView->isSwitchMode = TRUE;
                             ovy142_219c8e8(bagView);
                             return;
                         }
@@ -1173,7 +1173,7 @@ void ovy142_219a850(BagView *bagView)
                     }
                     else
                     {
-                        if (ovy142_2199d24(bagView))
+                        if (BagMenu_CheckUpDownKeyPad(bagView))
                         {
                             ovy142_219ed3c(bagView);
                             GFL_SndSEPlay(0x548);
@@ -1183,21 +1183,21 @@ void ovy142_219a850(BagView *bagView)
                     }
                 }
                 
-                if ((sub_0203DF44() & 0x10) != 0)
+                if ((sub_0203DF44() & KEY_RIGHT) != 0)
                     {
-                        v5 = bagView->itemType;
-                        bagView->itemType = v5 + 1;
+                        v5 = bagView->itemPocket;
+                        bagView->itemPocket = v5 + 1;
                         if (v5 + 1 >= 6)
-                            bagView->itemType = 0;
+                            bagView->itemPocket = 0;
                         sub_0203D564(0);
                         ovy142_219cac0(bagView, v5, 1, ovy142_219D464);
                     }
-                    else if ((sub_0203DF44() & 0x20) != 0)
+                    else if ((sub_0203DF44() & KEY_LEFT) != 0)
                     {
-                        v6 = bagView->itemType;
-                        bagView->itemType = v6 - 1;
+                        v6 = bagView->itemPocket;
+                        bagView->itemPocket = v6 - 1;
                         if (v6 - 1 < 0)
-                            bagView->itemType = 5;
+                            bagView->itemPocket = 5;
                         sub_0203D564(0);
                         ovy142_219cac0(bagView, v6, 0, ovy142_219D464);
                     }
@@ -1240,7 +1240,7 @@ void ovy142_219ab38(BagView *bagView)
                 ovy142_219bda4(bagView, 1);
             }
             
-            ovy142_219c8d0(bagView);
+            BagMenu_KeyPadMain(bagView);
         }
         
         ovy142_219fb60(bagView);
@@ -1266,7 +1266,7 @@ void ovy142_219abb8(BagView *bagView)
 
 void ovy142_219abd8(BagView *bagView);
 extern int sub_020062A8(void);
-extern void sub_020244A4(int, int, int);
+extern void LoadMoveNameToStrbuf(int, int, int);
 
 void ovy142_219abd8(BagView *bagView)
 {
@@ -1276,8 +1276,8 @@ void ovy142_219abd8(BagView *bagView)
     if ((iVar1 != 1) && ((GCTX_HIDGetPressedKeys() & (KEY_A | KEY_B)) || (sub_0203DA48() != 0)))
     {
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3e, bagView->stringBuff1);
-        int uVar3 = sub_02026AE4((u16)bagView->selectItem);
-        sub_020244A4(bagView->wordSetSystem, 0, uVar3);
+        int uVar3 = Item_GetTmHmMove((u16)bagView->selectItem);
+        LoadMoveNameToStrbuf(bagView->wordSetSystem, 0, uVar3);
         GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
         BagMenu_PrintBagMessage(bagView, 1);
         BagMenu_SetRunFunc(bagView, ovy142_219abb8);
@@ -1298,14 +1298,14 @@ void ovy142_219ac4c(BagView *bagView)
     }
 }
 
-extern int sub_02026B84(u16);
+extern int Item_GetTmHmNo(u16);
 void ovy142_219ac70(BagView *bagView);
 
 void ovy142_219ac70(BagView *bagView)
 {
     int iVar1;
 
-    iVar1 = sub_02026B84((u16)bagView->selectItem);
+    iVar1 = Item_GetTmHmNo((u16)bagView->selectItem);
     if (iVar1 == 0xFF)
     {
         GFL_MsgDataLoadStrbuf(bagView->msgData, 0x3c, bagView->stringBuff2);
@@ -1333,7 +1333,7 @@ void ovy142_219acb8(BagView *bagView)
         ovy142_219ed3c(bagView);
         sub_0204C520(bagView->unk6B8, 1);
         ovy142_219fda8(bagView, 1);
-        ovy142_219c8d0(bagView);
+        BagMenu_KeyPadMain(bagView);
     }
 }
 
@@ -1361,10 +1361,10 @@ void ovy142_219ad30(BagView *bagView)
         if (iVar1 == 0)
         {
             GFL_SndSEPlay(0x647);
-            BagView_DeletItem(bagView, bagView->unk814);
+            BagView_DeletItem(bagView, bagView->selectAmount);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x36, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, ((int)bagView->unk814 > 1), 0);
-            StringSetNumber(bagView->wordSetSystem, 1, bagView->unk814, 3, 0, 1);
+            ovy142_21999d8(bagView, 0, bagView->selectItem, ((int)bagView->selectAmount > 1), 0);
+            StringSetNumber(bagView->wordSetSystem, 1, bagView->selectAmount, 3, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2,
                                     bagView->stringBuff1);
             sub_0219F760(bagView);
@@ -1376,7 +1376,7 @@ void ovy142_219ad30(BagView *bagView)
             ovy142_219fda8(bagView, 1);
             iVar2 = sub_0203D554();
             ovy142_219bda4(bagView, iVar2 == 0);
-            ovy142_219c8d0(bagView);
+            BagMenu_KeyPadMain(bagView);
         }
     }
 }
@@ -1400,7 +1400,7 @@ extern void ovy142_219b438(BagView*, int);
 
 void ovy142_219ae30(BagView *bagView)
 {
-    bagView->unk814 = 1;
+    bagView->selectAmount = 1;
     ovy142_219b438(bagView, 1);
     GFL_MsgDataLoadStrbuf(bagView->msgData, 0x35, bagView->stringBuff1);
     ovy142_21999d8(bagView, 0, bagView->selectItem, 1, 0);
@@ -1444,8 +1444,8 @@ void ovy142_219ae90(BagView *bagView)
             GFL_SndSEPlay(0x54C);
             ovy142_219b46c(bagView);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x37, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->unk814, 0);
-            StringSetNumber(bagView->wordSetSystem, 1, bagView->unk814, 3, 0, 1);
+            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
+            StringSetNumber(bagView->wordSetSystem, 1, bagView->selectAmount, 3, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2,
                             bagView->stringBuff1);
             sub_0219F760(bagView);
@@ -1491,11 +1491,11 @@ void BagMenu_TrySellItem(BagView *bagView)
     }
     else
     {
-        bagView->unk814 = 1;
+        bagView->selectAmount = 1;
         ovy142_219fa3c(bagView);
         ovy142_219fda8(bagView, 0);
         uVar4 = sub_02199978(bagView);
-        ItemTable* iVar2 = (ItemTable*)ovy142_2199928(bagView, uVar4);
+        ItemTable* iVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, uVar4);
         if (iVar2->num == 1)
         {
             BagMenu_SetRunFunc(bagView, ovy142_219b12c);
@@ -1555,22 +1555,22 @@ void ovy142_219b0a0(BagView *bagView)
     }
 }
 
-void ovy142_219b1a0(BagView*);
+void BagMenu_PrintSellItemYesNo(BagView*);
 
 void ovy142_219b12c(BagView *bagView)
 {
     int uVar2;
 
     ovy142_219faac(bagView);
-    uVar2 = BagView_GetItemPrice(bagView->selectItem, bagView->unk814, bagView->heapId);
-    GFL_MsgDataLoadStrbuf(bagView->msgData, 0x4F, bagView->stringBuff1);
+    uVar2 = BagMenu_GetItemPrice(bagView->selectItem, bagView->selectAmount, bagView->heapId);
+    GFL_MsgDataLoadStrbuf(bagView->msgData, 79, bagView->stringBuff1);
     StringSetNumber(bagView->wordSetSystem, 0, uVar2, 7, 0, 1);
     GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
     sub_0219F760(bagView);
-    BagMenu_SetRunFunc(bagView, ovy142_219b1a0);
+    BagMenu_SetRunFunc(bagView, BagMenu_PrintSellItemYesNo);
 }
 
-void ovy142_219b1a0(BagView *bagView)
+void BagMenu_PrintSellItemYesNo(BagView *bagView)
 {
     int iVar1;
     int price;
@@ -1587,14 +1587,14 @@ void ovy142_219b1a0(BagView *bagView)
         switch (iVar1)
         {
         case 0:
-            price = BagView_GetItemPrice(bagView->selectItem, bagView->unk814, bagView->heapId);
-            BagView_DeletItem(bagView, bagView->unk814);
+            price = BagMenu_GetItemPrice(bagView->selectItem, bagView->selectAmount, bagView->heapId);
+            BagView_DeletItem(bagView, bagView->selectAmount);
             uVar3 = PlayerSave_GetPlayerSaveOffset(bagView->m_GameData);
             PlayerSave_AddMoney(uVar3, price);
             GFL_SndSEPlay(0x655);
-            ovy142_219f978(bagView);
+            BagMenu_PrintMoneyString(bagView);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x50, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->unk814, 0);
+            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
 
             StringSetNumber(bagView->wordSetSystem, 1, price, 7, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
@@ -1646,7 +1646,7 @@ void ovy142_219b2f0(BagView *bagView)
     ovy142_219fa6c(bagView);
     sub_0204C520(bagView->unk6B8, 1);
     ovy142_219fda8(bagView, 1);
-    ovy142_219c8d0(bagView);
+    BagMenu_KeyPadMain(bagView);
 }
 
 void BagView_DeletItem(BagView *bagView, int delNum)
@@ -1657,7 +1657,7 @@ void BagView_DeletItem(BagView *bagView, int delNum)
     int count;
 
     uVar2 = sub_02199978(bagView);
-    ovy142_2199928(bagView, uVar2);
+    BagMenu_GetBagItemDataBySlot(bagView, uVar2);
     inFreeSpace = BagSave_IsItemInFreeSpace(bagView->bagSave, bagView->selectItem);
     BagSave_SubItem(bagView->bagSave, bagView->selectItem, delNum, bagView->heapId);
     count = BagSave_GetItemCountByID(bagView->bagSave, bagView->selectItem, bagView->heapId);
@@ -1685,7 +1685,7 @@ void ovy142_219b3b0(BagView *bagView)
     int v10; // r1
 
     v2 = sub_02199978(bagView);
-    v3 = ovy142_2199988(bagView) + 1;
+    v3 = BagMenu_GetPocketItemAmount(bagView) + 1;
     v4 = 0;
     v5 = 0;
     if (v3 == v2 + 1)
@@ -1733,7 +1733,7 @@ void ovy142_219b438(BagView *bagView, int param_2)
 {
     bagView->unk80C = param_2;
     ovy142_219fb78(bagView);
-    ovy142_219fc14(bagView, bagView->unk814);
+    ovy142_219fc14(bagView, bagView->selectAmount);
     sub_0204C124(bagView->unk724[5], 1);
     sub_0204C124(bagView->unk724[6], 1);
 }
@@ -1760,9 +1760,9 @@ int ovy142_219b490(BagView *bagView)
     u8 *v16;
     u8 local_24[12];
 
-    iVar5 = bagView->unk814;
+    iVar5 = bagView->selectAmount;
 
-    ItemTable *iVar3 = ovy142_2199928(bagView, sub_02199978(bagView));
+    ItemTable *iVar3 = BagMenu_GetBagItemDataBySlot(bagView, sub_02199978(bagView));
     v9 = &sub021a08f8[0];
     v16 = &local_24[0];
     i = 12;
@@ -1792,22 +1792,22 @@ int ovy142_219b490(BagView *bagView)
         case 0:
             if (bagView->unk810 > 0x78)
             {
-                bagView->unk814 = bagView->unk814 + 10;
+                bagView->selectAmount = bagView->selectAmount + 10;
             }
             else
             {
-                bagView->unk814 = bagView->unk814 + 1;
+                bagView->selectAmount = bagView->selectAmount + 1;
             }
             unaff_r4 = 0;
             break;
         case 1:
             if (bagView->unk810 > 0x78)
             {
-                bagView->unk814 = bagView->unk814 - 10;
+                bagView->selectAmount = bagView->selectAmount - 10;
             }
             else
             {
-                bagView->unk814 = bagView->unk814 - 1;
+                bagView->selectAmount = bagView->selectAmount - 1;
             }
             unaff_r4 = 1;
             break;
@@ -1815,42 +1815,42 @@ int ovy142_219b490(BagView *bagView)
     }
     if (iVar6 == -1)
     {
-        if (sub_0203DF44() & 0x40)
+        if (sub_0203DF44() & KEY_UP)
         {
-            bagView->unk814 = bagView->unk814 + 1;
+            bagView->selectAmount = bagView->selectAmount + 1;
             unaff_r4 = 0;
             bVar11 = TRUE;
         }
-        else if (sub_0203DF44() & 0x80)
+        else if (sub_0203DF44() & KEY_DOWN)
         {
-            bagView->unk814 = bagView->unk814 + -1;
+            bagView->selectAmount = bagView->selectAmount + -1;
             unaff_r4 = 1;
             bVar11 = TRUE;
         }
-        else if (sub_0203DF44() & 0x10)
+        else if (sub_0203DF44() & KEY_RIGHT)
         {
-            bagView->unk814 = bagView->unk814 + 10;
+            bagView->selectAmount = bagView->selectAmount + 10;
             unaff_r4 = 0;
             bVar11 = TRUE;
         }
-        else if (sub_0203DF44() & 0x20)
+        else if (sub_0203DF44() & KEY_LEFT)
         {
-            bagView->unk814 = bagView->unk814 - 10;
+            bagView->selectAmount = bagView->selectAmount - 10;
             unaff_r4 = 1;
             bVar11 = TRUE;
         }
     }
 
-    if (iVar3->num < bagView->unk814)
+    if (iVar3->num < bagView->selectAmount)
     {
-        bagView->unk814 = 1;
+        bagView->selectAmount = 1;
     }
-    else if (bagView->unk814 < 1)
+    else if (bagView->selectAmount < 1)
     {
-        bagView->unk814 = iVar3->num;
+        bagView->selectAmount = iVar3->num;
     }
 
-    if (bagView->unk814 != iVar5)
+    if (bagView->selectAmount != iVar5)
     {
         u16 uVar8;
         int uVar22;
@@ -1866,12 +1866,12 @@ int ovy142_219b490(BagView *bagView)
             uVar8 = 10;
         }
         sub_0204C488(uVar22, uVar8);
-        ovy142_219fc14(bagView, bagView->unk814);
+        ovy142_219fc14(bagView, bagView->selectAmount);
     }
     return bVar11;
 }
 
-void ovy142_219b5d4(BagView *bagView)
+void BagMenu_MoveItemToFreeSpace(BagView *bagView)
 {
     int uVar1;
     int iVar2;
@@ -1883,18 +1883,18 @@ void ovy142_219b5d4(BagView *bagView)
     iVar2 = BagSave_IsItemInFreeSpace(bagView->bagSave, bagView->selectItem);
     uVar3 = BagSave_GetExistingItemPocket(bagView->bagSave, bagView->selectItem);
     uVar4 = sub_02199978(bagView);
-    iVar5 = ovy142_2199928(bagView, uVar4);
+    iVar5 = BagMenu_GetBagItemDataBySlot(bagView, uVar4);
     bVar6 = iVar5->num != 1;
     if (iVar2 == 0)
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x95, bagView->stringBuff1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 149, bagView->stringBuff1);
         ovy142_21999d8(bagView, 1, bagView->selectItem, bVar6, 0);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 5);
         ovy142_21a0578(&bagView->unk8C8, bagView->selectItem, (short)uVar3);
     }
     else
     {
-        GFL_MsgDataLoadStrbuf(bagView->msgData, 0x96,bagView->stringBuff1);
+        GFL_MsgDataLoadStrbuf(bagView->msgData, 150, bagView->stringBuff1);
         ovy142_21999d8(bagView, 1, bagView->selectItem, bVar6, 0);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, uVar3);
         uVar1 = sub_02199978(bagView);
@@ -1933,7 +1933,7 @@ void ovy142_219b6dc(BagView *bagView)
     sub_0204C520(bagView->unk6B8, 1);
     ovy142_219fda8(bagView, 1);
     ovy142_219ff40(bagView, 1);
-    ovy142_219c8d0(bagView);
+    BagMenu_KeyPadMain(bagView);
 }
 
 typedef struct
@@ -1967,8 +1967,8 @@ void BagMenu_SortItemByClass(BagView *bagView)
     
     iVar1 = (ItemSortTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xc10);
     iVar2 = (ItemTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xc11);
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 1);
-    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 1);
+    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemPocket, 1);
     arcHandle = Item_ArcHandleCreate(bagView->heapId);
     for (i = 0; i < bagItemCount; i++)
     {
@@ -1987,7 +1987,7 @@ void BagMenu_SortItemByClass(BagView *bagView)
     {
         iVar2[i]= iVar1[i].item;
     }
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 0);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 0);
     GFL_HeapFree(iVar2);
     GFL_HeapFree(iVar1);
 }
@@ -2004,8 +2004,8 @@ void BagMenu_SortItemByName(BagView *bagView)
  
     iVar1 = (ItemSortTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xc45);
     iVar2 = (ItemTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xc46);
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 1);
-    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 1);
+    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemPocket, 1);
     for ( i = 0; i < bagItemCount; i++)
     {
         u16 itemId = iVar2[i].itemid;
@@ -2018,7 +2018,7 @@ void BagMenu_SortItemByName(BagView *bagView)
     {
         iVar2[i] = iVar1[i].item ;
     }
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 0);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 0);
     GFL_HeapFree(iVar2);
     GFL_HeapFree(iVar1);
 }
@@ -2033,12 +2033,12 @@ void BagMenu_SortItemByIndex(BagView *bagView)
     ItemTable *iVar2;
     int bagItemCount;
 
-    if (bagView->itemType == 2)
+    if (bagView->itemPocket == 2)
     {
         iVar1 = (ItemSortTable *)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xC7A);
         iVar2 = (ItemTable *)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xC7B);
-        BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 1);
-        bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+        BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 1);
+        bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemPocket, 1);
         for (i = 0; i < bagItemCount; i++)
         {
             iVar1[i].ItemClass.param.pro1 = Item_GetTmHmIndex(iVar2[i].itemid);
@@ -2050,7 +2050,7 @@ void BagMenu_SortItemByIndex(BagView *bagView)
         {
             iVar2[i] = iVar1[i].item;
         }
-        BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemType, 0);
+        BagSave_CopyPocketRaw(bagView->bagSave, iVar2, bagView->itemPocket, 0);
         GFL_HeapFree(iVar2);
         GFL_HeapFree(iVar1);
     }
@@ -2070,8 +2070,8 @@ void BagMenu_SortItemByAmount(BagView *bagView, int sortType)
 
     iVar2 = (ItemSortTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemSortTable), 0, "itemmenu.c", 0xCA9);
     iVar3 = (ItemTable*)GFL_HeapAllocate(bagView->heapId, NORMAL_ITEM_MAX * sizeof(ItemTable), 0, "itemmenu.c", 0xCAA);
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar3, bagView->itemType, 1);
-    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemType, 1);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar3, bagView->itemPocket, 1);
+    bagItemCount = BagSave_GetPocketItemCountCore(bagView->bagSave, bagView->itemPocket, 1);
     uVar5 = Item_ArcHandleCreate(bagView->heapId);
     for (i = 0; i < bagItemCount; i++)
     {
@@ -2110,7 +2110,7 @@ void BagMenu_SortItemByAmount(BagView *bagView, int sortType)
     {
         iVar3[i] = iVar2[i].item;
     }
-    BagSave_CopyPocketRaw(bagView->bagSave, iVar3, bagView->itemType, 0);
+    BagSave_CopyPocketRaw(bagView->bagSave, iVar3, bagView->itemPocket, 0);
     GFL_HeapFree(iVar3);
     GFL_HeapFree(iVar2);
 }
@@ -2118,7 +2118,7 @@ void BagMenu_SortItemByAmount(BagView *bagView, int sortType)
 void ovy142_219bca4(BagView *bagView)
 {
     GFL_SndSEPlay(0x54C);
-    if (bagView->itemType != 5)
+    if (bagView->itemPocket != 5)
         sub_0204C488(bagView->unk744, 2);
     else
         sub_0204C488(bagView->unk740, 1);
@@ -2172,7 +2172,7 @@ void sub_0219BD68(BagView *bagView, int param_2)
 
 void ovy142_219bd84(BagView *bagView)
 {
-    if (bagView->itemType == 5)
+    if (bagView->itemPocket == 5)
     {
         sub_0219BD68(bagView, 0);
     }
@@ -2183,7 +2183,7 @@ void ovy142_219bda4(BagView *bagView, int param_2)
 {
     int iVar1;
 
-    if (bagView->unk83C == 1)
+    if (bagView->isSwitchMode == 1)
     {
         param_2 = 1;
     }
@@ -2191,7 +2191,7 @@ void ovy142_219bda4(BagView *bagView, int param_2)
         sub_0203D564(0);
     else
         sub_0203D564(1);
-    iVar1 = ovy142_2199988(bagView);
+    iVar1 = BagMenu_GetPocketItemAmount(bagView);
     if (iVar1 == 0)
     {
         param_2 = 0;
@@ -2226,12 +2226,12 @@ int ovy142_219be18(BagView *bagView, int param_2)
     int iVar3;
 
     param_2 += bagView->unk834 + 1;
-    iVar1 = ovy142_2199988(bagView);
+    iVar1 = BagMenu_GetPocketItemAmount(bagView);
     if (iVar1 <= param_2)
     {
         return 0;
     }
-    ItemTable *puVar2 = (ItemTable*)ovy142_2199928(bagView, param_2);
+    ItemTable *puVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, param_2);
     iVar1 = sub_02034AA4(puVar2->itemid);
 
     if (iVar1 == 0xff)
@@ -2259,7 +2259,7 @@ void ovy142_219be90(BagView *bagView)
     int uVar1;
     int uVar2;
 
-    uVar1 = sub_0219BE88(bagView->itemType);
+    uVar1 = sub_0219BE88(bagView->itemPocket);
     uVar2 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar1);
     sub_02017644(bagView->m_GameData, uVar1, uVar2 ^ 1);
     GFL_SndSEPlay(0x646);
@@ -2271,9 +2271,9 @@ void ovy142_219becc(BagView *bagView)
     int sVar1;
     int uVar2;
 
-    if (bagView->unk83C != 1)
+    if (bagView->isSwitchMode != 1)
     {
-        uVar2 = sub_0219BE88(bagView->itemType);
+        uVar2 = sub_0219BE88(bagView->itemPocket);
         sVar1 = GameData_IsShortcutRegistered(bagView->m_GameData, uVar2);
         sub_0204C488(bagView->unk724[2], (u16)(sVar1 + 6));
     }
@@ -2317,9 +2317,8 @@ void ovy142_219bf58(BagView *bagView, u8 *param_2)
     u32 unkv2;
     ItemTable *psVar3;
 
-
     unkv2 = sub_02199978(bagView);
-    psVar3 = (ItemTable *)ovy142_2199928(bagView, unkv2);
+    psVar3 = (ItemTable *)BagMenu_GetBagItemDataBySlot(bagView, unkv2);
     if ((psVar3 != NULL))
     {
         if ((psVar3->itemid != 0))
@@ -2357,7 +2356,7 @@ void ovy142_219bf58(BagView *bagView, u8 *param_2)
                     param_2[2] = 4;
                 }
             }
-            if (bagView->itemType != 5)
+            if (bagView->itemPocket != 5)
             {
                 param_2[3] = 8;
             }
@@ -2435,7 +2434,7 @@ int ovy142_219c0b4(BagView *bagView)
     int uVar1;
 
     uVar1 = sub_02199978(bagView);
-    ItemTable *puVar2 = (ItemTable *)ovy142_2199928(bagView, uVar1);
+    ItemTable *puVar2 = (ItemTable *)BagMenu_GetBagItemDataBySlot(bagView, uVar1);
     if (puVar2 == NULL)
     {
         return 0;
@@ -2477,13 +2476,13 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     int v20[6];   // [sp+8h] [bp-30h]
 
     v7 = -1;
-    v19 = ovy142_2199988(bagView);
+    v19 = BagMenu_GetPocketItemAmount(bagView);
     if (a2)
         return;
     if (a1 < 6)
     {
         v20 = unk_21A095C;
-        if (bagView->itemType != v20[a1])
+        if (bagView->itemPocket != v20[a1])
         {
             v7 = v20[a1];
             ovy142_219bda4(bagView, 0);
@@ -2492,28 +2491,28 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     else if (a1 == 6)
     {
         ovy142_219bda4(bagView, 0);
-        v8 = bagView->itemType;
-        bagView->itemType = v8 - 1;
+        v8 = bagView->itemPocket;
+        bagView->itemPocket = v8 - 1;
         if (v8 - 1 < 0)
-            bagView->itemType = 5;
+            bagView->itemPocket = 5;
         ovy142_219cac0(bagView, v8, 0, ovy142_219D464);
         return;
     }
     else if (a1 == 7)
     {
         ovy142_219bda4(bagView, 0);
-        v9 = bagView->itemType;
-        bagView->itemType = v9 + 1;
+        v9 = bagView->itemPocket;
+        bagView->itemPocket = v9 + 1;
         if (v9 + 1 >= 6)
-            bagView->itemType = 0;
+            bagView->itemPocket = 0;
         ovy142_219cac0(bagView, v9, 1, ovy142_219D464);
         return;
     }
     else if (a1 == 8)
     {
-        if (bagView->itemType != 5)
+        if (bagView->itemPocket != 5)
         {
-            if (ovy142_2199988(bagView) > 1)
+            if (BagMenu_GetPocketItemAmount(bagView) > 1)
             {
                 ovy142_219bca4(bagView);
                 ovy142_219bda4(bagView, 0);
@@ -2569,11 +2568,11 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     else if (a1 >= 12 && a1 < 0x12)
     {
         {
-            if (bagView->bagMenuFunc == ovy142_219a850)
+            if (bagView->bagMenuFunc == BagMenu_HandleKeyPad)
             {
                 v12 = bagView->posNow;
                 v18 = sub_02199978(bagView);
-                if (ovy142_2199988(bagView))
+                if (BagMenu_GetPocketItemAmount(bagView))
                 {
 
                     if (bagView->posNow != a1 - 12)
@@ -2610,10 +2609,10 @@ void ovy142_219c100(u32 a1, int a2, BagView *bagView)
     }
     if (v7 != -1)
     {
-        v16 = bagView->itemType;
-        bagView->itemType = v7;
+        v16 = bagView->itemPocket;
+        bagView->itemPocket = v7;
         GFL_SndSEPlay(2008);
-        ovy142_2199a5c(bagView, v16, bagView->itemType);
+        ovy142_2199a5c(bagView, v16, bagView->itemPocket);
         ovy142_219bd84(bagView);
         ovy142_219bda4(bagView, 0);
         bagView->unk838 = 0xFFFF;
@@ -2643,17 +2642,17 @@ void ovy142_219c38c(int a1, BagView *bagView)
 }
 
 
-void ovy142_219c3cc(BagView *bagView)
+void BagMenu_BagStart(BagView *bagView)
 {
     if (PrintSystem_IsTextPrintActiveEnd(bagView->printSystem))
     {
         GFL_FadeScreenSet(0, 1, 1, 0, 6, 1, bagView->heapId);
         GFL_SndSEPlay(1950);
-        BagMenu_SetRunFunc(bagView, ovy142_219c414);
+        BagMenu_SetRunFunc(bagView, BagMenu_BagWaitFadeIn);
     }
 }
 
-void ovy142_219c414(BagView *bagView)
+void BagMenu_BagWaitFadeIn(BagView *bagView)
 {
     int v2;     // r5
     int result; // r0
@@ -2663,7 +2662,7 @@ void ovy142_219c414(BagView *bagView)
     if (v2 == 1 && !result)
     {
         sub_0204C520(bagView->unk6B8, 1);
-        ovy142_219c8d0(bagView);
+        BagMenu_KeyPadMain(bagView);
     }
 }
 
@@ -2726,7 +2725,7 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
 
     sub_020086C0(v6->bagSave);
     ovy142_21a03f0(&v6->unk8C8, (int)a3->bagData, v6->unk1F50, v6->heapId);
-    v6->itemType = sub_02008890(v6->unk14);
+    v6->itemPocket = sub_02008890(v6->unk14);
     for (u16 v7 = 0; v7 < 6; ++v7)
     {
         int v8;
@@ -2763,7 +2762,7 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
                 }
             }
         }
-        if (v7 == v6->itemType)
+        if (v7 == v6->itemPocket)
         {
             v6->posNow = v16;
             v6->unk834 = v15 - 1;
@@ -2782,7 +2781,7 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
     v6->font = GFL_FontCreate(23, 0, 0, 0, v6->heapId);
     ovy142_219d7a8(v6);
     ovy142_219e284(v6);
-    ovy142_219e5c4(v6);
+    BagMenu_LoadBagItemBarResource(v6);
     ovy142_219efc0(v6);
     sub_021998DC(v6);
     ovy142_219e6f8(v6);
@@ -2810,6 +2809,6 @@ int ovy142_219c444(int a1, int a2, BAG_DATA *a3, int a4)
     ovy142_219bda4(v6, v11);
     ovy142_219d664();
 
-    BagMenu_SetRunFunc(v6, ovy142_219c3cc);
+    BagMenu_SetRunFunc(v6, BagMenu_BagStart);
     return 1;
 }

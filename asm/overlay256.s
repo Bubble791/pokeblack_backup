@@ -2411,7 +2411,7 @@ _021BC9A0:
 	mov r2, #0
 	ldr r1, [r5, r4]
 	str r0, [sp, #0x14]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	mov r1, #0x28
@@ -2469,7 +2469,7 @@ _021BC9A0:
 	ldr r0, [r5, r0]
 	ldr r1, [sp, #0x10]
 	str r0, [sp, #0xc]
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r1, r0, #0
 	ldr r0, [sp, #0x10]
 	sub r1, r6, r1
@@ -2673,7 +2673,7 @@ _021BCBD8:
 	mov r2, #0
 	add r6, r0, #0
 	mov r4, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x18]
 	mov r0, #0xb6
 	lsl r0, r0, #4
@@ -2913,7 +2913,7 @@ _021BCDDA:
 	ldrh r2, [r2, #0x14]
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_020244A4
+	bl LoadMoveNameToStrbuf
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x2c]
 	ldr r0, [r5, r0]

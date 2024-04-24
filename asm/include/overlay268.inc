@@ -761,7 +761,7 @@
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
 .public sub_02048614
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021D28
 .public sub_02021D28
 .public sub_021F3BB0

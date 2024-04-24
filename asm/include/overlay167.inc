@@ -214,7 +214,7 @@
 .public sub_0219C568
 .public sub_0201381C
 .public PlayerSave_GetPlayerSaveOffset
-.public sub_0200C9BC
+.public PlayerSave_GetMoney
 .public sub_0219D3D4
 .public sub_021BAC40
 .public sub_0219D21C
@@ -6303,7 +6303,7 @@
 .public sub_02021CFC
 .public sub_02022900
 .public sub_02021CFC
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public sub_02044CFC
 .public sub_021BAC40
@@ -6433,7 +6433,7 @@
 .public StringSetNumber
 .public sub_02022BC4
 .public sub_02024500
-.public sub_020244A4
+.public LoadMoveNameToStrbuf
 .public LoadItemNameToStrbuf
 .public sub_02024598
 .public sub_02022BF4

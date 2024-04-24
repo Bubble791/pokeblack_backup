@@ -180,7 +180,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap

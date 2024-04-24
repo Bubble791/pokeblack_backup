@@ -143,7 +143,7 @@ ovy61_21e5904: ; 0x021E5904
 	add r0, r5, #0
 	bl sub_0201024C
 	add r0, r4, #0
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r1, r0, #0
 	add r0, r5, #0
 	bl sub_020103EC
@@ -1036,7 +1036,7 @@ ovy61_21e60a8: ; 0x021E60A8
 	bl ovy12_21548e8
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r5, r0, #0
 	add r0, r6, #0
 	bl sub_020103E8
@@ -1081,7 +1081,7 @@ ovy61_21e60f4: ; 0x021E60F4
 	bl sub_02153EC4
 	add r7, r0, #0
 	add r0, r6, #0
-	bl sub_0200C9BC
+	bl PlayerSave_GetMoney
 	add r4, r0, #0
 	ldr r0, [sp, #0x10]
 	bl sub_020103E8

@@ -3,8 +3,8 @@
 	.include "global.inc"
 
 	.public ovy142_219a0dc
-	.public ovy142_219a104
-	.public ovy142_219a1ec
+	.public BagMenu_UseRepel
+	.public BagMenu_WaitPrintKeyPad
 	.public ovy142_219a250
 	.public ovy142_219a2ac
 	.public ovy142_219a2c4
@@ -15,7 +15,7 @@
 	.public ovy142_219a4a0
 	.public ovy142_219a4d0
 	.public ovy142_219a724
-	.public ovy142_219a850
+	.public BagMenu_HandleKeyPad
 	.public ovy142_219ab38
 	.public ovy142_219abb8
 	.public ovy142_219abd8
@@ -28,15 +28,15 @@
 	.public ovy142_219ae90
 	.public BagMenu_TrySellItem
 	.public ovy142_219b0a0
-	.public ovy142_219b1a0
+	.public BagMenu_PrintSellItemYesNo
 	.public ovy142_219b2f0
 	.public ovy142_219b3b0
 	.public ovy142_219b490
 	.public ovy142_219b46c
-	.public ovy142_219b5d4
+	.public BagMenu_MoveItemToFreeSpace
 	.public ovy142_219c100
 	.public ovy142_219c0e8
-	.public ovy142_219e21c
+	.public BagMenu_LoadBagBackDefaultText
 	.public ovy142_219d22c
 	.public ovy142_219f06c
 	.public BagMenu_PrintBagMessage

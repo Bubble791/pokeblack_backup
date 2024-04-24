@@ -1108,7 +1108,7 @@ _021EF520:
 _021EF524:
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	str r0, [sp, #0x1c]
 	ldr r0, [sp, #0x18]
 	mov r1, #0

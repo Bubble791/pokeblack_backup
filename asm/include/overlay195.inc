@@ -767,7 +767,7 @@
 .public ButtonSystem_Create
 .public GFL_StrBufCreate
 .public GFL_MsgDataLoadStrbuf
-.public sub_02022888
+.public GFL_FontGetBlockWidth
 .public sub_0202E210
 .public GFL_StrBufFree
 .public GFL_MsgDataLoadStrbuf

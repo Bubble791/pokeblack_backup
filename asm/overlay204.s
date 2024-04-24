@@ -2075,7 +2075,7 @@ _021AABB2:
 	ldr r1, [r5, r1]
 	add r0, r6, #0
 	mov r2, #0
-	bl sub_02022888
+	bl GFL_FontGetBlockWidth
 	add r3, r0, #0
 	mov r0, #0x5f
 	mov r2, #0xc0
