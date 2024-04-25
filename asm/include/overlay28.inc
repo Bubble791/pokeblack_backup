@@ -5,7 +5,7 @@
 .public sub_0200B50C
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_HeapFree
 .public sub_020425EC
 .public sub_02042A10

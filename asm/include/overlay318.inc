@@ -23,8 +23,8 @@
 .public sub_02021A18
 .public sub_02022DA8
 .public sub_02045264
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
 .public sub_0203DAC8

@@ -1360,9 +1360,9 @@ ovy190_21b3a58: ; 0x021B3A58
 	ldr r0, [r4, #0x34]
 	bl ovy190_21b3b4c
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x78
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy190_21b3a58
@@ -3805,9 +3805,9 @@ _021B4E52:
 	bl ovy190_21b3b4c
 	bl sub_02012144
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x79
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

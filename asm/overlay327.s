@@ -58,9 +58,9 @@ ovy327_21b5de0: ; 0x021B5DE0
 	ldr r0, [r4, #0x2c]
 	bl GFL_HeapFree
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0xa2
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -233,7 +233,7 @@ ovy327_21b5f08: ; 0x021B5F08
 	bl sub_0203CB80
 _021B5F1C:
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x28
@@ -1680,9 +1680,9 @@ ovy327_21b69f0: ; 0x021B69F0
 	ldr r0, [r5, r4]
 	bl sub_02022DA8
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0xa3
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021B6A5C ; =0x000000BD
 	bl sub_0203CDC8
 	ldr r0, _021B6A60 ; =0x000000C4

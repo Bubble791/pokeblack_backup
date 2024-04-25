@@ -3,8 +3,8 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -14,8 +14,8 @@
 .public sub_0202D7B8
 .public GFL_StrBufFree
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02013B8C
 .public sub_020174D4
 .public sub_0202D7A8

@@ -5,11 +5,11 @@
 .public GFL_ProcInitSubsystem
 .public GFL_StrBufCreate
 .public CreateGameProcManager
-.public sub_0203A980
+.public FreeGameProcManager
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203A978
 .public sub_0201735C
 .public sub_0201736C

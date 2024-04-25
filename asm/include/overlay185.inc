@@ -603,8 +603,8 @@
 .public sub_0203DF44
 .public sub_020504F0
 .public sub_0203A5D0
-.public sub_0203A1D0
-.public sub_0203A1D0
+.public GFL_HeapDelete
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public GFL_ProcInitSubsystem
 .public sub_02029A68
@@ -628,7 +628,7 @@
 .public sub_020504DC
 .public sub_0203A610
 .public GFL_HeapFree
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0219E7B0
 .public sub_0203DA2C
 .public sub_0203DF20
@@ -926,13 +926,13 @@
 .public GFL_MsgSysLoadData
 .public sub_02021998
 .public CreateGameProcManager
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_02021C44
 .public sub_02021A18
 .public GFL_MsgDataFree
 .public sub_02022DA8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_020342F4

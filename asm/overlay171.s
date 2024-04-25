@@ -60,9 +60,9 @@ _021DDAC0: .word 0x021DEB08
 	thumb_func_start ovy171_21ddac4
 ovy171_21ddac4: ; 0x021DDAC4
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x71
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy171_21ddac4

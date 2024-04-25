@@ -30,8 +30,8 @@
 .public sub_02017144
 .public OS_ResetSystem
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02005D8C
 .public sub_021FCB38
 .public sub_02011CFC
@@ -224,7 +224,7 @@
 .public MI_CpuFill8
 .public CreateGameProcManager
 .public sub_0203CB80
-.public sub_0203A980
+.public FreeGameProcManager
 .public GFL_HeapFree
 .public sub_0203A988
 .public sub_0203A978
@@ -235,9 +235,9 @@
 .public sub_02005EA0
 .public sub_0203CDC8
 .public sub_02040C64
-.public sub_0203A980
-.public sub_0203AB10
-.public sub_0203A1D0
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203A978
 .public sub_02005DF4
 .public sub_0203A988

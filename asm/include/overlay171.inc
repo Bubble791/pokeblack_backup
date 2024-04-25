@@ -5,8 +5,8 @@
 .public MI_CpuFill8
 .public sub_0203349C
 .public sub_0204B794
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8

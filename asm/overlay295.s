@@ -356,9 +356,9 @@ _0219D140: .word 0x00000558
 	thumb_func_start ovy295_219d144
 ovy295_219d144: ; 0x0219D144
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x54
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy295_219d144
@@ -923,9 +923,9 @@ _0219D5F8: .word 0x04000050
 	thumb_func_start ovy295_219d5fc
 ovy295_219d5fc: ; 0x0219D5FC
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x54
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy295_219d5fc

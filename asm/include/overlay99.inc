@@ -42,7 +42,7 @@
 .public ovy36_21ba624
 .public sub_0218105C
 .public ovy36_21b81bc
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public ovy36_218102c
 .public sub_0218105C
 .public ovy36_21b83b4
@@ -159,7 +159,7 @@
 .public sub_021B84E8
 .public sub_02016AF0
 .public sub_0218105C
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_02016AF0
 .public sub_0218105C
 .public GFL_HeapCreateChild

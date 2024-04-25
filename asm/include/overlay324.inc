@@ -49,8 +49,8 @@
 .public sub_02005EC0
 .public sub_0219D0C8
 .public sub_0202A6F0
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_

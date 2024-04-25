@@ -106,11 +106,11 @@ _021C2614:
 	bl sub_0203CDC8
 	add r6, #0xe0
 	ldr r0, [r6]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x58
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -587,9 +587,9 @@ _021C29C2:
 	bl ovy263_21c2c3c
 _021C29CA:
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x58
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0

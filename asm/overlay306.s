@@ -274,9 +274,9 @@ ovy306_219d078: ; 0x0219D078
 	ldr r0, [r4, #4]
 	bl ovy306_219eaec
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x75
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219D110 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

@@ -10,8 +10,8 @@
 .public sub_02176C24
 .public sub_0203CDC8
 .public sub_0203CDC8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_021C5C54
 .public sub_021C5C64
 .public sub_021C2560

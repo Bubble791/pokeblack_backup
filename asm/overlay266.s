@@ -47,9 +47,9 @@ _0219CEC4:
 	thumb_func_start ovy266_219cec8
 ovy266_219cec8: ; 0x0219CEC8
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x8e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy266_219cec8

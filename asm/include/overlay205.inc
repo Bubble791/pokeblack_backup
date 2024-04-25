@@ -43,8 +43,8 @@
 .public GFL_ArcToolFree
 .public sub_020504DC
 .public GFL_StrBufFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02046CF0
 .public GFL_BGSysSetVRAMBanks
 .public MIi_CpuClear32

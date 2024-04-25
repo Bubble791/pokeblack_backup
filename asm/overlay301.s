@@ -44,9 +44,9 @@ _0219FBFC:
 	thumb_func_start ovy301_219fc00
 ovy301_219fc00: ; 0x0219FC00
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x7e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy301_219fc00

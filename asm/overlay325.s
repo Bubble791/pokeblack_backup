@@ -102,9 +102,9 @@ ovy325_219cf20: ; 0x0219CF20
 	bl ovy325_219f138
 	ldrh r4, [r4]
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r4, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219CF6C ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

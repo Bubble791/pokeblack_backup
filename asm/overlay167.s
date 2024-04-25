@@ -748,13 +748,13 @@ _02199E6A:
 	strb r1, [r4, r5]
 _02199E90:
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x13
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x14
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x12
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	bl ovy167_21ce138
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}

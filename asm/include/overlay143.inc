@@ -30,16 +30,16 @@
 .public sub_0203A7F4
 .public sub_02021A3C
 .public sub_0204B794
-.public sub_0203A980
-.public sub_0203A980
+.public FreeGameProcManager
+.public FreeGameProcManager
 .public GFL_TCBRemove
 .public sub_0201362C
 .public sub_02199EE0
 .public sub_02199C9C
 .public sub_02199C88
 .public GFL_ArcToolFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysCreate
 .public GFL_BGSysSetLCDConfig
@@ -230,7 +230,7 @@
 .public GFL_StrBufFree
 .public sub_0219ACF8
 .public sub_0219ADC8
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203D554
 .public sub_0204476C
 .public sub_02045604
@@ -285,7 +285,7 @@
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_BGSysSetEnabledBGsB
 .public sub_0219B694
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02045604
@@ -387,7 +387,7 @@
 .public BmpWin_FlushChar
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_BGSysSetEnabledBGsA
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02045604
@@ -528,7 +528,7 @@
 .public sub_0219C9E0
 .public sub_0219C478
 .public GFL_MsgDataFree
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0204476C
 .public sub_0204476C
 .public sub_0204476C
@@ -675,7 +675,7 @@
 .public PrintSystem_IsTextPrintActiveEnd
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_BGSysSetEnabledBGsA
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02045604
@@ -809,7 +809,7 @@
 .public sub_02022DA8
 .public GFL_HeapFree
 .public sub_0219E028
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_02016AD8
 .public sub_02016B20
 .public sub_02016B08
@@ -1012,7 +1012,7 @@
 .public PrintSystem_IsTextPrintActiveEnd
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_BGSysSetEnabledBGsA
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0204476C
 .public sub_0204476C
 .public sub_02045604

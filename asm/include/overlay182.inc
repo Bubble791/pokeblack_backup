@@ -11,7 +11,7 @@
 .public OS_ResetSystem
 .public sub_02011778
 .public sub_0203CDC8
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_02012E28
 .public sub_021A6AFC
 .public sub_021A6A60

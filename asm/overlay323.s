@@ -259,9 +259,9 @@ ovy323_219d05c: ; 0x0219D05C
 	bl ovy323_219e76c
 	ldrh r5, [r5]
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r5, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219D0C4 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

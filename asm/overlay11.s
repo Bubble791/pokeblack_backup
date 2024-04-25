@@ -3907,7 +3907,7 @@ ovy11_21521a0: ; 0x021521A0
 	ldrh r0, [r0, #0x20]
 	cmp r0, #0
 	beq _021521D4
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, [r5]
 	strh r4, [r0, #0x20]
 _021521D4:

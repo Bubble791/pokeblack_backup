@@ -69,9 +69,9 @@ _021F7FFA:
 	bl ovy272_21f810c
 	bl sub_0200BB48
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x59
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -237,7 +237,7 @@ ovy272_21f810c: ; 0x021F810C
 	bl sub_0203CB80
 _021F8120:
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x28

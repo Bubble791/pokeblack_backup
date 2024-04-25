@@ -237,8 +237,8 @@ int ovy162_219d038(void *a1, void *a2, void *a3, void *a4)
 
 // int ovy162_219d168(int a1, int a2, int a3, int a4);
 // extern void sub_0200700C(void);
-// void sub_0203AB10(int);
-// extern void sub_0203A1D0(int);
+// void GFL_ProcReleaseSubsystem(int);
+// extern void GFL_HeapDelete(int);
 // extern void sub_0203A954(int, int, int);
 
 // int ovy162_219d168(int a1, int a2, int a3, int a4)
@@ -249,8 +249,8 @@ int ovy162_219d038(void *a1, void *a2, void *a3, void *a4)
 
 //     v5 = startWork->unk4;
 //     sub_0200700C();
-//     sub_0203AB10(a1);
-//     sub_0203A1D0(22);
+//     GFL_ProcReleaseSubsystem(a1);
+//     GFL_HeapDelete(22);
 //     switch (v5)
 //     {
 //         case 0:

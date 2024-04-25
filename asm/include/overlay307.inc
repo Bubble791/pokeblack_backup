@@ -6,10 +6,10 @@
 .public sub_0204E060
 .public CreateGameProcManager
 .public sub_02042BA8
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_021DE2D0
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GCTX_HIDGetPressedKeys
 .public sub_0203A978
 .public sub_0204E060

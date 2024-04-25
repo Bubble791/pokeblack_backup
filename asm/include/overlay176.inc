@@ -22,8 +22,8 @@
 .public sub_02199B8C
 .public sub_0219A980
 .public sub_0219BF7C
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0219B0AC

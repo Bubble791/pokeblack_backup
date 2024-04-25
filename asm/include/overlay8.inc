@@ -45,7 +45,7 @@
 .public sub_0203A988
 .public sub_0203A978
 .public sub_02011CFC
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_02017238
 .public sub_0200A150
 .public sub_02005EA0
@@ -55,7 +55,7 @@
 .public sub_0203A988
 .public sub_0203A978
 .public sub_02011CFC
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_02005EA0
 .public sub_0203CE0C
 .public sub_0203CE0C

@@ -46,7 +46,7 @@ ovy166_219cec8: ; 0x0219CEC8
 	add r4, r3, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0x40]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	ldr r0, [r4, #0x2c]
 	cmp r0, #0
 	beq _0219CEDE
@@ -55,9 +55,9 @@ _0219CEDE:
 	ldr r0, [r4, #4]
 	bl GFL_StrBufFree
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x52
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy166_219cec8

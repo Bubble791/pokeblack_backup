@@ -19,7 +19,7 @@
 .public sub_021F3F70
 .public sub_0202AEAC
 .public sub_02021A18
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203CDC8
 .public sub_0203CDC8
 .public sub_021F66B0

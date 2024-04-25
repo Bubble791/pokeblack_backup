@@ -4,7 +4,7 @@
 .public sub_0219D13C
 .public GFL_BGSysSetVRAMBanks
 .public sub_02046DF8
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_02016BEC
 .public sub_021A4414
 .public sub_0219D098

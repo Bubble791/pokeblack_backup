@@ -640,9 +640,9 @@ _021A7A92:
 	ldr r0, [r5, r6]
 	bl sub_0203D564
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x27
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -7716,11 +7716,11 @@ ovy186_21ab25c: ; 0x021AB25C
 	add r0, r4, #0
 	bl ovy186_21ac3e0
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x27
 	bl sub_0203A2BC
 	mov r0, #0x27
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021AB2B4 ; =0x00000093
 	bl sub_0203CDC8
 	mov r0, #1

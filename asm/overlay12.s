@@ -1696,7 +1696,7 @@ _02151126:
 	mov r0, #4
 	bl sub_0203A4A0
 	mov r0, #0x2c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 _02151136:
@@ -3525,9 +3525,9 @@ ovy12_2151ecc: ; 0x02151ECC
 	ldr r0, [r3]
 	bl GFL_HeapFree
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x2d
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _02151EF4 ; =0x000000D1
 	bl sub_0203CDC8
 	ldr r0, _02151EF8 ; =0x000000D0
@@ -3867,7 +3867,7 @@ ovy12_215218c: ; 0x0215218C
 	ldr r0, [r0, #0x18]
 	bl sub_021EEDD8
 	mov r0, #0x2c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, [r4]
 	mov r1, #2
 	ldr r0, [r0, #8]
@@ -3876,11 +3876,11 @@ ovy12_215218c: ; 0x0215218C
 	bl ovy12_2152248
 _021521BA:
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	ldr r0, _021521D0 ; =0x000000D1
 	bl sub_0203CDC8
 	mov r0, #0x2e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -45931,11 +45931,11 @@ ovy12_21662e4: ; 0x021662E4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r3]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x76
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0
@@ -52426,7 +52426,7 @@ ovy12_216919c: ; 0x0216919C
 	cmp r0, #0
 	bne _021691BC
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	mov r0, #0
 	str r0, [r4]
 	mov r0, #1
@@ -52644,9 +52644,9 @@ _02169346:
 	ldr r0, [r4, #0x30]
 	bl GFL_HeapFree
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x26
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -52659,9 +52659,9 @@ ovy12_216936c: ; 0x0216936C
 	ldr r0, [r3, #0x30]
 	bl GFL_HeapFree
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x26
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0

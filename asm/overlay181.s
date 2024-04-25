@@ -3820,9 +3820,9 @@ _0219EE42:
 	bl GFL_HeapFree
 _0219EE4C:
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x5d
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, [sp, #8]
 	cmp r0, #1
 	bne _0219EE82

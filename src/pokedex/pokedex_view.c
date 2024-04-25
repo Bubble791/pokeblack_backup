@@ -9,6 +9,8 @@ int ovy302_21ad764(int, u16*);
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4);
 int ovy302_21acfc8(int a1, int a2, void *a3, void *a4);
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4);
+void ovy302_21ad01c(PokeDexStartView*);
+void ovy302_21ad030(PokeDexStartView*);
 
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
 {
@@ -111,20 +113,14 @@ int ovy302_21acfc8(int a1, int a2, void *a3, void *a4)
     return 0;
 }
 
-extern void sub_0203A980(int);
-extern void sub_0203AB10(int);
-extern void sub_0203A1D0(int);
-void ovy302_21ad01c(PokeDexStartView*);
-void ovy302_21ad030(PokeDexStartView*);
-
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4)
 {
     PokeDexStartView *dexView = (PokeDexStartView *)a4;
 
     ovy302_21ad01c(dexView);
     ovy302_21ad030(dexView);
-    sub_0203A980(dexView->unk4);
-    sub_0203AB10(a1);
-    sub_0203A1D0(105);
+    FreeGameProcManager(dexView->unk4);
+    GFL_ProcReleaseSubsystem(a1);
+    GFL_HeapDelete(105);
     return 1;
 }

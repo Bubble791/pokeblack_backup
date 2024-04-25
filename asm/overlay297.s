@@ -147,9 +147,9 @@ ovy297_21f4368: ; 0x021F4368
 	ldr r0, [r4, #4]
 	bl ovy297_21f46d8
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x6a
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021F43BC ; =0x00000128
 	bl sub_0203CDC8
 	ldr r0, _021F43C0 ; =0x0000008B

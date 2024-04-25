@@ -1051,8 +1051,8 @@ _0203A1CE:
 	pop {r3, pc}
 	thumb_func_end sub_0203A194
 
-	thumb_func_start sub_0203A1D0
-sub_0203A1D0: ; 0x0203A1D0
+	thumb_func_start GFL_HeapDelete
+GFL_HeapDelete: ; 0x0203A1D0
 	push {r4, lr}
 	add r4, r0, #0
 	bl sub_0203A408
@@ -1073,7 +1073,7 @@ _0203A1F6:
 	bl OS_Terminate
 _0203A1FA:
 	pop {r4, pc}
-	thumb_func_end sub_0203A1D0
+	thumb_func_end GFL_HeapDelete
 
 	thumb_func_start GFL_HeapAllocate
 GFL_HeapAllocate: ; 0x0203A1FC
@@ -2223,13 +2223,13 @@ sub_0203A978: ; 0x0203A978
 _0203A97C: .word sub_0203A9E4
 	thumb_func_end sub_0203A978
 
-	thumb_func_start sub_0203A980
-sub_0203A980: ; 0x0203A980
+	thumb_func_start FreeGameProcManager
+FreeGameProcManager: ; 0x0203A980
 	ldr r3, _0203A984 ; =sub_0203AA60
 	bx r3
 	.align 2, 0
 _0203A984: .word sub_0203AA60
-	thumb_func_end sub_0203A980
+	thumb_func_end FreeGameProcManager
 
 	thumb_func_start sub_0203A988
 sub_0203A988: ; 0x0203A988
@@ -2460,8 +2460,8 @@ _0203AB08: .word 0x00000186
 _0203AB0C: .word 0x0209A874
 	thumb_func_end GFL_ProcInitSubsystem
 
-	thumb_func_start sub_0203AB10
-sub_0203AB10: ; 0x0203AB10
+	thumb_func_start GFL_ProcReleaseSubsystem
+GFL_ProcReleaseSubsystem: ; 0x0203AB10
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
@@ -2469,7 +2469,7 @@ sub_0203AB10: ; 0x0203AB10
 	mov r0, #0
 	str r0, [r4, #0x14]
 	pop {r4, pc}
-	thumb_func_end sub_0203AB10
+	thumb_func_end GFL_ProcReleaseSubsystem
 
 	thumb_func_start sub_0203AB20
 sub_0203AB20: ; 0x0203AB20
@@ -19628,7 +19628,7 @@ _0204281E: ; jump table
 _0204282C:
 	add r0, r7, #0
 _0204282E:
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	b _02042844
 _02042834:
 	add r0, r6, #0
@@ -19641,7 +19641,7 @@ _02042838:
 	pop {r3, r4, r5, r6, r7, pc}
 _02042844:
 	ldr r0, [sp]
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #4
 	bl sub_0203D134
 	pop {r3, r4, r5, r6, r7, pc}

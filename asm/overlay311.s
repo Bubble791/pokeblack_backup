@@ -91,9 +91,9 @@ _0219CEE6:
 	bl ovy311_219e1d4
 	ldrh r4, [r4]
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r4, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219CF50 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

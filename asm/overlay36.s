@@ -128,21 +128,21 @@ ovy36_217f6ec: ; 0x0217F6EC
 	mov r1, #0
 	bl sub_02016AF4
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x96
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x92
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x93
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x89
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x50
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x70
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x15
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	add r0, r4, #0
 	bl ovy36_21c9e04
 	mov r0, #1
@@ -32341,9 +32341,9 @@ _0218ECDE:
 	bl sub_020480A8
 	bl sub_02044528
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

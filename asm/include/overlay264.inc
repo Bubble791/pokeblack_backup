@@ -3,8 +3,8 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GX_SetGraphicsMode
 .public sub_02050610
 .public G2x_SetBGyAffine_

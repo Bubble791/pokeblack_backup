@@ -63,7 +63,7 @@ _021703B2:
 	add r0, r4, #0
 	bl GFL_HeapFree
 	mov r0, #0x41
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	add r0, r5, #0
 	bl GFL_HeapFree
 	pop {r3, r4, r5, pc}

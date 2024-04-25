@@ -131,9 +131,9 @@ ovy259_21999a4: ; 0x021999A4
 	bl sub_02018778
 _021999E0:
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x55
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy259_21999a4

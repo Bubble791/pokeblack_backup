@@ -66,9 +66,9 @@ ovy261_2176b68: ; 0x02176B68
 	ldr r0, _02176BA8 ; =0x0000008B
 	bl sub_0203CDC8
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x4e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop

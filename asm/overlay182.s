@@ -88,7 +88,7 @@ ovy182_21a49b0: ; 0x021A49B0
 	ldr r0, _021A49CC ; =0x000000B5
 	bl sub_0203CDC8
 	mov r0, #0xf
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	bl sub_02012E28
 	mov r0, #1
 	pop {r3, pc}

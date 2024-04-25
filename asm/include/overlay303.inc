@@ -2,7 +2,7 @@
 #pragma once
 .public GFL_HeapCreateChild
 .public sub_0219FC54
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_VBlankTCBAdd
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -10,7 +10,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021A2A20
 .public sub_021A28EC
 .public GXx_SetMasterBrightness_

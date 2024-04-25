@@ -11,9 +11,9 @@
 .public sub_02010D90
 .public sub_0200D1F8
 .public sub_0203A978
-.public sub_0203A980
-.public sub_0203AB10
-.public sub_0203A1D0
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapAllocate

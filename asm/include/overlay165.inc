@@ -2,13 +2,13 @@
 #pragma once
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021A3328
 .public sub_021A3150
 .public sub_0201FDF8

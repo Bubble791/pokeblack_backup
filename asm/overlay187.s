@@ -92,9 +92,9 @@ _021E8C86:
 	str r1, [r0, #0x14]
 _021E8C8A:
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x99
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -216,9 +216,9 @@ _021E8D6C:
 	ldr r0, [r5, #0xc]
 	bl GFL_HeapFree
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x99
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

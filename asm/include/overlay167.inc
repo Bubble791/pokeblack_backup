@@ -38,10 +38,10 @@
 .public sub_02005D08
 .public sub_020067B0
 .public sub_0203021C
-.public sub_0203AB10
-.public sub_0203A1D0
-.public sub_0203A1D0
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
+.public GFL_HeapDelete
+.public GFL_HeapDelete
 .public sub_0219C980
 .public sub_02017934
 .public sub_02007E64

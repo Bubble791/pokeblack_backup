@@ -159,6 +159,9 @@ extern int sub_02034F6C(void);
 extern void sub_02010D80(int, int);
 extern void sub_02010D90(int, int);
 extern int sub_0200D1F8(int);
+extern void FreeGameProcManager(int);
+extern void GFL_ProcReleaseSubsystem(int);
+extern void GFL_HeapDelete(int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

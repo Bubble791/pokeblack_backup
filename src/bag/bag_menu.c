@@ -151,8 +151,8 @@ int BagMenu_End(int a1, int a2, void *data3, void *a4)
 
     ovy142_219d46c(wk->unk14, a3->unk38, a3->unk44, wk->unk1F50);
     sub_0203DEB4(wk->KeyRetypeIntervalRepeated, wk->KeyRetypeIntervalFirst);
-    sub_0203AB10(a1);
-    sub_0203A1D0(14);
+    GFL_ProcReleaseSubsystem(a1);
+    GFL_HeapDelete(14);
     return 1;
 }
 

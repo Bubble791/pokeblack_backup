@@ -61,7 +61,7 @@ ovy303_219fc10: ; 0x0219FC10
 	add r1, r4, #0
 	bl ovy303_219fcb0
 	mov r0, #0xa5
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -140,7 +140,7 @@ ovy303_219fcb0: ; 0x0219FCB0
 	ldr r0, [r5, r4]
 	bl GFL_MsgDataFree
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	pop {r4, r5, r6, pc}
 	nop
 _0219FCD0: .word 0x00000894

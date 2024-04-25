@@ -96,9 +96,9 @@ ovy213_21bb7b0: ; 0x021BB7B0
 	bl sub_0203CDC8
 	add r4, #0xdc
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

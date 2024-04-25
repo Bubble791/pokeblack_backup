@@ -395,8 +395,8 @@
 .public sub_02016EE8
 .public sub_02017144
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_020120C8
 .public sub_02012154
 .public sub_02011CFC

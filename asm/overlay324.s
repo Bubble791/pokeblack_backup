@@ -694,9 +694,9 @@ _0219D414: .word 0x04000050
 	thumb_func_start ovy324_219d418
 ovy324_219d418: ; 0x0219D418
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0xa4
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219D430 ; =0x000000A8
 	bl sub_0203CDC8
 	mov r0, #1

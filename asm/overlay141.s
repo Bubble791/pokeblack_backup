@@ -123,11 +123,11 @@ ovy141_219cf60: ; 0x0219CF60
 	add r0, r4, #0
 	bl ovy141_219d064
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x80
 	bl sub_0203A2BC
 	mov r0, #0x80
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

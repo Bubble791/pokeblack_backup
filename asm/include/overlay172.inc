@@ -5,8 +5,8 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public GFL_HeapAllocate
 .public GFL_FontCreate

@@ -129,8 +129,8 @@
 .public sub_021B2FAC
 .public sub_02005DF4
 .public sub_02044B84
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_HeapAllocate
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
@@ -388,8 +388,8 @@
 .public sub_02005DF4
 .public sub_02042BA8
 .public sub_02012144
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_FadeScreenSet
 .public sub_021B4EA4
 .public GFL_FadeScreenIsFinished

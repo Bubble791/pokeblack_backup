@@ -372,8 +372,8 @@
 .public sub_02040C64
 .public sub_0202E34C
 .public sub_0202DA54
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_HeapAllocate
 .public sub_0203CE0C
 .public GFL_BGSysSetEnabledBGsA

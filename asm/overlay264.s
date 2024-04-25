@@ -50,9 +50,9 @@ _02199908:
 	thumb_func_start ovy264_219990c
 ovy264_219990c: ; 0x0219990C
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x7f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy264_219990c

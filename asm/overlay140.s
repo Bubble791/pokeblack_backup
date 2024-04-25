@@ -266,9 +266,9 @@ ovy140_219d048: ; 0x0219D048
 	add r0, r5, #0
 	bl ovy140_219d1c0
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219D0E8 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

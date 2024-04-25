@@ -91,8 +91,8 @@
 .public sub_0202E818
 .public GFL_TCBExMgrFree
 .public GFL_WordSetSystemFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GX_SetBankForLCDC
 .public MIi_CpuClearFast
 .public GX_DisableBankForLCDC

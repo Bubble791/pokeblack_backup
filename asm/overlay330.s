@@ -67,7 +67,7 @@ ovy330_219cef0: ; 0x0219CEF0
 	add r4, r3, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0x34]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	ldr r0, [r4, #0x28]
 	cmp r0, #0
 	beq _0219CF06
@@ -76,9 +76,9 @@ _0219CF06:
 	ldr r0, [r4, #4]
 	bl GFL_StrBufFree
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x8b
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy330_219cef0

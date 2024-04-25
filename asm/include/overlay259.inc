@@ -16,8 +16,8 @@
 .public sub_02017144
 .public GFL_HeapFree
 .public sub_02018778
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public MI_CpuFill8
 .public sub_0219B4FC
 .public MI_CpuFill8

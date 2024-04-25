@@ -47,9 +47,9 @@ _021BB744:
 	thumb_func_start ovy256_21bb748
 ovy256_21bb748: ; 0x021BB748
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x8c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy256_21bb748

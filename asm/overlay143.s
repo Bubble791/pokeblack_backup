@@ -377,10 +377,10 @@ ovy143_2199bb4: ; 0x02199BB4
 	mov r6, #0x13
 	lsl r6, r6, #4
 	ldr r0, [r4, r6]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r6, #4
 	ldr r0, [r4, r0]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	sub r0, r6, #4
 	ldr r0, [r4, r0]
 	bl GFL_TCBRemove
@@ -407,9 +407,9 @@ ovy143_2199bb4: ; 0x02199BB4
 	ldr r0, _02199C30 ; =0x04001050
 	strh r1, [r0]
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x61
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	nop
@@ -2544,7 +2544,7 @@ _0219AC04:
 	bl sub_0219ADC8
 	bl ovy143_219ad44
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy143_219abd4
@@ -3258,7 +3258,7 @@ _0219B166:
 	bl ovy143_219b30c
 	bl ovy143_219b1d4
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -4067,7 +4067,7 @@ _0219B81E:
 	add r0, r4, #0
 	bl ovy143_219b888
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -5385,7 +5385,7 @@ _0219C300:
 	ldr r0, [r4, #0x20]
 	bl GFL_MsgDataFree
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -7799,7 +7799,7 @@ _0219D50E:
 	bl ovy143_219d648
 	bl ovy143_219d574
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy143_219d4f8
@@ -9114,7 +9114,7 @@ _0219DF9C:
 	add r1, r4, #0
 	bl sub_0219E028
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy143_219df48
@@ -12310,7 +12310,7 @@ _0219F7BE:
 	add r0, r4, #0
 	bl ovy143_219f914
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

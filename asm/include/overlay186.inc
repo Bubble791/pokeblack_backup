@@ -50,8 +50,8 @@
 .public GFL_TCBRemove
 .public GFL_TCBExMgrFree
 .public sub_0203D564
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
@@ -415,9 +415,9 @@
 .public GFL_FadeScreenSet
 .public sub_0204B794
 .public sub_021AB7D0
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203A2BC
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public sub_02044CFC
 .public sub_02044CFC

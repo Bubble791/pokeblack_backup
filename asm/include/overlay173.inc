@@ -1377,8 +1377,8 @@
 .public GFL_HeapFree
 .public sub_02042788
 .public sub_02151CB8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02043E98
 .public MI_CpuCopy8
 

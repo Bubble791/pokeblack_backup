@@ -151,6 +151,6 @@
 .public sub_02008BEC
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_020120C8

@@ -396,9 +396,9 @@ ovy280_21d998c: ; 0x021D998C
 	ldr r0, [r5, r4]
 	bl sub_02022DA8
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021D9A4C ; =0x00000119
 	bl sub_0203CDC8
 	mov r0, #1

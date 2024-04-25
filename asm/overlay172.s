@@ -141,9 +141,9 @@ ovy172_2199984: ; 0x02199984
 	ldr r0, [r3]
 	bl ovy172_2199aec
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x85
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021999A4 ; =0x000000A8
 	bl sub_0203CDC8
 	mov r0, #1

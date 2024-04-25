@@ -1237,9 +1237,9 @@ ovy175_219a184: ; 0x0219A184
 	ldr r0, [r4, #0x3c]
 	bl GFL_HeapFree
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x3a
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -1563,7 +1563,7 @@ ovy175_219a3c8: ; 0x0219A3C8
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0xc

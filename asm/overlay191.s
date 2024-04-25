@@ -356,9 +356,9 @@ ovy191_21b56d8: ; 0x021B56D8
 	add r0, r4, #4
 	bl ovy191_21b6a1c
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x7d
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021B5728 ; =0x000000BD
 	bl sub_0203CDC8
 	bl sub_02005F0C

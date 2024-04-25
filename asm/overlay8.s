@@ -487,7 +487,7 @@ _0214F8A0:
 	pop {r4, r5, r6, r7, pc}
 _0214F8B6:
 	ldr r0, [r4, #0x1c]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	add r0, #0xb4
 	ldr r0, [r0]
@@ -566,7 +566,7 @@ _0214F946:
 	pop {r4, r5, r6, r7, pc}
 _0214F95C:
 	ldr r0, [r4, #0x1c]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	mov r0, #6
 	bl sub_02005EA0
 	b _0214FCE0

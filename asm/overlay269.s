@@ -110,7 +110,7 @@ _021EF2C8:
 	ldr r0, [r5, #0x20]
 	bl sub_02021A18
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	ldr r0, _021EF2EC ; =0x000000D1
 	bl sub_0203CDC8
 	ldr r0, _021EF2F0 ; =0x000000D2

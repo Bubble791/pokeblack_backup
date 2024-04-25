@@ -81,8 +81,8 @@
 .public sub_02005E54
 .public sub_02199908
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02005EC0
 .public sub_0219A3BC
 .public sub_0219A1FC
@@ -94,7 +94,7 @@
 .public sub_0219A1FC
 .public MI_CpuFill8
 .public CreateGameProcManager
-.public sub_0203A980
+.public FreeGameProcManager
 .public MI_CpuFill8
 .public sub_0203A988
 .public GFL_HeapAllocate

@@ -256,8 +256,8 @@
 .public sub_0202E1DC
 .public sub_020480A8
 .public sub_02044528
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_020504DC
 .public GFL_HeapAllocate
 .public GFL_WordSetSystemCreateDefault
@@ -1065,8 +1065,8 @@
 .public ovy11_215205c
 .public sub_0219D1F0
 .public sub_02152040
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public sub_020504DC
 .public GFL_HeapAllocate
@@ -1354,5 +1354,5 @@
 .public sub_0219D1F0
 .public sub_02042788
 .public sub_02152040
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203CDC8

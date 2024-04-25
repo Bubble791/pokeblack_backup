@@ -305,9 +305,9 @@ _021B31DC:
 	ldr r0, [r4]
 	bl sub_021C2600
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x57
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021B3230 ; =0x000000BD
 	bl sub_0203CDC8
 	ldr r0, _021B3234 ; =0x0000008B
@@ -5410,9 +5410,9 @@ _021B594E:
 	ldr r0, [r4]
 	bl sub_021C2600
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x57
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021B59AC ; =0x000000BD
 	bl sub_0203CDC8
 	ldr r0, _021B59B0 ; =0x0000008B

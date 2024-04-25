@@ -2506,9 +2506,9 @@ _021B4422:
 	bl sub_020480A8
 	bl sub_02044528
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy198_21b433c

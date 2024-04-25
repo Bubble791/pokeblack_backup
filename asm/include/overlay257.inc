@@ -187,7 +187,7 @@
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_HeapFree
 .public sub_021AAADC
 .public sub_021AAA14
@@ -3077,8 +3077,8 @@
 .public sub_0203DF20
 .public sub_0203DF20
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_020120C8
 .public sub_020120DC
 .public MIi_CpuClearFast

@@ -251,9 +251,9 @@ ovy205_21b74ec: ; 0x021B74EC
 	bl GFL_StrBufFree
 _021B75B4:
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x32
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy205_21b74ec

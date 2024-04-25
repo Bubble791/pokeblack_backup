@@ -63,7 +63,7 @@ ovy307_21ddc2c: ; 0x021DDC2C
 	add r0, #0x88
 	ldr r0, [r0]
 	add r5, r2, #0
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r5, #0
 	add r1, r4, #0
 	bl sub_021DE2D0
@@ -75,9 +75,9 @@ ovy307_21ddc2c: ; 0x021DDC2C
 	bl ovy307_21de104
 _021DDC54:
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x8f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy307_21ddc2c

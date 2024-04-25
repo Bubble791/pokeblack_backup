@@ -7,14 +7,14 @@
 .public sub_021F813C
 .public GFL_StrBufFree
 .public sub_0200BB48
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public MI_CpuFill8
 .public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
 .public sub_0203CB80
-.public sub_0203A980
+.public FreeGameProcManager
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public MI_CpuFill8

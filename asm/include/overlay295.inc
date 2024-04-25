@@ -39,8 +39,8 @@
 .public sub_0202E68C
 .public sub_0203A7F4
 .public sub_02035884
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02046DF8
 .public GX_SetBankForLCDC
 .public MIi_CpuClearFast
@@ -136,8 +136,8 @@
 .public GFL_MsgDataFree
 .public sub_02044B84
 .public sub_02022DA8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_BGSysCreate
 .public GFL_BGSysSetVRAMBanks
 .public GFL_BGSysSetLCDConfig

@@ -9,8 +9,8 @@
 .public sub_02040C20
 .public sub_021998C8
 .public sub_0203CDC8
-.public sub_0203A980
-.public sub_0203AB10
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
 .public sub_021998D4
 .public sub_0203CE0C
 .public sub_0203A988

@@ -41,11 +41,11 @@ ovy10_214ff28: ; 0x0214FF28
 	bl sub_020120DC
 _0214FF40:
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x76
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

@@ -2264,9 +2264,9 @@ _021B41F8:
 	bl sub_020480A8
 	bl sub_02044528
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -10217,9 +10217,9 @@ _021B820A:
 	bl sub_02152040
 _021B821C:
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x62
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021B8234 ; =0x000000BD
 	bl sub_0203CDC8
 	mov r0, #1
@@ -12595,7 +12595,7 @@ _021B9586:
 	bl sub_02152040
 _021B9596:
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	ldr r0, _021B95A8 ; =0x000000BD
 	bl sub_0203CDC8
 	mov r0, #1

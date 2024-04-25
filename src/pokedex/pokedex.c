@@ -116,13 +116,13 @@ int ovy299_219fbf0(int a1, int a2, int a3, int a4)
     return ovy299_21a05dc(a4) == 0;
 }
 
-extern void sub_0203AB10(void);
-extern void sub_0203A1D0(int);
+extern void GFL_ProcReleaseSubsystem(void);
+extern void GFL_HeapDelete(int);
 
 int ovy299_219fc04(void)
 {
-    sub_0203AB10();
-    sub_0203A1D0(107);
+    GFL_ProcReleaseSubsystem();
+    GFL_HeapDelete(107);
     return 1;
 }
 

@@ -242,9 +242,9 @@ ovy179_219aef0: ; 0x0219AEF0
 	add r0, r5, #0
 	bl ovy179_219b42c
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x3c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

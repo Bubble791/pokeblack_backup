@@ -219,9 +219,9 @@ ovy204_21a9ce4: ; 0x021A9CE4
 	ldr r1, [r4, r1]
 	bl ovy204_21a9e00
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x34
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021A9D2C ; =0x0000008B
 	bl sub_0203CDC8
 	ldr r0, _021A9D30 ; =0x000000CB
@@ -5486,7 +5486,7 @@ _021AC660:
 	mov r0, #2
 	b _021AC65E
 _021AC682:
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0
@@ -5497,7 +5497,7 @@ _021AC68E:
 	cmp r0, #0
 	bne _021AC76A
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	ldr r1, [r4, #4]
 	ldr r2, [r4, #8]
 	ldr r1, [r1, #0x20]
@@ -5550,7 +5550,7 @@ _021AC70A:
 	cmp r0, #0
 	bne _021AC76A
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	bl sub_0203D554
 	str r0, [r5]
 	ldr r0, [r4, #4]

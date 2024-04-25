@@ -8685,11 +8685,11 @@ _021BBD46:
 	add r0, r5, #0
 	bl ovy194_21bb218
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x1f
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0x91
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	cmp r4, #5
 	bge _021BBD7A
 	ldr r0, _021BBD9C ; =0x000000BD

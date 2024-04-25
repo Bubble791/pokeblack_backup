@@ -329,9 +329,9 @@ _0219AF60:
 	bl sub_02017144
 _0219AFEC:
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x43
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

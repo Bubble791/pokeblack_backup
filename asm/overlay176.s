@@ -246,9 +246,9 @@ ovy176_219aef4: ; 0x0219AEF4
 	add r0, r4, #0
 	bl ovy176_219b448
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x3b
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	nop

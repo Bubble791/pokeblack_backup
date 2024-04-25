@@ -373,9 +373,9 @@ _0219D194:
 	ldr r0, [r4, r5]
 	bl sub_02022DA8
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x44
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219D1E0 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

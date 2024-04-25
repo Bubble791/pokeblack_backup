@@ -2548,7 +2548,7 @@ ovy257_219aa18: ; 0x0219AA18
 	ldr r0, [r0]
 	bl ovy257_2199bb0
 	mov r0, #0x6e
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 _0219AA8E:
 	add r0, r4, #0
 	bl GFL_HeapFree
@@ -35529,9 +35529,9 @@ _021AAF90:
 	bl GFL_HeapFree
 _021AAF9E:
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x6d
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

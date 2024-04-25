@@ -27583,7 +27583,7 @@ sub_02012110: ; 0x02012110
 	ldr r0, [r4, #8]
 	bl GFL_HeapFree
 	mov r0, #8
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _02012140 ; =0x02141054
 	mov r1, #0x60
 	strb r1, [r0, #0x19]
@@ -29749,9 +29749,9 @@ sub_020131F0: ; 0x020131F0
 	ldr r0, [r3, #0x44]
 	bl sub_02017144
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x67
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0
 	blx OS_ResetSystem
 	mov r0, #1
@@ -30014,11 +30014,11 @@ sub_020133F0: ; 0x020133F0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r3, #8]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x5b
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0
@@ -37464,7 +37464,7 @@ sub_020166A0: ; 0x020166A0
 	bl GFL_HeapCreateChild
 	bl sub_020168EC
 	mov r0, #5
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
@@ -37695,13 +37695,13 @@ sub_02016888: ; 0x02016888
 	add r0, r3, #0
 	bl sub_02016A6C
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #3
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #4
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #5
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0
 	blx OS_ResetSystem
 	mov r0, #1
@@ -37923,7 +37923,7 @@ sub_02016A6C: ; 0x02016A6C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	bl sub_02016960
 	pop {r4, pc}

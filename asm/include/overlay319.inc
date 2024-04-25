@@ -11,8 +11,8 @@
 .public sub_0204E060
 .public sub_02042BA8
 .public GFL_TCBRemove
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0204E0E0
 .public sub_0219F158
 .public sub_0219F378

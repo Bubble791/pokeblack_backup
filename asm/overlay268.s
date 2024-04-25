@@ -81,7 +81,7 @@ ovy268_21ba1cc: ; 0x021BA1CC
 	ldr r0, [r4]
 	bl sub_021F4528
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy268_21ba1cc
@@ -571,7 +571,7 @@ _021BA5B4:
 	ldr r0, [r4, #4]
 	bl sub_021F4638
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -1129,7 +1129,7 @@ _021BA9F8:
 	ldr r0, [r5]
 	bl sub_0202AEAC
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy268_21ba99c
@@ -4272,7 +4272,7 @@ ovy268_21bc25c: ; 0x021BC25C
 	ldr r0, [r4]
 	bl sub_0202AEAC
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy268_21bc25c
@@ -6064,7 +6064,7 @@ ovy268_21bd098: ; 0x021BD098
 	ldr r0, [r4]
 	bl sub_0202AEAC
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy268_21bd098
@@ -7129,7 +7129,7 @@ _021BD91A:
 	ldr r0, [r4, #0x14]
 	bl sub_02021A18
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy268_21bd894
@@ -9065,7 +9065,7 @@ _021BE852:
 	ldr r0, [r5, #0x48]
 	bl sub_02021A18
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy268_21be838
@@ -10562,7 +10562,7 @@ ovy268_21bf434: ; 0x021BF434
 	mov r1, #0xb
 	bl sub_021F2EB4
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -13641,7 +13641,7 @@ _021C0B96:
 	ldr r0, [r5, #4]
 	bl sub_021F4528
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy268_21c0b8c
@@ -14097,7 +14097,7 @@ _021C0F60:
 	ldr r0, [r5, #8]
 	bl sub_021F4528
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -14780,7 +14780,7 @@ _021C149A:
 	ldr r0, [r0, #0x10]
 	bl sub_021F094C
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

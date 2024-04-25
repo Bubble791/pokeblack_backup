@@ -2927,7 +2927,7 @@
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_02042788
 .public sub_02042E84
 .public sub_020428A0
@@ -3075,8 +3075,8 @@
 .public MI_CpuFill8
 .public sub_0203A938
 .public sub_02042788
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public OS_ResetSystem
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
@@ -3091,9 +3091,9 @@
 .public MI_CpuFill8
 .public sub_0203A988
 .public sub_0205B5EC
-.public sub_0203A980
-.public sub_0203AB10
-.public sub_0203A1D0
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public MI_CpuFill8
 .public sub_0208D868
 .public sub_0204A934
@@ -3309,7 +3309,7 @@
 .public sub_02043F2C
 .public sub_02043F2C
 .public GFL_HeapCreateChild
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_0203CE0C
 .public sub_02180BDC
 .public GFL_HeapCreateChild
@@ -3324,10 +3324,10 @@
 .public sub_0208D868
 .public sub_02180A84
 .public sub_0218092C
-.public sub_0203AB10
-.public sub_0203A1D0
-.public sub_0203A1D0
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
+.public GFL_HeapDelete
+.public GFL_HeapDelete
 .public OS_ResetSystem
 .public MI_CpuFill8
 .public CreateGameProcManager
@@ -3335,7 +3335,7 @@
 .public sub_0203A978
 .public sub_0203D594
 .public sub_02180424
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_0203A988
 .public sub_021535DC
 .public sub_0203D3B4
@@ -9302,7 +9302,7 @@
 .public GFL_HeapCreateChild
 .public sub_0203A178
 .public sub_0203A194
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_HeapAllocate
 .public GFL_HeapFree
 .public sub_0203A25C
@@ -9355,7 +9355,7 @@
 .public sub_0203A954
 .public CreateGameProcManager
 .public sub_0203A978
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_0203A988
 .public sub_0203A990
 .public sub_0203A9BC
@@ -9366,7 +9366,7 @@
 .public sub_0203AAB0
 .public sub_0203AAE4
 .public GFL_ProcInitSubsystem
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203AB20
 .public sub_0203ABAC
 .public sub_0203AC04

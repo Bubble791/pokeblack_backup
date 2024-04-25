@@ -390,8 +390,8 @@
 .public sub_02017144
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_HeapAllocate
 .public sub_0201AD8C
 .public sub_0201AD7C

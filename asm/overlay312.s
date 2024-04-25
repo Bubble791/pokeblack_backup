@@ -1137,10 +1137,10 @@ ovy312_217d258: ; 0x0217D258
 	bl GFL_WordSetSystemFree
 	bl ovy312_217d38c
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	lsl r0, r6, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	nop

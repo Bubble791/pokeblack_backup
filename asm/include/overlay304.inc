@@ -4,7 +4,7 @@
 .public sub_0219FD94
 .public sub_0219FC9C
 .public sub_0219FCD4
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_VBlankTCBAdd
 .public sub_02005680
 .public GFL_ProcInitSubsystem
@@ -15,7 +15,7 @@
 .public GFL_WordSetSystemCreateDefault
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_02010D78
 .public sub_021A04F0
 .public sub_021A149C

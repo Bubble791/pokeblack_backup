@@ -61,7 +61,7 @@ ovy310_219cee0: ; 0x0219CEE0
 	bl ovy310_219d164
 	bl ovy310_219d1fc
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy310_219cee0

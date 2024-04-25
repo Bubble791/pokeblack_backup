@@ -4,8 +4,8 @@
 .public MI_CpuFill8
 .public CreateGameProcManager
 .public sub_0203A978
-.public sub_0203A980
-.public sub_0203AB10
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_021BBA18
@@ -99,8 +99,8 @@
 .public GFL_WordSetSystemFree
 .public sub_02022DA8
 .public GFL_TCBRemove
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GX_LoadOBJPltt
 .public sub_0204B7C8
 .public sub_02045A5C
@@ -448,8 +448,8 @@
 .public sub_02048F44
 .public GFL_TCBRemove
 .public GFL_ArcToolFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203D27C
 .public sub_021BD90C
 .public sub_0203A5D0

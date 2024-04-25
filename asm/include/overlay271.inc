@@ -22,8 +22,8 @@
 .public PlayerSave_GetPlayerSaveOffset
 .public sub_021F3024
 .public sub_0200CB3C
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_021F0944
@@ -73,7 +73,7 @@
 .public MI_CpuFill8
 .public CreateGameProcManager
 .public MI_CpuFill8
-.public sub_0203A980
+.public FreeGameProcManager
 .public GFL_HeapFree
 .public sub_0203CB80
 .public sub_0203CB80

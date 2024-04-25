@@ -8,9 +8,9 @@
 .public sub_0201FD6C
 .public sub_021998C8
 .public sub_0203CDC8
-.public sub_0203A980
-.public sub_0203AB10
-.public sub_0203A1D0
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02042788
 .public sub_02042E84
 .public sub_020120C8
@@ -39,8 +39,8 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_021C2A10
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02042788
 .public sub_02152404
 .public sub_02040440

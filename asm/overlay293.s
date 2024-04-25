@@ -132,9 +132,9 @@ ovy293_21a1c04: ; 0x021A1C04
 	ldr r0, [r4, #0xc]
 	bl ovy293_21a1ffc
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x6c
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021A1C64 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

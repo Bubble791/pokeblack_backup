@@ -142,9 +142,9 @@ ovy253_217ca30: ; 0x0217CA30
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r4, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0xa
 	bl sub_02005E68
 	ldr r0, _0217CAA4 ; =0x000000A2

@@ -11,9 +11,9 @@
 .public CreateGameProcManager
 .public sub_0203A978
 .public sub_02007AD4
-.public sub_0203A980
-.public sub_0203AB10
-.public sub_0203A1D0
+.public FreeGameProcManager
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_VBlankTCBAdd
 .public sub_02045A5C
 .public sub_0204B7C8
@@ -536,7 +536,7 @@
 .public sub_0203DEB4
 .public GFL_ArcToolFree
 .public GFL_HeapFree
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_0203CDC8
@@ -2389,8 +2389,8 @@
 .public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public GFL_FadeScreenIsFinished
 .public PrintSystem_IsTextPrintActiveEnd

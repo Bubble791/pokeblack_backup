@@ -14,9 +14,9 @@ ovy162_219d168: ; 0x0219D168
 	ldr r4, [r3, #4]
 	bl sub_0200700C
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x16
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	cmp r4, #0
 	bne _0219D188
 	ldr r0, _0219D1A4 ; =0x000000A2
@@ -1027,10 +1027,10 @@ ovy162_219d9d8: ; 0x0219D9D8
 	add r1, r4, #3
 	ldrb r5, [r3, r4]
 	ldrb r6, [r3, r1]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0xb
 	mov r7, #0xb
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	cmp r5, #8
 	bhi _0219DA94
 	add r0, r5, r5
@@ -6094,7 +6094,7 @@ ovy162_21a02d0: ; 0x021A02D0
 	ldr r0, [r5, #0x5c]
 	bl GFL_HeapFree
 	ldr r0, [r5, #0x34]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	bl ovy162_21a04e8
 	mov r0, #0
@@ -6106,7 +6106,7 @@ ovy162_21a02d0: ; 0x021A02D0
 	ldr r0, [r5, #0x2c]
 	bl sub_02165AE8
 	add r0, r7, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	ldr r1, _021A0360 ; =0x02090010
 	sub r0, r6, #1
 	add r2, r4, #0
@@ -6233,7 +6233,7 @@ ovy162_21a03dc: ; 0x021A03DC
 	ldr r1, [sp, #4]
 	bl sub_0200CA78
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
@@ -6398,9 +6398,9 @@ ovy162_21a0584: ; 0x021A0584
 	bl sub_02044B84
 	bl sub_02044528
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x39
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy162_21a0584
@@ -7308,9 +7308,9 @@ _021A0D14: .word 0x021A1A20
 	thumb_func_start ovy162_21a0d18
 ovy162_21a0d18: ; 0x021A0D18
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x16
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, pc}
 	thumb_func_end ovy162_21a0d18
@@ -7402,9 +7402,9 @@ _021A0DBA:
 	thumb_func_start ovy162_21a0dc0
 ovy162_21a0dc0: ; 0x021A0DC0
 	push {r3, lr}
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x81
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _021A0DDC ; =0x000000A2
 	ldr r1, _021A0DE0 ; =0x021A1614
 	mov r2, #0

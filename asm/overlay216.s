@@ -60,9 +60,9 @@ ovy216_21bb75c: ; 0x021BB75C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r3, #0x20]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #1
 	pop {r4, pc}
 	thumb_func_end ovy216_21bb75c
@@ -1056,9 +1056,9 @@ ovy216_21bbf40: ; 0x021BBF40
 	add r0, r4, #0
 	bl ovy216_21bc208
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x72
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -4172,9 +4172,9 @@ _021BD824:
 	ldr r0, [r4, r5]
 	bl GFL_ArcToolFree
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x72
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #8
 	bl sub_0203D27C
 	mov r0, #1

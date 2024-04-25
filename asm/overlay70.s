@@ -819,9 +819,9 @@ _0217D65C:
 	add r0, r4, #0
 	bl ovy70_217d8e4
 	add r0, r6, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x28
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 _0217D672:

@@ -337,7 +337,7 @@ ovy99_21eef28: ; 0x021EEF28
 	cmp r0, #1
 	bne _021EEF48
 	ldrh r0, [r4, #2]
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 _021EEF48:
 	add r0, r5, #0
 	mov r1, #1
@@ -1920,7 +1920,7 @@ ovy99_21efb70: ; 0x021EFB70
 	bl sub_0218105C
 	add r4, r0, #0
 	ldrh r0, [r4, #2]
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #0
 	str r0, [r4, #0x64]
 	pop {r4, pc}

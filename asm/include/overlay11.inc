@@ -144,7 +144,7 @@
 .public sub_020424AC
 .public sub_0205EF78
 .public GFL_HeapFree
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public OS_DisableInterrupts
 .public sub_0205EF80
 .public OS_RestoreInterrupts

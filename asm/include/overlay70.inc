@@ -74,8 +74,8 @@
 .public GFL_WordSetSystemFree
 .public sub_02022DA8
 .public sub_0217F338
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0204B7C8
 .public sub_02045A5C
 .public sub_0203FFC4

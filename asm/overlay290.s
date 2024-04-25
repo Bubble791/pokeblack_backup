@@ -184,9 +184,9 @@ _021FB9F8:
 	bl GFL_HeapFree
 _021FBA04:
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x56
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	bl sub_02005D8C
 	mov r0, #1
 	pop {r4, r5, r6, pc}
@@ -2325,7 +2325,7 @@ ovy290_21fca60: ; 0x021FCA60
 	bl sub_0203CB80
 _021FCA74:
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -2513,11 +2513,11 @@ _021FCB9E:
 	str r0, [r4, #0xc]
 _021FCBB0:
 	ldr r0, [r4]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r5, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x58
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop

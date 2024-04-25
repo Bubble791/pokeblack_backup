@@ -126,9 +126,9 @@ _0219CF5E:
 	bl ovy326_219e2d4
 	ldrh r4, [r5]
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r4, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219CF98 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1
@@ -3010,9 +3010,9 @@ _0219E57C:
 	bl ovy326_21a2b9c
 	ldrh r4, [r5]
 	ldr r0, [sp]
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r4, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, _0219E5C8 ; =0x0000008B
 	bl sub_0203CDC8
 	mov r0, #1

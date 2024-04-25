@@ -11,9 +11,9 @@
 .public sub_0204B794
 .public sub_0219D838
 .public sub_0219D324
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_0203A2BC
-.public sub_0203A1D0
+.public GFL_HeapDelete
 .public sub_0204B7C8
 .public sub_02045A5C
 .public GFL_ArcSysCreateFileHandle

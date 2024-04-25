@@ -7,8 +7,8 @@
 .public MI_CpuFill8
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_0203CDC8
 .public sub_0203CDC8
 .public GFL_VBlankTCBAdd
@@ -453,9 +453,9 @@
 .public sub_0203A988
 .public sub_0203A978
 .public sub_0203A988
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_0203A978
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_021A9E18
 .public sub_02165AE8
 .public sub_02034BC4
@@ -464,7 +464,7 @@
 .public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
-.public sub_0203A980
+.public FreeGameProcManager
 .public sub_0203D554
 .public sub_021A9E18
 .public sub_021A9E18

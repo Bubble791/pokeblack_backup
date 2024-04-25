@@ -14,7 +14,7 @@
 .public sub_021F4638
 .public sub_02021A18
 .public sub_021F4528
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F4530
 .public sub_02021A3C
 .public sub_021F466C
@@ -73,7 +73,7 @@
 .public sub_021F2B8C
 .public sub_021F0D00
 .public sub_021F4638
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F559C
 .public sub_021F55C8
 .public sub_021F0DD0
@@ -123,7 +123,7 @@
 .public sub_021F4528
 .public sub_02021A18
 .public sub_0202AEAC
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_020178BC
 .public sub_021F66B0
 .public sub_021F0A20
@@ -377,7 +377,7 @@
 .public sub_021F4638
 .public sub_02021A18
 .public sub_0202AEAC
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F559C
 .public sub_021F55C8
 .public sub_0203DAC8
@@ -553,7 +553,7 @@
 .public sub_021F4638
 .public sub_02021A18
 .public sub_0202AEAC
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F559C
 .public sub_021F55C8
 .public sub_0203DAC8
@@ -666,7 +666,7 @@
 .public sub_021F4638
 .public sub_0202AEAC
 .public sub_02021A18
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F66B0
 .public sub_021F0A20
 .public sub_021F4530
@@ -841,7 +841,7 @@
 .public sub_021F3F70
 .public sub_0202AEAC
 .public sub_02021A18
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F55C8
 .public sub_021F559C
 .public sub_021F55C8
@@ -1007,7 +1007,7 @@
 .public sub_021F2EB4
 .public sub_021F2EB4
 .public sub_021F2EB4
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F559C
 .public sub_021F55C8
 .public sub_021BF5C4
@@ -1165,7 +1165,7 @@
 .public sub_021F3F70
 .public sub_02021A18
 .public sub_021F4528
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_020178BC
 .public sub_021F66B0
 .public sub_021F0A20
@@ -1223,7 +1223,7 @@
 .public sub_021F4638
 .public sub_02021A18
 .public sub_021F4528
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_021F4530
 .public sub_021F4540
 .public sub_021F466C
@@ -1292,7 +1292,7 @@
 .public sub_021F4528
 .public sub_0202AEAC
 .public sub_021F094C
-.public sub_0203AB10
+.public GFL_ProcReleaseSubsystem
 .public sub_020178BC
 .public sub_021F66B0
 .public sub_021F0A20

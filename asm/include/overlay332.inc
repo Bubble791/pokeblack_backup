@@ -16,8 +16,8 @@
 .public GFL_HeapFree
 .public OS_ResetSystem
 .public GFL_HeapFree
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public sub_02006280
 .public GFL_HeapFree
 .public sub_021BF5B0

@@ -377,18 +377,18 @@ ovy215_21a7878: ; 0x021A7878
 	add r5, r3, #0
 	add r4, r0, #0
 	ldr r0, [r5, #0x1c]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	ldr r0, [r5, #0x10]
 	bl ovy215_21a7a14
 	ldr r0, [r5]
 	lsl r0, r0, #0x10
 	lsr r5, r0, #0x10
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	add r0, r5, #0
 	bl sub_0203A2BC
 	add r0, r5, #0
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -763,13 +763,13 @@ ovy215_21a7b70: ; 0x021A7B70
 	bl sub_02022DA8
 	ldr r5, [r5]
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
 	bl sub_0203A2BC
 	lsl r0, r5, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -3028,13 +3028,13 @@ ovy215_21a8dc4: ; 0x021A8DC4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r3, #0x30]
-	bl sub_0203A980
+	bl FreeGameProcManager
 	add r0, r4, #0
-	bl sub_0203AB10
+	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x65
 	bl sub_0203A2BC
 	mov r0, #0x65
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	mov r0, #1
 	pop {r4, pc}
 	thumb_func_end ovy215_21a8dc4
@@ -5780,7 +5780,7 @@ _021AA356:
 	bl GFL_HeapFree
 	mov r0, #0x66
 	str r4, [r5, #8]
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	ldr r0, [r5, #0x28]
 	pop {r3, r4, r5, pc}
 	.align 2, 0

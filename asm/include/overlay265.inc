@@ -4,8 +4,8 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02038BC8
-.public sub_0203AB10
-.public sub_0203A1D0
+.public GFL_ProcReleaseSubsystem
+.public GFL_HeapDelete
 .public GFL_VBlankTCBAdd
 .public GFL_VBlankTCBAdd
 .public sub_0204B7C8

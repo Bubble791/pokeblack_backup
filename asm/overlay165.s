@@ -55,7 +55,7 @@ ovy165_2199a50: ; 0x02199A50
 	add r4, r1, #0
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A1D0
+	bl GFL_HeapDelete
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
