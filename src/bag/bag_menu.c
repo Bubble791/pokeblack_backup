@@ -1630,274 +1630,117 @@ int BagMenu_CheckIsHmItem(u16 a1)
 }
 
 const u8 data_021A0FE6[8] = {0};
-
-
-asm void ovy142_219e924(BagView* a1)
+void ovy142_219e924(BagView *a1)
 {
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #0x50
-	add r5, r0, #0
-	bl BagMenu_GetPocketItemAmount
-	cmp r0, #0
-	bne _0219E948
-	add r0, r5, #0
-	bl BagMenu_LoadBagBackDefaultText
-	ldr r4, =0x00000794
-	ldr r0, [r5, r4]
-	bl sub_020484B4
-	add r0, r5, r4
-	bl ovy142_21a0134
-	b _0219E95C
-_0219E948:
-	ldr r0, =0x00000794
-	ldr r4, [r5, r0]
-	add r0, r4, #0
-	bl sub_020484B4
-	add r0, r4, #0
-	bl sub_020484D4
-	bl GFL_BGSysLoadScr
-_0219E95C:
-	ldr r4, =0x00000838
-	sub r0, r4, #4
-	ldr r1, [r5, r4]
-	ldr r0, [r5, r0]
-	cmp r1, r0
-	bne _0219E96A
-	b _0219EB30
-_0219E96A:
-	ldr r0, =0x0000054C
-	ldrh r0, [r5, r0]
-	bl Item_ArcHandleCreate
-	str r0, [sp, #0x14]
-	mov r0, #0
-	str r0, [sp, #0x18]
-	add r0, r4, #0
-	str r0, [sp, #0x1c]
-	sub r0, #0xb
-	str r0, [sp, #0x1c]
-	ldr r0, =0x0000054C
-	ldr r7, =0x00000664
-	str r0, [sp, #0x2c]
-	add r0, #0xd8
-	str r0, [sp, #0x2c]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x28]
-	sub r0, #0x2c
-	str r0, [sp, #0x28]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x24]
-	sub r0, #0x24
-	str r0, [sp, #0x24]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x30]
-	sub r0, #0x28
-	str r0, [sp, #0x30]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x4c]
-	sub r0, #0x28
-	str r0, [sp, #0x4c]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x48]
-	sub r0, #0x20
-	str r0, [sp, #0x48]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x44]
-	sub r0, #0x24
-	str r0, [sp, #0x44]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x40]
-	sub r0, #0x18
-	str r0, [sp, #0x40]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x3c]
-	add r0, #0xd8
-	str r0, [sp, #0x3c]
-	ldr r0, =0x0000054C
-	str r0, [sp, #0x38]
-	sub r0, #0x20
-	str r0, [sp, #0x38]
-	add r0, r4, #0
-	str r0, [sp, #0x34]
-	sub r0, #0xc
-	str r0, [sp, #0x34]
-	sub r0, r4, #4
-	str r0, [sp, #0x20]
-_0219E9DE:
-	ldr r0, [sp, #0x18]
-	lsl r0, r0, #2
-	add r4, r5, r0
-	mov r0, #9
-	str r0, [r4, r7]
-	ldr r0, [sp, #0x20]
-	ldr r1, [r5, r0]
-	ldr r0, [sp, #0x18]
-	add r1, r1, r0
-	bmi _0219EA02
-	add r0, r5, #0
-	bl BagMenu_GetBagItemDataBySlot
-	add r6, r0, #0
-	beq _0219EA02
-	ldrh r1, [r6]
-	cmp r1, #0
-	bne _0219EA04
-_0219EA02:
-	b _0219EB16
-_0219EA04:
-	ldr r2, =0x0000054C
-	ldr r0, [sp, #0x14]
-	ldrh r2, [r5, r2]
-	bl Item_ArcHandleReadFile
-	mov r1, #0xf
-	str r0, [sp, #0x10]
-	bl Item_GetParam
-	str r0, [sp, #0xc]
-	ldr r1, =0x021A0FE6
-	ldr r0, [sp, #0x18]
-	ldrb r0, [r1, r0]
-	cmp r0, #0
-	ldrh r0, [r6]
-	bne _0219EA34
-	bl BagMenu_CheckIsHmItem
-	cmp r0, #1
-	bne _0219EA30
-	ldr r0, =0x000018AD
-	b _0219EA42
-_0219EA30:
-	ldr r0, [sp, #0x1c]
-	b _0219EA42
-_0219EA34:
-	bl BagMenu_CheckIsHmItem
-	cmp r0, #1
-	bne _0219EA40
-	ldr r0, =0x000020ED
-	b _0219EA42
-_0219EA40:
-	ldr r0, =0x0000106D
-_0219EA42:
-	str r0, [sp, #8]
-	ldr r0, [sp, #0x2c]
-	mov r1, #0xd
-	ldr r0, [r4, r0]
-	bl BmpWin_BitmapFill
-	ldr r0, [sp, #0x28]
-	ldr r2, [sp, #0x24]
-	ldr r0, [r5, r0]
-	ldr r2, [r5, r2]
-	mov r1, #0x82
-	bl GFL_MsgDataLoadStrbuf
-	ldrh r0, [r6]
-	bl Item_GetTmHmMove
-	add r2, r0, #0
-	bne _0219EA72
-	ldrh r2, [r6]
-	add r0, r5, #0
-	mov r1, #0
-	bl BagMenu_LoadItemNameToStrbuf
-	b _0219EA7C
-_0219EA72:
-	ldr r0, [sp, #0x30]
-	mov r1, #0
-	ldr r0, [r5, r0]
-	bl LoadMoveNameToStrbuf
-_0219EA7C:
-	ldr r0, [sp, #0x4c]
-	ldr r1, [sp, #0x48]
-	ldr r2, [sp, #0x44]
-	ldr r0, [r5, r0]
-	ldr r1, [r5, r1]
-	ldr r2, [r5, r2]
-	bl GFL_WordSetFormatStrbuf
-	ldr r0, [sp, #0x40]
-	ldr r3, [sp, #0x38]
-	ldr r0, [r5, r0]
-	mov r1, #0
-	str r0, [sp]
-	ldr r0, [sp, #8]
-	mov r2, #0
-	str r0, [sp, #4]
-	ldr r0, [sp, #0x3c]
-	ldr r3, [r5, r3]
-	ldr r0, [r4, r0]
-	bl sub_02021D28
-	ldr r0, [sp, #0x34]
-	ldr r0, [r5, r0]
-	cmp r0, #1
-	bne _0219EAB0
-	b _0219EB0C
-_0219EAB0:
-	cmp r0, #3
-	bne _0219EAB6
-	b _0219EB0C
-_0219EAB6:
-	ldr r0, [sp, #0xc]
-	cmp r0, #4
-	bne _0219EAC0
-	mov r0, #3
-_0219EABE:
-	b _0219EB0E
-_0219EAC0:
-	cmp r0, #5
-	bne _0219EAC8
-	mov r0, #4
-	b _0219EABE
-_0219EAC8:
-	cmp r0, #1
-	bne _0219EAD0
-	mov r0, #5
-	b _0219EABE
-_0219EAD0:
-	ldrh r0, [r6]
-	bl Item_GetTmNo
-	cmp r0, #0xff
-	beq _0219EADE
-	mov r0, #7
-	b _0219EABE
-_0219EADE:
-	ldrh r0, [r6]
-	bl Item_GetTmHmIndex
-	cmp r0, #0xff
-	beq _0219EAEC
-	mov r0, #6
-	b _0219EABE
-_0219EAEC:
-	ldr r0, [sp, #0x10]
-	mov r1, #4
-	bl Item_GetParam
-	cmp r0, #0
-	beq _0219EB0C
-	ldrh r1, [r6]
-	add r0, r5, #0
-	bl ovy142_219c0e8
-	cmp r0, #1
-	bne _0219EB08
-	mov r0, #0
-	b _0219EABE
-_0219EB08:
-	mov r0, #1
-	b _0219EABE
-_0219EB0C:
-	mov r0, #8
-_0219EB0E:
-	str r0, [r4, r7]
-	ldr r0, [sp, #0x10]
-	bl GFL_HeapFree
-_0219EB16:
-	ldr r0, [sp, #0x18]
-	add r0, r0, #1
-	str r0, [sp, #0x18]
-	cmp r0, #8
-	bge _0219EB22
-	b _0219E9DE
-_0219EB22:
-	ldr r0, [sp, #0x14]
-	bl GFL_ArcToolFree
-	mov r0, #0x89
-	mov r1, #1
-	lsl r0, r0, #4
-	strh r1, [r5, r0]
-_0219EB30:
-	add sp, #0x50
-	pop {r3, r4, r5, r6, r7, pc}
+    ItemTable *v7; // r0
+    int v10;       // r0
+    int v2;        // r4
+    int i;
+    void *file;
+    void *v16;
+    int v15;
+    int v11;
+    int at;
+    
+    if (!BagMenu_GetPocketItemAmount(a1))
+    {
+        BagMenu_LoadBagBackDefaultText(a1);
+        sub_020484B4(a1->unk794.winData);
+        ovy142_21a0134(&a1->unk794);
+    }
+    else
+    {
+        v2 = a1->unk794.winData;
+        sub_020484B4(v2);
+        GFL_BGSysLoadScr(sub_020484D4(v2));
+    }
+
+    if (a1->unk838 != a1->unk834)
+    {
+        file = Item_ArcHandleCreate(a1->heapId);
+        for (i = 0; i < 8; ++i) 
+        {
+            a1->unk664[i] = 9; 
+            if (a1->unk834 + i >= 0)
+            {
+                int slot = a1->unk834 + i;
+                v7 = BagMenu_GetBagItemDataBySlot(a1, slot);
+                if (v7 && v7->itemid)
+                {
+                    v16 = Item_ArcHandleReadFile(file, v7->itemid, a1->heapId);
+                    v15 = Item_GetParam(v16, 15);
+                    at = data_021A0FE6[i];
+                    if (!at)
+                        v10 = BagMenu_CheckIsHmItem(v7->itemid) == 1 ? 6317 : 2093;
+                    else
+                        v10 = BagMenu_CheckIsHmItem(v7->itemid) == 1 ? 8429 : 4205;
+                    BmpWin_BitmapFill(a1->unk624[i], 13);
+                    GFL_MsgDataLoadStrbuf(a1->msgData, 130, a1->stringBuff1);
+                    v11 = Item_GetTmHmMove(v7->itemid);
+                    if (!v11)
+                        BagMenu_LoadItemNameToStrbuf(a1, 0, v7->itemid);
+                    else
+                        LoadMoveNameToStrbuf(a1->wordSetSystem, 0, v11);
+                    GFL_WordSetFormatStrbuf(a1->wordSetSystem, a1->stringBuff2, a1->stringBuff1);
+                    sub_02021D28(a1->unk624[i], 0, 0, a1->stringBuff2, a1->font, v10);
+
+                    if (a1->itemPocket == 1)
+                    {
+                        a1->unk664[i] = 8;
+                    }
+                    else if (a1->itemPocket == 3)
+                    {
+                        a1->unk664[i] = 8;
+                    }
+                    else if (v15 == 4)
+                    {
+                        a1->unk664[i] = 3;
+                    }
+                    else if (v15 == 5)
+                    {
+                        a1->unk664[i] = 4;
+                    }
+                    else if (v15 == 1)
+                    {
+                        a1->unk664[i] = 5;
+                    }
+                    else
+                    {
+                        if (Item_GetTmNo(v7->itemid) != 255)
+                        {
+                            a1->unk664[i] = 7;
+                        }
+                        else
+                        {
+                            if (Item_GetTmHmIndex(v7->itemid) != 255)
+                            {
+                                a1->unk664[i] = 6;
+                            }
+                            else
+                            {
+                                if (Item_GetParam(v16, 4))
+                                {
+                                    if (ovy142_219c0e8(a1, v7->itemid) == 1)
+                                        a1->unk664[i] = 0;
+                                    else
+                                        a1->unk664[i] = 1;
+                                }
+                                else
+                                {
+                                    a1->unk664[i] = 8;
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    GFL_HeapFree(v16);
+                }
+            }
+        }
+        GFL_ArcToolFree(file);
+        a1->unk890 = 1;
+    }
 }
 
 extern void Oam_GetSpritePosData(int, u16*, int);
@@ -3317,3 +3160,4 @@ void ovy142_21a071c(ITEM_UNKNOW_DATA* a1, u16 a2)
         return;
     }
 }
+

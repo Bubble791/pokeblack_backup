@@ -109,11 +109,11 @@ void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId)
     LoadBagPocketNameToStrbuf(bagView->wordSetSystem, bufId, msgId);
 }
 
-void ovy142_21999d8(BagView *bagView, int bufId, int msgId, int name1, int name2);
+void BagMenu_LoadItemTextWithAmount(BagView *bagView, int bufId, int msgId, int name1, int name2);
 
-void ovy142_21999d8(BagView *bagView, int bufId, int msgId, int name1, int name2)
+void BagMenu_LoadItemTextWithAmount(BagView *bagView, int bufId, int msgId, int isMult, int name2)
 {
-    sub_020244E0(bagView->wordSetSystem, bufId, msgId, name1, name2);
+    sub_020244E0(bagView->wordSetSystem, bufId, msgId, isMult, name2);
 }
 
 void BagMenu_SwitchItemPostion(BagView *bagView, int pockId1, int pockId2);
@@ -1368,7 +1368,7 @@ void ovy142_219ad30(BagView *bagView)
             GFL_SndSEPlay(0x647);
             BagView_DeletItem(bagView, bagView->selectAmount);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x36, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, ((int)bagView->selectAmount > 1), 0);
+            BagMenu_LoadItemTextWithAmount(bagView, 0, bagView->selectItem, ((int)bagView->selectAmount > 1), 0);
             StringSetNumber(bagView->wordSetSystem, 1, bagView->selectAmount, 3, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2,
                                     bagView->stringBuff1);
@@ -1408,7 +1408,7 @@ void BagMenu_ItemToss(BagView *bagView)
     bagView->selectAmount = 1;
     ovy142_219b438(bagView, 1);
     GFL_MsgDataLoadStrbuf(bagView->msgData, 0x35, bagView->stringBuff1);
-    ovy142_21999d8(bagView, 0, bagView->selectItem, 1, 0);
+    BagMenu_LoadItemTextWithAmount(bagView, 0, bagView->selectItem, 1, 0);
     GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
     sub_0219F760(bagView);
     BagMenu_SetRunFunc(bagView, BagMenu_SelectAmountItemToss);
@@ -1448,7 +1448,7 @@ void BagMenu_SelectAmountItemToss(BagView *bagView)
             GFL_SndSEPlay(0x54C);
             ovy142_219b46c(bagView);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 55, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
+            BagMenu_LoadItemTextWithAmount(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
             StringSetNumber(bagView->wordSetSystem, 1, bagView->selectAmount, 3, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
             sub_0219F760(bagView);
@@ -1499,6 +1499,7 @@ void BagMenu_TrySellItem(BagView *bagView)
         BagMenu_PopUpOptionMenuSetting(bagView, 0);
         uVar4 = BagMenu_GetSelectSlot(bagView);
         ItemTable* iVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, uVar4);
+        
         if (iVar2->num == 1)
         {
             BagMenu_SetRunFunc(bagView, ovy142_219b12c);
@@ -1597,7 +1598,7 @@ void BagMenu_PrintSellItemYesNo(BagView *bagView)
             GFL_SndSEPlay(0x655);
             BagMenu_PrintMoneyString(bagView);
             GFL_MsgDataLoadStrbuf(bagView->msgData, 0x50, bagView->stringBuff1);
-            ovy142_21999d8(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
+            BagMenu_LoadItemTextWithAmount(bagView, 0, bagView->selectItem, 1 < bagView->selectAmount, 0);
 
             StringSetNumber(bagView->wordSetSystem, 1, price, 7, 0, 1);
             GFL_WordSetFormatStrbuf(bagView->wordSetSystem, bagView->stringBuff2, bagView->stringBuff1);
@@ -1878,14 +1879,14 @@ void BagMenu_MoveItemToFreeSpace(BagView *bagView)
     if (iVar2 == 0)
     {
         GFL_MsgDataLoadStrbuf(bagView->msgData, 149, bagView->stringBuff1);
-        ovy142_21999d8(bagView, 1, bagView->selectItem, bVar6, 0);
+        BagMenu_LoadItemTextWithAmount(bagView, 1, bagView->selectItem, bVar6, 0);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, 5);
         ovy142_21a0578(&bagView->unk8C8, bagView->selectItem, (short)uVar3);
     }
     else
     {
         GFL_MsgDataLoadStrbuf(bagView->msgData, 150, bagView->stringBuff1);
-        ovy142_21999d8(bagView, 1, bagView->selectItem, bVar6, 0);
+        BagMenu_LoadItemTextWithAmount(bagView, 1, bagView->selectItem, bVar6, 0);
         BagMenu_LoadBagPocketNameToStrbuf(bagView, 0, uVar3);
         uVar1 = BagMenu_GetSelectSlot(bagView);
         ovy142_21a050c(&bagView->unk8C8, uVar1, 1);

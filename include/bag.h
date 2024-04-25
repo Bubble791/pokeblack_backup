@@ -540,7 +540,7 @@ extern void ovy142_21a0134(BagBmpWinData*);
 extern int sub_02034AA4(u16);
 extern void sub_02017644(void*, int, int);
 extern int ovy142_219c0e8(BagView*, int);
-extern void sub_02021D28(u8, int, int, int, int, int);
+extern void sub_02021D28(int, int, int, int, int, int);
 
 extern int ovy142_219c0b4(BagView*);
 extern void ovy142_219f0bc(BagView*, u32*, int);
