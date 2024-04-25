@@ -1651,7 +1651,9 @@ Overlay OVY_298
 }
 Overlay OVY_299
 {
-    After main
+    Address 0x219FBC0
+    
+    Object src/pokedex/pokedex.o
     Object asm/overlay299.o
 }
 Overlay OVY_300
