@@ -2672,8 +2672,11 @@ _0219E458: .word 0x021A1844
 _0219E45C: .word 0x021A1848
 _0219E460: .word 0x00000547
 	thumb_func_end ovy162_219e360
-_0219E464:
+
+thumb_func_start ovy162_0219E464
+ovy162_0219E464:
 	.byte 0x01, 0x4B, 0x01, 0x21, 0x18, 0x47, 0xC0, 0x46, 0xA9, 0xFF, 0x19, 0x02
+thumb_func_end ovy162_0219E464
 
 	thumb_func_start ovy162_219e470
 ovy162_219e470: ; 0x0219E470
@@ -6636,7 +6639,7 @@ ovy162_21a04a8: ; 0x021A04A8
 	cmp r0, #0
 	beq _021A04D4
 	add r0, r4, #0
-	bl sub_021BEE24
+	bl ovy331_21bee24
 _021A04D4:
 	add r0, r5, #0
 	bl sub_021BEC1C
@@ -6670,7 +6673,7 @@ ovy162_21a04e8: ; 0x021A04E8
 	beq _021A051E
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_021BED78
+	bl ovy331_21bed78
 _021A051E:
 	add r0, r4, #0
 	bl sub_021BEE68
@@ -6678,7 +6681,7 @@ _021A051E:
 	beq _021A0530
 	add r0, r4, #0
 	add r1, r5, #0
-	bl sub_021BEE88
+	bl ovy331_21bee88
 _021A0530:
 	add r0, r4, #0
 	bl sub_021BEC1C
@@ -7922,7 +7925,7 @@ ovy162_21a0edc: ; 0x021A0EDC
 	add r0, r6, #0
 	bl sub_0203CE0C
 	mov r0, #0x81
-	bl sub_021BEDE0
+	bl ovy331_21bede0
 	add r0, r6, #0
 	bl sub_0203CDC8
 	mov r0, #0x81
@@ -8572,6 +8575,8 @@ ovy162_21a144c: ; 0x021A144C
 _021A1466:
 	pop {r4, pc}
 	thumb_func_end ovy162_21a144c
+
+
 _021A1468:
 	.byte 0x03, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00
 	.byte 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x50, 0x15, 0x1A, 0x02, 0x04, 0x00, 0x00, 0x00

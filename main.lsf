@@ -963,7 +963,7 @@ Overlay OVY_161
 }
 Overlay OVY_162
 {
-    After main
+    Address 0x219CE80
     Object asm/overlay162.o
 }
 Overlay OVY_163
@@ -1809,7 +1809,7 @@ Overlay OVY_330
 }
 Overlay OVY_331
 {
-    After main
+    Address 0x21bea20
     Object asm/overlay331.o
 }
 Overlay OVY_332

@@ -718,7 +718,7 @@
 .public sub_0203CE0C
 .public sub_021BEA20
 .public sub_021BEE68
-.public sub_021BEE24
+.public ovy331_21bee24
 .public sub_021BEC1C
 .public sub_0203CDC8
 .public sub_02007460
@@ -726,9 +726,9 @@
 .public sub_0203CE0C
 .public sub_021BEA20
 .public sub_021BED54
-.public sub_021BED78
+.public ovy331_21bed78
 .public sub_021BEE68
-.public sub_021BEE88
+.public ovy331_21bee88
 .public sub_021BEC1C
 .public sub_0203CDC8
 .public GFL_HeapCreateChild
@@ -860,7 +860,7 @@
 .public sub_020056B0
 .public sub_020072FC
 .public sub_0203CE0C
-.public sub_021BEDE0
+.public ovy331_21bede0
 .public sub_0203CDC8
 .public sub_02011558
 .public sub_020074AC
