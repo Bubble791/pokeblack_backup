@@ -6,7 +6,7 @@
 .public MI_CpuFill8
 .public sub_0219E7D4
 .public sub_02199CB8
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0203D554
 .public sub_0219D620
 .public sub_0219CFB4
@@ -78,7 +78,7 @@
 .public Oam_EnableOamAnim
 .public sub_020111A0
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_ArcSysCreateFileHandle
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCLRFile
@@ -273,8 +273,8 @@
 .public sub_0203DF20
 .public sub_0203DA2C
 .public sub_020223E0
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0219D42C
 .public sub_02024EEC
 .public sub_020484B4
@@ -346,7 +346,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

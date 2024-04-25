@@ -78,7 +78,7 @@ ovy328_219ce80: ; 0x0219CE80
 	ldr r2, [r5, #0x3c]
 	ldr r3, [r5, #0x40]
 	mov r0, #1
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r4, #0xeb
 	str r0, [r5, r4]
 	add r0, r5, #0
@@ -1407,12 +1407,12 @@ _0219D99E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x24]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0219D99E
 	ldr r0, [r5, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x10]
 	bl sub_0204BCD0
 	ldr r0, [r5, #0x14]

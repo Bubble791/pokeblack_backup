@@ -3546,14 +3546,14 @@
 .public GFL_MsgDataFree
 .public sub_0218799C
 .public sub_02187998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0202E1DC
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0202DA48
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public sub_021804F0
 .public sub_0219A834

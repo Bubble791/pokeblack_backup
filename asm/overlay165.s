@@ -345,7 +345,7 @@ _02199D1C:
 	ldr r3, [r5, r3]
 	mov r0, #0
 	mov r1, #1
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	mov r1, #0x97
 	lsl r1, r1, #2
 	str r0, [r5, r1]
@@ -1616,21 +1616,21 @@ ovy165_219a7a4: ; 0x0219A7A4
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	sub r0, #8
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r4, #0xc
 	ldr r0, [r5, r4]
 	bl sub_0204BF98
@@ -9650,11 +9650,11 @@ ovy165_219e838: ; 0x0219E838
 	ldr r0, [r4, #0x20]
 	bl BmpWin_Free
 	ldr r0, [r4, #0x30]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x34]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x38]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x24]
 	bl sub_0204BECC
 	ldr r0, [r4, #0x28]
@@ -10980,7 +10980,7 @@ _0219F278:
 	ldrh r0, [r4, #6]
 	strh r0, [r4, #8]
 	ldr r0, [r4, #0x30]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x2c]
 	bl sub_0204B98C
 	ldr r0, [r4, #0x20]
@@ -12301,14 +12301,14 @@ ovy165_219fc40: ; 0x0219FC40
 	push {r4, lr}
 	add r4, r1, #0
 	ldr r0, [r4, #0x74]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	bne _0219FC52
 	mov r0, #0x19
 	pop {r4, pc}
 _0219FC52:
 	ldr r0, [r4, #0x74]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	lsl r0, r0, #1
 	add r0, r4, r0
 	ldrh r0, [r0, #2]
@@ -15408,9 +15408,9 @@ ovy165_21a14c0: ; 0x021A14C0
 	ldr r0, [r4, #8]
 	bl BmpWin_Free
 	ldr r0, [r4, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x10]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0xc]
 	bl sub_0204B98C
 	add r0, r4, #0

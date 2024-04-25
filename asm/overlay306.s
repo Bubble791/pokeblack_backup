@@ -2783,7 +2783,7 @@ ovy306_219e484: ; 0x0219E484
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl sub_02199A44
 	pop {r4, pc}

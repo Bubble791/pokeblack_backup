@@ -1185,7 +1185,7 @@ _021F4D3A:
 	add r0, r5, r0
 	add r0, #0x88
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021F4D3A

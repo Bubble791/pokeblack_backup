@@ -21,6 +21,9 @@ typedef struct {
     int z;
 } Vec32;
 
+#define TEXT_COLOR(back_color, font_color, shadow_color) (back_color | shadow_color << 5 | font_color << 10)
+
+
 #ifndef __MWERKS__
 #define NONMATCHING
 #endif //__MWERKS__

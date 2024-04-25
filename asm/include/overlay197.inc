@@ -85,7 +85,7 @@
 .public sub_0204C124
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -348,7 +348,7 @@
 .public sub_0204C318
 .public sub_021B5B3C
 .public sub_02044C98
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -740,9 +740,9 @@
 .public sub_02044C98
 .public sub_02045264
 .public sub_02045264
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
@@ -790,7 +790,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -955,11 +955,11 @@
 .public sub_0204C244
 .public sub_0204C318
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0

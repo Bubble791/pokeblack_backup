@@ -4148,7 +4148,7 @@ _021EC774:
 	ldr r0, [r6, #0x6c]
 	cmp r0, #0
 	beq _021EC784
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r6, #0x6c]
 _021EC784:
 	add r4, r4, #1
@@ -4163,7 +4163,7 @@ _021EC78E:
 	ldr r0, [r6, #0x3c]
 	cmp r0, #0
 	beq _021EC7A0
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r6, #0x3c]
 _021EC7A0:
 	add r4, r4, #1
@@ -5943,7 +5943,7 @@ _021ED584:
 	ldr r0, [r5, #0x3c]
 	cmp r0, #0
 	beq _021ED596
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r5, #0x3c]
 _021ED596:
 	add r4, r4, #1

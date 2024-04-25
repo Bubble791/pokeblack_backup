@@ -14,7 +14,7 @@
 .public sub_0203AB10
 .public sub_0203A1D0
 .public sub_02021998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204898C
 .public sub_0204898C
 .public GFL_StrBufFree
@@ -127,8 +127,8 @@
 .public sub_020223BC
 .public GFL_SndSEPlay
 .public sub_0202D974
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DB70
 .public sub_0202DA54
 .public sub_0219AC10
@@ -328,7 +328,7 @@
 .public sub_0204C028
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public sub_0204B758
 .public GFL_ArcToolFree

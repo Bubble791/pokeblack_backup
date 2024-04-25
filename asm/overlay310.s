@@ -2804,10 +2804,10 @@ _0219E3A4: .word 0x021A6914
 	thumb_func_start sub_0219E3A8
 sub_0219E3A8: ; 0x0219E3A8
 	ldr r0, [r0, #0x7c]
-	ldr r3, _0219E3B0 ; =sub_0204C108
+	ldr r3, _0219E3B0 ; =Oam_RemoveOam
 	bx r3
 	nop
-_0219E3B0: .word sub_0204C108
+_0219E3B0: .word Oam_RemoveOam
 	thumb_func_end sub_0219E3A8
 
 	thumb_func_start sub_0219E3B4
@@ -7820,7 +7820,7 @@ _021A09D2:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #3
 	blt _021A09D2
@@ -14655,7 +14655,7 @@ _021A3EB6:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021A3EB6
@@ -15758,10 +15758,10 @@ _021A4640: .word 0x021A7778
 	thumb_func_start sub_021A4644
 sub_021A4644: ; 0x021A4644
 	ldr r0, [r0, #0x24]
-	ldr r3, _021A464C ; =sub_0204C108
+	ldr r3, _021A464C ; =Oam_RemoveOam
 	bx r3
 	nop
-_021A464C: .word sub_0204C108
+_021A464C: .word Oam_RemoveOam
 	thumb_func_end sub_021A4644
 
 	thumb_func_start sub_021A4650
@@ -19378,7 +19378,7 @@ _021A6034:
 	mul r0, r6
 	add r0, r5, r0
 	ldr r0, [r0, #0x3c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #0x1a
 	blt _021A6034
@@ -19906,7 +19906,7 @@ _021A63BA:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x10]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021A63BA

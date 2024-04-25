@@ -129,7 +129,7 @@
 .public sub_0219F8A8
 .public sub_0204C0A4
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -274,7 +274,7 @@
 .public sub_0219F8A8
 .public Oam_CreateSprite
 .public Oam_EnableOamAnim
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -391,7 +391,7 @@
 .public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204898C
 .public sub_0202E1F0
 .public GFL_StrBufFree
@@ -400,7 +400,7 @@
 .public sub_0204898C
 .public sub_0202D974
 .public GFL_StrBufFree
-.public sub_0202DC00
+.public TaskAppListMenu_GetChoosenIndex
 .public GFL_ArcSysCreateFileHandle
 .public sub_0204B37C
 .public MI_CpuCopy8
@@ -550,7 +550,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

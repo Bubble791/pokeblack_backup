@@ -1324,9 +1324,9 @@ ovy173_219d814: ; 0x0219D814
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x18]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy173_219d814
@@ -4114,7 +4114,7 @@ ovy173_219ed90: ; 0x0219ED90
 	ldr r0, [r5, r4]
 	cmp r0, #0
 	beq _0219EDC2
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	bl sub_0204B98C
@@ -5252,7 +5252,7 @@ _0219F6FA:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _0219F712
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, r7]
 	bl sub_0204B98C
 _0219F712:

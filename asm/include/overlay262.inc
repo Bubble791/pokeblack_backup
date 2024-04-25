@@ -315,8 +315,8 @@
 .public sub_02021034
 .public sub_0204C378
 .public Oam_CreateSprite
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
@@ -331,7 +331,7 @@
 .public MI_CpuFill8
 .public Oam_CreateSprite
 .public sub_0204C378
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
@@ -346,7 +346,7 @@
 .public sub_021C2A98
 .public sub_021C2A98
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_02034168
@@ -428,7 +428,7 @@
 .public MI_CpuFill8
 .public Oam_CreateSprite
 .public sub_0204C378
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0
@@ -438,7 +438,7 @@
 .public sub_021C2A98
 .public sub_021C2A98
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public MI_CpuFill8
@@ -452,8 +452,8 @@
 .public sub_021C2A98
 .public Oam_CreateSprite
 .public Oam_EnableOamAnim
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public GFL_SndSEPlay
 .public sub_02006268
@@ -537,7 +537,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_020484B4
 .public BmpWin_Free
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public sub_0204BCD0

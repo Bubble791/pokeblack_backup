@@ -91,7 +91,7 @@
 .public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C244
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuCopy8
 .public sub_02043ED4
 .public MI_CpuFill8
@@ -1165,7 +1165,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C318
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -1282,7 +1282,7 @@
 .public sub_0204C378
 .public sub_0204C124
 .public sub_0204C318
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

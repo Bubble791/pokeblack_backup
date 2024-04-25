@@ -235,7 +235,7 @@
 .public sub_0204BE64
 .public Oam_CreateSprite
 .public sub_0204BF1C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public sub_02033E24
 .public sub_0201CDD8

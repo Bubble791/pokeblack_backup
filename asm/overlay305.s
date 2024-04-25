@@ -1374,7 +1374,7 @@ _0219D900:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0xc]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldrb r0, [r5, #0xb]
 	add r4, r4, #1
 	cmp r4, r0
@@ -2220,7 +2220,7 @@ _0219DF0A:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x18]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, r5, #1
 	cmp r5, #3
 	blt _0219DF0A
@@ -2229,7 +2229,7 @@ _0219DF1C:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x10]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, r5, #1
 	cmp r5, #2
 	blt _0219DF1C

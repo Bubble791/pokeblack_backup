@@ -4170,7 +4170,7 @@ _0219F13A:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, r5, #1
 	cmp r5, #9
 	blo _0219F13A

@@ -201,7 +201,7 @@
 .public sub_0202B2A0
 .public sub_0202B030
 .public GFL_BitmapFree
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public GFL_SndSEPlay
 .public Oam_GetSpritePosData
@@ -440,7 +440,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public Oam_EnableOamAnim
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_BitmapFree
 .public sub_020484B4
 .public BmpWin_Free
@@ -541,11 +541,11 @@
 .public Oam_CreateSprite
 .public sub_0204C378
 .public sub_0204C318
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -563,7 +563,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C318
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_021F4528
 .public GFL_HeapFree
 .public sub_021F4564
@@ -759,7 +759,7 @@
 .public sub_0204C288
 .public sub_0204C318
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public sub_0204C1A8
 .public sub_0204C288

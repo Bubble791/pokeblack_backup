@@ -217,7 +217,7 @@
 .public sub_0219D328
 .public GFL_HeapAllocate
 .public sub_021A2FB4
-.public sub_0204C108
+.public Oam_RemoveOam
 .public BmpWin_Free
 .public BmpWin_Free
 .public BmpWin_Free
@@ -352,8 +352,8 @@
 .public GFL_TCBRemove
 .public GFL_TCBRemove
 .public sub_0202654C
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public GFL_MsgDataFree
 .public GFL_StrBufFree
 .public BmpWin_Free
@@ -478,9 +478,9 @@
 .public GFL_MsgSysLoadData
 .public sub_0219E524
 .public sub_0219E52C
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_BGSysLoadNCLRDefault
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -555,12 +555,12 @@
 .public GFL_ArcToolFree
 .public sub_021A09D8
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BE64
 .public Oam_SetOamAnimIndex
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public sub_0202D810
@@ -830,8 +830,8 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public sub_021A2FB4
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public GFL_StrBufFree
 .public BmpWin_Free
 .public BmpWin_Free
@@ -967,7 +967,7 @@
 .public Oam_EnableOamAnim
 .public sub_021A42C0
 .public sub_021A4FF8
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_02042BA8
 .public sub_02021C44
 .public sub_02199A44
@@ -1094,8 +1094,8 @@
 .public sub_0203D564
 .public sub_02029884
 .public sub_021A442C
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202A234
 .public sub_021A4424
 .public sub_0203D554

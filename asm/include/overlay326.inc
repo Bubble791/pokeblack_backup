@@ -71,9 +71,9 @@
 .public GFL_ArcToolFree
 .public sub_0219E344
 .public sub_02042BA8
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -357,7 +357,7 @@
 .public sub_021A287C
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_SndSEPlay
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
@@ -420,8 +420,8 @@
 .public GFL_ArcToolFree
 .public sub_021A2C0C
 .public sub_02042BA8
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -442,8 +442,8 @@
 .public GFL_StrBufFree
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_020223CC
 .public GFL_StrBufFree
 .public sub_0204898C
@@ -664,7 +664,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

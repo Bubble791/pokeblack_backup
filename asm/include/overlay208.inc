@@ -12,9 +12,9 @@
 .public sub_0203D564
 .public sub_0200AE14
 .public sub_02005D8C
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -760,9 +760,9 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_EnableOamAnim
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204588C
 .public sub_0204C468
 .public sub_0204C318

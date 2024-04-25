@@ -1235,7 +1235,7 @@ ovy332_21bf82c: ; 0x021BF82C
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021BF842
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021BF842:
@@ -18327,7 +18327,7 @@ ovy332_21c7ad8: ; 0x021C7AD8
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _021C7AE6
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C7AE6:
 	ldr r0, [r4, #0x10]
 	bl sub_0204BCD0
@@ -20076,7 +20076,7 @@ ovy332_21c8810: ; 0x021C8810
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4]
 	bl sub_0204BCD0
 	ldr r0, [r4, #4]

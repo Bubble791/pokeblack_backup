@@ -40604,7 +40604,7 @@ _0204BFAA:
 	cmp r0, #0
 	beq _0204BFBC
 	add r0, r2, r1
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0204BFBC:
 	ldrh r0, [r5, #0xc]
 	add r4, r4, #1
@@ -40798,8 +40798,8 @@ sub_0204C0A4: ; 0x0204C0A4
 _0204C104: .word 0x0214193C
 	thumb_func_end sub_0204C0A4
 
-	thumb_func_start sub_0204C108
-sub_0204C108: ; 0x0204C108
+	thumb_func_start Oam_RemoveOam
+Oam_RemoveOam: ; 0x0204C108
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
@@ -40811,7 +40811,7 @@ sub_0204C108: ; 0x0204C108
 	add r0, r4, #0
 	bl sub_0204D040
 	pop {r4, pc}
-	thumb_func_end sub_0204C108
+	thumb_func_end Oam_RemoveOam
 
 	thumb_func_start sub_0204C124
 sub_0204C124: ; 0x0204C124

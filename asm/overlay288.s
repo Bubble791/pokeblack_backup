@@ -4932,7 +4932,7 @@ _021F6A16:
 	add r0, r5, r0
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021F6A16
@@ -4942,7 +4942,7 @@ _021F6A2A:
 	add r0, r5, r0
 	add r0, #0xac
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021F6A2A
@@ -4952,7 +4952,7 @@ _021F6A3E:
 	add r0, r5, r0
 	add r0, #0xc4
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021F6A3E
@@ -4962,7 +4962,7 @@ _021F6A52:
 	add r0, r5, r0
 	add r0, #0xd4
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #5
 	blt _021F6A52

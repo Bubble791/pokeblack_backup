@@ -30909,7 +30909,7 @@ _0218E12E:
 	ldr r0, [r5, r7]
 	cmp r0, #0
 	beq _0218E140
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r5, r7]
 _0218E140:
@@ -31454,7 +31454,7 @@ _0218E576:
 	ldr r0, [r6, r7]
 	cmp r0, #0
 	beq _0218E588
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r6, r7]
 _0218E588:
@@ -31470,7 +31470,7 @@ _0218E594:
 	ldr r0, [r6, r7]
 	cmp r0, #0
 	beq _0218E5A6
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r6, r7]
 _0218E5A6:
@@ -31876,11 +31876,11 @@ ovy36_218e8cc: ; 0x0218E8CC
 	add r4, r0, #0
 	lsl r5, r5, #6
 	ldr r0, [r4, r5]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0218E960
 	ldr r0, [r4, r5]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	cmp r0, #0
 	bne _0218E92E
 	ldr r0, [r4, #0x30]
@@ -32082,7 +32082,7 @@ ovy36_218e9a8: ; 0x0218E9A8
 	ldr r3, [r4, r3]
 	mov r0, #5
 	mov r1, #9
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r1, r5, #0
 	sub r1, #0x2c
 	str r0, [r4, r1]
@@ -56622,7 +56622,7 @@ ovy36_219a23c: ; 0x0219A23C
 	ldr r0, [r4, #4]
 	cmp r0, #0
 	beq _0219A24E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, #4]
 _0219A24E:
@@ -68881,11 +68881,11 @@ _0219FB74:
 	add r0, r4, #0
 	sub r0, #8
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	sub r0, #0xc
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	sub r0, #0x10
 	ldr r0, [r5, r0]
@@ -70607,7 +70607,7 @@ ovy36_21a0938: ; 0x021A0938
 	ldr r0, [r4, #0x18]
 	cmp r0, #0
 	beq _021A095E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x10]
 	bl sub_0204BE64
 	ldr r0, [r4, #0xc]
@@ -114682,7 +114682,7 @@ _021B5F2C:
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x3c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #0x15
 	blt _021B5F2C
@@ -115970,7 +115970,7 @@ ovy36_21b68bc: ; 0x021B68BC
 	ldr r2, [r2, #8]
 	blx r2
 	ldr r0, [r4, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -116185,7 +116185,7 @@ ovy36_21b6a3c: ; 0x021B6A3C
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6A56
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	add r0, #0xb8
@@ -116709,7 +116709,7 @@ ovy36_21b6e44: ; 0x021B6E44
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B6E5C
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	add r4, #0x88
 	str r0, [r4]
@@ -133813,7 +133813,7 @@ _021BF01E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x58]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #3
 	blt _021BF01E
@@ -143054,7 +143054,7 @@ _021C3612:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x1c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, r6
 	blt _021C3612
@@ -143071,7 +143071,7 @@ _021C3634:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x34]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, r6
 	blt _021C3634
@@ -143373,7 +143373,7 @@ _021C3876:
 	ldr r0, [r0, #0x4c]
 	cmp r0, #0
 	beq _021C3884
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C3884:
 	add r4, r4, #1
 	cmp r4, r6
@@ -143393,7 +143393,7 @@ _021C389C:
 	ldr r0, [r0, #0x64]
 	cmp r0, #0
 	beq _021C38AA
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C38AA:
 	add r4, r4, #1
 	cmp r4, r6
@@ -151500,7 +151500,7 @@ ovy36_21c7624: ; 0x021C7624
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0xc]
 	bl sub_0204B98C
 	ldr r0, [r4, #0x10]

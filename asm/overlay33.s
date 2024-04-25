@@ -4736,7 +4736,7 @@ ovy33_21790a0: ; 0x021790A0
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x3c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x40]
 	bl sub_0204B98C
 	ldr r0, [r4, #0x44]

@@ -275,7 +275,7 @@
 .public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C378
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204BCD0
 .public sub_0204BF98
@@ -350,7 +350,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

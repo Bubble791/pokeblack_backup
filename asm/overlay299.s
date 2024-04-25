@@ -3814,7 +3814,7 @@ ovy299_21a1a98: ; 0x021A1A98
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021A1AAE
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021A1AAE:

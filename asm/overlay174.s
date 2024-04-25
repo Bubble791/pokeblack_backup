@@ -559,7 +559,7 @@ ovy174_219d310: ; 0x0219D310
 	mov r0, #0x33
 	lsl r0, r0, #6
 	ldr r0, [r4, r0]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219D330
 	add r0, r4, #0
@@ -1178,11 +1178,11 @@ ovy174_219d814: ; 0x0219D814
 	add r5, r0, #0
 	lsl r6, r6, #6
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219D864
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	ldr r0, [r5, r6]
 	bl sub_0202DA54
@@ -1325,11 +1325,11 @@ ovy174_219d944: ; 0x0219D944
 	cmp r1, #0
 	beq _0219D97C
 	add r0, r1, #0
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219D984
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	ldr r0, [r5, r4]
 	bl sub_0202DA54
 	mov r0, #0
@@ -2204,7 +2204,7 @@ ovy174_219e098: ; 0x0219E098
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219E0B0
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _0219E0B0:
@@ -2544,7 +2544,7 @@ _0219E2BE:
 	ldr r2, [r5, r2]
 	ldr r3, [r5, r6]
 	mov r0, #6
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r6, #0xc
 	str r0, [r5, r6]
 	add r0, r5, #0
@@ -3010,11 +3010,11 @@ ovy174_219e768: ; 0x0219E768
 	add r5, r0, #0
 	lsl r6, r6, #6
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219E7B8
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	ldr r0, [r5, r6]
 	bl sub_0202DA54
@@ -3053,11 +3053,11 @@ ovy174_219e7c4: ; 0x0219E7C4
 	add r4, r0, #0
 	lsl r5, r5, #6
 	ldr r0, [r4, r5]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219E7F4
 	ldr r0, [r4, r5]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	ldr r0, [r4, r5]
 	bl sub_0202DA54
 	mov r0, #0
@@ -3088,11 +3088,11 @@ _0219E812:
 	mov r5, #0x33
 	lsl r5, r5, #6
 	ldr r0, [r4, r5]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219E83E
 	ldr r0, [r4, r5]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	ldr r0, [r4, r5]
 	bl sub_0202DA54
 	mov r0, #0
@@ -3166,11 +3166,11 @@ ovy174_219e8a8: ; 0x0219E8A8
 	add r5, r0, #0
 	lsl r6, r6, #6
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219E8F4
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	ldr r0, [r5, r6]
 	bl sub_0202DA54
@@ -3364,11 +3364,11 @@ ovy174_219ea48: ; 0x0219EA48
 	add r5, r0, #0
 	lsl r6, r6, #6
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219EA98
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	ldr r0, [r5, r6]
 	bl sub_0202DA54
@@ -3762,11 +3762,11 @@ _0219ED9A:
 	mov r4, #0x33
 	lsl r4, r4, #6
 	ldr r0, [r5, r4]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219EDEA
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	ldr r0, [r5, r4]
 	bl sub_0202DA54

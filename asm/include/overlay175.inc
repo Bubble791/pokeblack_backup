@@ -136,7 +136,7 @@
 .public sub_0200B11C
 .public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204588C
 .public GFL_MsgSysLoadData
 .public MI_CpuFill8
@@ -173,6 +173,6 @@
 .public sub_0204BCD0
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 
 .public sub_0203A978

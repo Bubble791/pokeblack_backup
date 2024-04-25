@@ -202,7 +202,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_EnableOamAnim
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -246,14 +246,14 @@
 .public sub_0204C124
 .public Oam_EnableOamAnim
 .public sub_02045708
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0205FA10
 .public sub_0205FA10
 .public sub_0203D554
 .public sub_0219E948
 .public sub_0202E41C
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -356,7 +356,7 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8
 .public sub_0204AFD8
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204898C
 .public sub_0204898C
 .public sub_0202E1F0
@@ -454,7 +454,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

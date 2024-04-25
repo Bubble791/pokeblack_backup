@@ -326,7 +326,7 @@
 .public sub_0200D1F8
 .public sub_021A14B0
 .public GameData_IsPocketRegistered
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public sub_0204B98C
 .public sub_0204BCD0

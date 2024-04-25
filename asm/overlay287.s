@@ -6622,7 +6622,7 @@ _021F7A80:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #0x29
 	blo _021F7A80

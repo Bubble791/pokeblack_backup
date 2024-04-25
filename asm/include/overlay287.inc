@@ -488,7 +488,7 @@
 .public sub_0204BF1C
 .public sub_02042BA8
 .public sub_02026F7C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_021F42E4
 .public sub_0204B98C
 .public sub_0204BCD0

@@ -3052,7 +3052,7 @@ _0219E6E0:
 	ldr r0, [r6, #0x10]
 	cmp r0, #0
 	beq _0219E6F0
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r6, #0x10]
 _0219E6F0:
 	add r4, r4, #1

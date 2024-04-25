@@ -9,7 +9,7 @@
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
 .public sub_02021998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_FadeScreenSet
 .public GFL_MsgDataFree
 .public GFL_WordSetSystemFree
@@ -89,8 +89,8 @@
 .public sub_0204BC48
 .public GFL_ArcToolFree
 .public sub_0202AE5C
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

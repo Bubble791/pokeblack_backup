@@ -41720,7 +41720,7 @@ ovy12_2164150: ; 0x02164150
 	add r2, r4, #0
 	str r0, [sp]
 	mov r0, #6
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	ldr r1, [r5, #0x1c]
 	str r0, [r1, #0x3c]
 	pop {r3, r4, r5, r6, r7, pc}
@@ -41788,12 +41788,12 @@ ovy12_216421c: ; 0x0216421C
 	bl sub_0202DB70
 	ldr r0, [r5, #0x1c]
 	ldr r0, [r0, #0x40]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #1
 	bne _02164250
 	ldr r0, [r5, #0x1c]
 	ldr r0, [r0, #0x40]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	ldr r0, [r5, #0x1c]
 	ldr r0, [r0, #0x40]

@@ -77,7 +77,7 @@ ovy83_21ea8ac: ; 0x021EA8AC
 	str r6, [sp]
 	add r0, r4, #0
 	add r1, r7, #0
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r5, #4]
 	mov r0, #0
 	mov r1, #2

@@ -172,10 +172,10 @@
 .public Oam_LoadNCERFile
 .public sub_02024D00
 .public GFL_BGSysLoadNCLRDefault
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public BmpWin_Free
 .public sub_0204BCD0
 .public sub_0204B98C

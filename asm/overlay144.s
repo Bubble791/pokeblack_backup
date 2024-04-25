@@ -1169,7 +1169,7 @@ ovy144_219d808: ; 0x0219D808
 	ldr r0, [r4, #0xc]
 	bl sub_02199B5C
 	ldr r0, [r4, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #8]
 	bl sub_0204BE64
 	ldr r0, [r4, #4]
@@ -2675,7 +2675,7 @@ ovy144_219e340: ; 0x0219E340
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _0219E34E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219E34E:
 	add r0, r4, #0
 	mov r1, #0
@@ -3316,7 +3316,7 @@ ovy144_219e85c: ; 0x0219E85C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #8
@@ -5114,7 +5114,7 @@ _0219F6AE:
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0219F6BC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219F6BC:
 	add r4, r4, #1
 	cmp r4, #4

@@ -264,7 +264,7 @@ ovy193_21b3178: ; 0x021B3178
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B318A
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021B318A:
 	ldr r4, _021B31C0 ; =0x000008A8
 	ldr r0, [r5, r4]
@@ -2375,7 +2375,7 @@ ovy193_21b43dc: ; 0x021B43DC
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B43EE
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021B43EE:
 	ldr r4, _021B4424 ; =0x000008A8
 	ldr r0, [r5, r4]
@@ -4257,7 +4257,7 @@ ovy193_21b5434: ; 0x021B5434
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _021B5446
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021B5446:
 	ldr r4, _021B547C ; =0x000008A8
 	ldr r0, [r5, r4]

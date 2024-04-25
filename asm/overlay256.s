@@ -3445,7 +3445,7 @@ ovy256_21bd1ec: ; 0x021BD1EC
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021BD202
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021BD202:

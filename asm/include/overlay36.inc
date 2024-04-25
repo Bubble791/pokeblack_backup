@@ -2192,7 +2192,7 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C108
+.public Oam_RemoveOam
 .public Oam_CreateSprite
 .public Oam_EnableOamAnim
 .public sub_0204C124
@@ -2209,8 +2209,8 @@
 .public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C318
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -2255,8 +2255,8 @@
 .public sub_0203DA48
 .public sub_02045738
 .public sub_0218D0EC
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_02017934
 .public sub_0200746C
 .public GFL_MsgDataLoadStrbuf
@@ -2283,7 +2283,7 @@
 .public GFL_TCBExMgrCreate
 .public sub_0202E7A4
 .public sub_02021998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0218E568
 .public sub_0218E568
 .public GFL_FadeScreenSet
@@ -3971,7 +3971,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C5C8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02005CBC
 .public sub_0202ED00
 .public GFL_SndSEPlay
@@ -4838,8 +4838,8 @@
 .public sub_0204C124
 .public sub_02042BA8
 .public GFL_TCBRemove
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BECC
 .public sub_0204BF98
 .public sub_0204BE64
@@ -4990,7 +4990,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public BmpWin_Free
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public BmpWin_FlushChar
@@ -9292,7 +9292,7 @@
 .public Oam_EnableOamAnim
 .public Oam_GetSpritePosData
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
 .public sub_0204BFD4
 .public sub_0201494C
@@ -9406,7 +9406,7 @@
 .public Oam_CreateSprite
 .public sub_0204C318
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public Oam_SetOamAnimIndex
 .public sub_02046E28
@@ -9419,7 +9419,7 @@
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C438
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -9461,7 +9461,7 @@
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C438
-.public sub_0204C108
+.public Oam_RemoveOam
 .public Oam_SetOamAnimIndex
 .public sub_0208D3BC
 .public sub_0208DD34
@@ -10771,7 +10771,7 @@
 .public sub_02044CFC
 .public sub_02044C98
 .public sub_02044C98
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02021C44
 .public sub_02021A18
 .public sub_02022DA8
@@ -11639,9 +11639,9 @@
 .public sub_0204C378
 .public sub_0204C124
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
@@ -11671,9 +11671,9 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
@@ -12175,7 +12175,7 @@
 .public GFL_ArcToolFree
 .public sub_02033EF4
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64

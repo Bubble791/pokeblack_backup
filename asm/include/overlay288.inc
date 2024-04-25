@@ -238,10 +238,10 @@
 .public sub_0204BF1C
 .public sub_0204C378
 .public sub_0204C318
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

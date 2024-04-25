@@ -2672,10 +2672,10 @@ sub_0219EBC8: ; 0x0219EBC8
 	add r0, r0, r1
 	add r0, #0xac
 	ldr r0, [r0]
-	ldr r3, _0219EBD4 ; =sub_0204C108
+	ldr r3, _0219EBD4 ; =Oam_RemoveOam
 	bx r3
 	.align 2, 0
-_0219EBD4: .word sub_0204C108
+_0219EBD4: .word Oam_RemoveOam
 	thumb_func_end sub_0219EBC8
 
 	thumb_func_start ovy296_219ebd8
@@ -2921,7 +2921,7 @@ _0219EDAC:
 	lsl r0, r4, #2
 	add r6, r5, r0
 	ldr r0, [r6, r7]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r6, #0xe8
 	ldr r0, [r6]
 	bl sub_0204B98C
@@ -3524,7 +3524,7 @@ _0219F244:
 	add r0, r4, r1
 	add r0, #0xd0
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219F25A:
 	add r5, r5, #1
 	cmp r5, #2
@@ -3871,7 +3871,7 @@ ovy296_219f4dc: ; 0x0219F4DC
 	ldr r0, [r0, r6]
 	cmp r0, #0
 	beq _0219F504
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, #0
 	add r1, r5, r4
 	sub r0, #0x14

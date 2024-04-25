@@ -2231,7 +2231,7 @@ _0219A8E8:
 	ldr r2, [sp, #0x40]
 	ldr r3, [sp, #0x44]
 	add r0, r6, #0
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r4, #4]
 	add r0, r6, #0
 	bl sub_0204588C
@@ -2548,7 +2548,7 @@ _0219ABAE:
 	ldr r0, [r0, #8]
 	cmp r0, #0
 	beq _0219ABBC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219ABBC:
 	add r4, r4, #1
 	cmp r4, #7

@@ -263,7 +263,7 @@
 .public Oam_CreateSystem
 .public sub_0204BF1C
 .public GFL_VBlankTCBAdd
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -287,7 +287,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_WordSetSystemCreateDefault
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public LoadCursorImageEndOfHeap
 .public LoadCursorImageEndOfHeap
 .public GFL_BGSysLoadNCLRDefault
@@ -357,9 +357,9 @@
 .public sub_0202DB70
 .public sub_0202568C
 .public sub_02025634
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_0203CB80
-.public sub_0202DC00
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0203CB80
 .public GFL_MsgDataLoadStrbuf
 .public sub_020485A4

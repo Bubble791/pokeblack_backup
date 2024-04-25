@@ -4734,7 +4734,7 @@ ovy271_21f2268: ; 0x021F2268
 	ldr r0, [r4, #8]
 	bl GFL_BitmapFree
 	ldr r0, [r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -7887,7 +7887,7 @@ _021F3A98:
 	lsl r0, r5, #2
 	add r0, r4, r0
 	ldr r0, [r0, #0x28]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, r5, #1
 	cmp r5, #4
 	blt _021F3A98
@@ -9078,7 +9078,7 @@ ovy271_21f4454: ; 0x021F4454
 	ldr r0, [r5, #0x28]
 	cmp r0, #0
 	beq _021F4474
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x38]
 	bl sub_0204BCD0
 	ldr r0, [r5, #0x3c]
@@ -9089,7 +9089,7 @@ _021F4474:
 	ldr r0, [r5, #0x24]
 	cmp r0, #0
 	beq _021F4490
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x2c]
 	bl sub_0204BCD0
 	ldr r0, [r5, #0x30]
@@ -9323,7 +9323,7 @@ _021F4642:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #0xc
 	blt _021F4642
@@ -12484,7 +12484,7 @@ ovy271_21f5e20: ; 0x021F5E20
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x4c

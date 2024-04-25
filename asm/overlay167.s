@@ -125526,7 +125526,7 @@ _021D613E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x24]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blt _021D613E

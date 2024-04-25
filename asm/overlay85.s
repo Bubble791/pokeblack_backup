@@ -4867,7 +4867,7 @@ _021ED3B6:
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, r7]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021ED3B6
@@ -5187,17 +5187,17 @@ _021ED636:
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x10]
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x10]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0xc]
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0xc]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	mov r1, #0
 	mov r2, #0x68

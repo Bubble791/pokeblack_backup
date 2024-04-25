@@ -506,7 +506,7 @@ _021B33CE:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x5c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021B33CE
@@ -588,7 +588,7 @@ ovy200_21b3400: ; 0x021B3400
 	ldr r2, [r5, #0x28]
 	ldr r3, [r5, #0x30]
 	mov r0, #4
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r5, #0x34]
 	mov r0, #4
 	str r0, [sp]

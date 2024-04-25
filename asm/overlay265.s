@@ -2725,7 +2725,7 @@ ovy265_219adac: ; 0x0219ADAC
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _0219ADC2
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _0219ADC2:

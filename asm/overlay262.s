@@ -3807,7 +3807,7 @@ _021C43AA:
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C43C4
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0x5b
 	mov r1, #0
 	lsl r0, r0, #2
@@ -3816,7 +3816,7 @@ _021C43C4:
 	ldr r0, [r4, r7]
 	cmp r0, #0
 	beq _021C43D4
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [sp]
 	mov r1, #0
 	str r1, [r4, r0]
@@ -3952,7 +3952,7 @@ ovy262_21c44dc: ; 0x021C44DC
 	add r5, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	add r0, #0x64
 	ldr r0, [r5, r0]
@@ -4027,10 +4027,10 @@ sub_021C4578: ; 0x021C4578
 	mov r1, #0x63
 	lsl r1, r1, #2
 	ldr r0, [r0, r1]
-	ldr r3, _021C4584 ; =sub_0204C108
+	ldr r3, _021C4584 ; =Oam_RemoveOam
 	bx r3
 	nop
-_021C4584: .word sub_0204C108
+_021C4584: .word Oam_RemoveOam
 	thumb_func_end sub_021C4578
 
 	thumb_func_start ovy262_21c4588
@@ -4122,7 +4122,7 @@ _021C462A:
 	ldr r0, [r5, r7]
 	cmp r0, #0
 	beq _021C463C
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r5, r7]
 _021C463C:
@@ -5016,7 +5016,7 @@ ovy262_21c4d38: ; 0x021C4D38
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x64]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	add r0, #0x82
 	ldrh r0, [r0]
@@ -5117,7 +5117,7 @@ _021C4DFC:
 	ldr r0, [r5, #0x68]
 	cmp r0, #0
 	beq _021C4E0C
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r5, #0x68]
 _021C4E0C:
 	add r4, r4, #1
@@ -5257,9 +5257,9 @@ ovy262_21c4f14: ; 0x021C4F14
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}
@@ -5836,7 +5836,7 @@ _021C5406:
 	ldr r0, [r0, #0x30]
 	cmp r0, #0
 	beq _021C5414
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C5414:
 	add r4, r4, #1
 	cmp r4, #0xe

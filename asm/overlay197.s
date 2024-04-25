@@ -687,7 +687,7 @@ _021B59EE:
 	ldr r0, [r0, #0xc]
 	cmp r0, #0
 	beq _021B59FC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021B59FC:
 	add r4, r4, #1
 	cmp r4, #0x23
@@ -4819,7 +4819,7 @@ _021B7A94:
 	mov r1, #0
 	bl sub_02044C98
 	ldr r0, [r4, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0xc]
 	bl sub_0204BCD0
 	ldr r0, [r4, #0x10]
@@ -9883,17 +9883,17 @@ _021BA1CC:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021BA1CC
 	mov r6, #0xaf
 	lsl r6, r6, #4
 	ldr r0, [r5, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r6, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -10631,7 +10631,7 @@ _021BA778:
 	ldr r0, [r1, r0]
 	cmp r0, #0
 	beq _021BA82C
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [sp, #0xc]
 	add r1, r0, r5
 	add r0, r4, #0
@@ -13780,7 +13780,7 @@ ovy197_21bbfc4: ; 0x021BBFC4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x14]
 	bl sub_0204B98C
 	ldr r0, [r4, #0x18]
@@ -13788,7 +13788,7 @@ ovy197_21bbfc4: ; 0x021BBFC4
 	ldr r0, [r4, #0x10]
 	bl sub_0204BCD0
 	ldr r0, [r4, #0x1c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #8]
 	bl sub_0204B98C
 	ldr r0, [r4, #0xc]

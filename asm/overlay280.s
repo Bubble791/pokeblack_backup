@@ -716,7 +716,7 @@ _021D9CCA:
 	ldr r0, [r0, #0xc]
 	cmp r0, #0
 	beq _021D9CD8
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021D9CD8:
 	add r4, r4, #1
 	cmp r4, #0x18
@@ -6434,7 +6434,7 @@ _021DC6F2:
 	ldr r0, [r4, #0x10]
 	bl sub_0204BE64
 	ldr r0, [r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x40

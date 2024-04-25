@@ -828,7 +828,7 @@
 .public GFL_SndSEPlay
 .public sub_0204C4E0
 .public sub_0204C560
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public GFL_TCBRemove
 .public GFL_HeapAllocate

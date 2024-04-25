@@ -312,7 +312,7 @@
 .public sub_0204C124
 .public Oam_EnableOamAnim
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02046E28
 .public sub_021EAB50
 .public BmpWin_BitmapFill
@@ -330,11 +330,11 @@
 .public GFL_StrBufFree
 .public sub_021EAB6C
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public GFL_HeapAllocate
 .public MI_CpuCopy8

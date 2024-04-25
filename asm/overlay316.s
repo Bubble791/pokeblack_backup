@@ -1220,7 +1220,7 @@ _0219D802:
 	lsl r0, r4, #2
 	add r0, r6, r0
 	ldr r0, [r0, #0x68]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mul r0, r7
 	add r5, r6, r0
@@ -2411,7 +2411,7 @@ ovy316_219e1c4: ; 0x0219E1C4
 	add r5, r0, #0
 	lsl r4, r4, #4
 	ldr r0, [r5, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
 	bl sub_0204BE64
@@ -3346,7 +3346,7 @@ ovy316_219e93c: ; 0x0219E93C
 	ldr r2, [r4, #0x18]
 	ldr r3, [r4, #0x1c]
 	mov r0, #2
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	mov r1, #0x96
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -3549,10 +3549,10 @@ sub_0219EAA8: ; 0x0219EAA8
 	mov r1, #0x26
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
-	ldr r3, _0219EAB4 ; =sub_0202DBE4
+	ldr r3, _0219EAB4 ; =TaskAppListMenu_ChoosenWait
 	bx r3
 	nop
-_0219EAB4: .word sub_0202DBE4
+_0219EAB4: .word TaskAppListMenu_ChoosenWait
 	thumb_func_end sub_0219EAA8
 
 	thumb_func_start ovy316_219eab8
@@ -3561,7 +3561,7 @@ ovy316_219eab8: ; 0x0219EAB8
 	mov r1, #0x26
 	lsl r1, r1, #4
 	ldr r0, [r0, r1]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	cmp r0, #0
 	bne _0219EACC
 	mov r0, #1

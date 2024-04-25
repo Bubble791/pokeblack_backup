@@ -84,7 +84,7 @@
 .public Oam_CreateSprite
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0203DAC8
 .public Oam_GetSpritePosData
 .public GFL_SndSEPlay

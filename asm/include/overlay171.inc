@@ -183,7 +183,7 @@
 .public sub_0204C4D4
 .public Oam_SetOamAnimIndex
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData

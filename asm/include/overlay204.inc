@@ -165,9 +165,9 @@
 .public sub_0204C124
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204C124
 .public Oam_EnableOamAnim
 .public Oam_EnableOamAnim
@@ -175,8 +175,8 @@
 .public sub_0204C56C
 .public sub_0202D974
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public sub_0203D554
 .public GFL_FadeScreenSet
@@ -211,7 +211,7 @@
 .public sub_0204B32C
 .public sub_0204898C
 .public sub_0204898C
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_021ADE28
 .public sub_0202E1DC
 .public GFL_StrBufFree
@@ -322,14 +322,14 @@
 .public sub_0204898C
 .public sub_0204898C
 .public sub_0204898C
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_StrBufCreate
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_CreateSprite
 .public sub_021ADE28
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public BmpWin_Free
 .public GFL_StrBufFree
 .public sub_0202E1DC
@@ -387,8 +387,8 @@
 .public sub_02009F80
 .public sub_0202D974
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public sub_0203D554
 .public sub_0203D554
@@ -436,7 +436,7 @@
 .public sub_02045604
 .public sub_02045B7C
 .public sub_021A7B9C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02009F80
 .public sub_02009F80
 .public sub_021A7A9C
@@ -662,6 +662,6 @@
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
-.public sub_0204C108
+.public Oam_RemoveOam
 
 .public GFL_BGSysSetVRAMBanks

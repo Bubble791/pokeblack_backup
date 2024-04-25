@@ -205,14 +205,14 @@ ovy208_2199a54: ; 0x02199A54
 	bl ovy208_219d6e4
 	ldr r6, _02199B6C ; =0x0000184C
 	ldr r0, [r5, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r4, #0
 	add r6, #0xc
 _02199A94:
@@ -7514,7 +7514,7 @@ _0219D6EC:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -7522,10 +7522,10 @@ _0219D6EC:
 	blo _0219D6EC
 	ldr r4, _0219D718 ; =0x000018B4
 	ldr r0, [r5, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	pop {r4, r5, r6, pc}
 	nop
 _0219D714: .word 0x00001890

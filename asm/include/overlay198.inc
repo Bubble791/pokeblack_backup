@@ -236,7 +236,7 @@
 .public sub_020241E4
 .public GFL_TCBExMgrCreate
 .public sub_02021998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public G2x_SetBlendAlpha_
 .public GFL_FadeScreenSet
 .public GFL_BGSysSetEnabledBGsB
@@ -267,10 +267,10 @@
 .public sub_02044B84
 .public sub_02021C44
 .public sub_02021A18
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

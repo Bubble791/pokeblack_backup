@@ -2032,7 +2032,7 @@ ovy312_217d994: ; 0x0217D994
 	ldr r3, [r4, r3]
 	mov r0, #2
 	mov r1, #9
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r1, r5, #0
 	sub r1, #0x18
 	str r0, [r4, r1]

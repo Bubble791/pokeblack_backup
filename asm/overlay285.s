@@ -80,7 +80,7 @@ ovy285_21f42e4: ; 0x021F42E4
 _021F42EA:
 	lsl r0, r4, #2
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #4
 	blo _021F42EA

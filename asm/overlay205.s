@@ -2622,7 +2622,7 @@ _021B87C6:
 	mul r0, r7
 	add r0, r5, r0
 	ldr r0, [r0, #0xc]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r6]
 	add r4, r4, #1
 	cmp r4, r0
@@ -2639,9 +2639,9 @@ _021B87E2:
 	mov r0, #0x57
 	lsl r0, r0, #2
 	ldr r0, [r6, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r6, r7]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021B87E2
@@ -2654,7 +2654,7 @@ _021B8806:
 	mul r0, r7
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #3
 	blt _021B8806

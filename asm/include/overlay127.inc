@@ -460,7 +460,7 @@
 .public BmpWin_BitmapFill
 .public BmpWin_FlushChar
 .public BmpWin_FlushMap
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204898C
 .public BmpWin_GetBitmap
 .public sub_02021CFC
@@ -474,7 +474,7 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0202DB70
-.public sub_0202DC00
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_021F20DC
 .public sub_02021C44
 .public sub_02021A18
@@ -492,6 +492,6 @@
 .public sub_02044C98
 
 .public sub_02010288
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_0202E1DC
 .public sub_021B870C

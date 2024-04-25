@@ -77,7 +77,7 @@
 .public sub_0219D760
 .public sub_0219D760
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0219D1BC
 .public GFL_SndSEPlay
 .public sub_0219D730
@@ -115,8 +115,8 @@
 .public sub_020095A0
 .public sub_02042D34
 .public sub_0204C124
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0219D730
 .public sub_0204C124
 .public Oam_EnableOamAnim

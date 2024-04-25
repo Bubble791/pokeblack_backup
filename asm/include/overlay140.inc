@@ -6,8 +6,8 @@
 .public MI_CpuFill8
 .public GFL_FontCreate
 .public sub_02021998
-.public sub_0202E168
-.public sub_0202E168
+.public TaskAppListMenu_Create
+.public TaskAppListMenu_Create
 .public GFL_MsgSysLoadData
 .public GFL_TCBExMgrCreate
 .public sub_02016AD8
@@ -139,7 +139,7 @@
 .public sub_0204C378
 .public sub_02042788
 .public sub_02042BA8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -280,8 +280,8 @@
 .public MI_CpuFill8
 .public sub_0202D974
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public G2x_SetBlendBrightness_
 .public sub_02044C98

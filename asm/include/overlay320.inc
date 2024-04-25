@@ -47,7 +47,7 @@
 .public sub_02199A5C
 .public sub_020164E8
 .public sub_0204C438
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02199A44
 .public sub_0219EB6C
 .public GFL_StrBufCreate
@@ -124,7 +124,7 @@
 .public MI_CpuFill8
 .public sub_0202AEC4
 .public sub_0202B098
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64
@@ -240,7 +240,7 @@
 .public sub_0202E438
 .public sub_0202DA54
 .public sub_0202DB70
-.public sub_0202DBE4
+.public TaskAppListMenu_ChoosenWait
 .public sub_02045A5C
 .public sub_0204B794
 .public sub_0204B7C8

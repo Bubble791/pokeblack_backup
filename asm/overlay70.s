@@ -4556,7 +4556,7 @@ ovy70_217f394: ; 0x0217F394
 	mov r0, #0
 	mov r1, #2
 	mov r4, #0
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	ldr r1, [sp, #4]
 	add r1, #0xc
 	str r0, [r6, r1]
@@ -4637,11 +4637,11 @@ ovy70_217f440: ; 0x0217F440
 	mov r4, #2
 	bl sub_0202DB70
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0217F46E
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	mov r4, #0
 	cmp r0, #0
 	beq _0217F468

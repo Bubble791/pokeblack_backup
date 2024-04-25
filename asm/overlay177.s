@@ -806,7 +806,7 @@ _0219B3CE:
 	ldr r0, [r0, #0x10]
 	cmp r0, #0
 	beq _0219B3DC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219B3DC:
 	add r4, r4, #1
 	cmp r4, #0x21

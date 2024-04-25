@@ -1213,7 +1213,7 @@ _021A02E6:
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, r7]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021A02E6
@@ -1468,12 +1468,12 @@ _021A04E6:
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x78]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x74]
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x74]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x60]
 	bl BmpWin_Free
 	add r4, r7, #0

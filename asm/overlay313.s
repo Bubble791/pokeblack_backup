@@ -670,7 +670,7 @@ _0219D3FE:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x4c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mul r0, r7
 	add r6, r5, r0
@@ -838,7 +838,7 @@ _0219D552:
 	add r0, r5, r0
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

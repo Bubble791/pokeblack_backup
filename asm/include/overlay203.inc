@@ -19,8 +19,8 @@
 .public sub_021A7F30
 .public Oam_CreateSprite
 .public sub_0204C468
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public sub_0204C210
 .public sub_0204C210

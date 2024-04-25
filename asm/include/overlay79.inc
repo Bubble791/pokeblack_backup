@@ -210,8 +210,8 @@
 .public sub_0204BE9C
 .public sub_0204C018
 .public sub_0204BFF0
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204BE64
 .public sub_0204B98C
@@ -366,7 +366,7 @@
 .public sub_020196D0
 .public sub_02177574
 .public sub_02016D50
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C560
 .public sub_021EA894
 .public sub_02042788

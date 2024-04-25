@@ -1098,7 +1098,7 @@ ovy139_219a0dc: ; 0x0219A0DC
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x38
@@ -2100,7 +2100,7 @@ _0219A86A:
 	add r0, r5, r0
 	add r0, #0xa0
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

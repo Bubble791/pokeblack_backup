@@ -59,7 +59,7 @@ ovy140_219ce80: ; 0x0219CE80
 	ldr r3, [r4, r3]
 	mov r0, #0
 	mov r1, #0xd
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r1, r5, #0
 	sub r1, #0x10
 	str r0, [r4, r1]
@@ -72,7 +72,7 @@ ovy140_219ce80: ; 0x0219CE80
 	ldr r3, [r4, r3]
 	mov r0, #3
 	mov r1, #9
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r1, r5, #0
 	sub r1, #0xc
 	str r0, [r4, r1]
@@ -1189,7 +1189,7 @@ _0219D856:
 	ldr r0, [r0, #0x18]
 	cmp r0, #0
 	beq _0219D864
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219D864:
 	add r4, r4, #1
 	cmp r4, #0xe
@@ -3250,11 +3250,11 @@ _0219E766:
 	ldr r0, [r4, #0x38]
 	bl sub_0202DB70
 	ldr r0, [r4, #0x38]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _0219E792
 	ldr r0, [r4, #0x38]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r1, r0, #1
 	add r0, r4, #0
 	add r0, #0x54

@@ -2219,7 +2219,7 @@ ovy198_21b40b0: ; 0x021B40B0
 	ldr r3, [r4, r3]
 	mov r0, #5
 	mov r1, #0xd
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	mov r1, #0xd
 	lsl r1, r1, #6
 	str r0, [r4, r1]
@@ -2439,21 +2439,21 @@ _021B438E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #3
 	blt _021B438E
 	mov r4, #0xe7
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	add r0, #8
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	sub r0, #0x24
 	ldr r0, [r5, r0]

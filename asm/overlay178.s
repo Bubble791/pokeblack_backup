@@ -875,7 +875,7 @@ _0219B46A:
 	ldr r0, [r0, #0x28]
 	cmp r0, #0
 	beq _0219B478
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219B478:
 	add r4, r4, #1
 	cmp r4, #0x23

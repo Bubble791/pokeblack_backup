@@ -1810,7 +1810,7 @@ _021B3EE4:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -1823,7 +1823,7 @@ _021B3EFE:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -4861,22 +4861,22 @@ ovy207_21b56e0: ; 0x021B56E0
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
 	ldr r0, [r5, #0x48]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x44]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r4, #0
 _021B56F2:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x24]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
 	cmp r4, #8
 	blo _021B56F2
 	ldr r0, [r5, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy207_21b56e0
@@ -9020,7 +9020,7 @@ ovy207_21b785c: ; 0x021B785C
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r1, #0
 	ldr r0, [r6, #0x54]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r4, #0
 	mov r7, #0x14
 _021B786A:
@@ -10619,7 +10619,7 @@ ovy207_21b84d0: ; 0x021B84D0
 	ldr r0, [r4, #0x18]
 	bl sub_0204B98C
 	ldr r0, [r4, #0x1c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #4
 	mov r1, #0
 	mov r5, #0
@@ -11323,22 +11323,22 @@ _021B8A68:
 	add r0, r5, #0
 	add r0, #0x90
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	add r0, #0x98
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	add r0, #0x9c
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, #0xa0
 	ldr r0, [r5]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy207_21b8a34
@@ -14705,9 +14705,9 @@ ovy207_21ba624: ; 0x021BA624
 	push {r4, lr}
 	add r4, r2, #0
 	ldr r0, [r4, #8]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0xc]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0xff
 	strb r0, [r4]
 	pop {r4, pc}
@@ -15315,7 +15315,7 @@ _021BAAC8:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

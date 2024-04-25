@@ -2053,7 +2053,7 @@
 .public sub_0204C378
 .public sub_0204C5C8
 .public sub_0204B98C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public sub_0204C124
 .public sub_0204C138
@@ -2609,7 +2609,7 @@
 .public sub_0204588C
 .public sub_0204C468
 .public Oam_SetOamAnimIndex
-.public sub_0204C108
+.public Oam_RemoveOam
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
 .public sub_0204C124

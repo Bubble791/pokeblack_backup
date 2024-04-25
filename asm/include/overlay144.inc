@@ -94,7 +94,7 @@
 .public sub_02199AA0
 .public sub_02199CE0
 .public sub_02199B5C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
@@ -200,7 +200,7 @@
 .public sub_0204C244
 .public sub_0204C468
 .public sub_0204C438
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public sub_0204C124
 .public sub_0204C124
@@ -258,7 +258,7 @@
 .public Oam_SetOamAnimIndex
 .public Oam_EnableOamAnim
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public Oam_SetSpritePosData
 .public MI_CpuFill8
@@ -467,7 +467,7 @@
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0

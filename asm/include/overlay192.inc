@@ -23,7 +23,7 @@
 .public Oam_LoadNCLRFile
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64

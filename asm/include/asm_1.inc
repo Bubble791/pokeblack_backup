@@ -4165,7 +4165,7 @@
 .public sub_0204C378
 .public sub_0204C5C8
 .public sub_0204B98C
-.public sub_0204C108
+.public Oam_RemoveOam
 .public GFL_HeapFree
 .public sub_0204C124
 .public sub_0204C138
@@ -4721,7 +4721,7 @@
 .public sub_0204588C
 .public sub_0204C468
 .public Oam_SetOamAnimIndex
-.public sub_0204C108
+.public Oam_RemoveOam
 .public BmpWin_GetBitmap
 .public BmpWin_FlushChar
 .public sub_0204C124
@@ -8391,8 +8391,8 @@
 .public sub_0202DA54
 .public sub_0202DAF0
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DC04
 .public sub_0202DC1C
 .public sub_0202DC20
@@ -8403,7 +8403,7 @@
 .public sub_0202DEF8
 .public sub_0202DF40
 .public sub_0202E054
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0202E1DC
 .public sub_0202E1F0
 .public sub_0202E210
@@ -10372,7 +10372,7 @@
 .public sub_0204C028
 .public Oam_CreateSprite
 .public sub_0204C0A4
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
 .public sub_0204C138
 .public Oam_SetSpritePosData

@@ -857,7 +857,7 @@ ovy314_219d59c: ; 0x0219D59C
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x54]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x50]
 	bl sub_0204BE64
 	ldr r0, [r4, #0x48]

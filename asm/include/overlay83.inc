@@ -6,7 +6,7 @@
 .public sub_02021A34
 .public sub_02021A34
 .public GFL_HeapAllocate
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_MsgSysLoadData
 .public sub_0204898C
 .public sub_0202E34C

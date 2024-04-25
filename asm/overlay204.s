@@ -1523,17 +1523,17 @@ ovy204_21aa790: ; 0x021AA790
 	add r6, r0, #0
 	lsl r4, r4, #2
 	ldr r0, [r6, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r4, #4
 	ldr r0, [r6, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r5, #0
 	sub r4, #0xc
 _021AA7AA:
 	lsl r0, r5, #2
 	add r0, r6, r0
 	ldr r0, [r0, r4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r5, r5, #1
 	cmp r5, #2
 	blt _021AA7AA
@@ -1638,11 +1638,11 @@ ovy204_21aa858: ; 0x021AA858
 	add r5, r0, #0
 	bl sub_0202DB70
 	add r0, r5, #0
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #1
 	bne _021AA87C
 	add r0, r5, #0
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_0202DA54
@@ -2148,7 +2148,7 @@ _021AABB2:
 	ldr r3, [r5, #0x34]
 	mov r0, #1
 	mov r1, #0xe
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	ldr r1, [sp, #0x18]
 	str r0, [r1, #0x48]
 	add sp, #0x28
@@ -3386,7 +3386,7 @@ _021AB5B0:
 	ldr r3, [r4, #0x34]
 	mov r0, #1
 	mov r1, #0xe
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	add r1, r5, #0
 	add r1, #0x4c
 	str r0, [r7, r1]
@@ -3501,10 +3501,10 @@ ovy204_21ab72c: ; 0x021AB72C
 	mov r6, #0x69
 	lsl r6, r6, #2
 	ldr r0, [r5, r6]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	sub r0, r6, #4
 	ldr r0, [r5, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, #0
 	sub r0, #0x9c
 	ldr r0, [r5, r0]
@@ -4425,11 +4425,11 @@ ovy204_21abe54: ; 0x021ABE54
 	str r2, [sp]
 	bl sub_0202DB70
 	ldr r0, [r5, r7]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #1
 	bne _021ABE80
 	ldr r0, [r5, r7]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	ldr r0, [r5, r7]
 	bl sub_0202DA54
@@ -5209,7 +5209,7 @@ _021AC44C:
 	ldr r0, [r5, #0x2c]
 	cmp r0, #0
 	beq _021AC45A
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r5, #0x2c]
 _021AC45A:
@@ -8687,7 +8687,7 @@ ovy204_21adeac: ; 0x021ADEAC
 	bl sub_0204BE64
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21adeac

@@ -112,7 +112,7 @@
 .public sub_0204C028
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public sub_0204B758
 .public sub_02044B84
@@ -499,7 +499,7 @@
 .public sub_020232D8
 .public GFL_TCBExMgrCreate
 .public sub_02021998
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0202E7A4
 .public sub_0203CE0C
 .public sub_0218B1F8
@@ -582,8 +582,8 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public sub_0202DA54
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_020254E0
 .public sub_02025634
 .public GFL_MsgSysLoadData

@@ -6181,7 +6181,7 @@ ovy300_21a2cd8: ; 0x021A2CD8
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021A2CEE
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021A2CEE:

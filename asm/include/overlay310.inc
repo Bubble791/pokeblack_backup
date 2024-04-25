@@ -773,7 +773,7 @@
 .public sub_021A0074
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02046E28
 .public sub_02046F3C
 .public sub_02047008
@@ -1335,7 +1335,7 @@
 .public sub_021A3410
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02046E28
 .public sub_02046F3C
 .public sub_02047008
@@ -1677,7 +1677,7 @@
 .public GFL_HeapAllocate
 .public sub_0204BF1C
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_021A6334
 .public sub_021A6368
 .public sub_021A632C
@@ -1718,7 +1718,7 @@
 .public sub_021A6370
 .public sub_021A63CC
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_021A67DC
 .public sub_0208D868
 .public sub_0208D374

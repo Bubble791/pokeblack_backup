@@ -270,7 +270,7 @@
 .public Oam_EnableOamAnim
 .public sub_02021034
 .public sub_0204C378
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_02199A44
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault

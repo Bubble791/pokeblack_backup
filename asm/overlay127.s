@@ -6756,7 +6756,7 @@ ovy127_21f1fb0: ; 0x021F1FB0
 	ldr r3, [r4, #0x24]
 	mov r0, #4
 	mov r1, #3
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r4, #0x28]
 	add sp, #4
 	pop {r3, r4, pc}
@@ -6843,7 +6843,7 @@ ovy127_21f2064: ; 0x021F2064
 	ldr r0, [r0, #0x2c]
 	cmp r0, #0
 	beq _021F2072
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	pop {r3, pc}
 _021F2072:
 	mov r0, #0
@@ -6854,10 +6854,10 @@ _021F2072:
 	thumb_func_start sub_021F2078
 sub_021F2078: ; 0x021F2078
 	ldr r0, [r0, #0x2c]
-	ldr r3, _021F2080 ; =sub_0202DBE4
+	ldr r3, _021F2080 ; =TaskAppListMenu_ChoosenWait
 	bx r3
 	nop
-_021F2080: .word sub_0202DBE4
+_021F2080: .word TaskAppListMenu_ChoosenWait
 	thumb_func_end sub_021F2078
 
 	thumb_func_start ovy127_21f2084

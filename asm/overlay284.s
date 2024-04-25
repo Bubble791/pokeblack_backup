@@ -2243,7 +2243,7 @@ _021E426C:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x48]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

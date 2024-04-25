@@ -47,7 +47,7 @@
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public GFL_BGSysLoadNCLRDefault
 .public LoadCursorImageEndOfHeap
 .public BmpWin_CreateDynamic
@@ -134,5 +134,5 @@
 .public sub_0203DA48
 
 .public sub_0202E1DC
-.public sub_0202DC00
-.public sub_0202DBE4
+.public TaskAppListMenu_GetChoosenIndex
+.public TaskAppListMenu_ChoosenWait

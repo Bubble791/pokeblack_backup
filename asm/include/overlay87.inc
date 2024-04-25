@@ -198,10 +198,10 @@
 .public sub_02016AD8
 .public sub_0201735C
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0201FDF8
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BCD0

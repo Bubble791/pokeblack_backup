@@ -4593,7 +4593,7 @@ _0219F268:
 	ldr r0, [r6, #0x30]
 	cmp r0, #0
 	beq _0219F278
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r6, #0x30]
 _0219F278:
 	add r4, r4, #1
@@ -4607,7 +4607,7 @@ _0219F282:
 	ldr r0, [r6, #0x28]
 	cmp r0, #0
 	beq _0219F292
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r6, #0x28]
 _0219F292:
 	add r4, r4, #1
@@ -4618,7 +4618,7 @@ _0219F292:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0219F2AE
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	mov r1, #0
 	add r0, #0x80

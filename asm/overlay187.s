@@ -2310,7 +2310,7 @@ _021E9EBA:
 	ldr r0, [r0, #0xc]
 	cmp r0, #0
 	beq _021E9EC8
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021E9EC8:
 	add r4, r4, #1
 	cmp r4, #5

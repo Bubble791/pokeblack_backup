@@ -83910,7 +83910,7 @@ _0202B04C:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -90225,8 +90225,8 @@ _0202DBCC:
 	pop {r4, pc}
 	thumb_func_end sub_0202DB70
 
-	thumb_func_start sub_0202DBE4
-sub_0202DBE4: ; 0x0202DBE4
+	thumb_func_start TaskAppListMenu_ChoosenWait
+TaskAppListMenu_ChoosenWait: ; 0x0202DBE4
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r1, [r4, #0x14]
@@ -90241,13 +90241,13 @@ _0202DBFA:
 	mov r0, #0
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end sub_0202DBE4
+	thumb_func_end TaskAppListMenu_ChoosenWait
 
-	thumb_func_start sub_0202DC00
-sub_0202DC00: ; 0x0202DC00
+	thumb_func_start TaskAppListMenu_GetChoosenIndex
+TaskAppListMenu_GetChoosenIndex: ; 0x0202DC00
 	ldrb r0, [r0]
 	bx lr
-	thumb_func_end sub_0202DC00
+	thumb_func_end TaskAppListMenu_GetChoosenIndex
 
 	thumb_func_start sub_0202DC04
 sub_0202DC04: ; 0x0202DC04
@@ -90972,8 +90972,8 @@ _0202E160: .word 0x00000551
 _0202E164: .word 0x0000054C
 	thumb_func_end sub_0202E054
 
-	thumb_func_start sub_0202E168
-sub_0202E168: ; 0x0202E168
+	thumb_func_start TaskAppListMenu_Create
+TaskAppListMenu_Create: ; 0x0202E168
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -91027,7 +91027,7 @@ _0202E1A6:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _0202E1D8: .word 0x0209A5E0
-	thumb_func_end sub_0202E168
+	thumb_func_end TaskAppListMenu_Create
 
 	thumb_func_start sub_0202E1DC
 sub_0202E1DC: ; 0x0202E1DC
@@ -105734,7 +105734,7 @@ _0203472A:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #8]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #2
 	blt _0203472A

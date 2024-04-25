@@ -1026,13 +1026,13 @@ ovy321_219d698: ; 0x0219D698
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, [r5, #0x1c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r4, #0
 _0219D6A4:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #6
 	blt _0219D6A4

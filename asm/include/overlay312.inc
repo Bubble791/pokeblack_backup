@@ -156,7 +156,7 @@
 .public sub_02045350
 .public sub_0204898C
 .public sub_0204898C
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0202E1F0
 .public sub_0202E34C
 .public sub_02045B7C

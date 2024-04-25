@@ -65,7 +65,7 @@
 .public sub_02199EF0
 .public Oam_CreateSprite
 .public Oam_EnableOamAnim
-.public sub_0204C108
+.public Oam_RemoveOam
 .public MI_CpuFill8
 .public sub_0204C138
 .public sub_0203DAC8
@@ -148,7 +148,7 @@
 .public Oam_EnableOamAnim
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C108
+.public Oam_RemoveOam
 .public BmpWin_Free
 .public BmpWin_Free
 .public sub_02044668

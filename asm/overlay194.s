@@ -2255,11 +2255,11 @@ ovy194_21b87b0: ; 0x021B87B0
 	ldr r4, _021B8828 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021B8822
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -2623,11 +2623,11 @@ ovy194_21b8ac0: ; 0x021B8AC0
 	ldr r4, _021B8B18 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021B8B14
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -3446,11 +3446,11 @@ _021B9194:
 _021B91A0:
 	ldr r6, _021B9354 ; =0x0000064C
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021B91B6
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	str r0, [sp, #4]
 	mov r4, #1
 _021B91B6:
@@ -4865,11 +4865,11 @@ ovy194_21b9d84: ; 0x021B9D84
 	ldr r6, _021B9DE4 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021B9DE2
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -10062,11 +10062,11 @@ ovy194_21bc7f8: ; 0x021BC7F8
 	ldr r4, _021BC870 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BC86C
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -10616,11 +10616,11 @@ ovy194_21bcc7c: ; 0x021BCC7C
 	ldr r6, _021BCCC4 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BCCC0
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -11433,11 +11433,11 @@ ovy194_21bd36c: ; 0x021BD36C
 	ldr r4, _021BD404 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r4]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BD400
 	ldr r0, [r5, r4]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r6, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -11877,11 +11877,11 @@ ovy194_21bd730: ; 0x021BD730
 	ldr r6, _021BD784 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BD780
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -13168,11 +13168,11 @@ ovy194_21be1e4: ; 0x021BE1E4
 	ldr r6, _021BE22C ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BE228
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -13296,11 +13296,11 @@ ovy194_21be2f0: ; 0x021BE2F0
 	ldr r6, _021BE338 ; =0x0000064C
 	add r5, r0, #0
 	ldr r0, [r5, r6]
-	bl sub_0202DBE4
+	bl TaskAppListMenu_ChoosenWait
 	cmp r0, #0
 	beq _021BE334
 	ldr r0, [r5, r6]
-	bl sub_0202DC00
+	bl TaskAppListMenu_GetChoosenIndex
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy194_21c00fc
@@ -16317,7 +16317,7 @@ ovy194_21bfba4: ; 0x021BFBA4
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021BFBBC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, #0x10]
 	add r0, r4, #0
@@ -16400,7 +16400,7 @@ ovy194_21bfc50: ; 0x021BFC50
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021BFC68
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, #0x10]
 	add r0, r4, #0
@@ -16802,7 +16802,7 @@ ovy194_21bfedc: ; 0x021BFEDC
 	ldr r3, [r5, r3]
 	mov r0, #6
 	mov r1, #9
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	sub r4, #0x74
 	str r0, [r5, r4]
 	add sp, #4
@@ -23640,7 +23640,7 @@ _021C3644:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021C365E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0x2b
 	mov r1, #0
 	lsl r0, r0, #6
@@ -23649,7 +23649,7 @@ _021C365E:
 	ldr r0, [r5, r6]
 	cmp r0, #0
 	beq _021C366E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [sp]
 	mov r1, #0
 	str r1, [r5, r0]
@@ -23731,7 +23731,7 @@ _021C36F6:
 	ldr r0, [r6, r7]
 	cmp r0, #0
 	beq _021C3708
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r6, r7]
 _021C3708:
@@ -26130,26 +26130,26 @@ ovy194_21c49e8: ; 0x021C49E8
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C49F8
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C49F8:
 	ldr r0, _021C4A5C ; =0x00000F0C
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C4A04
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C4A04:
 	mov r0, #0xf1
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C4A12
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C4A12:
 	ldr r0, _021C4A60 ; =0x00000F14
 	ldr r0, [r4, r0]
 	cmp r0, #0
 	beq _021C4A1E
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021C4A1E:
 	ldr r1, _021C4A58 ; =0x00000F08
 	mov r2, #0
@@ -26505,7 +26505,7 @@ ovy194_21c4cfc: ; 0x021C4CFC
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021C4D14
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl sub_02199A44
 	mov r0, #0
@@ -26944,7 +26944,7 @@ _021C506A:
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	beq _021C507A
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	str r7, [r5, #0x14]
 _021C507A:
 	add r4, r4, #1
@@ -27010,7 +27010,7 @@ ovy194_21c50d8: ; 0x021C50D8
 	ldr r0, [r0, r4]
 	cmp r0, #0
 	beq _021C5104
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r6, r7
 	mov r1, #0
 	add r0, r0, r5
@@ -27532,7 +27532,7 @@ ovy194_21c54ec: ; 0x021C54EC
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021C5502
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021C5502:
@@ -27634,7 +27634,7 @@ ovy194_21c55ac: ; 0x021C55AC
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021C55C2
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021C55C2:
@@ -27773,7 +27773,7 @@ ovy194_21c56b8: ; 0x021C56B8
 	ldr r0, [r0, r6]
 	cmp r0, #0
 	beq _021C56DA
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #2
 	mov r1, #0
@@ -27786,7 +27786,7 @@ _021C56DA:
 	ldr r0, [r0, r6]
 	cmp r0, #0
 	beq _021C56F2
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	lsl r0, r4, #2
 	mov r1, #0
 	add r0, r5, r0
@@ -27891,7 +27891,7 @@ ovy194_21c57a8: ; 0x021C57A8
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021C57BC
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #0
 	str r0, [r4, r5]
 _021C57BC:
@@ -28445,7 +28445,7 @@ _021C5C1A:
 	ldr r0, [r5, r0]
 	cmp r0, #0
 	beq _021C5C46
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, _021C5C78 ; =0x000010CC
 	str r7, [r5, r0]
 	ldr r0, [sp, #0xc]
@@ -28724,7 +28724,7 @@ ovy194_21c5e5c: ; 0x021C5E5C
 	ldr r0, [r4, r5]
 	cmp r0, #0
 	beq _021C5E74
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r1, #0
 	ldr r0, _021C5E7C ; =0x000011F5
 	str r1, [r4, r5]

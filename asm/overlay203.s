@@ -389,10 +389,10 @@ ovy203_21a7b9c: ; 0x021A7B9C
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	beq _021A7BAA
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _021A7BAA:
 	ldr r0, [r4, #4]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	mov r1, #0
 	mov r2, #0x18

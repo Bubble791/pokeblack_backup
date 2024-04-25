@@ -4,7 +4,7 @@
 .public Oam_CreateSprite
 .public sub_0204C378
 .public Oam_EnableOamAnim
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204C124
 .public Oam_SetSpritePosData
 .public Oam_SetSpritePosData

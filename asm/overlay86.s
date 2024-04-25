@@ -1240,7 +1240,7 @@ _021EB1E4:
 	mul r0, r7
 	add r5, r6, r0
 	ldr r0, [r5, #0x38]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	cmp r4, #1
 	beq _021EB200
 	ldr r0, [r5, #0x34]
@@ -1425,7 +1425,7 @@ ovy86_21eb380: ; 0x021EB380
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #0x24]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r4, #0x20]
 	bl sub_0204BE64
 	ldr r0, [r4, #0x1c]

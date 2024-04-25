@@ -480,7 +480,7 @@
 .public sub_0204C124
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BF98
 .public sub_0204B98C
 .public sub_0204BCD0

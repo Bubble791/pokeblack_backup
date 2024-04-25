@@ -136,7 +136,7 @@
 .public sub_0219E244
 .public sub_0219D560
 .public sub_0219D564
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public G2x_SetBlendAlpha_
 .public sub_02005680
 .public sub_02042BA8
@@ -159,8 +159,8 @@
 .public sub_020245E0
 .public sub_0219D568
 .public sub_0219D1FC
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0219D87C
 .public sub_0219D554
 .public sub_0219D1F4
@@ -187,7 +187,7 @@
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C124
-.public sub_0204C108
+.public Oam_RemoveOam
 .public Oam_CreateSprite
 .public Oam_EnableOamAnim
 .public sub_0204C138

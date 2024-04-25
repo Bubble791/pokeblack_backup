@@ -2007,7 +2007,7 @@ _021EBE5E:
 	mov r1, #0
 	bl sub_0204C124
 	ldr r0, [r5, r7]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #9
 	blt _021EBE5E
@@ -2366,7 +2366,7 @@ _021EC14E:
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r6, #0x24]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r4, r4, #1
 	cmp r4, #3
 	blt _021EC14E
@@ -2374,22 +2374,22 @@ _021EC14E:
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x20]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x1c]
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x1c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x18]
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x18]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x14]
 	add r1, r7, #0
 	bl sub_0204C124
 	ldr r0, [r5, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	add r1, r7, #0
 	mov r2, #0x58

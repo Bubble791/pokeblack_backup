@@ -2020,7 +2020,7 @@ _0219DDF2:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x38]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -2668,7 +2668,7 @@ ovy319_219e2e4: ; 0x0219E2E4
 	ldr r2, [r3, #0xc]
 	ldr r3, [r3, #0x14]
 	mov r0, #5
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r4, #8]
 	add r0, r4, #0
 	add r2, r4, #0
@@ -2727,14 +2727,14 @@ _0219E36E:
 	lsl r0, r4, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x60]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
 	cmp r4, #8
 	blo _0219E36E
 	ldr r0, [r5, #0x5c]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	ldr r0, [r5, #0x58]
 	bl sub_0204BE64
 	ldr r0, [r5, #0x50]
@@ -4049,7 +4049,7 @@ ovy319_219ed6c: ; 0x0219ED6C
 	ldr r2, [r3, #0xc]
 	ldr r3, [r3, #0x14]
 	mov r0, #5
-	bl sub_0202E168
+	bl TaskAppListMenu_Create
 	str r0, [r5, #8]
 	ldr r0, [r5, #4]
 	mov r1, #0

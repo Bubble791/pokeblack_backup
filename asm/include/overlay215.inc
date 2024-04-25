@@ -170,8 +170,8 @@
 .public sub_02027880
 .public sub_0202E644
 .public sub_0202E644
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public GFL_StrBufFree
 .public GFL_StrBufFree
@@ -209,7 +209,7 @@
 .public sub_02027880
 .public GFL_MsgSysLoadData
 .public GFL_StrBufCreate
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_02027880
 .public sub_0202778C
 .public sub_020275F8
@@ -415,7 +415,7 @@
 .public GFL_WordSetSystemFree
 .public GFL_MsgDataFree
 .public sub_0202D974
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_0204898C
 .public sub_0204898C
 .public GFL_StrBufFree
@@ -557,7 +557,7 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public Oam_CreateSprite
-.public sub_0204C108
+.public Oam_RemoveOam
 .public Oam_SetSpritePosData
 .public sub_0204C4D4
 .public sub_0204C318
@@ -625,8 +625,8 @@
 .public sub_020223CC
 .public GFL_SndSEPlay
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0202DA54
 .public sub_0202DA54
 .public sub_0203A978
@@ -655,8 +655,8 @@
 .public sub_021A9FA0
 .public sub_021A9FA0
 .public sub_0202DB70
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_021A9418
 .public sub_021A9FA0
 .public sub_021A9AB4

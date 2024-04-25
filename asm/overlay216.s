@@ -9493,7 +9493,7 @@ _021C0106:
 	pop {r4, r5, r6, pc}
 _021C0124:
 	ldr r0, [r4, #0x14]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r4, #0
 	bl GFL_HeapFree
 	add r0, r5, #0

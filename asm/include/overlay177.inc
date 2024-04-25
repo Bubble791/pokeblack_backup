@@ -85,7 +85,7 @@
 .public sub_0204C468
 .public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204BCD0
 .public sub_0204B98C
 .public sub_0204BE64

@@ -65,7 +65,7 @@ void ovy142_21998f4(BagView *bagView)
     {
         ovy142_219e120(bagView);
     }
-    ovy142_219e924(bagView);
+    BagMenu_DrawItemBarText(bagView);
     ovy142_219becc(bagView);
     bagView->unk892 = 1;
 }
@@ -109,14 +109,10 @@ void BagMenu_LoadBagPocketNameToStrbuf(BagView *bagView, int bufId, int msgId)
     LoadBagPocketNameToStrbuf(bagView->wordSetSystem, bufId, msgId);
 }
 
-void BagMenu_LoadItemTextWithAmount(BagView *bagView, int bufId, int msgId, int name1, int name2);
-
 void BagMenu_LoadItemTextWithAmount(BagView *bagView, int bufId, int msgId, int isMult, int name2)
 {
     sub_020244E0(bagView->wordSetSystem, bufId, msgId, isMult, name2);
 }
-
-void BagMenu_SwitchItemPostion(BagView *bagView, int pockId1, int pockId2);
 
 void BagMenu_SwitchItemPostion(BagView *bagView, int itemSlot1, int itemSlot2)
 {
@@ -233,7 +229,6 @@ int ovy142_2199b48(BagView *bagView, int itemCount, int param_3)
     return v4 != bagView->posNow || v5 != bagView->unk834;
 }
 
-
 int ovy142_2199bcc(BagView *bagView)
 {
     int v2;          // r6
@@ -318,8 +313,6 @@ int ovy142_2199c70(BagView *bagView)
     }
     return iVar5;
 }
-
-int BagMenu_CheckUpDownKeyPad(BagView *bagView);
 
 int BagMenu_CheckUpDownKeyPad(BagView *bagView)
 {
@@ -441,7 +434,6 @@ int ovy142_2199e88(void)
 
 void ovy142_2199eb8(BagView *bagView);
 extern void ovy142_219ffe8(BagView*, int);
-extern void BagMenu_KeyPadMain(BagView*);
 
 void ovy142_2199eb8(BagView *bagView)
 {
@@ -550,8 +542,6 @@ u16 inline BagMenu_CheckItem(u16 id)
 {
     return id + 0xffb4;
 }
-
-int BagMenu_IsRepelItem(u16 itemId);
 
 int BagMenu_IsRepelItem(u16 itemId)
 {
@@ -835,10 +825,10 @@ void BagMenu_HandlePressAButton(BagView *bagView)
 
     if (ovy142_219f7a4(bagView))
     {
-        int data = sub_0202DBE4(bagView->unk79C);
+        int data = TaskAppListMenu_ChoosenWait(bagView->unk79C);
         if (data)
         {
-            int iVar3 = sub_0202DC00(bagView->unk79C);
+            int iVar3 = TaskAppListMenu_GetChoosenIndex(bagView->unk79C);
             bagView->unk89C = bagView->unk848[iVar3];
             switch (bagView->unk89C)
             {
@@ -1221,10 +1211,10 @@ void ovy142_219ab38(BagView *bagView)
     int iVar1;
 
 
-    iVar1 = sub_0202DBE4(bagView->unk79C);
+    iVar1 = TaskAppListMenu_ChoosenWait(bagView->unk79C);
     if (iVar1 != 0)
     {
-        iVar1 = sub_0202DC00(bagView->unk79C);
+        iVar1 = TaskAppListMenu_GetChoosenIndex(bagView->unk79C);
         if (iVar1 == 0) 
         {
             sub_0219F0AC(bagView);
@@ -1271,7 +1261,6 @@ void ovy142_219abb8(BagView *bagView)
 
 }
 
-void BagMenu_PrintPokeLearnHmTm(BagView *bagView);
 extern int GFL_SndPlayerIsActiveAny(void);
 extern void LoadMoveNameToStrbuf(int, int, int);
 
@@ -1304,7 +1293,6 @@ void ovy142_219ac4c(BagView *bagView)
 }
 
 extern int Item_GetTmNo(u16);
-void BagMenu_TmHmUseStart(BagView *bagView);
 
 void BagMenu_TmHmUseStart(BagView *bagView)
 {
@@ -1357,10 +1345,10 @@ void ovy142_219ad30(BagView *bagView)
     int iVar1;
     int iVar2;
 
-    iVar1 = sub_0202DBE4(bagView->unk79C);
+    iVar1 = TaskAppListMenu_ChoosenWait(bagView->unk79C);
     if (iVar1 != 0)
     {
-        iVar1 = sub_0202DC00(bagView->unk79C);
+        iVar1 = TaskAppListMenu_GetChoosenIndex(bagView->unk79C);
         ovy142_219fb60(bagView);
         sub_02045738(3);
         if (iVar1 == 0)
@@ -1400,7 +1388,6 @@ void ovy142_219ae10(BagView *bagView)
     }
 }
 
-extern void BagMenu_SelectAmountItemToss(BagView*);
 extern void ovy142_219b438(BagView*, int);
 
 void BagMenu_ItemToss(BagView *bagView)
@@ -1462,10 +1449,6 @@ void BagMenu_SelectAmountItemToss(BagView *bagView)
     }
 }
 
-
-
-void BagMenu_TrySellItem(BagView *bagView);
-
 void ovy142_219b2a8(BagView*);
 extern void ovy142_219b0a0(BagView*);
 extern void ovy142_219b12c(BagView*);
@@ -1499,7 +1482,7 @@ void BagMenu_TrySellItem(BagView *bagView)
         BagMenu_PopUpOptionMenuSetting(bagView, 0);
         uVar4 = BagMenu_GetSelectSlot(bagView);
         ItemTable* iVar2 = (ItemTable*)BagMenu_GetBagItemDataBySlot(bagView, uVar4);
-        
+
         if (iVar2->num == 1)
         {
             BagMenu_SetRunFunc(bagView, ovy142_219b12c);
@@ -1559,8 +1542,6 @@ void ovy142_219b0a0(BagView *bagView)
     }
 }
 
-void BagMenu_PrintSellItemYesNo(BagView*);
-
 void ovy142_219b12c(BagView *bagView)
 {
     int uVar2;
@@ -1583,9 +1564,9 @@ void BagMenu_PrintSellItemYesNo(BagView *bagView)
 
     iVar1 = ovy142_219f7a4(bagView);
 
-    if ((iVar1 != 0) && (sub_0202DBE4(bagView->unk79C)))
+    if ((iVar1 != 0) && (TaskAppListMenu_ChoosenWait(bagView->unk79C)))
     {
-        iVar1 = sub_0202DC00(bagView->unk79C);
+        iVar1 = TaskAppListMenu_GetChoosenIndex(bagView->unk79C);
         ovy142_219fb60(bagView);
 
         switch (iVar1)
@@ -1983,8 +1964,6 @@ void BagMenu_SortItemByClass(BagView *bagView)
     GFL_HeapFree(iVar1);
 }
 
-void BagMenu_SortItemByName(BagView *bagView);
-
 void BagMenu_SortItemByName(BagView *bagView)
 {
     int i;
@@ -2013,7 +1992,6 @@ void BagMenu_SortItemByName(BagView *bagView)
     GFL_HeapFree(iVar1);
 }
 
-void BagMenu_SortItemByIndex(BagView *bagView);
 extern int Item_GetTmHmIndex(u16);
 
 void BagMenu_SortItemByIndex(BagView *bagView)
@@ -2046,7 +2024,6 @@ void BagMenu_SortItemByIndex(BagView *bagView)
     }
 }
 
-void BagMenu_SortItemByAmount(BagView *bagView, int param_2);
 extern int sub_0200854C(void*, u16);
 
 void BagMenu_SortItemByAmount(BagView *bagView, int sortType)
@@ -2442,8 +2419,6 @@ int ovy142_219c0e8(BagView *bagView, int param_2)
     return GameData_IsPocketRegistered(bagView->m_GameData, uVar1);
 }
 
-void BagMenu_ButtonManCallBack(u32 a1, int a2, BagView *bagView);
-
 void BagMenu_ButtonManCallBack(u32 hitIndex, int a2, BagView *bagView)
 {
     int v7;
@@ -2741,7 +2716,7 @@ int BagMenu_Main(int a1, int a2, void *data3, void *a4)
     v6->taskCallBack = GFL_VBlankTCBAdd(ovy142_219c38c, v6, 0);
     v6->unk748 = GFL_TCBExMgrCreate(v6->heapId, v6->heapId, 1, 0);
     ovy142_219f84c(v6);
-    v6->taskMenuData = sub_0202E168(
+    v6->taskMenuData = TaskAppListMenu_Create(
         3,
         9,
         v6->font,

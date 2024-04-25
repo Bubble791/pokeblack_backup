@@ -428,7 +428,7 @@ _0219D1F6:
 	add r0, r5, r0
 	add r0, #0x94
 	ldr r0, [r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	add r0, r5, #0
 	add r0, #0x80
 	ldrb r0, [r0]
@@ -1647,7 +1647,7 @@ _0219DBA2:
 	ldr r0, [r0, #0x14]
 	cmp r0, #0
 	beq _0219DBB0
-	bl sub_0204C108
+	bl Oam_RemoveOam
 _0219DBB0:
 	add r4, r4, #1
 	cmp r4, #0x16

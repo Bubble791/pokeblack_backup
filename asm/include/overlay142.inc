@@ -86,8 +86,8 @@
 .public sub_021998C0
 .public sub_0202E9DC
 .public sub_021998C0
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public BagSave_GetExistingItemPocket
 .public Item_GetItemParam
 .public sub_0202D384
@@ -146,8 +146,8 @@
 .public sub_0203D564
 .public sub_0203DF44
 .public sub_0203D564
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_0219F0AC
 .public sub_021998C0
 .public sub_0219F0AC
@@ -173,8 +173,8 @@
 .public sub_02045738
 .public Oam_EnableOamAnim
 .public sub_021998C0
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public sub_02045738
 .public GFL_SndSEPlay
 .public GFL_MsgDataLoadStrbuf
@@ -227,8 +227,8 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_0219F760
 .public sub_021998C0
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public PlayerSave_GetPlayerSaveOffset
 .public PlayerSave_AddMoney
 .public GFL_SndSEPlay
@@ -395,7 +395,7 @@
 .public ButtonSystem_Create
 .public GFL_VBlankTCBAdd
 .public GFL_TCBExMgrCreate
-.public sub_0202E168
+.public TaskAppListMenu_Create
 .public sub_02042BA8
 .public sub_0203D554
 .public sub_021998C0
@@ -477,8 +477,8 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_021998C0
 .public sub_0219CD58
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public GFL_SndSEPlay
 .public sub_021998C0
 .public GFL_SndSEPlay
@@ -517,8 +517,8 @@
 .public sub_020484B4
 .public sub_020484D4
 .public GFL_BGSysLoadScr
-.public sub_0202DBE4
-.public sub_0202DC00
+.public TaskAppListMenu_ChoosenWait
+.public TaskAppListMenu_GetChoosenIndex
 .public GFL_SndSEPlay
 .public sub_021998C0
 .public GFL_SndSEPlay
@@ -708,8 +708,8 @@
 .public BmpWin_Free
 .public BmpWin_Free
 .public BmpWin_Free
-.public sub_0204C108
-.public sub_0204C108
+.public Oam_RemoveOam
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64
@@ -742,7 +742,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public GFL_MsgDataLoadStrbuf
 .public sub_0203D554
-.public sub_0204C108
+.public Oam_RemoveOam
 .public sub_0204B98C
 .public sub_0204BCD0
 .public GFL_ArcSysCreateFileHandle

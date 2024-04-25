@@ -2436,7 +2436,7 @@ ovy294_21a2d5c: ; 0x021A2D5C
 	bl sub_0204BE64
 	sub r0, r5, #4
 	ldr r0, [r4, r0]
-	bl sub_0204C108
+	bl Oam_RemoveOam
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
