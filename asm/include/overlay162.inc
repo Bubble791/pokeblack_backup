@@ -650,7 +650,7 @@
 .public sub_0200898C
 .public MI_CpuFill8
 .public sub_021659EC
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203CE0C
 .public sub_0203CDC8
 .public sub_0203CE0C

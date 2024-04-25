@@ -13,8 +13,8 @@
 .public GFL_ArcSysCreateFileHandle
 .public sub_02199C90
 .public sub_0201361C
-.public sub_0203A970
-.public sub_0203A970
+.public CreateGameProcManager
+.public CreateGameProcManager
 .public sub_0202E678
 .public GFL_VBlankTCBAdd
 .public sub_02042BA8

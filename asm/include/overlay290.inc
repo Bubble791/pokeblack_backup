@@ -222,7 +222,7 @@
 .public sub_0201FDF8
 .public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203CB80
 .public sub_0203A980
 .public GFL_HeapFree
@@ -231,7 +231,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02005EA0
 .public sub_0203CDC8
 .public sub_02040C64

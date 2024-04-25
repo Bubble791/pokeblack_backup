@@ -71,7 +71,7 @@ _021BB780:
 	add r0, r4, #0
 	bl sub_021BBFEC
 	mov r0, #0x4b
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #4]
 	mov r0, #1
 	pop {r4, r5, r6, pc}

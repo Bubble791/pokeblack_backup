@@ -449,7 +449,7 @@
 .public Oam_CreateSprite
 .public sub_0203CDC8
 .public sub_02034B64
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
 .public sub_0203A988
@@ -461,7 +461,7 @@
 .public sub_02034BC4
 .public sub_0203CE0C
 .public sub_0203CDC8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
 .public sub_0203A980

@@ -1189,7 +1189,7 @@ ovy271_21f0770: ; 0x021F0770
 	ldr r1, [sp, #0x20]
 	str r6, [r4, #4]
 	str r1, [r4, #0x68]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4]
 	add r0, r4, #0
 	add r0, #0x2c

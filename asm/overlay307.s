@@ -43,7 +43,7 @@ ovy307_21ddbc0: ; 0x021DDBC0
 	mov r3, #0
 	bl sub_0204E060
 	ldrh r0, [r4]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r1, r4, #0
 	add r1, #0x88
 	str r0, [r1]

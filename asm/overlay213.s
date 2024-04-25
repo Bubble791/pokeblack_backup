@@ -49,7 +49,7 @@ _021BB74A:
 	lsl r0, r0, #2
 	strh r1, [r4, r0]
 	ldrh r0, [r4, r0]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r1, r4, #0
 	add r1, #0xdc
 	str r0, [r1]

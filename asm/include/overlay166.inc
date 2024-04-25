@@ -3,7 +3,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public GFL_StrBufCreate
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A980
 .public GFL_StrBufFree
 .public GFL_StrBufFree

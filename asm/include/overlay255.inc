@@ -8,7 +8,7 @@
 .public sub_02007B90
 .public sub_02007978
 .public sub_021BBFEC
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A978
 .public sub_02007AD4
 .public sub_0203A980

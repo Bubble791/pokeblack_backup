@@ -2,7 +2,7 @@
 #pragma once
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A978
 .public sub_0203A980
 .public sub_0203AB10

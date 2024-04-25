@@ -148,6 +148,17 @@ extern void sub_02022DA8(int);
 extern void sub_0202E818(int);
 extern void sub_02021C44(int);
 extern void sub_02021A18(int);
+extern void sub_0202DA54(int);
+extern void *sub_02017934(void*);
+extern void* SaveControl_GetEncountSave(void*);
+extern void GFL_MsgDataLoadStrbuf(int, int, int);
+extern void GFL_WordSetFormatStrbuf(int, int, int);
+extern int CreateGameProcManager(int);
+extern int sub_02010CB8(void*);
+extern int sub_02034F6C(void);
+extern void sub_02010D80(int, int);
+extern void sub_02010D90(int, int);
+extern int sub_0200D1F8(int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

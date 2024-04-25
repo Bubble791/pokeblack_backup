@@ -98,7 +98,7 @@ ovy284_21e30e0: ; 0x021E30E0
 	add r0, #0xf0
 	str r4, [r5, r0]
 	ldrh r0, [r5]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r6, #0xf4
 	str r0, [r5, r6]
 	ldr r0, [sp, #4]

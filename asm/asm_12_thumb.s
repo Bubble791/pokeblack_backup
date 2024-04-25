@@ -29806,7 +29806,7 @@ sub_02013210: ; 0x02013210
 	blx MI_CpuFill8
 	mov r0, #0x5b
 	str r4, [r5]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r5, #8]
 	mov r0, #1
 	pop {r4, r5, r6, pc}
@@ -37750,7 +37750,7 @@ sub_020168F0: ; 0x020168F0
 	strh r4, [r5]
 	ldrh r0, [r5]
 	str r2, [r5, #4]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	mov r6, #0
 	str r0, [r5, #8]
 	ldrh r0, [r5]

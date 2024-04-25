@@ -94,6 +94,8 @@ void ovy299_21a01e4(PokedexMenu *a1);
 void ovy299_21a01a0(PokedexMenu *a1);
 void ovy299_21a0208(PokedexMenu *a1);
 void sub_021A0220(PokedexMenu *a1);
+int ovy299_21a0298(PokedexMenu *a1);
+void sub_021A0288(PokedexMenu *result, s16 a2);
 
 int ovy299_219fbc0(int a1, int a2, int a3)
 {
@@ -453,22 +455,169 @@ void sub_021A0220(PokedexMenu *a1)
     GFL_HeapFree(a1->unkC5C);
 }
 
-void ovy299_21a0230(int a1, int a2, int a3, int a4)
-{
-    unsigned int i; // r5
-    int result;     // r0
-    __int16 v7;     // [sp+4h] [bp-1Ch] BYREF
-    __int16 v8;     // [sp+6h] [bp-1Ah] BYREF
-    int v9;         // [sp+8h] [bp-18h]
+extern void GFL_BGSysMoveBGReq(int, int, int);
+extern void ovy299_21a158c(PokedexMenu*, u32, s16*, s16*, int);
+extern void ovy299_21a1568(PokedexMenu*, u32, s16, s16, int);
+void ovy299_21a0230(PokedexMenu *a1);
 
-    v9 = a4;
+void ovy299_21a0230(PokedexMenu *a1)
+{
+    u32 i;
+    s16 v7[2];
+
     GFL_BGSysMoveBGReq(5, 3, 48);
     GFL_BGSysMoveBGReq(1, 3, -48);
     for (i = 6; i <= 0xC; ++i)
     {
-        sub_21A15CC(a1, i, &v8, &v7, 0);
-        v7 += 48;
-        result = sub_21A15A8(a1, i, v8, v7, 0);
+        ovy299_21a158c(a1, i, &v7[1], &v7[0], 0);
+        v7[0] += 48;
+        ovy299_21a1568(a1, i, v7[1], v7[0], 0);
     }
-    return result;
 }
+
+void sub_021A0288(PokedexMenu *result, s16 a2)
+{
+    result->unkC64 = 48;
+    result->unkC66 = a2;
+}
+
+int ovy299_21a0298(PokedexMenu *a1)
+{
+    s16 v7[2];
+    u32 i;
+    int v6;
+
+    int v5 = a1->unkC64;
+    if (!v5)
+        return 0;
+
+    GFL_BGSysMoveBGReq(5, 4, a1->unkC66);
+    GFL_BGSysMoveBGReq(1, 5, a1->unkC66);
+    for (i = 6; i <= 0xC; ++i)
+    {
+        ovy299_21a158c(a1, i, &v7[1], &v7[0], 0);
+        v7[0] += a1->unkC66;
+        ovy299_21a1568(a1, i, v7[1], v7[0], 0);
+    }
+    v6 = a1->unkC66;
+    if (v6 < 0)
+        v6 = -v6;
+    a1->unkC64 -= v6;
+    return 1;
+}
+
+extern const int data_021A25E0[4];
+
+// void ovy299_21a0324(PokedexMenu *a1, int a2, int a3, int a4)
+// {
+//     int v5;              // r7
+//     int *v6;             // r4
+//     int v7;              // r6
+//     int v8[4];            // r3
+//     int v9;              // r2
+//     int v10;             // r0
+//     int v11;             // r1
+//     unsigned int v12;    // r0
+//     unsigned int v13;    // r2
+//     char v14;            // r1
+//     unsigned int v15;    // r0
+//     unsigned int v16;    // r6
+//     int v17;             // r1
+//     unsigned int result; // r0
+//     int v19;             // r7
+//     int v20;             // r0
+//     int v21;             // r3
+//     int v22;             // r1
+//     int v23;             // r2
+//     int v24;             // r7
+//     int v25;             // r2
+//     char v26[20];        // [sp+10h] [bp-40h] BYREF
+//     __int16 v27;         // [sp+24h] [bp-2Ch]
+//     char v28;            // [sp+28h] [bp-28h]
+//     __int16 v29;         // [sp+2Ah] [bp-26h]
+
+//     v5 = GFL_ArcSysCreateFileHandle(157, 0x806B);
+
+//     v7 = sub_0200D214(a1->unk0.unk4);
+//     v8 = data_021A25E0;
+
+//     v27 = 649;
+//     v30 = a1;
+//     v12 = 0;
+//     v13 = *(unsigned __int16 *)(*a1 + 10);
+//     if (!a1->unk0.unkA)
+//     {
+//         while (v7 != *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v12))
+//         {
+//             if (++v12 >= v13)
+//                 goto LABEL_12;
+//         }
+//         v14 = v13 - 7;
+//         if (v12 > v13 - 7)
+//         {
+//             v28 = v12 - v14;
+//             LOWORD(v12) = v12 - (unsigned __int8)(v12 - v14);
+//         LABEL_7:
+//             v29 = v12;
+//             goto LABEL_12;
+//         }
+//         if (v12 >= 7)
+//             goto LABEL_7;
+//         v28 = v12;
+//     }
+// LABEL_12:
+//     a1[788] = MEMORY[0x219AF5C](v26, 107);
+//     v15 = *(unsigned __int16 *)(*a1 + 10);
+//     if (v15 >= 7)
+//         v15 = 7;
+//     a1[790] = v15;
+//     v16 = 0;
+//     MEMORY[0x219B220](a1[788], v5, 68, 0, 0);
+//     MEMORY[0x219B220](a1[788], v5, 69, 0, 1);
+//     MEMORY[0x219B220](a1[788], v5, 70, 0, 2);
+//     MEMORY[0x219B2BC](a1[788], v5, 49, 2, 3);
+//     MEMORY[0x204AB38](v5);
+//     v17 = *a1;
+//     result = *(unsigned __int16 *)(*a1 + 10);
+//     if (*(_WORD *)(*a1 + 10))
+//     {
+//         do
+//         {
+//             if (MEMORY[0x200D660](*(_DWORD *)(v17 + 4), *(unsigned __int16 *)(*(_DWORD *)(v17 + 12) + 2 * v16)) == 1)
+//             {
+//                 v19 = MEMORY[0x20489B8](MEMORY[0x209A474], *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16));
+//                 a1[v16 + 25] = MEMORY[0x20485D0](v19, 107);
+//                 MEMORY[0x2048590](v19);
+//                 v20 = a1[788];
+//                 v21 = *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16);
+//                 v22 = 0;
+//                 v23 = 0x20000000;
+//             }
+//             else
+//             {
+//                 if (MEMORY[0x200D7F4](*(_DWORD *)(*a1 + 4), *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16)) != 1)
+//                 {
+//                     a1[v16 + 25] = MEMORY[0x20489B8](a1[21], 7);
+//                     v25 = *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16);
+//                     v20 = a1[788];
+//                     v22 = 2;
+//                     goto LABEL_21;
+//                 }
+//                 v24 = MEMORY[0x20489B8](MEMORY[0x209A474], *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16));
+//                 a1[v16 + 25] = MEMORY[0x20485D0](v24, 107);
+//                 MEMORY[0x2048590](v24);
+//                 v20 = a1[788];
+//                 v21 = *(unsigned __int16 *)(*(_DWORD *)(*a1 + 12) + 2 * v16);
+//                 v22 = 1;
+//                 v23 = 0x10000000;
+//             }
+//             v25 = v23 | v21;
+//         LABEL_21:
+//             MEMORY[0x219B1F4](v20, v22, v25);
+//             v17 = *a1;
+//             ++v16;
+//             result = *(unsigned __int16 *)(*a1 + 10);
+//         } while (v16 < result);
+//     }
+//     return result;
+// }

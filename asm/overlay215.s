@@ -236,7 +236,7 @@ _021A7768:
 	ldr r0, [r4, #0x10]
 	strh r1, [r0]
 	mov r0, #0x63
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x1c]
 	mov r0, #1
 	pop {r4, r5, r6, pc}
@@ -3002,7 +3002,7 @@ ovy215_21a8d68: ; 0x021A8D68
 	str r0, [r4, #0x28]
 	mov r0, #0x65
 	str r6, [r4, #0x2c]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x30]
 	mov r0, #1
 	pop {r4, r5, r6, pc}

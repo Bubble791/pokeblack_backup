@@ -41,7 +41,7 @@ _021C2592:
 	strh r1, [r4, r0]
 	add r1, #0xb0
 	ldrh r0, [r4, r1]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r1, r4, #0
 	add r1, #0xe0
 	str r0, [r1]

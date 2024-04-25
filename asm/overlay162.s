@@ -5797,7 +5797,7 @@ ovy162_21a0054: ; 0x021A0054
 	bl sub_021659EC
 	str r0, [r4, #0x2c]
 	mov r0, #1
-	bl sub_0203A970
+	bl CreateGameProcManager
 	ldr r7, _021A0158 ; =0x00000118
 	str r0, [r4, #0x34]
 	add r0, r7, #0

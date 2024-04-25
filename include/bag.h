@@ -455,11 +455,6 @@ extern void sub_0202D384(u16);
 void ovy142_219ad30(BagView *m_bagView);
 extern void StringSetNumber(int, int, int, int, int, int);
 extern void sub_0219F0AC(BagView*);
-extern void sub_0202DA54(int);
-extern void *sub_02017934(void*);
-extern void* SaveControl_GetEncountSave(void*);
-extern void GFL_MsgDataLoadStrbuf(int, int, int);
-extern void GFL_WordSetFormatStrbuf(int, int, int);
 
 extern int EncountSave_IsRepelDepleted(void*);
 extern void EncountSave_SetRepelSteps(void*, u8);

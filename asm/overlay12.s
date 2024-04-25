@@ -45920,7 +45920,7 @@ ovy12_21662bc: ; 0x021662BC
 	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r0, #0x76
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4]
 	mov r0, #1
 	pop {r4, pc}
@@ -52708,7 +52708,7 @@ ovy12_21693b4: ; 0x021693B4
 	ldr r0, [r4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #8]
 _021693CA:
 	mov r1, #0
@@ -52766,7 +52766,7 @@ ovy12_2169414: ; 0x02169414
 	ldr r0, [r4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #8]
 _0216942A:
 	ldr r0, [r4, #0x30]
@@ -52843,7 +52843,7 @@ ovy12_21694ac: ; 0x021694AC
 	ldr r0, [r4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #8]
 _021694C2:
 	ldr r0, [r4, #0x30]
@@ -53062,7 +53062,7 @@ ovy12_2169668: ; 0x02169668
 	ldr r0, [r4]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #8]
 _0216968A:
 	mov r0, #1

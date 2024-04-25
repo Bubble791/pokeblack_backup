@@ -5460,7 +5460,7 @@ _021AC616:
 	add r0, r7, #0
 	bl ovy204_21a9d70
 	add r0, r6, #0
-	bl sub_0203A970
+	bl CreateGameProcManager
 	ldr r1, _021AC774 ; =0x00000118
 	ldr r2, _021AC778 ; =0x021DD940
 	ldr r3, [r4, #4]
@@ -5536,7 +5536,7 @@ _021AC6DA:
 	add r0, r7, #0
 	bl ovy204_21a9d70
 	add r0, r6, #0
-	bl sub_0203A970
+	bl CreateGameProcManager
 	ldr r1, _021AC774 ; =0x00000118
 	ldr r2, _021AC778 ; =0x021DD940
 	ldr r3, [r4, #4]

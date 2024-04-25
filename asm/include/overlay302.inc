@@ -3,7 +3,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02017934
 .public sub_02010CB8
 .public sub_02034F6C

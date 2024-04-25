@@ -101,11 +101,11 @@ ovy143_21998c0: ; 0x021998C0
 	bl sub_0201361C
 	str r0, [r5, #0x34]
 	mov r0, #0x61
-	bl sub_0203A970
+	bl CreateGameProcManager
 	lsl r1, r6, #3
 	str r0, [r5, r1]
 	mov r0, #0x61
-	bl sub_0203A970
+	bl CreateGameProcManager
 	mov r1, #0x61
 	add r1, #0xd3
 	str r0, [r5, r1]

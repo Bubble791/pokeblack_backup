@@ -71,7 +71,7 @@
 .public sub_0200AD4C
 .public GFL_HeapAllocate
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public MI_CpuFill8
 .public sub_0203A980
 .public GFL_HeapFree

@@ -31,7 +31,7 @@ ovy166_219ce80: ; 0x0219CE80
 	str r6, [r4, #0x34]
 	strh r5, [r4, #0x3c]
 	ldrh r0, [r4, #0x3c]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x40]
 	str r6, [r4, #0x44]
 	str r6, [r4, #0x48]

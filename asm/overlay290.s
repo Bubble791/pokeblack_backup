@@ -2297,7 +2297,7 @@ ovy290_21fca18: ; 0x021FCA18
 	add r4, r0, #0
 	blx MI_CpuFill8
 	add r0, r5, #0
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4]
 	ldr r0, [sp, #4]
 	str r0, [r4, #0xc]
@@ -2482,7 +2482,7 @@ ovy290_21fcb4c: ; 0x021FCB4C
 	blx MI_CpuFill8
 	str r6, [r5, #0xc]
 	mov r0, #0x58
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4]
 	mov r0, #0x10
 	bl sub_02005EA0

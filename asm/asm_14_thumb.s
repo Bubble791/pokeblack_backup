@@ -2207,13 +2207,13 @@ sub_0203A954: ; 0x0203A954
 _0203A96C: .word 0x02141858
 	thumb_func_end sub_0203A954
 
-	thumb_func_start sub_0203A970
-sub_0203A970: ; 0x0203A970
+	thumb_func_start CreateGameProcManager
+CreateGameProcManager: ; 0x0203A970
 	ldr r3, _0203A974 ; =sub_0203A990
 	bx r3
 	.align 2, 0
 _0203A974: .word sub_0203A990
-	thumb_func_end sub_0203A970
+	thumb_func_end CreateGameProcManager
 
 	thumb_func_start sub_0203A978
 sub_0203A978: ; 0x0203A978

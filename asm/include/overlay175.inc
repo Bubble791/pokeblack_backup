@@ -93,7 +93,7 @@
 .public sub_0219A1FC
 .public sub_0219A1FC
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A980
 .public MI_CpuFill8
 .public sub_0203A988

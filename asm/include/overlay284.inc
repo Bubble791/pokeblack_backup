@@ -9,7 +9,7 @@
 .public GFL_HeapAllocate
 .public sub_0204E060
 .public GFL_VBlankTCBAdd
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02042BA8
 .public sub_0203A980
 .public GFL_TCBRemove

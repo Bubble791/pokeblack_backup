@@ -2,7 +2,7 @@
 #pragma once
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_020120C8
 .public sub_020120DC
 .public sub_0203A980

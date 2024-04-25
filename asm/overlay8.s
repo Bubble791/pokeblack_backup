@@ -464,7 +464,7 @@ _0214F852:
 	ldr r1, _0214FAD8 ; =0x0000FFFF
 	bl sub_02005DF4
 	mov r0, #4
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r3, r4, #0
 	ldr r1, _0214FAE0 ; =0x000000BE
 	ldr r2, _0214FAE4 ; =0x021B50A8
@@ -546,7 +546,7 @@ _0214F8FC:
 	add r1, #0xd8
 	str r0, [r1]
 	mov r0, #4
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x1c]
 	add r4, #0xc0
 	ldr r1, _0214FAE0 ; =0x000000BE

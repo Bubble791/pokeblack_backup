@@ -41,7 +41,7 @@
 .public MI_CpuFill8
 .public sub_02016AD8
 .public sub_02005DF4
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
 .public sub_02011CFC
@@ -51,7 +51,7 @@
 .public sub_02005EA0
 .public sub_02005EA0
 .public sub_02016AD8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A988
 .public sub_0203A978
 .public sub_02011CFC

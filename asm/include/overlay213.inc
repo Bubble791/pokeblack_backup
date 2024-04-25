@@ -5,7 +5,7 @@
 .public sub_02042A6C
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02040C20
 .public sub_021998C8
 .public sub_0203CDC8

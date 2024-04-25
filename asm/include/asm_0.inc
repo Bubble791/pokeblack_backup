@@ -971,7 +971,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A978
 .public MI_CpuFill8
 .public MI_CpuFill8
@@ -1218,7 +1218,7 @@
 .public sub_0203A1D0
 .public OS_ResetSystem
 .public MI_CpuFill8
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203D594
 .public sub_0203A978
 .public sub_0203D594

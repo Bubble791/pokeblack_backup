@@ -925,7 +925,7 @@
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public sub_02021998
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A980
 .public sub_02021C44
 .public sub_02021A18

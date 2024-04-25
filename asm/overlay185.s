@@ -14257,7 +14257,7 @@ ovy185_21a3a14: ; 0x021A3A14
 	bl sub_02021998
 	str r0, [r4, #0x5c]
 	ldrh r0, [r4, #4]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	add r1, r4, #0
 	add r1, #0xac
 	str r0, [r1]

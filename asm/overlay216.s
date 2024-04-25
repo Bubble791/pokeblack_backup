@@ -19,7 +19,7 @@ ovy216_21bb700: ; 0x021BB700
 	str r0, [r4, #0x10]
 	mov r0, #1
 	str r5, [r4, #8]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x20]
 	mov r0, #1
 	pop {r3, r4, r5, pc}

@@ -4021,7 +4021,7 @@
 .public sub_02016EDC
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A980
 .public sub_0203AB10
 .public sub_0203A1D0
@@ -4558,16 +4558,16 @@
 .public GFL_HeapFree
 .public sub_0203AB10
 .public sub_0203A1D0
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A988
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02017934
 .public sub_0203A988
 .public sub_02017934
 .public sub_0200EF84
 .public sub_0200EFA8
 .public sub_0202D0FC
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_02017934
 .public sub_0203A988
 .public sub_02017934
@@ -4590,7 +4590,7 @@
 .public sub_020191AC
 .public sub_02017934
 .public sub_0200FB40
-.public sub_0203A970
+.public CreateGameProcManager
 .public GFL_StrBufCreate
 .public sub_02048614
 .public sub_0203A988

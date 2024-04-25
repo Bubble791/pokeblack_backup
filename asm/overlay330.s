@@ -54,7 +54,7 @@ ovy330_219ceb0: ; 0x0219CEB0
 	str r0, [r4, #0x2c]
 	strh r5, [r4, #0x30]
 	ldrh r0, [r4, #0x30]
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4, #0x34]
 	mov r0, #1
 	pop {r3, r4, r5, pc}

@@ -24,7 +24,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A978
 .public sub_0203A988
 .public sub_02009408
@@ -336,7 +336,7 @@
 .public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
 .public sub_02009790
-.public sub_0203A970
+.public CreateGameProcManager
 .public sub_0203A980
 .public sub_0203AB10
 .public sub_0203A2BC

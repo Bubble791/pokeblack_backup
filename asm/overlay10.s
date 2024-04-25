@@ -21,7 +21,7 @@ ovy10_214ff00: ; 0x0214FF00
 	bl GFL_ProcInitSubsystem
 	add r4, r0, #0
 	mov r0, #0x76
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r4]
 	mov r0, #1
 	pop {r4, pc}

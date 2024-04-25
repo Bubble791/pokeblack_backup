@@ -121,7 +121,7 @@ ovy272_21f8048: ; 0x021F8048
 	add r5, r0, #0
 	blx MI_CpuFill8
 	add r0, r4, #0
-	bl sub_0203A970
+	bl CreateGameProcManager
 	str r0, [r5]
 	str r7, [r5, #0x14]
 	str r6, [r5, #0x18]
