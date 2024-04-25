@@ -931,12 +931,12 @@ _0219D62E:
 	mov r0, #1
 	mov r1, #5
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #5
 	add r2, r4, #0
 	mov r6, #2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r5, #0x54]
 	add r1, sp, #0
 	mov r2, #0

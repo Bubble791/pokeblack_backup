@@ -753,12 +753,12 @@ ovy332_21bf4c4: ; 0x021BF4C4
 	mov r0, #3
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r2, [r4]
 	mov r0, #7
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r7, [r4, #8]
 	cmp r7, #0
 	beq _021BF5A2

@@ -4984,33 +4984,33 @@ _021F6B4C:
 	mov r0, #6
 	mov r1, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #6
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 _021F6B62:
 	mov r2, #6
 	mov r0, #6
 	mov r1, #0
 	add r2, #0xfa
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #6
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 _021F6B7A:
 	mov r0, #6
 	mov r1, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r2, #3
 	mov r0, #6
 	mov r1, #3
 	add r2, #0xfd
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy286_21f6b3c

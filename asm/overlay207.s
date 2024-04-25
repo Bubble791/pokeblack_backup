@@ -499,19 +499,19 @@ _021B337C:
 	add r0, r7, #0
 	add r1, r6, #0
 	add r2, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r7, #0
 	mov r1, #4
 	add r2, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	add r1, r6, #0
 	add r2, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #4
 	add r2, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r5]
 	sub r0, r0, #4
 	strb r0, [r5]
@@ -7172,7 +7172,7 @@ ovy207_21b6924: ; 0x021B6924
 	str r6, [r4, #4]
 	ldrh r0, [r5]
 	mov r1, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	str r0, [r4, #8]
 	add r0, r4, #0
 	add sp, #4

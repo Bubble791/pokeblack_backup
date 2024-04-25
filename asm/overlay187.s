@@ -1045,7 +1045,7 @@ _021E93DE:
 	lsr r0, r0, #0x18
 	mov r1, #0
 	neg r2, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #4
 	bl sub_021E9710
 	ldr r2, [r4, #0x68]
@@ -1054,7 +1054,7 @@ _021E93DE:
 	lsr r0, r0, #0x18
 	mov r1, #0
 	neg r2, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	thumb_func_end ovy187_21e93c4
 

@@ -2798,7 +2798,7 @@ ovy255_21bcc74: ; 0x021BCC74
 	add r4, r0, #0
 	mov r0, #0x4c
 	mov r1, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	mov r5, #0x62
 	ldr r1, [r4, #0x2c]
 	lsl r5, r5, #2
@@ -7813,7 +7813,7 @@ ovy255_21bf1a8: ; 0x021BF1A8
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy255_21bf1a8
 
@@ -7950,7 +7950,7 @@ _021BF2B4:
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0xc0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, r5, r6, pc}
 	nop
 _021BF2FC: .word 0x00009ECC
@@ -10226,7 +10226,7 @@ _021C0518:
 	mov r0, #3
 	mov r1, #2
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r4, #0
 	mov r1, #8
 	bl ovy255_21cfff4
@@ -10276,7 +10276,7 @@ _021C057C:
 	mov r1, #1
 	mov r5, #8
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	sub r5, #0x10
 	add r0, r4, #0
 	add r1, r5, #0

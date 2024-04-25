@@ -8161,7 +8161,7 @@ _0219D884:
 	mov r0, #6
 	ldrh r2, [r2]
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -8179,7 +8179,7 @@ ovy259_219d89c: ; 0x0219D89C
 	mov r1, #3
 	mov r2, #0
 	mov r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrh r0, [r5, #2]
 	cmp r0, #0
 	ble _0219D8D6
@@ -8320,7 +8320,7 @@ _0219D9C2:
 	ldrh r2, [r5]
 	mov r0, #6
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _0219D9D2:
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy259_219d8f8
@@ -9506,7 +9506,7 @@ _0219E24A:
 	mov r0, #4
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r4, #8]
 	bl sub_0202E1DC
 	add r0, r4, #0

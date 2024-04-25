@@ -7644,7 +7644,7 @@
 .public sub_020202A4
 .public sub_020202AC
 .public sub_02020414
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public sub_02020480
 .public sub_020204E4
 .public sub_02020510
@@ -10032,7 +10032,7 @@
 .public sub_02045A80
 .public sub_02045B7C
 .public sub_02045B94
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_02045E48
 .public sub_02045E74
 .public sub_02045EA0

@@ -717,15 +717,15 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_02045738
 .public GFL_BGSysLoadScr
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public MI_CpuFill8
 .public sub_0219E16C
 .public sub_0219E170
 .public sub_0219DFA4
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0203DAC8
 .public sub_0219DF70
 .public GFL_SndSEPlay
@@ -804,7 +804,7 @@
 .public BmpWin_Free
 .public sub_02045738
 .public GFL_BGSysLoadScr
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0202E1DC
 .public MI_CpuFill8
 .public sub_0202E434

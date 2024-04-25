@@ -1640,11 +1640,11 @@ _021A08EA:
 	mov r0, #3
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	str r0, [r4, r5]
 _021A0910:
@@ -4184,7 +4184,7 @@ ovy304_21a1cf8: ; 0x021A1CF8
 	mov r0, #1
 	mov r1, #5
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	lsl r0, r5, #0x10
 	mov r4, #0x5b
 	asr r6, r0, #0x10
@@ -4214,11 +4214,11 @@ _021A1D40:
 	mov r0, #4
 	mov r1, #5
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #5
 	mov r1, #5
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end ovy304_21a1cf8

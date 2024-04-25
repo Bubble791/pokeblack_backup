@@ -4170,7 +4170,7 @@ _021A1CE2:
 	mov r0, #3
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	str r0, [r4, r5]
 _021A1CFC:
@@ -5584,11 +5584,11 @@ ovy303_21a28f8: ; 0x021A28F8
 	mov r0, #6
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	nop
 _021A291C: .word 0x00000594
@@ -6577,11 +6577,11 @@ _021A30AC:
 	mov r0, #4
 	mov r1, #5
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #5
 	mov r1, #5
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021A30C4: .word 0x00000464

@@ -447,7 +447,7 @@ ovy162_219d4fc: ; 0x0219D4FC
 	add r2, r3, r2
 	mov r1, #0
 	asr r2, r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	bl sub_02015878
 	cmp r0, #0x17
 	ldr r0, [r4, #0x28]
@@ -1683,11 +1683,11 @@ _0219DF36:
 	ldr r2, [r5, r4]
 	mov r0, #1
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r2, [r5, r4]
 	mov r0, #2
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r1, r4, #0
 	add r1, #8
 	ldr r1, [r5, r1]
@@ -2067,13 +2067,13 @@ _0219E228:
 	ldr r2, [r4, r2]
 	mov r0, #1
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r2, r5, #0
 	add r2, #9
 	ldr r2, [r4, r2]
 	mov r0, #2
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r5, #0
 	sub r0, #0xf
 	ldr r0, [r4, r0]
@@ -5171,19 +5171,19 @@ ovy162_219fa90: ; 0x0219FA90
 	mov r0, #1
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #1
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy162_219f8c8
@@ -5217,23 +5217,23 @@ ovy162_219fbf4: ; 0x0219FBF4
 	mov r0, #1
 	mov r1, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r2, r4, #0
 	add r2, #0x48
 	ldr r2, [r5, r2]
 	mov r0, #1
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r2, r4, #0
 	add r2, #0x48
 	ldr r2, [r5, r2]
 	mov r0, #2
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r4, #0x34
 	ldrb r0, [r5, r4]
 	cmp r0, #0
@@ -5414,20 +5414,20 @@ ovy162_219fd30: ; 0x0219FD30
 	mov r0, #1
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #1
 	mov r1, #3
 	mov r2, #0
 	mov r6, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #0
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	add r1, r6, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy162_219f8c8

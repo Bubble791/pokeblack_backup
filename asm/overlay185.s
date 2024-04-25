@@ -4625,7 +4625,7 @@ _0219F1AA:
 _0219F1AC:
 	mov r0, #1
 	mov r1, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end ovy185_219f198

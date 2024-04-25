@@ -702,19 +702,19 @@ _021A0158:
 	mov r0, #3
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #1
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #5
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r4, #0xa]
 _021A0182:
 	add r0, r0, #1

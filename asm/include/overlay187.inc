@@ -105,9 +105,9 @@
 .public sub_02045B7C
 .public sub_021E93BC
 .public sub_021E9710
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021E9710
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021E93AC
 .public GFL_FontCreate
 .public GFL_FontCreate

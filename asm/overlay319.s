@@ -2253,7 +2253,7 @@ _0219DF94:
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r4]
 	ldrh r0, [r0, #4]
 	cmp r0, #6
@@ -2334,7 +2334,7 @@ ovy319_219e054: ; 0x0219E054
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r4, #0
 	bl GFL_HeapFree
 	pop {r4, pc}

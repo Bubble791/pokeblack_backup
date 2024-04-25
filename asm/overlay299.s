@@ -17,19 +17,8 @@
 	.public ovy299_21a01a0
 	.public ovy299_21a01e4
 	.public ovy299_21a0208
+	.public sub_021A0220
 	.text
-
-
-	thumb_func_start sub_021A0220
-sub_021A0220: ; 0x021A0220
-	ldr r1, _021A0228 ; =0x00000C5C
-	ldr r3, _021A022C ; =GFL_HeapFree
-	ldr r0, [r0, r1]
-	bx r3
-	.align 2, 0
-_021A0228: .word 0x00000C5C
-_021A022C: .word GFL_HeapFree
-	thumb_func_end sub_021A0220
 
 	thumb_func_start ovy299_21a0230
 ovy299_21a0230: ; 0x021A0230
@@ -39,12 +28,12 @@ ovy299_21a0230: ; 0x021A0230
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0x30
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r2, #1
 	mov r0, #1
 	mov r1, #3
 	sub r2, #0x31
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r5, #6
 	mov r7, #0
 	add r4, sp, #4
@@ -105,12 +94,12 @@ _021A02AC:
 	ldrsh r2, [r5, r2]
 	mov r0, #5
 	mov r1, #4
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r2, r7, #2
 	ldrsh r2, [r5, r2]
 	mov r0, #1
 	mov r1, #5
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r4, #6
 	add r6, sp, #4
 	add r7, r7, #2

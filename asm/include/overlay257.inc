@@ -1184,7 +1184,7 @@
 .public sub_0219CD34
 .public sub_0204C560
 .public sub_0204C4A0
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
 .public Oam_SetOamAnimIndex
@@ -1342,7 +1342,7 @@
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
 .public BmpWin_CreateDynamic
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021AAB50
 .public Oam_SetOamAnimIndex
 .public sub_0202E34C
@@ -1363,10 +1363,10 @@
 .public GFL_HeapFree
 .public sub_02045738
 .public GFL_BGSysLoadScr
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_02045738
 .public GFL_BGSysLoadScr
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021AAA54
 .public sub_021AAA4C
 .public sub_021AAA74
@@ -1442,7 +1442,7 @@
 .public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public sub_021AAA8C

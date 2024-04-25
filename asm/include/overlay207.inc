@@ -30,10 +30,10 @@
 .public sub_02049AF0
 .public sub_02019C0C
 .public sub_02049AA0
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204C560
 .public Oam_SetOamAnimIndex
 .public sub_0204C560
@@ -623,7 +623,7 @@
 .public sub_0201AC70
 .public sub_0201CD88
 .public GFL_HeapAllocate
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_0204B32C

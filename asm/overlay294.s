@@ -471,7 +471,7 @@ ovy294_21a1ef4: ; 0x021A1EF4
 	mov r0, #2
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _021A1F0A:
 	pop {r3, pc}
 	thumb_func_end ovy294_21a1ef4

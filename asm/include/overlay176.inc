@@ -249,11 +249,11 @@
 .public sub_0204566C
 .public GFL_BGSysLoadScr
 .public MI_CpuFill8
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0219C250
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public MI_CpuFill8
 .public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData

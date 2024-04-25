@@ -2282,11 +2282,11 @@ ovy176_219bf5c: ; 0x0219BF5C
 	mov r0, #4
 	mov r1, #3
 	mov r2, #0x58
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #3
 	mov r2, #0x58
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 	thumb_func_end ovy176_219bf5c
 
@@ -2318,12 +2318,12 @@ _0219BF9E:
 	mov r0, #4
 	mov r1, #3
 	sub r2, r5, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r2, [r4]
 	mov r0, #7
 	mov r1, #3
 	sub r2, r5, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _0219BFB8:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

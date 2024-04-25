@@ -171,8 +171,8 @@
 .public sub_02035660
 .public BmpWin_FlushChar
 .public sub_0203A7F4
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204BF1C
 .public sub_0204C028
 .public GFL_BGSysSetBGEnabledB

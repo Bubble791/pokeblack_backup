@@ -69300,14 +69300,14 @@ ovy36_219feec: ; 0x0219FEEC
 	mov r0, #5
 	mov r1, #3
 	neg r2, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r2, #6
 	ldrsh r3, [r5, r6]
 	sub r2, #0xb
 	mov r0, #6
 	mov r1, #3
 	sub r2, r2, r3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	str r0, [r5, r4]
 _0219FF1C:

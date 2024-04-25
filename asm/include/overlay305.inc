@@ -12,7 +12,7 @@
 .public sub_021998C0
 .public sub_02042BA8
 .public sub_0204E060
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021998FC
 .public GFL_MsgDataFree
 .public sub_02021A18
@@ -23,7 +23,7 @@
 .public sub_0203CDC8
 .public sub_02199904
 .public sub_02021A3C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public GFL_ArcSysCreateFileHandle
 .public GFL_G2DIOLoadArcNCLRDefault
 .public sub_0204ADA8

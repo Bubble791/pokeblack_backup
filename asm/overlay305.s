@@ -142,7 +142,7 @@ ovy305_219cfa0: ; 0x0219CFA0
 	mov r1, #0
 	mov r2, #0
 	add r5, r3, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r4, #0x44]
 	cmp r0, #2
 	beq _0219CFBC
@@ -223,7 +223,7 @@ _0219D03C:
 	mov r1, #0
 	asr r2, r2, #1
 	str r3, [r5, r4]
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 	nop

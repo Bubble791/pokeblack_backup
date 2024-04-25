@@ -348,7 +348,7 @@
 .public sub_02026F7C
 .public sub_02026F7C
 .public sub_020275F8
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0204B794
 .public sub_0203A7F4
 .public sub_0202E8D8
@@ -538,8 +538,8 @@
 .public sub_02026FE4
 .public GFL_VBlankGetTCBMgr
 .public sub_02026FE4
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public GFL_ArcSysCreateFileHandle
 .public sub_02035024
 .public sub_02035104
@@ -646,8 +646,8 @@
 .public sub_0204C124
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_02035178
 .public sub_02035024
 .public sub_02035090

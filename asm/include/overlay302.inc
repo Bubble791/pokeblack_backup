@@ -85,8 +85,8 @@
 .public sub_0200D1F8
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public Oam_CreateSprite
 .public sub_02010D78
 .public sub_02010D98
@@ -155,14 +155,14 @@
 .public GFL_HeapFree
 .public GFL_ArcToolFree
 .public GFL_HeapAllocate
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public sub_0204B570
 .public GFL_HeapAllocate
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public GFL_HeapAllocate
 .public sub_0204B610
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public sub_0204B610
 .public sub_0204B610
 .public sub_0204B610

@@ -90,10 +90,10 @@
 .public sub_0203D564
 .public sub_021AD7A8
 .public GFL_SndSEPlay
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public GFL_SndSEPlay
 .public sub_02045EA0
 .public sub_02045EA0

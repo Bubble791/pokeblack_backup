@@ -96,11 +96,11 @@
 .public GFL_WordSetSystemFree
 .public sub_02022DA8
 .public GFL_MsgDataFree
-.public sub_02020428
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
+.public PML_PersonalLoadRegionalDexTable
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public GFL_ArcSysCreateFileHandle
 .public sub_0200D214
 .public sub_0219AF1C

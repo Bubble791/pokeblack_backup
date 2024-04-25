@@ -5875,11 +5875,11 @@ ovy310_219fc2c: ; 0x0219FC2C
 	mov r0, #2
 	mov r1, #3
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #3
 	mov r1, #3
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, pc}
 _0219FC56:
 	cmp r0, r5
@@ -5888,11 +5888,11 @@ _0219FC56:
 	mov r0, #2
 	mov r1, #3
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #3
 	mov r1, #3
 	add r2, r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _0219FC70:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

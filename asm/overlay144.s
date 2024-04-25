@@ -3594,11 +3594,11 @@ _0219EA4A:
 	ldrb r0, [r4]
 	ldr r2, [r4, #0x20]
 	mov r1, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r4]
 	ldr r2, [r4, #0x24]
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r4]
 	mov r1, #9
 	mov r2, #0x80
@@ -3618,11 +3618,11 @@ _0219EA4A:
 	ldrb r0, [r4, #1]
 	ldr r2, [r4, #0x20]
 	mov r1, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r4, #1]
 	ldr r2, [r4, #0x24]
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r4, #1]
 	mov r1, #9
 	mov r2, #0x80

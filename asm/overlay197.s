@@ -5643,12 +5643,12 @@ _021B80DA:
 	mov r0, #3
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r2, [r6, #0xc]
 	mov r0, #7
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _021B8100: .word 0xFFFFFCCD
@@ -5734,12 +5734,12 @@ _021B8188:
 	mov r0, #3
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r2, [r7, #0xc]
 	mov r0, #7
 	mov r1, #3
 	asr r2, r2, #0xc
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021B81B4: .word 0xFFFFC000

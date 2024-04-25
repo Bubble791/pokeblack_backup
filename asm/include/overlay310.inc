@@ -632,10 +632,10 @@
 .public sub_0208DAC0
 .public sub_0208D65C
 .public sub_0219FC24
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_0219FCA0

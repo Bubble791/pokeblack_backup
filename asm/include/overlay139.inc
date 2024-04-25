@@ -263,8 +263,8 @@
 .public sub_0203DA84
 .public sub_0203D554
 .public sub_02035198
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0203DA0C
 .public sub_0203D554
 .public sub_0203D564
@@ -304,8 +304,8 @@
 .public sub_0219CA14
 .public sub_0219CA14
 .public GFL_SndSEPlay
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0203DA84
 .public sub_0203DA84
 .public sub_020355B8

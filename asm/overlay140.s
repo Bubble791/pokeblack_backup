@@ -2927,13 +2927,13 @@ _0219E508:
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	add r2, #0x14
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrh r0, [r5, #2]
 	mov r1, #3
 	add r2, r7, #0
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r1, [r5, #0x34]
 	ldr r0, [sp]
 	sub r1, r1, r0

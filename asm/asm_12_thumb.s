@@ -16260,7 +16260,7 @@ sub_0200D6E0: ; 0x0200D6E0
 	add r0, r1, #0
 	mov r1, #0
 	mov r5, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	add r6, r0, #0
 	mov r4, #1
 _0200D6F2:
@@ -16478,7 +16478,7 @@ sub_0200D888: ; 0x0200D888
 	add r0, r1, #0
 	mov r1, #0
 	mov r5, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	add r6, r0, #0
 	mov r4, #1
 _0200D89A:
@@ -16787,7 +16787,7 @@ sub_0200DAAC: ; 0x0200DAAC
 	add r0, r1, #0
 	mov r1, #0
 	mov r5, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	add r6, r0, #0
 	mov r4, #1
 _0200DABE:
@@ -16831,7 +16831,7 @@ sub_0200DB04: ; 0x0200DB04
 	add r0, r1, #0
 	mov r1, #0
 	mov r5, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	add r6, r0, #0
 	mov r4, #1
 _0200DB16:
@@ -59818,8 +59818,8 @@ _02020422:
 	.align 2, 0
 	thumb_func_end sub_02020414
 
-	thumb_func_start sub_02020428
-sub_02020428: ; 0x02020428
+	thumb_func_start PML_PersonalLoadRegionalDexTable
+PML_PersonalLoadRegionalDexTable: ; 0x02020428
 	push {r4, r5, r6, lr}
 	sub sp, #8
 	add r3, r0, #0
@@ -59864,7 +59864,7 @@ _0202046E:
 _02020474: .word 0x021413E8
 _02020478: .word 0x000002C5
 _0202047C: .word 0x000003E7
-	thumb_func_end sub_02020428
+	thumb_func_end PML_PersonalLoadRegionalDexTable
 
 	thumb_func_start sub_02020480
 sub_02020480: ; 0x02020480

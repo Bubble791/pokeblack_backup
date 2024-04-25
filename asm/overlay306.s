@@ -2902,7 +2902,7 @@ ovy306_219e538: ; 0x0219E538
 	mov r0, #3
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add sp, #0xc
 	pop {r3, r4, pc}
 	thumb_func_end ovy306_219e538

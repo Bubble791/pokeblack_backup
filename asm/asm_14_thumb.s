@@ -27072,8 +27072,8 @@ _02045E14: .word 0x0400101C
 _02045E18: .word 0x04001030
 	thumb_func_end sub_02045B94
 
-	thumb_func_start sub_02045E1C
-sub_02045E1C: ; 0x02045E1C
+	thumb_func_start GFL_BGSysMoveBGReq
+GFL_BGSysMoveBGReq: ; 0x02045E1C
 	push {r3, r4, r5, lr}
 	ldr r4, _02045E44 ; =0x0214190C
 	add r5, r0, #0
@@ -27094,7 +27094,7 @@ sub_02045E1C: ; 0x02045E1C
 	pop {r3, r4, r5, pc}
 	nop
 _02045E44: .word 0x0214190C
-	thumb_func_end sub_02045E1C
+	thumb_func_end GFL_BGSysMoveBGReq
 
 	thumb_func_start sub_02045E48
 sub_02045E48: ; 0x02045E48

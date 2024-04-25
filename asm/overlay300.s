@@ -1341,11 +1341,11 @@ ovy300_21a06bc: ; 0x021A06BC
 	mov r0, #1
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #5
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add sp, #0xc
 	pop {pc}
 	.align 2, 0
@@ -1359,11 +1359,11 @@ ovy300_21a0724: ; 0x021A0724
 	mov r0, #4
 	mov r1, #3
 	mov r2, #0x30
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #3
 	mov r2, #0x30
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r5, #0x20]
 	mov r1, #0
 	mov r2, #0
@@ -1463,12 +1463,12 @@ _021A07EE:
 	ldrsh r2, [r5, r2]
 	mov r0, #4
 	mov r1, #4
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r2, r7, #2
 	ldrsh r2, [r5, r2]
 	mov r0, #7
 	mov r1, #4
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r4, #2
 	add r6, sp, #4
 	add r7, r7, #2

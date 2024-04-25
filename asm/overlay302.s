@@ -1218,11 +1218,11 @@ ovy302_21ad7c8: ; 0x021AD7C8
 	bne _021AD7EE
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r5, #0
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	str r0, [r4]
 _021AD7EE:
@@ -2604,7 +2604,7 @@ _021AE232:
 _021AE24C:
 	add r0, r7, #0
 	add r1, sp, #0x10
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	str r0, [sp, #0xc]
 	add r0, sp, #0x14
 	str r0, [sp]
@@ -2735,7 +2735,7 @@ ovy302_21ae34c: ; 0x021AE34C
 	add r0, r4, #0
 	mov r1, #0
 	add r6, r2, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	str r0, [r7]
 	ldr r0, _021AE3B8 ; =0x0000028A
 	mov r1, #1

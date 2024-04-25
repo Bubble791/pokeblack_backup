@@ -3592,7 +3592,7 @@ ovy139_219b410: ; 0x0219B410
 	mov r2, #0
 	mov r4, #3
 	mov r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r5, #0
 	add r0, #0x66
 	strb r6, [r0]
@@ -3652,7 +3652,7 @@ _0219B47E:
 	mov r4, #3
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrsb r1, [r5, r4]
 	ldrb r0, [r5, #5]
 	add r1, #0x18
@@ -5372,13 +5372,13 @@ _0219C17A:
 	ldrb r0, [r5]
 	ldrsb r2, [r5, r4]
 	mov r1, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrb r0, [r5, #1]
 	cmp r0, #0xff
 	beq _0219C1A4
 	ldrsb r2, [r5, r4]
 	add r1, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _0219C1A4:
 	mov r1, #0x67
 	ldr r2, [r5, #0x20]

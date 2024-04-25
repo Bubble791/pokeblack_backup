@@ -7016,7 +7016,7 @@ ovy143_219cf50: ; 0x0219CF50
 	ror r3, r2
 	mov r1, #3
 	add r2, r4, r3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy143_219cf50
@@ -10832,7 +10832,7 @@ ovy143_219eccc: ; 0x0219ECCC
 	ror r3, r2
 	mov r1, #3
 	add r2, r4, r3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy143_219eccc

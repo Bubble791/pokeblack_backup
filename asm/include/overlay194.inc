@@ -1573,7 +1573,7 @@
 .public GFL_MsgDataLoadStrbuf
 .public sub_02021CFC
 .public sub_0201CCF8
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public GFL_HeapFree
 .public GFL_MsgDataLoadStrbuf
 .public StringSetNumber

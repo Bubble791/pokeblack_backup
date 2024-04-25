@@ -2463,11 +2463,11 @@ _0219E150:
 	neg r4, r0
 	mov r0, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy326_219e130
@@ -9036,11 +9036,11 @@ _021A1520:
 	neg r4, r0
 	mov r0, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r4, pc}
 	thumb_func_end ovy326_21a1508
 

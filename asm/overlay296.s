@@ -1276,7 +1276,7 @@ ovy296_219e0c8: ; 0x0219E0C8
 	ldrb r0, [r0]
 	mov r1, #3
 	mvn r2, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r5, #0x44]
 	cmp r0, #0
 	beq _0219E108
@@ -1318,7 +1318,7 @@ ovy296_219e114: ; 0x0219E114
 	ldrb r0, [r0]
 	mov r1, #3
 	neg r2, r2
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r5, #0x44]
 	cmp r0, #0
 	beq _0219E158
@@ -1346,7 +1346,7 @@ ovy296_219e164: ; 0x0219E164
 	add r0, #0x4e
 	ldrb r0, [r0]
 	add r2, r1, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _0219E180:
 	add r0, r4, #0
 	mov r1, #0
@@ -1664,7 +1664,7 @@ _0219E3CA:
 	bne _0219E3E4
 	ldrh r0, [r5]
 	mov r1, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	ldrh r1, [r5, #0xc]
 	lsl r1, r1, #1
 	ldrh r7, [r0, r1]
@@ -1977,7 +1977,7 @@ _0219E648:
 	bne _0219E662
 	ldrh r0, [r5]
 	mov r1, #0
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	ldrh r1, [r5, #0xc]
 	lsl r1, r1, #1
 	ldrh r4, [r0, r1]

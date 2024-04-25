@@ -201,7 +201,7 @@
 .public sub_0201CC0C
 .public sub_0201D5F4
 .public sub_0201CC4C
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public sub_0200D190
 .public sub_0200D1AC
 .public sub_020099B4
@@ -270,7 +270,7 @@
 .public sub_02020764
 .public sub_0201CD88
 .public sub_021BF364
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0201CC98
 .public sub_021BF1A0
 .public sub_0201CCC0
@@ -278,7 +278,7 @@
 .public sub_0201CC98
 .public sub_021BF1A0
 .public sub_0201CCC0
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_021BF404
 .public sub_0208D65C
 .public sub_0208D65C
@@ -373,8 +373,8 @@
 .public sub_0202BA64
 .public sub_0201FDF8
 .public GFL_SndSEPlay
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_020334DC
 .public sub_020334DC
 .public sub_0203DA2C

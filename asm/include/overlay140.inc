@@ -266,8 +266,8 @@
 .public sub_0219E9B0
 .public sub_0204C4B8
 .public sub_02044E74
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public Oam_SetSpritePosData
 .public GFL_SndSEPlay
 .public sub_02005C80

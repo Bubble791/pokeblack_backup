@@ -3878,13 +3878,13 @@ _021A9556:
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	add r2, r6, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r0, [r5, #0x14]
 	mov r1, #3
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	add r2, r4, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

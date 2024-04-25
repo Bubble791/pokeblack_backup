@@ -124,8 +124,8 @@
 .public sub_0204B7C8
 .public sub_020275F8
 .public sub_021A1520
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204B794
 .public sub_0219B2E0
 .public sub_021A1BC8
@@ -375,11 +375,11 @@
 .public sub_021A1BB8
 .public sub_021A1BA8
 .public sub_021A1BB8
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204C4D4
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex

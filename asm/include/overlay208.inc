@@ -58,8 +58,8 @@
 .public sub_021BBA4C
 .public sub_0204EBB0
 .public sub_02049AA0
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_02045764
 .public BmpWin_CreateDynamic
 .public sub_02024E80
@@ -75,8 +75,8 @@
 .public BmpWin_Free
 .public sub_0219D888
 .public sub_0219D888
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0219D888
 .public sub_0219D9CC
 .public sub_0219D9CC
@@ -157,8 +157,8 @@
 .public sub_0204AF50
 .public sub_0204AF50
 .public sub_0204AF50
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204BBA0
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile

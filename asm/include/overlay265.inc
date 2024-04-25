@@ -23,10 +23,10 @@
 .public sub_02050610
 .public G2x_SetBGyAffine_
 .public G2x_SetBGyAffine_
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_02045EA0
 .public sub_02045EA0
 .public sub_02045EA0

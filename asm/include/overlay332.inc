@@ -73,8 +73,8 @@
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_ArcToolFree
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0208D65C
 .public sub_0204AF18
 .public MI_CpuFill8

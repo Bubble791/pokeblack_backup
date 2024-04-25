@@ -635,7 +635,7 @@
 .public sub_0219CE20
 .public sub_0219A504
 .public sub_02045B7C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0202B230
 .public sub_02046F18
 .public sub_0202B0F4
@@ -926,7 +926,7 @@
 .public sub_0219EB9C
 .public sub_0219A504
 .public sub_02045B7C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0202B230
 .public sub_02046F18
 .public sub_0202B0F4

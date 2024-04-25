@@ -4886,8 +4886,8 @@
 .public Oam_GetSpritePosData
 .public sub_0204C124
 .public sub_0204C124
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public GXx_SetMasterBrightness_
 .public sub_0204476C
 .public sub_02044C98

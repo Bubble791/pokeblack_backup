@@ -1687,11 +1687,11 @@ _021BAF56:
 	mov r0, #7
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #7
 	mov r1, #5
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _021BAF80:
 	pop {r3, r4, r5, pc}
 	nop

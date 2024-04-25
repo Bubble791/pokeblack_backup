@@ -176,8 +176,8 @@
 .public sub_0204476C
 .public sub_02044C98
 .public sub_02045B7C
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_02045604
 .public sub_021A97F4
 .public sub_020454D4

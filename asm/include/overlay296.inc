@@ -56,11 +56,11 @@
 .public sub_020202AC
 .public sub_02044C98
 .public sub_02044C98
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_02044C98
 .public sub_02044C98
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0204B610
 .public GFL_G2DIOLoadArcNCLRDefault
 .public BmpWin_CreateDynamic
@@ -79,7 +79,7 @@
 .public GFL_StrBufFree
 .public sub_0204898C
 .public GFL_StrBufFree
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public GFL_HeapFree
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber
@@ -88,7 +88,7 @@
 .public BmpWin_GetBitmap
 .public sub_02021C7C
 .public GFL_StrBufFree
-.public sub_02020428
+.public PML_PersonalLoadRegionalDexTable
 .public GFL_HeapFree
 .public GFL_WordSetSystemCreateDefault
 .public StringSetNumber

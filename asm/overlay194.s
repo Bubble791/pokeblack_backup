@@ -17243,7 +17243,7 @@ ovy194_21c02e0: ; 0x021C02E0
 	ldr r0, _021C0388 ; =0x000005F4
 	add r1, r4, #0
 	ldrh r0, [r5, r0]
-	bl sub_02020428
+	bl PML_PersonalLoadRegionalDexTable
 	lsl r1, r6, #1
 	ldrh r6, [r0, r1]
 	bl GFL_HeapFree

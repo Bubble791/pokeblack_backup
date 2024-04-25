@@ -1103,7 +1103,7 @@ ovy298_21a031c: ; 0x021A031C
 	ldrb r0, [r4, #4]
 	mov r1, #1
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #4
 	strb r0, [r4, #5]
 	pop {r4, pc}
@@ -3278,7 +3278,7 @@ _021A133A:
 	mov r1, #3
 	mov r2, #0
 	mov r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r4, #0
 	add r0, #0xb0
 	strh r5, [r0]
@@ -3302,7 +3302,7 @@ _021A1380:
 	ldr r2, [r5, r2]
 	add r0, r6, #0
 	mov r1, #4
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r1, [r4, #0x1c]
 	mov r2, #0xb0
 	lsl r1, r1, #2
@@ -3341,7 +3341,7 @@ _021A13B8:
 	add r0, r5, #0
 	mov r1, #3
 	sub r2, #0x1b
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	add r0, r4, #0
 	mov r1, #0x18
 	add r0, #0xb0
@@ -3360,7 +3360,7 @@ _021A13F6:
 	lsl r2, r2, #2
 	ldr r2, [r5, r2]
 	mov r1, #5
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldr r1, [r4, #0x1c]
 	mov r2, #0xb0
 	lsl r1, r1, #2
@@ -5412,7 +5412,7 @@ _021A22A2:
 	add r0, r5, #0
 	mov r1, #3
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 _021A22C0:
 	str r0, [r4, #8]
@@ -5422,7 +5422,7 @@ _021A22C4:
 	add r1, r5, #0
 _021A22C8:
 	mov r2, #3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	b _021A22FC
 _021A22D2:
@@ -5439,7 +5439,7 @@ _021A22D4:
 	add r0, r5, #0
 	mov r1, #3
 	mov r2, #0x18
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #0
 	b _021A22C0
 _021A22F4:
@@ -9764,7 +9764,7 @@ _021A455E:
 	add r0, r5, #0
 	mov r1, #3
 	mov r2, #0x40
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #2
 	str r0, [r4, #0x7c]
 	b _021A45C0
@@ -9772,11 +9772,11 @@ _021A457A:
 	add r0, r5, #0
 	mov r1, #4
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #6
 	mov r1, #4
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	b _021A45C0
 _021A4590:
 	mov r0, #7
@@ -9788,18 +9788,18 @@ _021A4590:
 	mov r1, #3
 	mov r2, #0
 	mov r5, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	str r5, [r4, #0x7c]
 	b _021A45C0
 _021A45AC:
 	add r0, r5, #0
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #6
 	mov r1, #5
 	mov r2, #8
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _021A45C0:
 	ldr r0, [r4, #0x70]
 	lsl r0, r0, #2
@@ -18868,7 +18868,7 @@ _021A8DC0:
 	mov r0, #2
 	mov r1, #0
 	sub r2, #0x40
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 _021A8DCE:
 	ldr r0, _021A8DF4 ; =0x00000548
@@ -18878,14 +18878,14 @@ _021A8DCE:
 	mov r0, #2
 	mov r1, #0
 	mov r2, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 _021A8DE2:
 	mov r2, #0
 	mov r0, #2
 	mov r1, #0
 	sub r2, #0x40
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	pop {r3, pc}
 	.align 2, 0
 _021A8DF0: .word 0x000006B8

@@ -217,13 +217,13 @@
 .public Oam_SetOamAnimIndex
 .public GFL_HeapAllocate
 .public sub_0219E358
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public sub_0204C124
 .public sub_0219E988
 .public Oam_SetSpritePosData
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public GFL_HeapFree
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_0202E37C

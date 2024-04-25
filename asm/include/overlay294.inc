@@ -48,7 +48,7 @@
 .public sub_02044528
 .public MI_CpuFill8
 .public sub_02046E10
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public MI_CpuFill8
 .public GFL_BGSysCreate
 .public BmpWin_InitAllocator

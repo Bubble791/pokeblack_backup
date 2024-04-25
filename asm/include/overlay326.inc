@@ -169,8 +169,8 @@
 .public Oam_GetSpritePosData
 .public sub_0219C324
 .public Oam_SetSpritePosData
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public sub_0203D554
 .public sub_0203DF20
 .public sub_0219CC58
@@ -471,8 +471,8 @@
 .public GFL_StrBufFree
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate
 .public sub_0202437C

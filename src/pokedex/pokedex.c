@@ -441,14 +441,34 @@ void ovy299_21a01e4(PokedexMenu *a1)
     GFL_MsgDataFree(a1->unk54);
 }
 
-extern void *sub_02020428(int, int);
+extern void *PML_PersonalLoadRegionalDexTable(int, int);
 
 void ovy299_21a0208(PokedexMenu *a1)
 {
-    a1->unkC5C = sub_02020428(107, 0);
+    a1->unkC5C = PML_PersonalLoadRegionalDexTable(107, 0);
 }
 
 void sub_021A0220(PokedexMenu *a1)
 {
     GFL_HeapFree(a1->unkC5C);
+}
+
+void ovy299_21a0230(int a1, int a2, int a3, int a4)
+{
+    unsigned int i; // r5
+    int result;     // r0
+    __int16 v7;     // [sp+4h] [bp-1Ch] BYREF
+    __int16 v8;     // [sp+6h] [bp-1Ah] BYREF
+    int v9;         // [sp+8h] [bp-18h]
+
+    v9 = a4;
+    GFL_BGSysMoveBGReq(5, 3, 48);
+    GFL_BGSysMoveBGReq(1, 3, -48);
+    for (i = 6; i <= 0xC; ++i)
+    {
+        sub_21A15CC(a1, i, &v8, &v7, 0);
+        v7 += 48;
+        result = sub_21A15A8(a1, i, v8, v7, 0);
+    }
+    return result;
 }

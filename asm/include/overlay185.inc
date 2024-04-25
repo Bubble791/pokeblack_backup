@@ -287,7 +287,7 @@
 .public G2x_SetBlendAlpha_
 .public sub_02044C98
 .public sub_021A2FBC
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
 .public GFL_ArcSysCreateFileHandle
 .public sub_021A2FBC
 .public sub_0204AFD8

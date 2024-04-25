@@ -555,11 +555,11 @@ _02199D0C:
 	mov r1, #1
 	mov r2, #1
 	strb r6, [r4, r5]
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	mov r0, #3
 	mov r1, #5
 	mov r2, #1
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _02199D84:
 	ldr r5, _02199ED4 ; =0x000018C8
 	ldr r0, [r4, r5]
@@ -698,13 +698,13 @@ _02199E9C:
 	mov r0, #6
 	mov r1, #0
 	sub r2, r2, r3
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	sub r2, r5, #2
 	ldrb r2, [r4, r2]
 	mov r0, #5
 	mov r1, #0
 	sub r2, #0x80
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 _02199EBC:
 	add r0, r4, #0
 	mov r1, #8
@@ -1324,12 +1324,12 @@ ovy208_219a364: ; 0x0219A364
 	mov r0, #6
 	mov r1, #0
 	mov r2, #0x80
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	sub r7, #0x8d
 	mov r0, #5
 	mov r1, #0
 	add r2, r7, #0
-	bl sub_02045E1C
+	bl GFL_BGSysMoveBGReq
 	ldrh r0, [r5]
 	mov r1, #2
 	mov r2, #0

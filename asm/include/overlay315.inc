@@ -136,8 +136,8 @@
 .public sub_02044CFC
 .public Oam_SetSpritePosData
 .public sub_02044E74
-.public sub_02045E1C
-.public sub_02045E1C
+.public GFL_BGSysMoveBGReq
+.public GFL_BGSysMoveBGReq
 .public Oam_GetSpritePosData
 .public Oam_SetSpritePosData
 .public sub_02044E74
