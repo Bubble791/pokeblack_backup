@@ -7,8 +7,8 @@
 
 typedef struct
 {
-    /*0x000*/ u16 unk0;
-    /*0x002*/ u16 heapId;
+    /*0x0*/ u16 unk0;
+    /*0x2*/ u16 heapId;
     /*0x4*/ int unk4;
     /*0x8*/ int unk8;
     /*0xC*/ int unkC;
@@ -53,6 +53,7 @@ typedef struct
 int ovy162_219ce80(int a1);
 void ovy162_219ceb4(StartMenuData *a1);
 void ovy162_219cf44(StartMenuData *a1);
+int ovy162_219d038(void *a1, void *a2, void *a3, void *a4);
 
 extern void sub_02006FC8(u16);
 
@@ -146,3 +147,158 @@ void ovy162_219cf44(StartMenuData *a1)
         }
     }
 }
+
+extern void sub_0200703C(void);
+void ovy162_219d1b8(void);
+void ovy162_219d20c(void);
+void ovy162_219d2a0(int*, u16);
+void ovy162_219d340(int*, u16);
+void ovy162_219d554(int*, u16);
+void ovy162_219d844(int*, u16);
+void sub_02007054(int);
+int sub_0204E0E0(void);
+void ovy162_219d224(StartMenuData*);
+extern int sub_02006C40(int);
+int sub_020070A4(void);
+extern void sub_02007090(void);
+
+void ovy162_219d8f0(int*);
+void ovy162_219d7b0(int*);
+void ovy162_219d530(int*);
+void ovy162_219d310(int*);
+
+int ovy162_219d038(void *a1, void *a2, void *a3, void *a4)
+{
+    StartMenuData *startWork = (StartMenuData*)a4;
+
+    sub_0200703C();
+    switch (startWork->unk0)
+    {
+        case 0:
+            ovy162_219d1b8();
+            ovy162_219d20c();
+            startWork->unk0 = 1;
+            break;
+        case 1:
+            ovy162_219d2a0(&startWork->unk8, startWork->heapId);
+            ovy162_219d340(&startWork->unk14, startWork->heapId);
+            ovy162_219d554(&startWork->unk40, startWork->heapId);
+            ovy162_219d844(&startWork->unk54, startWork->heapId);
+            sub_0204E060(3, 0x10, 0, 2);
+            startWork->unk8C = 0;
+            startWork->unk0 = 2;
+            sub_02007054(0);
+            startWork->unk98 = *(u32*)(0x02FFFC3C);
+            break;
+        case 2:
+            if (!sub_0204E0E0())
+            {
+                startWork->unk0 = 3;
+            }
+            ovy162_219d224(startWork);
+            break;
+        case 3:
+            ovy162_219d224(startWork);
+            ovy162_219cf44(startWork);
+            ovy162_219ceb4(startWork);
+            break;
+        case 4:
+            if (!sub_02006C40(startWork->unk90))
+            {
+                startWork->unk0 = 5;
+            }
+            ovy162_219d224(startWork);
+            break;
+        case 5:
+            sub_0204E060(3, 0, 16, 2);
+            startWork->unk0 = 6;
+            ovy162_219d224(startWork);
+            sub_020070C0(16);
+            break;
+        case 6:
+            if (!sub_0204E0E0() && !sub_020070A4())
+            {
+                sub_02007090();
+                startWork->unk0 = 7;
+                
+            }
+            ovy162_219d224(startWork); 
+            break;
+        case 7:
+            ovy162_219d8f0(&startWork->unk54);
+            ovy162_219d7b0(&startWork->unk40);
+            ovy162_219d530(&startWork->unk14);
+            ovy162_219d310(&startWork->unk8);
+            return 1;
+        case 8:
+            return 1;
+    }
+    return 0;
+}
+
+// int ovy162_219d168(int a1, int a2, int a3, int a4);
+// extern void sub_0200700C(void);
+// void sub_0203AB10(int);
+// extern void sub_0203A1D0(int);
+// extern void sub_0203A954(int, int, int);
+
+// int ovy162_219d168(int a1, int a2, int a3, int a4)
+// {
+//     int v5;
+
+//     StartMenuData *startWork = (StartMenuData*)a4;
+
+//     v5 = startWork->unk4;
+//     sub_0200700C();
+//     sub_0203AB10(a1);
+//     sub_0203A1D0(22);
+//     switch (v5)
+//     {
+//         case 0:
+//             sub_0203A954(162, 0x021A172C, 0);
+//             break;
+//         case 2:
+//             sub_0203A954(162, 0x021A1A70, 0);
+//             break;
+//         case 3:
+//             sub_0203A954(253, 0x0217D6E4, 0);
+//             break;
+//     }
+//     return 1;
+// }
+
+// void ovy162_219d1b8(void)
+// {
+//     GXx_SetMasterBrightness_(67108972, -16);
+//     GXx_SetMasterBrightness_(67113068, -16);
+//     GFL_BGSysSetEnabledBGsA(0);
+//     GFL_BGSysSetEnabledBGsB(0);
+//     MEMORY[0x4000050] = 0;
+//     MEMORY[0x4001050] = 0;
+//     MEMORY[0x4000000] &= 0xFFFF1FFF;
+//     MEMORY[0x4001000] &= 0xFFFF1FFF;
+//     MEMORY[0x4001000] &= 0xFFFF1FFF;
+// }
+
+// void ovy162_219d20c(void)
+// {
+//     GFL_BGSysSetVRAMBanks(&unk_21A1620);
+//     GFL_BGSysSetLCDConfig(&unk_21A1538);
+// }
+
+// void ovy162_219d224(StartMenuData *a1)
+// {
+//     int v2; // r4
+
+//     v2 = MEMORY[0x2FFFC3C] - *(_DWORD *)(a1 + 152);
+//     *(_DWORD *)(a1 + 152) = MEMORY[0x2FFFC3C];
+//     sub_0219D304(a1 + 8, *(unsigned __int16 *)(a1 + 2));
+//     ovy162_219d4fc(a1 + 20, *(unsigned __int16 *)(a1 + 2));
+//     do
+//     {
+//         sub_0219D6FC(a1 + 64, *(unsigned __int16 *)(a1 + 2));
+//         --v2;
+//     } while (v2);
+//     ovy162_219d70c(a1 + 64, *(unsigned __int16 *)(a1 + 2));
+//     sub_0219D8E8(a1 + 84, *(unsigned __int16 *)(a1 + 2));
+// }
