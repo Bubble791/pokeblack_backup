@@ -21352,7 +21352,7 @@ _021E8094:
 	add r1, r5, r0
 	ldr r0, [r1, #0x34]
 	ldr r1, [r1, #0x38]
-	bl sub_020069F4
+	bl PokeVoice_Play
 	ldr r1, [sp, #0x14]
 	add r4, r0, #0
 	lsl r1, r1, #0x18

@@ -5359,7 +5359,7 @@
 .public sub_02006850
 .public sub_020068D8
 .public sub_020069B8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02006A44
 .public sub_02006AD4
 .public sub_02006AFC

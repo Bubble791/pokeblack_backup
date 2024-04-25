@@ -2344,7 +2344,7 @@ _021DEDAE:
 	mov r2, #0x40
 	mov r3, #0
 	str r6, [sp, #0xc]
-	bl sub_020069F4
+	bl PokeVoice_Play
 	b _021DEDF6
 _021DEDEA:
 	bl sub_020066C0

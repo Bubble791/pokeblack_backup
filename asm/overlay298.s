@@ -15668,7 +15668,7 @@ _021A73DA:
 	add r0, r4, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 	add r1, r5, #0
 	str r0, [r5, #0x64]
 	add r1, #0x74

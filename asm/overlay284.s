@@ -3872,7 +3872,7 @@ _021E4EF2:
 _021E4F20:
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 	b _021E5168
 _021E4F2A:
 	bl sub_020066C0

@@ -395,8 +395,7 @@ extern void sub_02035198(int);
 extern int PrintSystem_IsTextPrintActiveEnd(int);
 extern int sub_0203DA2C(void);
 extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
-extern void Oam_SetOamAnimIndex(int, u16);
-extern int GCTX_HIDGetPressedKeys(void);
+
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
 
 extern void GFL_TCBRemove(int);
@@ -423,15 +422,6 @@ extern int ovy142_219d22c(BagView*);
 
 extern void ovy142_219cac0(BagView*, int, int, FieldBagItemUse);
 
-extern void *GFL_HeapAllocate(int, int, int, char*, int line);
-extern void BagSave_CopyPocketRaw(void*, ItemTable*, int, int);
-extern int BagSave_GetPocketItemCountCore(void*, int, int);
-extern void* Item_ArcHandleCreate(int);
-extern void* Item_ArcHandleReadFile(void*, u16, int);
-extern void GFL_HeapFree(void*);
-extern int Item_GetParam(void*, int);
-extern void GFL_ArcToolFree(void*);
-
 extern MATH_QSort(void*, int, int, int, int);
 
 void ovy142_219bda4(BagView *m_bagView, int param_2);
@@ -441,8 +431,6 @@ extern void sub_020352B0(int);
 
 extern void ovy142_219acb8(BagView*);
 
-extern int Item_IsNotSpecialMonsball(u16);
-extern int Item_IsMail(u16);
 extern void sub_0219F760(BagView*);
 extern void ovy142_219c014(BagView*);
 extern void ovy142_219f76c(BagView*, int);
@@ -577,12 +565,6 @@ extern void sub_02026E04(int, int, int, u16);
 extern void sub_02026F7C(int, int, int, int);
 void ovy142_219cc24(BagView *bagView);
 
-extern int sub_020223B4(void);
-extern int sub_0202E8D8(int, int, int);
-extern void sub_020223CC(int);
-extern void sub_020223BC(int);
-extern int sub_0203DF20(void);
-extern void sub_020223E0(int, int);
 void ovy142_219f84c(BagView *a1);
 void ovy142_219d664(void);
 
@@ -601,23 +583,6 @@ extern int sub_0203DAC8(u32*, u32*);
 
 extern int Oam_LoadNCGRFile(void *fileHandle, int, int, int, u16);
 extern int Oam_LoadNCERFile(void *fileHandle, int, int, u16);
-
-extern void GFL_HeapCreateChild(int, int, int);
-extern void *GFL_ProcInitSubsystem(int, int, int);
-extern void sub_0203DF64(int*, int*);
-extern void sub_020086C0(void*);
-extern u32 GameData_GetLastBagPocket(void*);
-extern int GFL_MsgSysLoadData(int, int, int, u16);
-extern int GFL_StrBufCreate(int ,u16);
-extern int GFL_WordSetSystemCreateDefault(u16);
-extern int sub_020219A8(int, u16);
-extern int sub_0202E7A4(int ,int ,int, u16);
-extern int GFL_FontCreate(int ,int, int, int, u16);
-extern int ButtonSystem_Create(const TouchscreenHitbox *touchTemplate, void* checkFunc, void* data, u16 heap);
-extern int GFL_VBlankTCBAdd(void*, void*, int);
-extern void sub_02042BA8(int, u16);
-extern int TaskAppListMenu_Create(int, int, int, int, u16);
-extern int GFL_TCBExMgrCreate(u16, u16, int, int);
 
 extern void ovy142_219eb54(BagView*);
 extern void BagMenu_DrawItemNameBmpWinToOam(BagView*);
@@ -663,6 +628,10 @@ void ovy142_219a490(BagView *bagView);
 extern void ovy142_219cd98(BagView*);
 extern void GFL_MsgDataLoadStrbuf(int, int, int);
 extern void ovy142_219cce0(BagView*);
+
+extern void BagSave_CopyPocketRaw(void*, ItemTable*, int, int);
+extern int BagSave_GetPocketItemCountCore(void*, int, int);
+extern int ButtonSystem_Create(const TouchscreenHitbox *touchTemplate, void* checkFunc, void* data, u16 heap);
 
 extern const TouchscreenHitbox data_021A08F8[3];
 extern const TouchscreenHitbox data_021A0904[3];

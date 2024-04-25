@@ -1294,7 +1294,7 @@
 .public sub_02019BD8
 .public ovy168_21e012c
 .public ovy167_219d228
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02006AFC
 .public sub_02006B5C
 .public GFL_HeapAllocate

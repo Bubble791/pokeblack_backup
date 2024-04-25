@@ -480,7 +480,7 @@
 .public sub_0219EA88
 .public sub_0203D554
 .public GFL_SndSEPlay
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0219E498

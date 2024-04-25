@@ -70,7 +70,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_02006D54
-.public sub_020069F4
+.public PokeVoice_Play
 .public GFL_HeapFree
 .public sub_0201AB0C
 .public sub_021BEACC
@@ -342,7 +342,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_0201AB0C
 .public sub_021BEACC
 .public sub_021BE95C
@@ -629,7 +629,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_02006D54
-.public sub_020069F4
+.public PokeVoice_Play
 .public GFL_HeapFree
 .public sub_0201AB0C
 .public sub_021BEACC
@@ -675,7 +675,7 @@
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_0201AB0C
 .public sub_021BEACC
 .public sub_021BE95C

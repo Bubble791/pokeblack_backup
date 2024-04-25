@@ -1052,7 +1052,7 @@
 .public sub_0208D65C
 .public sub_0208D65C
 .public sub_0208D65C
-.public sub_020069F4
+.public PokeVoice_Play
 .public Oam_GetSpritePosData
 .public sub_0204C2A8
 .public Oam_SetSpritePosData

@@ -4585,7 +4585,7 @@ _02178F54:
 	mov r2, #0x40
 	mov r3, #0
 	str r6, [sp, #0xc]
-	bl sub_020069F4
+	bl PokeVoice_Play
 	str r0, [r4, #0x50]
 	mov r0, #0xb
 	b _02178D52

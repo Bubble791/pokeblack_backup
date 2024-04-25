@@ -251,7 +251,7 @@
 .public sub_021DF520
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_020066C0
 .public sub_02019AE8
 .public sub_02019C0C

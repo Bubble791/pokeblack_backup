@@ -16,7 +16,7 @@
 .public sub_02044C98
 .public GFL_BGSysSetBGEnabledB
 .public GCTX_HIDGetPressedKeys
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02046DF8
 .public sub_02044C98
 .public GFL_BGSysSetBGEnabledB

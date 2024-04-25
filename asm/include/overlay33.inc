@@ -633,7 +633,7 @@
 .public sub_021883B0
 .public sub_021883E8
 .public sub_02006D54
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02006C40
 .public sub_021883E8
 .public GFL_StrBufFree

@@ -16483,7 +16483,7 @@ _021A1D42:
 	add r0, r6, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 	lsl r1, r7, #7
 	str r0, [r4, r1]
 	ldrb r0, [r4, r5]
@@ -16764,7 +16764,7 @@ _021A1F64:
 	add r0, r7, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 	mov r1, #5
 	lsl r1, r1, #7
 	str r0, [r4, r1]

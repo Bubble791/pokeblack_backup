@@ -14882,7 +14882,7 @@ _021BC888:
 	ldrh r0, [r0]
 	ldrh r1, [r1]
 	mov r2, #0x40
-	bl sub_020069F4
+	bl PokeVoice_Play
 	add r1, r4, #0
 	add r1, #0xe8
 	str r0, [r1]

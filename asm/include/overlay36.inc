@@ -6132,7 +6132,7 @@
 .public sub_02032520
 .public sub_02005CBC
 .public sub_02006D54
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02155248
 .public sub_0215515C
 .public sub_02155174
@@ -10289,7 +10289,7 @@
 .public GFL_HeapFree
 .public GFL_HeapFree
 .public sub_02006D54
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_020066C0
 .public sub_02006B90
 .public sub_02006AFC

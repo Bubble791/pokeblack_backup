@@ -1,5 +1,7 @@
-with open("12.s", "r") as file:
-    for i in file.readlines():
-        if "Unknown identifier" in i:
-            new = i.split(", ")[1].replace("\n","")
-            print(f".public {new}")
+
+
+size = 156
+for i in range(int(size / 4)):
+    offset = hex(i * 4).upper().replace("X", "x")
+    oas = hex(i * 4).upper().replace("0X", "")
+    print(f"/*{offset}*/ int unk{oas};")

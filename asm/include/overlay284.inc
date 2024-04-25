@@ -364,7 +364,7 @@
 .public GFL_HeapFree
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_020066C0
 .public sub_0201AE2C
 .public sub_021E53C0

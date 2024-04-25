@@ -8078,6 +8078,7 @@ sub_0219D488: ; 0x02073FB4
 .public ovy142_219efc0
 .public ovy142_21A03D4
 .public ovy142_21a03f0
+.public ovy162_21a144c
 .public ovy162_219ce80
 .public data_021A0914
     thumb_func_start sub_021C5C10
@@ -8101,6 +8102,7 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219efc0
 	bl ovy142_21A03D4
 	bl ovy142_21a03f0
+	bl ovy162_21a144c
 	bl ovy162_219ce80
 	bx lr
 	.word data_021A0914

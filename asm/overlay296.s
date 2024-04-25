@@ -778,7 +778,7 @@ _0219DCD2:
 	ldrh r1, [r4, #0xe]
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 	mov r0, #3
 	b _0219DCD0
 _0219DD1E:
@@ -849,7 +849,7 @@ _0219DD8A:
 	ldrh r0, [r4, #0xc]
 	ldrh r1, [r4, #0xe]
 	mov r2, #0x40
-	bl sub_020069F4
+	bl PokeVoice_Play
 _0219DDA4:
 	mov r0, #6
 _0219DDA6:

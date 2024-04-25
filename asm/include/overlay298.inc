@@ -1182,7 +1182,7 @@
 .public sub_0200D190
 .public sub_0219FD40
 .public sub_0200D3C8
-.public sub_020069F4
+.public PokeVoice_Play
 .public OS_GetTick
 .public GFL_HeapAllocate
 .public BmpWin_CreateDynamic

@@ -1984,8 +1984,8 @@ _020069E6:
 	.align 2, 0
 	thumb_func_end sub_020069B8
 
-	thumb_func_start sub_020069F4
-sub_020069F4: ; 0x020069F4
+	thumb_func_start PokeVoice_Play
+PokeVoice_Play: ; 0x020069F4
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x14
 	add r5, r0, #0
@@ -2023,7 +2023,7 @@ _02006A18:
 	add r0, r4, #0
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
-	thumb_func_end sub_020069F4
+	thumb_func_end PokeVoice_Play
 
 	thumb_func_start sub_02006A44
 sub_02006A44: ; 0x02006A44

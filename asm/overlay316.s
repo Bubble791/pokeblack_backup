@@ -4954,7 +4954,7 @@ _0219F59C:
 	ldr r0, _0219F5F4 ; =0x0219FA94
 	ldrh r0, [r0, r2]
 	mov r2, #0x40
-	bl sub_020069F4
+	bl PokeVoice_Play
 _0219F5D6:
 	mov r0, #0x8b
 	mov r1, #0

@@ -84783,7 +84783,7 @@ _021A748A:
 	ldrh r1, [r5, #2]
 	mov r2, #0x40
 _021A749A:
-	bl sub_020069F4
+	bl PokeVoice_Play
 	add r1, r0, #0
 	ldr r0, [r5, #8]
 	bl sub_02155248
@@ -128169,7 +128169,7 @@ _021BC4E6:
 _021BC4F0:
 	ldr r1, [r5, #4]
 	mov r2, #0x40
-	bl sub_020069F4
+	bl PokeVoice_Play
 	str r0, [r5, #0x1c]
 _021BC4FA:
 	mov r0, #0x1e

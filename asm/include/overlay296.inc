@@ -43,10 +43,10 @@
 .public sub_02021A18
 .public GFL_HeapFree
 .public G2x_SetBlendBrightness_
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_0204C21C
 .public sub_0204C210
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02021A3C
 .public sub_020202A4
 .public sub_02020274

@@ -964,6 +964,8 @@ Overlay OVY_161
 Overlay OVY_162
 {
     Address 0x219CE80
+
+    Object src/start_menu/start_menu.o
     Object asm/overlay162.o
 }
 Overlay OVY_163

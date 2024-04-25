@@ -601,7 +601,7 @@ _021B33DC:
 	add r1, r5, #0
 	mov r2, #0x40
 	add r3, r7, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B3462:
 	ldr r5, _021B3540 ; =0x0000085C
 	ldr r0, [r4, r5]
@@ -1015,7 +1015,7 @@ ovy192_21b378c: ; 0x021B378C
 	add r0, r6, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B37E8:
 	ldr r0, _021B38B0 ; =0x000011EE
 	ldrb r0, [r5, r0]

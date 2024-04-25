@@ -601,7 +601,7 @@ _021B33DC:
 	add r1, r5, #0
 	mov r2, #0x40
 	add r3, r7, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B3462:
 	ldr r5, _021B3540 ; =0x0000085C
 	ldr r0, [r4, r5]
@@ -2510,7 +2510,7 @@ ovy193_21b4490: ; 0x021B4490
 	add r0, r6, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B44EC:
 	ldr r0, _021B45B4 ; =0x000011EE
 	ldrb r0, [r5, r0]
@@ -4594,7 +4594,7 @@ _021B5698:
 	add r1, r5, #0
 	mov r2, #0x40
 	add r3, r7, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B571E:
 	ldr r5, _021B57FC ; =0x0000085C
 	ldr r0, [r4, r5]
@@ -4986,7 +4986,7 @@ ovy193_21b5a10: ; 0x021B5A10
 	add r0, r6, #0
 	mov r2, #0x40
 	mov r3, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B5A6C:
 	ldr r0, _021B5B34 ; =0x000011EE
 	ldrb r0, [r5, r0]

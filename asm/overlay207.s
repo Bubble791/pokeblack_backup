@@ -3636,7 +3636,7 @@ _021B4D22:
 	add r1, r5, #0
 	mov r2, #0x40
 	add r3, r7, #0
-	bl sub_020069F4
+	bl PokeVoice_Play
 _021B4D72:
 	mov r0, #0x97
 	lsl r0, r0, #2

@@ -1138,7 +1138,7 @@
 .public GFL_SndPlayerIsActiveAny
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02006C40
 .public sub_02044C98
 .public sub_020061DC
@@ -1159,7 +1159,7 @@
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_0201CCF8
-.public sub_020069F4
+.public PokeVoice_Play
 .public sub_02006C40
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished

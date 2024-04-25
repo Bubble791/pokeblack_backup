@@ -1005,8 +1005,7 @@ extern u32 LoadCursorImageEndOfHeap(int, int, int, u16);
 extern void GFL_G2DIOLoadArcNCLR(void* fileHandle, int, int, int, int, int, u16);
 extern void GFL_BGSysLoadNCLRDefault(int, int, int, int, int, u16);
 extern int sub_0204BF1C(int, int, u16);
-extern void GFL_BGSysSetBGEnabledB(int, int);
-extern void GFL_BGSysSetBGEnabledA(int, int);
+
 extern void ovy142_219ed8c(BagView*);
 extern int GetDefaultUINarcIdx(void);
 extern int sub_0202D7E4();
