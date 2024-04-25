@@ -23,6 +23,33 @@ typedef struct {
 
 #define TEXT_COLOR(back_color, font_color, shadow_color) (back_color | shadow_color << 5 | font_color << 10)
 
+typedef struct
+{
+    u16 unk0;
+    u16 unk2;
+    int unk4;
+    int unk8;
+    int unkC;
+}BgInit;
+
+typedef struct
+{
+    u32 PosX;
+    u32 PosY;
+    u32 ScreenSize;
+    u32 ScreenOffset;
+    u8 Resolution;
+    u8 ColorsPalettes;
+    u8 ScreenBaseBlock;
+    u8 CharBaseBlock;
+    u32 CharBlockSize;
+    u8 ExtPaletteSlot;
+    u8 Priority;
+    u8 DisplayAreaOverflow;
+    u8 _padDisplayAreaOverflow;
+    u32 Mosaic;
+} BGSetup;
+
 extern void *GFL_HeapAllocate(int, int, int, char*, int line);
 
 extern void* Item_ArcHandleCreate(int);
@@ -60,6 +87,67 @@ extern void sub_020223CC(int);
 extern void sub_020223BC(int);
 extern int sub_0203DF20(void);
 extern void sub_020223E0(int, int);
+extern void GFL_TCBRemove(int);
+extern void GFL_BGSysSetLCDConfig(BgInit*);
+extern void GFL_BGSysSetEnabledBGsA(int);
+extern void GFL_BGSysSetEnabledBGsB(int);
+extern int BmpWin_InitAllocator(u16);
+extern void sub_020232D0(void);
+extern void GFL_BGSysCreate(u16);
+extern void GFL_BGSysSetVRAMBanks(int*);
+extern void sub_0204476C(int, BGSetup*, int);
+extern void sub_02045708(int);
+extern void GFL_BGSysLoadScr(int);
+extern void sub_02044C98(int, u8);
+extern void sub_02045118(int, int, int, int);
+extern void sub_02045738(int);
+extern void Oam_EnableOamAnim(int, int);
+extern void sub_02045B7C(int);
+extern void sub_020454AC(int, int, int, int, int, int);
+extern int sub_02060338(int, int*);
+extern void *sub_0204B600(int ,int, int, u16);
+extern void sub_020504DC(int);
+extern void sub_020480A8(void);
+extern void sub_02044528(void);
+extern void sub_02044B84(int);
+extern void GFL_G2DIOLoadArcNCLRDefault(void *fileHandle, int, int, int, int, u16);
+extern int GFL_BGSysLoadArcNCGRDynamic(void *fileHandle, int, int, int, int, u16);
+extern void GFL_G2DIOLoadNSCRSync(void *fileHandle, int, int, int, int, int, int, u16);
+extern int sub_02035024(int, int, int, u16);
+extern void *GFL_ArcSysCreateFileHandle(int, u16);
+extern void sub_02035104(int, void*, int, int, int);
+extern int GetDefaultUINarcIdx(void);
+extern int sub_0202D7E4();
+extern int sub_0202D7F8(int);
+extern int sub_0202D7FC(int);
+extern int sub_0202D80C(u8);
+extern int sub_0202D7F4(u8);
+
+extern void sub_020232D8(void);
+extern u32 LoadCursorImageEndOfHeap(int, int, int, u16);
+extern void GFL_G2DIOLoadArcNCLR(void* fileHandle, int, int, int, int, int, u16);
+extern void GFL_BGSysLoadNCLRDefault(int, int, int, int, int, u16);
+extern int sub_0204BF1C(int, int, u16);
+
+extern int sub_02026DC0(u16);
+extern void sub_02026E04(int, int, int, u16);
+extern void sub_02026F7C(int, int, int, int);
+extern void sub_02026E48(int, int);
+extern void sub_02026DE8(int);
+extern int GFL_VBlankGetTCBMgr(void);
+extern int sub_02026FE4(int, int, int, int, int, int, int, int);
+extern int sub_0204C138(int);
+extern void GFL_TCBExMgrFree(int);
+extern void GFL_MsgDataFree(int);
+extern void GFL_StrBufFree(int);
+extern void GFL_WordSetSystemFree(int);
+extern void sub_02044668(int, u16, u16);
+extern void BmpWin_Free(int);
+extern void sub_02045264(int, int, int);
+extern void sub_02022DA8(int);
+extern void sub_0202E818(int);
+extern void sub_02021C44(int);
+extern void sub_02021A18(int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

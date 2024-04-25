@@ -4,33 +4,6 @@
 #include "bag.h"
 #include "constants/arc_id.h"
 
-typedef struct
-{
-    u16 unk0;
-    u16 unk2;
-    int unk4;
-    int unk8;
-    int unkC;
-}BgInit;
-
-typedef struct
-{
-    u32 PosX;
-    u32 PosY;
-    u32 ScreenSize;
-    u32 ScreenOffset;
-    u8 Resolution;
-    u8 ColorsPalettes;
-    u8 ScreenBaseBlock;
-    u8 CharBaseBlock;
-    u32 CharBlockSize;
-    u8 ExtPaletteSlot;
-    u8 Priority;
-    u8 DisplayAreaOverflow;
-    u8 _padDisplayAreaOverflow;
-    u32 Mosaic;
-} BGSetup;
-
 const BgInit data_021A1018 = 
 {
     .unk0 = 1,
@@ -384,8 +357,6 @@ void ovy142_219cc24(BagView *bagView)
 }
 
 void ovy142_219cc60(BagView *bagView);
-extern void sub_02026E48(int, int);
-extern void sub_02026DE8(int);
 
 void ovy142_219cc60(BagView *bagView)
 {
@@ -861,11 +832,6 @@ void ovy142_219d46c(void *a1, int a2, int a3, int a4)
 }
 
 void ovy142_219d4c0(void);
-extern void sub_0204476C(int, BGSetup*, int);
-extern void sub_02045708(int);
-extern void GFL_BGSysLoadScr(int);
-extern void sub_02044C98(int, u8);
-extern void sub_02045118(int, int, int, int);
 
 void ovy142_219d4c0(void)
 {
@@ -992,27 +958,9 @@ typedef struct
     u8 unk;
 }OAM_TEMP;
 
-extern int BmpWin_InitAllocator(u16);
-extern void sub_020232D0(void);
-extern void GFL_BGSysCreate(u16);
-extern void GFL_BGSysSetVRAMBanks(int*);
 extern void Oam_CreateSystem(const OamSystemInitTemplate*, int*, u16);
-extern void GFL_BGSysSetLCDConfig(BgInit*);
-extern void GFL_BGSysSetEnabledBGsA(int);
-extern void GFL_BGSysSetEnabledBGsB(int);
-extern void sub_020232D8(void);
-extern u32 LoadCursorImageEndOfHeap(int, int, int, u16);
-extern void GFL_G2DIOLoadArcNCLR(void* fileHandle, int, int, int, int, int, u16);
-extern void GFL_BGSysLoadNCLRDefault(int, int, int, int, int, u16);
-extern int sub_0204BF1C(int, int, u16);
 
 extern void ovy142_219ed8c(BagView*);
-extern int GetDefaultUINarcIdx(void);
-extern int sub_0202D7E4();
-extern int sub_0202D7F8(int);
-extern int sub_0202D7FC(int);
-extern int sub_0202D80C(u8);
-extern int sub_0202D7F4(u8);
 extern int Oam_CreateSprite(int, int, int, int, OAM_TEMP *, int, u16);
 extern int sub_0202D800(u8);
 extern void sub_0204C378(int, int, int);
@@ -2390,11 +2338,6 @@ void ovy142_219fb60(BagView *a1)
     a1->unk79C = 0;
 }
 
-extern void sub_02045B7C(int);
-extern void sub_020454AC(int, int, int, int, int, int);
-extern int sub_02060338(int, int*);
-extern void *sub_0204B600(int ,int, int, u16);
-
 // 翻转
 asm void ovy142_219fb78(BagView *a1)
 {
@@ -2528,9 +2471,6 @@ void ovy142_219fd4c(BagView *a1, int a2)
 
     sub_0204C378(a1->unk644[i], (u8)a2, 0);
 }
-
-extern int sub_02026FE4(int, int, int, int, int, int, int, int);
-extern int sub_0204C138(int);
 
 void BagMenu_PopUpOptionMenuSetting(BagView *bagView, int a2)
 {

@@ -8059,8 +8059,8 @@ sub_0219D488: ; 0x02073FB4
 	.align 2, 0
 	thumb_func_end sub_0219D488
 
-.public ovy142_219a354
-.public ovy142_219a3c4
+.public ovy299_219fbf0
+.public ovy299_219fc04
 .public ovy142_219a3d4
 .public ovy142_219a3e4
 .public ovy142_219a3f4
@@ -8069,7 +8069,7 @@ sub_0219D488: ; 0x02073FB4
 .public ovy142_219a460
 .public ovy142_219a480
 .public ovy142_219a490
-.public BagMenu_MoveItemToFreeSpace
+.public ovy299_219fbc0
 .public ovy142_219b754
 .public ovy162_219d168
 .public ovy299_21a23a4
@@ -8083,8 +8083,8 @@ sub_0219D488: ; 0x02073FB4
 .public data_021A0914
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
-	bl ovy142_219a354
-	bl ovy142_219a3c4
+	bl ovy299_219fbf0
+	bl ovy299_219fc04
 	bl ovy142_219a3d4
 	bl ovy142_219a3e4
 	bl ovy142_219a3f4
@@ -8093,7 +8093,7 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy142_219a460
 	bl ovy142_219a480
 	bl ovy142_219a490
-	bl BagMenu_MoveItemToFreeSpace
+	bl ovy299_219fbc0
 	bl ovy142_219b754
 	bl ovy162_219d168
 	bl ovy299_21a23a4

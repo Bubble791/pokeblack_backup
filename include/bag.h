@@ -397,19 +397,13 @@ extern int sub_0203DA2C(void);
 extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
 
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
-
-extern void GFL_TCBRemove(int);
 extern void sub_021A046C(ITEM_UNKNOW_DATA*);
 extern void sub_0202E1DC(int);
 extern void ovy142_219e168(BagView*);
 extern void ovy142_219dd14(BagView*);
-extern void GFL_TCBExMgrFree(int);
-extern void GFL_MsgDataFree(int);
-extern void GFL_StrBufFree(int);
-extern void GFL_WordSetSystemFree(int);
+
 extern void ovy142_219f8c4(BagView*);
-extern void sub_02044668(int, u16, u16);
-extern void BmpWin_Free(int);
+
 
 extern void sub_020504F0(int);
 extern void sub_0203D564(int);
@@ -437,8 +431,6 @@ extern void ovy142_219f76c(BagView*, int);
 
 void ovy142_219a724(BagView *m_bagView);
 int ovy142_219f7a4(BagView*);
-extern void sub_02045738(int);
-extern void Oam_EnableOamAnim(int, int);
 
 void ovy142_2199a5c(BagView *m_bagView, int param_2, u32 param_3);
 extern void ovy142_219ff60(BagView*);
@@ -526,7 +518,6 @@ extern void sub_0204C124(int, int);
 int sub_0219BE88(int a1);
 
 extern int GameData_IsPocketRegistered(void*, int);
-extern int GFL_VBlankGetTCBMgr(void);
 extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
 extern int BagSave_IsItemInFreeSpace(void*, u16);
 extern void BagSave_SubItem(void*, u16, u16, u16);
@@ -544,9 +535,7 @@ extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
 extern int MyStatus_GetTrainerGender(void*);
 extern int Oam_LoadNCLRFile(void*, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
-extern void GFL_G2DIOLoadArcNCLRDefault(void *fileHandle, int, int, int, int, u16);
-extern int GFL_BGSysLoadArcNCGRDynamic(void *fileHandle, int, int, int, int, u16);
-extern void GFL_G2DIOLoadNSCRSync(void *fileHandle, int, int, int, int, int, int, u16);
+
 void ovy142_219e284(BagView *a1);
 extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
 extern void BmpWin_FlushMap(int);
@@ -556,13 +545,7 @@ void ovy142_219efc0(BagView *a1);
 void ovy142_219e6f8(BagView *a1);
 
 void ovy142_219c900(BagView *bagView);
-extern int sub_02035024(int, int, int, u16);
-extern void *GFL_ArcSysCreateFileHandle(int, u16);
-extern void sub_02035104(int, void*, int, int, int);
 
-extern int sub_02026DC0(u16);
-extern void sub_02026E04(int, int, int, u16);
-extern void sub_02026F7C(int, int, int, int);
 void ovy142_219cc24(BagView *bagView);
 
 void ovy142_219f84c(BagView *a1);
@@ -600,16 +583,9 @@ typedef struct
     /*0x4C*/ int unk4C;
 } BAG_RETURN_DATA;
 
-extern void sub_02045264(int, int, int);
-extern void sub_02022DA8(int);
-extern void sub_0202E818(int);
-extern void sub_02021C44(int);
-extern void sub_02021A18(int);
 extern void ovy142_219cc60(BagView*);
 extern void sub_0219C948(BagView*);
-extern void sub_020504DC(int);
-extern void sub_020480A8(void);
-extern void sub_02044528(void);
+
 extern void ovy142_219d46c(void*, int, int, int);
 extern void sub_0203AB10(int);
 extern void sub_0203A1D0(int);

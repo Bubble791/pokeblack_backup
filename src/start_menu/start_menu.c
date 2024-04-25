@@ -71,7 +71,6 @@ int ovy162_219ce80(int a1)
 
 extern void sub_0204E060(int, int, int, int);
 extern void sub_02046DF8(int);
-extern void sub_02044C98(int, int);
 extern int sub_02015CCC(int);
 extern void ovy162_219d7d8(int*, int);
 
