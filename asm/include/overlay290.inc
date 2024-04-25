@@ -226,7 +226,7 @@
 .public sub_0203CB80
 .public FreeGameProcManager
 .public GFL_HeapFree
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
@@ -240,14 +240,14 @@
 .public GFL_HeapDelete
 .public sub_0203A978
 .public sub_02005DF4
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203CE0C
 .public sub_02040C20
 .public sub_02040440
 .public sub_02040624
 .public sub_02040440
 .public sub_02040664
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02040440
 .public sub_02040624
 .public sub_02040440
@@ -264,7 +264,7 @@
 .public sub_02040664
 .public sub_02042788
 .public sub_02042E84
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_020120DC
 .public sub_02042788
 .public sub_02042E84

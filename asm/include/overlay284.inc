@@ -64,7 +64,7 @@
 .public sub_02008DDC
 .public sub_0201FDF8
 .public sub_0203CE0C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203CDC8
 .public sub_02042BA8
 .public sub_0204E0E0

@@ -3,14 +3,20 @@
 #include "pokedex.h"
 #include "touchscreen.h"
 
-int ovy302_21ad624(int, int*, int);
-int ovy302_21ad6d0(int, int, int);
+FS_EXTERN_OVERLAY(OVY_301);
+
+int ovy302_21ad624(int, void*, int);
+int ovy302_21ad6d0(int, void*, int);
 int ovy302_21ad764(int, u16*);
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4);
 int ovy302_21acfc8(int a1, int a2, void *a3, void *a4);
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4);
 void ovy302_21ad01c(PokeDexStartView*);
 void ovy302_21ad030(PokeDexStartView*);
+int sub_021AD044(PokeDexStartView *a1, int a2);
+int sub_21AD04C(PokeDexStartView *a1);
+void ovy302_21ad05c(PokeDexStartView *a1);
+int ovy302_21ad0a8(PokeDexStartView *a1);
 
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
 {
@@ -123,4 +129,86 @@ int ovy302_21acff4(int a1, int a2, void *a3, void *a4)
     GFL_ProcReleaseSubsystem(a1);
     GFL_HeapDelete(105);
     return 1;
+}
+
+void ovy302_21ad01c(PokeDexStartView *a1)
+{
+    void *result; // r0
+
+    result = a1->unkC;
+    if (result)
+    {
+        GFL_HeapFree(result);
+        a1->unkC = 0;
+    }
+}
+
+void ovy302_21ad030(PokeDexStartView *a1)
+{
+    void *result; // r0
+
+    result = a1->unk14;
+    if (result)
+    {
+        GFL_HeapFree(result);
+        a1->unk14 = 0;
+    }
+}
+
+int sub_021AD044(PokeDexStartView *a1, int a2)
+{
+    a1->unk28 = a2;
+    return 0;
+}
+
+int sub_21AD04C(PokeDexStartView *a1)
+{
+    if (a1->unk8 != 1)
+        return a1->unk28;
+    else
+        return 0; 
+}
+
+const char data_021AE5A0[] = ("zukan_search_engine.c");
+
+void ovy302_21ad05c(PokeDexStartView *a1)
+{
+    PokeDexSeacherEngine *v2; // r0
+    PokeDexParamInput *v3; // r1
+
+    v2 = (PokeDexSeacherEngine*)GFL_HeapAllocate(105, 12, 0, (char*)&data_021AE5A0, 362);
+    v3 = a1->inputParam;
+    a1->unk38 = v2;
+    v2->gameData = v3->gameData;
+    v2->playerInfo = a1->inputParam->playerInfo;
+    Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_301), 0x021A023C, a1->unk38);
+    sub_021AD044(a1, 2);
+}
+
+int ovy302_21ad0a8(PokeDexStartView *a1)
+{
+    int v1;
+
+    switch (a1->unk38->unk8)
+    {
+    case 0:
+
+        a1->inputParam->unkE = 0;
+        v1 = 13;
+        break;
+    case 1:
+
+        a1->inputParam->unkE = 1;
+        v1 = 13;
+        break;
+    case 2:
+
+        if (sub_0200D1F8(a1->inputParam->dexSave) == 2)
+            v1 = 11;
+        else
+            v1 = 3;
+        break;
+    }
+    GFL_HeapFree(a1->unk38);
+    return v1;
 }

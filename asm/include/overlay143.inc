@@ -21,9 +21,9 @@
 .public sub_02016B20
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_020232E8
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_0203A978
 .public GFL_FadeScreenIsFinished

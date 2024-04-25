@@ -11,7 +11,7 @@
 .public GFL_HeapDelete
 .public MI_CpuFill8
 .public CreateGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_0203CB80
 .public FreeGameProcManager

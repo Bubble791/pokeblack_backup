@@ -8065,8 +8065,8 @@ sub_0219D488: ; 0x02073FB4
 .public ovy302_21acee0
 .public ovy302_21acfc8
 .public ovy302_21acff4
-.public ovy142_219a440
-.public ovy142_219a460
+.public sub_21AD04C
+.public ovy302_21ad05c
 .public ovy142_219a480
 .public ovy142_219a490
 .public ovy299_219fbc0
@@ -8089,8 +8089,8 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy302_21acee0
 	bl ovy302_21acfc8
 	bl ovy302_21acff4
-	bl ovy142_219a440
-	bl ovy142_219a460
+	bl sub_21AD04C
+	bl ovy302_21ad05c
 	bl ovy142_219a480
 	bl ovy142_219a490
 	bl ovy299_219fbc0

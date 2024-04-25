@@ -4,6 +4,13 @@
 typedef struct
 {
     /*0x0*/ void *gameData;
+    /*0x4*/ int playerInfo;
+    /*0x8*/ int unk8;
+} PokeDexSeacherEngine;
+
+typedef struct
+{
+    /*0x0*/ void *gameData;
     /*0x4*/ int dexSave;
     /*0x8*/ int playerInfo;
     /*0xC*/ u16 unkC;
@@ -15,10 +22,10 @@ typedef struct
     /*0x0*/ PokeDexParamInput *inputParam;
     /*0x4*/ int unk4;
     /*0x8*/ int unk8;
-    /*0xC*/ int unkC;
+    /*0xC*/ void *unkC;
     /*0x10*/ u16 unk10;
     /*0x12*/ u16 unk12;
-    /*0x14*/ int unk14;
+    /*0x14*/ void *unk14;
     /*0x18*/ u16 unk18;
     /*0x1A*/ u16 unk1A;
     /*0x1C*/ int unk1C;
@@ -28,7 +35,7 @@ typedef struct
     /*0x2C*/ int unk2C;
     /*0x30*/ int unk30;
     /*0x34*/ int unk34;
-    /*0x38*/ int unk38;
+    /*0x38*/ PokeDexSeacherEngine *unk38;
 } PokeDexStartView;
 
 typedef int (*DexViewFunc)(PokeDexStartView *);

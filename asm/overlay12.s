@@ -46000,7 +46000,7 @@ _0216636C:
 	ldr r2, _021663A8 ; =0x021D6CE0
 	ldr r3, [r5, #4]
 	mvn r1, r1
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #3
 	b _0216634C
 _0216637E:
@@ -52716,7 +52716,7 @@ _021693CA:
 	ldr r2, _021693DC ; =0x0216DD60
 	ldr r3, [r4, #0x30]
 	mvn r1, r1
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #2
 	pop {r4, pc}
 	.align 2, 0
@@ -52778,7 +52778,7 @@ _0216942A:
 	ldr r1, _02169448 ; =0x000000B9
 	ldr r2, _0216944C ; =0x021A72B4
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #4
 	pop {r4, pc}
 	nop
@@ -52854,7 +52854,7 @@ _021694C2:
 	ldr r1, _021694DC ; =0x000000B9
 	ldr r2, _021694E0 ; =0x021AD288
 	ldr r3, [r4, #0x30]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #6
 	pop {r4, pc}
 	.align 2, 0
@@ -53117,7 +53117,7 @@ _0216968A:
 	ldr r1, _02169704 ; =0x000000BB
 	ldr r2, _02169708 ; =0x021EA060
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #8
 	pop {r4, pc}
 	nop

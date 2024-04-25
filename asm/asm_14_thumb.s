@@ -2231,12 +2231,12 @@ FreeGameProcManager: ; 0x0203A980
 _0203A984: .word sub_0203AA60
 	thumb_func_end FreeGameProcManager
 
-	thumb_func_start sub_0203A988
-sub_0203A988: ; 0x0203A988
+	thumb_func_start Overlay_QueueGameProc
+Overlay_QueueGameProc: ; 0x0203A988
 	push {r3, lr}
 	bl sub_0203AA88
 	pop {r3, pc}
-	thumb_func_end sub_0203A988
+	thumb_func_end Overlay_QueueGameProc
 
 	thumb_func_start sub_0203A990
 sub_0203A990: ; 0x0203A990

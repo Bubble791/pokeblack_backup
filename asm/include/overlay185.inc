@@ -1104,7 +1104,7 @@
 .public sub_02029968
 .public sub_0202A234
 .public sub_02029A2C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02029A44
 .public sub_02029A58
 .public sub_0202A23C

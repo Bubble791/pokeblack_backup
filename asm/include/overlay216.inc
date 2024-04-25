@@ -10,7 +10,7 @@
 .public MI_CpuFill8
 .public sub_021BBA18
 .public GFL_HeapFree
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0201735C
 .public sub_02034C54
 .public sub_0201FDF8
@@ -18,7 +18,7 @@
 .public sub_0201FDF8
 .public sub_021BB7C4
 .public sub_02042E94
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public GFL_HeapFree
 .public sub_0201736C
 .public sub_0200D190
@@ -27,10 +27,10 @@
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0200D1AC
-.public sub_0203A988
-.public sub_0203A988
+.public Overlay_QueueGameProc
+.public Overlay_QueueGameProc
 .public GFL_HeapFree
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public GFL_HeapAllocate

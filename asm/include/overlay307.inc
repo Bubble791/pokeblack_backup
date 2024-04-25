@@ -38,7 +38,7 @@
 .public sub_02017934
 .public sub_0200C838
 .public sub_02165A4C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02165B0C
 .public GFL_StrBufCreate
 .public GFL_StrBufCreate

@@ -17,11 +17,11 @@
 .public sub_020120DC
 .public sub_02152404
 .public sub_0203CE0C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_0203CDC8
 .public sub_0203CE0C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_0203CDC8
 .public sub_021998D4

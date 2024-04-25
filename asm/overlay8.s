@@ -470,7 +470,7 @@ _0214F852:
 	ldr r2, _0214FAE4 ; =0x021B50A8
 	add r3, #0x98
 	str r0, [r4, #0x1c]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	ldr r0, [r4, #0x5c]
 	str r6, [r0, #0xc]
 	str r7, [r5]
@@ -552,7 +552,7 @@ _0214F8FC:
 	ldr r1, _0214FAE0 ; =0x000000BE
 	ldr r2, _0214FAE8 ; =0x021B52BC
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	b _0214F7A4
 _0214F946:
 	ldr r0, [r4, #0x1c]

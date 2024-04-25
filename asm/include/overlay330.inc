@@ -39,7 +39,7 @@
 .public sub_0200D660
 .public sub_0200D72C
 .public sub_0200D568
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0200D72C
 .public sub_02017364
 .public sub_02017934

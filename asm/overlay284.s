@@ -974,7 +974,7 @@ _021E3810:
 	ldr r2, _021E3A44 ; =0x021BB6A0
 	ldr r3, [r4, r3]
 	sub r1, r1, #3
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	b _021E3D12
 _021E38AE:
 	cmp r6, #1

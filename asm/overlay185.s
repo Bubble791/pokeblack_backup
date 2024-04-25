@@ -16875,7 +16875,7 @@ _021A4E44:
 	ldr r2, _021A4E90 ; =0x021A7298
 	sub r1, r6, #2
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r5, #0x90
 	add sp, #8
 	str r4, [r5]

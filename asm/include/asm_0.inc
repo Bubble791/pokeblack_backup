@@ -975,9 +975,9 @@
 .public sub_0203A978
 .public MI_CpuFill8
 .public MI_CpuFill8
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public MI_CpuFill8
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0205B5EC
 .public FreeGameProcManager
 .public GFL_ProcReleaseSubsystem
@@ -1224,7 +1224,7 @@
 .public sub_0203D594
 .public sub_02180424
 .public FreeGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_021535DC
 .public sub_0203D3B4
 .public sub_0203D3D0

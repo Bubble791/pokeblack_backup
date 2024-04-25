@@ -250,7 +250,7 @@ _021C2732:
 	ldr r2, _021C280C ; =0x021A4CE0
 	mvn r1, r1
 	add r3, #8
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #1
 _021C274E:
 	str r0, [r4]
@@ -290,7 +290,7 @@ _021C2780:
 	ldr r2, _021C2814 ; =0x021BB6A0
 	mvn r1, r1
 	add r3, #0xb0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #4
 	b _021C274E
 _021C279E:

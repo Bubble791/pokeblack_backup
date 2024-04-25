@@ -187,7 +187,7 @@ _021BB862:
 	ldr r2, _021BB9D8 ; =0x021A4CE0
 	mvn r1, r1
 	add r3, r4, #4
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #1
 	b _021BB998
 _021BB87E:
@@ -287,7 +287,7 @@ _021BB92C:
 	ldr r2, _021BB9E0 ; =0x021BB6A0
 	mvn r1, r1
 	add r3, #0xac
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #4
 	b _021BB998
 _021BB94A:

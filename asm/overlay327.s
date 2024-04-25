@@ -170,7 +170,7 @@ _021B5EA0:
 	ldr r0, [r4]
 	ldr r2, [r2, #4]
 	ldr r3, [r4, #8]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #2
 	b _021B5E82
 _021B5EBA:

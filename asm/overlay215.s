@@ -275,7 +275,7 @@ _021A77A6:
 	ldr r0, [r4, #0x1c]
 	ldr r3, [r4, #0x10]
 	mvn r1, r1
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #1
 	b _021A7860
 _021A77BE:
@@ -329,7 +329,7 @@ _021A7806:
 	ldr r2, _021A7874 ; =0x021AB010
 	ldr r3, [r4, #8]
 	mvn r1, r1
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #4
 	b _021A7860
 _021A7826:
@@ -7030,7 +7030,7 @@ ovy215_21aad48: ; 0x021AAD48
 	ldr r0, [r3, #0x30]
 	ldr r1, _021AAD6C ; =0x000000A5
 	ldr r3, [r3, #0x10]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #0
 	pop {r3, pc}
 	.align 2, 0
@@ -7107,7 +7107,7 @@ ovy215_21aadb8: ; 0x021AADB8
 	ldr r2, _021AADF0 ; =0x021AB610
 	sub r1, r4, #3
 	str r3, [r5, #0x10]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0

@@ -41,7 +41,7 @@
 .public sub_0200D660
 .public sub_0200D72C
 .public sub_0200D568
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02017364
 .public sub_02017934
 .public sub_0200C838
@@ -69,7 +69,7 @@
 .public sub_020173AC
 .public sub_02020788
 .public GFL_HeapAllocate
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public GFL_HeapFree
 .public sub_0201735C
 .public sub_0201FDF8

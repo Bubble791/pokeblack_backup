@@ -29945,7 +29945,7 @@ _02013348:
 	ldr r0, [r4, #8]
 	ldr r1, _020133E8 ; =0x00000110
 _02013374:
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 _02013378:
 	ldr r0, [r5]
 	b _020132CC
@@ -29982,7 +29982,7 @@ _02013390:
 	ldr r0, [r4, #8]
 	ldr r1, _020133DC ; =0x000000BE
 	add r3, r4, r6
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	str r7, [r4, #4]
 _020133C0:
 	b _02013378
@@ -37953,7 +37953,7 @@ sub_02016A88: ; 0x02016A88
 sub_02016A98: ; 0x02016A98
 	push {r3, lr}
 	ldr r0, [r0, #8]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end sub_02016A98

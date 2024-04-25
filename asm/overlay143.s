@@ -219,7 +219,7 @@ _02199A64:
 	add r3, r4, #0
 	mvn r1, r1
 	add r3, #0xfc
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #1
 	add r6, #0xf
 	strb r0, [r4, r6]
@@ -243,7 +243,7 @@ _02199A98:
 	ldr r2, [r2, r3]
 	add r3, r4, #0
 	add r3, #0xfc
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #1
 	strb r0, [r4, r6]
 _02199AC8:

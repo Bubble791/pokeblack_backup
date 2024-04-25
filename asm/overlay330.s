@@ -253,7 +253,7 @@ _0219D084:
 	ldr r2, _0219D1A8 ; =0x021F4E38
 	add r3, r4, #0
 _0219D090:
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 _0219D094:
 	ldr r0, [r6]
 	add r0, r0, #1

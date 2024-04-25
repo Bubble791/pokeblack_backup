@@ -379,7 +379,7 @@ _021DDEA0:
 	ldr r0, [r0]
 	ldr r1, _021DE008 ; =0x00000118
 	ldr r2, _021DE00C ; =0x021DD940
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	b _021DDFAE
 _021DDEDE:
 	cmp r0, #1

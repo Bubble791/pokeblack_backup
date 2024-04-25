@@ -1343,7 +1343,7 @@ _021F08CE:
 	ldr r1, [r2, #8]
 	ldr r2, [r2]
 	ldr r3, [r4, #4]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #2
 	str r0, [r5, #0x18]
 	pop {r3, r4, r5, r6, r7, pc}

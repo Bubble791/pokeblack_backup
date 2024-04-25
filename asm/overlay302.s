@@ -3,121 +3,11 @@
 	.include "global.inc"
 
 	.text
+	.public ovy302_21ad01c
+	.public ovy302_21ad030
+	.public sub_021AD044
+	.public ovy302_21ad05c
 
-
-	thumb_func_start ovy302_21ad01c
-ovy302_21ad01c: ; 0x021AD01C
-	push {r4, lr}
-	add r4, r0, #0
-	ldr r0, [r4, #0xc]
-	cmp r0, #0
-	beq _021AD02E
-	bl GFL_HeapFree
-	mov r0, #0
-	str r0, [r4, #0xc]
-_021AD02E:
-	pop {r4, pc}
-	thumb_func_end ovy302_21ad01c
-
-	thumb_func_start ovy302_21ad030
-ovy302_21ad030: ; 0x021AD030
-	push {r4, lr}
-	add r4, r0, #0
-	ldr r0, [r4, #0x14]
-	cmp r0, #0
-	beq _021AD042
-	bl GFL_HeapFree
-	mov r0, #0
-	str r0, [r4, #0x14]
-_021AD042:
-	pop {r4, pc}
-	thumb_func_end ovy302_21ad030
-
-	thumb_func_start sub_021AD044
-sub_021AD044: ; 0x021AD044
-	str r1, [r0, #0x28]
-	mov r0, #0
-	bx lr
-	.align 2, 0
-	thumb_func_end sub_021AD044
-_021AD04C:
-	.byte 0x81, 0x68, 0x01, 0x29
-	.byte 0x01, 0xD0, 0x80, 0x6A, 0x70, 0x47, 0x00, 0x20, 0x70, 0x47, 0x00, 0x00
-
-	thumb_func_start ovy302_21ad05c
-ovy302_21ad05c: ; 0x021AD05C
-	push {r3, r4, lr}
-	sub sp, #4
-	add r4, r0, #0
-	ldr r0, _021AD098 ; =0x0000016A
-	ldr r3, _021AD09C ; =0x021AE5A0
-	str r0, [sp]
-	mov r0, #0x69
-	mov r1, #0xc
-	mov r2, #0
-	bl GFL_HeapAllocate
-	ldr r1, [r4]
-	str r0, [r4, #0x38]
-	ldr r1, [r1]
-	ldr r2, _021AD0A0 ; =0x021A023C
-	str r1, [r0]
-	ldr r1, [r4]
-	ldr r1, [r1, #8]
-	str r1, [r0, #4]
-	ldr r0, [r4, #4]
-	ldr r1, _021AD0A4 ; =0x0000012D
-	ldr r3, [r4, #0x38]
-	bl sub_0203A988
-	add r0, r4, #0
-	mov r1, #2
-	bl sub_021AD044
-	add sp, #4
-	pop {r3, r4, pc}
-	.align 2, 0
-_021AD098: .word 0x0000016A
-_021AD09C: .word 0x021AE5A0
-_021AD0A0: .word 0x021A023C
-_021AD0A4: .word 0x0000012D
-	thumb_func_end ovy302_21ad05c
-
-	thumb_func_start ovy302_21ad0a8
-ovy302_21ad0a8: ; 0x021AD0A8
-	push {r3, r4, r5, lr}
-	add r5, r0, #0
-	ldr r0, [r5, #0x38]
-	ldr r0, [r0, #8]
-	cmp r0, #0
-	beq _021AD0BE
-	cmp r0, #1
-	beq _021AD0C8
-	cmp r0, #2
-	beq _021AD0CC
-	b _021AD0DC
-_021AD0BE:
-	mov r1, #0
-_021AD0C0:
-	ldr r0, [r5]
-	mov r4, #0xd
-	strh r1, [r0, #0xe]
-	b _021AD0DC
-_021AD0C8:
-	mov r1, #1
-	b _021AD0C0
-_021AD0CC:
-	ldr r0, [r5]
-	ldr r0, [r0, #4]
-	bl sub_0200D1F8
-	mov r4, #0xb
-	cmp r0, #2
-	beq _021AD0DC
-	mov r4, #3
-_021AD0DC:
-	ldr r0, [r5, #0x38]
-	bl GFL_HeapFree
-	add r0, r4, #0
-	pop {r3, r4, r5, pc}
-	.align 2, 0
-	thumb_func_end ovy302_21ad0a8
 
 	thumb_func_start ovy302_21ad0e8
 ovy302_21ad0e8: ; 0x021AD0E8
@@ -174,7 +64,7 @@ _021AD14A:
 	ldr r1, _021AD16C ; =0x0000012B
 	ldr r2, _021AD170 ; =0x021A25C8
 	ldr r3, [r5, #0x38]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r0, r5, #0
 	mov r1, #4
 	bl sub_021AD044
@@ -305,7 +195,7 @@ ovy302_21ad214: ; 0x021AD214
 	ldr r0, [r5, #4]
 	ldr r1, _021AD264 ; =0x0000012C
 	ldr r3, [r5, #0x38]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r0, r5, #0
 	mov r1, #8
 	bl sub_021AD044
@@ -438,7 +328,7 @@ _021AD340:
 	ldr r1, _021AD360 ; =0x0000012A
 	ldr r2, _021AD364 ; =0x021ABF9C
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r0, r5, #0
 	mov r1, #6
 	str r4, [r5, #0x38]
@@ -581,7 +471,7 @@ _021AD452:
 	ldr r1, _021AD47C ; =0x0000012F
 	ldr r2, _021AD480 ; =0x021A32D8
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r0, r5, #0
 	mov r1, #0xa
 	bl sub_021AD044
@@ -700,7 +590,7 @@ ovy302_21ad4fc: ; 0x021AD4FC
 	ldr r1, _021AD56C ; =0x00000130
 	ldr r2, _021AD570 ; =0x021A1DAC
 	add r3, r4, #0
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	add r0, r5, #0
 	mov r1, #0xc
 	bl sub_021AD044

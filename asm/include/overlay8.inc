@@ -42,7 +42,7 @@
 .public sub_02016AD8
 .public sub_02005DF4
 .public CreateGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_02011CFC
 .public FreeGameProcManager
@@ -52,7 +52,7 @@
 .public sub_02005EA0
 .public sub_02016AD8
 .public CreateGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public sub_02011CFC
 .public FreeGameProcManager

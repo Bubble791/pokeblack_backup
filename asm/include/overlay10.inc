@@ -13,12 +13,12 @@
 .public sub_02040C64
 .public sub_0203CDC8
 .public sub_0200BB48
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02040440
 .public sub_02042D04
 .public sub_02040440
 .public sub_02042D0C
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203CE0C
 .public sub_02040C20
 .public sub_02040440
@@ -26,7 +26,7 @@
 .public sub_02040440
 .public sub_02042D0C
 .public sub_0200BB24
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_02040440
 .public sub_02042D04
 .public sub_02040440
@@ -35,9 +35,9 @@
 .public sub_0203CDC8
 .public sub_0200C1F0
 .public sub_0200C200
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0200C1D0
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0200BB48
 .public sub_02016CB4
 .public sub_02016EDC

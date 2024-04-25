@@ -450,9 +450,9 @@
 .public sub_0203CDC8
 .public sub_02034B64
 .public CreateGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public FreeGameProcManager
 .public sub_0203A978
 .public FreeGameProcManager
@@ -462,7 +462,7 @@
 .public sub_0203CE0C
 .public sub_0203CDC8
 .public CreateGameProcManager
-.public sub_0203A988
+.public Overlay_QueueGameProc
 .public sub_0203A978
 .public FreeGameProcManager
 .public sub_0203D554

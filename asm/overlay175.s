@@ -1616,7 +1616,7 @@ _0219A41A:
 	ldr r1, [r1, r3]
 	ldr r2, [r2, r3]
 	ldr r3, [r4, #8]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #2
 	b _0219A416
 _0219A430:

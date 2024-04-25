@@ -162,6 +162,7 @@ extern int sub_0200D1F8(int);
 extern void FreeGameProcManager(int);
 extern void GFL_ProcReleaseSubsystem(int);
 extern void GFL_HeapDelete(int);
+extern void Overlay_QueueGameProc(int manger, int ovyId, int funcTbl, void *data);
 
 #ifndef __MWERKS__
 #define NONMATCHING

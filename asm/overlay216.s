@@ -130,7 +130,7 @@ ovy216_21bb7c8: ; 0x021BB7C8
 	ldr r2, _021BB7EC ; =0x021C08DC
 	sub r1, r1, #2
 	str r3, [r4, #0xc]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #0
 	pop {r4, pc}
 	nop
@@ -195,7 +195,7 @@ _021BB846:
 	ldr r1, _021BB874 ; =0x000000A5
 	ldr r2, _021BB878 ; =0x021A4CE0
 	str r3, [r5, #0x18]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	ldr r0, [r5, #0xc]
 	str r4, [r0]
 	mov r0, #2
@@ -268,7 +268,7 @@ ovy216_21bb87c: ; 0x021BB87C
 	ldr r0, [r5, #0x20]
 	ldr r1, _021BB934 ; =0x000000CF
 	ldr r3, [r5, #0x1c]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #3
 	b _021BB922
 _021BB908:
@@ -279,7 +279,7 @@ _021BB908:
 	ldr r2, _021BB938 ; =0x021C08E8
 	ldr r3, [r5, #0xc]
 	mvn r1, r1
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	ldr r0, [r5, #0xc]
 	mov r1, #3
 	str r1, [r0]
@@ -312,7 +312,7 @@ ovy216_21bb93c: ; 0x021BB93C
 	ldr r1, _021BB968 ; =0x000000A5
 	ldr r2, _021BB96C ; =0x021A4CE0
 	str r3, [r4, #0x18]
-	bl sub_0203A988
+	bl Overlay_QueueGameProc
 	mov r0, #2
 	str r0, [r4]
 	mov r0, #0
