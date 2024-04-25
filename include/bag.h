@@ -582,8 +582,6 @@ extern void ovy142_219cc60(BagView*);
 extern void sub_0219C948(BagView*);
 
 extern void ovy142_219d46c(void*, int, int, int);
-extern void GFL_ProcReleaseSubsystem(int);
-extern void GFL_HeapDelete(int);
 int ovy142_219a354(BagView * bagView);
 void ovy142_219a3c4(BagView *bagView);
 void ovy142_219a3d4(BagView *bagView);

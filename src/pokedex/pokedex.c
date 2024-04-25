@@ -109,19 +109,16 @@ int ovy299_219fbc0(int a1, int a2, int a3)
 }
 
 int ovy299_21a05dc(int);
-int ovy299_219fc04(void);
+int ovy299_219fc04(int a1, int a2, int a3, int a4);
 
 int ovy299_219fbf0(int a1, int a2, int a3, int a4)
 {
     return ovy299_21a05dc(a4) == 0;
 }
 
-extern void GFL_ProcReleaseSubsystem(void);
-extern void GFL_HeapDelete(int);
-
-int ovy299_219fc04(void)
+int ovy299_219fc04(int a1, int a2, int a3, int a4)
 {
-    GFL_ProcReleaseSubsystem();
+    GFL_ProcReleaseSubsystem(a1);
     GFL_HeapDelete(107);
     return 1;
 }
