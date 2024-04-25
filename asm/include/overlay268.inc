@@ -1057,13 +1057,13 @@
 .public Oam_CreateSprite
 .public sub_0204C318
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public Oam_SetOamAnimIndex
 .public sub_0204C318
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021BFB64
 .public sub_021BFB64
 .public Oam_CreateSprite

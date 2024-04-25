@@ -1655,7 +1655,7 @@ _021BC464:
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x9c
 	ldr r0, [r0]

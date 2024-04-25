@@ -251,10 +251,10 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public G2x_SetBlendAlpha_
 .public G2x_SetBlendAlpha_

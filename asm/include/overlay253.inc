@@ -74,7 +74,7 @@
 .public GFL_ArcToolFree
 .public GFL_ArcToolFree
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C244
 .public sub_0204C2B0

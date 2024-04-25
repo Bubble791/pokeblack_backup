@@ -3129,7 +3129,7 @@ _0219B210:
 	ldr r0, [sp, #0xc]
 	mov r1, #0
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #0xe
 	blo _0219B210
@@ -3137,21 +3137,21 @@ _0219B210:
 	lsl r4, r4, #2
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x2c
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x30
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	sub r4, #0x34
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x1c
 	pop {r4, r5, r6, r7, pc}
 	nop

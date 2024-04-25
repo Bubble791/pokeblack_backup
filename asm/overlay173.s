@@ -1311,10 +1311,10 @@ ovy173_219d798: ; 0x0219D798
 	bl sub_0204C124
 	ldr r0, [r5, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x18]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	thumb_func_end ovy173_219d798
@@ -5291,7 +5291,7 @@ _0219F73C:
 	cmp r7, #0
 	beq _0219F75E
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x15
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
@@ -5299,7 +5299,7 @@ _0219F73C:
 	b _0219F76C
 _0219F75E:
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x15
 	lsl r0, r0, #4
 	ldr r0, [r5, r0]
@@ -5322,7 +5322,7 @@ _0219F778:
 	cmp r7, #0
 	beq _0219F79A
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x15
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
@@ -5330,7 +5330,7 @@ _0219F778:
 	b _0219F7A8
 _0219F79A:
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x15
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
@@ -5358,7 +5358,7 @@ _0219F7BE:
 	cmp r0, #0
 	beq _0219F7D6
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r7]
 	mov r1, #0
 	bl sub_0204C124

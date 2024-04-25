@@ -232,7 +232,7 @@
 .public sub_021F6B34
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C2B0
 .public sub_0204C2B0
 .public sub_0204BF1C
@@ -254,7 +254,7 @@
 .public sub_021F6B34
 .public Oam_SetSpritePosData
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C560
 .public sub_0204566C
 .public GFL_BGSysLoadScr

@@ -2252,13 +2252,13 @@ ovy305_219df30: ; 0x0219DF30
 	bl sub_0204C124
 	ldr r0, [r4, #0x10]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x14]
 	mov r1, #1
 	bl sub_0204C124
 	ldr r0, [r4, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219DF62:
 	ldrh r0, [r4, #0x24]
 	add r0, r0, #1
@@ -2294,7 +2294,7 @@ _0219DF86:
 	bl sub_0204C124
 	ldr r0, [r4, r6]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	lsl r1, r5, #0x10
 	ldr r0, [r4, r6]
 	lsr r1, r1, #0x10

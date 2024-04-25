@@ -15,7 +15,7 @@
 .public sub_020202A4
 .public sub_0201D4B0
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C56C
 .public GFL_ArcSysCreateFileHandle

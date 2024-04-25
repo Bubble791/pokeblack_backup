@@ -2763,7 +2763,7 @@ ovy306_219e3ec: ; 0x0219E3EC
 	bl sub_0204C438
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x38]
 	ldr r1, [sp, #0x3c]
 	ldr r2, [sp, #0x40]

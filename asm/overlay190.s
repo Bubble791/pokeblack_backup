@@ -2531,7 +2531,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	add r1, #0xc
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0xc
 	ldr r0, [r5, r0]
@@ -2566,7 +2566,7 @@ ovy190_21b42e0: ; 0x021B42E0
 	add r1, #0x10
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x10
 	ldr r0, [r5, r0]

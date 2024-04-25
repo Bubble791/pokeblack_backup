@@ -1120,7 +1120,7 @@ ovy144_219d720: ; 0x0219D720
 	bl Oam_CreateSprite
 	str r0, [r5, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x14]
 	bl sub_0204C550
 	ldr r3, _0219D804 ; =0x0219F780
@@ -1363,7 +1363,7 @@ ovy144_219d934: ; 0x0219D934
 	bl sub_0204C438
 	ldr r0, [r5, #4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	bl sub_0203D554
 	cmp r0, #0
 	ldr r0, [r5]
@@ -3299,7 +3299,7 @@ _0219E810:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	cmp r4, #0
 	bne _0219E856
 	ldr r0, [r5]
@@ -4349,7 +4349,7 @@ ovy144_219f050: ; 0x0219F050
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x14]
 	bl sub_0204C550
 	add sp, #0x18

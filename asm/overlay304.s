@@ -1102,7 +1102,7 @@ _021A0448:
 	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x10
 	mov r1, #0x54
@@ -2375,7 +2375,7 @@ _021A0F0C:
 	bl sub_0204C124
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r6, #0xd
 	str r6, [sp]
 	str r7, [sp, #4]
@@ -3991,7 +3991,7 @@ ovy304_21a1b84: ; 0x021A1B84
 	bl sub_0204C4D4
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy304_21a1b84
 

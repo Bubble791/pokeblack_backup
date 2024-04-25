@@ -1213,7 +1213,7 @@ _021BF7E4:
 	bl Oam_CreateSprite
 	str r0, [r5, r6]
 	add r1, r4, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r6]
 	add r1, r7, #0
 	bl sub_0204C124
@@ -12864,7 +12864,7 @@ _021C5072:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #8]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021C5280 ; =0x000008A3
 	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x20]
@@ -12946,7 +12946,7 @@ _021C5138:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	b _021C4FAC
 _021C514A:
 	ldr r0, [r4, #0x14]
@@ -12971,7 +12971,7 @@ _021C515A:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0xc]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021C5294 ; =0x000008A5
 	bl GFL_SndSEPlay
 	b _021C4FAC
@@ -13151,7 +13151,7 @@ _021C52E2:
 	bl sub_0204C124
 	ldr r0, [r4, #8]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021C53C0 ; =0x000008A3
 	bl GFL_SndSEPlay
 	ldr r0, [r4, #0x20]

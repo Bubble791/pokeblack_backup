@@ -1548,7 +1548,7 @@ _021DE6C8:
 	b _021DE72A
 _021DE6D0:
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0xf8
 	ldr r0, [r0]

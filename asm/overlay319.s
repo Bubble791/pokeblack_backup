@@ -1999,7 +1999,7 @@ _0219DDA0:
 	bl sub_0204C124
 	ldr r0, [r6, #0x38]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -2601,7 +2601,7 @@ ovy319_219e1ac: ; 0x0219E1AC
 	bl sub_0204C124
 	ldr r0, [r5, #0x5c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r1, _0219E2E0 ; =0x0219F8A8
 	add r0, sp, #0x10
 	ldrh r2, [r1]
@@ -2639,7 +2639,7 @@ _0219E28A:
 	bl sub_0204C124
 	ldr r0, [r6, #0x60]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18

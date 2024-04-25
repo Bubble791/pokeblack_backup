@@ -105642,7 +105642,7 @@ sub_02034648: ; 0x02034648
 	add r0, r5, #0
 	mov r1, #1
 	mov r4, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	bl sub_0203D5A8
 	cmp r0, #0x1e
 	bne _02034694

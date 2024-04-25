@@ -86,11 +86,11 @@
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C550
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C550
 .public sub_0204B28C
 .public BmpWin_CreateDynamic
@@ -127,7 +127,7 @@
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02005784
 .public sub_0204C4D4
 .public sub_0204C108
@@ -144,7 +144,7 @@
 .public GFL_ArcToolFree
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -668,7 +668,7 @@
 .public MI_CpuFill8
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -748,7 +748,7 @@
 .public MI_CpuFill8
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_CreateSprite
 .public sub_0204C124
 .public BmpWin_CreateDynamic

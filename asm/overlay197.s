@@ -8153,7 +8153,7 @@ _021B93FE:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add sp, #0x80
 	pop {r3, r4, r5, r6, r7, pc}
@@ -9831,7 +9831,7 @@ _021BA134:
 	ldr r0, [sp, #0x2c]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x28]
 	add r1, r7, #0
 	ldr r0, [r6, r0]

@@ -4776,7 +4776,7 @@ ovy85_21ed2d8: ; 0x021ED2D8
 	bl Oam_CreateSprite
 	add r4, r0, #0
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C5C8
@@ -4843,7 +4843,7 @@ _021ED346:
 	lsl r0, r0, #2
 	ldr r0, [r6, r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021ED346

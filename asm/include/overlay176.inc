@@ -27,7 +27,7 @@
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_0219B0AC
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02005DF4
 .public sub_0204E060
 .public sub_0204E0E0
@@ -80,11 +80,11 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C468
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C468
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C

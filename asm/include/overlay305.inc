@@ -119,11 +119,11 @@
 .public sub_0204C108
 .public sub_0219D730
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C4B8
 .public sub_0219E574
 .public sub_021999C8

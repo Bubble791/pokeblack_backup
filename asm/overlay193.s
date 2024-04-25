@@ -185,7 +185,7 @@ ovy193_21b3090: ; 0x021B3090
 	mov r1, #1
 	add r0, #0xb0
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0xc]
 	mov r1, #1
 	add r0, #0xb0
@@ -2296,7 +2296,7 @@ ovy193_21b42f4: ; 0x021B42F4
 	mov r1, #1
 	add r0, #0xb0
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0xc]
 	mov r1, #1
 	add r0, #0xb0
@@ -4178,7 +4178,7 @@ ovy193_21b534c: ; 0x021B534C
 	mov r1, #1
 	add r0, #0xb0
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0xc]
 	mov r1, #1
 	add r0, #0xb0

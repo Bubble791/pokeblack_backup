@@ -5468,7 +5468,7 @@ ovy300_21a2738: ; 0x021A2738
 	add r0, r4, r0
 	ldr r0, [r0, #0x28]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy300_21a2738
 

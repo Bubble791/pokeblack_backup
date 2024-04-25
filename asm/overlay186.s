@@ -7464,7 +7464,7 @@ _021AB006:
 	add r0, #0x98
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	cmp r7, #3
 	bne _021AB096
 	add r0, r4, r5
@@ -8501,7 +8501,7 @@ _021AB8D2:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r7, #0x4c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #0x2c
 	blt _021AB8D2

@@ -5213,7 +5213,7 @@ ovy262_21c4e44: ; 0x021C4E44
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r1, #0
 	add r0, sp, #0x1c
 	strh r1, [r0, #4]
@@ -5243,7 +5243,7 @@ ovy262_21c4e44: ; 0x021C4E44
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, #4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}

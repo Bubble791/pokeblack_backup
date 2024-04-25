@@ -818,7 +818,7 @@ _0219B3D4:
 	bl sub_0204C468
 	ldr r0, [r4, #0x28]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x28]
 	mov r1, #0
 	bl Oam_SetOamAnimIndex

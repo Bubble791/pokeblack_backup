@@ -173,7 +173,7 @@ int BagMenu_End(int a1, int a2, void *data3, void *a4)
     sub_020504DC(wk->buttonManSystem);
     sub_020480A8();
     sub_02044528();
-    a3->unk44 = wk->unk898;
+    a3->unk44 = wk->bagMenuReturnApp;
     a3->unk48 = wk->selectItem;
 
     ovy142_219d46c(wk->unk14, a3->unk38, a3->unk44, wk->unk1F50);
@@ -282,7 +282,7 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
     a1->unk8B8 = a2;
     sub_0204C4D4(a1->bottomIconOam[a1->unk8B8], 0);
     Oam_SetOamAnimIndex(a1->bottomIconOam[a1->unk8B8], v3);
-    sub_0204C520(a1->bottomIconOam[a1->unk8B8], 1);
+    Oam_EnableOamAnim(a1->bottomIconOam[a1->unk8B8], 1);
     a1->unk8BC = a3;
     BagMenu_SetRunFunc(a1, ovy142_219ca90);
 }
@@ -324,7 +324,7 @@ void ovy142_219cac0(BagView *bagView, int a2, int a3, FieldBagItemUse a4)
     bagView->unk8BA = 6;
     sub_0204C4D4(bagView->bottomIconOam[bagView->unk8B8], 0);
     Oam_SetOamAnimIndex(bagView->bottomIconOam[bagView->unk8B8], v4);
-    sub_0204C520(bagView->bottomIconOam[bagView->unk8B8], 1);
+    Oam_EnableOamAnim(bagView->bottomIconOam[bagView->unk8B8], 1);
     bagView->unk8BC = a4;
     BagMenu_SetRunFunc(bagView, ovy142_219cb64);
 }
@@ -360,8 +360,8 @@ void ovy142_219cba8(BagView *bagView);
 void ovy142_219cba8(BagView *bagView)
 {
     ovy142_219b46c(bagView);
-    sub_0204C520(bagView->scrollBarOam, 1);
-    ovy142_219fda8(bagView, 1);
+    Oam_EnableOamAnim(bagView->scrollBarOam, 1);
+    BagMenu_PopUpOptionMenuSetting(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
     BagMenu_KeyPadMain(bagView);
 }
@@ -369,8 +369,8 @@ void ovy142_219cbe4(BagView *bagView);
 void ovy142_219cbe4(BagView *bagView)
 {
     ovy142_219b46c(bagView);
-    sub_0204C520(bagView->scrollBarOam, 1);
-    ovy142_219fda8(bagView, 1);
+    Oam_EnableOamAnim(bagView->scrollBarOam, 1);
+    BagMenu_PopUpOptionMenuSetting(bagView, 1);
     ovy142_219bda4(bagView, sub_0203D554() == 0);
     BagMenu_SetRunFunc(bagView, ovy142_219b2f0);
 }
@@ -399,10 +399,10 @@ void BagMenu_StartSortItem(BagView *bagView)
     if (!sub_0204C560(bagView->unk744))
     {
         Oam_SetOamAnimIndex(bagView->unk744, 0);
-        sub_0204C520(bagView->scrollBarOam, 0);
+        Oam_EnableOamAnim(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 151, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
-        ovy142_219fda8(bagView, 0);
+        BagMenu_PopUpOptionMenuSetting(bagView, 0);
         ovy142_219cce0(bagView);
         BagMenu_SetRunFunc(bagView, ovy142_219cd98);
     }
@@ -519,8 +519,8 @@ void ovy142_219cd98(BagView* bagView)
 
                 ovy142_219bda4(bagView, sub_0203D554() == 0);
                 r5 = 1;
-                ovy142_219fda8(bagView, 1);
-                sub_0204C520(bagView->scrollBarOam, 1);
+                BagMenu_PopUpOptionMenuSetting(bagView, 1);
+                Oam_EnableOamAnim(bagView->scrollBarOam, 1);
                 BagMenu_KeyPadMain(bagView);
                 break;
 
@@ -633,10 +633,10 @@ void ovy142_219d0c8(BagView* bagView)
     if (!sub_0204C560(bagView->unk740))
     {
         Oam_SetOamAnimIndex(bagView->unk740, 2);
-        sub_0204C520(bagView->scrollBarOam, 0);
+        Oam_EnableOamAnim(bagView->scrollBarOam, 0);
         GFL_MsgDataLoadStrbuf(bagView->msgData, 147, bagView->stringBuff2);
         BagMenu_PrintBagMessage(bagView, 0);
-        ovy142_219fda8(bagView, 0);
+        BagMenu_PopUpOptionMenuSetting(bagView, 0);
         ovy142_219d120(bagView);
         BagMenu_SetRunFunc(bagView, ovy142_219d2bc);
     }
@@ -776,8 +776,8 @@ void ovy142_219d2bc(BagView *bagView)
 
                     ovy142_219bda4(bagView, sub_0203D554() == 0);
                     r5 = 1;
-                    ovy142_219fda8(bagView, 1);
-                    sub_0204C520(bagView->scrollBarOam, 1);
+                    BagMenu_PopUpOptionMenuSetting(bagView, 1);
+                    Oam_EnableOamAnim(bagView->scrollBarOam, 1);
                     BagMenu_KeyPadMain(bagView);
                     break;
             }
@@ -813,8 +813,8 @@ void ovy142_219d3d8(BagView *bagView)
     ovy142_219ed3c(bagView);
     ovy142_21998f4(bagView);
     sub_0219F0AC(bagView);
-    sub_0204C520(bagView->scrollBarOam, 1);
-    ovy142_219fda8(bagView, 1);
+    Oam_EnableOamAnim(bagView->scrollBarOam, 1);
+    BagMenu_PopUpOptionMenuSetting(bagView, 1);
     BagMenu_KeyPadMain(bagView);
 }
 
@@ -1174,7 +1174,7 @@ void ovy142_219d7a8(BagView *bagView)
         &newtemp[0],
         0,
         bagView->heapId);
-    sub_0204C520(bagView->unk744, 1);
+    Oam_EnableOamAnim(bagView->unk744, 1);
     sub_0204C124(bagView->unk744, 1);
     sub_0204C5C8(bagView->unk744, 0);
     ovy142_219ff60(bagView);
@@ -1213,7 +1213,7 @@ void ovy142_219dda0(BagView *a1, int a2)
     v5 = a1->itemIconOam;
     if (v5)
         sub_0204C124(v5, a2);
-    v6 = sub_02199978(a1);
+    v6 = BagMenu_GetSelectSlot(a1);
     v7 = BagMenu_GetBagItemDataBySlot(a1, v6);
     result = Item_GetTmHmMove(v7->itemid);
     if (result)
@@ -1246,7 +1246,7 @@ void ovy142_219de0c(BagView *a1)
     for (u32 i = 0; i < 0x11; i++)
         sub_0204C124(a1->unk6E0[i], 0);
 
-    v4 = sub_02199978(a1);
+    v4 = BagMenu_GetSelectSlot(a1);
     v5 = BagMenu_GetBagItemDataBySlot(a1, v4);
     v6 = v5;
     if (v5 == 0 || v5->itemid == 0)
@@ -1481,7 +1481,7 @@ void BagMenu_LoadItemIconOam(BagView *bagView, int item)
         &itemIconTemplate,
         1,
         bagView->heapId);
-    sub_0204C520(bagView->itemIconOam, 1);
+    Oam_EnableOamAnim(bagView->itemIconOam, 1);
     sub_0204C124(bagView->itemIconOam, 1);
     sub_0204C5C8(bagView->itemIconOam, 0);
 }
@@ -1544,7 +1544,7 @@ void ovy142_219e6f8(BagView *a1)
         0,
         a1->heapId);
     sub_0204C124(a1->scrollBarOam, 1);
-    sub_0204C520(a1->scrollBarOam, 1);
+    Oam_EnableOamAnim(a1->scrollBarOam, 1);
     sub_0204C5C8(a1->scrollBarOam, 0);
     ovy142_219ed3c(a1);
     temp[1].x = 140;
@@ -1564,7 +1564,7 @@ void ovy142_219e6f8(BagView *a1)
         a1->heapId);
     sub_0204C5C8(a1->unk6B4, 0);
     sub_0204C124(a1->unk6B4, 1);
-    sub_0204C520(a1->unk6B4, 1);
+    Oam_EnableOamAnim(a1->unk6B4, 1);
     for (int i = 0; i < 8; i++)
     {
         temp[0].x = 140;
@@ -2058,7 +2058,7 @@ void ovy142_219ed8c(BagView *a1)
         0,
         a1->heapId);
     sub_0204C124(a1->unk740, 0);
-    sub_0204C520(a1->unk740, 1);
+    Oam_EnableOamAnim(a1->unk740, 1);
     sub_0204C5C8(a1->unk740, 0);
     if (!BagMenu_IsNotNormalBagMode(a1))
         sub_0204C124(a1->bottomIconOam[2], 0);
@@ -2084,7 +2084,7 @@ void ovy142_219ed8c(BagView *a1)
             &temp,
             0,
             a1->heapId);
-        sub_0204C520(a1->bottomIconOam[newnum], 1);
+        Oam_EnableOamAnim(a1->bottomIconOam[newnum], 1);
         sub_0204C124(a1->bottomIconOam[newnum], 0);
         sub_0204C5C8(a1->bottomIconOam[newnum], 0);
 
@@ -2110,7 +2110,7 @@ void ovy142_219efc0(BagView *a1)
             &v8,
             0,
             a1->heapId);
-        sub_0204C520(a1->bagPocketOam[i], 1);
+        Oam_EnableOamAnim(a1->bagPocketOam[i], 1);
     }
 
 }
@@ -2177,7 +2177,7 @@ void ovy142_219f0bc(BagView *bagView, u32 *textList, int numList)
     bagView->unk79C = sub_0202D974(&task, bagView->taskMenuData);
     for (v9 = 0; v9 < numList; ++v9)
         GFL_StrBufFree(bagView->unk7A0[v9].textBuff);
-    ovy142_219fda8(bagView, 0);
+    BagMenu_PopUpOptionMenuSetting(bagView, 0);
 }
 
 void BagMenu_AddSortOptionListMenu(BagView *a1, u32 *textList, int a3)
@@ -2207,7 +2207,7 @@ void BagMenu_AddSortOptionListMenu(BagView *a1, u32 *textList, int a3)
     a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (v9 = 0; v9 < a3; ++v9)
         GFL_StrBufFree(a1->unk7A0[v9].textBuff);
-    ovy142_219fda8(a1, 0);
+    BagMenu_PopUpOptionMenuSetting(a1, 0);
 }
 
 void ovy142_219f284(BagView *a1, u8 a2)
@@ -2261,7 +2261,7 @@ void ovy142_219f284(BagView *a1, u8 a2)
     a1->unk79C = sub_0202D974(&task, a1->taskMenuData);
     for (i = 0; i < a2; ++i)
         GFL_StrBufFree(a1->unk7A0[i].textBuff);
-    ovy142_219fda8(a1, 0);
+    BagMenu_PopUpOptionMenuSetting(a1, 0);
 }
 
 extern sub_0204AFD8(void* ,int ,int, int, u16, int, int, u16);
@@ -2538,7 +2538,7 @@ void ovy142_219faac(BagView *a1)
     GFL_StrBufFree(a1->unk7A0[0].textBuff);
     GFL_StrBufFree(a1->unk7A0[1].textBuff);
     ovy142_219ff40(a1, 0);
-    ovy142_219fda8(a1, 0);
+    BagMenu_PopUpOptionMenuSetting(a1, 0);
 }
 
 void ovy142_219fb60(BagView *a1);
@@ -2691,7 +2691,7 @@ void ovy142_219fd4c(BagView *a1, int a2)
 extern int sub_02026FE4(int, int, int, int, int, int, int, int);
 extern int sub_0204C138(int);
 
-void ovy142_219fda8(BagView *bagView, int a2)
+void BagMenu_PopUpOptionMenuSetting(BagView *bagView, int a2)
 {
     int pocket;     // r0
     int isRegist;     // r7
@@ -2800,9 +2800,9 @@ void ovy142_219ffe8(BagView *a1, int a2)
         Oam_SetOamAnimIndex(a1->bottomIconOam[1], 5);
         Oam_SetOamAnimIndex(a1->bottomIconOam[3], 0);
         if (v5 == 1)
-            return Oam_SetOamAnimIndex(a1->bottomIconOam[2], 7);
+            Oam_SetOamAnimIndex(a1->bottomIconOam[2], 7);
         else
-            return Oam_SetOamAnimIndex(a1->bottomIconOam[2], 6);
+            Oam_SetOamAnimIndex(a1->bottomIconOam[2], 6);
     }
     else
     {
@@ -2812,9 +2812,9 @@ void ovy142_219ffe8(BagView *a1, int a2)
         Oam_SetOamAnimIndex(a1->bottomIconOam[1], 19);
         Oam_SetOamAnimIndex(a1->bottomIconOam[3], 14);
         if (v5 == 1)
-            return Oam_SetOamAnimIndex(a1->bottomIconOam[2], 22);
+            Oam_SetOamAnimIndex(a1->bottomIconOam[2], 22);
         else
-            return Oam_SetOamAnimIndex(a1->bottomIconOam[2], 21);
+            Oam_SetOamAnimIndex(a1->bottomIconOam[2], 21);
     }
 }
 
@@ -3046,7 +3046,7 @@ void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4)
     v5 = 0;
     a1->unk8 = a4;
     MI_CpuFill8(&a1->unkC, 0, 8 * 639);
-    for (i = 0; i <= 638; ++i)
+    for (i = 0; i <= MAX_ITEM; ++i)
     {
         if (BagSave_IsItemInFreeSpace((void*)a1->unk4, (u16)i))
         {
@@ -3092,7 +3092,7 @@ ItemTable *ovy142_21a0470(ITEM_UNKNOW_DATA *a1, u16 a2, u16 a3)
     v5 = 0;
     if (a2 != 5)
     {
-        for (int i = 0; i <= 638; i++)
+        for (int i = 0; i <= MAX_ITEM; i++)
         {
             v12 = (ItemTable *)sub_02008730(a1->unk4, a2, (u16)i);
             if (!v12)
@@ -3111,7 +3111,7 @@ ItemTable *ovy142_21a0470(ITEM_UNKNOW_DATA *a1, u16 a2, u16 a3)
     {   
         v8 = 0;
         SomeData *v10;
-        for (int i = 0; i <= 638; i++)
+        for (int i = 0; i <= MAX_ITEM; i++)
         {
             v10 = &a1->unkC[i];
             if (v10->unk4 == 1 && v10->unk0.ItemData.itemid)
@@ -3150,7 +3150,7 @@ void ovy142_21a050c(ITEM_UNKNOW_DATA *a1, u16 a2, int a3)
     int save = a1->unk4;
     v5 = 0;
 
-    for (int i = 0; i <= 638; i++)
+    for (int i = 0; i <= MAX_ITEM; i++)
     {
         v7 = &a1->unkC[i];
         if (v7->unk4 == 1 && v7->unk0.ItemData.itemid)
@@ -3222,7 +3222,7 @@ int ovy142_21a0610(ITEM_UNKNOW_DATA *a1, int a2)
     int v2; // r3
     
     v2 = 0;
-    for (i = 0; i <= 638; ++i)
+    for (i = 0; i <= MAX_ITEM; ++i)
     {
         if (a2 == a1->unkC[i].unk0.ItemData.num 
             && a1->unkC[i].unk0.ItemData.itemid)
@@ -3282,7 +3282,7 @@ int ovy142_21a0698(ITEM_UNKNOW_DATA *a1, int a2)
     }
     else
     {
-        for (i = 0; i <= 0x27E; ++i)
+        for (i = 0; i <= MAX_ITEM; ++i)
         {
             if (a1->unkC[i].unk0.ItemData.itemid)
             {   

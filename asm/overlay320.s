@@ -1510,7 +1510,7 @@ _0219DA94:
 	mov r1, #1
 _0219DAA4:
 	ldr r0, [r6, #0x14]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r1, [r4, #5]
 	mov r0, #2
 	tst r0, r1
@@ -1690,7 +1690,7 @@ ovy320_219dbf0: ; 0x0219DBF0
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy320_219dbf0
 
@@ -2635,7 +2635,7 @@ ovy320_219e2e0: ; 0x0219E2E0
 	bl sub_0204C124
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	lsl r1, r6, #1
 	ldr r0, _0219E374 ; =0x0219EE96
 	ldrsh r7, [r7, r1]

@@ -383,11 +383,11 @@
 .public GetDefaultUINarcIdx
 .public GFL_ArcSysCreateFileHandle
 .public Oam_CreateSprite
-.public sub_0204C520
-.public sub_0204C520
-.public sub_0204C520
-.public sub_0204C520
-.public sub_0204C520
+.public Oam_EnableOamAnim
+.public Oam_EnableOamAnim
+.public Oam_EnableOamAnim
+.public Oam_EnableOamAnim
+.public Oam_EnableOamAnim
 .public Oam_SetSpritePosData
 .public sub_0204C4D4
 .public Oam_SetSpritePosData

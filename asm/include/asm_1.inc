@@ -4713,7 +4713,7 @@
 .public sub_0204BE64
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0203D5A8
 .public sub_0204C53C
 .public sub_020484D4
@@ -10417,7 +10417,7 @@
 .public sub_0204C4F8
 .public sub_0204C504
 .public sub_0204C510
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C534
 .public sub_0204C53C
 .public sub_0204C540

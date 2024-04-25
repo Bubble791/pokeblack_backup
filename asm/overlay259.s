@@ -1419,7 +1419,7 @@ _0219A388:
 	bl sub_0204C124
 	ldr r0, [r4, #0x2c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x2c]
 	bl sub_0204C550
 	mov r1, #1
@@ -1439,7 +1439,7 @@ _0219A388:
 	bl sub_0204C124
 	ldr r0, [r4, #0x30]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x30]
 	bl sub_0204C550
 	add sp, #0x1c
@@ -1800,7 +1800,7 @@ _0219A644:
 	ldr r0, [r5, #0x44]
 	mov r4, #1
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	lsl r0, r4, #0xe
 	bl sub_02005784
 	add r1, r0, #0
@@ -1944,7 +1944,7 @@ ovy259_219a760: ; 0x0219A760
 	bl sub_0204C124
 	ldr r0, [r5, #0x6c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x14
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -7558,7 +7558,7 @@ ovy259_219d364: ; 0x0219D364
 	bl sub_0204C124
 	ldr r0, [r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	thumb_func_end ovy259_219d364
@@ -8917,7 +8917,7 @@ ovy259_219ddbc: ; 0x0219DDBC
 	bl sub_0204C124
 	ldr r0, [r5, #0x10]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x12
 	strh r0, [r6]
 	mov r0, #1

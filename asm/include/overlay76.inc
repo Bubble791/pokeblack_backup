@@ -167,7 +167,7 @@
 .public sub_0208D868
 .public sub_02199CF0
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C53C
 .public sub_02199C6C
 .public sub_0219980C
@@ -178,7 +178,7 @@
 .public sub_0208D868
 .public sub_02199CF0
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C53C
 .public sub_02199C6C
 .public sub_0219980C
@@ -188,7 +188,7 @@
 .public sub_0208D868
 .public sub_02199CF0
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C53C
 .public sub_02005748
 .public sub_0208D868

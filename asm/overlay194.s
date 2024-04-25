@@ -5935,7 +5935,7 @@ ovy194_21ba5f0: ; 0x021BA5F0
 	ldr r0, [r5, r6]
 	mov r1, #1
 	mov r6, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x10
 	ldrsh r0, [r5, r0]
@@ -7098,7 +7098,7 @@ _021BAFE0:
 	str r1, [r5, r0]
 	sub r0, #0x58
 	ldr r0, [r5, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _021BAFF2:
 	add r0, r5, #0
 	bl ovy194_21ba5f0
@@ -23570,7 +23570,7 @@ _021C3538:
 	ldr r0, [sp, #0x1c]
 	add r1, r6, #0
 	ldr r0, [r4, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x18]
 	add r1, r6, #0
 	ldr r0, [r4, r0]
@@ -23584,7 +23584,7 @@ _021C3538:
 	lsl r0, r0, #4
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r7, r7, #1
 	cmp r7, #5
 	blt _021C3538
@@ -24333,7 +24333,7 @@ _021C3B34:
 	lsl r0, r0, #6
 	ldr r0, [r1, r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x2b
 	ldr r1, [sp, #0x10]
 	lsl r0, r0, #6
@@ -25806,7 +25806,7 @@ ovy194_21c46a4: ; 0x021C46A4
 	ldr r4, _021C4758 ; =0x00000F04
 	mov r1, #0
 	str r0, [r5, r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r4]
 	mov r1, #1
 	bl sub_0204C124
@@ -25888,7 +25888,7 @@ ovy194_21c479c: ; 0x021C479C
 	ldr r7, _021C4968 ; =0x00000F08
 	mov r1, #1
 	str r0, [r5, r7]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r7]
 	mov r1, #1
 	bl sub_0204C124
@@ -25921,7 +25921,7 @@ ovy194_21c479c: ; 0x021C479C
 	add r1, r7, #4
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	bl sub_0203D554
 	cmp r0, #0
 	beq _021C4842
@@ -26002,7 +26002,7 @@ _021C4842:
 	lsl r6, r6, #4
 	str r0, [r5, r6]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r6]
 	mov r1, #1
 	bl sub_0204C124
@@ -26035,7 +26035,7 @@ _021C4842:
 	add r1, r6, #4
 	str r0, [r5, r1]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #4
 	ldr r0, [r5, r0]
 	mov r1, #1
@@ -27155,7 +27155,7 @@ _021C5198:
 	bl sub_0204C378
 	ldr r0, [r6, r4]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, r4]
 	ldr r1, [sp, #0x3c]
 	bl sub_0204C124
@@ -27598,7 +27598,7 @@ ovy194_21c551c: ; 0x021C551C
 _021C556E:
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C124
@@ -27705,7 +27705,7 @@ ovy194_21c55e4: ; 0x021C55E4
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, r4]
 	b _021C5646
 _021C5646:
@@ -27742,7 +27742,7 @@ _021C5646:
 	bl Oam_CreateSprite
 	str r0, [r6, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, r4]
 	mov r1, #1
 	bl sub_0204C124
@@ -27862,7 +27862,7 @@ _021C576E:
 	ldr r6, _021C5798 ; =0x00000FD4
 	mov r1, #1
 	ldr r0, [r5, r6]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r6]
 	mov r1, #1
 	bl sub_0204C124
@@ -28695,7 +28695,7 @@ ovy194_21c5dd8: ; 0x021C5DD8
 	bl sub_0204C124
 	ldr r0, [r5, r7]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021C5E54 ; =0x000011F5
 	add r1, sp, #0x14
 	strb r6, [r5, r0]

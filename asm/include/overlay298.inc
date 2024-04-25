@@ -198,7 +198,7 @@
 .public sub_021A0F10
 .public sub_021A0F10
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public MI_CpuFill8
 .public sub_0204C138
@@ -436,7 +436,7 @@
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public sub_0204C108
 .public sub_0204B98C
@@ -582,7 +582,7 @@
 .public Oam_CreateSprite
 .public Oam_CreateSprite
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C468
 .public sub_0204C438
 .public sub_0204C124
@@ -607,7 +607,7 @@
 .public Oam_CreateSprite
 .public sub_0219F730
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C468
 .public sub_0204C438
 .public sub_0204C124
@@ -620,7 +620,7 @@
 .public sub_0219F730
 .public sub_0219F730
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C108
@@ -671,7 +671,7 @@
 .public sub_0219FD34
 .public sub_0204C560
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
 .public GFL_ArcSysCreateFileHandle
 .public sub_02021114
@@ -686,7 +686,7 @@
 .public sub_02020F94
 .public Oam_LoadNCGRFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02021034
 .public sub_0204C378
 .public sub_0204C318
@@ -904,7 +904,7 @@
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C4D4
 .public sub_0204C124
 .public sub_0204B610
@@ -1069,7 +1069,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C318
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BCD0
 .public sub_0204B98C
@@ -1483,7 +1483,7 @@
 .public sub_02020F94
 .public Oam_LoadNCGRFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02021034
 .public sub_0204C378
 .public sub_0204C318
@@ -1590,12 +1590,12 @@
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C318
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public sub_0204C108
 .public sub_0204C108
@@ -1617,7 +1617,7 @@
 .public sub_0203D564
 .public Oam_SetOamAnimIndex
 .public GFL_SndSEPlay
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C4D4
 .public sub_0204C124
 .public sub_0204C124
@@ -1626,7 +1626,7 @@
 .public sub_0219FD34
 .public sub_0204C560
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public Oam_SetSpritePosData

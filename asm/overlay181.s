@@ -2287,7 +2287,7 @@ _0219E1CC:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x7c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219E374 ; =0x00000551
 	bl GFL_SndSEPlay
 	b _0219E20C

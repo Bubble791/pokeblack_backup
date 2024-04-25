@@ -381,7 +381,7 @@
 .public sub_021999C8
 .public sub_02199A5C
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02044C98
 .public GFL_BGSysSetBGEnabledB
 .public sub_021A2678

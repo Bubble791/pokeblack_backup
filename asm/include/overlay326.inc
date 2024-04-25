@@ -44,7 +44,7 @@
 .public sub_0219D27C
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C2B0
 .public sub_0204C2B0
 .public GFL_ArcSysCreateFileHandle
@@ -84,11 +84,11 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
@@ -398,7 +398,7 @@
 .public sub_021A1174
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C2B0
 .public sub_0204C2B0
 .public GFL_ArcSysCreateFileHandle
@@ -429,9 +429,9 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C560

@@ -164,7 +164,7 @@
 .public sub_0204BF98
 .public sub_0204B758
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public GFL_BGSysSetBGEnabledA

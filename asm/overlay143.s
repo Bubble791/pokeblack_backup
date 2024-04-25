@@ -1866,7 +1866,7 @@ ovy143_219a6fc: ; 0x0219A6FC
 	bl Oam_CreateSprite
 	mov r1, #1
 	add r5, r0, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	str r5, [r4]
 	add sp, #0x14
 	pop {r4, r5, pc}
@@ -1970,7 +1970,7 @@ ovy143_219a7a4: ; 0x0219A7A4
 	bl Oam_CreateSprite
 	mov r1, #1
 	add r4, r0, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
@@ -11120,7 +11120,7 @@ _0219EEB4:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, #0x38]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0xa
 	ldrsh r1, [r5, r0]
 	cmp r1, #0
@@ -11206,7 +11206,7 @@ ovy143_219ef80: ; 0x0219EF80
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy143_219ef80
 

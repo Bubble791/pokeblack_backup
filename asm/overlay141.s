@@ -743,7 +743,7 @@ _0219D45E:
 	ldr r0, [sp, #0xc]
 	mov r1, #1
 	ldr r0, [r7, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0219D45E

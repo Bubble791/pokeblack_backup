@@ -191,13 +191,13 @@
 .public Oam_CreateSprite
 .public Oam_CreateSprite
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public Oam_SetOamAnimIndex
 .public sub_0204C318
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021B8C08
 .public sub_021B8C08
 .public Oam_CreateSprite

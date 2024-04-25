@@ -189,7 +189,7 @@
 .public sub_0204C124
 .public sub_0204C108
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C138
 .public sub_0204C124
 .public sub_0204C138

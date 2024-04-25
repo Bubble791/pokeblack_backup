@@ -747,7 +747,7 @@ _0219B2CE:
 	add r0, #0xa4
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	add r0, #0xa4
 	ldr r0, [r0]

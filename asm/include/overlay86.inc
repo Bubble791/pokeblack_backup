@@ -47,7 +47,7 @@
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C4D4
 .public sub_020275F8
 .public sub_02044C98
@@ -73,7 +73,7 @@
 .public Oam_LoadNCGRFile
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public GFL_ArcToolFree
 .public Oam_SetSpritePosData
@@ -105,7 +105,7 @@
 .public sub_0202D81C
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C53C
 .public Oam_SetOamAnimIndex
 .public GFL_ArcToolFree

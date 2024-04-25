@@ -1906,7 +1906,7 @@
 .public sub_0204B794
 .public sub_0204C4D4
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C318
 .public sub_0204C318
@@ -2434,7 +2434,7 @@
 .public sub_02199A5C
 .public sub_0204C468
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public GFL_BGSysLoadNCLRDefault
 .public sub_02199A44
@@ -2825,7 +2825,7 @@
 .public sub_02045B7C
 .public sub_0204C4D4
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021D6AAC
 .public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData

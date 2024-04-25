@@ -2988,7 +2988,7 @@ _0219E578:
 	add r0, r4, #0
 	mov r5, #1
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	lsl r1, r5, #0xc
 	bl sub_0204C53C
@@ -7984,7 +7984,7 @@ ovy185_21a0a74: ; 0x021A0A74
 	bl Oam_CreateSprite
 	str r0, [r5, #0x28]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x28]
 	mov r1, #0
 	bl sub_0204C124
@@ -14718,7 +14718,7 @@ _021A3DD2:
 	bl sub_0204C468
 	ldr r0, [r5, #8]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x60]
 	str r0, [sp]
 	add r0, r5, #0

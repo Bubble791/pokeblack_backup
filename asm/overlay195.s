@@ -5082,7 +5082,7 @@ ovy195_21b5948: ; 0x021B5948
 	lsl r5, r5, #2
 	str r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	mov r1, #0
 	bl sub_0204C124
@@ -5271,7 +5271,7 @@ _021B5ABA:
 	bl Oam_CreateSprite
 	str r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C124
@@ -5330,7 +5330,7 @@ _021B5B42:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy195_21b5b2c
@@ -5752,7 +5752,7 @@ ovy195_21b5e2c: ; 0x021B5E2C
 	add r1, #0x70
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, #0x70
 	ldr r0, [r5, r4]
 	mov r1, #1
@@ -5858,7 +5858,7 @@ _021B5EEA:
 	lsl r1, r1, #6
 	str r0, [r7, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #5
 	lsl r0, r0, #6
 	ldr r0, [r7, r0]
@@ -5913,7 +5913,7 @@ ovy195_21b5f80: ; 0x021B5F80
 	bl sub_0204C56C
 	ldr r0, [r5, r6]
 	add r1, r4, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _021B5F9C:
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -6139,7 +6139,7 @@ _021B60EA:
 	bl Oam_CreateSprite
 	str r0, [r7, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r7, r4]
 	mov r1, #0
 	bl sub_0204C124
@@ -6504,7 +6504,7 @@ ovy195_21b6380: ; 0x021B6380
 	add r1, #0xf8
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x34
 	add r0, #0xf8
 	ldr r0, [r5, r0]
@@ -6530,7 +6530,7 @@ ovy195_21b6380: ; 0x021B6380
 	add r1, #0xfc
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x34
 	add r0, #0xfc
 	ldr r0, [r5, r0]
@@ -6616,7 +6616,7 @@ _021B6466:
 	add r0, #0xa0
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x90
 	add r0, #0xa0
 	lsl r2, r6, #2

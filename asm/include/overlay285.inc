@@ -3,7 +3,7 @@
 .public GFL_HeapAllocate
 .public Oam_CreateSprite
 .public sub_0204C378
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204C124
 .public Oam_SetSpritePosData

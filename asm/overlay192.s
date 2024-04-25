@@ -185,7 +185,7 @@ ovy192_21b3090: ; 0x021B3090
 	mov r1, #1
 	add r0, #0xb0
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0xc]
 	mov r1, #1
 	add r0, #0xb0

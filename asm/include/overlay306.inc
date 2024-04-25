@@ -267,7 +267,7 @@
 .public sub_02199A5C
 .public sub_0204C468
 .public sub_0204C438
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02021034
 .public sub_0204C378
 .public sub_0204C108

@@ -446,12 +446,12 @@
 .public sub_021C2A98
 .public sub_021C2A98
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021C2A98
 .public sub_021C2A98
 .public sub_021C2A98
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204C108
 .public GFL_HeapFree

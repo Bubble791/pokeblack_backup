@@ -1457,7 +1457,7 @@ _021AA6DA:
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0xc]
 	mov r1, #0
 	ldr r0, [r6, r0]
@@ -1573,7 +1573,7 @@ _021AA7E8:
 	add r0, r5, r0
 	ldr r0, [r0, r7]
 	add r1, r6, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021AA7E8
@@ -1590,7 +1590,7 @@ ovy204_21aa7fc: ; 0x021AA7FC
 	add r5, r0, r2
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r4]
 	add r1, r6, #0
 	bl Oam_SetOamAnimIndex
@@ -4862,7 +4862,7 @@ ovy204_21ac194: ; 0x021AC194
 	str r1, [r4, r0]
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #4
 	ldrsh r1, [r4, r0]
 	mov r0, #0xa
@@ -4960,7 +4960,7 @@ ovy204_21ac264: ; 0x021AC264
 	bl sub_0204C124
 	ldr r0, [r4, r5]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	nop
 _021AC28C: .word 0xFFFF1FFF
@@ -8513,7 +8513,7 @@ ovy204_21add84: ; 0x021ADD84
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21add84
@@ -8532,7 +8532,7 @@ ovy204_21adda8: ; 0x021ADDA8
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end ovy204_21adda8

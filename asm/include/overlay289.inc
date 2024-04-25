@@ -93,7 +93,7 @@
 .public sub_021F4EF8
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C2B0
 .public sub_0203DA0C
 .public sub_0204C124

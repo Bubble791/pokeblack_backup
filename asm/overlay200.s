@@ -487,7 +487,7 @@ _021B3388:
 	bl sub_0204C124
 	ldr r0, [r6, #0x5c]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #2
 	blt _021B3388

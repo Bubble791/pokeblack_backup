@@ -11262,7 +11262,7 @@ ovy268_21bf904: ; 0x021BF904
 	sub r0, #0xc8
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0xa4
 	strh r7, [r5, r0]
@@ -11289,7 +11289,7 @@ ovy268_21bf904: ; 0x021BF904
 	sub r0, #0xac
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0xac
 	ldr r0, [r5, r0]
@@ -11325,7 +11325,7 @@ ovy268_21bf904: ; 0x021BF904
 	sub r4, #0x90
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	mov r1, #1
 	add r2, r7, #0

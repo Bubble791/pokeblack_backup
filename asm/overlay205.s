@@ -2945,7 +2945,7 @@ ovy205_21b89ac: ; 0x021B89AC
 	ldr r0, [r5, r0]
 	mov r1, #1
 	mov r7, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0xa4
 	strh r6, [r5, r0]
@@ -2971,7 +2971,7 @@ ovy205_21b89ac: ; 0x021B89AC
 	sub r0, #0xac
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0xac
 	ldr r0, [r5, r0]
@@ -3006,7 +3006,7 @@ ovy205_21b89ac: ; 0x021B89AC
 	sub r4, #0x90
 	ldr r0, [r5, r4]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r6, #0

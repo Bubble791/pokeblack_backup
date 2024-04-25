@@ -1369,7 +1369,7 @@ _021F4EAC:
 	mov r1, #1
 _021F4EBC:
 	ldr r0, [r7, r6]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r1, [r4, #5]
 	mov r0, #2
 	tst r0, r1

@@ -88,7 +88,7 @@
 .public sub_0204B98C
 .public sub_0204BE64
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C244
 .public sub_0204C108
@@ -897,7 +897,7 @@
 .public sub_0202B230
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_SndSEPlay
 .public sub_0204C510
 .public sub_0204C550
@@ -908,12 +908,12 @@
 .public GFL_SndSEPlay
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C560
 .public Oam_SetSpritePosData
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_SndSEPlay
 .public sub_0204C560
 .public sub_0204C124
@@ -928,7 +928,7 @@
 .public Oam_SetSpritePosData
 .public sub_021C152C
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_SndSEPlay
 .public sub_0204C510
 .public sub_0204C550

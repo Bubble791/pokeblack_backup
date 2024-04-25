@@ -687,7 +687,7 @@ _021B3486:
 	ldr r0, [sp, #0x14]
 	mov r1, #0
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	ldr r0, [r6, r0]
@@ -733,7 +733,7 @@ _021B3486:
 	add r1, #0x90
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r5, r0]
@@ -774,7 +774,7 @@ _021B3486:
 	add r1, #0x94
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x94
 	ldr r0, [r5, r0]
@@ -815,7 +815,7 @@ _021B3486:
 	add r1, #0x98
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x98
 	ldr r0, [r5, r0]
@@ -1210,7 +1210,7 @@ _021B395A:
 	lsl r6, r2, #2
 	ldr r0, [r4, r6]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r6]
 	add r1, sp, #0
 	bl sub_0204C5B0
@@ -1744,7 +1744,7 @@ _021B3DA6:
 	add r0, #0x3c
 	ldr r0, [r4, r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r5, #0x3c
 	ldr r0, [r4, r5]
 	mov r1, #0xc
@@ -1761,7 +1761,7 @@ _021B3DCC:
 	add r0, #0x3c
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r5, #0x3c
 	ldr r0, [r4, r5]
 	mov r1, #0x14
@@ -1914,7 +1914,7 @@ _021B3F22:
 	bne _021B3FAE
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r4]
 	mov r1, #0x13
 	bl Oam_SetOamAnimIndex
@@ -1948,7 +1948,7 @@ _021B3F44:
 	add r0, #0x44
 	ldr r0, [r5, r0]
 	add r1, r6, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, #0x44
 	ldr r0, [r5, r4]
 	mov r1, #0xb

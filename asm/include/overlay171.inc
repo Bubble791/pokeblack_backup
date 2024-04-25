@@ -173,7 +173,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0201D624
 .public sub_020210C0
 .public sub_0204C378

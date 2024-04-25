@@ -3077,7 +3077,7 @@ ovy256_21bcf20: ; 0x021BCF20
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r4, r5, r6, pc}
 	nop
 _021BCF48: .word 0x00000B74

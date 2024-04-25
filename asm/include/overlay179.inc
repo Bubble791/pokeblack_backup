@@ -83,7 +83,7 @@
 .public sub_0204C124
 .public sub_0204C468
 .public sub_0204C438
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
 .public sub_0204C124
 .public sub_0204C468

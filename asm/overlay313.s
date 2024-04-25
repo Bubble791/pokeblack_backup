@@ -630,7 +630,7 @@ _0219D330:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x4c]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x14]
 	ldr r2, [sp, #0x10]
@@ -805,7 +805,7 @@ _0219D4CA:
 	add r0, #0x94
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #1
 	lsl r0, r0, #0x18
 	lsr r6, r0, #0x18

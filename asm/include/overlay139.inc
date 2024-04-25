@@ -64,7 +64,7 @@
 .public sub_02199EF0
 .public sub_02199EF0
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public MI_CpuFill8
 .public sub_0204C138
@@ -145,7 +145,7 @@
 .public sub_02044C98
 .public sub_0204C468
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
 .public sub_0204C108
@@ -180,7 +180,7 @@
 .public sub_02045B7C
 .public sub_0203D554
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02044C98
 .public sub_02044C98
 .public BmpWin_GetBitmap
@@ -196,7 +196,7 @@
 .public sub_020484D4
 .public sub_02045B7C
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DAC8
 .public GFL_SndSEPlay
@@ -212,11 +212,11 @@
 .public sub_0203D564
 .public sub_0203D554
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_SndSEPlay
 .public sub_0203D564
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar

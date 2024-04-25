@@ -790,7 +790,7 @@ _021A01DA:
 	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021A0248 ; =0x00000551
 	bl GFL_SndSEPlay
 	ldr r0, [r5, #8]
@@ -817,7 +817,7 @@ _021A01FE:
 	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C4D4
@@ -1238,7 +1238,7 @@ _021A0588:
 	bl sub_0204C4D4
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #8]
 	add r0, r0, #1
 	str r0, [r5, #8]
@@ -1349,7 +1349,7 @@ _021A066E:
 	bl sub_0204C504
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	bl ovy303_21a14a0
 	add r0, r5, #0
@@ -1510,7 +1510,7 @@ _021A07B0:
 	bl Oam_SetOamAnimIndex
 	add r0, r7, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r7, #0
 	bl sub_0204C540
 	ldr r0, [r5, #8]
@@ -1741,7 +1741,7 @@ _021A0966:
 	bl Oam_SetOamAnimIndex
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #8]
 	add sp, #0xc
 	add r0, r0, #1
@@ -1761,7 +1761,7 @@ _021A09BA:
 	bne _021A0A4C
 	add r0, r4, #0
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r1, [r5, r7]
 	add r0, r4, #0
 	lsl r1, r1, #2
@@ -4904,7 +4904,7 @@ ovy303_21a224c: ; 0x021A224C
 	add r0, #0x10
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x16
 	str r0, [sp]
 	str r6, [sp, #4]
@@ -4922,7 +4922,7 @@ ovy303_21a224c: ; 0x021A224C
 	add r0, #0x14
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x1f
 	str r0, [sp]
 	str r6, [sp, #4]
@@ -4953,7 +4953,7 @@ ovy303_21a224c: ; 0x021A224C
 	add r1, #0x18
 	str r0, [r5, r1]
 	add r1, r4, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r7, #0
 	add r0, #0x18
 	ldr r0, [r5, r0]
@@ -5115,7 +5115,7 @@ _021A2478:
 	add r0, #0x1c
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	str r4, [sp]
 	mov r0, #0xa5
 	str r0, [sp, #4]
@@ -5291,7 +5291,7 @@ ovy303_21a2610: ; 0x021A2610
 	bl sub_0204C468
 	ldr r0, [r5, r4]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0xc]
 	ldr r2, [sp, #0x10]
@@ -6046,7 +6046,7 @@ ovy303_21a2c80: ; 0x021A2C80
 	bl sub_0204C540
 	ldr r0, [r4, r5]
 	add r1, r6, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _021A2C9E:
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy303_21a2c80
@@ -6477,7 +6477,7 @@ ovy303_21a2fc4: ; 0x021A2FC4
 	bl sub_0204C4D4
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -6808,7 +6808,7 @@ _021A322C:
 	ldr r0, [sp, #0x24]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x20]
 	mov r1, #0
 	ldr r0, [r6, r0]

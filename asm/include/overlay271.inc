@@ -425,7 +425,7 @@
 .public sub_0203CB80
 .public sub_0203CB80
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C318
 .public sub_0204C124
 .public MI_CpuFill8
@@ -439,7 +439,7 @@
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public GFL_BitmapFree
 .public sub_020484B4

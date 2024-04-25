@@ -24,7 +24,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C244
 .public Oam_GetSpritePosData
@@ -380,8 +380,8 @@
 .public sub_0204C5B0
 .public sub_0204C5B0
 .public sub_02044C98
-.public sub_0204C520
-.public sub_0204C520
+.public Oam_EnableOamAnim
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C124
 .public sub_02042788

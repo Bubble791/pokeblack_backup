@@ -176,7 +176,7 @@
 .public OS_DisableInterrupts
 .public Oam_CreateSprite
 .public OS_RestoreInterrupts
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C53C
 .public sub_0204AFD8
 .public BmpWin_GetBitmap
@@ -574,7 +574,7 @@
 .public MI_CpuFill8
 .public sub_0219E520
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
@@ -964,7 +964,7 @@
 .public sub_021999C8
 .public sub_02199A5C
 .public sub_0204C468
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021A42C0
 .public sub_021A4FF8
 .public sub_0202E168

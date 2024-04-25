@@ -256,7 +256,7 @@ ovy174_219d02c: ; 0x0219D02C
 	bl Oam_CreateSprite
 	str r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	mov r1, #1
 	bl sub_0204C124
@@ -3708,11 +3708,11 @@ _0219ECD8:
 	cmp r0, #0
 	beq _0219ED36
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, #0x84
 	ldr r0, [r5, r4]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219ED36:
 	mov r6, #0
 	add r0, r5, #0

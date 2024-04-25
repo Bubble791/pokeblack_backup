@@ -39754,7 +39754,7 @@ ovy255_21cf608: ; 0x021CF608
 	ldr r0, _021CF624 ; =0x00009E98
 	ldr r0, [r1, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	nop
 _021CF624: .word 0x00009E98
@@ -49593,7 +49593,7 @@ _021D404E:
 	ldr r0, [sp, #0x18]
 	mov r1, #1
 	ldr r0, [r5, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x14]
 	mov r1, #0
 	ldr r0, [r5, r0]
@@ -55053,7 +55053,7 @@ ovy255_21d6ac0: ; 0x021D6AC0
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r4, r5, r6, pc}
 	thumb_func_end ovy255_21d6ac0
 

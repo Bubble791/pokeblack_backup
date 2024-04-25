@@ -631,7 +631,7 @@
 .public Oam_SetSpritePosData
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public GFL_BGSysLoadScr
 .public GFL_HeapFree
@@ -734,7 +734,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C2B0
 .public sub_02044C98

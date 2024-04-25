@@ -655,7 +655,7 @@ _021D9C30:
 	bl Oam_CreateSprite
 	str r0, [r6, #0xc]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, #0xc]
 	mov r1, #0
 	bl sub_0204C124
@@ -1460,7 +1460,7 @@ _021DA280:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r6, #0x44]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, #0x44]
 	add r1, sp, #0x18
 	mov r2, #0
@@ -6231,7 +6231,7 @@ _021DC514:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	cmp r7, #7
 	bhi _021DC61E
 	add r0, r7, r7
@@ -6737,7 +6737,7 @@ _021DC8CC:
 	add r1, r4, #0
 	bl sub_021D9CF4
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	add r1, r4, #0
 	bl sub_021D9CF4

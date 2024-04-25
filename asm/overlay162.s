@@ -1240,7 +1240,7 @@ ovy162_219d844: ; 0x0219D844
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, #4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x10
 	mov r1, #1
 	bl GFL_BGSysSetBGEnabledB
@@ -4101,7 +4101,7 @@ _0219F08A:
 	bl Oam_CreateSprite
 	str r0, [r6, #0x20]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, #0x20]
 	add r1, r7, #0
 	bl sub_0204C124

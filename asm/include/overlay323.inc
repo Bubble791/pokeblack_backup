@@ -75,7 +75,7 @@
 .public MI_CpuFill8
 .public sub_0219E7D4
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_020111A0
 .public sub_0204C124
 .public sub_0204C108
@@ -90,9 +90,9 @@
 .public MI_CpuFill8
 .public sub_0219E7D4
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public BmpWin_GetBitmap
 .public sub_02021C1C
 .public BmpWin_FlushChar

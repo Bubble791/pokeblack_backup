@@ -133,7 +133,7 @@
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public MI_CpuFill8
 .public Oam_CreateSprite
 .public sub_0204C378

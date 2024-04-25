@@ -7672,7 +7672,7 @@ _021F38AE:
 	bl Oam_CreateSprite
 	str r0, [r6, #0x28]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, #0x28]
 	mov r1, #1
 	bl sub_0204C318
@@ -7861,7 +7861,7 @@ _021F3A6C:
 	add r0, r4, r0
 	ldr r0, [r0, #0x28]
 	add r1, r6, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r5, r5, #1
 	cmp r5, #4
 	blt _021F3A6C

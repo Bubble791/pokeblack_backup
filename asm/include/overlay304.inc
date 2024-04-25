@@ -83,7 +83,7 @@
 .public sub_021A1550
 .public sub_0204C4A0
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0219FDE4
 .public sub_0204898C
 .public GFL_StrBufFree
@@ -229,7 +229,7 @@
 .public sub_0204C318
 .public sub_02199A5C
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02199A5C
 .public sub_0204C124
 .public sub_0204C468
@@ -365,7 +365,7 @@
 .public sub_021A1550
 .public Oam_SetOamAnimIndex
 .public sub_0204C4D4
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0219CC34
 .public sub_021A1B2C
 .public Oam_SetSpritePosData

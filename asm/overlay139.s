@@ -1057,7 +1057,7 @@ _0219A05C:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
 	beq _0219A098
@@ -2064,7 +2064,7 @@ _0219A7D8:
 	add r0, #0xa0
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #1
 	lsl r0, r0, #0x18
 	lsr r5, r0, #0x18
@@ -2342,7 +2342,7 @@ _0219AA7A:
 	add r0, #0xa0
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -2409,7 +2409,7 @@ _0219AB14:
 	add r0, #0xa0
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -2638,7 +2638,7 @@ _0219ACD6:
 	add r0, #0xa0
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #1
 	lsl r0, r0, #0x18
 	lsr r5, r0, #0x18
@@ -2665,7 +2665,7 @@ _0219AD10:
 	add r0, #0xa0
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #1
 	lsl r0, r0, #0x18
 	lsr r5, r0, #0x18

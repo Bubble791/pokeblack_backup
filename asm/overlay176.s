@@ -298,7 +298,7 @@ _0219AF94:
 	mov r1, #0x1f
 	bl sub_0219B0AC
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	add r0, #0xfc
 	bl ovy176_219bfbc
@@ -711,7 +711,7 @@ _0219B2F8:
 	bl sub_0204C468
 	ldr r0, [r4, #0x10]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r6, r6, #1
 	cmp r6, #0x1e
 	blt _0219B2F8
@@ -745,7 +745,7 @@ _0219B2F8:
 	add r5, #0x8c
 	ldr r0, [r5]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop

@@ -2396,7 +2396,7 @@ ovy316_219e11c: ; 0x0219E11C
 	lsl r1, r1, #5
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	mov r1, #0
 	bl ovy316_219e1f0

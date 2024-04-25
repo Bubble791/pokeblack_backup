@@ -713,7 +713,7 @@ _0217CE94:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5, r7]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10

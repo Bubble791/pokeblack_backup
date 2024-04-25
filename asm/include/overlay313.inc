@@ -74,7 +74,7 @@
 .public sub_0219DAB0
 .public Oam_CreateSprite
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_02021034
 .public sub_0204C378
 .public GFL_ArcToolFree
@@ -91,7 +91,7 @@
 .public sub_0219DAB0
 .public Oam_CreateSprite
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BE64
 .public sub_0204B98C

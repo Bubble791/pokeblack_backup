@@ -4425,7 +4425,7 @@ _021A3C8A:
 	bl sub_0204C124
 	ldr r0, [r4, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #6
 	mov r1, #1
 	bl sub_02044C98

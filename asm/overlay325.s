@@ -1066,7 +1066,7 @@ _0219D6E6:
 	mov r1, #1
 _0219D6F6:
 	ldr r0, [r6, r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r1, [r5, #5]
 	mov r0, #2
 	tst r0, r1
@@ -1259,7 +1259,7 @@ ovy325_219d884: ; 0x0219D884
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219D8A8:
 	cmp r1, #1
@@ -1275,7 +1275,7 @@ _0219D8A8:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219D8CA:
 	cmp r1, #2
@@ -1291,7 +1291,7 @@ _0219D8CA:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219D8EC:
 	cmp r1, #3
@@ -1307,7 +1307,7 @@ _0219D8EC:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
 _0219D912:

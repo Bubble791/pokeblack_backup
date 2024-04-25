@@ -978,7 +978,7 @@ ovy266_219d5c4: ; 0x0219D5C4
 	bl Oam_CreateSprite
 	str r0, [r4, #4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #4]
 	mov r1, #0
 	bl sub_0204C124
@@ -2602,7 +2602,7 @@ _0219E248:
 	add r0, #0x4f
 	ldr r0, [r5, r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	add r0, #0x4f
 	ldr r0, [r5, r0]

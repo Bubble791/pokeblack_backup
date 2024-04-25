@@ -687,7 +687,7 @@ ovy187_21e912c: ; 0x021E912C
 	ldr r0, [r5, #0x10]
 	mov r1, #1
 	mov r4, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	mov r1, #3
 	bl sub_021E93BC
@@ -708,7 +708,7 @@ ovy187_21e9158: ; 0x021E9158
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #3
 	bl sub_021E93BC
@@ -740,7 +740,7 @@ ovy187_21e9184: ; 0x021E9184
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x18]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x18]
 	mov r1, #0
 	bl sub_0204C4D4
@@ -772,7 +772,7 @@ ovy187_21e91c8: ; 0x021E91C8
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x1c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x1c]
 	mov r1, #0
 	bl sub_0204C4D4

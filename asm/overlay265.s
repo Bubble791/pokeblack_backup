@@ -2531,7 +2531,7 @@ ovy265_219ac4c: ; 0x0219AC4C
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r4, r5, r6, pc}
 	nop
 _0219AC74: .word 0x00009048

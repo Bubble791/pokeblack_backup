@@ -1328,7 +1328,7 @@ ovy87_21eb3dc: ; 0x021EB3DC
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy87_21eb3dc
 

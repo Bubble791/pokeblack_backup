@@ -1914,7 +1914,7 @@ ovy84_21ebd80: ; 0x021EBD80
 	bl Oam_CreateSprite
 	add r4, r0, #0
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C5C8
@@ -1983,7 +1983,7 @@ _021EBE3C:
 	mov r0, #0xe2
 	lsl r0, r0, #2
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #9
 	blt _021EBDE8
@@ -2199,7 +2199,7 @@ ovy84_21ebe78: ; 0x021EBE78
 	bl ovy84_21ebd80
 	str r0, [r4, #0x20]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x14]
 	add r0, r0, #6
 	lsl r0, r0, #0x18

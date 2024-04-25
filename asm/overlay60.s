@@ -3508,7 +3508,7 @@ ovy60_21e7470: ; 0x021E7470
 	add r1, #0x10
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	str r7, [sp]
 	str r6, [sp, #4]
 	ldrh r0, [r5, #4]

@@ -1629,7 +1629,7 @@ _021BAEE2:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, #0x58]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	b _021BAF0C
 _021BAEFE:
 	ldr r0, [r4, #0x58]
@@ -14284,7 +14284,7 @@ _021C0E82:
 	bl sub_0204C124
 	ldr r0, [r5, #0x5c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

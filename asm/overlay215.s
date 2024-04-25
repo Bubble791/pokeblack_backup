@@ -5074,7 +5074,7 @@ _021A9DEA:
 	mov r1, #1
 	add r0, r0, r6
 	ldr r0, [r0, r7]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #8
 	blo _021A9DEA

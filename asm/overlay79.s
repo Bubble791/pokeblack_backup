@@ -1346,7 +1346,7 @@ _021EB1DA:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #6
 	blo _021EB1DA
@@ -1436,7 +1436,7 @@ _021EB284:
 	ldr r0, [r0]
 	mov r1, #1
 _021EB29E:
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021EB2C4 ; =0x0000030A
 	lsl r3, r4, #0x18
 	ldrb r0, [r5, r0]
@@ -2421,7 +2421,7 @@ ovy79_21eba34: ; 0x021EBA34
 	bl sub_0204C124
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #0
 	bl sub_0204C5C8
@@ -2643,7 +2643,7 @@ _021EBC04:
 	ldr r1, [sp, #0xc]
 	str r0, [r1, #0x6c]
 	add r1, r4, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r6, r6, #1
 	cmp r6, #4
 	blt _021EBC04
@@ -2674,7 +2674,7 @@ _021EBC38:
 	blt _021EBC38
 	ldr r0, [r5, #0x7c]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	bl OS_IsRunOnTwl
 	cmp r0, #0
 	beq _021EBC84
@@ -5293,7 +5293,7 @@ _021ED0F0:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x42
 	ldrb r0, [r5, r0]
@@ -5302,7 +5302,7 @@ _021ED0F0:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r0, [r5, r4]
 	add r0, r0, #1
 	strb r0, [r5, r4]
@@ -5316,7 +5316,7 @@ _021ED134:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x42
 	ldrb r0, [r5, r0]
@@ -5325,7 +5325,7 @@ _021ED134:
 	lsl r0, r0, #2
 	add r0, r5, r0
 	ldr r0, [r0, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x42
 	ldrb r0, [r5, r0]

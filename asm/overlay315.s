@@ -908,7 +908,7 @@ ovy315_219d5b4: ; 0x0219D5B4
 	bl sub_0204C124
 	ldr r0, [r5, #0x54]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0

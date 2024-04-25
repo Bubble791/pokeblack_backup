@@ -7423,7 +7423,7 @@ _0219D5F2:
 	ldr r0, [sp, #0x14]
 	mov r1, #1
 	ldr r0, [r4, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x10]
 	add r1, r7, #0
 	ldr r0, [r4, r0]
@@ -7470,7 +7470,7 @@ _0219D5F2:
 	add r0, #0x68
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #2
 	strh r0, [r6, #4]
 	add r0, sp, #0x2c
@@ -7497,7 +7497,7 @@ _0219D5F2:
 	add r4, #0x6c
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x3c
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0

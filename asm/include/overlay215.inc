@@ -539,7 +539,7 @@
 .public sub_02045B7C
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021A9FA0
 .public sub_021A9FA0
 .public sub_021A9FA0

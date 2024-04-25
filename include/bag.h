@@ -3,6 +3,8 @@
 
 #define NORMAL_ITEM_MAX 0x136
 
+#define MAX_ITEM    638
+
 // 设置文本
 enum
 {
@@ -178,8 +180,8 @@ typedef struct
     u32 unk4;
     u16 unk8;
     u16 unkA;
-    SomeData unkC[639];
-    u8 unk1CCC[0x280];
+    SomeData unkC[MAX_ITEM + 1];
+    u8 unk1CCC[MAX_ITEM + 1];
 }ITEM_UNKNOW_DATA;
 
 struct BagViewWork
@@ -296,7 +298,7 @@ struct BagViewWork
     /*0x890*/ u16 unk890;
     /*0x892*/ u16 unk892;
     /*0x894*/ int unk894;
-    /*0x898*/ int unk898;
+    /*0x898*/ int bagMenuReturnApp;
     /*0x89C*/ int unk89C;
     /*0x8A0*/ u32 selectItem;
     /*0x8A4*/ int unk8A4;
@@ -458,8 +460,8 @@ extern void ovy142_219f76c(BagView*, int);
 void ovy142_219a724(BagView *m_bagView);
 int ovy142_219f7a4(BagView*);
 extern void sub_02045738(int);
-extern void sub_0204C520(int, int);
-extern void ovy142_219fda8(BagView*, int);
+extern void Oam_EnableOamAnim(int, int);
+extern void BagMenu_PopUpOptionMenuSetting(BagView*, int);
 
 void ovy142_2199a5c(BagView *m_bagView, int param_2, u32 param_3);
 extern void ovy142_219ff60(BagView*);
@@ -519,7 +521,7 @@ void ovy142_219c38c(int a1, BagView *m_bagView);
 extern void ovy142_219dd84(BagView*, int);
 extern int sub_020275F8(int);
 extern void sub_0204B7C8(int);
-int sub_02199978(BagView *m_bagView);
+int BagMenu_GetSelectSlot(BagView *m_bagView);
 void BagMenu_LoadBagBackDefaultText(BagView *a1);
 
 extern int BmpWin_GetBitmap(int);

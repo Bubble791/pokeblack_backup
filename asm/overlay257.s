@@ -7688,7 +7688,7 @@ _0219CEFA:
 	add r0, #0x98
 	ldr r0, [r0]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0
 	add r1, r4, #0
 	add r1, #0xac
@@ -9455,7 +9455,7 @@ _0219DF6A:
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219E1A8 ; =0x0000066C
 	bl GFL_SndSEPlay
 _0219DF90:
@@ -9501,7 +9501,7 @@ _0219DF98:
 	add r0, #0xa4
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219E1A8 ; =0x0000066C
 	bl GFL_SndSEPlay
 _0219DFFA:
@@ -9542,7 +9542,7 @@ _0219DFFA:
 	add r0, #0xa8
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219E1A8 ; =0x0000066C
 	bl GFL_SndSEPlay
 _0219E05C:
@@ -12189,7 +12189,7 @@ _0219F44E:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r4, #0x6c]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219F4DA:
 	lsl r0, r6, #2
 	add r0, r4, r0
@@ -13367,7 +13367,7 @@ ovy257_219feb4: ; 0x0219FEB4
 	add r0, #0x84
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021A01DC ; =0x0000066C
 	bl GFL_SndSEPlay
 _0219FF06:
@@ -13420,7 +13420,7 @@ _0219FF38:
 	add r0, #0x88
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _021A01DC ; =0x0000066C
 	bl GFL_SndSEPlay
 _0219FF7C:
@@ -13473,7 +13473,7 @@ _0219FF98:
 	add r0, #0x8c
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x8c
 	add r7, #0x11
@@ -13534,7 +13534,7 @@ _021A001C:
 	add r0, #0x8c
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x8c
 	add r7, #0x14
@@ -14213,7 +14213,7 @@ _021A05A0:
 	add r0, #0x84
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x90
 	ldr r0, [r0]
@@ -14246,7 +14246,7 @@ _021A05EE:
 	add r0, #0x88
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, #0x90
 	ldr r0, [r4]
 	mov r1, #0
@@ -14692,12 +14692,12 @@ ovy257_21a09d0: ; 0x021A09D0
 	add r0, #0x84
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x88
 	ldr r0, [r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add r0, #0x84
 	ldr r0, [r0]
@@ -14897,7 +14897,7 @@ _021A0B5A:
 	bl sub_0204C124
 	ldr r0, [r4, #0x48]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r1, #0x12
 	add r0, sp, #0x78
 	strh r1, [r0]
@@ -15028,7 +15028,7 @@ _021A0C8E:
 	lsl r0, r4, #0xa
 	ldr r0, [r6, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r1, #0xf8
 	add r0, sp, #0x78
 	strh r1, [r0]
@@ -19712,7 +19712,7 @@ _021A3190:
 	add r0, #0x68
 	ldr r0, [r4, r0]
 	add r1, r6, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r5, #0x68
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
@@ -20879,7 +20879,7 @@ _021A3B20:
 	ldr r0, [sp, #0x2c]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -20935,7 +20935,7 @@ _021A3B20:
 	add r0, #0x10
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r2, r6, #0
 	mov r1, #0xc8
 	add r0, sp, #0x48
@@ -20967,7 +20967,7 @@ _021A3B20:
 	add r6, #0x14
 	ldr r0, [r5, r6]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #8
 	bl sub_0203A584
 	add r1, r0, #0
@@ -21336,7 +21336,7 @@ _021A3F22:
 	ldr r0, [sp, #0x24]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -21458,7 +21458,7 @@ _021A3F22:
 	add r0, #0x28
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x41
 	strh r0, [r4]
 	mov r0, #0x7a
@@ -21562,7 +21562,7 @@ _021A4102:
 	ldr r0, [sp, #0x40]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r7, #1
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
@@ -21632,7 +21632,7 @@ _021A4192:
 	ldr r0, [sp, #0x58]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #1
 	lsl r0, r0, #0x18
 	lsr r4, r0, #0x18
@@ -22036,7 +22036,7 @@ _021A4504:
 	bl sub_0204C124
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #4
 	ldr r0, [r5, r0]
 	mov r1, #1
@@ -22313,7 +22313,7 @@ ovy257_21a4724: ; 0x021A4724
 	bl Oam_SetSpritePosData
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r4]
 	bl sub_0204C56C
 	sub r4, #0xc
@@ -22695,7 +22695,7 @@ _021A4A82:
 	lsl r4, r4, #4
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, r4]
 	bl sub_0204C56C
 _021A4A94:
@@ -23987,12 +23987,12 @@ _021A54B4:
 	sub r0, #0x10
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	sub r0, #0xc
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	sub r0, #0x10
 	ldr r0, [r4, r0]
@@ -24014,11 +24014,11 @@ _021A54B4:
 	sub r0, #8
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	sub r0, r6, #4
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	sub r0, #8
 	ldr r0, [r4, r0]
@@ -24033,7 +24033,7 @@ _021A54B4:
 	add r0, r6, #4
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #4
 	ldr r0, [r4, r0]
 	bl sub_0204C56C
@@ -24084,7 +24084,7 @@ _021A5598:
 	sub r0, #0x24
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	sub r5, #0x24
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
@@ -24100,7 +24100,7 @@ _021A55DE:
 	bl sub_0204C124
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	bl sub_0204C56C
 	add r0, r5, #4
@@ -24110,7 +24110,7 @@ _021A55DE:
 	add r0, r5, #4
 	ldr r0, [r4, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #4
 	ldr r0, [r4, r0]
 	b _021A566E
@@ -24138,7 +24138,7 @@ _021A5630:
 	ldr r0, [sp]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r6, r7]
 	bl sub_0204C56C
 	add r0, r5, #1
@@ -24154,7 +24154,7 @@ _021A5658:
 	bl sub_0204C124
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 _021A566E:
 	bl sub_0204C56C
@@ -27864,7 +27864,7 @@ _021A7428:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r7, #0x54]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	lsl r1, r4, #1
 	add r1, r4, r1
 	lsl r1, r1, #0x10
@@ -30063,7 +30063,7 @@ ovy257_21a84d4: ; 0x021A84D4
 	bl sub_0204C124
 	ldr r0, [r5, #0x14]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #3
 	strh r0, [r4, #4]
 	ldr r2, _021A861C ; =0x021B2250
@@ -33984,7 +33984,7 @@ _021AA26A:
 	add r0, #0xd0
 	str r0, [sp, #0x10]
 	ldr r0, [r5, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0xc]
 	bl MyStatus_GetTrainerGender
 	cmp r0, #0

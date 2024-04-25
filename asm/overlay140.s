@@ -1133,7 +1133,7 @@ _0219D7B2:
 	bl Oam_CreateSprite
 	mov r1, #0
 	str r0, [r7, #0x18]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #0xd
 	blt _0219D7B2

@@ -1932,7 +1932,7 @@ ovy311_219ddb8: ; 0x0219DDB8
 	bl Oam_CreateSprite
 	mov r1, #1
 	add r4, r0, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	add sp, #0xc
 	pop {r3, r4, pc}

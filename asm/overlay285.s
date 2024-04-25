@@ -64,7 +64,7 @@ _021F42AC:
 	bl sub_0204C378
 	ldr r0, [r5, r6]
 	add r1, r7, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #4
 	blo _021F42AC

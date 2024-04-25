@@ -149,7 +149,7 @@
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_BGSysSetBGEnabledB
 .public GFL_ArcToolFree
 .public sub_0204B98C
@@ -473,7 +473,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public Oam_CreateSprite
 .public Oam_CreateSprite

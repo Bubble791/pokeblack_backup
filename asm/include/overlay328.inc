@@ -63,7 +63,7 @@
 .public sub_0219D590
 .public Oam_CreateSprite
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C2B0
 .public sub_0204C2B0
 .public GFL_ArcSysCreateFileHandle
@@ -102,9 +102,9 @@
 .public GFL_BitmapFree
 .public sub_0202AEAC
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C124
 .public sub_0204C378

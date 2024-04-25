@@ -1188,7 +1188,7 @@ _0219D7BA:
 	mov r1, #1
 _0219D7CA:
 	ldr r0, [r6, r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r1, [r5, #5]
 	mov r0, #2
 	tst r0, r1
@@ -1466,7 +1466,7 @@ ovy328_219da0c: ; 0x0219DA0C
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219DA30:
 	cmp r1, #0
@@ -1482,7 +1482,7 @@ _0219DA30:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219DA50:
 	pop {r3, r4, r5, pc}
 	.align 2, 0

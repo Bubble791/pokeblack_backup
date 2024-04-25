@@ -307,10 +307,10 @@
 .public sub_0204BCD0
 .public GFL_HeapFree
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C5C8
 .public sub_0204C124
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C108
 .public sub_02046E28

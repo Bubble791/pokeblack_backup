@@ -90,7 +90,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public sub_0204C468
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetOamAnimIndex
 .public Oam_CreateSprite
 .public sub_0204C124

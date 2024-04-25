@@ -173,13 +173,13 @@
 .public GFL_ArcToolFree
 .public sub_021E4B84
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C108
 .public sub_0204BE64
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204C504
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C560
 .public sub_02044C98
 .public sub_02044C98

@@ -79,7 +79,7 @@
 .public sub_0204BBA0
 .public Oam_LoadNCERFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public GFL_BGSysSetBGEnabledA
 .public sub_0204B98C
@@ -175,7 +175,7 @@
 .public sub_02045080
 .public GFL_G2DIOLoadArcNCLRDefault
 .public GFL_BGSysSetBGEnabledB
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C550
 .public sub_0204C124
 .public GFL_BGSysSetBGEnabledA

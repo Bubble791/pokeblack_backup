@@ -202,7 +202,7 @@
 .public sub_0204C124
 .public sub_0204C4D4
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64

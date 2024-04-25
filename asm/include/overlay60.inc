@@ -304,7 +304,7 @@
 .public Oam_CreateSprite
 .public Oam_CreateSprite
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_CreateSprite
 .public sub_0204C378
 .public Oam_CreateSprite

@@ -2899,7 +2899,7 @@ _021A1084:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r5]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x10]
 	cmp r0, #0
 	beq _021A10C0
@@ -6959,7 +6959,7 @@ _021A2E82:
 	bl Oam_CreateSprite
 	str r0, [r4, #0x1c]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #0x1c]
 	mov r1, #1
 	bl sub_0204C318
@@ -8926,7 +8926,7 @@ _021A3ECA:
 	add r0, #0xc8
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, r6
 	add r1, sp, #0x24
 	add r0, #0xc8
@@ -9126,7 +9126,7 @@ _021A402A:
 	add r0, #0xec
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, r4
 	add r0, #0xec
 	ldr r0, [r0]
@@ -9317,7 +9317,7 @@ _021A41CA:
 	ldr r0, [sp, #0x2c]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x28]
 	mov r1, #1
 	ldr r0, [r6, r0]
@@ -9933,7 +9933,7 @@ _021A4680:
 	lsl r6, r6, #2
 	ldr r0, [r4, r6]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r6]
 	add r1, r7, #0
 	bl Oam_SetOamAnimIndex
@@ -10049,7 +10049,7 @@ ovy298_21a4738: ; 0x021A4738
 	bl Oam_CreateSprite
 	mov r1, #0
 	add r4, r0, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x34]
 	ldr r1, [sp, #0x38]
 	ldr r2, [sp, #0x3c]
@@ -12573,7 +12573,7 @@ _021A5B8C:
 	str r0, [sp, #8]
 	ldr r0, [r7, r0]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #8]
 	mov r1, #0
 	ldr r0, [r7, r0]
@@ -14646,7 +14646,7 @@ _021A6B6C:
 	add r5, #0xb4
 	ldr r0, [r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add sp, #0x18
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -19424,7 +19424,7 @@ ovy298_21a91dc: ; 0x021A91DC
 	bl Oam_CreateSprite
 	mov r1, #0
 	add r4, r0, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x34]
 	ldr r2, [sp, #0x38]
@@ -21511,7 +21511,7 @@ _021AA212:
 	ldr r0, [sp, #0x18]
 	mov r1, #1
 	ldr r0, [r6, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x14]
 	add r1, r7, #0
 	ldr r0, [r6, r0]
@@ -21846,7 +21846,7 @@ _021AA4B2:
 	ldr r0, [sp, #0x30]
 	mov r1, #1
 	ldr r0, [r4, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x2c]
 	mov r1, #1
 	ldr r0, [r4, r0]
@@ -22103,7 +22103,7 @@ _021AA720:
 	mul r5, r1
 	ldr r0, [r4, r5]
 	mov r1, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, r5]
 	mov r1, #0
 	bl sub_0204C4D4
@@ -22259,7 +22259,7 @@ _021AA848:
 	add r7, r4, r0
 	ldr r0, [r7, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r1, r4, r5
 	sub r6, #0xc
 	ldrb r1, [r1, r6]

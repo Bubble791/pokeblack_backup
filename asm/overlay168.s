@@ -24715,7 +24715,7 @@ _021E9A42:
 	ldr r0, [sp, #0x14]
 	mov r1, #1
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x18]
 	bl GFL_ArcToolFree
 	add r0, r4, #0
@@ -24841,7 +24841,7 @@ _021E9B2E:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, #0x38]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #0x16
 	blt _021E9B2E
@@ -24873,7 +24873,7 @@ _021E9B2E:
 	sub r1, #0x2c
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x2c
 	ldr r0, [r5, r0]
@@ -24907,12 +24907,12 @@ _021E9B2E:
 	sub r1, #0x1c
 	str r0, [r5, r1]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x1c
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	sub r0, #0x1c
 	ldr r0, [r5, r0]
@@ -30327,7 +30327,7 @@ _021EC718:
 	ldr r0, [sp, #0x24]
 	mov r1, #0
 	ldr r0, [r4, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x20]
 	mov r1, #1
 	ldr r0, [r4, r0]
@@ -30582,7 +30582,7 @@ ovy168_21ec938: ; 0x021EC938
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r5, r4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r1, _021EC978 ; =0x021F3A72
 	ldr r0, [r5, r4]
 	ldrb r1, [r1, r4]
@@ -31708,7 +31708,7 @@ _021ED218:
 	bl sub_0204C244
 	ldr r0, [r4, #8]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r4, #8]
 	ldr r1, [sp, #0x14]
 	bl Oam_SetOamAnimIndex
@@ -34057,7 +34057,7 @@ _021EE4AC:
 	ldr r0, [sp, #0x24]
 	mov r1, #1
 	ldr r0, [r7, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	add r0, #0xbc
 	ldr r1, [r0]
@@ -34379,7 +34379,7 @@ _021EE74A:
 	sub r0, #0xb4
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0xb1
 	lsl r0, r0, #2
 	sub r0, #0xb4
@@ -34424,7 +34424,7 @@ _021EE74A:
 	sub r0, #0xb0
 	ldr r0, [r5, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0xb1
 	lsl r0, r0, #2
 	sub r0, #0xb0
@@ -34595,7 +34595,7 @@ _021EE934:
 	bl Oam_SetSpritePosData
 	ldr r0, [r7, r6]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r1, #0xc
 	add r2, r4, #0
 	mul r2, r1
@@ -34744,7 +34744,7 @@ _021EEA4E:
 	ldr r0, [sp, #0x14]
 	mov r1, #1
 	ldr r0, [r4, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0xc]
 	lsl r2, r6, #2
@@ -34854,7 +34854,7 @@ ovy168_21eeafc: ; 0x021EEAFC
 	sub r0, #0xa8
 	ldr r0, [r6, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r7, #0
 	sub r0, #0xa8
 	ldr r0, [r6, r0]
@@ -38042,7 +38042,7 @@ _021F03CE:
 	ldr r0, [sp, #0x20]
 	mov r1, #1
 	ldr r0, [r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0x28]
 	add r1, sp, #0x60
 	strb r0, [r1, #6]
@@ -41531,7 +41531,7 @@ _021F1E36:
 	bl Oam_GetSpritePosData
 	ldr r0, [r5, #0x10]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	lsl r0, r6, #2
 	add r0, r4, r0
 	str r0, [sp, #0xc]
@@ -41641,7 +41641,7 @@ _021F1EF4:
 	bl Oam_GetSpritePosData
 	ldr r0, [r6, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r2, [r4]
 	ldr r0, [r6, r5]
 	add r1, r2, #0
@@ -42148,7 +42148,7 @@ _021F22F4:
 	bl Oam_CreateSprite
 	mov r1, #1
 	str r0, [r6, #8]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r4, r4, #1
 	cmp r4, #6
 	blt _021F22F4
@@ -43555,7 +43555,7 @@ _021F2E04:
 	bl sub_0204C4D4
 	ldr r0, [r5, #4]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #4]
 	mov r1, #1
 	bl sub_0204C124

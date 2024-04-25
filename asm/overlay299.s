@@ -3078,7 +3078,7 @@ ovy299_21a14c4: ; 0x021A14C4
 	ldr r0, _021A14E0 ; =0x00000A8C
 	ldr r0, [r1, r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 	nop
 _021A14E0: .word 0x00000A8C

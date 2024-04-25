@@ -41488,8 +41488,8 @@ sub_0204C510: ; 0x0204C510
 	.align 2, 0
 	thumb_func_end sub_0204C510
 
-	thumb_func_start sub_0204C520
-sub_0204C520: ; 0x0204C520
+	thumb_func_start Oam_EnableOamAnim
+Oam_EnableOamAnim: ; 0x0204C520
 	ldr r3, [r0, #0x60]
 	ldr r2, _0204C530 ; =0xFDFFFFFF
 	lsl r1, r1, #0x1f
@@ -41500,7 +41500,7 @@ sub_0204C520: ; 0x0204C520
 	bx lr
 	.align 2, 0
 _0204C530: .word 0xFDFFFFFF
-	thumb_func_end sub_0204C520
+	thumb_func_end Oam_EnableOamAnim
 
 	thumb_func_start sub_0204C534
 sub_0204C534: ; 0x0204C534

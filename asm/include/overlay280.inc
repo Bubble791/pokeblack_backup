@@ -64,7 +64,7 @@
 .public Oam_CreateSprite
 .public sub_0204C124
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public Oam_CreateSprite
 .public sub_0204C124
@@ -115,7 +115,7 @@
 .public sub_020486B8
 .public sub_020485F8
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public Oam_SetSpritePosData
 .public sub_0204C124
 .public sub_0204C124
@@ -353,7 +353,7 @@
 .public GFL_ArcToolFree
 .public MI_CpuFill8
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_020164E8
 .public Oam_SetOamAnimIndex
 .public sub_02021034
@@ -390,7 +390,7 @@
 .public Oam_GetSpritePosData
 .public sub_0203DAC8
 .public sub_021D9CF4
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_021D9CF4
 .public sub_0204C4D4
 .public sub_021D9CF4

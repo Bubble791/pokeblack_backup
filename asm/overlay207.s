@@ -1661,7 +1661,7 @@ _021B3D80:
 	ldr r0, [sp, #0x10]
 	mov r1, #1
 	ldr r0, [r7, r0]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [sp, #0xc]
 	mov r1, #1
 	ldr r0, [r7, r0]
@@ -11226,7 +11226,7 @@ ovy207_21b88ac: ; 0x021B88AC
 	add r0, #0x9c
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #2
 	strh r0, [r7, #4]
 	mov r0, #4
@@ -11261,7 +11261,7 @@ ovy207_21b88ac: ; 0x021B88AC
 	add r0, #0xa0
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	add r0, #0x2b
 	ldrb r0, [r0]

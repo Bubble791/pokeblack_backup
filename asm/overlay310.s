@@ -1708,7 +1708,7 @@ ovy310_219dc18: ; 0x0219DC18
 	bl sub_0204C124
 	add r0, r5, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r5, #0
 	lsl r1, r4, #0xc
 	bl sub_0204C53C
@@ -5468,7 +5468,7 @@ _0219F928:
 	bl Oam_SetSpritePosData
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	mov r1, #1
 	bl sub_0204C124
@@ -12341,10 +12341,10 @@ _021A2E12:
 	bl sub_0204C124
 	add r0, r7, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021A2E6C: .word 0x021A74C0
@@ -12471,7 +12471,7 @@ _021A2F34:
 	bl sub_0204C124
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	add r0, r4, #0
 	mov r1, #2
 	bl sub_0204C584
@@ -18858,7 +18858,7 @@ _021A5C22:
 	bl sub_0204C584
 	add r0, r4, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r1, #0x12
 	add r0, r4, #0
 	lsl r1, r1, #0xc

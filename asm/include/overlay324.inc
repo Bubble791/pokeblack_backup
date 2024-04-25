@@ -272,7 +272,7 @@
 .public Oam_LoadNCERFile
 .public Oam_LoadNCLRFile
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204C124
 .public sub_0204C378
 .public sub_0204C108
@@ -318,7 +318,7 @@
 .public sub_0219EB24
 .public sub_0219EB24
 .public sub_0219E718
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public G2x_SetBlendAlpha_
 .public sub_02044C98
 .public sub_02044C98

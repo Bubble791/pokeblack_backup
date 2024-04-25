@@ -89,7 +89,7 @@
 .public Oam_LoadNCERFile
 .public GFL_ArcToolFree
 .public Oam_CreateSprite
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public sub_0204B98C
 .public sub_0204BCD0
 .public sub_0204BE64

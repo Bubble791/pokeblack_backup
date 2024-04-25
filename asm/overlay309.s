@@ -4368,7 +4368,7 @@ _0219F082:
 	mov r1, #1
 _0219F092:
 	ldr r0, [r6, r4]
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldrb r1, [r5, #5]
 	mov r0, #2
 	tst r0, r1
@@ -4665,7 +4665,7 @@ ovy309_219f2f0: ; 0x0219F2F0
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219F310:
 	cmp r1, #1
@@ -4679,7 +4679,7 @@ _0219F310:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	pop {r3, r4, r5, pc}
 _0219F32E:
 	cmp r1, #2
@@ -4693,7 +4693,7 @@ _0219F32E:
 	bl Oam_SetOamAnimIndex
 	ldr r0, [r4, r5]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219F34A:
 	pop {r3, r4, r5, pc}
 	thumb_func_end ovy309_219f2f0

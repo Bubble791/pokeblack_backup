@@ -1397,7 +1397,7 @@ _0219DA44:
 	bl sub_0204C468
 	ldr r0, [r5, #0x74]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, [r5, #0x74]
 	mov r1, #1
 	bl sub_0204C438
@@ -2921,7 +2921,7 @@ _0219E6AE:
 _0219E6BE:
 	ldr r0, [r0]
 	add r1, r4, #0
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219E7D8 ; =0x0000082C
 	bl GFL_SndSEPlay
 	mov r0, #0x5e
@@ -4822,7 +4822,7 @@ _0219F5F6:
 	bl sub_0204C124
 	ldr r0, [r7, #0x74]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 _0219F602:
 	ldr r0, [sp, #4]
 	add r0, r0, #1
@@ -4919,7 +4919,7 @@ _0219F68A:
 	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219F6D8 ; =0x00000556
 	bl GFL_SndSEPlay
 _0219F6A0:
@@ -4983,7 +4983,7 @@ _0219F702:
 	bl Oam_SetOamAnimIndex
 	add r0, r6, #0
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	ldr r0, _0219F750 ; =0x00000551
 	bl GFL_SndSEPlay
 _0219F718:
@@ -5345,7 +5345,7 @@ _0219F9A4:
 	add r0, #0xc0
 	ldr r0, [r0]
 	mov r1, #1
-	bl sub_0204C520
+	bl Oam_EnableOamAnim
 	mov r0, #0x18
 	mul r0, r6
 	add r1, r5, #0

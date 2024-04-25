@@ -273,7 +273,7 @@
 .public sub_0203DA0C
 .public GCTX_HIDGetPressedKeys
 .public Oam_SetOamAnimIndex
-.public sub_0204C520
+.public Oam_EnableOamAnim
 .public GFL_SndSEPlay
 .public Oam_SetOamAnimIndex
 .public sub_02017BCC
