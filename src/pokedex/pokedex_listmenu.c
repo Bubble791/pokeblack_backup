@@ -507,25 +507,28 @@ typedef struct
     int unk1;
     int unk3;
     int unk44;
+
     u16 s;
     u16 unk2;
 
-    u16 unk5;
+    u16 maxIndex;
+
     u8 unk4;
     u8 unk41;
     u8 unk42;
     u8 ssdaf;
+
     u16 unk6;
     u16 safaf;
     int unk8;
     PokedexListMenu *unk9;
-} SPAD;
+} ListUiMenu;
 
-const SPAD data_021A25E0 = {0};
+const ListUiMenu data_021A25E0 = {0};
 
 typedef struct
 {
-    SPAD unkas;
+    ListUiMenu list;
 }UNKNOW_TEMPLATE;
 
 #define UnknowOffset *(u32*)(0x209A474)
@@ -547,9 +550,9 @@ void ovy299_21a0324(PokedexListMenu *a1)
     void *v5 = GFL_ArcSysCreateFileHandle(157, 0x806B);
     int v7 = sub_0200D214(a1->unk0->dexSave);
     
-    v26.unkas = data_021A25E0;
-    v26.unkas.unk5 = SPECIES_MAX;
-    v26.unkas.unk9 = a1;
+    v26.list = data_021A25E0;
+    v26.list.maxIndex = SPECIES_MAX;
+    v26.list.unk9 = a1;
     monCount = a1->unk0->unkA;
     i = 0;
     for (; i < a1->unk0->unkA; i++)
@@ -559,15 +562,15 @@ void ovy299_21a0324(PokedexListMenu *a1)
             int v14 = monCount - 7;
             if (i > monCount - 7)
             {
-                v26.unkas.unk42 = i - v14;
-                v26.unkas.unk6 = i - (v26.unkas.unk42);
+                v26.list.unk42 = i - v14;
+                v26.list.unk6 = i - (v26.list.unk42);
             }
             else 
             {
                 if (i < 7)
-                    v26.unkas.unk42 = i;
+                    v26.list.unk42 = i;
                 else
-                    v26.unkas.unk6 = i;
+                    v26.list.unk6 = i;
                 break;   
             }
             break;
@@ -1028,3 +1031,26 @@ int ovy299_21a081c(PokedexListMenu* a1)
     return r6;
 }
 
+int ovy299_21a0c6c(PokedexListMenu *a1)
+{
+    switch (a1->unk14)
+    {
+        case 0:
+            if (sub_0219B2E0(a1->unkC50) == -1)
+            {
+                ++a1->unk14;
+            }
+            break;
+        case 1:
+            u32 ui = (a1->unkC48 << 16);
+            if (ui >> 0x11 == 63 || !sub_021A14F8(a1))
+            {
+                a1->unk14 = 0;
+                ovy299_21a231c(a1, 0);
+                return 4;
+            }
+            break;
+    }
+
+    return 5;
+}

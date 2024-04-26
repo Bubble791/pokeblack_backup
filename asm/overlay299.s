@@ -25,52 +25,7 @@
 	.public ovy299_21a0564
 	.text
 
-	thumb_func_start ovy299_21a0c6c
-ovy299_21a0c6c: ; 0x021A0C6C
-	push {r4, lr}
-	add r4, r0, #0
-	ldr r1, [r4, #0x14]
-	cmp r1, #0
-	beq _021A0C7C
-	cmp r1, #1
-	beq _021A0C96
-	b _021A0CB8
-_021A0C7C:
-	mov r0, #0xc5
-	lsl r0, r0, #4
-	ldr r0, [r4, r0]
-	bl sub_0219B2E0
-	mov r1, #0
-	mvn r1, r1
-	cmp r0, r1
-	bne _021A0CB8
-	ldr r0, [r4, #0x14]
-	add r0, r0, #1
-	str r0, [r4, #0x14]
-	b _021A0CB8
-_021A0C96:
-	ldr r1, _021A0CBC ; =0x00000C48
-	ldrh r1, [r4, r1]
-	lsl r1, r1, #0x10
-	lsr r1, r1, #0x11
-	cmp r1, #0x3f
-	beq _021A0CAA
-	bl sub_021A14F8
-	cmp r0, #0
-	bne _021A0CB8
-_021A0CAA:
-	mov r1, #0
-	add r0, r4, #0
-	str r1, [r4, #0x14]
-	bl ovy299_21a231c
-	mov r0, #4
-	pop {r4, pc}
-_021A0CB8:
-	mov r0, #5
-	pop {r4, pc}
-	.align 2, 0
-_021A0CBC: .word 0x00000C48
-	thumb_func_end ovy299_21a0c6c
+
 
 	thumb_func_start ovy299_21a0cc0
 ovy299_21a0cc0: ; 0x021A0CC0
