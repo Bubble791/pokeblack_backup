@@ -10034,8 +10034,8 @@
 .public sub_02045B94
 .public GFL_BGSysMoveBGReq
 .public sub_02045E48
-.public sub_02045E74
-.public sub_02045EA0
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysAdjustBGOriginReq
 .public sub_02045ECC
 .public sub_02046064
 .public sub_020460D8

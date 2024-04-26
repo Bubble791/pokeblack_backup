@@ -5,10 +5,10 @@
 .public MI_CpuFill8
 .public sub_02016B20
 .public sub_02024E80
-.public sub_02045E74
-.public sub_02045E74
-.public sub_02045EA0
-.public sub_02045EA0
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
 .public sub_0219BD98
 .public sub_0219B134
 .public sub_0219B5A0

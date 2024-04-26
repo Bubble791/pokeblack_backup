@@ -201,8 +201,8 @@ extern int sub_020355B8(int, int, int, int, int);
 extern void GFL_SndSEPlay(int);
 extern int sub_0203DAC8(u32*, u32*);
 
-extern void sub_02045EA0(int, int, int);
-extern void sub_02045E74(int, int, int);
+extern void GFL_BGSysAdjustBGOriginReq(int, int, int);
+extern void GFL_BGSysScaleBGReq(int, int, int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

@@ -2,7 +2,6 @@
 #include "main.h"
 #include "pokedex.h"
 #include "touchscreen.h"
-#include "overlay_manager.h"
 
 const BgInit data_021A0248 = 
 {
@@ -13,81 +12,86 @@ const BgInit data_021A0248 =
     .unkC = 0
 };
 
-const BGSetup data_021A0270[] = 
+const BGSetup data_021A02D0 = 
 {
-    {
-        .PosY = 0x18,
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1E,
-        .CharBaseBlock = 2,
-        .CharBlockSize = 0x8000,
-        .Priority = 2,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1D,
-        .CharBaseBlock = 4,
-        .CharBlockSize = 0x8000,
-        .Priority = 0,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1F,
-        .CharBaseBlock = 0,
-        .CharBlockSize = 0x8000,
-        .Priority = 3,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1D,
-        .CharBaseBlock = 2,
-        .CharBlockSize = 0x8000,
-        .Priority = 2,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1E,
-        .CharBaseBlock = 4,
-        .CharBlockSize = 0x8000,
-        .Priority = 1,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1F,
-        .CharBaseBlock = 6,
-        .CharBlockSize = 0x8000,
-        .Priority = 0,
-    },
-    {
-        .ScreenSize = 0x0800,
-        .Resolution = 1,
-        .ScreenBaseBlock = 0x1C,
-        .CharBaseBlock = 0,
-        .CharBlockSize = 0x8000,
-        .Priority = 3,
-    },
+    .ScreenSize = 0x1000,
+    .Resolution = 2,
+    .ColorsPalettes = 1,
+    .ScreenBaseBlock = 0x18,
+    .CharBaseBlock = 4,
+    .CharBlockSize = 0x10000,
+    .ExtPaletteSlot = 1,
+    .Priority = 0,
+    .DisplayAreaOverflow = 1
+};
+
+const BGSetup data_021A02F0 =
+{
+    .ScreenSize = 0x800,
+    .Resolution = 1,
+    .ColorsPalettes = 1,
+    .ScreenBaseBlock = 0x1F,
+    .CharBaseBlock = 4,
+    .CharBlockSize = 0x10000,
+    .Priority = 1,
+    .DisplayAreaOverflow = 1,
+};
+
+const BGSetup data_021A0290 = 
+{
+    .PosY = 0xE8,
+    .ScreenSize = 0x2000,
+    .Resolution = 4,
+    .ColorsPalettes = 1,
+    .ScreenBaseBlock = 0x1C,
+    .CharBaseBlock = 4,
+    .CharBlockSize = 0x10000,
+    .ExtPaletteSlot = 1,
+    .Priority = 2,
+    .DisplayAreaOverflow = 1,
+};
+
+const BGSetup data_021A0270 =
+{
+    .PosY = 0x18,
+    .ScreenSize = 0x1000,
+    .Resolution = 2,
+    .ColorsPalettes = 1,
+    .ScreenBaseBlock = 0x1D,
+    .CharBaseBlock = 4,
+    .CharBlockSize = 0x8000,
+    .ExtPaletteSlot = 1,
+    .Priority = 0,
+    .DisplayAreaOverflow = 1,
+};
+
+const BGSetup data_021A02B0 = 
+{
+    .ScreenSize = 0x1000,
+    .Resolution = 2,
+    .ColorsPalettes = 0,
+    .ScreenBaseBlock = 0x1A,
+    .CharBaseBlock = 0,
+    .CharBlockSize = 0x8000,
+    .ExtPaletteSlot = 0,
+    .Priority = 1,
+    .DisplayAreaOverflow = 1,
 };
 
 enum
 {
     POKEDEX_OPEN_ANIM_SETTING,
-    POKEDEX_OPEN_ANIM_1,
+    POKEDEX_OPEN_ANIM_FREE,
     POKEDEX_OPEN_ANIM_2,
     POKEDEX_OPEN_ANIM_EXIT,
-    POKEDEX_OPEN_ANIM_4,
+    POKEDEX_OPEN_ANIM_WAIT,
     POKEDEX_OPEN_ANIM_OPEN,
     POKEDEX_OPEN_ANIM_END
 };
 
 typedef struct
 {
-    PokeDexSeacherEngine_TYPE1 *inputParam;
+    PokeDexOpenAnim *inputParam;
     int unk4;
     u16 waitTime;
     u8 delay;
@@ -101,22 +105,22 @@ int PokeDexStartAnim_Start(int manager, int state, void* a2, void* a3);
 int PokeDexStartAnim_Loop(int manager, int state, void* a2, void* a3);
 int PokeDexStartAnim_End(int manager, int state, void* a2, void* a3);
 int PokeDexStartAnim_RunFunc(PokeDexStartIn*);
-void ovy301_219fc30(void);
+void PokeDexStartAnim_SetBgSystem(void);
 void ovy301_219fc58(int a1);
-void ovy301_219fc74(PokeDexStartIn *a1);
+void PokeDexStartAnim_SetTaskCallBack(PokeDexStartIn *a1);
 void sub_0219FC8C(PokeDexStartIn *a1);
 void ovy301_219fc98(void);
 void ovy301_219fdbc(void);
-void ovy301_219fdf4(PokeDexStartIn *a1);
-void ovy301_219ff30(PokeDexStartIn *a1);
+void PokeDexStartAnim_LoadBgResource(PokeDexStartIn *a1);
+void PokeDexStartAnim_LoadBgPal(PokeDexStartIn *a1);
 int ovy301_219fff0(PokeDexStartIn *a1);
 void ovy302_21ad78c(int);
-int ovy301_21a004c(PokeDexStartIn *a1);
-int ovy301_21a0078(PokeDexStartIn *a1);
-int ovy301_21a008c(PokeDexStartIn *a1);
-int ovy301_21a00a0(PokeDexStartIn *a1);
+int PokeDexStartAnim_FreeResource(PokeDexStartIn *a1);
+int PokeDexStartAnim_OpenWaitFadeScreen(PokeDexStartIn *a1);
+int PokeDexStartAnim_ExitWaitFadeScreen(PokeDexStartIn *a1);
+int PokeDexStartAnim_WaitOpenDex(PokeDexStartIn *a1);
 int ovy301_21a0120(PokeDexStartIn* a1);
-void ovy301_21a0210(void);
+void PokeDexStartAnim_ScaleBg(void);
 
 const OvyMangerTemplate data_021A023C =
 {
@@ -132,7 +136,7 @@ int PokeDexStartAnim_Start(int manager, int state, void* a2, void* a3)
     GFL_HeapCreateChild(1, 126, 0x60000);
     v5 = (PokeDexStartIn*)GFL_ProcInitSubsystem(manager, 16, 126);
     MI_CpuFill8(v5, 0, 16);
-    v5->inputParam = (PokeDexSeacherEngine_TYPE1*)a2;
+    v5->inputParam = (PokeDexOpenAnim*)a2;
     return 1;
 }
 
@@ -156,10 +160,10 @@ int PokeDexStartAnim_End(int manager, int state, void* a2, void* a3)
 const DexStartInFunc gPokeDexStartAnimTask[] = 
 {
     [POKEDEX_OPEN_ANIM_SETTING] = ovy301_219fff0,
-    ovy301_21a004c,
-    ovy301_21a0078,
-    ovy301_21a008c,
-    ovy301_21a00a0,
+    [POKEDEX_OPEN_ANIM_FREE] = PokeDexStartAnim_FreeResource,
+    [POKEDEX_OPEN_ANIM_2] = PokeDexStartAnim_OpenWaitFadeScreen,
+    [POKEDEX_OPEN_ANIM_EXIT] = PokeDexStartAnim_ExitWaitFadeScreen,
+    [POKEDEX_OPEN_ANIM_WAIT] = PokeDexStartAnim_WaitOpenDex,
     [POKEDEX_OPEN_ANIM_OPEN] = ovy301_21a0120,
 };
 
@@ -172,11 +176,11 @@ int PokeDexStartAnim_RunFunc(PokeDexStartIn *a1)
     return nextTask != POKEDEX_OPEN_ANIM_END;
 }
 
-const int data_021A0310[12] = {0};
+const int data_021A0310[12] = {1, 16, 4, 0x80, 2, 0, 8, 0, 0, 0, 0x200010, 0x200010};
 
 extern void sub_02046BE0(int);
 
-void ovy301_219fc30(void)
+void PokeDexStartAnim_SetBgSystem(void)
 {
     int v0[12];
     
@@ -192,7 +196,7 @@ void ovy301_219fc58(int a1)
     v1->unk3FF8 |= 1;
 }
 
-void ovy301_219fc74(PokeDexStartIn *a1)
+void PokeDexStartAnim_SetTaskCallBack(PokeDexStartIn *a1)
 {
     a1->unk4 = GFL_VBlankTCBAdd(ovy301_219fc58, a1, 0);
 }
@@ -216,24 +220,24 @@ void ovy301_219fc98(void)
     v13 = data_021A0248;
     GFL_BGSysSetLCDConfig(&v13);
 
-    v5 = data_021A0270[1];
+    v5 = data_021A0290;
     sub_0204476C(3, &v5, 2);
     sub_02045738(3);
 
-    v6 = data_021A0270[2];
+    v6 = data_021A02B0;
     sub_0204476C(1, &v6, 0);
     sub_020450CC(1, 32, 32736, 32894);
     sub_02045790(1, 1023);
 
-    v7 = data_021A0270[3];
+    v7 = data_021A02D0;
     sub_0204476C(2, &v7, 0);
     sub_02045738(2);
 
-    v8 = data_021A0270[4];
+    v8 = data_021A02F0;
     sub_0204476C(7, &v8, 2);
     sub_02045738(7);
     
-    v9 = data_021A0270[0];
+    v9 = data_021A0270;
     sub_0204476C(5, &v9, 0);
     sub_02045738(5);
     GFL_BGSysSetBGEnabledA(14, 1);
@@ -252,7 +256,7 @@ void ovy301_219fdbc(void)
     sub_02044528();
 }
 
-void ovy301_219fdf4(PokeDexStartIn *a1)
+void PokeDexStartAnim_LoadBgResource(PokeDexStartIn *a1)
 {
     void *v2; // r5
 
@@ -292,7 +296,7 @@ extern void sub_02045320(int, int, int, int);
 extern void sub_02007534(void*, int);
 extern int sub_0200F18C(void);
 
-void ovy301_219ff30(PokeDexStartIn *a1)
+void PokeDexStartAnim_LoadBgPal(PokeDexStartIn *a1)
 {
     void *v1; // r6
     int v2; // r4
@@ -336,18 +340,18 @@ int ovy301_219fff0(PokeDexStartIn *a1)
     reg_G2_BLDCNT = 0;
     reg_G2S_DB_BLDCNT = 0;
     sub_02046DF8(0);
-    ovy301_219fc30();
+    PokeDexStartAnim_SetBgSystem();
     ovy301_219fc98();
-    ovy301_219fdf4(a1);
-    ovy301_219ff30(a1);
+    PokeDexStartAnim_LoadBgResource(a1);
+    PokeDexStartAnim_LoadBgPal(a1);
     sub_02042BA8(1, 126);
     GFL_BGSysSetBGEnabledB(16, 1);
-    ovy301_219fc74(a1);
+    PokeDexStartAnim_SetTaskCallBack(a1);
     ovy302_21ad78c(126);
     return 2;
 }
 
-int ovy301_21a004c(PokeDexStartIn *a1)
+int PokeDexStartAnim_FreeResource(PokeDexStartIn *a1)
 {
     sub_0219FC8C(a1);
     ovy301_219fdbc();
@@ -358,25 +362,25 @@ int ovy301_21a004c(PokeDexStartIn *a1)
     return POKEDEX_OPEN_ANIM_END;
 }
 
-int ovy301_21a0078(PokeDexStartIn *a1)
+int PokeDexStartAnim_OpenWaitFadeScreen(PokeDexStartIn *a1)
 {
     if (GFL_FadeScreenIsFinished() == 1)
-        return 4;
+        return POKEDEX_OPEN_ANIM_WAIT;
     else
         return 2;
 }
 
-int ovy301_21a008c(PokeDexStartIn *a1)
+int PokeDexStartAnim_ExitWaitFadeScreen(PokeDexStartIn *a1)
 {
     if (GFL_FadeScreenIsFinished() == 1)
-        return 1;
+        return POKEDEX_OPEN_ANIM_FREE;
     else
-        return 3;
+        return POKEDEX_OPEN_ANIM_EXIT;
 }
 
 extern void ovy302_21ad7a8(int);
 
-int ovy301_21a00a0(PokeDexStartIn *a1)
+int PokeDexStartAnim_WaitOpenDex(PokeDexStartIn *a1)
 {
     int v2; // r1
 
@@ -410,15 +414,23 @@ int ovy301_21a00a0(PokeDexStartIn *a1)
     }
     else
     {
-        return 4;
+        return POKEDEX_OPEN_ANIM_WAIT;
     }
 }
+
+enum
+{
+    SEQ_MOVE_BG,
+    SEQ_MOVE_SETTING,
+    SEQ_SCALE_BG,
+    SEQ_END
+};
 
 int ovy301_21a0120(PokeDexStartIn* a1)
 {
     switch (a1->moveBgSeq)
     {
-    case 0:
+    case SEQ_MOVE_BG:
         if (a1->delay == 26)
         {
             GFL_SndSEPlay(0x63D);
@@ -434,22 +446,22 @@ int ovy301_21a0120(PokeDexStartIn* a1)
             a1->delay++;
         }
         break;
-    case 1:
+    case SEQ_MOVE_SETTING:
         if (a1->delay == 32)
         {
             GFL_SndSEPlay(0x63E);
-            sub_02045EA0(3, 9, 128);
-            sub_02045EA0(3, 12, 120);
-            sub_02045EA0(7, 9, 128);
-            sub_02045EA0(7, 12, 96);
+            GFL_BGSysAdjustBGOriginReq(3, 9, 128);
+            GFL_BGSysAdjustBGOriginReq(3, 12, 120);
+            GFL_BGSysAdjustBGOriginReq(7, 9, 128);
+            GFL_BGSysAdjustBGOriginReq(7, 12, 96);
             a1->delay = 0;
             a1->moveBgSeq++;
         }
         else
             a1->delay++;
         break;
-    case 2:
-        ovy301_21a0210();
+    case SEQ_SCALE_BG:
+        PokeDexStartAnim_ScaleBg();
         if (a1->delay == 4)
         {
             GFL_FadeScreenSet(0, 0, 0, 0, 6, 4, 0x7e);
@@ -459,8 +471,8 @@ int ovy301_21a0120(PokeDexStartIn* a1)
         else
             a1->delay++;
         break;
-    case 3:
-        ovy301_21a0210();
+    case SEQ_END:
+        PokeDexStartAnim_ScaleBg();
         if (GFL_FadeScreenIsFinished() == 1)
         {
             a1->inputParam->unk8 = 2;
@@ -473,10 +485,10 @@ int ovy301_21a0120(PokeDexStartIn* a1)
     return POKEDEX_OPEN_ANIM_OPEN;
 }
 
-void ovy301_21a0210(void)
+void PokeDexStartAnim_ScaleBg(void)
 {
-    sub_02045E74(3, 4, 128);
-    sub_02045E74(3, 7, 128);
-    sub_02045E74(7, 4, 128);
-    sub_02045E74(7, 7, 128);
+    GFL_BGSysScaleBGReq(3, 4, 128);
+    GFL_BGSysScaleBGReq(3, 7, 128);
+    GFL_BGSysScaleBGReq(7, 4, 128);
+    GFL_BGSysScaleBGReq(7, 7, 128);
 }

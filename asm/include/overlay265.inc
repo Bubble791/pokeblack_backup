@@ -27,10 +27,10 @@
 .public GFL_BGSysMoveBGReq
 .public GFL_BGSysMoveBGReq
 .public GFL_BGSysMoveBGReq
-.public sub_02045EA0
-.public sub_02045EA0
-.public sub_02045EA0
-.public sub_02045EA0
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
 .public GFL_BGSysSetBGEnabledA
 .public GFL_BGSysSetBGEnabledB
 .public sub_02045350

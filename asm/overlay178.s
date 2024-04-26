@@ -130,19 +130,19 @@ _0219ADDC:
 	mov r0, #7
 	mov r1, #3
 	add r2, r4, #0
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	mov r0, #7
 	mov r1, #6
 	add r2, r4, #0
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	mov r0, #7
 	mov r1, #9
 	mov r2, #0x80
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	mov r0, #7
 	mov r1, #0xc
 	mov r2, #0x28
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	mov r0, #0x10
 	str r0, [sp]
 	mov r0, #2

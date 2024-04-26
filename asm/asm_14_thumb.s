@@ -27120,8 +27120,8 @@ sub_02045E48: ; 0x02045E48
 _02045E70: .word 0x0214190C
 	thumb_func_end sub_02045E48
 
-	thumb_func_start sub_02045E74
-sub_02045E74: ; 0x02045E74
+	thumb_func_start GFL_BGSysScaleBGReq
+GFL_BGSysScaleBGReq: ; 0x02045E74
 	push {r3, r4, r5, lr}
 	ldr r4, _02045E9C ; =0x0214190C
 	add r5, r0, #0
@@ -27142,10 +27142,10 @@ sub_02045E74: ; 0x02045E74
 	pop {r3, r4, r5, pc}
 	nop
 _02045E9C: .word 0x0214190C
-	thumb_func_end sub_02045E74
+	thumb_func_end GFL_BGSysScaleBGReq
 
-	thumb_func_start sub_02045EA0
-sub_02045EA0: ; 0x02045EA0
+	thumb_func_start GFL_BGSysAdjustBGOriginReq
+GFL_BGSysAdjustBGOriginReq: ; 0x02045EA0
 	push {r3, r4, r5, lr}
 	ldr r4, _02045EC8 ; =0x0214190C
 	add r5, r0, #0
@@ -27166,7 +27166,7 @@ sub_02045EA0: ; 0x02045EA0
 	pop {r3, r4, r5, pc}
 	nop
 _02045EC8: .word 0x0214190C
-	thumb_func_end sub_02045EA0
+	thumb_func_end GFL_BGSysAdjustBGOriginReq
 
 	thumb_func_start sub_02045ECC
 sub_02045ECC: ; 0x02045ECC

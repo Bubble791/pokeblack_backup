@@ -272,19 +272,19 @@ ovy265_2199a18: ; 0x02199A18
 	mov r1, #9
 	mov r2, #0xa0
 	mov r7, #9
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	mov r0, #3
 	mov r1, #0xc
 	mov r2, #0xa0
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	add r0, r6, #0
 	add r1, r7, #0
 	add r2, r5, #0
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	add r0, r6, #0
 	mov r1, #0xc
 	add r2, r5, #0
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	mov r0, #8
 	mov r1, #1
 	bl GFL_BGSysSetBGEnabledA

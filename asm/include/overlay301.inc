@@ -95,15 +95,15 @@
 .public GFL_BGSysMoveBGReq
 .public GFL_BGSysMoveBGReq
 .public GFL_SndSEPlay
-.public sub_02045EA0
-.public sub_02045EA0
-.public sub_02045EA0
-.public sub_02045EA0
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
+.public GFL_BGSysAdjustBGOriginReq
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenIsFinished
-.public sub_02045E74
-.public sub_02045E74
-.public sub_02045E74
-.public sub_02045E74
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysScaleBGReq
+.public GFL_BGSysScaleBGReq
 
 .public GFL_TCBRemove

@@ -18,10 +18,10 @@ int ovy302_21acfc8(int a1, int a2, void *a3, void *a4);
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4);
 void ovy302_21ad01c(PokeDexMain*);
 void ovy302_21ad030(PokeDexMain*);
-int sub_021AD044(PokeDexMain *a1, int a2);
+int PokeDexMain_SetNextApp(PokeDexMain *a1, int a2);
 int sub_21AD04C(PokeDexMain *a1);
-int ovy302_21ad05c(PokeDexMain *a1);
-int ovy302_21ad0a8(PokeDexMain *a1);
+int PokeDexMain_MakeOpenAnimData(PokeDexMain *a1);
+int PokeDexMain_OpenAnimEnd(PokeDexMain *a1);
 int ovy302_21ad0e8(PokeDexMain *a1);
 int ovy302_21ad72c(int);
 int ovy302_21ad174(PokeDexMain *a1);
@@ -63,7 +63,7 @@ int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
     v9 = v5->inputParam->unkC;
     if (!v5->inputParam->unkC)
     {
-        v5->unk24 = 1;
+        v5->unk24 = POKEDEX_FUNC_START_OPEN_DEX_ANIM;
     }
     else
     {
@@ -121,7 +121,11 @@ int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
 
 const DexViewFunc off_21AE3E8[] = 
 {
-    sub_21AD04C, ovy302_21ad05c, ovy302_21ad0e8, ovy302_21ad214, ovy302_21ad2d4,
+    [POKEDEX_FUNC_GET_CHILD_APP] = sub_21AD04C, 
+    [POKEDEX_FUNC_START_OPEN_DEX_ANIM] = PokeDexMain_MakeOpenAnimData,
+    [POKEDEX_FUNC_WAIT_OPEN_DEX_ANIM] = PokeDexMain_OpenAnimEnd,
+    ovy302_21ad0e8, 
+    ovy302_21ad214, ovy302_21ad2d4,
     ovy302_21ad268, ovy302_21ad368, ovy302_21ad3f4, ovy302_21ad484, ovy302_21ad4fc,
     ovy302_21ad574
 };
@@ -179,61 +183,60 @@ void ovy302_21ad030(PokeDexMain *a1)
     }
 }
 
-int sub_021AD044(PokeDexMain *a1, int a2)
+int PokeDexMain_SetNextApp(PokeDexMain *a1, int a2)
 {
-    a1->unk28 = a2;
+    a1->nextApp = a2;
     return 0;
 }
 
 int sub_21AD04C(PokeDexMain *a1) // 等待程序运行结束
 {
     if (a1->unk8 != 1)
-        return a1->unk28;
+        return a1->nextApp;
     else
         return 0; 
 }
 
 const char data_021AE5A0[] = ("zukan_search_engine.c");
 
-int ovy302_21ad05c(PokeDexMain *a1)
+int PokeDexMain_MakeOpenAnimData(PokeDexMain *a1)
 {
-    PokeDexSeacherEngine_TYPE1 *v2; // r0
+    PokeDexOpenAnim *v2; // r0
     PokeDexParamInput *v3; // r1
 
-    v2 = (PokeDexSeacherEngine_TYPE1*)GFL_HeapAllocate(105, sizeof(PokeDexSeacherEngine_TYPE1), 0, (char*)&data_021AE5A0, 362);
+    v2 = (PokeDexOpenAnim*)GFL_HeapAllocate(105, sizeof(PokeDexOpenAnim), 0, (char*)&data_021AE5A0, 362);
     v3 = a1->inputParam;
     a1->unk38 = v2;
     v2->gameData = v3->gameData;
     v2->unk4 = a1->inputParam->playerInfo;
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_301), 0x021A023C, a1->unk38);
-    return sub_021AD044(a1, 2);
+    return PokeDexMain_SetNextApp(a1, POKEDEX_FUNC_WAIT_OPEN_DEX_ANIM);
 }
 
-int ovy302_21ad0a8(PokeDexMain *a1)
+int PokeDexMain_OpenAnimEnd(PokeDexMain *a1)
 {
-    int v1;
-    PokeDexSeacherEngine_TYPE1 *seacher = (PokeDexSeacherEngine_TYPE1*)a1->unk38;
+    int next;
+    PokeDexOpenAnim *ret = (PokeDexOpenAnim*)a1->unk38;
 
-    switch (seacher->unk8)
+    switch (ret->unk8)
     {
     case 0:
         a1->inputParam->unkE = 0;
-        v1 = 13;
+        next = 13;
         break;
     case 1:
-
         a1->inputParam->unkE = 1;
-        v1 = 13;
+        next = 13;
         break;
     case 2:
         if (sub_0200D1F8(a1->inputParam->dexSave) == 2)
-            v1 = 11;
+            next = 11;
         else
-            v1 = 3;
+            next = POKEDEX_FUNC_MAIN_MENU_UNOVA_MODE;
         break;
     }
     GFL_HeapFree(a1->unk38);
-    return v1;
+    return next;
 }
 
 extern void sub_0200D1E4(int, int);
@@ -263,7 +266,7 @@ int ovy302_21ad0e8(PokeDexMain *a1)
     }
     
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_299), 0x021A25C8, a1->unk38);
-    return sub_021AD044(a1, 4);
+    return PokeDexMain_SetNextApp(a1, 4);
 }
 
 int ovy302_21ad174(PokeDexMain *a1)
@@ -335,7 +338,7 @@ int ovy302_21ad214(PokeDexMain *a1)
     v2->unk10 = 0;
     v2->unk14 = 0;
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_300), 0x021A4094, a1->unk38);
-    return sub_021AD044(a1, 8);
+    return PokeDexMain_SetNextApp(a1, 8);
 }
 
 int ovy302_21ad268(PokeDexMain *a1)
@@ -409,7 +412,7 @@ int ovy302_21ad2d4(PokeDexMain *a1)
 
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_298), 0x021ABF9C, v4);
     a1->unk38 = (void *)v4;
-    return sub_021AD044(a1, 6);
+    return PokeDexMain_SetNextApp(a1, 6);
 }
 
 extern void sub_0200D200(int, u16);
@@ -491,7 +494,7 @@ int ovy302_21ad3f4(PokeDexMain *a1)
     }
     
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_303), 0x021A32D8, v4);
-    return sub_021AD044(a1, 10);
+    return PokeDexMain_SetNextApp(a1, 10);
 }
 
 int ovy302_21ad80c(int, int, void*, int);
@@ -561,7 +564,7 @@ int ovy302_21ad4fc(PokeDexMain *a1)
     ovy302_21ad030(a1);
     ovy302_21adae8(v3, v4);
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_304), 0x021A1DAC, v4);
-    return sub_021AD044(a1, 12);
+    return PokeDexMain_SetNextApp(a1, 12);
 }
 
 int ovy302_21ad574(PokeDexMain *a1)

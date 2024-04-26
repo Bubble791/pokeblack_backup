@@ -3602,19 +3602,19 @@ _0219EA4A:
 	ldrb r0, [r4]
 	mov r1, #9
 	mov r2, #0x80
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	ldrb r0, [r4]
 	mov r1, #0xc
 	mov r2, #0x60
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	ldrb r0, [r4]
 	ldr r2, [r4, #0x14]
 	mov r1, #3
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	ldrb r0, [r4]
 	ldr r2, [r4, #0x14]
 	mov r1, #6
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	ldrb r0, [r4, #1]
 	ldr r2, [r4, #0x20]
 	mov r1, #0
@@ -3626,19 +3626,19 @@ _0219EA4A:
 	ldrb r0, [r4, #1]
 	mov r1, #9
 	mov r2, #0x80
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	ldrb r0, [r4, #1]
 	mov r1, #0xc
 	mov r2, #0x60
-	bl sub_02045EA0
+	bl GFL_BGSysAdjustBGOriginReq
 	ldrb r0, [r4, #1]
 	ldr r2, [r4, #0x14]
 	mov r1, #3
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	ldrb r0, [r4, #1]
 	ldr r2, [r4, #0x14]
 	mov r1, #6
-	bl sub_02045E74
+	bl GFL_BGSysScaleBGReq
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy144_219ea1c
