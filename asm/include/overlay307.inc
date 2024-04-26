@@ -24,7 +24,7 @@
 .public sub_02017544
 .public sub_02018C80
 .public sub_0201CA00
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public sub_0200D568
 .public sub_021DEEA8

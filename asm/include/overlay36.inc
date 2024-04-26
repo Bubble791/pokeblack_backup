@@ -7793,7 +7793,7 @@
 .public sub_0215516C
 .public sub_02016AD8
 .public sub_02017934
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02016AF0
 .public ovy12_21548e8
 .public ovy12_2154910
@@ -8059,9 +8059,9 @@
 .public sub_020243D0
 .public GFL_HeapFree
 .public GFL_HeapFree
-.public sub_0200D190
+.public GameData_GetPokedex
 .public GFL_HeapAllocate
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_02016AD8
 .public sub_0201735C
 .public sub_0201F268
@@ -8135,10 +8135,10 @@
 .public ovy12_21548e8
 .public sub_0215515C
 .public sub_02155174
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200DBDC
 .public sub_02155174
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0215516C
 .public sub_02016AF0
 .public ovy12_21548e8
@@ -10461,9 +10461,9 @@
 .public sub_0200C428
 .public sub_021804BC
 .public sub_02016AD8
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0201CCF8
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0200D568
 .public sub_0201C2CC
 .public sub_0200C440
@@ -12671,7 +12671,7 @@
 .public sub_02155184
 .public sub_0215516C
 .public sub_02016AD8
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02016AF0
 .public sub_021804C0
 .public ovy12_2154910
@@ -12683,7 +12683,7 @@
 .public sub_0204ABA4
 .public GFL_ArcToolFree
 .public MI_CpuFill8
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0200D7F4
 .public sub_0215516C
 .public sub_02016AD8

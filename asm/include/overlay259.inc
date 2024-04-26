@@ -946,7 +946,7 @@
 .public sub_0201CCF8
 .public sub_0219BB14
 .public sub_02199E24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02017934
 .public sub_02017A5C
 .public sub_02005ED4

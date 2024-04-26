@@ -2698,7 +2698,7 @@ ovy181_219e508: ; 0x0219E508
 	str r0, [sp, #8]
 	ldr r0, [r5, #8]
 	ldr r0, [r0, #4]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp, #4]
 	ldr r0, [r5, #0xc]
 	bl sub_0219F980

@@ -14,7 +14,7 @@
 .public sub_02016AF0
 .public sub_02016AD8
 .public sub_0201735C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02034C54
 .public GFL_HeapAllocate
 .public sub_0201FDF8

@@ -37260,7 +37260,7 @@ _021EFD88:
 	str r0, [sp, #8]
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	add r1, r5, r4
 	add r1, #0xaf
 	strb r0, [r1]

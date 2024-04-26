@@ -1302,7 +1302,7 @@ ovy62_21e6254: ; 0x021E6254
 	add r5, r1, #0
 	add r4, r2, #0
 	add r0, r5, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r6, r0, #0
 	mov r0, #0
 	add r1, r4, #0

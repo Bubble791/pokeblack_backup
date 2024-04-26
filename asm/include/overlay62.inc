@@ -174,7 +174,7 @@
 .public sub_0201F744
 .public sub_0204A934
 .public GFL_HeapFree
-.public sub_0200D190
+.public GameData_GetPokedex
 .public MIi_CpuClear32
 .public sub_0201735C
 .public sub_0201FDF8

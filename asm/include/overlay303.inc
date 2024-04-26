@@ -304,7 +304,7 @@
 .public sub_021A2B04
 .public sub_0204C124
 .public sub_021A11B4
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02017934
 .public sub_02010CB8
 .public sub_02010D78

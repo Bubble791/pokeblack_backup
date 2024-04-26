@@ -913,7 +913,7 @@
 .public sub_021F4678
 .public sub_0203DAC8
 .public sub_021F4678
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_021F6A1C
 .public sub_021F6CA8
 .public sub_021F6C80

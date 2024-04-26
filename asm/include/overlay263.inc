@@ -31,7 +31,7 @@
 .public sub_021998C0
 .public sub_02017934
 .public sub_0201736C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02008DDC
 .public sub_0201FDF8
 .public sub_0200D1AC

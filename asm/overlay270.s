@@ -1383,7 +1383,7 @@ _021EFC9C:
 	mov r2, #0x2c
 	bl sub_021F3F84
 	ldr r0, [r4, #0x18]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, [r4]
 	add r2, r6, #0
 	str r1, [sp]

@@ -45,9 +45,9 @@
 .public sub_0200F9AC
 .public GFL_ArcToolFree
 .public sub_0200F98C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0204A928
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_02017934
 .public sub_02017364
 .public sub_0200C260

@@ -11743,10 +11743,10 @@ ovy326_21a2954: ; 0x021A2954
 	add r4, r1, #0
 	ldr r0, [r0]
 	bl sub_02016AD8
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	lsl r1, r4, #0x10
 	lsr r1, r1, #0x10
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end ovy326_21a2954

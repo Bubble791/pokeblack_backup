@@ -788,7 +788,7 @@ _021EAF34:
 	bl sub_0204898C
 	str r0, [sp, #0x54]
 	ldr r0, [sp, #0x34]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	mov r1, #0x4d
 	lsl r1, r1, #2
 	ldrh r1, [r5, r1]

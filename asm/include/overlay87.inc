@@ -124,7 +124,7 @@
 .public sub_02017394
 .public sub_020191AC
 .public sub_0204898C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D83C
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf

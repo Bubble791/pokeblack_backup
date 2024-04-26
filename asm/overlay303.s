@@ -3559,7 +3559,7 @@ ovy303_21a1814: ; 0x021A1814
 	ldr r0, [r4, #0xc]
 	ldr r6, [r0]
 	add r0, r6, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r5, r0, #0
 	add r0, r6, #0
 	bl sub_02017934

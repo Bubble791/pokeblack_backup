@@ -230,7 +230,7 @@ _021DDD6A:
 	add r1, r7, #0
 	bl sub_0201CA00
 	ldr r0, [r5]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, [r5, #4]
 	add r6, r0, #0
 	bl sub_0200D72C

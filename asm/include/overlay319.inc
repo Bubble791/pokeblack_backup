@@ -75,7 +75,7 @@
 .public sub_02017934
 .public sub_0200FB40
 .public sub_0200F978
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1C0
 .public sub_02017934
 .public sub_0200F6F4

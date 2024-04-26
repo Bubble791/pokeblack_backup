@@ -221,7 +221,7 @@ ovy216_21bb87c: ; 0x021BB87C
 	ldr r0, [r5, #0x10]
 	bl sub_0201736C
 	ldr r0, [r5, #0x10]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	ldr r0, _021BB928 ; =0x00000147
 	ldr r3, _021BB92C ; =0x021C1100

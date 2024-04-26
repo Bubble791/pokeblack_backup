@@ -1228,7 +1228,7 @@
 .public sub_0201CCF8
 .public GFL_HeapFree
 .public sub_02017364
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0201736C
 .public sub_02035CF8
 .public PlayerSave_GetPlayerSaveOffset

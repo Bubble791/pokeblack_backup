@@ -294,7 +294,7 @@
 .public sub_02016AD4
 .public sub_02016AD8
 .public sub_0201FDF8
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1AC
 .public sub_02016AD4
 .public sub_021998C8

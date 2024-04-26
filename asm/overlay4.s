@@ -60,7 +60,7 @@ _0214F53E:
 	bl sub_02017364
 	str r0, [r4, #0x18]
 	add r0, r6, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [r4, #0x1c]
 	add r0, r6, #0
 	bl sub_02017238

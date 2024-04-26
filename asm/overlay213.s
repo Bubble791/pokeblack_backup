@@ -512,7 +512,7 @@ ovy213_21bbadc: ; 0x021BBADC
 	ldr r0, [r5, #0x14]
 	bl sub_0201736C
 	ldr r0, [r5, #0x14]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	ldr r0, [r5, #4]
 	str r0, [r4]

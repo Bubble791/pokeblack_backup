@@ -13,7 +13,7 @@
 .public sub_0203A978
 .public sub_0201735C
 .public sub_0201736C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02017364
 .public sub_02017994
 .public sub_020095A0
@@ -36,7 +36,7 @@
 .public sub_02035964
 .public sub_0200D1AC
 .public sub_0201CCF8
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0200D72C
 .public sub_0200D568
 .public Overlay_QueueGameProc

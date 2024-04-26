@@ -97,7 +97,7 @@
 .public GFL_StrBufFree
 .public sub_021A1550
 .public sub_0204C124
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1AC
 .public sub_0219FDE4
 .public GameData_IsPocketRegistered

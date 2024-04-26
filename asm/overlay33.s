@@ -2821,7 +2821,7 @@ ovy33_2178110: ; 0x02178110
 	add r1, r4, #0
 	bl sub_0201FD6C
 	add r0, r5, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r4, #0
 	bl sub_0200D568
 	add r0, r4, #0
@@ -7847,7 +7847,7 @@ _0217A914:
 	add r0, r7, #0
 	bl sub_0201FF14
 	add r0, r6, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, [r4, #0x10]
 	add r6, r0, #0
 	ldr r1, [r1, #0xc]

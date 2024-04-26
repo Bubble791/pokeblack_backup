@@ -15502,13 +15502,13 @@ sub_0200D184: ; 0x0200D184
 _0200D18C: .word sub_02007448
 	thumb_func_end sub_0200D184
 
-	thumb_func_start sub_0200D190
-sub_0200D190: ; 0x0200D190
+	thumb_func_start GameData_GetPokedex
+GameData_GetPokedex: ; 0x0200D190
 	push {r3, lr}
 	bl sub_02017934
 	bl sub_0200D184
 	pop {r3, pc}
-	thumb_func_end sub_0200D190
+	thumb_func_end GameData_GetPokedex
 
 	thumb_func_start sub_0200D19C
 sub_0200D19C: ; 0x0200D19C
@@ -16178,8 +16178,8 @@ _0200D658: .word 0x00000147
 _0200D65C: .word 0x000004D8
 	thumb_func_end sub_0200D568
 
-	thumb_func_start sub_0200D660
-sub_0200D660: ; 0x0200D660
+	thumb_func_start PokeDexSave_IsMonCaught
+PokeDexSave_IsMonCaught: ; 0x0200D660
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
 	add r4, r0, #0
@@ -16207,7 +16207,7 @@ _0200D674:
 _0200D690:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-	thumb_func_end sub_0200D660
+	thumb_func_end PokeDexSave_IsMonCaught
 
 	thumb_func_start sub_0200D694
 sub_0200D694: ; 0x0200D694
@@ -16238,7 +16238,7 @@ _0200D6BE:
 	lsl r1, r5, #0x10
 	add r0, r6, #0
 	lsr r1, r1, #0x10
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #1
 	bne _0200D6CE
 	add r4, r4, #1
@@ -16266,7 +16266,7 @@ sub_0200D6E0: ; 0x0200D6E0
 _0200D6F2:
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #1
 	bne _0200D70E
 	lsl r0, r4, #1
@@ -16759,7 +16759,7 @@ _0200DA7E:
 	lsl r1, r4, #0x10
 	add r0, r6, #0
 	lsr r1, r1, #0x10
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #1
 	bne _0200DA9E
 	lsl r0, r4, #0x10
@@ -16793,7 +16793,7 @@ sub_0200DAAC: ; 0x0200DAAC
 _0200DABE:
 	add r0, r7, #0
 	add r1, r4, #0
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #1
 	bne _0200DAE4
 	lsl r0, r4, #1
@@ -41320,7 +41320,7 @@ _02017FB4:
 	bl sub_0201734C
 	str r0, [r5, #0x7c]
 	add r0, r4, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r5, #0
 	add r1, #0x80
 	str r0, [r1]
@@ -42053,7 +42053,7 @@ _02018554:
 	str r1, [r7, #0x74]
 	bl sub_020089B4
 	ldr r0, [sp]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r7, #0
 	add r1, #0x80
 	str r0, [r1]
@@ -106373,7 +106373,7 @@ sub_02034BD8: ; 0x02034BD8
 	bl sub_0200AF80
 	str r0, [r5, #0x10]
 	add r0, r4, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [r5, #0x1c]
 	add r0, r6, #0
 	bl sub_0200CB58
@@ -110363,7 +110363,7 @@ _020369E4:
 	cmp r5, #8
 	blt _02036916
 	ldr r0, [sp, #4]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r6, r0, #0
 	ldr r0, [sp, #4]
 	bl sub_0201735C

@@ -510,7 +510,7 @@ ovy65_21e5bd0: ; 0x021E5BD0
 	cmp r0, #0
 	bne _021E5C30
 	add r0, r1, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	add r0, sp, #0
 	mov r1, #0xef
@@ -526,7 +526,7 @@ _021E5BF8:
 	bne _021E5C1E
 	ldrh r1, [r5]
 	add r0, r7, #0
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #0
 	bne _021E5C1E
 	ldrb r1, [r5, #2]

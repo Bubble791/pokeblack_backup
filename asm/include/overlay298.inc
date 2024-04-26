@@ -4,9 +4,9 @@
 .public GFL_HeapAllocate
 .public GFL_HeapFree
 .public GFL_HeapAllocate
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D7F4
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D7F4
 .public GFL_HeapAllocate
 .public G2x_SetBlendBrightnessExt_
@@ -70,7 +70,7 @@
 .public GFL_FontCreate
 .public sub_02021998
 .public GFL_VBlankTCBAdd
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1DC
 .public sub_0204E060
 .public sub_02042BA8
@@ -365,7 +365,7 @@
 .public sub_021A2320
 .public sub_021A2324
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0219FD28
 .public sub_021A08E4
 .public sub_0200D1F8
@@ -447,11 +447,11 @@
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0219FD40
 .public sub_0200D3C8
 .public sub_0200DA18
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0200DB5C
 .public sub_0204B354
 .public MI_CpuCopy8
@@ -765,7 +765,7 @@
 .public sub_0219F730
 .public sub_0219FD34
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1C0
 .public GCTX_HIDGetPressedKeys
 .public sub_0203DF44
@@ -856,7 +856,7 @@
 .public sub_0219FD40
 .public sub_0204C124
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D3C8
 .public sub_02021C44
 .public BmpWin_GetBitmap
@@ -975,7 +975,7 @@
 .public sub_0219F730
 .public sub_020191AC
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0219FD34
 .public sub_0200D1C0
 .public sub_0204C124
@@ -1084,7 +1084,7 @@
 .public sub_0204C504
 .public sub_0219FD40
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D3C8
 .public sub_0200DA18
 .public sub_02033E24
@@ -1179,7 +1179,7 @@
 .public sub_0203DAC8
 .public sub_0203D564
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0219FD40
 .public sub_0200D3C8
 .public PokeVoice_Play
@@ -1491,7 +1491,7 @@
 .public sub_0204B98C
 .public sub_0219FD40
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02020274
 .public sub_020202AC
 .public sub_020202AC
@@ -1502,7 +1502,7 @@
 .public sub_0208D65C
 .public sub_0219FD40
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200DA18
 .public sub_021ABF40
 .public sub_0201AB24
@@ -1661,7 +1661,7 @@
 .public sub_0201AB24
 .public sub_0219FD40
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D220
 .public sub_0208D374
 .public sub_0208E3C8
@@ -1817,7 +1817,7 @@
 .public sub_021A9080
 .public sub_0219FD40
 .public sub_0219FD24
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D220
 .public sub_021ABF40
 .public sub_0201AB24

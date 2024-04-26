@@ -134,7 +134,7 @@
 .public sub_021F32D8
 .public sub_021F3F40
 .public sub_021F3F84
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_021F6A1C
 .public sub_021F6CA8
 .public sub_021F6CBC

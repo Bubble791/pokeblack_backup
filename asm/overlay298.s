@@ -282,7 +282,7 @@ ovy298_219fd4c: ; 0x0219FD4C
 	ldr r0, [r5, #0x20]
 	ldrh r4, [r0]
 	ldr r0, [r5]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r6, r0, #0
 	mov r7, #0
 _0219FD5E:
@@ -319,7 +319,7 @@ ovy298_219fd8c: ; 0x0219FD8C
 	ldr r0, [r5, #0x20]
 	ldrh r4, [r0]
 	ldr r0, [r5]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r6, r0, #0
 _0219FD9C:
 	ldr r0, [r5, #0x20]
@@ -1255,7 +1255,7 @@ ovy298_21a03e8: ; 0x021A03E8
 	bl GFL_VBlankTCBAdd
 	str r0, [r4, #0x10]
 	ldr r0, [r5]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1DC
 	add r1, r0, #0
 	ldrh r0, [r4]
@@ -5971,7 +5971,7 @@ _021A2726:
 	bl ovy298_21a2e10
 	ldr r0, [sp, #0x88]
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r5, r0, #0
 	ldr r0, [sp, #0x88]
 	bl sub_0219FD28
@@ -7107,7 +7107,7 @@ ovy298_21a3004: ; 0x021A3004
 	str r3, [sp, #0xc]
 	ldr r7, [sp, #0x64]
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r6, r0, #0
 	add r0, r4, #0
 	bl sub_0219FD40
@@ -7133,7 +7133,7 @@ ovy298_21a3004: ; 0x021A3004
 _021A304E:
 	add r0, r6, #0
 	add r1, r4, #0
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	str r0, [sp, #0x10]
 	mov r5, #0
 _021A305A:
@@ -10665,7 +10665,7 @@ ovy298_21a4c70: ; 0x021A4C70
 	str r0, [sp, #8]
 	ldr r0, [sp, #4]
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r4, r0, #0
 	mov r0, #0x57
 	lsl r0, r0, #4
@@ -12202,7 +12202,7 @@ _021A5876:
 _021A5880:
 	ldr r0, [sp, #0x1c]
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, sp, #0x2c
 	str r1, [sp]
 	ldrh r1, [r5]
@@ -13583,7 +13583,7 @@ ovy298_21a6320: ; 0x021A6320
 	add r4, r1, #0
 	str r3, [sp]
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp, #4]
 	add r0, r6, #0
 	bl sub_0219FD34
@@ -14782,7 +14782,7 @@ ovy298_21a6ce4: ; 0x021A6CE4
 	str r0, [sp, #0x1c]
 	add r0, r4, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, sp, #0x30
 	str r1, [sp]
 	ldrh r1, [r5]
@@ -15645,7 +15645,7 @@ _021A73DA:
 	beq _021A7450
 	add r0, r7, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp, #0x10]
 	add r0, r7, #0
 	bl sub_0219FD40
@@ -19482,7 +19482,7 @@ ovy298_21a9274: ; 0x021A9274
 	str r0, [sp, #0x34]
 	add r0, r4, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp, #0x30]
 	ldrh r2, [r5]
 	ldr r0, [sp, #0x34]
@@ -19850,7 +19850,7 @@ ovy298_21a951c: ; 0x021A951C
 	bne _021A9568
 	add r0, r4, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r7, #0
 	bl sub_0200DA18
 	add r7, r0, #0
@@ -23044,7 +23044,7 @@ _021AAE16:
 	add r6, r0, #0
 	add r0, r4, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, _021AB080 ; =0x0000054E
 	ldr r3, _021AB084 ; =0x00000152
 	ldrh r1, [r5, r1]
@@ -23965,7 +23965,7 @@ _021AB600:
 	str r0, [sp, #4]
 	add r0, r5, #0
 	bl sub_0219FD24
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	mov ip, r0
 	ldr r0, _021AB6EC ; =0x0000054E
 	ldr r2, _021AB6F0 ; =0x00000152

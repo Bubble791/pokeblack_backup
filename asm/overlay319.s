@@ -951,7 +951,7 @@ _0219D580:
 	b _0219D5A4
 _0219D596:
 	add r0, r2, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1C0
 	cmp r0, #1
 	bne _0219D5A6

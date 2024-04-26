@@ -9865,7 +9865,7 @@ ovy268_21beeb4: ; 0x021BEEB4
 	add r4, r1, #0
 	add r5, r0, #0
 	ldr r0, [r4, #0x10]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, [r4]
 	str r1, [sp]
 	ldr r1, [r5, #0x3c]

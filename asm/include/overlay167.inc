@@ -135,7 +135,7 @@
 .public sub_0219BE8C
 .public sub_0219C988
 .public sub_021BAC44
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0219BED4
 .public sub_0219C988
 .public sub_021BB044

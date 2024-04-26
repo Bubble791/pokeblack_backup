@@ -11831,7 +11831,7 @@ _0219F32E: ; jump table
 	.short _0219F41C - _0219F32E - 2 ; case 9
 _0219F342:
 	ldr r0, [r4, #0xc]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	ldr r0, [r4, #0xc]
 	bl sub_02017934

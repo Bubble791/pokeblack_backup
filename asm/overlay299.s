@@ -157,7 +157,7 @@ _021A0420:
 	ldr r1, [r1, #0xc]
 	lsl r4, r6, #1
 	ldrh r1, [r1, r4]
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #1
 	bne _021A0462
 	ldr r1, [r5]

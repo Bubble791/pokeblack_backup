@@ -21,7 +21,7 @@
 .public Overlay_QueueGameProc
 .public GFL_HeapFree
 .public sub_0201736C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public sub_0201735C

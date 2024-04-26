@@ -100,7 +100,7 @@ ovy20_216e714: ; 0x0216E714
 	bl sub_0201735C
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp, #8]
 	add r0, r5, #0
 	mov r1, #0x19

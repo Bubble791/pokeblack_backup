@@ -365,7 +365,7 @@
 .public sub_0201735C
 .public sub_0201FDF8
 .public sub_0201FD6C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D568
 .public GFL_HeapFree
 .public sub_0201CCF8
@@ -1026,7 +1026,7 @@
 .public sub_020195C0
 .public sub_02016D68
 .public sub_0201FF14
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public sub_0200D568
 .public sub_020173AC

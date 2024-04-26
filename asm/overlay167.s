@@ -5062,7 +5062,7 @@ ovy167_219bf70: ; 0x0219BF70
 	ldr r0, [r4]
 	add r0, #0x80
 	ldr r0, [r0]
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	pop {r4, pc}
 	thumb_func_end ovy167_219bf70
 

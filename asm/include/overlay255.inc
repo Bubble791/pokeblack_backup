@@ -166,7 +166,7 @@
 .public sub_0201FF08
 .public sub_0201CCF8
 .public sub_0201C864
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public sub_0201D624
 .public sub_020077E8
@@ -184,7 +184,7 @@
 .public sub_0201FDF8
 .public sub_0201C894
 .public sub_0201C358
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public GFL_HeapFree
 .public sub_0201CD88
@@ -202,7 +202,7 @@
 .public sub_0201D5F4
 .public sub_0201CC4C
 .public PML_PersonalLoadRegionalDexTable
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1AC
 .public sub_020099B4
 .public sub_021C27F8
@@ -2367,7 +2367,7 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0200D190
+.public GameData_GetPokedex
 .public GFL_FontCreate
 .public GFL_MsgSysLoadData
 .public GFL_MsgSysLoadData
@@ -2743,7 +2743,7 @@
 .public sub_0219CC1C
 .public MI_CpuFill8
 .public sub_021D612C
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public GFL_HeapFree
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
@@ -2784,7 +2784,7 @@
 .public sub_0219B1B4
 .public sub_0219B1B4
 .public sub_021D612C
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0219B1B4
 .public sub_021D612C
 .public GFL_HeapFree

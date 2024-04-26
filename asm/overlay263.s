@@ -494,7 +494,7 @@ ovy263_21c2900: ; 0x021C2900
 	ldr r0, [r5, #0x14]
 	bl sub_0201736C
 	ldr r0, [r5, #0x14]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp]
 	ldr r0, [r6, #4]
 	str r0, [r4]

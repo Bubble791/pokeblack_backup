@@ -13,7 +13,7 @@
 .public sub_020092E4
 .public sub_0202018C
 .public sub_02017364
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_02017238
 .public sub_02009B78
 .public sub_02008DD0

@@ -123,7 +123,7 @@ _0219CF54:
 	bl sub_0201736C
 	str r0, [sp, #0x20]
 	ldr r0, [r5]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	ldr r0, [r5]
 	bl sub_02017364
@@ -214,7 +214,7 @@ _0219D008:
 	lsl r1, r1, #0x10
 	add r0, r7, #0
 	lsr r1, r1, #0x10
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #0
 	bne _0219D050
 	mov r0, #1

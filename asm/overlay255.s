@@ -2083,7 +2083,7 @@ _021BC6BC:
 	ldr r0, [sp]
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r6, #0
 	bl sub_0200D72C
 _021BC704:
@@ -2563,7 +2563,7 @@ ovy255_21bca8c: ; 0x021BCA8C
 	add r4, r0, #0
 	ldr r0, [r5]
 	ldr r0, [r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r4, #0
 	bl sub_0200D72C
 	add r0, r4, #0
@@ -2805,7 +2805,7 @@ ovy255_21bcc74: ; 0x021BCC74
 	str r0, [r1, r5]
 	ldr r0, [r4]
 	ldr r0, [r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1AC
 	ldr r2, [r4, #0x2c]
 	sub r1, r5, #4
@@ -48996,7 +48996,7 @@ ovy255_21d3b64: ; 0x021D3B64
 	ldr r0, [r6, #4]
 	ldr r0, [r0]
 	ldr r0, [r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [r4, #0x14]
 	ldrh r1, [r4]
 	mov r0, #0
@@ -53860,7 +53860,7 @@ _021D61CA:
 	lsl r2, r5, #1
 	ldrh r1, [r1, r2]
 	ldr r0, [r0, #0x14]
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #0
 	beq _021D61E2
 	ldr r0, [r4, r6]
@@ -54399,7 +54399,7 @@ _021D65FC:
 	lsl r6, r4, #1
 	ldrh r1, [r1, r6]
 	ldr r0, [r5, #0x14]
-	bl sub_0200D660
+	bl PokeDexSave_IsMonCaught
 	cmp r0, #0
 	beq _021D6618
 	ldr r2, [sp, #0xc]

@@ -75,7 +75,7 @@
 .public sub_02034BD8
 .public sub_021E5F78
 .public sub_021E6024
-.public sub_0200D190
+.public GameData_GetPokedex
 .public MIi_CpuClear32
 .public sub_0201FDF8
 .public sub_0200D1AC

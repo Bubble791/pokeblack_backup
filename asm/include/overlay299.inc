@@ -109,7 +109,7 @@
 .public sub_0219B1E0
 .public sub_0219B27C
 .public GFL_ArcToolFree
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0204898C
 .public sub_020485A4
 .public GFL_StrBufFree

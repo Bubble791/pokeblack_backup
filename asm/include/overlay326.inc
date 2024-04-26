@@ -612,8 +612,8 @@
 .public sub_0203580C
 .public MIi_CpuCopy32
 .public sub_02016AD8
-.public sub_0200D190
-.public sub_0200D660
+.public GameData_GetPokedex
+.public PokeDexSave_IsMonCaught
 .public sub_0204405C
 .public GFL_HeapAllocate
 .public MIi_CpuCopy32

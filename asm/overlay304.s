@@ -1325,7 +1325,7 @@ ovy304_21a0624: ; 0x021A0624
 	add r4, r0, #0
 	ldr r0, [r4, #0xc]
 	ldr r0, [r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1AC
 	mov r1, #0x71
 	lsl r1, r1, #4

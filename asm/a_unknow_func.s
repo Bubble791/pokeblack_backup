@@ -8067,14 +8067,14 @@ sub_0219D488: ; 0x02073FB4
 .public ovy302_21acff4
 .public sub_21AD04C
 .public ovy302_21ad05c
-.public ovy142_219a480
+.public ovy302_21ad0a8
 .public ovy142_219a490
 .public ovy299_219fbc0
-.public ovy142_219b754
+.public ovy302_21ad0e8
 .public ovy162_219d168
 .public ovy299_21a23a4
 .public ovy162_219d038
-.public ovy142_219d0c8
+.public ovy302_21ad174
 .public ovy142_219efc0
 .public ovy142_21A03D4
 .public ovy142_21a03f0
@@ -8091,14 +8091,14 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy302_21acff4
 	bl sub_21AD04C
 	bl ovy302_21ad05c
-	bl ovy142_219a480
+	bl ovy302_21ad0a8
 	bl ovy142_219a490
 	bl ovy299_219fbc0
-	bl ovy142_219b754
+	bl ovy302_21ad0e8
 	bl ovy162_219d168
 	bl ovy299_21a23a4
 	bl ovy162_219d038
-	bl ovy142_219d0c8
+	bl ovy302_21ad174
 	bl ovy142_219efc0
 	bl ovy142_21A03D4
 	bl ovy142_21a03f0

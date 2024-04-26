@@ -561,7 +561,7 @@ _021E3558:
 	ldr r0, [r5]
 	cmp r0, #0
 	beq _021E357A
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	ldr r1, [r4, #0x10]
 	add r6, r0, #0
 	bl sub_0200D72C
@@ -3126,7 +3126,7 @@ _021E48DC:
 	add r0, r4, #0
 	bl GFL_HeapFree
 	ldr r0, [r6]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r5, r0, #0
 	add r1, r4, #0
 	bl sub_0200D72C

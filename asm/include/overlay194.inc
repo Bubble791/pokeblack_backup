@@ -670,7 +670,7 @@
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
 .public GFL_HeapAllocate
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D1AC
 .public sub_0204BF1C
 .public sub_02040C20
@@ -1292,9 +1292,9 @@
 .public sub_0200D15C
 .public GFL_HeapAllocate
 .public sub_0200D15C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public MI_CpuCopy8
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D15C
 .public MI_CpuCopy8
 .public GFL_HeapFree
@@ -1406,14 +1406,14 @@
 .public sub_0201CCF8
 .public sub_02035964
 .public sub_020095A0
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D568
 .public sub_02017980
 .public sub_0200A5CC
 .public sub_0201CCF8
 .public sub_0201CCF8
 .public sub_0201C864
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D568
 .public sub_02007968
 .public sub_0201FF14
@@ -1433,7 +1433,7 @@
 .public sub_0208D65C
 .public sub_0201FD34
 .public sub_0201FD6C
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D568
 .public sub_02007968
 .public sub_0201FF08

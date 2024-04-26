@@ -19165,7 +19165,7 @@ ovy332_21c8110: ; 0x021C8110
 	bl sub_02017364
 	str r0, [sp, #4]
 	ldr r0, [r5, #4]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	str r0, [sp]
 	add r0, r5, #0
 	add r0, #0xa8

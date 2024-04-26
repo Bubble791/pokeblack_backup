@@ -44,7 +44,7 @@
 .public sub_021E40C8
 .public sub_0203D564
 .public sub_0201C7B4
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public sub_0200D568
 .public sub_0201CCF8
@@ -293,7 +293,7 @@
 .public sub_0201FD6C
 .public BagSave_SubItem
 .public GFL_HeapFree
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D72C
 .public sub_0200D568
 .public sub_02017994

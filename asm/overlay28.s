@@ -3784,7 +3784,7 @@ _021720AC:
 	strb r0, [r4, #0xf]
 	ldr r0, [r4, #8]
 	strb r1, [r4, #0x10]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1AC
 	str r0, [r4, #0x18]
 	ldr r0, [sp, #0xc]

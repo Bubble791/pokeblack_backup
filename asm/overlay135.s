@@ -2077,7 +2077,7 @@ ovy135_21efbb4: ; 0x021EFBB4
 	add r6, r0, #0
 	add r4, r2, #0
 	add r0, r5, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r7, r0, #0
 	mov r0, #0
 	add r1, r4, #0

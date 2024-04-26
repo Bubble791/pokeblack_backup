@@ -7926,7 +7926,7 @@ _021BB650:
 	sub r1, #0xe4
 	str r0, [r4, r1]
 	ldr r0, [r5, #0x14]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	bl sub_0200D1AC
 	add r6, #0x6a
 	strb r0, [r4, r6]
@@ -14926,7 +14926,7 @@ ovy194_21bef7c: ; 0x021BEF7C
 	bl sub_0200D15C
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r4, #0
 	add r2, r6, #0
 	blx MI_CpuCopy8
@@ -14941,7 +14941,7 @@ _021BEFB8: .word 0x021C6F30
 ovy194_21befbc: ; 0x021BEFBC
 	push {r3, r4, r5, lr}
 	add r5, r1, #0
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r4, r0, #0
 	bl sub_0200D15C
 	add r2, r0, #0
@@ -15646,7 +15646,7 @@ _021BF5C6:
 _021BF5CA:
 	ldr r6, _021BF5E0 ; =0x0000082C
 	ldr r0, [r4, r6]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r5, #0
 	bl sub_0200D568
 	ldr r0, _021BF604 ; =0x0000118C
@@ -15691,7 +15691,7 @@ _021BF618:
 	bl sub_0201C864
 	ldr r0, _021BF6E0 ; =0x0000082C
 	ldr r0, [r4, r0]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r5, #0
 	bl sub_0200D568
 _021BF650:
@@ -15891,7 +15891,7 @@ _021BF7D2:
 	bl sub_0201FD6C
 	ldr r7, _021BF858 ; =0x0000082C
 	ldr r0, [r5, r7]
-	bl sub_0200D190
+	bl GameData_GetPokedex
 	add r1, r6, #0
 	bl sub_0200D568
 	sub r0, r7, #4

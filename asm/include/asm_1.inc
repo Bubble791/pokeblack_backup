@@ -6129,7 +6129,7 @@
 .public sub_0200D15C
 .public sub_0200D164
 .public sub_0200D184
-.public sub_0200D190
+.public GameData_GetPokedex
 .public sub_0200D19C
 .public sub_0200D1AC
 .public sub_0200D1B4
@@ -6144,7 +6144,7 @@
 .public sub_0200D3A8
 .public sub_0200D3C8
 .public sub_0200D568
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0200D694
 .public sub_0200D6B4
 .public sub_0200D6E0

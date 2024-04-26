@@ -2211,7 +2211,7 @@
 .public sub_0201CCF8
 .public sub_0201D5B4
 .public sub_0201CCF8
-.public sub_0200D660
+.public PokeDexSave_IsMonCaught
 .public sub_0201CEB4
 .public sub_0201CF44
 .public ovy168_21efe1c
