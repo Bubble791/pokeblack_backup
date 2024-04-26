@@ -590,7 +590,7 @@
 .public sub_0205FA10
 .public sub_0204C378
 .public MI_CpuCopy8
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_HeapCreateChild
 .public sub_0219D554
@@ -605,7 +605,7 @@
 .public sub_0203A5D0
 .public GFL_HeapDelete
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GFL_ProcInitSubsystem
 .public sub_02029A68
 .public sub_02029B40
@@ -915,7 +915,7 @@
 .public sub_0204C560
 .public sub_0204C124
 .public Oam_SetOamAnimIndex
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GFL_HeapCreateChild
@@ -933,7 +933,7 @@
 .public sub_02022DA8
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_020342F4
 .public sub_0203A978
@@ -946,10 +946,10 @@
 .public sub_0204E0E0
 .public sub_0204E060
 .public sub_0204E0E0
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_021A3B30
 .public sub_021A3B30
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_021A3B30
 .public sub_02021A3C
 .public BmpWin_GetBitmap

@@ -5713,9 +5713,9 @@ ovy298_21a24e4: ; 0x021A24E4
 	add r4, r0, #0
 	ldr r0, _021A2564 ; =0x0000008B
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021A2568 ; =0x00000128
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r6, #0x12
 	lsl r6, r6, #4
 	ldrh r2, [r5]
@@ -5814,9 +5814,9 @@ ovy298_21a2570: ; 0x021A2570
 	add r0, r6, #0
 	bl ovy298_219fccc
 	ldr r0, _021A25F0 ; =0x00000128
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021A25F4 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0
@@ -7456,7 +7456,7 @@ ovy298_21a3298: ; 0x021A3298
 	bl sub_0219FD24
 	str r0, [sp]
 	ldr r0, _021A33E8 ; =0x00000090
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r7, #0x16
 	lsl r7, r7, #6
 	ldrh r2, [r6]
@@ -7686,7 +7686,7 @@ _021A341C:
 	ldr r0, [sp]
 	bl ovy298_219fccc
 	ldr r0, _021A34C4 ; =0x00000090
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	add sp, #8
 	pop {r3, r4, r5, r6, r7, pc}

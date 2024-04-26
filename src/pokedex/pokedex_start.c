@@ -331,8 +331,6 @@ void PokeDexStartAnim_LoadBgPal(PokeDexStartIn *a1)
     sub_02007534(v1, 7);
 }
 
-extern void sub_02046DF8(int);
-
 int ovy301_219fff0(PokeDexStartIn *a1)
 {
     GFL_BGSysSetEnabledBGsA(0);

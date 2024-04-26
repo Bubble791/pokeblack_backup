@@ -7852,9 +7852,9 @@ ovy194_21bb628: ; 0x021BB628
 	cmp r7, #5
 	bge _021BB642
 	ldr r0, _021BB7E0 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021BB7E4 ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021BB642:
 	cmp r7, #0
 	beq _021BB64A
@@ -7866,7 +7866,7 @@ _021BB64A:
 _021BB64E:
 	ldr r0, _021BB7EC ; =0x000000C1
 _021BB650:
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #1
 	bl sub_02046DF8
 	ldr r0, _021BB7F0 ; =0x000005F4
@@ -8693,9 +8693,9 @@ _021BBD46:
 	cmp r4, #5
 	bge _021BBD7A
 	ldr r0, _021BBD9C ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021BBDA0 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021BBD7A:
 	cmp r4, #0
 	beq _021BBD82
@@ -8707,7 +8707,7 @@ _021BBD82:
 _021BBD86:
 	ldr r0, _021BBDA8 ; =0x000000C1
 _021BBD88:
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0

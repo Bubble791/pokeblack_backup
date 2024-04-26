@@ -98,8 +98,8 @@
 .public sub_02043ED4
 .public sub_02043ED4
 .public MI_CpuFill8
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public sub_021BEA20
 .public sub_021BEE80
 .public sub_02017934
@@ -126,8 +126,8 @@
 .public GFL_MsgDataFree
 .public sub_02021A18
 .public sub_02022DA8
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public sub_021C0770
 .public sub_02045B7C
 .public sub_02045B7C
@@ -491,9 +491,9 @@
 .public sub_021C11EC
 .public GFL_HeapFree
 .public sub_021A03F4
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_021A039C
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_02152040
 .public MI_CpuCopy8
 .public MI_CpuCopy8
@@ -607,11 +607,11 @@
 .public MI_CpuCopy8
 .public sub_021C2174
 .public sub_021A03C8
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02152040
 .public sub_0219D124
 .public sub_0219D1F0
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0219D124
 .public sub_0219D1F0
 .public sub_02005ED4

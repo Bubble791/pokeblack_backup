@@ -54,7 +54,7 @@ ovy182_21a4974: ; 0x021A4974
 	mov r0, #1
 	bl sub_020116C0
 	ldr r0, _021A4994 ; =0x000000B5
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #1
 	pop {r3, pc}
 	.align 2, 0
@@ -86,7 +86,7 @@ ovy182_21a49b0: ; 0x021A49B0
 	mov r0, #1
 	bl sub_02011778
 	ldr r0, _021A49CC ; =0x000000B5
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0xf
 	bl GFL_HeapDelete
 	bl sub_02012E28

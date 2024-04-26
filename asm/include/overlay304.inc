@@ -104,7 +104,7 @@
 .public sub_02017644
 .public sub_02017644
 .public GameData_IsPocketRegistered
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
@@ -120,7 +120,7 @@
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0204B7C8
 .public sub_020275F8
 .public sub_021A1520

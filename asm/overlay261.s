@@ -25,9 +25,9 @@ ovy261_2176b00: ; 0x02176B00
 	str r5, [r4, #0x28]
 	ldr r0, _02176B5C ; =0x0000008B
 	strh r6, [r4]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02176B60 ; =0x00000106
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	bl ovy261_2176bd4
 	add r0, r4, #0
@@ -62,9 +62,9 @@ ovy261_2176b68: ; 0x02176B68
 	add r0, r4, #0
 	bl ovy261_2176be4
 	ldr r0, _02176BA4 ; =0x00000106
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02176BA8 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r5, #0
 	bl GFL_ProcReleaseSubsystem
 	mov r0, #0x4e

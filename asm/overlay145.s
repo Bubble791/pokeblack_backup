@@ -10,7 +10,7 @@ ovy145_219ce80: ; 0x0219CE80
 	add r4, r0, #0
 	ldr r0, _0219CF3C ; =0x0000008B
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r6]
 	bl sub_02017934
 	bl sub_0200FB40
@@ -273,7 +273,7 @@ ovy145_219d09c: ; 0x0219D09C
 	cmp r0, #0
 	bne _0219D0C2
 	ldr r0, _0219D11C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 _0219D0C2:
@@ -306,7 +306,7 @@ _0219D0C2:
 	mov r0, #0x97
 	bl GFL_HeapDelete
 	ldr r0, _0219D11C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	nop

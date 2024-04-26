@@ -519,7 +519,7 @@
 .public sub_0201CCF8
 .public Item_IsMail
 .public PrintSystem_IsTextPrintActiveEnd
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -539,7 +539,7 @@
 .public GFL_HeapDelete
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GFL_FadeScreenIsFinished
 .public sub_02027780
 .public sub_0203DA48
@@ -2363,7 +2363,7 @@
 .public sub_0203346C
 .public sub_0203346C
 .public sub_020336A0
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -2391,7 +2391,7 @@
 .public sub_02022DA8
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GFL_FadeScreenIsFinished
 .public PrintSystem_IsTextPrintActiveEnd
 .public sub_021D3EF8

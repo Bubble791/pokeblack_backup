@@ -6879,7 +6879,7 @@ ovy33_217a0f4: ; 0x0217A0F4
 	bl sub_02016EDC
 	add r4, r0, #0
 	ldr r0, _0217A144 ; =0x00000083
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_021804F0
 	str r0, [sp, #4]
@@ -6916,7 +6916,7 @@ ovy33_217a148: ; 0x0217A148
 	bl sub_02016EDC
 	add r4, r0, #0
 	ldr r0, _0217A180 ; =0x00000083
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r7, #0
@@ -6942,7 +6942,7 @@ ovy33_217a184: ; 0x0217A184
 	ldr r0, [r4]
 	bl sub_021EED18
 	ldr r0, _0217A1AC ; =0x00000083
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, pc}
 _0217A1A6:

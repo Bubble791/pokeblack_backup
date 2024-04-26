@@ -11,9 +11,9 @@ ovy297_21f4260: ; 0x021F4260
 	add r4, r0, #0
 	ldr r0, _021F435C ; =0x0000008B
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021F4360 ; =0x00000128
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r7, #1
 	mov r0, #1
 	mov r1, #0x6a
@@ -151,9 +151,9 @@ ovy297_21f4368: ; 0x021F4368
 	mov r0, #0x6a
 	bl GFL_HeapDelete
 	ldr r0, _021F43BC ; =0x00000128
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021F43C0 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
@@ -1293,7 +1293,7 @@ ovy297_21f4c9c: ; 0x021F4C9C
 	sub sp, #8
 	add r4, r0, #0
 	ldr r0, _021F4CF4 ; =0x000000A8
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldrh r0, [r4]
 	bl sub_02026DC0
 	mov r1, #1
@@ -1347,7 +1347,7 @@ ovy297_21f4cf8: ; 0x021F4CF8
 	mov r0, #0
 	str r0, [r4, #0x5c]
 	ldr r0, _021F4D24 ; =0x000000A8
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, pc}
 	.align 2, 0
 _021F4D24: .word 0x000000A8

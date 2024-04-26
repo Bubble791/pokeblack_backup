@@ -965,7 +965,7 @@ _021E3810:
 	ldr r0, [r4, r0]
 	str r7, [r0, #0x20]
 	ldr r0, _021E3A40 ; =0x000000CF
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r3, #0x47
 	lsl r3, r3, #2
 	ldr r0, [r4, r3]
@@ -987,7 +987,7 @@ _021E38B6:
 	pop {r4, r5, r6, r7, pc}
 _021E38BC:
 	ldr r0, _021E3A40 ; =0x000000CF
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0x1a
 	str r0, [r4, #0x28]
 	add r0, r5, #0
@@ -1164,7 +1164,7 @@ _021E3942:
 	add r0, #0xf0
 	str r7, [r0]
 	ldr r0, _021E3A4C ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021E3A50 ; =0x0000011F
 	b _021E3A54
 	.align 2, 0
@@ -1175,7 +1175,7 @@ _021E3A48: .word 0x021E80A0
 _021E3A4C: .word 0x0000011D
 _021E3A50: .word 0x0000011F
 _021E3A54:
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xb0
 	bl sub_021F8714
@@ -1214,9 +1214,9 @@ _021E3A98:
 	mov r0, #0x1e
 	str r0, [r4, #0x28]
 	ldr r0, _021E3D78 ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021E3D7C ; =0x0000011F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r0, #0xa8
 	ldr r0, [r0]
@@ -1586,7 +1586,7 @@ ovy284_21e3d84: ; 0x021E3D84
 	bl GFL_HeapCreateChild
 	ldr r0, _021E3EB4 ; =0x0000008B
 	strh r4, [r5, #2]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r4, #0
 	add r7, r4, #0
 _021E3DA4:
@@ -1751,7 +1751,7 @@ ovy284_21e3ebc: ; 0x021E3EBC
 	ldr r0, [r4, #4]
 	bl ovy284_21e4afc
 	ldr r0, _021E3F20 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0x68
 	bl GFL_HeapDelete
 	pop {r4, r5, r6, pc}

@@ -145,8 +145,8 @@
 .public sub_0204E0E0
 .public sub_0204E060
 .public sub_0204E0E0
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -168,8 +168,8 @@
 .public sub_02022DA8
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public sub_021B554C
 .public sub_021B55B8
 .public sub_021B5460

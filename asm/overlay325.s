@@ -11,7 +11,7 @@ ovy325_219ce80: ; 0x0219CE80
 	add r4, r0, #0
 	ldr r0, _0219CF1C ; =0x0000008B
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0xa9
@@ -106,7 +106,7 @@ ovy325_219cf20: ; 0x0219CF20
 	add r0, r4, #0
 	bl GFL_HeapDelete
 	ldr r0, _0219CF6C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

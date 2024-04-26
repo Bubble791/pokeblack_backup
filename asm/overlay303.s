@@ -3887,9 +3887,9 @@ ovy303_21a1a80: ; 0x021A1A80
 	add r5, r0, #0
 	ldr r0, _021A1B1C ; =0x0000008B
 	add r6, r1, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021A1B20 ; =0x00000090
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
@@ -3990,9 +3990,9 @@ ovy303_21a1b30: ; 0x021A1B30
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A1BB0 ; =0x00000090
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021A1BB4 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, r5, r6, pc}
 	nop
 _021A1BA4: .word 0x00000598

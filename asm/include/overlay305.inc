@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
 .public sub_0204E0E0
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -20,7 +20,7 @@
 .public sub_0219DFF0
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02199904
 .public sub_02021A3C
 .public GFL_BGSysMoveBGReq

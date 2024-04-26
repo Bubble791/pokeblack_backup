@@ -8308,7 +8308,7 @@ ovy185_21a0d64: ; 0x021A0D64
 	b _021A0E02
 _021A0D7C:
 	ldr r0, _021A0E0C ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #6
 	mov r0, #1
 	mov r1, #0x29
@@ -8429,7 +8429,7 @@ ovy185_21a0e80: ; 0x021A0E80
 	mov r0, #0x2a
 	bl GFL_HeapDelete
 	ldr r0, _021A0EA0 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, pc}
 	.align 2, 0
@@ -14209,7 +14209,7 @@ ovy185_21a3a14: ; 0x021A3A14
 	add r4, r0, #0
 	ldr r0, _021A3AB8 ; =0x0000008B
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r6, #0xf
 	mvn r6, r6
 	ldr r0, _021A3ABC ; =0x0400006C
@@ -14303,7 +14303,7 @@ ovy185_21a3ac4: ; 0x021A3AC4
 	mov r0, #0x51
 	bl GFL_HeapDelete
 	ldr r0, _021A3B08 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -14539,7 +14539,7 @@ _021A3CB4:
 	add r0, r4, #0
 	bl ovy185_21a3e90
 	ldr r0, _021A3D6C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r5, #0
 	add r1, r4, #0
 	mov r2, #0xe
@@ -14570,7 +14570,7 @@ _021A3CEA:
 	cmp r0, #0
 	beq _021A3D12
 	ldr r0, _021A3D6C ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	bl ovy185_21a3d70
 	add r0, r5, #0

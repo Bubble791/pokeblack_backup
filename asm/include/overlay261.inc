@@ -3,13 +3,13 @@
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public sub_021C5C10
 .public sub_021C5C4C
 .public sub_02176C24
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
 .public sub_021C5C54

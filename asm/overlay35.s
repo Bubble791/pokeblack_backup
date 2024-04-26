@@ -286,24 +286,24 @@ ovy35_217cb4c: ; 0x0217CB4C
 	add r0, #8
 	bl sub_02019128
 	ldr r0, _0217CBE4 ; =0x00000117
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_02016AD8
 	mov r1, #1
 	bl sub_021E8C6C
 	ldr r0, _0217CBE4 ; =0x00000117
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r6]
 	cmp r0, #0
 	bne _0217CBAC
 	ldr r0, _0217CBE4 ; =0x00000117
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_02016AD8
 	mov r1, #1
 	bl sub_021E8C64
 	ldr r0, _0217CBE4 ; =0x00000117
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _0217CBAC:
 	add r0, r5, #0
 	bl ovy35_217ca2c
@@ -871,7 +871,7 @@ _0217D070:
 	b _0217D282
 _0217D074:
 	ldr r0, _0217D288 ; =0x00000151
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	blx sub_02180BDC
 	ldrh r0, [r4, #0x14]
 	bl sub_02018B10
@@ -1079,7 +1079,7 @@ _0217D20E:
 	bl sub_0216A318
 _0217D21E:
 	ldr r0, _0217D288 ; =0x00000151
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [sp]
 	bl sub_02153668
 	ldr r0, [r7]
@@ -2140,9 +2140,9 @@ _0217DA14:
 	b _0217DA04
 _0217DA1E:
 	ldr r0, _0217DA58 ; =0x0000001C
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _0217DA5C ; =0x0000001B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r7, #0
 	bl sub_02017424
 	add r0, r6, #0
@@ -2215,9 +2215,9 @@ _0217DAB2:
 	b _0217DAE6
 _0217DABA:
 	ldr r0, _0217DAEC ; =0x0000001B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _0217DAF0 ; =0x0000001C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [sp]
 	mov r1, #4
 	bl ovy35_217d2b0

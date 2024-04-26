@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_0200C84C
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
@@ -35,7 +35,7 @@
 .public sub_02022DA8
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02021A3C
 .public sub_021DCCCC
 .public GFL_ArcSysCreateFileHandle

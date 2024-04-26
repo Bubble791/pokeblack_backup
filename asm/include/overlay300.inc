@@ -181,7 +181,7 @@
 .public GFL_BGSysMoveBGReq
 .public GFL_BGSysMoveBGReq
 .public sub_021AD7C8
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -201,7 +201,7 @@
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02027780
 .public sub_02027780
 .public sub_021A06B0

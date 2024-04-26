@@ -361,7 +361,6 @@ typedef struct
 void sub_021998DC(BagView *m_bagView);
 void ovy142_21998f4(BagView *m_bagView);
 
-extern int sub_0203D554(void);
 extern void ovy142_219de0c(BagView*);
 extern void ovy142_219e120(BagView*);
 extern void BagMenu_DrawItemBarText(BagView*);

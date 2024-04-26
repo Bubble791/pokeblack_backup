@@ -3,6 +3,8 @@
 
 #include "overlay_manager.h"
 
+#define SPECIES_MAX     649
+
 enum
 {
     POKEDEX_FUNC_GET_CHILD_APP,
@@ -15,6 +17,11 @@ enum
 
 typedef struct
 {
+    u16 *listData;
+}PokeDexListData;
+
+typedef struct
+{
     /*0x0*/ void *gameData;
     /*0x4*/ int unk4;
     /*0x8*/ int unk8;
@@ -23,10 +30,10 @@ typedef struct
 typedef struct
 {
     /*0x0*/ void *gameData;
-    /*0x4*/ int unk4;
+    /*0x4*/ int dexSave;
     /*0x8*/ u16 unk8;
     /*0xA*/ u16 unkA;
-    /*0xC*/ int unkC;
+    /*0xC*/ PokeDexListData unkC;
     /*0x10*/ int unk10;
 } PokeDexSeacherEngine_TYPE2;
 
@@ -78,11 +85,6 @@ typedef struct
     /*0xC*/ u16 unkC;
     /*0xE*/ u16 unkE;
 } PokeDexParamInput;
-
-typedef struct
-{
-    u16 *listData;
-}PokeDexListData;
 
 typedef struct
 {

@@ -10,9 +10,9 @@ ovy308_219f960: ; 0x0219F960
 	add r4, r0, #0
 	ldr r0, _0219F9EC ; =0x0000008B
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0219F9F0 ; =0x00000090
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0x77
@@ -97,9 +97,9 @@ ovy308_219f9f8: ; 0x0219F9F8
 	mov r0, #0x77
 	bl GFL_HeapDelete
 	ldr r0, _0219FA54 ; =0x00000090
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _0219FA58 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

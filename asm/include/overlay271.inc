@@ -8,7 +8,7 @@
 .public sub_021F3010
 .public sub_021F560C
 .public sub_021F32D8
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_02042788
 .public sub_02042BA8
 .public sub_0201749C
@@ -18,7 +18,7 @@
 .public sub_0201749C
 .public sub_0202ECDC
 .public sub_021F66F8
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public PlayerSave_GetPlayerSaveOffset
 .public sub_021F3024
 .public sub_0200CB3C
@@ -801,7 +801,7 @@
 .public sub_0204C1A8
 .public sub_0204C288
 .public sub_021F5E54
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapAllocate
 .public MI_CpuFill8
 .public MI_CpuFill8
@@ -817,7 +817,7 @@
 .public sub_0200DE60
 .public sub_021B5534
 .public GFL_HeapFree
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_021B57FC
 .public sub_0203CB80
 .public MI_CpuFill8

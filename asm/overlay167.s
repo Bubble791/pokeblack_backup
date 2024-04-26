@@ -4799,11 +4799,11 @@ ovy167_219bdfc: ; 0x0219BDFC
 	bhi _0219BE40
 	ldr r6, _0219BE44 ; =0x00000152
 	add r0, r6, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_0217CAF8
 	add r4, r0, #0
 	add r0, r6, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	cmp r4, #0
 	bne _0219BE24
 	mov r0, #0
@@ -108057,7 +108057,7 @@ ovy167_21ce10c: ; 0x021CE10C
 	tst r0, r1
 	beq _021CE128
 	ldr r0, _021CE130 ; =0x000000DB
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021CE134 ; =0x021DD864
 	mov r1, #1
 	str r1, [r0]
@@ -108080,7 +108080,7 @@ ovy167_21ce138: ; 0x021CE138
 	cmp r0, #0
 	beq _021CE14C
 	ldr r0, _021CE154 ; =0x000000DB
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	str r0, [r4]
 _021CE14C:
@@ -108809,16 +108809,16 @@ ovy167_21ce604: ; 0x021CE604
 	push {r3, lr}
 	bl ovy167_21ce678
 	ldr r0, _021CE62C ; =0x000000A8
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0x80
 	bl GX_SetBankForLCDC
 	ldr r0, _021CE630 ; =0x000000A9
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_02042B20
 	cmp r0, #0
 	bne _021CE62A
 	ldr r0, _021CE634 ; =0x000000AA
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021CE62A:
 	pop {r3, pc}
 	.align 2, 0
@@ -108832,14 +108832,14 @@ ovy167_21ce638: ; 0x021CE638
 	push {r3, lr}
 	bl ovy167_21ce748
 	ldr r0, _021CE65C ; =0x000000A8
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021CE660 ; =0x000000A9
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	bl sub_02042B20
 	cmp r0, #0
 	bne _021CE658
 	ldr r0, _021CE664 ; =0x000000AA
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021CE658:
 	pop {r3, pc}
 	nop
@@ -110643,7 +110643,7 @@ _021CF406:
 _021CF40C:
 	bl ovy167_21cf508
 	ldr r0, _021CF500 ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0x6d
 	lsl r0, r0, #2
 	ldrb r1, [r4, r0]
@@ -110662,7 +110662,7 @@ _021CF422:
 	ldr r0, [r4, r0]
 	bl ovy167_21cf528
 	ldr r0, _021CF504 ; =0x0000011F
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r6, #0
 	sub r0, #0xa8
 	add r0, r4, r0
@@ -110722,7 +110722,7 @@ _021CF4AA:
 	blo _021CF488
 _021CF4B0:
 	ldr r0, _021CF504 ; =0x0000011F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r5, #0x71
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
@@ -110746,7 +110746,7 @@ _021CF4D4:
 	b _021CF44A
 _021CF4E4:
 	ldr r0, _021CF500 ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0x6d
 	mov r1, #0
 	lsl r0, r0, #2
@@ -111095,7 +111095,7 @@ _021CF768:
 	mov r1, #1
 	bl ovy167_21cf868
 	ldr r0, _021CF85C ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #2
 _021CF77C:
 	strb r0, [r4, r5]
@@ -111112,7 +111112,7 @@ _021CF780:
 	ldr r0, [r4, r0]
 	bl ovy167_21cf888
 	ldr r0, _021CF860 ; =0x0000011E
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xc8
 	bl sub_021F5B64
@@ -111125,7 +111125,7 @@ _021CF7AA:
 	cmp r0, #0
 	beq _021CF858
 	ldr r0, _021CF860 ; =0x0000011E
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r0, #0xe8
 	ldr r0, [r0]
@@ -111156,7 +111156,7 @@ _021CF7CA:
 	sub r0, #0x84
 	strh r1, [r4, r0]
 	ldr r0, _021CF864 ; =0x0000011F
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	sub r0, #0xa8
 	add r0, r4, r0
@@ -111176,7 +111176,7 @@ _021CF810:
 	cmp r0, #0
 	beq _021CF858
 	ldr r0, _021CF864 ; =0x0000011F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021CF820:
 	mov r0, #6
 	b _021CF77C
@@ -111199,7 +111199,7 @@ _021CF83C:
 	cmp r0, #0
 	beq _021CF858
 	ldr r0, _021CF85C ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	strb r0, [r4, r5]
 	mov r0, #1
@@ -111454,7 +111454,7 @@ _021CF9F2:
 	mov r1, #1
 	bl ovy167_21cfa8c
 	ldr r0, _021CFA84 ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #2
 _021CFA06:
 	strb r0, [r4, r5]
@@ -111471,7 +111471,7 @@ _021CFA0A:
 	ldr r0, [r4, r0]
 	bl ovy167_21cfaac
 	ldr r0, _021CFA88 ; =0x00000120
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	sub r0, #0x58
 	add r0, r4, r0
@@ -111485,7 +111485,7 @@ _021CFA36:
 	cmp r0, #0
 	beq _021CFA7E
 	ldr r0, _021CFA88 ; =0x00000120
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #4
 	b _021CFA06
 _021CFA4A:
@@ -111507,7 +111507,7 @@ _021CFA62:
 	cmp r0, #0
 	beq _021CFA7E
 	ldr r0, _021CFA84 ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	strb r0, [r4, r5]
 	mov r0, #1
@@ -111652,7 +111652,7 @@ _021CFB66:
 	mov r1, #0
 	bl ovy167_21cfc00
 	ldr r0, _021CFBF8 ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #2
 _021CFB7A:
 	strb r0, [r4, r5]
@@ -111669,7 +111669,7 @@ _021CFB7E:
 	ldr r0, [r4, r0]
 	bl ovy167_21cfc20
 	ldr r0, _021CFBFC ; =0x00000121
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	sub r0, #0x3c
 	add r0, r4, r0
@@ -111683,7 +111683,7 @@ _021CFBAA:
 	cmp r0, #0
 	beq _021CFBF2
 	ldr r0, _021CFBFC ; =0x00000121
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #4
 	b _021CFB7A
 _021CFBBE:
@@ -111705,7 +111705,7 @@ _021CFBD6:
 	cmp r0, #0
 	beq _021CFBF2
 	ldr r0, _021CFBF8 ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	strb r0, [r4, r5]
 	mov r0, #1
@@ -113552,7 +113552,7 @@ _021D0876:
 	mov r1, #0
 	bl ovy167_21d0918
 	ldr r0, _021D090C ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021D0888:
 	ldrb r0, [r4, r5]
 	add r0, r0, #1
@@ -113570,7 +113570,7 @@ _021D0890:
 	ldr r0, [r4, r0]
 	bl ovy167_21d0938
 	ldr r0, _021D0910 ; =0x0000011F
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	sub r0, #0xa8
 	add r0, r4, r0
@@ -113583,7 +113583,7 @@ _021D08BA:
 	cmp r0, #0
 	beq _021D0906
 	ldr r0, _021D0910 ; =0x0000011F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r5, #0
 	add r0, #0x10
 	ldr r0, [r4, r0]
@@ -113606,7 +113606,7 @@ _021D08F0:
 	ldrb r0, [r4, r5]
 	strb r0, [r1]
 	ldr r0, _021D090C ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	add r5, #0x5d
 	strb r0, [r4, r5]

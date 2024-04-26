@@ -93,7 +93,7 @@ ovy213_21bb7b0: ; 0x021BB7B0
 	add r0, r4, #4
 	bl sub_021998C8
 	ldr r0, _021BB7D4 ; =0x000000A4
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r4, #0xdc
 	ldr r0, [r4]
 	bl FreeGameProcManager
@@ -179,7 +179,7 @@ _021BB850: ; jump table
 	.short _021BB916 - _021BB850 - 2 ; case 8
 _021BB862:
 	ldr r0, _021BB9D4 ; =0x000000A5
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xdc
 	mov r1, #0
@@ -204,7 +204,7 @@ _021BB88E:
 	b _021BB998
 _021BB892:
 	ldr r0, _021BB9D4 ; =0x000000A5
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r4, #0x54]
 	cmp r0, #1
 	bne _021BB8AA
@@ -278,7 +278,7 @@ _021BB916:
 	pop {r4, r5, r6, pc}
 _021BB92C:
 	ldr r0, _021BB9DC ; =0x000000CF
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xdc
 	mov r1, #0
@@ -324,7 +324,7 @@ _021BB976:
 	b _021BB998
 _021BB988:
 	ldr r0, _021BB9DC ; =0x000000CF
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r0, #0xbb
 	ldrb r0, [r0]
@@ -493,7 +493,7 @@ _021BBAC0:
 	add r0, #0xa4
 	strb r1, [r0]
 	ldr r0, _021BBAD8 ; =0x000000A4
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	bl sub_021998C0
 	pop {r4, r5, r6, pc}

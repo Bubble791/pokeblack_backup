@@ -130,7 +130,7 @@ ovy62_21e58ac: ; 0x021E58AC
 	str r0, [r4]
 	ldr r4, _021E58F4 ; =0x00000017
 	add r0, r4, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	str r0, [sp]
 	add r0, r6, #0
@@ -139,7 +139,7 @@ ovy62_21e58ac: ; 0x021E58AC
 	mov r3, #0
 	bl sub_0216F59C
 	add r0, r4, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
@@ -774,7 +774,7 @@ ovy62_21e5de4: ; 0x021E5DE4
 	bl sub_020110D4
 	ldr r7, _021E5E90 ; =0x00000017
 	add r0, r7, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_0216F698
 	cmp r0, #7
@@ -817,7 +817,7 @@ _021E5E7E:
 _021E5E80:
 	strh r0, [r4]
 	add r0, r7, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	strh r0, [r6]
 _021E5E8C:

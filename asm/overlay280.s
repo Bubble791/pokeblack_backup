@@ -13,7 +13,7 @@ ovy280_21d96e0: ; 0x021D96E0
 	str r0, [sp, #0x18]
 	ldr r0, _021D9984 ; =0x00000119
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r1, [r5]
 	cmp r1, #0xc
 	beq _021D972A
@@ -400,7 +400,7 @@ ovy280_21d998c: ; 0x021D998C
 	mov r0, #0x1e
 	bl GFL_HeapDelete
 	ldr r0, _021D9A4C ; =0x00000119
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

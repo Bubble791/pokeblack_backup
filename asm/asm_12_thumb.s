@@ -592,7 +592,7 @@ _02007210:
 _0200721A:
 	ldr r7, _020072CC ; =0x0000014B
 	add r0, r7, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _020072D0 ; =0x00008001
 	bl sub_021BEA20
 	add r6, r0, #0
@@ -625,7 +625,7 @@ _0200726A:
 	add r0, r6, #0
 	bl sub_021BEC1C
 	add r0, r7, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldrb r0, [r4, #5]
 	cmp r0, #1
 	bne _02007286
@@ -7763,25 +7763,25 @@ sub_02009F1C: ; 0x02009F1C
 	blx MI_CpuFill8
 	ldr r4, _02009F6C ; =0x0000000C
 	add r0, r4, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r6, _02009F70 ; =0x0000001B
 	add r0, r6, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r7, _02009F74 ; =0x0000001D
 	add r0, r7, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02009F78 ; =0x0000000B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_021523CC
 	ldr r0, _02009F78 ; =0x0000000B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r7, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r6, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _02009F68: .word 0x000007C4
@@ -9413,7 +9413,7 @@ _0200AA9C:
 	pop {r3, r4, r5, r6, r7, pc}
 _0200AAB0:
 	ldr r0, _0200AAE8 ; =0x0000014B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r7, #0
 	bl sub_021BEA20
 	str r0, [r5, #8]
@@ -9451,7 +9451,7 @@ _0200AAFA:
 	ldr r0, [r4, #8]
 	bl sub_021BEC1C
 	ldr r0, _0200AB14 ; =0x0000014B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _0200AB06:
 	add r0, r4, #0
 	mov r1, #0
@@ -12973,21 +12973,21 @@ _0200C1EC: .word 0x000017DC
 	thumb_func_start sub_0200C1F0
 sub_0200C1F0: ; 0x0200C1F0
 	ldr r0, _0200C1F8 ; =0x00000111
-	ldr r3, _0200C1FC ; =sub_0203CE0C
+	ldr r3, _0200C1FC ; =GFL_OvlLoad
 	bx r3
 	nop
 _0200C1F8: .word 0x00000111
-_0200C1FC: .word sub_0203CE0C
+_0200C1FC: .word GFL_OvlLoad
 	thumb_func_end sub_0200C1F0
 
 	thumb_func_start sub_0200C200
 sub_0200C200: ; 0x0200C200
 	ldr r0, _0200C208 ; =0x00000111
-	ldr r3, _0200C20C ; =sub_0203CDC8
+	ldr r3, _0200C20C ; =GFL_OvlUnload
 	bx r3
 	nop
 _0200C208: .word 0x00000111
-_0200C20C: .word sub_0203CDC8
+_0200C20C: .word GFL_OvlUnload
 	thumb_func_end sub_0200C200
 
 	thumb_func_start sub_0200C210
@@ -26236,47 +26236,47 @@ _020116D2: ; jump table
 	.short _020116E0 - _020116D2 - 2 ; case 6
 _020116E0:
 	ldr r0, _0201175C ; =0x0000000C
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011760 ; =0x0000001B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011764 ; =0x0000000B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02011768 ; =0x0000001D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0201176C ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_021505CC
 	pop {r3, pc}
 _02011704:
 	ldr r0, _0201175C ; =0x0000000C
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011760 ; =0x0000001B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011764 ; =0x0000000B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02011768 ; =0x0000001D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_021505CC
 	pop {r3, pc}
 _02011722:
 	ldr r0, _0201175C ; =0x0000000C
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011760 ; =0x0000001B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011764 ; =0x0000000B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02011768 ; =0x0000001D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_021505CC
 	pop {r3, pc}
 _02011740:
 	ldr r0, _02011770 ; =0x0000001E
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_021730E0
 	pop {r3, pc}
 _0201174C:
 	ldr r0, _02011774 ; =0x0000001F
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_02175914
 	pop {r3, pc}
 _02011758:
@@ -26313,43 +26313,43 @@ _0201178A: ; jump table
 	.short _02011798 - _0201178A - 2 ; case 6
 _02011798:
 	ldr r0, _020117FC ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011800 ; =0x0000000B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011804 ; =0x0000001D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011808 ; =0x0000000C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0201180C ; =0x0000001B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	pop {r3, pc}
 _020117B8:
 	ldr r0, _02011800 ; =0x0000000B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011804 ; =0x0000001D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011808 ; =0x0000000C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0201180C ; =0x0000001B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	pop {r3, pc}
 _020117D2:
 	ldr r0, _02011800 ; =0x0000000B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011804 ; =0x0000001D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02011808 ; =0x0000000C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0201180C ; =0x0000001B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	pop {r3, pc}
 _020117EC:
 	ldr r0, _02011810 ; =0x0000001E
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, pc}
 _020117F4:
 	ldr r0, _02011814 ; =0x0000001F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _020117FA:
 	pop {r3, pc}
 	.align 2, 0
@@ -28575,7 +28575,7 @@ _0201292E:
 	ldr r0, [r0, #4]
 	str r0, [r4, r5]
 	ldr r0, _02012990 ; =0x0000001F
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
@@ -28613,7 +28613,7 @@ _020129AA:
 	ldr r0, _020129D0 ; =0x02141078
 	str r4, [r0]
 	ldr r0, _020129DC ; =0x0000001F
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, r4, r5, pc}
 	nop
 _020129D0: .word 0x02141078
@@ -33589,10 +33589,10 @@ _02014AFE:
 _02014B00:
 	cmp r1, #0
 	beq _02014B0A
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	pop {r3, pc}
 _02014B0A:
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, pc}
 	.align 2, 0
 _02014B10: .word 0x00000018
@@ -37501,7 +37501,7 @@ sub_020166D4: ; 0x020166D4
 	ldr r0, _0201683C ; =0x00C35FFB
 	str r0, [sp, #0xc]
 	ldr r0, _02016840 ; =0x00000151
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	blx sub_02180BDC
 	mov r1, #3
 	mov r0, #1
@@ -37611,7 +37611,7 @@ _020167BA:
 	blx r2
 _020167CA:
 	ldr r0, _02016840 ; =0x00000151
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [sp]
 	ldr r1, [sp, #0x10]
 	mov r2, #3
@@ -38589,7 +38589,7 @@ _02016E80:
 	b _02016E9A
 _02016E90:
 	ldr r0, [r4]
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 _02016E9A:
@@ -38615,7 +38615,7 @@ sub_02016EA0: ; 0x02016EA0
 	add r4, r0, #0
 	add r0, r7, #0
 	str r7, [r4]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r1, [sp]
 	add r0, r6, #0
 	blx r5
@@ -89334,11 +89334,11 @@ sub_0202D6A8: ; 0x0202D6A8
 	push {r3, r4, r5, lr}
 	ldr r5, _0202D6D0 ; =0x00000152
 	add r0, r5, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_0217CAF8
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	cmp r4, #0
 	bne _0202D6CC
 	ldr r0, _0202D6D4 ; =sub_0202D6D8

@@ -1484,7 +1484,7 @@ ovy304_21a073c: ; 0x021A073C
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	ldr r0, _021A07B4 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r6, #0
 	bl GFL_BGSysSetEnabledBGsA
@@ -1591,7 +1591,7 @@ ovy304_21a07ec: ; 0x021A07EC
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A0854 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _021A084C: .word 0x04000050

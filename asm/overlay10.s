@@ -85,7 +85,7 @@ _0214FF92:
 	cmp r0, #1
 	bne _0214FFA0
 	ldr r0, _02150284 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _0214FFA0:
 	ldr r0, [sp, #4]
 	ldr r0, [r0, #0x18]
@@ -229,7 +229,7 @@ _0215009C:
 	mov r4, #1
 	str r4, [r0, #0x10]
 	ldr r0, _02150284 ; =0x000000A7
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [sp, #4]
 	ldr r1, _02150298 ; =0x021D7448
 	str r4, [r0, #0x14]
@@ -298,7 +298,7 @@ _02150128:
 	mov r5, #0
 	str r5, [r0, #0x14]
 	ldr r0, _02150284 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [sp, #4]
 	str r5, [r0, #0x10]
 	bl sub_0200C1F0

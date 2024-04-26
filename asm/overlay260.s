@@ -12,7 +12,7 @@ ovy260_21b2f80: ; 0x021B2F80
 	add r4, r2, #0
 	add r6, r1, #0
 	add r7, r3, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r4, #8]
 	ldr r0, [r0, #8]
 	cmp r0, #0
@@ -77,7 +77,7 @@ _021B2FFC:
 _021B3006:
 	bl sub_02006280
 	ldr r0, _021B3024 ; =0x00000106
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -127,9 +127,9 @@ ovy260_21b3064: ; 0x021B3064
 	add r4, r0, #0
 	ldr r0, _021B319C ; =0x0000008B
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021B31A0 ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #0x35
 	mov r0, #1
 	mov r1, #0x57
@@ -309,9 +309,9 @@ _021B31DC:
 	mov r0, #0x57
 	bl GFL_HeapDelete
 	ldr r0, _021B3230 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021B3234 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
@@ -5237,9 +5237,9 @@ ovy260_21b57dc: ; 0x021B57DC
 	add r4, r0, #0
 	ldr r0, _021B5908 ; =0x0000008B
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021B590C ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0x57
@@ -5414,9 +5414,9 @@ _021B594E:
 	mov r0, #0x57
 	bl GFL_HeapDelete
 	ldr r0, _021B59AC ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021B59B0 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

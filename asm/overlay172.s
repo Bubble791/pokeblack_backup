@@ -86,7 +86,7 @@ ovy172_219991c: ; 0x0219991C
 	add r4, r0, #0
 	ldr r0, _02199960 ; =0x000000A8
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0x85
@@ -145,7 +145,7 @@ ovy172_2199984: ; 0x02199984
 	mov r0, #0x85
 	bl GFL_HeapDelete
 	ldr r0, _021999A4 ; =0x000000A8
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, pc}
 	.align 2, 0
@@ -638,7 +638,7 @@ _02199D66:
 	str r1, [r4, #0x5c]
 	bl sub_021EA908
 	ldr r0, _02199EF8 ; =0x0000011D
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _02199DB0:
 	ldr r0, [r4, #0x60]
 	add r0, r0, #1
@@ -651,7 +651,7 @@ _02199DB8:
 	cmp r0, #0
 	bne _02199DDC
 	ldr r0, _02199EFC ; =0x0000011E
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0x1c
 	bl sub_021F5B64
@@ -666,9 +666,9 @@ _02199DDC:
 	b _02199EF4
 _02199DDE:
 	ldr r0, _02199EF8 ; =0x0000011D
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _02199EFC ; =0x0000011E
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r4, #0x10]
 	bl sub_021EA99C
 	ldrh r5, [r4, #0x32]

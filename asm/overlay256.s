@@ -812,7 +812,7 @@ ovy256_21bbd44: ; 0x021BBD44
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r0, _021BBDCC ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r4, #0
 	bl GFL_BGSysSetEnabledBGsA
@@ -900,7 +900,7 @@ ovy256_21bbdd8: ; 0x021BBDD8
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021BBE44 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0xb
 	pop {r4, r5, r6, pc}
 	nop

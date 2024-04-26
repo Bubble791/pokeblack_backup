@@ -842,7 +842,7 @@ Overlay OVY_138
 }
 Overlay OVY_139
 {
-    After main
+    Address 0x21998c0
     Object asm/overlay139.o
 }
 Overlay OVY_140

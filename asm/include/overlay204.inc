@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -9,8 +9,8 @@
 .public GFL_TCBRemove
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public GFL_VBlankTCBAdd
 .public GFL_TCBRemove
 .public BmpWin_CreateDynamic
@@ -447,7 +447,7 @@
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public Oam_CreateSprite
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02034B64
 .public CreateGameProcManager
 .public Overlay_QueueGameProc
@@ -459,8 +459,8 @@
 .public sub_021A9E18
 .public sub_02165AE8
 .public sub_02034BC4
-.public sub_0203CE0C
-.public sub_0203CDC8
+.public GFL_OvlLoad
+.public GFL_OvlUnload
 .public CreateGameProcManager
 .public Overlay_QueueGameProc
 .public sub_0203A978
@@ -469,7 +469,7 @@
 .public sub_021A9E18
 .public sub_021A9E18
 .public sub_02165AE8
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_02017934
 .public sub_0200C838
 .public sub_02017238

@@ -126,7 +126,7 @@
 .public sub_0219CC3C
 .public sub_0219CC34
 .public ovy302_21ad7c8
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public GXx_SetMasterBrightness_
@@ -144,7 +144,7 @@
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02027780
 .public sub_0219B294
 .public sub_02027780

@@ -1517,9 +1517,9 @@ ovy327_21b68b4: ; 0x021B68B4
 	add r4, r0, #0
 	ldr r0, _021B69DC ; =0x000000C4
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021B69E0 ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #5
 	mov r0, #1
 	mov r1, #0xa3
@@ -1684,9 +1684,9 @@ ovy327_21b69f0: ; 0x021B69F0
 	mov r0, #0xa3
 	bl GFL_HeapDelete
 	ldr r0, _021B6A5C ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021B6A60 ; =0x000000C4
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	.align 2, 0

@@ -407,7 +407,7 @@
 .public Oam_SetOamAnimIndex
 .public sub_0204C56C
 .public sub_0204C378
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MIi_CpuClearFast
@@ -418,7 +418,7 @@
 .public GFL_ProcReleaseSubsystem
 .public sub_0203A2BC
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02044CFC
 .public sub_02044CFC
 .public sub_02044CFC

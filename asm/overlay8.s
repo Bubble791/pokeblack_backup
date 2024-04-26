@@ -572,9 +572,9 @@ _0214F95C:
 	b _0214FCE0
 _0214F96A:
 	ldr r0, _0214FAEC ; =0x000000AD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _0214FAF0 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r4, #0x5c]
 	ldr r0, [r0]
 	bl ovy173_21A6240
@@ -621,9 +621,9 @@ _0214F9C0:
 	ldr r0, _0214FB04 ; =0x00000172
 	strb r1, [r4, r0]
 	ldr r0, _0214FAF0 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _0214FAEC ; =0x000000AD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	b _0214FCE4
 _0214F9DC:
 	ldr r0, [sp, #0xc]
@@ -672,7 +672,7 @@ _0214FA2C:
 	add r2, r6, #0
 	bl ovy8_214F700
 	ldr r0, _0214FB10 ; =0x000000A7
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #1
 	ldr r1, _0214FB14 ; =0x021D7448
 	lsl r0, r0, #8
@@ -814,7 +814,7 @@ _0214FB58:
 	sub r1, r6, #4
 	str r0, [r4, r1]
 	ldr r0, _0214FCEC ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r4]
 	ldr r1, _0214FCF0 ; =0x0000000A
 	ldr r2, _0214FCF4 ; =0x0215039C

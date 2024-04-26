@@ -1295,7 +1295,7 @@ ovy319_219d838: ; 0x0219D838
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _0219D894 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0xeb
 	str r0, [sp]
 	ldrh r0, [r5, #4]
@@ -1349,7 +1349,7 @@ ovy319_219d8a0: ; 0x0219D8A0
 	add r0, r4, #0
 	bl GFL_HeapFree
 	ldr r0, _0219D8CC ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, pc}
 	nop
 _0219D8CC: .word 0x0000008B

@@ -10,7 +10,7 @@ ovy323_219ce80: ; 0x0219CE80
 	add r4, r0, #0
 	ldr r0, _0219CFAC ; =0x0000008B
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #6
 	mov r0, #1
 	mov r1, #0xa1
@@ -263,7 +263,7 @@ ovy323_219d05c: ; 0x0219D05C
 	add r0, r5, #0
 	bl GFL_HeapDelete
 	ldr r0, _0219D0C4 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop

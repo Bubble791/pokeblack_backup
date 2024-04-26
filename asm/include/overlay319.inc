@@ -118,7 +118,7 @@
 .public DC_FlushRange
 .public GX_LoadBG2Scr
 .public GFL_HeapFree
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapAllocate
 .public sub_0219DAD4
 .public sub_0219DF58
@@ -126,7 +126,7 @@
 .public GFL_TCBRemove
 .public sub_02199B5C
 .public GFL_HeapFree
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02199B90
 .public sub_02199C30
 .public sub_02199C08

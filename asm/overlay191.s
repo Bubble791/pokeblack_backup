@@ -10,7 +10,7 @@ ovy191_21b5420: ; 0x021B5420
 	add r4, r0, #0
 	ldr r0, _021B54C0 ; =0x000000BD
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #6
 	mov r0, #1
 	mov r1, #0x7d
@@ -360,7 +360,7 @@ ovy191_21b56d8: ; 0x021B56D8
 	mov r0, #0x7d
 	bl GFL_HeapDelete
 	ldr r0, _021B5728 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	bl sub_02005F0C
 	mov r0, #0
 	bl sub_02005E54

@@ -320,7 +320,7 @@ _021A7802:
 	pop {r4, r5, r6, pc}
 _021A7806:
 	ldr r0, _021A7870 ; =0x000000B9
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r1, r6, #0
 	bl ovy215_21a78a8
@@ -357,7 +357,7 @@ _021A7852:
 	ldr r0, [r4, #8]
 	bl sub_02029A20
 	ldr r0, _021A7870 ; =0x000000B9
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 _021A7860:
 	str r0, [r5]

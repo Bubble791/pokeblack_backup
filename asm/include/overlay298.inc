@@ -328,8 +328,8 @@
 .public sub_02046EF4
 .public sub_02045080
 .public sub_02045B7C
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public MI_CpuFill8
 .public GFL_VBlankTCBAdd
 .public sub_0219FE98
@@ -346,8 +346,8 @@
 .public sub_0219FDE4
 .public sub_0219FDE4
 .public GFL_TCBRemove
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public sub_0219FD34
 .public sub_0219FD38
 .public GFL_FontCreate
@@ -463,7 +463,7 @@
 .public sub_0204C378
 .public sub_0205FA10
 .public sub_0219FD24
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public MI_CpuFill8
 .public sub_0219FD28
 .public sub_021A08E4
@@ -482,7 +482,7 @@
 .public GFL_TCBRemove
 .public GFL_ArcToolFree
 .public sub_0219F728
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0219FD34
 .public sub_0219FD38
 .public GX_SetGraphicsMode

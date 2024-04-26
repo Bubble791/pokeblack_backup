@@ -1,7 +1,7 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203CE0C
-.public sub_0203CE0C
+.public GFL_OvlLoad
+.public GFL_OvlLoad
 .public sub_021F0948
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -19,8 +19,8 @@
 .public sub_0202AEAC
 .public sub_02021A18
 .public GFL_ProcReleaseSubsystem
-.public sub_0203CDC8
-.public sub_0203CDC8
+.public GFL_OvlUnload
+.public GFL_OvlUnload
 .public sub_021F66B0
 .public sub_021F0A20
 .public sub_021F4530

@@ -1856,7 +1856,7 @@ _0219DE4C:
 	ldr r0, _0219DEA4 ; =0x0000001E
 	mov r5, #0
 	str r5, [r4, #0x30]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r4, #0x28
 	ldrb r0, [r4]
 	cmp r0, #0
@@ -1895,7 +1895,7 @@ ovy181_219deac: ; 0x0219DEAC
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r0, _0219DEF8 ; =0x0000001E
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	mov r4, #0
 	bl CARD_SetPulledOutCallback
@@ -5653,7 +5653,7 @@ _0219FC8E:
 	cmp r0, #1
 	bne _0219FD0C
 	ldr r0, _0219FD24 ; =0x00000024
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r1, sp, #0x10
 	strh r6, [r1]
 	str r7, [sp, #0x14]
@@ -5695,7 +5695,7 @@ ovy181_219fd28: ; 0x0219FD28
 	beq _0219FD3C
 	bl sub_0218B320
 	ldr r0, _0219FDBC ; =0x00000024
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _0219FD3C:
 	ldr r0, [r4, #0x48]
 	cmp r0, #0
@@ -6710,7 +6710,7 @@ _021A04EE:
 	str r6, [r5, #0x18]
 	str r6, [r5, #0x14]
 	str r6, [r5, #0x1c]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021A05CC ; =0x021A47CC
 	ldr r1, _021A05D0 ; =0x021A08A5
 	str r6, [r0]
@@ -6790,7 +6790,7 @@ _021A058E:
 	b _021A052A
 _021A05A4:
 	ldr r0, _021A05C8 ; =0x0000001E
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	str r0, [r5, #0x20]
 	mov r0, #1

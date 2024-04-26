@@ -9,7 +9,7 @@
 .public sub_0219D168
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0204E060
 .public sub_0204E0E0
 .public sub_02199904
@@ -125,7 +125,7 @@
 .public GFL_MsgDataFree
 .public GFL_StrBufFree
 .public sub_0219B138
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8

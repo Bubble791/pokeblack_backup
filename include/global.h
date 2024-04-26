@@ -203,6 +203,13 @@ extern int sub_0203DAC8(u32*, u32*);
 
 extern void GFL_BGSysAdjustBGOriginReq(int, int, int);
 extern void GFL_BGSysScaleBGReq(int, int, int);
+extern int PokeDexSave_IsMonCaught(int, u16);
+extern int sub_0200D7F4(int, u16);
+extern int sub_0204898C(int, u16);
+extern void sub_02046DF8(int);
+extern void GFL_OvlLoad(int);
+extern void GFL_OvlUnload(int);
+extern int sub_0203D554(void);
 
 #ifndef __MWERKS__
 #define NONMATCHING

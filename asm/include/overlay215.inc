@@ -29,13 +29,13 @@
 .public Overlay_QueueGameProc
 .public sub_02009408
 .public sub_020095A0
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public Overlay_QueueGameProc
 .public sub_02029A40
 .public sub_02029A58
 .public sub_02029A48
 .public sub_02029A20
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public FreeGameProcManager
 .public GFL_ProcReleaseSubsystem
 .public sub_0203A2BC

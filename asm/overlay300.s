@@ -1630,7 +1630,7 @@ ovy300_21a090c: ; 0x021A090C
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r0, _021A09D4 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r7, #0
 	bl GFL_BGSysSetEnabledBGsA
@@ -1767,7 +1767,7 @@ _021A09FE:
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021A0A7C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0x1b
 	pop {r4, r5, r6, pc}
 	.align 2, 0

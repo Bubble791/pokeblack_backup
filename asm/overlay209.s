@@ -27,9 +27,9 @@ ovy209_21ba140: ; 0x021BA140
 	b _021BA360
 _021BA16A:
 	ldr r0, _021BA3DC ; =0x000000D3
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021BA3E0 ; =0x000000D2
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0x72
 	str r0, [sp]
 	ldr r3, _021BA3E4 ; =0x021C300C
@@ -280,7 +280,7 @@ _021BA360:
 	cmp r0, #1
 	bne _021BA36E
 	ldr r0, _021BA3E0 ; =0x000000D2
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021BA36E:
 	ldr r0, [sp, #0xc]
 	ldr r0, [r0, #8]
@@ -288,7 +288,7 @@ _021BA36E:
 	cmp r0, #1
 	bne _021BA37E
 	ldr r0, _021BA3DC ; =0x000000D3
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021BA37E:
 	ldr r0, _021BA404 ; =0x021BA4F5
 	ldr r1, [sp, #0xc]
@@ -388,14 +388,14 @@ _021BA41C:
 	cmp r0, #1
 	bne _021BA46A
 	ldr r0, _021BA4A8 ; =0x000000D3
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021BA46A:
 	ldr r0, [r4, #8]
 	ldr r0, [r0, #8]
 	cmp r0, #1
 	bne _021BA478
 	ldr r0, _021BA4AC ; =0x000000D2
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021BA478:
 	cmp r5, #0
 	bne _021BA490
@@ -405,7 +405,7 @@ _021BA478:
 	ldr r0, [r4, #8]
 	bl GFL_HeapFree
 	ldr r0, _021BA4A8 ; =0x000000D3
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021BA490:
 	add r0, r7, #0
 	bl GFL_ProcReleaseSubsystem

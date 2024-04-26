@@ -3280,7 +3280,7 @@ _02171CD8:
 	b _02171CC8
 _02171CE2:
 	ldr r0, _02171ED8 ; =0x00000045
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r5]
 	ldr r0, [r0, #8]
 	bl sub_0201736C
@@ -3493,7 +3493,7 @@ _02171E8C:
 	mov r0, #0
 	str r0, [r5, r6]
 	ldr r0, _02171ED8 ; =0x00000045
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _02171EA2:
 	mov r0, #0x11
 	b _02171D1A
@@ -3738,7 +3738,7 @@ _0217206C:
 	b _02172364
 _02172076:
 	ldr r0, _021722FC ; =0x000000A4
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r5, #0
 	bl sub_021998C0
 	b _02172258
@@ -3805,7 +3805,7 @@ _021720FA:
 	add r0, r5, #0
 	bl sub_021998C8
 	ldr r0, _021722FC ; =0x000000A4
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #8
 	b _0217237A
 _0217210A:

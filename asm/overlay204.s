@@ -10,9 +10,9 @@ ovy204_21a9b60: ; 0x021A9B60
 	add r4, r0, #0
 	ldr r0, _021A9BDC ; =0x000000CB
 	add r7, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021A9BE0 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0x34
@@ -223,9 +223,9 @@ ovy204_21a9ce4: ; 0x021A9CE4
 	mov r0, #0x34
 	bl GFL_HeapDelete
 	ldr r0, _021A9D2C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021A9D30 ; =0x000000CB
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	nop
@@ -5438,7 +5438,7 @@ _021AC608: ; jump table
 	.short _021AC750 - _021AC608 - 2 ; case 6
 _021AC616:
 	ldr r0, _021AC770 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #1
@@ -5517,7 +5517,7 @@ _021AC6BA:
 	ldr r0, [r4, #8]
 	bl sub_02034BC4
 	ldr r0, _021AC770 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r7, #0
 	add r1, r6, #0
 	bl ovy204_21a9d40
@@ -5526,7 +5526,7 @@ _021AC6BA:
 	pop {r3, r4, r5, r6, r7, pc}
 _021AC6DA:
 	ldr r0, _021AC770 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r1, r5, #0
 	mov r2, #0
@@ -5581,7 +5581,7 @@ _021AC750:
 	ldr r0, [r4, #4]
 	bl sub_02165AE8
 	ldr r0, _021AC770 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r7, #0
 	add r1, r6, #0
 	bl ovy204_21a9d40

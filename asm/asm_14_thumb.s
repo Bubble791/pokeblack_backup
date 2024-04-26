@@ -2495,7 +2495,7 @@ _0203AB3E:
 	mvn r1, r1
 	cmp r0, r1
 	beq _0203AB4C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _0203AB4C:
 	mov r0, #1
 	str r0, [r4, #8]
@@ -2543,7 +2543,7 @@ _0203AB84:
 	mvn r1, r1
 	cmp r0, r1
 	beq _0203ABA4
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _0203ABA4:
 	mov r0, #1
 	pop {r3, r4, r5, pc}
@@ -7222,8 +7222,8 @@ sub_0203CDB4: ; 0x0203CDB4
 	.align 2, 0
 	thumb_func_end sub_0203CDB4
 
-	thumb_func_start sub_0203CDC8
-sub_0203CDC8: ; 0x0203CDC8
+	thumb_func_start GFL_OvlUnload
+GFL_OvlUnload: ; 0x0203CDC8
 	push {r4, r5, r6, lr}
 	mov r1, #0
 	add r5, r0, #0
@@ -7257,10 +7257,10 @@ _0203CE04:
 	blt _0203CDEC
 _0203CE0A:
 	pop {r4, r5, r6, pc}
-	thumb_func_end sub_0203CDC8
+	thumb_func_end GFL_OvlUnload
 
-	thumb_func_start sub_0203CE0C
-sub_0203CE0C: ; 0x0203CE0C
+	thumb_func_start GFL_OvlLoad
+GFL_OvlLoad: ; 0x0203CE0C
 	push {r3, r4, r5, r6, r7, lr}
 	mov r7, #0
 	add r5, r0, #0
@@ -7337,7 +7337,7 @@ _0203CE9A:
 	.align 2, 0
 _0203CE9C: .word 0x0209A9B4
 _0203CEA0: .word 0x0209A9B8
-	thumb_func_end sub_0203CE0C
+	thumb_func_end GFL_OvlLoad
 
 	thumb_func_start sub_0203CEA4
 sub_0203CEA4: ; 0x0203CEA4

@@ -5,7 +5,7 @@
 .public MI_CpuFill8
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -21,7 +21,7 @@
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GCTX_HIDGetPressedKeys
 .public sub_0204B794
 .public GFL_ArcSysCreateFileHandle

@@ -43,7 +43,7 @@ ovy324_219ce80: ; 0x0219CE80
 	sub r1, r1, #4
 	str r0, [r4, r1]
 	ldr r0, _0219CEDC ; =0x000000A8
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -698,7 +698,7 @@ ovy324_219d418: ; 0x0219D418
 	mov r0, #0xa4
 	bl GFL_HeapDelete
 	ldr r0, _0219D430 ; =0x000000A8
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, pc}
 	nop

@@ -9,9 +9,9 @@
 .public sub_02155174
 .public sub_02011040
 .public sub_02017A04
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_0216F59C
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02155174
 .public sub_02017A04
 .public sub_02155184
@@ -119,9 +119,9 @@
 .public sub_020110AC
 .public sub_020110AC
 .public sub_020110D4
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_0216F698
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public ovy12_21548e8
 .public sub_020111B0
 .public sub_020111EC

@@ -10,7 +10,7 @@ ovy197_21b5420: ; 0x021B5420
 	add r4, r0, #0
 	ldr r0, _021B5584 ; =0x000000BD
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #0xa
 	mov r0, #1
 	mov r1, #0x1d
@@ -233,7 +233,7 @@ _021B55BC:
 	mov r0, #0
 	blx OS_ResetSystem
 	ldr r0, _021B5644 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	bl sub_02005D8C
 	mov r0, #1
 	pop {r3, r4, r5, r6, r7, pc}

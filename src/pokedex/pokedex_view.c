@@ -250,18 +250,18 @@ int ovy302_21ad0e8(PokeDexMain *a1)
     v3 = a1->inputParam;
     a1->unk38 = v2;
     v2->gameData = v3->gameData;
-    v2->unk4 = a1->inputParam->dexSave;
-    if (sub_0200D1F8(v2->unk4) == 2)
+    v2->dexSave = a1->inputParam->dexSave;
+    if (sub_0200D1F8(v2->dexSave) == 2)
         sub_0200D1E4(a1->inputParam->dexSave, 0);
     v2->unk8 = a1->unk12;
     if (!a1->unk12 && !ovy302_21ad72c(a1->inputParam->dexSave))
     {
-        v2->unkC = (int)a1->unkC.listData + 2;
+        v2->unkC.listData = &a1->unkC.listData[1];
         v2->unkA = a1->unk10 - 1;
     }
     else
     {
-        v2->unkC = (int)a1->unkC.listData;
+        v2->unkC.listData = a1->unkC.listData;
         v2->unkA = a1->unk10;
     }
     
@@ -617,8 +617,6 @@ int ovy302_21ad574(PokeDexMain *a1)
 }
 
 int ovy302_21ae210(int, int, u16**);
-extern int PokeDexSave_IsMonCaught(int, u16);
-extern int sub_0200D7F4(int, u16);
 
 int ovy302_21ad624(int a1, PokeDexListData *a2, int a3)
 {

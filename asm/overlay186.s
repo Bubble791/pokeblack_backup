@@ -7597,7 +7597,7 @@ ovy186_21ab178: ; 0x021AB178
 	add r4, r0, #0
 	ldr r0, _021AB21C ; =0x00000093
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #0xa
 	mov r0, #1
 	mov r1, #0x27
@@ -7722,7 +7722,7 @@ ovy186_21ab25c: ; 0x021AB25C
 	mov r0, #0x27
 	bl GFL_HeapDelete
 	ldr r0, _021AB2B4 ; =0x00000093
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

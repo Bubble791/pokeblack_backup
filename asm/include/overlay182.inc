@@ -7,10 +7,10 @@
 .public OS_RestoreInterrupts
 .public GFL_HeapCreateChild
 .public sub_020116C0
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public OS_ResetSystem
 .public sub_02011778
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GFL_HeapDelete
 .public sub_02012E28
 .public sub_021A6AFC

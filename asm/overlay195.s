@@ -3629,7 +3629,7 @@ ovy195_21b4d24: ; 0x021B4D24
 	add r5, #0x16
 	ldr r0, _021B4E1C ; =0x0000008B
 	str r7, [r4, r5]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
@@ -3867,7 +3867,7 @@ _021B4F72:
 	add r0, r5, #0
 	bl GFL_HeapFree
 	ldr r0, _021B4F94 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, r5, r6, pc}
 	nop
 _021B4F94: .word 0x0000008B

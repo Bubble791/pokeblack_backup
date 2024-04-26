@@ -229,13 +229,13 @@
 .public MIi_CpuCopy16
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
 .public sub_02044C98
 .public CARD_SetPulledOutCallback
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public CARD_SetPulledOutCallback
 .public GFL_HeapFree
 .public GFL_HeapFree
@@ -501,10 +501,10 @@
 .public sub_02021998
 .public TaskAppListMenu_Create
 .public sub_0202E7A4
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_0218B1F8
 .public sub_0218B320
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0202DA54
 .public sub_020256B0
 .public sub_0203580C
@@ -609,7 +609,7 @@
 .public sub_02174E58
 .public sub_021754A0
 .public sub_02175164
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_021750F0
 .public sub_0203E76C
 .public sub_0203E810
@@ -621,7 +621,7 @@
 .public sub_02175578
 .public sub_0203D2BC
 .public sub_02175164
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_020810FC
 .public sub_0203E7F8
 .public sub_0203E838

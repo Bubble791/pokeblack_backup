@@ -379,7 +379,7 @@
 .public ovy189_21a57dc
 .public ovy189_21a5768
 .public GFL_HeapAllocate
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -410,7 +410,7 @@
 .public sub_02044C98
 .public sub_02044528
 .public GFL_HeapFree
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0204476C
 .public sub_02044C98
 .public GFL_BGSysLoadScr
@@ -1023,7 +1023,7 @@
 .public sub_02010078
 .public GFL_HeapFree
 .public sub_02037A68
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -1067,7 +1067,7 @@
 .public sub_02152040
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_020504DC
 .public GFL_HeapAllocate
 .public BmpWin_InitAllocator
@@ -1182,7 +1182,7 @@
 .public BmpWin_Free
 .public sub_02045B7C
 .public GFL_HeapAllocate
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -1210,7 +1210,7 @@
 .public sub_02044C98
 .public sub_02044528
 .public GFL_HeapFree
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0204476C
 .public sub_02044C98
 .public GFL_BGSysLoadScr
@@ -1325,7 +1325,7 @@
 .public sub_021B8FAC
 .public sub_0219D124
 .public sub_0219D1F0
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public sub_02017934
@@ -1355,4 +1355,4 @@
 .public sub_02042788
 .public sub_02152040
 .public GFL_ProcReleaseSubsystem
-.public sub_0203CDC8
+.public GFL_OvlUnload

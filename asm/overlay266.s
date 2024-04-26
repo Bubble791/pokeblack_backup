@@ -84,7 +84,7 @@ ovy266_219cf04: ; 0x0219CF04
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r0, _0219CF90 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r7, #0
 	bl GFL_BGSysSetEnabledBGsA
@@ -205,7 +205,7 @@ _0219CFD8:
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _0219D03C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #6
 	pop {r4, r5, r6, pc}
 	nop

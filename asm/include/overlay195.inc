@@ -375,7 +375,7 @@
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
 .public GFL_HeapAllocate
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -423,7 +423,7 @@
 .public sub_02044B84
 .public sub_02044528
 .public GFL_HeapFree
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0204476C
 .public sub_02045708
 .public GFL_BGSysLoadScr

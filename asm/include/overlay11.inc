@@ -130,9 +130,9 @@
 .public sub_02042EA4
 .public sub_02042E84
 .public sub_02042D94
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_021998C0
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_0203CB80
 .public sub_0203CB80
 .public sub_0203CB80

@@ -103,7 +103,7 @@ _021C2614:
 	add r0, #8
 	bl sub_021998C8
 	ldr r0, _021C2644 ; =0x000000A4
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r6, #0xe0
 	ldr r0, [r6]
 	bl FreeGameProcManager
@@ -241,7 +241,7 @@ _021C2726: ; jump table
 	.short _021C27CC - _021C2726 - 2 ; case 5
 _021C2732:
 	ldr r0, _021C2808 ; =0x000000A5
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xe0
 	mov r1, #0
@@ -266,7 +266,7 @@ _021C2752:
 	b _021C274E
 _021C2764:
 	ldr r0, _021C2808 ; =0x000000A5
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r4, #0x58]
 	cmp r0, #1
 	bne _021C277C
@@ -281,7 +281,7 @@ _021C277C:
 	pop {r4, r5, r6, pc}
 _021C2780:
 	ldr r0, _021C2810 ; =0x000000CF
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	add r0, #0xe0
 	mov r1, #0
@@ -319,7 +319,7 @@ _021C27BA:
 	b _021C274E
 _021C27CC:
 	ldr r0, _021C2810 ; =0x000000CF
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r4, #0
 	add r0, #0x7b
 	ldrb r0, [r0]
@@ -474,7 +474,7 @@ _021C28E2:
 	strh r0, [r1]
 _021C28EE:
 	ldr r0, _021C28FC ; =0x000000A4
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	bl sub_021998C0
 	pop {r3, r4, r5, r6, r7, pc}
@@ -714,11 +714,11 @@ _021C2AA4:
 	b _021C2A8C
 _021C2AA6:
 	ldr r0, _021C2B58 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021C2B5C ; =0x000000BD
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021C2B60 ; =0x00000104
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r1, [r6]
 	ldr r0, [r6, #0x14]
 	ldr r1, [r1]
@@ -771,11 +771,11 @@ _021C2B1A:
 	mov r0, #0
 	str r0, [r5]
 	ldr r0, _021C2B60 ; =0x00000104
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021C2B5C ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021C2B58 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	b _021C2AA4
 _021C2B38:
 	bl sub_02040440
@@ -807,11 +807,11 @@ ovy263_21c2b64: ; 0x021C2B64
 	beq _021C2B82
 	bl sub_021B8DA4
 	ldr r0, _021C2B84 ; =0x00000104
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021C2B88 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021C2B8C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021C2B82:
 	pop {r3, pc}
 	.align 2, 0
@@ -827,7 +827,7 @@ ovy263_21c2b90: ; 0x021C2B90
 	ldr r0, _021C2BAC ; =0x00000105
 	add r4, r1, #0
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r4]
 	add r1, r6, #0
 	ldr r0, [r0]
@@ -920,7 +920,7 @@ ovy263_21c2c3c: ; 0x021C2C3C
 	ldr r0, [r0]
 	bl sub_0217A2C8
 	ldr r0, _021C2C4C ; =0x00000105
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, pc}
 	.align 2, 0
 _021C2C4C: .word 0x00000105

@@ -124,7 +124,7 @@ _021EFF08:
 	b _021EFF4E
 _021EFF48:
 	ldr r0, _021EFFCC ; =0x000000C9
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 _021EFF4E:
 	bl sub_02042788
 	cmp r0, #0
@@ -222,7 +222,7 @@ _021F000C:
 	b _021F001E
 _021F0018:
 	ldr r0, _021F0084 ; =0x000000C9
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _021F001E:
 	ldr r0, [r4, #0x10]
 	ldr r1, [r4, #4]
@@ -13029,7 +13029,7 @@ ovy271_21f6224: ; 0x021F6224
 	ldr r0, _021F62D4 ; =0x000000C9
 	str r1, [sp, #4]
 	add r7, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r5, _021F62D8 ; =0x000005E4
 	mov r0, #0x97
 	str r0, [sp]
@@ -13140,7 +13140,7 @@ _021F6332:
 	add r0, r5, #0
 	bl GFL_HeapFree
 	ldr r0, _021F6344 ; =0x000000C9
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021F6340: .word 0x000005AC

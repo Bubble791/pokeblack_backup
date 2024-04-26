@@ -823,7 +823,7 @@ ovy290_21fbe2c: ; 0x021FBE2C
 	bl sub_02017C60
 	str r0, [r4, #4]
 	ldr r0, _021FC178 ; =0x000000A7
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r1, [r5, #0x1c]
 	sub r0, r1, #2
 	cmp r0, #1
@@ -1148,7 +1148,7 @@ _021FC156:
 	add r1, r6, #0
 	bl sub_020186B0
 	ldr r0, _021FC178 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	cmp r7, #0
 	beq _021FC16E
 	ldr r0, [sp, #0x10]
@@ -1779,7 +1779,7 @@ ovy290_21fc5f0: ; 0x021FC5F0
 	blx MI_CpuFill8
 	ldr r7, _021FC664 ; =0x000000A7
 	add r0, r7, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	add r0, r4, #0
 	bl sub_02017C94
 	ldr r1, [r6, #4]
@@ -1787,7 +1787,7 @@ ovy290_21fc5f0: ; 0x021FC5F0
 	add r2, r5, #0
 	bl sub_02018540
 	add r0, r7, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	bl sub_0200C1F0
 	add r0, r4, #0
 	mov r1, #0
@@ -1795,7 +1795,7 @@ ovy290_21fc5f0: ; 0x021FC5F0
 	bl sub_021E98A8
 	bl sub_0200C200
 	add r0, r7, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_02005D8C
 	ldrh r0, [r4, #0x18]
 	ldr r1, _021FC668 ; =0x0000FFFF
@@ -1822,7 +1822,7 @@ ovy290_21fc66c: ; 0x021FC66C
 	add r0, r4, #0
 	bl GFL_HeapFree
 	ldr r0, _021FC69C ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	add r0, r5, #0
 	mov r1, #0
 	bl sub_021FCB40
@@ -2499,7 +2499,7 @@ ovy290_21fcb88: ; 0x021FCB88
 	cmp r0, #0
 	beq _021FCB9E
 	ldr r0, _021FCBC8 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #0
 	str r0, [r4, #8]
 _021FCB9E:
@@ -2591,7 +2591,7 @@ _021FCC42:
 	b _021FCF16
 _021FCC48:
 	ldr r0, _021FCEF4 ; =0x000000A7
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [sp, #4]
 	mov r5, #1
 	str r5, [r0, #8]
@@ -2667,7 +2667,7 @@ _021FCCC8:
 	mov r5, #0
 	str r5, [r0, #0xc]
 	ldr r0, _021FCEF4 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [sp, #4]
 	mov r1, #9
 	str r5, [r0, #8]
@@ -2697,7 +2697,7 @@ _021FCCF8:
 	mov r5, #0
 	str r5, [r0, #0xc]
 	ldr r0, _021FCEF4 ; =0x000000A7
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [sp, #4]
 	mov r1, #9
 	str r5, [r0, #8]

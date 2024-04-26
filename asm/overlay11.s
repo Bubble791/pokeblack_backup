@@ -3750,10 +3750,10 @@ ovy11_2152078: ; 0x02152078
 	bne _02152098
 	ldr r4, _0215209C ; =0x00000020
 	add r0, r4, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	bl sub_021998C0
 	add r0, r4, #0
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 _02152098:
 	pop {r4, pc}
 	nop

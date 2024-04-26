@@ -1,6 +1,6 @@
 #include <nitro/fs/overlay.h>
 #pragma once
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_HeapCreateChild
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
@@ -16,7 +16,7 @@
 .public GFL_TCBExMgrFree
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GFL_FadeScreenIsFinished
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenSet

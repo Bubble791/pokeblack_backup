@@ -245,7 +245,7 @@
 .public sub_0217CA1C
 .public sub_02016D68
 .public sub_020193A4
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_0201736C
 .public sub_0217C940
 .public sub_02040440
@@ -274,7 +274,7 @@
 .public sub_02005E08
 .public sub_02005EC0
 .public sub_0217C9C0
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_02019494
 .public sub_021B878C
 .public sub_02040440
@@ -288,7 +288,7 @@
 .public sub_02042A6C
 .public sub_021998D4
 .public sub_020193A4
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public sub_021998C0
 .public sub_02016A98
 .public sub_02016AD4
@@ -298,7 +298,7 @@
 .public sub_0200D1AC
 .public sub_02016AD4
 .public sub_021998C8
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public sub_020120C8
 .public sub_0203CB94
 .public sub_0203CB94

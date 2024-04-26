@@ -14845,7 +14845,7 @@ ovy255_21c2908: ; 0x021C2908
 	sub sp, #4
 	add r5, r0, #0
 	ldr r0, _021C2A00 ; =0x0000008B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r4, #0
 	bl GFL_BGSysSetEnabledBGsA
@@ -14990,7 +14990,7 @@ ovy255_21c2a18: ; 0x021C2A18
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsB
 	ldr r0, _021C2AA4 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, [r4, #0x28]
 	pop {r4, pc}
 	nop
@@ -48973,7 +48973,7 @@ ovy255_21d3b64: ; 0x021D3B64
 	add r4, r0, #0
 	ldr r0, _021D3C8C ; =0x0000008B
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #3
 	mov r0, #1
 	mov r1, #0x98
@@ -49131,7 +49131,7 @@ ovy255_21d3c90: ; 0x021D3C90
 	add r0, r5, #0
 	bl GFL_HeapDelete
 	ldr r0, _021D3CFC ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	.align 2, 0

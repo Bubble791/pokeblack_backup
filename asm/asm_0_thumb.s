@@ -163,9 +163,9 @@ sub_02005258: ; 0x02005258
 sub_02005264: ; 0x02005264
 	push {r4, lr}
 	ldr r0, _0200530C ; =0x0000000C
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _02005310 ; =0x0000001B
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	mov r4, #0
 	bl sub_02021974

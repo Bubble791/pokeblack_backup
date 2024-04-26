@@ -81,7 +81,7 @@
 .public sub_02007534
 .public GFL_StrBufFree
 .public GFL_StrBufFree
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
 .public sub_02046DF8
@@ -93,7 +93,7 @@
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public PrintSystem_IsTextPrintActiveEnd
 .public GFL_FadeScreenIsFinished
 .public sub_021BCF4C

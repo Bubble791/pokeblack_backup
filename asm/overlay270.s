@@ -10,9 +10,9 @@ ovy270_21ef1e0: ; 0x021EF1E0
 	add r4, r0, #0
 	ldr r0, _021EF274 ; =0x000000D1
 	add r6, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, _021EF278 ; =0x000000D2
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldr r0, [r6, #0x10]
 	bl sub_021F0948
 	add r2, r0, #0
@@ -118,9 +118,9 @@ _021EF2C8:
 	add r0, r6, #0
 	bl GFL_ProcReleaseSubsystem
 	ldr r0, _021EF2FC ; =0x000000D1
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	ldr r0, _021EF300 ; =0x000000D2
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r4, r5, r6, pc}
 	nop

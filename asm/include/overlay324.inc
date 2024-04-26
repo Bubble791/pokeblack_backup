@@ -4,7 +4,7 @@
 .public GFL_ProcInitSubsystem
 .public MI_CpuFill8
 .public MyStatus_GetTrainerGender
-.public sub_0203CE0C
+.public GFL_OvlLoad
 .public GCTX_HIDGetPressedKeys
 .public sub_02044C98
 .public sub_0219E3DC
@@ -51,7 +51,7 @@
 .public sub_0202A6F0
 .public GFL_ProcReleaseSubsystem
 .public GFL_HeapDelete
-.public sub_0203CDC8
+.public GFL_OvlUnload
 .public GXx_SetMasterBrightness_
 .public GXx_SetMasterBrightness_
 .public GFL_BGSysSetEnabledBGsA

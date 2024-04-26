@@ -3492,7 +3492,7 @@ ovy199_21b4b48: ; 0x021B4B48
 	ldr r7, _021B4BFC ; =0x000043C8
 	ldr r0, _021B4C00 ; =0x0000008B
 	strh r6, [r4, r7]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
@@ -3665,7 +3665,7 @@ _021B4CB6:
 	add r0, r5, #0
 	bl GFL_HeapFree
 	ldr r0, _021B4D00 ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 _021B4D00: .word 0x0000008B
@@ -9874,7 +9874,7 @@ ovy199_21b7f34: ; 0x021B7F34
 	add r4, r0, #0
 	ldr r0, _021B80A4 ; =0x000000BD
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r2, #0x22
 	mov r0, #1
 	mov r1, #0x62
@@ -10221,7 +10221,7 @@ _021B821C:
 	mov r0, #0x62
 	bl GFL_HeapDelete
 	ldr r0, _021B8234 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
@@ -11047,7 +11047,7 @@ ovy199_21b88d0: ; 0x021B88D0
 	ldr r4, _021B8970 ; =0x000009E4
 	ldr r0, _021B8974 ; =0x0000008B
 	strh r6, [r5, r4]
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	mov r0, #0
 	bl GFL_BGSysSetEnabledBGsA
 	mov r0, #0
@@ -11202,7 +11202,7 @@ _021B8A04:
 	add r0, r5, #0
 	bl GFL_HeapFree
 	ldr r0, _021B8A5C ; =0x0000008B
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	pop {r4, r5, r6, pc}
 	.align 2, 0
 _021B8A54: .word 0x00000988
@@ -12406,7 +12406,7 @@ ovy199_21b93f0: ; 0x021B93F0
 	add r4, r0, #0
 	ldr r0, _021B94A4 ; =0x000000BD
 	add r5, r2, #0
-	bl sub_0203CE0C
+	bl GFL_OvlLoad
 	ldrh r2, [r5, #8]
 	add r0, r4, #0
 	mov r1, #0x74
@@ -12597,7 +12597,7 @@ _021B9596:
 	add r0, r5, #0
 	bl GFL_ProcReleaseSubsystem
 	ldr r0, _021B95A8 ; =0x000000BD
-	bl sub_0203CDC8
+	bl GFL_OvlUnload
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 	nop
