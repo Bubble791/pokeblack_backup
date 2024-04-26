@@ -50,6 +50,12 @@ typedef struct
     u32 Mosaic;
 } BGSetup;
 
+typedef struct
+{
+    u8 unk0[0x3FF8];
+    int unk3FF8;
+}UnknowOffset;
+
 extern void *GFL_HeapAllocate(int, int, int, char*, int line);
 
 extern void* Item_ArcHandleCreate(int);
@@ -163,6 +169,40 @@ extern void FreeGameProcManager(int);
 extern void GFL_ProcReleaseSubsystem(int);
 extern void GFL_HeapDelete(int);
 extern void Overlay_QueueGameProc(int manger, int ovyId, int funcTbl, void *data);
+
+extern void GFL_FadeScreenSet(int, int, int, int, int, int, u16);
+extern int GFL_FadeScreenIsFinished(void);
+extern void GFL_BGSysMoveBGReq(int, int, int);
+extern int sub_02045A5C(int);
+extern void sub_0204B7C8(void);
+extern void sub_020275F8(int);
+extern void sub_020450CC(int, int, int, int);
+extern void sub_02045790(int, int);
+extern int MyStatus_GetTrainerGender(void*);
+extern int Oam_LoadNCLRFile(void*, int, int, int, int, int, u16); 
+extern void sub_0204ADA8(void*, int, int, int, int, int, int);
+extern void sub_0204AF50(void*, int, int, int, int, int, int);
+extern int sub_0202D824(void);
+extern int sub_0202D820(void);
+extern void sub_0204566C(int, int, int, int, int, int);
+extern int sub_0202D828(void);
+extern void sub_020504F0(int);
+extern void sub_0203D564(int);
+extern void sub_02035198(int);
+extern int PrintSystem_IsTextPrintActiveEnd(int);
+extern int sub_0203DA2C(void);
+extern void sub_0203DEB4(int, int);
+extern int Item_GetItemParam(u16, int, u16);
+extern void LoadItemNameToStrbuf(int , int, int);
+extern void LoadBagPocketNameToStrbuf(int , int, int);
+extern int sub_0203DA84(u32*, u32*);
+extern int sub_0203DA48(void);
+extern int sub_020355B8(int, int, int, int, int);
+extern void GFL_SndSEPlay(int);
+extern int sub_0203DAC8(u32*, u32*);
+
+extern void sub_02045EA0(int, int, int);
+extern void sub_02045E74(int, int, int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

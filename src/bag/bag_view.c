@@ -2580,7 +2580,6 @@ void BagMenu_ButtonManCallBack(u32 hitIndex, int a2, BagView *bagView)
 void ovy142_219c38c(int a1, BagView *bagView)
 {
     int v3; // r0
-    int v4; // r0
 
     v3 = bagView->unk894;
     if (v3 == 1)
@@ -2593,8 +2592,8 @@ void ovy142_219c38c(int a1, BagView *bagView)
         ovy142_219dd84(bagView, 0);
         bagView->unk894 = 0;
     }
-    v4 = sub_020275F8(bagView->unk8A8);
-    sub_0204B7C8(v4);
+    sub_020275F8(bagView->unk8A8);
+    sub_0204B7C8();
 }
 
 

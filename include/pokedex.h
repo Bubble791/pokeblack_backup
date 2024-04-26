@@ -22,7 +22,7 @@ typedef struct
 {
     /*0x0*/ void *gameData;
     /*0x4*/ int unk4;
-    /*0x8*/ u16 *unk8;
+    /*0x8*/ u8 *unk8;
     /*0xC*/ int unkC;
     /*0x10*/ int unk10;
     /*0x14*/ u16 unk14;
@@ -82,18 +82,16 @@ typedef struct
     /*0x12*/ u16 unk12;
     /*0x14*/ void *unk14;
     /*0x18*/ u16 unk18;
-    /*0x1A*/ u16 unk1A;
-    /*0x1C*/ int unk1C;
-    /*0x20*/ int unk20;
+    /*0x1A*/ u8 unk1A[10];
     /*0x24*/ int unk24;
     /*0x28*/ int unk28;
     /*0x2C*/ int unk2C;
     /*0x30*/ int unk30;
     /*0x34*/ int unk34;
     /*0x38*/ void *unk38;
-} PokeDexStartView;
+} PokeDexMain;
 
-typedef int (*DexViewFunc)(PokeDexStartView *);
+typedef int (*DexViewFunc)(PokeDexMain *);
 
 typedef struct
 {

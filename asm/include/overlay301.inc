@@ -73,7 +73,7 @@
 .public sub_02046DF8
 .public sub_02042BA8
 .public GFL_BGSysSetBGEnabledB
-.public sub_021AD78C
+.public ovy302_21ad78c
 .public sub_0219FC8C
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB
@@ -85,10 +85,10 @@
 .public sub_0203D564
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
-.public sub_021AD7A8
+.public ovy302_21ad7a8
 .public GCTX_HIDGetPressedKeys
 .public sub_0203D564
-.public sub_021AD7A8
+.public ovy302_21ad7a8
 .public GFL_SndSEPlay
 .public GFL_BGSysMoveBGReq
 .public GFL_BGSysMoveBGReq

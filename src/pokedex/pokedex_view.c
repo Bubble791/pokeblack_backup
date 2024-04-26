@@ -11,47 +11,50 @@ FS_EXTERN_OVERLAY(OVY_303);
 FS_EXTERN_OVERLAY(OVY_304);
 
 int ovy302_21ad624(int, PokeDexListData*, int);
-int ovy302_21ad6d0(int, u16*, int);
-int ovy302_21ad764(int, u16*);
+void ovy302_21ad6d0(int, u16*, u16);
+void ovy302_21ad764(int, u8*);
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4);
 int ovy302_21acfc8(int a1, int a2, void *a3, void *a4);
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4);
-void ovy302_21ad01c(PokeDexStartView*);
-void ovy302_21ad030(PokeDexStartView*);
-int sub_021AD044(PokeDexStartView *a1, int a2);
-int sub_21AD04C(PokeDexStartView *a1);
-int ovy302_21ad05c(PokeDexStartView *a1);
-int ovy302_21ad0a8(PokeDexStartView *a1);
-int ovy302_21ad0e8(PokeDexStartView *a1);
+void ovy302_21ad01c(PokeDexMain*);
+void ovy302_21ad030(PokeDexMain*);
+int sub_021AD044(PokeDexMain *a1, int a2);
+int sub_21AD04C(PokeDexMain *a1);
+int ovy302_21ad05c(PokeDexMain *a1);
+int ovy302_21ad0a8(PokeDexMain *a1);
+int ovy302_21ad0e8(PokeDexMain *a1);
 int ovy302_21ad72c(int);
-int ovy302_21ad174(PokeDexStartView *a1);
-int ovy302_21ad214(PokeDexStartView *a1);
-int ovy302_21ad268(PokeDexStartView *a1);
-int ovy302_21ad2d4(PokeDexStartView *a1);
-int ovy302_21ad368(PokeDexStartView *a1);
-int ovy302_21ad3f4(PokeDexStartView *a1);
-int ovy302_21ad484(PokeDexStartView *a1);
-int ovy302_21ad4fc(PokeDexStartView *a1);
-int ovy302_21ad574(PokeDexStartView *a1);
+int ovy302_21ad174(PokeDexMain *a1);
+int ovy302_21ad214(PokeDexMain *a1);
+int ovy302_21ad268(PokeDexMain *a1);
+int ovy302_21ad2d4(PokeDexMain *a1);
+int ovy302_21ad368(PokeDexMain *a1);
+int ovy302_21ad3f4(PokeDexMain *a1);
+int ovy302_21ad484(PokeDexMain *a1);
+int ovy302_21ad4fc(PokeDexMain *a1);
+int ovy302_21ad574(PokeDexMain *a1);
+void ovy302_21ad78c(u16 a1);
+void ovy302_21ad7a8(u16 a1);
+void ovy302_21ad7c8(int result, int a2, int *a3);
 
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
 {
-    PokeDexStartView *v5; // r5
+    PokeDexMain *v5; // r5
     void *v6;               // r0
     int v7;               // r4
     int v8;               // r0
     int v9;
 
     GFL_HeapCreateChild(1, 105, 0x10000);
-    v5 = (PokeDexStartView *)GFL_ProcInitSubsystem(a1, sizeof(PokeDexStartView), 105);
-    MI_CpuFill8(v5, 0, sizeof(PokeDexStartView));
+    v5 = (PokeDexMain *)GFL_ProcInitSubsystem(a1, sizeof(PokeDexMain), 105);
+    MI_CpuFill8(v5, 0, sizeof(PokeDexMain));
 
     v5->inputParam = (PokeDexParamInput *)a3;
     v5->unk4 = CreateGameProcManager(105);
     v5->unk10 = ovy302_21ad624(v5->inputParam->dexSave, &v5->unkC, 105);
     v5->unk12 = 0;
     ovy302_21ad6d0(v5->inputParam->dexSave, v5->unkC.listData, v5->unk10);
-    ovy302_21ad764(v5->inputParam->dexSave, &v5->unk1A);
+    ovy302_21ad764(v5->inputParam->dexSave, v5->unk1A);
     v6 = sub_02017934(v5->inputParam->gameData);
     v7 = sub_02010CB8(v6);
     v8 = sub_02034F6C();
@@ -129,7 +132,7 @@ int ovy302_21acfc8(int a1, int a2, void *a3, void *a4)
 {
     int v6; // r0
     int v7; // r1
-    PokeDexStartView *dexView = (PokeDexStartView *)a4;
+    PokeDexMain *dexView = (PokeDexMain *)a4;
 
     if (dexView->unk24 == 13)
         return 1;
@@ -142,7 +145,7 @@ int ovy302_21acfc8(int a1, int a2, void *a3, void *a4)
 
 int ovy302_21acff4(int a1, int a2, void *a3, void *a4)
 {
-    PokeDexStartView *dexView = (PokeDexStartView *)a4;
+    PokeDexMain *dexView = (PokeDexMain *)a4;
 
     ovy302_21ad01c(dexView);
     ovy302_21ad030(dexView);
@@ -152,7 +155,7 @@ int ovy302_21acff4(int a1, int a2, void *a3, void *a4)
     return 1;
 }
 
-void ovy302_21ad01c(PokeDexStartView *a1)
+void ovy302_21ad01c(PokeDexMain *a1)
 {
     void *result; // r0
 
@@ -164,7 +167,7 @@ void ovy302_21ad01c(PokeDexStartView *a1)
     }
 }
 
-void ovy302_21ad030(PokeDexStartView *a1)
+void ovy302_21ad030(PokeDexMain *a1)
 {
     void *result; // r0
 
@@ -176,13 +179,13 @@ void ovy302_21ad030(PokeDexStartView *a1)
     }
 }
 
-int sub_021AD044(PokeDexStartView *a1, int a2)
+int sub_021AD044(PokeDexMain *a1, int a2)
 {
     a1->unk28 = a2;
     return 0;
 }
 
-int sub_21AD04C(PokeDexStartView *a1)
+int sub_21AD04C(PokeDexMain *a1) // 等待程序运行结束
 {
     if (a1->unk8 != 1)
         return a1->unk28;
@@ -192,7 +195,7 @@ int sub_21AD04C(PokeDexStartView *a1)
 
 const char data_021AE5A0[] = ("zukan_search_engine.c");
 
-int ovy302_21ad05c(PokeDexStartView *a1)
+int ovy302_21ad05c(PokeDexMain *a1)
 {
     PokeDexSeacherEngine_TYPE1 *v2; // r0
     PokeDexParamInput *v3; // r1
@@ -206,7 +209,7 @@ int ovy302_21ad05c(PokeDexStartView *a1)
     return sub_021AD044(a1, 2);
 }
 
-int ovy302_21ad0a8(PokeDexStartView *a1)
+int ovy302_21ad0a8(PokeDexMain *a1)
 {
     int v1;
     PokeDexSeacherEngine_TYPE1 *seacher = (PokeDexSeacherEngine_TYPE1*)a1->unk38;
@@ -235,7 +238,7 @@ int ovy302_21ad0a8(PokeDexStartView *a1)
 
 extern void sub_0200D1E4(int, int);
 
-int ovy302_21ad0e8(PokeDexStartView *a1)
+int ovy302_21ad0e8(PokeDexMain *a1)
 {
     PokeDexSeacherEngine_TYPE2 *v2;     // r4
     PokeDexParamInput *v3; // r0
@@ -263,7 +266,7 @@ int ovy302_21ad0e8(PokeDexStartView *a1)
     return sub_021AD044(a1, 4);
 }
 
-int ovy302_21ad174(PokeDexStartView *a1)
+int ovy302_21ad174(PokeDexMain *a1)
 {
     int r5;
     PokeDexSeacherEngine_TYPE2 *seacher = (PokeDexSeacherEngine_TYPE2*)a1->unk38;
@@ -318,7 +321,7 @@ int ovy302_21ad174(PokeDexStartView *a1)
     return r5;
 }
 
-int ovy302_21ad214(PokeDexStartView *a1)
+int ovy302_21ad214(PokeDexMain *a1)
 {
     PokeDexSeacherEngine_TYPE3 *v2;     // r0
     PokeDexParamInput *v3; // r1
@@ -328,14 +331,14 @@ int ovy302_21ad214(PokeDexStartView *a1)
     a1->unk38 = v2;
     v2->gameData = v3->gameData;
     v2->unk4 = a1->inputParam->dexSave;
-    v2->unk8 = &a1->unk1A;
+    v2->unk8 = a1->unk1A;
     v2->unk10 = 0;
     v2->unk14 = 0;
     Overlay_QueueGameProc(a1->unk4, FS_OVERLAY_ID(OVY_300), 0x021A4094, a1->unk38);
     return sub_021AD044(a1, 8);
 }
 
-int ovy302_21ad268(PokeDexStartView *a1)
+int ovy302_21ad268(PokeDexMain *a1)
 {
     int v5; // r4
 
@@ -371,7 +374,7 @@ int ovy302_21ad268(PokeDexStartView *a1)
 extern int GameData_GetPokedex(void* gameData);
 extern int sub_0200D214(int);
 
-int ovy302_21ad2d4(PokeDexStartView *a1)
+int ovy302_21ad2d4(PokeDexMain *a1)
 {
     int v2;                         // r0
     int v3;                         // r6
@@ -411,7 +414,7 @@ int ovy302_21ad2d4(PokeDexStartView *a1)
 
 extern void sub_0200D200(int, u16);
 
-int ovy302_21ad368(PokeDexStartView *a1)
+int ovy302_21ad368(PokeDexMain *a1)
 {
     PokeDexSeacherEngine_TYPE4 *v4; // r6
     int v1;                         // r4
@@ -461,7 +464,7 @@ int ovy302_21ad368(PokeDexStartView *a1)
 
 void ovy302_21ad8e0(int, PokeDexSeacherEngine_TYPE5*, int);
 
-int ovy302_21ad3f4(PokeDexStartView *a1)
+int ovy302_21ad3f4(PokeDexMain *a1)
 {
     void *v2;     // r0
     int v3;     // r6
@@ -492,7 +495,7 @@ int ovy302_21ad3f4(PokeDexStartView *a1)
 }
 
 int ovy302_21ad80c(int, int, void*, int);
-int ovy302_21ad484(PokeDexStartView *a1)
+int ovy302_21ad484(PokeDexMain *a1)
 {
     int v3;
     int v5; // r0
@@ -542,7 +545,7 @@ int ovy302_21ad484(PokeDexStartView *a1)
 
 void ovy302_21adae8(int, PokeDexSeacherEngine_TYPE6*);
 
-int ovy302_21ad4fc(PokeDexStartView *a1)
+int ovy302_21ad4fc(PokeDexMain *a1)
 {
     void *v2;     // r0
     int v3;     // r6
@@ -561,7 +564,7 @@ int ovy302_21ad4fc(PokeDexStartView *a1)
     return sub_021AD044(a1, 12);
 }
 
-int ovy302_21ad574(PokeDexStartView *a1)
+int ovy302_21ad574(PokeDexMain *a1)
 {
     int r5;
     PokeDexSeacherEngine_TYPE6 *seacher = (PokeDexSeacherEngine_TYPE6 *)a1->unk38;
@@ -616,17 +619,17 @@ extern int sub_0200D7F4(int, u16);
 
 int ovy302_21ad624(int a1, PokeDexListData *a2, int a3)
 {
-    int v6;
+    int numDex;
     u32 v7;
     u16 i;
     u16 *v11;
 
     if (sub_0200D1F8(a1) == 1)
-        v6 = ovy302_21ae210(0, a3, &v11);
+        numDex = ovy302_21ae210(0, a3, &v11);
     else
-        v6 = ovy302_21ae210(1, a3, &v11);
+        numDex = ovy302_21ae210(1, a3, &v11);
     v7 = 0;
-    for (i = 0; v7 < v6; ++v7)
+    for (i = 0; v7 < numDex; ++v7)
     {
         if (PokeDexSave_IsMonCaught(a1, v11[v7]) == 1 || sub_0200D7F4(a1, v11[v7]) == 1)
         {
@@ -635,4 +638,116 @@ int ovy302_21ad624(int a1, PokeDexListData *a2, int a3)
     }
     a2->listData = v11;
     return i;
+}
+
+int ovy302_21ad688(int a1, u8 *a2, int a3, int a4, int a5);
+
+asm int ovy302_21ad688(int a1, u8 *a2, int a3, int a4, int a5)
+{
+	push {r3, r4, r5, r6, r7, lr}
+	add r5, r1, #0
+	ldrh r1, [r5]
+	add r7, r0, #0
+	add r4, r2, #0
+	add r6, r3, #0
+	bl PokeDexSave_IsMonCaught
+	cmp r0, #1
+	beq _021AD6A8
+	ldrh r1, [r5]
+	add r0, r7, #0
+	bl sub_0200D7F4
+	cmp r0, #1
+	bne _021AD6CC
+_021AD6A8:
+	ldr r0, [sp, #0x18]
+	cmp r0, #1
+	bne _021AD6C0
+	lsl r0, r6, #1
+	add r0, r6, r0
+	add r0, r5, r0
+	add r0, r0, r4
+	ldrb r0, [r0, #2]
+	cmp r0, #1
+	bne _021AD6CC
+	mov r0, #1
+	pop {r3, r4, r5, r6, r7, pc}
+_021AD6C0:
+	add r0, r5, r4
+	ldrb r0, [r0, #2]
+	cmp r0, #1
+	bne _021AD6CC
+	mov r0, #1
+	pop {r3, r4, r5, r6, r7, pc}
+_021AD6CC:
+	mov r0, #0
+	pop {r3, r4, r5, r6, r7, pc}
+}
+
+void ovy302_21ad6d0(int dexSave, u16 *a2, u16 a3)
+{
+    u16 v4;         // r6
+    u16 i; // r4
+
+    int v9;         // [sp+8h] [bp-20h]
+
+    v4 = 0xFFFF;
+    v9 = sub_0200D214(dexSave);
+    for (i = 0; i < a3; i++)
+    {
+        if (sub_0200D7F4(dexSave, a2[i]) == 1)
+        {
+            if (v9 == a2[i])
+                return;
+            if (v4 == 0xFFFF)
+                v4 = a2[i];
+        }
+    }
+
+    if (v4 != 0xFFFF)
+        sub_0200D200(dexSave, v4);
+}
+
+int ovy302_21ad72c(int a1)
+{
+    if (sub_0200D1F8(a1) == 1)
+        return 1;
+    return PokeDexSave_IsMonCaught(a1, 494) == 1 || sub_0200D7F4(a1, 494) == 1;
+}
+
+void ovy302_21ad764(int a1, u8 *a2)
+{
+    if (sub_0200D1F8(a1) == 1)
+        a2[0] = 0;
+    else
+        a2[0] = 1;
+    a2[1] = 0;
+    a2[2] = -1;
+    a2[3] = -1;
+    a2[4] = -1;
+    a2[5] = -1;
+    a2[6] = -1;
+}
+
+void ovy302_21ad78c(u16 a1)
+{
+    GFL_FadeScreenSet(0, 1, 1, 0, 6, 1, a1);
+}
+
+void ovy302_21ad7a8(u16 a1)
+{
+    GFL_FadeScreenSet(0, 0, 0, 0, 6, 1, a1);
+}
+
+void ovy302_21ad7c8(int result, int a2, int *a3)
+{
+    int v5; // r1
+
+    v5 = *a3 + 1;
+    *a3 = v5;
+    if (v5 == 4)
+    {
+        GFL_BGSysMoveBGReq(result, 1, 1);
+        GFL_BGSysMoveBGReq(a2, 1, 1);
+        *a3 = 0;
+    }
 }

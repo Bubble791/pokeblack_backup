@@ -133,19 +133,10 @@ void sub_0219FC2C(PokedexMenu *a1)
     GFL_TCBRemove(a1->unk4);
 }
 
-typedef struct
-{
-    u8 unk0[0x3FF8];
-    int unk3FF8;
-}UnknowOffset;
-
-extern int sub_02045A5C(int);
-extern void sub_0204B7C8(int);
-extern void sub_020275F8(int);
-
 void ovy299_219fc38(int a1, PokedexMenu *a2)
 {
-    sub_0204B7C8(sub_02045A5C(a1));
+    sub_02045A5C(a1);
+    sub_0204B7C8();
     sub_020275F8(a2->unkC);
     UnknowOffset *v1 = (UnknowOffset*)(0x02FE0000);
     v1->unk3FF8 |= 1;
@@ -205,8 +196,6 @@ int sub_0219FCFC(void)
 {
     return 0x021A2608;
 }
-
-extern void sub_020450CC(int, int, int, int);
 
 void ovy299_219fd04(int a1, int a2, int a3, int a4)
 {
@@ -276,13 +265,6 @@ void ovy299_219fea8(void)
     sub_02044B84(0);
     sub_02044528();
 }
-
-extern void sub_0204ADA8(void*, int, int, int, int, int, int);
-extern void sub_0204AF50(void*, int, int, int, int, int, int);
-extern int sub_0202D824(void);
-extern int sub_0202D820(void);
-extern void sub_0204566C(int, int, int, int, int, int);
-extern int sub_0202D828(void);
 
 void ovy299_219fef0(void)
 {
@@ -452,7 +434,6 @@ void sub_021A0220(PokedexMenu *a1)
     GFL_HeapFree(a1->unkC5C);
 }
 
-extern void GFL_BGSysMoveBGReq(int, int, int);
 extern void ovy299_21a158c(PokedexMenu*, u32, s16*, s16*, int);
 extern void ovy299_21a1568(PokedexMenu*, u32, s16, s16, int);
 void ovy299_21a0230(PokedexMenu *a1);

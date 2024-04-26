@@ -8,213 +8,10 @@
 	.public sub_021AD044
 	.public ovy302_21ad05c
 	.public ovy302_21ad624
+	.public ovy302_21ad688
+	.public ovy302_21ad78c
+	.public ovy302_21ad7a8
 
-	thumb_func_start ovy302_21ad688
-ovy302_21ad688: ; 0x021AD688
-	push {r3, r4, r5, r6, r7, lr}
-	add r5, r1, #0
-	ldrh r1, [r5]
-	add r7, r0, #0
-	add r4, r2, #0
-	add r6, r3, #0
-	bl PokeDexSave_IsMonCaught
-	cmp r0, #1
-	beq _021AD6A8
-	ldrh r1, [r5]
-	add r0, r7, #0
-	bl sub_0200D7F4
-	cmp r0, #1
-	bne _021AD6CC
-_021AD6A8:
-	ldr r0, [sp, #0x18]
-	cmp r0, #1
-	bne _021AD6C0
-	lsl r0, r6, #1
-	add r0, r6, r0
-	add r0, r5, r0
-	add r0, r0, r4
-	ldrb r0, [r0, #2]
-	cmp r0, #1
-	bne _021AD6CC
-	mov r0, #1
-	pop {r3, r4, r5, r6, r7, pc}
-_021AD6C0:
-	add r0, r5, r4
-	ldrb r0, [r0, #2]
-	cmp r0, #1
-	bne _021AD6CC
-	mov r0, #1
-	pop {r3, r4, r5, r6, r7, pc}
-_021AD6CC:
-	mov r0, #0
-	pop {r3, r4, r5, r6, r7, pc}
-	thumb_func_end ovy302_21ad688
-
-	thumb_func_start ovy302_21ad6d0
-ovy302_21ad6d0: ; 0x021AD6D0
-	push {r3, r4, r5, r6, r7, lr}
-	sub sp, #0x10
-	str r2, [sp, #4]
-	str r0, [sp]
-	add r5, r1, #0
-	ldr r6, _021AD728 ; =0x0000FFFF
-	bl sub_0200D214
-	str r0, [sp, #8]
-	ldr r0, [sp, #4]
-	mov r4, #0
-	cmp r0, #0
-	bls _021AD716
-	str r6, [sp, #0xc]
-_021AD6EC:
-	lsl r7, r4, #1
-	ldrh r1, [r5, r7]
-	ldr r0, [sp]
-	bl sub_0200D7F4
-	cmp r0, #1
-	bne _021AD70A
-	ldrh r1, [r5, r7]
-	ldr r0, [sp, #8]
-	cmp r0, r1
-	beq _021AD724
-	ldr r0, [sp, #0xc]
-	cmp r6, r0
-	bne _021AD70A
-	add r6, r1, #0
-_021AD70A:
-	add r0, r4, #1
-	lsl r0, r0, #0x10
-	lsr r4, r0, #0x10
-	ldr r0, [sp, #4]
-	cmp r4, r0
-	blo _021AD6EC
-_021AD716:
-	ldr r0, _021AD728 ; =0x0000FFFF
-	cmp r6, r0
-	beq _021AD724
-	ldr r0, [sp]
-	add r1, r6, #0
-	bl sub_0200D200
-_021AD724:
-	add sp, #0x10
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-_021AD728: .word 0x0000FFFF
-	thumb_func_end ovy302_21ad6d0
-
-	thumb_func_start ovy302_21ad72c
-ovy302_21ad72c: ; 0x021AD72C
-	push {r3, r4, r5, lr}
-	add r5, r0, #0
-	bl sub_0200D1F8
-	cmp r0, #1
-	bne _021AD73C
-	mov r0, #1
-	pop {r3, r4, r5, pc}
-_021AD73C:
-	ldr r4, _021AD760 ; =0x000001EE
-	add r0, r5, #0
-	add r1, r4, #0
-	bl PokeDexSave_IsMonCaught
-	cmp r0, #1
-	beq _021AD756
-	add r0, r5, #0
-	add r1, r4, #0
-	bl sub_0200D7F4
-	cmp r0, #1
-	bne _021AD75A
-_021AD756:
-	mov r0, #1
-	pop {r3, r4, r5, pc}
-_021AD75A:
-	mov r0, #0
-	pop {r3, r4, r5, pc}
-	nop
-_021AD760: .word 0x000001EE
-	thumb_func_end ovy302_21ad72c
-
-	thumb_func_start ovy302_21ad764
-ovy302_21ad764: ; 0x021AD764
-	push {r4, lr}
-	add r4, r1, #0
-	bl sub_0200D1F8
-	cmp r0, #1
-	bne _021AD774
-	mov r0, #0
-	b _021AD776
-_021AD774:
-	mov r0, #1
-_021AD776:
-	strb r0, [r4]
-	mov r0, #0
-	strb r0, [r4, #1]
-	mov r0, #0xff
-	strb r0, [r4, #2]
-	strb r0, [r4, #3]
-	strb r0, [r4, #4]
-	strb r0, [r4, #5]
-	strb r0, [r4, #6]
-	pop {r4, pc}
-	.align 2, 0
-	thumb_func_end ovy302_21ad764
-
-	thumb_func_start ovy302_21ad78c
-ovy302_21ad78c: ; 0x021AD78C
-	push {lr}
-	sub sp, #0xc
-	mov r1, #6
-	str r1, [sp]
-	mov r1, #1
-	str r1, [sp, #4]
-	str r0, [sp, #8]
-	mov r0, #0
-	mov r2, #1
-	mov r3, #0
-	bl GFL_FadeScreenSet
-	add sp, #0xc
-	pop {pc}
-	thumb_func_end ovy302_21ad78c
-
-	thumb_func_start ovy302_21ad7a8
-ovy302_21ad7a8: ; 0x021AD7A8
-	push {lr}
-	sub sp, #0xc
-	mov r1, #6
-	str r1, [sp]
-	mov r1, #1
-	str r1, [sp, #4]
-	str r0, [sp, #8]
-	mov r0, #0
-	mov r1, #0
-	mov r2, #0
-	mov r3, #0
-	bl GFL_FadeScreenSet
-	add sp, #0xc
-	pop {pc}
-	.align 2, 0
-	thumb_func_end ovy302_21ad7a8
-
-	thumb_func_start ovy302_21ad7c8
-ovy302_21ad7c8: ; 0x021AD7C8
-	push {r3, r4, r5, lr}
-	add r4, r2, #0
-	add r5, r1, #0
-	ldr r1, [r4]
-	add r1, r1, #1
-	str r1, [r4]
-	cmp r1, #4
-	bne _021AD7EE
-	mov r1, #1
-	mov r2, #1
-	bl GFL_BGSysMoveBGReq
-	add r0, r5, #0
-	mov r1, #1
-	mov r2, #1
-	bl GFL_BGSysMoveBGReq
-	mov r0, #0
-	str r0, [r4]
-_021AD7EE:
-	pop {r3, r4, r5, pc}
-	thumb_func_end ovy302_21ad7c8
 
 	thumb_func_start ovy302_21ad7f0
 ovy302_21ad7f0: ; 0x021AD7F0
@@ -1789,9 +1586,14 @@ _021AE3D6:
 	bx lr
 	thumb_func_end ovy302_21ae3bc
 _021AE3DC:
-	.byte 0xE1, 0xCE, 0x1A, 0x02
-	.byte 0xC9, 0xCF, 0x1A, 0x02, 0xF5, 0xCF, 0x1A, 0x02, 0x4D, 0xD0, 0x1A, 0x02, 0x5D, 0xD0, 0x1A, 0x02
-	.byte 0xA9, 0xD0, 0x1A, 0x02, 0xE9, 0xD0, 0x1A, 0x02, 0x75, 0xD1, 0x1A, 0x02, 0xD5, 0xD2, 0x1A, 0x02
+	.byte 0xE1, 0xCE, 0x1A, 0x02, 0xC9, 0xCF, 0x1A, 0x02, 0xF5, 0xCF, 0x1A, 0x02
+_021AE3E8:
+	.byte 0x4D, 0xD0, 0x1A, 0x02
+	.byte 0x5D, 0xD0, 0x1A, 0x02
+	.byte 0xA9, 0xD0, 0x1A, 0x02
+	.byte 0xE9, 0xD0, 0x1A, 0x02
+	.byte 0x75, 0xD1, 0x1A, 0x02
+	.byte 0xD5, 0xD2, 0x1A, 0x02
 	.byte 0x69, 0xD3, 0x1A, 0x02, 0x15, 0xD2, 0x1A, 0x02, 0x69, 0xD2, 0x1A, 0x02, 0xF5, 0xD3, 0x1A, 0x02
 	.byte 0x85, 0xD4, 0x1A, 0x02, 0xFD, 0xD4, 0x1A, 0x02, 0x75, 0xD5, 0x1A, 0x02, 0xB8, 0x09, 0xAB, 0x01
 	.byte 0x18, 0x00, 0xC0, 0x09, 0xB5, 0x01, 0x17, 0x00, 0xC1, 0x09, 0xBE, 0x01, 0x1C, 0x00, 0xC2, 0x09

@@ -385,15 +385,9 @@ extern void ovy142_219f8ec(BagView*, u32);
 extern void ovy142_219f06c(BagView*, u32);
 extern void ovy142_219f450(BagView*, u32);
 
-extern void GFL_FadeScreenSet(int, int, int, int, int, int, u16);
-extern int GFL_FadeScreenIsFinished(void);
-
 
 typedef void (*UnknowFunc)(BagView *);
 
-extern void sub_02035198(int);
-extern int PrintSystem_IsTextPrintActiveEnd(int);
-extern int sub_0203DA2C(void);
 extern void BagSave_CopyPocket(void*, ItemTable*, int, int);
 
 extern void ovy142_219c9f8(BagView*, int, FieldBagItemUse);
@@ -404,9 +398,6 @@ extern void ovy142_219dd14(BagView*);
 
 extern void ovy142_219f8c4(BagView*);
 
-
-extern void sub_020504F0(int);
-extern void sub_0203D564(int);
 extern void ovy142_219be90(BagView*);
 
 extern void ovy142_219d0c8(BagView*);
@@ -474,8 +465,6 @@ extern int ovy142_219d43c(BagView*, u8);
 
 void ovy142_219c38c(int a1, BagView *m_bagView);
 extern void ovy142_219dd84(BagView*, int);
-extern int sub_020275F8(int);
-extern void sub_0204B7C8(int);
 
 extern int BmpWin_GetBitmap(int);
 extern int BmpWin_BitmapFill(int, int);
@@ -527,8 +516,6 @@ void ovy142_21a03f0(ITEM_UNKNOW_DATA *a1, int a2, int a3, u16 a4);
 
 extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
 
-extern int MyStatus_GetTrainerGender(void*);
-extern int Oam_LoadNCLRFile(void*, int, int, int, int, int, u16); 
 void ovy142_219d7a8(BagView *a1);
 
 void ovy142_219e284(BagView *a1);
@@ -548,16 +535,6 @@ void ovy142_219d664(void);
 
 extern int BagSave_GetUniqueItemCount(ItemTable* bagView, int maxItem);
 extern int BagSave_GetExistingItemPocket(void* bagSave, u16 item);
-
-extern void sub_0203DEB4(int, int);
-extern int Item_GetItemParam(u16, int, u16);
-extern void LoadItemNameToStrbuf(int , int, int);
-extern void LoadBagPocketNameToStrbuf(int , int, int);
-extern int sub_0203DA84(u32*, u32*);
-extern int sub_0203DA48(void);
-extern int sub_020355B8(int, int, int, int, int);
-extern void GFL_SndSEPlay(int);
-extern int sub_0203DAC8(u32*, u32*);
 
 extern int Oam_LoadNCGRFile(void *fileHandle, int, int, int, u16);
 extern int Oam_LoadNCERFile(void *fileHandle, int, int, u16);

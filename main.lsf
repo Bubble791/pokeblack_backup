@@ -1664,6 +1664,8 @@ Overlay OVY_300
 Overlay OVY_301
 {
     Address 0x219FBC0
+
+    Object src/pokedex/pokedex_start.o
     Object asm/overlay301.o
 }
 Overlay OVY_302
