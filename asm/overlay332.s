@@ -3544,10 +3544,10 @@ ovy332_21c09dc: ; 0x021C09DC
 	add r5, r0, #0
 	str r1, [sp, #8]
 	ldr r0, [r5, #0x14]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x14]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	ldr r0, [r5, #0x14]
 	bl sub_020484D8

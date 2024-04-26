@@ -851,7 +851,7 @@
 .public sub_021BAD9C
 .public sub_0201CD88
 .public sub_021BAD9C
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MI_CpuCopy8
 .public sub_0204898C
 .public GFL_StrBufCreate
@@ -1288,7 +1288,7 @@
 .public Oam_RemoveOam
 .public GFL_HeapFree
 .public sub_0204C124
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02046F00
 .public DC_FlushRange
 .public sub_02046EF8

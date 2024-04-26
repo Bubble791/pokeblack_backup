@@ -63669,7 +63669,7 @@ sub_02021FB4: ; 0x02021FB4
 	add r6, r2, #0
 	str r3, [sp, #0x14]
 	ldr r4, [sp, #0x34]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, sp, #0x30
 	add r2, r0, #0
 	ldrh r1, [r1]
@@ -63708,7 +63708,7 @@ sub_02022000: ; 0x02022000
 	add r6, r2, #0
 	str r3, [sp, #0x18]
 	ldr r4, [sp, #0x34]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, sp, #0x30
 	add r2, r0, #0
 	ldrh r1, [r1]
@@ -70163,16 +70163,16 @@ sub_02024E80: ; 0x02024E80
 	bl sub_020484D4
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0x10]
 	add r0, r5, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #0x14]
 	add r0, r5, #0
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x18]
 	add r0, r5, #0
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp]
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x10]
@@ -70216,16 +70216,16 @@ sub_02024EEC: ; 0x02024EEC
 	bl sub_020484D4
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r7, r0, #0
 	add r0, r5, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #0xc]
 	add r0, r5, #0
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x10]
 	add r0, r5, #0
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	ldr r1, [sp, #0x10]
 	ldr r3, [sp, #0xc]
 	add r1, r1, #2
@@ -72891,7 +72891,7 @@ sub_02026270: ; 0x02026270
 	add r7, r0, #0
 	add r5, r1, #0
 	str r2, [sp]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r4, r0, #0
 	lsl r1, r6, #0x18
 	lsl r0, r6, #0x10
@@ -73035,7 +73035,7 @@ sub_02026374: ; 0x02026374
 	add r7, r0, #0
 	add r5, r1, #0
 	str r2, [sp]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r4, r0, #0
 	lsl r1, r6, #0x18
 	lsl r0, r6, #0x10
@@ -83997,7 +83997,7 @@ sub_0202B0F4: ; 0x0202B0F4
 	sub sp, #0x20
 	add r6, r0, #0
 	ldr r0, [r6]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x1c]
 	ldr r0, [r6]
 	bl sub_02046F00
@@ -91376,10 +91376,10 @@ sub_0202E454: ; 0x0202E454
 	cmp r0, #0
 	beq _0202E4A4
 	ldr r0, [r5]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	lsl r6, r0, #3
 	ldr r0, [r5]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	lsl r4, r0, #3
 	ldr r0, [r5]
 	bl sub_020484D8
@@ -91473,7 +91473,7 @@ _0202E50C:
 _0202E51A:
 	add r0, r5, #0
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0xc]
 	add r0, r5, #0
 	bl sub_020484D8
@@ -103370,10 +103370,10 @@ sub_020335C4: ; 0x020335C4
 	bl sub_020484DC
 	str r0, [sp, #4]
 	ldr r0, [sp]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0x10]
 	ldr r0, [sp]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #0x14]
 	mov r0, #0
 	mov ip, r0
@@ -105253,18 +105253,18 @@ sub_02034380: ; 0x02034380
 	ldr r0, [sp, #0xc]
 	add r5, r6, r7
 	ldr r0, [r6, r0]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r4, r0, #0
 	ldr r0, [r6, r7]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r4, r0
 	str r0, [sp, #4]
 	ldr r0, [sp, #0xc]
 	ldr r0, [r6, r0]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r4, r0, #0
 	ldr r0, [r6, r7]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r4, r0
 	str r0, [sp]
 	ldr r0, [r6, r7]
@@ -105410,14 +105410,14 @@ sub_020344C8: ; 0x020344C8
 	add r5, r1, #0
 	add r6, r2, #0
 	ldr r4, [sp, #0x18]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	lsl r0, r0, #3
 	ldr r1, [r7]
 	add r0, r5, r0
 	add r0, r1, r0
 	str r0, [r4]
 	ldr r0, [sp]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	ldr r2, [r7, #4]
 	lsl r1, r6, #4
 	lsl r0, r0, #3
@@ -107872,13 +107872,13 @@ sub_020356A0: ; 0x020356A0
 	bl sub_020484D4
 	str r0, [sp, #0xc]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	add r0, r4, #0
 	bl sub_020484D8
 	add r7, r0, #0
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #0x10]
 	add r0, r4, #0
 	bl sub_020484DC
@@ -107962,13 +107962,13 @@ sub_0203576C: ; 0x0203576C
 	bl sub_020484D4
 	str r0, [sp, #0x10]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	add r0, r4, #0
 	bl sub_020484D8
 	add r7, r0, #0
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #0x14]
 	add r0, r4, #0
 	bl sub_020484DC

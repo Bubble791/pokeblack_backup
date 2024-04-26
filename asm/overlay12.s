@@ -54221,7 +54221,7 @@ _02169FB0:
 ovy12_2169fb4: ; 0x02169FB4
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r4, r0, #0
 	add r0, r5, #0
 	bl sub_02046F00
@@ -54283,10 +54283,10 @@ ovy12_216a004: ; 0x0216A004
 	lsl r0, r0, #0xd
 	lsr r6, r0, #0x10
 	add r0, r4, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x18]
 	add r0, r5, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x14]
 	ldr r0, [sp, #8]
 	mov r5, #0
@@ -54397,7 +54397,7 @@ ovy12_216a0b8: ; 0x0216A0B8
 	add r1, r7, #0
 	bl ovy12_216a004
 	add r0, r7, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x1c]
 	ldr r0, [r5, #4]
 	ldr r4, [r5, #0xc]

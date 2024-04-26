@@ -325,12 +325,12 @@
 .public sub_020503F4
 .public sub_020331D4
 .public sub_020335C4
-.public sub_020484E0
-.public sub_020484E4
-.public sub_020484E8
-.public sub_020484EC
+.public BmpWin_GetWidth1
+.public BmpWin_GetHeight2
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopy32
 .public sub_0203368C
 .public sub_02033694

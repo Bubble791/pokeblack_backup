@@ -103,7 +103,7 @@
 .public sub_02045B7C
 .public GFL_StrBufFree
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopy32
 .public sub_0204898C
 .public sub_020484D8

@@ -1452,10 +1452,10 @@
 .public sub_02045B7C
 .public sub_02048508
 .public sub_020484D4
-.public sub_020484E8
-.public sub_020484EC
-.public sub_020484E0
-.public sub_020484E4
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
+.public BmpWin_GetWidth1
+.public BmpWin_GetHeight2
 .public sub_0204566C
 .public sub_020484D4
 .public sub_02045B7C

@@ -5568,13 +5568,13 @@ _0219C424:
 	add r0, r5, r0
 	ldr r4, [r0, #0x24]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x10]
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
@@ -5647,13 +5647,13 @@ _0219C4C4:
 	add r0, r5, r0
 	ldr r4, [r0, #0x24]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #8]
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
@@ -5832,13 +5832,13 @@ _0219C622:
 	add r0, r5, r0
 	ldr r6, [r0, #0x24]
 	add r0, r6, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #0x10]
 	add r0, r6, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
@@ -5911,13 +5911,13 @@ _0219C6BE:
 	add r0, r6, r0
 	ldr r5, [r0, #0x24]
 	add r0, r5, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	str r0, [sp, #0xc]
 	add r0, r5, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
@@ -5955,12 +5955,12 @@ _0219C71C:
 	add r0, r6, r0
 	ldr r4, [r0, #0x24]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r7, r0, #0x18
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #0x18
 	lsr r6, r0, #0x18

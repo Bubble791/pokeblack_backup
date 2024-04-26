@@ -306,7 +306,7 @@
 .public BmpWin_FlushChar
 .public sub_02046F3C
 .public sub_02046F00
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_020450A8
 .public sub_0204AF88
 .public sub_0204566C
@@ -325,7 +325,7 @@
 .public sub_02021C7C
 .public GFL_StrBufFree
 .public sub_02021C1C
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02045080
 .public sub_02045B7C
 .public GFL_OvlLoad

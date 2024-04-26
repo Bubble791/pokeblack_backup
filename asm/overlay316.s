@@ -2529,7 +2529,7 @@ ovy316_219e24c: ; 0x0219E24C
 	str r6, [sp, #4]
 	bl sub_020470F8
 	add r0, r4, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_02046F00
@@ -2539,7 +2539,7 @@ ovy316_219e24c: ; 0x0219E24C
 	mov r3, #0
 	bl sub_02045080
 	add r0, r4, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_02046F00

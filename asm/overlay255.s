@@ -37944,9 +37944,9 @@ ovy255_21ce870: ; 0x021CE870
 	add r0, r5, #0
 	bl sub_020484D4
 	add r0, r5, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r0, r5, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r0, r5, #0
 	bl sub_020484D8
 	str r0, [sp, #0x34]

@@ -359,8 +359,8 @@
 .public sub_02021CFC
 .public GFL_StrBufFree
 .public GFL_WordSetSystemFree
-.public sub_02046EF4
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopy32
 .public GFL_HeapAllocate
 .public MI_CpuFill8

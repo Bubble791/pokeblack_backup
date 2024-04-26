@@ -1539,7 +1539,7 @@
 .public GFL_FontGetBlockWidth
 .public BmpWin_BitmapFill
 .public sub_02021D28
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0204BAB8
 .public GFL_StrBufFree
 .public GFL_BitmapFree
@@ -2077,7 +2077,7 @@
 .public GFL_WordSetFormatStrbuf
 .public sub_02021CFC
 .public sub_020232E8
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0204C40C
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
@@ -2349,7 +2349,7 @@
 .public GFL_FontGetBlockWidth
 .public sub_02021CFC
 .public sub_020232E8
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0204C40C
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16
@@ -2390,7 +2390,7 @@
 .public sub_020232E8
 .public sub_02021CFC
 .public sub_020232E8
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0204C40C
 .public MIi_CpuCopy16
 .public MIi_CpuCopy16

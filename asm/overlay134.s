@@ -1607,7 +1607,7 @@ ovy134_21ef87c: ; 0x021EF87C
 	ldr r7, [r0, #0x14]
 	add r0, r1, #0
 	ldr r0, [r0, #0x1c]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0xc]
 	ldr r1, [sp, #0xc]
 	mov r0, #0
@@ -1645,7 +1645,7 @@ _021EF910:
 	bl sub_02047FB4
 	ldr r0, [sp, #4]
 	ldr r0, [r0, #0x1c]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r3, #2
 	add r2, r0, #0
 	ldr r1, [sp, #0x14]

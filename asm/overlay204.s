@@ -7084,7 +7084,7 @@ _021AD324:
 	lsl r0, r0, #2
 	str r0, [sp, #0x20]
 	ldr r0, [r4, r0]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r3, r0, #0
 	mov r0, #0
 	str r0, [sp]

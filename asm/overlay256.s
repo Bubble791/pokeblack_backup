@@ -2350,7 +2350,7 @@ _021BC8C8:
 	add r0, r5, #0
 	sub r0, #0x18
 	ldr r0, [r4, r0]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r2, r0, #0
 	add r0, r5, #0
 	add r0, #8

@@ -2375,7 +2375,7 @@
 .public sub_0204BCD0
 .public sub_0204BE64
 .public sub_0204BB80
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02046F00
 .public DC_FlushRange
 .public GXS_LoadOBJ

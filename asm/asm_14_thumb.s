@@ -7127,7 +7127,7 @@ _0203CCF2:
 	blt _0203CCF0
 	ldr r0, _0203CD2C ; =0x02141874
 	ldr r0, [r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r4, #2
 	lsl r4, r4, #0xc
 	add r5, r0, #0
@@ -29431,11 +29431,11 @@ _02046EEC:
 	pop {r4, pc}
 	thumb_func_end GFL_BitmapFree
 
-	thumb_func_start sub_02046EF4
-sub_02046EF4: ; 0x02046EF4
+	thumb_func_start GFL_BitmapGetPixelData
+GFL_BitmapGetPixelData: ; 0x02046EF4
 	ldr r0, [r0]
 	bx lr
-	thumb_func_end sub_02046EF4
+	thumb_func_end GFL_BitmapGetPixelData
 
 	thumb_func_start sub_02046EF8
 sub_02046EF8: ; 0x02046EF8
@@ -32139,7 +32139,7 @@ BmpWin_FlushChar: ; 0x02048244
 	add r4, r1, #0
 	mul r4, r0
 	ldr r0, [r5, #0xc]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	ldrb r0, [r5, #2]
 	ldrh r3, [r5, #0xa]
@@ -32472,29 +32472,29 @@ sub_020484DC: ; 0x020484DC
 	bx lr
 	thumb_func_end sub_020484DC
 
-	thumb_func_start sub_020484E0
-sub_020484E0: ; 0x020484E0
+	thumb_func_start BmpWin_GetWidth1
+BmpWin_GetWidth1: ; 0x020484E0
 	ldrb r0, [r0, #7]
 	bx lr
-	thumb_func_end sub_020484E0
+	thumb_func_end BmpWin_GetWidth1
 
-	thumb_func_start sub_020484E4
-sub_020484E4: ; 0x020484E4
+	thumb_func_start BmpWin_GetHeight2
+BmpWin_GetHeight2: ; 0x020484E4
 	ldrb r0, [r0, #8]
 	bx lr
-	thumb_func_end sub_020484E4
+	thumb_func_end BmpWin_GetHeight2
 
-	thumb_func_start sub_020484E8
-sub_020484E8: ; 0x020484E8
+	thumb_func_start BmpWin_GetPosX
+BmpWin_GetPosX: ; 0x020484E8
 	ldrb r0, [r0, #3]
 	bx lr
-	thumb_func_end sub_020484E8
+	thumb_func_end BmpWin_GetPosX
 
-	thumb_func_start sub_020484EC
-sub_020484EC: ; 0x020484EC
+	thumb_func_start BmpWin_GetPosY
+BmpWin_GetPosY: ; 0x020484EC
 	ldrb r0, [r0, #4]
 	bx lr
-	thumb_func_end sub_020484EC
+	thumb_func_end BmpWin_GetPosY
 
 	thumb_func_start sub_020484F0
 sub_020484F0: ; 0x020484F0

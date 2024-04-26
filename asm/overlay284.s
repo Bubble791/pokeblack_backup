@@ -5363,7 +5363,7 @@ ovy284_21e59b8: ; 0x021E59B8
 	ldr r4, [r0, #0x14]
 	add r0, r1, #0
 	ldr r0, [r0, #0x10]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x1c]
 	mov r2, #0x20
 	ldr r1, [sp, #0x1c]
@@ -5493,7 +5493,7 @@ _021E5B34:
 	bl sub_02047FB4
 	ldr r0, [sp, #0x20]
 	ldr r0, [r0, #0x10]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r3, #2
 	add r2, r0, #0
 	ldr r1, [sp, #0x58]

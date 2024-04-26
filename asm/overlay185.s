@@ -6324,7 +6324,7 @@ ovy185_219fe9c: ; 0x0219FE9C
 	bl sub_0219FFB0
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, sp, #0x10
 	mov r1, #4
 	ldrsh r1, [r6, r1]
@@ -6332,7 +6332,7 @@ ovy185_219fe9c: ; 0x0219FE9C
 	add r0, r1, r0
 	strh r0, [r6]
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	mov r1, #6
 	ldrsh r1, [r6, r1]
 	lsl r0, r0, #3

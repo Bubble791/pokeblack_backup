@@ -5535,7 +5535,7 @@ ovy298_21a2348: ; 0x021A2348
 	bl sub_02046F00
 	str r0, [r5, #0x20]
 	ldr r0, [r5, #0x18]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	ldr r2, [r5, #0x20]
 	mov r0, #5
@@ -5687,7 +5687,7 @@ ovy298_21a24ac: ; 0x021A24AC
 	cmp r0, #0
 	bne _021A24DE
 	ldr r0, [r4, #0x18]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	ldr r2, [r4, #0x20]
 	ldr r3, [r4, #0x1c]

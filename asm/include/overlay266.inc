@@ -129,9 +129,9 @@
 .public GFL_FadeScreenSet
 .public GFL_FadeScreenSet
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0219D9A0
 .public GFL_MsgDataLoadStrbuf
 .public GFL_FontGetBlockWidth

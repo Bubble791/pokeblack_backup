@@ -848,7 +848,7 @@
 .public BmpWin_BitmapFill
 .public sub_0208D65C
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public BmpWin_FlushChar
 .public sub_0203DAC8
 .public sub_0203DA84

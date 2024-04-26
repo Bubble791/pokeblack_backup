@@ -28527,7 +28527,7 @@ _021C5CB0:
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
 	ldr r0, [r4, r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r6, r0, #0
 	ldr r0, [sp, #8]
 	ldr r0, [r4, r0]

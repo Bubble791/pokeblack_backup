@@ -4,7 +4,7 @@
 .public sub_0203FFC4
 .public MIi_CpuCopyFast
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopyFast
 .public BmpWin_FlushChar
 .public BmpWin_FlushMap
@@ -23,7 +23,7 @@
 .public sub_0203FFC4
 .public sub_0203FFC4
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopyFast
 .public sub_0217CF80
 .public sub_02040414

@@ -829,14 +829,14 @@
 .public sub_02045B7C
 .public sub_02045B7C
 .public BmpWin_Free
-.public sub_020484EC
+.public BmpWin_GetPosY
 .public sub_02048500
 .public BmpWin_FlushMap
 .public sub_02045B7C
 .public sub_02045B7C
 .public sub_02045B7C
 .public BmpWin_Free
-.public sub_020484EC
+.public BmpWin_GetPosY
 .public sub_02048500
 .public BmpWin_FlushMap
 .public sub_02045B7C

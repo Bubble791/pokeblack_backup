@@ -863,7 +863,7 @@ _0219D526:
 	ldr r4, [r0, #0x14]
 	ldr r0, [r6, #0x40]
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r2, #6
 	add r1, r0, #0
 	add r0, r4, #0

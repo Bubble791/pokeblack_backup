@@ -10068,7 +10068,7 @@ ovy207_21b8050: ; 0x021B8050
 	ldr r0, [r6, #0x48]
 	ldr r7, [r0, #0x14]
 	ldr r0, [r4, #0xc]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r2, r6, #0
 	add r2, #0x59
 	add r1, r0, #0
@@ -15393,7 +15393,7 @@ ovy207_21bab64: ; 0x021BAB64
 	sub sp, #0x20
 	add r7, r0, #0
 	ldr r0, [r7]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x1c]
 	ldr r0, [r7]
 	bl sub_02046F00

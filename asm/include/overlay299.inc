@@ -228,12 +228,12 @@
 .public BmpWin_FlushMap
 .public sub_020484D4
 .public sub_02045B7C
-.public sub_020484E0
-.public sub_020484E4
-.public sub_020484E8
-.public sub_020484EC
+.public BmpWin_GetWidth1
+.public BmpWin_GetHeight2
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
 .public BmpWin_GetBitmap
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public GFL_ArcSysCreateFileHandle
 .public sub_0204B32C
 .public sub_0204B28C

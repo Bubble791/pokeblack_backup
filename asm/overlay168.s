@@ -25753,7 +25753,7 @@ ovy168_21ea210: ; 0x021EA210
 	add r3, r4, #0
 	bl sub_02021D28
 	add r0, r6, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	mov r0, #0
 	str r0, [sp]
@@ -34926,7 +34926,7 @@ ovy168_21eeafc: ; 0x021EEAFC
 	ldrb r2, [r4]
 	bl sub_020232E8
 	ldr r0, [sp, #0xc]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	sub r7, #0xa8
 	add r4, r0, #0
 	ldr r0, [r6, r7]
@@ -39577,7 +39577,7 @@ _021F0F7E:
 	cmp r0, #0
 	beq _021F1058
 	add r0, r7, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r4, r0, #0
 	ldr r0, [r5]
 	add r1, sp, #0xc
@@ -40118,7 +40118,7 @@ ovy168_21f1348: ; 0x021F1348
 	ldrb r2, [r2]
 	bl sub_020232E8
 	add r0, r7, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r6, r0, #0
 	ldr r0, [r5]
 	add r1, sp, #0xc

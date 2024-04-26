@@ -6284,7 +6284,7 @@
 .public GFL_SndSEPlay
 .public sub_02044CFC
 .public sub_02044CFC
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02045080
 .public ovy168_21e00b8
 .public ovy168_21e00ac
@@ -6295,7 +6295,7 @@
 .public sub_020062C4
 .public sub_020062C4
 .public sub_02046F00
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopy32
 .public sub_020232E8
 .public sub_020228C0
@@ -6309,7 +6309,7 @@
 .public sub_021BAC40
 .public ovy168_21e04d8
 .public GFL_SndSEPlay
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02045080
 .public sub_020062C4
 .public MI_CpuFill8
@@ -6340,8 +6340,8 @@
 .public sub_02021CFC
 .public BmpWin_FlushChar
 .public GFL_SndSEPlay
-.public sub_020484E8
-.public sub_020484EC
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
 .public sub_020484D8
 .public sub_020484DC
 .public sub_020484D4

@@ -1798,8 +1798,8 @@
 .public BmpWin_BitmapFill
 .public BmpWin_GetBitmap
 .public sub_020484D4
-.public sub_020484E8
-.public sub_020484EC
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
 .public sub_020484D8
 .public sub_020484DC
 .public BmpWin_BitmapFill

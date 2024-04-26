@@ -1709,7 +1709,7 @@ void ovy142_219eb54(BagView *a1)
 }
 
 extern int sub_0204BB80(int, int);
-extern int sub_02046EF4(int);
+extern int GFL_BitmapGetPixelData(int);
 extern int sub_02046F00(int);
 
 void BagMenu_DrawItemNameBmpWinToOam(BagView *a1)
@@ -1723,7 +1723,7 @@ void BagMenu_DrawItemNameBmpWinToOam(BagView *a1)
     for (i = 0; i < 8; ++i)
     {
         v3 = sub_0204BB80(a1->itemBarNCGR[i], 0);
-        v4 = sub_02046EF4(a1->unk624[i]);
+        v4 = GFL_BitmapGetPixelData(a1->unk624[i]);
         v5 = sub_02046F00(a1->unk624[i]);
         DC_FlushRange((void*)v4, v5);
         GX_LoadOBJ((void*)(v4 + 256), v3 + 128, 128);

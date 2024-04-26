@@ -8280,10 +8280,10 @@ ovy271_21f3d68: ; 0x021F3D68
 	add r7, r1, #0
 	add r5, r2, #0
 	add r4, r3, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r6, r0, #0
 	add r0, r7, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r2, sp, #0x18
 	ldrh r3, [r2, #8]
 	add r1, r0, #0

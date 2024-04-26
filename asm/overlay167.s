@@ -120474,7 +120474,7 @@ _021D3CF0:
 	cmp r0, #0x11
 	bhs _021D3D38
 	ldr r0, [r4, #4]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r4, #0
 	add r1, #0x21
 	ldrb r2, [r1]
@@ -120590,7 +120590,7 @@ ovy167_21d3ddc: ; 0x021D3DDC
 	bl sub_02046F00
 	add r6, r0, #0
 	ldr r0, [r5, #4]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	ldr r0, [r5]
 	ldrb r3, [r5, #0xa]
@@ -120862,7 +120862,7 @@ _021D3FA6:
 	b _021D3F9E
 _021D3FEE:
 	ldr r0, [r4, #4]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	mov r2, #9
 	ldrb r0, [r4, #0xb]
@@ -121569,11 +121569,11 @@ ovy167_21d44d8: ; 0x021D44D8
 	b _021D456E
 _021D44F0:
 	ldr r0, [r4, #8]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	str r0, [sp, #0x10]
 	ldr r0, [r4, #8]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	str r0, [sp, #0xc]
 	ldr r0, [r4, #8]

@@ -20445,10 +20445,10 @@ ovy36_2188f34: ; 0x02188F34
 	add r2, r7, #0
 	bl ovy36_21892b0
 	ldr r0, [r4, #4]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	ldr r0, [r4, #4]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	ldr r0, [r4, #4]
 	bl sub_020484D8
@@ -20495,10 +20495,10 @@ ovy36_218903c: ; 0x0218903C
 	ldr r0, [r5, #4]
 	bl BmpWin_GetBitmap
 	ldr r0, [r5, #4]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r4, r0, #0
 	ldr r0, [r5, #4]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r6, r0, #0
 	ldr r0, [r5, #4]
 	bl sub_020484D8
@@ -20521,10 +20521,10 @@ ovy36_218903c: ; 0x0218903C
 	ldr r0, [r5, #4]
 	bl sub_020484B4
 	ldr r0, [r5, #4]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	ldr r0, [r5, #4]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	ldr r0, [r5, #4]
 	bl sub_020484D8
@@ -21402,7 +21402,7 @@ ovy36_218978c: ; 0x0218978C
 	add r4, r2, #0
 	add r5, r3, #0
 	mov r7, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r6, r0, #0
 	mov r0, #5
 	mov r1, #7
@@ -21867,10 +21867,10 @@ ovy36_2189b50: ; 0x02189B50
 	ldr r0, [r5]
 	bl sub_020484B4
 	ldr r0, [r5]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	ldr r0, [r5]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	ldr r0, [r5]
 	bl sub_020484D8
@@ -22369,10 +22369,10 @@ ovy36_2189f2c: ; 0x02189F2C
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x1c
 	add r4, r0, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0x10]
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	add r0, r4, #0
 	bl sub_020484D8
@@ -22536,10 +22536,10 @@ ovy36_218a08c: ; 0x0218A08C
 	bl sub_020484D4
 	add r4, r0, #0
 	add r0, r5, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r6, r0, #0
 	add r0, r5, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	add r0, r5, #0
 	bl sub_020484D8
@@ -25975,40 +25975,40 @@ ovy36_218ba18: ; 0x0218BA18
 	add r6, r1, #0
 	add r7, r2, #0
 	str r3, [sp]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r0, r0, #3
 	str r0, [sp, #0x14]
 	ldr r0, [r4, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r0, r0, #3
 	str r0, [sp, #0x10]
 	ldr r0, [r4, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r0, r0, #2
 	lsl r0, r0, #3
 	str r0, [sp, #0xc]
 	ldr r0, [r4, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	add r0, r0, #2
 	lsl r0, r0, #3
 	str r0, [sp, #8]
 	ldr r0, [r6, #0xc]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r4, r0, #3
 	ldr r0, [r6, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r5, r0, #3
 	ldr r0, [r6, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r0, r0, #2
 	lsl r0, r0, #3
 	str r0, [sp, #4]
 	ldr r0, [r6, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	add r0, r0, #2
 	ldr r2, [sp, #0x14]
 	ldr r1, [sp, #0xc]
@@ -26103,19 +26103,19 @@ ovy36_218bb0c: ; 0x0218BB0C
 	str r1, [sp, #4]
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	sub r0, r0, #1
 	lsl r6, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r4, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r0, r0, #2
 	lsl r7, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	add r0, r0, #2
 	lsl r0, r0, #3
 	str r0, [sp, #0x18]
@@ -26328,17 +26328,17 @@ ovy36_218bcb0: ; 0x0218BCB0
 	str r1, [sp]
 	str r2, [sp, #4]
 	str r3, [sp, #8]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	lsl r6, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	sub r0, r0, #1
 	lsl r4, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	lsl r7, r0, #3
 	ldr r0, [r5, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	add r0, r0, #2
 	lsl r5, r0, #3
 	ldr r2, [sp]
@@ -26911,16 +26911,16 @@ ovy36_218c174: ; 0x0218C174
 	str r1, [sp, #0xc]
 	add r0, r1, #0
 	str r2, [sp, #0x10]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r4, r0, #0
 	ldr r0, [sp, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r7, r0, #0
 	ldr r0, [sp, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x38]
 	ldr r0, [sp, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp, #0x34]
 	mov r0, #0
 	str r0, [sp, #0x30]
@@ -27344,16 +27344,16 @@ ovy36_218c4c0: ; 0x0218C4C0
 	add r5, r0, #0
 	add r0, r7, #0
 	str r2, [sp, #0xc]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0x18]
 	add r0, r7, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r6, r0, #0
 	add r0, r7, #0
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x14]
 	add r0, r7, #0
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp, #0x10]
 	mov r0, #0
 	str r0, [sp, #0x44]
@@ -28007,16 +28007,16 @@ ovy36_218c9dc: ; 0x0218C9DC
 	add r5, r0, #0
 	add r0, r7, #0
 	str r2, [sp, #0xc]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	str r0, [sp, #0x18]
 	add r0, r7, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r6, r0, #0
 	add r0, r7, #0
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x14]
 	add r0, r7, #0
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp, #0x10]
 	mov r0, #0
 	str r0, [sp, #0x44]
@@ -28718,16 +28718,16 @@ ovy36_218cf48: ; 0x0218CF48
 	add r6, r0, #0
 	str r1, [sp, #0xc]
 	add r0, r1, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r5, r0, #0
 	ldr r0, [sp, #0xc]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r4, r0, #0
 	ldr r0, [sp, #0xc]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0x2c]
 	ldr r0, [sp, #0xc]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp, #0x28]
 	mov r0, #0
 	str r0, [sp, #0x24]
@@ -128327,7 +128327,7 @@ ovy36_21bc56c: ; 0x021BC56C
 	ldr r0, [sp, #0xc]
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x28]
 	ldr r1, [sp, #0x28]
 	mov r0, #0
@@ -128458,7 +128458,7 @@ _021BC706:
 	ldr r0, [sp, #0xc]
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r3, #2
 	add r2, r0, #0
 	ldr r1, [sp, #0x20]
@@ -128674,7 +128674,7 @@ ovy36_21bc844: ; 0x021BC844
 	ldr r0, [sp, #4]
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x1c]
 	add r0, sp, #0x48
 	ldrb r0, [r0, #8]
@@ -128742,7 +128742,7 @@ _021BC94C:
 	ldr r0, [sp, #4]
 	add r0, #0x8c
 	ldr r0, [r0]
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r2, r0, #0
 	ldr r1, [sp, #0x2c]
 	ldr r3, [sp, #8]
@@ -150698,7 +150698,7 @@ ovy36_21c6f94: ; 0x021C6F94
 	ldr r0, [r5, #0x10]
 	bl sub_02047008
 	add r0, r4, #0
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r5, r0, #0
 	add r0, r4, #0
 	bl sub_02046F00

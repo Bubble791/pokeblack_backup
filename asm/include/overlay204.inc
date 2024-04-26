@@ -573,7 +573,7 @@
 .public sub_02009F80
 .public BmpWin_GetBitmap
 .public BmpWin_BitmapFill
-.public sub_020484E0
+.public BmpWin_GetWidth1
 .public sub_0219A2EC
 .public sub_02009F80
 .public sub_02009F80

@@ -491,14 +491,14 @@
 .public sub_0204B2B4
 .public sub_02033768
 .public sub_0204B354
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public MIi_CpuClear32
 .public MIi_CpuCopy32
 .public MIi_CpuCopy32
 .public MIi_CpuCopy32
 .public MIi_CpuCopy32
 .public sub_02047FB4
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_0205FA10
 .public sub_0205FA10
 .public GFL_BitmapFree

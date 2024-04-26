@@ -54,7 +54,7 @@ _0217D010:
 	lsl r5, r5, #2
 	ldr r0, [r4, r5]
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	add r1, r0, #0
 	ldr r0, _0217D078 ; =0x00004290
 	mov r2, #0xe1
@@ -403,7 +403,7 @@ ovy70_217d2b8: ; 0x0217D2B8
 	ldr r0, [r5, r0]
 	add r4, r1, #0
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r2, #0xfa
 	lsl r2, r2, #2
 	add r1, r4, #0

@@ -1595,13 +1595,13 @@ _0219DAB6:
 	lsl r4, r4, #4
 	ldr r0, [r0, r4]
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x10]
 	ldr r0, [sp]
 	add r4, #8
 	ldr r0, [r0, r4]
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov r4, #0
 	str r0, [sp, #0xc]
 	mov r5, #0

@@ -1319,43 +1319,42 @@ enum
     heap_dex = 0x6B
 };
 
-extern u8 sub_020484E8(int);
-extern u8 sub_020484EC(int);
-extern u8 sub_020484E0(int);
-extern u8 sub_020484E4(int);
-extern u8*sub_02046EF4(int);
+extern u8 BmpWin_GetPosX(int);
+extern u8 BmpWin_GetPosY(int);
+extern u8 BmpWin_GetWidth1(int);
+extern u8 BmpWin_GetHeight2(int);
+extern u8*GFL_BitmapGetPixelData(int);
 extern void *sub_0204B32C(void*, int, int, CharHeader**, int);
 extern void *sub_0204B28C(void*, int, int, BGHeader**, int);
 
 void ovy299_21a1024(PokedexListMenu *a1, int a2)
 {
-
-    BGHeader *v20; // [sp+28h] [bp-18h] BYREF
+    BGHeader *v20;
     void *v18;
 
-    CharHeader *v19; // [sp+24h] [bp-1Ch] BYREF
+    CharHeader *v19;
 
-    u8 *tileMap;  // [sp+1Ch] [bp-24h]
-    u8 width;     // r5
-    void *v16;      // [sp+18h] [bp-28h]
-    u8 *winPixel; // [sp+14h] [bp-2Ch]
+    u8 *tileMap;
+    u8 width;
+    void *v16;
+    u8 *winPixel;
 
     u8 x;   // r7
     int v6; // r0
 
     u16 *v8;  // r4
-    u8 y;     // [sp+8h] [bp-38h]
-    u16 *v13; // [sp+Ch] [bp-34h]
+    u8 y;
+    u16 *v13;
 
-    u8 height; // [sp+4h] [bp-3Ch]
-    void *v7;  // r6
+    u8 height;
+    void *v7;
 
-    width = sub_020484E0(a1->unk20[a2].winData);  // BmpWin_GetWidth1
-    height = sub_020484E4(a1->unk20[a2].winData); // BmpWin_GetHeight2
-    x = sub_020484E8(a1->unk20[a2].winData);      // BmpWin_GetPosX
-    y = sub_020484EC(a1->unk20[a2].winData);      // BmpWin_GetPosY
+    width = BmpWin_GetWidth1(a1->unk20[a2].winData);  // BmpWin_GetWidth1
+    height = BmpWin_GetHeight2(a1->unk20[a2].winData); // BmpWin_GetHeight2
+    x = BmpWin_GetPosX(a1->unk20[a2].winData);      // BmpWin_GetPosX
+    y = BmpWin_GetPosY(a1->unk20[a2].winData);      // BmpWin_GetPosY
     v6 = BmpWin_GetBitmap(a1->unk20[a2].winData);
-    winPixel = sub_02046EF4(v6); // GFL_BitmapGetPixelData u8*
+    winPixel = GFL_BitmapGetPixelData(v6); // GFL_BitmapGetPixelData u8*
 
     v7 = GFL_ArcSysCreateFileHandle(157, 107);
     v16 = sub_0204B32C(v7, 71, 0, &v19, heap_dex | 0x8000);

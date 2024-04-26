@@ -16415,16 +16415,16 @@ ovy310_21a4a50: ; 0x021A4A50
 	bl sub_020484D4
 	add r6, r0, #0
 	ldr r0, [r5, #0x18]
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r7, r0, #0
 	ldr r0, [r5, #0x18]
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #8]
 	ldr r0, [r5, #0x18]
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	str r0, [sp, #0xc]
 	ldr r0, [r5, #0x18]
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp]
 	ldr r2, [sp, #8]
 	ldr r3, [sp, #0xc]

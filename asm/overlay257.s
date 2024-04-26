@@ -10848,7 +10848,7 @@ ovy257_219eac4: ; 0x0219EAC4
 	add r6, r0, #0
 	ldr r0, [r4, #0x2c]
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	mov ip, r0
 	mov r0, #0
 	b _0219EB84

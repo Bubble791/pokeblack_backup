@@ -437,8 +437,8 @@
 .public sub_02029E44
 .public sub_020484D4
 .public sub_0219FFB0
-.public sub_020484E8
-.public sub_020484EC
+.public BmpWin_GetPosX
+.public BmpWin_GetPosY
 .public Oam_SetOamAnimIndex
 .public Oam_SetSpritePosData
 .public sub_0204C124

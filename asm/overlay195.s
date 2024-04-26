@@ -8271,7 +8271,7 @@ _021B7208:
 	ldr r0, [r5, #0x6c]
 	cmp r0, #0
 	beq _021B722A
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r1, r0, #0
 	sub r1, r1, #6
 	lsl r1, r1, #0x18
@@ -8367,7 +8367,7 @@ _021B72BA:
 	ldr r0, [r5, #0x6c]
 	cmp r0, #0
 	beq _021B72DC
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	add r1, r0, #0
 	add r1, r1, #6
 	lsl r1, r1, #0x18

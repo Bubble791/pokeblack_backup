@@ -287,10 +287,10 @@
 .public sub_02046E28
 .public sub_020470F8
 .public sub_020470F8
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02046F00
 .public sub_02045080
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
 .public sub_02046F00
 .public sub_02045080
 .public GFL_BitmapFree

@@ -146,7 +146,7 @@
 .public StringSetNumber
 .public StringSetNumber
 .public GFL_WordSetFormatStrbuf
-.public sub_020484E0
+.public BmpWin_GetWidth1
 .public sub_0219A2A4
 .public GFL_StrBufFree
 .public BmpWin_BitmapFill

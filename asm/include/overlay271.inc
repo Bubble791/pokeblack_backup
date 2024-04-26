@@ -459,8 +459,8 @@
 .public BmpWin_FlushChar
 .public sub_0203D9C8
 .public sub_0203DA84
-.public sub_02046EF4
-.public sub_02046EF4
+.public GFL_BitmapGetPixelData
+.public GFL_BitmapGetPixelData
 .public MIi_CpuCopy32
 .public sub_0203DA0C
 .public sub_0203DAC8

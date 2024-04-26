@@ -6332,20 +6332,20 @@ ovy139_219c824: ; 0x0219C824
 	ldrb r0, [r5, #4]
 	str r0, [sp]
 	add r0, r4, #0
-	bl sub_020484E0
+	bl BmpWin_GetWidth1
 	add r5, r0, #0
 	add r0, r4, #0
-	bl sub_020484E4
+	bl BmpWin_GetHeight2
 	str r0, [sp, #0x10]
 	add r0, r4, #0
-	bl sub_020484E8
+	bl BmpWin_GetPosX
 	add r7, r0, #0
 	add r0, r4, #0
-	bl sub_020484EC
+	bl BmpWin_GetPosY
 	str r0, [sp, #4]
 	add r0, r4, #0
 	bl BmpWin_GetBitmap
-	bl sub_02046EF4
+	bl GFL_BitmapGetPixelData
 	str r0, [sp, #0x18]
 	mov r0, #0
 	str r0, [sp, #0xc]
