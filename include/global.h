@@ -210,6 +210,19 @@ extern void sub_02046DF8(int);
 extern void GFL_OvlLoad(int);
 extern void GFL_OvlUnload(int);
 extern int sub_0203D554(void);
+extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
+extern void BmpWin_FlushMap(int);
+extern int GameData_IsPocketRegistered(void*, int);
+extern int sub_02034AA4(u16);
+extern void sub_02017644(void*, int, int);
+extern void sub_02021A3C(int);
+extern int sub_02021C1C(int, int);
+extern int BmpWin_GetBitmap(int);
+extern void BmpWin_FlushChar(int);
+extern int BmpWin_BitmapFill(int, int);
+extern void sub_020484B4(int);
+extern int sub_020484D4(int);
+extern void GFL_BGSysLoadScr(int);
 
 #ifndef __MWERKS__
 #define NONMATCHING

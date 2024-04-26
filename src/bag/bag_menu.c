@@ -615,9 +615,6 @@ void ovy142_219d0c8(BagView* bagView)
 extern const u8 data_021A08F0[7];
 void ovy142_219d120(BagView* bagView);
 extern void ovy142_219d188(BagView*, u8*);
-extern void sub_020484B4(int);
-extern int sub_020484D4(int);
-extern void GFL_BGSysLoadScr(int);
 extern void ovy142_219f284(BagView*, u8);
 
 void ovy142_219d120(BagView* bagView)
@@ -2636,9 +2633,6 @@ void ovy142_21a0134(BagBmpWinData *a1)
     v2 = sub_020484D4(a1->winData);
     sub_02045B7C(v2);
 }
-
-extern void sub_02021A3C(int);
-extern int sub_02021C1C(int, int);
 
 void ovy142_21a014c(BagView *a1)
 {

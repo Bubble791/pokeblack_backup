@@ -465,11 +465,7 @@ extern int ovy142_219d43c(BagView*, u8);
 void ovy142_219c38c(int a1, BagView *m_bagView);
 extern void ovy142_219dd84(BagView*, int);
 
-extern int BmpWin_GetBitmap(int);
-extern int BmpWin_BitmapFill(int, int);
-
 extern int ovy142_21a03ac(u8);
-extern void BmpWin_FlushChar(int);
 extern int Item_GetTmNo(u16);
 extern int Item_GetTmHmIndex(u16);
 extern void LoadMoveNameToStrbuf(int, int, int);
@@ -478,8 +474,6 @@ extern void sub_020267C0(int ,u16, u16);
 
 extern void ovy142_21a0134(BagBmpWinData*);
 
-extern int sub_02034AA4(u16);
-extern void sub_02017644(void*, int, int);
 extern int ovy142_219c0e8(BagView*, int);
 extern void sub_02021D28(int, int, int, int, int, int);
 
@@ -500,7 +494,6 @@ extern void sub_0204C124(int, int);
 
 int sub_0219BE88(int a1);
 
-extern int GameData_IsPocketRegistered(void*, int);
 extern ItemTable* ovy142_21a0470(ITEM_UNKNOW_DATA*, u16, u16);
 extern int BagSave_IsItemInFreeSpace(void*, u16);
 extern void BagSave_SubItem(void*, u16, u16, u16);
@@ -518,8 +511,6 @@ extern void ovy142_21a063c(ITEM_UNKNOW_DATA*, u16);
 void ovy142_219d7a8(BagView *a1);
 
 void ovy142_219e284(BagView *a1);
-extern int BmpWin_CreateDynamic(int bg, int x, int y, int width, int height, int palindex, int alloc);
-extern void BmpWin_FlushMap(int);
 
 extern int sub_02046E28(int, int, int, u16);
 void ovy142_219efc0(BagView *a1);

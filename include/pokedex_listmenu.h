@@ -3,6 +3,12 @@
 
 typedef struct
 {
+    int winData;
+    u8 flag;
+}UnknowWindowData;
+
+typedef struct
+{
     /*0x0*/ PokeDexSeacherEngine_TYPE2 *unk0;
     /*0x4*/ int unk4;
     /*0x8*/ int unk8;
@@ -11,18 +17,7 @@ typedef struct
     /*0x14*/ int unk14;
     /*0x18*/ int unk18;
     /*0x1C*/ int unk1C;
-    /*0x20*/ int unk20;
-    /*0x24*/ int unk24;
-    /*0x28*/ int unk28;
-    /*0x2C*/ int unk2C;
-    /*0x30*/ int unk30;
-    /*0x34*/ int unk34;
-    /*0x38*/ int unk38;
-    /*0x3C*/ int unk3C;
-    /*0x40*/ int unk40;
-    /*0x44*/ int unk44;
-    /*0x48*/ int unk48;
-    /*0x4C*/ int unk4C;
+    /*0x20*/ UnknowWindowData unk20[6];
     /*0x50*/ int unk50;
     /*0x54*/ int unk54;
     /*0x58*/ int unk58;
@@ -142,6 +137,8 @@ typedef struct
     /*0xC40*/ int unkC40;
     /*0xC44*/ int unkC44;
     /*0xC48*/ u16 unkC48;
+    /*0xC4A*/ u8 unkC4A;
+    /*0xC4B*/ u8 unkC4B;
     /*0xC4C*/ int unkC4C;
     /*0xC50*/ int unkC50;
     /*0xC54*/ int unkC54;
