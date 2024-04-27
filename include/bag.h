@@ -119,24 +119,6 @@ enum
 
 typedef struct
 {
-    u16 unk0;
-    u16 unk2;
-    int unk4;
-    u8 unk8;
-    u8 unk9;
-    u8 unkA;
-    u8 unkB;
-    int unkC;
-    u16 unk10;
-    u16 unk12;
-    u16 unk14;
-    u16 unk16;
-    u16 unk18;
-    u16 unk1A;
-}OamSystemInitTemplate;
-
-typedef struct
-{
     int winData;
     u8 flag;
 } BagBmpWinData;
@@ -443,7 +425,6 @@ extern void ovy142_219ff40(BagView*, int);
 extern void sub_0202D384(u16);
 
 void ovy142_219ad30(BagView *m_bagView);
-extern void StringSetNumber(int, int, int, int, int, int);
 extern void sub_0219F0AC(BagView*);
 
 extern int EncountSave_IsRepelDepleted(void*);
@@ -490,7 +471,6 @@ extern void sub_020470F8(int, int, int, int, int, int);
 
 void ovy142_219fb78(BagView*);
 void ovy142_219fc14(BagView*, int);
-extern void sub_0204C124(int, int);
 
 int sub_0219BE88(int a1);
 
@@ -526,8 +506,6 @@ void ovy142_219d664(void);
 extern int BagSave_GetUniqueItemCount(ItemTable* bagView, int maxItem);
 extern int BagSave_GetExistingItemPocket(void* bagSave, u16 item);
 
-extern int Oam_LoadNCGRFile(void *fileHandle, int, int, int, u16);
-extern int Oam_LoadNCERFile(void *fileHandle, int, int, u16);
 
 extern void ovy142_219eb54(BagView*);
 extern void BagMenu_DrawItemNameBmpWinToOam(BagView*);

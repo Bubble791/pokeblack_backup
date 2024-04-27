@@ -226,7 +226,6 @@ void ovy142_219c958(BagView *bagView)
 }
 
 extern void ovy142_219ca90(BagView*);
-extern void sub_0204C4D4(int, int);
 
 void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
 {
@@ -260,7 +259,6 @@ void ovy142_219c9f8(BagView *a1, int a2, FieldBagItemUse a3)
     BagMenu_SetRunFunc(a1, ovy142_219ca90);
 }
 
-extern int sub_0204C560(int);
 void ovy142_219ca90(BagView *bagView);
 
 void ovy142_219ca90(BagView *bagView)
@@ -946,25 +944,7 @@ void BagMenu_LoadBagPocketSpriteResource(BagView *bagView, void *fileHandle)
 extern int unk_21A16A4[4] = {0};
 extern int unk_21A103C[4] = {0};
 
-typedef struct
-{
-    s16 x;
-    s16 y;
-    u16 anim;
-    u8 flag;
-    u8 unk;
-}OAM_TEMP;
-
-extern void Oam_CreateSystem(const OamSystemInitTemplate*, int*, u16);
-
 extern void ovy142_219ed8c(BagView*);
-extern int Oam_CreateSprite(int, int, int, int, OAM_TEMP *, int, u16);
-extern int sub_0202D800(u8);
-extern void sub_0204C378(int, int, int);
-extern void sub_0204C124(int, int);
-extern void sub_0204C5C8(int, int);
-extern int sub_0202D7E8(u8);
-extern int GFL_FontGetBlockWidth(int, int, int);
 
 void ovy142_219d7a8(BagView *bagView)
 {
@@ -1283,14 +1263,6 @@ void ovy142_219e120(BagView *a1)
     
 }
 
-extern void Oam_RemoveOam(int);
-extern void sub_0204B98C(int);
-extern void sub_0204BCD0(int);
-extern void GFL_BitmapFree(int);
-extern int sub_0204BF98(int);
-extern int sub_0204B758(int);
-extern void sub_0204BE64(int);
-
 void ovy142_219e168(BagView *a1)
 {
     int i;  // r4
@@ -1428,9 +1400,6 @@ void BagMenu_LoadItemIconOam(BagView *bagView, int item)
     sub_0204C124(bagView->itemIconOam, 1);
     sub_0204C5C8(bagView->itemIconOam, 0);
 }
-
-extern void sub_0204B794(void);
-extern void sub_0202DB70(void);
 
 void ovy142_219e5a8(BagView *a1)
 {
@@ -1684,10 +1653,6 @@ void BagMenu_DrawItemBarText(BagView *a1)
         a1->unk890 = 1;
     }
 }
-
-extern void Oam_GetSpritePosData(int, u16*, int);
-extern int Oam_SetSpritePosData(int, u16*, int);
-extern void sub_0204C504(int, int);
 
 void ovy142_219eb54(BagView *a1)
 {

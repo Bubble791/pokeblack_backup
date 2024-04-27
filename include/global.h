@@ -34,6 +34,33 @@ typedef struct
 
 typedef struct
 {
+    u16 unk0;
+    u16 unk2;
+    int unk4;
+    u8 unk8;
+    u8 unk9;
+    u8 unkA;
+    u8 unkB;
+    int unkC;
+    u16 unk10;
+    u16 unk12;
+    u16 unk14;
+    u16 unk16;
+    u16 unk18;
+    u16 unk1A;
+}OamSystemInitTemplate;
+
+typedef struct
+{
+    s16 x;
+    s16 y;
+    u16 anim;
+    u8 flag;
+    u8 unk;
+}OAM_TEMP;
+
+typedef struct
+{
     u32 PosX;
     u32 PosY;
     u32 ScreenSize;
@@ -223,6 +250,50 @@ extern int BmpWin_BitmapFill(int, int);
 extern void sub_020484B4(int);
 extern int sub_020484D4(int);
 extern void GFL_BGSysLoadScr(int);
+extern void StringSetNumber(int, int, int, int, int, int);
+extern void Oam_RemoveOam(int);
+extern void sub_0204B98C(int);
+extern void sub_0204BCD0(int);
+extern void GFL_BitmapFree(int);
+extern int sub_0204BF98(int);
+extern int sub_0204B758(int);
+extern void sub_0204BE64(int);
+extern void sub_0204C4A0(int);
+extern void sub_0204B794(void);
+extern void sub_0202DB70(void);
+extern void sub_0204C4D4(int, int);
+extern void sub_0204C550(int);
+extern int sub_0204C534(void);
+extern int sub_0204C4E0(int, int);
+extern void sub_0204C540(int);
+extern int sub_0204C560(int);
+extern int Oam_CreateSprite(int, int, int, int, OAM_TEMP *, int, u16);
+extern int sub_0202D800(u8);
+extern void sub_0204C378(int, int, int);
+extern void sub_0204C124(int, int);
+extern void sub_0204C5C8(int, int);
+extern int sub_0202D7E8(u8);
+extern int GFL_FontGetBlockWidth(int, int, int);
+
+extern void Oam_GetSpritePosData(int, u16*, int);
+extern int Oam_SetSpritePosData(int, u16*, int);
+extern void sub_0204C504(int, int);
+
+extern void Oam_CreateSystem(const OamSystemInitTemplate*, int*, u16);
+extern int Oam_LoadNCGRFile(void *fileHandle, int, int, int, u16);
+extern int Oam_LoadNCERFile(void *fileHandle, int, int, u16);
+extern int sub_0204BBA0(void*, int, int, int, int);
+extern int sub_02020F94(int, int, int, int);
+extern int sub_02021154(void);
+extern int sub_0202D810(void);
+extern int sub_0202D814(void);
+extern int sub_0202111C(void);
+extern int sub_02021114(void);
+extern int sub_0204BC48(void*, int, int, int, int);
+extern int sub_02021190(void);
+extern int sub_020211C8(void);
+extern int sub_0202D81C(int);
+extern int sub_0202D818(int);
 
 #ifndef __MWERKS__
 #define NONMATCHING
