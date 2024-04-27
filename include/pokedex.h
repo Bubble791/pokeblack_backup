@@ -35,7 +35,7 @@ typedef struct
     /*0xA*/ u16 unkA;
     /*0xC*/ PokeDexListData unkC;
     /*0x10*/ int unk10;
-} PokeDexSeacherEngine_TYPE2;
+} PokeDexListMenu_Screen;
 
 typedef struct
 {
@@ -107,5 +107,6 @@ typedef struct
 
 typedef int (*DexViewFunc)(PokeDexMain *);
 
+void PokedexView_BackgroundScroll(int, int, int* delayVar);
 
 #endif //POKEHEARTGOLD_POKEDEX_H

@@ -75,9 +75,9 @@ const BGSetup data_021A26C8[] =
     },
 };
 
-int ovy299_219fbc0(int manager, int state, void* a2, void* a3);
-int ovy299_219fbf0(int manager, int state, void* a2, void* a3);
-int ovy299_219fc04(int manager, int state, void* a2, void* a3);
+int PokeListMenu_Start(int manager, int state, void* a2, void* a3);
+int PokeListMenu_Loop(int manager, int state, void* a2, void* a3);
+int PokeListMenu_End(int manager, int state, void* a2, void* a3);
 void ovy299_219fc14(PokedexListMenu *a1);
 void ovy299_219fc38(int a1, PokedexListMenu *a2);
 void sub_0219FC2C(PokedexListMenu *a1);
@@ -96,7 +96,7 @@ void sub_021A014C(void);
 void sub_021A018C(void);
 void ovy299_21a01e4(PokedexListMenu *a1);
 void ovy299_21a01a0(PokedexListMenu *a1);
-void ovy299_21a0208(PokedexListMenu *a1);
+void PokeListMenu_LoadUnovaSpeciesTable(PokedexListMenu *a1);
 void sub_021A0220(PokedexListMenu *a1);
 int ovy299_21a0298(PokedexListMenu *a1);
 void sub_021A0288(PokedexListMenu *result, s16 a2);
@@ -121,31 +121,31 @@ int ovy299_21a1fa8(PokedexListMenu *a1, int a2);
 
 const OvyMangerTemplate data_021A25C8 =
 {
-    ovy299_219fbc0,
-    ovy299_219fbf0,
-    ovy299_219fc04,
+    PokeListMenu_Start,
+    PokeListMenu_Loop,
+    PokeListMenu_End,
 };
 
 
-int ovy299_219fbc0(int manager, int state, void* a2, void* a3)
+int PokeListMenu_Start(int manager, int state, void* a2, void* a3)
 {
-    PokedexListMenu *pokeDexMenu; // r4
+    PokedexListMenu *pokeDexMenu;
 
     GFL_HeapCreateChild(1, 107, 0x60000);
-    pokeDexMenu = (PokedexListMenu*) GFL_ProcInitSubsystem(manager, 3184, 107);
-    MI_CpuFill8(pokeDexMenu, 0, 3184);
-    pokeDexMenu->unk0 = (PokeDexSeacherEngine_TYPE2*)a2;
+    pokeDexMenu = (PokedexListMenu*) GFL_ProcInitSubsystem(manager, sizeof(PokedexListMenu), 107);
+    MI_CpuFill8(pokeDexMenu, 0, sizeof(PokedexListMenu));
+    pokeDexMenu->unk0 = (PokeDexListMenu_Screen*)a2;
     return 1;
 }
 
 int ovy299_21a05dc(PokedexListMenu*);
 
-int ovy299_219fbf0(int manager, int state, void* a2, void* a3)
+int PokeListMenu_Loop(int manager, int state, void* a2, void* a3)
 {
     return ovy299_21a05dc((PokedexListMenu*)a3) == 0;
 }
 
-int ovy299_219fc04(int manager, int state, void* a2, void* a3)
+int PokeListMenu_End(int manager, int state, void* a2, void* a3)
 {
     GFL_ProcReleaseSubsystem(manager);
     GFL_HeapDelete(107);
@@ -453,14 +453,14 @@ void ovy299_21a01e4(PokedexListMenu *a1)
 
 extern u16 *PML_PersonalLoadRegionalDexTable(int, int);
 
-void ovy299_21a0208(PokedexListMenu *a1)
+void PokeListMenu_LoadUnovaSpeciesTable(PokedexListMenu *a1)
 {
-    a1->unkC5C = PML_PersonalLoadRegionalDexTable(107, 0);
+    a1->unovaSpeciesTbl = PML_PersonalLoadRegionalDexTable(107, 0);
 }
 
 void sub_021A0220(PokedexListMenu *a1)
 {
-    GFL_HeapFree(a1->unkC5C);
+    GFL_HeapFree(a1->unovaSpeciesTbl);
 }
 
 extern void ovy299_21a158c(PokedexListMenu*, u32, s16*, s16*, u16);
@@ -543,7 +543,8 @@ typedef struct
     ListUiMenu list;
 }UNKNOW_TEMPLATE;
 
-#define UnknowOffset *(u32*)(0x209A474)
+#define gPMLSpeciesNamesResident *(u32*)(0x209A474)
+
 void ovy299_21a0324(PokedexListMenu *a1);
 extern int sub_0200D214(int);
 extern int ovy139_219af1c(UNKNOW_TEMPLATE*, int);
@@ -606,7 +607,7 @@ void ovy299_21a0324(PokedexListMenu *a1)
     {
         if (PokeDexSave_IsMonCaught(a1->unk0->dexSave, a1->unk0->unkC.listData[i]) == 1)
         {
-            v19 = sub_0204898C(UnknowOffset, a1->unk0->unkC.listData[i]); // GFL_MsgDataLoadStrbufNew
+            v19 = sub_0204898C(gPMLSpeciesNamesResident, a1->unk0->unkC.listData[i]); // GFL_MsgDataLoadStrbufNew
             a1->unk64[i] = sub_020485A4(v19, 107);
             GFL_StrBufFree(v19);
             ovy139_219b1b4(a1->unkC50, 0, 0x20000000 | a1->unk0->unkC.listData[i]);
@@ -615,7 +616,7 @@ void ovy299_21a0324(PokedexListMenu *a1)
         {
             if (sub_0200D7F4(a1->unk0->dexSave, a1->unk0->unkC.listData[i]) == 1)
             {
-                v19 = sub_0204898C(UnknowOffset, a1->unk0->unkC.listData[i]);
+                v19 = sub_0204898C(gPMLSpeciesNamesResident, a1->unk0->unkC.listData[i]);
                 a1->unk64[i] = sub_020485A4(v19, 107);
                 GFL_StrBufFree(v19);
                 ovy139_219b1b4(a1->unkC50, 1, 0x10000000 | a1->unk0->unkC.listData[i]);
@@ -721,7 +722,6 @@ const DexListMenuFunc data_21A27A0[] =
 
 void ovy299_21a1440(PokedexListMenu*);
 void ovy299_21a0f2c(PokedexListMenu*);
-extern void ovy302_21ad7c8(int, int, int*);
 
 int ovy299_21a05dc(PokedexListMenu *a1)
 {
@@ -733,7 +733,7 @@ int ovy299_21a05dc(PokedexListMenu *a1)
         return 0;
     ovy299_21a1440(a1);
     ovy299_21a0f2c(a1);
-    ovy302_21ad7c8(3, 7, &a1->unkC60);
+    PokedexView_BackgroundScroll(3, 7, &a1->scrollDelay);
     return 1;
 }
 
@@ -760,7 +760,7 @@ int ovy299_21a0618(PokedexListMenu *a1)
     ovy299_21a01a0(a1);
     ovy299_21a0ec0(a1);
     ovy299_21a13f0(a1);
-    ovy299_21a0208(a1);
+    PokeListMenu_LoadUnovaSpeciesTable(a1);
     ovy299_21a0324(a1);
     if (!a1->unk0->unk8)
         ovy299_21a1224(a1);
@@ -1466,17 +1466,17 @@ void ovy299_21a1300(PokedexListMenu *a1)
 
 extern int sub_0219CC18(int);
 
-void ovy299_21a1358(PokedexListMenu *a1, UnknowWindowData *a2, int a3, int a4)
+void ovy299_21a1358(PokedexListMenu *a1, UnknowWindowData *a2, int a3, int species)
 {
     int v7;  // r6
     int v10; // [sp+14h] [bp-1Ch]
 
     v10 = sub_0219CC18(a1->unkC50);
     if (sub_0200D1F8(a1->unk0->dexSave) != 1)
-        a4 = a1->unkC5C[a4];
+        species = a1->unovaSpeciesTbl[species];
 
     v7 = sub_0204898C(a1->unk54, 8);
-    StringSetNumber(a1->unk58, 0, a4, 3, 2, 1);
+    StringSetNumber(a1->unk58, 0, species, 3, 2, 1);
     GFL_WordSetFormatStrbuf(a1->unk58, a1->unk5C, v7);
     GFL_StrBufFree(v7);
 
@@ -1690,9 +1690,7 @@ void ovy299_21a15e8(PokedexListMenu *a1)
     void *v26 = GFL_ArcSysCreateFileHandle(GetDefaultUINarcIdx(), 32875);
 
     a1->unkB88[34] = Oam_LoadNCGRFile(v26, sub_0202D814(), 0, 0, 107);
-
     a1->unkC18[4] = sub_0204BBA0(v26, sub_0202D810(), 0, 224, 107);
-
     a1->unkC30[4] = Oam_LoadNCERFile(v26, sub_0202D818(2), sub_0202D81C(2), 107);
     GFL_ArcToolFree(v26);
 }
@@ -2260,8 +2258,8 @@ void ovy299_21a231c(PokedexListMenu *a1, int a2)
     }
 }
 
-const int data_021A296C[6] = {0};
-const int data_021A29B0[6] = {0};
+const TouchscreenHitbox data_021A296C = {0};
+const TouchscreenHitbox data_021A29B0 = {0};
 
 extern void sub_0219CC90(int);
 extern void sub_0219CCA0(int);
@@ -2344,22 +2342,22 @@ int ovy299_21a23a4(PokedexListMenu *a1)
     else
     {
         v8 = GCTX_HIDGetPressedKeys();
-        if ((v8 & 2) != 0)
+        if ((v8 & KEY_B) != 0)
         {
             sub_0203D564(0);
             return 12;
         }
-        else if ((GCTX_HIDGetPressedKeys() & 0x400) != 0)
+        else if ((GCTX_HIDGetPressedKeys() & KEY_X) != 0)
         {
             sub_0203D564(0);
             return 11;
         }
-        else if ((GCTX_HIDGetPressedKeys() & 8) != 0 && sub_0200D1DC(a1->unk0->dexSave) == 1)
+        else if ((GCTX_HIDGetPressedKeys() & KEY_START) != 0 && sub_0200D1DC(a1->unk0->dexSave) == 1)
         {
             sub_0203D564(0);
             return 8;
         }
-        else if ((GCTX_HIDGetPressedKeys() & 4) != 0)
+        else if ((GCTX_HIDGetPressedKeys() & KEY_SELECT) != 0)
         {
             if (!sub_0200D1C0(a1->unk0->dexSave))
                 return -1;
@@ -2377,7 +2375,7 @@ int ovy299_21a23a4(PokedexListMenu *a1)
             }
                 
         }
-        else if ((GCTX_HIDGetPressedKeys() & 0x800) != 0)
+        else if ((GCTX_HIDGetPressedKeys() & KEY_Y) != 0)
         {
             if (a1->unk0->unk8 == 1)
             {

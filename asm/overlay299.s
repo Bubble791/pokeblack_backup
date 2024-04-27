@@ -2,45 +2,6 @@
 	.include "overlay299.inc"
 	.include "global.inc"
 
-	.public ovy299_219fc14
-	.public ovy299_219fc60
-	.public sub_0219FC78
-	.public sub_0219FCEC
-	.public sub_0219FCFC
-	.public ovy299_219fd04
-	.public ovy299_219fea8
-	.public ovy299_219fef0
-	.public ovy299_21a0040
-	.public ovy299_21a0080
-	.public ovy299_21a00ac
-	.public ovy299_21a0134
-	.public ovy299_21a01a0
-	.public ovy299_21a01e4
-	.public ovy299_21a0208
-	.public sub_021A0220
-	.public ovy299_21a0298
-	.public ovy299_21a0230
-	.public ovy299_21a0324
-	.public ovy299_21a04e8
-	.public ovy299_21a0564
-	.public ovy299_21a0e1c
-	.public ovy299_21a0e3c
-	.public ovy299_21a0f70
-	.public ovy299_21a0fb8
-	.public ovy299_21a100c
-	.public ovy299_21a1024
-	.public ovy299_21a1158
-	.public ovy299_21a1488
-	.public sub_021A14B0
-	.public ovy299_21a14c4
-	.public sub_021A14E4
-	.public ovy299_21a150c
-	.public sub_021A1528
-	.public ovy299_21a153c
-	.public ovy299_21a1568
-	.public ovy299_21a158c
-	.public ovy299_21a1a98
-	.public ovy299_21a1f04
 	.text
 
 

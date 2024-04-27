@@ -125,7 +125,7 @@
 .public sub_0219CC1C
 .public sub_0219CC3C
 .public sub_0219CC34
-.public ovy302_21ad7c8
+.public PokedexView_BackgroundScroll
 .public GFL_OvlLoad
 .public GFL_BGSysSetEnabledBGsA
 .public GFL_BGSysSetEnabledBGsB

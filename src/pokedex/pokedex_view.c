@@ -35,7 +35,6 @@ int ovy302_21ad4fc(PokeDexMain *a1);
 int ovy302_21ad574(PokeDexMain *a1);
 void ovy302_21ad78c(u16 a1);
 void ovy302_21ad7a8(u16 a1);
-void ovy302_21ad7c8(int result, int a2, int *a3);
 
 int ovy302_21acee0(int a1, int a2, void *a3, void *a4)
 {
@@ -243,10 +242,10 @@ extern void sub_0200D1E4(int, int);
 
 int ovy302_21ad0e8(PokeDexMain *a1)
 {
-    PokeDexSeacherEngine_TYPE2 *v2;     // r4
+    PokeDexListMenu_Screen *v2;     // r4
     PokeDexParamInput *v3; // r0
 
-    v2 = (PokeDexSeacherEngine_TYPE2*)GFL_HeapAllocate(105, sizeof(PokeDexSeacherEngine_TYPE2), 0, (char*)&data_021AE5A0, 430);
+    v2 = (PokeDexListMenu_Screen*)GFL_HeapAllocate(105, sizeof(PokeDexListMenu_Screen), 0, (char*)&data_021AE5A0, 430);
     v3 = a1->inputParam;
     a1->unk38 = v2;
     v2->gameData = v3->gameData;
@@ -272,7 +271,7 @@ int ovy302_21ad0e8(PokeDexMain *a1)
 int ovy302_21ad174(PokeDexMain *a1)
 {
     int r5;
-    PokeDexSeacherEngine_TYPE2 *seacher = (PokeDexSeacherEngine_TYPE2*)a1->unk38;
+    PokeDexListMenu_Screen *seacher = (PokeDexListMenu_Screen*)a1->unk38;
 
     switch (seacher->unk10)
     {
@@ -302,7 +301,6 @@ int ovy302_21ad174(PokeDexMain *a1)
     case 3:
         r5 = 5;
         a1->unk2C = 1;
-        
         break;
     case 4:
         if (a1->unk12 == 1)
@@ -739,16 +737,16 @@ void ovy302_21ad7a8(u16 a1)
     GFL_FadeScreenSet(0, 0, 0, 0, 6, 1, a1);
 }
 
-void ovy302_21ad7c8(int result, int a2, int *a3)
+void PokedexView_BackgroundScroll(int mainBg, int subBg, int *delayVar)
 {
-    int v5; // r1
+    int delay;
 
-    v5 = *a3 + 1;
-    *a3 = v5;
-    if (v5 == 4)
+    delay = *delayVar + 1;
+    *delayVar = delay;
+    if (delay == 4)
     {
-        GFL_BGSysMoveBGReq(result, 1, 1);
-        GFL_BGSysMoveBGReq(a2, 1, 1);
-        *a3 = 0;
+        GFL_BGSysMoveBGReq(mainBg, 1, 1);
+        GFL_BGSysMoveBGReq(subBg, 1, 1);
+        *delayVar = 0;
     }
 }

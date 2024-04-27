@@ -9,7 +9,7 @@ typedef struct
 
 typedef struct
 {
-    /*0x0*/ PokeDexSeacherEngine_TYPE2 *unk0;
+    /*0x0*/ PokeDexListMenu_Screen *unk0;
     /*0x4*/ int unk4;
     /*0x8*/ int unk8;
     /*0xC*/ int unkC;
@@ -38,8 +38,8 @@ typedef struct
     /*0xC50*/ int unkC50;
     /*0xC54*/ int unkC54;
     /*0xC58*/ int unkC58;
-    /*0xC5C*/ u16 *unkC5C;
-    /*0xC60*/ int unkC60;
+    /*0xC5C*/ u16 *unovaSpeciesTbl;
+    /*0xC60*/ int scrollDelay;
     /*0xC64*/ u16 unkC64;
     /*0xC64*/ s16 unkC66;
     /*0xC68*/ int unkC68;
