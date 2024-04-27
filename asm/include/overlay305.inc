@@ -32,12 +32,12 @@
 .public sub_0204ADA8
 .public sub_0204AF50
 .public GFL_ArcToolFree
-.public sub_021999B8
+.public ovy139_21999b8
 .public sub_0204A5C0
 .public sub_0204A5C0
-.public sub_021999BC
+.public ovy139_21999bc
 .public sub_0219D730
-.public sub_021999C0
+.public ovy139_21999c0
 .public sub_0219D1BC
 .public GFL_SndSEPlay
 .public sub_0219E1C8

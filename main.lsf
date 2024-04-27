@@ -843,6 +843,8 @@ Overlay OVY_138
 Overlay OVY_139
 {
     Address 0x21998c0
+
+    Object src/ui/ui_scene.o
     Object asm/overlay139.o
 }
 Overlay OVY_140

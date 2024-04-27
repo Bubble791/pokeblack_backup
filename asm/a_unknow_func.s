@@ -8085,9 +8085,13 @@ sub_0219D488: ; 0x02073FB4
 .public ovy299_21a0564
 .public ovy299_21a0514
 .public ovy299_21a05b0
+.public ovy139_21998c0
+.public ovy139_21998fc
+.public ovy139_2199904
     thumb_func_start sub_021C5C10
 sub_021C5C10: ; 0x02073FB4
-
+	bl ovy139_21998c0
+	bl ovy139_21998fc
 	bl ovy302_21ae3bc
 	bl ovy302_21acee0
 	bl ovy302_21acfc8
@@ -8108,6 +8112,7 @@ sub_021C5C10: ; 0x02073FB4
 	bl ovy162_219ce80
 	bl ovy299_21a0564
 	bl ovy299_21a0514
+	bl ovy139_2199904
 	bx lr
 	.word data_021A0914
 	.word data_021A023C
@@ -8125,7 +8130,13 @@ sub_021999C8:
 	bx lr
 	thumb_func_end sub_021999C8
 
+.public ovy139_21999b8
+.public ovy139_21999bc
+.public ovy139_21999c0
 	thumb_func_start sub_021998C0
 sub_021998C0:
+	bl ovy139_21999b8
+	bl ovy139_21999bc
+	bl ovy139_21999c0
 	bx lr
 	thumb_func_end sub_021998C0

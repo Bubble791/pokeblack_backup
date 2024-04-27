@@ -313,7 +313,7 @@ ovy305_219d110: ; 0x0219D110
 	bl ovy305_219df04
 	ldr r1, _0219D134 ; =0x0000FFFE
 	add r0, r5, #0
-	bl sub_021999B8
+	bl ovy139_21999b8
 	pop {r3, r4, r5, pc}
 	nop
 _0219D130: .word 0x0000498C
@@ -413,7 +413,7 @@ ovy305_219d1cc: ; 0x0219D1CC
 	sub sp, #0x30
 	add r5, r1, #0
 	add r6, r0, #0
-	bl sub_021999BC
+	bl ovy139_21999bc
 	add r4, r0, #0
 	add r0, r5, #0
 	bl ovy305_219dd24
@@ -453,7 +453,7 @@ _0219D226:
 	bl ovy305_219dd60
 _0219D22C:
 	add r0, r6, #0
-	bl sub_021999C0
+	bl ovy139_21999c0
 	b _0219D328
 _0219D234:
 	add r0, r5, #0
