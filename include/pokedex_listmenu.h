@@ -29,10 +29,12 @@ typedef struct
     /*0xB88*/ int unkB88[36];
     /*0xC18*/ int unkC18[6];
     /*0xC30*/ int unkC30[6];
-    /*0xC48*/ u16 unkC48;
+    /*0xC48*/ u16 unkC48:1;
+              u16 unkC48_1:15;
     /*0xC4A*/ u8 unkC4A;
     /*0xC4B*/ u8 unkC4B;
-    /*0xC4C*/ int unkC4C;
+    /*0xC4C*/ u16 unkC4C;
+    /*0xC4E*/ u16 unkC4E;
     /*0xC50*/ int unkC50;
     /*0xC54*/ int unkC54;
     /*0xC58*/ int unkC58;

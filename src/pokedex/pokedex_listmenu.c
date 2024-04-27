@@ -115,6 +115,9 @@ void ovy299_21a0f70(PokedexListMenu *a1, int a2, u16 a3, int a4, int a5, u16 a6,
 void ovy299_21a1024(PokedexListMenu *a1, int a2);
 void ovy299_21a1158(PokedexListMenu *a1);
 void ovy299_21a150c(PokedexListMenu *a1, int a2, int a3);
+void ovy299_21a1a98(PokedexListMenu *a1, int a2);
+void ovy299_21a1f04(PokedexListMenu *a1, int a2, int a3, int a4, u16 a5, int a6);
+int ovy299_21a1fa8(PokedexListMenu *a1, int a2);
 
 const OvyMangerTemplate data_021A25C8 =
 {
@@ -880,13 +883,13 @@ int ovy299_21a081c(PokedexListMenu* a1)
             break;
         case 5:
             ovy299_21a14c4(a1, 10, 12);
-            a1->unkC48 = (a1->unkC48 & 0xFFFF0001) | 0x14;
+            a1->unkC48_1 =  10;
             a1->unk14 = 0;
             r6 = 5;
             break;
         case 6:
             ovy299_21a14c4(a1, 9, 13);
-            a1->unkC48 = (a1->unkC48 & 0xFFFF0001) | 0x12;
+            a1->unkC48_1 =  9;
             a1->unk14 = 0;
             r6 = 5;
             break;
@@ -897,7 +900,7 @@ int ovy299_21a081c(PokedexListMenu* a1)
         case 9:
         case 10:
             ovy299_21a21f4(a1);
-            a1->unkC48 = (a1->unkC48 & 0xFFFF0001) | 0x7E;
+            a1->unkC48_1 = 63;
             a1->unk14 = 1;
             r6 = 5;
             break;
@@ -1056,8 +1059,7 @@ int ovy299_21a0c6c(PokedexListMenu *a1)
             }
             break;
         case 1:
-            u32 ui = (a1->unkC48 << 16);
-            if (ui >> 0x11 == 63 || !sub_021A14F8(a1, ui >> 0x11))
+            if (a1->unkC48_1 == 63 || !sub_021A14F8(a1, a1->unkC48_1))
             {
                 a1->unk14 = 0;
                 ovy299_21a231c(a1, 0);
@@ -1073,8 +1075,7 @@ extern void ovy139_219cad8(int, u16, int);
 
 int ovy299_21a0cc0(PokedexListMenu *a1)
 {
-    u32 ui = (a1->unkC48 << 16);
-    if (!sub_021A14F8(a1, ui >> 0x11))
+    if (!sub_021A14F8(a1, a1->unkC48_1))
     {
         ovy299_21a231c(a1, 0);
         return a1->unk18;
@@ -1150,8 +1151,7 @@ int ovy299_21a0dec(PokedexListMenu *a1, int a2, int a3, int a4)
 
     v5 = a2;
     ovy299_21a14c4(a1, a2, a3);
-    u32 data = v5 << 0x11;
-    a1->unkC48 = (a1->unkC48 & 0xffff0001) | (data >> 0x10);
+    a1->unkC48_1 = v5;
     a1->unk18 = a4;
     return 6;
 }
@@ -1503,13 +1503,14 @@ void ovy299_21a13f0(PokedexListMenu *a1)
 
 void sub_021A1818(PokedexListMenu* );
 void ovy299_21a1ab4(PokedexListMenu* );
-int ovy299_21a1834(PokedexListMenu* );
+void ovy299_21a1834(PokedexListMenu* );
 
 void ovy299_21a1424(PokedexListMenu *a1)
 {
     sub_021A1818(a1);
     ovy299_21a1ab4(a1);
-    sub_0204B758(ovy299_21a1834(a1));
+    ovy299_21a1834(a1);
+    sub_0204B758();
 }
 
 void ovy299_21a1440(PokedexListMenu *a1)
@@ -1542,8 +1543,8 @@ void ovy299_21a1488(PokedexListMenu *a1, int a2, int a3)
 }
 
 void sub_021A14B0(PokedexListMenu* a1, int a2);
-void sub_021A14E4(PokedexListMenu* a1, int a2);
-void sub_021A1528(PokedexListMenu* a1, int a2);
+int sub_021A14E4(PokedexListMenu* a1, int a2);
+int sub_021A1528(PokedexListMenu* a1, int a2);
 
 void sub_021A14B0(PokedexListMenu* a1, int a2)
 {
@@ -1556,9 +1557,9 @@ void ovy299_21a14c4(PokedexListMenu *a1, int a2, int a3)
     Oam_EnableOamAnim(a1->unkA8C[a2], 1);
 }
 
-void sub_021A14E4(PokedexListMenu* a1, int a2)
+int sub_021A14E4(PokedexListMenu* a1, int a2)
 {
-    sub_0204C4A0(a1->unkA8C[a2]);
+    return sub_0204C4A0(a1->unkA8C[a2]);
 }
 
 int sub_021A14F8(PokedexListMenu* a1, u32 a2)
@@ -1575,9 +1576,9 @@ void ovy299_21a150c(PokedexListMenu *a1, int a2, int a3)
         sub_0204C124(result, a3);
 }
 
-void sub_021A1528(PokedexListMenu* a1, int a2)
+int sub_021A1528(PokedexListMenu* a1, int a2)
 {
-    sub_0204C138(a1->unkA8C[a2]);
+    return sub_0204C138(a1->unkA8C[a2]);
 }
 
 void ovy299_21a153c(PokedexListMenu *a1, int a2, int a3);
@@ -1694,4 +1695,708 @@ void ovy299_21a15e8(PokedexListMenu *a1)
 
     a1->unkC30[4] = Oam_LoadNCERFile(v26, sub_0202D818(2), sub_0202D81C(2), 107);
     GFL_ArcToolFree(v26);
+}
+
+void ovy299_21a17d8(PokedexListMenu *a1)
+{
+    void *v2; // r4
+
+    v2 = GFL_ArcSysCreateFileHandle(157, 107);
+    a1->unkC68 = sub_02035024(16, 16, 65534, 107);
+    sub_02035104(a1->unkC68, v2, 53, 16, 32);
+    GFL_ArcToolFree(v2);
+}
+
+void sub_021A1818(PokedexListMenu *a1)
+{
+    sub_02035178(a1->unkC68);
+}
+
+void sub_021A1828(PokedexListMenu *a1, int a2)
+{
+    a1->unkC6C = a2;
+}
+
+void ovy299_21a1834(PokedexListMenu *a1)
+{
+    for (u32 i = 0; i < 0x24; ++i)
+    {
+        if (a1->unkB88[i] != -1)
+            sub_0204B98C(a1->unkB88[i]);
+    }
+    for (u32 j = 0; j < 6; ++j)
+    {
+        if (a1->unkC18[j] != -1)
+            sub_0204BCD0(a1->unkC18[j]);
+    }
+    for (u32 k = 0; k < 6; ++k)
+    {
+        if (a1->unkC30[k] != -1)
+            sub_0204BE64(a1->unkC30[k]);
+    }
+}
+
+
+typedef struct
+{
+    u16 unk0;
+    u16 unk4;
+    u16 unk8;
+}ObjTemplate;
+
+typedef struct
+{
+    ObjTemplate temp;
+    int unk0;
+    int unk1;
+    int unk2;
+    u16 unk3;
+    u16 unk4;
+}PokeDexObjTemplate;
+
+const PokeDexObjTemplate data_021A2834[12] = {0};
+
+extern int ovy302_21ad7f0(int, PokeDexObjTemplate*, int);
+extern int sub_0200D1DC(int);
+
+void ovy299_21a1894(PokedexListMenu *a1)
+{
+    int v14 = sub_0200D1AC(a1->unk0->dexSave);
+    int v13 = sub_0200D1C0(a1->unk0->dexSave);
+
+    a1->unkA88 = sub_0204BF1C(63, 0, 107);
+    for (u32 i = 0; i < 63; i++)
+    {
+        a1->unkA8C[i] = 0;
+    }
+    for (u32 i = 0; i <= 12; i++)
+    {
+        PokeDexObjTemplate now;
+
+        now = data_021A2834[i];
+        now.unk0 = a1->unkB88[now.unk0];
+        now.unk1 = a1->unkC18[now.unk1];
+        now.unk2 = a1->unkC30[now.unk2];
+        a1->unkA8C[i] = ovy302_21ad7f0(a1->unkA88, &now, 107);
+        sub_0204C5C8(a1->unkA8C[i], 0);
+    }
+   
+    if (a1->unk0->unkA <= 7u)
+    {
+        ovy299_21a150c(a1, 0, 0);
+        ovy299_21a150c(a1, 1, 0);
+    }
+    if (!sub_0200D1DC(a1->unk0->dexSave))
+        ovy299_21a150c(a1, 12, 0);
+
+    if (!v13)
+    {
+        s16 v15[2];
+        
+        ovy299_21a150c(a1, 11, 0);
+        ovy299_21a158c(a1, 12, &v15[1], &v15[0], 0);
+        s16 datas = (v15[1]) - 32;
+        ovy299_21a1568(a1, 12, datas, v15[0], 0);
+    }
+    if (!v14 && !v13)
+    {
+        ovy299_21a150c(a1, 3, 0);
+        ovy299_21a150c(a1, 4, 0);
+        ovy299_21a150c(a1, 5, 0);
+    }
+    else if (!v14 && v13 == 1)
+        {
+            ovy299_21a150c(a1, 3, 0);
+            ovy299_21a1488(a1, 4, 0xE);
+            sub_021A14B0(a1, 4);
+        }
+    else
+    {
+        if (v14 == 1 && v13 == 1)
+        {
+            if (sub_0200D1F8(a1->unk0->dexSave) != 1)
+            {
+                ovy299_21a1488(a1, 3, 0xE);
+                sub_021A14B0(a1, 3);
+            }
+            else
+            {
+                ovy299_21a1488(a1, 4, 0xE);
+                sub_021A14B0(a1, 4);
+            }
+        }   
+    }
+    if (a1->unk0->unk8 == 1)
+    {
+        ovy299_21a150c(a1, 11, 0);
+        ovy299_21a150c(a1, 8, 0);
+        ovy299_21a150c(a1, 3, 0);
+        ovy299_21a150c(a1, 4, 0);
+        ovy299_21a150c(a1, 5, 0);
+    }
+    else
+    {
+        int result = GameData_IsPocketRegistered(a1->unk0->gameData, 18);
+        if (result == 1)
+            ovy299_21a14c4(a1, 8, 7u);
+    }
+}
+
+void ovy299_21a1a98(PokedexListMenu *a1, int a2)
+{
+    if (a1->unkA8C[a2])
+    {
+        Oam_RemoveOam(a1->unkA8C[a2]);
+        a1->unkA8C[a2] = 0;
+    }
+}
+
+void ovy299_21a1ab4(PokedexListMenu *a1)
+{
+    u32 i; // r5
+
+    for (i = 0; i < 0x3F; ++i)
+        ovy299_21a1a98(a1, i);
+    sub_0204BF98(a1->unkA88);
+}
+
+const PokeDexObjTemplate data_021A2800 = {0};
+extern void sub_0200D3C8(int, u16, int *, int *, int *, int);
+extern void *sub_02033E24(int);
+extern int sub_0200DA18(int, int);
+extern int sub_02033E78(void *, u16, int, int, int, int, int, int, int, int);
+extern int sub_02033E34(void *, u16, int, int, int, int, int, int, u16, int);
+extern int sub_02033EF4(u16, int, int, int, int, int, int, int, int);
+extern int sub_02020274(u16, u16, int);
+extern int sub_020202AC(int, int);
+extern void sub_0204C2B0(int, int, int);
+extern void sub_020202A4(int);
+
+void ovy299_21a1ad8(PokedexListMenu *a1, u16 a2)
+{
+    PokeDexObjTemplate v30;
+    int v6;
+    int v18;
+    u32 v7;
+
+    int v23;
+    int v13, v24, v22;
+    
+
+    v30 = data_021A2800;
+    u32 what = a1->unkC48;
+    if ((what) == 0)
+    {
+        v18 = 0x3e;
+        v6 = 0x3D;
+        v7 = 0x160;
+    }
+    else
+    {
+        v6 = 62;
+
+        v18 = 0x3D;
+        v30.unk0 = 0x21;
+        v30.unk1 = 3;
+        v30.unk2 = 3;
+        v7 = 384;
+    }
+    
+
+    if (a1->unkA8C[v6])
+    {
+        ovy299_21a1a98(a1, v6);
+        if (a1->unkB88[v30.unk0] != -1)
+            sub_0204B98C(a1->unkB88[v30.unk0]);
+        if (a1->unkC18[v30.unk1] != -1)
+            sub_0204BCD0(a1->unkC18[v30.unk1]);
+        if (a1->unkC30[v30.unk2] != -1)
+            sub_0204BE64(a1->unkC30[v30.unk2]);
+    }
+    if (!a2)
+    {
+        void *v21 = GFL_ArcSysCreateFileHandle(157, 32875);
+        a1->unkB88[v30.unk0]= Oam_LoadNCGRFile(v21, 56, 0, 0, 107);
+        a1->unkC18[v30.unk1] = Oam_LoadNCLRFile(v21, 52, 0, (u16)v7, 0, 1, 107);
+        a1->unkC30[v30.unk2] = Oam_LoadNCERFile(v21, 62, 72, 107);
+        GFL_ArcToolFree(v21);
+        ovy299_21a150c(a1, 2, 0);
+    }
+    else
+    {
+        int v10;
+        int v11, v12;
+
+        sub_0200D3C8(a1->unk0->dexSave, a2, &v23, &v22, &v24, 32875);
+        void *v17 = sub_02033E24(32875);
+        if (a2 == 327)
+            v10 = sub_0200DA18(a1->unk0->dexSave, 0);
+        else
+            v10 = 0;
+        v11 = sub_02033E78(v17, a2, v24, v23, v22, 0, 0, v10, 0, 107);
+        a1->unkB88[v30.unk0]= v11;
+        v12 = sub_02033E34(v17, a2, v24, v23, v22, 0, 0, 0, (u16)v7, 107);
+        a1->unkC18[v30.unk1] = v12;
+        v13 = sub_02033EF4(a2, v24, v23, v22, 0, 0, 2, 0, 107);
+        a1->unkC30[v30.unk2] = v13;
+        GFL_ArcToolFree(v17);
+        ovy299_21a150c(a1, 2, 1);
+    }
+    
+    
+    v30.unk0 = a1->unkB88[v30.unk0];
+    v30.unk1 = a1->unkC18[v30.unk1];
+    v30.unk2 = a1->unkC30[v30.unk2]; 
+    a1->unkA8C[v6] = ovy302_21ad7f0(a1->unkA88, &v30, 107);
+    sub_0204C5C8(a1->unkA8C[v6], 0);
+    int v14 = sub_02020274(a2, (u16)v24, 32875);
+    int v15 = v14;
+    if (a2 && !sub_020202AC(v14, 34))
+        sub_0204C2B0(a1->unkA8C[v6], 1, 1);
+    sub_020202A4(v15);
+    ovy299_21a150c(a1, v18, 0);
+    sub_02026F7C(a1->unkC, 2, (u16)(16 * (v7 >> 5)), 32);
+
+    a1->unkC48 ^= 1;
+}
+
+const PokeDexObjTemplate data_021A27E8 = {0};
+
+void ovy299_21a1d6c(PokedexListMenu *a1)
+{
+    PokeDexObjTemplate v10;
+    
+    v10 = data_021A27E8;
+
+    v10.unk1 = a1->unkC18[0];
+    v10.unk2 = a1->unkC30[0];
+
+    for (u32 i = 0; i < 16; i++)
+    {
+        v10.temp.unk4 =  i * 24 + 8;
+        v10.unk0 = a1->unkB88[i];
+        a1->unkA8C[13 + i] = ovy302_21ad7f0(a1->unkA88, &v10, 107);
+        sub_0204C5C8(a1->unkA8C[13 + i], 0);
+    }
+
+    v10 = data_021A27E8;
+    v10.unk1 = a1->unkC18[1];
+    v10.unk2 = a1->unkC30[1];
+    for (u32 i = 0; i < 16; i++)
+    {
+        v10.temp.unk4 =  i * 24 + 0x20;
+        v10.unk0 = a1->unkB88[i + 16];
+        v10.unk4 = 1;
+        a1->unkA8C[29 + i] = ovy302_21ad7f0(a1->unkA88, &v10, 107);
+        sub_0204C5C8(a1->unkA8C[29 + i], 0);
+        ovy299_21a153c(a1, i + 29, 1);
+        a1->unkA8C[45 + i] = ovy302_21ad7f0(a1->unkA88, &v10, 107);
+        sub_0204C5C8(a1->unkA8C[45 + i], 0);
+        sub_0204C318(a1->unkA8C[45 + i], 2);
+    }
+    
+    for (u32 i = 0; i < 16; i++)
+    {
+        ovy299_21a150c(a1, i + 13, 0);
+    }
+    
+    for (u32 i = 0; i < 16; i++)
+    {
+        ovy299_21a150c(a1, i + 29, 0);
+        ovy299_21a150c(a1, i + 45, 0);
+    }
+}
+
+typedef struct
+{
+    u8 unk0[0x14];
+    int unk14;
+}BGDATA;
+extern int sub_0204C428(int);
+extern void sub_0204BAB8(int, int, int, int, int);
+extern void *sub_0204B2DC(void*, int, int, BGDATA**, int);
+extern int sub_02021034(int, int, int, int);
+
+void ovy299_21a1f04(PokedexListMenu *a1, int a2, int a3, int a4, u16 a5, int a6)
+{
+    void *v16;     // [sp+Ch] [bp-1Ch]
+    BGDATA *v17;  // [sp+10h] [bp-18h] BYREF
+    int v10;
+    int v13;     // r0
+    void *v15;     // [sp+8h] [bp-20h]
+    
+    v16 = GFL_ArcSysCreateFileHandle(7, 32875);
+    v10 = sub_02020F94(a3, a4, a5, 0);
+    v15 = sub_0204B2DC(v16, v10, 0, &v17, 32875);
+
+    if (a6 == 1)
+        sub_0204BAB8(sub_0204C428(a1->unkA8C[a2]), v17->unk14, 1024, 0, 0);
+    else
+        sub_0204BAB8(sub_0204C428(a1->unkA8C[a2]), v17->unk14, 1024, 0, 1);
+    GFL_HeapFree(v15);
+    GFL_ArcToolFree(v16);
+    v13 = sub_02021034(a3, a4, a5, 0);
+    sub_0204C378(a1->unkA8C[a2], v13, 1);
+}
+
+int ovy299_21a1fa8(PokedexListMenu *a1, int a2)
+{
+    u32 i; // r5
+
+    if (a2 == 1)
+    {
+        for (i = 13; i < 0x1D; ++i)
+        {
+            if (!sub_021A1528(a1, i))
+                return i;
+        }
+    }
+    else
+    {
+        for (i = 29; i < 0x2D; ++i)
+        {
+            if (!sub_021A1528(a1, i))
+                return i;
+        }
+    }
+    return 0;
+}
+
+void ovy299_21a1fe8(PokedexListMenu *a1, u16 a2, int a3, int a4)
+{
+    int v7;      // r6
+    int v9;  // r4
+    int v11; // [sp+Ch] [bp-24h] BYREF
+    int v12;     // [sp+10h] [bp-20h] BYREF
+    int v13;  // [sp+14h] [bp-1Ch] BYREF
+
+    sub_0200D3C8(a1->unk0->dexSave, a2, &v11, &v13, &v12, 32875);
+    v7 = ovy299_21a1fa8(a1, a4);
+    ovy299_21a1f04(a1, v7, a2, (u16)v12, (u16)(v11), a4);
+    ovy299_21a150c(a1, v7, 1);
+    ovy299_21a14c4(a1, v7, 0);
+    if (a4 == 1)
+    {
+        ovy299_21a1568(a1, v7, 112, (s16)(a3 + 8), 0);
+        return;
+    }
+    v9 = a3 + 8;
+    ovy299_21a1568(a1, v7, 112, v9, 1);
+    ovy299_21a1568(a1, v7 + 16, 112, v9, 1);
+    ovy299_21a150c(a1, v7 + 16, 1);
+}
+
+void ovy299_21a2098(PokedexListMenu *a1, s8 a2)
+{
+    u32 i;      // r5
+    int v7;              // r1
+    u32 j;      // r5
+    int result;          // r0
+    int v10;             // r1
+    s16 v11;         // [sp+4h] [bp+0h] BYREF
+    s16 v12;         // [sp+6h] [bp+2h] BYREF
+ 
+    for (i = 13; i < 0x1D; ++i)
+    {
+        if (sub_021A1528(a1, i))
+        {
+            ovy299_21a158c(a1, i, &v11, &v12, 0);
+            ovy299_21a1568(a1, i, v11, (s16)(v12 + a2), 0);
+            v7 = v12 + a2;
+            if (v7 <= -16 || v7 >= 200)
+                ovy299_21a150c(a1, i, 0);
+        }
+    }
+    for (j = 29; j < 0x2D; ++j)
+    {
+        result = sub_021A1528(a1, j);
+        if (result)
+        {
+            ovy299_21a158c(a1, j, &v11, &v12, 1u);
+            ovy299_21a1568(a1, j, v11, (s16)(v12 + a2), 1u);
+            ovy299_21a1568(a1, j + 16, v11, (s16)(v12 + a2), 1u);
+            v10 = v12 + a2;
+            if (v10 <= -16 || v10 >= 200)
+            {
+                ovy299_21a150c(a1, j, 0);
+                ovy299_21a150c(a1, j + 16, 0);
+            }
+        }
+    }
+}
+
+void ovy299_21a2188(PokedexListMenu *a1)
+{
+
+    u32 i;  // r4
+    int result;      // r0
+
+    a1->unkC4C = 0;
+    a1->unkC4E = 0;
+
+    for (i = 13; i < 29; ++i)
+    {
+        if (sub_021A1528(a1, i))
+            a1->unkC4C |= 1 << (i - 13);
+    }
+
+    for (i = 29; i < 45; ++i)
+    {
+        result = sub_021A1528(a1, i);
+        if (result)
+        {
+            a1->unkC4E |= (1 << (i - 29));
+        }
+    }
+}
+
+void ovy299_21a21f4(PokedexListMenu *a1)
+{
+    u32 i; // r4
+    u32 j;
+
+    for (i = 13; i < 0x1D; ++i)
+    {
+        if ((a1->unkC4C & (1 << (i - 13))) != 0)
+            ovy299_21a150c(a1, i, 0);
+    }
+    for (j = 29; j < 0x2D; ++j)
+    {
+        if ((a1->unkC4E & (1 << (j - 29))) != 0)
+        {
+            ovy299_21a150c(a1, j, 0);
+            ovy299_21a150c(a1, j + 16, 0);
+        }
+    }
+    a1->unkC4C = 0;
+    a1->unkC4E = 0;
+}
+
+void ovy299_21a2268(PokedexListMenu *a1, int a2)
+{
+    u16 aa = (a2 * 24) ;// fuck
+    s16 v11;
+    s16 v12;
+   
+    int a2a = aa + 8;
+    for (u32 i = 13; i < 29; ++i)
+    {
+        if (!sub_021A1528(a1, i))
+        {
+            ovy299_21a14c4(a1, i, 0);
+        }
+        else
+        {
+            ovy299_21a158c(a1, i, &v11, &v12, 0);
+            if (a2a == v12)
+            {
+                if (sub_021A14E4(a1, i) != 1)
+                {
+                    ovy299_21a14c4(a1, i, 1);
+                }
+            }
+            else
+            {
+                ovy299_21a14c4(a1, i, 0);
+            }
+        }
+        
+    }
+}
+
+extern int ovy139_219c324(int, s16);
+
+void ovy299_21a22d4(PokedexListMenu *a1)
+{
+    u32 v5; // r0
+    int v6;      // r3
+    s16 v8;
+    s16 v9;
+
+    ovy299_21a158c(a1, 0, &v8, &v9, 0);
+    v5 = ovy139_219c324(a1->unkC50, v9);
+    v6 = v5;
+    if (v5 < 0xC)
+    {
+        v6 = 12;
+    }
+    else
+    {
+        if (v5 > 0x9C)
+            v6 = 156;
+    }
+
+    
+    ovy299_21a1568(a1, 0, 252, (s16)v6, 0);
+}
+
+extern int sub_0219CC44(int);
+
+void ovy299_21a231c(PokedexListMenu *a1, int a2)
+{
+    int v4;              // r6
+    int v8;              // r0
+
+    v4 = sub_0219CC34(a1->unkC50);
+    if (sub_021A14E4(a1, 10) != 12 || !a2)
+    {
+        if (!sub_0219CC3C(a1->unkC50) && !v4)
+        {
+            ovy299_21a14c4(a1, 10, 0x12);
+        }
+        else
+        {
+            ovy299_21a14c4(a1, 10, 4);
+        }
+        
+    }
+    v8 = sub_021A14E4(a1, 9);
+    if (v8 != 13 || !a2)
+    {
+        if (!sub_0219CC44(a1->unkC50) && v4 == a1->unkC58 - 1)
+            ovy299_21a14c4(a1, 9, 0x13);
+        else
+            ovy299_21a14c4(a1, 9, 5);
+    }
+}
+
+const int data_021A296C[6] = {0};
+const int data_021A29B0[6] = {0};
+
+extern void sub_0219CC90(int);
+extern void sub_0219CCA0(int);
+
+int ovy299_21a23a4(PokedexListMenu *a1)
+{
+    void *v2; // r0
+    int v3;   // r0
+    int v4;   // r4
+    int v6;
+    int v8;  // r0
+
+    if (sub_0200D1C0(a1->unk0->dexSave) == 1)
+        v2 = &data_021A296C;
+    else
+        v2 = &data_021A29B0;
+    v3 = sub_0203DA0C(v2);
+    v4 = v3;
+    if (v3 != -1)
+    {
+        if (v3 == 8 && !sub_0200D1DC(a1->unk0->dexSave))
+            return -1;
+        if (v4 == 9)
+        {
+            if (!sub_0200D1C0(a1->unk0->dexSave))
+                return -1;
+            if (a1->unk0->unk8 == 1)
+                return -1;
+        }
+        if (v4 == 10)
+        {
+            if (a1->unk0->unk8 == 1)
+                return -1;
+            if (!sub_0203D554())
+            {
+                sub_0203D564(1);
+                sub_0219CCA0(a1->unkC50);
+            }
+        }
+        if (v4 == 13)
+        {
+            if (sub_0200D1AC(a1->unk0->dexSave) != 1 || sub_0200D1C0(a1->unk0->dexSave) != 1)
+                return -1;
+            if (a1->unk0->unk8 == 1)
+                return -1;
+            if (sub_0200D1F8(a1->unk0->dexSave) != 1)
+                return -1;
+            sub_0203D564(1);
+        }
+        if (v4 == 14)
+        {
+            if (sub_0200D1AC(a1->unk0->dexSave) != 1 || sub_0200D1C0(a1->unk0->dexSave) != 1)
+                return -1;
+            if (a1->unk0->unk8 == 1)
+                return -1;
+            v6 = sub_0200D1AC(a1->unk0->dexSave);
+
+            if (v6 == 1)
+            {
+                if (sub_0200D1F8(a1->unk0->dexSave) == 1)
+                    return -1;
+            }
+            else if (sub_0200D1F8(a1->unk0->dexSave) == 1)
+            {
+                return -1;
+            }
+            sub_0203D564(1);
+        }
+        if (v4 == 15)
+        {
+            if (!sub_0200D1C0(a1->unk0->dexSave))
+                return -1;
+            if (a1->unk0->unk8 == 1)
+                return -1;
+            sub_0203D564(1);
+        }
+        sub_0203D564(1);
+        return v4;
+    }
+    else
+    {
+        v8 = GCTX_HIDGetPressedKeys();
+        if ((v8 & 2) != 0)
+        {
+            sub_0203D564(0);
+            return 12;
+        }
+        else if ((GCTX_HIDGetPressedKeys() & 0x400) != 0)
+        {
+            sub_0203D564(0);
+            return 11;
+        }
+        else if ((GCTX_HIDGetPressedKeys() & 8) != 0 && sub_0200D1DC(a1->unk0->dexSave) == 1)
+        {
+            sub_0203D564(0);
+            return 8;
+        }
+        else if ((GCTX_HIDGetPressedKeys() & 4) != 0)
+        {
+            if (!sub_0200D1C0(a1->unk0->dexSave))
+                return -1;
+            else
+            {
+                if (a1->unk0->unk8 == 1)
+                {
+                    return -1;
+                }
+                else
+                {
+                    sub_0203D564(0);
+                    return 9;
+                }
+            }
+                
+        }
+        else if ((GCTX_HIDGetPressedKeys() & 0x800) != 0)
+        {
+            if (a1->unk0->unk8 == 1)
+            {
+                return -1;
+            }
+            else
+            {
+                if (sub_0203D554() == 1)
+                {
+                    sub_0203D564(0);
+                    sub_0219CC90(a1->unkC50);
+                }
+                else
+                {
+                    sub_0203D564(0);
+                }
+                return 10;
+            }
+        }
+    }
+    return v4;
 }

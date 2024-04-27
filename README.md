@@ -1,3 +1,9 @@
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# 该仓库没完全设置，无法正常编译黑白2 ROM，经供参考
+# THIS REPO CANT BUILD NORMALIY BW2 ROM
+# 编译器版本：dsi/1.3p1
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
 # Pokémon HeartGold and SoulSilver
 
 This is a WIP disassembly of Pokémon HeartGold and SoulSilver. For instructions on how to set up the repository, please read [INSTALL.md](INSTALL.md).

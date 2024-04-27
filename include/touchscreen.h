@@ -12,4 +12,7 @@ typedef struct
 #define TOUCHSCREEN_CIRCLE_SENTINEL 0xFE
 #define TOUCHSCREEN_RECTLIST_END    0xFF
 
+
+extern int sub_0203DA0C(const TouchscreenHitbox*);
+
 #endif // TOUCHSCREEN_H

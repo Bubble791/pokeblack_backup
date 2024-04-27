@@ -256,9 +256,9 @@ extern void sub_0204B98C(int);
 extern void sub_0204BCD0(int);
 extern void GFL_BitmapFree(int);
 extern int sub_0204BF98(int);
-extern int sub_0204B758(int);
+extern int sub_0204B758(void);
 extern void sub_0204BE64(int);
-extern void sub_0204C4A0(int);
+extern int sub_0204C4A0(int);
 extern void sub_0204B794(void);
 extern void sub_0202DB70(void);
 extern void sub_0204C4D4(int, int);
@@ -294,6 +294,8 @@ extern int sub_02021190(void);
 extern int sub_020211C8(void);
 extern int sub_0202D81C(int);
 extern int sub_0202D818(int);
+extern void sub_02035178(int);
+
 
 #ifndef __MWERKS__
 #define NONMATCHING

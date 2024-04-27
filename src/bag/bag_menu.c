@@ -181,8 +181,6 @@ void ovy142_219c900(BagView *bagView)
     GFL_ArcToolFree(v2);
 }
 
-extern void sub_02035178(int);
-
 void sub_0219C948(BagView *bagView)
 {
     sub_02035178(bagView->unk8A4);
@@ -313,7 +311,6 @@ void ovy142_219cb64(BagView *bagView)
     }
 }
 
-extern int sub_0203DA0C(const TouchscreenHitbox*);
 int ovy142_219cb88(void);
 
 int ovy142_219cb88(void)
@@ -1265,8 +1262,7 @@ void ovy142_219e120(BagView *a1)
 
 void ovy142_219e168(BagView *a1)
 {
-    int i;  // r4
-    int v3; // r0
+    int i;
 
     BmpWin_Free(a1->unk76C.winData);
     BmpWin_Free(a1->unk754.winData);
@@ -1286,8 +1282,8 @@ void ovy142_219e168(BagView *a1)
     sub_0204BE64(a1->unk558);
     for (i = 0; i < 8; ++i)
         GFL_BitmapFree(a1->unk624[i]);
-    v3 = sub_0204BF98(a1->spriteGroup);
-    sub_0204B758(v3);
+    sub_0204BF98(a1->spriteGroup);
+    sub_0204B758();
 }
 
 void BagMenu_LoadBagBackDefaultText(BagView *a1)
